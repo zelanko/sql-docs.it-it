@@ -1,11 +1,7 @@
 ---
-title: 'Procedura: Eliminare oggetti e risolvere le dipendenze | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Eliminare oggetti e risolvere le dipendenze
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Data.Tools.Project.HelpKeywords.SqlProjectDropDatabaseConfirmationDialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026607"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241431"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Procedura: Eliminare oggetti e risolvere le dipendenze
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Procedura: Eliminazione oggetti e risoluzione dipendenze
+
 Quando si rinomina o si elimina un oggetto in **Esplora oggetti di SQL Server**, in SQL Server Data Tools vengono rilevati automaticamente tutti i relativi oggetti di dipendenza e verrà preparato uno script ALTER per rinominare o eliminare la dipendenza in base alle esigenze.  
   
 > [!WARNING]  
@@ -46,7 +47,7 @@ Quando si rinomina o si elimina un oggetto in **Esplora oggetti di SQL Server**,
     > [!WARNING]  
     > Dipendenze basate su script, quali i riferimenti a una tabella da una vista o stored procedure, non vengono aggiornati automaticamente da SSDT. Al termine della ridenominazione, è possibile usare il riquadro **Elenco errori** per individuare tutte le altre dipendenze e correggerle manualmente.  
   
-5.  Applicare la modifica seguendo i passaggi descritti in [Procedura: Aggiornare un database connesso con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+5.  Applicare la modifica seguendo i passaggi nella procedura [Procedura: Aggiornare un database connesso con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) precedente.  
   
 6.  Fare di nuovo clic con il pulsante destro del mouse sulla tabella **Customers** in **Esplora oggetti di SQL Server** e selezionare **Visualizza dati**. Si noti che i dati della tabella non sono stati modificati dopo l'operazione di ridenominazione.  
   

@@ -12,10 +12,10 @@ ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594070"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurare gli URL del server di report (Gestione configurazione SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "73594070"
 |Parte|Descrizione|  
 |----------|-----------------|  
 |Nome host|Una rete TCP/IP utilizza un indirizzo IP per identificare in modo univoco un dispositivo in rete. È presente un indirizzo IP fisico per ogni scheda di rete installata in un computer. Se l'indirizzo IP viene risolto in un'intestazione host, è possibile specificare l'intestazione host. Se il server di report viene distribuito in una rete aziendale, è possibile utilizzare il nome di rete del computer.|  
-|Port|Una porta TCP è un endpoint nel dispositivo. Il server di report sarà in attesa delle richieste su una porta designata.|  
+|Porta|Una porta TCP è un endpoint nel dispositivo. Il server di report sarà in attesa delle richieste su una porta designata.|  
 |Directory virtuale|Una porta viene spesso condivisa da più servizi o applicazioni Web. Per tale motivo, un URL del server di report include sempre una directory virtuale corrispondente all'applicazione che riceve la richiesta. È necessario specificare nomi delle directory virtuali univoci per ogni applicazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in attesa sullo stesso indirizzo IP e sulla stessa porta.|  
 |Impostazioni SSL|È possibile configurare gli URL in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per l'utilizzo di un certificato SSL esistente precedentemente installato nel computer. Per altre informazioni, vedere [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73594070"
 |Parte|valore|Spiegazione|  
 |----------|-----------|-----------------|  
 |Indirizzo IP|Tutti assegnati|Il DNS nella rete risolve il nome host incluso nell'URL nell'indirizzo IP del computer. Se l'indirizzo IP è incluso nell'URL definito, una richiesta inviata a un host specifico raggiungerà la destinazione desiderata.|  
-|Port|80|La porta 80 è la porta predefinita per le connessioni TCP/IP in un computer. Poiché il server di report è in ascolto sulla porta 80, è possibile omettere il numero di porta dall'URL. Se si specifica un'altra porta, è necessario specificarla nell'URL.|  
+|Porta|80|La porta 80 è la porta predefinita per le connessioni TCP/IP in un computer. Poiché il server di report è in ascolto sulla porta 80, è possibile omettere il numero di porta dall'URL. Se si specifica un'altra porta, è necessario specificarla nell'URL.|  
 |Directory virtuale|ReportServer|Si noti che entrambi gli URL di esempio includono il nome della directory virtuale. A meno che non si personalizzi la definizione dell'URL, è sempre necessario specificare il nome della directory virtuale dell'applicazione nell'URL.|  
   
 > [!NOTE]  

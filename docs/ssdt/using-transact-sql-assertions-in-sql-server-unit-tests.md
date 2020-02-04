@@ -1,23 +1,24 @@
 ---
-title: Uso di asserzioni Transact-SQL in unit test di SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Utilizzo di asserzioni Transact-SQL in unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140956"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243506"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Utilizzo di asserzioni Transact-SQL in unit test di SQL Server
+
 In uno unit test di SQL Server, uno script di test Transact\-SQL viene eseguito e restituisce un risultato. Talvolta, i risultati vengono restituiti come set di risultati. È possibile convalidare i risultati utilizzando le condizioni di test. È ad esempio possibile utilizzare una condizione di test per controllare il numero di righe restituite in un determinato set di risultati o per verificare il tempo necessario per l'esecuzione di un test specifico. Per altre informazioni sulle condizioni di test, vedere [Uso delle condizioni di test negli unit test di SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
   
 Invece di usare le condizioni di test, è possibile usare anche asserzioni Transact\-SQL, vale a dire le istruzioni THROW o RAISERROR in uno script Transact\-SQL. In determinate circostanze, è preferibile usare un'asserzione Transact\-SQL invece di una condizione di test.  
@@ -56,7 +57,7 @@ Dove:
   
 Tutti i parametri non specificati vengono ignorati. Passare questi parametri all'istruzione RAISERROR nel codice di database. Se si specifica MatchFirstError = true, l'attributo corrisponderà a uno qualsiasi dei valori SqlErrors nell'eccezione. Il comportamento predefinito (MatchFirstError = true) troverà una corrispondenza solo per il primo errore che si verifica.  
   
-Per un esempio di utilizzo delle eccezioni previste e di uno unit test di SQL Server negativo, vedere [Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Per un esempio di come usare le eccezioni previste e uno unit test negativo di SQL Server, vedere [Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>Istruzione RAISERROR  
   
@@ -78,7 +79,7 @@ dove:
   
 @ErrorState è un numero intero arbitrario compreso tra 1 e 127. È possibile utilizzare questo numero intero per differenziare le occorrenze di un singolo errore generato in punti diversi del codice.  
   
-Per altre informazioni, vedere [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Un esempio di utilizzo di RAISERROR in uno unit test di SQL Server è fornito nell'argomento [Procedura: Scrivere uno unit test di SQL Server in esecuzione nell'ambito di una singola transazione](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Per altre informazioni, vedere [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Un esempio dell'uso di RAISERROR in uno unit test di SQL Server è disponibile nell'argomento [Procedura: Scrivere uno unit test di SQL Server in esecuzione nell'ambito di una singola transazione](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

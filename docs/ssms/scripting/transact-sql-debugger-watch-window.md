@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.reviewer: ''
-ms.date: 03/14/2017
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8870849ef3cb83262284eab524b741c25a0a7ae
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: ab0abfe0e2221da335e069ef2f8ba6de38c1d3f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119222"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252987"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Debugger Transact-SQL - Finestra Espressioni di controllo
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Nella finestra **Espressione di controllo** vengono visualizzate informazioni sulle espressioni selezionate. Possono essere presenti fino a quattro finestre Espressioni di controllo: **Espressione di controllo 1**, **Espressione di controllo 2, Espressione di controllo 3** e **Espressione di controllo 4**. Le espressioni vengono valutate nell'ambito del frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per controllare variabili ed espressioni, è necessario utilizzare la modalità di debug.  
+Nella finestra **Espressione di controllo** vengono visualizzate informazioni sulle espressioni selezionate. Sono disponibili fino a quattro finestre di visualizzazione delle espressioni di controllo: **Espressione di controllo 1**, **Espressione di controllo 2, Espressione di controllo 3**ed **Espressione di controllo 4**. Le espressioni vengono valutate nell'ambito del frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per controllare variabili ed espressioni, è necessario utilizzare la modalità di debug.  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -50,9 +50,9 @@ Nella finestra **Espressione di controllo** vengono visualizzate informazioni su
   
 -   Espressioni compilate applicando operatori a uno o più parametri, variabili o funzioni di sistema, ad esempio @@IntegerCounter + 1 o FirstName + LastName.  
   
--   Istruzioni Transact-SQL che restituiscono un singolo valore, come ad esempio: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+-   Istruzioni Transact-SQL tramite cui viene restituito un solo valore, ad esempio SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
- **Value**  
+ **Valore**  
  Consente di visualizzare il valore restituito dopo che il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] valuta l'espressione specificata in **Nome**.  
   
  Se la lunghezza di un'espressione è maggiore della larghezza della colonna **Valore** , il valore completo verrà visualizzato in una descrizione comandi quando si sposta il puntatore sulla cella **Valore** per l'espressione.  

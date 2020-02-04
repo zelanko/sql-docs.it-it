@@ -11,10 +11,10 @@ ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993064"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
@@ -39,13 +39,13 @@ $*cursor_offset*: simbolo (intero) facoltativo che specifica la riga da recupera
 ## <a name="return-value"></a>Valore restituito  
 Valore misto che restituisce una riga o false.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Il cursore viene spostato automaticamente in avanti quando si chiama un'operazione di recupero. Nella tabella seguente sono elencati i valori possibili di $*fetch_style*.  
   
 |$*fetch_style*|Descrizione|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Specifica una matrice indicizzata in base al nome della colonna.|  
-|PDO::FETCH_BOTH|Specifica una matrice indicizzata in base al nome della colonna e all'ordine in base 0. Impostazione predefinita.|  
+|PDO::FETCH_BOTH|Specifica una matrice indicizzata in base al nome della colonna e all'ordine in base 0. Questa è la modalità predefinita.|  
 |PDO::FETCH_BOUND|Restituisce true e assegna i valori come specificato da [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md).|  
 |PDO::FETCH_CLASS|Crea un'istanza ed esegue il mapping delle colonne sulle proprietà denominate.<br /><br />Chiamare [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) prima di chiamare il recupero.|  
 |PDO::FETCH_INTO|Aggiorna un'istanza della classe richiesta.<br /><br />Chiamare [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) prima di chiamare il recupero.|  
@@ -59,7 +59,7 @@ Se il cursore è scorrevole (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), le chiamate
   
 |$*cursor_orientation*|Descrizione|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|Recupera la riga seguente. Impostazione predefinita.|  
+|PDO::FETCH_ORI_NEXT|Recupera la riga seguente. Questa è la modalità predefinita.|  
 |PDO::FETCH_ORI_PRIOR|Recupera la riga precedente.|  
 |PDO::FETCH_ORI_FIRST|Recupera la prima riga.|  
 |PDO::FETCH_ORI_LAST|Recupera l'ultima riga.|  

@@ -17,13 +17,13 @@ ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f109a264d394a47164966e602b264f0fcd337e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935841"
 ---
-# <a name="sqlsrvcancel"></a>sqlsrv_cancel
+# <a name="sqlsrv_cancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Annulla un'istruzione. Ciò significa che qualsiasi risultato in sospeso per l'istruzione viene eliminato. Dopo la chiamata a questa funzione, l'istruzione può essere eseguita nuovamente se è stata preparata con [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). La chiamata a questa funzione non è necessaria se sono stati usati tutti i risultati associati all'istruzione.  

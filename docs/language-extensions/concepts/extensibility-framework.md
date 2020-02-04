@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658877"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Architettura di estendibilità nelle estensioni di linguaggio di SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "73658877"
 
 Informazioni sull'architettura di estendibilità usata per le estensioni del linguaggio di SQL Server, che consente di eseguire codice esterno in SQL Server. Java è supportato in SQL Server 2019. Il codice viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
 
-## <a name="background"></a>Informazioni preliminari
+## <a name="background"></a>Background
 
 Lo scopo del framework di estendibilità è fornire un'interfaccia tra SQL Server e i linguaggi esterni, ad esempio Java. Eseguendo un linguaggio attendibile all'interno di un framework protetto gestito da SQL Server, gli amministratori di database possono mantenere la sicurezza consentendo ai data scientist di accedere ai dati aziendali.
 

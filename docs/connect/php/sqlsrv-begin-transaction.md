@@ -18,13 +18,13 @@ ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 333a3b0c6434415c573907bdf0bdbf3e9667afcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992877"
 ---
-# <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
+# <a name="sqlsrv_begin_transaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Inizia una transazione nella connessione specificata. La transazione corrente include tutte le istruzioni della connessione specificata eseguite dopo la chiamata a **sqlsrv_begin_transaction** e prima delle chiamate a [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) o [sqlsrv_commit](../../connect/php/sqlsrv-commit.md).  

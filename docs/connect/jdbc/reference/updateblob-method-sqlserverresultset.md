@@ -16,10 +16,10 @@ ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b57b962b343da7d169f77ad09a9e9a3191da443
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997081"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>Metodo updateBlob (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67997081"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|Aggiorna la colonna designata con un valore java.sql.Blob.|  
 |[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|Aggiorna la colonna designata tramite il flusso di input specificato.|  

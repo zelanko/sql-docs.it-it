@@ -12,10 +12,10 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194107"
 ---
 # <a name="custom-report-item-class-libraries"></a>Librerie di classi dell'elemento del report personalizzato
@@ -42,7 +42,7 @@ ms.locfileid: "63194107"
 |**Width**|Larghezza del controllo dell'elemento del report personalizzato.|  
 |**Report**|Contenitore per le proprietà a livello di report, ad esempio l'elenco dei set di dati nel report.|  
 |**AltReportItem**|Oggetto elemento del report alternativo, da utilizzare se il controllo di runtime di un elemento del report personalizzato non è supportato.|  
-|**Stile**|Proprietà di stile per l'elemento del report personalizzato.|  
+|**Style**|Proprietà di stile per l'elemento del report personalizzato.|  
 |**Adornment**|Finestra dell'area di controllo utilizzata per la modifica interattiva del controllo.|  
 |**Site**|Interfaccia **ISite** del componente.|  
 |**DesignerVerbCollection**|Matrice di verbi personalizzati per il menu di scelta rapida del controllo.|  

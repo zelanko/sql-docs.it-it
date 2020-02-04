@@ -12,10 +12,10 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573300"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>configurazione dell'autenticazione di base nel server di report
@@ -80,7 +80,7 @@ ms.locfileid: "65573300"
 ## <a name="rswindowsbasic-reference"></a>Riferimento per RSWindowsBasic  
  Quando si configura l'autenticazione di base, è possibile specificare gli elementi seguenti.  
   
-|Elemento|Obbligatorio|Valori validi|  
+|Elemento|Obbligatoria|Valori validi|  
 |-------------|--------------|------------------|  
 |LogonMethod|Sì<br /><br /> Se non si specifica un valore, verrà utilizzato 3.|**2** = accesso alla rete, destinato ai server ad alte prestazioni per l'autenticazione di password in testo normale.<br /><br /> **3** = accesso non crittografato, che mantiene le credenziali di accesso nel pacchetto di autenticazione inviato con ogni richiesta HTTP, consentendo al server di rappresentare l'utente in caso di connessione ad altri server della rete. Valore predefinito.<br /><br /> Nota: i valori 0 (per accesso interattivo) e 1 (per accesso batch) **NON** sono supportati in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Facoltativo|Specifica una partizione delle risorse che include le caratteristiche di autorizzazione e autenticazione utilizzate per controllare l'accesso alle risorse protette nell'organizzazione.|  

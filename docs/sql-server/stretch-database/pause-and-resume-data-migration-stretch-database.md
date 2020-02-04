@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844536"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>Sospendere e riprendere la migrazione dei dati (Stretch Database)
@@ -55,7 +55,7 @@ GO
 2.  Fare clic con il pulsante destro del mouse e selezionare **Estendi**, quindi selezionare **Riprendi**.  
   
 ### <a name="use-transact-sql-to-resume-data-migration"></a>Usare Transact-SQL per riprendere la migrazione dei dati  
- Eseguire questo comando.  
+ Eseguire il comando seguente.  
   
 ```sql  
 USE <Stretch-enabled database name>;
@@ -68,7 +68,7 @@ ALTER TABLE <Stretch-enabled table name>
 ## <a name="check-whether-migration-is-active-or-paused"></a>Controllare se la migrazione è attiva o sospesa
 
 ### <a name="use-sql-server-management-studio-to-check-whether-migration-is-active-or-paused"></a>Usare SQL Server Management Studio per controllare se la migrazione è attiva o sospesa
-In SQL Server Management Studio aprire **Monitoraggio di Stretch Database** e controllare il valore della colonna **Stato di migrazione**. Per altre informazioni, vedere [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)(Monitorare e risolvere i problemi relativi alla migrazione dei dati).
+In SQL Server Management Studio aprire **Stretch Database Monitor** e controllare il valore della colonna **Stato della migrazione**. Per altre informazioni, vedere [Monitor and troubleshoot data migration](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md)(Monitorare e risolvere i problemi relativi alla migrazione dei dati).
 
 ### <a name="use-transact-sql-to-check-whether-migration-is-active-or-paused"></a>Usare Transact-SQL per controllare se la migrazione è attiva o sospesa
 Eseguire una query nella vista del catalogo **sys.remote_data_archive_tables** e controllare il valore della colonna **is_migration_paused** . Per altre informazioni, vedere [sys.remote_data_archive_tables](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).

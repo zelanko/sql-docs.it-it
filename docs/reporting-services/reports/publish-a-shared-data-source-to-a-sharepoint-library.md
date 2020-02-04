@@ -13,10 +13,10 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd8444cc0bcdfe29268504cf2441c10d67a9ad0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577525"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Pubblicare un'origine dati condivisa in una raccolta di SharePoint
@@ -34,11 +34,11 @@ ms.locfileid: "65577525"
   
 4.  Se si desidera pubblicare le origini dati condivise nel progetto e sovrascrivere origini dati condivise pubblicate in precedenza, impostare **OverwriteDataSources** su **True**.  
   
-5.  (Facoltativo) Per **TargetDataSourceFolder**, digitare un URL a una raccolta di SharePoint oppure a una cartella della raccolta, ad esempio `https://TestServer/TestSite/Documents/DataSources`.  
+5.  (Facoltativo) Per **TargetDataSourceFolder**, digitare un URL a una raccolta di SharePoint oppure a una cartella della raccolta, Ad esempio: `https://TestServer/TestSite/Documents/DataSources`.  
   
      Se non si specifica alcun valore, verrà utilizzato il valore **TargetReportFolder** .  
   
-6.  Per **TargetReportFolder**, digitare l'URL di una raccolta o di una cartella della raccolta, ad esempio `https://TestServer/TestSite/Documents/Reports`.  
+6.  Per **TargetReportFolder**, digitare l'URL di una raccolta o di una cartella della raccolta, Ad esempio: `https://TestServer/TestSite/Documents/Reports`.  
   
 7.  Per **TargetServerURL**, digitare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà utilizzato il sito principale predefinito, Ad esempio `https://servername`, `https://servername/site` o `https://servername/site/subsite`.  
   

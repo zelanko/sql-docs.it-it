@@ -18,10 +18,10 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2802da2b5b227f3cdb4e4ea3bfa59ca15f5d8d2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576082"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formattazione di numeri e date (Generatore report e SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "65576082"
   
 -   I formati disponibili nella pagina **Numero** rappresentano un subset delle stringhe di formato numerico standard di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per formattare un numero o una data usando un formato personalizzato non incluso nella finestra di dialogo, è possibile usare qualsiasi stringa di formato [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per i numeri o le date. Per altre informazioni sulle stringhe di formato personalizzato, vedere l'argomento [Formattazione dei tipi di dati](https://go.microsoft.com/fwlink/?LinkId=112024) su MSDN.  
   
--   Se è stata specificata una stringa di formato personalizzato, tale stringa avrà una priorità più elevata rispetto alle impostazioni predefinite che sono specifiche delle impostazioni cultura. Si supponga, ad esempio, di impostare la stringa di formato personalizzato "#, ###" per visualizzare il numero 1234 come 1,234. Questa impostazione potrebbe essere interpretata dagli utenti americani in modo diverso rispetto agli utenti europei. Prima di specificare un formato personalizzato, considerare in che modo tale formato influirà sugli utenti con impostazioni cultura differenti che potrebbero visualizzare il report.  
+-   Se è stata specificata una stringa di formato personalizzato, tale stringa avrà una priorità più elevata rispetto alle impostazioni predefinite che sono specifiche delle impostazioni cultura. Si supponga, ad esempio, di impostare la stringa di formato personalizzato "#, ###" per visualizzare il numero 1234 come 1,234. Questa impostazione potrebbe essere interpretata dagli utenti americani in modo diverso rispetto agli utenti Europai. Prima di specificare un formato personalizzato, considerare in che modo tale formato influirà sugli utenti con impostazioni cultura differenti che potrebbero visualizzare il report.  
   
 -   Se si specifica una stringa di formato non valida, il testo formattato verrà interpretato come stringa letterale che esegue l'override della formattazione.  
   

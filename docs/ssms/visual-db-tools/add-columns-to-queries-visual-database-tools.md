@@ -1,10 +1,7 @@
 ---
-title: Aggiungere colonne a query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Aggiungere colonne a query
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +12,19 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68c09e7162103cd027657beb81482803a1589a3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: b6638a8b5a749c833d2d50ca0dc6fba78d61038c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264659"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244192"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Aggiunta di colonne a query (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Per utilizzare una colonna in una query, è necessario aggiungerla alla query. È possibile aggiungere una colonna per visualizzarla nell'output della query, per utilizzarla per l'ordinamento oppure per ricercarne o riepilogarne il contenuto. È possibile decidere quali colonne utilizzate nella query devono essere incluse nel riquadro Risultati quando viene eseguita la query. Per altre informazioni, vedere [Rimuovere colonne dai risultati della query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md).  
   
@@ -35,7 +37,7 @@ Ovunque si utilizzi una colonna in una query, è anche possibile utilizzare un'e
   
 -   Nel **riquadro Diagramma**selezionare la casella di controllo accanto alla colonna da includere.  
   
-    oppure  
+    -oppure-  
   
 -   Nel **riquadro Criteri**spostarsi sulla prima riga vuota della griglia, fare clic sul campo nella colonna **Colonna** e selezionare un nome di colonna dall'elenco a discesa.  
   
@@ -54,7 +56,7 @@ Ovunque si utilizzi una colonna in una query, è anche possibile utilizzare un'e
 ## <a name="see-also"></a>Vedere anche  
 [Rimuovere colonne dai risultati della query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)  
 [Rimozione di colonne da query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)  
-[Specificare i criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

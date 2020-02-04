@@ -11,10 +11,10 @@ ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992897"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Recupero di dati come flusso usando il driver SQLSRV
@@ -45,7 +45,7 @@ Di seguito sono elencati i passaggi principali per il recupero dei dati sotto fo
 |Argomento|Descrizione|  
 |---------|---------------|  
 |[Tipi di dati con supporto di flusso tramite il driver SQLSRV](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Elenca i tipi di dati di SQL Server che possono essere recuperati come flussi.|  
-|[Procedura: Recupero di dati di tipo carattere come flusso usando il driver SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Descrive come recuperare i dati di tipo carattere come flusso.|  
+|[Procedura: Recuperare dati di tipo carattere come flusso usando il driver SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Descrive come recuperare i dati di tipo carattere come flusso.|  
 |[Procedura: Recuperare dati binari come flusso usando il driver SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Descrive come recuperare i dati binari come flusso.|  
   
 ## <a name="see-also"></a>Vedere anche  

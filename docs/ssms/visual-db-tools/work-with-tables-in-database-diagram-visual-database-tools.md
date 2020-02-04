@@ -1,10 +1,7 @@
 ---
-title: Usare tabelle in diagrammi di database (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Utilizzare tabelle in diagrammi di database
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,21 +12,27 @@ helpviewer_keywords:
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 358d9940227e9034cdd3155d521d1782abb95360
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 81611e2968dcf60bbf4d20a07364dc8fdd91a072
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262482"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246186"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Utilizzo di tabelle in diagrammi di database (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 È possibile modificare e creare tabelle di database in Progettazione tabelle o in Progettazione diagrammi di database.  
   
 > [!NOTE]  
 > Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) di Transact-SQL oppure SMO (SQL Server Management Objects). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione
+
 [Aggiunta di tabelle a diagrammi &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
 [Aggiungere tabelle correlate a diagrammi &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-related-tables-to-diagrams-visual-database-tools.md)  
@@ -44,7 +47,8 @@ ms.locfileid: "68262482"
   
 [Creazione di relazioni riflessive &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)  
   
-## <a name="reference"></a>Riferimento  
-[Finestra di dialogo Aggiungi tabella &#40;Database Designer&#41; &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)  
-  
-## <a name="related-sections"></a>Sezioni correlate  
+## <a name="reference"></a>Riferimento
+
+[Finestra di dialogo Aggiungi tabella &#40;Database Designer&#41; &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)
+
+## <a name="related-sections"></a>Sezioni correlate

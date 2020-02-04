@@ -1,10 +1,9 @@
 ---
-title: Cancellare i risultati di una query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Cancellare i risultati di una query
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 291bfbebcca9006b393fc5b50a746be14e21b283
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: e43a4142c970c1e096478a65bf7753db7ea54a36
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262578"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255491"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Cancella i risultati di una query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +38,7 @@ Dopo l'esecuzione di una query in **Progettazione query e Progettazione viste**,
     Se è in esecuzione una query quando si cancella il contenuto del riquadro Risultati, l'esecuzione verrà arrestata.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[Eseguire query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Arrestare una query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
 [Usare i dati nel riquadro Risultati &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

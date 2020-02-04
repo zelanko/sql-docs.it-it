@@ -1,6 +1,6 @@
 ---
-title: Personalizzare i menu e i tasti di scelta rapida | Microsoft Docs
-ms.custom: ''
+title: Personalizzare i menu e i tasti di scelta rapida
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6492b85430ac29fe690de9c41cd7a1625e409b20
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532875"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243915"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizzare i menu e i tasti di scelta rapida
 
@@ -107,7 +107,7 @@ Un tasto di scelta rapida consente di scegliere un comando di menu o un pulsante
   
 4.  Premere TAB per passare all'elenco **Controlli** e usare i tasti di direzione per selezionare il pulsante che si vuole modificare.  
   
-5.  Premere **ALT+M** per selezionare **Modifica selezione**.  
+5.  Premere **ALT+M**per selezionare **Modifica selezione**.  
   
 6.  Premere TAB per passare alla casella **Name** del menu di scelta rapida e digitare un nome da assegnare al pulsante sulla barra degli strumenti, anteponendo una e commerciale (&) alla lettera che si vuole usare come tasto di scelta rapida.  
   

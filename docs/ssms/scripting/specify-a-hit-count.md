@@ -1,10 +1,8 @@
 ---
-title: Specificare un numero di passaggi | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Specifica di un numero di passaggi
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
@@ -13,19 +11,27 @@ helpviewer_keywords:
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862d99fd57b22e1643ce2591fccfb0478b664074
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 03eed65b3295f1b9a1cc5b33de8809ce1d1c5c90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267687"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243544"
 ---
 # <a name="specify-a-hit-count"></a>Specifica di un numero di passaggi
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Un numero di passaggi di un punto di interruzione è un contatore incrementato dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] ogni volta che viene raggiunto il punto di interruzione. Se viene raggiunto il numero di passaggi specificato e viene soddisfatta qualsiasi condizione per il punto di interruzione, il debugger esegue l'azione specificata per il punto di interruzione.  
-  
-## <a name="hit-count-considerations"></a>Considerazioni relative al numero di passaggi  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Un numero di passaggi di un punto di interruzione è un contatore incrementato dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] ogni volta che viene raggiunto il punto di interruzione. Se viene raggiunto il numero di passaggi specificato e viene soddisfatta qualsiasi condizione per il punto di interruzione, il debugger esegue l'azione specificata per il punto di interruzione.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="hit-count-considerations"></a>Considerazioni relative al numero di passaggi
+
  Per impostazione predefinita, l'esecuzione viene interrotta ogni volta che viene rilevato un punto di interruzione. È possibile scegliere tra una delle opzioni seguenti:  
   
 -   Interrompi sempre (impostazione predefinita)  
@@ -46,7 +52,7 @@ ms.locfileid: "68267687"
   
 1.  Nella finestra dell'editor fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e scegliere **Passaggi** dal menu di scelta rapida.  
   
-     oppure  
+     -oppure-  
   
      Nella finestra **Punti di interruzione** fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e scegliere **Passaggi** dal menu di scelta rapida.  
   
@@ -60,7 +66,7 @@ ms.locfileid: "68267687"
   
 1.  Nella finestra dell'editor fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e scegliere **Passaggi** dal menu di scelta rapida.  
   
-     oppure  
+     -oppure-  
   
      Nella finestra **Punti di interruzione** fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e scegliere **Passaggi** dal menu di scelta rapida.  
   

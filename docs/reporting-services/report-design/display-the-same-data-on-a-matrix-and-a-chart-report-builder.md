@@ -9,10 +9,10 @@ ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578833"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Visualizzare dati identici in una matrice e in un grafico (Generatore report)
@@ -67,7 +67,7 @@ ms.locfileid: "65578833"
   
 14. Fare clic su **Ordinamento**.  
   
-15. Scegliere **Aggiungi**. Nella griglia delle espressioni di ordinamento verrà visualizzata una nuova riga.  
+15. Fare clic su **Aggiungi**. Nella griglia delle espressioni di ordinamento verrà visualizzata una nuova riga.  
   
 16. Nell'elenco a discesa **Ordina per**selezionare il campo del set di dati scelto nel passaggio 9 per il raggruppamento.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65578833"
   
 21. Fare clic su **Ordinamento**.  
   
-22. Scegliere **Aggiungi**. Nella griglia delle espressioni di ordinamento verrà visualizzata una nuova riga.  
+22. Fare clic su **Aggiungi**. Nella griglia delle espressioni di ordinamento verrà visualizzata una nuova riga.  
   
 23. Nell'elenco a discesa **Ordina per**selezionare il campo del set di dati scelto nel passaggio 16 per il raggruppamento.  
   

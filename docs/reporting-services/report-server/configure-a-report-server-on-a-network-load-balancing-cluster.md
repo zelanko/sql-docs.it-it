@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
-ms.openlocfilehash: cd8f8e05e9be4bcd7a48c5e2fb800c2ebbc9e308
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.date: 12/11/2019
+ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329268"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244396"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
 
@@ -56,21 +56,21 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. Generare una chiave di convalida e una chiave di decrittografia mediante la funzionalità di generazione automatica disponibile in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alla fine è necessario avere un'unica voce <`MachineKey`> da incollare nel file Web.config per ogni istanza di Server di report presente nella distribuzione scale-out.  
+1. Generare una chiave di convalida e una chiave di decrittografia mediante la funzionalità di generazione automatica disponibile in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Alla fine è necessario avere un'unica voce <`machineKey`> da incollare nel file Web.config per ogni istanza di Server di report presente nella distribuzione scale-out.  
   
     Nell'esempio seguente viene illustrato il valore che è necessario ottenere: Non copiare l'esempio nei file di configurazione in uso, in quanto i valori di chiave non sono validi.  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Aprire il file Web.config di Server di report, quindi nella sezione <`system.web`> incollare l'elemento <`MachineKey`> generato. Per impostazione predefinita, il file Web.config di Server di report si trova in \Programmi\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Aprire il file Web.config di Server di report, quindi nella sezione <`system.web`> incollare l'elemento <`machineKey`> generato. Per impostazione predefinita, il file Web.config di Server di report si trova in \Programmi\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Salvare il file.  
   
 4. Ripetere il passaggio precedente per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
   
-5. Verificare che tutti i file Web.Config nelle cartelle \Reporting Services\Reportserver contengano elementi <`MachineKey`> identici nella sezione <`system.web`>.  
+5. Verificare che tutti i file Web.Config nelle cartelle \Reporting Services\Reportserver contengano elementi <`machineKey`> identici nella sezione <`system.web`>.  
 
 ::: moniker-end
 
@@ -145,4 +145,4 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Configurare un URL &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurare una distribuzione con scalabilità orizzontale di un server di report in modalità nativa &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Gestione di un server di report in modalità nativa](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Gestire un server di report in modalità nativa di Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

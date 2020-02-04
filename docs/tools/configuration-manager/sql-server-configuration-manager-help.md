@@ -1,6 +1,6 @@
 ---
-title: Guida di Gestione configurazione SQL Server | Microsoft Docs
-ms.custom: ''
+title: Guida di Gestione configurazione SQL Server
+ms.custom: seo-lt-2019
 ms.date: 02/01/2018
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fa579e072ffdddc70e10d3ad1e9a205840374aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 8ade0d0e0944b01005866fc5c38e50ce45fae0fd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024092"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306949"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Guida di Gestione configurazione SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68024092"
  In questa sezione sono disponibili gli argomenti della Guida per le finestre di dialogo di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione SQL Server non è in grado di configurare le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager non è in grado di configurare versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="services"></a>Servizi  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestione configurazione SQL Server gestisce i servizi relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sebbene molte delle funzioni di questo strumento equivalgano alle opzioni della finestra di dialogo Servizi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, è importante sottolineare che Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue operazioni aggiuntive sui servizi che gestisce, ad esempio applicando le autorizzazioni corrette quando si cambia l'account del servizio. L'utilizzo della finestra di dialogo Servizi Windows standard per configurare i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe provocare malfunzionamenti.  

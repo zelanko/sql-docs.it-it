@@ -1,6 +1,6 @@
 ---
-title: Proprietà - SQL Server (scheda Avanzate) | Microsoft Docs
-ms.custom: ''
+title: Proprietà - SQL Server (scheda Avanzate)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b64a1c1b9d40061d5319d1e629d0f2215df72e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023972"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306830"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Proprietà - SQL Server (scheda Avanzate)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68023972"
  Indica la posizione in cui vengono memorizzati i dump di memoria in caso di errore.  
   
  **Segnalazione errori**  
- Se l'opzione è impostata su **Sì**, il programma Dr. Watson inoltra le informazioni a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o al server interno per la segnalazione degli errori se si verifica un errore grave. Per ulteriori informazioni sulla funzionalità di segnalazione degli errori, cercare l'argomento "Impostazioni segnalazione errori e utilizzo funzionalità" nella documentazione online. Per modificare questo valore, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sul server, scegliere **Proprietà** e quindi fare clic sulla pagina **Impostazioni varie server**. Le opzioni verranno visualizzate nell'area **Segnalazione informazioni** .  
+ Se l'opzione è impostata su **Sì**, il programma Dr. Watson inoltra le informazioni a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o al server interno per la segnalazione degli errori se si verifica un errore grave. Per ulteriori informazioni sulla funzionalità di segnalazione degli errori, cercare l'argomento "Impostazioni segnalazione errori e utilizzo funzionalità" nella documentazione online. Per modificare questo valore, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sul server, scegliere **Proprietà**e quindi fare clic sulla pagina **Impostazioni varie server** . Le opzioni verranno visualizzate nell'area **Segnalazione informazioni** .  
   
  **Versione file**  
  Visualizza la versione dell'eseguibile di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

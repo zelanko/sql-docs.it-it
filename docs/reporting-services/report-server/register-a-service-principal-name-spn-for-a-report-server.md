@@ -9,10 +9,10 @@ ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500227"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrare un nome dell'entità servizio (SPN) per un server di report
@@ -21,7 +21,7 @@ ms.locfileid: "66500227"
 ## <a name="about-spns"></a>Informazioni sugli SPN  
  Un SPN è un identificatore univoco per un servizio in una rete che utilizza l'autenticazione Kerberos. È costituito da una classe di servizio, un nome host e talvolta una porta. I nomi dell'entità servizio HTTP non richiedono una porta. In una rete che utilizza l'autenticazione Kerberos un SPN per il server deve essere registrato con un account computer predefinito, ad esempio NetworkService o LocalSystem, o un account utente. Gli SPN vengono registrati automaticamente per gli account predefiniti. Quando, tuttavia, si esegue un servizio utilizzando un account utente di dominio, è necessario registrare manualmente l'SPN per l'account che si desidera utilizzare.  
   
- Per creare un SPN, è possibile usare l'utilità della riga di comando **SetSPN** . Per ulteriori informazioni, vedere quanto segue:  
+ Per creare un SPN, è possibile usare l'utilità della riga di comando **SetSPN** . Per altre informazioni, vedere gli argomenti seguenti:  
   
 -   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
@@ -50,7 +50,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 2.  Accedere al controller di dominio come amministratore di dominio.  
   
-3.  Aprire la finestra del prompt dei comandi.  
+3.  Aprire una finestra del prompt dei comandi.  
   
 4.  Copiare il comando seguente, sostituendo i valori segnaposto con quelli effettivi, validi per la rete in uso:  
   
@@ -58,7 +58,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
     Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-     Esempio: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+     Ad esempio: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  Eseguire il comando.  
   

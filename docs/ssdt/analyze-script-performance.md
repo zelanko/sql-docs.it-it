@@ -1,25 +1,24 @@
 ---
-title: Analizzare le prestazioni degli script | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Analizzare le prestazioni degli script
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 355259372566758c48d6a20451627a51e65c6c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0c762da9cf6bb8a2a66831e4a75c98a4360afc6a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984677"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245556"
 ---
 # <a name="analyze-script-performance"></a>Analizzare le prestazioni degli script
+
 Gli strumenti forniti da SQL Server Data Tools consentono di determinare se è possibile migliorare le prestazioni di query, stored procedure o script. Il monitoraggio delle statistiche client quali i tempi di risposta delle query più frequenti consente, ad esempio, di determinare se sono necessarie modifiche alle query o agli indici nelle tabelle. Tali statistiche possono includere l'ora di esecuzione del client, il profilo delle query e i pacchetti/byte inviati e ricevuti.  
   
 Inoltre, è consigliabile risolvere determinati problemi di prestazioni analizzando le query dell'applicazione e gli aggiornamenti inoltrati al database dall'applicazione, oltre al modo in cui tali query e aggiornamenti interagiscono con i dati inclusi nel database e nello schema del database. I piani di esecuzione consentono di visualizzare graficamente i metodi di recupero dei dati scelti da Query Optimizer di SQL Server e di mostrare i costi di esecuzione di istruzioni e query specifiche. Pertanto, aiutano a comprendere la modalità con cui una query SQL verrà elaborata da SQL Server e di determinare la causa di eventuali riduzioni delle prestazioni.  

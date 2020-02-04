@@ -1,25 +1,26 @@
 ---
-title: SQL Server Data Tools | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server Data Tools
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bd026b76a7ce6e891c4267ad2c11b4e869a4d35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 2049550374569d10631239419cd380c115022ff2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110688"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256337"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
+
 SQL Server Data Tools (SSDT) trasforma lo sviluppo dei database, introducendo un modello diffuso e dichiarativo che si estende a tutte le fasi di sviluppo di database all'interno di Visual Studio. È possibile usare le funzionalità di progettazione di SSDT Transact\-SQL per creare, gestire ed eseguire il debug e il refactoring di database. È possibile utilizzare un progetto di database o direttamente un'istanza del database connessa in locale o ospitata.  
   
 Gli sviluppatori possono usare i comuni strumenti di Visual Studio per lo sviluppo di database, Strumenti come, ad esempio, navigazione nel codice, IntelliSense, supporto del linguaggio di programmazione equiparabile a quello disponibile per C# e Visual Basic, convalida specifica della piattaforma, debug e modifica dichiarativa nell'editor Transact\-SQL. SSDT fornisce inoltre una Progettazione tabelle visiva per creare e modificare tabelle in progetti di database o istanze del database connesse. Mentre si lavora sui progetti di database in un ambiente basato su team, è possibile utilizzare il controllo della versione per tutti i file. Al momento della pubblicazione del progetto, è possibile eseguire la pubblicazione in tutte le piattaforme SQL supportate, inclusi il database SQL e SQL Server. La funzionalità di convalida della piattaforma di SSDT garantisce il funzionamento degli script nella destinazione specificata.  

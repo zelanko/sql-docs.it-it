@@ -13,10 +13,10 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194829"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
@@ -74,7 +74,7 @@ Per utilizzare l'esercitazione è necessario che nel computer sia installato qua
 **Tempo previsto per il completamento dell'esercitazione:** 30 minuti. Ulteriori 30 minuti qualora l'esercitazione sul report di base non venga completata.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
-[Creare un report di tabelle semplice &#40;Esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
+[Sottoscrizioni guidate dai dati](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+[Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

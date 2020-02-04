@@ -9,10 +9,10 @@ ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 24a50de92a2b182295abc926c98358fa56e2f379
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581770"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Raccolte predefinite - Riferimenti alla raccolta ReportItems (Generatore report)
@@ -24,7 +24,7 @@ ms.locfileid: "65581770"
 ## <a name="using-the-reportitems-value-property"></a>Utilizzo della proprietà Valute di ReportItems  
  Per gli elementi nella raccolta **ReportItems** è disponibile solo la proprietà Value. È possibile usare il valore per un elemento di **ReportItems** per visualizzare o calcolare i dati di un altro campo del report. Per accedere al valore della casella di testo corrente, è possibile usare la proprietà globale predefinita Me.Value di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] o semplicemente Value. Nelle funzioni per i report come First e nelle funzioni di aggregazione utilizzare la sintassi completa.  
   
- Esempio:  
+ Ad esempio:  
   
 -   Questa espressione, se inserita in una casella di testo, visualizza il valore di una casella di testo **ReportItem** denominata `Textbox1`:  
   

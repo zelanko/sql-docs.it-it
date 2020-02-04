@@ -9,10 +9,10 @@ ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580667"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvare i report in un server di report (Generatore report)
@@ -48,7 +48,7 @@ ms.locfileid: "65580667"
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Salvataggio di report &#40;Generatore report&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Esportare un report in un altro tipo di file &#40;Generatore report e SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   

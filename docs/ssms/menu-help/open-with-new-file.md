@@ -1,6 +1,6 @@
 ---
-title: Apri con (Nuovo File) | Microsoft Docs
-ms.custom: ''
+title: Apri con (Nuovo file)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0dc393db0da76d48c3d64a04a0ba57cda580ad8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252048"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245778"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Visualizza l'elenco degli editor disponibili in [!INCLUDE[msCoName](../../includ
 **Apri**  
 Fare clic su **Apri** per aprire il documento nell'editor selezionato.  
   
-**Aggiungi**  
+**Aggiungere**  
 Fare clic su questo pulsante per aggiungere un programma all'elenco visualizzato in **Selezionare un programma dall'elenco**. È possibile digitare il percorso del programma nel campo **Nome programma** oppure fare clic su **Sfoglia**per selezionare il percorso del programma. In **Nome descrittivo**immettere il nome del programma da includere nell'elenco visualizzato in **Selezionare un programma dall'elenco**.  
   
 **Rimuovi**  

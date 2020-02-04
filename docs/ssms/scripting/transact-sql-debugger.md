@@ -1,5 +1,6 @@
 ---
 title: Debugger Transact-SQL
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -9,15 +10,15 @@ ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 8e705be1cda43f0645b53f74f3f658a5bc8c2f2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097932"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252997"
 ---
 # <a name="transact-sql-debugger"></a>Debugger Transact-SQL
 
@@ -68,8 +69,8 @@ Ogni volta che il debugger sospende l'esecuzione in corrispondenza di un'istruzi
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Descrive come configurare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per il debugging remoto.|[Configurare le regole del firewall prima di eseguire il debugger TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|Descrive come avviare, arrestare e controllare l'operazione del debugger.|[Esecuzione del debugger Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|Descrive come utilizzare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per avanzare nel codice.|[Esecuzione istruzione per istruzione del codice Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
+|Descrive come avviare, arrestare e controllare l'operazione del debugger.|[Eseguire il debugger Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
+|Descrive come utilizzare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per avanzare nel codice.|[Eseguire istruzione per istruzione il codice Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Descrive come utilizzare il debugger per visualizzare dati [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio parametri e variabili, e informazioni sul sistema.|[Informazioni del debugger Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
 
 ## <a name="see-also"></a>Vedere anche

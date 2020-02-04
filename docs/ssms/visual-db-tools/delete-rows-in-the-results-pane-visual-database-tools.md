@@ -1,10 +1,9 @@
 ---
-title: Eliminare le righe nel riquadro Risultati (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Eliminare le righe nel riquadro Risultati
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,14 @@ helpviewer_keywords:
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a07da8ed6f57a8ebcc693391bc69a0ba88175b87
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 227c2b460eac208827e188f35b4cc8630542c77c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263843"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247544"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Eliminare le righe nel riquadro Risultati (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +45,6 @@ Per eliminare record dal database, è necessario eliminare righe nel riquadro Ri
 > Se una delle righe selezionate non può essere eliminata dal database, non ne verrà eliminata alcuna e verrà visualizzato un messaggio che indicherà quali righe non possono essere eliminate.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
-[Definizione di condizioni di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Creare query di eliminazione &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
+[Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

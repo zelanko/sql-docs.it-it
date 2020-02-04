@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Aggiungere condizioni di test a unit test di SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Aggiungere condizioni di test a unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afc0e433a7d39dffa2e4d31d03292d2aee07a4a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4216358a4b8b541ed724b70fe68245a16235664b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899178"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241631"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Procedura: Aggiungere condizioni di test a unit test di SQL Server
+
 È possibile aggiungere condizioni di test a uno unit test di SQL Server tramite la **finestra di progettazione unit test di SQL Server**. Quando si salva la classe di test, le condizioni di test vengono salvate automaticamente nel progetto di test come codice Visual C\# o Visual Basic nel file del codice sorgente contenente la classe di test. Dopo aver salvato una condizione di test, è possibile modificarla nella **finestra di progettazione unit test di SQL Server** o nel relativo file del codice sorgente.  
   
 ### <a name="to-add-test-conditions-to-a-sql-server-unit-test"></a>Per aggiungere condizioni di test a uno unit test di SQL Server  

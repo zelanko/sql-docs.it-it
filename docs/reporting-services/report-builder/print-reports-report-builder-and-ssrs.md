@@ -9,10 +9,10 @@ ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581161"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>Stampare report - Reporting Services (SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "65581161"
  Vengono fornite istruzioni dettagliate su come stampare un report, come controllare i margini di una pagina e come specificare il formato carta per i report di cui verrà eseguito il rendering da renderer di interruzioni di pagina manuali, ovvero PDF, immagine o stampa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esportare report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Esportare report &#40;Generatore Report e SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Intestazioni di pagina e piè di pagina &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Immagini &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  

@@ -17,13 +17,13 @@ ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f94c20c8aa6cf603c6588586e072813682b2ce68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992697"
 ---
-# <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
+# <a name="sqlsrv_get_config"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Restituisce il valore corrente dell'impostazione di configurazione specificata.  
@@ -41,7 +41,7 @@ sqlsrv_get_config( string $setting )
 ## <a name="return-value"></a>Valore restituito  
 Il valore dell'impostazione specificata dal parametro *$setting* . Se viene specificata un'impostazione non valida, viene restituito **false** e viene aggiunto un errore alla raccolta degli errori.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Se **false** config **sqlsrv_get_config**, è necessario effettuare una chiamata a [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) per determinare se si è verificato un errore oppure se **false** è il valore dell'impostazione specificata dal parametro *$setting* .  
   
 ## <a name="see-also"></a>Vedere anche  

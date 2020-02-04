@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843753"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identificare i database e le tabelle per Stretch Database con Data Migration Assistant
@@ -37,7 +37,7 @@ ms.locfileid: "73843753"
 
 3.  Selezionare **SQL Server** come **Source server type** (Tipo server di origine) e **Target server type** (Tipo server di destinazione).
 
-4.  Selezionare **Crea**. 
+4.  Selezionare **Create** (Crea). 
 
 5. Nella pagina **Options** (Opzioni) (passaggio 1) selezionare **New features recommendation** (Nuove funzionalità raccomandate). Facoltativamente, deselezionare l'opzione **Compatibility issues** (Problemi di compatibilità).
 
@@ -45,7 +45,7 @@ ms.locfileid: "73843753"
 
 7.  Selezionare **Start Assessment** (Avvia valutazione).
 
-## <a name="review-the-results"></a>Controllare i risultati  
+## <a name="review-the-results"></a>Esaminare i risultati  
   
 1.  Al termine dell'analisi, nella pagina **Review results** (Verifica risultati) (passaggio 3) selezionare l'opzione **Funzionalità consigliate** e quindi selezionare la scheda **Archiviazione**.
 
@@ -59,13 +59,13 @@ Con il rilascio di Data Migration Assistant, che sostituisce ed estende Gestione
 ## <a name="next-step"></a>Passaggio successivo  
  Abilitare Stretch Database.  
   
--   Per abilitare Estensione database in un **database**, vedere [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
+-   Per abilitare Stretch Database in un **database**, vedere [Abilitare Stretch Database per un database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
--   Per abilitare Estensione database in un'altra **tabella**, quando l'estensione è già abilitata nel database, vedere [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). 
+-   Per abilitare Stretch Database in un'altra **tabella** quando Stretch è già abilitato nel database, vedere [Abilitare Stretch Database per una tabella](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). 
   
 ## <a name="see-also"></a>Vedere anche  
  [Limitazioni per Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
- [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [Enable Stretch Database for a table (Abilitare Estensione database per una tabella)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [Abilitare Stretch Database per un database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Abilitare Stretch Database per una tabella](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

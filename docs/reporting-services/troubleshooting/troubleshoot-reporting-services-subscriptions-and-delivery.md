@@ -9,10 +9,10 @@ ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572120"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Risolvere i problemi di sottoscrizioni e recapito di Reporting Services
@@ -46,7 +46,7 @@ Se si esegue un'applicazione di posta elettronica mediante il protocollo POP3 in
   
 dove \<error message> viene sostituito da altre informazioni sul messaggio di errore restituite da Collaboration Data Objects (CDO).  
   
-### <a name="to-resolve-this-problem"></a>Per risolvere il problema:  
+### <a name="to-resolve-this-problem"></a>Per risolvere questo problema:  
 * Impostare su 1 il valore dell'elemento `SendUsing` nel file **Rsreportserver.config** .  
 * Cancellare il valore della proprietà `SMTPServer` in modo che sia vuota. Sarà inoltre necessario specificare un valore per la proprietà `SMTPServerPickupDirectory` .   
   

@@ -9,10 +9,10 @@ ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63316643"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Aggiungere visualizzazioni nei report per dispositivi mobili di Reporting Services
@@ -188,9 +188,9 @@ I grafici a cascata rappresentano una buona soluzione:
    I mesi in cui si è registrato un guadagno, come settembre, ottobre e novembre, sono visualizzati in verde. 
 
 ## <a name="see-also"></a>Vedere anche 
-* [Esegue il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Eseguire il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Aggiungere gli strumenti di navigazione ai report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
-* [Aggiungere griglie dei dati al report per dispositivi mobili](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
+* [Aggiungere griglie dei dati al report per dispositivi mobili in Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Aggiungere indicatori ai report per dispositivi mobili | Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
 

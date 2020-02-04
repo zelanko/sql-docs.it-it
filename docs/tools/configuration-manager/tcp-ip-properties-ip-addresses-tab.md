@@ -1,6 +1,6 @@
 ---
-title: Proprietà TCP/IP (scheda indirizzi IP) | Microsoft Docs
-ms.custom: ''
+title: Proprietà TCP/IP
+ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 927f732d4f04c43b5e2973a82509e4da7970a448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023815"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307560"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Proprietà TCP/IP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "68023815"
  All'avvio, quando un'istanza di SQL Server è configurata per restare in attesa sulle porte dinamiche, verifica che nel sistema operativo sia disponibile una porta e apre un endpoint per la porta. Per eseguire la connessione, le connessioni in ingresso devono specificare il numero di quella porta. Poiché il numero di porta può variare a ogni avvio di SQL Server, SQL Server offre il servizio SQL Server Browser, che esegue il monitoraggio delle porte e indirizza le connessioni in ingresso alla porta corrente per l'istanza. L'uso di porte dinamiche rende più complessa la connessione a SQL Server tramite un firewall, perché il numero di porta può cambiare al riavvio di SQL Server con la conseguente necessità di modificare le impostazioni del firewall. Per evitare problemi di connessione attraverso un firewall, configurare SQL Server per l'uso di una porta statica.  
   
 ## <a name="options"></a>Opzioni  
- **Attiva**  
+ **Attivo**  
  Indica che l'indirizzo IP è attivo sul computer. Non disponibile per **IPAll**.  
   
- **Abilitata**  
+ **Enabled**  
  Se la proprietà **Attesa su tutti** nella finestra di dialogo **Proprietà TCP/IP** (scheda Protocollo) è impostata su **No**, questa proprietà indica se SQL Server è in attesa sull'indirizzo IP. Se la proprietà **Attesa su tutti** nella finestra di dialogo **Proprietà TCP/IP** (scheda Protocollo) è impostata su **Sì**, questa proprietà viene ignorata. Non disponibile per **IPAll**.  
   
  **Indirizzo IP**  

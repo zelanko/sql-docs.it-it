@@ -1,6 +1,6 @@
 ---
-title: Opzioni (Esplora oggetti di SQL Server - pagina Generazione script) | Microsoft Docs
-ms.custom: ''
+title: Opzioni (Esplora oggetti di SQL Server - pagina Generazione script)
+ms.custom: seo-lt-2019
 ms.date: 08/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,26 +13,26 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0991ab88cb37ab2f4decb67194ae78ed62d2c13d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844533"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251079"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opzioni (Esplora oggetti di SQL Server - pagina Generazione script)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Usare questa pagina per impostare le opzioni di scripting valide per i comandi seguenti dei menu di scelta rapida degli oggetti in **Esplora oggetti**:  
   
--   Comandi **Modifica** per tabelle e viste utente.  
+-   Comandi**Modifica** per tabelle e viste utente.  
   
 -   Comandi **Crea script<object> per** per oggetti creati dall'utente.  
   
--   Comandi **Modifica** per oggetti creati dall'utente.  
+-   Comandi**Modifica** per oggetti creati dall'utente.  
   
 -   Questa pagina consente inoltre di impostare i valori predefiniti per le opzioni di creazione di script per **Generazione guidata script di SQL Server**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 I comandi **Modifica** e **Cambia** potrebbero produrre risultati diversi rispetto al comando **Crea script <object> per** con la stessa impostazione dell'opzione. I comandi **Modifica** e **Cambia** sono infatti stati creati per modificare oggetti nel database corrente durante una sessione dell'editor di query. Il comando **Crea script<object> per** è invece stato creato per generare uno script affinché possa essere usato in seguito per la creazione di oggetti.  
   
 ## <a name="options"></a>Opzioni  
@@ -46,7 +46,7 @@ Specificare le opzioni di scripting selezionando le impostazioni desiderate tra 
 Consente di separare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] singole utilizzando un separatore batch. Per modificare il separatore batch predefinito per l' **editor di query**, scegliere **Strumenti**/**Opzioni**/**Esecuzione query**/**SQL Server**/**Generale**/**Separatore batch**. Il valore predefinito è False. Per altre informazioni, vedere [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Includi intestazioni descrittive**  
-Consente di aggiungere commenti descrittivi allo script dividendolo in sezioni per ogni oggetto. Il valore predefinito è True. Per altre informazioni, vedere [/ *...* / (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
+Consente di aggiungere commenti descrittivi allo script dividendolo in sezioni per ogni oggetto. Il valore predefinito è true. Per altre informazioni, vedere [/ *...* / (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
   
 **Includi abilitazione compressione VarDecimal**  
 Consente di includere le opzioni per l'archiviazione vardecimal. Il valore predefinito è False. Per altre informazioni, vedere [sp_db_vardecimal_storage_format (Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542).  
@@ -58,7 +58,7 @@ Consente di includere nello script le informazioni sul rilevamento delle modific
 Consente di includere uno script per cataloghi full-text. Il valore predefinito è False. Per altre informazioni, vedere [CREATE FULLTEXT CATALOG (Transact-SQL)](https://msdn.microsoft.com/d7a8bd93-e2d7-4a40-82ef-39069e65523b).  
   
 **Script per USE <database>**  
-Aggiunge l'istruzione USE DATABASE allo script per creare oggetti di database nel contesto del database di **Esplora oggetti** corrente. Se si prevede di utilizzare lo script in un database diverso, selezionare False per omettere tale istruzione. Il valore predefinito è True. Per altre informazioni, vedere [USE (Transact-SQL)](https://msdn.microsoft.com/c05acac8-c063-4770-8e36-d7f71d500b10).  
+Aggiunge l'istruzione USE DATABASE allo script per creare oggetti di database nel contesto del database di **Esplora oggetti** corrente. Se si prevede di utilizzare lo script in un database diverso, selezionare False per omettere tale istruzione. Il valore predefinito è true. Per altre informazioni, vedere [USE (Transact-SQL)](https://msdn.microsoft.com/c05acac8-c063-4770-8e36-d7f71d500b10).  
   
 ### <a name="object-scripting-options"></a>Opzioni di scripting per gli oggetti  
 
@@ -79,7 +79,7 @@ Consente di includere le proprietà estese nello script qualora l'oggetto dispon
 Consente di includere il proprietario nello script generato. Il valore predefinito è False.  
   
 **Script per autorizzazioni**  
-Consente di includere autorizzazioni sugli oggetti di database nello script. Il valore predefinito è True. Per altre informazioni, vedere [Autorizzazioni](../../relational-databases/security/permissions-database-engine.md).  
+Consente di includere autorizzazioni sugli oggetti di database nello script. Il valore predefinito è true. Per altre informazioni, vedere [Autorizzazioni](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="tableview-options"></a>Opzioni tabella/vista  
 Le opzioni seguenti si applicano solo agli script per tabelle o viste.  
@@ -88,22 +88,22 @@ Le opzioni seguenti si applicano solo agli script per tabelle o viste.
 Consente di convertire i tipi di dati definiti dall'utente nei tipi di base da cui sono stati creati. Utilizzare True se il tipo di dati definito dall'utente nel database di origine non è presente nel database in cui lo script verrà eseguito. Utilizzare False per mantenere i tipi di dati definiti dall'utente. Il valore predefinito è False. Per altre informazioni, vedere [CREATE TYPE (Transact-SQL)](https://msdn.microsoft.com/2202236b-e09f-40a1-bbc7-b8cff7488905).  
   
 **Genera comandi SET ANSI PADDING**  
-Consente di aggiungere l'istruzione SET ANSI_PADDING prima e dopo ogni istruzione CREATE TABLE. Il valore predefinito è True. Per altre informazioni, vedere [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0).  
+Consente di aggiungere l'istruzione SET ANSI_PADDING prima e dopo ogni istruzione CREATE TABLE. Il valore predefinito è true. Per altre informazioni, vedere [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0).  
   
 **Includi regole di confronto**  
-Consente di includere le regole di confronto nella definizione della colonna. Il valore predefinito è True. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+Consente di includere le regole di confronto nella definizione della colonna. Il valore predefinito è true. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 **Includi proprietà IDENTITY**  
-Consente di includere definizioni per il valore di inizializzazione di IDENTITY e l'incremento di IDENTITY. Il valore predefinito è True. Per altre informazioni, vedere [IDENTITY (Property) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c).  
+Consente di includere definizioni per il valore di inizializzazione di IDENTITY e l'incremento di IDENTITY. Il valore predefinito è true. Per altre informazioni, vedere [IDENTITY (Property) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c).  
   
 **Schema per qualifica dei riferimenti alle chiavi esterne**  
-Consente di aggiungere il nome dello schema ai riferimenti alle tabelle per i vincoli FOREIGN KEY. Il valore predefinito è True.  
+Consente di aggiungere il nome dello schema ai riferimenti alle tabelle per i vincoli FOREIGN KEY. Il valore predefinito è true.  
   
 **Script per associazione di valori predefiniti e regole**  
-Includere le chiamate alle stored procedure di associazione **sp_bindefault** e **sp_bindrule** . Il valore predefinito è True. Per altre informazioni, vedere [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) e [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67).  
+Includere le chiamate alle stored procedure di associazione **sp_bindefault** e **sp_bindrule** . Il valore predefinito è true. Per altre informazioni, vedere [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) e [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67).  
   
 **Script per vincoli CHECK**  
-Aggiunge [vincoli CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) allo script. Il valore predefinito è True.  
+Aggiunge [vincoli CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) allo script. Il valore predefinito è true.  
   
 **Script per valori predefiniti**  
 Consente di includere i valori predefiniti delle colonne nello script. Il valore predefinito è False. Per altre informazioni, vedere [CREATE DEFAULT (Transact-SQL)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41).  
@@ -118,13 +118,13 @@ Include [vincoli FOREIGN KEY](../../relational-databases/tables/primary-and-fore
 Consente di includere indici full-text nello script. Il valore predefinito è False. Per altre informazioni, vedere [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd).  
   
 **Script per indici**  
-Consente di includere indici cluster, non cluster e XML nello script. Il valore predefinito è True. Per altre informazioni, vedere [CREATE INDEX (Transact-SQL)](https://msdn.microsoft.com/d2297805-412b-47b5-aeeb-53388349a5b9).  
+Consente di includere indici cluster, non cluster e XML nello script. Il valore predefinito è true. Per altre informazioni, vedere [CREATE INDEX (Transact-SQL)](https://msdn.microsoft.com/d2297805-412b-47b5-aeeb-53388349a5b9).  
   
 **Script per schemi di partizione**  
 Consente di includere schemi di partizione di tabelle nello script. Il valore predefinito è False. Per altre informazioni, vedere [CREATE PARTITION SCHEME (Transact-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4).  
   
 **Script per chiavi primarie**  
-Include [vincoli primari e FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md) nello script. Il valore predefinito è True.  
+Include [vincoli primari e FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md) nello script. Il valore predefinito è true.  
   
 **Script per statistiche**  
 Consente di includere statistiche definite dall'utente nello script. Il valore predefinito è False. Per altre informazioni, vedere [CREATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2).  

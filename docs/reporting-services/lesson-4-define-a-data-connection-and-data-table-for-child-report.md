@@ -9,10 +9,10 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651361"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio
@@ -26,7 +26,7 @@ Dopo aver progettato il report padre, il passaggio successivo consiste nel crear
   
     Verrà aggiunto un nuovo file XSD **DataSet2.xsd** al progetto e verrà aperto Progettazione DataSet.  
   
-3.  Dalla finestra della casella degli strumenti trascinare un controllo **TableAdapter** nell'area di progettazione. Verrà avviata la configurazione guidata **TableAdapter** .  
+3.  Dalla finestra della casella degli strumenti trascinare un controllo **TableAdapter** nell'area di progettazione. Viene avviata la configurazione guidata **TableAdapter** .  
   
 4.  Nella pagina **Seleziona connessione dati** è possibile selezionare la connessione creata nella lezione 2. Se è già selezionata, selezionate **Avanti** e andare al passaggio 8. In caso contrario, selezionare **Nuova connessione**.  
   
@@ -40,11 +40,11 @@ Dopo aver progettato il report padre, il passaggio successivo consiste nel crear
   
     3.  Nell'elenco a discesa **Selezionare o immettere un nome di database** selezionare **AdventureWorks2014**.  
   
-    4.  Selezionare **OK**e quindi selezionare **Avanti**.  
+    4.  Selezionare **OK**, quindi **Avanti**.  
   
 6.  Se è stato selezionato **Usa autenticazione di SQL Server** nel passaggio 5 (b), selezionare l'opzione per includere i dati sensibili nella stringa o per impostare le informazioni nel codice dell'applicazione.  
   
-7.  Nella pagina **Salva stringa di connessione nel file di configurazione dell'applicazione** digitare il nome per la stringa di connessione o accettare l'impostazione predefinita **AdventureWorks2014ConnectionString**. Fare clic su **Avanti**.  
+7.  Nella pagina **Salva stringa di connessione nel file di configurazione dell'applicazione** digitare il nome per la stringa di connessione o accettare l'impostazione predefinita **AdventureWorks2014ConnectionString**. Selezionare **Avanti**.  
   
 8.  Nella pagina **Seleziona un tipo di comando** selezionare **Usa istruzioni SQL**e quindi fare clic su **Avanti**.  
   

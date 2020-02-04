@@ -12,10 +12,10 @@ ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51fcade75cff0f5cafa0e780a823ce505e43e297
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576664"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Impostare i parametri in un report pubblicato - Modalità integrata SharePoint
@@ -77,7 +77,7 @@ ms.locfileid: "65576664"
   
     3.  Selezionare **Interno** se si usa un valore predefinito e non si vuole che il parametro venga visualizzato nel riquadro Parametri o nelle pagine della sottoscrizione.  
   
-7.  Fare clic su **Applica**.  
+7.  Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  

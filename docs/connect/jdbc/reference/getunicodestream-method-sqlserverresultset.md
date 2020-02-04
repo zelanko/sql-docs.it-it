@@ -16,10 +16,10 @@ ms.assetid: 0dd61865-663b-47e2-b417-e9df418894cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 079663faa466b171df35481ee69374194c015acb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978385"
 ---
 # <a name="getunicodestream-method-sqlserverresultset"></a>Metodo getUnicodeStream (SQLServerResultSet)
@@ -32,7 +32,7 @@ ms.locfileid: "67978385"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo getUnicodeStream &#40;int&#41;](../../../connect/jdbc/reference/getunicodestream-method-int.md)|Recupera il valore dell'indice della colonna designata nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come flusso di caratteri Unicode.|  
 |[Metodo getUnicodeStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getunicodestream-method-java-lang-string.md)|Recupera il valore del nome della colonna designata nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come flusso di caratteri Unicode.|  

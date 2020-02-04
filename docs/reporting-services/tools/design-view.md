@@ -13,13 +13,13 @@ ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577876"
 ---
-# <a name="design-view"></a>Visualizzazione Progettazione
+# <a name="design-view"></a>Visualizzazione progettazione
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Progettazione report usare la visualizzazione Progettazione per disporre gli elementi nel report. Tale visualizzazione viene talvolta denominata superficie di progettazione o visualizzazione Layout.  
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)
 ## <a name="report-design-surface"></a>Area di progettazione del report  

@@ -9,10 +9,10 @@ ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581202"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Esportazione in un file CSV (Generatore report e SSRS)
@@ -53,9 +53,9 @@ ms.locfileid: "65581202"
   
 -   Elementi personalizzati del report  
   
--   Riga  
+-   Grafico a linee  
   
--   image  
+-   Image  
   
 -   Rectangle  
   

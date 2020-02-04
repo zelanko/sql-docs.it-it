@@ -1,6 +1,6 @@
 ---
-title: Eseguire ricerche interattive nei documenti | Microsoft Docs
-ms.custom: ''
+title: Ricerca interattiva all'interno di documenti
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -14,12 +14,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67e8e90d8ca45afd827ca44a4fa87ced24184505
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5bcdb8d269deb90d7c88c0f88a98e55289c89635
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264187"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253657"
 ---
 # <a name="search-documents-interactively"></a>Ricerca interattiva all'interno di documenti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "68264187"
   
 5.  Fare clic su **Sostituisci**e continuare a fare clic su **Sostituisci** fino all'ultima sostituzione nell'ultimo file. Fare clic su **Trova successivo** per ignorare una corrispondenza che non si desidera sostituire.  
   
-     oppure  
+     -oppure-  
   
      Scegliere **Sostituisci tutto** per sostituire tutte le corrispondenze. Verrà visualizzata una finestra di messaggio con il numero totale di sostituzioni.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "68264187"
  [Ricerca e sostituzione](../../relational-databases/scripting/search-and-replace.md)   
  [Ricerca nei documenti utilizzando gli elenchi dei risultati](../../relational-databases/scripting/search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Testo di ricerca con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
+ [Eseguire ricerche di testo con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
   
   

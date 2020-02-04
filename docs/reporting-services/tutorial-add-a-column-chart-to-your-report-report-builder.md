@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041401"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
@@ -51,11 +51,11 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
-3.  Nel riquadro a destra fare clic su **Creazione guidata grafico**.  
+3.  Nel riquadro di destra fare clic su **Creazione guidata grafico**.  
   
 4.  Nella pagina **Scegliere un set di dati**fare clic su **Crea un set di dati**, quindi scegliere **Avanti**.  
   
-5.  Nella pagina **Scegliere una connessione a un'origine dati** selezionare un'origine dati esistente o trovare il server di report, quindi selezionare un'origine dati e fare clic su **Avanti**. Potrebbe essere necessario immettere un nome utente e una password.  
+5.  Nella pagina **Scegliere una connessione a un'origine dati** selezionare un'origine dati esistente o individuare il server di report, quindi selezionare un'origine dati e fare clic su **Avanti**. Potrebbe essere necessario immettere un nome utente e una password.  
   
     > [!NOTE]  
     > L'origine dati scelta non ha importanza purché si disponga delle autorizzazioni appropriate. Non verranno recuperati dati dall'origine dati. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -83,22 +83,22 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
     UNION SELECT CAST('2015-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
 ## <a name="ChartType"></a>2. Scegliere il tipo di grafico  
 È possibile scegliere tra diversi tipi predefiniti di grafico, quindi modificare il grafico dopo aver completato la procedura guidata.  
   
 ### <a name="to-add-a-column-chart"></a>Per aggiungere un istogramma  
   
-1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico** . Scegliere **Avanti**.  
+1.  L'istogramma è il tipo di grafico predefinito nella pagina **Scegliere un tipo di grafico** . Fare clic su **Avanti**.  
   
 2.  Nella pagina **Disponi campi del grafico** trascinare il campo SalesDate in **Categorie**. Le categorie vengono visualizzate sull'asse orizzontale.  
   
 3.  Trascinare il campo Sales in **Valori**. Nella casella **Valori** viene visualizzato Sum(Sales) perché per ogni data viene aggregata la somma dei totali di vendita. I valori vengono visualizzati sull'asse verticale.  
   
-4.  Scegliere **Avanti**.  
+4.  Fare clic su **Avanti**.  
  
 6.  Fare clic su **Fine**.  
   
@@ -241,7 +241,7 @@ Una media mobile è una media dei dati della serie calcolata nel tempo. La media
   
 1.  Passare alla visualizzazione di progettazione report.  
   
-2.  Fare doppio clic nel grafico per visualizzare il riquadro **Dati grafico** .  
+2.  Fare doppio clic sul grafico per visualizzare il riquadro **Dati grafico** .  
   
 3.  Fare clic con il pulsante destro del mouse sul campo **[Sum(Sales)]** disponibile nell'area **Valori** , quindi scegliere **Aggiungi serie calcolata**.  
 
@@ -297,7 +297,7 @@ Nel grafico viene visualizzata una riga in cui è riportata la media mobile dell
   
 4.  Fare clic su **Salva**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 Questo passaggio conclude l'esercitazione relativa all'aggiunta di un istogramma al report. Per altre informazioni sui grafici, vedere [Grafici &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) e [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  

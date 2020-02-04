@@ -17,10 +17,10 @@ ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
 ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68731123"
 ---
 # <a name="sql-server-powershell-provider"></a>Provider PowerShell per SQL Server
@@ -31,7 +31,7 @@ Il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Windows P
   
 > [!NOTE]
 > Esistono due moduli SQL Server PowerShell: **SqlServer** e **SQLPS**. Il modulo **SQLPS** è incluso nell'installazione di SQL Server (per la compatibilità con le versioni precedenti), ma non viene più aggiornato. Il modulo PowerShell più aggiornato è il modulo **SqlServer**. Il modulo **SqlServer** contiene versioni aggiornate dei cmdlet di **SQLPS** e include anche nuovi cmdlet per il supporto delle funzionalità SQL più recenti.  
-> Le versioni precedenti del modulo **SqlServer** *erano* incluse con SQL Server Management Studio (SSMS), ma solo con le versioni 16.x di SQL Server Management Studio. Per usare PowerShell con SSMS 17.0 e versioni successive, è necessario installare il modulo **SqlServer** da PowerShell Gallery.
+> Le versioni precedenti del modulo **SqlServer***erano* incluse con SQL Server Management Studio (SSMS), ma solo con le versioni 16.x di SQL Server Management Studio. Per usare PowerShell con SSMS 17.0 e versioni successive, è necessario installare il modulo **SqlServer** da PowerShell Gallery.
 > Per installare il modulo **SqlServer**, vedere [Installare il modulo PowerShell SqlServer](download-sql-server-ps-module.md).
 
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>Vantaggi del provider PowerShell per SQL Server
@@ -69,7 +69,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  I nodi delle raccolte in un percorso sono associati a una classe di raccolte nel modello a oggetti associato. I nodi dei nomi di oggetti sono associati a una classe di oggetti nel modello a oggetti associato, come indicato nella tabella seguente:  
   
-|Percorso|Classe SMO|  
+|Path|Classe SMO|  
 |----------|---------------|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
@@ -79,8 +79,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Descrizione dell'attività|Articolo|  
 |----------------------|-----------|  
 |Viene descritto come utilizzare i cmdlet di Windows PowerShell per spostarsi tra i nodi all'interno di un percorso e, a ogni nodo, ottenere un elenco degli oggetti in corrispondenza di quel nodo.|[Spostarsi all'interno dei percorsi di SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
-|Viene descritto come utilizzare i metodi e le proprietà SMO per eseguire report e attività sull'oggetto rappresentato da un nodo in un percorso. Viene inoltre descritto come ottenere un elenco dei metodi e delle proprietà SMO per quel nodo.|[Utilizzo di percorsi di SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
-|Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Conversione di URN in percorsi di provider di SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
+|Viene descritto come utilizzare i metodi e le proprietà SMO per eseguire report e attività sull'oggetto rappresentato da un nodo in un percorso. Viene inoltre descritto come ottenere un elenco dei metodi e delle proprietà SMO per quel nodo.|[Usare i percorsi di SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
+|Viene descritto come convertire un Uniform Resource Name SMO (URN) in un percorso del provider SQL Server.|[Convertire URN in percorsi di provider di SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
 |Viene descritto come stabilire connessioni con autenticazione di SQL Server tramite il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per impostazione predefinita, il provider utilizza connessioni di autenticazione di Windows stabilite mediante le credenziali dell'account di Windows che esegue il processo di Windows PowerShell.|[Gestire l'autenticazione nel motore di database PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="next-steps"></a>Passaggi successivi

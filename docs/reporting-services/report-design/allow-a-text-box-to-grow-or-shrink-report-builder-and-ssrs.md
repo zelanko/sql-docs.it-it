@@ -9,10 +9,10 @@ ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aaa9b5b26b94bb6eb25b4091e0503591b2dcdba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581867"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Espansione o riduzione di una casella di testo (Generatore report e SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65581867"
   
 1.  Fare clic con il pulsante destro del mouse sulla casella di testo, quindi scegliere **Proprietà casella di testo**.  
   
-2.  Fare clic sulla scheda **Generale** .  
+2.  Fare clic sulla scheda **General** (Generale).  
   
     -   Per consentire l'espansione in verticale della casella di testo in base al contenuto, selezionare **Consenti aumento altezza**.  
   

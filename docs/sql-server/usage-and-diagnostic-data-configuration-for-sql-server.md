@@ -9,17 +9,17 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028932"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configurare la raccolta di dati di diagnostica e utilizzo per SQL Server (Analisi utilizzo software)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Per impostazione predefinita, Microsoft SQL Server raccoglie informazioni su come i clienti usano l'applicazione. In particolare, SQL Server raccoglie informazioni sull'esperienza di installazione, l'utilizzo e le prestazioni. Queste informazioni consentono a Microsoft di migliorare il prodotto per meglio soddisfare le esigenze dei clienti. Ad esempio, Microsoft raccoglie informazioni sui tipi di codici di errore riscontrati dai clienti in modo da poter correggere i bug correlati, migliorare la documentazione su come usare SQL Server e determinare se occorre aggiungere funzionalità al prodotto per offrire un'esperienza migliore ai clienti.
 
@@ -55,7 +55,7 @@ Per SQL Server in Linux, fare riferimento a [Customer Feedback for SQL Server on
 > [!NOTE]
 > È possibile disabilitare l'invio di informazioni a Microsoft solo nelle versioni a pagamento di SQL Server.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
  - La rimozione o la disabilitazione del servizio Analisi utilizzo software di SQL non è supportata. 
  - La rimozione di risorse di Analisi utilizzo software di SQL dal gruppo di cluster non è supportata. 
 
@@ -115,7 +115,7 @@ In modo analogo al comportamento in una versione precedente di SQL Server, i cli
 
     Nome RegEntry = EnableErrorReporting
 
-    Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
+    Tipo voce DWORD: 0 rifiuto esplicito ; 1 consenso esplicito
  
     {IDIstanza} fa riferimento al tipo di istanza e all'istanza, come negli esempi seguenti: 
 
@@ -130,7 +130,7 @@ In modo analogo al comportamento in una versione precedente di SQL Server, i cli
 
     Nome RegEntry = EnableErrorReporting
 
-    Tipo voce DWORD: 0 rifiuto esplicito; 1 consenso esplicito
+    Tipo voce DWORD: 0 rifiuto esplicito ; 1 consenso esplicito
 
 > [!NOTE]
 > {Versione principale} fa riferimento alla versione di SQL Server. Ad esempio, "140" indica SQL Server 2017.

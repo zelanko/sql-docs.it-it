@@ -1,6 +1,6 @@
 ---
-title: Ricerca incrementale in un documento attivo | Microsoft Docs
-ms.custom: ''
+title: Ricerca incrementale in un documento attivo
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -14,12 +14,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac382ee5c57cbecdcbc183e2c246fd8ac5ed28b5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cff144b4d08f543a6745798419b33ef1357bc99c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264217"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253700"
 ---
 # <a name="search-an-active-document-incrementally"></a>Ricerca incrementale in un documento attivo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,6 +53,6 @@ ms.locfileid: "68264217"
  [Ricerca interattiva all'interno di documenti](../../relational-databases/scripting/search-documents-interactively.md)   
  [Ricerca nei documenti utilizzando gli elenchi dei risultati](../../relational-databases/scripting/search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Testo di ricerca con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
+ [Eseguire ricerche di testo con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
   
   

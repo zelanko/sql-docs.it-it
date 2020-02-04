@@ -1,27 +1,28 @@
 ---
-title: Impostare opzioni di traccia globali (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Impostare le opzioni di traccia globali
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9605f5e12b1dcc206d50e958d8c1787750e98941
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307946"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Impostare opzioni di traccia globali (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento viene illustrato come impostare opzioni applicabili a tutte le tracce create in un'istanza specifica di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+In questo argomento viene illustrato come impostare opzioni applicabili a tutte le tracce create in un'istanza specifica di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-set-global-trace-options"></a>Per impostare le opzioni di traccia globali  
   

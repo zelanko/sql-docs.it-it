@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Clonare un database esistente | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Clonare un database esistente
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017623"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241594"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Procedura: Clonare un database esistente
+# <a name="how-to-clone-an-existing-database"></a>Procedura: Clonazione di un database esistente
+
 In questa attività vengono utilizzati alcuni dei passaggi di procedure precedenti per creare un nuovo database in cui trasferire i dati esistenti. Vengono inoltre usati i passaggi illustrati in [Procedura: Usare il confronto schema per confrontare definizioni di database diverse](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) per sincronizzare lo schema di un database di origine e di un database del progetto.  
   
 Se si utilizzano questi passaggi, è possibile creare facilmente un database di sviluppo o di test da un database di produzione con schema e dati identici. Inoltre, è possibile continuare a sviluppare il database di test in una modalità connessa o creare un progetto di database per lo sviluppo e il test offline, senza interrompere le operazioni del database di produzione.  

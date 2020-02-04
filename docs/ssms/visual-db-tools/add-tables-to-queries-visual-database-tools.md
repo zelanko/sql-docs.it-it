@@ -1,10 +1,7 @@
 ---
-title: Aggiungere tabelle a query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Aggiungere tabelle a query
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +11,19 @@ helpviewer_keywords:
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3be181b428645226cf6e3d675fbab06b9bf4ca11
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 3f333e275441f211457e14800cae14d19bd83b2a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263707"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245366"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Aggiunta di tabelle a query (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Quando si crea una query, si recuperano dati da una tabella o da altri oggetti strutturati come tabelle, come viste e alcune funzioni definite dall'utente. Per usare uno qualsiasi di questi oggetti nelle query, è necessario aggiungerlo nel **riquadro Diagramma**.  
   
@@ -58,8 +60,8 @@ Se non si dispone di diritti di accesso sufficienti o se il provider non è in g
 7.  Sempre nel **riquadro SQL**aggiungere un alias dopo la parentesi destra.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creare alias di tabella &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
-[Rimuovere tabelle dalle query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
+[Creazione di alias di tabella &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
+[Rimozione di tabelle da query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
 [Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

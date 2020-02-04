@@ -1,6 +1,6 @@
 ---
-title: Rimuovere o eliminare un elemento o un progetto | Microsoft Docs
-ms.custom: ''
+title: Rimozione o eliminazione di un elemento o di un progetto
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a19a4bf8c91eb118af246a0e0bc0b3458833af7c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 299b99a06666b42e45d63d920370aac30444bf65
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265357"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242826"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Rimozione o eliminazione di un elemento o di un progetto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,6 +55,6 @@ Un elemento rimosso rimane comunque nel file system. È pertanto possibile aggiu
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  
-[Aggiunta di nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)  
+[Aggiungere nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)  
 [Aggiungere elementi esistenti a un progetto](../../ssms/solution/add-existing-items-to-a-project.md)  
   

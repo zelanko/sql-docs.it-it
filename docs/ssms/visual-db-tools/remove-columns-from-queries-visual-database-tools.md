@@ -1,10 +1,9 @@
 ---
-title: Rimuovere colonne da query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Rimuovere colonne da query
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54f99801992ba804861d6712edaadae24720c8bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: e548479b98b6495ed61582a5a6fcef8b8878154a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266229"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255272"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Rimozione di colonne da query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,12 +34,12 @@ Le colonne non più necessarie in una query possono essere eliminate. In questo 
   
 -   Nel **riquadro Criteri**selezionare la riga della griglia che contiene la colonna da rimuovere e premere CANC.  
   
-    oppure  
+    -oppure-  
   
 -   Eliminare qualsiasi riferimento alla colonna nel [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Aggiungere colonne a query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  
+[Aggiunta di colonne a query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  
 [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Creare un riepilogo dei risultati di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

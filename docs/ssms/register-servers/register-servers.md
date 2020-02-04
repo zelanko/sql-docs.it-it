@@ -1,10 +1,7 @@
 ---
-title: Registrazione di server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Registrazione di server
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -18,16 +15,22 @@ helpviewer_keywords:
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34452ed824b8aa5bec4efcc9a926718481614e09
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: d5b3993fb1c350e4aa89159ca8dd8135546b178b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266207"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256269"
 ---
 # <a name="register-servers"></a>Registrazione di server
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  La registrazione di un server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di archiviare le informazioni sulla connessione al server per uso futuro. È possibile registrare un server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in tre modi.  
+
+La registrazione di un server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di archiviare le informazioni sulla connessione al server per uso futuro. È possibile registrare un server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in tre modi.  
   
 1.  Le istanze locali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono registrate automaticamente durante il primo avvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dopo l'installazione.  
   
@@ -70,7 +73,7 @@ ms.locfileid: "68266207"
 |Visualizzare i server registrati|[Visualizzazione della finestra Server registrati in SQL Server Management Studio](../../tools/sql-server-management-studio/view-registered-servers-in-sql-server-management-studio.md)|  
 |Rimuovere un server registrato|[Rimuovere un server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/remove-a-registered-server-sql-server-management-studio.md)|  
 |Modificare la registrazione di un server|[Modificare la registrazione di un server &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)|  
-|Connettersi a un server registrato|[Connettersi a un server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)|  
+|Connettersi a un server registrato|[Connessione a un server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md)|  
 |Disconnettersi da un server registrato|[Disconnettersi da un server registrato &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/disconnect-from-a-registered-server-sql-server-management-studio.md)|  
 |Spostare un server registrato o un gruppo di server|[Spostare un server registrato o un gruppo di server registrati &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)|  
 |Modificare il nome di un server registrato o di un gruppo di server|[Modificare il nome di un server registrato o di un gruppo di server registrati &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-the-name-of-registered-server-or-registered-server-group.md)|  

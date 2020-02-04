@@ -15,10 +15,10 @@ ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2b82d064b379f7c8a43f854204b9fce7337262e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574848"
 ---
 # <a name="cache-a-report-report-manager"></a>Memorizzare un report nella cache (Gestione report)
@@ -32,7 +32,7 @@ ms.locfileid: "65574848"
   
 2.  In Gestione report passare alla pagina **Contenuto** . quindi passare al report per il quale si desidera impostare le proprietà relative alla memorizzazione nella cache, posizionare il puntatore del mouse sull'elemento e fare clic sulla freccia a discesa.  
   
-3.  Nel menu a discesa fare clic su **Gestisci**.  
+3.  Scegliere **Gestisci**dal menu a discesa.  
   
 4.  Nel riquadro di sinistra fare clic sulla scheda **Opzioni di elaborazione**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65574848"
   
     -   Per configurare una copia memorizzata nella cache affinché scada in base a una pianificazione, fare clic su **Memorizza nella cache una copia temporanea del report. La scadenza della copia è determinata dalla pianificazione seguente.** Fare clic su **Configura**oppure selezionare una pianificazione condivisa per controllare la scadenza del report.  
   
-7.  Fare clic su **Applica**.  
+7.  Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)   

@@ -11,10 +11,10 @@ ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31e7465b2fca0d76f569afb83e3a7d8501fd6036
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936042"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
@@ -35,7 +35,7 @@ bool PDOStatement::execute ([ $input ] );
 ## <a name="return-value"></a>Valore restituito  
 true se ha esito positivo; in caso contrario, false.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Le istruzioni eseguite con PDOStatement::execute devono prima essere preparate con [PDO::prepare](../../connect/php/pdo-prepare.md). Per informazioni su come specificare l'esecuzione di istruzioni diretta o preparata, vedere [Esecuzione di istruzioni diretta e preparata nel driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) .  
   
 Tutti i valori della matrice di parametri di input vengono trattati come valori PDO::PARAM_STR.  

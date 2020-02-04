@@ -1,10 +1,9 @@
 ---
-title: Creare alias di tabella (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Creare alias di tabella
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 691f6280414dafd12839a8d55b13299b6b1ece56
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 14c8defcabde99a42993b4f1490094670a890cee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264267"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254233"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Creazione di alias di tabella (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

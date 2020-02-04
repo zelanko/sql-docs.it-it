@@ -1,27 +1,28 @@
 ---
-title: Impostare i valori predefiniti per la visualizzazione delle tracce (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Impostare i valori predefiniti per la visualizzazione della traccia
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc875bf091b2dac6f3bfb393c7a716c3fa49caea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059714"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307937"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Impostare i valori predefiniti per la visualizzazione delle tracce (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento viene descritta la procedura per l'impostazione delle opzioni relative al tipo, alla dimensione e allo stile del carattere utilizzato da [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la visualizzazione delle tracce nella finestra di traccia. È inoltre possibile specificare che in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tutti i valori di data e ora vengano visualizzati in base alle impostazioni internazionali configurate per il sistema operativo in uso.  
+
+In questo argomento viene descritta la procedura per l'impostazione delle opzioni relative al tipo, alla dimensione e allo stile del carattere utilizzato da [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per la visualizzazione delle tracce nella finestra di traccia. È inoltre possibile specificare che in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tutti i valori di data e ora vengano visualizzati in base alle impostazioni internazionali configurate per il sistema operativo in uso.  
   
 ### <a name="to-set-trace-display-defaults"></a>Per impostare i valori predefiniti per la visualizzazione della traccia  
   

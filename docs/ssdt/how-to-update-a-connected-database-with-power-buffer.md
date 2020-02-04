@@ -1,25 +1,26 @@
 ---
-title: 'Procedura: Aggiornare un database connesso con Power Buffer | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Aggiornare un database connesso con Power Buffer
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bad8fd64e0242d4dbe965b91d8d8be5ab9796591
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034990"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244257"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procedura: Aggiornare un database connesso con Power Buffer
+
 La tecnologia Power Buffer di SQL Server Data Tools consente di applicare facilmente le modifiche al database connesso archiviandole tutte nella sessione corrente. Tutti gli errori causati dalla modifica della finestra Power Buffer (nell'Editor Transact\-SQL o in Progettazione tabelle) vengono visualizzati immediatamente nel riquadro **Elenco errori**, che consente di seguire gli errori identificati per un'ulteriore risoluzione dei problemi. È possibile verificare le modifiche in sospeso finché non si è pronti ad applicarle al database. Durante il processo di aggiornamento, tramite SSDT viene creato automaticamente uno script ALTER in base alle modifiche e vengono visualizzati gli avvisi di tutti i potenziali problemi. È possibile applicare tutte le modifiche accumulate in tutte le finestre Power Buffer aperte allo stesso database o salvare lo script ALTER da distribuire in un secondo momento.  
   
 SSDT consente inoltre di tenere conto di tutte le modifiche apportate allo schema del database esternamente a Visual Studio. Ad esempio, se si aggiunge una nuova tabella a un database esistente in SQL Server Management Studio, tale modifica verrà visualizzata immediatamente in Esplora oggetti di SQL Server in Visual Studio senza aggiornare manualmente la tabella. Questa funzionalità di rilevamento dello sfasamento assicura che venga visualizzata sempre la definizione dello schema più recente di un database in Esplora oggetti di SQL Server. Si noti che tutti gli oggetti di database aperti in Progettazione tabelle o nell'Editor Transact\-SQL per la modifica non verranno aggiornati per mostrare le modifiche esternamente a Visual Studio.  

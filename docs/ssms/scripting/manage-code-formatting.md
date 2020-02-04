@@ -1,6 +1,6 @@
 ---
-title: Gestire la formattazione del codice | Microsoft Docs
-ms.custom: ''
+title: Gestione della formattazione del codice
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c971543a87645c1c4a25d181fa7cef478eef0f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 741fce0949ce1a07f0f164c7f131579c220d4cfc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265412"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253813"
 ---
 # <a name="manage-code-formatting"></a>Gestione della formattazione del codice
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68265412"
   
 5.  Selezionare una delle opzioni seguenti:  
   
-    -   **None**. Il cursore si porta all'inizio della riga successiva.  
+    -   **Nessuno**. Il cursore si porta all'inizio della riga successiva.  
   
     -   **Blocco**. Il cursore allinea la riga successiva con quella precedente.  
   

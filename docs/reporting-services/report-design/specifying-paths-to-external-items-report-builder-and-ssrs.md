@@ -9,10 +9,10 @@ ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9848a77ae760fc2c1fa4c4d0ddeaa5b1120ec1ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578472"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Specifica di percorsi di elementi esterni (Generatore report e SSRS)
@@ -39,11 +39,11 @@ ms.locfileid: "65578472"
   
     -   **Nel server di report:** Un percorso completo inizia da **/** la cartella Home, ad esempio /Report/TuttiSottoreport/Sottoreport1.  
   
-    -   **In un sito di SharePoint** È necessario specificare il nome del report in un'espressione, includendo l'URL completo dell'elemento e l'estensione di file rdl, Ad esempio, `="https://server/site/library/folder/Report1.rdl"`.  
+    -   **In un sito di SharePoint** È necessario specificare il nome del report in un'espressione, includendo l'URL completo dell'elemento e l'estensione di file rdl, Ad esempio: `="https://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere un'immagine esterna &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
- [Aggiungere un sottoreport e di parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [Aggiungere un sottoreport e parametri &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Aggiungere un'azione drill-through a un report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

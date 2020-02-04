@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Indice full-text (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Indice full-text
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 926e3d42d21e24d9a3e76d10966e3d90381ca843
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254618"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247255"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Finestra di dialogo Indice full-text (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ Questa finestra di dialogo consente di creare un indice full-text per eseguire r
 **Indice full-text selezionato**  
 Elenca gli indici full-text disponibili. Selezionarne uno per visualizzarne le proprietà nella griglia a destra. Se l'elenco è vuoto, significa che per la tabella non sono state definite relazioni full-text.  
   
-**Aggiungi**  
+**Aggiungere**  
 Crea un nuovo indice full-text.  
   
 **Elimina**  
@@ -60,11 +61,11 @@ Visualizza il nome specificato dal sistema per l'indice full-text.
 **Categoria Progettazione tabelle**  
 Se viene espansa, visualizza le proprietà che determinano il funzionamento dell'indice.  
   
-**Attiva**  
+**Attivo**  
 Indica se è possibile eseguire una ricerca full-text utilizzando l'indice full-text.  
   
 **Impostazione ricerca delle modifiche**  
-Visualizza lo stato del rilevamento modifiche per l'indice: Manuale, Automatico o Disattivato.  
+Visualizza lo stato della ricerca delle modifiche per l'indice: Manuale, Automatico o Disattivato.  
   
 **Ricerca completata**  
 Indica se la ricerca più recente è stata completata. Se la proprietà è impostata su No, è in corso una ricerca.  
@@ -88,12 +89,12 @@ Visualizza la data e l'ora in cui è iniziata la ricerca corrente o più recente
 Visualizza la data e l'ora di inizio della prossima ricerca.  
   
 **Tipo di ricerca corrente o più recente**  
-Visualizza il tipo della ricerca corrente o più recente: Completa, Incrementale, Aggiorna o Propagazione automatica.  
+Visualizza il tipo della ricerca corrente o più recente: Completa, Incrementale, Aggiornamento o Propagazione automatica.  
   
 **Nome indice univoco**  
 Visualizza un elenco di tutti i nomi delle colonne del database con indici di colonne singole univoci. Queste colonne possono essere utilizzate per creare un indice full-text.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzare l'Indicizzazione guidata full-text](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
+[Usare l'Indicizzazione guidata full-text](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
 [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
   

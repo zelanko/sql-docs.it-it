@@ -1,24 +1,25 @@
 ---
-title: 'Procedura: Strutturare e aggiungere frammenti di codice allo script Transact-SQL | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Strutturare e aggiungere frammenti di codice allo script Transact-SQL
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035123"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241363"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procedura: Strutturare e aggiungere frammenti di codice allo script Transact-SQL
-In SQL Server Data Tools è disponibile una libreria del codice contenente frammenti di codice che è possibile inserire direttamente nell'applicazione. Ogni frammento consente di eseguire un'attività di script completa, quale la creazione di una funzione, di una tabella, di un trigger, di un indice, di una vista, di un tipo di dati definito dall'utente e così via. Bastano pochi clic del mouse per inserire un frammento nel codice sorgente. Questi frammenti consentono di aumentare la produttività riducendo il tempo necessario per digitare.  
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procedura: Struttura e aggiunta di frammenti di codice allo script Transact-SQL
+
+In SQL Server Data Tools è disponibile una libreria del codice contenente frammenti di codice che è possibile inserire direttamente nell'applicazione. Ogni frammento consente di eseguire un'attività di script completa, quale la creazione di una funzione, di una tabella, di un trigger, di un indice, di una vista, di un tipo di dati definito dall'utente e così via. L'inserimento di un frammento nel codice di origine può essere eseguito con pochi clic del mouse. Questi frammenti consentono di aumentare la produttività riducendo il tempo necessario per digitare.  
   
 Se è necessario cercare un frammento appropriato, è possibile utilizzare Selezione frammento di codice per visualizzare gli elenchi suddivisi per categoria in cui operare una scelta. Una volta aggiunto il frammento al codice, può essere necessario personalizzare alcune delle parti, ad esempio sostituire nomi di variabili con nomi più adatti o inserire la logica effettiva di una stored procedure. Si noterà che il frammento di codice inserito dispone di uno o più punti di sostituzione evidenziati nel codice a tale scopo. Se si posiziona il puntatore del mouse sul punto di sostituzione, viene visualizzata una descrizione comando che illustra come poter modificare il codice.  
   

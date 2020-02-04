@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Errori nella sintassi SQL (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Errori nella sintassi SQL
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f12b8efc54d55d3377665b0f80ec3f77e1f2ed3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b02f9b741fe179aab565887226d1426ecc77ea09
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265628"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254888"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>Finestra di dialogo Errori nella sintassi SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

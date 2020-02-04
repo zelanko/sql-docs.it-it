@@ -22,10 +22,10 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72359409"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Pubblicazione dei report in un server di report

@@ -1,6 +1,6 @@
 ---
-title: Associare una query a una connessione in un progetto | Microsoft Docs
-ms.custom: ''
+title: Associazione di una query a una connessione in un progetto
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 247258298acbe8af4a68c0cd0b981cd04deb26ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f5e26bcc445f563c08a8d0dcc933918ded7057aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258139"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241882"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Associazione di una query a una connessione in un progetto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,6 +34,6 @@ Se una query è stata creata senza connessione oppure è stata spostata da un pr
   
 ## <a name="see-also"></a>Vedere anche  
 [Esplora soluzioni](../../ssms/solution/solution-explorer.md)  
-[Modifica della connessione associata a una query](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
+[Modificare la connessione associata a una query](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
 [Visualizzazione o modifica delle proprietà di una connessione in un progetto](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  
   

@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Creare nuovi oggetti di database tramite query | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creare nuovi oggetti di database tramite query
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 38a7165eb1145c6da08902d06a8483b0e26abf5b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897195"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241487"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Procedura: Creare nuovi oggetti di database tramite query
+# <a name="how-to-create-new-database-objects-using-queries"></a>Procedura: Creazione di nuovi oggetti di database tramite query
+
 Se si preferisce usare script per creare o modificare viste, stored procedure, funzioni, trigger o tipi definiti dall'utente, è possibile usare l'Editor Transact\-SQL. L'Editor Transact\-SQL fornisce IntelliSense e altro supporto del linguaggio. Per altre informazioni, vedere [Usare l'Editor Transact-SQL per modificare ed eseguire script](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
 L'Editor Transact\-SQL viene richiamato quando si usa il menu contestuale **Visualizza codice** per aprire un'entità del database in un database connesso o in un progetto. Viene anche aperto automaticamente quando si usa il menu contestuale **Nuova query** da Esplora oggetti di SQL Server o si aggiunge un nuovo oggetto script a un progetto di database. Se non si è connessi a un database ma si vuole eseguire una query sul database stesso, è possibile usare la finestra di dialogo **Nuova connessione query** selezionando il menu **Editor Transact-SQL** dal menu **SQL** per connettersi a un database e avviare l'Editor Transact\-SQL.  

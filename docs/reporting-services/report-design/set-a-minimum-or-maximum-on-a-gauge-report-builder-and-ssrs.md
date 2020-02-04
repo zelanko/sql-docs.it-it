@@ -9,10 +9,10 @@ ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a2cbda4af8898233e27aa2ad2c505981e343116c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576858"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Impostare un valore minimo o massimo su un misuratore (Generatore report e SSRS)

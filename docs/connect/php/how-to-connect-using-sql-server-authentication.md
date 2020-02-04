@@ -13,10 +13,10 @@ ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7d894b48fc6ec82450c42599f13725f0cd8ee1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993554"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Procedura: Connessione con l'autenticazione di SQL Server
@@ -140,7 +140,7 @@ Questo esempio usa il driver PDO_SQLSRV per illustrare la procedura di connessio
 
 [Procedura: Creare un account di accesso di SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Procedura: Creazione di un utente del database](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Procedura: Creare un utente del database](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Gestione di utenti, ruoli e account di accesso](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

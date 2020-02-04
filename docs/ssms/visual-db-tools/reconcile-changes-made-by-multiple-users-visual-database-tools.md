@@ -1,10 +1,9 @@
 ---
-title: Riconciliare le modifiche apportate da più utenti (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Riconciliare le modifiche apportate da più utenti
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b4eee47ea3e15b869909e66818bddf655f63ea3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b85d852b4eee542632af0afbbf561fec47fac35a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266241"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255283"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Riconciliare le modifiche apportate da più utenti (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

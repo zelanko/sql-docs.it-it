@@ -1,10 +1,8 @@
 ---
-title: Informazioni del debugger Transact-SQL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Informazioni del debugger Transact-SQL
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -16,20 +14,28 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6329776bd998a8d90cbadd577132a500020515b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253551"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253044"
 ---
 # <a name="transact-sql-debugger---information"></a>Debugger Transact-SQL - Informazioni
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Ogni volta che l'esecuzione viene sospesa dal debugger in corrispondenza di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica, è possibile utilizzare le varie finestre del debugger per visualizzare lo stato corrente dell'esecuzione.  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Ogni volta che l'esecuzione viene sospesa dal debugger in corrispondenza di un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specifica, è possibile utilizzare le varie finestre del debugger per visualizzare lo stato corrente dell'esecuzione. 
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="debugger-windows"></a>Finestre del debugger  
- In modalità di debug, il debugger apre due finestre nella parte inferiore della finestra principale di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . In queste due finestre vengono fornite tutte le informazioni del debugger. Ciascuna finestra dispone di schede che è possibile selezionare per controllare il set di informazioni che viene visualizzato nella finestra. La finestra di sinistra contiene le schede **Variabili locali**, **Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4** . La finestra di destra contiene le schede **Stack di chiamate**, **Thread**, **Punti di interruzione**, **Finestra di comando**e **Output** .  
+
+In modalità di debug, il debugger apre due finestre nella parte inferiore della finestra principale di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . In queste due finestre vengono fornite tutte le informazioni del debugger. Ciascuna finestra dispone di schede che è possibile selezionare per controllare il set di informazioni che viene visualizzato nella finestra. La finestra di sinistra contiene le schede **Variabili locali**, **Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4** . La finestra di destra contiene le schede **Stack di chiamate**, **Thread**, **Punti di interruzione**, **Finestra di comando**e **Output** .  
   
 > [!NOTE]  
 >  Le descrizioni precedenti indicano le posizioni predefinite delle finestre del debugger. È possibile trascinare una scheda per spostarla da una finestra all'altra oppure è possibile disancorare una scheda per creare una nuova finestra che potrà essere collocata ovunque si desideri.  
@@ -41,11 +47,11 @@ ms.locfileid: "68253551"
 -   Fare clic su **Punti di interruzione** sulla barra degli strumenti **Debug**, quindi selezionare la finestra desiderata.  
   
 ## <a name="transact-sql-expressions"></a>Espressioni di Transact-SQL  
- Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori dei dati attualmente assegnati a espressioni in un massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3** ed **Espressione di controllo4**.  
+ Le espressioni sono clausole [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono un singolo valore scalare, ad esempio variabili o parametri. La finestra sinistra del debugger può visualizzare i valori di dati attualmente assegnati a espressioni in massimo cinque schede o finestre: **Variabili locali, Espressione di controllo1**, **Espressione di controllo2**, **Espressione di controllo3**ed **Espressione di controllo4**.  
   
  La finestra **Variabili locali** visualizza informazioni sulle variabili locali nell'ambito corrente del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il set di espressioni elencate nella finestra **Variabili locali** cambia man mano che il debugger viene eseguito sulle varie parti del codice.  
   
- Le espressioni incluse in **Controllo immediato** e nelle quattro finestre **Espressione di controllo** non si limitano semplicemente a elencare l'identificatore di una variabile. È possibile specificare un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituisce un valore singolo, ad esempio l'aggiunta di un numero a una variabile, oppure un'istruzione SELECT che restituisce un valore singolo. Esempi di tali situazioni:  
+ Le espressioni incluse in **Controllo immediato** e nelle quattro finestre **Espressione di controllo** non si limitano semplicemente a elencare l'identificatore di una variabile. È possibile specificare un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituisce un valore singolo, ad esempio l'aggiunta di un numero a una variabile, oppure un'istruzione SELECT che restituisce un valore singolo. Tra gli esempi sono inclusi:  
   
 -   Nome di una variabile, ad esempio @IntegerCounter.  
   

@@ -1,10 +1,9 @@
 ---
-title: Creare query di accodamento (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Creare query di accodamento
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 850d64df71644c5010cfda9a2c2624ab4bfd49cf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: bf6436ae1ec235c2fb750df5ed57e640326c56aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264959"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254325"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Creazione di query di accodamento (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +86,7 @@ Quando si crea una query di accodamento, nel riquadro Criteri vengono visualizza
   
 6.  Se si desidera copiare le righe in un particolare ordine, specificare il criterio di ordinamento. Per informazioni dettagliate, vedere [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   
-7.  Specificare le righe da copiare immettendo le condizioni di ricerca nella colonna **Filtro**. Per informazioni dettagliate, vedere [Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
+7.  Specificare le righe da copiare immettendo le condizioni di ricerca nella colonna **Filtro** . Per informazioni dettagliate, vedere [Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
     Se non si specifica alcuna condizione di ricerca, tutte le righe della tabella di origine verranno copiate nella tabella di destinazione.  
   

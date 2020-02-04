@@ -16,10 +16,10 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bbce09bb5c76d29bf56defb3c5403665e5226558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576754"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Accedere al provider WMI per Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "65576754"
 > [!IMPORTANT]  
 >  A partire dalla versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , il provider WMI è supportato solo per server di report in modalità nativa. I server di report in modalità SharePoint possono essere gestiti con pagine di Amministrazione centrale SharePoint e script di PowerShell.  
   
-|Classe|Namespace|Descrizione|  
+|Classe|Spazio dei nomi|Descrizione|  
 |-----------|---------------|-----------------|  
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<NomeIstanzaCodificato>* \v13|Fornisce le informazioni di base necessarie affinché un client si connetta a un server di report installato.|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<NomeIstanzaCodificato>* \v13\Admin|Rappresenta i parametri di installazione e di runtime di un'istanza del server di report. Tali parametri sono archiviati nel file di configurazione per il server di report.<br /><br /> **\*\* Importante \*\*** Questa classe è accessibile solo con privilegi amministrativi.|  
@@ -66,7 +66,7 @@ PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\Repor
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>Eseguire una query sui metodi e sulle proprietà disponibili  
- Per visualizzare i metodi e le proprietà disponibili in una delle classi WMI per Reporting Services, inviare i risultati da Get-WmiObject al comando Get-Member. Esempio:  
+ Per visualizzare i metodi e le proprietà disponibili in una delle classi WMI per Reporting Services, inviare i risultati da Get-WmiObject al comando Get-Member. Ad esempio:  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  

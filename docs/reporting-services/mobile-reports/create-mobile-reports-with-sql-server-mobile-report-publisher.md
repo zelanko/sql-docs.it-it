@@ -11,10 +11,10 @@ ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63200550"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Creare report per dispositivi mobili con SQL Server Mobile Report Publisher
@@ -31,7 +31,7 @@ Con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]è possibil
 * I report per dispositivi mobili possono essere disposti in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili che si adattano in modo ottimale agli schermi di qualsiasi dimensione. 
 * È quindi possibile salvare i report per dispositivi mobili in un server di Reporting Services, visualizzarli e modificarli in un browser o nell'app Power BI per dispositivi mobili su iPad, iPhone, telefoni e tablet Android e dispositivi Windows 10.
   
-## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>Creare report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
+## <a name="create-includessrsnoversion_mdincludesssrsnoversion-mdmd--mobile-reports"></a>Creare report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
   
 Questi articoli includono informazioni utili per iniziare.
 -  Scaricare [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)  
@@ -54,7 +54,7 @@ Questi articoli includono informazioni utili per iniziare.
   
 -   [Creare, modificare ed eliminare origini dati condivise (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
 -   [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)  
--  [Usare gli indicatori KPI in Reporting Services](../../reporting-services/working-with-kpis-in-reporting-services.md)  
+-  [Utilizzo degli indicatori KPI in Reporting Services](../../reporting-services/working-with-kpis-in-reporting-services.md)  
 - [Abilitare un server di report per l'accesso a Power BI per dispositivi mobili](../../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)  
 
   

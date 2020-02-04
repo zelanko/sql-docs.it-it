@@ -1,10 +1,8 @@
 ---
-title: Specificare un'azione del punto di interruzione | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Impostazione di un'azione del punto di interruzione
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
@@ -12,22 +10,30 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5209a5cd5d80529a71c545a11d8b59b46248bc96
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267728"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253647"
 ---
 # <a name="specify-a-breakpoint-action"></a>Impostazione di un'azione del punto di interruzione
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Un'azione **Quando raggiunto** per un punto di interruzione specifica un'attività personalizzata eseguita dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per un punto di interruzione. Se viene raggiunto il numero di passaggi specificato e viene soddisfatta qualsiasi condizione per il punto di interruzione, il debugger esegue l'azione specificata per il punto di interruzione.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Un'azione **Quando raggiunto** per un punto di interruzione specifica un'attività personalizzata eseguita dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] per un punto di interruzione. Se viene raggiunto il numero di passaggi specificato e viene soddisfatta qualsiasi condizione per il punto di interruzione, il debugger esegue l'azione specificata per il punto di interruzione.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
-##  <a name="BKMK_ActionConsiderations"></a> Considerazioni sulle azioni  
- L'azione predefinita per un punto di interruzione consiste nell'interrompere l'esecuzione una volta raggiunto il numero di passaggi e soddisfatta la condizione per il punto di interruzione. L'utilizzo principale di un'azione **Quando raggiunto** nel debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste nello stampare informazioni nella finestra **Output** del debugger specificando un messaggio di stampa.  
+##  <a name="BKMK_ActionConsiderations"></a> Considerazioni sulle azioni
+
+L'azione predefinita per un punto di interruzione consiste nell'interrompere l'esecuzione una volta raggiunto il numero di passaggi e soddisfatta la condizione per il punto di interruzione. L'utilizzo principale di un'azione **Quando raggiunto** nel debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste nello stampare informazioni nella finestra **Output** del debugger specificando un messaggio di stampa.  
   
- È possibile specificare un messaggio di stampa nell'opzione **Stampa un messaggio** . Il messaggio di stampa viene specificato come stringa di testo che include espressioni contenenti informazioni ottenute dal debug di [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le espressioni includono gli elementi seguenti:  
+È possibile specificare un messaggio di stampa nell'opzione **Stampa un messaggio** . Il messaggio di stampa viene specificato come stringa di testo che include espressioni contenenti informazioni ottenute dal debug di [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le espressioni includono gli elementi seguenti:  
   
 -   Un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] racchiusa tra parentesi graffe ({}). Le espressioni possono includere variabili, parametri e funzioni predefinite [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ad esempio, {@MyVariable}, {@NameParameter}, {@@SPID} o {SERVERPROPERTY('ProcessID')}.  
   
@@ -51,7 +57,7 @@ ms.locfileid: "68267728"
   
 1.  Nella finestra dell'editor fare clic con il pulsante destro del mouse sul glifo del punto di interruzione, quindi scegliere **Quando raggiunto** dal menu di scelta rapida.  
   
-     oppure  
+     -oppure-  
   
      Nella finestra **Punti di interruzione** fare clic con il pulsante destro del mouse sul glifo del punto di interruzione, quindi scegliere **Quando raggiunto** dal menu di scelta rapida.  
   
@@ -67,4 +73,4 @@ ms.locfileid: "68267728"
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare una condizione del punto di interruzione](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Specifica di un numero di passaggi](../../relational-databases/scripting/specify-a-hit-count.md)  
+ [Specificare un numero di passaggi](../../relational-databases/scripting/specify-a-hit-count.md)  

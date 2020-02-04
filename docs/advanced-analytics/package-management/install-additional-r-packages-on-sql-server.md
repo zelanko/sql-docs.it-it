@@ -3,19 +3,19 @@ title: Installare nuovi pacchetti R
 description: Informazioni su come usare sqlmlutils per installare nuovi pacchetti R in un'istanza di Machine Learning Services per SQL Server o R Services per SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727493"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479436"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installare nuovi pacchetti R con sqlmlutils
 
@@ -141,12 +141,12 @@ Se il computer client usato per connettersi a SQL Server dispone di accesso a In
    ```
 
    > [!TIP]
-   > Il valore di **scope** per la definizione dell'ambito può essere **PUBLIC** o **PRIVATE**. L'ambito pubblico è utile all'amministratore del database per installare i pacchetti che possono essere usati da tutti gli utenti. L'ambito privato consente di limitare la disponibilità del pacchetto all'utente che lo ha installato. Se non si specifica l'ambito, il valore predefinito è **PRIVATE**.
+   > L'ambito (**scope**) può essere **PUBLIC** o **PRIVATE**. L'ambito pubblico è utile all'amministratore del database per installare i pacchetti che possono essere usati da tutti gli utenti. L'ambito privato consente di limitare la disponibilità del pacchetto all'utente che lo ha installato. Se non si specifica l'ambito, il valore predefinito è **PRIVATE**.
 
 ### <a name="add-the-package-offline"></a>Aggiungere il pacchetto offline
 
 Se il computer client non dispone di una connessione Internet, è possibile usare **miniCRAN** per scaricare il pacchetto **glue** usando un computer con accesso a Internet. Copiare quindi il pacchetto nel computer client in cui è possibile installare il pacchetto offline.
-Per informazioni sull'installazione di **miniCRAN**, vedere [Installare miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
+Per informazioni sull'installazione di [miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran), vedere **Installare miniCRAN**.
 
 In un computer con accesso a Internet:
 
@@ -205,7 +205,7 @@ Nel computer client:
    ```
 
    > [!TIP]
-   > Il valore di **scope** per la definizione dell'ambito può essere **PUBLIC** o **PRIVATE**. L'ambito pubblico è utile all'amministratore del database per installare i pacchetti che possono essere usati da tutti gli utenti. L'ambito privato consente di limitare la disponibilità del pacchetto all'utente che lo ha installato. Se non si specifica l'ambito, il valore predefinito è **PRIVATE**.
+   > L'ambito (**scope**) può essere **PUBLIC** o **PRIVATE**. L'ambito pubblico è utile all'amministratore del database per installare i pacchetti che possono essere usati da tutti gli utenti. L'ambito privato consente di limitare la disponibilità del pacchetto all'utente che lo ha installato. Se non si specifica l'ambito, il valore predefinito è **PRIVATE**.
 
 ## <a name="use-the-package"></a>Usare il pacchetto
 

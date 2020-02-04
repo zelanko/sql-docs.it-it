@@ -9,10 +9,10 @@ ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280447"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Aggiungere griglie dati a report per dispositivi mobili | Reporting Services
@@ -77,7 +77,7 @@ Quando si aggiunge una colonna grafico a una griglia dati, è necessario aggiung
    * **Chart data field** (Campo dati del grafico) determina la metrica della tabella **Dati di riferimento per le visualizzazioni dei grafici** da usare come valore dell'asse y o della serie nel grafico a livello di riga.  
 
 ## <a name="see-also"></a>Vedere anche 
-* [Esegue il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Eseguire il mapping nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Aggiungere gli strumenti di navigazione ai report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizations to Reporting Services mobile reports (Visualizzazioni nei report per dispositivi mobili di Reporting Services)](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Aggiungere indicatori ai report per dispositivi mobili | Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  

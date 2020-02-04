@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028887"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
@@ -22,7 +22,7 @@ Procedura dettagliata per creare report per dispositivi mobili per schermi di qu
 
 Consente di creare report per dispositivi mobili in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili. È possibile connettersi a un'ampia gamma di origini dati locali, caricare cartelle di lavoro di Excel oppure creare report per dispositivi mobili, quindi salvarli in un portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] e visualizzarli in un browser o nelle app Power BI per dispositivi mobili.  
   
-Questo argomento illustra le operazioni seguenti:   
+In questo articolo viene descritto:   
   
 - La creazione di un'origine dati condivisa e di un set di dati nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , usando il database AdventureWorks come origine dati di esempio.  
 - La creazione di un report per dispositivi mobili di Reporting Services in [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
@@ -44,7 +44,7 @@ Per proseguire, sono necessari questi prodotti:
   
 ## <a name="create-a-shared-data-source"></a>Creazione di un'origine dati condivisa  
   
-È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere l' [elenco delle origini dati supportate](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+È possibile creare un'origine dati condivisa per i report per dispositivi mobili da una delle origini dati supportate da Reporting Services. Vedere l'[elenco delle origini dati supportate](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. Nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] fare clic su **Nuovo** > **Origine dati**.  
   
@@ -65,7 +65,7 @@ Altre informazioni sulle [origini dati condivise in Reporting Services](../repor
    
 ## <a name="shared-dataset">Creare un set di dati condiviso</a>  
   
-Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] esistente, ad esempio Progettazione Report in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  Questa procedura dettagliata usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installare Generatore report](../install-windows/install-report-builder.md)oppure avviarlo dal portale Web. Verranno creati tre set di dati, uno per il valore dell'indicatore KPI, uno per la tendenza KPI e uno con più campi per il report per dispositivi mobili di Reporting Services.     
+Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] esistente, ad esempio Progettazione Report in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)].  Questa procedura dettagliata usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installare Generatore report](../install-windows/install-report-builder.md) oppure avviarlo dal portale Web. Verranno creati tre set di dati, uno per il valore dell'indicatore KPI, uno per la tendenza KPI e uno con più campi per il report per dispositivi mobili di Reporting Services.     
   
 1. Nel portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] fare clic su **Nuovo** > **Report impaginato** per avviare [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
@@ -165,7 +165,7 @@ Quando si apre per la prima volta [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobi
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. Fare clic sulla scheda **Layout** .  
+6. Fare clic sulla scheda **Layout**.  
   
 7. Fare clic sulla ruota dentata Opzioni ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) nell'angolo superiore destro della mappa ad albero per visualizzare il menu in essa contenuto.   
   

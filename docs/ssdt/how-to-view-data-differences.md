@@ -1,25 +1,26 @@
 ---
-title: 'Procedura: Visualizzare le differenze dei dati | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Visualizzare le differenze dei dati
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec641fc027bae18a09e81d5cf14eee1bd8ab3ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930347"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226745"
 ---
 # <a name="how-to-view-data-differences"></a>Procedura: Visualizzare le differenze dei dati
+
 Una volta completato il confronto dei dati nei due database, viene visualizzato ogni *oggetto di database* confrontato e ne viene riportato lo stato. È anche possibile visualizzare i risultati per i record in ogni oggetto, raggruppati in base allo stato.  
   
 Dopo avere visualizzato le differenze, è possibile aggiornare la *destinazione* in modo corrispondente all'*origine* per alcuni o tutti gli oggetti o record diversi, mancanti o nuovi.  

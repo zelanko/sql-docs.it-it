@@ -1,10 +1,9 @@
 ---
-title: Riordinare le colonne di output (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Riordinare le colonne di output
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8ea54ee09a6e2c03548779e591aed5d260b54d49
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 33739ef70de87ece117d57a9091dda83d60138fb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255888"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255195"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Riordinamento delle colonne di output (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ Per controllare la posizione di visualizzazione o l'ordine di utilizzo di una co
   
 2.  Fare clic sul selettore di riga e trascinare la riga nella nuova posizione.  
   
-    oppure  
+    -oppure-  
   
     Modificare l'ordine dei nomi di colonna nel [riquadro SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   

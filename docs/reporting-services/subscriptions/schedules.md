@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578101"
 ---
 # <a name="schedules"></a>Pianificazioni
@@ -35,7 +35,7 @@ ms.locfileid: "65578101"
   
   
 ##  <a name="bkmk_whatyoucando"></a> Operazioni possibili con le pianificazioni  
- È possibile usare il portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] nelle pagine della modalità nativa e di amministrazione del sito SharePoint in modalità SharePoint per creare e gestire le pianificazioni. È possibile effettuare le operazioni seguenti:  
+ È possibile usare il portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] nelle pagine della modalità nativa e di amministrazione del sito SharePoint in modalità SharePoint per creare e gestire le pianificazioni. È possibile:  
   
 -   Pianificare il recapito di un report in una sottoscrizione standard o guidata dai dati.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "65578101"
 |Per|Includere questa attività|Ruoli predefiniti della modalità nativa|Gruppi della modalità SharePoint|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |Creare, modificare o eliminare pianificazioni condivise|Gestione di pianificazioni condivise|Amministratore sistema|Proprietari|  
-|Selezionare pianificazioni condivise|Visualizzazione di pianificazioni condivise|Utente sistema|Membri|  
+|Selezionare pianificazioni condivise|Visualizzazione di pianificazioni condivise|Utente sistema|Members|  
 |Creare, modificare o eliminare pianificazioni in base al report in una sottoscrizione definita dall'utente|Gestione di sottoscrizioni individuali|Browser, Generatore report, Report personali, Gestione contenuto|Visitatori, Membri|  
 |Creare, modificare o eliminare pianificazioni in base al report per tutte le altre operazioni pianificate|Gestione della cronologia dei report, Gestione di tutte le sottoscrizioni e Gestione di report|Gestione contenuto|Proprietari|  
   

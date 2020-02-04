@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Compilare e distribuire in un database locale | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Compilare e distribuire in un database locale
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 612ed6750946dfa5e77970bf6e3a4859cbb0045b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911876"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241613"
 ---
-# <a name="how-to-build-and-deploy-to-a-local-database"></a>Procedura: Compilare e distribuire in un database locale
+# <a name="how-to-build-and-deploy-to-a-local-database"></a>Procedura: Compilazione e distribuzione in un database locale
+
 In Microsoft SQL Server 2012 è disponibile un'istanza del server su richiesta locale, denominata Runtime del database locale di SQL Server Express, che viene attivata quando si esegue il debug di un progetto di database di SQL Server. Questa istanza del server locale può essere utilizzata come sandbox per la compilazione, il test e il debug del progetto. È indipendente da tutte le istanze di SQL Server installate e non è accessibile al di fuori di SQL Server Data Tools (SSDT). Tale soluzione è ideale per gli sviluppatori che dispongono di accesso limitato ai database di produzione, o a cui non possono accedere affatto, ma che desiderano eseguire il test dei progetti in locale prima che vengano distribuiti nella produzione da persone autorizzate. Inoltre, quando si sviluppa una soluzione database per SQL Azure, è possibile avvalersi dei vantaggi forniti da questo server locale per sviluppare ed eseguire il test del progetto di database in locale, prima di distribuirlo nel cloud.  
   
 > [!WARNING]  

@@ -9,10 +9,10 @@ ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573861"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Risolvere i problemi di elaborazione dei report di Reporting Services
@@ -28,7 +28,7 @@ Inoltre, le espressioni del report valutate in fase di esecuzione devono seguire
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>Le espressioni per gli elementi dei report possono fare riferimento solo ai campi inclusi nell'ambito del set di dati corrente oppure, se contenute in una funzione di aggregazione, a campi inclusi nell'ambito del set di dati specificato."  
   
 Utilizzare l'elenco seguente per determinare la causa dell'errore:  
-* Quando un report dispone di più di un set di dati, è necessario che un parametro di ambito sia specificato in un'espressione di aggregazione in una casella di testo nel corpo del report, Ad esempio, `=First(Fields!FieldName.Value, "DataSet1")`.  
+* Quando un report dispone di più di un set di dati, è necessario che un parametro di ambito sia specificato in un'espressione di aggregazione in una casella di testo nel corpo del report, Ad esempio: `=First(Fields!FieldName.Value, "DataSet1")`.  
   
 Per specificare un parametro di ambito, fornire il nome di un set di dati, un'area dati o un gruppo che è compreso nell'ambito per l'elemento del report. Per altre informazioni, vedere [Informazioni sull'ambito di espressioni per totali, aggregazioni e raccolte predefinite (Generatore report 3.0 e SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Riferimento alle espressioni (Generatore report 3.0 e SSRS)](../../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md).  
   

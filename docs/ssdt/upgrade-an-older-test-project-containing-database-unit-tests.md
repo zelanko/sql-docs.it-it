@@ -1,29 +1,30 @@
 ---
-title: Aggiornare un progetto di test precedente contenente unit test del database | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Aggiornare un progetto di test precedente contenente unit test del database
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b2ad973cf845817a0dbd251bbee23ac6f13d7c04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 146d52de5abbd868d80e848636213cf273c468ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110581"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256297"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Aggiornare un progetto di test precedente contenente unit test del database
+
 È possibile aggiornare un progetto di test precedente creato in Visual Studio 2010 contenente gli unit test del database in modo da usare i nuovi strumenti e runtime per unit test del database SQL Server Data Tools. Dopo aver aggiornato un progetto precedente è possibile aggiungere unit test di SQL Server al progetto. Per altre informazioni, vedere [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md).  
   
 > [!TIP]  
 > Se si usa Visual Studio 2010, dopo aver aggiunto gli unit test di SQL Server a un progetto dei test, non è possibile aggiungere unit test usando il vecchio modello di unit test del database. Se viene utilizzato, è necessario convertire nuovamente il progetto per poter eseguire correttamente i test.  
   
-Se un progetto di database di test è stato creato con una versione precedente a Visual Studio 2010, è possibile seguire l'argomento [Procedura: Aggiornare unit test di database da versioni precedenti di Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) per aggiornare il progetto di database a Visual Studio 2010, prima di aggiornarlo a SQL Server Data Tools.  
+Se un progetto di test del database è stato creato in una versione precedente a Visual Studio 2010, fare riferimento all'argomento [Procedura: Aggiornare Unit test da versioni precedenti di Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) per aggiornare il progetto di database a Visual Studio 2010, prima di aggiornare il progetto a SQL Server Data Tools.  
   
 ### <a name="initiating-an-upgrade"></a>Avvio di un aggiornamento  
   

@@ -1,10 +1,9 @@
 ---
-title: Stampare i risultati delle query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Stampare i risultati di query
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e57bc256e2fec2bd978e958b75c18683b8837599
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 322572041340f1ed61b003cb424df48f32bb2a0d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266318"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255378"
 ---
 # <a name="print-query-results-visual-database-tools"></a>Stampa dei risultati di query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

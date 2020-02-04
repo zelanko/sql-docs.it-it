@@ -16,10 +16,10 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571585"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizzare i parametri di estensione per il rendering in RSReportServer.config.
@@ -128,7 +128,7 @@ ms.locfileid: "65571585"
   
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [File di configurazione RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
+ [RSReportDesigner - file di configurazione](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Impostazioni relative alle informazioni sul dispositivo CSV](../reporting-services/csv-device-information-settings.md)   
  [Impostazioni relative alle informazioni sul dispositivo Excel](../reporting-services/excel-device-information-settings.md)   
  [Impostazioni relative alle informazioni sul dispositivo HTML](../reporting-services/html-device-information-settings.md)   

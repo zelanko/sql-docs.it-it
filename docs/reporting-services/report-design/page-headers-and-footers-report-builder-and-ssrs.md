@@ -22,10 +22,10 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576333"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Intestazioni di pagina e piè di pagina (Generatore report e SSRS)
@@ -55,12 +55,12 @@ ms.locfileid: "65576333"
   
 |Elementi supportati nell'espressione|Aggregazioni ReportItems|Aggregazioni Dataset (l'ambito deve essere il nome del set di dati)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Caselle di testo nel corpo del report|Sì|no|  
-|&PageNumber|Sì|no|  
-|&TotalPages|Sì|no|  
+|Caselle di testo nel corpo del report|Sì|No|  
+|&PageNumber|Sì|No|  
+|&TotalPages|Sì|No|  
 |Funzione di aggregazione|Sì. Ad esempio,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sì. Ad esempio,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Raccolta Fields per gli elementi della pagina|Indirettamente. Ad esempio,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sì. Ad esempio,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|Immagine con associazione a dati|Indirettamente. Ad esempio, `=ReportItems!TXT_Photo.Value`|Sì. Ad esempio,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|Immagine con associazione a dati|Indirettamente. Ad esempio, usare `=ReportItems!TXT_Photo.Value`|Sì. Ad esempio,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  Nelle sezioni seguenti di questo argomento vengono illustrate alcune espressioni già esistenti per il recupero dei dati variabili comunemente utilizzati nelle intestazioni e nei piè di pagina. In una sezione viene inoltre indicato il modo in cui l'estensione per il rendering Excel elabora le intestazioni e i piè di pagina. Per altre informazioni sulle espressioni, vedere [Espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   

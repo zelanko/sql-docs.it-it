@@ -1,35 +1,33 @@
 ---
-title: Opzioni di riproduzione (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Opzioni di riproduzione
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
-- health monitor [SQL Server]
-- Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a79c932739fa8d9d5d9125cdd93cc3564d16f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 649bf543417c0772c23c6338862e33b6bac9bad1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031445"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307490"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Opzioni di riproduzione (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Prima di riprodurre una traccia acquisita con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è necessario specificare le opzioni di riproduzione nella finestra di dialogo **Configurazione riproduzione** . Per visualizzare questa finestra di dialogo, aprire il file o la tabella di traccia per la riproduzione in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]e scegliere **Avvia** dal menu **Riproduci**. Per informazioni sulle autorizzazioni necessarie per riprodurre una traccia, vedere [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
+
+Prima di riprodurre una traccia acquisita con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è necessario specificare le opzioni di riproduzione nella finestra di dialogo **Configurazione riproduzione** . Per visualizzare questa finestra di dialogo, aprire il file o la tabella di traccia per la riproduzione in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]e scegliere **Avvia** dal menu **Riproduci**. Per informazioni sulle autorizzazioni necessarie per riprodurre una traccia, vedere [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  In questo argomento vengono descritte le opzioni specificate con la finestra di dialogo **Configurazione riproduzione** .  
   
 > [!NOTE]  
->  È consigliabile utilizzare Distributed Replay Utility per riprodurre un'applicazione OLTP intensiva (con molte connessioni simultanee attive o una velocità effettiva elevata). Distributed Replay Utility può riprodurre dati di traccia da più computer, per simulare in modo migliore un carico di lavoro di importanza critica. Per altre informazioni, vedere [Riesecuzione distribuita di SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md).  
+>  È consigliabile utilizzare Distributed Replay Utility per riprodurre un'applicazione OLTP intensiva (con molte connessioni simultanee attive o una velocità effettiva elevata). Distributed Replay Utility può riprodurre dati di traccia da più computer, per simulare in modo migliore un carico di lavoro di importanza critica. Per altre informazioni, vedere [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
 ## <a name="basic-replay-options"></a>Opzioni di riproduzione di base  
  **Server di riproduzione**  
@@ -47,18 +45,18 @@ ms.locfileid: "68031445"
  **Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**  
  Consente di utilizzare metodi di debug quali l'esecuzione istruzione per istruzione di una traccia. Se l'opzione non è selezionata, non è garantito che l'ordine nel quale vengono riprodotti gli eventi sia consistente con l'ordine in cui sono stati acquisiti in origine.  
   
- **Riproduci gli eventi utilizzando più thread**  
+ **Riproduci gli eventi usando più thread**  
  Ottimizza le prestazioni e disabilita il debug. Gli eventi vengono riprodotti nell'ordine in cui sono stati registrati per un ID di processo server (SPID), ma non viene garantito l'ordinamento degli SPID.  
   
  **Visualizza risultati di riproduzione**  
- Visualizza i risultati della riproduzione. Si tratta dell'opzione predefinita. Se la traccia che si desidera riprodurre è molto estesa, è possibile disabilitare questa opzione per risparmiare spazio su disco.  
+ Visualizza i risultati della riproduzione. Questa è l'opzione predefinita. Se la traccia che si desidera riprodurre è molto estesa, è possibile disabilitare questa opzione per risparmiare spazio su disco.  
   
 > [!NOTE]  
 >  Per ottenere le migliori prestazioni di riproduzione, è consigliabile selezionare l'opzione per la riproduzione con più thread e deselezionare l'opzione per la visualizzazione dei risultati.  
   
 ## <a name="advanced-replay-options"></a>Opzioni avanzate di riproduzione  
  **Riproduci SPID di sistema**  
- Riproduce tutti gli SPID. Si tratta dell'opzione predefinita.  
+ Riproduce tutti gli SPID. Questa è l'opzione predefinita.  
   
  **Riproduci un solo SPID**  
  Riproduce il numero di SPID selezionato nell'elenco.  

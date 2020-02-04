@@ -1,6 +1,6 @@
 ---
-title: Riquadro Dettagli di Esplora oggetti | Microsoft Docs
-ms.custom: ''
+title: Riquadro Dettagli di Esplora oggetti
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51309850e4e36083dbbf5fa228746dac18968ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264078"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257149"
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,11 +43,11 @@ In Dettagli Esplora oggetti è inclusa una barra degli strumenti che contiene le
 |--------|----------|  
 |**Indietro**|Passa agli elementi precedenti visualizzati in Dettagli Esplora oggetti. Esegue nuovamente una ricerca se la visualizzazione precedente è il risultato di un'operazione di ricerca.|  
 |**Avanti**|Sposta lo stato attivo alla schermata successiva dopo la selezione di un'operazione **Indietro** .|  
-|**Su**|Sposta lo stato attivo sulla cartella o l'oggetto padre.|  
+|**Attivo**|Sposta lo stato attivo sulla cartella o l'oggetto padre.|  
 |**Sincronizza**|Imposta lo stato attivo di Esplora oggetti sull'oggetto selezionato in Dettagli Esplora oggetti.|  
 |**Filter**|Quando disponibile, visualizza un subset di oggetti configurabili.|  
 |**Aggiorna**|Aggiorna la visualizzazione del contenuto di Dettagli Esplora oggetti.|  
-|**Cerca**|Fornisce un'area nella quale immettere un termine di ricerca per determinati oggetti di database.|  
+|**Ricerca**|Fornisce un'area nella quale immettere un termine di ricerca per determinati oggetti di database.|  
   
 ### <a name="column-header-selections"></a>Selezioni di intestazioni di colonna  
 Dettagli Esplora oggetti dispone di colonne selezionabili. È possibile fare clic con il pulsante destro del mouse su qualsiasi intestazione di colonna e controllare gli elementi che si desidera visualizzare. Le selezioni risulteranno persistenti per tutti i diversi oggetti sui quali ci si sposta. Le selezioni per ogni utente vengono mantenute quando si esce da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e lo si riavvia.  
@@ -88,7 +88,7 @@ Dettagli Esplora oggetti supporta la selezione di più oggetti. Ad esempio, se i
 ## <a name="sql-server-object-search"></a>Ricerca di oggetti SQL Server  
 Caratteri jolly  
   
--   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per altre informazioni, vedere [Procedura: Eseguire ricerche di testo con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Sono supportati i caratteri jolly standard. Ad esempio, la ricerca di **dm_os%counters** restituisce sia dm_os_memory_cache_counters che dm_os_performance_counters. Per altre informazioni, vedere [Procedura: Ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Ambito di ricerca  
   

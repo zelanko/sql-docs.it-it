@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Parametri query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Parametri query
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bea7f04d7a0275b035879dabcb1da8b3952c849
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 05e99d2fc2365ab39b68ad6211889047a1564113
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266299"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255375"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>Finestra di dialogo Parametri query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ Questa finestra di dialogo consente di immettere valori per i parametri definiti
 **Nome**  
 Elenca i parametri definiti per la query eseguita. Se la query contiene parametri denominati, i nomi vengono visualizzati nell'elenco. Se nella query sono contenuti parametri senza nome, per ogni parametro della query verranno elencati i nomi di parametro definiti dal sistema.  
   
-**Value**  
+**Valore**  
 Immettere il valore per ogni parametro elencato in **Nome**. Il valore utilizzato per ultimo viene visualizzato come valore del parametro predefinito.  
   
 ## <a name="example"></a>Esempio  
@@ -41,5 +42,5 @@ WHERE   (LastName = @Param1);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di query mediante parametri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
+[Esecuzione di query con parametri &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
   

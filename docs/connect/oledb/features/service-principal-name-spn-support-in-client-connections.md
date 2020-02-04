@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e7b61536b335d6cbbcdc78e77e0ebbeb18618a22
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74056675"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
@@ -28,7 +28,7 @@ ms.locfileid: "74056675"
 
   A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], il supporto per i nomi SPN è stato esteso per consentire l'autenticazione reciproca in tutti i protocolli. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i nomi SPN sono supportati solo per Kerberos su TCP quando il nome SPN predefinito per l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene registrato con Active Directory.  
   
- I nomi SPN vengono usati dal protocollo di autenticazione per determinare l'account usato per l'esecuzione di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se l'account dell'istanza è noto, è possibile usare l'autenticazione Kerberos per fornire autenticazione reciproca dal client e dal server. Se l'account dell'istanza non è noto, viene usata l'autenticazione NTLM, che fornisce solo l'autenticazione del client da parte del server. Attualmente, il driver OLE DB per SQL Server esegue la ricerca di autenticazione, deducendo SPN dal nome dell'istanza e dalle proprietà della connessione di rete. Le istanze [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenteranno di registrare i nomi SPN all'avvio ma è possibile registrarli manualmente. La registrazione, tuttavia, non riuscirà se l'account dispone di diritti di accesso insufficienti per la registrazione dei nomi SPN.  
+ I nomi SPN vengono usati dal protocollo di autenticazione per determinare l'account usato per l'esecuzione di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se l'account dell'istanza è noto, è possibile usare l'autenticazione Kerberos per fornire autenticazione reciproca dal client e dal server. Se l'account dell'istanza non è noto, viene usata l'autenticazione NTLM, che fornisce solo l'autenticazione del client da parte del server. Attualmente, il driver OLE DB per SQL Server esegue la ricerca di autenticazione, deducendo SPN dal nome dell'istanza e dalle proprietà della connessione di rete. Le istanze [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tenteranno di registrare i nomi SPN all'avvio ma è possibile registrarli manualmente. La registrazione, tuttavia, non riuscirà se l'account dispone di diritti di accesso insufficienti per la registrazione dei nomi SPN.  
   
  Gli account di dominio e del computer vengono registrati automaticamente in Active Directory. Questi possono essere usati come SPN oppure gli amministratori possono definire i propri SPN. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rende l'autenticazione più gestibile e affidabile consentendo ai client di specificare direttamente i nomi SPN da usare.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74056675"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>Utilizzo  
+## <a name="usage"></a>Uso  
  Nella tabella seguente vengono descritti gli scenari più comuni in cui le applicazioni client possono abilitare l'autenticazione protetta.  
   
 |Scenario|Descrizione|  
@@ -78,7 +78,7 @@ ms.locfileid: "74056675"
   
 -   Sicurezza: verificare se il nome SPN specificato comporta la divulgazione di informazioni protette.  
   
--   Affidabilità: per consentire l'uso di nomi SPN predefiniti, è necessario che l'account del servizio usato per l'esecuzione dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponga di privilegi sufficienti per l'aggiornamento di Active Directory nel centro distribuzione chiavi.  
+-   Affidabilità: per consentire l'uso di nomi SPN predefiniti, è necessario che l'account del servizio usato per l'esecuzione dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponga di privilegi sufficienti per l'aggiornamento di Active Directory nel Centro distribuzione chiavi.  
   
 -   Utilità e trasparenza a livello di posizione: valutare le conseguenze sui nomi SPN di un'applicazione se il database viene spostato in un'istanza diversa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
   
@@ -92,8 +92,8 @@ ms.locfileid: "74056675"
 |Sintassi|Descrizione|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|Nome SPN predefinito generato dal provider per un'istanza predefinita quando si utilizza un protocollo diverso da TCP.<br /><br /> *fqdn* è un nome di dominio completo.|  
-|MSSQLSvc/*fqdn*:*port*|Nome SPN predefinito generato dal provider quando si usa il protocollo TCP.<br /><br /> *port* è un numero di porta TCP.|  
-|MSSQLSvc/*fqdn*:*InstanceName*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP.<br /><br /> *InstanceName* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
+|MSSQLSvc/*fqdn*:*port*|Nome SPN predefinito generato dal provider quando si utilizza il protocollo TCP.<br /><br /> *port* è un numero di porta TCP.|  
+|MSSQLSvc/*fqdn*:*InstanceName*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP.<br /><br /> *InstanceName* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Nome SPN di cui viene eseguito il mapping ad account del computer predefiniti registrati automaticamente in Windows.|  
 |*Username*@*Domain*|Specifica diretta di un account di dominio.<br /><br /> *Username* è un nome di account utente di Windows.<br /><br /> *Domain* è un nome di dominio di Windows o un nome di dominio completo.|  
 |*MachineName*$@*Domain*|Specifica diretta di un account del computer.<br /><br /> Se il server a cui si stabilisce la connessione viene eseguito usando l'account di sistema locale o del servizio di rete, per ottenere l'autenticazione Kerberos **ServerSPN** può usare il formato *MachineName*$@*Domain* .|  

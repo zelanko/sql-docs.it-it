@@ -14,10 +14,10 @@ ms.assetid: ceb68b8b-9214-4745-abc9-f47f33ecd6f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a963fcad77a6c916b4726cf62b0dd09b49d6152f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128868"
 ---
 # <a name="omitting-values-for-optional-web-service-objects"></a>Omissione di valori per gli oggetti del servizio Web facoltativi
@@ -32,6 +32,6 @@ ms.locfileid: "63128868"
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni tramite servizio Web e .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Guida di riferimento tecnico &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Riferimento tecnico &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   

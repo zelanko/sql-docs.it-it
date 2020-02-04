@@ -18,10 +18,10 @@ ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581776"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Raccolte predefinite - Riferimenti a variabili di report e di gruppo (Generatore report)
@@ -55,7 +55,7 @@ ms.locfileid: "65581776"
 ## <a name="group-variables"></a>Variabili di gruppo  
  Utilizzare una variabile di gruppo per calcolare un'espressione complessa nell'ambito di un gruppo. Una variabile di gruppo è valida solo nell'ambito del gruppo e dei relativi gruppi figlio.  
   
- Si supponga, ad esempio, che in un'area dati vengano visualizzati dati di inventario per elementi che rientrano in diverse categorie di imposta e che si desideri applicare aliquote d'imposta diverse per ogni categoria. I dati verranno raggruppati in base alla categoria e verrà definita una variabile *Tax* nel gruppo padre. Verrà quindi definita una variabile di gruppo per *ItemTax* per ogni categoria di imposta e ogni sottogruppo di categorie diverso verrà assegnato alla variabile di gruppo corretta. Esempio:  
+ Si supponga, ad esempio, che in un'area dati vengano visualizzati dati di inventario per elementi che rientrano in diverse categorie di imposta e che si desideri applicare aliquote d'imposta diverse per ogni categoria. I dati verranno raggruppati in base alla categoria e verrà definita una variabile *Tax* nel gruppo padre. Verrà quindi definita una variabile di gruppo per *ItemTax* per ogni categoria di imposta e ogni sottogruppo di categorie diverso verrà assegnato alla variabile di gruppo corretta. Ad esempio:  
   
 -   Per il gruppo padre basato su `[Category]`, definire la variabile *Tax* con un valore `[Tax]`. Si supponga che i valori di categoria siano Food e Clothing.  
   

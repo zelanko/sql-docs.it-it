@@ -1,6 +1,6 @@
 ---
-title: Generare script (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Generazione di script (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,18 +11,18 @@ ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 800153a20651b649d644fecfeacf11d48958fab8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: abdbbd7659221fb27df12ff03995b2d246241463
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265451"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253865"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generazione di script (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce due meccanismi per la generazione di script [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile creare script per più oggetti usando la **Procedura guidata Genera e pubblica script**. È anche possibile generare uno script per un singolo oggetto o per più oggetti usando il menu **Crea script per** in **Esplora oggetti**.  
 
-Per un'esercitazione dettagliata sulla creazione di script per diversi oggetti tramite SQL Server Management Studio (SSMS), vedere [Esercitazione: Creare script per oggetti in SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Per un'esercitazione dettagliata sulla creazione di script per diversi oggetti tramite SQL Server Management Studio (SSMS), vedere [Esercitazione: eseguire script per oggetti in SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
 
   
 ## <a name="before-you-begin"></a>Prima di iniziare  

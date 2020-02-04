@@ -1,26 +1,24 @@
 ---
-title: Creazione e definizione di unit test di SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creazione e definizione di unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.unittesting.DatabaseMethodNameDialog
-- sql.data.tools.unittesting.designer
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b920803c317920c6336dbdde0990b4ad511cccb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 096fc7128d5c6d62dad0957445380ac8860645a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984584"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245537"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Creazione e definizione di unit test di SQL Server
+
 È possibile eseguire unit test di SQL Server per verificare se le modifiche apportate a uno o più oggetti di database in uno schema abbiano interferito con le funzionalità esistenti in un'applicazione di database. Questi test costituiscono un'integrazione degli unit test creati dagli sviluppatori del software. È necessario eseguire entrambi i tipi di test per verificare il comportamento dell'applicazione.  
   
 È possibile verificare il comportamento di qualsiasi oggetto nello schema aggiungendo uno unit test di SQL Server e uno script Transact\-SQL per testare l'oggetto. In alternativa, si può generare automaticamente uno stub di uno script Transact\-SQL se si vuole verificare il comportamento di una funzione, di un trigger o di una stored procedure particolare. Dopo aver generato lo stub, è necessario personalizzarlo per ottenere risultati significativi.  
@@ -33,7 +31,7 @@ Nella tabella seguente sono incluse le descrizioni di attività comuni che suppo
   
 |Attività comuni|Contenuto di supporto|  
 |----------------|----------------------|  
-|**Esercitazione pratica**: è possibile seguire una procedura dettagliata introduttiva per acquisire familiarità con le modalità di creazione ed esecuzione di un semplice unit test di SQL Server.|-   [Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
+|**Fare pratica**: è possibile seguire una procedura dettagliata introduttiva per acquisire familiarità con le modalità di creazione ed esecuzione di uno unit test di SQL Server semplice.|-   [Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
 |**Altre informazioni sugli unit test di SQL Server**: è possibile acquisire maggiori informazioni sui file e sugli script tramite cui viene costituito uno unit test di SQL Server. Inoltre, è possibile ottenere altre informazioni sull'uso delle condizioni di test e sulle asserzioni Transact\-SQL negli unit test.|-   [Script in unit test di SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md)<br />-   [File di unit test di SQL Server](../ssdt/sql-server-unit-test-files.md)<br />-   [Uso di condizioni di test in unit test di SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)<br />-   [Uso di asserzioni Transact-SQL in unit test di SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)|  
 |**Creare uno o più progetti di test**: è necessario creare unit test di SQL Server in un progetto di test. Se si crea uno unit test di SQL Server che usa Esplora oggetti di SQL Server prima di un progetto di prova, quest'ultimo viene creato automaticamente. È possibile creare più di un progetto di test se, ad esempio, si desidera utilizzare piani di generazione dati diversi o configurazioni di distribuzione differenti in vari set di test. Quando si crea il progetto di test, è possibile configurare le impostazioni relativa al test, ad esempio la stringa di connessione, le impostazioni di distribuzione e un piano di generazione dati da utilizzare per il progetto in questione.|-   [Procedura: Creare un progetto di test per l'esecuzione di unit test del database di SQL Server](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md)<br />-|  
 |**Configurare la modalità di esecuzione dello unit test**: è possibile specificare la stringa di connessione al database in cui si eseguono i test, il piano di generazione dati e le impostazioni di distribuzione. Configurare queste impostazioni quando si aggiunge per la prima volta uno unit test di SQL Server al progetto, tuttavia esse possono essere modificate anche in un secondo momento.|-   [Procedura: Configurare l'esecuzione di unit test di SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)<br />-   [Panoramica delle stringhe di connessione e delle autorizzazioni](../ssdt/overview-of-connection-strings-and-permissions.md)|  

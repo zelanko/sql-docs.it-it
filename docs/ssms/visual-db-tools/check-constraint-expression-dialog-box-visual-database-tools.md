@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Espressione vincolo CHECK (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Espressione vincolo CHECK
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,19 +11,21 @@ f1_keywords:
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f1554ee91444462c52dee404d198b35944a7caf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: fcd0eacf11390947248208310eba3ddec40089ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263666"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255505"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Finestra di dialogo Espressione vincolo CHECK (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Quando si associa un vincolo CHECK a una tabella o colonna, è necessario includere un'espressione SQL. Digitare l'espressione di vincolo CHECK nella casella specifica.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
-Espressione  
+Expression  
 Immettere l'espressione.  
   
 È possibile creare un'espressione di vincolo semplice per verificare i dati in base a una condizione semplice oppure creare un'espressione complessa, con operatori booleani, per verificare i dati in base a diverse condizioni. Si supponga ad esempio che nella tabella degli autori sia presente una colonna del codice postale in cui è richiesta una stringa di 5 caratteri. L'espressione di vincolo dell'esempio seguente garantisce che venga accettata solo l'immissione di numeri a 5 cifre:  
@@ -60,12 +61,12 @@ La sintassi SQL è costituita dai parametri seguenti:
 |constant|Valore letterale, ad esempio dati numerici o caratteri. I caratteri devono essere racchiusi tra virgolette semplici (')|  
 |column_name|Specifica una colonna.|  
 |function|Funzione predefinita.|  
-|operatore|Operatore aritmetico, bit per bit, di confronto o operatore di stringa.|  
+|operator|Operatore aritmetico, bit per bit, di confronto o operatore di stringa.|  
 |AND|Si utilizza nelle espressioni booleane per collegare due espressioni. Viene restituito un risultato quando entrambe le espressioni sono true.<br /><br />Quando un'istruzione contiene sia AND che OR, il parametro AND viene elaborato per primo. È tuttavia possibile modificare l'ordine di esecuzione tramite l'utilizzo delle parentesi.|  
 |o|Si utilizza nelle espressioni booleane per collegare due o più condizioni. Viene restituito un risultato quando una delle due condizioni è true.<br /><br />Quando un'istruzione contiene sia AND che OR, OR viene elaborato dopo AND. È tuttavia possibile modificare l'ordine di esecuzione tramite l'utilizzo delle parentesi.|  
 |NOT|Nega qualsiasi espressione booleana (che può includere parole chiave come LIKE, NULL, BETWEEN, IN ed EXISTS).<br /><br />Quando in un'istruzione sono utilizzati più operatori logici, NOT viene elaborato per primo. È tuttavia possibile modificare l'ordine di esecuzione tramite l'utilizzo delle parentesi.|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Vincoli UNIQUE e CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
-[Creare vincoli univoci](../../relational-databases/tables/create-unique-constraints.md)  
+[Creare vincoli UNIQUE](../../relational-databases/tables/create-unique-constraints.md)  
   

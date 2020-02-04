@@ -9,10 +9,10 @@ ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574763"
 ---
 # <a name="cache-a-shared-dataset"></a>Memorizzare nella cache un set di dati condiviso
@@ -39,7 +39,7 @@ ms.locfileid: "65574763"
   
 6.  Selezionare l'opzione che determina la scadenza della cache dopo 30 minuti. È inoltre possibile scegliere che la cache scada in base a una determinata pianificazione.  
   
-7.  Fare clic su **Applica**.  
+7.  Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md)  

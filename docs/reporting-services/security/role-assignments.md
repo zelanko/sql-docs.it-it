@@ -15,13 +15,13 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570563"
 ---
-# <a name="role-assignments"></a>Assegnazioni di ruolo
+# <a name="role-assignments"></a>Assegnazioni di ruoli
 
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]le *assegnazioni di ruolo* determinano l'accesso agli elementi archiviati e al server di report. Un'assegnazione di ruolo è composta dalle parti seguenti:  
   
@@ -33,7 +33,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]le *assegnazioni
   - **Browser**
   - **Gestione contenuto**
   - **Report personali**
-  - **Server di pubblicazione**
+  - **Autore**
   - **Generatore report**
   - **Amministratore sistema**
   - **Utente sistema**
@@ -49,7 +49,7 @@ Per i singoli elementi, è possibile definire assegnazioni di ruolo che avranno 
   
  Nella figura seguente è illustrata un'assegnazione di ruolo in cui viene eseguito il mapping di un gruppo e di un utente specifico al ruolo **Server di pubblicazione** per la cartella B.  
   
- ![Diagramma di assegnazioni dei ruoli](../../reporting-services/security/media/report-securityarch.gif "Diagramma di assegnazioni dei ruoli")  
+ ![Diagramma di assegnazione dei ruoli](../../reporting-services/security/media/report-securityarch.gif "Diagramma di assegnazione dei ruoli")  
 Diagramma di assegnazione dei ruoli  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>Assegnazioni di ruolo a livello di sistema e di elemento
@@ -57,7 +57,7 @@ Diagramma di assegnazione dei ruoli
  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la sicurezza basata sui ruoli è organizzata nei livelli seguenti:
 
 - Le assegnazioni di ruolo a livello di elemento controllano l'accesso agli elementi nella gerarchia di cartelle del server di report, ad esempio:
-  - report
+  - reports
   - cartelle
   - Modelli di report
   - origini dati condivise
