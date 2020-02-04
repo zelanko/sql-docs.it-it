@@ -1,6 +1,6 @@
 ---
-title: Proprietà - SQL Server Agent (scheda Accesso) | Microsoft Docs
-ms.custom: ''
+title: Proprietà - SQL Server Agent (scheda Accesso)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ce0cf176198a0b26c4812583c4ea89411fedab5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 1b9ec7ce2d0280f551953bf14f8494b7bd80becb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024226"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307152"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Proprietà - SQL Server Agent (scheda Accesso)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68024226"
  **Account seguente**  
  Specificare un account utente locale o di dominio che utilizza l’autenticazione di Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di utilizzare un account utente di dominio con diritti minimi. Per ulteriori informazioni sulla selezione di un account, vedere l'argomento "Impostazione di account di Windows per i servizi" nella documentazione online.  
   
- **Nome account**  
+ **Account Name** (Nome account)  
  Specificare il nome dell'account utente locale o di dominio.  
   
  **Password**  
@@ -41,10 +41,10 @@ ms.locfileid: "68024226"
  **Conferma password**  
  Digitare nuovamente la password dell'account.  
   
- **Start**  
+ **Inizia**  
  Avviare il servizio.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare il servizio.  
   
  **Sospendi**  

@@ -18,13 +18,13 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015029"
 ---
-# <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
+# <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Recupera la riga successiva di dati come matrice indicizzata numericamente, matrice associativa o entrambe.  
@@ -65,7 +65,7 @@ Se viene recuperata una riga di dati, viene restituita una **matrice** . Se non 
   
 In base al valore del parametro *$fetchType* , la **matrice** restituita può essere una **matrice**indicizzata numericamente, una **matrice**associativa o entrambe. Per impostazione predefinita, viene restituita una **matrice** con chiavi sia numeriche sia associative. Il tipo di dati di un valore nella matrice restituita corrisponderà al tipo di dati PHP predefinito. Per informazioni sui tipi di dati PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Se viene restituita una colonna senza nome, la chiave associativa per l'elemento della matrice sarà una stringa vuota (""). Ad esempio, si consideri l'istruzione Transact-SQL seguente che inserisce un valore in una tabella di database e recupera la chiave primaria generata dal server:  
   
 ```

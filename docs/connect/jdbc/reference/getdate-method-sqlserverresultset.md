@@ -16,10 +16,10 @@ ms.assetid: efb17208-4cd3-4aa8-a39b-e169b414758c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f284c3287527a94b859414f67ac02a1097da9e7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983881"
 ---
 # <a name="getdate-method-sqlserverresultset"></a>Metodo getDate (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67983881"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo getDate (int)](../../../connect/jdbc/reference/getdate-method-int-sqlserverresultset.md)|Recupera il valore dell'indice della colonna designata nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto java.sql.Date nel linguaggio di programmazione Java.|  
 |[getDate (int, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-int-java-util-calendar-sqlserverresultset.md)|Recupera il valore dell'indice della colonna designata nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto java.sql.Date nel linguaggio di programmazione Java, utilizzando l'oggetto Calendar specificato.|  

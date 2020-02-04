@@ -9,10 +9,10 @@ ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570677"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteggere gli elementi del set di dati condiviso
@@ -40,7 +40,7 @@ ms.locfileid: "65570677"
 |Selezionare questa attività|Per concedere agli utenti l'autorizzazione per|Ruoli predefiniti che includono l'attività|  
 |----------------------|---------------------------------|-----------------------------------------|  
 |Visualizzazione di report|Visualizzare l'elemento del set di dati condiviso nella gerarchia di cartelle. Se questa attività non è selezionata, l'elemento non è visibile agli utenti che potrebbero non essere consapevoli della disponibilità del set di dati.|Browser<br /><br /> Gestione contenuto<br /><br /> Generatore report<br /><br /> Report personali|  
-|Gestione di report|Visualizzare le proprietà che specificano il nome, la descrizione e le informazioni di connessione. Questa attività viene inoltre utilizzata per visualizzare un elemento del set di dati condiviso nella gerarchia di cartelle. Se si seleziona questa attività, è possibile omettere l'attività Visualizzazione di report.|Gestione contenuto<br /><br /> Server di pubblicazione<br /><br /> Report personali|  
+|Gestione di report|Visualizzare le proprietà che specificano il nome, la descrizione e le informazioni di connessione. Questa attività viene inoltre utilizzata per visualizzare un elemento del set di dati condiviso nella gerarchia di cartelle. Se si seleziona questa attività, è possibile omettere l'attività Visualizzazione di report.|Gestione contenuto<br /><br /> Editore<br /><br /> Report personali|  
 |Utilizzo di report|Visualizzare la definizione del set di dati condiviso.|Gestione contenuto<br /><br /> Generatore report|  
 |Impostazione della sicurezza per singoli elementi|Creare e modificare assegnazioni di ruolo che controllano l'accesso al set di dati condiviso. Questa attività deve essere utilizzata con l'attività Visualizzazione di report o Gestione di report. In caso contrario non avrà alcun effetto, poiché l'utente non potrà selezionare l'elemento.|Gestione contenuto|  
   

@@ -1,6 +1,6 @@
 ---
-title: Ricerca e sostituzione | Microsoft Docs
-ms.custom: ''
+title: Ricerca e sostituzione
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -28,16 +28,16 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e9fffe0c3d3e7cd27de3aa208600340221d0406
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7fc7b5c7cb0fbd560dc2826af24029d2c7961d95
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264199"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253688"
 ---
 # <a name="search-and-replace"></a>Ricerca e sostituzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  È possibile eseguire ricerche e sostituzioni di testo in diversi modi. Nel menu **Modifica** la voce **Trova e sostituisci** offre quattro opzioni: **Ricerca veloce**, **Sostituzione veloce**, **Cerca nei file** o **Sostituisci nei file**. L'aspetto della finestra di dialogo **Trova e sostituisci** cambia in base all'opzione selezionata. È inoltre possibile eseguire ricerche senza una finestra di dialogo, utilizzando i tasti di scelta rapida per la ricerca incrementale. Queste tecniche consentono di controllare l'ambito di ricerca e sostituzione e di scegliere il metodo di analisi dei risultati.  
+  È possibile eseguire ricerche e sostituzioni di testo in diversi modi. L'opzione **Trova e sostituisci** del menu **Modifica** offre quattro scelte: **Ricerca veloce**, **Sostituzione veloce**, **Cerca nei file**e **Sostituisci nei file**. L'aspetto della finestra di dialogo **Trova e sostituisci** cambia in base all'opzione selezionata. È inoltre possibile eseguire ricerche senza una finestra di dialogo, utilizzando i tasti di scelta rapida per la ricerca incrementale. Queste tecniche consentono di controllare l'ambito di ricerca e sostituzione e di scegliere il metodo di analisi dei risultati.  
   
  Al momento della ricerca e sostituzione di un testo, è consigliabile tenere presente quanto segue:  
   
@@ -54,6 +54,6 @@ ms.locfileid: "68264199"
  [Ricerca interattiva all'interno di documenti](../../relational-databases/scripting/search-documents-interactively.md)   
  [Ricerca nei documenti utilizzando gli elenchi dei risultati](../../relational-databases/scripting/search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Testo di ricerca con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
+ [Eseguire ricerche di testo con espressioni regolari](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
   
   

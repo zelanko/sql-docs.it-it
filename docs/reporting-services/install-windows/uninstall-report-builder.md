@@ -8,10 +8,10 @@ ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed8c8eb56d23d03ab77aa7bf7cc3ce3e0553e614
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65502648"
 ---
 # <a name="uninstall-report-builder"></a>Disinstallare Generatore report
@@ -50,7 +50,7 @@ Se le cartelle utilizzate da Generatore report includono file personalizzati, le
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-5.  Premere **INVIO**.  
+5.  Premere **Invio**.  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

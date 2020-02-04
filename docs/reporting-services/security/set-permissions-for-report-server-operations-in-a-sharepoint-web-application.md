@@ -16,10 +16,10 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570593"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Impostare le autorizzazioni per le operazioni del server di report in un'applicazione Web di SharePoint
@@ -43,7 +43,7 @@ ms.locfileid: "65570593"
   
 -   Utilizzo interfacce remote  
   
--   Apertura  
+-   Apri  
   
 -   Visualizzazione pagine applicazione  
   
@@ -133,6 +133,6 @@ ms.locfileid: "65570593"
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Utilizzare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Usare la sicurezza predefinita di Windows SharePoint Services per gli elementi del server di report](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Finestra di dialogo Controllo immediato
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -11,15 +12,15 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af12ca6fb0b8eb0b4461d95e75e8c1a3c62ed77e
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 9cfd48c59a928481be28d03d970fb399ea10b720
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119253"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253020"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Debugger Transact-SQL - Finestra di dialogo Controllo immediato
 
@@ -47,7 +48,7 @@ Utilizzare la finestra di dialogo **Controllo immediato** per visualizzare rapid
   
     -   Espressioni compilate applicando operatori a uno o più parametri, variabili o funzioni di sistema, ad esempio @@IntegerCounter + 1 o FirstName + LastName.  
   
-    -   Istruzioni Transact-SQL che restituiscono un singolo valore, come ad esempio: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+    -   Istruzioni Transact-SQL tramite cui viene restituito un solo valore, ad esempio SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Fare clic su **Rivaluta**.  
   
@@ -57,7 +58,7 @@ Utilizzare la finestra di dialogo **Controllo immediato** per visualizzare rapid
   
  **Per modificare il valore di un'espressione di controllo immediato**  
   
--   Fare clic con il pulsante destro del mouse sull'espressione, quindi scegliere **Modifica valore**.  
+-   Fare clic con il pulsante destro del mouse sull'espressione e scegliere **Modifica valore**.  
   
 ## <a name="options"></a>Opzioni  
  **Elenco di espressioni**  
@@ -69,7 +70,7 @@ Utilizzare la finestra di dialogo **Controllo immediato** per visualizzare rapid
  **Nome**  
  Espressione [!INCLUDE[tsql](../../includes/tsql-md.md)] controllata.  
   
- **Value**  
+ **Valore**  
  Consente di visualizzare il valore assegnato all'espressione. Quando l'espressione non è associata ad alcun valore, viene visualizzato uno spazio vuoto.  
   
  Se la lunghezza di un'espressione è maggiore della larghezza della colonna **Valore** , il valore completo verrà visualizzato in una descrizione comandi quando si sposta il puntatore sulla cella **Valore** per l'espressione.  
@@ -85,6 +86,6 @@ Utilizzare la finestra di dialogo **Controllo immediato** per visualizzare rapid
  [finestra Espressioni di controllo](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
  [finestra Variabili locali](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
  [Finestra Stack di chiamate](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   
   

@@ -1,32 +1,32 @@
 ---
-title: Riprodurre una tabella di traccia (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Riprodurre una tabella di traccia
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c35935e7b63faa44c3af1bbe21adb90a7f837883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 405f8b71730e2758b45c7ddeddf888498d701d20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031460"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307505"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>Riprodurre una tabella di traccia (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La funzionalità di riproduzione è la capacità di aprire una traccia salvata e riprodurla nuovamente. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] include un motore di riproduzione a thread multipli in grado di simulare le connessioni utente e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La funzionalità di riproduzione risulta utile per la risoluzione dei problemi a livello di applicazione o di processo. Quando si identifica il problema e si implementano le correzioni adeguate, eseguire nell'applicazione o nel processo la traccia con cui è stato rilevato il possibile problema. Riprodurre quindi la traccia originale e confrontare i risultati.  
+
+La funzionalità di riproduzione è la capacità di aprire una traccia salvata e riprodurla nuovamente. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] include un motore di riproduzione a thread multipli in grado di simulare le connessioni utente e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La funzionalità di riproduzione risulta utile per la risoluzione dei problemi a livello di applicazione o di processo. Quando si identifica il problema e si implementano le correzioni adeguate, eseguire nell'applicazione o nel processo la traccia con cui è stato rilevato il possibile problema. Riprodurre quindi la traccia originale e confrontare i risultati.  
   
  Per consentire la riproduzione è necessario acquisire classi di evento specifiche oltre alle classi di evento che si desidera monitorare. Questi eventi vengono acquisiti per impostazione predefinita se si usa il modello di traccia **TSQL_Replay** . Per altre informazioni, vedere [Requisiti per la riproduzione](../../tools/sql-server-profiler/replay-requirements.md).  
   
-### <a name="to-replay-a-trace-table"></a>Per riprodurre una tabella di traccia  
+## <a name="to-replay-a-trace-table"></a>Per riprodurre una tabella di traccia
   
 1.  Aprire una tabella di traccia contenente le classi di eventi necessarie per la riproduzione.  
   

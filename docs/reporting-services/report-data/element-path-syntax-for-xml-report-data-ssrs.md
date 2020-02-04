@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72173833"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "72173833"
 |&#124; (barra verticale)|Separa gli elementi della sintassi. Indica che è possibile scegliere un solo elemento.|  
 |`[ ]` (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |**{ }** (parentesi graffe)|Delimitano i parametri degli elementi della sintassi.|  
-|[ **,** ...*n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
+|[ **,** ...*n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le occorrenze sono separate da virgole.|  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,22 +64,22 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono riepilogati i termini del percorso di elemento. Gli esempi della tabella si riferiscono al documento XML di esempio Customers.xml, incluso nella sezione relativa agli esempi di questo argomento.  
   
 > [!NOTE]  
 >  Nei tag XML viene fatta distinzione tra maiuscole e minuscole. Se nel percorso di elemento si specifica un nodo ElementNode, è necessario che corrisponda esattamente ai tag XML dell'origine dei dati.  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |Element path|Definisce la sequenza di nodi da attraversare nel documento XML per recuperare i dati del campo di un set di dati con un'origine dei dati XML.|  
 |**ElementNode**|Nodo XML nel documento XML. I nodi sono designati da tag e sono correlati agli altri nodi in base a una relazione gerarchica. Customers>\<, ad esempio, è il nodo elemento radice. Customer>\< è un sottoelemento di Customers>\<.|  
-|**XMLName**|Nome del nodo. Il nome del nodo Customers, ad esempio, è Customers. **XMLName** può essere preceduto da un identificatore dello spazio dei nomi, per assegnare a ogni nodo un nome univoco.|  
-|**Codifica**|Indica che il **valore** dell'elemento è un valore XML con codifica e deve essere decodificato e incluso come sottoelemento dell'elemento.|  
+|**XMLName**|Il nome del nodo. Il nome del nodo Customers, ad esempio, è Customers. **XMLName** può essere preceduto da un identificatore dello spazio dei nomi, per assegnare a ogni nodo un nome univoco.|  
+|**Encoding**|Indica che il **valore** dell'elemento è un valore XML con codifica e deve essere decodificato e incluso come sottoelemento dell'elemento.|  
 |**FieldList**|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato l'elenco dei campi vuoto ( **{}** ), non verrà usato alcun campo di questo nodo.<br /><br /> L'oggetto **FieldList** non può contenere un **valore** e un **elemento** oppure un nodo **ElementNode**.|  
 |**Campo**|Specifica i dati recuperati come campo del set di dati.|  
-|**Attribute**|Coppia nome-valore contenuta in **ElementNode**. Nel nodo dell'elemento \<Customer ID="1">, **ID** è un attributo e **\@ID(Integer)** restituisce "1" come tipo integer nel campo dati **ID** corrispondente.|  
-|**Value**|Valore dell'elemento. **Valore** può essere usato solo nell'ultimo **ElementNode** del percorso di elemento. Poiché, ad esempio, Return>\< è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore di **Return {@}** è **Chair**.|  
+|**Attributo**|Coppia nome-valore contenuta in **ElementNode**. Nel nodo dell'elemento \<Customer ID="1">, **ID** è un attributo e **\@ID(Integer)** restituisce "1" come tipo integer nel campo dati **ID** corrispondente.|  
+|**Valore**|Valore dell'elemento. **Valore** può essere usato solo nell'ultimo **ElementNode** del percorso di elemento. Poiché, ad esempio, Return>\< è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore di **Return {@}** è **Chair**.|  
 |**elemento**|Valore del sottoelemento denominato. Customers {}/Customer {}/LastName recupera, ad esempio, i valori solo per l'elemento LastName.|  
 |**Tipo**|Tipo di dati facoltativo da utilizzare per il campo creato da questo elemento.|  
 |**NamespacePrefix**|**NamespacePrefix** è definito nell'elemento Query XML. Se non è presente alcun elemento Query XML, gli spazi dei nomi dell'elemento **ElementPath** XML vengono ignorati. Se è presente un elemento Query XML, l'elemento **ElementPath** XML include un attributo **IgnoreNamespaces**facoltativo. Se IgnoreNamespaces è **True**, gli spazi dei nomi dell'elemento **ElementPath** XML e del documento XML vengono ignorati. Per altre informazioni, vedere [Sintassi di XML Query per i dati del report XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
@@ -92,7 +92,7 @@ XMLLocalName :: =
   
  **Esempio n. 1**: *vuoto*  
   
-|JSON|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
+|JSON|Qtà|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
 |Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
 |Tabella|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
@@ -117,7 +117,7 @@ XMLLocalName :: =
   
  **Esempio n. 4**: `Customers {}/Customer {}/Orders/Order {@,@Qty}`  
   
-|JSON|Qty|  
+|JSON|Qtà|  
 |-----------|---------|  
 |Chair|6|  
 |Tabella|1|  

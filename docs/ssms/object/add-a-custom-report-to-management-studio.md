@@ -1,6 +1,6 @@
 ---
-title: Aggiungere un report personalizzato a Management Studio | Microsoft Docs
-ms.custom: ''
+title: Aggiunta di un report personalizzato a Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84aee831cb03ebf419849fca8bf653803e5d5ced
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a7a287cad9b674c55f032a04490a0518f723a797
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263458"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251359"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Aggiunta di un report personalizzato a Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ In questo argomento viene descritto come creare un report semplice di [!INCLUDE[
   
 -   In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un nodo in Esplora oggetti, scegliere **Report**e fare clic su **Report personalizzati**. Nella finestra di dialogo **Apri file** individuare la cartella dei report personalizzati, selezionare il file **ReportConnessioni.rdl** e fare clic su **Apri**.  
   
-    Alla prima apertura di un nuovo report personalizzato da un nodo di Esplora oggetti, tale report verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati** nel menu di scelta rapida del nodo. Analogamente, alla prima apertura, anche un report standard verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati**. Se viene eliminato un file di un report personalizzato, alla successiva selezione dell'elemento verrà visualizzato un messaggio che chiederà di eliminare la relativa voce dall'elenco degli ultimi elementi utilizzati.  
+    Alla prima apertura di un nuovo report personalizzato da un nodo Esplora oggetti, tale report verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati** nel menu di scelta rapida del nodo. Analogamente, alla prima apertura, anche un report standard verrà aggiunto all'elenco degli ultimi elementi usati in **Report personalizzati**. Se viene eliminato un file di un report personalizzato, alla successiva selezione dell'elemento verrà visualizzato un messaggio che chiederà di eliminare la relativa voce dall'elenco degli ultimi elementi utilizzati.  
   
     1.  Per modificare il numero dei file visualizzati nell'elenco degli ultimi elementi usati, scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Ambiente** e fare clic su **Generale**.  
   
@@ -70,7 +70,7 @@ In questo argomento viene descritto come creare un report semplice di [!INCLUDE[
   
 ## <a name="see-also"></a>Vedere anche  
 [Report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
-[Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
-[Visualizzazione di avvisi relativi all'esecuzione di report personalizzati](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[Usare report personalizzati con proprietà dei nodi di Esplora oggetti](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+[Visualizzare gli avvisi relativi all'esecuzione di report personalizzati](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [SQL Server Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

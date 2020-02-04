@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727465"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Creare una stored procedure con sqlrutils
@@ -83,7 +83,7 @@ Quando si esegue la chiamata a ogni funzione, viene creato un oggetto R che verr
 
 Quando tutti i parametri di input e di output sono pronti, effettuare una chiamata al costruttore `StoredProcedure`.
 
-**Usage**
+**Utilizzo**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

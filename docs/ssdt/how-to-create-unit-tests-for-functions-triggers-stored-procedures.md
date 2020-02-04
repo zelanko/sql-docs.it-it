@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Creare unit test di SQL Server per funzioni, trigger e stored procedure | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creare unit test di SQL Server per funzioni, trigger e stored procedure
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bda57c10-a1ab-4a1a-8a71-42085a3cb793
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1320cf0f6a0b27c1571d63c0432040294e8c68b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c7218f035ca907bf9052865408b3a7311e8f75b4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897188"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241465"
 ---
 # <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>Procedura: Creare unit test di SQL Server per funzioni, trigger e stored procedure
+
 È possibile scrivere unit test che restituiscono le modifiche apportate a qualsiasi oggetto di database. Tuttavia, in SQL Server Data Tools sono incluse funzionalità di supporto aggiuntive per creare test per stored procedure, trigger e funzioni di database dal nodo di un progetto di database in Esplora oggetti di SQL Server. È possibile generare automaticamente stub di codice Transact\-SQL personalizzabili.  
   
 ### <a name="to-create-a-sql-server-unit-test-from-a-function-trigger-or-stored-procedure"></a>Per creare uno unit test di SQL Server da una funzione, un trigger o una stored procedure  

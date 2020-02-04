@@ -13,10 +13,10 @@ ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 66e0d56cbff57a6100ab8c61436ba6bcddf15382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573180"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Finestra di dialogo Proprietà set di dati, Parametri
@@ -27,7 +27,7 @@ ms.locfileid: "65573180"
  In caso di dipendenze dei valori predefiniti di un parametro del report da un altro parametro del report collegato a un parametro di query, l'ordine dei parametri del report visualizzati nella finestra di dialogo **Proprietà parametri report** risulta importante. I parametri del report che vengono dopo nell'elenco possono fare riferimento a parametri che vengono prima. Per altre informazioni sui parametri report, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un nuovo parametro all'elenco.  
   
  **Elimina**  
@@ -36,7 +36,7 @@ ms.locfileid: "65573180"
  **Nome parametro**  
  Digitare il nome di un parametro di query aggiunto al set di dati nella scheda **Query** della finestra di dialogo **Proprietà set di dati** .  
   
- **Valore parametro**  
+ **Valore del parametro**  
  Immettere un valore per il parametro di query. Può trattarsi di un valore statico o di un'espressione che fa riferimento a un oggetto nel report, ma non a un campo o a un elemento del report. Per impostazione predefinita, in **Valore** è contenuta un'espressione che punta a un parametro del report.  
   
  **Freccia in su**  

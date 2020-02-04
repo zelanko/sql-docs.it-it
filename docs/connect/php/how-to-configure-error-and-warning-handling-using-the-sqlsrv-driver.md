@@ -13,10 +13,10 @@ ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2073159ce86604109c71c7addce7caac431851c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993574"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Procedura: Configurare la gestione degli errori e degli avvisi usando il driver SQLSRV

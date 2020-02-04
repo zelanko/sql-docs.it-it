@@ -1,6 +1,6 @@
 ---
-title: Cerca nei file | Microsoft Docs
-ms.custom: ''
+title: Cerca nei file
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45121de07c89603f4de8f2d97ddd7d92d500879b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4acfec737fb3ba0779c825e294315183ec463cf2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265456"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253884"
 ---
 # <a name="find-in-files"></a>Cerca nei file
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68265456"
 ## <a name="find-what"></a>Trova  
  Questi controlli della scheda **Cerca nei file** consentono di specificare la stringa o l'espressione di cui si desidera ottenere le corrispondenze.  
   
- **Find what**  
+ **Trova**  
  Digitare il testo che si desidera cercare. Nella finestra di dialogo verrà proposto un testo di ricerca probabile, basato sul testo selezionato con il cursore prima dell'apertura della finestra di dialogo oppure sul testo vicino o su quello cercato in precedenza. È possibile riutilizzare una delle 20 stringhe di ricerca più recenti selezionandola dall'elenco a discesa.  
   
  **[stringa con caratteri jolly]**  
@@ -79,7 +79,7 @@ ms.locfileid: "68265456"
  **Parola intera**  
  Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono alle parole complete. La ricerca di **MioOggetto** restituirà quindi "MioOggetto", ma non "CMioOggetto" o "MioOggettoC."  
   
- **Utilizza**  
+ **Uso**  
  Indica come interpretare i caratteri speciali immessi nella casella di testo **Trova** o **Sostituisci con** . Sono disponibili le opzioni **Caratteri jolly** ed **Espressioni regolari**.  
   
  **Regular Expressions**  
@@ -89,7 +89,7 @@ ms.locfileid: "68265456"
  I caratteri speciali, quali asterischi (`*`) e punti interrogativi(`?`), rappresentano uno o più caratteri. Per un elenco, vedere [Trova con caratteri jolly](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
  **Cerca i seguenti tipi di file**  
- In questo elenco sono indicati i tipi di file da cercare nelle directory specificate in **Cerca in**. Se il campo viene lasciato vuoto, la ricerca verrà eseguita in tutti i file contenuti nella directory specificata in **Cerca in** .  
+ In questo elenco vengono indicati i tipi di file da cercare nelle directory specificate in **Cerca in**. Se il campo viene lasciato vuoto, la ricerca verrà eseguita in tutti i file contenuti nella directory specificata in **Cerca in** .  
   
 ```  
 *.[ext]; *.[ext] (manual)  

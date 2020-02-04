@@ -15,10 +15,10 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580418"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurare un server di report per l'amministrazione remota
@@ -68,7 +68,7 @@ ms.locfileid: "65580418"
   
 1.  Accedere come amministratore locale al computer per il quale si desidera abilitare l'amministrazione remota.  
   
-2.  Aprire un prompt dei comandi con privilegi amministrativi.  
+2.  Aprire un prompt dei comandi con privilegi di amministratore.  
   
 3.  Eseguire il comando seguente:  
   
@@ -118,7 +118,7 @@ ms.locfileid: "65580418"
   
 3.  Fare clic con il pulsante destro del mouse su **Controllo WMI**e scegliere **Proprietà**.  
   
-4.  Fare clic su **Sicurezza**.  
+4.  Fare clic su **Security**.  
   
 5.  Aprire la cartella Root.  
   

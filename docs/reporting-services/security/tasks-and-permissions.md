@@ -17,10 +17,10 @@ ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8724bbcfdb410f573ea65fbc1b9364d44f9af23d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578508"
 ---
 # <a name="tasks-and-permissions"></a>Attività e autorizzazioni

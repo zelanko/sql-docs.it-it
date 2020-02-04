@@ -9,16 +9,16 @@ ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a9033e39b58e70131ca7c361f89cebed9f12c1d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580853"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Visualizzare intestazioni e piè di pagina con un gruppo (Generatore report e SSRS)
   È possibile stabilire se di una riga statica, ad esempio l'intestazione o il piè di pagina di un gruppo, viene eseguito il rendering con righe dinamiche associate a un gruppo in un'area dati Tablix.  
   
- Per ripetere tutte le intestazioni di colonna o di riga su più pagine, è possibile impostare proprietà per l'area dati Tablix. Per altre informazioni, vedere [Visualizzazione delle intestazioni di riga e colonna in più pagine Generatore report e SSRS](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
+ Per ripetere tutte le intestazioni di colonna o di riga su più pagine, è possibile impostare proprietà per l'area dati Tablix. Per altre informazioni, vedere [Visualizzare le intestazioni di riga e colonna in più pagine (Generatore report e SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
  Per controllare il comportamento di rendering per righe e colonne dinamiche associate a gruppi nidificati oppure per righe e colonne statiche associate a etichette o subtotali, è necessario impostare proprietà per il membro Tablix. Un membro Tablix rappresenta una riga o una colonna statica o dinamica. Un membro statico si ripete una sola volta. Ad esempio, la riga di un totale complessivo è una riga statica. Un membro dinamico si ripete una sola volta per ogni istanza di un gruppo. Ad esempio, una riga associata a un gruppo che include l'espressione di raggruppamento [Territory] si ripete una sola volta per ogni valore univoco relativo al territorio. Per altre informazioni sui membri Tablix, vedere [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   

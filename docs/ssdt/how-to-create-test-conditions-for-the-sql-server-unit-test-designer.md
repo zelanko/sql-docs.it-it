@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Creare condizioni di test per la finestra di progettazione unit test di SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creare condizioni di test per la finestra di progettazione unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6406c2e2ff709e163057163424719169cb2b9787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911795"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241483"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procedura: Creare condizioni di test per la finestra di progettazione unit test di SQL Server
+
 È possibile usare la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) estendibile per creare nuove condizioni di test. Ad esempio, è possibile creare una nuova condizione di test che verifica il numero delle colonne o i valori restituiti in un set di risultati.  
   
 ## <a name="to-create-a-test-condition"></a>Per creare una condizione di test  
@@ -48,7 +49,7 @@ In questa procedura viene spiegato come creare una condizione di test da visuali
   
 10. Derivare la classe dalla classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Firmare l'assembly con un nome sicuro. Per altre informazioni, vedere [Procedura: Firmare un assembly con un nome sicuro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Firmare l'assembly con un nome sicuro. Per altre informazioni, vedere [Procedura: firmare un assembly con un nome sicuro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Compilare la libreria di classi.  
   

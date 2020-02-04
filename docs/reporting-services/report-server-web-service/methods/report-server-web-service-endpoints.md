@@ -15,10 +15,10 @@ ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 19daac65c808691be20621d6718b4b71e33b83f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284625"
 ---
 # <a name="report-server-web-service-endpoints"></a>Endpoint del servizio Web ReportServer

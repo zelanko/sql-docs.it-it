@@ -13,10 +13,10 @@ ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580928"
 ---
 # <a name="windows-application-log"></a>Registro applicazioni di Windows

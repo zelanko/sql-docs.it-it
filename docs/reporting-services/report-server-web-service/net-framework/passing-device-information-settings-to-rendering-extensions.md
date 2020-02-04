@@ -20,10 +20,10 @@ ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128885"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering
@@ -40,7 +40,7 @@ ms.locfileid: "63128885"
 </DeviceInfo>  
 ```  
   
- Quando viene eseguito il rendering di un report come frammento HTML, il contenuto del report si trova all'interno di un elemento TABLE senza l'utilizzo di un elemento HTML o BODY. È possibile usare il frammento HTML per incorporare il report in un documento HTML esistente. Per altre informazioni sulle impostazioni delle informazioni sul dispositivo per l'output HTML, vedere [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md).  
+ Quando viene eseguito il rendering di un report come frammento HTML, il contenuto del report si trova all'interno di un elemento TABLE senza l'utilizzo di un elemento HTML o BODY. È possibile usare il frammento HTML per incorporare il report in un documento HTML esistente. Per altre informazioni sulle impostazioni delle informazioni sul dispositivo per l'output HTML, vedere [Impostazioni relative alle informazioni sul dispositivo HTML](../../../reporting-services/html-device-information-settings.md).  
   
 ## <a name="passing-device-information-using-url-access"></a>Passaggio delle informazioni sul dispositivo con accesso tramite URL  
  È inoltre possibile passare le impostazioni delle informazioni sul dispositivo con accesso tramite URL. Le impostazioni relative alle informazioni sul dispositivo vengono passate come parametri URL. È possibile passare al server di report la stringa di accesso tramite URL per generare un report visualizzabile senza la barra degli strumenti del visualizzatore HTML.  

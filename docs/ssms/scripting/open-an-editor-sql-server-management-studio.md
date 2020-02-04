@@ -1,6 +1,6 @@
 ---
-title: Aprire un editor (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Apertura di un editor (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31c2a9419105f1ee8435b3c1b7e0d7dc7728e0d8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267025"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253785"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Apertura di un editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68267025"
 ### <a name="permissions"></a>Autorizzazioni  
  Le operazioni eseguite in un editor del codice sono soggette alle autorizzazioni concesse all'account di autenticazione utilizzato per l'accesso. Se ad esempio si apre una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando l'autenticazione di Windows, non sarà possibile eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che fanno riferimento a oggetti per i quali l'account di Windows non dispone delle autorizzazioni di accesso.  
   
-## <a name="how-to-open-editors"></a>Procedura: Aprire gli editor  
+## <a name="how-to-open-editors"></a>Procedura: Apertura degli editor  
  In questa sezione viene illustrato come aprire i vari editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Utilizzo del menu File/Nuovo  

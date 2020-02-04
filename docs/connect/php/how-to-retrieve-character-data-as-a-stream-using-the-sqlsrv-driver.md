@@ -14,10 +14,10 @@ ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3b4a0fd48809d53cda18f2ceb4eaf1f435210e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936419"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Procedura: Recupero di dati di tipo carattere come flusso usando il driver SQLSRV
@@ -28,7 +28,7 @@ Il recupero di dati come flusso è disponibile solo nel driver SQLSRV dei [!INCL
 Il driver SQLSRV sfrutta i flussi PHP per recuperare grandi quantità di dati dal server. Nell'esempio riportato in questo argomento viene illustrato come recuperare i dati di tipo carattere come flusso.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene recuperata una riga dalla tabella *Production.ProductReview* del database AdventureWorks. Il campo *Comments* della riga restituita viene recuperato come flusso e visualizzato tramite la funzione PHP [fpassthru](https://php.net/manual/function.fpassthru.php) .  
+Nell'esempio seguente viene recuperata una riga dalla tabella *Production.ProductReview* del database AdventureWorks. Il campo *Comments* della riga restituita viene recuperato come flusso e visualizzato tramite la funzione PHP [fpassthru](https://php.net/manual/function.fpassthru.php).  
   
 Il recupero di dati come flusso viene eseguito usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) specificando flusso di caratteri come tipo restituito. Il tipo restituito viene specificato usando la costante **SQLSRV_PHPTYPE_STREAM**. Per informazioni sulle costanti **sqlsrv**, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
@@ -94,7 +94,7 @@ Poiché per i primi tre campi non è stato specificato alcun tipo restituito PHP
 ## <a name="see-also"></a>Vedere anche  
 [Recupero di dati](../../connect/php/retrieving-data.md)
 
-[Recupero di dati come flusso usando il driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+[Recupero di dati come flusso tramite il driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
 
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
   

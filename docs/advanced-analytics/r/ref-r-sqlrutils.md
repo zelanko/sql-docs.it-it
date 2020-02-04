@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715037"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (libreria R in SQL Server)

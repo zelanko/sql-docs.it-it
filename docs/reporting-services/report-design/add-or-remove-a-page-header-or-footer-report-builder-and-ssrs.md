@@ -9,10 +9,10 @@ ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8c05a90f2d077e76bbbdebb9f285c3f2e8b3f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581921"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Aggiungere o rimuovere un'intestazione o un piè di pagina (Generatore report e SSRS)
@@ -47,9 +47,9 @@ ms.locfileid: "65581921"
   
     -   **Immagine**  
   
-3.  Fare clic con il pulsante destro del mouse sull'intestazione pagina, quindi scegliere **Proprietà intestazione** per aggiungere bordi, immagini di sfondo o colori oppure per regolare la larghezza dell'intestazione. Fare clic su **OK**.  
+3.  Fare clic con il pulsante destro del mouse sull'intestazione pagina, quindi scegliere **Proprietà intestazione** per aggiungere bordi, immagini di sfondo o colori oppure per regolare la larghezza dell'intestazione. Fare quindi clic su **OK**.  
   
-4.  Fare clic con il pulsante destro del mouse sul piè di pagina, quindi scegliere **Proprietà piè di pagina** per aggiungere bordi, immagini di sfondo o colori oppure per regolare la larghezza del piè di pagina. Fare clic su **OK**.  
+4.  Fare clic con il pulsante destro del mouse sul piè di pagina, quindi scegliere **Proprietà piè di pagina** per aggiungere bordi, immagini di sfondo o colori oppure per regolare la larghezza del piè di pagina. Fare quindi clic su **OK**.  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>Per rimuovere un'intestazione di pagina o un piè di pagina  
   

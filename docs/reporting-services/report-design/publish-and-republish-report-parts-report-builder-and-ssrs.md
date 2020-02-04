@@ -9,10 +9,10 @@ ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f48415c35b57b889b764abfe44f5bf937ee3f650
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576631"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Pubblicare e ripubblicare parti del report (Generatore report e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65576631"
   
      Dopo la pubblicazione, nella finestra di dialogo viene mostrato quali parti di report sono state pubblicate correttamente e quali non lo sono state. È possibile visualizzare i dettagli nella finestra di dialogo **Pubblica parti del report** per le parti del report non pubblicate correttamente.  
   
-6.  Scegliere **Chiudi**.  
+6.  Fare clic su **Close**.  
   
 ## <a name="to-republish-a-report-part"></a>Per ripubblicare una parte di report  
   

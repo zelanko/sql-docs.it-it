@@ -9,14 +9,14 @@ ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573847"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Risolvere i problemi di progettazione dei report con Reporting Services
-I problemi di progettazione del report si possono verificare quando si crea il layout del report nella visualizzazione Progettazione in un'applicazione per la progettazione di report. Usare le informazioni presenti in questo argomento per risolvere questi problemi.   
+I problemi di progettazione del report si possono verificare quando si crea il layout del report nella visualizzazione Progettazione in un'applicazione per la progettazione di report. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.   
   
 ## <a name="why-does-my-text-box-show-only-a-single-value-and-not-repeat-for-every-row"></a>Nella casella di testo è visualizzato un solo valore, il quale non viene ripetuto per ogni riga  
 Una casella di testo con un riferimento di campo del set di dati viene visualizzata solo una volta e contiene il primo valore nel set di dati.   

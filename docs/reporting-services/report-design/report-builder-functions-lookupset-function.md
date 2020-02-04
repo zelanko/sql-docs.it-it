@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577405"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funzioni di Generatore report - Funzione LookupSet
@@ -30,13 +30,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parametri  
  *source_expression*  
- (**Variant**) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare. Ad esempio, `=Fields!ID.Value`.  
+ (**Variant**) Espressione valutata nell'ambito corrente che specifica il nome o la chiave da ricercare. Ad esempio: `=Fields!ID.Value`.  
   
  *destination_expression*  
- (**Variant**) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui stabilire la corrispondenza. Ad esempio, `=Fields!CustomerID.Value`.  
+ (**Variant**) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui stabilire la corrispondenza. Ad esempio: `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (**Variant**) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, e che specifica il valore da recuperare. Ad esempio, `=Fields!PhoneNumber.Value`.  
+ (**Variant**) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, e che specifica il valore da recuperare. Ad esempio: `=Fields!PhoneNumber.Value`.  
   
  *set di dati*  
  Costante che specifica il nome di un set di dati nel report, ad esempio "InformazioniDiContatto".  
@@ -44,7 +44,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Return  
  Restituisce **VariantArray**o **Nothing** se non viene rilevata alcuna corrispondenza.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Usare **LookupSet** per recuperare un set di valori dal set di dati specificato per una coppia nome/valore in cui è presente una relazione uno-a-molti. Per un identificatore di cliente in una tabella, ad esempio, è possibile usare la funzione **LookupSet** per recuperare tutti i numeri di telefono relativi al cliente da un set di dati non associato all'area dati.  
   
  Tramite la funzione**LookupSet** vengono effettuate le operazioni seguenti:  
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Per recuperare un singolo valore da un set di dati con coppie nome/valore per un nome specificato in cui è presente una relazione uno-a-uno, usare la [Funzione Lookup &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Per chiamare la funzione **Lookup** per un set di valori, usare la [Funzione Multilookup &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- Sono previste le restrizioni seguenti:  
+ Si applicano le restrizioni seguenti:  
   
 -   La funzione**LookupSet** viene valutata dopo l'applicazione di tutte le espressioni di filtro.  
   

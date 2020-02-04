@@ -9,10 +9,10 @@ ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d14c8e092a030c88dbc4d0b5d4375bb56a8eb82c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308176"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Abilitare un server di report per l'accesso a Power BI per dispositivi mobili
@@ -49,7 +49,7 @@ Per altre informazioni su come configurare Windows Firewall, vedere [Configurare
   
 ## <a name="see-also"></a>Vedere anche  
   
-[configurazione dell'autenticazione di base nel server di report](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+[Configurare l'autenticazione di base nel server di report](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
 [Configurare connessioni SSL in un server di report in modalità nativa](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   

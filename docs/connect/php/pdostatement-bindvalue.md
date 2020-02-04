@@ -11,10 +11,10 @@ ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993118"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
@@ -39,7 +39,7 @@ $*data_type*: tipo di dati (intero) facoltativo rappresentato da una costante PD
 ## <a name="return-value"></a>Valore restituito  
 TRUE in caso di esito positivo; in caso contrario, FALSE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
   

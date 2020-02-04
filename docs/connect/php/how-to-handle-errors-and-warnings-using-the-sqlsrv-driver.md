@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18e50d7344fb5d3d16c4fc0978137e169ba487ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: eb1af89c0641a50be503d1283f1f85a735a153f1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936499"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929423"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Procedura: Gestire errori e avvisi usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ Nella prima chiamata a una funzione **sqlsrv** ([sqlsrv_configure](../../connect
   
 Si noti inoltre che il codice di esempio ricerca gli errori dopo ogni chiamata a una funzione **sqlsrv** . Questa è la procedura consigliata.  
   
-Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser. Quando l'esempio viene eseguito in una nuova installazione del database AdventureWorks, produce tre avvisi e i due errori. I primi due avvisi sono avvisi standard che vengono rilasciati quando ci si connette a un database. Il terzo avviso si verifica perché le ore di ferie disponibili di un dipendente vengono aggiornate a un valore minore di zero. Gli errori si verificano perché le ore di ferie disponibili di un dipendente vengono aggiornate a un valore inferiore a -40 ore violando un vincolo nella tabella.  
+L'esempio presuppone che SQL Server e il database [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser. Quando l'esempio viene eseguito in una nuova installazione del database AdventureWorks, produce tre avvisi e i due errori. I primi due avvisi sono avvisi standard che vengono rilasciati quando ci si connette a un database. Il terzo avviso si verifica perché le ore di ferie disponibili di un dipendente vengono aggiornate a un valore minore di zero. Gli errori si verificano perché le ore di ferie disponibili di un dipendente vengono aggiornate a un valore inferiore a -40 ore violando un vincolo nella tabella.  
   
 ```  
 <?php  
@@ -130,7 +130,7 @@ $params = array(
                  array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                 );  
   
-/* Define and prepare the query to substract used vacation hours. */  
+/* Define and prepare the query to subtract used vacation hours. */  
 $tsql3 = "{call SubtractVacationHours(?, ?)}";  
 $stmt3 = sqlsrv_prepare($conn, $tsql3, $params);  
   

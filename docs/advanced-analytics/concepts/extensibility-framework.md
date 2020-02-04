@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727685"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architettura di estendibilità in SQL Server Machine Learning Services 
@@ -22,7 +22,7 @@ ms.locfileid: "73727685"
 
 SQL Server ha un framework di estendibilità per l'esecuzione di uno script esterno, ad esempio R o Python, nel server. Lo script viene eseguito in un ambiente di runtime del linguaggio come estensione del motore di database principale.
 
-## <a name="background"></a>Informazioni preliminari
+## <a name="background"></a>Background
 
 Il framework di estendibilità è stato introdotto in SQL Server 2016 per supportare il runtime R. In SQL Server 2017 e versioni successive è incluso il supporto per Python.
 

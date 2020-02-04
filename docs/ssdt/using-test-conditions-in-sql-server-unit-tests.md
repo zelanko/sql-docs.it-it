@@ -1,25 +1,26 @@
 ---
-title: Uso di condizioni di test in unit test di SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Utilizzo di condizioni di test in unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa2bce398b6ac03422044c9ffad23f91ab81818c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140971"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243524"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilizzo di condizioni di test in unit test di SQL Server
+
 In uno unit test di SQL Server vengono eseguiti uno o più script di test Transact\-SQL. I risultati possono essere valutati nello script Transact\-SQL e nell'istruzione THROW o RAISERROR usata per restituire un errore e interrompere il test. In alternativa, per valutare i risultati è possibile definire nel test le relative condizioni. Tramite il test viene restituita un'istanza della classe [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx). Nell'istanza di questa classe sono contenuti uno o più set di dati, il tempo di esecuzione e le righe interessate dallo script. Tutte queste informazioni vengono raccolte durante l'esecuzione dello script. Questi risultati possono essere valutati usando le condizioni di test. SQL Server Data Tools fornisce un set di condizioni di test predefinite. È anche possibile creare e usare condizioni personalizzate. Vedere [Condizioni di test personalizzate per unit test di SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
 ## <a name="predefined-test-conditions"></a>Condizioni di test predefinite  
@@ -27,7 +28,7 @@ Nella tabella seguente sono elencate le condizioni di test predefinite che è po
   
 |**Condizione di test**|**Descrizione della condizione di test**|  
 |----------------------|----------------------------------|  
-|Checksum di dati|Esito negativo se il valore di checksum del set di risultati restituito dallo script Transact\-SQL non corrisponde al valore di checksum previsto. Per ulteriori informazioni, vedere [Specifica di un checksum di dati](#SpecifyDataChecksum).<br /><br />**NOTA:** È consigliabile non usare questa condizione di test se vengono restituiti dati che variano tra le esecuzioni dei test. Se ad esempio il set di risultati contiene date o ore generate oppure colonne Identity, i test avranno esito negativo perché il valore di checksum sarà diverso per ogni esecuzione.|  
+|Checksum di dati|Esito negativo se il valore di checksum del set di risultati restituito dallo script Transact\-SQL non corrisponde al valore di checksum previsto. Per ulteriori informazioni, vedere [Specifica di un checksum di dati](#SpecifyDataChecksum).<br /><br />**NOTA:** non è consigliabile usare questa condizione di test se vengono restituiti dati che variano tra le esecuzioni di test. Se ad esempio il set di risultati contiene date o ore generate oppure colonne Identity, i test avranno esito negativo perché il valore di checksum sarà diverso per ogni esecuzione.|  
 |Set di risultati vuoto|Esito negativo se il set di risultati restituito dallo script Transact\-SQL non è vuoto.|  
 |Tempo di esecuzione|Esito negativo se l'esecuzione dello script di test Transact\-SQL richiede più tempo del previsto. Il tempo di esecuzione predefinito è di 30 secondi.<br /><br />Il tempo di esecuzione si applica solo allo script di test, non allo script di pre-test o post-test.|  
 |Schema previsto|Esito negativo se i tipi di dati e colonne del set di risultati non corrispondono a quelli specificati per la condizione di test. È necessario specificare uno schema tramite le proprietà della condizione di test. Per ulteriori informazioni, vedere [Specifica di uno schema previsto](#SpecifyExpectedSchema).|  
@@ -72,7 +73,7 @@ Dove:
   
 Tutti i parametri non specificati vengono ignorati. Passare questi parametri all'istruzione **THROW** nel codice di database. Se si specifica MatchFirstError = false, l'attributo corrisponderà a uno qualsiasi dei valori SqlErrors nell'eccezione. Il comportamento predefinito (MatchFirstError = true) troverà una corrispondenza solo per il primo errore che si verifica.  
   
-Per un esempio di utilizzo delle eccezioni previste e di uno unit test di SQL Server negativo, vedere [Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Per un esempio di come usare le eccezioni previste e uno unit test negativo di SQL Server, vedere [Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="SpecifyDataChecksum"></a>Specifica di un checksum di dati  
 Per visualizzare la finestra di progettazione unit test di SQL Server, fare doppio clic sul file del codice sorgente dello unit test in **Esplora soluzioni**.  

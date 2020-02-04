@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593925"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -69,7 +69,7 @@ ms.locfileid: "73593925"
   
 1.  In una raccolta documenti di SharePoint creare un report semplice di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contenente solo una casella di testo, ad esempio un titolo. Il report non contiene origini dati e set di dati. L'obiettivo consiste nel verificare che sia possibile aprire Generatore report. In tal caso, verrà visualizzato in anteprima un report di base.  
   
-2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report (Generatore report)](../report-builder/start-report-builder.md).  
+2.  Salvare il report nella raccolta documenti e quindi eseguire il report dalla raccolta. Per altre informazioni sulla creazione di report con Generatore report, vedere [Avviare Generatore report](../report-builder/start-report-builder.md).  
   
 ### <a name="reporting-services-samples"></a>Esempi di Reporting Services  
   

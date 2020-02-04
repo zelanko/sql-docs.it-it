@@ -12,10 +12,10 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cab49b0f07caff685bd216ec9090f9e851a1d38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581482"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Prestazioni, snapshot, memorizzazione nella cache (Reporting Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65581482"
   
 -   Se tutti i report vengono elaborati lentamente per ottenere un formato specifico (ad esempio durante il rendering in formato PDF), prendere in considerazione l'utilizzo del recapito tramite la condivisione file, l'aggiunta di ulteriore memoria o la scelta di un formato diverso.  
   
--   Per individuare la quantità di tempo necessario per elaborare un report e altre misure relative all'utilizzo, esaminare il log di esecuzione del server di report. Per altre informazioni, vedere [Report Server ExecutionLog and the ExecutionLog3 View](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)(Vista ExecutionLog ed ExecutionLog3 del server di report).  
+-   Per individuare la quantità di tempo necessario per elaborare un report e altre misure relative all'utilizzo, esaminare il log di esecuzione del server di report. Per altre informazioni, vedere [Vista ExecutionLog ed ExecutionLog3 del server di report](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
 -   Per altre informazioni su come limitare i problemi di prestazioni ottimizzando le impostazioni di configurazione di Gestione memoria, vedere [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65581482"
  [Monitoraggio delle prestazioni del server di report](../../reporting-services/report-server/monitoring-report-server-performance.md)  
  Descrive gli oggetti relativi alle prestazioni che è possibile utilizzare per tenere traccia del carico di elaborazione nel server.  
   
- [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)  
+ [Impostare le proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md)  
  Descrive come configurare un report per l'esecuzione su richiesta, dalla cache o in base a una pianificazione come snapshot del report.  
   
  [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  

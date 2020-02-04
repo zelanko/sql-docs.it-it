@@ -9,10 +9,10 @@ ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a98492ecca7cafebfff34e6438edb39e173d8b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571633"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Aggiungere un bordo o un frame a un grafico (Generatore report e SSRS)

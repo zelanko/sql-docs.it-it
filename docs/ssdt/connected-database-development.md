@@ -1,25 +1,24 @@
 ---
-title: Sviluppo del database connesso | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Sviluppo del database connesso
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a072483769e4e75ac21b992b0fefa462640fa31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 068418e04624d912671e5b390823fb0903ba50af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984601"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256135"
 ---
 # <a name="connected-database-development"></a>Sviluppo del database connesso
+
 Questa sezione descrive le funzionalità fornite da SQL Server Data Tools per la progettazione di un database connesso e l'esecuzione di query su tale database.  
   
 Se si usa Esplora oggetti di SQL Server in Visual Studio, gli sviluppatori possono ora creare, modificare e sfogliare oggetti di database posizionati in un server di database locale, quale SQL Server 2008 o Microsoft SQL Server 2012 oppure ospitati in SQL Azure. Possono inoltre facilmente clonare un database di produzione esistente in un'istanza di test, effettuare in esso un'operazione di sviluppo aggiuntiva e pubblicare di nuovo le modifiche nel database di produzione.  
@@ -42,6 +41,6 @@ Se si usa Esplora oggetti di SQL Server in Visual Studio, gli sviluppatori posso
 |[Procedura: Clonare un database esistente](../ssdt/how-to-clone-an-existing-database.md)|Creare un database di sviluppo da un database di produzione.|  
 |[Estrarre, pubblicare e registrare file con estensione dacpac](../ssdt/extract-publish-and-register-dacpac-files.md)|Viene mostrato come estrarre e pubblicare file con estensione dacpac.|  
   
-## <a name="related-sections"></a>Sezioni correlate  
-[Gestire tabelle e relazioni e correggere errori](../ssdt/manage-tables-relationships-and-fix-errors.md)  
-  
+## <a name="related-sections"></a>Sezioni correlate
+
+[Gestire tabelle e relazioni e correggere errori](../ssdt/manage-tables-relationships-and-fix-errors.md)

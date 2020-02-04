@@ -1,11 +1,7 @@
 ---
-title: 'Procedura: Creare oggetti di database tramite Progettazione tabelle | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creare oggetti di database tramite Progettazione tabelle
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897157"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241499"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Procedura: Creare oggetti di database tramite Progettazione tabelle
+# <a name="how-to-create-database-objects-using-table-designer"></a>Procedura: Creazione di oggetti di database tramite Progettazione tabelle
+
 Il nuovo nodo **SQL Server** in **Esplora oggetti di SQL Server** non solo è visivamente molto simile a SSMS, ma consente di creare nuovi oggetti tramite menu contestuali con un funzionamento è simile ai corrispondenti di SSMS.  
   
 È ad esempio possibile creare un nuovo database nel nodo **Database**. Analogamente, è possibile selezionare un database specifico e creare o modificare definizioni di tabella e relativi oggetti di programmazione correlati immediatamente tramite la nuova Progettazione tabelle. Da Progettazione tabelle è possibile passare a un riquadro di script che consente di modificare direttamente lo script mediante il quale viene definita questa tabella.  
@@ -56,21 +57,21 @@ Il nuovo nodo **SQL Server** in **Esplora oggetti di SQL Server** non solo è vi
 5.  Aggiungere un'altra colonna. Immettere **Address** per il campo **Name**, **nvarchar (MAX)** per **Tipo di dati** e deselezionare il campo **Consenti valori Null**.  
   
     > [!WARNING]  
-    > Se si modificano gli oggetti da un database connesso, non salvarli nell'unità locale. Per salvare correttamente le modifiche nel database, seguire i passaggi descritti in [Procedura: Aggiornare un database connesso con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+    > Se si modificano gli oggetti da un database connesso, non salvarli nell'unità locale. Per salvare correttamente le modifiche nel database, seguire i passaggi indicati nella prossima procedura [Procedura: Aggiornare un database connesso con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Ripetere i passaggi elencati in precedenza per creare un'altra tabella denominata **Customer**. Questa volta, aggiungere alla tabella Customer le colonne seguenti utilizzando la Griglia colonne. Inoltre, modificare lo script in modo che il nome della tabella sia `[dbo].[Customer]`.  
   
-    |nome|Tipo di dati|**Consenti valori NULL**|  
+    |Nome|Tipo di dati|**Consenti valori NULL**|  
     |--------|-------------|-------------------|  
     |ID|INT|non selezionata|  
-    |nome|nvarchar (128)|non selezionata|  
+    |Nome|nvarchar (128)|non selezionata|  
   
 7.  Creare un'ulteriore tabella denominata **Products**. Aggiungere alla tabella Products le colonne seguenti utilizzando la Griglia colonne. Inoltre, modificare lo script in modo che il nome della tabella sia `[dbo].[Products]`.  
   
-    |nome|Tipo di dati|**Consenti valori NULL**|  
+    |Nome|Tipo di dati|**Consenti valori NULL**|  
     |--------|-------------|-------------------|  
     |ID|INT|non selezionata|  
-    |nome|nvarchar (128)|non selezionata|  
+    |Nome|nvarchar (128)|non selezionata|  
     |ShelfLife|INT|selezionata|  
     |SupplierId|INT|selezionata|  
     |CustomerId|INT|selezionata|  

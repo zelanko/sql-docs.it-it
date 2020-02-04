@@ -1,10 +1,9 @@
 ---
-title: Riepilogare o aggregare valori mediante espressioni personalizzate | Microsoft Docs
-ms.custom: ''
+title: Riepilogare o aggregare valori mediante espressioni personalizzate
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a5ba3f3022e39bc9fb4db7c7af3d62ab9fbe430
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: acf28bbddb69d7dfe2888ad53465143103c90dba
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267425"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254862"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>Riepilogo o aggregazione di valori mediante l'utilizzo di espressioni personalizzate (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

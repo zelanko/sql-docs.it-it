@@ -5,22 +5,22 @@ description: Informazioni su come distribuire un cluster Big Data di SQL Server 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706341"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720846"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Distribuire il nodo NameNode di HDFS e i servizi Spark condivisi in una configurazione a disponibilità elevata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Oltre a distribuire l'istanza master di SQL Server in una configurazione a disponibilità elevata tramite gruppi di disponibilità, è possibile distribuire altri servizi cruciali nel cluster Big Data per garantire un livello di affidabilità maggiore. È possibile configurare `HDFS name node` e i servizi Spark condivisi raggruppati in `SparkHead` con una replica aggiuntiva. In questo caso, viene distribuito anche `Zookeeper` dal cluster Big Data al server come coordinatore del cluster e archivio di metadati per i servizi seguenti: 
+Oltre a distribuire l'istanza master di SQL Server in una configurazione a disponibilità elevata tramite gruppi di disponibilità, è possibile distribuire altri servizi cruciali nel cluster Big Data per garantire un livello di affidabilità maggiore. È possibile configurare `HDFS name node` e i servizi Spark condivisi raggruppati in `sparkhead` con una replica aggiuntiva. In questo caso, viene distribuito anche `Zookeeper` dal cluster Big Data al server come coordinatore del cluster e archivio di metadati per i servizi seguenti: 
 
 - Nodo NameNode di HDFS
 - Livy e Yarn Resource Manager. 
@@ -46,7 +46,7 @@ La figura seguente mostra una distribuzione a disponibilità elevata di HDFS in 
 
 :::image type="content" source="media/deployment-high-availability-hdfs-spark/hdfs-ha.png" alt-text="hdfs-ha-bdc":::
 
-## <a name="deploy"></a>Distribuzione
+## <a name="deploy"></a>Distribuire
 
 Se il nodo NameNode o SparkHead è configurato con due repliche, è necessario configurare anche la risorsa Zookeeper con tre repliche. In una configurazione a disponibilità elevata per il nodo NameNode di HDFS due pod ospitano due repliche. I pod sono `nmnode-0` e `nmnode-1`. Questa configurazione è attiva-passiva. È attivo un solo nodo per volta. L'altro è in standby e diventa attivo solo come conseguenza di un evento di failover. 
 

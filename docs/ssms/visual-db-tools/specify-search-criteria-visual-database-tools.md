@@ -1,10 +1,9 @@
 ---
-title: Specificare i criteri di ricerca (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Specificare criteri di ricerca
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3cef20ba9e4d841e74a8deaed47fab2f8b6b193
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d8a27a6e7fa531f8fe95cfcc7cdd6d98043ab9d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263545"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254938"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Specifica di criteri di ricerca (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +77,7 @@ Viene descritto come e perché utilizzare l'operatore OR per filtrare i risultat
 Viene descritto come creare sottoquery o query nidificate.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
-[Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Vengono forniti collegamenti ad argomenti relativi alle procedure per l'esecuzione delle attività di query più comuni.  
   
 [Tipi di query &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  

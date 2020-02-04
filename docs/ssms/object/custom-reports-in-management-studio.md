@@ -1,6 +1,6 @@
 ---
-title: Report personalizzati in Management Studio | Microsoft Docs
-ms.custom: ''
+title: Report personalizzati in Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f2fd6eb4e5c3c6b50f7fd96a0dd5ff51034d305
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0e5dafb96c0bb94fcb2dd0134fefb3f96b7c5708
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259509"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257231"
 ---
 # <a name="custom-reports-in-management-studio"></a>Report personalizzati in Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] molti nodi di Esplora oggetti contengono un set di report standard creati da [!INCLUDE[msCoName](../../includes/msconame_md.md)]. In tali report viene fornito un riepilogo delle informazioni relative ai server generalmente necessarie. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, gli amministratori possono eseguire report personalizzati creati in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]molti nodi di Esplora oggetti contengono un set di report standard creati da [!INCLUDE[msCoName](../../includes/msconame_md.md)]. In tali report viene fornito un riepilogo delle informazioni relative ai server generalmente necessarie. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, gli amministratori possono eseguire report personalizzati creati in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="implementation"></a>Implementazione  
 I report personalizzati vengono archiviati come file di definizione di report con estensione rdl e vengono creati mediante il linguaggio RDL (Report Definition Language). Il linguaggio RDL contiene informazioni sul layout e il recupero dei dati per un report in formato XML RDL è uno schema aperto. Gli sviluppatori possono estendere RDL con attributi ed elementi aggiuntivi. Nei report può essere eseguita qualsiasi istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] valida.  
@@ -75,6 +75,6 @@ In un report è possibile incorporare qualsiasi comando [!INCLUDE[dnprdnshort](.
   
 ## <a name="see-also"></a>Vedere anche  
 [Aggiunta di un report personalizzato a Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
-[Visualizzazione di avvisi relativi all'esecuzione di report personalizzati](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[Visualizzare gli avvisi relativi all'esecuzione di report personalizzati](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
 [Usare report personalizzati con proprietà dei nodi di Esplora oggetti](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   

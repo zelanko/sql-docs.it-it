@@ -18,13 +18,13 @@ ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992744"
 ---
-# <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
+# <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Recupera la riga successiva di dati in forma di oggetto PHP.  
@@ -66,7 +66,7 @@ Un oggetto PHP con proprietà corrispondenti ai nomi dei campi del set di risult
   
 Il tipo di dati di un valore nell'oggetto restituito corrisponderà al tipo di dati PHP predefinito. Per informazioni sui tipi di dati PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Se viene specificato un nome di classe con il parametro facoltativo *$className* , viene creata un'istanza di un oggetto di questo tipo di classe. Se la classe presenta proprietà con nomi corrispondenti ai nomi dei campi del set di risultati, alle proprietà vengono applicati i valori del set di risultati corrispondenti. Se un nome di campo del set di risultati non corrisponde ad alcuna proprietà della classe, all'oggetto viene aggiunta una proprietà con il nome del campo del set di risultati e alla proprietà viene applicato il valore del set di risultati.  
   
 Quando si specifica una classe con il parametro *$className* , si applicano le regole seguenti:  

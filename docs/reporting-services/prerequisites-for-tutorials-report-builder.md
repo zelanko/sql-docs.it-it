@@ -9,10 +9,10 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 450a490e5c4f54f9fec2e88c1c73bfbf8502869a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66499987"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Prerequisiti per le esercitazioni (Generatore report)
@@ -29,7 +29,7 @@ Per completare le esercitazioni di Generatore report, è necessario soddisfare i
   
     In un server di report selezionare **Nuovo** > **Report impaginato**.
   
-    In un server di report in modalità integrata SharePoint, nella scheda **Documenti** selezionare **Nuovo documento**, quindi selezionare **Report di Generatore report**nell'elenco a discesa. Ad esempio, `https://<servername>/sites/mySite/reports`. L'amministratore di SharePoint deve abilitare la caratteristica Report di Generatore report per ogni raccolta documenti.  
+    In un server di report in modalità integrata SharePoint, nella scheda **Documenti** selezionare **Nuovo documento**, quindi selezionare **Report di Generatore report**nell'elenco a discesa. Ad esempio: `https://<servername>/sites/mySite/reports`. L'amministratore di SharePoint deve abilitare la caratteristica Report di Generatore report per ogni raccolta documenti.  
   
 -   URL di un server di report di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] o di un sito di SharePoint integrato con un server di report di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . È necessario disporre dell'autorizzazione per il salvataggio e la visualizzazione di report, origini dati condivise, set di dati condivisi, parti di report e modelli. Per impostazione predefinita, l'URL per un server di report è `https://<servername>/reportserver`. Per impostazione predefinita, l'URL per un sito SharePoint è `https://<sitename>` o `https://<server>/site`.  
   

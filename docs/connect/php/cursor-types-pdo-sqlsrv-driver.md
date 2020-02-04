@@ -11,20 +11,20 @@ ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c62c2a35123e77f5366dd5348fd51b3c50c85605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993694"
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>Tipi di cursore (driver PDO_SQLSRV)
+# <a name="cursor-types-pdo_sqlsrv-driver"></a>Tipi di cursore (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Il driver PDO_SQLSRV consente di creare set di risultati scorrevoli con uno dei diversi cursori disponibili.
 
 Per informazioni su come specificare un cursore con il driver PDO_SQLSRV e per esempi di codice, vedere [PDO::prepare](../../connect/php/pdo-prepare.md).
 
-## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV e cursori lato server
+## <a name="pdo_sqlsrv-and-server-side-cursors"></a>PDO_SQLSRV e cursori lato server
 Nelle versioni dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] precedenti alla 3.0, il driver PDO_SQLSRV consente di creare un set di risultati con un cursore statico o forward-only lato server. A partire dalla versione 3.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], sono disponibili anche cursori dinamici e keyset.
 
 È possibile indicare il tipo di cursore lato server usando [PDO::prepare](../../connect/php/pdo-prepare.md) per selezionare uno dei tipi di cursore seguenti:
@@ -41,7 +41,7 @@ Nelle versioni dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pre
 
 -   `PDO::SQLSRV_CURSOR_KEYSET`
 
-## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV e cursori lato client
+## <a name="pdo_sqlsrv-and-client-side-cursors"></a>PDO_SQLSRV e cursori lato client
 I cursori lato client sono stati aggiunti nella versione 3.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] e consentono di memorizzare nella cache in memoria un intero set di risultati. Un vantaggio è rappresentato dal fatto che dopo l'esecuzione di una query è disponibile il numero delle righe.
 
 È consigliabile usare i cursori lato client per set di risultati di piccole e medie dimensioni. Per set di risultati di grandi dimensioni, usare i cursori lato server.

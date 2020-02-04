@@ -1,6 +1,6 @@
 ---
-title: Aprire un modello | Microsoft Docs
-ms.custom: ''
+title: Aprire un modello
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c52d9b58a3fb738222c78dd57e9d45634963fbde
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dd59b435c1c0fbd3461333305824aca61c68d296
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266759"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245685"
 ---
 # <a name="open-a-template"></a>Aprire un modello
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ Dopo avere aperto il modello, usare la finestra di dialogo **Sostituisci paramet
 Se in seguito all'apertura di un modello viene aperta una nuova finestra dell'editor, la finestra verrà aperta con le credenziali della connessione attiva corrente. Ad esempio, se è attiva un'istanza del [!INCLUDE[ssDE](../../includes/ssde_md.md)] in Esplora oggetti quando si apre il modello CREATE DATABASE, verrà aperta una nuova finestra dell'editor utilizzando una connessione a tale istanza. In assenza di connessione attiva, in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verrà visualizzata una finestra di dialogo di accesso.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Visualizza](../../ssms/template/template-explorer.md)  
+[Esplora modelli](../../ssms/template/template-explorer.md)  
 [Sostituire i parametri del modello](../../ssms/template/replace-template-parameters.md)  
   

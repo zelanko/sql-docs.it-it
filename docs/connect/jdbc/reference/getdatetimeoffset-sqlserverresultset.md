@@ -11,10 +11,10 @@ ms.assetid: 60ec0499-1c2a-4476-9e32-03b9d698fe54
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 305c178c066edead818f58c3e7cdbc9229588e2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983783"
 ---
 # <a name="getdatetimeoffset-sqlserverresultset"></a>getDateTimeOffset (SQLServerResultSet)
@@ -24,7 +24,7 @@ ms.locfileid: "67983783"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo getDateTimeOffset (int)](../../../connect/jdbc/reference/getdatetimeoffset-int-sqlserverresultset.md)|Recupera il valore della colonna designata come oggetto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) nel linguaggio di programmazione Java in base all'indice del parametro.|  
 |[getDateTimeOffset (java.lang.string)](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|Recupera il valore della colonna designata come oggetto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) nel linguaggio di programmazione Java in base all'indice del parametro.|  

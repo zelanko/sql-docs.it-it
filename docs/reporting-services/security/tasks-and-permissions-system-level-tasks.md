@@ -11,10 +11,10 @@ ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f7ca906c8689c1bf8f40e79875acff5b7ab7c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570293"
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>Attività e autorizzazioni - attività a livello di sistema
@@ -29,10 +29,10 @@ ms.locfileid: "65570293"
 |Attività|Autorizzazioni|  
 |----------|-----------------|  
 |Esecuzione delle definizioni dei report|Esecuzione delle definizioni dei report (il nome dell'autorizzazione e il nome dell'attività sono identici)|  
-|Generazione di eventi|Generazione di eventi|  
-|Gestisci processi|Lettura delle proprietà di sistema<br /><br /> Aggiornamento delle proprietà di sistema|  
+|Generare eventi|Generazione di eventi|  
+|Gestire i processi|Lettura delle proprietà di sistema<br /><br /> Aggiornamento delle proprietà di sistema|  
 |Gestione delle proprietà del server di report|Lettura delle proprietà di sistema<br /><br /> Aggiornamento delle proprietà di sistema|  
-|Gestione di ruoli|Creazione di ruoli<br /><br /> Eliminazione di ruoli<br /><br /> Lettura delle proprietà di ruolo<br /><br /> Aggiornamento delle proprietà di ruolo|  
+|Gestire i ruoli|Creazione di ruoli<br /><br /> Eliminazione di ruoli<br /><br /> Lettura delle proprietà di ruolo<br /><br /> Aggiornamento delle proprietà di ruolo|  
 |Gestione di pianificazioni condivise|Creazione di pianificazioni|  
 |Gestione della sicurezza del server di report|Lettura dei criteri di sicurezza del sistema<br /><br /> Aggiornamento dei criteri di sicurezza del sistema|  
 |Visualizzazione delle proprietà del server di report|Lettura delle proprietà di sistema|  

@@ -12,10 +12,10 @@ ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8da5d6851b9cf042d1b04e72b9c58257f9f9f509
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579332"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>Incorporare un'immagine in un report (Generatore report e SSRS)
@@ -62,7 +62,7 @@ ms.locfileid: "65579332"
   
 ## <a name="see-also"></a>Vedere anche  
  [Immagini &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Aggiungere un'immagine di sfondo &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [Aggiungere un'immagine con associazione a dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà immagine, Generale &#40;Generatore report e SSRS&#41;](https://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

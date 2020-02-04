@@ -1,5 +1,5 @@
 ---
-title: Criteri di supporto per SQL Server Management Studio (SSMS) | Microsoft Docs
+title: Criteri di supporto per SQL Server Management Studio (SSMS)
 ms.date: 11/13/2018
 ms.prod: sql
 ms.technology: ssms
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2be5846150a28ea76b48bab0434ab01ee9eee1d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267041"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245672"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Criteri di supporto per SQL Server Management Studio (SSMS)
 
@@ -35,7 +35,7 @@ Ad esempio, a maggio 2018 è stata rilasciata la versione SSMS 17.7. La versione
 
 Per un'esperienza ottimale, è consigliabile installare la versione più recente tramite https://aka.ms/ssms  
 
-Fase di manutenzione **Supporto completo**: quando si esegue la versione Current Branch più recente di SQL Server Management Studio, si ricevono tutti gli aggiornamenti, tra cui gli aggiornamenti della sicurezza, gli aggiornamenti critici, le nuove funzionalità e così via.
+Fase di servizio **Supporto completo**: quando si esegue la versione Current Branch più recente di SQL Server Management Studio, si ricevono tutti gli aggiornamenti, tra cui gli aggiornamenti della sicurezza, gli aggiornamenti critici, le nuove funzionalità e così via.
 
 
 

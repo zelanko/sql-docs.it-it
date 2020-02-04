@@ -16,10 +16,10 @@ ms.assetid: bfa493c4-fe07-449b-b4d0-384e1a1fce48
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3146c0874a6ba43d18f2fd4af2cca7533046c8b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979500"
 ---
 # <a name="getstring-method-int-sqlserverresultset"></a>Metodo getString (int) (SQLServerResultSet)
@@ -45,7 +45,7 @@ public java.lang.String getString(int columnIndex)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getString viene specificato dal metodo getString nell'interfaccia java.sql.ResultSet.  
   
  Tutte le colonne in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono essere restituite come stringa. Pertanto, possono essere restituite una rappresentazione **String** di tutti i tipi numerici e basati su caratteri e una rappresentazione stringa esadecimale di colonne binarie quali binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier.  

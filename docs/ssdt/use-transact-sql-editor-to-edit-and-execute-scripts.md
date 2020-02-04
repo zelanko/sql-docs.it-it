@@ -1,25 +1,26 @@
 ---
-title: Usare l'Editor Transact-SQL per modificare ed eseguire script | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Utilizzare l'Editor Transact-SQL per modificare ed eseguire script
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c2b84cb9f75987995e9e0cdbf92165fa28f61a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c3eaaa53b87d2e360503a087b8978f507d6a6023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256203"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Utilizzare l'Editor Transact-SQL per modificare ed eseguire script
+
 L'editor Transact\-SQL offre un'esperienza di modifica e di debug completa durante l'utilizzo degli script. Viene richiamato quando si usa il menu contestuale **Visualizza codice** per aprire un'entità del database in un progetto o in un database connesso. Viene anche aperto automaticamente quando si usa il menu contestuale **Nuova query** da Esplora oggetti di SQL Server o si aggiunge un nuovo oggetto script a un progetto di database.  
   
 Se non si è connessi a un database ma si vuole eseguire una query sul database stesso, è anche possibile usare la finestra di dialogo **Nuova connessione query** nell'opzione di menu **SQL** -> **Editor Transact\-SQL** per connettersi a un database e avviare l'editor Transact\-SQL.  
@@ -37,6 +38,6 @@ Nell'editor Transact\-SQL è disponibile un riquadro **T-SQL** principale in cui
 |[Procedura: Eseguire il debug di stored procedure](../ssdt/how-to-debug-stored-procedures.md)|Creare ed eseguire il debug di una stored procedure Transact\-SQL eseguendo le singole istruzioni.|  
 |[Analizzare le prestazioni degli script](../ssdt/analyze-script-performance.md)|Utilizzare piani di esecuzione, statistiche client e analisi codice per determinare se è possibile migliorare le prestazioni di query, stored procedure o script.|  
   
-## <a name="see-also"></a>Vedere anche  
-[Procedura: Creare nuovi oggetti di database tramite query](../ssdt/how-to-create-new-database-objects-using-queries.md)  
-  
+## <a name="see-also"></a>Vedere anche
+
+[Procedura: Creare nuovi oggetti di database tramite query](../ssdt/how-to-create-new-database-objects-using-queries.md)

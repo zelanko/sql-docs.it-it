@@ -1,23 +1,24 @@
 ---
-title: Autorizzazioni necessarie per SQL Server Data Tools | Microsoft Docs
-ms.custom:
-- SSDT
+title: Autorizzazioni necessarie
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4199109ef0492a23206233c82b6051b88564cc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110762"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256987"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Autorizzazioni necessarie per SQL Server Data Tools
+
 Prima di poter eseguire un'azione in un database in Visual Studio, è necessario accedere con un account provvisto di determinate autorizzazioni. Le autorizzazioni specifiche necessarie variano in base all'azione che si desidera eseguire. Nelle sezioni seguenti vengono descritte le azioni che è possibile eseguire e le autorizzazioni specifiche necessarie per eseguirle.  
   
 -   [Autorizzazioni per creare o distribuire un database](#DatabaseCreationAndDeploymentPermissions)  
@@ -44,7 +45,7 @@ Per creare o distribuire un database è necessario disporre delle autorizzazioni
 |Importare oggetti server e relative impostazioni|È necessario avere la possibilità di connettersi al database master nel server specificato.<br /><br />Se nel server è in esecuzione SQL Server 2005, è necessario avere l'autorizzazione **VIEW ANY DEFINITION** per il server.<br /><br />Anche se il database di origine è basato su SQL Server 2008 o versioni successive, è necessario avere l'autorizzazione **VIEW ANY DEFINITION** per il server. Per l'accesso è necessaria l'autorizzazione **VIEW SERVER STATE** per le chiavi di crittografia del database.|  
 |Creare o aggiornare un progetto di database|Non è necessario disporre di alcuna autorizzazione per database per creare o modificare un progetto di database.|  
 |Distribuire un nuovo database o distribuire con l'opzione **Ricrea sempre database** impostata|È necessario avere l'autorizzazione **CREATE DATABASE** oppure essere membro del ruolo **dbcreator** nel server di destinazione.<br /><br />Quando si crea un database, Visual Studio si connette al database modello e ne copia il contenuto. Per l'accesso iniziale, ad esempio *yourLogin*, usato per connettersi al database di destinazione, sono necessarie le autorizzazioni **db_creator** e **CONNECT SQL**. Questo accesso deve disporre di un mapping utente nel database modello. Se si hanno autorizzazioni **sysadmin**, è possibile creare il mapping eseguendo le istruzioni Transact\-SQL seguenti:<br /><br />`USE [model] CREATE USER yourUser FROM LOGIN yourLogin`<br /><br />L'utente, in questo esempio yourUser, deve avere le autorizzazioni **CONNECT** e **VIEW DEFINITION** per il database modello. Se si hanno autorizzazioni **sysadmin**, è possibile concederle eseguendo le istruzioni Transact\-SQL seguenti:<br /><br />`USE [model] GRANT CONNECT to yourUser GRANT VIEW DEFINITION TO yourUser`<br /><br />Se si distribuisce un database contenente vincoli senza nome e l'opzione **CheckNewContraints** è abilitata, come da impostazione predefinita, è necessario avere l'autorizzazione **db_owner** o **sysadmin** o la distribuzione non verrà eseguita. Questa regola è applicabile solo ai vincoli senza nome. Per altre informazioni sull'opzione **CheckNewConstraints**, vedere [Impostazioni del progetto di database](../ssdt/database-project-settings.md).|  
-|Distribuire aggiornamenti in un database esistente|È necessario essere un utente di database valido. È anche necessario essere membro del ruolo **db_ddladmin**, proprietario dello schema oppure degli oggetti che si vogliono creare o modificare nel database di destinazione. Per utilizzare concetti più avanzati come account di accesso o server collegati negli script pre-distribuzione o post-distribuzione, sono necessarie autorizzazioni aggiuntive.<br /><br />**NOTA:** se si esegue la distribuzione nel database master, è necessario avere anche l'autorizzazione **VIEW ANY DEFINITION** per il server di destinazione.|  
+|Distribuire aggiornamenti in un database esistente|È necessario essere un utente di database valido. È anche necessario essere membro del ruolo **db_ddladmin**, proprietario dello schema oppure degli oggetti che si vogliono creare o modificare nel database di destinazione. Per utilizzare concetti più avanzati come account di accesso o server collegati negli script pre-distribuzione o post-distribuzione, sono necessarie autorizzazioni aggiuntive.<br /><br />**NOTA:** se si esegue la distribuzione al database master, è necessario avere anche l'autorizzazione **VIEW ANY DEFINITION** per il server in cui si distribuisce.|  
 |Utilizzare un assembly con l'opzione EXTERNAL_ACCESS in un progetto di database|È necessario impostare la proprietà TRUSTWORTHY per il progetto di database. È necessario avere l'autorizzazione EXTERNAL ACCESS ASSEMBLY per l'account di accesso di SQL Server.|  
 |Distribuire assembly in un database nuovo o esistente|È necessario essere membro del ruolo sysadmin nel server di distribuzione di destinazione.|  
   

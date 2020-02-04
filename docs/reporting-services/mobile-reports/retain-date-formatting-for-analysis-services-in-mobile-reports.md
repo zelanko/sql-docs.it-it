@@ -9,10 +9,10 @@ ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62503029"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>Mantieni date (formattazione) per Analysis Services nei report per dispositivi mobili
@@ -26,7 +26,7 @@ La soluzione alternativa consiste nell'aggiungere un membro calcolato quando si 
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>Creare una misura per mantenere un tipo di dati del campo relativo alla data
 
-1. Creare una misura per contenere il valore del campo relativo alla data in questione e nel campo relativo all'espressione scegliere il livello o la gerarchia della data e aggiungere **.CurrentMember.MemberValue**. Esempio:
+1. Creare una misura per contenere il valore del campo relativo alla data in questione e nel campo relativo all'espressione scegliere il livello o la gerarchia della data e aggiungere **.CurrentMember.MemberValue**. Ad esempio:
  
    [Internet Sales].[Data spedizione].CurrentMember.MemberValue
    
@@ -39,4 +39,4 @@ La soluzione alternativa consiste nell'aggiungere un membro calcolato quando si 
 ### <a name="see-also"></a>Vedere anche
 
 -  [Dati per report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
--  [Preparare i dati per report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
+-  [Preparare i dati per i report per dispositivi mobili di Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)

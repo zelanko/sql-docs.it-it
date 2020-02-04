@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581123"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -23,7 +23,7 @@ ms.locfileid: "65581123"
 > [!IMPORTANT]
 >  Prestare attenzione in caso di modifiche al file di configurazione. Se si modifica un'impostazione riservata per l'uso interno, l'installazione potrebbe essere disabilitata. Non è in genere consigliabile modificare le impostazioni di configurazione, a meno che non sia necessario risolvere un problema specifico. Per altre informazioni sulle impostazioni sicure da modificare, vedere [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) o [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md). Per altre informazioni sui file di configurazione, vedere la documentazione del prodotto [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
- Contenuto dell'argomento:  
+ In questo argomento  
   
 -   [Lettura e utilizzo di valori di configurazione](#bkmk_read_values)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "65581123"
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [File di configurazione ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
- [File di configurazione RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
+ [RSReportDesigner - file di configurazione](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Distribuzione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Distribuzione di un'estensione per il recapito](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Distribuzione di un'estensione per il rendering](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   

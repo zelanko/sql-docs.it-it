@@ -1,23 +1,24 @@
 ---
-title: 'Procedura: Installare e gestire le estensioni delle funzionalità | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: Installare e gestire le estensioni delle funzionalità
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a7d2f4fa27623a75bd49a32a7ce800801f63e9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: 7ef7a61b87c11c63070d1e7713d2aae0ad87f547
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929595"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241398"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Procedura: Installare e gestire le estensioni delle funzionalità
+
 È possibile aggiungere regole per l'analisi del codice del database, condizioni per gli unit test del database e collaboratori alla compilazione/distribuzione per aumentare le funzionalità offerte dalle edizioni di Visual Studio che includono SQL Server Data Tools. Tuttavia, per potere usare un'estensione della funzionalità è necessario prima installarla, indipendentemente dal fatto che l'estensione sia stata creata dall'utente stesso o se ne stia installando una creata da un altro utente.  
   
 Il percorso in cui installare l'estensione dipende dal tipo di estensione e da dove si intende usarla. Nelle versioni più recenti di Visual Studio il percorso di installazione di alcuni componenti è stato spostato dalla directory di installazione di SQL Server all'interno della directory di Visual Studio. Questa configurazione semplifica la possibilità di eseguire contemporaneamente diverse versioni del software, ma implica che potrebbe essere necessario installare l'estensione in più percorsi, se si vuole usarla in una versione diversa di SQL Server Data Tools e dalla riga di comando.  
@@ -36,13 +37,13 @@ Le estensioni possono essere eseguite come parte dei servizi Microsoft da riga d
 |Tipo di estensione|Servizio della riga di comando|Cartella di installazione|  
 |------------------|------------------------|------------------|  
 |Condizione di test personalizzata per unit test di SQL Server|MSBuild / MSTest può essere usato per eseguire gli unit test dal Prompt dei comandi per gli sviluppatori per Visual Studio 2013 e da altri strumenti da riga di comando simili.|Uguale a quella dell'esecuzione all'interno di Visual Studio.|  
-|Collaboratori alla compilazione<br /><br />Collaboratori alla distribuzione|[SqlPackage.exe](../tools/sqlpackage.md) oppure usando le destinazioni di distribuzione o pubblicazione di MSBuild durante la compilazione di un progetto del database.|MSBuild: Uguale a quella dell'esecuzione all'interno di Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): se si trova all'interno della directory di Visual Studio, come in precedenza.<br /><br />Se SqlPackage.exe e le altre DLL di DacFx si trovano all'esterno di tale directory, le estensioni dovranno essere posizionate nella stessa directory o in C:\Programmi (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
+|Collaboratori alla compilazione<br /><br />Collaboratori alla distribuzione|[SqlPackage.exe](../tools/sqlpackage.md) oppure usando le destinazioni di distribuzione o pubblicazione di MSBuild durante la compilazione di un progetto del database.|MSBuild: uguale a quella dell'esecuzione all'interno di Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): se si trova all'interno della directory di Visual Studio, come in precedenza.<br /><br />Se SqlPackage.exe e le altre DLL di DacFx si trovano all'esterno di tale directory, le estensioni dovranno essere posizionate nella stessa directory o in C:\Programmi (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
 |Regole di analisi del codice statica|MSBuild può essere usato per compilare il progetto ed eseguire l'analisi del codice statica.<br /><br />È anche possibile eseguire l'analisi del codice usando l'API CodeAnalysisService dalle applicazioni. Le regole di ricerca estensione funzionano in questo caso allo stesso modo di quando si usa SqlPackage.exe.|Uguale a quella dei collaboratori alla compilazione e alla distribuzione|  
   
 > [!NOTE]  
 > È necessario avere le autorizzazioni di amministratore sul computer per accedere a tutte le directory di installazione nella cartella Programmi. Se non si hanno le autorizzazioni appropriate, contattare l'amministratore di rete.  
   
-**Considerazioni sulla sicurezza**  
+**Security Considerations**  
   
 Prima di installare un'estensione creata da altri, è necessario comprendere i rischi dell'operazione:  
   

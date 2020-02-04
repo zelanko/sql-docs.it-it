@@ -15,10 +15,10 @@ ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577772"
 ---
 # <a name="enable-and-disable-my-reports"></a>Abilitare e disabilitare la funzionalità Report personali
@@ -29,7 +29,7 @@ ms.locfileid: "65577772"
 ## <a name="how-to-enable-and-disable-my-reports"></a>Come abilitare e disabilitare la funzionalità Report personali  
  Per abilitare Report personali tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connettersi all'istanza del server di report e aprire la pagina **Proprietà server** . Quindi, nella scheda **Generale** selezionare l'opzione **Abilita una cartella Report personali per ogni utente** .  
   
- La definizione di ruolo utilizzata per la funzionalità Report personali determina le azioni supportate nell'area di lavoro Report personali. Ad esempio, se per il ruolo Report personali non viene selezionata l'attività "Creazione di report collegati", gli utenti appartenenti a questo ruolo non potranno creare report collegati nelle cartelle Report personali. Per altre informazioni, vedere [Protezione dei report](../../reporting-services/security/secure-my-reports.md).  
+ La definizione di ruolo utilizzata per la funzionalità Report personali determina le azioni supportate nell'area di lavoro Report personali. Ad esempio, se per il ruolo Report personali non viene selezionata l'attività "Creazione di report collegati", gli utenti appartenenti a questo ruolo non potranno creare report collegati nelle cartelle Report personali. Per altre informazioni, vedere [Proteggere i report personali](../../reporting-services/security/secure-my-reports.md).  
   
  Per disattivare Report personali, deselezionare **Abilita una cartella Report personali per ogni utente**. Se si disattiva la funzionalità Report personali, per gli utenti non verrà più visualizzato alcun riferimento alla cartella Report personali. Le cartelle in cui sono effettivamente archiviati i dati, ovvero le sottocartelle di Cartelle utenti, devono essere eliminate manualmente dopo la disabilitazione della caratteristica.  
   

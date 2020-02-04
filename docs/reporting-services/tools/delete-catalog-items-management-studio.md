@@ -11,10 +11,10 @@ ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573941"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Elimina elementi catalogo (Management Studio)
@@ -36,15 +36,15 @@ ms.locfileid: "65573941"
  **Proprietario**  
  Visualizza il nome del proprietario. Nella maggior parte dei casi, si tratta di System.  
   
- **Stato**  
+ **Status**  
  Visualizza le informazioni sullo stato dell'operazione di eliminazione.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Visualizza un codice se si verifica un errore durante l'eliminazione di un elemento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare un elemento &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Guida sensibile al contesto del server di report in Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [Creare, modificare ed eliminare pianificazioni](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

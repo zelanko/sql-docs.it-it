@@ -11,10 +11,10 @@ ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194135"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Procedura: Distribuzione di un elemento del report personalizzato
@@ -22,7 +22,7 @@ ms.locfileid: "63194135"
   
 ### <a name="to-deploy-a-custom-report-item"></a>Per distribuire un elemento del report personalizzato  
   
-1.  Modificare il file Rsreportdesigner.config per configurare i componenti runtime e della modalità progettazione del report personalizzato da utilizzare nella finestra di progettazione. Si noti che **ReportItemName** deve corrispondere all'attributo **CustomReportItemAttribute** usato nella classe **CustomReportItemDesigner**. Esempio:  
+1.  Modificare il file Rsreportdesigner.config per configurare i componenti runtime e della modalità progettazione del report personalizzato da utilizzare nella finestra di progettazione. Si noti che **ReportItemName** deve corrispondere all'attributo **CustomReportItemAttribute** usato nella classe **CustomReportItemDesigner**. Ad esempio:  
   
     ```  
     <ReportItems>  
@@ -36,7 +36,7 @@ ms.locfileid: "63194135"
     </ReportItemConverter>  
     ```  
   
-2.  Modificare il file Rsreportserver.config per registrare il componente runtime dell'elemento del report personalizzato. Esempio:  
+2.  Modificare il file Rsreportserver.config per registrare il componente runtime dell'elemento del report personalizzato. Ad esempio:  
   
     ```  
     <ReportItems>  
@@ -44,7 +44,7 @@ ms.locfileid: "63194135"
     </ReportItems>  
     ```  
   
-3.  Modificare il file Rsssrvpolicy.config per aggiungere **CodeGroup** che concede le autorizzazioni appropriate all'elemento del report personalizzato. Esempio:  
+3.  Modificare il file Rsssrvpolicy.config per aggiungere **CodeGroup** che concede le autorizzazioni appropriate all'elemento del report personalizzato. Ad esempio:  
   
     ```  
     <CodeGroup   

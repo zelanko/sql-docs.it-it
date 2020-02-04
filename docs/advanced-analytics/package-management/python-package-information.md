@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1aa12da4a138ea8f292fa8b64db00456d3c35fe3
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70000441"
 ---
 # <a name="get-python-package-information"></a>Ottenere informazioni sui pacchetti Python

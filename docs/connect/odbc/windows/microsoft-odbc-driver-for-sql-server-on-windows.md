@@ -11,10 +11,10 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c075c7adcc7eeae3ae7a83676256e72b4b86d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989435"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server in Windows
@@ -24,7 +24,7 @@ I driver Microsoft ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion
 
 È possibile usare Microsoft ODBC Driver for SQL Server per creare nuove applicazioni. È anche possibile aggiornare le applicazioni precedenti che attualmente usano un driver ODBC meno recente. ODBC Driver for SQL Server supporta le connessioni a database SQL di Azure, Azure SQL Data Warehouse, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 e SQL Server 2005.  
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 | Versione       | Funzionalità supportate      |
 | ------------- |---------------| 

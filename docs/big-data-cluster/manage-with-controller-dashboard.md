@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531937"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Gestire cluster Big Data con il dashboard del controller di SQL Server
@@ -78,6 +78,6 @@ Oltre ai prerequisiti precedenti, il cluster Big Data di SQL Server 2019 richied
 
 1. Se si nota un componente non integro, fare clic su **Risoluzione dei problemi** sulla barra degli strumenti per avviare un book Jupyter contenente un notebook utile per la diagnosi del problema.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sul controller, vedere la [documentazione del controller](concept-controller.md).

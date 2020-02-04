@@ -12,21 +12,21 @@ ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193694"
 ---
 # <a name="deploying-a-rendering-extension"></a>Distribuzione di un'estensione per il rendering
-  Dopo avere scritto e compilato l'estensione per il rendering del report [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in una libreria di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , è necessario renderla individuabile dal server di report e da Progettazione report. A tale scopo, copiare l'estensione nella directory appropriata e aggiungere voci ai file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriati.  
+  Dopo avere scritto e compilato l'estensione per il rendering del report [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in una libreria di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è necessario renderla individuabile dal server di report e da Progettazione report. A tale scopo, copiare l'estensione nella directory appropriata e aggiungere voci ai file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriati.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento di estensione del rendering del file di configurazione  
  Dopo avere compilato un'estensione per il rendering in una DLL, è necessario aggiungere una voce al file rsreportserver.config. Per impostazione predefinita, il percorso è %Programmi%\Microsoft SQL Server\MSRS10_50.\<nomeistanza>\Reporting Services\ReportServer. L'elemento padre è \<Render>. Sotto l'elemento Render è presente un elemento Extension per ogni estensione per il rendering. L'elemento **Extension** contiene due attributi, Name e Type.  
   
  Nella tabella riportata di seguito vengono descritti gli attributi relativi all'elemento **Extension** per le estensioni per il rendering:  
   
-|attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |**Nome**|Nome univoco dell'estensione. La lunghezza massima consentita per l'attributo **Name** è 255 caratteri. Il nome deve essere univoco all'interno di tutte le voci dell'elemento **Extension** di un file di configurazione. Se è presente un nome duplicato, il server di report restituirà un errore.|  
 |**Tipo**|Elenco delimitato da virgole che include lo spazio dei nomi completo insieme al nome dell'assembly.|  

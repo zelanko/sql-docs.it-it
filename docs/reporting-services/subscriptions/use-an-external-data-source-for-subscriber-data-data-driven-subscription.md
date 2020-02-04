@@ -16,10 +16,10 @@ ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 39698991ebb6d683944b19966a5712c269c11e88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578086"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore (sottoscrizione guidata dai dati)

@@ -11,10 +11,10 @@ ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576794"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Aggiungere un report nuovo o esistente a un progetto report (SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "65576794"
   
 2.  In **Modelli**fare clic su **Report**.  
   
-3.  Scegliere **Aggiungi**.  
+3.  Fare clic su **Aggiungi**.  
   
      Un nuovo report vuoto verrà aggiunto al progetto e visualizzato nell'area di progettazione.  
   

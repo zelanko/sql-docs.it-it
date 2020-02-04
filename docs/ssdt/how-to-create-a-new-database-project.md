@@ -1,11 +1,7 @@
 ---
-title: 'Procedura: Creare un nuovo progetto di database | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creare un nuovo progetto di database
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
@@ -17,14 +13,19 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fb617241f9af31122993bc1d341e433ac62904f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3ce0ac6afc902803afe8aa6e20c71f38998f8286
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897170"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241542"
 ---
-# <a name="how-to-create-a-new-database-project"></a>Procedura: Creare un nuovo progetto di database
+# <a name="how-to-create-a-new-database-project"></a>Procedura: Creazione di un nuovo progetto di database
+
 È possibile creare un nuovo progetto di database e importare lo schema del database da un database esistente, un file di script con estensione sql o un'applicazione di livello dati (con estensione dacpac). È quindi possibile richiamare gli stessi strumenti visivi della finestra di progettazione (Editor Transact\-SQL, Progettazione tabelle) disponibili per lo sviluppo del database connesso per apportare modifiche al progetto di database offline e pubblicare di nuovo le modifiche nel database di produzione. Inoltre, è possibile salvare le modifiche come script da pubblicare in un secondo momento. Se si usa il riquadro **Proprietà progetto**, è possibile impostare la piattaforma di destinazione su versioni differenti di SQL Server (incluso SQL Azure).  
   
 Nelle due procedure seguenti si ottiene sostanzialmente lo stesso risultato creando un nuovo progetto di database e importando lo schema da un database esistente. Ogni oggetto di database sarà rappresentato come file di script SQL (con estensione sql) in **Esplora soluzioni**. Per altre informazioni sull'importazione dello schema del database da uno snapshot, vedere [Procedura: Creare uno snapshot di un progetto](../ssdt/how-to-create-a-snapshot-of-a-project.md).  

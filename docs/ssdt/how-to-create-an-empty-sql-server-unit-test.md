@@ -1,25 +1,26 @@
 ---
-title: 'Procedura: Creare uno unit test di SQL Server vuoto | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creare uno unit test di SQL Server vuoto
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cd7a605fbe9d3075d4d67e1ce824664ef2747c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5684735fc0bf2aaaa35183933145006d6efe188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897138"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241506"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procedura: Creare uno unit test di SQL Server vuoto
+
 Includere unit test nel progetto di database per verificare che le modifiche apportate agli oggetti di database non interrompano la funzionalità esistente. Le procedure seguenti illustrano come creare unit test di SQL Server per qualsiasi oggetto di database. SQL Server Data Tools include alcune funzionalità di supporto aggiuntive per trigger, stored procedure e funzioni di database. Per altre informazioni, vedere [Procedura: Creare unit test di SQL Server per funzioni, trigger e stored procedure](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
   
 Quando si crea uno unit test di SQL Server usando la prima procedura, viene creato automaticamente un progetto di test, se non ve ne sono di disponibili. Se sono già disponibili progetti di test, è possibile scegliere di aggiungere il nuovo test a uno di tali progetti oppure è possibile crearne uno nuovo. Per altre informazioni sui progetti di test, vedere [Procedura: Creare un progetto di test per l'esecuzione di unit test del database di SQL Server](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md).  
@@ -95,7 +96,7 @@ Dopo aver configurato il progetto di test e aver creato il database, procedere c
 -   Aggiungere condizioni di test o un'altra istruzione di asserzione per verificare i risultati dello script.  
   
 > [!NOTE]  
-> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: Aggiungere condizioni di test a unit test del database](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> La condizione di test Senza risultati è la condizione predefinita aggiunta a ogni test. Questa condizione di test viene inclusa per indicare che la verifica del test non è stata implementata. Eliminare tale condizione dal test dopo l'aggiunta di altre condizioni di test. Per altre informazioni, vedere [Procedura: aggiungere condizioni di test a unit test del database](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Procedura: Eseguire unit test di SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  

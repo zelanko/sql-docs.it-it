@@ -9,10 +9,10 @@ ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499925"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Preparare i dati per report di Reporting Services per dispositivi mobili
@@ -43,7 +43,7 @@ I campi di data in modelli di [!INCLUDE[ssASnoversion_md](../../includes/ssasnov
 | Banche     | AFGHANISTAN   | ASIA      |  
 | Servizi commerciali e professionali | AFGHANISTAN | ASIA |  
 | Alimentari, bevande e tabacco | AFGHANISTAN | ASIA |  
-| Supporti | AFGHANISTAN | ASIA |  
+| Contenuti multimediali | AFGHANISTAN | ASIA |  
 | Prodotti farmaceutici | AFGHANISTAN | ASIA |  
 | Commercio al dettaglio di alimentari e beni di consumo | ALBANIA | EUROPA |  
   
@@ -59,7 +59,7 @@ In questa tabella, gli elementi ChiavePadre vengono prima elencati nella colonna
 | Beni di consumo |    |  
 | Beni voluttuari |  |     
 | Sanità   |   |  
-| Tecnologia informatica |  |  
+| Reparto IT |  |  
 | Banche | Finanza |  
 | Beni immobili | Finanza |  
 | Finanza diversificata |  Finanza |   
@@ -70,20 +70,20 @@ In questa tabella, gli elementi ChiavePadre vengono prima elencati nella colonna
 | Alimentari, bevande e tabacco |    Beni di consumo |  
 | Commercio al dettaglio di alimentari e beni di consumo |    Beni di consumo |  
 | Prodotti per la casa e per la persona | Beni di consumo |  
-| Supporti | Beni voluttuari |  
+| Contenuti multimediali | Beni voluttuari |  
 | Automobili e componentistica |  Beni voluttuari |  
 | Beni durevoli e abbigliamento |Beni voluttuari |  
 | Servizi al consumo |   Beni voluttuari |  
 | Commercio | Beni voluttuari |  
 | Prodotti farmaceutici   | Sanità |  
 | Attrezzature e servizi sanitari |    Sanità |  
-| Software e servizi | Tecnologia informatica |  
-| Tecnologia - Attrezzature e hardware   | Tecnologia informatica |  
-| Servizi di telecomunicazione |Tecnologia informatica |  
+| Software e servizi | Reparto IT |  
+| Tecnologia - Attrezzature e hardware   | Reparto IT |  
+| Servizi di telecomunicazione |Reparto IT |  
   
 ### <a name="see-also"></a>Vedere anche  
 - [Preparare i dati di Excel per i report per dispositivi mobili di Reporting Services](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
-- [Retain date formatting for Analysis Services in mobile reports](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
+- [Mantenere la formattazione della data per i dati di Analysis Services nei report per dispositivi mobili](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [Creare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   

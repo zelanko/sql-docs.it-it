@@ -16,10 +16,10 @@ ms.assetid: 0cf286c7-9dcd-4b02-a568-ba6b6eb27e82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fabb6e8f71c1b771341045de7a113703d5f254e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998231"
 ---
 # <a name="updatestring-method-sqlserverresultset"></a>Metodo updateString (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67998231"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|Aggiorna la colonna designata con un valore **String** in base all'indice di colonna.|  
 |[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|Aggiorna la colonna designata con un valore **String** in base al nome della colonna.|  

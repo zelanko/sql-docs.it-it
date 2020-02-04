@@ -1,21 +1,23 @@
 ---
-title: Finestra di dialogo Aggiungi riferimento al database | Microsoft Docs
+title: Finestra di dialogo Aggiungi riferimento al database
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
-ms.custom: SSDT
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984695"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256138"
 ---
 # <a name="add-database-reference-dialog-box"></a>Finestra di dialogo Aggiungi riferimento al database
+
 In questo argomento vengono descritte le procedure che è possibile eseguire nella finestra di dialogo **Aggiungi riferimento al database**.  
   
 I riferimenti al database consentono di:  
@@ -28,7 +30,8 @@ Con i riferimenti a database in un progetto composito è possibile partizionare 
   
 I riferimenti a database possono essere creati in un progetto di database nella soluzione corrente oppure in un file DACPAC. L'aggiunta di un riferimento a database in un progetto influisce sulle dipendenze del progetto e sull'ordine di compilazione.  
   
-## <a name="selecting-the-database-to-reference"></a>Selezione del database a cui fare riferimento  
+## <a name="selecting-the-database-to-reference"></a>Selezione del database a cui fare riferimento
+
 È possibile fare riferimento a un altro progetto di database nella stessa soluzione, a un database di sistema o a un file DACPAC.  
   
 Se nella soluzione sono contenuti più progetti di database, è abilitata l'opzione **Progetti di database nella soluzione corrente**. È possibile fare riferimento a un altro database della soluzione.  
@@ -37,7 +40,8 @@ Selezionare **Database di sistema** se si vuole selezionare uno dei database di 
   
 Selezionare **Applicazione livello dati (.dacpac)** per fare riferimento a un database in un file DACPAC, quindi passare alla directory contenente il file desiderato.  
   
-## <a name="selecting-the-databases-relative-location"></a>Selezione del percorso relativo del database  
+## <a name="selecting-the-databases-relative-location"></a>Selezione del percorso relativo del database
+
 Dopo aver selezionato il database a cui fare riferimento, è possibile specificare il percorso previsto di un oggetto di database, relativo al progetto cui si fa riferimento.  
   
 I riferimenti possono essere risolti per gli oggetti in uno dei percorsi seguenti:  
@@ -59,7 +63,8 @@ Se si seleziona l'opzione **Database e server diversi** è obbligatorio specific
 > [!IMPORTANT]  
 > In alcune situazioni, è possibile creare un riferimento a database con lo stesso nome di un riferimento a database esistente. La presenza di due riferimenti a database con lo stesso nome può produrre risultati imprevisti. In questo caso, eliminare entrambi i riferimenti a database.  
   
-## <a name="common-procedures"></a>Procedure comuni  
+## <a name="common-procedures"></a>Procedure comuni
+
 Di seguito sono indicate le procedure comuni:  
   
 ### <a name="to-create-a-reference-to-a-database-on-the-same-server"></a>Per creare un riferimento a un database nello stesso server  
@@ -112,6 +117,6 @@ Quando si pubblica il progetto, è possibile distribuire progetti compositi nell
   
 3.  Nella finestra di dialogo **Impostazioni di pubblicazione avanzate** assicurarsi che sia selezionato **Includi oggetti compositi** nell'elenco **Opzioni di distribuzione avanzate**.  
   
-## <a name="see-also"></a>Vedere anche  
-[Sviluppo di database offline orientato ai progetti](../ssdt/project-oriented-offline-database-development.md)  
-  
+## <a name="see-also"></a>Vedere anche
+
+[Sviluppo di database offline orientato ai progetti](../ssdt/project-oriented-offline-database-development.md)

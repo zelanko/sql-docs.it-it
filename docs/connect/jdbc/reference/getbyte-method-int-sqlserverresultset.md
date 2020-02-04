@@ -16,10 +16,10 @@ ms.assetid: b22ba097-6cb8-4c5d-916b-6360dd01d2c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf00138e512b966614a19adaf152f038c516f9fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953499"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>Metodo getByte (int) (SQLServerResultSet)
@@ -45,7 +45,7 @@ public byte getByte(int columnIndex)
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo getByte viene specificato dal metodo getByte nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo è supportato solo sui tipi di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che possono restituire in modo sicuro un valore byte, ad esempio tinyint e bit. Tutti gli altri tipi di dati genereranno un'eccezione.  

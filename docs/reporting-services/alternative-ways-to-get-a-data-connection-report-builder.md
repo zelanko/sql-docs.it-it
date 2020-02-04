@@ -9,10 +9,10 @@ ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62703886"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Modalità alternative di acquisizione di una connessione dati (Generatore report)
@@ -35,7 +35,7 @@ Per usare un'origine dati condivisa, è necessario selezionare un server di repo
   
 3.  Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**. Verrà visualizzato il messaggio "Creazione connessione completata". [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Scegliere **Avanti**.  
+4.  Fare clic su **Avanti**.  
   
     Se necessario, immettere le credenziali. Per salvare in locale le credenziali, selezionare **Salva password con la connessione**. Se non si seleziona questa opzione, le credenziali verranno richieste ogni volta che si esegue il report  
   
@@ -43,7 +43,7 @@ Per usare un'origine dati condivisa, è necessario selezionare un server di repo
   
 ### <a name="to-specify-a-data-connection-by-browsing-to-a-shared-data-source-on-a-report-server"></a>Per specificare una connessione dati selezionando il percorso a un'origine dati condivisa nel server di report  
   
-1.  Nella procedura guidata Nuova tabella o matrice o Nuovo grafico selezionare **Crea un set di dati** nella pagina **Scegliere un set di dati**e quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati** .  
+1.  Nella procedura guidata Nuova tabella o matrice o Nuovo grafico selezionare **Crea un set di dati** nella pagina **Scegliere un set di dati**e quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
 2.  Fare clic su **Sfoglia**. Verrà visualizzata la finestra di dialogo **Seleziona origine dati** .  
   
@@ -63,7 +63,7 @@ Per usare un'origine dati condivisa, è necessario selezionare un server di repo
   
     Verrà visualizzato il messaggio "Creazione connessione completata". [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Se viene richiesto un nome utente e una password, immettere le credenziali. Per salvare in locale le credenziali, selezionare **Salva password con la connessione**.  
   

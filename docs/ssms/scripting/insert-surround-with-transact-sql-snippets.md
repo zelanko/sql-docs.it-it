@@ -1,6 +1,6 @@
 ---
-title: Inserire frammenti Transact-SQL racchiusi | Microsoft Docs
-ms.custom: ''
+title: Inserimento di frammenti Transact-SQL racchiusi
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c77619c36ce71fecbb5e7442f09ee9d03843bf83
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3ad887bc26ca9b320ff62130633d3a77b08b9f8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265427"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253853"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Inserimento di frammenti Transact-SQL racchiusi
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,6 +46,6 @@ ms.locfileid: "68265427"
 3.  Selezionare il nome del frammento (BEGIN, IF o WHILE) nell'elenco utilizzando il mouse o digitando il nome del frammento e quindi premendo TAB o INVIO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inserimento di frammenti di Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
+ [Inserire frammenti Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
   
   

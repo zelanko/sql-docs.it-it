@@ -14,10 +14,10 @@ ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f77439f2369d7fbf4e27603bcbf8c8a2f8d8399
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993482"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Procedura: Recuperare dati binari come flusso usando il driver SQLSRV
@@ -92,7 +92,7 @@ La specifica del tipo restituito nell'esempio mostra come specificare il tipo re
 ## <a name="see-also"></a>Vedere anche  
 [Recupero di dati](../../connect/php/retrieving-data.md)
 
-[Recupero di dati come flusso usando il driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
+[Recupero di dati come flusso tramite il driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
 
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
   

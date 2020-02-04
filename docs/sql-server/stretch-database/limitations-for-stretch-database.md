@@ -1,5 +1,5 @@
 ---
-title: Limitazioni per Stretch Database
+title: Limitazioni di Stretch Database
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -14,19 +14,19 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843790"
 ---
-# <a name="limitations-for-stretch-database"></a>Limitazioni per Stretch Database
+# <a name="limitations-for-stretch-database"></a>Limitazioni di Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
   Informazioni sulle limitazioni per le tabelle basate sull'estensione e sulle limitazioni che attualmente impediscono l'abilitazione dell'estensione per una tabella.  
   
-##  <a name="Caveats"></a> Limitazioni per le tabelle abilitate per l'estensione  
+##  <a name="Caveats"></a> Limitazioni per le tabelle abilitate per Estensione  
   
 Le tabelle abilitate per l'estensione presentano le limitazioni seguenti.  
   
@@ -43,7 +43,7 @@ Le tabelle abilitate per l'estensione presentano le limitazioni seguenti.
   
 -   I filtri sugli indici [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non vengono propagati alla tabella remota.  
   
-##  <a name="Limitations"></a> Limitazioni che attualmente impediscono l'abilitazione dell'estensione per una tabella  
+##  <a name="Limitations"></a> Limitazioni che attualmente impediscono l'abilitazione dell'Estensione per una tabella  
    
  Gli elementi seguenti attualmente impediscono l'abilitazione dell'estensione per una tabella.  
   
@@ -54,12 +54,12 @@ Le tabelle abilitate per l'estensione presentano le limitazioni seguenti.
   
 -   Tabelle replicate o che usano attivamente il rilevamento delle modifiche o Change Data Capture  
   
--   Tabelle con ottimizzazione per la memoria  
+-   Tabelle ottimizzate per la memoria  
   
 ### <a name="data-types"></a>Tipi di dati  
 -   text, ntext e image  
   
--   TIMESTAMP  
+-   timestamp  
   
 -   sql_variant  
   
@@ -89,6 +89,6 @@ Le tabelle abilitate per l'estensione presentano le limitazioni seguenti.
 ## <a name="see-also"></a>Vedere anche  
  [Identificare i database e le tabelle per Estensione database eseguendo Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
  [Abilitare Stretch Database per un database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [Enable Stretch Database for a table (Abilitare Estensione database per una tabella)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [Abilitare Stretch Database per una tabella](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

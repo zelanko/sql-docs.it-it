@@ -1,6 +1,6 @@
 ---
-title: Personalizza (pagina Comandi) | Microsoft Docs
-ms.custom: ''
+title: Personalizza (pagina Comandi)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2fd07b342977603f6983c4d9389ac1c6b7934629
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259423"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255704"
 ---
 # <a name="customize-commands-page"></a>Personalizza (pagina Comandi)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questa finestra di dialogo consente di aggiungere e rimuovere i comandi sulle barre degli strumenti e nei menu, nonché di modificare le immagini utilizzate per i pulsanti della barra degli strumenti o per i comandi di menu. Per accedere alla pagina **Comandi** , scegliere **Personalizza** dal menu **Strumenti** e quindi fare clic su **Comandi**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
-**Categorie**  
+**Categories** (Categorie)  
 Consente di specificare il set di comandi visualizzati nella casella di riepilogo **Comandi** . Le categorie dei comandi si basano sui titoli di menu assegnati dagli strumenti e dalle finestre di progettazione attualmente supportati nell'ambiente. Poiché questo elenco di titoli è dinamico, è possibile che l'ordine delle categorie e dei titoli di menu cambi in base agli strumenti e alla finestra di progettazione, nonché alle personalizzazioni apportate a questi elementi. È pertanto possibile che due menu associati a due finestre di progettazione diverse abbiano lo stesso nome e che quindi lo stesso titolo venga visualizzato due volte, anche se corrisponde a due set di comandi diversi.  
   
 **Comandi**  

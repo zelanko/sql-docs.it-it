@@ -12,10 +12,10 @@ ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037866"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tasti di scelta rapida (Generatore report)
@@ -32,15 +32,15 @@ ms.locfileid: "67037866"
   
 |Descrizione|Combinazione di tasti|  
 |-----------------|---------------------|  
-|Aprire il menu Generatore report.|ALT+F|  
+|Aprire il menu Generatore report.|ALT + F|  
 |Creare un report.|CTRL+N|  
 |Aprire un report.|CTRL+O|  
 |Salvare un report.|CTRL+S, ALT+S|  
 |Spostarsi tra le aree di Generatore report, ad esempio la barra multifunzione, l'area di progettazione, il riquadro Raggruppamento, il riquadro Proprietà e il riquadro Dati.|F6, MAIUSC+F6|  
 |Passare alla barra multifunzione.|ALT|  
-|Passare alla scheda Home sulla barra multifunzione.|ALT+H|  
+|Passare alla scheda Home sulla barra multifunzione.|ALT + H|  
 |Passare alla scheda Inserisci sulla barra multifunzione.|ALT+I|  
-|Passare alla scheda Visualizza sulla barra multifunzione.|ALT+V|  
+|Passare alla scheda Visualizza sulla barra multifunzione.|ALT + V|  
 |Attivare le righe di divisione tra le aree, ad esempio la riga tra il riquadro Raggruppamento e l'area di progettazione.|TAB|  
 |Spostare le righe di divisione tra le aree.|Qualsiasi tasto di direzione. Utilizzare i tasti freccia SU e GIÙ per spostare la riga tra il riquadro Raggruppamento e l'area di progettazione. Utilizzare i tasti freccia DESTRA e SINISTRA per spostare la riga tra il riquadro dei dati del report e l'area di progettazione.|  
 |Spostarsi all'interno di un'area di Generatore report, ad esempio all'interno di una scheda della barra multifunzione.|TAB, MAIUSC+TAB|  
@@ -54,11 +54,11 @@ ms.locfileid: "67037866"
 |Allineare i bordi di più elementi selezionati.|ALT+H+A|  
 |Eseguire il report.|F5, ALT+H+R|  
 |Passare alla modalità progettazione.|F8|  
-|Copia|CTRL+C, ALT+H+C|  
+|Copiare|CTRL+C, ALT+H+C|  
 |Taglia|CTRL+X, ALT+H+X|  
 |Incolla|CTRL+V, ALT+H+V|  
 |Selezionare tutto.|CTRL+A|  
-|Annullare|CTRL+Z, ALT+Z|  
+|Annullamento|CTRL+Z, ALT+Z|  
 |Ripristinare|CTRL+Y, ALT+Y|  
 |Eseguire lo zoom avanti.|CTRL+SEGNO DI ADDIZIONE (+)|  
 |Eseguire lo zoom indietro.|CTRL+SEGNO DI SOTTRAZIONE (-)|  

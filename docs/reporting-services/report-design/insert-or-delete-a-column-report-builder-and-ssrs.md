@@ -9,10 +9,10 @@ ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2796447d65a7fcabe029c67f460a76284daf242f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580211"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Inserire o eliminare una colonna (Generatore report e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "65580211"
   
 -   Fare clic con il pulsante destro del mouse su un handle di colonna in corrispondenza del quale si vuole inserire una colonna, scegliere **Inserisci colonna**e quindi fare clic su **A sinistra** o **A destra**.  
   
-     -oppure-  
+     -- o --  
   
 -   Fare clic con il pulsante destro del mouse su una cella nell'area dati in corrispondenza della quale si vuole inserire una colonna, scegliere **Inserisci colonna**e quindi fare clic su **A sinistra** o **A destra**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65580211"
   
 -   Selezionare la colonna o le colonne da eliminare, fare clic con il pulsante destro del mouse sull'handle di una delle colonne selezionate e quindi scegliere **Elimina colonne**.  
   
-     -oppure-  
+     -- o --  
   
 -   Fare clic con il pulsante destro del mouse su una cella nell'area dati in corrispondenza della quale si vuole eliminare una colonna e quindi scegliere **Elimina colonne**.  
   

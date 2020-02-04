@@ -15,10 +15,10 @@ ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593853"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale
@@ -34,7 +34,7 @@ ms.locfileid: "73593853"
   
 1.  Eseguire **rskeymgmt.exe** localmente nel computer che ospita un server di report già membro della distribuzione con scalabilità orizzontale.  
   
-2.  Usare l'argomento **-j** per unire in join un server di report al database del server di report. Usare gli argomenti **-m** e **-n** per specificare l'istanza del server di report remoto che si desidera aggiungere alla distribuzione. Usare gli argomenti **-u** e **-v** per specificare un account amministratore nel computer remoto. Se si sta creando una distribuzione con scalabilità orizzontale utilizzando più istanze del server di report sullo stesso computer, la sintassi da utilizzare è leggermente diversa. Per altre informazioni sulla sintassi da utilizzare, vedere [Utilità rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
+2.  Usare l'argomento **-j** per unire in join un server di report al database del server di report. Usare gli argomenti **-m** e **-n** per specificare l'istanza del server di report remoto che si desidera aggiungere alla distribuzione. Usare gli argomenti **-u** e **-v** per specificare un account amministratore nel computer remoto. Se si sta creando una distribuzione con scalabilità orizzontale utilizzando più istanze del server di report sullo stesso computer, la sintassi da utilizzare è leggermente diversa. Per altre informazioni sulla sintassi da usare, vedere [Utilità rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
   
      Nell'esempio seguente vengono illustrati gli argomenti che è necessario specificare se si sta unendo in join un server di report remoto a una distribuzione con scalabilità orizzontale (è possibile omettere le credenziali se si dispone di autorizzazioni di amministratore sul computer remoto):  
   

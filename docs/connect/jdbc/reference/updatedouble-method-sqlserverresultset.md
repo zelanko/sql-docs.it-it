@@ -16,10 +16,10 @@ ms.assetid: ce4ec01f-87a0-4787-81d4-a4bf490d1331
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1cc1a2febd12cdbc999f7b87d08e6453e850d25c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998980"
 ---
 # <a name="updatedouble-method-sqlserverresultset"></a>Metodo updateDouble (SQLServerResultSet)
@@ -29,7 +29,7 @@ ms.locfileid: "67998980"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |[updateDouble (int, double)](../../../connect/jdbc/reference/updatedouble-method-int-double.md)|Aggiorna la colonna designata con un valore **double** in base all'indice della colonna.|  
 |[updateDouble (java.lang.String, double)](../../../connect/jdbc/reference/updatedouble-method-java-lang-string-double.md)|Aggiorna la colonna designata con un valore **double** in base al nome della colonna.|  

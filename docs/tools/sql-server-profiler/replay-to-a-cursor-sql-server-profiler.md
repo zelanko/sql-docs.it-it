@@ -1,29 +1,28 @@
 ---
-title: Riprodurre fino a un cursore (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Riprodurre fino a un cursore
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- replaying cursors
-- traces [SQL Server], replaying
-- replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c4a6a02576ac5c58c88cf1b2b489106d6cf8013e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 9df4fe8bf442fae11aefeb2b3d4e3c95aa13037e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928851"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957785"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>Riprodurre fino a un cursore (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento viene descritto come sospendere la riproduzione di tabelle o file di traccia in corrispondenza di un cursore utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. La sospensione della riproduzione delle tracce in corrispondenza dei cursori supporta il debug in quanto è possibile interrompere la riproduzione di script di traccia lunghi in segmenti più brevi per eseguirne l'analisi incrementale.  
+
+In questo argomento viene descritto come sospendere la riproduzione di tabelle o file di traccia in corrispondenza di un cursore utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. La sospensione della riproduzione delle tracce in corrispondenza dei cursori supporta il debug in quanto è possibile interrompere la riproduzione di script di traccia lunghi in segmenti più brevi per eseguirne l'analisi incrementale.  
   
 ### <a name="to-replay-to-the-cursor"></a>Per eseguire la riproduzione fino al cursore  
   

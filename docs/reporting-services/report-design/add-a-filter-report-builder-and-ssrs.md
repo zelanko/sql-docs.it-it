@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574832"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Aggiungere un filtro (Generatore report e SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "65574832"
   
 3.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-4.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+4.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 5.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65574832"
   
 4.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-5.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+5.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 6.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65574832"
   
 4.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-5.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+5.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 6.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   
@@ -110,7 +110,7 @@ ms.locfileid: "65574832"
   
 4.  Fare clic su **Filtri**. Verrà visualizzato l'elenco corrente di equazioni di filtro. Per impostazione predefinita, l'elenco è vuoto.  
   
-5.  Scegliere **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
+5.  Fare clic su **Aggiungi**. Verrà visualizzata una nuova equazione di filtro vuota.  
   
 6.  Nella casella **Espressione**digitare o selezionare l'espressione per il campo da filtrare. Per modificare l'espressione, fare clic sul pulsante dell'espressione (*fx*).  
   

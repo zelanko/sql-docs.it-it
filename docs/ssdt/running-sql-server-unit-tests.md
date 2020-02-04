@@ -1,25 +1,26 @@
 ---
-title: Esecuzione di unit test di SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Esecuzione di unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconfig
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a36cfa888b5a00e8f69404db3989cf9852f0d47e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 93dfaf8cf202b0b9447574ecfc58cc13f151381b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110748"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256986"
 ---
 # <a name="running-sql-server-unit-tests"></a>Esecuzione di unit test di SQL Server
+
 Per migliorare e gestire la qualità del codice, è possibile creare ed eseguire unit test di SQL Server per verificare il comportamento di qualsiasi oggetto di database e archiviare quindi questi test nel controllo delle versioni. Quando l'utente o qualsiasi membro del team modifica lo schema del database, eseguire sia unit test di SQL Server sia unit test del software per verificare che le modifiche non abbiano interrotto le funzionalità esistenti. È possibile eseguire singoli test o gruppi di test, detti elenchi di test. Per altre informazioni, vedere [Utilizzo di elenchi di test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182461(VS.100).aspx).  
   
 ## <a name="ways-to-run-sql-server-unit-tests"></a>Modi per eseguire unit test di SQL Server  
@@ -35,7 +36,7 @@ Per migliorare e gestire la qualità del codice, è possibile creare ed eseguire
   
 -   Eseguire singoli test o elenchi di test dalla finestra **Editor elenco dei test** (Visual Studio 2010). Per altre informazioni, vedere [Procedura: Eseguire test automatizzati da Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx) o [Procedura: Eseguire test automatizzati da Microsoft Visual Studio 2012](https://msdn.microsoft.com/library/ms182470.aspx).  
   
--   Eseguire test durante la compilazione di un progetto in Team Foundation Build. Per altre informazioni, vedere [Procedura: Configurare ed eseguire test pianificati dopo la compilazione dell'applicazione (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) o [Procedura: Configurare ed eseguire test pianificati dopo la compilazione dell'applicazione (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx).  
+-   Eseguire test durante la compilazione di un progetto in Team Foundation Build. Per altre informazioni, vedere [Procedura: Configurare ed eseguire test pianificati dopo avere compilato l'applicazione (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) o [Procedura: Configurare ed eseguire test pianificati dopo avere compilato l'applicazione (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182465.aspx).  
   
 È possibile eseguire unit test di SQL Server in un ordine specifico tramite un test ordinato. Per altre informazioni, vedere [Procedura: Creare un test ordinato (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx) o [Procedura: Creare un test ordinato (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx).  
   
