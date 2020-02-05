@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113282"
 ---
 # <a name="subqueries-sql-server"></a>Sottoquery (SQL Server)
@@ -486,7 +486,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-Non è possibile convertire questa istruzione in un join. Il join di disuguaglianza analogo ha un significato diverso: trova i nomi dei prodotti inclusi in una sottocategoria che non corrisponde a una bicicletta finita.      
+Non è possibile convertire questa istruzione in un join. Il join di disuguaglianza corrispondente ha infatti un significato diverso perché trova i nomi dei prodotti inclusi in una sottocategoria che non corrisponde a una bicicletta finita.      
 
 ### <a name="upsert"></a> Sottoquery in istruzioni UPDATE, DELETE e INSERT
 Le sottoquery possono essere nidificate nelle istruzioni DML `UPDATE`, `DELETE`, `INSERT` e `SELECT`.    
@@ -521,7 +521,7 @@ GO
 ### <a name="comparison"></a> Sottoquery con operatori di confronto
 Le sottoquery possono essere introdotte da un operatore di confronto, ovvero =, < >, >, > =, <, ! >, ! < o < =).   
 
-Analogamente alle sottoquery introdotte da `IN`, le sottoquery introdotte da un operatore di confronto non modificato, ovvero non seguito dalla parola chiave `ANY` o `ALL`, devono restituire un solo valore anziché un elenco di valori. Se una sottoquery di questo tipo restituisce più valori, SQL Server visualizza un messaggio di errore.    
+Analogamente alle sottoquery introdotte da `ANY`, le sottoquery introdotte da un operatore di confronto non modificato, ovvero non seguito dalla parola chiave `ALL` o `IN`, devono restituire un solo valore anziché un elenco di valori. Se una sottoquery di questo tipo restituisce più valori, SQL Server visualizza un messaggio di errore.    
 
 Per utilizzare una sottoquery introdotta da un operatore di confronto non modificato, è necessario aver acquisito una certa familiarità con i dati e la natura del problema in modo da sapere che la sottoquery restituirà un solo valore.     
 

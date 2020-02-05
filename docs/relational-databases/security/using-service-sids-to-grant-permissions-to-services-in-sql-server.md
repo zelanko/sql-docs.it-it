@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095596"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Uso dei SID dei servizi per concedere autorizzazioni ai servizi in SQL Server
@@ -46,7 +46,7 @@ Con un SID del servizio è invece possibile concedere le autorizzazioni per un s
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-create-a-service-sid"></a>A. Creare un SID del servizio
+### <a name="a-create-a-service-sid"></a>R. Creare un SID del servizio
 
 Il comando di PowerShell seguente consente di creare un SID del servizio nel servizio integrità di System Center Operations Manager.
 

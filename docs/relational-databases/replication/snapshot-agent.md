@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c3eb8c58bc43268356f47946df3ec60e7553ec61
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b4f8a7c8bb130c7b92446ba3a925566e730737eb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769533"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287164"
 ---
 # <a name="snapshot-agent"></a>agente snapshot
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68769533"
  **Visualizza**  
  Consente di selezionare le sessioni dell'agente snapshot da visualizzare.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente snapshot. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -41,7 +41,7 @@ ms.locfileid: "68769533"
   
 -   Non in esecuzione  
   
--   Completato  
+-   Completi  
   
  **Start Time**  
  Ora di inizio della sessione.  
@@ -49,7 +49,7 @@ ms.locfileid: "68769533"
  **Ora fine**  
  Ora di fine della sessione. Se l'agente non è arrestato, questo campo è vuoto.  
   
- **Durata**  
+ **Duration**  
  Periodo di tempo per cui l'agente snapshot è stato eseguito in questa sessione. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale della sessione se la sessione dell'agente è terminata.  
   
  **Messaggio di errore**  

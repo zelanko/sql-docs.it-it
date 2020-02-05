@@ -1,5 +1,5 @@
 ---
-title: DOMANDE FREQUENTI
+title: Domande frequenti
 titleSuffix: Azure Data Studio
 description: Domande frequenti su Azure Data Studio.
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959543"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>Domande frequenti su [!INCLUDE[Azure Data Studio](../includes/name-sos.md)]
@@ -100,7 +100,7 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 |Proprietà degli oggetti||Sì|
 |Progettazione tabelle||Sì|
 
-### <a name="query-editor"></a>Editor query
+### <a name="query-editor"></a>Editor di query
 
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -132,7 +132,7 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 |:---|:---|:---|
 |Procedura guidata dati esterni|Anteprima||
 |Integrazione HDFS|Anteprima||
-|Blocchi appunti|Anteprima||
+|Notebooks|Anteprima||
 
 ### <a name="database-administration"></a>Amministrazione del database
 
@@ -143,7 +143,7 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 |SQL Agent|Anteprima|Sì|
 |SQL Profiler|Anteprima|Sì|
 |Always On||Sì|
-|Crittografia sempre attiva||Sì|
+|Always Encrypted||Sì|
 |Procedura guidata Copia dati||Sì|
 |Ottimizzazione guidata dati||Sì|
 |Diagrammi di database||Sì|
@@ -156,7 +156,7 @@ No. Gli investimenti negli strumenti principali di Windows (SSMS, SSDT, PowerShe
 |Server registrati||Sì|
 |Replica||Sì|
 |Gestione della sicurezza||Sì|
-|Service Broker||Sì|
+|Broker di servizio||Sì|
 |SQL Mail||Sì|
 |Esplora modelli||Sì|
 |Valutazione della vulnerabilità||Sì|

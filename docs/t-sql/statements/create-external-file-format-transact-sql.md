@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902700"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67902700"
   
 Per creare una tabella esterna, vedere [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi
   
@@ -170,7 +170,7 @@ PolyBase usa solo il formato di data personalizzato per l'importazione dei dati.
   
 -   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
--   Ora: 'HH:mm:ss'  
+-   Time: 'HH:mm:ss'  
   
 Nella tabella seguente sono riportati **esempi di formati di data**:
   
@@ -184,21 +184,21 @@ Note sulla tabella:
   
 |Tipo di data|Esempio|Descrizione|  
 |---------------|-------------|-----------------|  
-|DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 24 ore, da 00 a 59 minuti, da 00 a 59 secondi e 3 cifre per i millisecondi.|  
-|DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 12 ore, da 00 a 59 minuti, da 00 a 59 secondi, 3 cifre per i millisecondi e AM, am, PM o pm. |  
+|Datetime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 24 ore, da 00 a 59 minuti, da 00 a 59 secondi e 3 cifre per i millisecondi.|  
+|Datetime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 12 ore, da 00 a 59 minuti, da 00 a 59 secondi, 3 cifre per i millisecondi e AM, am, PM o pm. |  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 23 ore e da 00 a 59 minuti.|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 11 ore, da 00 a 59 minuti, non i secondi e AM, am, PM o pm.|  
-|date|DATE_FORMAT =  'yyyy-MM-dd'|Anno, mese e giorno. Non sono inclusi elementi di ora.|  
-|date|DATE_FORMAT = 'yyyy-MMM-dd'|Anno, mese e giorno. Se il mese è specificato con 3 M, il valore di input è una delle stringhe Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov o Dec.|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 23 ore, da 00 a 59 minuti, da 00 a 59 secondi e 7 cifre per i millisecondi.|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 11 ore, da 00 a 59 minuti, da 00 a 59 secondi, 7 cifre per i millisecondi e AM, am, PM o pm.|  
+|Data|DATE_FORMAT =  'yyyy-MM-dd'|Anno, mese e giorno. Non sono inclusi elementi di ora.|  
+|Data|DATE_FORMAT = 'yyyy-MMM-dd'|Anno, mese e giorno. Se il mese è specificato con 3 M, il valore di input è una delle stringhe Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov o Dec.|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 23 ore, da 00 a 59 minuti, da 00 a 59 secondi e 7 cifre per i millisecondi.|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 11 ore, da 00 a 59 minuti, da 00 a 59 secondi, 7 cifre per i millisecondi e AM, am, PM o pm.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 23 ore, da 00 a 59 minuti, da 00 a 59 secondi, 7 cifre per i millisecondi e la differenza di fuso orario specificata nel file di input come `{+&#124;-}HH:ss`. Ad esempio, poiché l'ora di Los Angeles senza ora legale è 8 ore indietro rispetto all'ora UTC, il valore -08:00 nel file di input specifica il fuso orario per Los Angeles.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|Oltre ad anno, mese e giorno questo formato di data include da 00 a 11 ore, da 00 a 59 minuti, da 00 a 59 secondi, 7 cifre per i millisecondi, AM, am, PM o pm e la differenza di fuso orario. Vedere la descrizione della riga precedente.|  
-|Time|DATE_FORMAT = 'HH:mm:ss'|Non vi è alcun valore di data, solo da 00 a 23 ore, da 00 a 59 minuti e da 00 a 59 secondi.|  
+|Tempo|DATE_FORMAT = 'HH:mm:ss'|Non vi è alcun valore di data, solo da 00 a 23 ore, da 00 a 59 minuti e da 00 a 59 secondi.|  
   
  Tutti i formati di data supportati:
   
-|DATETIME|smalldatetime|Data|datetime2|datetimeoffset|  
+|Datetime|smalldatetime|Data|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
@@ -293,7 +293,7 @@ Note sulla tabella:
   
   Quando si esportano dati in Hadoop o nell'archiviazione BLOB di Azure usando PolyBase, vengono esportati solo i dati e non i nomi di colonne (metadati) definiti nel comando CREATE EXTERNAL TABLE.
 
-## <a name="locking"></a>Utilizzo di blocchi  
+## <a name="locking"></a>Blocco  
  Acquisisce un blocco condiviso per l'oggetto EXTERNAL FILE FORMAT.
   
 ## <a name="performance"></a>Prestazioni
@@ -303,7 +303,7 @@ Note sulla tabella:
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-create-a-delimitedtext-external-file-format"></a>A. Creare un formato di file esterno DELIMITEDTEXT  
+### <a name="a-create-a-delimitedtext-external-file-format"></a>R. Creare un formato di file esterno DELIMITEDTEXT  
  In questo esempio viene creato un formato di file esterno denominato *textdelimited1* per un file delimitato da testo. Le opzioni indicate per FORMAT\_OPTIONS specificano che i campi nel file devono essere separati usando un carattere pipe "|". Il file di testo viene anche compresso con il codec Gzip. Se non si specifica DATA\_COMPRESSION, il file di testo non è compresso.
   
  Per un file di testo delimitato, il metodo di compressione dei dati può essere il codec predefinito, "org.apache.hadoop.io.compress.DefaultCodec" o il codec Gzip, "org.apache.hadoop.io.compress.GzipCodec".
