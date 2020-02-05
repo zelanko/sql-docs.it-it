@@ -24,18 +24,18 @@ ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 392a50a23bd33235bb5a89eb95d585ebd5531527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929118"
 ---
-# <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
+# <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Controlla il funzionamento dell'istruzione COMMIT TRANSACTION di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il valore predefinito di questa impostazione è OFF, che specifica che i cursori non verranno chiusi dal server in occasione del commit di una transazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67929118"
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando l'opzione SET CURSOR_CLOSE_ON_COMMIT è impostata su ON, in corrispondenza del commit o del rollback tutti i cursori aperti vengono chiusi in conformità con ISO. Quando l'opzione SET CURSOR_CLOSE_ON_COMMIT è impostata su OFF, i cursori aperti non vengono chiusi in corrispondenza del commit di una transazione.  
   
 > [!NOTE]  

@@ -1,10 +1,7 @@
 ---
-title: Proprietà Operatore - Nuovo operatore (pagina Notifiche) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Nuovo operatore (pagina Notifiche)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a7eab713ea833832b46b36bbd8a7e4af17d33124
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5bad4791f749e8932b4a4ccfe84ff0522476f694
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260057"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247653"
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>Proprietà Operatore - Nuovo operatore (pagina Notifiche)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -49,7 +51,7 @@ Consente di inviare una notifica all'operatore tramite posta elettronica.
 **Cercapersone**  
 Inviare una notifica all'operatore tramite un messaggio di posta elettronica all'indirizzo del cercapersone.  
   
-**Net send**  
+**Net Send**  
 Notificare questo operatore tramite **Net Send**.  
   
 ## <a name="see-also"></a>Vedere anche  

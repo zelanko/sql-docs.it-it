@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67990933"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installare SQL Server con l'archiviazione su condivisione file SMB
@@ -90,7 +90,7 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]i database di sist
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], incluso Server Core|3.0|Supporto per il failover trasparente delle condivisioni file che garantisce tempi di inattività ridotti a zero senza interventi dell'amministratore del DBA SQL o del file server nelle configurazioni di cluster di file server.<br /><br /> Supporto per IO che utilizzano più interfacce di rete simultaneamente e tolleranza agli errori dell'interfaccia di rete.<br /><br /> Supporto per interfacce di rete con funzionalità RDMA.<br /><br /> Per altre informazioni su queste funzionalità e su Server Message Block, vedere [Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174) (Panoramica di SMB (Server Message Block)).<br /><br /> Supporto per File server di scalabilità orizzontale (SoFS) con disponibilità continua.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluso Server Core|3.2|Supporto per il failover trasparente delle condivisioni file che garantisce tempi di inattività ridotti a zero senza interventi dell'amministratore del DBA SQL o del file server nelle configurazioni di cluster di file server.<br /><br /> Supporto per IO che utilizzano più interfacce di rete simultaneamente e tolleranza agli errori dell'interfaccia di rete tramite SMB multicanale.<br /><br /> Supporto per interfacce di rete con funzionalità RDMA tramite SMB diretto.<br /><br /> Per altre informazioni su queste funzionalità e su Server Message Block, vedere [Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174) (Panoramica di SMB (Server Message Block)).<br /><br /> Supporto per File server di scalabilità orizzontale (SoFS) con disponibilità continua.<br /><br /> Ottimizzato per piccole operazioni I/O di lettura/scrittura casuali comuni per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> L'unità massima di trasmissione (MTU) è abilitata per impostazione predefinita per migliorare significativamente le prestazioni nei trasferimenti sequenziali di grandi dimensioni come il ripristino o il backup del database e il data warehouse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
+## <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
   
 -   Gli account dei servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent devono disporre di autorizzazioni di condivisione di controllo completo e di autorizzazioni NTFS sulle cartelle condivise SMB. L'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere un account di dominio o di sistema quando si utilizza un file server SMB. Per altre informazioni sulle autorizzazioni NTFS e di condivisione, vedere [Autorizzazioni NTFS e di condivisione in un file server](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535) .  
   

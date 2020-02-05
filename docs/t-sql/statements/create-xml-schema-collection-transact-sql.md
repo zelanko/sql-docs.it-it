@@ -26,10 +26,10 @@ ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28409675fda41f030e82337b1fcf0f1a6ec5821e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927722"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67927722"
 
   Importa i componenti di schema in un database.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +56,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  *Espressione*  
  Costante stringa o variabile scalare È di tipo **varchar**, **varbinary**, **nvarchar**, o **xml**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È anche possibile aggiungere nuovi spazi dei nomi alla raccolta oppure nuovi componenti a spazi dei nomi esistenti nella raccolta mediante [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
   
  Per rimuovere raccolte, usare [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
@@ -78,7 +78,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. Creazione di una raccolta di XML Schema nel database  
+### <a name="a-creating-xml-schema-collection-in-the-database"></a>R. Creazione di una raccolta di XML Schema nel database  
  Nell'esempio corrente viene creata la raccolta di XML Schema `ManuInstructionsSchemaCollection`. La raccolta ha solo uno spazio dei nomi di schema.  
   
 ```  
@@ -171,7 +171,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
  L'istruzione CREATE XML SCHEMA COLLECTION archivia solo i componenti di schema supportati da SQL Server. Il contenuto dell'XML Schema non viene archiviato nel database. Pertanto, se si desidera una copia esatta della raccolta di XML Schema, è consigliabile salvare gli XML Schema in una colonna di database o in un'altra cartella nel computer.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Specifica di spazi dei nomi relativi a più schemi in una raccolta di schemi  
- È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Esempio:  
+ È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Ad esempio:  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  

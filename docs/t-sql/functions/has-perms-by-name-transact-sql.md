@@ -23,10 +23,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982946"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
@@ -51,7 +51,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  Nome della classe dell'entità a protezione diretta in cui viene testata l'autorizzazione. *securable_class* è un'espressione scalare di tipo **nvarchar(60)** .  
   
- Nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] l'argomento securable_class deve essere impostato su uno dei seguenti valori: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] l'argomento securable_class deve essere impostato su uno dei seguenti valori **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
   
  *permission*  
  Espressione scalare non Null di tipo **sysname** che rappresenta il nome dell'autorizzazione da controllare. Non prevede alcun valore predefinito. Il nome di autorizzazione ANY è un carattere jolly.  
@@ -72,7 +72,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  Restituisce NULL se la query non viene eseguita correttamente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione predefinita testa se l'entità principale dispone di una determinata autorizzazione valida per un'entità a protezione diretta specificata. HAS_PERMS_BY_NAME restituisce 1 quando l'utente dispone dell'autorizzazione valida sull'entità a protezione diretta, 0 in caso contrario oppure NULL quando la classe di entità a protezione diretta o l'autorizzazione non è valida. Di seguito vengono riportate le autorizzazioni valide:  
   
 -   Autorizzazione concessa direttamente all'entità di protezione e non negata.  
@@ -95,15 +95,15 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  Vengono utilizzate le regole di confronto seguenti:  
   
--   Regole di confronto del database corrente: entità a protezione diretta a livello di database che includono entità a protezione diretta non contenute in uno schema, entità a protezione diretta con ambito schema in una o due parti, database di destinazione quando si usa un nome in tre parti.  
+-   Regole di confronto del database corrente: entità a protezione diretta che includono le entità a protezione diretta non contenute in uno schema, entità a protezione diretta con ambito schema in una o due parti, database di destinazione quando si utilizza un nome in tre parti.  
   
--   regole di confronto del database master: entità a protezione diretta a livello di server.  
+-   Regole di confronto del database master: entità a protezione diretta del database.  
   
 -   ANY non è supportato per i controlli a livello di colonna. È necessario specificare l'autorizzazione appropriata.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Verifica dell'autorizzazione utente VIEW SERVER STATE a livello di server  
+### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>R. Verifica dell'autorizzazione utente VIEW SERVER STATE a livello di server  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   

@@ -12,13 +12,13 @@ ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a38a5470c51145141eda81d30eaadd8ff9f72e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002022"
 ---
-# <a name="mssqlserver2579"></a>MSSQLSERVER_2579
+# <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -30,7 +30,7 @@ ms.locfileid: "68002022"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_EXTENT_OUT_OF_RANGE|  
-|Testo del messaggio|Errore di tabella: l'extent ID_P nell'oggetto con ID ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TYPE) è oltre l'intervallo consentito per questo database.|  
+|Testo del messaggio|Errore di tabella: l'extent ID_P nell'oggetto con ID ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TIPO) è oltre l'intervallo consentito per questo database.|  
   
 ## <a name="explanation"></a>Spiegazione  
 *P_ID* è l'ID di pagina del form *(filenum:pageinfile)* . Il valore *pageinfile* di questo extent è maggiore della dimensione fisica del file (*filenum)* del database. L'extent è contrassegnato per l'allocazione in una pagina IAM con l'ID di unità di allocazione indicato.  
