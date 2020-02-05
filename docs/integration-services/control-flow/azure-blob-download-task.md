@@ -14,10 +14,10 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc83e4d8e39c5521fd897ceeec07755f62b5765d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294322"
 ---
 # <a name="azure-blob-download-task"></a>Attività di download di BLOB di Azure
@@ -40,5 +40,5 @@ Per aggiungere un' **attività di download di BLOB di Azure**, trascinare l'atti
 |BlobDirectory|Consente di specificare il nome della directory BLOB che include i file BLOB da scaricare. La directory BLOB è una struttura gerarchica virtuale.|  
 |SearchRecursively|Consente di specificare se eseguire la ricerca in modo ricorsivo all'interno di sottodirectory.|  
 |LocalDirectory|Consente di specificare la directory locale in cui vengono archiviati i file BLOB scaricati.|  
-|FileName|Consente di specificare un filtro per nomi per la selezione di file con il modello di nome specificato. Ad esempio, `MySheet*.xls\*` include file come `MySheet001.xls` e `MySheetABC.xlsx`.|  
-|TimeRangeFrom/TimeRangeTo|Consente di specificare un filtro basato su un intervallo di tempo. Sono inclusi i file modificati dopo **TimeRangeFrom** e prima di **TimeRangeTo**.|  
+|FileName|Specifica un filtro per i nomi per la selezione di file con il modello di nomi specificato. Ad esempio, `MySheet*.xls\*` include file come `MySheet001.xls` e `MySheetABC.xlsx`.|  
+|TimeRangeFrom/TimeRangeTo|Specifica un filtro basato su un intervallo di tempo. Sono inclusi i file modificati dopo **TimeRangeFrom** e prima di **TimeRangeTo**.|  

@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126831"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
@@ -49,7 +49,7 @@ ms.locfileid: "68126831"
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|Viene descritto il comando per la creazione di certificati.|  
 |[Identificazione dell'origine dei pacchetti con firme digitali](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Vengono fornite informazioni sull'utilizzo di certificati per la firma di pacchetti software.|  
-|[Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Vengono fornite informazioni sull'utilizzo dei certificati con il mirroring del database.|  
+|[Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Vengono fornite informazioni sull'utilizzo dei certificati con il mirroring del database.|  
   
 ## <a name="asymmetric-keys"></a>Chiavi asimmetriche  
  Le chiavi asimmetriche sono utilizzate per proteggere le chiavi simmetriche. È possibile utilizzarle anche per una crittografia limitata dei dati e per la firma digitale di oggetti di database. Una chiave asimmetrica consiste in una chiave privata e in una chiave pubblica corrispondente. Per altre informazioni sulle chiavi simmetriche, vedere [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).  

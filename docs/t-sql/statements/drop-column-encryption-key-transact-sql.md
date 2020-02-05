@@ -21,10 +21,10 @@ ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 4141a205028b22bfd627e2660b057879b5982250
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594303"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -45,7 +45,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  Nome in base al quale la chiave di crittografia della colonna verrà rimossa dal database.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La chiave di crittografia di una colonna non può essere rimossa se viene usata per crittografare una qualsiasi colonna del database. Occorre prima eliminare tutte le colonne che usano la chiave di crittografia della colonna.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -53,7 +53,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dropping-a-column-encryption-key"></a>A. Rimozione di una chiave di crittografia della colonna  
+### <a name="a-dropping-a-column-encryption-key"></a>R. Rimozione di una chiave di crittografia della colonna  
  Nell'esempio seguente viene rimossa una chiave di crittografia della colonna denominata `MyCEK`.  
   
 ```  

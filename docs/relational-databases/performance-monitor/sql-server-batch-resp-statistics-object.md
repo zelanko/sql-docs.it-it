@@ -13,10 +13,10 @@ ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 87045f104bdf183c91c3b60b0d85c4a64929359e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987198"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, Oggetto Batch Resp Statistics

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d81c5865b062e0817c41cef504994f1d6a5c437c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009526"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Classe di evento Degree of Parallelism (7.0 Insert)
@@ -30,13 +30,13 @@ ms.locfileid: "68009526"
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione e non con il nome visualizzato del programma.|10|Sì|  
-|**BinaryData**|**image**|Numero di CPU utilizzate per eseguire il processo in base ai valori seguenti:<br /><br /> 0x00000000, indica un piano seriale eseguito in serie.<br /><br /> 0x01000000, indica un piano parallelo eseguito in serie.<br /><br /> >= 0x02000000, indica un piano parallelo eseguito in parallelo.|2|no|  
+|**BinaryData**|**image**|Numero di CPU utilizzate per eseguire il processo in base ai valori seguenti:<br /><br /> 0x00000000, indica un piano seriale eseguito in serie.<br /><br /> 0x01000000, indica un piano parallelo eseguito in serie.<br /><br /> >= 0x02000000, indica un piano parallelo eseguito in parallelo.|2|No|  
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione USE database oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE database. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|**Event Class**|**int**|Tipo di evento = 28.|27|no|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
-|**EventSubClass**|**int**|Indica l'istruzione eseguita, in base ai valori seguenti:<br /><br /> 1=Seleziona<br /><br /> 2=Inserisci<br /><br /> 3=Aggiorna<br /><br /> 4=Elimina|21|no|  
+|**Event Class**|**int**|Tipo di evento = 28.|27|No|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|**EventSubClass**|**int**|Indica l'istruzione eseguita, in base ai valori seguenti:<br /><br /> 1=Seleziona<br /><br /> 2=Inserisci<br /><br /> 3=Aggiorna<br /><br /> 4=Elimina|21|No|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**Integer Data**|**int**|Quantità di "memoria dell'area di lavoro", espressa in KB, assegnata alla query per eseguire operazioni che implicano l'hashing, l'ordinamento o la creazione di indici. La memoria verrà acquisita durante l'esecuzione in base alle necessità.|25|Sì|  
@@ -46,7 +46,7 @@ ms.locfileid: "68009526"
 |**NTDomainName**|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**RequestID**|**int**|Identificazione della richiesta che ha avviato la query full-text.|49|Sì|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  

@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a4b619396c2dcdad589deff3f9fc6a03fe37c1d5
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d5d5cb5256f4a1b8389d882300a89f0ee0012a99
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531694"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820982"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
+L'articolo seguente offre informazioni di riferimento sui comandi `bdc` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | Crea un cluster Big Data.

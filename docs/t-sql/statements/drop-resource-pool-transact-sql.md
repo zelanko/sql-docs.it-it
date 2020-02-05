@@ -18,10 +18,10 @@ ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ab6a901d2c1eafc2469f0e1307e5d2db71186fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043864"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68043864"
 
   Elimina un pool di risorse di Resource Governor definito dall'utente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ DROP RESOURCE POOL pool_name
  *pool_name*  
  Il nome di un pool di risorse esistente definito dall'utente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Non è possibile eliminare un pool di risorse contenente gruppi del carico di lavoro.  
   
  Non è possibile eliminare pool predefiniti o interni di Resource Governor.  

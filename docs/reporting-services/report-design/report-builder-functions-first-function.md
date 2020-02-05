@@ -9,10 +9,10 @@ ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8d7f2db5b2b212dd529ac800819c5aa58b5d121a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579524"
 ---
 # <a name="report-builder-functions---first-function"></a>Funzioni di Generatore report - Funzione First
@@ -38,7 +38,7 @@ First(expression, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Determinato dal tipo di espressione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione **First** restituisce il primo valore di un set di dati dopo l'applicazione di tutti i criteri di ordinamento e di filtro all'ambito specificato.  
   
  La funzione **First** non può essere usata in espressioni di filtro di gruppo con altri ambiti ad eccezione dell'ambito corrente (predefinito).  

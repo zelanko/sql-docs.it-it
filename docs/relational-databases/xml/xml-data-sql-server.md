@@ -14,17 +14,17 @@ ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc11a8dd385266d38bb12f067d2ffa1a88030b87
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70190430"
 ---
 # <a name="xml-data-sql-server"></a>Dati XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una potente piattaforma per lo sviluppo di applicazioni complete per la gestione di dati semistrutturati. Il supporto per XML è integrato in tutti i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e include i seguenti elementi:  
   
--   Tipo di dati **xml** . I valori XML possono essere archiviati in modo nativo in una colonna con tipo di dati **xml** che può essere tipizzata in base a una raccolta di XML Schema oppure lasciata non tipizzata. La colonna XML può essere indicizzata.  
+-   Tipo di dati **xml** . I valori XML possono essere archiviati in modo nativo in una colonna con tipo di dati **xml** che può essere tipizzata in base a una raccolta di XML Schema oppure lasciata non tipizzata. È possibile indicizzare la colonna XML.  
   
 -   Possibilità di specificare una query XQuery sui dati XML archiviati in colonne e variabili di tipo **xml** .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70190430"
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Esempi di importazione ed esportazione in blocco di documenti XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
+ [Esempi di importazione ed esportazione bulk di documenti XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
  [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)
   

@@ -11,10 +11,10 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296582"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
@@ -40,7 +40,7 @@ ms.locfileid: "71296582"
 |created_time|**datatimeoffset(7)**|Ora in cui vengono ottenuti i valori.|  
 |execution_path|**nvarchar(max)**|Percorso di esecuzione del componente.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 -   In presenza di più output dal componente, viene aggiunta una riga per ogni output.  
   

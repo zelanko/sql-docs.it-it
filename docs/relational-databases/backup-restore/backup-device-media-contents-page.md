@@ -13,10 +13,10 @@ ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987768"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo di backup (pagina Contenuto supporti)
@@ -59,8 +59,8 @@ ms.locfileid: "67987768"
 |Intestazione|Valori|  
 |------------|------------|  
 |**Nome**|Nome del set di backup.|  
-|**Tipo**|Oggetto di cui è stato eseguito il backup: database, file o *\<vuoto>* , nel caso dei log delle transazioni.|  
-|**Componente**|Tipo di operazione di backup eseguita: Completo, Differenziale o Log delle transazioni.|  
+|**Tipo**|Oggetto di cui viene eseguito il backup: database, file o *\<vuoto>* , nel caso dei log delle transazioni.|  
+|**Componente**|Tipo di backup eseguito, ovvero Completo, Differenziale o Log delle transazioni.|  
 |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
 |**Database**|Nome del database di cui è stato eseguito il backup.|  
 |**Posizione**|Posizione del set di backup nel volume.|  
@@ -73,13 +73,13 @@ ms.locfileid: "67987768"
   
 -   [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 -   [Specificare un disco o un nastro come destinazione di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Eliminare un dispositivo di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
--   [Impostare la data di scadenza di un backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Impostazione della data di scadenza di un backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Visualizzare il contenuto di un nastro o di un file di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   

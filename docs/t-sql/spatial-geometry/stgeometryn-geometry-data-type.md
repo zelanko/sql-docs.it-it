@@ -18,10 +18,10 @@ ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8eb3644652d826744b50b6980b0dbe0a42ae2d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950203"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (tipo di dati geometry)
@@ -45,7 +45,7 @@ Restituisce una geometria specificata in una **raccolta di geometrie**.
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce **null** se il parametro è maggiore del risultato di `STNumGeometries()` e genererà un'eccezione **ArgumentOutOfRangeException** se il parametro *expression* è minore di 1.  
   
 ## <a name="examples"></a>Esempi  

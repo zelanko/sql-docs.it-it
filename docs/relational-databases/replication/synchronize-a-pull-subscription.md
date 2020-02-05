@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e0606b6a6895ffd63c219e312a727157d1e2ad86
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769397"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287043"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronizzazione di una sottoscrizione pull
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68769397"
   
      [Oggetti RMO (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Le sottoscrizioni vengono sincronizzate dall'agente di distribuzione, per la replica snapshot e transazionale, o dall'agente di merge, per la replica di tipo merge. Gli agenti possono essere in esecuzione continuamente, essere in esecuzione su richiesta o essere in esecuzione su una pianificazione. Per altre informazioni sull'impostazione delle pianificazioni della sincronizzazione, vedere [Specificare le pianificazioni della sincronizzazione](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  Sincronizzare una sottoscrizione su richiesta dalla cartella **Sottoscrizioni locali** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "68769397"
   
 4.  Nella finestra di dialogo **Visualizza stato sincronizzazione - \<Sottoscrittore>:\<DatabaseSottoscrizione>** fare clic su **Avvia**. Al termine della sincronizzazione verrà visualizzato il messaggio **Sincronizzazione completata** .  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
  Le sottoscrizioni pull possono essere sincronizzate a livello di programmazione e su richiesta richiamando il file eseguibile dell'agente di replica appropriato dal prompt dei comandi. Il file eseguibile dell'agente di replica richiamato dipenderà dal tipo di pubblicazione a cui appartiene la sottoscrizione pull. Per altre informazioni, vedere [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md).  
@@ -831,7 +831,7 @@ End Try
   
 ## <a name="see-also"></a>Vedere anche  
  [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md)   
- [Creare una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Procedure consigliate per la sicurezza della replica](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

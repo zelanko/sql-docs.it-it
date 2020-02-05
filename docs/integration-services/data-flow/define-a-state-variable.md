@@ -11,10 +11,10 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292933"
 ---
 # <a name="define-a-state-variable"></a>Definire una variabile di stato
@@ -58,7 +58,7 @@ ms.locfileid: "71292933"
 |TFEND (Trickle-Feed Update Ended)|Si tratta dello stato previsto per le esecuzioni CDC normali. Indica che l'esecuzione precedente è stata completata e che è possibile avviare una nuova esecuzione con un nuovo intervallo di elaborazione.|  
 |TFSTART|Si tratta dello stato durante un'esecuzione non iniziale del pacchetto di aggiornamento Trickle-Feed, dopo la chiamata dell'operazione **GetProcessingRange** all'attività di controllo CDC.<br /><br /> Indica che un'esecuzione CDC normale è stata avviata in maniera pulita, ma non è stata o non è ancora,terminata (**MarkProcessedRange**).|  
 |TFREDO (Reprocessing Trickle-Feed Updates)|Si tratta dello stato di **GetProcessingRange** che si verifica dopo TFSTART. Indica che l'esecuzione precedente non è stata completata correttamente.<br /><br /> Se si utilizza la colonna __$reprocessing, viene impostato su 1 per indicare che a livello di destinazione è possibile che le righe siano già in corso di rielaborazione.|  
-|ERROR|Il gruppo CDC si trova in uno stato ERROR.|  
+|ERRORE|Il gruppo CDC si trova in uno stato ERROR.|  
   
  Di seguito sono riportati esempi di valori della variabile di stato CDC.  
   
@@ -90,6 +90,6 @@ ms.locfileid: "71292933"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di controllo CDC](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor attività Controllo CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [Editor dell'attività di controllo CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070267"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68070267"
 
 Modifica l'appartenenza di un ruolo del server o il nome di un ruolo del server definito dall'utente. Impossibile rinominare i ruoli predefiniti del server.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,10 +64,10 @@ Aggiunge l'entità server specificata al ruolo del server. *server_principal* pu
 DROP MEMBER *server_principal*  
 Rimuove l'entità server specificata dal ruolo del server. *server_principal* può essere un account di accesso o un ruolo del server definito dall'utente. *server_principal* non può essere un ruolo predefinito del server, un ruolo del database o sa.  
   
-WITH NAME **=**_new_server_role_name_  
+WITH NAME **=** _new_server_role_name_  
 Specifica il nuovo nome del ruolo del server definito dall'utente. Il nome non deve essere già esistente nel server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 La modifica del nome di un ruolo del server definito dall'utente non comporta la modifica del numero di ID, del proprietario o delle autorizzazioni del ruolo.  
   
 Per la modifica dell'appartenenza al ruolo, `ALTER SERVER ROLE` sostituisce sp_addsrvrolemember e sp_dropsrvrolemember. Queste stored procedure sono deprecate.  
@@ -95,7 +95,7 @@ Per aggiungere un membro a un ruolo del server definito dall'utente, è necessar
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-name-of-a-server-role"></a>A. Modifica del nome di un ruolo del server  
+### <a name="a-changing-the-name-of-a-server-role"></a>R. Modifica del nome di un ruolo del server  
 Nell'esempio seguente viene creato un ruolo del server denominato `Product`, viene quindi modificato il nome del ruolo del server in `Production`.  
   
 ```  
@@ -127,7 +127,7 @@ ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. Rimozione di un account di accesso di SQL Server da un ruolo del server  
-Nell'esempio seguente l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Ted` viene rimosso dal ruolo predefinito del server `diskadmin`.  
+Nell'esempio seguente l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Ted` viene rimosso dal ruolo predefinito del server `diskadmin`.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  

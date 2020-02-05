@@ -17,10 +17,10 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a271b9dd9da2a4b21040a89145d9f2ab1fe84b68
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297586"
 ---
 # <a name="functions-ssis-expression"></a>Funzioni (espressione SSIS)

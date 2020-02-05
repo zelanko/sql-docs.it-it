@@ -19,10 +19,10 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050830"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT - autorizzazioni per il catalogo full-text (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68050830"
   
 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,10 +53,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti nella sezione "Osservazioni" più avanti in questo argomento.  
   
- ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
  Specifica il catalogo full-text per cui viene concessa l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
  Specifica l'elenco di parole non significative full-text per cui viene concessa l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  
@@ -86,7 +86,7 @@ AS *granting_principal*
 -   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="fulltext-catalog-permissions"></a>Autorizzazioni FULLTEXT CATALOG  
  Un catalogo full-text è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per un catalogo full-text, insieme alle autorizzazioni più generali che le includono in modo implicito.  
@@ -132,7 +132,7 @@ AS *granting_principal*
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-granting-permissions-to-a-full-text-catalog"></a>A. Concessione di autorizzazioni per un catalogo full-text  
+### <a name="a-granting-permissions-to-a-full-text-catalog"></a>R. Concessione di autorizzazioni per un catalogo full-text  
  Nell'esempio seguente a `Ted` viene concessa l'autorizzazione `CONTROL` per il catalogo full-text `ProductCatalog`.  
   
 ```  

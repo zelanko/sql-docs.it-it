@@ -18,10 +18,10 @@ ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
 ms.openlocfilehash: 2758b728792c48ef309eb08f545ea4a6953c9e9d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530824"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
@@ -64,7 +64,7 @@ Per eliminare una libreria è necessario il privilegio ALTER ANY EXTERNAL LIBRAR
 
 Se l'istruzione ha esito positivo viene restituito un messaggio informativo.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 A differenza di altre istruzioni `DROP` in SQL Server, questa istruzione supporta la specifica di una clausola di autorizzazione facoltativa. In questo modo gli utenti **dbo** o gli utenti con ruolo **db_owner** possono eliminare una libreria di pacchetti caricata nel database da un utente comune.
 

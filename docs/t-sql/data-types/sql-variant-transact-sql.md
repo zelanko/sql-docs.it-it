@@ -21,18 +21,18 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6a417d8240bb3360a13367230f0017762b51d659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000509"
 ---
-# <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
+# <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Tipo di dati per l'archiviazione di valori per vari tipi di dati supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ Tipo di dati per l'archiviazione di valori per vari tipi di dati supportati da [
 sql_variant  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 **sql_variant** può essere usato in colonne, parametri, variabili e in valori restituiti di funzioni definite dall'utente. **sql_variant** consente a questi oggetti di database di supportare valori di altri tipi di dati.
   
 Una colonna di tipo **sql_variant** può includere righe con tipi di dati diversi. Ad esempio, una colonna definita come **sql_variant** può archiviare valori **int**, **binary**, e **char**.
@@ -59,7 +59,7 @@ Non è possibile usare il tipo di dati **sql_variant** in CONTAINSTABLE e FREETE
   
 ODBC non offre il supporto completo di **sql_variant**. Quando si usa il provider Microsoft OLE DB per ODBC (MSDASQL), pertanto, le query eseguite su colonne di tipo **sql_variant** restituiscono dati binari. Ad esempio, la stringa di caratteri "PS2091" di una colonna di tipo **sql_variant** viene restituita come 0x505332303931.
   
-## <a name="comparing-sqlvariant-values"></a>Confronto di valori sql_variant  
+## <a name="comparing-sql_variant-values"></a>Confronto di valori sql_variant  
 Il tipo di dati **sql_variant** è incluso nella parte iniziale dell'elenco della gerarchia dei tipi di dati per la conversione. Per l'esecuzione di confronti di valori **sql_variant**, la gerarchia dei tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene suddivisa in gruppi di tipi di dati.
   
 |Gerarchia dei tipi di dati|Gruppo di tipi di dati|  
@@ -69,7 +69,7 @@ Il tipo di dati **sql_variant** è incluso nella parte iniziale dell'elenco dell
 |**datetimeoffset**|Date e Time|  
 |**datetime**|Date e Time|  
 |**smalldatetime**|Date e Time|  
-|**data**|Date e Time|  
+|**date**|Date e Time|  
 |**time**|Date e Time|  
 |**float**|Valori numerici approssimati|  
 |**real**|Valori numerici approssimati|  
@@ -85,19 +85,19 @@ Il tipo di dati **sql_variant** è incluso nella parte iniziale dell'elenco dell
 |**nchar**|Unicode|  
 |**varchar**|Unicode|  
 |**char**|Unicode|  
-|**varbinary**|Binario|  
-|**binary**|Binario|  
+|**varbinary**|Binary|  
+|**binary**|Binary|  
 |**uniqueidentifier**|Uniqueidentifier |  
   
 Per i confronti **sql_variant** vengono applicate le regole seguenti:
 -   Nei confronti tra valori **sql_variant** con tipi di dati di base diversi appartenenti a gruppi di tipi di dati diversi, il valore appartenente al gruppo di tipi di dati che occupa un livello più alto nella gerarchia viene considerato il valore maggiore.  
 -   Nei confronti di valori **sql_variant** con tipi di dati di base diversi appartenenti allo stesso gruppo, il valore del tipo di dati di base che appartiene a un gruppo di livello inferiore nella gerarchia viene convertito in modo implicito nell'altro tipo di dati, dopodiché viene eseguito il confronto.  
--   Quando vengono confrontati i valori **sql_variant** dei tipi di dati **char**, **varchar**, **nchar** o **nvarchar**, le relative regole di confronto vengono prima confrontate in base ai criteri seguenti: LCID, versione LCID, flag di confronto e ID di ordinamento. Per ognuno di questi criteri il confronto viene eseguito con valori interi e nell'ordine elencato. Se tutti questi criteri sono uguali, i valori effettivi della stringa vengono confrontati in base alle regole di confronto.  
+-   Quando vengono confrontati i valori **sql_variant** dei tipi di dati **char**, **varchar**, **nchar** o **nvarchar**, vengono messe a confronto per prime le regole di confronto in base ai criteri seguenti: LCID, versione LCID, flag di confronto e ID di ordinamento. Per ognuno di questi criteri il confronto viene eseguito con valori interi e nell'ordine elencato. Se tutti questi criteri sono uguali, i valori effettivi della stringa vengono confrontati in base alle regole di confronto.  
   
-## <a name="converting-sqlvariant-data"></a>Conversione di dati sql_variant  
+## <a name="converting-sql_variant-data"></a>Conversione di dati sql_variant  
 Nel caso del tipo di dati **sql_variant**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la conversione implicita in **sql_variant** degli oggetti con tipi di dati diversi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta tuttavia le conversioni implicite dal tipo di dati **sql_variant** in oggetti con un tipo di dati diverso.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
 Nella tabella seguente sono elencati i tipi di valori che non è possibile archiviare con **sql_variant**:
   
 |||  
@@ -114,8 +114,8 @@ Nella tabella seguente sono elencati i tipi di valori che non è possibile archi
 
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Uso di un tipo sql_variant in una tabella  
- Nell'esempio seguente viene creata una tabella con tipi di dati sql_variant. In seguito vengono recuperate le informazioni di `SQL_VARIANT_PROPERTY` relative al valore `colA` `46279.1`, dove `colB` =`1689`, partendo dal presupposto che `tableA` include `colA` di tipo `sql_variant` e `colB`.  
+### <a name="a-using-a-sql_variant-in-a-table"></a>R. Uso di un tipo sql_variant in una tabella  
+ Nell'esempio seguente viene creata una tabella con tipi di dati sql_variant. In seguito vengono recuperate le informazioni di `SQL_VARIANT_PROPERTY` relative al valore `colA``46279.1`, dove `colB` =`1689`, partendo dal presupposto che `tableA` include `colA` di tipo `sql_variant` e `colB`.  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -137,7 +137,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Uso di un tipo sql_variant come variabile   
+### <a name="b-using-a-sql_variant-as-a-variable"></a>B. Uso di un tipo sql_variant come variabile   
  Nell'esempio seguente viene creata una variabile con il tipo di dati sql_variant e in seguito vengono recuperate le informazioni di `SQL_VARIANT_PROPERTY` su una variabile denominata @v1.  
   
 ```sql    

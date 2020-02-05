@@ -11,10 +11,10 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 976c495cca321a5731a59ff69e3d7935323cdce5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294656"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script di registrazione supplementare Oracle
@@ -31,7 +31,7 @@ ms.locfileid: "71294656"
 ## <a name="options"></a>Opzioni  
  Di seguito sono riportate le opzioni disponibili relative all'esecuzione dello script.  
   
- **Run Script**  
+ **Esegui script**  
  Tramite questa opzione è possibile eseguire lo script di registrazione supplementare nelle tabelle definite per l'istanza di CDC. Per eseguire questo script, l'utente Oracle deve disporre dell'autorizzazione ALTER TABLE per tutte le tabelle da acquisire e dell'autorizzazione SELECT per la vista DBA_LOG_GROUPS. L'utente Oracle deve inoltre disporre delle credenziali per utilizzare il database Oracle con le autorizzazioni necessarie. Il programma richiederà l'immissione delle credenziali Oracle per l'esecuzione dello script.  
   
  **Save As**  
