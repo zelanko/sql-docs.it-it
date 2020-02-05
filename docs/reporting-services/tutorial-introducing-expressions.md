@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63295922"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
@@ -56,7 +56,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
     > [!NOTE]  
     > L'origine dati scelta non ha importanza purché si disponga delle autorizzazioni appropriate. Non verranno recuperati dati dall'origine dati. Per altre informazioni, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina **Progetta query** fare clic su **Modifica come testo**.  
   
@@ -93,7 +93,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
 
     ![Generatore-report-espressione-esercitazione-query-come-testo](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. Scegliere **Avanti**.  
+11. Fare clic su **Avanti**.  
   
 12. Nella pagina **Disponi campi** trascinare i campi seguenti nell'ordine specificato, dall'elenco **Campi disponibili** all'elenco **Valori** .  
   
@@ -114,7 +114,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
     
     ![Generatore-report-espressione-non-somma](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. Scegliere **Avanti**.  
+15. Fare clic su **Avanti**.  
   
 16. Nella pagina **Scegliere il layout** , mantenere tutte le impostazioni predefinite e fare clic su **Avanti**.  
 
@@ -533,25 +533,25 @@ Creare un parametro in modo che gli utenti del report possano specificare il col
   
 5.  Nella scheda **Valori disponibili** fare clic su **Imposta valori**.  
   
-7.  Scegliere **Aggiungi**.  
+7.  Fare clic su **Aggiungi**.  
   
 8.  Nella casella **Etichetta** digitare: **Giallo**  
   
 9. Nella casella **Valore** digitare **Yellow**  
   
-10. Scegliere **Aggiungi**.  
+10. Fare clic su **Aggiungi**.  
   
 11. Nella casella **Etichetta** digitare **Green**  
   
 12. Nella casella **Valore** digitare **PaleGreen**  
   
-13. Scegliere **Aggiungi**.  
+13. Fare clic su **Aggiungi**.  
   
 14. Nella casella **Etichetta** digitare **Blue**  
   
 15. Nella casella **Valore** digitare **LightBlue**  
   
-16. Scegliere **Aggiungi**.  
+16. Fare clic su **Aggiungi**.  
   
 17. Nella casella **Etichetta** digitare **Pink**  
   

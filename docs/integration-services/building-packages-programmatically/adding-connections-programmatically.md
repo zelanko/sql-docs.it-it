@@ -25,10 +25,10 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dbeccf07c052eb99c3a110cc5f3d8811cf9529ce
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299100"
 ---
 # <a name="adding-connections-programmatically"></a>Aggiunta di connessioni a livello di programmazione
@@ -49,7 +49,7 @@ ms.locfileid: "71299100"
   
  Nella tabella seguente sono elencate le gestioni connessioni incluse in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. e la stringa utilizzata nell'istruzione `package.Connections.Add("xxx")` Per un elenco di tutte le gestioni connessioni, vedere [Connessioni di Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-|String|Gestione connessione|  
+|string|Gestione connessione|  
 |------------|------------------------|  
 |"OLEDB"|Gestione connessione per le connessioni OLE DB.|  
 |"ODBC"|Gestione connessione per le connessioni ODBC.|  

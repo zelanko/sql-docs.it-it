@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024994"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
@@ -37,7 +37,7 @@ ms.locfileid: "68024994"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un indice cluster in una tabella tramite:**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68024994"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Per creare un indice cluster tramite Esplora oggetti  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68024994"
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Tabelle** e scegliere **Nuova tabella**.  
   
-3.  Creare una nuova tabella con il metodo tradizionale. Per altre informazioni, vedere [Creare tabelle &#40;motore di database&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
+3.  Creare una nuova tabella con il metodo tradizionale. Per altre informazioni, vedere [Creare tabelle &#40;Motore di database&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   
 4.  Fare clic con il pulsante destro del mouse sulla nuova tabella creata e scegliere **Progetta**.  
   
@@ -109,15 +109,15 @@ ms.locfileid: "68024994"
   
 6.  Nella finestra di dialogo **Indici/chiavi** fare clic su **Aggiungi**.  
   
-7.  Selezionare il nuovo indice nella casella di testo **Chiave o indice primario/univoco selezionato** .  
+7.  Selezionare il nuovo indice dalla casella di testo **Chiave o indice primario/univoco selezionato** .  
   
 8.  Nella griglia selezionare **Crea come CLUSTERED**, quindi selezionare **Sì** dall'elenco a discesa a destra della proprietà.  
   
-9. Scegliere **Chiudi**.  
+9. Fare clic su **Close**.  
   
 10. Dal menu **File** scegliere **Salva**_nome\_tabella_.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Per creare un indice cluster  
   
@@ -147,6 +147,6 @@ ms.locfileid: "68024994"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di chiavi primarie](../../relational-databases/tables/create-primary-keys.md)   
- [Creare vincoli univoci](../../relational-databases/tables/create-unique-constraints.md)  
+ [Creare vincoli UNIQUE](../../relational-databases/tables/create-unique-constraints.md)  
   
   

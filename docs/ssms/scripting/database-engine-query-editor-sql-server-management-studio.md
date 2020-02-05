@@ -1,6 +1,6 @@
 ---
-title: Editor di query del motore di database (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editor di query del Motore di database (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263497"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253937"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor di query del Motore di database (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68263497"
 ## <a name="sql-editor-toolbar"></a>Barra degli strumenti Editor SQL  
  Quando l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è aperto, nella barra degli strumenti Editor SQL sono visualizzati i pulsanti seguenti.  
   
- **Connect**  
+ **Connettere**  
  Consente di aprire la finestra di dialogo **Connetti al server** . Utilizzare questa finestra di dialogo per stabilire una connessione a un server.  
   
  **Disconnetti**  
@@ -70,10 +70,10 @@ ms.locfileid: "68263497"
  **Database disponibili**  
  Consente di passare a un database diverso sullo stesso server.  
   
- **Execute**  
+ **Eseguire**  
  Consente di eseguire il codice selezionato o, se non è selezionata alcuna parte del codice, di eseguire tutto il codice incluso nell'editor di query.  
   
- **Debug**  
+ **Eseguire il debug**  
  Consente di abilitare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , che supporta azioni di debug quali l'impostazione di punti di interruzione, il controllo di variabili e l'esecuzione di codice istruzione per istruzione.  
   
  **Annulla esecuzione query**  
@@ -126,7 +126,7 @@ ms.locfileid: "68263497"
 ## <a name="sql-editor-toolbar"></a>Barra degli strumenti Editor SQL  
  Quando è aperta una finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , è possibile aggiungere la barra degli strumenti Debug scegliendo **Barre degli strumenti** dal menu **Visualizza**e quindi facendo clic su **Debug**. Se la barra degli strumenti Debug viene aggiunta quando non è aperta alcuna finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , non sarà disponibile alcun pulsante.  
   
- **Continue**  
+ **Continua**  
  Consente di eseguire il codice nella finestra dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] fino a quando non viene rilevato un punto di interruzione.  
   
  **Interrompi tutto**  

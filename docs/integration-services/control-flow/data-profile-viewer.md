@@ -16,10 +16,10 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294221"
 ---
 # <a name="data-profile-viewer"></a>Visualizzatore profilo dati
@@ -32,7 +32,7 @@ ms.locfileid: "71294221"
 > [!IMPORTANT]  
 >  Il file di output potrebbe contenere dati sensibili sul database e i dati inclusi nel database. Per suggerimenti su come rendere più sicuro questo file, vedere [Accesso ai file utilizzati dai pacchetti](../../integration-services/security/security-overview-integration-services.md#files).  
   
-## <a name="data-profiles"></a>Profili dati  
+## <a name="data-profiles"></a>Profili dei dati  
  Per visualizzare i profili dati, è necessario configurare l'attività Profiling dati per inviare l'output a un file e quindi utilizzare il Visualizzatore profilo dati autonomo. Per aprire il Visualizzatore profilo dati, effettuare una delle azioni seguenti:  
   
 -   Fare clic con il pulsante destro del mouse sull'attività **Profiling dati** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , quindi scegliere **Modifica**. Fare clic su **Apri Visualizzatore profilo** nella pagina **Generale** dell' **Editor attività Profiling dati**.  
@@ -76,7 +76,7 @@ ms.locfileid: "71294221"
  Per altre informazioni sull'uso del Visualizzatore profilo dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md). Per altre informazioni sull'uso dell'attività Profiling dati che crea l'output del profilo analizzato nel Visualizzatore profilo dati, vedere [Impostazione dell'attività Profiling Dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
   
 ### <a name="static-options"></a>Opzioni statiche  
- **Aprire**  
+ **Apri**  
  Consente di accedere al file salvato che contiene l'output dell'attività Profiling dati.  
   
  Riquadro**Profili**  
@@ -114,7 +114,7 @@ ms.locfileid: "71294221"
  **Lunghezza**  
  Visualizza le lunghezze di colonna rilevate nella colonna analizzata.  
   
- **Count**  
+ **Numero**  
  Visualizza il numero di righe in cui il valore della colonna analizzata ha la lunghezza indicata nella colonna **Lunghezza** .  
   
  **Percentuale**  
@@ -139,7 +139,7 @@ ms.locfileid: "71294221"
  Visualizza il numero di righe della tabella o della vista.  
   
 ##### <a name="pattern-distribution-pane"></a>Riquadro Distribuzione criteri di ricerca  
- **Pattern**  
+ **Modello**  
  Visualizza i modelli calcolati per la colonna analizzata.  
   
  **Percentuale**  
@@ -148,7 +148,7 @@ ms.locfileid: "71294221"
 #### <a name="profile-type--column-statistics-profile"></a>Tipo di profilo: profilo Statistiche di colonna  
   
 ##### <a name="column-statistics-profile---column-pane"></a>Profilo Statistiche di colonna - riquadro \<colonna>  
- **Minimo**  
+ **Minimi**  
  Visualizza il valore minimo rilevato nella colonna analizzata.  
   
  **Massimo**  
@@ -170,10 +170,10 @@ ms.locfileid: "71294221"
  Visualizza il numero di righe della tabella o della vista.  
   
 ##### <a name="detailed-value-distribution-pane"></a>Riquadro Distribuzione dettagliata valori  
- **Value**  
+ **Valore**  
  Visualizza i valori distinct rilevati nella colonna analizzata.  
   
- **Count**  
+ **Numero**  
  Visualizza il numero di righe in cui la colonna analizzata ha il valore indicato nella colonna **Valore** .  
   
  **Percentuale**  
@@ -192,7 +192,7 @@ ms.locfileid: "71294221"
  **\<colonna1>, \<colonna2>, ecc.**  
  Visualizza i valori duplicati rilevati nella colonna analizzata.  
   
- **Count**  
+ **Numero**  
  Visualizza il numero di righe in cui la colonna specificata ha il valore indicato nella prima colonna.  
   
 #### <a name="profile-type--functional-dependency-profile"></a>Tipo di profilo: profilo Dipendenza funzionale  
@@ -243,6 +243,6 @@ ms.locfileid: "71294221"
  **\<colonna1>, \<colonna2>, ecc.**  
  Visualizza i valori nella colonna o colonne del subset che non sono disponibili nella colonna o colonne del superset.  
   
- **Count**  
+ **Numero**  
  Visualizza il numero di righe in cui la colonna specificata ha il valore indicato nella prima colonna.  
   

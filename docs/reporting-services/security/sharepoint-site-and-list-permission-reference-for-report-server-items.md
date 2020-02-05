@@ -14,10 +14,10 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570689"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report
@@ -30,7 +30,7 @@ ms.locfileid: "65570689"
 |Livello di autorizzazione|Abbreviazione|  
 |----------------------|------------------|  
 |Controllo completo|**F**|  
-|Collaborazione|**C**|  
+|Contribuire|**C**|  
 |Visitatore|**V**|  
   
  Le autorizzazioni che non interessano i server di report non sono elencate. In questo articolo di riferimento non sono incluse le autorizzazioni relative alla personalizzazione. Sebbene sia possibile includere elementi di un server di report in un sito Web personalizzato, il server di report non gestisce direttamente le operazioni o le richieste di personalizzazione.  
@@ -42,7 +42,7 @@ ms.locfileid: "65570689"
 ## <a name="list-permissions"></a>Autorizzazioni relative agli elenchi  
  Le autorizzazioni impostate per la raccolta che contiene gli elementi del server di report determinano la modalità con cui gli utenti potranno accedere a tali elementi.  
   
-|Autorizzazione|Descrizione|F|c|V|Funzionamento del server di report|  
+|Autorizzazione|Descrizione|F|C|V|Funzionamento del server di report|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gestione elenchi|Consente di creare ed eliminare elenchi, aggiungere o rimuovere colonne in un elenco e aggiungere o rimuovere le visualizzazioni pubbliche di un elenco.|X|||Creazione di una cartella in una raccolta di SharePoint durante un'operazione di pubblicazione eseguita da uno strumento di creazione. Questa autorizzazione è necessaria anche per la gestione della cronologia dei report.|  
 |Aggiungi elementi|Consente di aggiungere elementi a un elenco, documenti a raccolte documenti e commenti a discussioni Web.|X|X||Aggiunta di report, modelli di report, origini dati condivise e risorse (file di immagine esterni) a raccolte di SharePoint. Creazione di origini dati condivise. Generazione di modelli di report da origini dati condivise. Avvio di Generatore report e creazione di un nuovo report o caricamento di un modello in Generatore report.|  
@@ -59,7 +59,7 @@ ms.locfileid: "65570689"
 ## <a name="site-permissions"></a>Autorizzazioni relative ai siti  
  Le autorizzazioni relative ai siti consentono di accedere a operazioni del server di report non direttamente correlate agli elementi archiviati in una raccolta specifica, ad esempio la creazione e la modifica di pianificazioni condivise, che possono essere utilizzate da elementi di più raccolte, e la configurazione della web part Visualizzatore report, che può essere utilizzata in varie aree di un sito.  
   
-|Autorizzazione|Descrizione|F|c|V|Funzionamento del server di report|  
+|Autorizzazione|Descrizione|F|C|V|Funzionamento del server di report|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gestione autorizzazioni|Consente di creare e modificare i livelli di autorizzazione nel sito Web e di assegnare autorizzazioni a utenti e gruppi.|X|||Modifica delle autorizzazioni per tutte le operazioni e gli elementi di un server di report. Impostazione della sicurezza a livello di elemento di modello.|  
 |Gestione sito web|Consente di eseguire tutte le attività di amministrazione del sito Web, nonché di gestirne il contenuto.|X|||Creazione, modifica ed eliminazione di pianificazioni condivise.|  
@@ -68,7 +68,7 @@ ms.locfileid: "65570689"
 |Enumerazione autorizzazioni|Consente di enumerare le autorizzazioni relative a siti Web, elenchi, cartelle, documenti o voci di elenco.|X|||Lettura di autorizzazioni per tutti gli elementi di un server di report. Consente di visualizzare un report click-through che utilizza un modello di report contenente impostazioni di sicurezza per gli elementi del modello.|  
 |Gestione avvisi|Consente di gestire avvisi per tutti gli utenti del sito Web.|X|||Creazione, modifica ed eliminazione di qualsiasi sottoscrizione su un sito.|  
 |Utilizzo interfacce remote|Consente di utilizzare le interfacce SOAP, Web DAV o SharePoint Designer per accedere al sito Web.|X|X|X|Utilizzata per chiamare l'endpoint proxy dell'URL del server di report.|  
-|Apertura|Consente di aprire un sito Web, un elenco o una cartella per accedere agli elementi disponibili in tale contenitore.|X|X|X|Lettura delle proprietà di elementi e pianificazioni.|  
+|Apri|Consente di aprire un sito Web, un elenco o una cartella per accedere agli elementi disponibili in tale contenitore.|X|X|X|Lettura delle proprietà di elementi e pianificazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Confrontare ruoli e attività di Reporting Services con autorizzazioni e gruppi di SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

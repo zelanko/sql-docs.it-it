@@ -20,10 +20,10 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065666"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68065666"
 
   Consente di avviare o arrestare una sessione eventi oppure di modificare la configurazione di una sessione eventi.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -118,7 +118,7 @@ ON SERVER
   
 |||  
 |-|-|  
-|Nome|Definizione|  
+|Termine|Definizione|  
 |*event_session_name*|Nome di una sessione dell'evento esistente.|  
 |STATE = START &#124; STOP|Avvia o arresta la sessione dell'evento. Questo argomento è valido solo quando ALTER EVENT SESSION è applicato a un oggetto della sessione dell'evento.|  
 |ADD EVENT \<event_specifier>|Associa l'evento identificato da \<event_specifier> con la sessione dell'evento.|
@@ -141,7 +141,7 @@ ON SERVER
 |TRACK_CAUSALITY = { ON &#124; **OFF** }|Specifica se viene tenuta traccia della causalità. Se abilitato, la causalità consente la correlazione di eventi correlati in diverse connessioni server.|  
 |STARTUP_STATE = { ON &#124; **OFF** }|Specifica se avviare automaticamente questa sessione dell'evento all'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Se STARTUP_STATE=ON, la sessione dell'evento verrà avviata solo se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato e quindi riavviato.<br /><br /> ON= La sessione dell'evento ha inizio all'avvio.<br /><br /> **OFF** = La sessione dell'evento non ha inizio all'avvio.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Non è possibile usare gli argomenti `ADD` e `DROP` nella stessa istruzione.  
   
 ## <a name="permissions"></a>Autorizzazioni  

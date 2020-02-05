@@ -11,10 +11,10 @@ ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 359e5f8f8916a698be802cd7cc05d800e5997d82
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294537"
 ---
 # <a name="the-oracle-cdc-instance"></a>Istanza di Oracle CDC
@@ -26,9 +26,9 @@ ms.locfileid: "71294537"
   
  Di seguito vengono descritte le attività eseguite dall'istanza di Oracle CDC:  
   
--   **Gestione della verifica dell'avvio del servizio**: all'avvio, l'istanza di CDC carica la configurazione dalla tabella **xdbcdc_config** ed esegue una serie di verifiche dello stato per controllare che lo stato persistente dell'istanza di CDC sia coerente e che sia possibile avviare l'elaborazione delle modifiche.  
+-   **Gestione della verifica dell'avvio del servizio**: all'avvio, tramite l'istanza di CDC viene caricata la configurazione dalla tabella **xdbcdc_config** e viene eseguita una serie di verifiche dello stato per controllare che lo stato persistente dell'istanza di CDC sia coerente e che sia possibile avviare l'elaborazione delle modifiche.  
   
--   **Preparazione per l'acquisizione delle modifiche**: al completamento della verifica, l'istanza di Oracle CDC analizza tutte le istanze di acquisizione attualmente definite e vengono preparate le query Oracle LogMiner e altre strutture di supporto necessarie per l'acquisizione delle modifiche. Inoltre, viene ricaricato lo stato di acquisizione interno salvato all'ultima esecuzione dell'istanza di Oracle CDC.  
+-   **Preparazione per l'acquisizione delle modifiche**: al completamento della verifica, tramite l'istanza di Oracle CDC vengono analizzate tutte le istanze di acquisizione attualmente definite e vengono preparate le query Oracle LogMiner e altre strutture di supporto necessarie per l'acquisizione delle modifiche. Inoltre, viene ricaricato lo stato di acquisizione interno salvato all'ultima esecuzione dell'istanza di Oracle CDC.  
   
 -   **Acquisizione delle modifiche da Oracle**: tramite l'istanza di Oracle CDC le modifiche da Oracle vengono riunite in pool mediante la struttura Oracle LogMiner e ordinate in base al commit della transazione, viene modificata l'ora di una transazione, quindi le modifiche vengono scritte nelle tabelle delle modifiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database CDC.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "71294537"
   
     -   In un thread separato, viene scritto il numero più alto possibile di record memorizzati nella cache nella tabella delle transazioni gestite temporaneamente per un massimo di 30 secondi (dalla transazione meno recente alla più recente), quindi viene aggiornata la tabella **xdbcdc_state** e viene eseguito il commit di tutte le modifiche.  
   
--   **Gestione delle modifiche della configurazione**: viene inviata una notifica all'istanza di Oracle CDC relativamente alle modifiche della configurazione dal servizio CDC o mediante il rilevamento di una nuova versione nella tabella **cdc.xdbcdc_config**. La maggior parte delle modifiche non richiede il riavvio dell'istanza di Oracle CDC (ad esempio l'aggiunta o la rimozione delle istanze di acquisizione). Alcune modifiche, tuttavia, ad esempio la modifica della stringa di connessione Oracle o delle credenziali di accesso richiedono il riavvio dell'istanza di CDC.  
+-   **Gestione delle modifiche della configurazione**: viene inviata una notifica all'istanza di Oracle CDC relativamente alle modifiche della configurazione dal servizio CDC o mediante il rilevamento di una nuova versione nella tabella **cdc.xdbcdc_config** . La maggior parte delle modifiche non richiede il riavvio dell'istanza di Oracle CDC (ad esempio l'aggiunta o la rimozione delle istanze di acquisizione). Alcune modifiche, tuttavia, ad esempio la modifica della stringa di connessione Oracle o delle credenziali di accesso richiedono il riavvio dell'istanza di CDC.  
   
--   **Gestione del recupero**: all'avvio di un'istanza di Oracle CDC, il relativo stato interno viene ripristinato dalle tabelle **xdbcdc_state** e **xdbcdc_staged_transactions**. Una volta ripristinato lo stato, il processo dell'istanza di CDC prosegue nel modo consueto.  
+-   **Gestione del recupero**: all'avvio di un'istanza di Oracle CDC, il relativo stato interno viene ripristinato dalle tabelle **xdbcdc_state** e **xdbcdc_staged_transactions** . Una volta ripristinato lo stato, il processo dell'istanza di CDC prosegue nel modo consueto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione degli errori](../../integration-services/change-data-capture/error-handling.md)  

@@ -21,10 +21,10 @@ ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128845"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Impostazioni delle estensioni per il recapito di Reporting Services
@@ -39,9 +39,9 @@ ms.locfileid: "63128845"
 |Impostazione|valore|  
 |-------------|-----------|  
 |**TO**|Indirizzo di posta elettronica visualizzato nella riga **A** del messaggio di posta elettronica. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Obbligatorio.|  
-|**CC**|Indirizzo di posta elettronica visualizzato nella riga **Cc** del messaggio di posta elettronica. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativo.|  
-|**BCC**|Indirizzo di posta elettronica visualizzato nella riga **Ccn** del messaggio di posta elettronica. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativo.|  
-|**ReplyTo**|Indirizzo di posta elettronica visualizzato nell'intestazione **Risposta** del messaggio di posta elettronica. Il valore deve essere un singolo indirizzo di posta elettronica. Facoltativo.|  
+|**CC**|Indirizzo di posta elettronica visualizzato nella riga **Cc** del messaggio di posta elettronica. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativa.|  
+|**BCC**|Indirizzo di posta elettronica visualizzato nella riga **Ccn** del messaggio di posta elettronica. Se sono presenti più indirizzi di posta elettronica, vengono separati da un punto e virgola. Facoltativa.|  
+|**ReplyTo**|Indirizzo di posta elettronica visualizzato nell'intestazione **Risposta** del messaggio di posta elettronica. Il valore deve essere un singolo indirizzo di posta elettronica. Facoltativa.|  
 |**IncludeReport**|Valore che indica se includere il report nel recapito tramite posta elettronica. Un valore **true** indica che il report viene recapitato nel corpo del messaggio di posta elettronica.|  
 |**RenderFormat**|Nome dell'estensione per il rendering da utilizzare per generare il report visualizzabile. Il nome deve corrispondere a una delle estensioni per il rendering visibili installate nel server di report. Questo valore è obbligatorio se l'impostazione **IncludeReport** è impostata su **true**.|  
 |**Priorità**|Priorità per l'invio del messaggio di posta elettronica. I valori validi sono **LOW**, **NORMAL** e **HIGH**. Il valore predefinito è **NORMAL**.|  

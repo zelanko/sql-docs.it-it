@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc10141cc2b6c069894868b2a153abc31c4c250c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155824"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "70155824"
 
   Rimuove una o più definizioni di tabella e tutti i dati, gli indici, i trigger, i vincoli e le specifiche di autorizzazione associate alle tabelle in questione. Le viste e stored procedure che fanno riferimento alla tabella eliminata devono essere eliminate in modo esplicito tramite l'istruzione [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) o [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md). Per indicare le dipendenze da una tabella, usare [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -84,7 +84,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  *table_name*  
  Nome della tabella da rimuovere.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Non è possibile utilizzare l'istruzione DROP TABLE per eliminare una tabella a cui fa riferimento un vincolo FOREIGN KEY. È prima necessario eliminare il vincolo FOREIGN KEY o la tabella di riferimento. Se con la stessa istruzione DROP TABLE si eliminano sia la tabella di riferimento che la tabella che contiene la chiave primaria, è necessario indicare la tabella di riferimento per prima nell'elenco.  
   
  Si possono eliminare più tabelle in qualsiasi database. Se una tabella da eliminare fa riferimento alla chiave primaria di un'altra tabella, anch'essa da eliminare, è necessario indicare la tabella di riferimento con la chiave esterna prima della tabella contenente la chiave primaria a cui fa riferimento la prima tabella.  
@@ -105,7 +105,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dropping-a-table-in-the-current-database"></a>A. Eliminazione di una tabella dal database corrente  
+### <a name="a-dropping-a-table-in-the-current-database"></a>R. Eliminazione di una tabella dal database corrente  
  Nell'esempio seguente vengono eliminati la tabella `ProductVendor1` e i dati e gli indici corrispondenti dal database corrente.  
   
 ```  

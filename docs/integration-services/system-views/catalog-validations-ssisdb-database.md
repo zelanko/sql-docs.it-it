@@ -11,10 +11,10 @@ ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295246"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (database SSISDB)
@@ -42,7 +42,7 @@ ms.locfileid: "71295246"
 |object_id|**bigint**|ID dell'oggetto interessato dall'operazione.|  
 |start_time|**datetimeoffset(7)**|Ora di inizio dell'operazione.|  
 |end_time|**datetimeoffsset(7)**|Ora di fine dell'operazione.|  
-|status|**int**|Stato dell'operazione. I valori possibili sono Creata (`1`), In esecuzione (`2`), Operazione annullata (`3`) Operazione non riuscita (`4`), In sospeso (`5`), Terminata in modo inatteso (`6`), Operazione riuscita (`7`), Arresto in corso (`8`) Operazione completata (`9`).|  
+|status|**int**|Lo stato dell'operazione. I valori possibili sono Creata (`1`), In esecuzione (`2`), Operazione annullata (`3`) Operazione non riuscita (`4`), In sospeso (`5`), Terminata in modo inatteso (`6`), Operazione riuscita (`7`), Arresto in corso (`8`) Operazione completata (`9`).|  
 |caller_sid|**varbinary(85)**|ID di sicurezza (SID) dell'utente se per l'accesso è stata utilizzata l'autenticazione di Windows.|  
 |caller_name|**nvarchar(128)**|Nome dell'account tramite cui è stata eseguita l'operazione.|  
 |process_id|**int**|ID processo del programma esterno, se applicabile.|  
@@ -52,7 +52,7 @@ ms.locfileid: "71295246"
 |machine_name|**nvarchar(128)**|Nome del computer in cui è in esecuzione l'istanza del server.|  
 |dump_id|**uniqueidentifier**|ID del dump di esecuzione.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni convalida nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -15,10 +15,10 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a0648ea24162f59562f6d7a68dd5007ca78be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051268"
 ---
 # <a name="nodes-method-xml-data-type"></a>Metodo nodes() (tipo di dati xml)
@@ -46,7 +46,7 @@ Valore letterale stringa costituito da un'espressione XQuery. Se l'espressione d
 *Table*(*Column*)  
 Nome della tabella e della colonna per il set di righe risultante.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Si consideri ad esempio la tabella seguente:  
   
 ```sql
@@ -215,7 +215,7 @@ In questo esempio la query imposta ogni elemento <`Location`> come nodo di conte
   
 La query seguente restituisce l'elemento di contesto. Nel metodo `'.'` viene specificata la sintassi abbreviata per `self::node()`, ovvero `query()`.  
   
-Si noti quanto segue:
+Tenere presente quanto segue:
   
 - Il metodo `nodes()` viene applicato alla colonna Instructions e restituisce il set di righe `T (C)`, il quale contiene copie logiche del documento originale di istruzioni per la produzione con `/root/Location` come elemento di contesto.  
   
@@ -247,7 +247,7 @@ Si noti quanto segue:
 ### <a name="applying-nodes-to-the-rowset-returned-by-another-nodes-method"></a>Applicazione del metodo nodes() al set di righe restituito da un altro metodo nodes()  
 Il codice seguente esegue una query sui documenti XML con le istruzioni per la produzione archiviati nella colonna `Instructions` della tabella `ProductModel`. La query restituisce un set di righe che contiene l'ID del modello di prodotto, i centri di produzione e i passaggi di produzione.  
   
-Si noti quanto segue:  
+Tenere presente quanto segue:  
   
 - Il metodo `nodes()` viene applicato alla colonna `Instructions` e restituisce il set di righe `T1 (Locations)`, il quale contiene copie logiche del documento originale di istruzioni per la produzione con `/root/Location` come elemento di contesto.  
   

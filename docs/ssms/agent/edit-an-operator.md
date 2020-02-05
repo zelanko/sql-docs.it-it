@@ -1,10 +1,9 @@
 ---
-title: Modificare un operatore | Microsoft Docs
-ms.custom: ''
+title: Modifica di un operatore
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 918bb57b0798645ea3968247e1182d22b2de6df3
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 1b69797d3a308d6fe34fa96751143cbaa480f3ea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552903"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242412"
 ---
 # <a name="edit-an-operator"></a>Modifica di un operatore
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,9 +42,9 @@ In questo argomento viene descritto come modificare la disponibilità degli oper
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 Solo i membri del ruolo predefinito del server **sysadmin** possono modificare gli operatori.  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
@@ -58,7 +59,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono modificare g
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore da modificare e selezionare **Proprietà**.  
   
-    Per altre informazioni sulle opzioni disponibili nella finestra di dialogo **Proprietà**_nome\_operatore_, vedere:  
+    Per altre informazioni sulle opzioni disponibili nella finestra di dialogo _Proprietà\__ nome**operatore**, vedere:  
   
     -   [Proprietà operatore - nuovo operatore &#40;pagina generale&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

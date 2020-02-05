@@ -14,10 +14,10 @@ ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 74b18ed725b70e1086b22515a0a051d2521383b7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288327"
 ---
 # <a name="round-ssis-expression"></a>ROUND (espressione SSIS)
@@ -38,13 +38,13 @@ ROUND(numeric_expression,length)
  *numeric_expression*  
  Espressione di tipo numeric valido. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
- *lunghezza*  
+ *length*  
  Espressione integer. Precisione per l'arrotondamento di *numeric_expression* .  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Tipo identico a *numeric*_*expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Tramite l'argomento *length* deve essere restituito un numero intero positivo oppure zero.  
   
  Se l'argomento è Null, ROUND restituirà Null.  

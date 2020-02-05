@@ -18,10 +18,10 @@ ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d5fe71b55325297a4267901e380831c4df889629
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120844"
 ---
 # <a name="stpointfromtext-geography-data-type"></a>STPointFromText (tipo di dati geography)
@@ -50,7 +50,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
  Tipo OGC: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

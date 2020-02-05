@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d3cbf58a3a85d84daf5b0f83006a7cdcb24b589
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982255"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
@@ -60,7 +60,7 @@ LOG ( float_expression )
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per impostazione predefinita, **LOG()** restituisce il logaritmo naturale. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è possibile impostare la base del logaritmo su un altro valore usando il parametro *base* facoltativo.  
   
  Il logaritmo naturale è il logaritmo in base **e**, dove **e** è una costante non razionale approssimativamente uguale a 2,718281828.  
@@ -69,7 +69,7 @@ LOG ( float_expression )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-calculating-the-logarithm-for-a-number"></a>A. Calcolo del logaritmo di un numero.  
+### <a name="a-calculating-the-logarithm-for-a-number"></a>R. Calcolo del logaritmo di un numero.  
  Nell'esempio seguente viene calcolato il valore `LOG` per l'espressione **float** specificata.  
   
 ```  

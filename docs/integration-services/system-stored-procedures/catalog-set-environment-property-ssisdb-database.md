@@ -11,10 +11,10 @@ ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8c455243f6ca903f61bfa7ad6ef6d88e544a258
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295425"
 ---
 # <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property (database SSISDB)
@@ -40,7 +40,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
+ Il nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
  Nome di una proprietà dell'ambiente. *property_name* è di tipo **nvarchar(128)** .  
@@ -52,7 +52,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
@@ -72,7 +72,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   Nome dell'ambiente non valido  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa versione è possibile impostare solo la proprietà `Description`. Il valore della proprietà `Description` non può superare i 4000 caratteri.  
   
   

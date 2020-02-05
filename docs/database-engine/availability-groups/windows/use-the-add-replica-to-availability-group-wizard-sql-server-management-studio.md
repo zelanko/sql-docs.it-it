@@ -16,10 +16,10 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244975"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Aggiungere una replica al gruppo di disponibilità Always On usando la Creazione guidata gruppo di disponibilità in SQL Server Management Studio
@@ -72,12 +72,12 @@ ms.locfileid: "75244975"
   
 4.  Nella pagina **Connetti a repliche secondarie esistenti** , connettersi a ogni replica secondaria del gruppo di disponibilità. Per altre informazioni, vedere la pagina [Connetti a repliche secondarie esistenti &#40;procedura guidata Aggiungi replica: procedura guidata Aggiungi database&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
-5.  Nella pagina **Specifica repliche** specificare e configurare una o più nuove repliche secondarie per il nuovo gruppo di disponibilità. In questa pagina sono incluse tre schede. Queste schede vengono presentate nella tabella seguente. Per altre informazioni, vedere la pagina[Specifica repliche&#40;Creazione guidata Gruppo di disponibilità: procedura guidata Aggiungi replica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+5.  Nella pagina **Specifica repliche** specificare e configurare una o più nuove repliche secondarie per il nuovo gruppo di disponibilità. In questa pagina sono incluse tre schede. Queste schede vengono presentate nella tabella seguente. Per altre informazioni, vedere [ &#40;Creazione guidata Gruppo di disponibilità: Aggiungi replica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Scheda|Breve descrizione|  
     |---------|-----------------------|  
     |**Repliche**|Utilizzare questa scheda per specificare ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospiterà una nuova replica secondaria.|  
-    |**Endpoints**|Utilizzare questa scheda per verificare l'endpoint del mirroring di database esistente, se presente, per ogni nuova replica secondaria. Se tale endpoint risulta mancante in un'istanza del server i cui account del servizio utilizzano l'autenticazione di Windows, si tenterà di creare l'endpoint automaticamente.<br /><br /> <br /><br /> Nota: se qualsiasi istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.|  
+    |**Endpoints**|Utilizzare questa scheda per verificare l'endpoint del mirroring di database esistente, se presente, per ogni nuova replica secondaria. Se tale endpoint risulta mancante in un'istanza del server i cui account del servizio utilizzano l'autenticazione di Windows, si tenterà di creare l'endpoint automaticamente.<br /><br /> <br /><br /> Nota: se un'istanza del server è in esecuzione in un account utente non di dominio, è necessario apportare una modifica manuale all'istanza del server prima di continuare con la procedura guidata. Per altre informazioni, vedere la sessione [Prerequisiti](#Prerequisites)più indietro in questo argomento.|  
     |**Preferenze di backup**|Utilizzare questa scheda per specificare le preferenze di backup per il gruppo di disponibilità nel suo complesso, se si desidera modificare l'impostazione corrente e per specificare le priorità di backup per le singole repliche di disponibilità.|  
   
 6.  Se le repliche selezionate contengono database con una chiave master del database, immettere le password per le chiavi master del database nella colonna **Password**. La colonna **Stato** visualizza **Password obbligatoria** per i database con una chiave master del database. L'opzione **Avanti** è disattivata finché non viene immessa la password corretta nella colonna **Password**. Dopo avere immesso le password, fare clic su **Aggiorna**. Se le password sono state immesse correttamente, la colonna Stato indica **Password immessa** e **Avanti** diventa disponibile.  
@@ -116,7 +116,7 @@ ms.locfileid: "75244975"
      Al termine della procedura guidata, fare clic su **Chiudi** per uscire.  
   
 > [!IMPORTANT]  
->  Dopo aver aggiunto una replica, vedere la sezione "Completamento: Dopo l'aggiunta di una replica secondaria" in [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
+>  Dopo avere aggiunto una replica, vedere la sezione "Completamento: Dopo l'aggiunta di una replica secondaria" in [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   

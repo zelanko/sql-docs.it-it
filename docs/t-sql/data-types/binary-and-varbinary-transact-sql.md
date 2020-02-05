@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940246"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary e varbinary (Transact-SQL)
@@ -38,7 +38,7 @@ Tipi di dati binary a lunghezza fissa o variabile.
   
 **varbinary** [ ( _n_ | **max**) ] Dati binari a lunghezza variabile. _n_ può essere un valore compreso tra 1 e 8.000. **max** indica che la capacità di memorizzazione massima è di 2^31-1 byte. Le dimensioni dello spazio di archiviazione corrispondono alla lunghezza effettiva dei dati immessi + 2 byte. È possibile che la lunghezza dei dati immessi sia pari a 0 byte. L'equivalente di ANSI SQL per **varbinary** è **binary varying**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Se non si specifica _n_ in un'istruzione di definizione dei dati o di dichiarazione di variabili, la lunghezza predefinita è 1. Se non si specifica _n_ con la funzione CAST, la lunghezza predefinita è 30.
 
 | Tipo di dati | Usare se... |

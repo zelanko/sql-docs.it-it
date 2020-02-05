@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095385"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
+# <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Numera l'output di un set di risultati. In particolare, restituisce il numero sequenziale di una riga all'interno di una partizione di un set di risultati, a partire da 1 per la prima riga di ogni partizione. 
@@ -38,7 +38,7 @@ Numera l'output di un set di risultati. In particolare, restituisce il numero se
 > [!NOTE]
 > `ROW_NUMBER` è un valore temporaneo calcolato al momento dell'esecuzione della query. Per mantenere i numeri in una tabella, vedere [Proprietà IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) e [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
   
 ## <a name="syntax"></a>Sintassi  
@@ -50,7 +50,7 @@ ROW_NUMBER ( )
   
 ## <a name="arguments"></a>Argomenti  
  PARTITION BY *value_expression*  
- Suddivide il set di risultati generato dalla clausola [FROM](../../t-sql/queries/from-transact-sql.md) in partizioni alle quali viene applicata la funzione ROW_NUMBER. *value_expression* specifica la colonna in base alla quale viene partizionato il set di risultati. Se `PARTITION BY` non viene specificato, la funzione considera tutte le righe del set di risultati della query come un unico gruppo. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Suddivide il set di risultati generato dalla clausola [FROM](../../t-sql/queries/from-transact-sql.md) in partizioni alle quali viene applicata la funzione ROW_NUMBER. *value_expression* specifica la colonna in base alla quale viene partizionato il set di risultati. Se `PARTITION BY` non viene specificato, la funzione considera tutte le righe del set di risultati della query come un unico gruppo. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  *order_by_clause*  
  La clausola `ORDER BY` determina la sequenza in base alla quale alle righe viene assegnato un valore univoco `ROW_NUMBER` all'interno di una partizione specificata. Questo argomento è obbligatorio. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -71,7 +71,7 @@ ROW_NUMBER ( )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-examples"></a>A. Esempi semplici 
+### <a name="a-simple-examples"></a>R. Esempi semplici 
 
 La query seguente restituisce le quattro tabelle di sistema in ordine alfabetico.
 
@@ -85,12 +85,12 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|NAME    |recovery_model_desc |  
+|name    |recovery_model_desc |  
 |-----------  |------------ |  
-|master |SIMPLE |
+|master |SEMPLICE |
 |model |FULL |
-|msdb |SIMPLE |
-|tempdb |SIMPLE |
+|msdb |SEMPLICE |
+|tempdb |SEMPLICE |
 
 Per aggiungere una colonna con i numeri di riga davanti a ogni riga, aggiungere una colonna con la funzione `ROW_NUMBER`, in questo caso denominata `Row#`. È necessario spostare in alto la clausola `ORDER BY`, accanto alla clausola `OVER`.
 
@@ -104,12 +104,12 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|N. di riga |NAME    |recovery_model_desc |  
+|N. di riga |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |master |SIMPLE |
+|1 |master |SEMPLICE |
 |2 |model |FULL |
-|3 |msdb |SIMPLE |
-|4 |tempdb |SIMPLE |
+|3 |msdb |SEMPLICE |
+|4 |tempdb |SEMPLICE |
 
 Se si aggiunge una clausola `PARTITION BY` nella colonna `recovery_model_desc`, la numerazione verrà riavviata quando il valore `recovery_model_desc` viene modificato. 
  
@@ -123,12 +123,12 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|N. di riga |NAME    |recovery_model_desc |  
+|N. di riga |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
-|1 |master |SIMPLE |
-|2 |msdb |SIMPLE |
-|3 |tempdb |SIMPLE |
+|1 |master |SEMPLICE |
+|2 |msdb |SEMPLICE |
+|3 |tempdb |SEMPLICE |
 
 
 ### <a name="b-returning-the-row-number-for-salespeople"></a>B. Restituzione del numero di riga per i venditori  
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>D. Utilizzo di ROW_NUMBER() con PARTITION  
+### <a name="d-using-row_number-with-partition"></a>D. Utilizzo di ROW_NUMBER() con PARTITION  
  Nell'esempio seguente viene utilizzato l'argomento `PARTITION BY` per suddividere il set di risultati della query in base alla colonna `TerritoryName`. La clausola `ORDER BY` specificata nella clausola `OVER` ordina le righe in ogni partizione in base alla colonna `SalesYTD`. La clausola `ORDER BY` nell'istruzione `SELECT` ordina l'intero set di risultati della query in base al valore di `TerritoryName`.  
   
 ```sql  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>F. Utilizzo di ROW_NUMBER() con PARTITION  
+### <a name="f-using-row_number-with-partition"></a>F. Utilizzo di ROW_NUMBER() con PARTITION  
  Nell'esempio seguente viene illustrato l'utilizzo della funzione `ROW_NUMBER` con l'argomento `PARTITION BY`. Ciò determina la numerazione, da parte della funzione `ROW_NUMBER`, delle righe in ogni partizione.  
   
 ```sql  

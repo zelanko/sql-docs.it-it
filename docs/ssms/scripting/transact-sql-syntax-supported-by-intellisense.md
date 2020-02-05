@@ -1,10 +1,7 @@
 ---
-title: Sintassi Transact-SQL supportata da IntelliSense | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: Sintassi Transact-SQL supportata da IntelliSense
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,13 +11,16 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63e8ba6c7770679ca487d945e4823f70425413ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253261"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252983"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintassi Transact-SQL supportata da IntelliSense
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,17 +48,17 @@ ms.locfileid: "68253261"
   
 |Istruzione Transact-SQL|Sintassi supportata|Eccezioni|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Tutta la sintassi, eccetto la clausola *execute_statement* .|None|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Tutta la sintassi.|None|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Tutta la sintassi.|None|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Tutta la sintassi.|None|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Tutta la sintassi.|None|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Esecuzione di stored procedure e di funzioni definite dall'utente e di sistema.|None|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Tutta la sintassi.|None|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Tutta la sintassi.|None|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Tutta la sintassi, eccetto la clausola *execute_statement* .|nessuno|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Tutta la sintassi.|nessuno|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Tutta la sintassi.|nessuno|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Tutta la sintassi.|nessuno|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Tutta la sintassi.|nessuno|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Esecuzione di stored procedure e di funzioni definite dall'utente e di sistema.|nessuno|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Tutta la sintassi.|nessuno|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Tutta la sintassi.|nessuno|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|Tutta la sintassi.|Non è disponibile supporto IntelliSense per la clausola EXTERNAL NAME.<br /><br /> Nella clausola AS IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Tutta la sintassi|Non è disponibile supporto IntelliSense per la clausola EXTERNAL NAME.<br /><br /> Nella clausola AS IntelliSense supporta solo le istruzioni e la sintassi elencate in questo argomento.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|Tutta la sintassi.|None|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|Tutta la sintassi.|nessuno|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense in istruzioni supportate  
  Nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] IntelliSense supporta i seguenti elementi della sintassi quando vengono utilizzati in una delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] supportate:  

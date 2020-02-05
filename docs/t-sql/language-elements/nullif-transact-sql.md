@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 28c331cd810e905a14fa17d6e212fee331da74f9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844381"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
@@ -50,14 +50,14 @@ NULLIF ( expression , expression )
   
  Se le due espressioni non sono uguali, la funzione NULLIF restituisce il primo argomento *expression*. Se le espressioni sono uguali, NULLIF restituisce un valore Null del tipo del primo argomento *expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  NULLIF è equivalente a un'espressione CASE avanzata in cui le due espressioni sono uguali e l'espressione risultante è Null.  
   
  È consigliabile non utilizzare funzioni dipendenti dal tempo, ad esempio RAND(), in una funzione NULLIF. La funzione potrebbe essere valutata due volte e restituire risultati diversi nelle due chiamate.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-budget-amounts-that-have-not-changed"></a>A. Restituzione degli importi del budget non modificati  
+### <a name="a-returning-budget-amounts-that-have-not-changed"></a>R. Restituzione degli importi del budget non modificati  
  Nell'esempio seguente viene creata una tabella `budgets` per visualizzare un reparto (`dept`), il relativo budget corrente (`current_year`) e il relativo budget precedente (`previous_year`). Per l'anno in corso, viene utilizzato `NULL` per i reparti in cui il budget dell'anno corrente è uguale a quello dell'anno precedente e `0` per i budget non ancora definiti. Per trovare la media solo dei reparti che ricevono un budget e includere inoltre il valore del budget dell'anno precedente (utilizzare il valore `previous_year` se `current_year` è `NULL`), vengono combinate le funzioni `NULLIF` e `COALESCE`.  
   
 ```sql  
@@ -111,7 +111,7 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: Restituzione degli importi del budget che non contengono dati  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. Restituzione degli importi del budget che non contengono dati  
  Nell'esempio seguente viene creata una tabella `budgets`, vengono caricati i dati e viene usato `NULLIF` per restituire un valore Null se né `current_year` né `previous_year` contengono dati.  
   
 ```sql  

@@ -1,30 +1,28 @@
 ---
-title: Requisiti per la riproduzione | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Requisiti per la riproduzione
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- event classes [SQL Server], replaying traces
-- traces [SQL Server], replaying
-- replaying traces
-- TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4a4cf18a4bf6131e41e45343244a747c4651a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928899"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307487"
 ---
 # <a name="replay-requirements"></a>Requisiti per la riproduzione
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Per riprodurre dati di traccia con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Distributed Replay Utility, è necessario acquisire un set specifico di classi di evento e colonne nella traccia. Queste impostazioni sono abilitate per impostazione predefinita se si usa il modello di traccia **TSQL_Replay** per configurare una traccia usata successivamente per la riproduzione. In questo argomento vengono descritte queste impostazioni e altri requisiti per la riproduzione.  
+
+Per riprodurre dati di traccia con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Distributed Replay Utility, è necessario acquisire un set specifico di classi di evento e colonne nella traccia. Queste impostazioni sono abilitate per impostazione predefinita se si usa il modello di traccia **TSQL_Replay** per configurare una traccia usata successivamente per la riproduzione. In questo argomento vengono descritte queste impostazioni e altri requisiti per la riproduzione.  
   
 > [!NOTE]  
 >  È consigliabile utilizzare Distributed Replay Utility per riprodurre un'applicazione OLTP intensiva (con molte connessioni simultanee attive o una velocità effettiva elevata). Distributed Replay Utility può riprodurre dati di traccia da più computer, per simulare in modo migliore un carico di lavoro di importanza critica. Per altre informazioni, vedere [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
@@ -71,7 +69,7 @@ ms.locfileid: "67928899"
   
 -   **TextData**  
   
--   **Application Name**  
+-   **Nome dell'applicazione**  
   
 -   **LoginName**  
   
@@ -99,7 +97,7 @@ ms.locfileid: "67928899"
   
 -   **NTUserName**  
   
--   **Errore**  
+-   **Error (Errore) (Error (Errore)e)**  
   
 > [!NOTE]  
 >  Usare il modello di traccia **TSQL_Replay** per le tracce che consentono di acquisire i dati per la riproduzione.  

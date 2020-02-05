@@ -13,10 +13,10 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa6215e3fafbbf962c687daf329f6781f466342d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293805"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Inclusione valore (Attività Profiling dati)
@@ -131,7 +131,7 @@ ms.locfileid: "71293805"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**None**|Non specifica alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
+|**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità della chiave viene segnalato indipendentemente dal valore.|  
 |**Specified**|Consente di usare la soglia specificata in **InclusionStrengthThreshold**. Il livello di attendibilità dell'inclusione viene segnalato solo se è maggiore della soglia.|  
 |**Exact**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato solo se i valori del subset sono inclusi completamente nei valori del superset.|  
   
@@ -145,7 +145,7 @@ ms.locfileid: "71293805"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**None**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato indipendentemente dall'attendibilità della chiave nella colonna del superset.|  
+|**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato indipendentemente dall'attendibilità della chiave nella colonna del superset.|  
 |**Specified**|Consente di usare la soglia specificata in **SupersetColumnsKeyThreshold**. Il livello di attendibilità dell'inclusione viene segnalato solo se l'attendibilità della chiave nella colonna del superset è maggiore della soglia.|  
 |**Exact**|Non specifica alcuna soglia. Il livello di attendibilità dell'inclusione viene segnalato solo se le colonne del superset rappresentano una chiave esatta nella colonna del superset.|  
   

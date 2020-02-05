@@ -1,10 +1,7 @@
 ---
-title: Avvisi | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Avvisi
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,15 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c29706e1bf94f8717b90964f8edc3a8fff4bc474
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383800"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252691"
 ---
 # <a name="alerts"></a>Avvisi
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -82,7 +84,7 @@ Il tipo di evento determina i parametri utilizzati per specificare l'evento esat
 ## <a name="selecting-a-performance-condition"></a>Selezione di una condizione delle prestazioni  
 È possibile determinare la generazione di un avviso in risposta a una condizione delle prestazioni specifica. In questo caso, è necessario specificare il contatore delle prestazioni da monitorare, una soglia per l'avviso e il comportamento indicato dal contatore se viene generato l'avviso. Per impostare una condizione delle prestazioni, è necessario definire gli elementi indicati di seguito nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Generale **della finestra di dialogo** Nuovo avviso **o** Proprietà avviso **di** Agent:  
   
--   **Oggetto**  
+-   **Object**  
   
     L'oggetto rappresenta l'area delle prestazioni da monitorare.  
   
@@ -98,7 +100,7 @@ Il tipo di evento determina i parametri utilizzati per specificare l'evento esat
   
     La soglia per l'avviso e il comportamento prodotto dall'avviso. La soglia è rappresentata da un numero. Il comportamento può essere uno dei seguenti **: è minore di**, **diventa uguale a**o **è maggiore di un numero specificato per Valore**. L'opzione **Valore** rappresenta un numero che descrive il contatore della condizione delle prestazioni. Per impostare, ad esempio, un avviso per l'oggetto prestazione **SQLServer:Locks** quando il valore **Tempo di attesa blocchi (ms)** supera i 30 minuti, selezionare **è maggiore di** e **specificare 30 come valore**.  
   
-    Sempre a titolo di esempio, è possibile specificare che un avviso venga generato per l'oggetto prestazione **SQLServer:Transactions** quando lo spazio disponibile in **tempdb** è minore di 1000 KB. Per procedere, scegliere il contatore **Spazio disponibile in tempdb (KB)**, **è minore di**e un **Valore** pari a **1000**.  
+    Sempre a titolo di esempio, è possibile specificare che un avviso venga generato per l'oggetto prestazione **SQLServer:Transactions** quando lo spazio disponibile in **tempdb** è minore di 1000 KB. Per procedere, scegliere il contatore **Spazio disponibile in tempdb (KB)** , **è minore di**e un **Valore** pari a **1000**.  
   
     > [!NOTE]  
     > Viene eseguito un campionamento periodico dei dati relativi alle prestazioni, che può determinare un lieve ritardo (qualche secondo) tra il raggiungimento della soglia e la generazione dell'avviso.  
@@ -106,7 +108,7 @@ Il tipo di evento determina i parametri utilizzati per specificare l'evento esat
 ## <a name="selecting-a-wmi-event"></a>Selezione di un evento WMI  
 È possibile impostare la generazione di un avviso in risposta a un evento WMI specifico. Per selezionare un evento WMI, è necessario definire gli elementi indicati di seguito nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Generale **della finestra di dialogo** Nuovo avviso **o** Proprietà avviso **di** Agent:  
   
--   **Namespace**  
+-   **Spazio dei nomi**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene registrato come client WMI nello spazio dei nomi WMI indicato per le query per gli eventi.  
   

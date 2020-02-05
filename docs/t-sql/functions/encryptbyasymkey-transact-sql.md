@@ -20,10 +20,10 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314597"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314597"
 
 Questa funzione crittografa i dati con una chiave asimmetrica.  
   
- ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +52,7 @@ Stringa di dati che verrà crittografata da `ENCRYPTBYASYMKEY` con la chiave asi
 + **nvarchar**
 + **varbinary**
   
-o Gestione configurazione
+o
   
 + **varchar**
  
@@ -67,7 +67,7 @@ Variabile contenente un valore che verrà crittografato da `ENCRYPTBYASYMKEY` co
 + **nvarchar**
 + **varbinary**
   
-o Gestione configurazione
+o
   
 + **varchar**
  
@@ -76,7 +76,7 @@ come tipo di dati.
 ## <a name="return-types"></a>Tipi restituiti  
 **varbinary** con un valore massimo di 8.000 byte.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Le operazioni di crittografia e decrittografia che usano chiavi asimmetriche usano una quantità elevata di risorse e diventano quindi molto costose rispetto alla crittografia e alla decrittografia a chiavi simmetriche. È consigliabile che gli sviluppatori evitino le operazioni di crittografia e decrittografia con chiavi asimmetriche su set di dati di grandi dimensioni, ad esempio nel caso di set di dati utente archiviati in tabelle di database. Si consiglia invece agli sviluppatori di crittografare prima i dati con una chiave simmetrica avanzata e quindi di crittografare tale chiave simmetrica con una chiave asimmetrica.  
   
 A seconda dell'algoritmo, `ENCRYPTBYASYMKEY` restituisce **NULL** se l'input supera un determinato numero di byte. Limiti specifici:

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661440"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
@@ -38,7 +38,7 @@ ROW_NUMBER e RANK sono simili. ROW_NUMBER numera tutte le righe in sequenza (ad 
 > [!NOTE]
 > RANK è un valore temporaneo calcolato al momento dell'esecuzione della query. Per mantenere i numeri in una tabella, vedere [Proprietà IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) e [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ## <a name="return-types"></a>Tipi restituiti  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se due o più righe hanno un valore equivalente per un rango, ogni riga equivalente riceve lo stesso rango. Ad esempio, se due venditori principali hanno lo stesso valore SalesYTD, viene assegnato a entrambi il rango uno. Al venditore con il valore SalesYTD più alto successivo viene assegnato il rango tre, poiché sono presenti due righe di rango più elevato. Pertanto, la funzione RANK non restituirà sempre valori interi consecutivi.  
   
  L'ordinamento utilizzato per l'intera query determina l'ordinamento in base al quale vengono visualizzate le righe in un set di risultati,  
@@ -62,7 +62,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-ranking-rows-within-a-partition"></a>A. Classificazione di righe all'interno di una partizione  
+### <a name="a-ranking-rows-within-a-partition"></a>R. Classificazione di righe all'interno di una partizione  
  Nell'esempio seguente vengono assegnati i ranghi per i prodotti nelle ubicazioni di inventario specificate in base alle quantità. Il set di risultati viene partizionato da `LocationID` e ordinato logicamente in base al valore di `Quantity`. Si noti che la quantità dei prodotti 494 e 495 è la stessa. Poiché tali prodotti sono collegati, vengono entrambi classificati con uno.  
   
 ```sql  

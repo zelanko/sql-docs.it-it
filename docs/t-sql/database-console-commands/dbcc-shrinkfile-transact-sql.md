@@ -30,10 +30,10 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930320"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "67930320"
 
 Compatta le dimensioni dei file di dati e di log specificati nel database corrente. Questa operazione può essere usata per spostare dati da un file ad altri file nello stesso filegroup, svuotando il file e consentendo la rimozione del relativo database. È possibile compattare un file fino a dimensioni inferiori rispetto a quelle specificate al momento della creazione, reimpostando così le dimensioni minime sul nuovo valore.
   
-![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -105,7 +105,7 @@ La tabella seguente descrive le colonne dei set di risultati.
 |**UsedPages**|Numero di pagine da 8 KB utilizzate dal file.|  
 |**EstimatedPages**|Numero di pagine da 8 KB calcolato da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Corrisponde alle possibili dimensioni finali del file compattato.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 L'istruzione DBCC SHRINKFILE viene applicata ai file del database corrente. Per altre informazioni su come modificare il database corrente, vedere [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
 È possibile interrompere le operazioni di DBCC SHRINKFILE in qualsiasi punto e il lavoro completato fino a quel momento viene mantenuto. Se si usa il parametro EMPTYFILE per un file e l'operazione viene annullata, il file non viene contrassegnato per impedire l'aggiunta di altri dati.
@@ -131,7 +131,7 @@ Quando si pianifica la compattazione di un file, considerare le informazioni seg
 
 -   Compattare più file nello stesso database in sequenza anziché contemporaneamente. La contesa sulle tabelle di sistema può provocare blocchi e di conseguenza ritardi.  
   
-## <a name="troubleshooting"></a>Risoluzione dei problemi  
+## <a name="troubleshooting"></a>risoluzione dei problemi  
 In questa sezione viene descritto come diagnosticare e correggere eventuali problemi che possono verificarsi durante l'esecuzione del comando DBCC SHRINKFILE.
   
 ### <a name="the-file-doesnt-shrink"></a>Il file non viene compattato

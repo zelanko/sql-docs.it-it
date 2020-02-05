@@ -26,10 +26,10 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fefd85737e5d58e71dae6fd81dc2c0306b0838e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927636"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - Funzioni di trigger (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67927636"
 
   Restituisce un valore booleano che indica se sono stati effettuati tentativi di esecuzione dell'operazione INSERT o UPDATE su una colonna specifica di una tabella o vista. UPDATE() viene utilizzata in qualsiasi punto all'interno del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT o UPDATE per controllare se il trigger deve eseguire operazioni specifiche.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ UPDATE ( column )
 ## <a name="return-types"></a>Tipi restituiti  
  Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  UPDATE() restituisce TRUE indipendentemente dall'esito del tentativo di esecuzione dell'operazione INSERT o UPDATE.  
   
  Per eseguire la verifica di un'azione INSERT o UPDATE in più di una colonna, specificare una clausola UPDATE(*column*) separata a partire dalla prima colonna. In alternativa, è possibile eseguire la stessa verifica utilizzando COLUMNS_UPDATED. In questo caso viene restituito uno schema di bit che indica le colonne inserite o aggiornate.  

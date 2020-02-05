@@ -9,10 +9,10 @@ ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8b6891ec497b3100206b812fbc8da7b0463fa4d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579501"
 ---
 # <a name="report-builder-functions---inscope-function"></a>Funzioni di Generatore report - Funzione InScope
@@ -34,7 +34,7 @@ InScope(scope)
 ## <a name="return-type"></a>Tipo restituito  
  Viene restituito un valore **Boolean**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione **InScope** testa l'ambito dell'istanza corrente di un elemento del report per verificare l'appartenenza all'ambito specificato dal parametro *scope*.  
   
  *Scope* non può essere un'espressione.  

@@ -16,10 +16,10 @@ ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a3fb6ba51d875807d4936e90b5d0cd1b3997bc3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573544"
 ---
 # <a name="configurationsetting-property---installationid"></a>Proprietà di ConfigurationSetting - InstallationID
@@ -36,7 +36,7 @@ public string InstanceID;
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

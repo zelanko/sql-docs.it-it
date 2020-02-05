@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63294692"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
@@ -47,11 +47,11 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati**.  
   
-5.  Scegliere **Avanti**.  
+5.  Fare clic su **Avanti**.  
   
 6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non è disponibile un'origine dati o non si dispone dell'accesso a un server di report, sarà possibile utilizzare un'origine dati incorporata. Per informazioni sulla creazione di un'origine dati incorporata, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina **Progetta query** fare clic su **Modifica come testo**.  
   
@@ -92,7 +92,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 10. (facoltativo) Fare clic sull'icona Esegui (!) per eseguire la query e visualizzare i dati.
 
-11. Scegliere **Avanti**.  
+11. Fare clic su **Avanti**.  
   
 ## <a name="Groups"></a>2. Organizzare i dati e scegliere il layout dalla Creazione guidata tabella o matrice  
 Utilizzare la procedura guidata per fornire una progettazione iniziale in cui visualizzare i dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della matrice.  
@@ -121,15 +121,15 @@ Utilizzare la procedura guidata per fornire una progettazione iniziale in cui vi
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
-8.  Nella pagina Scegliere il layout, sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+8.  Nella pagina Scegliere il layout, in **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
 9. Verificare che l'opzione **Bloccato, subtotale sotto** sia selezionata.  
   
 10. Verificare che l'opzione **Espandi/comprimi gruppi** sia selezionata.  
   
-11. Scegliere **Avanti**.  
+11. Fare clic su **Avanti**.  
   
 13. Fare clic su **Fine**.  
   
@@ -156,7 +156,7 @@ Per impostazione predefinita, i dati riepilogativi per il campo Sales vengono vi
   
 3.  Nella scheda **Home** > **Numero** > **Valuta**. Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
-    Se la lingua delle impostazioni locali è Inglese - Stati Uniti, il testo di esempio predefinito corrisponderà a [ **$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
+    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [ **$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
@@ -352,7 +352,7 @@ Il testo in una casella di testo può inoltre essere visualizzato in senso orizz
   
 Il nome dell'area risulterà scritto in senso verticale, dal basso verso l'alto. L'altezza del gruppo di righe Territory dipenderà dalla lunghezza del nome del territorio.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 L'esercitazione sulla creazione di un report matrice è terminata. Per altre informazioni sulle matrici, vedere: 
 -    [Tabelle, matrici ed elenchi](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Creare una matrice](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72289347"
 ---
 # <a name="set-or-change-the-database-collation"></a>Impostare o modificare le regole di confronto del database
@@ -35,7 +35,7 @@ ms.locfileid: "72289347"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per impostare o modificare le regole di confronto del database utilizzando:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72289347"
 
 -   Le regole di confronto non possono essere modificate usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dopo la creazione del database in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Possono essere modificate solo tramite [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 È possibile trovare i nomi delle regole di confronto supportate in [Windows_collation_name &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md); oppure è possibile usare la funzione di sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
@@ -74,7 +74,7 @@ Quando si modificano le regole di confronto del database, è possibile modificar
   
  Per modificare le regole di confronto di un database esistente è richiesta l'autorizzazione `ALTER` per il database.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>Per impostare o modificare le regole di confronto del database  
   
@@ -86,7 +86,7 @@ Quando si modificano le regole di confronto del database, è possibile modificar
   
 3.  Al termine dell'operazione scegliere **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-set-the-database-collation"></a>Per impostare le regole di confronto del database  
   

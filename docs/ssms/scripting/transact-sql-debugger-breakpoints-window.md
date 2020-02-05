@@ -1,29 +1,32 @@
 ---
-title: Finestra Punti di interruzione | Microsoft Docs
+title: Finestra Punti di interruzione
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc5600a7cd9e933046700204a8dac916199832c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638016"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243366"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Debugger Transact-SQL - Finestra Punti di interruzione
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Nella finestra **Punti di interruzione** sono elencati tutti i punti di interruzione impostati nell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] corrente. Per gestire i punti di interruzione, usare la barra degli strumenti nella finestra **Punti di interruzione** . I punti di interruzione sono posizioni nel codice in cui viene sospesa l'esecuzione in modalità di debug per consentire la visualizzazione dei dati di debug.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="task-list"></a>Elenco attività
 
@@ -38,7 +41,7 @@ Per impostazione predefinita, la finestra **Punti di interruzione** include le c
 **Nome**  
 Consente di visualizzare il nome del punto di interruzione. I nomi dei punti di interruzione vengono forniti dal debugger. Questo nome include il nome della finestra dell'editor di query del Motore di database che contiene il punto di interruzione e il numero di riga nell'editor di query in cui è impostato il punto di interruzione.  
 
-**Condizione**  
+**Condition**  
 Viene visualizzato **(nessuna condizione)** . Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di condizioni per i punti di interruzione.
 
 **Passaggi**  
@@ -52,7 +55,7 @@ Viene visualizzato **(nessuno)** . Il debugger [!INCLUDE[tsql](../../includes/ts
 **Quando raggiunto**  
 Viene visualizzato **Interrompi**.
 
-**Linguaggio**  
+**Lingua**  
 Viene visualizzato **Transact-SQL** per [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 **Funzione**  
@@ -64,7 +67,7 @@ Consente di visualizzare il nome del file di origine che contiene il punto di in
 **Indirizzo**  
 Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta questa funzionalità.  
 
-**Process**  
+**Processo**  
 Viene visualizzato **[SQL]** , a indicare che si tratta di un processo del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , seguito dal nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in cui viene eseguito il codice.
 
 ## <a name="breakpoints-window-toolbar"></a>Barra degli strumenti della finestra Punti di interruzione

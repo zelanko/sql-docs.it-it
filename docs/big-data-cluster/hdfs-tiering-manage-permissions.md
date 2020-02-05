@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 758338618a312d8efe92503581ae82d49d353e51
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531967"
 ---
 # <a name="manage-hdfs-permissions-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Gestire le autorizzazioni HDFS per i [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -90,7 +90,7 @@ azdata bdc hdfs chown --owner alice --group 'salesgroup' --path '/sales/data'
 
 ## <a name="change-permissions-of-a-file-or-directory-with-chmod"></a>Modificare le autorizzazioni di un file o di una directory con `chmod`
 
-Usare `chmod` per modificare le autorizzazioni per file e directory (per proprietario, gruppo proprietario e altro). Per altre informazioni, vedere [Modifica delle autorizzazioni in un file system Linux](https://www.lifewire.com/uses-of-command-chmod-2201064). In HDFS il modello è lo stesso. Esempio:
+Usare `chmod` per modificare le autorizzazioni per file e directory (per proprietario, gruppo proprietario e altro). Per altre informazioni, vedere [Modifica delle autorizzazioni in un file system Linux](https://www.lifewire.com/uses-of-command-chmod-2201064). In HDFS il modello è lo stesso. Ad esempio:
 
 ```bash
 azdata bdc hdfs chmod --permission 750 --path /sales/data
@@ -112,7 +112,7 @@ azdata bdc hdfs chmod --path /sales/users --permission 1750
 
 Per impostare elenchi di controllo di accesso per file e directory in HDFS, usare i comandi `azdata`.
 
-Di seguito vengono impostati elenchi di controllo di accesso su una directory e viene assegnato all'utente di nome *`tom`* l'accesso in lettura, scrittura ed esecuzione alla directory *`data`*. 
+Di seguito vengono impostati elenchi di controllo di accesso su una directory e viene assegnato all'utente di nome *`tom`* l'accesso in lettura, scrittura ed esecuzione alla directory *`data`* . 
 
 > [!NOTE]
 > Quando si usa il comando `set`, assicurarsi di fornire la specifica completa dell'elenco di controllo di accesso, incluse le informazioni su utente proprietario, gruppo proprietario e altro.

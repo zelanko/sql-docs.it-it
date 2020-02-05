@@ -19,15 +19,15 @@ ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01ac569b82d382850343af0a35b16c676720097c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 471a69f76a9cb663267e6d1b8c5e8c10614912bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097890"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253786"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Esecuzione del debugger Transact-SQL
 
@@ -41,7 +41,7 @@ ms.locfileid: "74097890"
 
 Di seguito vengono indicati i requisiti per avviare il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] :
 
-- Se l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è connesso a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un altro computer, è necessario aver configurato il debugger per il debug remoto. Per altre informazioni, vedere [Configurazione del debugger Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
+- Se l'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] è connesso a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in un altro computer, è necessario aver configurato il debugger per il debug remoto. Per altre informazioni, vedere [Configurare le regole del firewall prima di eseguire il debugger TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] deve essere eseguito con un account di Windows membro del ruolo predefinito del server sysadmin.
 
@@ -83,7 +83,7 @@ Di seguito vengono indicati i requisiti per avviare il debugger [!INCLUDE[tsql](
   
  Nella tabella seguente sono illustrati i comandi di menu del debugger, i pulsanti della barra degli strumenti e i tasti di scelta rapida.  
   
-|Comando del menu Debug|Comando di scelta rapida dell'editor|Pulsante della barra degli strumenti|Scelta rapida da tastiera|Azione|  
+|Comando del menu Debug|Comando di scelta rapida dell'editor|Pulsante della barra degli strumenti|Tasto di scelta rapida|Azione|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
 |**Finestra, Punti di interruzione**|Non disponibile|**Punti di interruzione**|CTRL+ALT+B|Consente di visualizzare la finestra **Punti di interruzione** nella quale è possibile visualizzare e gestire i punti di interruzione.|  
 |**Finestra, Espressione di controllo, Espressione di controllo1**|Non disponibile|**Punti di interruzione, Espressione di controllo, Espressione di controllo1**|CTRL+ALT+W, 1|Consente di visualizzare la finestra **Espressione di controllo1** .|  
@@ -93,17 +93,17 @@ Di seguito vengono indicati i requisiti per avviare il debugger [!INCLUDE[tsql](
 |**Finestra, Variabili locali**|Non disponibile|**Punti di interruzione, Variabili locali**|CTRL+ALT+V, L|Consente di visualizzare la finestra **Variabili locali** .|  
 |**Finestra, Stack di chiamate**|Non disponibile|**Punti di interruzione, Stack di chiamate**|CTRL+ALT+C|Consente di visualizzare la finestra **Stack di chiamate** .|  
 |**Finestra, Thread**|Non disponibile|**Punti di interruzione, Thread**|CTRL+ALT+H|Consente di visualizzare la finestra **Thread** .|  
-|**Continue**|Non disponibile|**Continue**|ALT+F5|Eseguire il codice fino al successivo punto di interruzione. **Continua** non è attivo fintanto che una finestra dell'editor di query in modalità di debug non ha lo stato attivo.|  
+|**Continua**|Non disponibile|**Continua**|ALT+F5|Eseguire il codice fino al successivo punto di interruzione. **Continua** non è attivo fintanto che una finestra dell'editor di query in modalità di debug non ha lo stato attivo.|  
 |**Avvia debug**|Non disponibile|**Avvia debug**|ALT+F5|Consente di attivare la modalità di debug per una finestra dell'editor di query ed eseguire il codice fino al primo punto di interruzione. Se lo stato attivo si trova in una finestra dell'editor di query in modalità di debug, **Avvia debug** viene sostituito da **Continua**.|  
 |**Interrompi tutto**|Non disponibile|**Interrompi tutto**|CTRL+ALT+INTERR|Questa caratteristica non è utilizzata dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
-|**Arresta debug**|Non disponibile|**Debug**|MAIUSC+F5|Consente di portare una finestra dell'editor di query dalla modalità di debug alla modalità normale.|  
+|**Arresta debug**|Non disponibile|**Arresta debug**|MAIUSC+F5|Consente di portare una finestra dell'editor di query dalla modalità di debug alla modalità normale.|  
 |**Disconnetti tutto**|Non disponibile|Non disponibile|Non disponibile|Consente di arrestare la modalità di debug, ma di eseguire le istruzioni restanti nella finestra dell'editor di query.|  
 |**Esegui istruzione**|Non disponibile|**Esegui istruzione**|F11|Consente di eseguire l'istruzione successiva e anche di aprire una nuova finestra dell'editor di query nella modalità di debug se l'istruzione successiva esegue una stored procedure, un trigger o una funzione.|  
 |**Esegui istruzione/routine**|Non disponibile|**Esegui istruzione/routine**|F10|Stessa funzione di **Esegui istruzione**eccetto per il fatto che con questo comando non viene eseguito il debug di funzioni, stored procedure o trigger.|  
 |**Esci da istruzione/routine**|Non disponibile|**Esci da istruzione/routine**|MAIUSC+F11|Consente di eseguire il codice restante in un trigger, una funzione o una stored procedure ignorando i punti di interruzione. La normale modalità di debug riprende quando il controllo viene restituito al codice che ha chiamato il modulo.|  
 |Non disponibile|**Esegui fino al cursore**|Non disponibile|CTRL+F10|Consente di eseguire tutto il codice dall'ultima posizione di arresto fino alla posizione corrente del cursore ignorando i punti di arresto.|  
 |**Controllo immediato**|**Controllo immediato**|Non disponibile|CTRL+ALT+Q|Consente di visualizzare la finestra **Controllo immediato** .|  
-|**Imposta/Rimuovi punto di interruzione**|**Punto di interruzione, Inserisci punto di interruzione**|Non disponibile|F9|Consente di inserire un punto di interruzione in corrispondenza dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] corrente o selezionata.|  
+|**Attiva/disattiva punto di interruzione**|**Punto di interruzione, Inserisci punto di interruzione**|Non disponibile|F9|Consente di inserire un punto di interruzione in corrispondenza dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] corrente o selezionata.|  
 |Non disponibile|**Punto di interruzione, Elimina punto di interruzione**|Non disponibile|Non disponibile|Consente di eliminare il punto di interruzione dalla riga selezionata.|  
 |Non disponibile|**Punto di interruzione, Disabilita punto di interruzione**|Non disponibile|Non disponibile|Consente di disabilitare il punto di interruzione nella riga selezionata. Il punto di interruzione rimane sulla riga di codice, ma l'esecuzione non verrà arrestata fino a quando non sarà riattivata.|  
 |Non disponibile|**Punto di interruzione, Attiva punto di interruzione**|Non disponibile|Non disponibile|Consente di attivare il punto di interruzione nella riga selezionata.|  

@@ -24,10 +24,10 @@ ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984429"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (autorizzazioni di Service Broker) (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67984429"
 
   Nega le autorizzazioni per un contratto, un tipo di messaggio, un'associazione al servizio remoto, una route o un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -99,7 +99,7 @@ CASCADE
 -   Utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   Utente del database sul quale non viene eseguito il mapping ad alcuna entità server  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="service-broker-contracts"></a>Contratti di Service Broker  
  Un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che possono essere negate per un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] assieme alle autorizzazioni più generali incluse in modo implicito.  

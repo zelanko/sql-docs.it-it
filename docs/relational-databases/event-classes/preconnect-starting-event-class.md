@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e309d3783dab58e42f0be76badfa293d7ce872f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940683"
 ---
 # <a name="preconnectstarting-event-class"></a>Classe di evento PreConnect:Starting
@@ -27,7 +27,7 @@ ms.locfileid: "67940683"
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**int**|215|27|no|  
+|EventClass|**int**|215|27|No|  
 |SPID|**int**|ID del processo del server che genera l'evento.|12|Sì|  
 |EventSubClass|**int**|1 per la funzione di classificazione definita dall'utente.|21|Sì|  
 |StartTime|**datetime**|Ora di avvio della funzione di classificazione definita dall'utente.|14|Sì|  

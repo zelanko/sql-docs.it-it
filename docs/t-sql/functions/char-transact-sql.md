@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113696"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68113696"
 
 Questa funzione converte un codice ASCII di tipo **int** in un valore di carattere.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,12 +52,12 @@ CHAR ( integer_expression )
 Valore intero compreso tra 0 e 255. `CHAR` restituisce un valore `NULL` per le espressioni integer non comprese in questo intervallo o quando il valore integer esprime solo il primo byte di un carattere a byte doppio.
 
 > [!NOTE]
-> Alcuni set di caratteri non europei, come [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), includono caratteri che possono essere rappresentati in uno schema di codifica a byte singolo, ma richiedono la codifica multibyte. Per altre informazioni sui set di caratteri, vedere [Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Alcuni set di caratteri non Europai, come [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), includono caratteri che possono essere rappresentati in uno schema di codifica a byte singolo, ma richiedono la codifica multibyte. Per altre informazioni sui set di caratteri, vedere [Set di caratteri a byte singolo e multibyte](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## <a name="return-types"></a>Tipi restituiti
 **char(1)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Usare la funzione `CHAR` per inserire caratteri di controllo nelle stringhe di caratteri. In questa tabella sono elencati i caratteri di controllo usati più di frequente.
   
 |Carattere di controllo|valore|  
@@ -68,7 +68,7 @@ Usare la funzione `CHAR` per inserire caratteri di controllo nelle stringhe di c
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. Utilizzo di ASCII e CHAR per stampare valori ASCII da una stringa  
+### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>R. Utilizzo di ASCII e CHAR per stampare valori ASCII da una stringa  
 In questo esempio viene stampato il valore e il carattere ASCII di ogni carattere della stringa `New Moon`.
   
 ```sql
@@ -203,8 +203,8 @@ NULL                                NULL
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
- [+ &#40;Concatenazione di stringhe&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
 

@@ -10,10 +10,10 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893086"
 ---
 # <a name="tutorials-for-sql-server"></a>Esercitazioni di SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "68893086"
  
 ## <a name="current-tutorials"></a>Esercitazioni correnti  
   
-|Technology|Descrizione|  
+|Tecnologia|Descrizione|  
 |--------------|---------------|  
 |[Esercitazioni su Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Viene illustrato come sviluppare e distribuire modelli tabulari o multidimensionali di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Viene inoltre illustrato come usare strumenti quali PowerPivot per analizzare i dati nei modelli.|  
 |[Esercitazioni del motore di database](../relational-databases/database-engine-tutorials.md)|Viene illustrato come connettersi a un'istanza del motore di database e, successivamente, compilare ed eseguire istruzioni Transact-SQL.|  
