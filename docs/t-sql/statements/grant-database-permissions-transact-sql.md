@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982211"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT - autorizzazioni per database (Transact-SQL)
@@ -100,10 +100,10 @@ Specifica un utente del database sul quale viene eseguito il mapping a una chiav
 
 *Database_user_with_no_login* specifica un utente del database senza entità di livello server corrispondente.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 > [!IMPORTANT]
-> Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Esempio: un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.
+> Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può ad esempio creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.
 
 Un database è un'entità a protezione diretta contenuta nel server padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per un database, insieme alle autorizzazioni più generali che le includono in modo implicito.
 
@@ -167,7 +167,7 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |CREATE SERVICE|ALTER ANY SERVICE|CONTROL SERVER|
 |CREATE SYMMETRIC KEY|ALTER ANY SYMMETRIC KEY|CONTROL SERVER|
 |CREATE SYNONYM|ALTER|CONTROL SERVER|
-|CREATE TABLE|ALTER|CONTROL SERVER|
+|CREA TABELLA|ALTER|CONTROL SERVER|
 |CREATE TYPE|ALTER|CONTROL SERVER|
 |CREATE VIEW|ALTER|CONTROL SERVER|
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
@@ -212,7 +212,7 @@ Gli utenti che dispongono dell'autorizzazione CONTROL SERVER, ad esempio i membr
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-granting-permission-to-create-tables"></a>A. Concessione dell'autorizzazione per la creazione di tabelle
+### <a name="a-granting-permission-to-create-tables"></a>R. Concessione dell'autorizzazione per la creazione di tabelle
 
 Nell'esempio seguente viene concessa l'autorizzazione `CREATE TABLE` per il database `AdventureWorks` all'utente `MelanieK`.
 
