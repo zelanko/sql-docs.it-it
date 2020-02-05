@@ -22,17 +22,17 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056266"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configurare e gestire word breaker e stemmer per la ricerca (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Word breaker e stemmer eseguono l'analisi linguistica su tutti i dati con indicizzazione full-text. L'analisi linguistica esegue le due operazioni seguenti:
 
--   **Trovare i delimitatori di parola (word breaking)** . Il *word breaker* identifica singole parole determinando i delimitatori di parola in base alle regole lessicali della lingua. Ogni parola ( *token*) viene inserita nell'indice full-text utilizzando una rappresentazione compressa per ridurre le relative dimensioni.
+-   **Trovare i delimitatori di parola (word breaking)** . Lo *word breaker* identifica singole parole determinando i delimitatori di parola in base alle regole lessicali della lingua. Ogni parola ( *token*) viene inserita nell'indice full-text utilizzando una rappresentazione compressa per ridurre le relative dimensioni.
 
 -   **Coniugare i verbi (stemming)** . Lo *stemmer* genera forme flessive di una particolare parola in base alle regole di quella lingua, ad esempio "running", "ran" e "runner" sono varie forme della parola "run".
 
@@ -70,7 +70,7 @@ Per altre opzioni e ulteriori informazioni, vedere [sp_help_fulltext_system_comp
 Se si aggiunge, rimuove o modifica un word breaker, è necessario aggiornare l'elenco degli identificatori delle impostazioni locali (LCID) di Microsoft Windows supportati per l'indicizzazione e le query full-text. Per altre informazioni, vedere [Visualizzazione o modifica di word breaker e filtri registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="default"></a> Impostare l'opzione default full-text language  
- Per una versione localizzata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'opzione della [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lingua predefinita full-text **viene impostata dal programma di installazione di** sulla lingua del server, se esiste una corrispondenza appropriata. Per le versioni non localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'opzione **default full-text language** è impostata sull'inglese.  
+ Per le versioni localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imposta l'opzione **default full-text language** sulla lingua del server, se esiste una corrispondenza appropriata. Per le versioni non localizzate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'opzione **default full-text language** è impostata sull'inglese.  
   
  Quando si crea o modifica un indice full-text, è possibile specificare una lingua diversa per ogni colonna di indicizzazione full-text. Se per una colonna non è stata specificata alcuna lingua, il valore predefinito è quello dell'opzione di configurazione **default full-text language**.  
   
@@ -122,7 +122,7 @@ Per altre opzioni e ulteriori informazioni, vedere [sys.fulltext_index_columns &
 #### <a name="user-action"></a>Azione dell'utente  
  Selezionare l'azione dell'utente adatta alla probabile causa del timeout, come segue:  
   
-|Causa probabile|Azione utente|  
+|Possibile causa|Azione utente|  
 |--------------------|-----------------|  
 |Il word breaker per il linguaggio di query non è configurato correttamente.|Se si utilizza un word breaker di terze parti, è possibile che non sia stato registrato correttamente nel sistema operativo. In questo caso, registrare nuovamente il word breaker. Per altre informazioni, vedere [Ripristinare i word breaker usati dalla ricerca alla versione precedente](revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
 |Il malfunzionamento del word breaker è dovuto a una stringa di query specifica.|Se il word breaker è supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contattare il Servizio Supporto Tecnico Clienti Microsoft.|  

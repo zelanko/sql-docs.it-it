@@ -18,10 +18,10 @@ ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066258"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (tipo di dati geometry)
@@ -45,7 +45,7 @@ Restituisce 1 se un'istanza **geometry** è completamente all'interno di un'altr
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.
   
 ## <a name="examples"></a>Esempi  

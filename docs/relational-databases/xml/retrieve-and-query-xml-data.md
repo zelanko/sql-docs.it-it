@@ -14,10 +14,10 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995264"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
@@ -28,7 +28,7 @@ ms.locfileid: "67995264"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene il contenuto dell'istanza XML, ma non mantiene gli aspetti dell'istanza XML che non sono considerati significativi nel modello di dati XML. Ciò significa che un'istanza XML recuperata potrebbe non essere identica all'istanza archiviata nel server, ma conterrà le stesse informazioni.  
   
 ### <a name="xml-declaration"></a>Dichiarazione XML  
- La dichiarazione XML in un'istanza non viene mantenuta quando l'istanza viene archiviata nel database. Esempio:  
+ La dichiarazione XML in un'istanza non viene mantenuta quando l'istanza viene archiviata nel database. Ad esempio:  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -80,7 +80,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- È possibile che il prefisso dello spazio dei nomi nel risultato sia diverso. Esempio:  
+ È possibile che il prefisso dello spazio dei nomi nel risultato sia diverso. Ad esempio:  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
@@ -92,13 +92,13 @@ GO
   
 |Opzioni SET|Valori richiesti|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|ANSI_NULLS|ATTIVA|  
+|ANSI_PADDING|ATTIVA|  
+|ANSI_WARNINGS|ATTIVA|  
+|ARITHABORT|ATTIVA|  
+|CONCAT_NULL_YIELDS_NULL|ATTIVA|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|ATTIVA|  
   
  Se le opzioni non vengono impostate nel modo indicato, le query e le modifiche eseguite dai metodi per il tipo di dati **xml** avranno esito negativo.  
   

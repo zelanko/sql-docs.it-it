@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271908"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "71271908"
 
 Definisce le regole di confronto di un database o di una colonna di database, o un'operazione di cast di regole di confronto se applicata all'espressione della stringa di caratteri. È possibile usare nomi di regole di confronto di Windows o SQL. Se non viene specificato durate la creazione del database, al database vengono assegnate le regole di confronto predefinite dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non viene specificato durate la creazione della colonna della tabella, alla colonna vengono assegnate le regole di confronto predefinite del database.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -52,7 +52,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** specifica che la clausola COLLATE eredita le regole di confronto del database corrente.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 È possibile specificare la clausola COLLATE a vari livelli, tra cui:
 
@@ -103,7 +103,7 @@ FROM fn_helpcollations();
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-specifying-collation-during-a-select"></a>A. Specifica delle regole di confronto durante una SELEZIONE
+### <a name="a-specifying-collation-during-a-select"></a>R. Specifica delle regole di confronto durante una SELEZIONE
 
 Nell'esempio seguente viene creata la tabella semplice in cui vengono inserite 4 righe. Quindi vengono applicate due regole di confronto durante la selezione dei dati dalla tabella per dimostrare che `Chiapas` viene ordinato in modo differente.
 

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115892"
 ---
 # <a name="objecttype-trace-event-column"></a>Colonna ObjectType per gli eventi di traccia
@@ -33,7 +33,7 @@ ms.locfileid: "68115892"
 |8259|Vincolo CHECK|  
 |8260|Predefinito (vincolo o autonomo)|  
 |8262|Vincolo FOREIGN KEY|  
-|8272|Stored procedure|  
+|8272|Stored Procedure|  
 |8274|Regola|  
 |8275|Tabella di sistema|  
 |8276|Trigger nel server|  
@@ -42,10 +42,10 @@ ms.locfileid: "68115892"
 |8280|Stored procedure estesa|  
 |16724|Trigger CLR|  
 |16964|Database|  
-|16975|Object|  
+|16975|Oggetto|  
 |17222|Catalogo full-text|  
 |17232|Stored procedure CLR|  
-|17235|schema|  
+|17235|SCHEMA|  
 |17475|Credenziale|  
 |17491|Evento DDL|  
 |17741|Evento di gestione|  
@@ -64,7 +64,7 @@ ms.locfileid: "68115892"
 |19283|ObfusKey|  
 |19521|Account di accesso con chiave asimmetrica|  
 |19523|Account di accesso con certificato|  
-|19538|Role|  
+|19538|Ruolo|  
 |19539|Account di accesso SQL|  
 |19543|Account di accesso Windows|  
 |20034|Associazione al servizio remoto|  
@@ -100,7 +100,7 @@ ms.locfileid: "68115892"
 |22601|Indice|  
 |22604|Account di accesso con certificato|  
 |22611|XMLSchema|  
-|22868|Tipo|  
+|22868|Type|  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

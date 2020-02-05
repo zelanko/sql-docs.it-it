@@ -20,10 +20,10 @@ ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e1b4177de655300e8297d450ab382c6f37a9f0fe
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843663"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73843663"
 ## <a name="return-types"></a>Tipi restituiti  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Al termine di un'istruzione INSERT, SELECT INTO o di copia bulk, la funzione @@IDENTITY include l'ultimo valore Identity generato dall'istruzione. Se l'istruzione non ha modificato alcuna tabella contenente la colonna Identity, la funzione @@IDENTITY restituisce NULL. Se vengono inserite più righe, con la conseguente generazione di più valori Identity, la funzione @@IDENTITY restituisce l'ultimo valore Identity generato. Se l'istruzione attiva uno o più trigger per l'esecuzione di inserimenti che generano valori Identity, la chiamata della funzione @@IDENTITY subito dopo l'istruzione restituisce l'ultimo valore Identity generato dai trigger. Se un trigger viene attivato dopo un'operazione di inserimento in una tabella che include una colonna Identity e il trigger esegue l'inserimento in un'altra tabella che non include una colonna Identity, la funzione @@IDENTITY restituisce il valore Identity del primo inserimento. Il valore della funzione @@IDENTITY non viene ripristinato su un'impostazione precedente se l'istruzione INSERT, SELECT INTO o l'operazione di copia bulk ha esito negativo o se viene eseguito il rollback della transazione.  
   
  Le istruzioni e le transazioni con esito negativo sono in grado di modificare i dati Identity correnti di una tabella e creare gap nei valori della colonna Identity. Non viene mai eseguito il rollback del valore Identity, anche se non si esegue il commit della transazione che ha tentato l'inserimento del valore nella tabella. Se, ad esempio, un'istruzione INSERT ha esito negativo a causa di una violazione di IGNORE_DUP_KEY, il valore Identity corrente per la tabella viene comunque incrementato.  

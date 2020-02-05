@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258764"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Istruzioni RESTORE per il ripristino, il recupero e la gestione dei backup (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "75258764"
 |.|Descrizione|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|Descrive le istruzioni Transact-SQL RESTORE DATABASE e RESTORE LOG utilizzate per ripristinare e recuperare un database dai backup eseguiti con il comando BACKUP. RESTORE DATABASE viene utilizzata per i database con tutti i modelli di recupero. RESTORE LOG viene utilizzata solo con i modelli di recupero con registrazione completa e con registrazione minima delle operazioni bulk. RESTORE DATABASE può essere inoltre utilizzata per ripristinare un database in base a uno snapshot del database.|  
-|[Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Descrive gli argomenti riportati nella sezione "Sintassi" dell'istruzione RESTORE e del set di istruzioni ausiliarie associato: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. La maggior parte degli argomenti sono supportati solo da un subset di queste sei istruzioni. Informazioni dettagliate sono contenute nella descrizione dell'argomento.|  
+|[Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Descrive gli argomenti riportati nella sezione "Sintassi" dell'istruzione RESTORE e delle istruzioni ausiliarie correlate RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY e RESTORE VERIFYONLY. La maggior parte degli argomenti sono supportati solo da un subset di queste sei istruzioni. Informazioni dettagliate sono contenute nella descrizione dell'argomento.|  
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE FILELISTONLY, che consente di restituire un set di risultati contenente un elenco dei file di database e di log inclusi nel set di backup.|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE HEADERONLY, che consente di restituire un set di risultati contente tutte le informazioni di intestazione del backup per tutti i set di backup in un dispositivo di backup specifico.|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE LABELONLY, che consente di restituire un set di risultati contenente informazioni sui supporti di backup identificati dal dispositivo di backup specificato.|  

@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557936"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Manutenzione e risoluzione dei problemi del Connettore SQL Server
@@ -44,7 +44,7 @@ ms.locfileid: "75557936"
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** usare le istruzioni seguenti, come illustrato nella sezione 3 del passaggio 3.  
+-   **Uso di [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** usare le istruzioni seguenti, come illustrato nella sezione 3 del passaggio 3.  
   
      Importare la nuova chiave asimmetrica.  
   
@@ -153,7 +153,7 @@ In sintesi, ecco i passaggi necessari:
 * Concedere le autorizzazioni all'entità servizio di SQL Server per l'uso di questo nuovo insieme di credenziali.  
 * Modificare le credenziali di SQL Server usate dal motore di database in modo da riflettere il nuovo nome dell'insieme di credenziali, se necessario.  
   
-I backup delle chiavi possono essere ripristinati in aree diverse di Azure, purché rimangano nella stessa area geografica o nello stesso cloud nazionale: Stati Uniti, Canada, Giappone, Australia, India, Asia Pacifico, Europa, Brasile, Cina, US Government o Germania.  
+I backup delle chiavi possono essere ripristinati nelle aree di Azure, a condizione che rimangano nella stessa area geografica o nel cloud nazionale: Stati Uniti, Canada, Giappone, Australia, India, Asia Pacifico, Europa, Brasile, Cina, US Gov o Germania.  
   
   
 ##  <a name="AppendixB"></a> B. Domande frequenti  
@@ -169,7 +169,7 @@ I backup delle chiavi possono essere ripristinati in aree diverse di Azure, purc
 
 **Quali sono gli endpoint a cui deve accedere Connettore SQL Server?** Il connettore comunica con due endpoint che devono essere inclusi nell'elenco degli elementi consentiti. L'unica porta necessaria per la comunicazione in uscita a questi altri servizi è 443 per Https:
 -  login.microsoftonline.com/*:443
--  *.vault.azure.net/*:443
+-  *.vault.azure.net/* :443
 
 **Come si esegue la connessione ad Azure Key Vault usando un server proxy HTTP(S)?**
 Il Connettore usa le impostazioni di configurazione del proxy di Internet Explorer. Queste impostazioni possono essere controllate usando [Criteri di gruppo](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) o il Registro di sistema, ma è importante tenere presente che non sono impostazioni a livello di sistema e dovranno essere indirizzate all'account del servizio che esegue l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se un amministratore del database visualizza o modifica le impostazioni in Internet Explorer, queste avranno effetto solo sull'account dell'amministratore del database anziché sul motore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L'accesso interattivo al server usando l'account del servizio non è consigliato e viene bloccato in molti ambienti protetti. Per rendere effettive le modifiche apportate alle impostazioni proxy configurate, può essere necessario riavviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] perché vengono memorizzate nella cache quando il Connettore tenta per la prima volta di connettersi a un insieme di credenziali delle chiavi.

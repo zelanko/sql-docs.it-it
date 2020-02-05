@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70958342"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
@@ -49,8 +49,8 @@ Quando si usano le tabelle temporali, tenere presenti le considerazioni seguenti
 - Per non invalidare la logica DML, i trigger**INSTEAD OF** non sono consentiti né per la tabella corrente né per quella di cronologia. I trigger**AFTER** sono consentiti solo per la tabella corrente. Sono bloccati nella tabella di cronologia per evitare di invalidare la logica DML.
 - L'utilizzo di tecnologie di replica è limitato:
 
-  - **Always On:** supporto completo
-  - **Change Data Capture e rilevamento modifiche dati:** supportati solo nella tabella corrente
+  - **Always On:** completamente supportato
+  - **Change Data Capture e Change Data Tracking:** supportati solo per la tabella corrente
   - **Replica snapshot e transazionale**: supportata solo per un singolo server di pubblicazione senza attivazione di tabella temporale e per un sottoscrittore con attivazione di tabella temporale. In questo caso, il server di pubblicazione viene usato per un carico di lavoro OLTP, mentre il sottoscrittore viene usato per la ripartizione di report, inclusa l'esecuzione di query 'AS OF'. L'uso di più sottoscrittori non è supportato poiché questo scenario potrebbe comportare dati temporali incoerenti in quanto ognuno di essi dipenderebbe dall'orologio di sistema locale.
   - **Replica di tipo merge:** non supportata per le tabelle temporali
 

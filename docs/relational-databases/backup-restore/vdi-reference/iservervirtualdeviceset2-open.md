@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 552394db26a1b236a4d6997f6dbfba77d12086ee
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847222"
 ---
 # <a name="iservervirtualdeviceset2open-vdi"></a>IServerVirtualDeviceSet2::Open (VDI)
@@ -44,7 +44,7 @@ HRESULT IServerVirtualDeviceSet2::Open (
 | NOERROR | Funzione completata. |
 | VD_E_INVALID | Il nome fornito non ha identificato un set di dispositivi virtuali accessibile per il server. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Dopo che questa funzione è stata richiamata correttamente, il server può procedere alla configurazione del set di dispositivi virtuali tramite GetConfiguration e SetConfiguration.
 

@@ -18,10 +18,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907253"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
@@ -90,7 +90,7 @@ Eventuali messaggi di errore correlati ai dati, al modello o al formato delle co
 
 Non è possibile visualizzare la struttura del modello interna tramite `PREDICT`. Se si vuole comprendere il contenuto del modello stesso, è necessario caricare l'oggetto modello, deserializzarlo e usare codice R appropriato per analizzare il modello.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 La funzione `PREDICT` è supportata da tutte le edizioni di SQL Server 2017 o versione successiva in Windows e in Linux. La funzione `PREDICT` è supportata anche nel database SQL di Azure nel cloud. Questo supporto è attivo indipendentemente dal fatto che siano abilitate altre funzionalità di Machine Learning.
 

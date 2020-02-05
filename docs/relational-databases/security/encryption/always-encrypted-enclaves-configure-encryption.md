@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595516"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri 
@@ -44,7 +44,7 @@ Un utente o un'applicazione che attiva operazioni di crittografia deve avere le 
 > [!NOTE]
 > La [procedura guidata Always Encrypted](always-encrypted-wizard.md) e il cmdlet [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) non supportano attualmente la crittografia sul posto e scaricano sempre i dati per le operazioni di crittografia, anche se la configurazione soddisfa i requisiti precedenti. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Configurare la crittografia delle colonne sul posto con Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Creare e usare indici in una colonna usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-create-use-indexes.md)
 - [Sviluppare applicazioni usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-client-development.md)

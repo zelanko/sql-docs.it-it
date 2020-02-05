@@ -23,10 +23,10 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2772440c98d103790808564b5cdddcde4c2dfd42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117175"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68117175"
   
  Per informazioni e scenari in cui vengono usate entrambe le funzioni **CREATE SEQUENCE** e **NEXT VALUE FOR** , vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -170,7 +170,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  Se una sequenza utilizza un tipo di dati definito dall'utente, l'autore della sequenza deve disporre dell'autorizzazione REFERENCES per il tipo.  
   
-### <a name="audit"></a>Controllare il funzionamento di  
+### <a name="audit"></a>Audit  
  Per controllare **CREATE SEQUENCE**, monitorare **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Esempi  
@@ -185,7 +185,7 @@ CREATE SCHEMA Test ;
 GO  
 ```  
   
-### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. Creazione di una sequenza che aumenta di 1  
+### <a name="a-creating-a-sequence-that-increases-by-1"></a>R. Creazione di una sequenza che aumenta di 1  
  Nell'esempio seguente Thierry crea una sequenza denominata CountBy1 che aumenta di uno ogni volta che viene utilizzata.  
   
 ```sql  

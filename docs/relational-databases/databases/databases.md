@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109713"
 ---
 # <a name="databases"></a>Database
@@ -48,7 +48,7 @@ ms.locfileid: "68109713"
 |[Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)|[Rinominare un database](../../relational-databases/databases/rename-a-database.md)|  
 |[Stati del database](../../relational-databases/databases/database-states.md)|[Impostare un database in modalità utente singolo](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
 |[Stati dei file](../../relational-databases/databases/file-states.md)|[Compattare un database](../../relational-databases/databases/shrink-a-database.md)|  
-|[Stimare le dimensioni di un database](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[Compattare un file](../../relational-databases/databases/shrink-a-file.md)|  
+|[Stima delle dimensioni di un database](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[Compattare un file](../../relational-databases/databases/shrink-a-file.md)|  
 |[Copiare database in altri server](../../relational-databases/databases/copy-databases-to-other-servers.md)|[Visualizzare o modificare le proprietà di un database](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
 |[Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[Visualizzare un elenco di database in un'istanza di SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[Aggiungere file di dati o file di log a un database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
@@ -59,8 +59,8 @@ ms.locfileid: "68109713"
 ## <a name="related-content"></a>Contenuto correlato  
  [Indici](../../relational-databases/indexes/indexes.md)  
   
- [Viste](../../relational-databases/views/views.md)  
+ [Visualizzazioni](../../relational-databases/views/views.md)  
   
- [Stored procedure &#40;motore di database&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
+ [Stored procedure &#40;Motore di database&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
   
   

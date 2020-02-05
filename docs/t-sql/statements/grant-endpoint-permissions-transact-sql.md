@@ -18,10 +18,10 @@ ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050845"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT - autorizzazioni per endpoint (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68050845"
   Concede le autorizzazioni per un endpoint.  
 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,7 +75,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile concedere autorizzazioni nell'ambito del server solo se il database corrente è il database **master**.  
   
  Le informazioni sugli endpoint sono visibili nella vista del catalogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e le informazioni sulle entità server sono visibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -95,8 +95,8 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. Concessione dell'autorizzazione VIEW DEFINITION per un endpoint  
- Nell'esempio seguente viene concessa l'autorizzazione `VIEW DEFINITION` per l'endpoint `Mirror7` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `ZArifin`.  
+### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>R. Concessione dell'autorizzazione VIEW DEFINITION per un endpoint  
+ Nell'esempio seguente viene concessa l'autorizzazione `VIEW DEFINITION` per l'endpoint `Mirror7` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`ZArifin`.  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Concessione dell'autorizzazione TAKE OWNERSHIP con GRANT OPTION  
- Nell'esempio seguente viene concessa l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` con `GRANT OPTION`.  
+ Nell'esempio seguente viene concessa l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` con `GRANT OPTION`.  
   
 ```  
 USE master;  

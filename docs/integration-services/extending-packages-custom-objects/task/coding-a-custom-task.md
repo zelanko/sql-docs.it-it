@@ -19,10 +19,10 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297125"
 ---
 # <a name="coding-a-custom-task"></a>Scrittura del codice di un'attività personalizzata
@@ -173,7 +173,7 @@ End Class
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Contiene le variabili disponibili per l'attività. Le attività utilizzano le variabili tramite VariableDispenser, non direttamente. VariableDispenser blocca e sblocca le variabili e impedisce il verificarsi di deadlock o sovrascritture.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Contiene i metodi chiamati dall'attività per generare eventi nel motore di runtime.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Contiene i metodi e le proprietà utilizzati dall'attività per scrivere voci nel registro eventi.|  
-|Object|Contiene l'oggetto transazione di cui fa parte il contenitore, se presente. Questo valore viene passato come parametro al metodo <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> di un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
+|Oggetto|Contiene l'oggetto transazione di cui fa parte il contenitore, se presente. Questo valore viene passato come parametro al metodo <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> di un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
   
 ### <a name="providing-execution-feedback"></a>Feedback dell'esecuzione  
  Le attività eseguono il wrapping del codice in blocchi **try/catch** per evitare che vengano generate eccezioni nel motore di runtime. In questo modo l'esecuzione del pacchetto viene completata senza arresti imprevisti. Tuttavia, il motore di runtime prevede altri meccanismi per la gestione delle condizioni di errore che possono verificarsi durante l'esecuzione di un'attività, tra cui l'invio di messaggi di errore e di avviso, la restituzione di un valore dalla struttura <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>, l'invio di messaggi, la restituzione del valore <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> e la diffusione di informazioni sui risultati dell'esecuzione dell'attività tramite la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>.  

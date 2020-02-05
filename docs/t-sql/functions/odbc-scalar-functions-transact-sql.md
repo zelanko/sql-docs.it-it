@@ -52,25 +52,25 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a58f211c1a838cb0089cbc2f3e5e156936d1c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914744"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909831"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Funzioni scalari ODBC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   È possibile usare le [funzioni scalari ODBC](https://go.microsoft.com/fwlink/?LinkID=88579) all'interno di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Queste istruzioni sono interpretate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è possibile utilizzarle in stored procedure e funzioni definite dall'utente. Queste includono funzioni per i valori stringa, numerici, di ora, di data, di intervallo e di sistema.  
   
-## <a name="usage"></a>Utilizzo  
+## <a name="usage"></a>Uso  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>Funzioni  
  Nelle tabelle seguenti sono elencate le funzioni scalari ODBC non duplicate in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-### <a name="string-functions"></a>Funzioni per i valori stringa  
+### <a name="string-functions"></a>Funzioni di stringa  
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
@@ -104,7 +104,7 @@ ms.locfileid: "67914744"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. Utilizzo di una funzione ODBC in una stored procedure  
+### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>R. Utilizzo di una funzione ODBC in una stored procedure  
  Nell'esempio seguente viene utilizzata una funzione ODBC in una stored procedure:  
   
 ```  
@@ -223,7 +223,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 SELECT {fn CONCAT( 'CONCAT ','returns a character string')};  
 -- Returns CONCAT returns a character string  
 SELECT {fn CURRENT_DATE( )};  
--- Returns todays date  
+-- Returns today's date  
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   

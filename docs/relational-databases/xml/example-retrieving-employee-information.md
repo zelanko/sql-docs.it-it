@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Recupero di informazioni sui dipendenti | Microsoft Docs'
+title: 'Esempio: recupero di informazioni sui dipendenti | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006773"
 ---
 # <a name="example-retrieving-employee-information"></a>Esempio: Recupero di informazioni sui dipendenti
@@ -58,7 +58,7 @@ INNER JOIN Person.Person AS P
 ON  E.BusinessEntityID = P.BusinessEntityID;  
 ```  
   
- È necessario combinare queste query con `UNION AL`L, applicare `FOR XML EXPLICIT` e specificare la clausola obbligatoria `ORDER BY`. Il set di righe deve essere ordinato prima per `BusinessEntityID` e quindi per nome, in modo che i valori NULL nel nome vengano visualizzati per primi. Eseguendo la query successiva senza la clausola FOR XML viene generata la tabella universale.  
+ È necessario combinare queste query con `UNION AL`L, applicare `FOR XML EXPLICIT`e specificare la clausola obbligatoria `ORDER BY` . Il set di righe deve essere ordinato prima per `BusinessEntityID` e quindi per nome, in modo che i valori NULL nel nome vengano visualizzati per primi. Eseguendo la query successiva senza la clausola FOR XML viene generata la tabella universale.  
   
  La query finale sarà pertanto:  
   
@@ -96,7 +96,7 @@ FOR XML EXPLICIT;
 ...
 ```
   
- La prima istruzione `SELECT` specifica i nomi per le colonne nel set di righe risultante. I nomi formano due gruppi di colonne. Il gruppo con valore di `Tag` pari a `1` nel nome della colonna identifica `Employee` come elemento ed `EmpID` come attributo. L'altro gruppo di colonne contiene il valore di `Tag` `2` nella colonna e identifica <`Name`> come elemento e `FName` e `LName` come attributi.  
+ La prima istruzione `SELECT` specifica i nomi per le colonne nel set di righe risultante. I nomi formano due gruppi di colonne. Il gruppo con valore di `Tag` pari a `1` nel nome della colonna identifica `Employee` come elemento ed `EmpID` come attributo. L'altro gruppo di colonne contiene il valore di `Tag``2` nella colonna e identifica <`Name`> come elemento e `FName` e `LName` come attributi.  
   
  La tabella seguente mostra il set di righe parziale generato dalla query:  
   
@@ -119,6 +119,6 @@ Tag | Parent | Employee!1!EmpID | Name!2!FName | Name!2!LName
  Il processo viene ripetuto per tutte le righe del set di righe. Si noti l'importanza dell'ordinamento delle righe nella tabella universale, in modo che l'istruzione FOR XML EXPLICIT possa elaborare il set di righe nell'ordine corretto e generare il codice XML desiderato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

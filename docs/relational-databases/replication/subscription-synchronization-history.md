@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ba656a13c71792a176b7f625a2f561f1f422e4b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769435"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287065"
 ---
 # <a name="subscription-synchronization-history"></a>Sottoscrizione, Cronologia sincronizzazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "68769435"
  **Visualizza**  
  Consente di selezionare l'agente di merge da visualizzare.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente di merge al termine della sessione. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
   
--   Completato  
+-   Completi  
   
 -   Nuovo tentativo in corso  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68769435"
  **Ora fine**  
  Ora di fine della sessione. Se l'agente non è arrestato, questo campo è vuoto.  
   
- **Durata**  
+ **Duration**  
  Quantità di tempo di esecuzione dell'agente di merge in una sessione. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale se l'agente è stato eseguito in precedenza.  
   
  **Comandi caricati**  
@@ -76,7 +76,7 @@ ms.locfileid: "68769435"
  **% del totale**  
  Percentuale del tempo di elaborazione totale riferita a ogni fase della sessione selezionata.  
   
- **Durata**  
+ **Duration**  
  Quantità di tempo utilizzata per ogni fase di elaborazione. Il valore di durata rappresenta il tempo trascorso se l'agente di merge è attualmente in esecuzione per la sessione e la durata totale se l'agente di merge è stato eseguito in precedenza.  
   
  **Inserts**  

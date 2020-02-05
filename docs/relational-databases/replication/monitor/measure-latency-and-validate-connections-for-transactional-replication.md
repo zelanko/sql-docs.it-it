@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: cdf335fe061bfd6c7c8646f87b6b4c1798243e9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321853"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288158"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Misurazione della latenza e convalida delle connessioni per la replica transazionale
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "75321853"
   
 3.  Fare clic su **Inserisci utilità di traccia**.  
   
-4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**, **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
+4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**e **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Per visualizzare informazioni su un token di traccia inserito in precedenza  
   
@@ -101,12 +101,12 @@ ms.locfileid: "75321853"
   
 3.  Selezionare un'ora dall'elenco a discesa **Ora di inserimento** .  
   
-4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**, **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
+4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**e **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
   
     > [!NOTE]  
     >  Le informazioni sul token di traccia vengono mantenute per lo stesso periodo di tempo degli altri dati cronologici, ovvero in base all'impostazione del periodo di memorizzazione della cronologia del database di distribuzione. Per informazioni sulla modifica delle proprietà del database di distribuzione, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Per inviare un token di traccia a una pubblicazione transazionale  
   

@@ -13,10 +13,10 @@ ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31ee9136f4c2b0f0864db0ecd3931e2e45ea4fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942748"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Ottimizzazione delle prestazioni per i server di pubblicazione Oracle
@@ -43,6 +43,6 @@ ms.locfileid: "67942748"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Panoramica della pubblicazione Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

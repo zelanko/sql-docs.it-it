@@ -13,10 +13,10 @@ ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68052277"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Negazione delle autorizzazioni per una raccolta di XML Schema
@@ -48,7 +48,7 @@ ms.locfileid: "68052277"
 ## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di pulizia necessario.  
   
-### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. Procedura per impedire a un utente di creare una raccolta di XML Schema  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>R. Procedura per impedire a un utente di creare una raccolta di XML Schema  
  Uno dei modi per impedire a un utente di creare una raccolta di XML Schema consiste nel negare l'autorizzazione ALTER per uno schema relazionale, come illustrato nell'esempio seguente.  
   
  Nell'esempio vengono creati l'account utente `TestLogin1`e un database, nonché uno schema relazionale, in aggiunta allo schema `dbo` , nel database. Inizialmente, l'autorizzazione `CREATE XML SCHEMA` consente all'utente di creare una raccolta di schemi in una posizione qualsiasi all'interno del database. Nell'esempio viene negata all'utente l'autorizzazione `ALTER` per uno degli schemi relazionali. In questo modo, viene impedito all'utente di creare una raccolta di XML Schema in tale schema relazionale.  

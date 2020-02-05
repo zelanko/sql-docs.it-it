@@ -11,10 +11,10 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308394"
 ---
 # <a name="configure-the-web-portal"></a>Configurare il portale Web
@@ -48,7 +48,7 @@ Per impostazione predefinita, l'URL del portale Web include un nome di directory
 
 3. Immettere un nome di directory virtuale univoco per il portale Web.
 
-4. Fare clic su **Applica**.
+4. Fare clic su **Apply**.
 
 5. Se si usa [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] o Windows Server 2008, potrebbe essere necessario completare altri passaggi per usare il portale Web. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
@@ -66,7 +66,7 @@ Quando si configurano gli URL nello strumento di configurazione di [!INCLUDE[ssR
 
 3. Sostituirlo con l'URL dell'istanza del server di report.
 
-4. Salvare le modifiche, quindi chiudere il file.
+4. Salvare le modifiche e chiudere il file.
 
 Per altre informazioni sul file di configurazione, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) e [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).
 

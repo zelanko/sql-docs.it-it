@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 4a701a56ba5a71037317f6c404fa394a466febba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729891"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
@@ -33,7 +33,7 @@ Mostra lo spazio di archiviazione usato per la memorizzazione nella cache dei se
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Il comando `DBCC SHOWRESULTCACHESPACEUSED` non accetta parametri e restituisce lo spazio usato dal database in cui viene eseguito il comando.
 
@@ -43,12 +43,12 @@ Il comando `DBCC SHOWRESULTCACHESPACEUSED` non accetta parametri e restituisce l
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|colonna|Tipo di dati|Descrizione|  
+|Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|Spazio totale usato per il database, in KB. Questo numero cambierà con l'aumento del set di risultati memorizzato nella cache.|  
-|data_space|BIGINT|Spazio usato per i dati, in KB.|  
-|index_space|BIGINT|Spazio usato per gli indici, in KB.|  
-|unused_space|BIGINT|Spazio che è parte dello spazio riservato e non usato, in KB.|  
+|reserved_space|bigint|Spazio totale usato per il database, in KB. Questo numero cambierà con l'aumento del set di risultati memorizzato nella cache.|  
+|data_space|bigint|Spazio usato per i dati, in KB.|  
+|index_space|bigint|Spazio usato per gli indici, in KB.|  
+|unused_space|bigint|Spazio che è parte dello spazio riservato e non usato, in KB.|  
 
 
 ## <a name="see-also"></a>Vedere anche

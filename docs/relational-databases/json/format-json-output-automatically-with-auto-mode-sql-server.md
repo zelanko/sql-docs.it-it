@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1472c05c2ac4a9308a0fc941ed706d155203ca03
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095802"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Formattare automaticamente l'output JSON con la modalità AUTO (SQL Server)
@@ -51,7 +51,7 @@ SELECT TOP 5
    FOR JSON AUTO  
 ```  
   
- **Result**  
+ **Risultato**  
   
 ```json  
 [{
@@ -98,7 +98,7 @@ FROM Sales.SalesOrderHeader H
 FOR JSON AUTO   
 ```  
   
-**Result**  
+**Risultato**  
   
 ```json  
 [{
@@ -136,7 +136,7 @@ FROM Sales.SalesOrderHeader AS H
 FOR JSON PATH  
 ```  
   
-**Result**  
+**Risultato**  
   
 ```json  
 [{

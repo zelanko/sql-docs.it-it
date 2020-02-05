@@ -12,13 +12,13 @@ ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0250837855713c1d81202d176976d668f42a164
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138564"
 ---
-# <a name="mssqlserver2515"></a>MSSQLSERVER_2515
+# <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -61,6 +61,6 @@ Se l'esecuzione di DBCC CHECKDB con una clausola REPAIR non consente di risolver
 L'esecuzione di REPAIR invalida la mappa di bit differenziale. Non è possibile eseguire un backup differenziale fino a che viene eseguito un backup completo del database. Il backup completo del database offre un riferimento per la ricompilazione della mappa di bit differenziale.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creare un backup completo del database &#40;SQL Server&#41;](~/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+[Creazione di un backup completo del database &#40;SQL Server&#41;](~/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
 [MSSQLSERVER_2516](~/relational-databases/errors-events/mssqlserver-2516-database-engine-error.md)  
   

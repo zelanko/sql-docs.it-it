@@ -14,10 +14,10 @@ ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078034"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Direttiva TYPE in query FOR XML
@@ -74,7 +74,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>Esecuzione di una query sui risultati di una query FOR XML  
  La query FOR XML restituisce codice XML. È quindi possibile applicare i metodi con tipo **xml** , ad esempio **query()** e **value()** , al risultato XML restituito dalle query FOR XML.  
   
- Nella query seguente il metodo `query()` del tipo di dati **xml** viene usato per l'esecuzione di una query sui risultati della query `FOR XML`. Per altre informazioni, vedere [Metodo query&#40;&#41; con tipo di dati XML](../../t-sql/xml/query-method-xml-data-type.md).  
+ Nella query seguente il metodo `query()` del tipo di dati **xml** viene usato per l'esecuzione di una query sui risultati della query `FOR XML` . Per altre informazioni, vedere [Metodo query&#40;&#41; con &#40;tipo di dati XML&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -88,7 +88,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- La query interna `SELECT ... FOR XML` restituisce un risultato di tipo **xml** al quale la query esterna `SELECT` applica il metodo `query()` per il tipo **xml**. Si noti la direttiva `TYPE` specificata.  
+ La query interna `SELECT ... FOR XML` restituisce un risultato di tipo **xml** al quale la query esterna `SELECT` applica il metodo `query()` per il tipo **xml** . Si noti la direttiva `TYPE` specificata.  
   
  Risultato:  
   
@@ -104,7 +104,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- Nella query seguente il metodo `value()` con il tipo di dati **xml** viene usato per recuperare un valore dal risultato XML restituito dalla query `SELECT...FOR XML`. Per altre informazioni, vedere [Metodo value&#40;&#41; &#40;tipo di dati XML&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
+ Nella query seguente il metodo `value()` con il tipo di dati **xml** viene usato per recuperare un valore dal risultato XML restituito dalla query `SELECT...FOR XML` . Per altre informazioni, vedere [Metodo value&#40;&#41; &#40;tipo di dati XML&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  

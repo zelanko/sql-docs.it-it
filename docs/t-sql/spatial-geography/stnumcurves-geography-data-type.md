@@ -18,10 +18,10 @@ ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f7a525dedd8f5cbfbf881da63b7bb40f461bc802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120925"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (tipo di dati geography)
@@ -41,7 +41,7 @@ ms.locfileid: "68120925"
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  I tipi di dati spaziali unidimensionali includono **LineString**, **CircularString** e **CompoundCurve**. Un'istanza **geography** unidimensionale vuota restituisce 0.  
   
  `STNumCurves`() funziona solo su tipi semplici; non funziona con raccolte **geography** come **MultiLineString**. **NULL** viene restituito quando l'istanza **geography** non è un tipo di dati unidimensionale.  
@@ -50,7 +50,7 @@ ms.locfileid: "68120925"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. Utilizzo di STNumCurves() in un'istanza CircularString  
+### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>R. Utilizzo di STNumCurves() in un'istanza CircularString  
  Nell'esempio seguente viene illustrato come ottenere il numero di curve in un'istanza `CircularString`:  
   
 ```

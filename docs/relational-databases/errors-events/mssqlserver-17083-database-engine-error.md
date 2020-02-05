@@ -12,13 +12,13 @@ ms.assetid: 6c83737d-0531-4fd9-88f6-2da5a150532d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2559f86514ccd57e4c70f15e199724b3ebf44388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100268"
 ---
-# <a name="mssqlserver17083"></a>MSSQLSERVER_17083
+# <a name="mssqlserver_17083"></a>MSSQLSERVER_17083
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -36,7 +36,7 @@ ms.locfileid: "68100268"
 Il corpo di una stored procedure compilata in modo nativo non disponeva di un blocco ATOMIC.  
   
 ## <a name="user-action"></a>Azione dell'utente  
-Una stored procedure compilata in modo nativo deve essere un blocco ATOMIC. Esempio:  
+Una stored procedure compilata in modo nativo deve essere un blocco ATOMIC. Ad esempio:  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

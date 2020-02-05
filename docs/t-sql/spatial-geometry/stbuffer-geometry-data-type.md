@@ -18,10 +18,10 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 01d7b5277e0711f5297e00d7b08b12e105b7f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930360"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo di dati geometry)
@@ -45,7 +45,7 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  `STBuffer()` calcola un buffer in modo analogo a [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), specificando *tolerance* = distance \* 0,001 e *relative* = **false**.  
   
  Se *distance* > 0 viene restituita un'istanza **Polygon** o **MultiPolygon**.  
@@ -70,7 +70,7 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. Chiamata di STBuffer() con parameter_value < 0 in un'istanza di geometria unidimensionale  
+### <a name="a-calling-stbuffer-with-parameter_value--0-on-one-dimensional-geometry-instance"></a>R. Chiamata di STBuffer() con parameter_value < 0 in un'istanza di geometria unidimensionale  
  Nell'esempio seguente viene restituita un'istanza `GeometryCollection` vuota:  
   
 ```
@@ -78,7 +78,7 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Chiamata di STBuffer() con parameter_value < 0 in un'istanza Polygon  
+### <a name="b-calling-stbuffer-with-parameter_value--0-on-a-polygon-instance"></a>B. Chiamata di STBuffer() con parameter_value < 0 in un'istanza Polygon  
  Nell'esempio seguente viene restituita un'istanza `Polygon` con un buffer negativo:  
   
 ```
@@ -86,7 +86,7 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. Chiamata di STBuffer() con parameter_value < 0 in un'istanza CurvePolygon  
+### <a name="c-calling-stbuffer-with-parameter_value--0-on-a-curvepolygon-instance"></a>C. Chiamata di STBuffer() con parameter_value < 0 in un'istanza CurvePolygon  
  Nell'esempio seguente viene restituita un'istanza `Polygon` con un buffer negativo da un'istanza `CurvePolygon`:  
   
 ```
@@ -107,7 +107,7 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
   
  Questa istruzione **SELECT** restituisce `GEOMETRYCOLLECTION EMPTY.`  
   
-### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Chiamata a STBuffer() con parameter_value = 0  
+### <a name="e-calling-stbuffer-with-parameter_value--0"></a>E. Chiamata a STBuffer() con parameter_value = 0  
  Nell'esempio seguente viene restituita una copia dell'istanza `geometry` chiamante:  
   
 ```
@@ -124,7 +124,7 @@ Restituisce un oggetto geometrico che rappresenta l'unione di tutti i punti la c
  SELECT @g.STBuffer(@distance).ToString();
  ```  
   
-### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. Chiamata a STBuffer() con parameter_value > 0  
+### <a name="g-calling-stbuffer-with-parameter_value--0"></a>G. Chiamata a STBuffer() con parameter_value > 0  
  Nell'esempio seguente viene restituita un'istanza `Polygon`:  
   
 ```

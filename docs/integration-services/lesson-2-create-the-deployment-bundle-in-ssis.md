@@ -11,10 +11,10 @@ ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23d700f7886b046896397eb1cce4eb21f9c32850
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296007"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lezione 2: Creare il pacchetto di distribuzione in SSIS
@@ -22,7 +22,7 @@ ms.locfileid: "71296007"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-Nella [Lezione 1: Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), è stato creato il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] denominato Deployment Tutorial, sono stati aggiunti i pacchetti e i file di supporto al progetto e sono state implementate le configurazioni nei pacchetti.  
+Nella lezione 1, [Preparazione alla creazione del pacchetto di distribuzione](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), è stato creato il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] denominato Deployment Tutorial, sono stati aggiunti i pacchetti e i file di supporto al progetto e sono state implementate le configurazioni nei pacchetti.  
   
 In questa lezione si procederà alla creazione del pacchetto di distribuzione, ovvero una cartella contenente gli elementi necessari per installare i pacchetti in un altro computer. Nel pacchetto di distribuzione verranno inclusi un manifesto di distribuzione, copie dei pacchetti e copie dei file di supporto del progetto Deployment Tutorial. Nel manifesto di distribuzione vengono elencati i pacchetti, i file esterni e le configurazioni incluse nel pacchetto di distribuzione.  
   

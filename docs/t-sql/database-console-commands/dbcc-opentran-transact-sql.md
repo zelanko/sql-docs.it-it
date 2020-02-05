@@ -26,10 +26,10 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039078"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
@@ -40,7 +40,7 @@ DBCC OPENTRAN consente di identificare le transazioni attive che potrebbero impe
 > [!NOTE]
 >  L'istruzione DBCC OPENTRAN non è supportata per server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,7 +64,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Utilizzare l'istruzione DBCC OPENTRAN per determinare se il log delle transazioni include una transazione aperta. Quando si utilizza l'istruzione BACKUP LOG, è possibile troncare solo la sezione inattiva del log. La presenza di una transazione aperta può comportare un troncamento incompleto del log. Per identificare una transazione aperta, utilizzare la stored procedure sp_who per ottenere l'ID del processo di sistema.
   
 ## <a name="result-sets"></a>Set di risultati  
@@ -79,7 +79,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  
-### <a name="a-returning-the-oldest-active-transaction"></a>A. Restituzione della transazione attiva meno recente  
+### <a name="a-returning-the-oldest-active-transaction"></a>R. Restituzione della transazione attiva meno recente  
 Nell'esempio seguente vengono recuperate le informazioni sulle transazioni per il database corrente. I risultati possono variare.
   
 ```sql  

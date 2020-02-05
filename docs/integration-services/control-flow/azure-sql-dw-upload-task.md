@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947193"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
@@ -26,7 +26,7 @@ ms.locfileid: "67947193"
 
 
 
-L'**'attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di copiare dati tabulari in Azure SQL Data Warehouse (DW) dal file system o da Archiviazione BLOB di Azure.
+L' **'attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di copiare dati tabulari in Azure SQL Data Warehouse (DW) dal file system o da Archiviazione BLOB di Azure.
 L'attività usa PolyBase per migliorare le prestazioni, come descritto nell'articolo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Modelli e strategie di caricamento di Azure SQL Data Warehouse).
 Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8.
 Quando si copia dal file system, i dati vengono prima caricati in Archiviazione BLOB di Azure per lo staging e poi in Azure SQL DW. Per questo motivo, è quindi necessario un account di Archiviazione BLOB di Azure.
@@ -39,8 +39,8 @@ Nella pagina **Generale** configurare le proprietà seguenti.
 
 **SourceType** specifica il tipo di archivio dati di origine. Selezionare uno dei tipi seguenti:
 
-* **FileSystem:** i dati di origine risiedono nel file system locale.
-* **BlobStorage:** i dati di origine risiedono in Archiviazione BLOB di Azure.
+* **FileSystem:** i dati di origine si trovano nel file system locale.
+* **BlobStorage:** i dati di origine si trovano in Archiviazione BLOB di Azure.
 
 Di seguito sono elencate le proprietà per ogni tipo di origine.
 
@@ -50,9 +50,9 @@ Campo|Descrizione
 -----|-----------
 LocalDirectory|Specifica la directory locale che contiene i file di dati da caricare.
 Recursively (Ricorsivo)|Specifica se eseguire una ricerca ricorsiva delle sottodirectory.
-FileName|Specifica un filtro per nome per selezionare i file con un determinato modello di nome. Ad esempio, Foglio*.xsl\* includerà file come Foglio001.xls e FoglioABC.xlsx.
+FileName|Specifica un filtro per nome per selezionare i file con un determinato modello di nome. ad esempio Foglio*.xsl\* includerà file come Foglio001.xls e FoglioABC.xlsx.
 RowDelimiter|Specifica il carattere che contrassegna la fine di ogni riga.
-ColumnDelimiter|Specifica uno o più caratteri che contrassegnano la fine di ogni colonna. Ad esempio, &#124; (barra verticale), \t (TAB), ' (virgoletta singola), " (virgoletta doppia) e 0x5c (barra rovesciata).
+ColumnDelimiter|Specifica uno o più caratteri che contrassegnano la fine di ogni colonna. ad esempio &#124; (barra verticale), \t (TAB), ' (virgoletta singola), " (virgoletta doppia) e 0x5c (barra rovesciata).
 IsFirstRowHeader|Specifica se la prima riga in ogni file di dati contiene nomi di colonna anziché dati effettivi.
 AzureStorageConnection|Specifica una gestione connessione di Archiviazione di Azure.
 BlobContainer|Specifica il nome di un contenitore BLOB in cui i dati locali verranno caricati e inoltrati ad Azure DW tramite PolyBase. Se il contenitore non esiste, ne verrà creato uno nuovo.
@@ -61,7 +61,7 @@ RetainFiles|Specifica se mantenere i file caricati in Archiviazione di Azure.
 CompressionType|Specifica il formato di compressione da usare durante il caricamento dei file in Archiviazione di Azure. L'origine locale non è interessata.
 CompressionLevel|Specifica il livello di compressione da usare per il formato di compressione.
 AzureDwConnection|Specifica una gestione connessione ADO.NET per Azure SQL DW.
-TableName|Specifica il nome della tabella di destinazione. Scegliere un nome di tabella esistente o crearne uno nuovo scegliendo **\<Nuova tabella ...>**.
+TableName|Specifica il nome della tabella di destinazione. Scegliere un nome di tabella esistente o crearne uno nuovo scegliendo **\<Nuova tabella ...>** .
 TableDistribution|Specifica il metodo di distribuzione per la nuova tabella. Si applica se per **TableName**viene specificato un nuovo nome tabella.
 HashColumnName|Specifica la colonna usata per la distribuzione di tabelle hash. Si applica se **HASH** è specificato per **TableDistribution**.
 
@@ -73,10 +73,10 @@ AzureStorageConnection|Specifica una gestione connessione di Archiviazione di Az
 BlobContainer|Specifica il nome del contenitore BLOB in cui risiedono i dati di origine.
 BlobDirectory|Specifica la directory BLOB (struttura gerarchica virtuale) in cui risiedono i dati di origine.
 RowDelimiter|Specifica il carattere che contrassegna la fine di ogni riga.
-ColumnDelimiter|Specifica uno o più caratteri che contrassegnano la fine di ogni colonna. Ad esempio, &#124; (barra verticale), \t (TAB), ' (virgoletta singola), " (virgoletta doppia) e 0x5c (barra rovesciata).
+ColumnDelimiter|Specifica uno o più caratteri che contrassegnano la fine di ogni colonna. ad esempio &#124; (barra verticale), \t (TAB), ' (virgoletta singola), " (virgoletta doppia) e 0x5c (barra rovesciata).
 CompressionType|Specifica il formato di compressione usato per i dati di origine.
 AzureDwConnection|Specifica una gestione connessione ADO.NET per Azure SQL DW.
-TableName|Specifica il nome della tabella di destinazione. Scegliere un nome di tabella esistente o crearne uno nuovo scegliendo **\<Nuova tabella ...>**.
+TableName|Specifica il nome della tabella di destinazione. Scegliere un nome di tabella esistente o crearne uno nuovo scegliendo **\<Nuova tabella ...>** .
 TableDistribution|Specifica il metodo di distribuzione per la nuova tabella. Si applica se per **TableName**viene specificato un nuovo nome tabella.
 HashColumnName|Specifica la colonna usata per la distribuzione di tabelle hash. Si applica se **HASH** è specificato per **TableDistribution**.
 

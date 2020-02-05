@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 08e81abbc21671881affc80fc9b7f0346cd490f7
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056012"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure
@@ -44,7 +44,7 @@ Per tutti gli esempi seguenti sono necessarie credenziali con ambito database ch
 
 Creare credenziali con ambito database usando `IDENTITY` che deve essere `SHARED ACCESS SIGNATURE`. Usare il token di firma di accesso condiviso generato per l'account di archiviazione BLOB. Verificare che il token di firma di accesso condiviso non abbia un `?` iniziale, che sia disponibile almeno l'autorizzazione di lettura per l'oggetto che deve essere caricato e che il periodo di scadenza sia valido (tutte le date sono in ora UTC).
 
-Esempio:
+Ad esempio:
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices

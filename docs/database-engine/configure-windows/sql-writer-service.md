@@ -22,10 +22,10 @@ ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816670"
 ---
 # <a name="sql-writer-service"></a>servizio writer SQL
@@ -76,6 +76,6 @@ ms.locfileid: "71816670"
   
 -   Ripristino di pagine  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 Il servizio writer SQL è un servizio separato dal motore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene condiviso tra versioni diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tra istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso server.  Il file del servizio writer SQL viene fornito come parte del pacchetto di installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e verrà contrassegnato con lo stesso numero di versione del motore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui viene fornito.  Quando viene installata una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server o viene aggiornata un'istanza esistente, se il numero di versione dell'istanza installata o aggiornata è maggiore del numero di versione del servizio writer SQL attualmente nel server, tale file verrà sostituito con quello dal pacchetto di installazione.  Si noti che se il servizio writer SQL viene aggiornato da un Service Pack o un aggiornamento cumulativo e si installa una versione RTM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile sostituire una versione più recente del servizio writer SQL con una versione precedente, a condizione che l'installazione abbia un numero di versione principale più alto.  Ad esempio, si supponga che il servizio writer SQL venga aggiornato in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] CU2 SP2.  Se tale istanza viene aggiornata a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM, il servizio writer SQL aggiornato verrà sostituito con una versione precedente.  In questo caso, sarebbe necessario applicare l'aggiornamento cumulativo più recente alla nuova istanza per ottenere la versione più recente del servizio writer SQL.
 

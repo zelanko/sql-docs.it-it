@@ -11,10 +11,10 @@ ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 author: jodebrui
 ms.author: jodebrui
 ms.openlocfilehash: d741f06741972637f7f9e6576a8dc5a21dabc681
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412561"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>Caratteristiche interne di OLTP in memoria di SQL Server per SQL Server 2016
@@ -27,7 +27,7 @@ Questa efficace tecnologia consente di sfruttare grandi quantità di memoria e d
   
 **Revisori tecnici:** Sunil Agarwal e Jos de Bruijn  
   
-**Data di pubblicazione:** Giugno 2016  
+**Data di pubblicazione:** giugno 2016  
   
 **Si applica a:** SQL Server 2016  
   

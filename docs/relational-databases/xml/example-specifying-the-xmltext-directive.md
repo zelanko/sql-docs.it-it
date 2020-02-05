@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Specifica della direttiva XMLTEXT | Microsoft Docs'
+title: 'Esempio: specifica della direttiva XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006680"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Esempio: Specifica della direttiva XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Esempio: specifica della direttiva XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Nell'esempio seguente viene illustrata la gestione dei dati nella colonna di overflow utilizzando la direttiva **XMLTEXT** in un'istruzione `SELECT` in modalità EXPLICIT.  
   
@@ -127,7 +127,7 @@ FOR XML EXPLICIT
  </Parent>
  ```  
   
- In questo elemento di query la *direttiva* viene specificata per l'attributo `PersonName`. `PersonName` verrà pertanto aggiunto come sottoelemento dell'elemento <`Parent`> che lo racchiude. Gli attributi dell'elemento <`xmltext`> vengono aggiunti all'elemento <`Parent`> che li racchiude. Il contenuto dell'elemento <`overflow`> e i sottoelementi vengono anteposti agli altri sottoelementi degli elementi <`Parent`> che li racchiudono.  
+ In questo elemento di query la *direttiva* viene specificata per l'attributo `PersonName` . `PersonName` verrà pertanto aggiunto come sottoelemento dell'elemento <`Parent`> che lo racchiude. Gli attributi dell'elemento <`xmltext`> vengono aggiunti all'elemento <`Parent`> che li racchiude. Il contenuto dell'elemento <`overflow`> e i sottoelementi vengono anteposti agli altri sottoelementi degli elementi <`Parent`> che li racchiudono.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  
@@ -152,7 +152,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- Se i dati della colonna `XMLTEXT` includono attributi per l'elemento radice, tali attributi non compaiono nello schema dei dati XML e il parser MSXML non convalida il frammento di documento XML risultante. Esempio:  
+ Se i dati della colonna `XMLTEXT` includono attributi per l'elemento radice, tali attributi non compaiono nello schema dei dati XML e il parser MSXML non convalida il frammento di documento XML risultante. Ad esempio:  
   
 ```  
 SELECT 1 AS Tag,  
@@ -175,6 +175,6 @@ FOR XML EXPLICIT, xmldata;
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

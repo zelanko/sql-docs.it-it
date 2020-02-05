@@ -18,10 +18,10 @@ ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 68ce1a309d3b6abf77e2fe9d3f571f9c4f738cef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120803"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB (tipo di dati geography)
@@ -48,9 +48,9 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
  Tipo CLR restituito: **SqlGeography**  
   
- Tipo OGC: **Poligono**  
+ Tipo OGC: **Polygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

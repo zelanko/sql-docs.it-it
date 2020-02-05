@@ -18,10 +18,10 @@ ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 320118e7844dfe40e45be9a893ad7bf45faff8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120898"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (tipo di dati geography)
@@ -41,12 +41,12 @@ ms.locfileid: "68120898"
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo conta i punti nella descrizione di un'istanza **geography**. Vengono contati anche i punti duplicati; tuttavia, i punti di connessione tra i segmenti vengono contati una sola volta. Se questa istanza è una raccolta, il metodo restituisce il numero totale di punti nella raccolta.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-retrieving-the-total-number-of-points-in-a-linestring"></a>A. Recupero del numero complessivo di punti in LineString  
+### <a name="a-retrieving-the-total-number-of-points-in-a-linestring"></a>R. Recupero del numero complessivo di punti in LineString  
  Nell'esempio seguente viene creata un'istanza `LineString` e viene utilizzato `STNumPoints()` per determinare il numero di punti utilizzati nella descrizione dell'istanza.  
   
 ```  

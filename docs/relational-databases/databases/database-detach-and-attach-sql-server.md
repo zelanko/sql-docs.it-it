@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037578"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Collegamento e scollegamento di un database (SQL Server)
@@ -39,12 +39,12 @@ ms.locfileid: "68037578"
 È possibile scollegare i file di dati e di log delle transazioni di un database e, successivamente, ricollegarli alla stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o a un'istanza diversa. Scollegare e collegare un database risulta utile se si desidera assegnare il database a un'istanza diversa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer oppure spostarlo.  
   
   
-##  <a name="Security"></a> Security  
+##  <a name="Security"></a> Sicurezza  
 Le autorizzazioni di accesso ai file vengono impostate durante l'esecuzione di alcune operazioni del database, inclusi il collegamento e lo scollegamento.  
   
 > [!IMPORTANT]  
 > È consigliabile evitare di collegare o ripristinare database provenienti da origini sconosciute o non attendibili. Tali database possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema o la struttura fisica di database.   
-> Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare inoltre il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
+> Prima di utilizzare un database da un'origine sconosciuta o non attendibile, eseguire [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sul database in un server non di produzione ed esaminare il codice contenuto nel database, ad esempio le stored procedure o altro codice definito dall'utente.  
   
 ##  <a name="DetachDb"></a> Scollegamento di un database  
 Lo scollegamento di un database determina la rimozione del database dall'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mentre i file di dati e i file del log delle transazioni inclusi nel database non vengono modificati. È quindi possibile utilizzare questi file per collegare il database a qualsiasi istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso il server dal quale è stato scollegato il database.  
@@ -65,7 +65,7 @@ Non è possibile scollegare un database quando si verifica una delle condizioni 
   
 -   È in corso il mirroring del database in una sessione di mirroring.  
   
-    Non è possibile scollegare il database fino al termine della sessione. Per altre informazioni, vedere [Rimozione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+    Non è possibile scollegare il database fino al termine della sessione. Per altre informazioni, vedere [Rimozione del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
 -   Il database è sospetto. Non è possibile scollegare un database sospetto. Per poter eseguire lo scollegamento, è prima necessario attivare la modalità di emergenza. Per ulteriori informazioni sull'attivazione della modalità di emergenza per un database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   

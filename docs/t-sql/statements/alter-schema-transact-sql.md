@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044308"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68044308"
 
   Trasferisce un'entità a protezione diretta da uno schema a un altro.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,7 +69,7 @@ ALTER SCHEMA schema_name
  *securable_name*  
  Nome in una o due parti di un'entità a protezione diretta con ambito schema da spostare nello schema.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Utenti e schemi sono completamente distinti.  
   
  È possibile utilizzare ALTER SCHEMA solo per spostare le entità a protezione diretta tra schemi presenti nello stesso database. Per modificare o eliminare un'entità a sicurezza diretta all'interno di uno schema, utilizzare l'istruzione ALTER o DROP specifica dell'entità a sicurezza diretta desiderata.  
@@ -96,7 +96,7 @@ ALTER SCHEMA schema_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-transferring-ownership-of-a-table"></a>A. Trasferimento della proprietà di una tabella  
+### <a name="a-transferring-ownership-of-a-table"></a>R. Trasferimento della proprietà di una tabella  
  Nell'esempio seguente viene modificato lo schema `HumanResources` mediante il trasferimento nello schema della tabella `Address` dello schema `Person`.  
   
 ```  

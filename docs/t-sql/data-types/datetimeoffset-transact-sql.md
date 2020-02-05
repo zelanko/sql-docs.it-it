@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148831"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
@@ -40,7 +40,7 @@ Definisce una data in combinazione con un'ora del giorno con considerazione del 
 |Proprietà|valore|  
 |---|---|
 |Sintassi|**datetimeoffset** [ (*precisione in secondi frazionari*) ]|  
-|Utilizzo|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|Uso|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Formati predefiniti per i valori letterali stringa (utilizzati per il client legacy)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
 |Intervallo di date|Da 01-01-0001 a 31-12-9999<br /><br /> Dal 1 gennaio 1 al 31 dicembre 9999|  
 |Intervallo di ore|da 00:00:00 a 23:59:59.9999999|  
@@ -54,7 +54,7 @@ Definisce una data in combinazione con un'ora del giorno con considerazione del 
 |Calendario|Gregoriano|  
 |Precisione in secondi frazionari definita dall'utente|Sì|  
 |Considerazione e conservazione delle differenze di fuso orario|Sì|  
-|Considerazione dell'ora legale|no|  
+|Considerazione dell'ora legale|No|  
   
 |Scala specificata|Risultato (precisione, scala)|Lunghezza della colonna (byte)|Precisione in secondi frazionari|  
 |---|---|---|---|
@@ -103,7 +103,7 @@ Alcune versioni precedenti dei client non supportano i tipi di dati **time**, **
 |Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Formato predefiniti dei valori letterali stringa passati al client legacy|ODBC delle versioni precedenti|OLEDB delle versioni precedenti|JDBC delle versioni precedenti|SQLCLIENT delle versioni precedenti|  
 |---|---|---|---|---|---|
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
-|**data**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
+|**date**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetime2**|AAAA-MM-GG hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
   
@@ -208,7 +208,7 @@ Le conversioni da valori letterali stringa a tipi di data e ora sono consentite 
 |solo TIME|Il valore predefinito per la parte di DATE è 1900-1-1. Il valore predefinito di TIMEZONE è +00:00.|  
 |solo TIMEZONE|Vengono forniti i valori predefiniti.|  
 |DATE + TIME|Il valore predefinito di TIMEZONE è +00:00:00.|  
-|DATE + TIMEZONE|Non consentiti|  
+|DATE + TIMEZONE|Non consentito|  
 |TIME + TIMEZONE|Il valore predefinito per la parte di DATE è 1900-1-1.|  
 |DATE + TIME + TIMEZONE|Semplice|  
   

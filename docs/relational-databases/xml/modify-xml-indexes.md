@@ -14,10 +14,10 @@ ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a579fcf8809c8c05838dad70126421362cd8048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042683"
 ---
 # <a name="modify-xml-indexes"></a>Modifica di indici XML
@@ -30,7 +30,7 @@ ms.locfileid: "68042683"
   
 -   Se viene specificata l'opzione ALTER INDEX ALL, questa viene applicata agli indici sia XML che non XML. È possibile che vengano specificate opzioni di indicizzazione che non sono valide per entrambi i tipi di indici. In tal caso, l'intera istruzione ha esito negativo.  
   
-## <a name="example-modifying-an-xml-index"></a>Esempio: Modifica di un indice XML  
+## <a name="example-modifying-an-xml-index"></a>Esempio: modifica di un indice XML  
  Nell'esempio seguente viene creato, e quindi modificato, un indice XML impostando l'opzione `ALLOW_ROW_LOCKS` su `OFF`. Quando l'opzione `ALLOW_ROW_LOCKS` è impostata su `OFF`, le righe non sono bloccate ed è possibile ottenere l'accesso agli indici specificati tramite blocchi a livello di pagina e di tabella.  
   
 ```  
@@ -51,7 +51,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>Esempio: Disabilitazione e abilitazione di un indice XML  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>Esempio: disabilitazione e attivazione di un indice XML  
  Per impostazione predefinita, viene attivato un indice XML. Se si disabilita un indice XML, per le query in esecuzione sulla colonna XML non viene utilizzato l'indice XML. Per abilitare un indice XML, utilizzare `ALTER INDEX` con l'opzione `REBUILD` .  
   
 ```  

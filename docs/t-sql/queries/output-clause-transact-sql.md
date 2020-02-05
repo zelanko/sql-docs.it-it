@@ -31,10 +31,10 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2122954c2ce126441eba6d5d05db69e9a8bfa30e
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952443"
 ---
 # <a name="output-clause-transact-sql"></a>Clausola OUTPUT (Transact-SQL)
@@ -81,7 +81,7 @@ ms.locfileid: "75952443"
   
  Se non si specifica *column_list*, la variabile **table** deve avere lo stesso numero di colonne del set dei risultati OUTPUT. Le eccezioni sono le colonne calcolate e Identity, le quali devono essere ignorate. Se *column_list* viene specificato, le colonne omesse devono consentire i valori Null oppure devono avere valori predefiniti assegnati.  
   
- Per altre informazioni sulle variabili [table](../../t-sql/data-types/table-transact-sql.md), vedere **table &#40;Transact-SQL&#41;**.  
+ Per altre informazioni sulle variabili **table**, vedere [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md).  
   
  *output_table*  
  Specifica una tabella in cui vengono inserite le righe restituite invece di essere restituite al chiamante. *output_table* può essere una tabella temporanea.  
@@ -133,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Riferimento di colonna esplicito. Qualsiasi riferimento alla tabella che viene modificata deve essere qualificato correttamente tramite il prefisso INSERTED o DELETED in base alle esigenze, ad esempio: INSERTED **.**_column\_name_.  
+ Riferimento di colonna esplicito. Qualsiasi riferimento alla tabella che viene modificata deve essere qualificato correttamente tramite il prefisso INSERTED o DELETED in base alle esigenze, ad esempio: INSERTED **.** _column\_name_.  
   
  $action  
- È disponibile solo per l'istruzione MERGE. Specifica una colonna di tipo **nvarchar(10)** nella clausola OUTPUT in un'istruzione MERGE che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', a seconda dell'azione eseguita su quella riga.  
+ È disponibile solo per l'istruzione MERGE. Specifica una colonna di tipo **nvarchar(10)** nella clausola OUTPUT in un'istruzione MERGE che restituisce uno dei tre valori per ogni riga: 'INSERT', 'UPDATE' o 'DELETE', secondo l'azione eseguita sulla riga.  
   
 ## <a name="remarks"></a>Osservazioni  
- La clausola OUTPUT \<dml_select_list> e la clausola OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } possono essere definite in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  
+ La clausola OUTPUT \<dml_select_list> e la clausola OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } possono essere definite in un'unica istruzione INSERT, UPDATE, DELETE o MERGE.  
   
 > [!NOTE]  
 >  Se non specificato diversamente, i riferimenti alla clausola OUTPUT fanno riferimento a entrambe le clausole OUTPUT e OUTPUT INTO.  
@@ -226,7 +226,7 @@ Nel contesto di un database impostato a un livello di compatibilità pari a 130 
  Se è impostata l'opzione disallow results from triggers di sp_configure, una clausola OUTPUT senza clausola INTO provoca l'esito negativo dell'istruzione quando viene richiamata dall'interno di un trigger.  
   
 ## <a name="data-types"></a>Tipi di dati  
- La clausola OUTPUT supporta i tipi di dati Large Object: **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, **text**, **ntext**, **image**, e **xml**. Quando si usa la clausola .WRITE nell'istruzione UPDATE per modificare una colonna di tipo **nvarchar(max)**, **varchar(max)** o **varbinary(max)**, vengono restituite le immagini complete precedenti e successive dei valori se contengono dei riferimenti. La funzione TEXTPTR( ) non può comparire in un'espressione in una colonna di tipo **text**, **ntext** o **image** nella clausola OUTPUT.  
+ La clausola OUTPUT supporta i tipi di dati Large Object: **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , **text**, **ntext**, **image**, e **xml**. Quando si usa la clausola .WRITE nell'istruzione UPDATE per modificare una colonna di tipo **nvarchar(max)** , **varchar(max)** o **varbinary(max)** , vengono restituite le immagini complete precedenti e successive dei valori se contengono dei riferimenti. La funzione TEXTPTR( ) non può comparire in un'espressione in una colonna di tipo **text**, **ntext** o **image** nella clausola OUTPUT.  
   
 ## <a name="queues"></a>Code  
  È possibile utilizzare la clausola OUTPUT nelle applicazioni che utilizzano le tabelle come code oppure per mantenere i risultati intermedi delle query. In altre parole, l'applicazione aggiunge o rimuove costantemente le righe dalla tabella. Nell'esempio seguente viene utilizzata la clausola OUTPUT in un'istruzione DELETE per restituire la riga eliminata all'applicazione chiamante.  

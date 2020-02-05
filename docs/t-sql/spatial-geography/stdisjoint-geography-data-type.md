@@ -18,10 +18,10 @@ ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2129c9990156fe970faa2ce134eaf2a17b35c764
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042317"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (tipo di dati geography)
@@ -45,7 +45,7 @@ ms.locfileid: "68042317"
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Due istanze **geography** sono disgiunte se l'intersezione dei relativi set di punti è vuota.  
   
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  

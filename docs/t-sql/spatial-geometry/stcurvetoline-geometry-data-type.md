@@ -15,10 +15,10 @@ ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930305"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (tipo di dati geometry)
@@ -38,7 +38,7 @@ Restituisce un'approssimazione poligonale di un'istanza **geometry** contenente 
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Restituisce un'istanza **GeometryCollection** vuota per variabili di istanza **geometry** vuote e restituisce **NULL** per variabili **geometry** non inizializzate.  
   
  L'approssimazione poligonale restituita dal metodo dipende dall'istanza **geometry** usata per chiamare il metodo:  
@@ -53,7 +53,7 @@ Restituisce un'approssimazione poligonale di un'istanza **geometry** contenente 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Utilizzo di una variabile di geometria non inizializzata e di un'istanza vuota  
+### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>R. Utilizzo di una variabile di geometria non inizializzata e di un'istanza vuota  
  Nell'esempio seguente, la prima istruzione **SELECT** usa un'istanza **geometry** non inizializzata per chiamare il metodo `STCurveToLine` e la seconda istruzione **SELECT** usa un'istanza **geometry** vuota. Pertanto, il metodo restituisce **NULL** alla prima istruzione e una raccolta **GeometryCollection** alla seconda istruzione.  
   
 ```

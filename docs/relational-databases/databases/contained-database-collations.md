@@ -13,10 +13,10 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137376"
 ---
 # <a name="contained-database-collations"></a>Regole di confronto dei database indipendenti
@@ -132,7 +132,7 @@ END;
 |Dati temporanei (impostazione predefinita)|Regole di confronto TempDB|DATABASE_DEFAULT|  
 |Metadati|DATABASE_DEFAULT/CATALOG_DEFAULT|COLLATE|  
 |Metadati temporanei|Regole di confronto TempDB|COLLATE|  
-|Variabili|Regole di confronto di istanza|COLLATE|  
+|variables|Regole di confronto di istanza|COLLATE|  
 |Etichette Goto|Regole di confronto di istanza|COLLATE|  
 |Nomi di cursori|Regole di confronto di istanza|COLLATE|  
   

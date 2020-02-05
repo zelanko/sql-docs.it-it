@@ -18,10 +18,10 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: de9df087cd068ad27029cb17ae553390b054a2f8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297459"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Valori letterali numerici, stringa e booleani
@@ -60,10 +60,10 @@ ms.locfileid: "71297459"
 |------------------------|-----------------|  
 |{D}+{IS}|Valore letterale numerico integrale con almeno una cifra (D) e, facoltativamente, suffisso per valori di tipo long e/o per valori senza segno (IS).  Esempi: 457, 785u, 986L e 7945ul.|  
 |{D}+{E}{FS}|Valore letterale numerico non integrale con almeno una cifra (D), notazione scientifica e suffisso per valori di tipo long o float.  Esempi: 4E8l, 13e-2f e 5E+L.|  
-|{D}*"."{D}+{E}?{FS}|Valore letterale numerico non integrale con una cifra decimale, frazione decimale con almeno una cifra (D), esponente facoltativo (E) e identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 6,45E3f, 0,89E-2l e 1,05E+7F.|  
+|{D}*"."{D}+{E}?{FS}|Valore letterale numerico non integrale con una cifra decimale, frazione decimale con almeno una cifra (D), esponente facoltativo (E) e identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 6,45E3f, ,89E-2l e 1,05E+7F.|  
 |{D}+"."{D}*{E}?{FS}|Valore letterale numerico non integrale con almeno una cifra significativa (D), una cifra decimale, esponente (E) e un identificatore di tipo float o long (FS). Questo valore letterale numerico ha tipo di dati DT_R4 o DT_R8.  Esempi: 1,E-4f, 4,6E6L e 8,365E+2f.|  
 |{D}*.{D}+|Valore letterale numerico non integrale con precisione e scala. Include una cifra decimale e una frazione decimale con almeno una cifra (D). Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: ,9, 5,8 e 0,346.|  
-|{D}+.{D}*|Valore letterale numerico non integrale con precisione e scala. Include almeno una cifra significativa (D) e una cifra decimale. Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: 6., 0,2 e 8,.0.|  
+|{D}+.{D}*|Valore letterale numerico non integrale con precisione e scala. Include almeno una cifra significativa (D) e una cifra decimale. Questo valore letterale numerico ha tipo di dati DT_NUMERIC.  Esempi: 6,, 0,2 e 8,0.|  
 |#{D}+|Identificatore di derivazione. È costituito dal simbolo di cancelletto (#) e da almeno una cifra (D). Esempi: #123.|  
 |0[xX]{H}+{uU}|Valore letterale stringa in formato esadecimale. Include uno zero, una x maiuscola o minuscola, almeno una H maiuscola e, facoltativamente, il suffisso per valori senza segno. Esempi: 0xFF0A e 0X000010000U.|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71297459"
   
     |Suffisso|Tipo di risultato|  
     |------------|-----------------|  
-    |None|DT_I4|  
+    |nessuno|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  
@@ -114,8 +114,8 @@ ms.locfileid: "71297459"
 |\xhhhh|Carattere Unicode in notazione esadecimale|  
   
 ## <a name="boolean-literals"></a>Valori letterali booleani  
- L'analizzatore di espressioni supporta i valori letterali booleani soliti: **True** e **False**. L'analizzatore di espressioni non fa distinzione tra maiuscole e minuscole ed è pertanto possibile utilizzare qualsiasi combinazione di maiuscole e minuscole. Ad esempio, è possibile utilizzare indifferentemente TRUE o True.  
+ L'analizzatore di espressioni supporta i consueti valori letterali booleani: **True** e **False**. L'analizzatore di espressioni non fa distinzione tra maiuscole e minuscole ed è pertanto possibile utilizzare qualsiasi combinazione di maiuscole e minuscole. Ad esempio, è possibile utilizzare indifferentemente TRUE o True.  
   
-> **NOTA** Nelle espressioni i valori letterali booleani devono essere delimitati da spazi.  
+> **NOTA** : nelle espressioni i valori letterali booleani devono essere delimitati da spazi.  
   
   

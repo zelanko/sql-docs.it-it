@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981781"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -55,7 +55,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione SUSER_SNAME può essere utilizzata come vincolo DEFAULT nell'istruzione ALTER TABLE o CREATE TABLE. È possibile utilizzare SUSER_SNAME nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. SUSER_SNAME deve essere sempre seguita da una coppia di parentesi, anche se non si specifica alcun parametro.  
   
  Se chiamata senza argomenti, la funzione SUSER_SNAME restituisce il nome del contesto di sicurezza corrente. Se chiamata senza argomenti all'interno di un batch che ha cambiato contesto tramite EXECUTE AS, la funzione SUSER_SNAME restituisce il nome del contesto rappresentato. Se chiamata da un contesto rappresentato, ORIGINAL_LOGIN restituisce il nome del contesto originale.  
@@ -67,7 +67,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-suser_sname"></a>A. Utilizzo di SUSER_SNAME  
+### <a name="a-using-suser_sname"></a>R. Utilizzo di SUSER_SNAME  
  Nell'esempio seguente viene restituito il nome dell'account di accesso per il contesto di sicurezza corrente.  
   
 ```  

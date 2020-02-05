@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a9fff28fd4f4d47c68dfd86eaa7de450ff5e79d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008882"
 ---
 # <a name="set-parseonly-transact-sql"></a>SET PARSEONLY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68008882"
 
   Esamina la sintassi di ogni istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] e restituisce eventuali messaggi di errore senza compilare o eseguire l'istruzione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68008882"
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando l'opzione SET PARSEONLY è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue soltanto l'analisi dell'istruzione. Quando l'opzione SET PARSEONLY è impostata su OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila ed esegue l'istruzione.  
   
  L'opzione SET PARSEONLY viene impostata in fase di analisi, non in fase di esecuzione.  

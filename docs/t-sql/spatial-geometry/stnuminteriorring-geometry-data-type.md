@@ -18,10 +18,10 @@ ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a076c8356cb7dedec9759e445c9c80499528437b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140934"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (tipo di dati geometry)
@@ -41,7 +41,7 @@ Restituisce il numero di anelli interni in un'istanza **Polygongeometry**.
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce null se l'istanza **geometry** non è un poligono.  
   
 ## <a name="examples"></a>Esempi  

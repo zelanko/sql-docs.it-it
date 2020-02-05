@@ -15,13 +15,13 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c09e789738f8ca6633a56c36d626dd200ae70e78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137242"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -38,7 +38,7 @@ ms.locfileid: "68137242"
 ## <a name="explanation"></a>Spiegazione  
 Il computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in grado di elaborare il pacchetto di accesso client in quanto quest'ultimo potrebbe essere stato creato in modo errato o danneggiato durante la trasmissione. La mancata elaborazione può essere causata anche dalla configurazione del computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'indirizzo IP elencato è l'indirizzo del computer client.  
   
-### <a name="more-information"></a>Ulteriori informazioni  
+### <a name="more-information"></a>Altre informazioni  
 In caso di utilizzo dell'autenticazione di Windows in un ambiente Kerberos, un client riceve un ticket Kerberos che contiene un certificato attributi privilegi. Tale certificato contiene vari tipi di dati sull'autorizzazione, inclusi i gruppi di cui l'utente è membro, i diritti di cui dispone e i criteri validi. Quando il client riceve il ticket Kerberos, le informazioni contenute nel certificato attributi privilegi vengono utilizzate per generare il token di accesso dell'utente. Il client presenta il token al computer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte del pacchetto di accesso.  
   
 Se il token è stato creato in modo errato o è stato danneggiato durante la trasmissione, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono disponibili informazioni aggiuntive sul problema.  
@@ -59,7 +59,7 @@ Per risolvere questo problema, aumentare il valore di **MaxTokenSize** del compu
   
 3.  Passare a **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   
-4.  Se il parametro **MaxTokenSize** non è presente, fare clic con il pulsante destro del mouse su **Parametri**, scegliere **Nuovo** e quindi fare clic su **Valore DWORD (32 bit)**. Assegnare alla voce del Registro di sistema il nome **MaxTokenSize**.  
+4.  Se il parametro **MaxTokenSize** non è presente, fare clic con il pulsante destro del mouse su **Parametri**, scegliere **Nuovo** e quindi fare clic su **Valore DWORD (32 bit)** . Assegnare alla voce del Registro di sistema il nome **MaxTokenSize**.  
   
 5.  Fare clic con il pulsante destro del mouse su **MaxTokenSize** e quindi scegliere **Modifica**.  
   
