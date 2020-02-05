@@ -1,23 +1,24 @@
 ---
-title: Script in unit test di SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Script in unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f84c8b03343b353cf355f0f604152a82b23627b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110739"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256973"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Script in unit test di SQL Server
+
 In ogni unit test di SQL Server sono contenuti una singola azione di pre-test, di test e di post-test. In ognuna di queste azioni sono contenuti a loro volta gli elementi seguenti:  
   
 -   Script Transact\-SQL da eseguire in un database.  
@@ -45,7 +46,7 @@ Per altre informazioni sui diversi contesti di sicurezza in cui viene eseguito o
 ## <a name="order-in-which-scripts-are-run"></a>Ordine in cui vengono eseguiti gli script  
 L'ordine di esecuzione di ogni script è un aspetto fondamentale da considerare. Anche se l'ordine non può essere modificato, è possibile decidere quali script eseguire. La figura seguente include la selezione degli script che è possibile usare in un'esecuzione di test contenente due unit test di SQL Server e viene indicato l'ordine in cui vengono eseguiti:  
   
-![Due unit test del database](../ssdt/media/twodatabaseunittests.png "Due unit test del database")  
+![Two Database Unit Tests](../ssdt/media/twodatabaseunittests.png "Two Database Unit Tests")  
   
 > [!NOTE]  
 > Se è stata configurata la distribuzione del progetto di database di SQL Server, questa operazione viene eseguita all'avvio dell'esecuzione del test, usando la stringa di connessione del contesto autorizzato. Per altre informazioni, vedere [Procedura: Configurare l'esecuzione di unit test di SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
