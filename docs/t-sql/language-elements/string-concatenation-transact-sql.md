@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072255"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (concatenazione di stringhe) (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072255"
 
   Operatore in un'espressione stringa che consente di concatenare in un'unica espressione due o più stringhe di tipo carattere o binario, colonne o una combinazione di nomi di colonna e stringhe (operatore di stringa).  Ad esempio `SELECT 'book'+'case';` restituisce `bookcase`.
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,14 +67,14 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>Tipi restituiti  
  Viene restituito il tipo di dati dell'argomento con precedenza maggiore. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'operatore + di concatenazione delle stringhe ha un funzionamento diverso quando viene utilizzato con una stringa vuota, di lunghezza zero, rispetto a quando viene utilizzato con valori NULL, o sconosciuti. Una stringa di caratteri di lunghezza zero può essere specificata con due virgolette singole senza alcun carattere all'interno delle virgolette. Una stringa binaria di lunghezza zero può essere specificata con 0x senza alcun valore byte nella costante esadecimale. La concatenazione di una stringa di valore zero comporta sempre la concatenazione delle due stringhe specificate. Quando si utilizzano stringhe con un valore Null, il risultato della concatenazione dipende dalle impostazioni della sessione. Allo stesso modo di quanto accade per le operazioni aritmetiche eseguite su valori Null, in cui, quando un valore Null viene aggiunto a un valore noto, il risultato è in genere un valore sconosciuto, un'operazione di concatenazione di stringhe eseguita con un valore Null dovrebbe restituire un risultato Null. È tuttavia possibile modificare questo comportamento cambiando l'impostazione di `CONCAT_NULL_YIELDS_NULL` per la sessione corrente. Per altre informazioni, vedere [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  Se il risultato della concatenazione di stringhe supera il limite di 8.000 byte, il risultato viene troncato. Se tuttavia almeno una delle stringhe concatenate è un tipo di dati per valori di grandi dimensioni, il troncamento non avviene.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-string-concatenation"></a>A. Utilizzo della concatenazione di stringhe  
+### <a name="a-using-string-concatenation"></a>R. Utilizzo della concatenazione di stringhe  
  Nell'esempio seguente viene creata una singola colonna sotto l'intestazione `Name` in base a più colonne di tipo carattere, con il cognome della persona seguito da una virgola, uno spazio e successivamente il nome. Il set di risultati è visualizzato in ordine alfabetico crescente in base prima al cognome e quindi al nome.  
   
 ```sql  

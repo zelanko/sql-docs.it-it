@@ -12,10 +12,10 @@ ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503096"
 ---
 # <a name="html-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo HTML
@@ -39,7 +39,7 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
 |**LinkTarget**|Destinazione dei collegamenti ipertestuali nel report. È possibile impostare come destinazione una finestra o un frame fornendo il nome della finestra, ad esempio **LinkTarget**=*window_name*oppure impostare come destinazione una finestra nuova usando **LinkTarget**=_blank. Altri nomi di destinazione validi includono _self, _parent e _top.|  
 |**OnlyVisibleStyles(\*)**|Indica che vengono generati solo gli stili condivisi per la pagina di cui è stato attualmente eseguito il rendering.|  
 |**OutlookCompat**|Indica se eseguire il rendering con metadati aggiuntivi che comportano una visualizzazione migliore del report in Outlook, mentre per altri il valore predefinito è **false**.|  
-|**Parametri**|Indica se mostrare o nascondere l'area dei parametri della barra degli strumenti. Se si imposta questo parametro su **true**, l'area dei parametri della barra degli strumenti viene visualizzata. Il valore predefinito di questo parametro è **true**.|  
+|**Parameters**|Indica se mostrare o nascondere l'area dei parametri della barra degli strumenti. Se si imposta questo parametro su **true**, l'area dei parametri della barra degli strumenti viene visualizzata. Il valore predefinito di questo parametro è **true**.|  
 |**PrefixId**|Se usato con **HTMLFragment**, aggiunge il prefisso specificato a tutti gli attributi **ID** nel frammento HTML creato.|  
 |**ReplacementRoot(\*)**|Stringa da anteporre a tutti i collegamenti di drill-through, attivazione/disattivazione e segnalibro nel report quando viene eseguito il rendering al di fuori del controllo ReportViewer. Ad esempio, viene usata per il reindirizzamento di un clic utente a una pagina personalizzata.|  
 |**ResourceStreamRoot(\*)**|Stringa da anteporre all'URL per tutte le risorse dell'immagine, ad esempio le immagini per l'attivazione o la disattivazione oppure l'ordinamento.|  
@@ -53,7 +53,7 @@ Nella tabella seguente si elencano le impostazioni relative alle informazioni su
   
 ## <a name="see-also"></a>Vedere anche  
  [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizzare i parametri di estensione per il rendering in RSReportServer.config.](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

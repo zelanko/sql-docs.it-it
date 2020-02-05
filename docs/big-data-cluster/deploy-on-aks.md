@@ -1,20 +1,21 @@
 ---
 title: Configurare il servizio Azure Kubernetes
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Informazioni su come configurare il servizio Azure Kubernetes per le distribuzioni di [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016894"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251205"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurare il servizio Azure Kubernetes per le distribuzioni di cluster Big Data di SQL Server
 

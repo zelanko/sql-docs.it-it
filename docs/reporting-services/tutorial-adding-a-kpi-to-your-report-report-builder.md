@@ -9,14 +9,14 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041891"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
-In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] viene aggiunto un indicatore KPI a un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
+In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] si aggiunge un indicatore di prestazioni chiave (KPI) a un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
 
 Gli indicatori KPI sono valori misurabili con significato aziendale. In questo scenario l'indicatore KPI è il riepilogo delle vendite in base alle sottocategorie del prodotto. Lo stato corrente dell'indicatore KPI viene indicato da colori, misuratori e indicatori.
   
@@ -49,11 +49,11 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 4.  Nella pagina **Scegliere un set di dati** fare clic su **Crea un set di dati**.  
   
-5.  Scegliere **Avanti**.  
+5.  Fare clic su **Avanti**.  
   
 6.  Nella pagina **Scegliere una connessione a un'origine dei dati** selezionare un'origine dati esistente o individuare il server di report e selezionare un'origine dati. Se non vi è alcuna origine dati disponibile o non si dispone dell'accesso a un server di report, è possibile utilizzare un'origine dati incorporata. Per altre informazioni, vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina **Progetta query** fare clic su **Modifica come testo**.  
   
@@ -97,7 +97,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
   
 10. Sulla barra degli strumenti Progettazione query fare clic su Esegui ( **!** ).
 
-11. Scegliere **Avanti**.  
+11. Fare clic su **Avanti**.  
   
 ## <a name="CompleteWizard"></a>2. Organizzare i dati e scegliere il layout nella procedura guidata  
 La Creazione guidata tabella o matrice offre una progettazione iniziale in cui visualizzare i dati. Il riquadro di anteprima nella procedura guidata consente di visualizzare il risultato del raggruppamento di dati prima di completare la progettazione della tabella o della matrice.  
@@ -120,7 +120,7 @@ La Creazione guidata tabella o matrice offre una progettazione iniziale in cui v
   
     I passaggi 4 e 5 consentono di organizzare i valori per i campi prima in base alla data, quindi in base a tutte le vendite per tale data.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
     Quando si esegue il report, nella tabella vengono visualizzati tutte le date, tutti gli ordini per ciascuna data e tutti i prodotti, le quantità e i totali di vendite per ogni ordine.  
   
@@ -132,7 +132,7 @@ La Creazione guidata tabella o matrice offre una progettazione iniziale in cui v
   
     Nel report creato in questa esercitazione non viene utilizzata la funzionalità drill-down che consente all'utente di espandere una gerarchia di gruppo padre per visualizzare le righe del gruppo figlio e le righe di dettaglio.  
   
-10. Scegliere **Avanti**.  
+10. Fare clic su **Avanti**.  
   
 11. Fare clic su **Fine**.  
   
@@ -159,7 +159,7 @@ Allargare le colonne e impostare il formato per date e valuta.
 
    Se la lingua delle impostazioni locali è inglese (Stati Uniti), il testo di esempio predefinito sarà [$12,345.00]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![report-generatore-segnaposto-valore-pulsante](../reporting-services/media/report-builder-placeholder-value-button.png)
 
 5. (Facoltativo) Nel gruppo **Numero** della scheda **Home** fare clic due volte sul pulsante **Diminuisci decimali** per visualizzare le cifre in dollari senza centesimi.
 
@@ -289,7 +289,7 @@ Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare
 ![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
   
 ## <a name="Title"></a>6. Aggiungere un titolo al report  
-Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se il report ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa sezione sarà usata la casella di testo che viene automaticamente posizionata nella parte superiore del corpo del report.  
+Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa sezione sarà usata la casella di testo che viene automaticamente posizionata nella parte superiore del corpo del report.  
   
 Il testo può essere ulteriormente migliorato applicando stili di carattere, dimensioni e colori diversi alle frasi e ai singoli caratteri del testo. Per altre informazioni, vedere [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
@@ -335,7 +335,7 @@ Il report verrà salvato sul server di report. Il nome del server di report al q
   
 2.  Fare clic su **Salva**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 Questo passaggio conclude l'esercitazione relativa all'aggiunta di un indicatore KPI al report. Per altre informazioni, vedere:
 *  [Misuratori](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicatori](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

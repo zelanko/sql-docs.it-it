@@ -9,10 +9,10 @@ ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3f1e0f0364eebbd0861edb931b0ee7f46954a7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577154"
 ---
 # <a name="report-builder-functions---union-function"></a>Funzioni di Generatore report - Funzione Union
@@ -32,7 +32,7 @@ Union(expression, scope, recursive)
  *expression*  
  (**SqlGeometry** o **SqlGeography**) Espressione su cui eseguire l'aggregazione.  
   
- *scope*  
+ *ambito*  
  (**String**) Facoltativo. Nome di un set di dati, gruppo o area dati che contiene gli elementi del report a cui applicare la funzione di aggregazione. Se si omette *scope* , viene usato l'ambito corrente.  
   
  *ricorsivi*  
@@ -41,7 +41,7 @@ Union(expression, scope, recursive)
 ## <a name="return"></a>Return  
  Restituisce un oggetto spaziale, **SqlGeometry** o **SqlGeography**, in base al tipo di espressione. Per altre informazioni sui tipi di dati spaziali **SqlGeometry** e **SqlGeography** , vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il set di dati specificato nell'espressione deve essere dello stesso tipo di dati.  
   
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Gli ambiti del set di dati non sono supportati. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  

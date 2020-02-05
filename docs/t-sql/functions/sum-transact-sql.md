@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2f549af8bd9e594d14407fe16186ee5d308e546
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117634"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68117634"
 
   Restituisce la somma di tutti i valori o solo dei valori DISTINCT dell'espressione. La funzione SUM può essere utilizzata solo con colonne numeriche. I valori Null vengono ignorati.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  Costante, colonna o funzione e qualsiasi combinazione di operatori aritmetici, bit per bit e stringa. *expression* è un'espressione della categoria dei tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati **bit**. Non è possibile utilizzare funzioni di aggregazione e sottoquery. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. _order\_by\_clause_ determina l'ordine logico in cui viene eseguita l'operazione. _order\_by\_clause_ è obbligatorio. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
@@ -75,12 +75,12 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 |Categoria **money** e **smallmoney**|**money**|  
 |Categoria **float** e **real**|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  SUM è una funzione deterministica quando viene utilizzato senza le clausole ORDER BY e OVER. Non è deterministica quando viene specificata con le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-sum-to-return-summary-data"></a>A. Utilizzo di SUM per restituire dati di riepilogo  
+### <a name="a-using-sum-to-return-summary-data"></a>R. Utilizzo di SUM per restituire dati di riepilogo  
  Negli esempi seguenti viene mostrato l'uso della funzione SUM per restituire dati di riepilogo nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

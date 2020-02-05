@@ -16,10 +16,10 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a282ed4ce04df00a062fb1b910318125e23b1634
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68078779"
 ---
 # <a name="replication-security-best-practices"></a>Procedure consigliate per la sicurezza della replica
@@ -71,7 +71,7 @@ ms.locfileid: "68078779"
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replica su Internet](../../../relational-databases/replication/replication-over-the-internet.md)   
- [Proteggere il sottoscrittore](../../../relational-databases/replication/security/secure-the-subscriber.md)   
+ [Proteggere il Sottoscrittore](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Proteggere il database di distribuzione](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [Proteggere il server di pubblicazione](../../../relational-databases/replication/security/secure-the-publisher.md)   
  [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  

@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582059"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Aggiungere filtri per set di dati, aree dati e gruppi
@@ -60,7 +60,7 @@ ms.locfileid: "65582059"
   
  Nelle sezioni seguenti sono descritte le singole parti dell'equazione di filtro.  
   
-### <a name="expression"></a>Espressione  
+### <a name="expression"></a>Expression  
  Quando l'equazione di filtro viene valutata dal componente Elaborazione report in fase di esecuzione, i tipi di dati per l'espressione e il valore devono essere identici. Il tipo di dati del campo selezionato per **Espressione** viene determinato dall'estensione per l'elaborazione dati o dal provider di dati usato per recuperare i dati dall'origine dati. Il tipo di dati dell'espressione immessa per **Valore** viene determinato dai valori predefiniti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le opzioni disponibili per il tipo di dati sono determinate dai tipi di dati supportati per una definizione del report. I valori del database potrebbero essere convertiti dal provider di dati in un tipo CLR.  
   
 ### <a name="data-type"></a>Tipo di dati  
@@ -90,7 +90,7 @@ ms.locfileid: "65582059"
 ### <a name="value"></a>valore  
  L'espressione Valore specifica la parte finale dell'equazione di filtro. Il componente Elaborazione report converte l'espressione valutata nel tipo di dati specificato dall'utente, quindi valuta l'intera equazione di filtro per determinare se i dati specificati in Espressione passano attraverso il filtro.  
   
- Per eseguire la conversione in un tipo di dati diverso da un tipo di dati CLR standard, è necessario modificare l'espressione in modo da eseguire una conversione esplicita in un tipo di dati. È possibile usare le funzioni di conversione elencate nella finestra di dialogo **Espressione** in **Funzioni comuni**, **Conversione**. Ad esempio, per un campo `ListPrice` che rappresenta i dati archiviati come tipo di dati **money** in un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'estensione per l'elaborazione dati restituisce il valore del campo come tipo di dati <xref:System.Decimal> . Per impostare un filtro in modo da usare solo i valori maggiori di **50000,00`=CDec(50000.00)` nella valuta del report, convertire il valore in Decimal mediante l'espressione** .  
+ Per eseguire la conversione in un tipo di dati diverso da un tipo di dati CLR standard, è necessario modificare l'espressione in modo da eseguire una conversione esplicita in un tipo di dati. È possibile usare le funzioni di conversione elencate nella finestra di dialogo **Espressione** in **Funzioni comuni**, **Conversione**. Ad esempio, per un campo `ListPrice` che rappresenta i dati archiviati come tipo di dati **money** in un'origine dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'estensione per l'elaborazione dati restituisce il valore del campo come tipo di dati <xref:System.Decimal> . Per impostare un filtro in modo da usare solo i valori maggiori di **50000,00** nella valuta del report, convertire il valore in Decimal mediante l'espressione `=CDec(50000.00)`.  
   
  Questo valore può inoltre includere un riferimento di parametro per consentire la selezione interattiva di un valore in base al quale applicare un filtro.  
   

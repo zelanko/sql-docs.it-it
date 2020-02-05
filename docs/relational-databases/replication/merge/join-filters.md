@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033239"
 ---
 # <a name="join-filters"></a>filtri di join
@@ -44,7 +44,7 @@ ms.locfileid: "68033239"
 LoginID = SUSER_SNAME()  
 ```  
   
- Questo filtro garantisce che la sottoscrizione di ogni dipendente contenga soltanto i dati della tabella **HumanResources.Employee** rilevanti per tale dipendente. In questo caso, si tratta di una singola riga. Per altre informazioni, vedere [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Questo filtro garantisce che la sottoscrizione di ogni dipendente contenga soltanto i dati della tabella **HumanResources.Employee** rilevanti per tale dipendente. In questo caso, si tratta di una singola riga. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Il passaggio successivo consiste nell'estendere questo filtro a ogni tabella correlata, utilizzando una sintassi simile a quella utilizzata per specificare un join tra due tabelle. La prima clausola di filtro di join è:  
   

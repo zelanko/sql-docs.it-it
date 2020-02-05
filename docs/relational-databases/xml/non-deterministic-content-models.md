@@ -14,10 +14,10 @@ ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4de53a22bb650098db48619bef26efe543dd9ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137429"
 ---
 # <a name="non-deterministic-content-models"></a>modelli di contenuto non deterministici
@@ -60,7 +60,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>Esempio: modello di contenuto non deterministico accettato  
+## <a name="example-non-deterministic-content-model-accepted"></a>Esempio: modello di contenuto non deterministico rifiutato  
  Lo schema seguente verrebbe rifiutato nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1.  
   
 ```  
@@ -80,6 +80,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per le raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

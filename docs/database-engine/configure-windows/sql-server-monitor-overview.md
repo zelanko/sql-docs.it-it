@@ -15,10 +15,10 @@ ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032496"
 ---
 # <a name="sql-server-monitor-overview"></a>Panoramica di Monitoraggio SQL Server

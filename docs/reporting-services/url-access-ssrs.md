@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574244"
 ---
 # <a name="url-access-ssrs"></a>Accesso con URL (SSRS)
@@ -56,14 +56,14 @@ reportpath
   
 ### <a name="syntax-description"></a>Descrizione della sintassi  
  *rswebserviceurl*  
- URL del servizio Web del server di report. Per la modalità nativa, è l'URL del servizio Web dell'istanza del server di report configurata in Gestione configurazione Reporting Services (vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Esempio:  
+ URL del servizio Web del server di report. Per la modalità nativa, è l'URL del servizio Web dell'istanza del server di report configurata in Gestione configurazione Reporting Services (vedere [Configurare gli URL del server di report &#40;Gestione configurazione SSRS&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Ad esempio:  
   
 ```  
 https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- Per la modalità integrata SharePoint, è l'URL del proxy [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Esempio:  
+ Per la modalità integrata SharePoint, è l'URL del proxy [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a un sito di SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Ad esempio:  
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver  
@@ -75,13 +75,13 @@ https://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  Il nome di percorso relativo dell'elemento nel database del server di report in modalità nativa o l'URL completo dell'elemento in un catalogo di SharePoint.  
   
- Il percorso dell'elemento del catalogo. Per la modalità nativa, si tratta del percorso relativo dell'elemento nel database del server di report, che inizia con una barra ( **/** ). Esempio:  
+ Il percorso dell'elemento del catalogo. Per la modalità nativa, si tratta del percorso relativo dell'elemento nel database del server di report, che inizia con una barra ( **/** ). Ad esempio:  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- Per la modalità integrata SharePoint, si tratta dell'URL completo dell'elemento nella raccolta di SharePoint, inclusa l'estensione dell'elemento. Esempio:  
+ Per la modalità integrata SharePoint, si tratta dell'URL completo dell'elemento nella raccolta di SharePoint, inclusa l'estensione dell'elemento. Ad esempio:  
   
 ```  
 https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
@@ -91,7 +91,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  Carattere utilizzato per separare le coppie di nome e valore dei parametri di accesso tramite URL.  
   
  **prefix**  
- Facoltativo. Un prefisso per il parametro di accesso tramite URL (ad esempio, `rs:` o `rc:`) per l'accesso a un processo specifico in esecuzione nel server di report.  
+ Facoltativa. Un prefisso per il parametro di accesso tramite URL (ad esempio, `rs:` o `rc:`) per l'accesso a un processo specifico in esecuzione nel server di report.  
   
 > [!NOTE]  
 >  Se per un parametro di accesso tramite URL non viene incluso un prefisso, il parametro viene elaborato dal server di report come parametro del report. Nei parametri del report non si utilizzano prefissi dei parametri e non esistono distinzioni tra maiuscole e minuscole.  
@@ -99,7 +99,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  **param**  
  Nome del parametro.  
   
- *Valore*  
+ *value*  
  Testo dell'URL che corrisponde al valore del parametro utilizzato.  
   
  **Nota:** per un elenco dei parametri di accesso tramite URL disponibili, vedere [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md). Per esempi di passaggi di parametri di report nell'URL, vedere [Passare un parametro del report in un URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
@@ -108,7 +108,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |Descrizioni delle attività|Collegamenti|  
 |-----------------------|-----------|  
-|Accedere a elementi del server di report, quali report, origini dati condivise e risorse.|[Accesso agli elementi del server di report utilizzando l'accesso tramite URL](../reporting-services/access-report-server-items-using-url-access.md)|  
+|Accedere a elementi del server di report, quali report, origini dati condivise e risorse.|[Accesso agli elementi del server di report usando l'accesso tramite URL](../reporting-services/access-report-server-items-using-url-access.md)|  
 |Passare i parametri di report a un report.|[Passare un parametro del report in un URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
 |Impostare le impostazioni locali dei parametri del report nella stringa dell'accesso tramite URL che definisce le interpretazioni delle impostazioni locali di date, valute e così via.|[Impostare la lingua per i parametri del report in un URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
 |Inviare le impostazioni specifiche dell'estensione di rendering che personalizzano l'esecuzione del rendering del report.|[Specificare le impostazioni relative alle informazioni sul dispositivo in un URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  

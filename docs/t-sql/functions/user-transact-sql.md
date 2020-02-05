@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844316"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
@@ -46,7 +46,7 @@ USER
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  USER è caratterizzata dalle stesse funzionalità della funzione di sistema USER_NAME.  
   
  Utilizzare la funzione USER con vincoli DEFAULT nell'istruzione CREATE TABLE o ALTER TABLE oppure come qualsiasi funzione standard.  
@@ -57,7 +57,7 @@ USER
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-user-to-return-the-database-user-name"></a>A. Utilizzo della funzione USER per recuperare il nome dell'utente del database  
+### <a name="a-using-user-to-return-the-database-user-name"></a>R. Utilizzo della funzione USER per recuperare il nome dell'utente del database  
  Nell'esempio seguente viene dichiarata una variabile di tipo `char`, viene assegnato il valore corrente di USER alla variabile e vengono restituite la variabile e una descrizione.  
   
 ```  

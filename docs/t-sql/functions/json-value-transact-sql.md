@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109347"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+# <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68109347"
   
  Per estrarre un oggetto o una matrice da una stringa JSON anziché da un valore scalare, vedere [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md). Per informazioni sulle differenze tra **JSON_VALUE** e **JSON_QUERY**, vedere [Confronto tra JSON_VALUE e JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,7 +67,7 @@ In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel [!INCLUDE[ssSDSf
   
  Se è necessario restituire valori scalari maggiori di 4000 caratteri, usare **OPENJSON** anziché **JSON_VALUE**. Per altre informazioni, vedere [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 ### <a name="lax-mode-and-strict-mode"></a>Modalità lax e modalità strict
 
@@ -92,7 +92,7 @@ SET @jsonInfo=N'{
   
  Nella tabella seguente viene confrontato il comportamento di **JSON_VALUE** in modalità lax e in modalità strict. Per altre informazioni sulla specifica facoltativa della modalità del percorso (lax o strict), vedere [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Percorso|Valore restituito in modalità lax|Valore restituito in modalità strict|Altre informazioni|  
+|Path|Valore restituito in modalità lax|Valore restituito in modalità strict|Altre informazioni|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|NULL|Errore|Non è un valore scalare.<br /><br /> Usare **JSON_QUERY**.|  
 |$.info.type|N'1'|N'1'|N/a|  

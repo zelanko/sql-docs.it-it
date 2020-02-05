@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e97480b767e10a27c7e9647c2e6ae7369d4b37f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040232"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68040232"
 
 Questa funzione restituisce la media dei valori di un gruppo. Ignora i valori Null.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,7 +69,7 @@ Il risultato valutato dell'*espressione* determina il tipo restituito.
 |Categoria **money** e **smallmoney**|**money**|  
 |Categoria **float** e **real**|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Se *expression* è di un tipo di dati alias, anche il tipo restituito è di tipo alias. Tuttavia, se il tipo di dati di base del tipo alias viene alzato di livello, ad esempio da **tinyint** a **int**, il valore restituito è del tipo di dati promosso e non del tipo alias.
   
 AVG () calcola la media di un set di valori dividendo la somma di tali valori per il numero di valori non Null. Se la somma supera il valore massimo per il tipo di dati del valore restituito, AVG() restituisce un errore.
@@ -78,7 +78,7 @@ AVG è una funzione deterministica quando viene utilizzata senza le clausole ORD
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>A. Utilizzo delle funzioni SUM e AVG per l'esecuzione di calcoli  
+### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>R. Utilizzo delle funzioni SUM e AVG per l'esecuzione di calcoli  
 Questo esempio calcola la media delle ore di ferie e la somma delle ore di malattia usate dai vicepresidenti di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Ogni funzione di aggregazione restituisce un singolo valore di riepilogo per tutte le righe recuperate. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql

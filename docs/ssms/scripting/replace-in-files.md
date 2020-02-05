@@ -1,6 +1,6 @@
 ---
-title: Sostituisci nei file | Microsoft Docs
-ms.custom: ''
+title: Sostituisci nei file
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53a95f29495388f31ca833b992f8afe3fd9450c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 787ab0e852055b7dcc53a16f14580f7e184500bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265977"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253712"
 ---
 # <a name="replace-in-files"></a>Sostituisci nei file
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68265977"
 ## <a name="find-what"></a>Trova  
  Questi controlli della scheda **Sostituisci nei file** consentono di specificare la stringa o l'espressione da trovare.  
   
- **Find what**  
+ **Trova**  
  Digitare il testo che si desidera cercare. Nella finestra di dialogo verrà proposto un testo di ricerca probabile, basato sul testo selezionato con il cursore prima dell'apertura della finestra di dialogo oppure sul testo vicino o su quello cercato in precedenza. È possibile riutilizzare una delle 20 stringhe di ricerca più recenti selezionandola dall'elenco a discesa.  
   
  **[stringa con caratteri jolly]**  
@@ -40,7 +40,7 @@ ms.locfileid: "68265977"
  **Generatore di espressioni**  
  Questo pulsante triangolare accanto alla casella **Trova** è disponibile se in **Opzioni di ricerca** è selezionata la casella di controllo **Utilizza**. Fare clic su questo pulsante per visualizzare un elenco di caratteri jolly o di espressioni regolari, a seconda dell'opzione selezionata nella casella **Utilizza** . Selezionando un elemento in questo elenco lo si aggiunge alla stringa specificata nella casella **Trova** .  
   
-## <a name="replace-with"></a>Sostituisci con  
+## <a name="replace-with"></a>Sostituire con  
  Questi controlli consentono di specificare ciò che verrà inserito al posto della stringa o espressione trovata.  
   
  **Replace with**  
@@ -49,14 +49,14 @@ ms.locfileid: "68265977"
  **Generatore di espressioni**  
  Questo pulsante triangolare accanto alla casella **Sostituisci con** diventa disponibile quando è selezionata la casella di controllo **Utilizza** in **Opzioni di ricerca**. Fare clic su questo pulsante per visualizzare un elenco di caratteri jolly o di espressioni regolari, a seconda dell'opzione selezionata nella casella **Utilizza** . Selezionando un elemento nell'elenco lo si aggiunge alla stringa specificata nella casella **Sostituisci con** .  
   
- **Sostituisci**  
+ **Replace**  
  Fare clic su questo pulsante per sostituire l'istanza corrente della stringa specificata nella casella **Trova** con la stringa specificata nella casella **Sostituisci con** e per trovare l'istanza successiva nell'ambito specificato nella casella **Cerca in**.  
   
  **Sostituisci tutto**  
  Fare clic su questo pulsante per sostituire tutte le istanze della stringa specificata nella casella **Trova** con la stringa specificata nella casella **Sostituisci con** in tutti i file dell'ambito specificato nella casella **Cerca in**.  
   
 > [!CAUTION]  
->  Verificare che la casella **Cerca in** sia impostata in modo da includere solo i file che si vuole modificare.  
+>  Verificare che la casella **Cerca in** sia impostata in modo da includere solo i file che si vogliono modificare.  
   
  Viene visualizzato un promemoria che include l'opzione **Non chiudere i file modificati** . Selezionare questa opzione per mantenere l'opzione **Annulla** . **Annulla** è disponibile solo per i file che restano aperti dopo essere stati modificati.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68265977"
  L'opzione selezionata nell'elenco a discesa **Cerca in** determina se la funzione **Sostituisci nei file** eseguirà la ricerca solo nei file attualmente attivi oppure in tutti i file archiviati all'interno di determinate cartelle. Selezionare un ambito di ricerca dall'elenco, digitare il percorso di una cartella oppure fare clic sul pulsante **Sfoglia** per visualizzare la finestra di dialogo **Seleziona cartelle di ricerca** e selezionare un set di cartelle in cui eseguire la ricerca.  
   
 > [!NOTE]  
->  Se l'opzione selezionata in **Cerca in** interessa un file estratto dal controllo del codice di sorgente, la ricerca verrà eseguita solo nella versione del file scaricata sul computer locale.  
+>  Se l'opzione selezionata in **Cerca in** interessa un file estratto dal controllo del codice sorgente, la ricerca verrà eseguita solo nella versione del file scaricata sul computer locale.  
   
  **Look in**  
  Selezionare un ambito di ricerca predefinito dall'elenco oppure usare la finestra di dialogo **Seleziona cartelle di ricerca** per specificare un set di directory personalizzato.  
@@ -94,12 +94,12 @@ ms.locfileid: "68265977"
  È possibile espandere o comprimere la sezione **Opzioni di ricerca** . Le opzioni seguenti possono essere selezionate o deselezionate.  
   
  **Maiuscole/minuscole**  
- Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono per il contenuto e per l'uso di lettere maiuscole o minuscole. Ad esempio, una ricerca di **MioOggetto** con la casella **Maiuscole/minuscole** selezionata restituirà "MioOggetto" ma non "miooggetto" o "MIOOGGETTO".  
+ Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono sia per il contenuto che per l'uso di lettere maiuscole o minuscole. Ad esempio, una ricerca di **MioOggetto** con la casella **Maiuscole/minuscole** selezionata restituirà "MioOggetto" ma non "miooggetto" o "MIOOGGETTO".  
   
  **Parola intera**  
  Se questa casella di controllo è selezionata, nelle finestre dei risultati di ricerca verranno visualizzate solo le istanze della stringa specificata in **Trova** che corrispondono alle parole complete. La ricerca di **MioOggetto** restituirà quindi "MioOggetto", ma non "CMioOggetto" o "MioOggettoC."  
   
- **Utilizza**  
+ **Uso**  
  Indica come interpretare i caratteri speciali immessi nella casella di testo **Trova** o **Sostituisci con** . Sono disponibili le opzioni **Caratteri jolly** ed **Espressioni regolari**.  
   
  **Regular Expressions**  

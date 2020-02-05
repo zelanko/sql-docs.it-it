@@ -22,10 +22,10 @@ ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044025"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68044025"
 
   Rimuove uno schema di partizione dal database corrente. Gli schemi di partizione vengono creati tramite [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) e modificati tramite [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,13 +46,13 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
  *partition_scheme_name*  
  Nome dello schema di partizione che si desidera eliminare.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile eliminare uno schema di partizione solo se non esistono tabelle o indici che lo utilizzano. Se esistono tabelle o indici che utilizzano lo schema di partizione specifico, l'istruzione DROP PARTITION SCHEME restituisce un errore. L'esecuzione dell'istruzione DROP PARTITION SCHEME non comporta la rimozione dei filegroup.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per eseguire l'istruzione DROP PARTITION SCHEME, è necessario utilizzare le autorizzazioni seguenti:  
   
--   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti dei database **db_owner** e **db_ddladmin** .  
+-   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin** .  
   
 -   Autorizzazione CONTROL o ALTER per il database nel quale viene creato lo schema di partizione.  
   

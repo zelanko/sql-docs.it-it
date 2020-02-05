@@ -1,10 +1,9 @@
 ---
-title: Usare i token nei passaggi dei processi | Microsoft Docs
-ms.custom: ''
+title: Utilizzo dei token nei passaggi dei processi
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 13ee039c9f3a70b5468d3d7b726b1600e8f80339
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260882"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257883"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utilizzo dei token nei passaggi dei processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "68260882"
 ## <a name="understanding-using-tokens"></a>Informazioni sull'utilizzo dei token  
   
 > [!IMPORTANT]  
-> Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. I token sono: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(**_property_**)**. Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.  
+> Qualsiasi utente di Windows con autorizzazioni di scrittura per il registro eventi di Windows è in grado di accedere ai passaggi di processo attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o di WMI. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. I token interessati sono: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**, e **WMI(** _property_ **)** . Si noti che in questa versione l'utilizzo dei token è esteso a tutti gli avvisi.  
 >   
 > Se si desidera utilizzare questi token, verificare innanzitutto che solo i membri di gruppi di sicurezza di Windows trusted, ad esempio il gruppo Administrators, dispongano delle autorizzazioni di scrittura per il registro eventi del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A questo punto, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e nella pagina **Sistema avvisi** selezionare **Sostituisci token per tutte le risposte del processo ad avvisi** per abilitare questi token.  
   
-La sostituzione dei token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è semplice ed efficiente: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sostituisce un valore letterale di stringa esatto per il token. Tutti i token effettuano una distinzione tra maiuscole e minuscole. È necessario prendere in considerazione tale comportamento nei passaggi di processo e indicare correttamente i token da utilizzare oppure convertire la stringa di sostituzione nel tipo di dati corretto.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent i token vengono sostituiti da valori stringa letterali esatti con un'operazione semplice ed efficiente. Tutti i token effettuano una distinzione tra maiuscole e minuscole. È necessario prendere in considerazione tale comportamento nei passaggi di processo e indicare correttamente i token da utilizzare oppure convertire la stringa di sostituzione nel tipo di dati corretto.  
   
 Ad esempio, è possibile utilizzare l'istruzione seguente per inserire il nome del database in un passaggio di processo:  
   
@@ -61,9 +62,9 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
   
 ### <a name="sql-server-agent-tokens"></a>Token di SQL Server Agent  
   
-|Token|Descrizione|  
+|token|Descrizione|  
 |---------|---------------|  
-|**(A-DBN)**|Nome del database. Se il processo viene eseguito da un avviso, il valore del nome del database sostituisce automaticamente il token nel passaggio di processo.|  
+|**(A-DBN)**|nome del database. Se il processo viene eseguito da un avviso, il valore del nome del database sostituisce automaticamente il token nel passaggio di processo.|  
 |**(A-SVR)**|Nome del server. Se il processo viene eseguito da un avviso, il valore del nome del server sostituisce automaticamente il token nel passaggio di processo.|  
 |**(A-ERR)**|Numero di errore. Se il processo viene eseguito da un avviso, il valore del numero di errore sostituisce automaticamente il token nel passaggio di processo.|  
 |**(A-SEV)**|Gravità dell'errore. Se il processo viene eseguito da un avviso, il valore della gravità dell'errore sostituisce automaticamente il token nel passaggio di processo.|  
@@ -71,7 +72,7 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
 |**(JOBNAME)**|Nome del processo. Questo token è disponibile solo in SQL Server 2016 e versioni successive.|  
 |**(STEPNAME)**|Nome del passaggio. Questo token è disponibile solo in SQL Server 2016 e versioni successive.|  
 |**(DATE)**|Data corrente nel formato AAAAMMGG.|  
-|**(INST)**|Nome dell'istanza. Per un'istanza predefinita, il token avrà il nome dell'istanza predefinita: MSSQLSERVER.|  
+|**(INST)**|Nome dell'istanza. Il nome di un'istanza predefinita di questo token sarà MSSQLSERVER.|  
 |**(JOBID)**|ID del processo.|  
 |**(MACH)**|Nome del computer.|  
 |**(MSSA)**|Nome del servizio SQLServerAgent master.|  
@@ -84,28 +85,28 @@ Nelle tabelle seguenti vengono elencati e illustrati i token e le macro supporta
 |**(TIME)**|Ora corrente nel formato HHMMSS.|  
 |**(STRTTM)**|Ora nel formato HHMMSS in cui è stata avviata l'esecuzione del processo.|  
 |**(STRTDT)**|Data nel formato AAAAMMGG in cui è stata avviata l'esecuzione del processo.|  
-|**(WMI (**_property_**))**|Per i processi eseguiti in risposta ad avvisi WMI, indica il valore della proprietà specificata da *property*. Ad esempio, `$(WMI(DatabaseName))` specifica il valore della proprietà **DatabaseName** per l'evento WMI che ha provocato l'esecuzione dell'avviso.|  
+|**(WMI (** _property_ **))**|Per i processi eseguiti in risposta ad avvisi WMI, indica il valore della proprietà specificata da *property*. Ad esempio, `$(WMI(DatabaseName))` specifica il valore della proprietà **DatabaseName** per l'evento WMI che ha provocato l'esecuzione dell'avviso.|  
   
 ### <a name="sql-server-agent-escape-macros"></a>Macro di escape di SQL Server Agent  
   
 |Macro di escape|Descrizione|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(**_nome\_token_**))**|Utilizza caratteri di escape per virgolette singole (') nella stringa di sostituzione del token. Sostituisce una virgoletta singola con due virgolette singole.|  
-|**$(ESCAPE_DQUOTE(**_nome\_token_**))**|Utilizza caratteri di escape per virgolette doppie (") nella stringa di sostituzione del token. Sostituisce una virgoletta doppia con due virgolette doppie.|  
-|**$(ESCAPE_RBRACKET(**_nome\_token_**))**|Utilizza caratteri di escape per parentesi chiuse (]) nella stringa di sostituzione del token. Sostituisce una parentesi chiusa con due parentesi chiuse.|  
-|**$(ESCAPE_NONE(**_nome\_token_**))**|Sostituisce il token senza utilizzare caratteri di escape per i caratteri della stringa. Questa macro viene utilizzata per assicurare la compatibilità con le versioni precedenti in ambienti in cui si presuppone che le stringhe di sostituzione dei token provengano esclusivamente da utenti trusted. Per ulteriori informazioni, vedere "Aggiornamento dei passaggi di processo per l'utilizzo di macro" più avanti in questo argomento.|  
+|**$(ESCAPE_SQUOTE(** _nome\_token_ **))**|Utilizza caratteri di escape per virgolette singole (') nella stringa di sostituzione del token. Sostituisce una virgoletta singola con due virgolette singole.|  
+|**$(ESCAPE_DQUOTE(** _nome\_token_ **))**|Utilizza caratteri di escape per virgolette doppie (") nella stringa di sostituzione del token. Sostituisce una virgoletta doppia con due virgolette doppie.|  
+|**$(ESCAPE_RBRACKET(** _nome\_token_ **))**|Utilizza caratteri di escape per parentesi chiuse (]) nella stringa di sostituzione del token. Sostituisce una parentesi chiusa con due parentesi chiuse.|  
+|**$(ESCAPE_NONE(** _nome\_token_ **))**|Sostituisce il token senza utilizzare caratteri di escape per i caratteri della stringa. Questa macro viene utilizzata per assicurare la compatibilità con le versioni precedenti in ambienti in cui si presuppone che le stringhe di sostituzione dei token provengano esclusivamente da utenti trusted. Per ulteriori informazioni, vedere "Aggiornamento dei passaggi di processo per l'utilizzo di macro" più avanti in questo argomento.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Aggiornamento dei passaggi di processo per l'utilizzo di macro  
 Nella tabella seguente viene indicata la modalità di gestione della sostituzione del token in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente. Per attivare o disattivare la sostituzione dei token relativi agli avvisi, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e selezionare o deselezionare la casella di controllo **Sostituisci token per tutte le risposte del processo ad avvisi** nella pagina **Sistema avvisi** .  
   
 |Sintassi dei token|Sostituzione dei token relativi agli avvisi attivata|Sostituzione dei token relativi agli avvisi disattivata|  
 |----------------|------------------------------|-------------------------------|  
-|La macro ESCAPE è stata utilizzata|Tutti i token presenti nei processi sono stati sostituiti correttamente.|I token attivati da avvisi non vengono sostituiti. I token interessati sono **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**, e **WMI(**_property_**)**. Altri token statici sono stati sostituiti correttamente.|  
+|La macro ESCAPE è stata utilizzata|Tutti i token presenti nei processi sono stati sostituiti correttamente.|I token attivati da avvisi non vengono sostituiti. I token interessati sono **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**, e **WMI(** _property_ **)** . Altri token statici sono stati sostituiti correttamente.|  
 |La macro ESCAPE non è stata utilizzata|Tutti i processi contenenti token hanno esito negativo.|Tutti i processi contenenti token hanno esito negativo.|  
   
 ## <a name="token-syntax-update-examples"></a>Esempi di aggiornamento della sintassi dei token  
   
-### <a name="a-using-tokens-in-non-nested-strings"></a>A. Utilizzo di token in stringhe non nidificate  
+### <a name="a-using-tokens-in-non-nested-strings"></a>R. Utilizzo di token in stringhe non nidificate  
 Nell'esempio seguente viene illustrato come aggiornare uno script semplice non nidificato con la macro di escape appropriata. Prima di eseguire lo script di aggiornamento, lo script del passaggio di processo seguente utilizza un token per inserire il nome del database appropriato:  
   
 `PRINT N'Current database name is $(A-DBN)' ;`  
@@ -130,7 +131,7 @@ PRINT N'Print ' + @msgString ;</pre>
   
 Si noti inoltre che in questo esempio la funzione QUOTENAME imposta il carattere utilizzato per le virgolette.  
   
-### <a name="c-using-tokens-with-the-escapenone-macro"></a>C. Utilizzo di token con la macro ESCAPE_NONE  
+### <a name="c-using-tokens-with-the-escape_none-macro"></a>C. Utilizzo di token con la macro ESCAPE_NONE  
 L'esempio seguente fa parte di uno script in cui `job_id` viene recuperato dalla tabella `sysjobs` e in cui il token `JOBID` viene utilizzato per popolare la variabile `@JobID` dichiarata in precedenza nello script come tipo di dati binario. Poiché non è necessario alcun delimitatore per i tipi di dati binari, la macro `ESCAPE_NONE` viene utilizzata con il token `JOBID` . Non è necessario aggiornare questo passaggio di processo dopo aver eseguito lo script di aggiornamento.  
   
 <pre>SELECT * FROM msdb.dbo.sysjobs  

@@ -22,18 +22,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71e719d816e1afb9457d99049fa69c4749c18c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098740"
 ---
-# <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
+# <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce l'ID per il nome di un tipo di dati specificato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,12 +53,12 @@ TYPE_ID ( [ schema_name ] type_name )
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come TYPE_ID possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  TYPE_ID restituisce NULL se il nome del tipo non è valido oppure se il chiamante non dispone di autorizzazioni sufficienti per fare riferimento al tipo.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>A. Ricerca dei valori di TYPE_ID per i nomi dei tipi composti da una o due parti  
+### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>R. Ricerca dei valori di TYPE_ID per i nomi dei tipi composti da una o due parti  
  Nell'esempio seguente viene restituito l'ID di tipo per i nomi dei tipi composti da una o due parti.  
   
 ```  

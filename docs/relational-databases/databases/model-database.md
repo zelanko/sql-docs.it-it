@@ -15,10 +15,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067370"
 ---
 # <a name="model-database"></a>Database model
@@ -28,7 +28,7 @@ ms.locfileid: "68067370"
  I database utente appena creati utilizzano lo stesso [modello di recupero](../../relational-databases/backup-restore/recovery-models-sql-server.md) del database model. La stringa predefinita è configurabile dall'utente. Per informazioni sull'attuale modello di recupero, vedere [Visualizzazione o modifica del modello di recupero di un database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
 > [!IMPORTANT]  
->  Se si modifica il database **modello** con le informazioni sul modello specifiche dell'utente, è consigliabile eseguire il backup del **modello**. Per altre informazioni, vedere [Backup e ripristino di database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+>  Se si modifica il database **modello** con le informazioni sul modello specifiche dell'utente, è consigliabile eseguire il backup del **modello**. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## <a name="model-usage"></a>Utilizzo del database model  
  Quando viene eseguita un'istruzione CREATE DATABASE, la prima parte del database viene creata copiando i contenuti del database **model** . La parte restante del nuovo database viene riempita con pagine vuote.  
@@ -59,34 +59,34 @@ Per SQL Server 2014, vedere [Database model](https://docs.microsoft.com/sql/rela
 |ANSI_WARNINGS|OFF|Sì|  
 |ARITHABORT|OFF|Sì|  
 |AUTO_CLOSE|OFF|Sì|  
-|AUTO_CREATE_STATISTICS|ON|Sì|  
+|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
 |AUTO_SHRINK|OFF|Sì|  
-|AUTO_UPDATE_STATISTICS|ON|Sì|  
+|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
-|CHANGE_TRACKING|OFF|no|  
+|CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
 |CURSOR_DEFAULT|GLOBAL|Sì|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> Sì<br /><br /> Sì|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sì<br /><br /> Sì|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|OFF|no|  
-|ENCRYPTION|OFF|no|  
-|MIXED_PAGE_ALLOCATION|ON|no|  
+|DB_CHAINING|OFF|No|  
+|ENCRYPTION|OFF|No|  
+|MIXED_PAGE_ALLOCATION|ATTIVA|No|  
 |NUMERIC_ROUNDABORT|OFF|Sì|  
 |PAGE_VERIFY|CHECKSUM|Sì|  
-|PARAMETERIZATION|SIMPLE|Sì|  
+|PARAMETERIZATION|SEMPLICE|Sì|  
 |QUOTED_IDENTIFIER|OFF|Sì|  
 |READ_COMMITTED_SNAPSHOT|OFF|Sì|  
 |RECOVERY|Dipende dall'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Sì|  
 |RECURSIVE_TRIGGERS|OFF|Sì|  
-|Opzioni relative a Service Broker|DISABLE_BROKER|no|  
-|TRUSTWORTHY|OFF|no|  
+|Opzioni relative a Service Broker|DISABLE_BROKER|No|  
+|TRUSTWORTHY|OFF|No|  
   
  *Per verificare l'attuale modello di recupero del database, vedere [Visualizzazione o modifica del modello di recupero di un database &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  Nel database **model** non è possibile eseguire le operazioni seguenti:  
   
 -   Aggiunta di file o di filegroup.  

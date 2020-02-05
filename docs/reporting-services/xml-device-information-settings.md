@@ -12,10 +12,10 @@ ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee4e9f30dc190aae78e1e3e763451e42b3a52ecb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571020"
 ---
 # <a name="xml-device-information-settings"></a>Impostazioni relative alle informazioni sul dispositivo XML
@@ -29,14 +29,14 @@ ms.locfileid: "65571020"
 |**Indented**|**true**<br /><br /> **false**|Indica se generare codice XML con rientro. Il valore predefinito **false** genera codice XML compresso senza rientro.|  
 |**OmitNamespace**|**true**<br /><br /> **false**|Indica se omettere lo spazio dei nomi predefinito dai dati XML.<br /><br /> Se true, i dati XML non specificano uno spazio dei nomi predefinito.<br /><br /> Se false, i dati XML specificano uno spazio dei nomi predefinito con il valore della proprietà DataSchema del report. L'impostazione predefinita della proprietà DataSchema corrisponde al nome del report.<br /><br /> Il valore predefinito è**false**.|  
 |**OmitSchema**|**true**<br /><br /> **false**|Indica se omettere la posizione dello schema dai dati XML. Il percorso è l'attributo SchemaLocation.<br /><br /> Il valore predefinito di OmitSchema dipende dal valore di OmitNamespace:<br /><br /> Se OmitNamespace = False, OmitSchema = **False** per impostazione predefinita. L'utente può eseguire l'override dell'impostazione predefinita impostando OmitSchema = True.<br /><br /> Se OmitNamespace = True, OmitSchema funzionerà come **True** indipendentemente dal valore configurato in modo esplicito per OmitSchema.|  
-|**Codifica**|Il nome IANA (Internet Assigned Numbers Authority) di una codifica dei caratteri supportata da .NET Framework.|Il valore predefinito è **UTF-8**. Esempi di altri valori includono ASCII, UTF-7 e UTF-16.|  
+|**Encoding**|Il nome IANA (Internet Assigned Numbers Authority) di una codifica dei caratteri supportata da .NET Framework.|Il valore predefinito è **UTF-8**. Esempi di altri valori includono ASCII, UTF-7 e UTF-16.|  
 |**FileExtension**|Estensione di file da utilizzare per il file generato.||  
 |**Schema**|Il valore **true** indica che viene eseguito il rendering di un elemento XML Schema. Il valore predefinito è **false**.|Indica se viene eseguito il rendering di XSD (XML Schema Definition) o dei dati XML effettivi.|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizzare i parametri di estensione per il rendering in RSReportServer.config.](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizzare i parametri di estensione per il rendering in RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Riferimento tecnico &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810973"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Specifica SDK client VDI per SQL Server in Linux
@@ -65,7 +65,7 @@ Questa sezione contiene le descrizioni di ognuna delle funzioni client. Le descr
 - Sintassi della funzione
 - Elenco parametri
 - Valori restituiti
-- Remarks
+- Osservazioni
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -81,7 +81,7 @@ Questa sezione contiene le descrizioni di ognuna delle funzioni client. Le descr
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| | **name** | Identifica il set di dispositivi virtuali. È necessario seguire le regole per i nomi usati da CreateFileMapping(). È possibile usare qualsiasi carattere eccetto la barra rovesciata (\)). Stringa di caratteri. È consigliabile anteporre alla stringa il nome del prodotto o della società dell'utente e il nome del database. |
+| | **nome** | Identifica il set di dispositivi virtuali. È necessario seguire le regole per i nomi usati da CreateFileMapping(). È possibile usare qualsiasi carattere eccetto la barra rovesciata (\)). Stringa di caratteri. È consigliabile anteporre alla stringa il nome del prodotto o della società dell'utente e il nome del database. |
 | |**cfg** | Configurazione per il set di dispositivi virtuali. Per altre informazioni, vedere la sezione "Configurazione" più avanti in questo documento.
 
 | Valori restituiti | Argomento | Spiegazione
@@ -129,7 +129,7 @@ Questa sezione contiene le descrizioni di ognuna delle funzioni client. Le descr
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| | **name** |Identifica il set di dispositivi virtuali.
+| | **nome** |Identifica il set di dispositivi virtuali.
 | | **ppVirtualDevice** |Quando la funzione riesce, viene restituito un puntatore al dispositivo virtuale. Questo dispositivo viene usato per GetCommand e CompleteCommand.
 
 | Valori restituiti | Argomento | Spiegazione
@@ -217,7 +217,7 @@ Quando questa routine deve bloccarsi per attendere un comando, il thread viene l
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |None | Non applicabile
+| |nessuno | Non applicabile
         
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |
@@ -237,7 +237,7 @@ Quando questa routine deve bloccarsi per attendere un comando, il thread viene l
 
 | Parametri | Argomento | Spiegazione
 | ----- | ----- | ------ |
-| |None |Non applicabile
+| |nessuno |Non applicabile
         
 | Valori restituiti | Argomento | Spiegazione
 | ----- | ----- | ------ |

@@ -18,10 +18,10 @@ ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: fcaad3c2fb8337c64612d5ef5532bcbc4ed4b91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100987"
 ---
 # <a name="starea-geometry-data-type"></a>STArea (tipo di dati geometry)
@@ -41,12 +41,12 @@ ms.locfileid: "68100987"
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  `STArea()` restituisce 0 se un'istanza **geometry** contiene solo figure zero-dimensionali e uni-dimensionali oppure se è vuota. `STArea()` restituisce **NULL** se non è stata inizializzata l'istanza **geometry**.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-computing-the-area-of-a-polygon-instance"></a>A. Calcolo dell'area di un'istanza Polygon  
+### <a name="a-computing-the-area-of-a-polygon-instance"></a>R. Calcolo dell'area di un'istanza Polygon  
  Nell'esempio seguente viene creata un'istanza `Polygon``geometry` e viene calcolata l'area del poligono.  
   
 ```  

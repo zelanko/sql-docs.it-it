@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906837"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -37,7 +37,7 @@ STRING_SPLIT richiede un livello di compatibilità minimo di 130. Quando il live
 
 Per modificare il livello di compatibilità di un database, fare riferimento a [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md).
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
 
@@ -57,7 +57,7 @@ STRING_SPLIT ( string , separator )
 
 Restituisce una tabella a colonna singola le cui righe sono sottostringhe. Il nome della colonna è **value**. Restituisce **nvarchar** se uno qualsiasi degli argomenti di input è **nvarchar** o **nchar**. In caso contrario, restituisce **varchar**. La lunghezza del tipo restituito è uguale a quella dell'argomento di stringa.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 
 **STRING_SPLIT** inserisce una stringa con sottostringhe delimitate e inserisce un carattere da usare come delimitatore o separatore. STRING_SPLIT restituisce una tabella a colonna singola le cui righe contengono le sottostringhe. Il nome della colonna di output è **value**.
 
@@ -84,7 +84,7 @@ In un esempio pratico, l'istruzione SELECT precedente ha restituito la tabella d
 
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-split-comma-separated-value-string"></a>A. Dividere una stringa di valori separati da virgola
+### <a name="a-split-comma-separated-value-string"></a>R. Dividere una stringa di valori separati da virgola
 
 Analizzare un elenco di valori separati da virgole e restituire tutti i token non vuoti:  
 
@@ -102,7 +102,7 @@ STRING_SPLIT restituirà una stringa vuota se non c'è niente tra i separatori. 
 
 La tabella Product ha una colonna con un elenco di tag delimitati da virgole illustrato nell'esempio seguente:  
   
-|ProductId|nome|Tag|  
+|ProductId|Nome|Tag|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,10 +118,10 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|nome|Valore|  
+|ProductId|Nome|Valore|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
-|1|Full-Finger Gloves|road|  
+|1|Full-Finger Gloves|strada|  
 |1|Full-Finger Gloves|touring|  
 |1|Full-Finger Gloves|bike|  
 |2|LL Headset|bike|  

@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5a3fa36b42af67c26a5351a9d8ba7319fc37c4b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984397"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67984397"
   Nega un'autorizzazione a un'entità. Impedisce a tale entità di ereditare l'autorizzazione tramite l'appartenenza al ruolo o al gruppo. DENY ha la precedenza su tutte le autorizzazioni, ma non si applica ai proprietari di oggetti o ai membri del ruolo predefinito del server sysadmin.
   **Nota sulla sicurezza**: non è possibile negare le autorizzazioni ai membri del ruolo predefinito del server sysadmin e ai proprietari di oggetti.
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -132,7 +132,7 @@ Usare la clausola AS principal per indicare che l'entità registrata come l'uten
   
 L'uso di AS in questa istruzione non implica la possibilità di rappresentare un altro utente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La sintassi completa dell'istruzione DENY è complessa. Il diagramma della sintassi precedente è stato semplificato per evidenziarne la struttura. La sintassi completa per negare le autorizzazioni su entità a protezione diretta specifiche è descritta negli argomenti elencati di seguito.  
   
  DENY ha esito negativo se l'argomento CASCADE viene omesso quando si nega un'autorizzazione a un'entità a cui è stata concessa tale autorizzazione con l'opzione GRANT OPTION specificata.  
@@ -170,25 +170,25 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
 |Catalogo full-text|[DENY - Autorizzazioni per il catalogo full-text &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
 |Elenco di parole non significative full-text|[DENY - Autorizzazioni per il catalogo full-text &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
 |Funzione|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Account di accesso|[DENY - Autorizzazioni per entità server &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
+|Login|[DENY - Autorizzazioni per entità server &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)|  
 |Tipo di messaggio|[DENY - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Object|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Oggetto|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Coda|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Associazione al servizio remoto|[DENY - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Role|[DENY - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
+|Ruolo|[DENY - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |Route|[DENY - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|schema|[DENY - Autorizzazioni per schemi &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
+|SCHEMA|[DENY - Autorizzazioni per schemi &#40;Transact-SQL&#41;](../../t-sql/statements/deny-schema-permissions-transact-sql.md)|  
 |Elenco delle proprietà di ricerca|[DENY - Autorizzazioni per l'elenco delle proprietà di ricerca &#40;Transact-SQL&#41;](../../t-sql/statements/deny-search-property-list-permissions-transact-sql.md)|  
 |Server|[DENY - Autorizzazioni per server &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)|  
-|Servizio|[DENY - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
-|Stored procedure|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Service|[DENY - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
+|Stored Procedure|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Chiave simmetrica|[DENY - Autorizzazioni per chiavi simmetriche &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)|  
 |Sinonimo|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Oggetti di sistema|[DENY - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)|  
 |Tabella|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
-|Tipo|[DENY - Autorizzazioni per tipi &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
+|Type|[DENY - Autorizzazioni per tipi &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)|  
 |Utente|[DENY - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
-|Vista|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
+|Visualizza|[DENY - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Raccolta di XML Schema|[DENY - Autorizzazioni per raccolte di XML Schema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

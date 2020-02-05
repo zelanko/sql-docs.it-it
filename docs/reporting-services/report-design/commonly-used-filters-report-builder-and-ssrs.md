@@ -14,10 +14,10 @@ ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0757982d8e1e758a771d7ccdf880c88576f980f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581584"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Filtri di uso comune (Generatore report e SSRS)
@@ -46,8 +46,8 @@ ms.locfileid: "65581584"
   
 |Tipo di parametro|Espressione (filtro)|Operatore|valore|Tipo di dati|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|Valore singolo|`[EmployeeID]`|=|`[@EmployeeID]`|Valore intero|  
-|Multivalore|`[EmployeeID]`|IN|`[@EmployeeID]`|Valore intero|  
+|Valore singolo|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
+|Multivalore|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

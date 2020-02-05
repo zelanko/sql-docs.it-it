@@ -24,18 +24,18 @@ author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1b1706a78402c705eac92f135a492ea352544fe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928966"
 ---
-# <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
+# <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Consente l'inserimento di valori espliciti nella colonna Identity di una tabella.  
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,7 +54,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
  *table_name*  
  Nome di una tabella contenente una colonna Identity.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La proprietà IDENTITY_INSERT può essere impostata su ON per una sola tabella di una sessione. Se in una tabella tale proprietà è già impostata su ON e viene eseguita un'istruzione SET IDENTITY_INSERT ON per un'altra tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza un messaggio di errore per segnalare che la proprietà SET IDENTITY_INSERT è già impostata su ON e indicata la tabella per la quale l'opzione è impostata.  
   
  Se il valore immesso è maggiore del valore Identity corrente per la tabella, il nuovo valore viene utilizzato automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come valore Identity corrente.  

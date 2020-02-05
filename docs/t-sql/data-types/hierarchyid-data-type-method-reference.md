@@ -19,10 +19,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077904"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Guida di riferimento ai metodi per il tipo di dati hierarchyid
@@ -42,7 +42,7 @@ Un valore del tipo di dati **hierarchyid** rappresenta una posizione in un alber
   
 Il tipo **hierarchyid** è disponibile per i client CLR come tipo di dati **SqlHierarchyId**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Il tipo **hierarchyid** codifica logicamente le informazioni su un solo nodo in un albero gerarchico codificando il percorso dalla radice dell'albero al nodo. Tale percorso è rappresentato logicamente come una sequenza di etichette dei nodi di tutti gli elementi figlio visitati dopo la radice. La rappresentazione inizia con una barra. Un percorso che visita solo la radice è rappresentato da una singola barra. Per i livelli sotto la radice, ogni etichetta è codificata come una sequenza di numeri interi separata dai punti. Il confronto tra gli elementi figlio viene eseguito confrontando le sequenze di numeri interi separati da punti in base all'ordinamento del dizionario. Ogni livello è seguito da una barra. Una barra separa quindi i padri dai figli. Ad esempio, gli elementi seguenti sono percorsi **hierarchyid** validi rispettivamente di lunghezza di 1, 2, 2, 3 e 3 livelli:
   
 -   /  

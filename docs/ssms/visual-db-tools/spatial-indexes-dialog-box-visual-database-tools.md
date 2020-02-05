@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Indici spaziali (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Indici spaziali
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4d8ce987edf5595c0f1f75bb0da6d94c5399033
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 40e3625aee9da35d2c29d495346386768b41aee8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263568"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254966"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici spaziali (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ Per informazioni sulle restrizioni alla creazione di indici spaziali, vedere [Pa
 **Indice spaziale selezionato**  
 Consente di visualizzare un elenco degli indici spaziali esistenti. Selezionare un indice per visualizzare le relative proprietà. Se l'elenco è vuoto, significa che non sono stati definiti indici spaziali per la tabella.  
   
-**Aggiungi**  
+**Aggiungere**  
 Consente di creare un nuovo indice spaziale.  
   
 **Elimina**  
@@ -86,10 +87,10 @@ Specifica la coordinata y dell'angolo inferiore sinistro del rettangolo di selez
 Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione** .  
   
 **(Nome)**  
-Visualizza il nome dell'indice spaziale. Quando viene creato un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
+Visualizza il nome dell'indice spaziale. Quando viene creato un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. È possibile modificare il nome in qualsiasi momento.  
   
 **Descrizione**  
-Descrive l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione (**...**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
+Descrive l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione ( **...** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
   
 **Categoria Progettazione tabelle**  
 Se viene espansa, visualizza le informazioni relative alle proprietà dell'indice spaziale.  

@@ -9,10 +9,10 @@ ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9dbecce71d9464267da63dcebb7388cd947a168f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579505"
 ---
 # <a name="report-builder-functions---level-function"></a>Funzioni di Generatore report - Funzione Level
@@ -35,7 +35,7 @@ Level(scope)
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Integer**. Se il parametro *scope* specifica un set di dati o un'area dati oppure un raggruppamento non ricorsivo, ovvero un raggruppamento privo dell'elemento **Parent** , **Level** restituirà 0. Se *scope* viene omesso, restituisce il livello dell'ambito corrente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore restituito dalla funzione **Level** è a base zero, ovvero il primo livello di una gerarchia viene indicato con 0.  
   
  È possibile utilizzare la funzione **Level** per consentire l'applicazione dei rientri in una gerarchia ricorsiva, ad esempio un elenco di dipendenti.  

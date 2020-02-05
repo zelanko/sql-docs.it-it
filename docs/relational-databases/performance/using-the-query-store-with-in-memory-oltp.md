@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251300"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Uso di Archivio query con OLTP in-memoria
@@ -47,7 +47,7 @@ Esistono tuttavia alcuni aspetti specifici di cui gli utenti dovranno tenere con
     
 -   Quando si esegue Archivio query in un database con un carico di lavoro misto, è quindi possibile usare il campo **is_natively_compiled** da [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) per trovare rapidamente i piani di query generati dalla compilazione di codice nativo.  
   
--   La modalità di acquisizione di Archivio query (parametro *QUERY_CAPTURE_MODE* nell'istruzione **ALTER TABLE**) non influisce sulle query da moduli compilati in modo nativo, perché vengono sempre acquisite indipendentemente dal valore configurato. Ciò vale anche per l'impostazione `QUERY_CAPTURE_MODE = NONE`.  
+-   La modalità di acquisizione di Archivio query (parametro*QUERY_CAPTURE_MODE* nell'istruzione **ALTER TABLE** ) non influisce sulle query da moduli compilati in modo nativo, perché vengono sempre acquisite indipendentemente dal valore configurato. Ciò vale anche per l'impostazione `QUERY_CAPTURE_MODE = NONE`.  
   
 -   La durata della compilazione della query acquisita da Archivio query include solo tempo dedicato all'ottimizzazione della query, prima della generazione del codice nativo. Più precisamente, non include il tempo per la compilazione del codice C e la generazione delle strutture interne necessarie per la generazione del codice C.  
   
@@ -138,7 +138,7 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
  [Monitoraggio delle prestazioni tramite Archivio query](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41; (Stored procedure di Archivio query - Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Stored procedure di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Viste del catalogo di Archivio query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   

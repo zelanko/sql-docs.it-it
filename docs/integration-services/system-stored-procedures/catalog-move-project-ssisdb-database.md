@@ -11,10 +11,10 @@ ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bcab50f0e1082ecbff8f19a9261a1d7694616b26
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296759"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project (database SSISDB)
@@ -48,7 +48,7 @@ catalog.move_project [ @source_folder = ] source_folder
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
@@ -70,7 +70,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando un progetto viene spostato da una cartella di origine a una di destinazione, il progetto nella cartella di origine e i riferimenti all'ambiente corrispondenti vengono eliminati. Nella cartella di destinazione vengono creati un progetto e riferimenti all'ambiente identici. I riferimenti all'ambiente relativi verranno risolti in una cartella diversa dopo lo spostamento. I riferimenti assoluti verranno risolti nella stessa cartella dopo lo spostamento.  
   
 > [!NOTE]  

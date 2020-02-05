@@ -9,10 +9,10 @@ ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6f6a30101e4ee1472845d11dc1ab6b7cb3d70bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579534"
 ---
 # <a name="report-builder-functions---last-function"></a>Funzioni di Generatore report - Funzione Last
@@ -38,7 +38,7 @@ Last(expression, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Determinato dal tipo di espressione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione **Last** restituisce il valore finale di un set di dati dopo l'applicazione di tutti i criteri di ordinamento e di filtro all'ambito specificato.  
   
  La funzione **Last** non può essere usata nelle espressioni di filtro di gruppo con altri ambiti, ad eccezione dell'ambito corrente (predefinito).  

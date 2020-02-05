@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b39d5f4e33b9ecae8617cb414854d423945637d6
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952731"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Disinstallare PowerPivot per SharePoint
@@ -74,7 +74,7 @@ ms.locfileid: "71952731"
   
 -   Verificare che il servizio Amministrazione SharePoint sia in esecuzione.  
   
-1.  **Eseguire lo strumento di configurazione:** Si noti che gli strumenti di configurazione vengono elencati solo se nel server locale è installato [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Nel menu **Start** scegliere **Tutti i programmi**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], fare clic su **Strumenti di configurazione**, quindi scegliere una delle voci seguenti:  
+1.  **Eseguire lo strumento di configurazione:** si noti che gli strumenti di configurazione sono elencati solo quando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] è installato nel server locale. Scegliere **Tutti i programmi** dal menu **Start**, fare clic su [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi scegliere una delle voci seguenti:  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "71952731"
   
 6.  Fare clic su **Convalida** per controllare la validità di ogni azione. Se **Convalida** non è disponibile, significa che tutte le azioni sono valide per il sistema.  
   
-7.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione**Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando fa clic su **Esegui** viene visualizzato il seguente messaggio di avviso, in cui si ricorda che le azioni vengono elaborate in modalità batch: "Tutte le impostazioni di configurazione che sono contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?"  
+7.  Fare clic su **Esegui** per eseguire tutte le azioni valide per questa attività. L'opzione**Esegui** è disponibile solo dopo il superamento del controllo di convalida. Quando si fa clic su **Esegui** viene visualizzato l'avviso seguente, che indica che le azioni vengono elaborate in modalità batch: "Tutte le impostazioni di configurazione contrassegnate come valide nello strumento verranno applicate alla farm di SharePoint. Continuare?"  
   
 8.  Per continuare, scegliere **Sì** .  
   
@@ -122,7 +122,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  Esaminare le distribuzioni esistenti per le informazioni seguenti: **Tipo** è Retraction o Deployment, **File** è powerpivotwebapp.wsp o powerpivotfarm.wsp.  
+3.  Esaminare le distribuzioni esistenti cercando le informazioni seguenti: **Tipo** è Retraction o Deployment, **File** è powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
 4.  Per le distribuzioni o i ritiri correlati alle soluzioni [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copiare il valore GUID per **JobId** e incollarlo nel comando seguente. Per copiare il GUID, usare i comandi Contrassegna, Copia e Incolla del menu Modifica della shell:  
   
@@ -147,10 +147,10 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Nel programma di installazione è possibile selezionare l'istanza di **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , quindi scegliere **Analysis Services** e **Integrazione Analysis Services SharePoint** per rimuovere solo quella funzionalità, senza modificare altri elementi.  
   
-##  <a name="bkmk_addin"></a>Passaggio 4: Disinstallare il componente aggiuntivo PowerPivot per SharePoint  
+##  <a name="bkmk_addin"></a> Passaggio 4: Disinstallare il componente aggiuntivo PowerPivot per SharePoint  
  Se la distribuzione di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dispone di due o più server ed è stato installato il componente aggiuntivo [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , disinstallare il componente aggiuntivo [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] da ogni server in cui è stato installato per disinstallare completamente tutti i file di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Per altre informazioni, vedere [Installare o disinstallare il componente aggiuntivo PowerPivot per SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-##  <a name="verify"></a>Passaggio 5: Verificare la disinstallazione  
+##  <a name="verify"></a> Passaggio 5: Verificare la disinstallazione  
   
 1.  In **Gestisci servizi nel server**di Amministrazione centrale connettersi al server da cui è stato disinstallato [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.  
   
