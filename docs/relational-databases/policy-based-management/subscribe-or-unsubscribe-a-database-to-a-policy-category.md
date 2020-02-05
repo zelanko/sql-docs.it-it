@@ -14,10 +14,10 @@ ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6425834958f88e86726f1ec2137bc6917a889671
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558231"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database
@@ -43,7 +43,7 @@ ms.locfileid: "75558231"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>Per sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75558231"
   
 5.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>Per sottoscrivere una categoria di criteri per un database  
   

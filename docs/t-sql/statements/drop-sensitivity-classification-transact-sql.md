@@ -26,10 +26,10 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223589"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -55,10 +55,10 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 Si tratta del nome della colonna del database da cui rimuovere la classificazione. Attualmente è supportata solo la classificazione delle colonne.
     - *schema_name* (facoltativo): si tratta del nome dello schema a cui appartiene la colonna classificata.
-    - *Table_name*: si tratta del nome della tabella a cui appartiene la colonna classificata.
+    - *table_name*: si tratta del nome della tabella a cui appartiene la colonna classificata.
     - *column_name*: si tratta del nome della colonna da cui eliminare la classificazione.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 
 - È possibile eliminare più classificazioni di oggetti usando una sola istruzione 'DROP SENSITIVITY CLASSIFICATION'.
 
@@ -70,7 +70,7 @@ Si tratta del nome della colonna del database da cui rimuovere la classificazion
 ## <a name="examples"></a>Esempi  
 
 
-### <a name="a-dropping-classification-from-a-single-column"></a>A. Eliminazione della classificazione da una singola colonna
+### <a name="a-dropping-classification-from-a-single-column"></a>R. Eliminazione della classificazione da una singola colonna
 
 Nell'esempio seguente la classificazione viene rimossa dalla colonna `dbo.sales.price`.  
 

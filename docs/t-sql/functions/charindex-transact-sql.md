@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 24c005d2b9b95827dce28bc78303a75828270143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105055"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68105055"
 
 Questa funzione esegue la ricerca dell'espressione di un carattere all'interno di una seconda espressione di caratteri, e restituisce la posizione iniziale della prima espressione, se trovata.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,7 +54,7 @@ Espressione **integer** o **bigint** in corrispondenza della quale inizia la ric
 ## <a name="return-types"></a>Tipi restituiti
 **bigint** se *expressionToSearch* è del tipo di dati **varchar(max)** , **varbinary(max)** o **varchar(max)** . In caso contrario, **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Se l'espressione *expressionToFind* o *expressionToSearch* ha un tipo di dati Unicode (**nchar** oppure **nvarchar**) e l'altra espressione non ha tale tipo di dati, la funzione CHARINDEX converte l'altra espressione in un tipo di dati Unicode. Non è possibile usare CHARINDEX con i tipi di dati **image**, **ntext**, o **text**.
   
 Se l'espressione *expressionToFind* o *expressionToSearch* è NULL, CHARINDEX restituisce NULL.
@@ -72,7 +72,7 @@ Quando si usano le regole di confronto SC, *start_location* e il valore restitui
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-starting-position-of-an-expression"></a>A. Restituzione della posizione iniziale di un'espressione  
+### <a name="a-returning-the-starting-position-of-an-expression"></a>R. Restituzione della posizione iniziale di un'espressione  
 In questo esempio viene cercato l'elemento `bicycle` nella variabile di valore stringa ricercata `@document`.
   
 ```sql

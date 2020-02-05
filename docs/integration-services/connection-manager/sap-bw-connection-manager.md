@@ -13,10 +13,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298481"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestione connessione SAP BW
@@ -40,7 +40,7 @@ ms.locfileid: "71298481"
   
 -   Specificare il numero di sistema e host per un server applicazioni oppure specificare server messaggi, gruppo e SID per un gruppo di server con carico bilanciato.  
   
--   Abilitare la registrazione personalizzata delle chiamate di funzione RFC per i componenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Tale registrazione è separata dalla registrazione facoltativa che è possibile abilitare nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Per abilitare la registrazione delle chiamate di funzione RFC, specificare una directory in cui archiviare i file di log creati prima e dopo ogni chiamata di funzione RFC. Questa funzionalità di registrazione crea molti file di log in formato XML. Poiché questi file di log contengono anche tutte le righe di dati trasferiti, è possibile che occupino una grande quantità di spazio su disco. Se non si seleziona una directory di log, la registrazione non è abilitata.  
+-   Abilitare la registrazione personalizzata delle chiamate di funzione RFC per i componenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Tale registrazione è separata dalla registrazione facoltativa che è possibile abilitare nei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per abilitare la registrazione delle chiamate di funzione RFC, specificare una directory in cui archiviare i file di log creati prima e dopo ogni chiamata di funzione RFC. Questa funzionalità di registrazione crea molti file di log in formato XML. Poiché questi file di log contengono anche tutte le righe di dati trasferiti, è possibile che occupino una grande quantità di spazio su disco. Se non si seleziona una directory di log, la registrazione non è abilitata.  
   
     > [!IMPORTANT]  
     >  Se i dati trasferiti contengono informazioni riservate, anche i file di log conterranno tali informazioni riservate.  
@@ -72,7 +72,7 @@ ms.locfileid: "71298481"
   
     -   Fare doppio clic sulla gestione connessione SAP BW.  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic con il tasto destro del mouse sulla gestione connessione SAP BW, quindi scegliere **Modifica**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "71298481"
  **Lingua**  
  Specificare la lingua utilizzata dal sistema. Ad esempio, specificare **IT** per l'italiano.  
   
- **User name**  
+ **Nome utente**  
  Specificare il nome utente che verrà utilizzato per connettersi al sistema.  
   
  **Password**  
@@ -152,6 +152,6 @@ ms.locfileid: "71298481"
  Verificare la connessione utilizzando i valori forniti. Dopo avere fatto clic su **Test connessione**viene visualizzata una finestra di messaggio che indica se la connessione ha avuto esito positivo o negativo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Componenti di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componenti di Microsoft Connector per SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

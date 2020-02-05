@@ -26,10 +26,10 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941840"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "67941840"
 
   Determina la visualizzazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di informazioni sulla quantità di attività del disco generata dalle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67941840"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando STATISTICS IO è impostato su ON, le informazioni statistiche vengono visualizzate, mentre quando è impostato su OFF le informazioni non vengono visualizzate.   
   
  Dopo che questa opzione è stata impostata su ON, tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] restituiscono le informazioni statistiche fino a quando l'opzione non viene impostata su OFF.  
@@ -56,7 +56,7 @@ SET STATISTICS IO { ON | OFF }
 |Elemento di output|Significato|  
 |-----------------|-------------|  
 |**Tabella**|Nome della tabella.|  
-|**Scan count**|Numero di ricerche o analisi avviate dopo aver raggiunto il livello foglia in qualsiasi direzione per recuperare tutti i valori al fine di costruire il set di dati finale per l'output.<br /><br /> Il conteggio analisi è 0 se l'indice usato è un indice univoco o cluster in una chiave primaria e se si sta cercando un solo valore. Ad esempio, `WHERE Primary_Key_Column = <value>`.<br /><br /> Il conteggio analisi è 1 quando si cerca un valore usando un indice cluster non univoco definito in una colonna chiave non primaria. Questo processo viene eseguito per verificare la presenza di valori duplicati per il valore di chiave che si sta cercando. Ad esempio, `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Il conteggio analisi è N quando N è il numero delle diverse ricerche o analisi avviate sul lato sinistro o destro al livello foglia dopo aver individuato un valore di chiave usando la chiave dell'indice.|  
+|**Scan count**|Numero di ricerche o analisi avviate dopo aver raggiunto il livello foglia in qualsiasi direzione per recuperare tutti i valori al fine di costruire il set di dati finale per l'output.<br /><br /> Il conteggio analisi è 0 se l'indice usato è un indice univoco o cluster in una chiave primaria e se si sta cercando un solo valore. Ad esempio: `WHERE Primary_Key_Column = <value>`.<br /><br /> Il conteggio analisi è 1 quando si cerca un valore usando un indice cluster non univoco definito in una colonna chiave non primaria. Questo processo viene eseguito per verificare la presenza di valori duplicati per il valore di chiave che si sta cercando. Ad esempio: `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Il conteggio analisi è N quando N è il numero delle diverse ricerche o analisi avviate sul lato sinistro o destro al livello foglia dopo aver individuato un valore di chiave usando la chiave dell'indice.|  
 |**logical reads**|Numero di pagine lette dalla cache dei dati.|  
 |**physical reads**|Numero di pagine lette dal disco.|  
 |**read-ahead reads**|Numero di pagine inserite nella cache per la query.|  

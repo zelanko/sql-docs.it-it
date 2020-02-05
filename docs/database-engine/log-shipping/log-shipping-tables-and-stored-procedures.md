@@ -16,10 +16,10 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030718"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -39,7 +39,7 @@ ms.locfileid: "68030718"
   
 ## <a name="primary-server-stored-procedures"></a>Stored procedure del server primario  
   
-|Stored procedure|Descrizione|  
+|Stored Procedure|Descrizione|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|Imposta il database primario per una configurazione di log shipping, inclusi il processo di backup, il record di monitoraggio locale e il record di monitoraggio remoto.|  
 |[sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|Aggiunge un nome di database secondario a un database primario esistente.|  
@@ -67,7 +67,7 @@ ms.locfileid: "68030718"
   
 ## <a name="secondary-server-stored-procedures"></a>Stored procedure del server secondario  
   
-|Stored procedure|Descrizione|  
+|Stored Procedure|Descrizione|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|Imposta un database secondario per il log shipping.|  
 |[sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|Imposta le informazioni primarie, aggiunge collegamenti di monitoraggio locale e remoto e crea processi di copia e di ripristino nel server secondario per il database primario specificato.|  
@@ -92,7 +92,7 @@ ms.locfileid: "68030718"
   
 ## <a name="monitor-server-stored-procedures"></a>Stored procedure del server di monitoraggio  
   
-|Stored procedure|Descrizione|  
+|Stored Procedure|Descrizione|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|Crea un processo di avviso di log shipping, se non ne è ancora stato creato uno.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|Rimuove un processo di avviso di log shipping se non è disponibile alcun database primario associato.|  

@@ -22,18 +22,18 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ff9f53c6dd3e0029f2627545c7654ded3219abbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914530"
 ---
-# <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
+# <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce il nome dell'account di accesso utilizzato per la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile utilizzare questa funzione per restituire l'identità dell'account di accesso originale in sessioni in cui si verificano numerosi cambi di contesto espliciti o impliciti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>Tipi restituiti  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione può essere utile per il controllo dell'identità del contesto di connessione originale. A differenza di funzioni quali [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) e [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) che restituiscono il contesto di esecuzione corrente, ORIGINAL_LOGIN restituisce l'identità dell'account di accesso usato per la prima connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in tale sessione.  
  
   

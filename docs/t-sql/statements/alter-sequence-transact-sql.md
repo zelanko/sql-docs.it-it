@@ -19,10 +19,10 @@ ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070328"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68070328"
   
  Una sequenza è un oggetto associato a schema definito dall'utente che genera una sequenza di valori numerici in base a una specifica. Si generano nuovi valori da una sequenza chiamando la funzione NEXT VALUE FOR. Usare **sp_sequence_get_range** per ottenere immediatamente più numeri di sequenza. Per informazioni e scenari in cui vengono usate le istruzioni CREATE SEQUENCE, **sp_sequence_get_range** e la funzione NEXT VALUE FOR, vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -77,7 +77,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  Per altre informazioni sul comportamento della cache, vedere [REATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per informazioni sulla creazione delle sequenze e sulla gestione della cache delle sequenze, vedere [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
  Non è possibile modificare MINVALUE per le sequenze con ordine crescente e MAXVALUE per le sequenze con ordine decrescente in un valore che non consente il valore START WITH della sequenza. Per modificare MINVALUE per una sequenza con ordine crescente in un numero maggiore del valore START WITH o per modificare MAXVALUE di una sequenza con ordine decrescente in un numero più piccolo del valore START WITH, includere l'argomento RESTART WITH per riprendere la sequenza in un punto desiderato compreso nell'intervallo minimo e massimo.  
@@ -96,13 +96,13 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
   
  È possibile trasferire la proprietà di un oggetto sequenza tramite l'istruzione **ALTER AUTHORIZATION**.  
   
-### <a name="audit"></a>Controllare il funzionamento di  
+### <a name="audit"></a>Audit  
  Per controllare **ALTER SEQUENCE**, monitorare **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Esempi  
  Per esempi relativi alla creazione di sequenze e all'uso della funzione **NEXT VALUE FOR** per generare numeri di sequenza, vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
-### <a name="a-altering-a-sequence"></a>A. Alterazione di una sequenza  
+### <a name="a-altering-a-sequence"></a>R. Alterazione di una sequenza  
  Nell'esempio seguente vengono creati uno schema denominato Test e una sequenza denominata TestSeq usando il tipo di dati **int**, con un intervallo di valori compreso tra 100 e 200. La sequenza inizia con 125 e aumenta di 25 ogni volta che viene generato un numero. Poiché la sequenza è configurata per la ripresa del ciclo quando il valore supera il valore massimo di 200, la sequenza riprende dal valore minimo di 100.  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 79d63ac2bca109e1bc1238cee96f8870632c96cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042166"
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (tipo di dati geography)
@@ -41,7 +41,7 @@ ms.locfileid: "68042166"
   
  Tipo CLR restituito: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  I nomi dei tipi OGC che possono essere restituiti da `STGeometryType()` sono **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, **MultiPolygon** e **FullGlobe**.  
   
 ## <a name="examples"></a>Esempi  

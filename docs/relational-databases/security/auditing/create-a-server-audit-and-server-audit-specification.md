@@ -19,10 +19,10 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952472"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del server
@@ -61,13 +61,13 @@ ms.locfileid: "75952472"
   
 -   Dopo essere stata creata, la specifica del controllo del server può essere visualizzata dalle entità con autorizzazione CONTROL SERVER o ALTER ANY SERVER AUDIT, dell'account sysadmin oppure dalle entità che possono accedere esplicitamente al controllo.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...** .  
   
      Nella pagina **Generale** della finestra di dialogo **Crea controllo** sono disponibili le opzioni indicate di seguito.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "75952472"
      Indica il percorso della cartella in cui vengono scritti i dati del controllo quando in **Destinazione controllo** è specificato un file.  
   
      **Puntini di sospensione (...)**  
-     Apre la finestra di dialogo **Trova cartella -**_nome\_server_ per specificare un percorso di file o creare una cartella in cui viene scritto il file di controllo.  
+     Apre la finestra di dialogo **Trova cartella -** _nome\_server_ per specificare un percorso di file o creare una cartella in cui viene scritto il file di controllo.  
   
      **Limite massimo di file di controllo:**  
      **Numero massimo file di rollover**  
@@ -126,7 +126,7 @@ ms.locfileid: "75952472"
   
 1.  In Esplora oggetti fare clic sul segno più per espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo server** e selezionare **Nuova specifica controllo server...**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo server** e selezionare **Nuova specifica controllo server...** .  
   
      Nella finestra di dialogo **Crea specifica controllo server** sono disponibili le opzioni indicate di seguito.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "75952472"
   
 3.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Per creare un controllo del server  
   

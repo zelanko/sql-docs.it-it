@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064539"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
@@ -98,7 +98,7 @@ RETURNS return_data_type
  *function_body*  
  Serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  L'argomento function_body non può contenere un'istruzione SELECT e non può fare riferimento a dati del database.  L'argomento function_body non può fare riferimento a tabelle o viste. Il corpo della funzione può chiamare altre funzioni deterministiche, ma non è possibile chiamare funzioni non deterministiche. 
   
- Nelle funzioni scalari, *function_body* corrisponde a una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che in combinazione restituiscono un valore scalare.  
+ Nelle funzioni scalari *function_body* corrisponde a una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che in combinazione restituiscono un valore scalare.  
   
  *scalar_expression*  
  Specifica il valore scalare restituito dalla funzione scalare.  
@@ -153,7 +153,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Metadati  
  Nella sezione seguente vengono elencate le viste del catalogo di sistema usate per restituire i metadati sulle funzioni definite dall'utente.  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Visualizza la definizione delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente. Esempio:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): visualizza la definizione delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente. Ad esempio:  
   
 ```sql  
 SELECT definition, type   
@@ -165,16 +165,16 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Visualizza le informazioni sui parametri definiti nelle funzioni definite dall'utente.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): visualizza le informazioni sui parametri definiti nelle funzioni definite dall'utente.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Visualizza gli oggetti sottostanti a cui fa riferimento una funzione.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): visualizza gli oggetti sottostanti a cui fa riferimento una funzione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE FUNCTION nel database e dell'autorizzazione ALTER per lo schema in cui la funzione è in fase di creazione.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Uso di una funzione definita dall'utente a valori scalari per modificare un tipo di dati  
+### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>R. Uso di una funzione definita dall'utente a valori scalari per modificare un tipo di dati  
  Questa semplice funzione accetta un tipo di dati **int** come input e restituisce un tipo di dati **decimal(10,2)** come output.  
   
 ```sql  

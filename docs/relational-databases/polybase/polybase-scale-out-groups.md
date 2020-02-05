@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
-ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75623234"
 ---
 # <a name="polybase-scale-out-groups"></a>Gruppi con scalabilità orizzontale di PolyBase
@@ -28,7 +28,7 @@ Un'istanza di SQL Server autonomo con PolyBase può diventare un collo di bottig
   
 Vedere [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) (Introduzione a PolyBase) e [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)(Guida di Polybase).
   
-![gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
+![gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Gruppi con scalabilità orizzontale di PolyBase")  
   
 ## <a name="head-node"></a>Nodo head  
 
@@ -47,7 +47,7 @@ Ad esempio, si supponga di avere una tabella esterna di SQL Server con 12 partiz
 > [!NOTE]
 >  Questa funzionalità è diversa dalle letture con scalabilità orizzontale su Hadoop. 
 
-![gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
+![gruppi con scalabilità orizzontale di PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Gruppi con scalabilità orizzontale di PolyBase")
   
 ## <a name="distributed-query-processing"></a>Elaborazione delle query distribuite  
 

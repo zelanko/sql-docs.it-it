@@ -19,10 +19,10 @@ ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898177"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67898177"
 
   Elimina un oggetto specifica controllo database utilizzando la funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Nome di un oggetto della specifica del controllo esistente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  DROP DATABASE AUDIT SPECIFICATION rimuove i metadati per la specifica del controllo, ma non i dati di controllo raccolti prima dell'esecuzione del comando DROP. Prima che sia possibile eseguirne l'eliminazione, è necessario impostare lo stato di una specifica del controllo del database su OFF usando `ALTER DATABASE AUDIT SPECIFICATION`.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -52,7 +52,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dropping-a-database-audit-specification"></a>A. Eliminazione di una specifica del controllo del database  
+### <a name="a-dropping-a-database-audit-specification"></a>R. Eliminazione di una specifica del controllo del database  
  Nell'esempio seguente viene eliminato un controllo denominato `HIPAA_Audit_DB_Specification`.  
   
 ```  

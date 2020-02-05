@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251600"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurare SQL Server in un'installazione Server Core
@@ -225,7 +225,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Utilizzare gli strumenti di risoluzione dei problemi  
  È possibile usare [SQLdiag Utility](../../tools/sqldiag-utility.md) per raccogliere i log e i file di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e altri tipi di server, nonché per monitorare i server in un intervallo di tempo oppure risolvere problemi specifici dei server. SQLdiag è stata creata per velocizzare e semplificare la raccolta delle informazioni di diagnostica necessarie per il Servizio Supporto Tecnico Clienti Microsoft.  
   
- È possibile avviare l'utilità nel prompt dei comandi dell'amministratore in Server Core, usando la sintassi specificata nell'articolo: [Utilità di SQLdiag](../../tools/sqldiag-utility.md).  
+ È possibile avviare l'utilità nel prompt dei comandi dell'amministratore in Server Core, usando la sintassi specificata nell'articolo [Utilità SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

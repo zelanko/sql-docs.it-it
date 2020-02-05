@@ -13,10 +13,10 @@ ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bfe32fd730d4c81e2df9275ba2cbcc879978808a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940471"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>Eliminare i criteri della gestione basata su criteri
@@ -27,7 +27,7 @@ ms.locfileid: "67940471"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per eliminare i criteri tramite:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67940471"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-delete-a-policy"></a>Per eliminare i criteri  
   

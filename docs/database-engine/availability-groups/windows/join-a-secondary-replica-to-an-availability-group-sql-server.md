@@ -17,10 +17,10 @@ ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 560b808bc22145993ea7ae713ce45d650a0933d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68003728"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Creare un join di una replica secondaria a un gruppo di disponibilità Always On
@@ -40,7 +40,7 @@ ms.locfileid: "68003728"
 ##  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per creare un join di una replica di disponibilità a un gruppo di disponibilità**  
   
 1.  In Esplora oggetti connettersi all'istanza del server in cui viene ospitata la replica secondaria e fare clic sul nome del server per espandere il relativo albero.  
@@ -55,7 +55,7 @@ ms.locfileid: "68003728"
   
 6.  Per creare un join della replica secondaria al gruppo di disponibilità, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per creare un join di una replica di disponibilità a un gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica secondaria.  
@@ -75,7 +75,7 @@ ms.locfileid: "68003728"
     > [!NOTE]  
     >  Per un esempio di questa istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] impiegata in un contesto, vedere [Creare un gruppo di disponibilità &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per creare un join di una replica di disponibilità a un gruppo di disponibilità**  
   
  Nel provider PowerShell per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  

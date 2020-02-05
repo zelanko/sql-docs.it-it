@@ -21,10 +21,10 @@ ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 27f6d8f947dc0ad5e25ddf53ac63e5f40b332c2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013216"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Opzione di configurazione del server affinity mask
@@ -36,7 +36,7 @@ ms.locfileid: "68013216"
   
  Per eseguire il multitasking, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sposta talvolta thread tra processori diversi. Sebbene in questo modo venga garantita una maggiore efficienza del sistema operativo, questa attività può comportare una riduzione delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel caso di carichi di lavoro elevati, poiché la cache di ogni processore viene ricaricata più volte con dati. In tali casi, l'assegnazione dei processori a thread specifici consente di aumentare le prestazioni, in quanto le operazioni di ricaricamento dei processori vengono eliminate e si riduce la migrazione dei thread tra i processori, limitando lo scambio di contesto. Questo tipo di associazione tra un thread e un processore è definito "affinità processori".  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'affinità processori tramite due opzioni Affinity mask: Affinity mask (nota anche come **CPU Affinity mask**) e Affinity I/O mask. Per altre informazioni sull'opzione Affinity I/O mask, vedere [Opzione di configurazione del server Affinity Input-Output](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md). Il supporto di CPU e Affinity I/O per server con 33 fino a 64 processori richiede rispettivamente l'uso aggiuntivo dell' [opzione di configurazione del server affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) e dell' [opzione di configurazione del server affinity64 Input-Output mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'affinità processori tramite due opzioni Affinity mask: Affinity mask (nota anche come **Affinity CPU mask**) e Affinity I/O mask. Per altre informazioni sull'opzione Affinity I/O mask, vedere [Opzione di configurazione del server Affinity Input-Output](../../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md). Il supporto di Affinity CPU e I/O per server con 33 fino a 64 processori richiede rispettivamente l'uso aggiuntivo dell'[opzione di configurazione del server affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) e dell'[opzione di configurazione del server affinity64 Input-Output mask](../../database-engine/configure-windows/affinity64-input-output-mask-server-configuration-option.md).  
   
 > [!NOTE]  
 >  Il supporto dell'affinità nei server dotati di un numero di processori compreso tra 33 e 64 è disponibile solo su sistemi operativi a 64 bit.  
@@ -45,7 +45,7 @@ ms.locfileid: "68013216"
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile configurare l'opzione affinity mask senza che sia necessario riavviare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si utilizza sp_configure è necessario eseguire RECONFIGURE oppure RECONFIGURE WITH OVERRIDE dopo aver impostato un'opzione di configurazione. Se si utilizza [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la modifica dell'opzione affinity mask non richiede il riavvio.  
   
- Le modifiche alle maschere di affinità vengono eseguite in modo dinamico, consentendo l'avvio e l'arresto a richiesta delle utilità di pianificazione della CPU che associano i thread dei processi all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa situazione si può verificare quando le condizioni nel server vengono modificate. Ad esempio, se nel server viene aggiunta una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , potrebbe essere necessario modificare l'opzione affinity mask per ridistribuire il carico dei processori.  
+ Le modifiche alle maschere di affinità vengono eseguite in modo dinamico, consentendo l'avvio e l'arresto a richiesta delle utilità di pianificazione della CPU che associano i thread dei processi all'interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa situazione si può verificare quando le condizioni nel server vengono modificate. Ad esempio, se nel server viene aggiunta una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], potrebbe essere necessario modificare l'opzione affinity mask per ridistribuire il carico dei processori.  
   
  Per le modifiche alle maschere di bit di affinità, è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abiliti una nuova utilità di pianificazione della CPU e disabiliti quella esistente. È quindi possibile elaborare nuovi batch nelle nuove utilità di pianificazione o in quelle rimanenti.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "68013216"
   
  Per garantire che la nuova maschera di affinità sia valida, il comando RECONFIGURE verifica che le affinità di CPU e I/O si escludano a vicenda. In caso contrario, nella sessione del client e nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un messaggio di errore che indica che l'impostazione non è corretta. Per consentire affinità di CPU e di I/O che non si escludono a vicenda, è possibile eseguire le opzioni RECONFIGURE WITH OVERRIDE.  
   
- Se si specifica una maschera di affinità che tenta di eseguire il mapping a una CPU non esistente, il comando RECONFIGURE visualizza un messaggio di errore nella sessione client e nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . In questo caso, l'utilizzo dell'opzione RECONFIGURE WITH OVERRIDE non avrà alcun effetto e verrà visualizzato di nuovo lo stesso errore di configurazione.  
+ Se si specifica una maschera di affinità che tenta di eseguire il mapping a una CPU non esistente, il comando RECONFIGURE visualizza un messaggio di errore nella sessione client e nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo caso, l'utilizzo dell'opzione RECONFIGURE WITH OVERRIDE non avrà alcun effetto e verrà visualizzato di nuovo lo stesso errore di configurazione.  
   
  È inoltre possibile escludere l'attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da processori ai quali sono stati assegnati carichi di lavoro specifici nei sistemi operativi Windows 2000 o Windows Server 2003. Se si imposta su 1 un bit corrispondente a un processore, il processore viene selezionato dal Motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'assegnazione di thread. Se si imposta **affinity mask** su 0 (impostazione predefinita), l'affinità del thread viene impostata dagli algoritmi di pianificazione di Microsoft Windows 2000 o Windows Server 2003. Se l'opzione della **maschera di affinità** viene impostata su un valore diverso da zero, l'affinità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta il valore come maschera di bit che indica che i processori sono selezionabili.  
   
- L'esclusione dei thread [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da processori specifici consente a Microsoft Windows 2000 o Windows Server 2003 di valutare adeguatamente la gestione dei processi specifici di Windows. Ad esempio, per un server con 8 CPU nel quale sono in esecuzione due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (istanza A e B), l'amministratore di sistema può utilizzare l'opzione affinity mask per assegnare il primo set di 4 CPU all'istanza A e il secondo set di 4 CPU all'istanza B. Per configurare più di 32 processori, impostare entrambe le opzioni affinity mask e affinity64 mask. I valori della **maschera di affinità** sono i seguenti:  
+ L'esclusione dei thread [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da processori specifici consente a Microsoft Windows 2000 o Windows Server 2003 di valutare adeguatamente la gestione dei processi specifici di Windows. Ad esempio, per un server con 8 CPU nel quale sono in esecuzione due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (istanza A e B), l'amministratore di sistema può utilizzare l'opzione affinity mask per assegnare il primo set di 4 CPU all'istanza A e il secondo set di 4 CPU all'istanza B. Per configurare più di 32 processori, impostare entrambe le opzioni affinity mask e affinity64 mask. I valori della **affinity mask** sono i seguenti:  
   
 -   Un' **affinity mask** da un byte copre fino a 8 CPU in un computer multiprocessore.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68013216"
 -   0 nell'opzione affinity mask e 1 nell'opzione affinity I/O mask.  
   
 > [!CAUTION]  
->  Non configurare l'affinità di CPU nel sistema operativo Windows e contemporaneamente l'opzione affinity mask in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le due impostazioni mirano a ottenere lo stesso risultato e, se le configurazioni sono incoerenti, potrebbero causare risultati imprevisti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La configurazione ottimale dell'affinità di CPU in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]può essere ottenuta usando l'opzione sp_configure.  
+>  Non configurare l'affinità di CPU nel sistema operativo Windows e contemporaneamente l'opzione affinity mask in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le due impostazioni mirano a ottenere lo stesso risultato e, se le configurazioni sono incoerenti, potrebbero causare risultati imprevisti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La configurazione ottimale dell'affinità di CPU in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere ottenuta usando l'opzione sp_configure.  
   
 ## <a name="example"></a>Esempio  
  Si supponga di configurare l'opzione affinity mask. Se, ad esempio, i processori 1, 2 e 5 sono selezionati come disponibili tramite l'impostazione dei bit 1, 2 e 5 su 1 e l'impostazione dei bit 0, 3, 4, 6 e 7 su 0, viene specificato il valore esadecimale 0x26 oppure l'equivalente decimale `38` . Numerare i bit da destra a sinistra. L'opzione affinity mask inizia a contare i processori da 0 a 31. Nell'esempio seguente il contatore `1` rappresenta il secondo processore nel server.  
@@ -127,9 +127,9 @@ GO
  L'affinità dinamica è strettamente correlata alle licenze per le CPU. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente di configurare le opzioni affinity mask in modo da violare i criteri di licenza.  
   
 ### <a name="startup"></a>Avvio  
- Se un'opzione affinity mask specificata viola i criteri di licenza durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o durante il collegamento di database, il livello del motore completerà il processo di avvio o l'operazione di collegamento o ripristino del database e successivamente reimposterà il valore di esecuzione di sp_configure per l'opzione affinity mask su zero, visualizzando un messaggio di errore nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Se un'opzione affinity mask specificata viola i criteri di licenza durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o durante il collegamento di database, il livello del motore completerà il processo di avvio o l'operazione di collegamento o ripristino del database e successivamente reimposterà il valore di esecuzione di sp_configure per l'opzione affinity mask su zero, visualizzando un messaggio di errore nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="reconfigure"></a>Riconfigurazione  
+### <a name="reconfigure"></a>Riconfigurare  
  Se un'opzione affinity mask specificata viola i criteri di licenza durante l'esecuzione del comando [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, nella sessione client e nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà visualizzato un messaggio di errore che richiede all'amministratore del database di riconfigurare l'opzione. In questo caso il comando RECONFIGURE WITH OVERRIDE non verrà accettato.  
   
 ## <a name="see-also"></a>Vedere anche  

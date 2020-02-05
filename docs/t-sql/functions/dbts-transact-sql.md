@@ -19,10 +19,10 @@ ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136025"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68136025"
 
 Questa funzione restituisce il valore del tipo di dati **timestamp** corrente per il database corrente. Il database corrente avrà un valore di timestamp univoco garantito.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ Questa funzione restituisce il valore del tipo di dati **timestamp** corrente pe
 ## <a name="return-types"></a>Tipi restituiti
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 @@DBTS restituisce l'ultimo valore timestamp del database corrente. Quando si inserisce o si aggiorna una riga che include una colonna **timestamp** viene generato un nuovo valore timestamp.
   
 Le modifiche apportate ai livelli di isolamento delle transazioni non interessano la funzione @@DBTS.

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fe633bc88750173f974ccf41a75f4bcad7e5c03b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075508"
 ---
 # <a name="create-nested-triggers"></a>Creazione di trigger annidati
@@ -36,7 +36,7 @@ ms.locfileid: "68075508"
   
  Se è consentito l'utilizzo di trigger nidificati e un trigger della catena avvia un ciclo infinito, il livello di nidificazione viene superato e il trigger viene interrotto.  
   
- È possibile utilizzare i trigger nidificati per eseguire funzioni di manutenzione, utili quali l'archiviazione di una copia di backup delle righe interessate da un trigger precedente. È ad esempio possibile creare un trigger su `PurchaseOrderDetail` per salvare una copia di backup delle righe di `PurchaseOrderDetail` eliminate dal trigger `delcascadetrig` . Se il trigger `delcascadetrig` è attivo, l'eliminazione di `PurchaseOrderID` 1965 dalla tabella `PurchaseOrderHeader` implica l'eliminazione della riga o delle righe corrispondenti da `PurchaseOrderDetail`. Per salvare i dati eliminati in un'altra tabella creata separatamente denominata `PurchaseOrderDetail` , creare un trigger DELETE su `del_save`. Esempio:  
+ È possibile utilizzare i trigger nidificati per eseguire funzioni di manutenzione, utili quali l'archiviazione di una copia di backup delle righe interessate da un trigger precedente. È ad esempio possibile creare un trigger su `PurchaseOrderDetail` per salvare una copia di backup delle righe di `PurchaseOrderDetail` eliminate dal trigger `delcascadetrig` . Se il trigger `delcascadetrig` è attivo, l'eliminazione di `PurchaseOrderID` 1965 dalla tabella `PurchaseOrderHeader` implica l'eliminazione della riga o delle righe corrispondenti da `PurchaseOrderDetail`. Per salvare i dati eliminati in un'altra tabella creata separatamente denominata `PurchaseOrderDetail` , creare un trigger DELETE su `del_save`. Ad esempio:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  

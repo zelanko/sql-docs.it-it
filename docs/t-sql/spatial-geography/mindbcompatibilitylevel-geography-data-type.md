@@ -18,10 +18,10 @@ ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a8aaa21498c95c215de5e5a49f9ced8089b4c71e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223664"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (tipo di dati geography)
@@ -41,12 +41,12 @@ ms.locfileid: "68223664"
   
  Tipo CLR restituito: **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare `MinDbCompatibilityLevel()` per verificare la compatibilità di un oggetto spaziale prima di modificare il livello di compatibilità in un database. Un tipo **geography** non valido restituisce 110.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. Verifica della compatibilità del tipo CircularString con livello di compatibilità 110  
+### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>R. Verifica della compatibilità del tipo CircularString con livello di compatibilità 110  
  Nell'esempio seguente viene verificata la compatibilità di un'istanza `CircularString` con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000610"
 ---
 # <a name="read-database-engine"></a>Read (Motore di database)
@@ -42,7 +42,7 @@ void Read( BinaryReader r )
 ## <a name="return-types"></a>Tipi restituiti
  **Tipo CLR restituito: void**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Read non esegue la convalida dell'input. Se viene specificato un input binario non valido, Read può generare un'eccezione oppure può avere esito positivo ma restituire un oggetto **SqlHierarchyId** non valido i cui metodi possono restituire risultati imprevisti o generare un'eccezione.  
   
  Read può essere chiamato solo su un oggetto **SqlHierarchyId** appena creato.  

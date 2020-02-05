@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298218"
 ---
 # <a name="odbc-destination"></a>Destinazione ODBC
@@ -36,16 +36,16 @@ ms.locfileid: "71298218"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Opzioni di caricamento  
  La destinazione ODBC può utilizzare uno tra due moduli di caricamento di accesso. Impostare la modalità in [Editor origine ODBC &#40;pagina Gestione connessione #41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Le due modalità sono:  
   
--   **Batch**: in questa modalità la destinazione ODBC tenta di usare il metodo di inserimento più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
+-   **Batch**: in questa modalità il componente tenta di usare il metodo di inserimento più efficiente in base alle funzionalità del provider ODBC rilevate. Per la maggior parte degli attuali provider ODBC, ciò significa preparare un'istruzione INSERT con parametri e quindi usare un'associazione di parametri di matrice a livello di riga, in cui le dimensioni della matrice sono determinate dalla proprietà **BatchSize** . Se si seleziona **Batch** e il provider non supporta questo metodo, la destinazione ODBC passa automaticamente alla modalità **Riga per riga** .  
   
--   **Riga per riga**: in questa modalità, la destinazione ODBC prepara un'istruzione INSERT con parametri e usa **SQL Execute** per inserire le righe una per volta.  
+-   **Riga per riga**: in questa modalità, tramite la destinazione ODBC viene preparata un'istruzione INSERT con parametri e viene usato **SQL Execute** per inserire le righe una per volta.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  La destinazione ODBC include un output degli errori. L'output degli errori del componente include le colonne di output seguenti:  
   
--   **Error Code** (Codice errore): numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database di origine. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
+-   **Error Code**: numero che corrisponde all'errore corrente. Per un elenco degli errori, vedere la documentazione per il database di origine. Per un elenco dei codici di errore SSIS, vedere la Guida di riferimento ai messaggi e ai codici di errore SSIS.  
   
--   **Error Column**(Colonna errore): colonna di origine che causa l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che provoca l'errore (per gli errori di conversione).  
   
 -   Colonne dei dati di output standard.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "71298218"
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |Nome tabella - Batch|Selezionare questa opzione per configurare la destinazione ODBC per l'utilizzo della modalità batch. Se si seleziona questa opzione, sono disponibili le opzioni seguenti.|  
-||**Nome tabella o vista**: selezionare una tabella o vista disponibile nell'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o usare il carattere jolly (\*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si vuole usare.<br /><br /> **Dimensioni batch**: tipo di dimensioni del batch per il caricamento bulk. Si tratta del numero di righe caricato come un batch|  
+||**Nome tabella o vista**: selezionare una tabella o vista disponibile nell'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o usare il carattere jolly (\*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si vuole usare.<br /><br /> **Dimensioni batch**: digitare la dimensione del batch per il caricamento bulk. Si tratta del numero di righe caricato come un batch|  
 |Nome tabella - Riga per riga|Selezionare questa opzione per configurare la destinazione ODBC per l'inserimento di una riga per volta nella tabella di destinazione. Se si seleziona questa opzione, è disponibile l'opzione seguente.|  
-||**Nome tabella o vista**: selezionare una tabella o vista disponibile dal database nell'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.|  
+||**Nome tabella o vista**: selezionare una tabella o vista disponibile del database dall'elenco.<br /><br /> Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.|  
   
 #### <a name="preview"></a>Anteprima  
  Fare clic su **Anteprima** per visualizzare fino a 200 dati per la tabella selezionata.  
@@ -155,7 +155,7 @@ ms.locfileid: "71298218"
 #### <a name="inputoutput"></a>Input/Output  
  Consente di visualizzare il nome dell'origine dei dati.  
   
-#### <a name="column"></a>colonna  
+#### <a name="column"></a>Colonna  
  Non usato.  
   
 #### <a name="error"></a>Errore  

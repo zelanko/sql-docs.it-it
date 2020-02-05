@@ -24,10 +24,10 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bed89f0cade880f41122e921fbda146ae2abc28d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296973"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilizzo di immagini con l'attività Script
@@ -37,14 +37,14 @@ ms.locfileid: "71296973"
 
   Un database di prodotti o utenti include di frequente immagini oltre a testo e dati numerici. Lo spazio dei nomi **System.Drawing** in Microsoft .NET Framework fornisce le classi per la modifica delle immagini.  
   
- [Esempio 1: Convertire immagini in formato JPEG](#example1)  
+ [Esempio 1: convertire immagini in formato JPEG](#example1)  
   
- [Esempio 2: Creare e salvare le immagini di anteprima](#example2)  
+ [Esempio 2: creare e salvare le immagini di anteprima](#example2)  
   
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Descrizione dell'esempio 1: Convertire immagini in formato JPEG  
+##  <a name="example1"></a> Descrizione dell'esempio 1: convertire immagini in formato JPEG  
  Nell'esempio seguente viene aperto un file di immagine specificato da una variabile e lo salva come file JPEG compresso tramite un codificatore. Il codice per recuperare le informazioni sul codificatore viene incapsulato in una funzione privata.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Per configurare questa attività Script di esempio per l'utilizzo con un solo file di immagine  
@@ -153,7 +153,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Descrizione dell'esempio 2: Creare e salvare le immagini di anteprima  
+##  <a name="example2"></a> Descrizione dell'esempio 2: creare e salvare le immagini di anteprima  
  Nell'esempio seguente viene aperto un file di immagine specificato da una variabile, viene creata un'anteprima dell'immagine pur mantenendo una proporzione costante e viene salvata l'anteprima con un nome file modificato. Il codice che calcola l'altezza e larghezza dell'anteprima mantenendo una proporzione costante viene incapsulato in una subroutine privata.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Per configurare questa attività Script di esempio per l'utilizzo con un solo file di immagine  

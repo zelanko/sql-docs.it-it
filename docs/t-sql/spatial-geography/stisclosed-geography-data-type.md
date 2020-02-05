@@ -18,10 +18,10 @@ ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: dbc1bd923b0e86acfd0fbae995bd6fdbd16816a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042030"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (tipo di dati geography)
@@ -43,7 +43,7 @@ ms.locfileid: "68042030"
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce 0 se una figura di un'istanza **geography** è costituita da punti o se l'istanza è vuota.  
   
  Questo metodo restituisce True se un'istanza **FullGlobe** è **Polygon** o un altro tipo di istanza.  

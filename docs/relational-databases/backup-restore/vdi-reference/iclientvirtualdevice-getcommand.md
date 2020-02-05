@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: a861377924b4bb3cc1c1d2a4b83eba660fbf99e0
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847592"
 ---
 # <a name="iclientvirtualdevicegetcommand-vdi"></a>IClientVirtualDevice::GetCommand (VDI)
@@ -46,7 +46,7 @@ HRESULT IClientVirtualDevice::GetCommand (
 | VD_E_TIMEOUT | Nessun comando disponibile e timeout scaduto. |
 | VD_E_ABORT | Il client o il server ha usato SignalAbort per forzare l'arresto. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 La restituzione di VD_E_CLOSE indica che SQL Server ha chiuso il dispositivo. Fa parte della normale procedura di arresto. Dopo la chiusura di tutti i dispositivi, il client richiama IClientVirtualDeviceSet2::Close per chiudere il set di dispositivi virtuali.
 

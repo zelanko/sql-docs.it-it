@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072383"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68072383"
 
   Aggiorna il valore attualmente configurato (la colonna **config_value** del set di risultati di **sp_configure**) di un'opzione di configurazione modificata tramite la stored procedure di sistema **sp_configure**. Poiché con alcune opzioni di configurazione è necessario arrestare e riavviare il server per aggiornare il valore corrente, RECONFIGURE non aggiorna sempre il valore corrente (la colonna **run_value** del set di risultati di **sp_configure**) per un valore di configurazione modificato.    
     
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Sintassi    
     
@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Praticamente qualsiasi opzione di configurazione può essere riconfigurata tramite l'opzione WITH OVERRIDE, salvo alcuni casi che possono generare errori irreversibili. Ad esempio l'opzione **min server memory** non può essere configurata con un valore superiore a quello specificato nell'opzione di configurazione **max server memory**.
       
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Osservazioni    
  **sp_configure** non accetta nuovi valori di opzioni di configurazione non compresi nell'intervallo valido previsto per ogni opzione di configurazione.    
     
  L'istruzione RECONFIGURE non è consentita in una transazione esplicita o implicita. Quando si riconfigurano diverse opzioni contemporaneamente, in caso di esito negativo di una o più delle operazioni di riconfigurazione nessuna delle operazioni di riconfigurazione avrà effetto.    

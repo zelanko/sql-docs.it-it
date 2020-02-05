@@ -18,10 +18,10 @@ ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 3aa054a04b236c419b833df42ba668926e97e312
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030867"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (tipo di dati geometry)
@@ -41,7 +41,7 @@ Restituisce true se il formato di un'istanza **geometry** è corretto, in base a
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il tipo OGC di un'istanza **geometry** può essere determinato richiamando [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produce solo istanze **geometry** valide, ma consente l'archiviazione e il recupero di istanze non valide. Un'istanza valida che rappresenta lo stesso set di punti di qualsiasi istanza non valida può essere recuperata utilizzando il metodo `MakeValid()`.  

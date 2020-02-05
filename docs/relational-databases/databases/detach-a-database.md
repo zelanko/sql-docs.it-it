@@ -16,10 +16,10 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006197"
 ---
 # <a name="detach-a-database"></a>Scollegare un database
@@ -32,7 +32,7 @@ ms.locfileid: "68006197"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per scollegare un database utilizzando:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68006197"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-detach-a-database"></a>Per scollegare un database  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68006197"
      **Database da scollegare**  
      Consente di visualizzare i database da scollegare.  
   
-     **Database Name**  
+     **Nome database**  
      Consente di visualizzare il nome del database da scollegare.  
   
      **Interrompi connessioni**  
@@ -78,24 +78,24 @@ ms.locfileid: "68006197"
      **Mantieni cataloghi full-text**  
      Per impostazione predefinita, con l'operazione di scollegamento è possibile mantenere eventuali cataloghi full-text associati al database. Per rimuoverli, deselezionare la casella di controllo **Mantieni cataloghi full-text** . Questa opzione è visualizzata solo quando si aggiorna un database da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-     **Stato**  
+     **Status**  
      Consente di visualizzare uno degli stati seguenti: **Pronto** o **Non pronto**.  
   
-     **Message**  
+     **Messaggio**  
      Nella colonna **Messaggio** possono essere visualizzate informazioni sul database simili alle seguenti:  
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando per un database esistono una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza _<number_of_active_connections>_ **Connessioni attive**, ad esempio: **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando per un database esistono una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza _Connessioni attive:_ **<numero_di_connessioni_attive>** , ad esempio **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   
 4.  Quando si è pronti per scollegare il database, fare clic su **OK**.  
   
 > [!NOTE]  
->  Il database scollegato rimarrà visibile nel nodo **Database** di Esplora oggetti fino all'aggiornamento della vista. È possibile aggiornare la vista in qualsiasi momento: Fare clic nel riquadro Esplora oggetti, scegliere **Vista** dalla barra dei menu, quindi **Aggiorna**.  
+>  Il database scollegato rimarrà visibile nel nodo **Database** di Esplora oggetti fino all'aggiornamento della vista. Per aggiornare la vista in qualsiasi momento, fare clic sul riquadro Esplora oggetti, scegliere **Vista** dalla barra dei menu e quindi **Aggiorna**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-detach-a-database"></a>Per scollegare un database  
   

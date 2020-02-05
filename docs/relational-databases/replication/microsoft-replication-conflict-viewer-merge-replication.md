@@ -14,10 +14,10 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321958"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizzatore conflitti di replica Microsoft (Merge repliche)
@@ -73,7 +73,7 @@ ms.locfileid: "75321958"
  Selezionare questa opzione per visualizzare le prime cinque colonne e tutte le colonne contenenti conflitti. Questa opzione risulta utile quando nella tabella sono presenti numerose colonne, ma si desidera visualizzare solo le colonne più significative per la risoluzione dei conflitti. Le prime cinque colonne vengono sempre visualizzate perché i campi di identificazione di una riga, ad esempio i campi del nome o della chiave primaria, sono solitamente inclusi tra le prime colonne della tabella.  
   
  **Visualizza informazioni sulla colonna** ( **…** )  
- Fare clic per visualizzare le informazioni sulla colonna: **Nome tabella**, **Nome colonna**, **Tipo di dati** e **Valore colonna**. È possibile modificare**Valore colonna** , purché il valore non sia visualizzato in modalità di sola lettura.  
+ Fare clic per visualizzare le informazioni sulla colonna, ovvero **Nome tabella**, **Nome colonna**, **Tipo di dati**e **Valore colonna**. È possibile modificare**Valore colonna** , purché il valore non sia visualizzato in modalità di sola lettura.  
   
  **Invia riga in conflitto confermata**  
  Fare clic su questo pulsante per mantenere la riga confermata dal sistema di risoluzione dei conflitti. Prima di fare clic su questo pulsante, è possibile modificare il valore di ogni colonna non visualizzata come di sola lettura.  

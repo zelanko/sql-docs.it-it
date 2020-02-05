@@ -11,10 +11,10 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 518835df5ae78a39360cad1a6aab1db35be675ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292307"
 ---
 # <a name="look-up-rfc-destination"></a>Cerca destinazione RFC
@@ -57,6 +57,6 @@ ms.locfileid: "71292307"
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Editor destinazione SAP BW &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Guida sensibile al contesto di Microsoft Connector per SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

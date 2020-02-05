@@ -16,15 +16,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564788"
 ---
 # <a name="recompile-a-stored-procedure"></a>Ricompilare una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  In questo argomento viene descritto come ricompilare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Questa operazione può essere eseguita in tre modi: usando l'opzione **WITH RECOMPILE** nella definizione della stored procedure o quando viene chiamata la stored procedure, tramite l'hint per la query **RECOMPILE** nelle singole istruzioni o usando la stored procedure di sistema **sp_recompile**. Questo argomento illustra l'uso dell'opzione WITH RECOMPILE quando si crea una definizione di stored procedure e si esegue una stored procedure esistente. Descrive anche l'uso della stored procedure di sistema sp_recompile per ricompilare una stored procedure esistente.  
+  In questo argomento viene descritto come ricompilare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile eseguire questa operazione in tre modi: usando l'opzione **WITH RECOMPILE** nella definizione della stored procedure o quando viene chiamata la stored procedure, tramite l'hint per la query **RECOMPILE** nelle singole istruzioni o usando la stored procedure di sistema **sp_recompile** . Questo argomento illustra l'uso dell'opzione WITH RECOMPILE quando si crea una definizione di stored procedure e si esegue una stored procedure esistente. Descrive anche l'uso della stored procedure di sistema sp_recompile per ricompilare una stored procedure esistente.  
   
  **Contenuto dell'articolo**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74564788"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Quando una stored procedure viene compilata per la prima volta o viene ricompilata, il piano di query della stored procedure viene ottimizzato per lo stato corrente del database e dei relativi oggetti. Se i dati o la struttura di un database vengono modificati significativamente, con la ricompilazione di una stored procedure viene aggiornato e ottimizzato il piano di query della stored procedure per tali modifiche. Ciò può migliorare le prestazioni di elaborazione della stored procedure.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74564788"
  Stored procedure di sistema**sp_recompile**  
  È richiesta l'autorizzazione ALTER per la stored procedure specificata.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
 
 1. Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

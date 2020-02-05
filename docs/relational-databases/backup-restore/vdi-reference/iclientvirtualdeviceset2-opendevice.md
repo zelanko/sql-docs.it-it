@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: aff46d7240cf504b02e75d91b75d0ba746a24752
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847572"
 ---
 # <a name="iclientvirtualdeviceset2opendevice-vdi"></a>IClientVirtualDeviceSet2::OpenDevice (VDI)
@@ -48,7 +48,7 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 | VD_E_PROTOCOL | Il set non è nello stato di inizializzazione o questo particolare dispositivo è già aperto. |
 | VD_E_INVALID | Il nome del dispositivo non è valido. Non è uno dei nomi noti inclusi nel set. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 VD_E_OPEN può essere restituito senza problemi. Il client può chiamare OpenDevice per mezzo di un ciclo finché questo codice non viene restituito.
 Se sono configurati più dispositivi, ad esempio n dispositivi, il set di dispositivi virtuali restituirà n interfacce di dispositivo univoche. Il primo dispositivo ha lo stesso nome del set di dispositivi virtuali. Gli altri dispositivi vengono denominati come specificato con le clausole VIRTUAL_DEVICE dell'istruzione BACKUP/RESTORE.

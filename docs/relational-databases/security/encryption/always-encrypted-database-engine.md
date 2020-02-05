@@ -18,16 +18,16 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef8514d7d18478c7fcb78cb5197c5b39602c9610
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254827"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "|::ref1::|")  
+  ![Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  Always Encrypted è una funzionalità progettata per proteggere dati sensibili, ad esempio numeri di carta di credito, codici fiscali, passaporti, ecc. archiviati in database [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Always Encrypted consente ai client di crittografare dati sensibili all'interno di applicazioni client senza mai rivelare le chiavi di crittografia a [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Di conseguenza, Always Encrypted crea una separazione tra chi possiede i dati e può visualizzarli e chi gestisce i dati, ma non può accedervi. Garantendo l'impossibilità di accesso ai dati crittografati da parte di amministratori di database locali, operatori di database cloud o altri utenti con privilegi elevati ma non autorizzati, Always Encrypted consente ai clienti di archiviare in modo sicuro i dati sensibili su cui non esercitano un controllo diretto. In questo modo le organizzazioni possono archiviare i dati in Azure e delegare l'amministrazione di database locali a terze parti o ridurre i requisiti di nulla osta di sicurezza per il proprio personale DBA.
 

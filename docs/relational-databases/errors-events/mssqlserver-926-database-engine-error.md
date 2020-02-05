@@ -12,13 +12,13 @@ ms.assetid: 57e01668-883b-4be4-84a8-a111caaf0486
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e915f74e6bd3e686916aeb2de2f78d8d2e9ae439
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67937950"
 ---
-# <a name="mssqlserver926"></a>MSSQLSERVER_926
+# <a name="mssqlserver_926"></a>MSSQLSERVER_926
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -49,7 +49,7 @@ Se il recupero non è riuscito a causa di un errore di I/O persistente, una pagi
 Se non è possibile risolvere il problema, rivolgersi al supporto tecnico. Tenere a disposizione il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eventuali verifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Eseguire il backup e il ripristino dei database SQL Server](~/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+[Backup e ripristino di database SQL Server](~/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
 [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
 [sys.sysdatabases &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
 [Collegamento e scollegamento di un database &#40;SQL Server&#41;](~/relational-databases/databases/database-detach-and-attach-sql-server.md)  

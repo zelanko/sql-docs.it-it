@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f63cb12399efd7417f9b00695d54b1356f681fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934466"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Stima delle dimensioni di un indice non cluster
@@ -121,7 +121,7 @@ ms.locfileid: "67934466"
     >  È possibile estendere un indice non cluster includendo colonne non chiave oltre alle colonne chiave. Tali colonne aggiuntive vengono archiviate solo al livello foglia dell'indice non cluster. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary**o **sql_variant** che causano il superamento del limite di 8.060 byte previsto per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna **varchar**, **varbinary**o **sql_variant** e di 4.000 byte per le colonne **nvarchar** . Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella. Lo stesso vale inoltre per le righe foglia dell'indice non cluster che presentano colonne incluse.  
+    >  È possibile combinare colonne **varchar**, **nvarchar**, **varbinary**o **sql_variant** che fanno eccedere gli 8.060 byte per la larghezza totale definita della tabella. La lunghezza di ogni colonna deve essere compresa nel limite di 8.000 byte per una colonna **varchar**, **varbinary**o **sql_variant** e di 4.000 byte per le colonne **nvarchar** . Le larghezze combinate di tali colonne possono tuttavia superare il limite di 8.060 byte in una tabella. Lo stesso vale inoltre per le righe foglia dell'indice non cluster che presentano colonne incluse.  
   
      Se l'indice non cluster non dispone di colonne incluse, utilizzare i valori del passaggio 1, incluse le eventuali modifiche determinate al passaggio 1.3:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "67934466"
   
      Poiché le righe di indice non si estendono su più pagine, il numero di righe di indice per pagina deve essere arrotondato alla riga completa più vicina. Il numero 2 nella formula si riferisce alla voce della riga nella matrice di slot della pagina.  
   
-7.  Calcolare il numero di righe libere riservate per pagina, sulla base del [fattore di riempimento](../../relational-databases/indexes/specify-fill-factor-for-an-index.md) specificato:  
+7.  Calcolare il numero di righe libere riservate per pagina, in base al [fattore di riempimento](../../relational-databases/indexes/specify-fill-factor-for-an-index.md) specificato:  
   
      ***Free_Rows_Per_Page***  = 8096 x ((100 - ***Fill_Factor***) / 100) / (***Leaf_Row_Size*** + 2)  
   
@@ -249,7 +249,7 @@ ms.locfileid: "67934466"
   
 -   Valori LOB  
   
-     L'algoritmo per determinare con esattezza la quantità di spazio usata per archiviare i tipi di dati LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**e **image** è complesso. È comunque sufficiente aggiungere le dimensioni medie dei valori LOB previsti, moltiplicarle per ***Num_Rows***e aggiungere il prodotto alle dimensioni totali dell'indice non cluster.  
+     L'algoritmo per determinare con esattezza la quantità di spazio utilizzata per archiviare i tipi di dati LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**e **image** è complesso. È comunque sufficiente aggiungere le dimensioni medie dei valori LOB previsti, moltiplicarle per ***Num_Rows***e aggiungere il prodotto alle dimensioni totali dell'indice non cluster.  
   
 -   Compressione  
   

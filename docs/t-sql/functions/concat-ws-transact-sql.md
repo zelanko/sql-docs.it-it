@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075332"
 ---
-# <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
+# <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Questa funzione restituisce una stringa risultante dalla concatenazione o unione in join end-to-end di due o più valori di stringa. Separa tali valori concatenati della stringa con il delimitatore specificato nel primo argomento della funzione. (`CONCAT_WS` indica *concatenare con separatore*.)
@@ -45,7 +45,7 @@ Espressione di qualsiasi tipo.
 ## <a name="return-types"></a>Tipi restituiti
 Valore stringa la cui lunghezza e tipo dipendono dall'input.
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Osservazioni   
 `CONCAT_WS` accetta un numero variabile di argomenti stringa e li concatena in una singola stringa. Separa tali valori concatenati della stringa con il delimitatore specificato nel primo argomento della funzione. `CONCAT_WS` richiede un argomento separatore e almeno altri due argomenti dei valori della stringa. In caso contrario, `CONCAT_WS` genererà un errore. `CONCAT_WS` converte in modo implicito tutti gli argomenti nei tipi di stringa prima della concatenazione. 
 
 Per la conversione implicita in stringhe vengono seguite le regole esistenti per le conversioni dei tipi di dati. Per altre informazioni sul comportamento e le conversioni dei tipi di dati, vedere [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
@@ -62,7 +62,7 @@ Se uno scenario include valori Null separati da un delimitatore, prendere in con
 
 ## <a name="examples"></a>Esempi   
 
-### <a name="a--concatenating-values-with-separator"></a>A.  Concatenazione di valori con separatore
+### <a name="a--concatenating-values-with-separator"></a>R.  Concatenazione di valori con separatore
 Questo esempio illustra come concatenare tre colonne della tabella sys.databases, separando i valori con un `-`.   
 
 ```sql
@@ -133,5 +133,5 @@ FROM sys.databases;
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

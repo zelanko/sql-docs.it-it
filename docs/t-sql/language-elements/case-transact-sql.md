@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950356"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -43,7 +43,7 @@ Valuta un elenco di condizioni e restituisce una tra più espressioni di risulta
   
  L'espressione CASE può essere utilizzata in qualsiasi istruzione o clausola che consenta un'espressione valida. È possibile, ad esempio, utilizzare CASE in istruzioni quali SELECT, UPDATE, DELETE e SET e in clausole quali select_list, IN, WHERE, ORDER BY e HAVING.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -111,7 +111,7 @@ END
   
 -   Se nessun confronto *Boolean_expression* restituisce TRUE, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce *else_result_expression* se è stata specificata una clausola ELSE. In caso contrario, restituisce un valore Null.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente solo 10 livelli di nidificazione nelle espressioni CASE.  
   
  L'espressione CASE non può essere utilizzata per controllare il flusso di esecuzione di istruzioni, blocchi di istruzioni, funzioni definite dall'utente e stored procedure Transact-SQL. Per un elenco di metodi di controllo di flusso, vedere [Controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
@@ -137,7 +137,7 @@ FROM Data ;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. Utilizzo di un'istruzione SELECT con un'espressione CASE semplice  
+### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>R. Utilizzo di un'istruzione SELECT con un'espressione CASE semplice  
  In un'istruzione `SELECT` un'espressione `CASE` semplice consente di eseguire solo un controllo di uguaglianza senza ulteriori confronti. Nell'esempio seguente viene utilizzata l'espressione `CASE` per modificare la visualizzazione delle categorie delle linee di prodotti in modo da renderle più intuitive.  
   
 ```  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-using-case-in-an-order-by-clause"></a>C. Utilizzo di CASE in una clausola ORDER BY  
- Nell'esempio seguente viene utilizzata l'espressione CASE in una clausola ORDER BY per determinare l'ordinamento delle righe in base al valore di una colonna. Nel primo esempio, viene calcolato il valore nella colonna `SalariedFlag` della tabella `HumanResources.Employee`. I dipendenti per cui `SalariedFlag` è impostato su 1 vengono restituiti in ordine decrescente in base a `BusinessEntityID`. I dipendenti per cui `SalariedFlag` è impostato su 0 vengono restituiti in ordine crescente in base a `BusinessEntityID`. Nel secondo esempio il set di risultati viene ordinato in base alla colonna `TerritoryName` quando la colonna `CountryRegionName` è uguale a 'United States' e in base a `CountryRegionName` per tutte le altre righe.  
+ Nell'esempio seguente viene utilizzata l'espressione CASE in una clausola ORDER BY per determinare l'ordinamento delle righe in base al valore di una colonna. Nel primo esempio, viene calcolato il valore nella colonna `SalariedFlag` della tabella `HumanResources.Employee`. I dipendenti per cui `SalariedFlag` è impostato su 1 vengono restituiti in ordine decrescente in base a `BusinessEntityID`. I dipendenti per cui `SalariedFlag` è impostato su 0 vengono restituiti in ordine crescente in base a `BusinessEntityID`. Nel secondo esempio il set di risultati viene ordinato in base alla colonna `TerritoryName` quando la colonna `CountryRegionName` è uguale a 'Stati Uniti' e in base a `CountryRegionName` per tutte le altre righe.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  

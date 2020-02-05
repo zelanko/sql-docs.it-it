@@ -12,10 +12,10 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907713"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
@@ -33,7 +33,7 @@ ms.locfileid: "72907713"
 |Testo del messaggio|Memoria di sistema insufficiente per l'esecuzione della query.|  
   
 ## <a name="explanation"></a>Spiegazione  
-Non è stato possibile allocare memoria sufficiente per eseguire la query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le cause possono essere varie, tra cui impostazioni del sistema operativo, disponibilità della memoria fisica o limiti di memoria nel carico di lavoro corrente. Nella maggior parte dei casi la transazione che ha avuto esito negativo non è la causa dell'errore.  
+Non è stato possibile allocare memoria sufficiente per eseguire la query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ciò può essere causato da diversi motivi, tra cui le impostazioni del sistema operativo, la disponibilità di memoria fisica o i limiti di memoria nel carico di lavoro corrente. Nella maggior parte dei casi, la transazione non riuscita non è la causa dell'errore.  
   
 Le query di diagnostica, ad esempio le istruzioni DBCC, possono avere esito negativo perché il server non dispone di memoria sufficiente.  
   
@@ -46,7 +46,7 @@ Nell'elenco seguente viene illustrata la procedura generale per la risoluzione d
   
 1.  Verificare se altre applicazioni o servizi utilizzano la memoria nel server specificato. Riconfigurare le applicazioni o i servizi meno critici per utilizzare una quantità di memoria inferiore.  
   
-2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gestione buffer**, **SQL Server: Memory Manager**.  
+2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gestione buffer** e **SQL Server: Gestione memoria**.  
   
 3.  Verificare i seguenti parametri di configurazione della memoria di SQL Server:  
   

@@ -18,10 +18,10 @@ ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b973e39b4e402bbe5fb970a57478587ac240daf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066527"
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (tipo di dati geography)
@@ -46,7 +46,7 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="exception"></a>Eccezione  
  Genera un'eccezione `FormatException` in presenza di valori di input non validi. Vedere [STIsValid &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo restituisce **Null** quando l'input è vuoto o dispone di SRID diversi. Vedere [Identificatori SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  Il metodo ignora gli input **Null**.  

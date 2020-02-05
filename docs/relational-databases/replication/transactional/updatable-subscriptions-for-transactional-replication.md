@@ -19,10 +19,10 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7baa131caa531038d8764c070ebd00ba44147c54
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321436"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Sottoscrizioni aggiornabili - Per la replica transazionale
@@ -83,7 +83,7 @@ ms.locfileid: "75321436"
   
 -   I sottoscrittori non possono aggiornare o inserire valori **text**, **ntext** o **image** perché non è possibile leggere dalle tabelle inserite o eliminate all'interno dei trigger di rilevamento modifiche della replica. In modo analogo, i sottoscrittori non possono aggiornare o inserire valori **text** o **image** tramite **WRITETEXT** o **UPDATETEXT** perché i dati vengono sovrascritti dal server di pubblicazione. È invece possibile partizionare le colonne **text** e **image** in una tabella distinta e modificare le due tabelle all'interno di una transazione.  
   
-     Per aggiornare gli oggetti di grandi dimensioni in un sottoscrittore, usare i tipi di dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)** anziché, rispettivamente, **text**, **ntext**, e **image** .  
+     Per aggiornare gli oggetti di grandi dimensioni in un sottoscrittore, usare i tipi di dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** anziché, rispettivamente, **text**, **ntext**, e **image** .  
   
 -   Gli aggiornamenti delle chiavi univoche, incluse le chiavi primarie, che generano duplicati, ad esempio, un aggiornamento del form `UPDATE <column> SET <column> =<column>+1` , non sono consentiti e vengono rifiutati in quanto violazioni dell'univocità. Questo avviene perché gli aggiornamenti dei set eseguiti nel sottoscrittore vengono propagati tramite replica come singole istruzioni **UPDATE** per tutte le righe interessate.  
   

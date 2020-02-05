@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 54922dc96874142d216e7aedb8c80a44ce40ab31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898040"
 ---
 # <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "67898040"
 
   Rimuove un'origine dati esterna PolyBase.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ SELECT * FROM sys.external_data_sources;
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede ALTER ANY EXTERNAL DATA SOURCE.  
   
-## <a name="locking"></a>Utilizzo di blocchi  
+## <a name="locking"></a>Blocco  
  Acquisisce un blocco condiviso sull'oggetto origine dati esterna.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
@@ -57,7 +57,7 @@ SELECT * FROM sys.external_data_sources;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-basic-syntax"></a>A. Uso della sintassi di base  
+### <a name="a-using-basic-syntax"></a>R. Uso della sintassi di base  
   
 ```  
 DROP EXTERNAL DATA SOURCE mydatasource;  

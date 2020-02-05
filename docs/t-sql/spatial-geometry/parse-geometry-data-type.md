@@ -15,10 +15,10 @@ ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 91bcf58df4f8dd9651f077c200d69eea2c1f7660
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101047"
 ---
 # <a name="parse-geometry-data-type"></a>Parse (tipo di dati geometry)
@@ -42,7 +42,7 @@ Parse ( 'geometry_tagged_text' )
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il tipo OGC dell'istanza **geometry** restituita da `Parse()` è impostato sull'input WKT corrispondente.  
   
  La stringa "Null" verrà interpretata come un'istanza **geometry** Null.  

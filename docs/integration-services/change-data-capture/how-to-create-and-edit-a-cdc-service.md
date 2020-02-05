@@ -11,10 +11,10 @@ ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9df960fa5018ad8f4368c99a91c5aed3fe0aab15
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294794"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Procedura di creazione e modifica di un servizio CDC
@@ -66,6 +66,6 @@ ms.locfileid: "71294794"
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione Change Data Capture per Oracle di Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+ [Creare e modificare un servizio Oracle CDC](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

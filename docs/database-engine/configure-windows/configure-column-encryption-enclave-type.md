@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593826"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Configurare il tipo di enclave per l'opzione di configurazione del server Always Encrypted
@@ -27,7 +27,7 @@ L'opzione di configurazione del server **column encryption enclave type** contro
 |valore|Descrizione|  
 |-------------------|-----------------| 
 |0|**No secure enclave** (Nessun enclave sicuro). [!INCLUDE[ssDE](../../includes/ssde-md.md)] non inizializza l'enclave sicuro per Always Encrypted. Di conseguenza non è disponibile la funzionalità Always Encrypted con enclave sicuri.|  
-|1|**Sicurezza basata sulla virtualizzazione (VBS)**. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] proverà a inizializzare un'enclave di sicurezza basata sulla virtualizzazione.
+|1|**Sicurezza basata sulla virtualizzazione (VBS)** . Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] proverà a inizializzare un'enclave di sicurezza basata sulla virtualizzazione.
 
 > [!IMPORTANT]
 > Le modifiche a **column encryption enclave type** non hanno effetto finché non si riavvia l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -72,7 +72,7 @@ SELECT
 FROM sys.configurations
 WHERE [name] = 'column encryption enclave type'; 
 ```  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
  [Gestire le chiavi per Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
 
 ## <a name="see-also"></a>Vedere anche  

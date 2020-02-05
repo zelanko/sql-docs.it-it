@@ -11,10 +11,10 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085438"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
@@ -52,13 +52,13 @@ La funzionalità FileTable si basa sulle capacità FILESTREAM esistenti e consen
 
 |Funzionalità|Soluzione file server e database|Soluzione FILESTREAM|Soluzione FileTable|
 |:------|:--------------------------------|:------------------|:-----------------|
-|**Singola soluzione per le attività di gestione**|no|Sì|**Sì**|
-|**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|no|Sì|**Sì**|
-|**Modello di sicurezza integrata**|no|Sì|**Sì**|
-|**Aggiornamenti sul posto di dati FILESTREAM**|Sì|no|**Sì**|
-|**Gerarchia di file e directory gestita nel database**|no|no|**Sì**|
-|**Compatibilità delle applicazioni di Windows**|Sì|no|**Sì**|
-|**Accesso relazionale agli attributi dei file**|no|no|**Sì**|
+|**Singola soluzione per le attività di gestione**|No|Sì|**Sì**|
+|**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|No|Sì|**Sì**|
+|**Modello di sicurezza integrata**|No|Sì|**Sì**|
+|**Aggiornamenti sul posto di dati FILESTREAM**|Sì|No|**Sì**|
+|**Gerarchia di file e directory gestita nel database**|No|No|**Sì**|
+|**Compatibilità delle applicazioni di Windows**|Sì|No|**Sì**|
+|**Accesso relazionale agli attributi dei file**|No|No|**Sì**|
 
 ## <a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)
 
@@ -68,4 +68,4 @@ Un'altra opzione per l'archiviazione dei dati non strutturati implica l'utilizzo
 
 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  
-[Archivio BLOB remoto &#40;RBS&#41; &#40;SQL Server&#41;](../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)
+[Archivio Blob remoto &#40;RBS&#41; &#40;SQL Server&#41;](../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)

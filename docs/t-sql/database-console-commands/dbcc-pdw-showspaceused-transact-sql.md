@@ -13,13 +13,13 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116485"
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+# <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Visualizza il numero di righe, lo spazio su disco riservato e lo spazio su disco usato per una tabella specifica o per tutte le tabelle in un database [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
@@ -40,7 +40,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 ## <a name="arguments"></a>Argomenti  
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
- Il nome di tabella composto da una, due o tre parti da visualizzare. Per i nomi di tabella composti da due o tre parti, il nome deve essere racchiuso tra virgolette doppie (""). L'uso delle virgolette nei nomi di tabella composti da una parte è facoltativo. Quando non viene specificato alcun nome di tabella, vengono visualizzate le informazioni per il database corrente.  
+ Il nome di tabella composto da una, due o tre parti da visualizzare. Per i nomi di tabella composti da due o tre parti, il nome deve essere racchiuso tra virgolette doppie (""). L'uso delle virgolette nei nomi di tabella composti da una sola parte è facoltativo. Quando non viene specificato alcun nome di tabella, vengono visualizzate le informazioni per il database corrente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione VIEW SERVER STATE.
@@ -48,28 +48,28 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ## <a name="result-sets"></a>Set di risultati  
 Il set di risultati per tutte le tabelle è il seguente.
   
-|colonna|Tipo di dati|Descrizione|  
+|Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|Spazio totale usato per il database, in KB.|  
-|data_space|BIGINT|Spazio usato per i dati, in KB.|  
-|index_space|BIGINT|Spazio usato per gli indici, in KB.|  
-|unused_space|BIGINT|Spazio che è parte dello spazio riservato e non usato, in KB.|  
+|reserved_space|bigint|Spazio totale usato per il database, in KB.|  
+|data_space|bigint|Spazio usato per i dati, in KB.|  
+|index_space|bigint|Spazio usato per gli indici, in KB.|  
+|unused_space|bigint|Spazio che è parte dello spazio riservato e non usato, in KB.|  
 |pdw_node_id|INT|Nodo di calcolo usato per i dati.|  
   
 Il set di risultati per una tabella è il seguente.
   
-|colonna|Tipo di dati|Descrizione|Intervallo|  
+|Colonna|Tipo di dati|Descrizione|Range|  
 |------------|---------------|-----------------|-----------|  
-|rows|BIGINT|Numero di righe.||  
-|reserved_space|BIGINT|Spazio totale riservato per l'oggetto, in KB.||  
-|data_space|BIGINT|Spazio usato per i dati, in KB.||  
-|index_space|BIGINT|Spazio usato per gli indici, in KB.||  
-|unused_space|BIGINT|Spazio che è parte dello spazio riservato e non usato, in KB.||  
+|rows|bigint|Numero di righe.||  
+|reserved_space|bigint|Spazio totale riservato per l'oggetto, in KB.||  
+|data_space|bigint|Spazio usato per i dati, in KB.||  
+|index_space|bigint|Spazio usato per gli indici, in KB.||  
+|unused_space|bigint|Spazio che è parte dello spazio riservato e non usato, in KB.||  
 |pdw_node_id|INT|Nodo di calcolo usato per i report relativi all'uso dello spazio.||  
 |distribution_id|INT|Distribuzione usata per i report relativi all'uso dello spazio.|Il valore è -1 per le tabelle replicate.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. Sintassi di base di DBCC PDW_SHOWSPACEUSED  
+### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>R. Sintassi di base di DBCC PDW_SHOWSPACEUSED  
 Gli esempi seguenti illustrano i diversi modi di visualizzare il numero di righe, lo spazio su disco riservato e lo spazio su disco usato dalla tabella FactInternetSales nel database [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ```sql

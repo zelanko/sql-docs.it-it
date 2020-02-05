@@ -11,10 +11,10 @@ ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75c34c5993204e4ee2331eea5bfde0014e355f19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291797"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Proprietà personalizzate della destinazione SQL Server Compact Edition
@@ -28,7 +28,7 @@ ms.locfileid: "71291797"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|TableName|String|Nome della tabella di destinazione in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
+|TableName|string|Nome della tabella di destinazione in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
   
  L'input e le colonne di input della destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact non includono proprietà personalizzate.  
   

@@ -24,13 +24,13 @@ ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b385caa4146f40a1395c74fa0f26b5be518ff149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026484"
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+# <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Questa funzione restituisce il periodo di tempo in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato attivo dopo l'ultimo avvio. `@@CPU_BUSY` restituisce un risultato misurato in incrementi di tempo di CPU, o "tick". Questo valore è cumulativo per tutte le CPU, quindi può essere maggiore del tempo trascorso effettivo. Per convertire in microsecondi, moltiplicare per [@@TIMETICKS](./timeticks-transact-sql.md).
@@ -38,7 +38,7 @@ Questa funzione restituisce il periodo di tempo in cui [!INCLUDE[ssNoVersion](..
 > [!NOTE]  
 >  Se il periodo di tempo restituito nelle variabili @@CPU_BUSY o @@IO_BUSY è superiore a circa 49 giorni di tempo di CPU cumulativo, si riceve un avviso di overflow aritmetico. In tal caso, il valore delle variabili `@@CPU_BUSY`, `@@IO_BUSY` e `@@IDLE` non è preciso.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ Questa funzione restituisce il periodo di tempo in cui [!INCLUDE[ssNoVersion](..
 ## <a name="return-types"></a>Tipi restituiti
 **integer**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Per visualizzare un report contenente dati statistici relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inclusa l'attività della CPU, eseguire [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md).
   
 ## <a name="examples"></a>Esempi  

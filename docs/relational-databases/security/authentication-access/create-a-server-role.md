@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094947"
 ---
 # <a name="create-a-server-role"></a>Creazione di un ruolo del server
@@ -34,7 +34,7 @@ ms.locfileid: "68094947"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un nuovo ruolo del server utilizzando:**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68094947"
   
     -   Per assegnare la proprietà di un ruolo del server a un altro ruolo del server, è richiesta l'appartenenza al ruolo del server destinatario oppure l'autorizzazione ALTER per tale ruolo.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-new-server-role"></a>Per creare un nuovo ruolo del server  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68094947"
   
 3.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli server** e selezionare **Nuovo ruolo server**.  
   
-4.  Nella pagina **Generale** della finestra di dialogo **Nuovo ruolo server -** _nome\_ruolo\_server_ immettere un nome per il nuovo ruolo del server nella casella **Nome ruolo del server**.  
+4.  Nella pagina **Generale** della finestra di dialogo _Nuovo ruolo server -\_\_nome_ruolo**server** immettere un nome per il nuovo ruolo del server nella casella **Nome ruolo del server**.  
   
 5.  Nella casella **Proprietario** immettere il nome dell'entità del server proprietaria del nuovo ruolo. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona account di accesso o ruolo server**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68094947"
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-new-server-role"></a>Per creare un nuovo ruolo del server  
   

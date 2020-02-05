@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67916045"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Gestire i gruppi di disponibilità Always On in Linux
@@ -76,13 +76,13 @@ Prima di iniziare, eseguire il backup di ogni database.
 
    Se il tipo di cluster per il gruppo di disponibilità è `NONE`, eseguire il failover manualmente. Completare i passaggi seguenti nell'ordine indicato:
 
-      A. Il comando seguente imposta la replica primaria come secondaria. Sostituire `AG1` con il nome del gruppo di disponibilità. Eseguire il comando Transact-SQL nell'istanza di SQL Server che ospita la replica primaria.
+      a. Il comando seguente imposta la replica primaria come secondaria. Sostituire `AG1` con il nome del gruppo di disponibilità. Eseguire il comando Transact-SQL nell'istanza di SQL Server che ospita la replica primaria.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. Il comando seguente imposta una replica secondaria sincrona come primaria. Eseguire il comando Transact-SQL seguente nell'istanza di destinazione di SQL Server, ovvero l'istanza che ospita la replica secondaria sincrona.
+      b. Il comando seguente imposta una replica secondaria sincrona come primaria. Eseguire il comando Transact-SQL seguente nell'istanza di destinazione di SQL Server, ovvero l'istanza che ospita la replica secondaria sincrona.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

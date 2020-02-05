@@ -18,10 +18,10 @@ ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7850a3fec40dcdd6606086d44e626e2e5f57ea93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950179"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (tipo di dati geometry)
@@ -48,7 +48,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il tipo OGC dell'istanza **geometry** restituita da `STGeomFromText()` è impostato sull'input WKT corrispondente.  
   
  Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  

@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: d4fc71583bf972b2def20d78a69001f00d14966d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065827"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68065827"
 
   Modifica le proprietà di una credenziale con ambito database.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,9 +50,9 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  SECRET **='***secret***'**  
  Specifica il segreto richiesto per l'autenticazione in uscita. È necessario specificare *secret* per importare un file dall'archiviazione BLOB di Azure. *secret* può essere facoltativo per altri scopi.   
 > [!WARNING]
->  Il valore della chiave di firma di accesso condiviso può iniziare con '?' (punto interrogativo). Quando si usa la chiave di firma di accesso condiviso, è necessario rimuovere il carattere "?" iniziale, altrimenti potrebbe verificarsi un blocco.    
+>  Il valore della chiave di firma di accesso condiviso può iniziare con "?" (punto interrogativo). Quando si usa la chiave di firma di accesso condiviso, è necessario rimuovere il carattere "?" iniziale, altrimenti potrebbe verificarsi un blocco.    
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando si modifica una credenziale con ambito database, i valori di *identity_name* e *secret* vengono reimpostati. Se l'argomento facoltativo SECRET viene omesso, il valore del segreto archiviato verrà impostato su NULL.  
   
  Il segreto viene crittografato tramite la chiave master del servizio. Se la chiave master del servizio viene rigenerata, il segreto verrà crittografato nuovamente tramite la nuova chiave master del servizio.  
@@ -64,7 +64,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. Modifica della password di una credenziale con ambito database  
+### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>R. Modifica della password di una credenziale con ambito database  
  Nell'esempio seguente viene modificato il segreto archiviato nella credenziale con ambito database denominata `Saddles`. La credenziale con ambito database include l'account di accesso Windows `RettigB` e la relativa password. La nuova password viene aggiunta alla credenziale con ambito database tramite la clausola SECRET.  
   
 ```  

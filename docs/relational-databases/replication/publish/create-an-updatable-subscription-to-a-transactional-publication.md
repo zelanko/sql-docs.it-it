@@ -15,10 +15,10 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321248"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale
@@ -201,7 +201,7 @@ Configurare le sottoscrizioni aggiornabili nella pagina **Sottoscrizioni aggiorn
 1. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni ad aggiornamento in coda. 
 
     * Se il valore di allow_queued_tran nel set di risultati è 1, la pubblicazione supporta le sottoscrizioni ad aggiornamento immediato.
-    * Se il valore di allow_queued_tran nel set di risultati è 0, sarà necessario creare nuovamente la pubblicazione abilitando le sottoscrizioni ad aggiornamento in coda. Per altre informazioni, vedere Procedura: Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali (Programmazione Transact-SQL della replica).
+    * Se il valore di allow_queued_tran nel set di risultati è 0, sarà necessario creare nuovamente la pubblicazione abilitando le sottoscrizioni ad aggiornamento in coda. Per altre informazioni, vedere Procedura: Abilitare le sottoscrizioni aggiornabili per le pubblicazioni transazionali (programmazione Transact-SQL della replica).
 
 2. Nel server di pubblicazione eseguire [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)per verificare che la pubblicazione supporti le sottoscrizioni push. 
 
@@ -228,7 +228,7 @@ Configurare le sottoscrizioni aggiornabili nella pagina **Sottoscrizioni aggiorn
     * Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione.
 
 ## <a name="set-queued-updating-conflict-resolution-options"></a>Impostare le opzioni di risoluzione dei conflitti per l'aggiornamento in coda 
-Per impostare le opzioni di risoluzione dei conflitti per le pubblicazioni che supportano sottoscrizioni ad aggiornamento in coda, usare la pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+Per impostare le opzioni di risoluzione dei conflitti per le pubblicazioni che supportano sottoscrizioni ad aggiornamento in coda, usare la pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
   
 1.  Nella pagina **Opzioni sottoscrizione** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare uno dei valori seguenti per l'opzione **Criteri di risoluzione dei conflitti**:  

@@ -19,10 +19,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 872f5207f673c5047475220b1da01a41678c1c6d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056146"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text
@@ -97,7 +97,7 @@ Usare [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/al
   
 5.  Nella finestra di dialogo [Proprietà elenco di parole non significative full-text](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
   
-    1.  Nella casella di riepilogo **Azione** selezionare una delle azioni seguenti: **Add stopword** (Aggiungi parola non significativa), **Delete stopword** (Elimina parola non significativa), **Delete all stopwords** (Elimina tutte le parole non significative) o **Cancella elenco di parole non significative**.  
+    1.  Nella casella di riepilogo **Azione** selezionare una delle azioni seguenti: **Aggiungi parola non significativa**, **Elimina parola non significativa**, **Elimina tutte le parole non significative**o **Cancella elenco di parole non significative**.  
   
     2.  Se la casella di testo **Parola non significativa** è abilitata per l'azione selezionata, immettere una singola parola non significativa. Questa parola deve essere univoca, ovvero non ancora inclusa nell'elenco di parole non significative per la lingua selezionata.  
   
@@ -127,11 +127,11 @@ Usare l'[opzione di configurazione del server transform noise words](../../datab
 |Istruzioni|1|  
 |non|2|  
 |valide|3|  
-|in|4|  
+|to|4|  
 |questi|5|  
 |modelli|6|  
 |Adventure|7|  
-|Works|8|  
+|Cicli|8|  
 |modelli|9|  
   
  Le parole non significative "sono", "in" e "questi" nelle posizioni 2, 4 e 5 vengono escluse dall'indice full-text. Le relative informazioni di posizione vengono comunque mantenute, lasciando invariata la posizione delle altre parole nella frase.   

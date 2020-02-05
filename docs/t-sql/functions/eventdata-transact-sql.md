@@ -25,10 +25,10 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094570"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68094570"
 
 Questa funzione restituisce informazioni sugli eventi del server o del database. La funzione `EVENTDATA` viene chiamata quando viene generata una notifica degli eventi e il Service Broker specificato riceve i risultati. Anche un trigger DDL o LOGON supporta l'uso interno di `EVENTDATA`.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ Questa funzione restituisce informazioni sugli eventi del server o del database.
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `EVENTDATA` restituisce dati solo se usata direttamente in un trigger DDL o LOGON. `EVENTDATA` restituisce Null se chiamata da altre routine, anche se queste routine sono chiamate da un trigger DDL o LOGON.
   
 I dati restituiti da `EVENTDATA` non sono validi dopo una transazione
@@ -81,7 +81,7 @@ Per estrarre lo schema di un evento specifico, cercare nello schema il tipo comp
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-querying-event-data-in-a-ddl-trigger"></a>A. Recupero tramite query dei dati di eventi in un trigger DDL  
+### <a name="a-querying-event-data-in-a-ddl-trigger"></a>R. Recupero tramite query dei dati di eventi in un trigger DDL  
 Questo esempio crea un trigger DDL che impedisce la creazione di nuove tabelle di database. L'uso di XQuery sui dati XML generati da `EVENTDATA` consente di acquisire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che attiva il trigger. Per altre informazioni, vedere [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md).  
   
 > [!NOTE]  

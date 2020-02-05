@@ -11,10 +11,10 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2293f8cf40bcd5b3d104f63df80abacf282686ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096888"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
@@ -115,7 +115,7 @@ ms.locfileid: "68096888"
   
  L'archiviazione XML nativa è utile quando si utilizzano documenti XML con strutture diverse oppure conformi a schemi diversi o complessi, di cui è difficile eseguire il mapping a strutture relazionali.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Esempio: modellazione di dati XML tramite il tipo di dati XML  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Esempio: modellazione di dati XML tramite il tipo di dati xml  
  Si consideri un manuale di prodotto in formato XML, composto da un capitolo per ogni argomento e con più sezioni in ogni capitolo. Una sezione può contenere sottosezioni e, di conseguenza, l'elemento \<sezione> è ricorsivo. I manuali dei prodotti includono elevati volumi di contenuto eterogeneo, ad esempio diagrammi e materiale tecnico, e i dati sono semistrutturati. Gli utenti possono avere l'esigenza di ricercare gli argomenti di interesse in un contesto specifico, ad esempio la sezione dedicata agli indici cluster nel capitolo dedicato all'indicizzazione, e di eseguire query su quantità tecniche.  
   
  Una colonna con tipo di dati **xml** costituisce un modello di archiviazione particolarmente appropriato per i documenti XML, perché mantiene il contenuto InfoSet dei dati XML. È possibile indicizzare la colonna XML per migliorare le prestazioni delle query.  

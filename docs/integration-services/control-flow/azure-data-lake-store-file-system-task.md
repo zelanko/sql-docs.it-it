@@ -13,10 +13,10 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: cab5a97beb9f1bfe4d47844e2d0acdb49b28b924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947344"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Attività File system di Azure Data Lake Store
@@ -35,8 +35,8 @@ Per aggiungere un'attività File System di Azure Data Lake Store a un pacchetto,
 
 La proprietà **Operation** specifica l'operazione del file system da eseguire. Selezionare una delle operazioni seguenti:
 
-- **CopyToADLS:** carica i file in ADLS.
-- **CopyFromADLS:** scarica i file da ADLS.
+- **CopyToADLS** per caricare file in ADLS.
+- **CopyFromADLS** per scaricare file da ADLS.
 
 ## <a name="configure-the-properties-for-the-operation"></a>Configurare le proprietà per l'operazione
 Per qualsiasi operazione è necessario specificare una gestione della connessione di Azure Data Lake.

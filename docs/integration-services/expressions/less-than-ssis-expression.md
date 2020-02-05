@@ -14,10 +14,10 @@ ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f28079a72c76fdbadfc2561541750dd7d82ef5fb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297520"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (minore di) (espressione SSIS)
@@ -42,12 +42,12 @@ expression1 < expression2
   
 ## <a name="arguments"></a>Argomenti  
  *expression1, expression2*  
- Qualsiasi espressione valida.  
+ È qualsiasi espressione valida.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
  Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  

@@ -18,18 +18,18 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2949c4bbf5e72fad99f6698287880ec2a2f97f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067565"
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
+# <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Restituisce il valore della chiave specificata nel contesto della sessione corrente. Il valore viene impostato usando la procedura [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +50,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="permissions"></a>Autorizzazioni  
  Qualsiasi utente può leggere il contesto della sessione per la propria sessione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il comportamento di MARS per SESSION_CONTEXT è simile a quello per CONTEXT_INFO. Se un batch MARS imposta una coppia chiave-valore, il nuovo valore non viene restituito in altri batch MARS nella stessa connessione, salvo se l'operazione è iniziata dopo il completamento del batch che ha impostato il nuovo valore. Se su una connessione sono attivi più batch MARS non è possibile impostare i valori come "read_only" (sola lettura). Questo comportamento impedisce le race condition e il non determinismo relativo al valore che "ottiene la precedenza".  
   
 ## <a name="examples"></a>Esempi  

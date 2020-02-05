@@ -14,15 +14,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126863"
 ---
-# <a name="sql-injection"></a>Attacco intrusivo nel codice SQL
+# <a name="sql-injection"></a>Attacchi SQL injection
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  In un attacco SQL injection il malware viene inserito in stringhe successivamente passate un'istanza di SQL Server per l'analisi e l'esecuzione. Per la prevenzione degli attacchi di questo tipo è necessario esaminare tutte le procedure che creano istruzioni SQL perché SQL Server esegue tutte le query sintatticamente valide che riceve. Anche i dati con parametri possono essere modificati da un utente malintenzionato abile e determinato.  
+  In un attacco SQL injection, il malware viene inserito in stringhe che vengono successivamente passate a un'istanza di SQL Server per l'analisi e l'esecuzione. Per la prevenzione degli attacchi di questo tipo è necessario esaminare tutte le procedure che creano istruzioni SQL perché SQL Server esegue tutte le query sintatticamente valide che riceve. Anche i dati con parametri possono essere modificati da un utente malintenzionato abile e determinato.  
   
 ## <a name="how-sql-injection-works"></a>Come funziona un attacco SQL injection  
  La forma principale di un attacco intrusivo nel codice SQL consiste nell'inserimento diretto di codice in variabili di input utente concatenate a comandi SQL ed eseguite. Una forma meno diretta di attacco consiste nell'inserimento di malware in stringhe destinate all'archiviazione in una tabella o come metadati. Quando le stringhe archiviate vengono successivamente concatenate in un comando SQL dinamico, il codice dannoso viene eseguito.  
@@ -85,15 +85,15 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   Non eseguire mai la concatenazione di input utente non convalidato. La concatenazione delle stringhe è il punto di ingresso principale per l'attacco intrusivo nel codice script.  
   
--   Non accettare le stringhe seguenti nei campi da cui è possibile costruire i nomi di file: AUX, CLOCK$, da COM1 a COM8, CON, CONFIG$, da LPT1 a LPT8, NUL e PRN.  
+-   Non accettare le stringhe seguenti in campi da cui è possibile creare nomi di file: AUX, CLOCK$, da COM1 a COM8, CON, CONFIG$, da LPT1 a LPT8, NUL e PRN.  
   
  Quando possibile, rifiutare l'input contenente i caratteri seguenti.  
   
 |Carattere di input|Significato in Transact-SQL|  
 |---------------------|------------------------------|  
 |**;**|Delimitatore di query|  
-|**'**|Delimitatore di stringhe di dati di tipo carattere|  
-|**--**|Delimitatore di stringhe di dati di tipo carattere<br />,|  
+|**"**|Delimitatore di stringhe di dati di tipo carattere|  
+|**--**|Delimitatore di stringhe di dati di tipo carattere<br />.|  
 |**/\*** ... **\*/**|Delimitatori di commento. Il testo compreso fra **/\*** e **\*/** non viene valutato dal server.|  
 |**xp_**|Usato all'inizio del nome delle stored procedure estese di catalogo come `xp_cmdshell`.|  
   

@@ -26,10 +26,10 @@ ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bf05f923a5a7a6333bdca7278efae918aed71f32
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211416"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "70211416"
 
   Restituisce lo stato dell'ultima trasmissione per un lato di una conversazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>Tipi restituiti  
  **nchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Restituisce una stringa che descrive lo stato dell'ultimo tentativo di trasmissione per la conversazione specificata. Restituisce una stringa vuota se l'ultimo tentativo di trasmissione ha avuto esito positivo, se non è ancora stato effettuato alcun tentativo di trasmissione oppure se *conversation_handle* non esiste.  
   
  Le informazioni restituite da questa funzione corrispondono alle stesse informazioni visualizzate nella colonna last_transmission_error della vista di gestione sys.transmission_queue. Tuttavia, questa funzione può essere utilizzata per ricercare lo stato di trasmissione delle conversazioni che non includono messaggi nella coda di trasmissione.  

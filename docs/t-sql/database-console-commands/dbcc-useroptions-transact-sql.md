@@ -22,10 +22,10 @@ ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: dc8f12ae745acd0410fb309dc4c3dc9b65e7a382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040450"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68040450"
 
 Restituisce le opzioni SET attive, ovvero impostate, per la connessione corrente.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -70,7 +70,7 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 DBCC USEROPTIONS segnala un livello di isolamento dello snapshot 'Read Committed' quando l'opzione di database READ_COMMITTED_SNAPSHOT è impostata su ON e il livello di isolamento delle transazioni è impostato su 'Read Committed'. Il livello di isolamento effettivo è Read Committed.
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -18,10 +18,10 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077969"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (Motore di database)
@@ -53,7 +53,7 @@ NULL o il valore **hierarchyid** di un figlio del nodo corrente.
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Restituisce un nodo figlio discendente del padre.
 -   Se il padre è Null, restituisce Null.  
 -   Se il padre è diverso da Null e child1 e child2 sono Null, restituisce un figlio del padre.  
@@ -68,7 +68,7 @@ GetDescendant è deterministico. Pertanto, se viene chiamato con gli stessi inpu
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. Inserimento di una riga come ultimo nodo discendente  
+### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>R. Inserimento di una riga come ultimo nodo discendente  
 Viene assunto un nuovo dipendente, messo in relazione con un dipendente esistente nel nodo `/3/1/`. Eseguire il codice seguente per inserire la nuova riga usando il metodo GetDescendant senza argomenti per specificare il nuovo nodo delle righe come `/3/1/1/`:
   
 ```sql

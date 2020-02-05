@@ -18,10 +18,10 @@ ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ea26c364621910d6dd5148a5753bd6709d3e0f07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066282"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (tipo di dati geometry)
@@ -45,12 +45,12 @@ ms.locfileid: "68066282"
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono. Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-computing-the-symmetric-difference-of-two-polygon-instances"></a>A. Calcolo della differenza simmetrica di due istanze Polygon  
+### <a name="a-computing-the-symmetric-difference-of-two-polygon-instances"></a>R. Calcolo della differenza simmetrica di due istanze Polygon  
  Nell'esempio seguente viene utilizzato `STSymDifference()` per calcolare la differenza simmetrica tra due istanze `Polygon`.  
   
 ```  

@@ -13,10 +13,10 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 485a0a9061a1cef6bdde4fee84b95614ea220005
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006720"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Esempio: specifica della direttiva ELEMENTXSINIL
@@ -74,6 +74,6 @@ FOR XML EXPLICIT;
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

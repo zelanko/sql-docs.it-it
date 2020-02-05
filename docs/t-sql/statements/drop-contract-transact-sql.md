@@ -22,10 +22,10 @@ ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 479d00aec0cbd4c9cd81359a0a1f633e80bce521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898271"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67898271"
 
   Elimina un contratto esistente da un database.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ DROP CONTRACT contract_name
  *contract_name*  
  Nome del contratto da eliminare. Non è possibile specificare i nomi del server, del database e dello schema.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Non è possibile eliminare un contratto se esistono servizi o priorità di conversazione che fanno riferimento a esso.  
   
  Quando si elimina un contratto, tramite [!INCLUDE[ssSB](../../includes/sssb-md.md)] viene interrotta qualsiasi conversazione esistente che utilizza tale contratto e viene generato un errore.  

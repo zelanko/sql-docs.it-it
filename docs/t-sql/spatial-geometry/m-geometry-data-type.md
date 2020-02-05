@@ -18,10 +18,10 @@ ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e23b5332ca419637749ce029a5698257a6fb835d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101207"
 ---
 # <a name="m-geometry-data-type"></a>M (tipo di dati geometry)
@@ -43,7 +43,7 @@ ms.locfileid: "68101207"
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore di questa proprietà è Null se l'istanza **geometry** non è **Point** e per qualsiasi istanza **Point** per cui la proprietà non è impostata.  
   
  Questa proprietà è di sola lettura.  

@@ -18,10 +18,10 @@ ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 826e0a047e119b186905f9d3f2d56170aa7b9249
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041246"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accesso ai dati FILESTREAM con OpenSqlFilestream
@@ -55,7 +55,7 @@ HANDLE OpenSqlFilestream (
  *DesiredAccess*  
  [in] Imposta la modalità utilizzata per accedere ai dati BLOB FILESTREAM. Questo valore viene passato alla [funzione DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527).  
   
-|nome|valore|Significato|  
+|Nome|valore|Significato|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|I dati possono essere letti dal file.|  
 |SQL_FILESTREAM_WRITE|1|I dati possono essere scritti nel file.|  
@@ -97,7 +97,7 @@ HANDLE OpenSqlFilestream (
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/access-filestream-data-w_0_3.cpp)]  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per utilizzare questa API, è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sia installato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene installato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con gli strumenti client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Installazione di SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Vedere anche  

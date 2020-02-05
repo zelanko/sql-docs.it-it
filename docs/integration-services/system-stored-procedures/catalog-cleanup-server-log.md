@@ -11,10 +11,10 @@ ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b80b346c426ae68a1c6b0750bca112417861f51e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295586"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
@@ -33,13 +33,13 @@ catalog.cleanup_server_log
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Nessuna.  
+ No.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 per esito positivo e 1 per esito negativo.  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna.  
+ No.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
@@ -57,7 +57,7 @@ catalog.cleanup_server_log
   
 -   Il database SSISDB non è in modalità utente singolo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In SQL Server 2012 Service Pack 2 è stata aggiunta la proprietà SERVER_OPERATION_ENCRYPTION_LEVEL alla tabella **internal.catalog_properties**. Per questa proprietà sono possibili due valori:  
   
 -   **PER_EXECUTION (1)** : il certificato e la chiave simmetrica usati per la protezione dei parametri e dei log di esecuzione riservati vengono creati per ogni esecuzione. Poiché i certificati e le chiavi vengono generati per ogni esecuzione, è possibile riscontrare problemi di prestazioni (deadlock, mancata riuscita di processi di manutenzione e così via) negli ambienti di produzione. Questa impostazione, tuttavia, offre un livello di sicurezza superiore rispetto all'altro valore (2).  
@@ -78,7 +78,7 @@ catalog.cleanup_server_log
   
      È possibile specificare l'ambito o il livello (di esecuzione o di progetto) e il numero di chiavi da eliminare. La dimensione predefinita del batch per l'eliminazione è 1000. Quando si imposta il livello su 2, le chiavi e i certificati vengono eliminati solo se i progetti associati sono stati eliminati.  
   
- Per altre informazioni, vedere l'articolo della Knowledge Base seguente: [CORREZIONE: Problemi di prestazioni quando si usa SSISDB come archivio di distribuzione in SQL Server 2012](https://support.microsoft.com/kb/2972285)  
+ Per altre informazioni, vedere l'articolo della Knowledge Base [CORREZIONE: Problemi di prestazioni quando si usa SSISDB come archivio di distribuzione in SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente chiama la stored procedure cleanup_server_log.  

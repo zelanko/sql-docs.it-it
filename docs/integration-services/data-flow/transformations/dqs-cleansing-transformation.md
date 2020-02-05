@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291474"
 ---
 # <a name="dqs-cleansing-transformation"></a>Trasformazione DQS Cleansing
@@ -47,9 +47,9 @@ ms.locfileid: "71291474"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Apertura di progetti di Integration Services nel client Data Quality](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [Aprire progetti di Integration Services in Data Quality Client](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [Import Cleansing Project Values into a Domain](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [Importare i valori di un progetto di pulizia in un dominio](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [Applicare le regole relative alla qualità dei dati all'origine dati](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71291474"
  **Gestione connessione Data Quality**  
  Consente di selezionare una gestione connessione DQS esistente nell'elenco oppure di crearne una facendo clic sul pulsante **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione DQS Cleansing** . Per altre informazioni, vedere [Impostare le opzioni nella finestra di dialogo Gestione connessione DQS Cleansing](#manager).  
   
  **Data Quality Knowledge Base**  
@@ -163,5 +163,5 @@ ms.locfileid: "71291474"
   
 2.  Fare clic con il pulsante destro sull'area relativa alle connessioni, scegliere **Nuova connessione**e quindi fare clic su **DQS**.  
   
-3.  Scegliere **Aggiungi**.  
+3.  Fare clic su **Aggiungi**.  
   

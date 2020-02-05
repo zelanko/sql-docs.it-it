@@ -20,10 +20,10 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f963a3f8bf82ed3de76e31b6872ac6475d6dfd83
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297843"
 ---
 # <a name="merge-join-transformation"></a>Merge join - trasformazione
@@ -60,7 +60,7 @@ ms.locfileid: "71297843"
   
  Per informazioni sull'impostazione delle proprietà di questa trasformazione, fare clic su uno degli argomenti seguenti:  
   
--   [Estensione di un set di dati tramite la trasformazione Merge join](../../../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)  
+-   [Estendere un set di dati tramite la trasformazione Merge join](../../../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   

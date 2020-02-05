@@ -13,10 +13,10 @@ ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099571"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>Proprietà database (pagina Log shipping)
@@ -41,7 +41,7 @@ ms.locfileid: "68099571"
  **Istanze del server e database secondari**  
  Consente di elencare i server i e database secondari attualmente configurati per il database primario. Evidenziare un database secondario e quindi fare clic su **...** per modificarne i parametri associati.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su **Aggiungi** per aggiungere un database secondario alla configurazione per il log shipping per il database primario.  
   
  **Rimuovi**  

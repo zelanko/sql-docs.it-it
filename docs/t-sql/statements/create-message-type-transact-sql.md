@@ -29,10 +29,10 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745466"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "70745466"
 
   Crea un nuovo tipo di messaggio. Il tipo di messaggio definisce il nome di un messaggio e la convalida che viene eseguita da [!INCLUDE[ssSB](../../includes/sssb-md.md)] nei messaggi con tale nome. In entrambi i lati di una conversazione devono essere definiti gli stessi tipi di messaggio.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -77,7 +77,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  Specifica che il corpo del messaggio deve contenere dati XML conformi a uno schema incluso nella raccolta di schemi specificata. *schema_collection_name* deve corrispondere al nome di una raccolta di XML Schema esistente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] convalida i messaggi in arrivo. Se il corpo di un messaggio non è conforme al tipo di convalida specificato, [!INCLUDE[ssSB](../../includes/sssb-md.md)] elimina il messaggio non valido e restituisce un errore al servizio che ha inviato il messaggio.  
   
  In entrambi i lati di una conversazione deve essere definito lo stesso nome per un tipo di messaggio. Per semplificare la risoluzione dei problemi, per entrambi i lati di una conversazione viene in genere specificata la stessa convalida per il tipo di messaggio, sebbene questo non sia un requisito di [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
@@ -93,7 +93,7 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. Creazione di un tipo di messaggio contenente codice XML ben formato  
+### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>R. Creazione di un tipo di messaggio contenente codice XML ben formato  
  Nell'esempio seguente viene creato un nuovo tipo di messaggio contenente XML in formato corretto.  
   
 ```  

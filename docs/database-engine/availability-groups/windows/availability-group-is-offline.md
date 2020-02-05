@@ -15,10 +15,10 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2f9c6101be3dba631a9e0cbebdfedc3444c72d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991471"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Un gruppo di disponibilità Always On è offline
@@ -30,7 +30,7 @@ ms.locfileid: "67991471"
 |-|-|  
 |**Nome criteri**|Stato online del gruppo di disponibilità|  
 |**Problema**|Il gruppo di disponibilità è offline.|  
-|**Category**|**Critico**|  
+|**Categoria**|**Critico**|  
 |**Facet**|gruppo di disponibilità|  
   
 ## <a name="description"></a>Descrizione  
@@ -74,7 +74,7 @@ ms.locfileid: "67991471"
 -   Se è in corso un failover, attenderne il completamento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

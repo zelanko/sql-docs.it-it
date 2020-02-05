@@ -21,10 +21,10 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086153"
 ---
 # <a name="unary-operators---positive"></a>Operatori unari - positivo
@@ -40,7 +40,7 @@ Restituisce il valore di un'espressione numerica (operatore unario). Gli operato
   
  Gli operatori + (positivo) e - (negativo) possono essere utilizzati in qualsiasi espressione di un tipo di dati della categoria numerici. L'operatore ~ (NOT bit per bit) può essere utilizzato solo in espressioni di un tipo di dati della categoria integer.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,12 +56,12 @@ Restituisce il valore di un'espressione numerica (operatore unario). Gli operato
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati di *numeric_expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Sebbene sia possibile aggiungere un operatore più unario prima di qualsiasi espressione numerica, in questo caso non viene eseguita alcuna operazione sul valore restituito dall'espressione. In particolare, non verrà restituito il valore positivo di un'espressione negativa. Per restituire il valore positivo di un'espressione negativa, usare la funzione [ABS](../../t-sql/functions/abs-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-setting-a-variable-to-a-positive-value"></a>A. Impostazione di una variabile su un valore positivo  
+### <a name="a-setting-a-variable-to-a-positive-value"></a>R. Impostazione di una variabile su un valore positivo  
  Nell'esempio seguente una variabile viene impostata su un valore positivo.  
   
 ```  

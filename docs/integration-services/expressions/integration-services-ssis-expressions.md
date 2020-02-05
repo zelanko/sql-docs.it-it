@@ -17,10 +17,10 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f2e884e7a34af6cae14b4b057038e54b20255200
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289681"
 ---
 # <a name="integration-services-ssis-expressions"></a>Espressioni di Integration Services (SSIS)
@@ -67,7 +67,7 @@ ms.locfileid: "71289681"
  Alle variabili è associato un ambito. Nella cartella **Variabili** del Generatore di espressioni sono elencate solo le variabili incluse nell'ambito e utilizzabili. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Utilizzo di un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Usare un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  

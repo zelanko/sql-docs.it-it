@@ -21,18 +21,18 @@ ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0fa5615d70542373030e0344d6988d9d2d0a028c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026265"
 ---
-# <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
+# <a name="database_principal_id-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Questa funzione restituisce il numero ID di un'entità nel database corrente. Per altre informazioni sulle entità, vedere [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,12 +48,12 @@ Espressione di tipo **sysname** che rappresenta l'entità. Se *principal_name* v
 **int**  
 NULL se l'entità di database non esiste.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Usare `DATABASE_PRINCIPAL_ID` in un elenco di selezione, una clausola WHERE o in qualsiasi posizione che consente un'espressione. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-retrieving-the-id-of-the-current-user"></a>A. Recupero dell'ID dell'utente corrente  
+### <a name="a-retrieving-the-id-of-the-current-user"></a>R. Recupero dell'ID dell'utente corrente  
 In questo esempio viene restituito l'ID dell'entità di database per l'utente corrente.
   
 ```sql

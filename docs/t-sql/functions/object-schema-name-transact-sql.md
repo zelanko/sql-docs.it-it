@@ -22,18 +22,18 @@ ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 70556dd6365c6c3b204456db2877fdbc61e53d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914749"
 ---
-# <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
+# <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Restituisce il nome dello schema di database per gli oggetti con ambito schema. Per un elenco degli oggetti con ambito schema, vedere [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,7 +60,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ANY per l'oggetto. Per specificare l'ID di un database, è inoltre necessaria l'autorizzazione CONNECT per il database o l'abilitazione dell'account guest.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Per altre informazioni, vedere [Espressioni](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Il set di risultati restituito da questa funzione di sistema utilizza le regole di confronto del database corrente.  
@@ -83,7 +83,7 @@ FROM master.sys.objects;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-object-schema-name-and-object-name"></a>A. Restituzione del nome dello schema dell'oggetto e del nome dell'oggetto  
+### <a name="a-returning-the-object-schema-name-and-object-name"></a>R. Restituzione del nome dello schema dell'oggetto e del nome dell'oggetto  
  Nell'esempio seguente vengono restituiti il nome dello schema dell'oggetto, il nome dell'oggetto e il testo SQL per tutti i piani di query memorizzati nella cache che non sono istruzioni ad hoc o preparate.  
   
 ```sql

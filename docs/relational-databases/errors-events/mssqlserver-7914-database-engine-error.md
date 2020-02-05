@@ -12,13 +12,13 @@ ms.assetid: d32a81ce-4ca7-4b33-b536-c7ea0ed6f226
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0bdd7db91d41e9169fb5c71b138355694e73ed42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109119"
 ---
-# <a name="mssqlserver7914"></a>MSSQLSERVER_7914
+# <a name="mssqlserver_7914"></a>MSSQLSERVER_7914
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -36,5 +36,5 @@ ms.locfileid: "68109119"
 Messaggio informativo inviato da REPAIR che indica che una pagina GAM o SGAM è stata ricompilata utilizzando la pagina di dati PFS.  
   
 ## <a name="user-action"></a>Azione dell'utente  
-None  
+nessuno  
   

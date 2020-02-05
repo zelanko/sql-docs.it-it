@@ -15,15 +15,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cfe1638d6bb1bc1d56e7160ec51cd15138be1f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940659"
 ---
 # <a name="progress-report-event-category"></a>Categoria di eventi Report di stato
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La categoria di eventi **Report di stato** include la classe di evento **Progress Report: Online Index Operation**.  
+  Nella categoria di eventi **Report di stato** è inclusa la classe di evento **Progress Report: Online Index Operation** .  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

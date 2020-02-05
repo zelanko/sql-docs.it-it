@@ -14,10 +14,10 @@ ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc5c349835acb6211fb3d46c0bad37d377760063
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288836"
 ---
 # <a name="-multiply-ssis-expression"></a>* (moltiplicazione) (espressione SSIS)
@@ -42,7 +42,7 @@ numeric_expression1 * numeric_expression2
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se uno degli operandi è Null, il risultato sarà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  

@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 64060ae1662d9d1448695426da9e555afbf6869a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056193"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Trovare frasi chiave nei documenti mediante ricerca semantica
@@ -36,7 +36,7 @@ ms.locfileid: "74056193"
 > [!IMPORTANT]  
 >  Per le colonne di destinazione deve essere abilitata l'indicizzazione full-text e semantica.  
   
-###  <a name="HowToTopPhrases"></a> Esempio 1: Trovare le principali frasi chiave in un documento specifico  
+###  <a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
  L'esempio seguente recupera le prime 10 frasi chiave dal documento specificato tramite la variabile @DocumentId nella colonna Document della tabella Production.Document del database di esempio AdventureWorks. La variabile @DocumentId rappresenta un valore della colonna chiave dell'indice full-text.  
   
 ```sql  
@@ -53,7 +53,7 @@ GO
   
  La funzione **SEMANTICKEYPHRASETABLE** recupera in modo efficiente questi risultati tramite una ricerca nell'indice anziché un'analisi della tabella.  
   
-###  <a name="HowToTopDocuments"></a> Esempio 2: Trovare i documenti principali che contengono una frase chiave specifica  
+###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
  Nell'esempio seguente vengono recuperati i primi 25 documenti che contengono la frase chiave "Bracket" dalla colonna Documento della tabella Production.Document del database di esempio AdventureWorks.  
   
 ```sql  

@@ -13,10 +13,10 @@ ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c66a4d3826493d10974ab4ce8363e3adde1bd0fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998421"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>ottimizzare per l'opzione di configurazione del server dei carichi di lavoro a hoc
@@ -33,7 +33,7 @@ ms.locfileid: "67998421"
 > [!WARNING]  
 >  Il flag di traccia 8032 può provocare prestazioni ridotte se cache di grandi dimensioni rendono disponibile meno memoria per altri consumer di memoria, ad esempio il pool di buffer.  
 
-## <a name="recommendations"></a>Indicazioni
+## <a name="recommendations"></a>Consigli
 Evitare la presenza di un numero elevato di piani a uso singolo nella cache dei piani. Una causa comune di questo problema è la definizione non coerente dei tipi di dati o dei parametri di query. Questo è vero specificamente per la lunghezza delle stringhe ma è applicabile a qualsiasi tipo di dati che dispone di una lunghezza massima, una precisione o una scala. Se ad esempio un parametro con nome @Greeting viene passato come nvarchar(10) in una chiamata e come nvarchar(20) nella chiamata seguente, vengono creati piani separati per ogni dimensione del parametro. Se una query include diversi parametri e questi non sono definiti in modo coerente quando vengono chiamati, è possibile che per ogni query esista un numero elevato di piani di query. È possibile che esistano piani per ogni combinazione di tipi di dati dei parametri di query e lunghezze.
 
 Se il numero di piani a utilizzo singolo occupa una parte significativa della memoria di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in un server OLTP e questi piani sono piani ad-hoc, usare questa opzione server per ridurre l'utilizzo della memoria con questi oggetti.

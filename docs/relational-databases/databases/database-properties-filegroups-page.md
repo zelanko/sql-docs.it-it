@@ -13,10 +13,10 @@ ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099625"
 ---
 # <a name="database-properties-filegroups-page"></a>Proprietà database (pagina Filegroup)
@@ -44,7 +44,7 @@ ms.locfileid: "68099625"
  **Default**  
  Consente di impostare il filegroup come filegroup predefinito. È possibile avere un filegroup predefinito per le righe e un filegroup predefinito per i dati FILESTREAM.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere una nuova riga vuota alla griglia in cui sono elencati i filegroup per il database.  
   
  **Rimuovi**  
@@ -57,7 +57,7 @@ ms.locfileid: "68099625"
  **File FILESTREAM**  
  Visualizza il numero di file (contenitori) nel filegroup di dati ottimizzato per la memoria. È possibile aggiungere contenitori nella pagina **File** .  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere una nuova riga vuota alla griglia in cui sono elencati i filegroup per il database.  
   
  **Rimuovi**  

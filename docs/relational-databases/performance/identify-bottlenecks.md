@@ -23,10 +23,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bbabafa1f5b367343f02c3a0bf3e122bc827ce66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946759"
 ---
 # <a name="identify-bottlenecks"></a>Individuare i colli di bottiglia
@@ -46,7 +46,7 @@ ms.locfileid: "67946759"
 ## <a name="analyzing-bottlenecks"></a>Analisi dei colli di bottiglia  
  La durata eccessiva di alcuni eventi segnala la presenza di colli di bottiglia che è possibile ottimizzare.  
   
- Esempio:  
+ Ad esempio:  
   
 -   È possibile che un altro componente impedisca che il processo di caricamento raggiunga il componente in uso, con un conseguente incremento dei tempi necessari per completare il caricamento.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67946759"
 |Possibile area in cui è presente un collo di bottiglia|Effetti sul server|  
 |------------------------------|---------------------------|  
 |Utilizzo della memoria|Se la memoria allocata per Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o disponibile per il sistema non è sufficiente, le prestazioni risultano inferiori. I dati infatti devono essere letti nel disco anziché direttamente nella cache dei dati. Microsoft Windows NT esegue un paging eccessivo con uno swapping dei dati da e nel disco in base alle pagine richieste.|  
-|Utilizzo della CPU|Se la frequenza di utilizzo della CPU risulta costantemente elevata, potrebbe essere necessario ottimizzare le query [!INCLUDE[tsql](../../includes/tsql-md.md)] o aggiornare la CPU.|  
+|Uso della CPU|Se la frequenza di utilizzo della CPU risulta costantemente elevata, potrebbe essere necessario ottimizzare le query [!INCLUDE[tsql](../../includes/tsql-md.md)] o aggiornare la CPU.|  
 |Input/output (I/O) del disco|[!INCLUDE[tsql](../../includes/tsql-md.md)] le query possono essere ottimizzate per ridurre le operazioni di I/O del disco non necessarie, ad esempio tramite l'uso di indici.|  
 |Connessioni utente|Se il numero di utenti che accede al server simultaneamente è molto elevato, le prestazioni potrebbe risultare inferiori.|  
 |Blocchi di blocco|L'utilizzo di applicazioni progettate in modo non corretto può causare blocchi e ostacolare la concorrenza, con un conseguente rallentamento dei tempi di risposta e una diminuzione della velocità effettiva.|  

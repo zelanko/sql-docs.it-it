@@ -12,13 +12,13 @@ ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f60c9b7f02748e4dcd99e214fcbcd12505f203d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043599"
 ---
-# <a name="mssqlserver3456"></a>MSSQLSERVER_3456
+# <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -30,7 +30,7 @@ ms.locfileid: "68043599"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|REC_REDOLSNMISMATCH|  
-|Testo del messaggio|Impossibile eseguire il rollforward del record di log %S_LSN per l'ID di transazione %S_XID, pagina %S_PGID, database '%.*ls' (ID di database %d). Pagina: LSN = %S_LSN, tipo = %ld. Log: OpCode = %ld, contesto=%d, PrevPageLSN: %S_LSN. Correggere il database oppure ripristinarlo da un backup.|  
+|Testo del messaggio|Impossibile eseguire il rollforward del record di log %S_LSN per l'ID di transazione %S_XID, pagina %S_PGID, database '%.*ls' (ID di database %d). Pagina: LSN = %S_LSN, tipo = %ld. Informazioni sul log: OpCode = %ld, contesto=%d, PrevPageLSN: %S_LSN. Correggere il database oppure ripristinarlo da un backup.|  
   
 ## <a name="explanation"></a>Spiegazione  
 Durante l'operazione di ripristino non è stato possibile eseguire il rollforward del log delle transazioni. Tale errore ha determinato l'impostazione del database sullo stato SUSPECT. Il filegroup primario, e probabilmente altri filegroup, sono sospetti e possono essere danneggiati. Non è possibile recuperare il database durante l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pertanto non è disponibile. Per risolvere il problema, è necessario l'intervento dell'utente.  

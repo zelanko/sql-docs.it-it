@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035679"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabella di esempio HumanResources.myTeam (SQL Server)
@@ -31,11 +31,11 @@ ms.locfileid: "68035679"
   
  Nella tabella **myTeam** sono incluse le colonne seguenti.  
   
-|colonna|Tipo di dati|Supporto di valori Null|Descrizione|  
+|Colonna|Tipo di dati|Supporto di valori Null|Descrizione|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|Non Null|Chiave primaria per le righe. ID dipendente di un membro del team.|  
 |**Nome**|**nvarchar(50)**|Non Null|Nome di un membro del team.|  
-|**Title**|**nvarchar(50)**|Ammette valori Null|Titolo professionale del dipendente nel team.|  
+|**Titolo**|**nvarchar(50)**|Nullable|Titolo professionale del dipendente nel team.|  
 |**Background**|**nvarchar(50)**|Non Null|Data e ora dell'ultimo aggiornamento della riga. Valore predefinito.|  
   
 **Per creare HumanResources.myTeam**  

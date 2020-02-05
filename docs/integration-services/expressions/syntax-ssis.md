@@ -14,10 +14,10 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c0e005ee8dbb1c01cdaf5d3af031fd9ffba31ac
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288253"
 ---
 # <a name="syntax-ssis"></a>Sintassi (SSIS)
@@ -80,7 +80,7 @@ ms.locfileid: "71288253"
  Per altre informazioni, vedere [Funzioni &#40;espressione SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Utilizzo di un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Usare un'espressione in un componente flusso di dati](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenuto correlato  
   

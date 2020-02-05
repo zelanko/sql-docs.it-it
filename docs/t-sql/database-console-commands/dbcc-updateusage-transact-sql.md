@@ -34,10 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040460"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68040460"
 
 Segnala e corregge le imprecisioni relative al conteggio delle pagine e delle righe nelle viste del catalogo. Queste imprecisioni possono causare la restituzione di report sull'utilizzo dello spazio non corretti da parte della stored procedure di sistema sp_spaceused.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,7 +67,7 @@ Nome o ID della tabella o della vista indicizzata per cui si desidera segnalare 
 *index_id* | *index_name*  
 ID o nome dell'indice da utilizzare. Se viene omesso, l'istruzione elabora tutti gli indici della tabella o della vista specificata.  
   
-con  
+WITH  
 Consente di specificare opzioni.  
   
 NO_INFOMSGS  
@@ -76,7 +76,7 @@ Disattiva tutti i messaggi informativi.
 COUNT_ROWS  
 Specifica che la colonna row count viene aggiornata in base al numero di righe corrente della tabella o della vista.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 L'istruzione DBCC UPDATEUSAGE corregge i conteggi delle righe, delle pagine utilizzate, delle pagine riservate, delle pagine foglia e delle pagine di dati per ogni partizione di una tabella o di un indice. Se nelle tabelle di sistema non vengono rilevate imprecisioni, l'istruzione DBCC UPDATEUSAGE non restituisce alcun dato. Se vengono rilevate e corrette alcune imprecisioni e l'opzione WITH NO_INFOMSGS non è stata utilizzata, l'istruzione DBCC UPDATEUSAGE restituisce le righe e le colonne aggiornate nelle tabelle di sistema.
   
 DBCC CHECKDB è stato migliorato in modo da rilevare i casi in cui il conteggio delle pagine o delle righe diventa negativo. In tali situazioni, l'output DBCC CHECKDB include un avviso e l'indicazione di eseguire DBCC UPDATEUSAGE per risolvere il problema.
@@ -96,7 +96,7 @@ DBCC UPDATEUSAGE restituisce il messaggio seguente (i valori possono variare):
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-updating-page-or-row-counts-or-both-for-all-objects-in-the-current-database"></a>A. Aggiornamento del conteggio delle pagine, delle righe o di entrambi per tutti gli oggetti nel database corrente  
+### <a name="a-updating-page-or-row-counts-or-both-for-all-objects-in-the-current-database"></a>R. Aggiornamento del conteggio delle pagine, delle righe o di entrambi per tutti gli oggetti nel database corrente  
 Nell'esempio seguente viene specificato il valore `0` per il nome del database e l'istruzione `DBCC UPDATEUSAGE` restituisce informazioni aggiornate relative al conteggio delle pagine o delle righe per il database corrente.
   
 ```sql

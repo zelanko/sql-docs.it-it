@@ -18,10 +18,10 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051236"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
@@ -46,7 +46,7 @@ Identifica il nuovo valore del nodo. Può essere un'espressione che restituisce 
 ## <a name="examples"></a>Esempi  
 Negli esempi seguenti di istruzione XML DML **replace value of** viene illustrata la modalità di aggiornamento dei nodi in un documento XML.  
   
-### <a name="a-replacing-values-in-an-xml-instance"></a>A. Sostituzione di valori in un'istanza XML  
+### <a name="a-replacing-values-in-an-xml-instance"></a>R. Sostituzione di valori in un'istanza XML  
 Nell'esempio seguente, viene assegnata prima un'istanza di documento a una variabile di tipo **xml**. Successivamente, le istruzioni XML DML **replace value of** aggiornano i valori nel documento.  
   
 ```sql

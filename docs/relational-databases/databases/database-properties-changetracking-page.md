@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2661424dcfe87f7151bbd92b2dfbf76861913fbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099636"
 ---
 # <a name="database-properties-changetracking-page"></a>Proprietà database (pagina ChangeTracking)
@@ -34,7 +34,7 @@ ms.locfileid: "68099636"
   
  È anche possibile configurare il rilevamento delle modifiche usando [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
- **Periodo di memorizzazione**  
+ **Periodo di conservazione**  
  Specifica il periodo minimo di conservazione delle informazioni sul rilevamento delle modifiche nel database. I dati vengono rimossi solo se il valore **Pulizia automatica** è impostato su **True**.  
   
  Il valore predefinito è 2.  

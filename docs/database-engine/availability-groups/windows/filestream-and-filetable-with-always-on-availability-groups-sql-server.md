@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6398c949f5cccbd6c437eaddba04ab5bb32aae12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008413"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Usare FILESTREAM e FileTable con i gruppi di disponibilità Always On
@@ -71,12 +71,12 @@ ms.locfileid: "68008413"
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Abilitare e configurare FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
--   [Abilitazione dei prerequisiti per la tabella FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
+-   [Abilitare i prerequisiti per la tabella FileTable](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: ff7b069ebde75185b0e500bc7052edc6e99fc927
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68265355"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>Lo stato di sincronizzazione dei dati del database di disponibilità non è integro per un gruppo di disponibilità Always On
@@ -31,7 +31,7 @@ ms.locfileid: "68265355"
 |-|-|  
 |**Nome criteri**|Stato di sincronizzazione dei dati del database di disponibilità|  
 |**Problema**|Lo stato di sincronizzazione dei dati del database di disponibilità non è integro.|  
-|**Category**|**Avviso**|  
+|**Categoria**|**Warning**|  
 |**Facet**|Database di disponibilità|  
   
 ## <a name="description"></a>Descrizione  
@@ -48,7 +48,7 @@ ms.locfileid: "68265355"
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
 

@@ -11,10 +11,10 @@ ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733e6c8000f3a14127b0f3a8704b43af81fa0f85
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292334"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Caricare dati tramite la destinazione ODBC
@@ -38,9 +38,9 @@ ms.locfileid: "71292334"
   
 6.  Selezionare il metodo di accesso ai dati.  
   
-    -   **Nome tabella - Batch**: Selezionare questa opzione per configurare la destinazione ODBC per l'utilizzo della modalità batch. Quando si seleziona questa opzione, è possibile impostare un valore per **Dimensioni batch**.  
+    -   **Nome tabella - Batch**: selezionare questa opzione per configurare la destinazione ODBC per l'utilizzo della modalità batch. Quando si seleziona questa opzione, è possibile impostare un valore per **Dimensioni batch**.  
   
-    -   **Nome tabella - Riga per riga**: Selezionare questa opzione per configurare la destinazione ODBC per l'inserimento di una riga per volta nella tabella di destinazione. Quando si seleziona questa opzione, i dati vengono caricati una riga per volta nella tabella.  
+    -   **Nome tabella - Riga per riga**: selezionare questa opzione per configurare la destinazione ODBC per l'inserimento di una riga per volta nella tabella di destinazione. Quando si seleziona questa opzione, i dati vengono caricati una riga per volta nella tabella.  
   
 7.  Nel campo **Nome tabella o vista** selezionare una tabella o una vista disponibile del database dall'elenco o digitare un'espressione regolare per identificare la tabella. Questo elenco contiene solo le prime 1000 tabelle. Se il database contiene più di 1000 tabelle, è possibile digitare l'inizio di un nome di tabella o utilizzare il carattere jolly (*) per immettere qualsiasi parte del nome e visualizzare la tabella o le tabelle che si desidera utilizzare.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71292334"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ODBC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [ODBC Destination Editor &#40;pagina Mapping&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
+ [Editor destinazione ODBC &#40;pagina Mapping&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
  [Editor origine ODBC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

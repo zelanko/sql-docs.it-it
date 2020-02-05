@@ -18,10 +18,10 @@ ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930140"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (tipo di dati geometry)
@@ -45,7 +45,7 @@ Restituisce 1 se un'istanza **geometry** incrocia un'altra istanza **geometry**.
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Due istanze **geometry** si incrociano se si verificano entrambe le condizioni seguenti:  
   
 -   L'intersezione delle due istanze **geometry** restituisce una geometria le cui dimensioni sono minori delle dimensioni massime delle istanze **geometry** di origine.  

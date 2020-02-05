@@ -15,10 +15,10 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e360df3a5e29aae987b90c97c0c983af6cd0f8a
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952463"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "75952463"
 ## <a name="change-data-capture-data-flow"></a>Flusso di dati di Change Data Capture  
  Nella figura seguente viene illustrato il flusso di dati principale per Change Data Capture.  
   
- ![Flusso di dati di Change Data Capture](../../relational-databases/track-changes/media/cdcdataflow.gif "|::ref1::|")  
+ ![Flusso di dati di Change Data Capture](../../relational-databases/track-changes/media/cdcdataflow.gif "Flusso di dati di Change Data Capture")  
   
  L'origine dei dati delle modifiche per la funzionalità Change Data Capture è data dal log delle transazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Man mano che alle tabelle di origine con rilevamento vengono applicati inserimenti, aggiornamenti ed eliminazioni, le voci che descrivono tali modifiche vengono aggiunte al log. Il log viene utilizzato come input per il processo di acquisizione Il log viene letto e le informazioni relative alle modifiche vengono aggiunte alla tabella delle modifiche associata alla tabella con rilevamento. Per enumerare le modifiche visualizzate nelle tabelle delle modifiche in un intervallo specificato, sono disponibili diverse funzioni che restituiscono le informazioni in un set di risultati filtrato. Tale set di risultati viene utilizzato in genere da un processo dell'applicazione per aggiornare una rappresentazione dell'origine in alcuni ambienti esterni.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75952463"
   
  Ogni operazione di inserimento o eliminazione applicata a una tabella di origine viene visualizzata in un'unica riga all'interno della tabella delle modifiche. Le colonne di dati della riga che costituisce il risultato di un'operazione di inserimento contengono i valori della colonna dopo l'inserimento, mentre le colonne di dati della riga che costituisce il risultato di un'operazione di eliminazione contengono i valori della colonna prima dell'eliminazione. Per eseguire un'operazione di aggiornamento sono necessarie due voci di riga, una per identificare i valori della colonna prima dell'aggiornamento e l'altra per identificare i valori della colonna dopo l'aggiornamento.  
   
- Ogni riga di una tabella delle modifiche contiene inoltre metadati aggiuntivi che consentono di interpretare l'attività di modifica. La colonna __$start_lsn identifica il numero di sequenza del file di log (LSN) del commit assegnato alla modifica. Il valore LSN di commit identifica le modifiche di cui è stato eseguito il commit all'interno della stessa transazione e ordina inoltre tali transazioni. La colonna \_\_$seqval può essere usata per ordinare più modifiche che si verificano all'interno di una stessa transazione, La colonna \_\_$operation registra l'operazione associata alla modifica: 1 = eliminazione, 2 = inserimento, 3 = aggiornamento (prima dell'immagine) e 4 = aggiornamento (dopo l'immagine). La colonna \_\_$update_mask, infine, è una maschera di bit variabile con un bit definito per ogni colonna acquisita. Per le voci relative all'inserimento e all'eliminazione dei dati, tutti i bit della maschera di aggiornamento verranno sempre impostati. Per le righe aggiornate, tuttavia, saranno impostati solo i bit corrispondenti alle colonne modificate.  
+ Ogni riga di una tabella delle modifiche contiene inoltre metadati aggiuntivi che consentono di interpretare l'attività di modifica. La colonna __$start_lsn identifica il numero di sequenza del file di log (LSN) del commit assegnato alla modifica. Il valore LSN di commit identifica le modifiche di cui è stato eseguito il commit all'interno della stessa transazione e ordina inoltre tali transazioni. La colonna \_\_$seqval può essere usata per ordinare più modifiche che si verificano all'interno di una stessa transazione, mentre la colonna \_\_$operation registra l'operazione associata alla modifica in base al seguente schema: 1 = eliminazione, 2 = inserimento, 3 = aggiornamento (prima dell'immagine) e 4 = aggiornamento (dopo l'immagine). La colonna \_\_$update_mask, infine, è una maschera di bit variabile con un bit definito per ogni colonna acquisita. Per le voci relative all'inserimento e all'eliminazione dei dati, tutti i bit della maschera di aggiornamento verranno sempre impostati. Per le righe aggiornate, tuttavia, saranno impostati solo i bit corrispondenti alle colonne modificate.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervallo di validità di Change Data Capture per un database  
  L'intervallo di validità di Change Data Capture per un database è rappresentato dal periodo di tempo durante il quale i dati delle modifiche sono disponibili per le istanze di acquisizione. L'intervallo di validità ha inizio nel momento in cui viene creata la prima istanza di acquisizione e si estende fino al momento corrente.  

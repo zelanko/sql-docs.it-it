@@ -23,10 +23,10 @@ ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034946"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68034946"
 
   Compila le varie query senza eseguirle.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68034946"
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando l'opzione SET NOEXEC è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila, ma non esegue, tutti i batch delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando l'opzione è impostata su OFF, tutti i batch vengono eseguiti dopo la compilazione.  
   
  L'esecuzione di istruzioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è composta da due fasi: compilazione ed esecuzione. Tale impostazione risulta utile per consentire la convalida in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della sintassi e dei nomi di oggetto nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] in fase di esecuzione. Risulta utile inoltre per il debug di istruzioni che normalmente fanno parte di un batch di istruzioni più esteso.  

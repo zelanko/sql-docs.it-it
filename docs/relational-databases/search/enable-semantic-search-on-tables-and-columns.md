@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082905"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Abilitare la ricerca semantica in tabelle e colonne
@@ -43,7 +43,7 @@ ms.locfileid: "68082905"
   
 -   È possibile creare un indice semantico in colonne che includono qualsiasi tipo di dati supportato per l'indicizzazione full-text. Per altre informazioni, vedere [Creare e gestire indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
--   È possibile specificare qualsiasi tipo di documento supportato per l'indicizzazione full-text per colonne **varbinary(max)** . Per altre informazioni, vedere [Procedura: Determinare quali tipi di documenti è possibile indicizzare](#doctypes) in questo argomento.  
+-   È possibile specificare qualsiasi tipo di documento supportato per l'indicizzazione full-text per colonne **varbinary(max)** . Per ulteriori informazioni, vedere [Procedura: determinare quali tipi di documenti è possibile indicizzare](#doctypes) in questo argomento.  
   
 -   L'indicizzazione semantica consente di creare due tipi di indici per le colonne selezionate, ovvero un indice di frasi chiave e un indice di somiglianza del documento. Non è possibile selezionare solo uno dei due tipi di indice quando si abilita l'indicizzazione semantica. È tuttavia possibile eseguire query indipendenti su questi due indici. Per altre informazioni, vedere [Trovare frasi chiave nei documenti mediante ricerca semantica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) e [Trovare documenti simili e correlati tramite la ricerca semantica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68082905"
  
  Chiamare l'istruzione **CREATE FULLTEXT INDEX** e specificare **STATISTICAL_SEMANTICS** per ogni colonna in cui creare un indice semantico. Per altre informazioni su tutte le opzioni per questa istruzione, vedere [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
- **Esempio 1: Creare un indice univoco, un indice full-text e un indice semantico**  
+ **Esempio 1: creazione di un indice univoco, di un indice full-text e di un indice semantico**  
   
  L'esempio riportato di seguito crea il catalogo full-text predefinito **ft**. L'esempio crea quindi un indice univoco nella colonna **JobCandidateID** della tabella **HumanResources.JobCandidate** del database di esempio AdventureWorks2012. Questo indice univoco è necessario come colonna chiave di un indice full-text. L'esempio crea infine un indice full-text e un indice semantico nella colonna **Resume** .  
   
@@ -80,7 +80,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
- **Esempio 2: Creare un indice full-text e semantico in diverse colonne con popolamento dell'indice posticipato**  
+ **Esempio: creazione di un indice full-text e semantico in diverse colonne con popolamento dell'indice posticipato**  
   
  L'esempio seguente crea un catalogo full-text **documents_catalog**nel database di esempio AdventureWorks2012. Nell'esempio viene quindi creato un indice full-text che utilizza questo nuovo catalogo. L'indice full-text viene creato per le colonne **Title**, **DocumentSummary**e **Document** della tabella **Production.Document** , mentre l'indice semantico viene creato solo per la colonna **Document** . Questo indice full-text usa il catalogo full-text appena creato e un indice di chiave univoca esistente, **PK_Document_DocumentID**. Come consigliato, questa chiave di indice viene creata in una colonna Integer, **DocumentID**. Nell'esempio viene specificato l'LCID 1033 per l'inglese, che identifica la lingua dei dati presenti nelle colonne.  
   
@@ -131,7 +131,7 @@ GO
   
 -   Per aggiungere l'indicizzazione semantica a una colonna già abilitata per l'indicizzazione full-text, usare l'opzione **ADD STATISTICAL_SEMANTICS** . È possibile aggiungere l'indicizzazione semantica solo a una colonna in una singola istruzione **ALTER** .  
   
- **Esempio: Aggiungere l'indicizzazione semantica a una colonna già abilitata per l'indicizzazione full-text**  
+ **Esempio: aggiunta di indicizzazione semantica a una colonna già abilitata per l'indicizzazione full-text**  
   
  Nell'esempio seguente viene modificato un indice full-text esistente nella tabella **Production.Document** del database di esempio AdventureWorks2012. Nell'esempio viene aggiunto un indice semantico nella colonna **Document** della tabella **Production.Document** , in cui è già presente un indice full-text. Nell'esempio viene specificato che l'indice non verrà ripopolato automaticamente.  
   
@@ -274,7 +274,7 @@ GO
   
  Se il tipo di documento che si desidera indicizzare non è nell'elenco di tipi supportati, può essere necessario individuare, scaricare e installare filtri aggiuntivi. Per altre informazioni, vedere [Visualizzazione o modifica di word breaker e filtri registrati](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Procedura consigliata: Considerare la creazione di un filegroup distinto per gli indici full-text e semantici  
+##  <a name="BestPracticeFilegroup"></a> Procedura consigliata: considerare la creazione di un filegroup distinto per gli indici full-text e semantici  
  Valutare se creare un filegroup distinto per gli indici full-text e semantici se l'allocazione di spazio su disco costituisce un problema. Gli indici semantici vengono creati nello stesso filegroup dell'indice full-text. Un indice semantico completamente popolato può contenere una notevole quantità di dati.  
  
 ##  <a name="IssueNoResults"></a> Problema: la ricerca in specifiche colonne non restituisce alcun risultato  

@@ -15,10 +15,10 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 22101d8ec2f24eeb1a93708adf52b2b24060ce28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987146"
 ---
 # <a name="view-plan-guide-properties"></a>Visualizzare le proprietà delle guide di piano
@@ -29,7 +29,7 @@ ms.locfileid: "67987146"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare le proprietà delle guide di piano utilizzando:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67987146"
 ####  <a name="Permissions"></a> Autorizzazioni  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui un utente è proprietario o per le quali dispone di autorizzazioni.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Per visualizzare le proprietà di una guida di piano  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67987146"
      **Nome**  
      Visualizza il nome della guida di piano.  
   
-     **Parametri**  
+     **Parameters**  
      Quando il tipo di ambito è SQL o TEMPLATE, vengono visualizzati il nome e il tipo di dati di tutti i parametri incorporati nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Batch ambito**  
@@ -85,7 +85,7 @@ ms.locfileid: "67987146"
   
 4.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Per visualizzare le proprietà di una guida di piano  
   

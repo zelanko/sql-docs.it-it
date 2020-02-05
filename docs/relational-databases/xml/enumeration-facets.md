@@ -13,10 +13,10 @@ ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fd368cdf5289d1b21818d6c7d6e51d395e340d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006833"
 ---
 # <a name="enumeration-facets"></a>facet di enumerazione
@@ -45,6 +45,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per le raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

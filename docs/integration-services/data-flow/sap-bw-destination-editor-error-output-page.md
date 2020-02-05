@@ -13,10 +13,10 @@ ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9016a943848247ce7c9ba81d70cf542b470b6e2a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291971"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>Editor destinazione SAP BW (pagina Output degli errori)
@@ -24,7 +24,7 @@ ms.locfileid: "71291971"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Usare la pagina **Output degli errori** dell'**Editor destinazione SAP BW** per specificare le opzioni di gestione degli errori.  
+  Usare la pagina **Output degli errori** dell' **Editor destinazione SAP BW** per specificare le opzioni di gestione degli errori.  
   
  Per altre informazioni sulla destinazione SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Destinazione SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71291971"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene la destinazione SAP BW.  
   
-2.  Nella scheda **Flusso dati** fare doppio clic sulla destinazione SAP BW.  
+2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione SAP BW.  
   
 3.  Nell' **Editor destinazione SAP BW**fare clic su **Output degli errori** per aprire la pagina **Output degli errori** dell'editor.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71291971"
  **Colonna**  
  Questa opzione non viene utilizzata.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Specificare quale azione dovrà essere eseguita dalla destinazione in caso di errore: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Troncamento**  

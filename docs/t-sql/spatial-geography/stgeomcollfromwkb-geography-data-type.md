@@ -18,10 +18,10 @@ ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: afa95f660c04bf38bf12cee66b1053b935cc5113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042246"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (tipo di dati geography)
@@ -48,7 +48,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il tipo OGC dell'istanza **geography** restituito da STGeomCollFromWKB() è impostato su **GeometryCollection**, **MultiPolygon**, **MultiLineString** o **MultiPoint**, in base all'input WKB corrispondente.  
   
  Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  

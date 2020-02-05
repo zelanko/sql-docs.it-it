@@ -34,10 +34,10 @@ ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096913"
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
@@ -94,7 +94,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   Chiave primaria della tabella di base. La chiave primaria della tabella di base viene duplicata nell'indice XML primario per eseguire un join all'indietro con la tabella di base e il numero massimo di colonne nella chiave primaria della tabella di base è limitato a 15.  
   
- Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Esempio:  
+ Le informazioni sul nodo vengono utilizzate per valutare e costruire i risultati XML di una query specificata. A scopo di ottimizzazione, il nome di tag e le informazioni sul tipo di nodo vengono codificati come valori integer e per la colonna Path viene utilizzata la stessa codifica. Inoltre, i percorsi vengono archiviati in ordine inverso per consentirne la corrispondenza quando è noto solo il relativo suffisso. Ad esempio:  
   
 -   `//ContactRecord/PhoneNumber` in cui sono noti solo gli ultimi due passaggi  
   
@@ -104,13 +104,13 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Query Processor usa l'indice XML primario per le query che implicano [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md) e restituisce valori scalari o sottoalberi XML dall'indice primario stesso. In tale indice vengono archiviate tutte le informazioni necessarie per ricostruire l'istanza XML.  
   
- Ad esempio, la query seguente restituisce informazioni di riepilogo archiviate nella colonna di tipo `CatalogDescription`**xml** nella tabella `ProductModel`. La query restituisce informazioni <`Summary`> solo per modelli di prodotti la cui descrizione di catalogo contiene inoltre la descrizione <`Features`>.  
+ Ad esempio, la query seguente restituisce informazioni di riepilogo archiviate nella colonna di tipo `CatalogDescription`**xml** nella tabella `ProductModel` . La query restituisce informazioni <`Summary`> solo per modelli di prodotti la cui descrizione di catalogo contiene inoltre la descrizione <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
- In relazione all'indice XML primario, anziché suddividere ogni istanza degli oggetti BLOB XML nella tabella di base, nelle righe dell'indice che corrispondono a ogni oggetto BLOB XML viene eseguita la ricerca sequenziale dell'espressione specificata nel metodo `exist()`. Se il percorso viene individuato nella colonna Path dell'indice, l'elemento <`Summary`> e i relativi sottoalberi vengono recuperati dall'indice XML primario e convertiti in un oggetto BLOB XML come risultato del metodo `query()`.  
+ In relazione all'indice XML primario, anziché suddividere ogni istanza degli oggetti BLOB XML nella tabella di base, nelle righe dell'indice che corrispondono a ogni oggetto BLOB XML viene eseguita la ricerca sequenziale dell'espressione specificata nel metodo `exist()` . Se il percorso viene individuato nella colonna Path dell'indice, l'elemento <`Summary`> e i relativi sottoalberi vengono recuperati dall'indice XML primario e convertiti in un oggetto BLOB XML come risultato del metodo `query()`.  
   
  Si noti che l'indice XML primario non viene utilizzato per il recupero di un'istanza XML completa. Ad esempio, la query seguente recupera dalla tabella l'intera istanza XML che descrive le istruzioni di produzione per un modello di prodotto specifico.  
   

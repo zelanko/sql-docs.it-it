@@ -12,13 +12,13 @@ ms.assetid: 0418352c-0ab2-4dc7-b8b9-5c3bad94560c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e87c0983ac7e74b45251bb72c44265f2134aa3b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103733"
 ---
-# <a name="mssqlserver2533"></a>MSSQLSERVER_2533
+# <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -30,7 +30,7 @@ ms.locfileid: "68103733"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_PAGE_WAS_NOT_SEEN|  
-|Testo del messaggio|Errore di tabella: impossibile rilevare la pagina P_ID allocata all'ID di oggetto O_ID, con ID di indice I_ID, ID di partizione PN_ID e ID di unità di allocazione A_ID (tipo TYPE). La pagina non è valida oppure l'ID di unità di allocazione contenuto nell'intestazione della pagina non è corretto.|  
+|Testo del messaggio|Errore di tabella: impossibile rilevare la pagina P_ID allocata all'ID di oggetto O_ID, con ID di indice I_ID, ID di partizione PN_ID, e ID di unità di allocazione A_ID (tipo TYPE). La pagina non è valida oppure l'ID di unità di allocazione contenuto nell'intestazione della pagina non è corretto.|  
   
 ## <a name="explanation"></a>Spiegazione  
 Una pagina viene allocata all'ID di unità di allocazione *A_ID*, che però non è contenuto nell'intestazione della pagina. L'intestazione ha un ID di unità di allocazione differente. Se l'ID di unità di allocazione contenuto nell'intestazione della pagina è relativo a un oggetto valido, la pagina può restituire un errore MSQLEngine_2534 corrispondente.  

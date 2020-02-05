@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: af24aff4bbb8f0eefa14363453e962c0a90d610e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847212"
 ---
 # <a name="iservervirtualdeviceset2opendevice-vdi"></a>IServerVirtualDeviceSet2::OpenDevice (VDI)
@@ -44,7 +44,7 @@ HRESULT IServerVirtualDeviceSet2::OpenDevice (
 | NOERROR | Funzione completata. |
 | VD_E_OPEN |Tutti i dispositivi sono stati aperti. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Ogni chiamata restituisce il successivo dispositivo non aperto. La funzione può essere chiamata solo per il numero di volte uguale al numero di dispositivi specificato nella configurazione del set di dispositivi virtuali.
 

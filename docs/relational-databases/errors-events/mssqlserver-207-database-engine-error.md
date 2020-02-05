@@ -12,13 +12,13 @@ ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0fa8c6371ba5889cde5afe2c66b036a1ec8c031d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056815"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -53,7 +53,7 @@ L'errore di query può essere causato da uno dei problemi seguenti:
   
     1.  FROM  
   
-    2.  ON  
+    2.  ATTIVA  
   
     3.  JOIN  
   
@@ -115,7 +115,7 @@ Verificare le informazioni seguenti e correggere l'istruzione in base alle esige
     GROUP BY Year;  
     ```  
   
--   La clausola WHEN NOT MATCHED BY SOURCE nell'istruzione MERGE fa riferimento a un valore cui è possibile accedere. Modificare l'istruzione MERGE in modo che venga restituita almeno una riga dalla tabella di origine nella clausola WHEN NOT MATCHED BY SOURCE. Può ad esempio essere necessario aggiungere o modificare la condizione di ricerca specificata per la clausola. In alternativa, è possibile modificare la clausola per specificare un valore che non fa riferimento alla tabella di origine, Ad esempio, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
+-   La clausola WHEN NOT MATCHED BY SOURCE nell'istruzione MERGE fa riferimento a un valore cui è possibile accedere. Modificare l'istruzione MERGE in modo che venga restituita almeno una riga dalla tabella di origine nella clausola WHEN NOT MATCHED BY SOURCE. Può ad esempio essere necessario aggiungere o modificare la condizione di ricerca specificata per la clausola. In alternativa, è possibile modificare la clausola per specificare un valore che non fa riferimento alla tabella di origine, Ad esempio: `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
 ## <a name="see-also"></a>Vedere anche  
 [MERGE &#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  

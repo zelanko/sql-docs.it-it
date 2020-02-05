@@ -18,10 +18,10 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f05c80a78417a8b5153345466eadcd49fa810228
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077994"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (Motore di database)
@@ -46,14 +46,14 @@ SqlInt16 GetLevel ( )
   
 **Tipo CLR restituito: SqlInt16**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Utilizzato per determinare il livello di uno o più nodi o per filtrare i nodi sui membri di un livello specificato. La radice della gerarchia si trova a livello 0.
   
 GetLevel è utile per indici di ricerca breadth-first. Per altre informazioni, vedere [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-hierarchy-level-as-a-column"></a>A. Restituzione del livello della gerarchia come una colonna  
+### <a name="a-returning-the-hierarchy-level-as-a-column"></a>R. Restituzione del livello della gerarchia come una colonna  
 Nell'esempio seguente vengono restituiti una rappresentazione in formato testo di **hierarchyid** e quindi il livello della gerarchia come colonna **EmpLevel** per tutte le righe della tabella:
   
 ```sql

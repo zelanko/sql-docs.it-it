@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59c4f13d53a8ffa296a685883bd4797d59403c55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130155"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68130155"
 
   Restituisce il carattere Unicode corrispondente al codice integer specificato, in base alla definizione dello standard Unicode.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,7 +67,7 @@ SELECT NCHAR(UNICODE(@d));
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-nchar-and-unicode"></a>A. Utilizzo delle funzioni NCHAR e UNICODE  
+### <a name="a-using-nchar-and-unicode"></a>R. Utilizzo delle funzioni NCHAR e UNICODE  
  Nell'esempio seguente vengono utilizzate le funzioni `UNICODE` e `NCHAR` per stampare il valore `UNICODE` e il risultato di `NCHAR` (carattere Unicode) del secondo carattere della stringa di caratteri `København`, nonché il secondo carattere effettivo, ovvero `ø`.  
   
 ```sql  

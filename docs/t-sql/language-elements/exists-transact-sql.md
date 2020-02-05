@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: be05a8adcf83fdd9f2e26ca5dce38d71a67c70ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075260"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68075260"
 
   Specifica una sottoquery per testare l'esistenza di righe.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ EXISTS ( subquery )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. Utilizzo di NULL in una sottoquery per restituire sempre un set di risultati  
+### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>R. Utilizzo di NULL in una sottoquery per restituire sempre un set di risultati  
  Nell'esempio seguente viene restituito un set di risultati grazie all'aggiunta di `NULL` nella sottoquery e viene comunque restituito TRUE tramite l'utilizzo della parola chiave `EXISTS`.  
   
 ```  
