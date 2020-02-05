@@ -1,28 +1,28 @@
 ---
 title: Informazioni di riferimento su azdata bdc spark batch
-titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi azdata bdc spark batch.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc3dc5a987ae55ba410ca64c15a3a4b776465b54
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 5d141669313a90bd04cda2e54d5a9e9d5a3c68f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531755"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258628"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
+L'articolo seguente offre informazioni di riferimento sui comandi `bdc spark batch` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | Crea un nuovo batch Spark.

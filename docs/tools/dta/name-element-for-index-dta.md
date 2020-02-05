@@ -1,10 +1,7 @@
 ---
-title: Elemento Name per index (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento Name per Index (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2d9ba05cb38d98823d6bf37cab92194e9e610d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 7f2df8bfce1f9b4cbb4e27c44c8f6b37e8d5e0f4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034708"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304655"
 ---
 # <a name="name-element-for-index-dta"></a>Elemento Name per Index (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifica un nome di un indice nella configurazione specificata dall'utente.  
+
+Specifica un nome di un indice nella configurazione specificata dall'utente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,7 +42,7 @@ ms.locfileid: "68034708"
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuna.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio una sola volta per ogni elemento **Index** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -47,7 +50,7 @@ ms.locfileid: "68034708"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Index &#40;DTA&#41;](../../tools/dta/index-element-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  

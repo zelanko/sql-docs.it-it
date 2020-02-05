@@ -1,23 +1,24 @@
 ---
-title: Uso di MSDeploy con il provider dbSqlPackage | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: Utilizzo di MSDeploy con il provider dbSqlPackage
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9279a433d848108b204cadc6990803695f9e82d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140976"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243557"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilizzo di MSDeploy con il provider dbSqlPackage
+
 **DbSqlPackage** è un provider **MSDeploy** che consente di interagire con database di SQL Server o SQL Azure. **DbSqlPackage** supporta le azioni seguenti:  
   
 -   **Extract**: crea un file snapshot di database con estensione dacpac da un database di SQL Server o SQL Azure attivo.  
@@ -46,21 +47,21 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 |Verbo|Descrizione|  
 |--------|---------------|  
-|dump|Fornisce informazioni, tra cui nome, numero di versione e descrizione, su un database di origine contenuto in un file con estensione dacpac. Specificare il database di origine utilizzando il formato seguente nella riga di comando:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
-|sync|Specifica le azioni di dbSqlPackage utilizzando il formato seguente nella riga di comando:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Vedere le sezioni riportate di seguito per i parametri di origine e di destinazione validi per il verbo sync.|  
+|dump|Fornisce informazioni, tra cui nome, numero di versione e descrizione, su un database di origine contenuto in un file con estensione dacpac. Specificare il database di origine utilizzando il formato seguente nella riga di comando:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
+|sync|Specifica le azioni di dbSqlPackage utilizzando il formato seguente nella riga di comando:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Vedere le sezioni riportate di seguito per i parametri di origine e di destinazione validi per il verbo sync.|  
   
 ## <a name="dbsqlpackage-source"></a>Origine di dbSqlPackage  
 Il provider **dbSqlPackage** accetta un input che è una stringa di connessione valida di SQL Azure o di SQL Server oppure un percorso di un file con estensione dacpac su disco.  La sintassi per specificare l'origine di input per il provider è la seguente:  
   
-|Input|Default|Descrizione|  
+|Input|Predefinito|Descrizione|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**N/D**|*input* è una stringa di connessione valida di SQL Server o di SQL Azure o di SQL Server oppure un percorso di un file con estensione dacpac su disco.<br /><br />**NOTA:** le uniche proprietà della stringa di connessione supportate quando si usa una stringa di connessione come origine di input sono *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* e *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=** {*input*}|**N/D**|*input* è una stringa di connessione valida di SQL Server o di SQL Azure o di SQL Server oppure un percorso di un file con estensione dacpac su disco.<br /><br />**NOTA:** le uniche proprietà della stringa di connessione supportate quando si usa una stringa di connessione come origine di input sono *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* e *ConnectionTimeout*.|  
   
 Se l'origine di input è una stringa di connessione a un database di SQL Server o SQL Azure attivo, **dbSqlPackage** estrarrà uno snapshot di database sotto forma di file con estensione dacpac da un database di SQL Server o SQL Azure attivo.  
   
 I parametri **Source** sono:  
   
-|Parametro|Default|Descrizione|  
+|Parametro|Predefinito|Descrizione|  
 |-------------|-----------|---------------|  
 |**Profile**:{ *stringa*}|N/D|Specifica il percorso file a un profilo di pubblicazione dell'applicazione livello dati. Il profilo consente di definire una raccolta di proprietà e variabili da utilizzare durante la generazione del pacchetto di applicazione livello dati risultante. Il profilo di pubblicazione viene passato alla destinazione e utilizzato come opzioni predefinite durante l'esecuzione di un'azione **Publish**, **Script** o **DeployReport**.|  
 |**DacApplicationName**={ *stringa* }|Nome database|Definisce il nome dell'applicazione da archiviare nei metadati del pacchetto di applicazione livello dati. La stringa predefinita corrisponde al nome del database.|  
@@ -77,13 +78,13 @@ I parametri **Source** sono:
 ## <a name="dbsqlpackage-destination"></a>Destinazione di dbSqlPackage  
 Il provider **dbSqlPackage** accetta una stringa di connessione valida di SQL Azure o di SQL Server oppure un percorso di un file con estensione dacpac su disco come input di destinazione.  La sintassi per specificare la destinazione per il provider è la seguente:  
   
-|Input|Default|Descrizione|  
+|Input|Predefinito|Descrizione|  
 |---------|-----------|---------------|  
 |-**dest:dbSqlPackage**={*input*}|N/D|*input* è una stringa di connessione valida di SQL Server o di SQL Azure oppure un percorso completo o parziale di un file con estensione dacpac su disco. Se *input* è un percorso di file, non può essere specificato nessun altro parametro.|  
   
 I parametri **Destination** seguenti sono disponibili per tutte le operazioni **dbSqlPackage**:  
   
-|Proprietà|Default|Descrizione|  
+|Proprietà|Predefinito|Descrizione|  
 |------------|-----------|---------------|  
 |**Action={Publish&#124;DeployReport&#124;Script}**|N/D|Parametro facoltativo che specifica l'azione da eseguire in **Destination**.|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|Specifica se eliminare gli assembly di blocco durante la pubblicazione di **SqlClr** come parte del piano di distribuzione. Per impostazione predefinita, tutti gli assembly di blocco o di riferimento bloccano l'aggiornamento di un assembly se l'assembly di riferimento deve essere eliminato.|  
@@ -122,7 +123,7 @@ I parametri **Destination** seguenti sono disponibili per tutte le operazioni **
 |**IgnoreFileSize= {True &#124; False}**|**True**|Specifica se ignorare o aggiornare le differenze nelle dimensioni dei file durante la pubblicazione in un database.|  
 |**IgnoreFillFactor= {True &#124; False}**|**True**|Specifica se ignorare o aggiornare le differenze nei fattori di riempimento durante la pubblicazione in un database.|  
   
-|Proprietà|Default|Descrizione|  
+|Proprietà|Predefinito|Descrizione|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True**|Specifica se ignorare o aggiornare le differenze nel percorso dei file di indice full-text durante la pubblicazione in un database.|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|Specifica se ignorare o aggiornare le differenze nel valore di inizializzazione per una colonna Identity durante la pubblicazione in un database.|  
@@ -171,7 +172,7 @@ I parametri **Destination** seguenti sono disponibili per tutte le operazioni **
   
 I parametri **Destination** seguenti sono disponibili solo per le operazioni **DeployReport** e **Script**:  
   
-|Parametro|Default|Descrizione|  
+|Parametro|Predefinito|Descrizione|  
 |-------------|-----------|---------------|  
 |**OutputPath**={ *stringa* }|N/D|Parametro facoltativo che indica a **dbSqlPackage** di creare il file di output XML di DeployReport o il file di output SQL di Script nel percorso su disco specificato da *stringa*. Tale azione sovrascrive tutti gli script che si trovano attualmente nel percorso specificato dalla stringa.|  
   
