@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 943ff8fdcf2eadd428d1ec6ceb5d15fe34ad9291
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 7cf4f98a4cb8d191cebd9b361fd63217b9cd2228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952407"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "75956493"
 ---
 # <a name="what-is-azure-data-studio"></a>Che cos'è Azure Data Studio?
 
@@ -95,9 +95,9 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Temi|Sì||
 |Modalità scura|Sì||
 |Azure Resource Explorer|Anteprima||
-|Procedura guidata Genera script||Sì|
+|Procedura guidata Genera script||Anteprima|
 |Pacchetto di applicazione livello dati di importazione/esportazione||Sì|
-|Proprietà degli oggetti||Sì|
+|Proprietà degli oggetti||Anteprima|
 |Progettazione tabelle||Sì|
 
 ### <a name="query-editor"></a>Editor di query
@@ -116,7 +116,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |Risultati in formato testo||Sì|
 |Visualizzatore spaziale||Sì|
 |SQLCMD||Sì|
-|Notebook|Sì||
+|Notebooks|Sì||
 |Salvare una query come frammento di codice|Sì||
 
 ### <a name="operating-system-support"></a>Supporto dei sistemi operativi
@@ -133,7 +133,7 @@ Per informazioni sulla creazione di estensioni, vedere [Creazione di estensioni]
 |:---|:---|:---|
 |Procedura guidata di creazione tabella esterna|Sì||
 |Integrazione HDFS|Sì||
-|Notebook|Sì||
+|Notebooks|Sì||
 
 ### <a name="database-administration"></a>Amministrazione del database
 

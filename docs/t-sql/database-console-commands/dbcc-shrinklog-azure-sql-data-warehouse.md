@@ -12,10 +12,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930311"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
@@ -50,7 +50,7 @@ Nei risultati DBCC SHRINKLOG non vengono visualizzati i messaggi informativi.
 DBCC SHRINKLOG non modifica le dimensioni del log archiviate nei metadati per il database. I metadati continuano a contenere il parametro LOG_SIZE specificato nell'istruzione CREATE DATABASE o ALTER DATABASE.
   
 ## <a name="examples"></a>Esempi 
-### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>A. Ridurre il log delle transazioni alle dimensioni originali specificate da CREATE DATABASE.  
+### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>R. Ridurre il log delle transazioni alle dimensioni originali specificate da CREATE DATABASE.  
 Si supponga che il log delle transazioni per il database Addresses sia stato impostato su 100 MB quando il database è stato creato. In altre parole, l'istruzione CREATE DATABASE per il database Addresses era LOG_SIZE = 100 MB. A questo punto, si supponga che il file di log abbia raggiunto i 150 MB che e lo si voglia riportare nuovamente a 100 MB.
   
 Ognuna delle istruzioni seguenti tenterà di ridurre il log delle transazioni per il database di Addresses fino a riportarlo alle dimensioni predefinite pari a 100 MB. Se la riduzione del log a 100 MB comporta la perdita di dati, DBCC SHRINKLOG riduce il log alle dimensioni più piccole possibili, superiori a 100 MB, senza perdere dati.

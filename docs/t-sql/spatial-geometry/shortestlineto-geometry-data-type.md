@@ -15,10 +15,10 @@ ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4bb425d07d566f4bb06d18a8f74f493a649fa8b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101020"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (tipo di dati geometry)
@@ -42,12 +42,12 @@ Restituisce un'istanza **LineString** con due punti che rappresentano la distanz
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo restituisce un'istanza **LineString** con endpoint che si trovano sui bordi delle due istanze **geometry** non intersecate messe a confronto. La lunghezza dell'istanza **LineString** restituita corrisponde alla distanza minore tra le due istanze **geometry**. Viene restituita un'istanza **LineString** vuota quando le due istanze **geometry** si intersecano.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>A. Chiamata di ShortestLineTo() in istanze non intersecate  
+### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>R. Chiamata di ShortestLineTo() in istanze non intersecate  
  In questo esempio viene individuata la distanza più breve tra un'istanza `CircularString` e un'istanza `LineString` e viene restituita l'istanza `LineString` che collega i due punti:  
   
 ```

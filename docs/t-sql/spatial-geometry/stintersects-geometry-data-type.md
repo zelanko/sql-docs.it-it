@@ -18,10 +18,10 @@ ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a01a4ee58b4bca80cba9bfc9a1a094f575c5154
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950123"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (tipo di dati geometry)
@@ -45,7 +45,7 @@ Restituisce 1 se un'istanza **geometry** interseca un'altra istanza **geometry**
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  

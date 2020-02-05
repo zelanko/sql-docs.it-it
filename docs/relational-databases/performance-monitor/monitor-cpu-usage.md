@@ -23,10 +23,10 @@ ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: eb73d1b82d1a58a756c2ec6287429cee88315fd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091028"
 ---
 # <a name="monitor-cpu-usage"></a>Monitorare l'utilizzo della CPU

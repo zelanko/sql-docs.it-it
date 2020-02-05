@@ -26,13 +26,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 651af5040782bc729d5bca48fa2285e14e709e10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929171"
 ---
-# <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
+# <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Specifica il comportamento conforme allo standard ISO degli operatori di confronto Uguale a (=) e Diverso da (<>) quando vengono usati con valori Null in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "67929171"
 > [!IMPORTANT]  
 > In una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ANSI_NULLS sarà impostata su ON e qualsiasi applicazione che imposta tale opzione in modo esplicito su OFF genererà un errore. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -56,7 +56,7 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Quando l'opzione ANSI_NULLS è impostata su ON, un'istruzione SELECT che usa WHERE *column_name* = **NULL** non restituisce alcuna riga anche se *column_name* include valori Null. Un'istruzione SELECT che usa WHERE *column_name* <> **NULL** non restituisce alcuna riga anche se *column_name* include valori non Null.  
   
 Quando l'opzione ANSI_NULLS è impostata su OFF, gli operatori uguale a (=) e diverso da (<>) non seguono lo standard ISO. Un'istruzione SELECT che usa WHERE *column_name* = **NULL** restituisce le righe con valori Null in *column_name*. Un'istruzione SELECT che usa WHERE *column_name* <> **NULL** restituisce le righe con valori non Null nella colonna. Inoltre un'istruzione SELECT che usa WHERE *column_name* <> *XYZ_value* restituisce tutte le righe che non sono *XYZ_value* e non sono NULL.  
@@ -107,7 +107,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono usati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null in una tabella. L'esempio evidenzia anche il fatto che l'impostazione dell'opzione `SET ANSI_NULLS` non influisce su `IS NULL`.  
+ Nell'esempio seguente vengono usati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null in una tabella. L'esempio evidenzia anche il fatto che l'impostazione dell'opzione `IS NULL` non influisce su `SET ANSI_NULLS`.  
   
 ```sql  
 -- Create table t1 and insert values.  

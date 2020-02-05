@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531594"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Come visualizzare lo stato di un cluster Big Data 
@@ -223,7 +223,7 @@ Il comando seguente visualizza ad esempio lo stato del pool di archiviazione:
 azdata bdc status show --all --resource storage-0
 ```
 
-Per visualizzare lo stato di tutti i componenti che eseguono un servizio specifico, è necessario usare il gruppo di comandi corrispondente `azdata bdc <serviceName> status show`. Esempio:
+Per visualizzare lo stato di tutti i componenti che eseguono un servizio specifico, è necessario usare il gruppo di comandi corrispondente `azdata bdc <serviceName> status show`. Ad esempio:
 
 - azdata bdc sql status show --all
 - azdata bdc hdfs status show --all

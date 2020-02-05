@@ -1,5 +1,5 @@
 ---
-title: 'Esempi: Utilizzo della modalità PATH | Microsoft Docs'
+title: Esempi d'uso della modalità PATH | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4b9487f6a185b76b5f4ee52d7a39f349906d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943375"
 ---
-# <a name="examples-using-path-mode"></a>Esempi: Uso della modalità PATH
+# <a name="examples-using-path-mode"></a>Esempi di utilizzo della modalità PATH
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Negli esempi seguenti viene illustrato l'utilizzo della modalità PATH nella creazione di codice XML da una query SELECT. Molte di queste query vengono specificate sui documenti XML di istruzioni per la produzione di biciclette archiviate nella colonna Instructions della tabella ProductModel.  
   
@@ -38,7 +38,7 @@ FOR XML PATH;
 GO  
 ```  
   
- Il risultato seguente è codice XML incentrato sugli elementi in cui il valore di ogni colonna nel set di righe risultante viene inserito in un elemento. Poiché la clausola `SELECT` non specifica alcun alias per i nomi delle colonne, i nomi degli elementi figlio generati sono gli stessi nomi di colonna corrispondenti nella clausola `SELECT`. Per ogni riga del set di righe viene aggiunto un tag <`row`>.  
+ Il risultato seguente è codice XML incentrato sugli elementi in cui il valore di ogni colonna nel set di righe risultante viene inserito in un elemento. Poiché la clausola `SELECT` non specifica alcun alias per i nomi delle colonne, i nomi degli elementi figlio generati sono gli stessi nomi di colonna corrispondenti nella clausola `SELECT` . Per ogni riga del set di righe viene aggiunto un tag <`row`>.  
   
  ```
 <row>  

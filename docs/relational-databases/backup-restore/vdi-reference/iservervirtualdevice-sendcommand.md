@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c75cd206557547f55d47eec0a7aec52cc0069b71
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847512"
 ---
 # <a name="iservervirtualdevicesendcommand-vdi"></a>IServerVirtualDevice::SendCommand (VDI)
@@ -49,7 +49,7 @@ Questo callback viene eseguito dall'agente di completamento quando il client ind
 | VD_E_IO_ERROR | Il dispositivo è in uno stato IO-ERROR . |
 | VD_E_PROTOCOL | Il dispositivo non è attivo. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Quando si verifica un errore durante il tentativo di invio del comando, viene richiamata la funzione di callback e il completionCode nel buffer dei comandi viene impostato come segue:
 

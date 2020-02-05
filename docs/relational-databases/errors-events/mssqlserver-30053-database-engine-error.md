@@ -10,13 +10,13 @@ ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2773c43695f67cc6d3878f1885686e74e84e67c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039313"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -48,7 +48,7 @@ Un errore di timeout del word breaking può verificarsi nelle situazioni seguent
 ## <a name="user-action"></a>Azione dell'utente  
 Selezionare l'azione dell'utente adatta alla probabile causa del timeout, come segue:  
   
-|Causa probabile|Azione utente|  
+|Possibile causa|Azione utente|  
 |------------------|---------------|  
 |Il word breaker per il linguaggio di query non è configurato correttamente.|Se si utilizza un word breaker di terze parti, è possibile che non sia stato registrato correttamente nel sistema operativo. In questo caso, registrare nuovamente il word breaker. Per altre informazioni, vedere [Ripristinare i word breaker usati dalla ricerca alla versione precedente](~/relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md).|  
 |Il malfunzionamento del word breaker è dovuto a una stringa di query specifica.|Se il word breaker è supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contattare il Servizio Supporto Tecnico Clienti Microsoft.|  
@@ -60,6 +60,6 @@ Selezionare l'azione dell'utente adatta alla probabile causa del timeout, come s
 [Impostare l'account del servizio dell'Utilità di avvio del daemon di filtri full-text](~/relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
 [Ricerca full-text](~/relational-databases/search/full-text-search.md)  
 [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
-[Configurare e gestire word breaker e stemmer per la ricerca](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
+[Configurazione e gestione di word breaker e stemmer per la ricerca](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
 [Configurare e gestire filtri per la ricerca](~/relational-databases/search/configure-and-manage-filters-for-search.md)  
   

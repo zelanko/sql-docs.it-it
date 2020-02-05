@@ -16,10 +16,10 @@ ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 209186cf3756c0bfb9b572a33ba470a83e0cd493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051445"
 ---
 # <a name="parse-geography-data-type"></a>Parse (tipo di dati geography)
@@ -45,7 +45,7 @@ Parse ( 'geography_tagged_text' )
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il tipo OGC dell'istanza **geography** restituita da `Parse()` è impostato sull'input WKT corrispondente.  
   
  La stringa "Null" verrà interpretata come un'istanza **geography** Null.  

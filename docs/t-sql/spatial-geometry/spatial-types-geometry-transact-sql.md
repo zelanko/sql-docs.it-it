@@ -18,10 +18,10 @@ ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101010"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>Tipi spaziali - geometry (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68101010"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. Informazioni su come aggiungere ed eseguire una query su dati geometry  
+### <a name="a-showing-how-to-add-and-query-geometry-data"></a>R. Informazioni su come aggiungere ed eseguire una query su dati geometry  
  Nei due esempi seguenti viene illustrato come aggiungere ed eseguire query su dati di tipo geometry. Nel primo esempio viene creata una tabella con una colonna Identity e una colonna `geometry`, ovvero `GeomCol1`. Una terza colonna effettua il rendering della colonna `geometry` nella rappresentazione Well-Known Text (WKT) OGC (Open Geospatial Consortium) e utilizza il metodo `STAsText()` . Vengono quindi inserite due righe: in una riga è contenuta un'istanza `LineString` di `geometry`e in una seconda è contenuta un'istanza `Polygon` .  
   
 ```sql 

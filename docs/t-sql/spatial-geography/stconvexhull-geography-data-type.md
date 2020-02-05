@@ -15,10 +15,10 @@ ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042476"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (tipo di dati geography)
@@ -38,7 +38,7 @@ ms.locfileid: "68042476"
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Restituisce un oggetto `FullGlobe` per l'istanza **geography** che ha un angolo della busta maggiore di 90 gradi.  
   
  Restituisce una raccolta **geography** vuota per un'istanza **geography** vuota.  
@@ -47,7 +47,7 @@ ms.locfileid: "68042476"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. Utilizzo di STConvexHull() in un'istanza geografica non inizializzata  
+### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>R. Utilizzo di STConvexHull() in un'istanza geografica non inizializzata  
  Nell'esempio seguente viene usato `STConvexHull()` in un'istanza **geography** non inizializzata.  
   
 ```

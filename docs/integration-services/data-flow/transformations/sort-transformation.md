@@ -21,10 +21,10 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b8c49f0f462bf62bde8e92a1e51f981d18d7ef7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297744"
 ---
 # <a name="sort-transformation"></a>Ordinamento - trasformazione
@@ -41,7 +41,7 @@ ms.locfileid: "71297744"
   
  La trasformazione Ordinamento è inoltre in grado di rimuovere le righe duplicate nell'ambito dell'operazione di ordinamento. Sono considerate duplicate le righe che hanno valori di chiave di ordinamento identici. Il valore della chiave di ordinamento viene generato in base alle opzioni utilizzate per il confronto delle stringhe e questo significa che stringhe letterali diverse possono avere gli stessi valori di chiave di ordinamento. La trasformazione identifica come duplicate le righe delle colonne di input che hanno valori di chiave di ordinamento identici, anche se i valori effettivi sono diversi.  
   
- La trasformazione Ordinamento include la proprietà personalizzata **MaximumThreads**, che può essere aggiornata da un'espressione di proprietà al caricamento del pacchetto. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Utilizzo delle espressioni di proprietà nei pacchetti](../../../integration-services/expressions/use-property-expressions-in-packages.md) e [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+ La trasformazione Ordinamento include la proprietà personalizzata **MaximumThreads** , che può essere aggiornata da un'espressione di proprietà al caricamento del pacchetto. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Utilizzo delle espressioni di proprietà nei pacchetti](../../../integration-services/expressions/use-property-expressions-in-packages.md) e [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
  Questa trasformazione include un input e un output. Non supporta output degli errori.  
   

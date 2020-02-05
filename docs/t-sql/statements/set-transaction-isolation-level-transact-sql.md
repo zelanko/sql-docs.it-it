@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099990"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68099990"
 
 Controlla il funzionamento relativo ai blocchi e al controllo delle versioni delle righe per le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite tramite una connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="syntax"></a>Sintassi
 
@@ -100,7 +100,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  Vengono acquisiti blocchi condivisi per tutti i dati letti da ogni istruzione della transazione e tali blocchi vengono mantenuti attivi fino al completamento della transazione. Ciò impedisce ad altre transazioni di modificare qualsiasi riga letta dalla transazione corrente. Altre transazioni possono inserire nuove righe, se tali righe corrispondono alle condizioni di ricerca delle istruzioni eseguite dalla transazione corrente. Se la transazione corrente ripete l'istruzione in seguito, verranno recuperate le nuove righe con conseguenti letture fantasma. Poiché i blocchi condivisi vengono mantenuti attivi fino alla fine di una transazione, anziché essere rilasciati alla fine di ogni istruzione, il livello di concorrenza è inferiore rispetto a quello consentito dal livello di isolamento predefinito READ COMMITTED. Utilizzare questa opzione solo se necessario.  
   
  SNAPSHOT  
- Specifica che i dati letti da qualsiasi istruzione in una transazione rappresenteranno la versione coerente dal punto di vista transazionale dei dati esistenti al momento dell'avvio della transazione. La transazione può quindi accedere solo alle modifiche dei dati di cui è stato eseguito il commit prima dell'avvio della transazione. Le modifiche ai dati apportate da altre transazioni dopo l'avvio della transazione corrente non sono visibili per le istruzioni eseguite nella transazione corrente. Di conseguenza, è come se le istruzioni di una transazione ottenessero uno snapshot dei dati di cui è stato eseguito il commit corrispondente ai dati presenti all'avvio della transazione.  
+ Specifica che i dati letti da qualsiasi istruzione in una transazione rappresenteranno la versione coerente dal punto di vista transazionale dei dati esistenti al momento dell'avvio della transazione. La transazione può quindi accedere solo alle modifiche dei dati di cui è stato eseguito il commit prima dell'avvio della transazione. Le modifiche ai dati apportate da altre transazioni dopo l'avvio della transazione corrente non sono visibili per le istruzioni eseguite nella transazione corrente. È come se le istruzioni di una transazione ottenessero uno snapshot dei dati di cui è stato eseguito il commit così come si presentavano al momento dell'avvio della transazione.  
   
  Con l'eccezione delle operazioni di recupero di un database, le transazioni SNAPSHOT non richiedono blocchi per la lettura dei dati. Le transazioni SNAPSHOT che eseguono letture di dati non impediscono la scrittura di dati da altre transazioni. Viceversa, le transazioni che eseguono scritture di dati non impediscono la lettura di dati da transazioni SNAPSHOT.  
   
@@ -126,7 +126,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Vengono acquisiti blocchi di intervalli di chiavi per l'intervallo dei valori di chiave corrispondenti alle condizioni di ricerca di ogni istruzione eseguita in una transazione. In questo modo si impedisce che altre transazioni possano aggiornare o inserire righe qualificate per l'esecuzione di qualsiasi istruzione della transazione corrente. Ciò significa che in caso di ripetizione di una delle istruzioni di una transazione, la lettura restituirà lo stesso set di righe. I blocchi di intervalli di chiavi vengono mantenuti attivi fino al completamento della transazione. Questo è il livello di isolamento più restrittivo tra quelli disponibili, perché blocca interi intervalli di chiavi e mantiene attivi tali blocchi fino al completamento della transazione. Poiché la concorrenza è inferiore, utilizzare questa opzione solo quando è strettamente necessario. Questa opzione equivale all'impostazione di HOLDLOCK per tutte le tabelle in tutte le istruzioni SELECT di una transazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile impostare una sola opzione di livello di isolamento alla volta. Tale impostazione rimane valida per la connessione fino a quando non viene modificata in modo esplicito. Tutte le operazioni di lettura eseguite nell'ambito della transazione rispettano le regole del livello di isolamento specificato a meno che un hint di tabella nella clausola FROM di un'istruzione non specifichi un funzionamento di blocco o di controllo delle versioni diverso per una tabella.  
   
  I livelli di isolamento delle transazioni definiscono i tipi di blocchi acquisiti per le operazioni di lettura. I blocchi condivisi acquisiti per il livello READ COMMITTED o REPEATABLE READ sono in genere blocchi di riga, anche se è possibile che venga eseguita l'escalation a blocchi di pagina o di tabella, se la lettura fa riferimento a un numero significativo di righe in una pagina o una tabella. Se la transazione modifica una riga dopo la lettura, la transazione acquisisce un blocco esclusivo per proteggere tale riga e il blocco viene mantenuto attivo fino al completamento della transazione. Ad esempio, se una transazione REPEATABLE READ acquisisce un blocco condiviso su una riga e quindi modifica tale riga, il blocco di riga condiviso viene convertito in un blocco di riga esclusivo.  

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082075"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Ruolo di lavoro di scalabilità orizzontale di Integration Services (SSIS)
@@ -31,7 +31,7 @@ Scale Out Worker esegue il servizio Scale Out Worker per eseguire il pull di att
 |Configurazione  |Descrizione  |Valore predefinito|
 |---------|---------|---------|
 |DisplayName|Nome visualizzato del ruolo di lavoro di scalabilità orizzontale. **NON in uso in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Nome computer|
-|Descrizione|Descrizione del ruolo di lavoro di scalabilità orizzontale. **NON in uso in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vuoto|
+|Descrizione|Descrizione del ruolo di lavoro di scalabilità orizzontale. **NON in uso in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Empty|
 |MasterEndpoint|Endpoint per la connessione al master di scalabilità orizzontale.|Endpoint impostato durante l'installazione del ruolo di lavoro di scalabilità orizzontale|
 |MasterHttpsCertThumbprint|Identificazione personale del certificato SSL del client usato per autenticare il master di scalabilità orizzontale|Identificazione personale del certificato client specificato durante l'installazione del ruolo di lavoro di scalabilità orizzontale.|
 |WorkerHttpsCertThumbprint|Identificazione personale del certificato del master di scalabilità orizzontale usato per autenticare il ruolo di lavoro di scalabilità orizzontale.|Identificazione personale di un certificato creato e installato automaticamente durante l'installazione del ruolo di lavoro di scalabilità orizzontale|
@@ -40,15 +40,15 @@ Scale Out Worker esegue il servizio Scale Out Worker per eseguire il pull di att
 |AgentHeartbeatInterval|Intervallo di heartbeat del ruolo di lavoro di scalabilità orizzontale.|00:01:00|
 |TaskHeartbeatInterval|Intervallo del ruolo di lavoro di scalabilità orizzontale indicante lo stato dell'attività.|00:00:10|
 |HeartbeatErrorTolerance|Dopo il periodo di tempo definito dall'ultimo heartbeat dell'attività, quest'ultima viene terminata se si riceve un errore di heartbeat.|00:10:00|
-|TaskRequestMaxCPU|Limite massimo di CPU per il ruolo di lavoro di scalabilità orizzontale per richiedere attività.|70.0|
+|TaskRequestMaxCPU|Limite massimo di CPU per il ruolo di lavoro di scalabilità orizzontale per richiedere attività.|70|
 |TaskRequestMinMemory|Limite massimo di memoria espressa in MB per il ruolo di lavoro di scalabilità orizzontale per richiedere attività.|100.0|
 |MaxTaskCount|Numero massimo di attività che il ruolo di lavoro di scalabilità orizzontale può gestire.|10|
 |LeaseInterval|Intervallo di lease di un'attività gestito dal ruolo di lavoro di scalabilità orizzontale.|00:01:00|
-|TasksRootFolder|Cartella dei log delle attività. Se il valore è vuoto, viene usato il percorso cartella `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks`. [account] è l'account che esegue il servizio Ruolo di lavoro di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutWorker140.|Vuoto|
+|TasksRootFolder|Cartella dei log delle attività. Se il valore è vuoto, viene usato il percorso cartella `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks`. [account] è l'account che esegue il servizio Ruolo di lavoro di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutWorker140.|Empty|
 |TaskLogLevel|Livello di log dell'attività del ruolo di lavoro di scalabilità orizzontale. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information, Warning, Error, Progress, CriticalError, Audit)|
 |TaskLogSegment|Intervallo di tempo di un file di log dell'attività.|00:00:00|
 |TaskLogEnabled|Specifica se il log dell'attività è abilitato.|true|
-|ExecutionLogCacheFolder|Cartella usata per memorizzare nella cache il log di esecuzione del pacchetto. Se il valore è vuoto, viene usato il percorso cartella `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache`. [account] è l'account che esegue il servizio Ruolo di lavoro di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutWorker140.|Vuoto|
+|ExecutionLogCacheFolder|Cartella usata per memorizzare nella cache il log di esecuzione del pacchetto. Se il valore è vuoto, viene usato il percorso cartella `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache`. [account] è l'account che esegue il servizio Ruolo di lavoro di scalabilità orizzontale. Per impostazione predefinita, l'account è SSISScaleOutWorker140.|Empty|
 |ExecutionLogMaxBufferLogCount|Numero massimo di log di esecuzione memorizzati nella cache, un buffer del log di esecuzione in memoria.|10000|
 |ExecutionLogMaxInMemoryBufferCount|Numero massimo di buffer del log di esecuzione in memoria per i log di esecuzione.|10|
 |ExecutionLogRetryCount|Numero di tentativi se si verifica un errore del log di esecuzione.|3|

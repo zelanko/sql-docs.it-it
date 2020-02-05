@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03dbb54a41ef319b7a44185cee00d5de7d46b126
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909540"
 ---
-# <a name="sortintempdb-option-for-indexes"></a>Opzione SORT_IN_TEMPDB per gli indici
+# <a name="sort_in_tempdb-option-for-indexes"></a>Opzione SORT_IN_TEMPDB per gli indici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Quando si crea o si ricompila un indice, l'impostazione dell'opzione SORT_IN_TEMPDB su ON consente a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di usare **tempdb** per l'archiviazione dei risultati intermedi dell'ordinamento usati per la compilazione dell'indice. Questa opzione aumenta lo spazio su disco temporaneo necessario per creare un indice, ma può consentire di creare o ricompilare un indice in tempi più brevi se **tempdb** si trova in un set di dischi diverso rispetto al database utente. Per altre informazioni su **tempdb**, vedere [Configurare l'opzione di configurazione del server index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "67909540"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] unisce i vari ordinamenti delle righe foglia dell'indice in un unico flusso ordinato. Il componente di [!INCLUDE[ssDE](../../includes/ssde-md.md)] che presiede all'unione delle operazioni di ordinamento inizia dalla prima pagina di ogni operazione, trova la chiave minore in tutte le pagine e quindi passa la riga foglia corrispondente al componente per la creazione dell'indice. Vengono quindi elaborate tutte le altre chiavi, dalla minore alla maggiore. Dopo aver estratto l'ultima riga foglia dell'indice da una pagina di un'operazione di ordinamento, il processo passa alla pagina successiva della stessa operazione di ordinamento. Quando sono state elaborate tutte le pagine di un extent di un'operazione di ordinamento, l'extent viene liberato. Ogni riga foglia passata al componente per la creazione dell'indice viene inserita in una pagina foglia dell'indice all'interno del buffer. Ogni pagina foglia viene scritta non appena viene riempita completamente. Man mano che vengono scritte le pagine foglia, [!INCLUDE[ssDE](../../includes/ssde-md.md)] compila inoltre i livelli superiori dell'indice. Ogni pagina dell'indice di livello superiore viene scritta non appena viene riempita completamente.  
   
-## <a name="sortintempdb-option"></a>SORT_IN_TEMPDB - opzione  
+## <a name="sort_in_tempdb-option"></a>SORT_IN_TEMPDB - opzione  
  Se l'opzione SORT_IN_TEMPDB è impostata su OFF (impostazione predefinita), le operazioni di ordinamento vengono archiviate nel filegroup di destinazione. Durante la prima fase della creazione dell'indice, l'alternarsi delle operazioni di lettura delle pagine della tabella di base e delle operazioni di scrittura delle operazioni di ordinamento comporta lo spostamento delle testine di lettura/scrittura tra le diverse aree del disco. Le testine si trovano nell'area delle pagine di dati delle quali viene eseguita l'analisi, passano a un'area di spazio libero quando vengono riempiti completamente i buffer di ordinamento ed è necessario scrivere su disco l'operazione di ordinamento corrente, quindi tornano all'area delle pagine di dati non appena riprende l'analisi delle pagine della tabella. Il movimento delle testine di lettura/scrittura è più intenso nella seconda fase, durante la quale il processo di ordinamento in genere legge alternativamente le varie aree relative alle operazioni di ordinamento. Sia le operazioni di ordinamento che le pagine del nuovo indice vengono compilate nel filegroup di destinazione, a indicare che mentre [!INCLUDE[ssDE](../../includes/ssde-md.md)] distribuisce le letture tra le operazioni di ordinamento, deve passare periodicamente agli extent dell'indice per scrivere le nuove pagine dell'indice non appena vengono riempite completamente.  
   
  Se l'opzione SORT_IN_TEMPDB è impostata su ON e **tempdb** si trova in un set di dischi diverso rispetto al filegroup di destinazione, durante la prima fase le operazioni di lettura delle pagine di dati vengono eseguite in un disco diverso da quello in cui vengono eseguite le operazioni di scrittura nell'area delle operazioni di ordinamento in **tempdb**. Di conseguenza, le letture da disco delle chiavi di dati tendono a procedere in modo più seriale nel disco e anche le operazioni di scrittura nel disco di **tempdb** e quelle necessarie per compilare l'indice finale sono seriali. Anche se altri utenti utilizzano il database e accedono a diverse aree dei dischi, lo schema generale di lettura e scrittura risulta più efficiente se viene specificata l'opzione SORT_IN_TEMPDB.  
@@ -84,6 +84,6 @@ Quando si crea un indice cluster in una tabella che contiene indici non cluster,
   
  [Configurare l'opzione di configurazione del server index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [Requisiti di spazio su disco per operazioni DLL sugli indici](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
   

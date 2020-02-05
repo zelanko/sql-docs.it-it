@@ -9,10 +9,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 696b7bbd19ed41aeedaf0cbba683870c04de1b13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896204"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>Aprire e salvare file in locale e in Azure con pacchetti SSIS distribuiti in Azure
@@ -30,7 +30,7 @@ Se è necessario archiviare ed elaborare i file temporanei durante l'esecuzione 
 Per continuare a usare **condivisioni file locali** quando si spostano pacchetti che usano i file system locali in SSIS in Azure, effettuare le operazioni seguenti:
 1.  Trasferire i file dai file system locali alle condivisioni file locali.
 2.  Aggiungere le condivisioni file locali a una rete virtuale di Azure.
-3.  Aggiungere il runtime di integrazione Azure-SSIS alla stessa rete virtuale. Per altre informazioni, vedere [Aggiungere un runtime di integrazione SSIS di Azure a una rete virtuale](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+3.  Aggiungere il runtime di integrazione Azure-SSIS alla stessa rete virtuale. Per altre informazioni, vedere [Aggiungere un runtime di integrazione Azure-SSIS a una rete virtuale](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
 4.  Connettere il runtime di integrazione Azure-SSIS alle condivisioni file locali all'interno della stessa rete virtuale impostando le credenziali di accesso che usano l'autenticazione di Windows. Per altre informazioni, vedere [Connettersi a dati e condivisioni file con autenticazione di Windows](ssis-azure-connect-with-windows-auth.md).
 5.  Aggiornare i percorsi di file locali nei pacchetti in base ai percorsi UNC che puntano alle condivisioni file locali. Ad esempio, aggiornare `C:\abc.txt` a `\\<on-prem-server-name>\<share-name>\abc.txt`.
 

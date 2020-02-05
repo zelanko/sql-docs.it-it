@@ -14,10 +14,10 @@ ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 817bfeccb29de6b1531b83a48da4d78f8397b4ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68058256"
 ---
 # <a name="remove-log-shipping-sql-server"></a>Disattivare il log shipping [SQL Server]
@@ -28,7 +28,7 @@ ms.locfileid: "68058256"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rimuovere il log shipping utilizzando:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68058256"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Le stored procedure per il log shipping richiedono l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-remove-log-shipping"></a>Per rimuovere il log shipping  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68058256"
   
 5.  Fare clic su **OK** per rimuovere il log shipping dal database primario.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-remove-log-shipping"></a>Per rimuovere il log shipping  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68058256"
   
 -   [Monitorare il log shipping &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
--   [Eseguire il failover in un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [Failover su un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 -   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   

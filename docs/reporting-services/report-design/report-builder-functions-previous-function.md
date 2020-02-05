@@ -9,10 +9,10 @@ ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3a54bd68b1bac51581329224aa7e9405cee8e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577194"
 ---
 # <a name="report-builder-functions---previous-function"></a>Funzioni di Generatore report - Funzione Previous
@@ -38,7 +38,7 @@ Previous(expression, scope)
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Variant** o **Binary**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione **Previous** restituisce il valore precedente per l'espressione valutata nell'ambito specificato dopo l'applicazione di tutti i criteri di ordinamento e di filtro.  
   
  Se in *expression* non è contenuta un'aggregazione, la funzione **Previous** viene impostata per impostazione predefinita sull'ambito corrente per l'elemento del report.  
@@ -61,7 +61,7 @@ Previous(expression, scope)
 ### <a name="description"></a>Descrizione  
  L'esempio di codice seguente, se inserito nella riga di dati predefinita di un'area dati, fornisce il valore per il campo `LineTotal` nella riga precedente.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 =Previous(Fields!LineTotal.Value)  
@@ -72,7 +72,7 @@ Previous(expression, scope)
   
  Ad esempio, per un'area dati con un gruppo padre denominato `Year`che ha un gruppo figlio denominato `Month`che a sua volta ha un gruppo figlio denominato `Day` (3 livelli annidati). L'espressione `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` in una riga associata al gruppo `Day` restituisce il valore delle vendite per lo stesso giorno e mese dell'anno precedente.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 =Sum(Fields!Sales.Value) & " " & Previous(Sum(Fields!Sales.Value,"GroupbyDay"),"GroupbyYear")  

@@ -16,10 +16,10 @@ ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a688bae85e0ea6bd30bbde50df0151a97fd6f505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012995"
 ---
 # <a name="change-server-authentication-mode"></a>Modifica della modalità di autenticazione del server
@@ -32,7 +32,7 @@ ms.locfileid: "68012995"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare la modalità di autenticazione del server utilizzando:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68012995"
 ###  <a name="Security"></a> Sicurezza  
  L'account sa è un account noto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che viene spesso preso di mira da utenti malintenzionati. Non abilitare l'account sa a meno che l'applicazione non lo richieda. È estremamente importante utilizzare una password complessa per l'accesso all'account sa.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-change-security-authentication-mode"></a>Per modificare la modalità di autenticazione di sicurezza  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68012995"
   
 3.  Nella pagina **Stato** fare clic su **Abilitato** nella sezione **Account di accesso**, quindi scegliere **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per abilitare l'account di accesso sa**  
   
 1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

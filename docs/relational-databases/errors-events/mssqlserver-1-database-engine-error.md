@@ -14,13 +14,13 @@ ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1993d5ec94abc206cabd7c12841c3fdbe15a7cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928087"
 ---
-# <a name="mssqlserver-1"></a>MSSQLSERVER_-1
+# <a name="mssqlserver_-1"></a>MSSQLSERVER_-1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -57,7 +57,7 @@ Per risolvere l'errore, eseguire una delle operazioni seguenti:
 -   Assicurarsi che il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sia stato avviato nel server.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Configurazione di Windows Firewall per l'accesso al Motore di database](~/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+[Configurare Windows Firewall per l'accesso al motore di database](~/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
 [Configurazione di protocolli client](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Protocolli e librerie di rete](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Configurazione di rete dei client](~/database-engine/configure-windows/client-network-configuration.md)  

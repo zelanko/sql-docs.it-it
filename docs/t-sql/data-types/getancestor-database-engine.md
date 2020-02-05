@@ -18,10 +18,10 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077980"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Motore di database)
@@ -50,7 +50,7 @@ Valore **int** che rappresenta il numero di livelli da salire nella gerarchia.
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Utilizzato per testare se per ogni nodo nell'output il nodo corrente rappresenta un predecessore al livello specificato.
   
 Se viene passato un numero maggiore di [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md), viene restituito NULL.
@@ -59,7 +59,7 @@ Se viene passato un numero negativo, viene generata un'eccezione.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-finding-the-child-nodes-of-a-parent"></a>A. Ricerca dei nodi figlio di un padre  
+### <a name="a-finding-the-child-nodes-of-a-parent"></a>R. Ricerca dei nodi figlio di un padre  
 `GetAncestor(1)` restituisce i dipendenti per cui `david0` rappresenta il predecessore immediato (padre). Nell'esempio seguente viene utilizzato `GetAncestor(1)`:
   
 ```sql

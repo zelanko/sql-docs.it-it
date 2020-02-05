@@ -1,10 +1,9 @@
 ---
-title: 'Procedura dettagliata: Aggiunta e modifica di un diagramma di database | Microsoft Docs'
-ms.custom: ''
+title: Aggiunta e modifica di un diagramma di database
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +13,16 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30177e5dc9061fb66bffda6203f0740bcac3b5af
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258927"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246250"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procedura dettagliata: Aggiunta e modifica di un diagramma di database
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Scenario: Aggiunta e modifica di un diagramma di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 In questo scenario viene illustrato come creare e modificare un diagramma di database e apportare modifiche al database tramite il componente per i diagrammi di database. Verrà descritto come aggiungere tabelle ai diagrammi, creare relazioni tra le tabelle, creare vincoli e indici su colonne e modificare il livello delle informazioni visualizzate per ogni tabella.  
   
@@ -91,7 +92,7 @@ Per completare questo scenario, saranno necessari gli elementi seguenti:
   
 6.  Nella finestra di dialogo **Scegli nome** selezionare **OK** per accettare il nome predefinito **Diagram1**.  
   
-7.  Verrà visualizzata la finestra di dialogo **Salva** con un messaggio che indica che `Table1` verrà salvata nel database. Scegliere **Sì**.  
+7.  Verrà visualizzata la finestra di dialogo **Salva** con un messaggio che indica che `Table1` verrà salvata nel database. Fare clic su **Sì**.  
   
 ## <a name="modifying-table-structure"></a>Modifica della struttura della tabella  
 È possibile aggiungere vincoli CHECK e creare relazioni tra le tabelle in Progettazione diagrammi.  
@@ -102,7 +103,7 @@ Per completare questo scenario, saranno necessari gli elementi seguenti:
   
     Verrà visualizzata la finestra di dialogo **Vincoli CHECK** .  
   
-2.  Scegliere **Aggiungi**.  
+2.  Fare clic su **Aggiungi**.  
   
     Verrà visualizzato un nuovo vincolo nell'elenco **Selected Check Constraint** (Vincolo CHECK selezionato), con il nome predefinito `CK_Table1`.  
   
@@ -114,7 +115,7 @@ Per completare questo scenario, saranno necessari gli elementi seguenti:
   
     `Table1` include ora un vincolo in base al quale tutti i valori immessi in `T1col3` devono essere maggiori di 5.  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
 #### <a name="to-create-relationships-between-tables"></a>Per creare relazioni tra le tabelle  
   
@@ -146,7 +147,7 @@ Per completare questo scenario, saranno necessari gli elementi seguenti:
   
     Verrà visualizzata la finestra di dialogo **Indici/chiavi** .  
   
-2.  Scegliere **Aggiungi**.  
+2.  Fare clic su **Aggiungi**.  
   
     Verrà visualizzato un nuovo indice nell'elenco **Chiave o indice primario/univoco selezionato** , con un nome predefinito simile a `IX_Table1`.  
   
@@ -174,11 +175,11 @@ Per completare questo scenario, saranno necessari gli elementi seguenti:
   
     Verrà visualizzata la finestra di dialogo **Indici XML** .  
   
-3.  Scegliere **Aggiungi**.  
+3.  Fare clic su **Aggiungi**.  
   
     Un indice XML con valori predefiniti verrà aggiunto all'elenco **Selected XML Index** (Indice XML selezionato).  
   
-4.  Scegliere **Chiudi**.  
+4.  Fare clic su **Close**.  
   
     > [!NOTE]  
     > Gli indici XML vengono creati per colonna. Il primo indice XML è primario, eventuali indici aggiuntivi sono secondari.  
@@ -196,7 +197,7 @@ Tutte le modifiche apportate a un diagramma non vengono inviate al database fino
   
 3.  Se si sono verificati errori, verrà visualizzata la finestra di dialogo **Notifiche postsalvataggio** con gli errori e le relative cause. Correggere gli errori e salvare nuovamente il diagramma.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 Si tratta di un diagramma di base con due tabelle esistenti e due tabelle nuove, che illustra comunque le potenzialità della creazione di diagrammi per un database esistente o di creazione di un nuovo schema in modo visivo. Alcuni suggerimenti per un'analisi più ampia dell'argomento includono:  
   
 -   Creazione di nuovi diagrammi che contengono gruppi di tabelle correlate  

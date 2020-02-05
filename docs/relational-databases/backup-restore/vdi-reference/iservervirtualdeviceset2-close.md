@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2847ef10bd52d69375fa4f13f1d003eb4159961f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847472"
 ---
 # <a name="iservervirtualdeviceset2close-vdi"></a>IServerVirtualDeviceSet2::Close (VDI)
@@ -34,7 +34,7 @@ HRESULT IServerVirtualDeviceSet2::Close ();
 |---|---|
 | VD_E_PROTOCOL | I dispositivi erano ancora aperti. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Non eseguire la chiusura del set di dispositivi virtuali prima di chiudere i dispositivi. Se si verifica questa situazione, viene restituito VD_E_PROTOCOL. Con questa azione, Close rilascia immediatamente il mapping della memoria condivisa. Il server è soggetto a violazioni di accesso se continua a dare per scontata la proprietà delle risorse restituite dall'interfaccia dispositivo virtuale. L'interfaccia esegue l'elaborazione SignalAbort.
 

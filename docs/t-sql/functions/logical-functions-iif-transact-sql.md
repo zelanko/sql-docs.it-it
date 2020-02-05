@@ -18,10 +18,10 @@ ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 92dd195322e03f8b3eb776269cd6a8636fffd150
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059742"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>Funzioni logiche - IIF (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68059742"
 
   Viene restituito uno di due valori a seconda che l'espressione booleana sia true o false in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,14 +53,14 @@ IIF ( boolean_expression, true_value, false_value )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce il tipo di dati con precedenza maggiore nei tipi *true_value* e *false_value*. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  IIF è un modo abbreviato per scrivere un'espressione CASE. Valuta l'espressione booleana passata come primo argomento, quindi restituisce uno dei due argomenti in base al risultato della valutazione. Viene quindi restituito *true_value* se l'espressione booleana è true, mentre viene restituito *false_value* se l'espressione booleana è false o sconosciuta. *true_value* e *false_value* possono essere di qualsiasi tipo. Le stesse regole applicate all'espressione CASE per espressioni booleane, gestione di valori Null e tipi restituiti vengono applicate anche a IIF. Per altre informazioni, vedere [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md).  
   
  La conversione di IIF in CASE influisce inoltre su altri aspetti del comportamento di questa funzione. Poiché le espressioni CASE possono essere nidificate solo fino a livello 10, anche le istruzioni IIF possono essere nidificate fino al livello massimo 10. Inoltre l'istruzione IIF viene eseguita in modalità remota in altri server come un'espressione CASE equivalente dal punto di vista semantico, con tutti i comportamenti di un'espressione CASE eseguita in modalità remota.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-iif-example"></a>A. Esempio semplice di IIF  
+### <a name="a-simple-iif-example"></a>R. Esempio semplice di IIF  
   
 ```  
 DECLARE @a int = 45, @b int = 40;  

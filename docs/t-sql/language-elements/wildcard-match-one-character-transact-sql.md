@@ -22,20 +22,20 @@ ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6f6876003c64889d32e31266ebe74b6532c1a8f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000308"
 ---
-# <a name="-wildcard---match-one-character-transact-sql"></a>_ (carattere jolly per corrispondenze di singoli caratteri) (Transact-SQL)
+# <a name="_-wildcard---match-one-character-transact-sql"></a>_ (carattere jolly per corrispondenze di singoli caratteri) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Usare il carattere di sottolineatura _ per individuare singoli caratteri in un'operazione di confronto stringhe con criteri di ricerca, ad esempio `LIKE` e `PATINDEX`.  
   
 ## <a name="examples"></a>Esempi  
 
-## <a name="a-simple-example"></a>A: Esempio semplice   
+## <a name="a-simple-example"></a>A. Esempio semplice   
 
 L'esempio seguente restituisce tutti i nomi di database che iniziano con la lettera `m` e la cui terza lettera è la lettera `d`. Il carattere di sottolineatura specifica che il secondo carattere del nome può essere qualsiasi lettera. I database `model` e `msdb` soddisfano questi criteri. Il database `master` non li soddisfa.
 
@@ -54,7 +54,7 @@ msdb
 
 È possibile usare più caratteri di sottolineatura per rappresentare più caratteri. La modifica del criterio `LIKE` in modo da includere due caratteri di sottolineatura `'m__%` determinerà l'inclusione del database master nel risultato.
 
-### <a name="b-more-complex-example"></a>B: Esempio più complesso
+### <a name="b-more-complex-example"></a>B. Esempio più complesso
  Nell'esempio seguente viene usato l'operatore _ per trovare tutte le persone nella tabella `Person` con un nome composto da tre lettere che termina con `an`.  
   
 ```sql  
@@ -95,6 +95,6 @@ db_securityadmin
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% (Caratteri jolly per la corrispondenza)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; &#93; (Caratteri jolly per la corrispondenza)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [&#91;^&#93; (Caratteri jolly per la mancata corrispondenza dei caratteri)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+  [&#91; &#93; (carattere jolly)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [&#91;^&#93; (caratteri jolly per la mancata corrispondenza dei caratteri)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
   

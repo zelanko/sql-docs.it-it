@@ -18,10 +18,10 @@ ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1e50ca09fc8ac7c9c61c17227448deebe8c69bc8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066316"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo di dati geometry)
@@ -43,7 +43,7 @@ ms.locfileid: "68066316"
  *intersection_pattern_matrix*  
  Stringa di tipo **nchar(9)** che codifica valori accettabili per il dispositivo a matrice del modello DE-9IM tra le due istanze **geometry**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono. Questo metodo genererà un'eccezione **ArgumentException** se la matrice non è formattata in modo corretto.  
   
 ## <a name="return-types"></a>Tipi restituiti  

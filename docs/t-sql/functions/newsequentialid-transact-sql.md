@@ -19,10 +19,10 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3edebc2c1a7182e71ec093508adc5755afb22758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914939"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67914939"
 > [!WARNING]  
 >  La funzione UuidCreateSequential ha dipendenze hardware. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si possono sviluppare cluster di valori sequenziali quando i database (ad esempio, i database indipendenti) vengono spostati in altri computer. Quando si usa Always On in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], si possono sviluppare cluster di valori sequenziali se si effettua il failover del database in un computer diverso.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,8 +50,8 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>Tipo restituito  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
- La funzione NEWSEQUENTIALID() può essere usata solo con vincoli DEFAULT su colonne di tabella di tipo **uniqueidentifier**. Esempio:  
+## <a name="remarks"></a>Osservazioni  
+ La funzione NEWSEQUENTIALID() può essere usata solo con vincoli DEFAULT su colonne di tabella di tipo **uniqueidentifier**. Ad esempio:  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   

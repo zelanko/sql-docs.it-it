@@ -12,13 +12,13 @@ ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0320795493df3c4d0283e3d82a2235e9f1f08914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951430"
 ---
-# <a name="mssqlserver7906"></a>MSSQLSERVER_7906
+# <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -30,7 +30,7 @@ ms.locfileid: "67951430"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Testo del messaggio|Errore di database: il file 'FILE' non è un file FILESTREAM valido.|  
+|Testo del messaggio|Errore di database: il file "FILE" non è un file FileStream valido.|  
   
 ## <a name="explanation"></a>Spiegazione  
 Ad eccezione di alcuni file speciali, ad esempio 'filestream.hdr', nessun file deve trovarsi direttamente nello spazio dati FileStream.  

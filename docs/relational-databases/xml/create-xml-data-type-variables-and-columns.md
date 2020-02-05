@@ -14,10 +14,10 @@ ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984873"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Creazione di variabili e colonne con tipo di dati XML
@@ -67,7 +67,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta anche i vincoli NULL e NOT NULL sulle colonne di tipo **xml** . Esempio:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta anche i vincoli NULL e NOT NULL sulle colonne di tipo **xml** . Ad esempio:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  

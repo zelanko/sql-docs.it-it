@@ -26,18 +26,18 @@ ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ead8278841f3eafa97f31b91480cb8464ce77dd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071488"
 ---
-# <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
+# <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Questa funzione restituisce il nome di file logico corrispondente al numero di identificazione di file (ID) specificato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +52,7 @@ Numero di identificazione di file per cui `FILE_NAME` restituirà il nome di fil
 ## <a name="return-types"></a>Tipi restituiti  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 *file_ID* corrisponde alla colonna file_id nella vista del catalogo sys.master_files o sys.database_files.  
   
 ## <a name="examples"></a>Esempi  

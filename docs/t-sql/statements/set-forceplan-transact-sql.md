@@ -24,10 +24,10 @@ ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 84060374e3d46dde985e32a549180d8492c72892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929001"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67929001"
 
   Quando FORCEPLAN è impostato su ON, Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora un join nello stesso ordine delle tabelle nella clausola FROM di una query. L'impostazione di FORCEPLAN su ON determina inoltre l'utilizzo forzato di un nested loop join, a meno che altri tipi di join non siano necessari per la costruzione di un piano per la query o siano richiesti con hint di join o hint per la query.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67929001"
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'opzione SET FORCEPLAN sostanzialmente sostituisce la logica utilizzata in Query Optimizer per l'elaborazione di un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)]. I dati restituiti dall'istruzione SELECT sono gli stessi, indipendentemente dall'impostazione. L'unica differenza è la modalità in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora le tabelle per soddisfare la query.  
   
  È inoltre possibile utilizzare gli hint di Query Optimizer in query che hanno effetto sulla modalità di elaborazione dell'istruzione SELECT in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

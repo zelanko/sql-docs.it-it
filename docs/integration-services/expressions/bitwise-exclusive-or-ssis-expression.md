@@ -14,10 +14,10 @@ ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4afd716b1241371525d2a9def89edc61ba8cc1ae
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297709"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (OR esclusivo bit per bit) (espressione SSIS)
@@ -44,7 +44,7 @@ integer_expression1 ^ integer_expression2
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se una delle due condizioni è Null, il risultato dell'espressione sarà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  

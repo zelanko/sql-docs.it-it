@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Specifica della direttiva CDATA | Microsoft Docs'
+title: 'Esempio: specifica della direttiva CDATA | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e67e3bb42aa2d70ae4e27a3f13955e5d0827c2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006744"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>Esempio: Specifica della direttiva CDATA
+# <a name="example-specifying-the-cdata-directive"></a>Esempio: specifica della direttiva CDATA
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Se si specifica la direttiva **CDATA**, i dati contenuti non vengono codificati come entità, ma vengono inseriti nella sezione CDATA. Gli attributi **CDATA** devono essere privi di nome.  
   
@@ -48,6 +48,6 @@ FOR XML EXPLICIT
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

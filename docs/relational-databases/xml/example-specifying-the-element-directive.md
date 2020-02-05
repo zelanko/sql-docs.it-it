@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Specifica della direttiva ELEMENT | Microsoft Docs'
+title: 'Esempio: specifica della direttiva ELEMENT | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006731"
 ---
-# <a name="example-specifying-the-element-directive"></a>Esempio: Specifica della direttiva ELEMENT
+# <a name="example-specifying-the-element-directive"></a>Esempio: specifica della direttiva ELEMENT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   In questo modo vengono recuperate le informazioni sul personale e viene generato un valore XML incentrato sugli attributi, come mostrato negli elementi seguenti:  
   
@@ -85,6 +85,6 @@ FOR XML EXPLICIT;
  `...`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1feffb9116294c6dc77af5bae2552362fd8e532b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107846"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (tipo di dati geometry)
@@ -41,7 +41,7 @@ Restituisce le dimensioni massime di un'istanza **geometry**.
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  `STDimension()` restituisce -1 se l'istanza **geometry** è vuota.  
   
 ## <a name="examples"></a>Esempi  
@@ -58,9 +58,9 @@ FROM @temp;
   
  Nell'esempio vengono restituite le dimensioni di ogni istanza `geometry`.  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
-|Punto|0|  
+|Point|0|  
 |LineString|1|  
 |Polygon|2|  
   

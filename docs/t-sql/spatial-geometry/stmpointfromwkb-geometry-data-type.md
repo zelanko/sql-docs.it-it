@@ -18,10 +18,10 @@ ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 86f995fc650460bdbda6004917c974377cd1b2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894865"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (tipo di dati geometry)
@@ -50,7 +50,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
  Tipo OGC: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

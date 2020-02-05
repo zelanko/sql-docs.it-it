@@ -15,10 +15,10 @@ ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ddebe254c44d1577b2da5200cec02011c5bca89f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101200"
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (tipo di dati geometry)
@@ -38,12 +38,12 @@ Restituisce il livello minimo di compatibilità del database che riconosce l'ist
   
  Tipo CLR restituito: **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare `MinDbCompatibilityLevel()` per verificare la compatibilità di un oggetto spaziale prima di modificare il livello di compatibilità in un database.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. Verifica della compatibilità del tipo CircularString con livello di compatibilità 110  
+### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>R. Verifica della compatibilità del tipo CircularString con livello di compatibilità 110  
  Nell'esempio seguente viene verificata la compatibilità di un'istanza `CircularString` con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```

@@ -22,10 +22,10 @@ ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121929"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121929"
 
   Apre un cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)] e popola il cursore mediante l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specificata nell'istruzione DECLARE CURSOR o SET *cursor_variable*.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +52,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  *cursor_variable_name*  
  Nome di una variabile di cursore che fa riferimento a un cursore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se il cursore viene dichiarato con l'opzione INSENSITIVE o STATIC, OPEN crea una tabella temporanea per il set di risultati. OPEN ha esito negativo se le dimensioni di una riga del set dei risultati supera le dimensioni massime consentite per le righe delle tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il cursore viene dichiarato con l'opzione KEYSET, OPEN crea una tabella temporanea per il keyset. Le tabelle temporanee vengono archiviate in tempdb.  
   
  Dopo l'apertura di un cursore, usare la funzione @@CURSOR_ROWS per ricevere il numero delle righe risultanti nell'ultimo cursore aperto.  

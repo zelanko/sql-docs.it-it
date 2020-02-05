@@ -14,10 +14,10 @@ ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048865"
 ---
 # <a name="event-notifications"></a>Notifiche degli eventi
@@ -52,7 +52,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>Concetti delle notifiche di eventi  
  Durante la creazione di una notifica degli eventi, vengono aperte una o più conversazioni [!INCLUDE[ssSB](../../includes/sssb-md.md)] tra un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il servizio di destinazione specificato. Tali conversazioni rimangono in genere aperte finché la notifica degli eventi è disponibile come oggetto nell'istanza del server. In alcune situazioni di errore è possibile che le conversazioni vengano chiuse prima dell'eliminazione della notifica. Le conversazioni non vengono mai condivise tra le notifiche degli eventi. A ogni notifica sono associate conversazioni esclusive. Se una conversazione viene terminata in modo esplicito, il servizio di destinazione non potrà più ricevere altri messaggi e la conversazione non verrà riaperta alla successiva attivazione della notifica degli eventi.  
   
- Le informazioni sugli eventi vengono fornite al servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] sotto forma di variabile di tipo **xml**. Tale variabile fornisce informazioni relative al momento in cui si verifica l'evento, all'oggetto di database interessato, all'istruzione batch [!INCLUDE[tsql](../../includes/tsql-md.md)], nonché informazioni di altro tipo. Per altre informazioni su XML Schema prodotto dalle notifiche degli eventi, vedere [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md).  
+ Le informazioni sugli eventi vengono fornite al servizio [!INCLUDE[ssSB](../../includes/sssb-md.md)] sotto forma di variabile di tipo **xml** . Tale variabile fornisce informazioni relative al momento in cui si verifica l'evento, all'oggetto di database interessato, all'istruzione batch [!INCLUDE[tsql](../../includes/tsql-md.md)] , nonché informazioni di altro tipo. Per altre informazioni su XML Schema prodotto dalle notifiche degli eventi, vedere [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md).  
   
 ### <a name="event-notifications-vs-triggers"></a>Notifiche degli eventi e Trigger  
  Nella tabella seguente viene eseguito il confronto fra trigger e notifiche di eventi.  
@@ -69,7 +69,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Il proprietario dei trigger DML è il proprietario delle tabelle sulle quali vengono applicati.|Il proprietario di una notifica degli eventi in una coda può essere diverso dal proprietario dell'oggetto al quale viene applicata.|  
 |I trigger supportano la clausola EXECUTE AS.|Le notifiche degli eventi non supportano la clausola EXECUTE AS.|  
 |Le informazioni sull'evento di un trigger DDL possono essere acquisite usando la funzione EVENTDATA, che restituisce un tipo di dati **xml** .|Le notifiche degli eventi inviano informazioni **xml** sull'evento a un servizio di Service Broker. Le informazioni vengono formattate con lo stesso schema della funzione EVENTDATA.|  
-|I metadati relativi ai trigger si trovano nelle viste del catalogo **sys.triggers** e **sys.server_triggers** .|I metadati relativi alle notifiche degli eventi si trovano nelle viste del catalogo **sys.event_notifications** e **sys.server_event_notifications**.|  
+|I metadati relativi ai trigger si trovano nelle viste del catalogo **sys.triggers** e **sys.server_triggers** .|I metadati relativi alle notifiche degli eventi si trovano nelle viste del catalogo **sys.event_notifications** e **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notifiche degli eventi e Traccia SQL  
  Nella tabella seguente vengono confrontate le caratteristiche delle notifiche degli eventi e della Traccia SQL per il monitoraggio degli eventi del server.  

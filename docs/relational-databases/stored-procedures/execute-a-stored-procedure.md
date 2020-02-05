@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f088c526666dcd81d269bc68479914202969a2e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934043"
 ---
 # <a name="execute-a-stored-procedure"></a>Eseguire una stored procedure
@@ -41,7 +41,7 @@ In questo argomento viene illustrato come eseguire una stored procedure in [!INC
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per eseguire una stored procedure tramite:**  
   
@@ -63,7 +63,7 @@ In questo argomento viene illustrato come eseguire una stored procedure in [!INC
   
 -   Se una stored procedure definita dall'utente ha lo stesso nome di una stored procedure di sistema, potrebbe non essere possibile eseguire la prima.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Esecuzione di stored procedure di sistema  
   
@@ -127,7 +127,7 @@ In questo argomento viene illustrato come eseguire una stored procedure in [!INC
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per altre informazioni, vedere la sezione Autorizzazioni in [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Per eseguire una stored procedure  
   
@@ -151,12 +151,12 @@ In questo argomento viene illustrato come eseguire una stored procedure in [!INC
      **Passa valore Null**  
      Consente di passare NULL come valore del parametro.  
   
-     **Value**  
+     **Valore**  
      Digitare il valore del parametro al momento della chiamata alla procedura.  
   
 5.  Per eseguire la stored procedure, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-execute-a-stored-procedure"></a>Per eseguire una stored procedure  
   

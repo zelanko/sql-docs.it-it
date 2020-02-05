@@ -1,10 +1,9 @@
 ---
-title: Server di destinazione (scheda Stato server di destinazione) | Microsoft Docs
-ms.custom: ''
+title: Server di destinazione (scheda Stato server di destinazione)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 72bb2ff92b6b882de0cb2465b8e61417936ceef7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: edf504e5555933341243e45104e7da3ec96069e9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256180"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257838"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Server di destinazione (scheda Stato server di destinazione)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ Consente di visualizzare la data e l'ora locali dell'esecuzione dell'ultimo poll
 **Istruzioni non lette**  
 Consente di visualizzare il numero di istruzioni che il server di destinazione non ha ancora ricevuto.  
   
-**Stato**  
+**Status**  
 Consente di visualizzare lo stato del server di destinazione.  
   
 **Imponi polling**  

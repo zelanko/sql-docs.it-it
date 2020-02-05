@@ -14,10 +14,10 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133598"
 ---
 # <a name="master-database"></a>Database master
@@ -51,39 +51,39 @@ Nella tabella seguente è indicato il valore predefinito di ogni opzione del dat
 
 |Opzione di database|Valore predefinito|Modificabile|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|no|  
+|ALLOW_SNAPSHOT_ISOLATION|ATTIVA|No|  
 |ANSI_NULL_DEFAULT|OFF|Sì|  
 |ANSI_NULLS|OFF|Sì|  
 |ANSI_PADDING|OFF|Sì|  
 |ANSI_WARNINGS|OFF|Sì|  
 |ARITHABORT|OFF|Sì|  
-|AUTO_CLOSE|OFF|no|  
-|AUTO_CREATE_STATISTICS|ON|Sì|  
-|AUTO_SHRINK|OFF|no|  
-|AUTO_UPDATE_STATISTICS|ON|Sì|  
+|AUTO_CLOSE|OFF|No|  
+|AUTO_CREATE_STATISTICS|ATTIVA|Sì|  
+|AUTO_SHRINK|OFF|No|  
+|AUTO_UPDATE_STATISTICS|ATTIVA|Sì|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sì|  
-|CHANGE_TRACKING|OFF|no|  
+|CHANGE_TRACKING|OFF|No|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sì|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sì|  
 |CURSOR_DEFAULT|GLOBAL|Sì|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> no<br /><br /> no|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sì|  
-|DB_CHAINING|ON|no|  
-|ENCRYPTION|OFF|no|  
-|MIXED_PAGE_ALLOCATION|ON|no|  
+|DB_CHAINING|ATTIVA|No|  
+|ENCRYPTION|OFF|No|  
+|MIXED_PAGE_ALLOCATION|ATTIVA|No|  
 |NUMERIC_ROUNDABORT|OFF|Sì|  
 |PAGE_VERIFY|CHECKSUM|Sì|  
-|PARAMETERIZATION|SIMPLE|Sì|  
+|PARAMETERIZATION|SEMPLICE|Sì|  
 |QUOTED_IDENTIFIER|OFF|Sì|  
-|READ_COMMITTED_SNAPSHOT|OFF|no|  
-|RECOVERY|SIMPLE|Sì|  
+|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|RECOVERY|SEMPLICE|Sì|  
 |RECURSIVE_TRIGGERS|OFF|Sì|  
-|Opzioni relative a Service Broker|DISABLE_BROKER|no|  
+|Opzioni relative a Service Broker|DISABLE_BROKER|No|  
 |TRUSTWORTHY|OFF|Sì|  
   
 Per una descrizione di queste opzioni di database, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
 Nel database **master** non è possibile eseguire le operazioni seguenti:  
   
 - Aggiunta di file o di filegroup.  
@@ -100,7 +100,7 @@ Nel database **master** non è possibile eseguire le operazioni seguenti:
 - Impostazione del database su OFFLINE.  
 - Impostazione del database o del filegroup primario su READ_ONLY.  
   
-## <a name="recommendations"></a>Indicazioni  
+## <a name="recommendations"></a>Consigli  
 Quando si utilizza il database **master** , è consigliabile attenersi alle indicazioni seguenti:  
   
 - Tenere sempre a disposizione un backup aggiornato del database **master** .  

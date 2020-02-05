@@ -14,13 +14,13 @@ ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 05d10406c4eb3e0a854942084047c4c42b576062
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095662"
 ---
-# <a name="mssqlserver10060"></a>MSSQLSERVER_10060
+# <a name="mssqlserver_10060"></a>MSSQLSERVER_10060
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -45,7 +45,7 @@ Per risolvere l'errore, eseguire una delle operazioni seguenti:
 -   Utilizzare lo strumento Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per consentire l'accettazione di connessioni remote in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
-[Configurazione di Windows Firewall per l'accesso al Motore di database](~/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+[Configurare Windows Firewall per l'accesso al motore di database](~/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
 [Configurazione di protocolli client](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Protocolli e librerie di rete](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Configurazione di rete dei client](~/database-engine/configure-windows/client-network-configuration.md)  

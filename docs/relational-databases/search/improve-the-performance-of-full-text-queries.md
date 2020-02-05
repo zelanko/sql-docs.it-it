@@ -11,10 +11,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0b08e445cf22760f41da3e21e086c20fc927f8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021162"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Migliorare le prestazioni delle query full-text
@@ -49,7 +49,7 @@ ms.locfileid: "68021162"
 -   Per le applicazioni che contengono affermazioni a relazione selettiva, le prestazioni di esecuzione delle query che utilizzano predicati relazionali selettivi e predicati full-text non selettivi potrebbero risultare migliori se le query sono scritte per l'utilizzo di Query Optimizer. In questo modo, Query Optimizer sarà in grado di stabilire la possibilità o meno di utilizzare l'impostazione di intervalli o di predicati per produrre un piano di query efficace. Questo metodo è più semplice e spesso più efficiente rispetto all'indicizzazione di dati relazionali come dati full-text.  
   
 ## <a name="related-resources"></a>Risorse correlate  
- [SQL Server 2008 Full-Text Search: Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544) (Ricerca full-text di SQL Server 2008: elementi interni e miglioramenti)  
+ [SQL Server 2008 Full-Text Search: Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   

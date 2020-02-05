@@ -15,10 +15,10 @@ ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086019"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>Eliminare uno snapshot del database (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68086019"
   
 2.  Eseguire un'istruzione [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) , specificando il nome dello snapshot del database da eliminare. La sintassi è la seguente:  
   
-     DROP DATABASE *database_snapshot_name* [ **,**...*n* ]  
+     DROP DATABASE *database_snapshot_name* [ **,** ...*n* ]  
   
      Dove *database_snapshot_name* è il nome dello snapshot del database da eliminare.  
   
@@ -57,7 +57,7 @@ DROP DATABASE SalesSnapshot0600 ;
   
 -   [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [Visualizzare uno snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [Visualizzazione di uno snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
 -   [Ripristinare un database a uno snapshot del database](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   

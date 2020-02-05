@@ -18,10 +18,10 @@ ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 868b344a18494e4b92cd3ee5944cb80ad15ab845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066223"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (tipo di dati geometry)
@@ -45,12 +45,12 @@ Restituisce un oggetto che rappresenta l'unione di un'istanza **geometry** con u
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono. Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-computing-the-union-of-two-polygon-instances"></a>A. Calcolo dell'unione di due istanze Polygon  
+### <a name="a-computing-the-union-of-two-polygon-instances"></a>R. Calcolo dell'unione di due istanze Polygon  
  Nell'esempio seguente viene utilizzato `STUnion()` per calcolare l'unione di due istanze `Polygon`.  
   
 ```  

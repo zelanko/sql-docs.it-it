@@ -18,10 +18,10 @@ ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 34fcb2841d414d56a8718f3864039aa85d390d85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042104"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (tipo di dati geography)
@@ -50,7 +50,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il tipo OGC dell'istanza **geography** restituita da `STGeomFromText()` è impostato sull'input WKB corrispondente.  
   
  Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  

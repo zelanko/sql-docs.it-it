@@ -11,10 +11,10 @@ ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: efc8ce0a541a508f88e7b1122b561008e25f4d51
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292664"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Estrarre dati tramite l'origine ODBC

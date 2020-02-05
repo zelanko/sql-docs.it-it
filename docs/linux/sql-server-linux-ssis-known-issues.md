@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032234"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitazioni e problemi noti di SSIS in Linux
@@ -102,7 +102,7 @@ Le attività di piano di manutenzione seguenti sono supportate in Linux:
 
 ## <a name="supported-data-flow-transformations"></a>Trasformazioni di flusso di dati supportate
 - Aggregate
-- Controllare il funzionamento di
+- Audit
 - Server di distribuzione di dati bilanciati
 - Mappa caratteri
 - Suddivisione condizionale
@@ -114,7 +114,7 @@ Le attività di piano di manutenzione seguenti sono supportate in Linux:
 - Ricerca fuzzy
 - Importa colonna
 - Ricerca
-- Merge
+- Unione
 - Merge Join
 - Multicast
 - Pivot

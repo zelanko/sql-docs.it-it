@@ -22,10 +22,10 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121701"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68121701"
 
   Arresta immediatamente SQL Server.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,9 +44,9 @@ SHUTDOWN [ WITH NOWAIT ]
   
 ## <a name="arguments"></a>Argomenti  
  WITH NOWAIT  
- Facoltativo. Viene arrestato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza eseguire i checkpoint in ogni database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene chiuso dopo il tentativo di interruzione di tutti i processi degli utenti. All'avvio successivo del server, verrà eseguita una operazione di rollback per le transazioni non completate.  
+ Facoltativa. Viene arrestato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza eseguire i checkpoint in ogni database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene chiuso dopo il tentativo di interruzione di tutti i processi degli utenti. All'avvio successivo del server, verrà eseguita una operazione di rollback per le transazioni non completate.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  A meno che non venga usata l'opzione WITHNOWAIT, SHUTDOWN arresta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguendo le operazioni seguenti:  
   
 1.  Disabilitazione degli account di accesso, tranne quelli dei membri dei ruoli predefiniti del server **sysadmin** e **serveradmin**.  
@@ -64,7 +64,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   Utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Eseguendo **net stop mssqlserver** dal prompt dei comandi per un'istanza predefinita oppure eseguendo **net stop mssql$**_instancename_ da un prompt dei comandi per un'istanza denominata.  
+-   Eseguendo **net stop mssqlserver** dal prompt dei comandi per un'istanza predefinita oppure eseguendo **net stop mssql$** _instancename_ da un prompt dei comandi per un'istanza denominata.  
   
 -   Utilizzando Servizi nel Pannello di controllo.  
   

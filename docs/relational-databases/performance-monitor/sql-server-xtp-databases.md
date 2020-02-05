@@ -13,10 +13,10 @@ ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 01336bc87411fec167a3f78dfd3bf397a93b6d2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947790"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases

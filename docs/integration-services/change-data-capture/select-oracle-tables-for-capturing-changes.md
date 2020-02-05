@@ -13,10 +13,10 @@ ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e0ce4f9888602ef8083dc4f64e98ac4ad6154e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294587"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Selezionare le tabelle Oracle per l'acquisizione delle modifiche
@@ -31,14 +31,14 @@ ms.locfileid: "71294587"
  **Per cercare tabelle specifiche**  
  Immettere i criteri di ricerca nel modo illustrato di seguito, quindi scegliere **Cerca**:  
   
--   **Schema**: selezionare uno schema del database nell'elenco. Verranno incluse nell'elenco solo le tabelle aventi questo schema.  
+-   **Schema**: selezionare uno schema del database dall'elenco. Verranno incluse nell'elenco solo le tabelle aventi questo schema.  
   
--   **Table Name Pattern** (Modello nome tabella): immettere qualsiasi stringa di caratteri. Verranno visualizzate solo le tabelle che includono la stringa di caratteri immessa.  
+-   **Table Name Pattern**: immettere qualsiasi stringa di caratteri. Verranno visualizzate solo le tabelle che includono la stringa di caratteri immessa.  
   
 > [!NOTE]  
 >  È possibile immettere criteri in uno o entrambi questi campi.  
   
--   **Display first 1000 matching tables** (Visualizza prima 1000 tabelle corrispondenti): questa casella di controllo è selezionata per impostazione predefinita. La visualizzazione è limitata alle prime 1000 tabelle corrispondenti. Se si deseleziona la casella di controllo, vengono visualizzate tutte le tabelle che soddisfano i criteri. Se sono presenti molte tabelle, la visualizzazione dell'elenco potrebbe richiedere molto tempo.  
+-   **Display first 1000 matching tables**: per impostazione predefinita questa casella di controllo è selezionata. La visualizzazione è limitata alle prime 1000 tabelle corrispondenti. Se si deseleziona la casella di controllo, vengono visualizzate tutte le tabelle che soddisfano i criteri. Se sono presenti molte tabelle, la visualizzazione dell'elenco potrebbe richiedere molto tempo.  
   
  **Per selezionare le tabelle da includere nell'istanza di CDC**  
  Fare clic sulla casella di controllo accanto alle tabelle che si desidera includere, quindi scegliere **Aggiungi**. Le tabelle vengono aggiunte all'elenco nella pagina **Select Tables and Columns** della New Instance Wizard.  

@@ -18,10 +18,10 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101039"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo di dati geometry)
@@ -45,7 +45,7 @@ Restituisce un'approssimazione dell'istanza **geometry** specificata. L'approssi
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per i tipi di raccolta, questo algoritmo opera in modo indipendente su ogni elemento **geometry** contenuto nell'istanza.  
   
  Questo algoritmo non modifica le istanze **Point**.  
@@ -54,13 +54,13 @@ Restituisce un'approssimazione dell'istanza **geometry** specificata. L'approssi
   
  `Reduce()` restituisce un'istanza **LineString**, **CircularString** o **CompoundCurve** per le istanze **CircularString**.  `Reduce()` restituisce un'istanza **CompoundCurve** o **LineString** per le istanze **CompoundCurve**.  
   
- Nelle istanze **Polygon** l'algoritmo di approssimazione viene applicato in modo indipendente a ogni anello. Il metodo genera un'eccezione `FormatException` se l'istanza **Polygon** restituita non è valida. Se ad esempio `Reduce()` viene applicato per semplificare ogni anello nell'istanza e gli anelli risultanti si sovrappongono, viene creata un'istanza **MultiPolygon** non valida.  Nelle istanze **CurvePolygon** con un anello esterno e nessun anello interno, `Reduce()` restituisce un'istanza **CurvePolygon**, **LineString** o **Point**.  Se **CurvePolygon** include anelli interni viene restituita un'istanza **CurvePolygon** o **MultiPoint**.  
+ Nelle istanze **Polygon** l'algoritmo di approssimazione viene applicato in modo indipendente a ogni anello. Il metodo genera un'eccezione `FormatException` se l'istanza **Polygon** restituita non è valida. Se ad esempio **viene applicato per semplificare ogni anello nell'istanza e gli anelli risultanti si sovrappongono, viene creata un'istanza**MultiPolygon`Reduce()` non valida.  Nelle istanze **CurvePolygon** con un anello esterno e nessun anello interno, `Reduce()` restituisce un'istanza **CurvePolygon**, **LineString** o **Point**.  Se **CurvePolygon** include anelli interni viene restituita un'istanza **CurvePolygon** o **MultiPoint**.  
   
  Quando viene rilevato un segmento di arco circolare, l'algoritmo di approssimazione controlla se è possibile approssimare l'arco secondo la corda in metà della tolleranza specificata. Se la corda soddisfa questi criteri, l'arco circolare viene sostituito nei calcoli dalla corda. Se non soddisfa questi criteri, l'arco circolare viene mantenuto e l'algoritmo di approssimazione viene applicato ai segmenti rimanenti.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-reduce-to-simplify-a-linestring"></a>A. Utilizzo di Riduce() per semplificare LineString  
+### <a name="a-using-reduce-to-simplify-a-linestring"></a>R. Utilizzo di Riduce() per semplificare LineString  
  Nell'esempio seguente viene creata un'istanza `LineString` e viene utilizzato il metodo `Reduce()` per semplificarla.  
   
 ```  

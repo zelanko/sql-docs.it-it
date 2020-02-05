@@ -13,10 +13,10 @@ ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c4eb20f4492e3550ffdbfca5a649684e28685c1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68216179"
 ---
 # <a name="select-backup-device"></a>Seleziona dispositivo di backup
@@ -40,7 +40,7 @@ ms.locfileid: "68216179"
   
  Per informazioni su come visualizzare il contenuto di un dispositivo di backup, vedere [Visualizzare le proprietà e il contenuto di un dispositivo di backup logico &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se nell'elenco non è visualizzato un dispositivo di backup logico contenente il backup di interesse, è possibile che il backup sia stato scritto direttamente su uno o più file o unità nastro. In questo caso, chiudere la finestra di dialogo **Seleziona dispositivo di backup** e selezionare **File** o **Nastro** nella casella di riepilogo **Supporti di backup** della finestra di dialogo **Seleziona backup** .  
   
 ## <a name="see-also"></a>Vedere anche  

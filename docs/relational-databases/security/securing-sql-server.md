@@ -19,10 +19,10 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 473c12211ada579c3ceb441792788a1e975a85e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892488"
 ---
 # <a name="securing-sql-server"></a>Sicurezza di SQL Server
@@ -53,7 +53,7 @@ E possibile considerare la sicurezza di [!INCLUDE[ssNoVersion](../../includes/ss
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
+|Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Servizio Integration Services &#40;servizio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
 |Configurazione di un firewall per l'utilizzo con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso ad Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |Apertura di porte specifiche su un firewall per consentire l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurare Windows Firewall per consentire l'accesso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
@@ -116,7 +116,7 @@ SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Creazione di un certificato per l'uso con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|  
-|Utilizzo di un certificato con mirroring del database|[Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
+|Utilizzo di un certificato con mirroring del database|[Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
 | &nbsp; | &nbsp; |
 
 ## <a name="application-security"></a>Sicurezza dell'applicazione
@@ -162,7 +162,7 @@ Controllo di applicazioni di Windows Defender (WDAC, Windows Defender Applicatio
 
 ## <a name="related-content"></a>Contenuto correlato  
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Procedure consigliate per la sicurezza di SQL Server 2012 - Attività operative e amministrative](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [Blog sulla sicurezza di SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [Procedura consigliata per la sicurezza e white paper di Label Security Toolkit](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  

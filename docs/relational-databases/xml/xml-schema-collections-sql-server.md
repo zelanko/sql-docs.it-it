@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096826"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "68096826"
   
 -   Tipizzare i dati XML a mano a mano che vengono archiviati nel database.  
   
- Si noti che una raccolta di XML Schema è un'entità di metadati analoga a una tabella in un database. Le raccolte di schemi XML possono essere create, modificate ed eliminate. Gli schemi specificati in un'istruzione [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) vengono automaticamente importati nell'oggetto raccolta di XML Schema appena creato. È possibile importare altri schemi o componenti di schema in un oggetto raccolta esistente nel database, usando l'istruzione [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
+ Si noti che una raccolta di XML Schema è un'entità di metadati analoga a una tabella in un database. Le raccolte di schemi XML possono essere create, modificate ed eliminate. Gli schemi specificati in un'istruzione [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) vengono automaticamente importati nell'oggetto raccolta di XML Schema appena creato. È possibile importare altri schemi o componenti di schema in un oggetto raccolta esistente nel database, usando l'istruzione [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) .  
   
  Come descritto nell'argomento [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md), i dati XML archiviati in una colonna o in una variabile a cui è associato uno schema sono detti dati XML **tipizzati** perché lo schema fornisce le informazioni sul tipo di dati necessarie per i dati dell'istanza. SQL Server utilizza tali informazioni sul tipo per ottimizzare l'archiviazione dei dati.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68096826"
   
 -   MODELGROUP  
   
- Esempio:  
+ Ad esempio:  
   
 -   **SomeAttribute** è un componente di tipo ATTRIBUTE.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68096826"
   
  Quando si importa uno schema nel database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non archivia direttamente lo schema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivia invece i singoli componenti. Ciò significa che il tag \<Schema> non viene archiviato, ma vengono mantenuti i componenti definiti al suo interno. Non vengono mantenuti tutti gli elementi dello schema. Se il tag \<Schema> contiene attributi che specificano il comportamento predefinito dei relativi componenti, tali attributi vengono spostati nei componenti dello schema durante il processo di importazione, come illustrato nella tabella seguente.  
   
-|Nome dell'attributo|Comportamento|  
+|Nome attributo|Comportamento|  
 |--------------------|--------------|  
 |**attributeFormDefault**|Attributo **form** applicato a tutte le dichiarazioni di attributo nello schema nelle quali non è già presente e dove il valore viene impostato sul valore dell'attributo **attributeFormDefault** .|  
 |**elementFormDefault**|Attributo **form** applicato a tutte le dichiarazioni di elemento nello schema nelle quali non è già presente e dove il valore viene impostato sul valore dell'attributo **elementFormDefault** .|  
@@ -152,11 +152,11 @@ ms.locfileid: "68096826"
   
      Questo argomento presenta informazioni sulla concessione delle autorizzazioni per creare una raccolta XML Schema e delle autorizzazioni per un oggetto raccolta di schemi XML.  
   
--   [Revoca delle autorizzazioni per una raccolta di XML Schema](../../relational-databases/xml/revoke-permissions-on-an-xml-schema-collection.md)  
+-   [Revocare le autorizzazioni per una raccolta di XML Schema](../../relational-databases/xml/revoke-permissions-on-an-xml-schema-collection.md)  
   
      Questo argomento presenta informazioni sulla revoca delle autorizzazioni per impedire la creazione di una raccolta XML Schema e illustra la revoca delle autorizzazioni per un oggetto raccolta XML Schema.  
   
--   [Negazione delle autorizzazioni per una raccolta di XML Schema](../../relational-databases/xml/deny-permissions-on-an-xml-schema-collection.md)  
+-   [Negare le autorizzazioni per una raccolta di XML Schema](../../relational-databases/xml/deny-permissions-on-an-xml-schema-collection.md)  
   
      In questo argomento vengono fornite informazioni sulla negazione delle autorizzazioni per creare una raccolta XML Schema e delle autorizzazioni per un oggetto raccolta XML Schema.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "68096826"
   
  Queste tecniche di enumerazione sono illustrate negli esempi seguenti.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Esempio: Enumerazione degli spazi dei nomi XML in una raccolta di XML Schema  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Esempio: enumerazione degli spazi dei nomi XML in una raccolta di XML Schema  
  Per la raccolta di XML Schema "myCollection" utilizzare la query seguente:  
   
 ```sql
@@ -183,7 +183,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Esempio: Enumerazione del contenuto di una raccolta di XML Schema  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Esempio: enumerazione del contenuto di una raccolta di XML Schema  
  L'istruzione seguente enumera il contenuto della raccolta di XML Schema "myCollection" nell'ambito dello schema relazionale dbo.  
   
 ```sql
@@ -192,7 +192,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  I singoli elementi XML Schema inclusi nella raccolta possono essere ottenuti come istanze del tipo di dati **xml** , specificando lo spazio dei nomi di destinazione come terzo argomento della funzione **XML_SCHEMA_NAMESPACE()** , come illustrato nell'esempio seguente.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: Restituzione di uno schema specifico da una raccolta di XML Schema  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: restituzione di uno schema specifico da una raccolta di XML Schema  
  L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione _pretend_ https/\/www.microsoft.com/was-books dalla raccolta di XML Schema "myCollection" all'interno dello schema relazionale dbo.  
   
 ```sql

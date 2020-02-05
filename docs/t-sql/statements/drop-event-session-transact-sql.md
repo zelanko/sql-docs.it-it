@@ -19,10 +19,10 @@ ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b408b030a27b1e6ebe0fc94db8b6ee32cbb837ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898051"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67898051"
 
   Consente di eliminare una sessione eventi.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ ON SERVER
  *event_session_name*  
  Nome di una sessione dell'evento esistente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando si rilascia una sessione dell'evento, ogni informazioni di configurazione, ad esempio parametri delle destinazioni e della sessione, viene rimossa completamente.  
   
 ## <a name="permissions"></a>Autorizzazioni  

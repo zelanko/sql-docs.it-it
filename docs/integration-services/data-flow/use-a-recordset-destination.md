@@ -13,10 +13,10 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 94c1d149dd152a9cf83e5464cde2c56ec9b42af7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290993"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
@@ -102,7 +102,7 @@ ms.locfileid: "71290993"
   
 1.  Nella scheda **Flusso di controllo** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] aggiungere un'attività Flusso di dati nell'area di progettazione.  
   
-2.  Nella scheda **Flusso di dati** tab, add an OLE DB source to the Flusso di dati task, and then open the **Editor origine OLE DB**.  
+2.  Nella scheda **Flusso di dati** aggiungere un'origine OLE DB all'attività Flusso di dati e quindi aprire **Editor origine OLE DB.**  
   
 3.  Nella pagina **Gestione connessione** dell'editor configurare l'origine con le impostazioni seguenti:  
   

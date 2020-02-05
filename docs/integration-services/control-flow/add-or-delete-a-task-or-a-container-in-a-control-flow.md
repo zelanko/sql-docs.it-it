@@ -16,10 +16,10 @@ ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76e7db001469b141df5633228927135c6d01af53
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298437"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo
@@ -101,7 +101,7 @@ ms.locfileid: "71298437"
   
      Per informazioni sulla configurazione di un contenitore Ciclo For, vedere [Configurazione di un contenitore Ciclo For](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
   
-     Per informazioni sulla configurazione di un contenitore Ciclo Foreach, vedere [Configurazione di un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     Per informazioni su come configurare il contenitore Ciclo Foreach, vedere [Configurare un contenitore Ciclo Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
     > [!NOTE]  
     >  Il contenitore Sequenza non dispone di un editor personalizzato.  

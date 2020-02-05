@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e627106c5c2b4456b3559971897687c95e9833b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086668"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68086668"
 
   Rimuove una tabella esterna PolyBase da un database, ma non elimina i dati esterni.  
   
- ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-basic-syntax"></a>A. Uso della sintassi di base  
+### <a name="a-using-basic-syntax"></a>R. Uso della sintassi di base  
   
 ```  
 DROP EXTERNAL TABLE SalesPerson;  

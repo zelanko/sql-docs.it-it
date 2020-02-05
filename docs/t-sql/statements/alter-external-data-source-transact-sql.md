@@ -19,10 +19,10 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71227161"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
@@ -63,7 +63,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION = 'nome_server_o_IP' Fornisce il protocollo di connettività e il percorso dell'origine dati esterna.
 
- RESOURCE_MANAGER_LOCATION ='\<Indirizzo IP;Porta>' (non si applica ad Azure SQL Data Warehouse) Specifica il percorso di Gestione risorse Hadoop. Quando specificato, Query Optimizer può scegliere di pre-elaborare i dati di una query PolyBase usando le funzionalità di calcolo di Hadoop. Questa decisione si basa sui costi. La cosiddetta distribuzione del predicato può ridurre notevolmente il volume dei dati trasferiti tra Hadoop e SQL e pertanto migliorare le prestazioni delle query.
+ RESOURCE_MANAGER_LOCATION ='\<Indirizzo IP;Porta>' (non si applica ad Azure SQL Data Warehouse) Specifica il percorso di Gestione risorse Hadoop. Quando specificato, Query Optimizer può scegliere di pre-elaborare i dati di una query PolyBase usando le funzionalità di calcolo di Hadoop. Questa decisione si basa sui costi. Il pushdown dei predicati può ridurre notevolmente il volume dei dati trasferiti tra Hadoop e SQL e pertanto migliorare le prestazioni delle query.
 
  CREDENTIAL = Credential_Name Specifica la credenziale denominata. Vedere [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -74,7 +74,7 @@ La credenziale usata deve essere creata usando `SHARED ACCESS SIGNATURE` come id
 
   
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
  È possibile modificare una sola origine per volta. Le richieste simultanee di modifica della stessa origine mettono in attesa un'istruzione. È invece possibile modificare origini diverse nello stesso momento. Questa istruzione può essere eseguita contemporaneamente ad altre istruzioni.
 
 ## <a name="permissions"></a>Autorizzazioni  

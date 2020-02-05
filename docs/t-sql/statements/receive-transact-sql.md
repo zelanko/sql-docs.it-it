@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211434"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70211434"
 
   Recupera uno o più messaggi da una coda. A seconda del periodo di memorizzazione impostato per la coda, questa istruzione rimuove il messaggio dalla coda o aggiorna lo stato del messaggio nella coda.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -105,7 +105,7 @@ ms.locfileid: "70211434"
  TIMEOUT *timeout*  
  Specifica l'intervallo di tempo, in millisecondi, per cui l'istruzione deve rimanere in attesa di un messaggio. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se non si specifica questa clausola o se il timeout è -**1**, il tempo di attesa è illimitato. Alla scadenza del timeout, l'istruzione RECEIVE restituisce un set di risultati vuoto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 > [!IMPORTANT]  
 >  Se l'istruzione RECEIVE non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola (;).  
@@ -157,7 +157,7 @@ ms.locfileid: "70211434"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**status**|**tinyint**|Stato del messaggio. Per i messaggi restituiti dal comando RECEIVE, lo stato è sempre **0**. I messaggi nella coda possono contenere uno dei valori seguenti:<br /><br /> **0**=Pronto**1**=Messaggio ricevuto**2**=Non ancora completo**3**=Messaggio inviato memorizzato|  
+|**Stato**|**tinyint**|Stato del messaggio. Per i messaggi restituiti dal comando RECEIVE, lo stato è sempre **0**. I messaggi nella coda possono contenere uno dei valori seguenti:<br /><br /> **0**=Pronto**1**=Messaggio ricevuto**2**=Non ancora completo**3**=Messaggio inviato memorizzato|  
 |**priority**|**tinyint**|Livello di priorità della conversazione applicato al messaggio.|  
 |**queuing_order**|**bigint**|Numero progressivo del messaggio nella coda.|  
 |**conversation_group_id**|**uniqueidentifier**|Identificatore del gruppo di conversazioni a cui appartiene il messaggio.|  
@@ -177,7 +177,7 @@ ms.locfileid: "70211434"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. Ricezione di tutte le colonne di tutti i messaggi in un gruppo di conversazioni  
+### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>R. Ricezione di tutte le colonne di tutti i messaggi in un gruppo di conversazioni  
  Nell'esempio seguente, l'istruzione è impostata per la ricezione di tutti i messaggi disponibili per il successivo gruppo di conversazioni disponibile dalla coda `ExpenseQueue`. L'istruzione restituisce i messaggi in forma di set di risultati.  
   
 ```  

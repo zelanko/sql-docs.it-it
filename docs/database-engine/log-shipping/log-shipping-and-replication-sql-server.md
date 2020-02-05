@@ -13,10 +13,10 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce1bf24e0f76a7e6d61f2b3bdc3c43c89863d85a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030822"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Log shipping e replica (SQL Server)

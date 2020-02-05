@@ -23,10 +23,10 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902020"
 ---
 # <a name="hints-transact-sql---join"></a>Hint (Transact-SQL) - Join
@@ -45,7 +45,7 @@ ms.locfileid: "67902020"
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,12 +68,12 @@ ms.locfileid: "67902020"
   
  L'opzione REMOTE può essere utilizzata solo per operazioni INNER JOIN.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Gli hint di join vengono specificati nella clausola FROM di una query e consentono di imporre una strategia di join tra due tabelle. Se tra due tabelle viene specificato un hint di join, Query Optimizer impone in modo automatico l'ordine di join per tutte le tabelle unite in join della query, in base alla posizione delle parole chiave ON. Se si utilizza un CROSS JOIN senza la clausola ON, è possibile utilizzare le parentesi per indicare l'ordine di join.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-hash"></a>A. Utilizzo di HASH  
+### <a name="a-using-hash"></a>R. Utilizzo di HASH  
  Nell'esempio seguente viene specificato che l'operazione `JOIN` nella query viene eseguita da un join `HASH`. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

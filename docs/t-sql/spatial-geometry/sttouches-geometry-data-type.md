@@ -18,10 +18,10 @@ ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 93ea5be3c2f9a4ecdd415471da16ca21eb1f08c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066239"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (tipo di dati geometry)
@@ -45,7 +45,7 @@ Restituisce 1 se un'istanza **geometry** tocca a livello spaziale un'altra istan
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Due istanze **geometry** si toccano se si intersecano i relativi set di punti, ma non le parti interne.  
   
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  

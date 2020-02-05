@@ -18,10 +18,10 @@ ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2b42f879a238e1c1e9a44c92c8683a91c9021600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030866"
 ---
 # <a name="stlength-geometry-data-type"></a>STLength (tipo di dati geometry)
@@ -41,7 +41,7 @@ Restituisce la lunghezza totale degli elementi in un'istanza **geometry**.
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se un'istanza **geometry** è chiusa, la lunghezza viene calcolata come lunghezza totale lungo l'istanza. La lunghezza di qualsiasi poligono è il relativo perimetro e la lunghezza di un punto è 0. La lunghezza di qualsiasi tipo **geometrycollection** è la somma delle lunghezze delle istanze **geometry** contenute.  
   
  STLength() può essere utilizzato con oggetti LineString validi e non validi. In genere, un oggetto LineString non è valido a causa di segmenti sovrapposti dovuti ad anomalie, ad esempio tracce GPS imprecise. STLength() non rimuove i segmenti sovrapposti o non validi, i quali vengono inclusi nel valore di lunghezza restituito. È possibile rimuovere i segmenti sovrapposti da un oggetto LineString con il metodo MakeValid().  

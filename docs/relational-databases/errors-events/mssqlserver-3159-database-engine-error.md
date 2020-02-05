@@ -12,13 +12,13 @@ ms.assetid: c93c1003-0e3a-40aa-9873-44a0f5b8b57e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 56bf6c459dbf7d4db85bb5ca405b7a59ebc0a8ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001846"
 ---
-# <a name="mssqlserver3159"></a>MSSQLSERVER_3159
+# <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -49,7 +49,7 @@ Se non è possibile eseguire il backup della parte finale del log, utilizzare WI
   
 ## <a name="see-also"></a>Vedere anche  
 [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](~/relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
-[Eseguire il backup del log delle transazioni quando il database è danneggiato &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
+[Esecuzione del backup del log delle transazioni quando il database è danneggiato &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
 [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
 [Backup della parte finale del log &#40;SQL Server&#41;](~/relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   

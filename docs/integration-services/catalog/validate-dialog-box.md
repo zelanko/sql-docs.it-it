@@ -14,10 +14,10 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294866"
 ---
 # <a name="validate-dialog-box"></a>Finestra di dialogo Convalida
@@ -50,7 +50,7 @@ ms.locfileid: "71294866"
 5.  Fare clic con il pulsante destro del mouse sul pacchetto o sul progetto, quindi selezionare **Convalida**.  
   
 ##  <a name="general"></a> Impostare le opzioni nella pagina Generale  
- **Ambiente**  
+ **Environment**  
  Selezionare l'ambiente da utilizzare per convalidare il progetto o pacchetto.  
   
  **Runtime a 32 bit**  
@@ -64,7 +64,7 @@ ms.locfileid: "71294866"
  **Parametro**  
  Viene elencato il nome dei parametri.  
   
- **Value**  
+ **Valore**  
  Viene elencato il valore del parametro.  
   
  Nella scheda **Gestioni connessioni** sono elencati i valori delle proprietà delle gestioni connessioni utilizzati per convalidare il progetto o pacchetto.  
@@ -80,7 +80,7 @@ ms.locfileid: "71294866"
  **Nome proprietà**  
  Viene elencato il nome della proprietà della gestione connessione.  
   
- **Value**  
+ **Valore**  
  Viene elencato il valore assegnato alla proprietà della gestione connessione.  
   
   

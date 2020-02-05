@@ -19,10 +19,10 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885336e48d7b8820ac7c1015be6d770b851978af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898074"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67898074"
 > [!IMPORTANT]
 >  L'istruzione DROP DEFAULT verrà rimossa a partire dalla prossima versione di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare DROP DEFAULT in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente la utilizzano. In alternativa, usare le definizioni di valori predefiniti che è possibile creare con la parola chiave DEFAULT dell'istruzione [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
   
 ## <a name="arguments"></a>Argomenti  
  *IF EXISTS*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Rimuove in modo condizionale l'impostazione predefinita solo se esiste già.  
   
@@ -53,7 +53,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  *default_name*  
  Nome di un valore predefinito esistente. Per visualizzare un elenco dei valori predefiniti esistenti, eseguire **sp_help**. I valori predefiniti devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). Il nome dello schema predefinito è facoltativo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Prima di eliminare un valore predefinito associato a una colonna o un tipo di dati alias, è necessario annullarne l'associazione eseguendo **sp_unbindefault**.  
   
  Se si aggiungono nuove righe senza specificare in modo esplicito un valore dopo avere eliminato un valore predefinito da una colonna che ammette valori Null, in tale posizione verrà inserita la stringa NULL. Se si aggiungono nuove righe senza specificare in modo esplicito un valore dopo avere eliminato un valore predefinito da una colonna NOT NULL, verrà visualizzato un messaggio di errore. Queste righe vengono aggiunte successivamente durante la normale esecuzione dell'istruzione INSERT.  
@@ -63,7 +63,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dropping-a-default"></a>A. Eliminazione di un valore predefinito  
+### <a name="a-dropping-a-default"></a>R. Eliminazione di un valore predefinito  
  Se un valore predefinito non è associato a una colonna o un tipo di dati alias, è possibile eliminarlo semplicemente tramite l'istruzione DROP DEFAULT. Nell'esempio seguente viene rimosso il valore predefinito `datedflt` creato dall'utente.  
   
 ```  

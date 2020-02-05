@@ -18,10 +18,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: a8912a290723e3f0e1d0a0b951a6a5d1ce04b725
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710509"
 ---
 # <a name="polybase-query-scenarios"></a>Scenari di query di PolyBase
@@ -60,7 +60,7 @@ ORDER BY SensorData.Speed DESC
   
 ```  
 
-## <a name="import-data"></a>Importazione di dati
+## <a name="import-data"></a>Importa dati
 
 Importare dati da Hadoop o dall'archiviazione di Azure in SQL Server per l'archivio permanente. Usare SELECT INTO per importare i dati a cui fa riferimento una tabella esterna, per l'archiviazione permanente in SQL Server. Creare un tabella relazionale e quindi creare un indice columnstore sulla tabella in un secondo passaggio.
 
@@ -82,7 +82,7 @@ ORDER BY YearlyIncome
 CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;  
 ```
 
-## <a name="export-data"></a>Esportare dati
+## <a name="export-data"></a>Esportazione dei dati
 
 Esportare dati da SQL Server in Hadoop o Archiviazione di Azure. 
 

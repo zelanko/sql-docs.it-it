@@ -15,10 +15,10 @@ ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bff01341c6d28f38cc1ba18ecf6ac2644b4bb530
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017517"
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate (tipo di dati geometry)
@@ -43,7 +43,7 @@ CollectionAggregate ( geometry_operand )
 ## <a name="exceptions"></a>Eccezioni  
  Genera un'eccezione `FormatException` in presenza di valori di input non validi. Vedere [STIsValid &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo restituisce **Null** quando l'input è vuoto o dispone di SRID diversi. Vedere [Identificatori SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  Il metodo ignora gli input **Null**.  

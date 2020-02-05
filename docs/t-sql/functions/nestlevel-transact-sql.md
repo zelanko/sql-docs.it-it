@@ -20,10 +20,10 @@ ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4d9b391d58d8a55b7486cda447d13246df16093b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130149"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68130149"
 
   Restituisce il livello di nidificazione dell'esecuzione corrente di stored procedure (il livello iniziale è 0) nel server locale.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,14 +42,14 @@ ms.locfileid: "68130149"
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Ogni volta che una stored procedure ne richiama un'altra oppure esegue codice gestito tramite un riferimento a una routine CLR, un tipo CLR o una funzione di aggregazione CLR, il livello di nidificazione viene incrementato. Quando viene superato il livello massimo pari a 32, la transazione viene interrotta.  
   
  Se la funzione @@NESTLEVEL viene eseguita all'interno di una stringa [!INCLUDE[tsql](../../includes/tsql-md.md)], il valore restituito è 1 + il livello di annidamento corrente. Se la funzione @@NESTLEVEL viene eseguita dinamicamente usando la stored procedure sp_executesql, il valore restituito è 2 + il livello di annidamento corrente.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>A. Uso di @@NESTLEVEL in una procedura  
+### <a name="a-using-nestlevel-in-a-procedure"></a>R. Uso di @@NESTLEVEL in una procedura  
  Nell'esempio seguente vengono create due procedure: una procedura che richiama l'altra e una che visualizza le impostazioni della funzione `@@NESTLEVEL` di ciascuna procedura.  
   
 ```  

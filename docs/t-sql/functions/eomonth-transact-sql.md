@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 481faddf2a0a12bcc44a8b4e677101afa68c37a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904384"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67904384"
 
 Questa funzione restituisce l'ultimo giorno del mese contenente una data specificata, con una differenza facoltativa.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,14 +48,14 @@ Espressione Integer facoltativa che specifica il numero di mesi da aggiungere a 
 Se l'argomento *month_to_add* ha un valore, `EOMONTH` aggiunge il numero di mesi specificato a *start_date*, quindi restituisce l'ultimo giorno del mese della data risultante. Se questa aggiunta supera l'intervallo valido di date, `EOMONTH` genererà un errore.  
   
 ## <a name="return-type"></a>Tipo restituito  
- **data**  
+ **date**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 La funzione `EOMONTH` può essere eseguita in modalità remota in server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-eomonth-with-explicit-datetime-type"></a>A. EOMONTH con tipo datetime esplicito  
+### <a name="a-eomonth-with-explicit-datetime-type"></a>R. EOMONTH con tipo datetime esplicito  
   
 ```  
 DECLARE @date DATETIME = '12/1/2011';  
@@ -90,7 +90,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. EOMONTH con e senza il parametro month_to_add  
+### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. EOMONTH con e senza il parametro month_to_add  
   
 Nota: i valori illustrati in questi set di risultati rispecchiano una data di esecuzione inclusa tra e comprendente
         

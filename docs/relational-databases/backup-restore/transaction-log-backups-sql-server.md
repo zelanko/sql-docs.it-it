@@ -16,10 +16,10 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041350"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backup di log delle transazioni (SQL Server)
@@ -35,7 +35,7 @@ In genere, un amministratore del database crea un backup completo occasionale de
 ##  <a name="LogBackupSequence"></a> Modalità di funzionamento di una sequenza di backup del log  
  La sequenza della *catena di log* dei backup del log delle transazioni è indipendente dai backup dei dati. Si consideri ad esempio la sequenza di eventi seguente:  
   
-|Time|Evento|  
+|Tempo|Event|  
 |----------|-----------|  
 |8\.00|Backup del database|  
 |12.00|Backup del log delle transazioni|  
@@ -45,7 +45,7 @@ In genere, un amministratore del database crea un backup completo occasionale de
   
  Il backup del log delle transazioni creato alle 20.00 contiene i record del log delle transazioni compresi tra le 16.00 e le 20.00, includendo l'ora di creazione del backup completo del database (18.00). La sequenza di backup del log delle transazioni è continua, dal primo backup completo del database creato alle 8.00 fino all'ultimo backup del log delle transazioni creato alle 20.00. Per informazioni su come applicare i backup del log, vedere l'esempio in [Applicare backup log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-##  <a name="Recommendations"></a> Indicazioni  
+##  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Se un log delle transazioni è danneggiato, il lavoro eseguito dopo il backup valido più recente viene perso. Pertanto è consigliabile inserire i file di log in una risorsa di archiviazione con tolleranza di errore.  
   
@@ -76,6 +76,6 @@ In genere, un amministratore del database crea un backup completo occasionale de
  [Backup del log delle transazioni nella Guida sull'architettura e gestione del log delle transazioni in SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Backups)     
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
- [Applicare backup log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
+ [Applicare backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

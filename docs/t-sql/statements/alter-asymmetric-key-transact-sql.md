@@ -20,10 +20,10 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066070"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68066070"
 
   Modifica le proprietà di una chiave asimmetrica.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,16 +66,16 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Specifica la vecchia password, attualmente utilizzata per proteggere la chiave privata. Questo parametro non è richiesto se la chiave privata è crittografata con la chiave master del database.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se non è presente una chiave master del database, l'opzione ENCRYPTION BY PASSWORD è obbligatoria e l'operazione avrà esito negativo se non si specifica una password. Per altre informazioni su come creare una chiave master del database, vedere [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  È possibile utilizzare ALTER ASYMMETRIC KEY per modificare la protezione della chiave privata specificando le opzioni PRIVATE KEY come illustrato nella tabella seguente.  
   
 |Modifica della protezione|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|Sostituzione della vecchia password con una nuova password|Obbligatorio|Obbligatorio|  
-|Sostituzione della password con la chiave master|Omettere|Obbligatorio|  
-|Sostituzione della chiave master con una password|Obbligatorio|Omettere|  
+|Sostituzione della vecchia password con una nuova password|Obbligatoria|Obbligatoria|  
+|Sostituzione della password con la chiave master|Omettere|Obbligatoria|  
+|Sostituzione della chiave master con una password|Obbligatoria|Omettere|  
   
  È necessario aprire la chiave master del database prima di poterla utilizzare per proteggere una chiave privata. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md).  
   
@@ -86,7 +86,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-password-of-the-private-key"></a>A. Modifica della password della chiave privata  
+### <a name="a-changing-the-password-of-the-private-key"></a>R. Modifica della password della chiave privata  
  Nell'esempio seguente viene modificata la password utilizzata per proteggere la chiave privata della chiave asimmetrica `PacificSales09`. Verrà impostata la nuova password `<enterStrongPasswordHere>`.  
   
 ```  

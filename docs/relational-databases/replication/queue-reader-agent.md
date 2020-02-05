@@ -15,10 +15,10 @@ ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2987497ade73542890b0e90e6c09c1fdd44870ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021248"
 ---
 # <a name="queue-reader-agent"></a>Agente di lettura coda
@@ -31,7 +31,7 @@ ms.locfileid: "68021248"
  **Visualizza**  
  Consente di selezionare le sessioni dell'agente di lettura coda da visualizzare. L'agente di lettura coda in genere viene eseguito in modo continuo, pertanto potrebbe essere disponibile una sola sessione da visualizzare.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente di lettura coda. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -48,7 +48,7 @@ ms.locfileid: "68021248"
  **Ora fine**  
  Ora di fine della sessione. Se l'agente non è arrestato, questo campo è vuoto.  
   
- **Durata**  
+ **Duration**  
  Periodo di tempo durante il quale l'agente di lettura coda è stato eseguito in questa sessione. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale della sessione se la sessione dell'agente è terminata.  
   
  **Messaggio di errore**  

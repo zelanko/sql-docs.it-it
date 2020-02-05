@@ -14,10 +14,10 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67aa61e65bc89246cfb0c685d08a32371a5fc4df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287908"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (diverso da) (espressione SSIS)
@@ -39,12 +39,12 @@ expression1 != expression2
   
 ## <a name="arguments"></a>Argomenti  
  *expression1, expression2*  
- Qualsiasi espressione valida.  
+ È qualsiasi espressione valida.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
  Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  
@@ -85,7 +85,7 @@ expression1 != expression2
   
 -   **Binary** Sia *expression1* che *expression2* devono restituire il tipo di dati DT_BYTES.  
   
--   **BLOB** Sia *expression1* che *expression2* devono restituire lo stesso tipo di dati BLOB (Binary Large Object Block): DT_TEXT, DT_NTEXT o DT_IMAGE.  
+-   **BLOB** Sia *expression1* che *expression2* devono restituire lo stesso tipo di dati BLOB (Binary Large Object Block), cioè DT_TEXT, DT_NTEXT o DT_IMAGE.  
   
  Per altre informazioni sui tipi di dati, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   

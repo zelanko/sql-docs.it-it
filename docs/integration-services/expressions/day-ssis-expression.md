@@ -14,10 +14,10 @@ ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 344e3eca9359d3bafa0dd0fd529c939f84575921
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297620"
 ---
 # <a name="day-ssis-expression"></a>DAY (espressione SSIS)
@@ -35,13 +35,13 @@ DAY(date)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *data*  
+ *date*  
  Espressione che restituisce una data valida o una stringa con formato di data.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, DAY restituirà Null.  
   
  Per i valori letterali di data è necessario eseguire il cast esplicito a uno dei tipi di dati date. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

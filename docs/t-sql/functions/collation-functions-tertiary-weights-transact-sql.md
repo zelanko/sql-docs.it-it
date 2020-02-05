@@ -21,18 +21,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11d5012cadf7bdb028ce921f9039d5502363cbc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064689"
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>Funzioni delle regole di confronto - TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiary_weights-transact-sql"></a>Funzioni delle regole di confronto - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Questa funzione restituisce una stringa binaria di spessori per ogni carattere in un'espressione stringa non Unicode definita tramite una regola di confronto SQL terziaria.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ Un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) stri
 ## <a name="return-types"></a>Tipi restituiti
 `TERTIARY_WEIGHTS` restituisce **varbinary** quando *non_Unicode_character_string_expression* è **char** o **varchar** e restituisce **varbinary(max)** quando *non_Unicode_character_string_expression* ha il tipo di dati **varchar(max)** .
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `TERTIARY_WEIGHTS` restituisce NULL quando una raccolta SQL terziaria non definisce *non_Unicode_character_string_expression*. La tabella seguente elenca le regole di confronto SQL terziarie:
   
 |ID tipo di ordinamento|Regole di confronto SQL|  

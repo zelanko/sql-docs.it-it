@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017666"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Vincoli UNIQUE e CHECK
@@ -48,7 +48,7 @@ ms.locfileid: "68017666"
   
  È possibile applicare più vincoli CHECK a una colonna e inoltre applicare un singolo vincolo CHECK a più colonne creandolo a livello di tabella. È ad esempio possibile usare un vincolo CHECK in più colonne per confermare che a ogni riga con un valore di colonna **country_region** pari a **USA** corrisponda un valore di due caratteri nella colonna **state** . In questo modo è possibile verificare più condizioni simultaneamente.  
   
- I vincoli CHECK simili ai vincoli FOREIGN KEY perché controllano i valori inseriti in una colonna. La differenza consiste nel modo in cui determinano i valori validi. I vincoli FOREIGN KEY ottengono l'elenco di valori validi da un'altra tabella, mentre i vincoli CHECK determinano i valori validi da un'espressione logica.  
+ I vincoli CHECK simili ai vincoli FOREIGN KEY perché controllano i valori inseriti in una colonna. La differenza consiste nel modo in cui vengono determinati i valori validi. I vincoli FOREIGN KEY ottengono l'elenco di valori validi da un'altra tabella, mentre i vincoli CHECK determinano i valori validi da un'espressione logica.  
   
 > [!CAUTION]  
 >  I vincoli che prevedono la conversione implicita o esplicita di tipi di dati possono impedire l'esecuzione di operazioni specifiche. Ad esempio, i vincoli definiti nelle tabelle di origine per il cambio di partizione possono impedire l'esecuzione di un'operazione ALTER TABLE...SWITCH. Evitare la conversione di tipi di dati nelle definizioni dei vincoli.  
@@ -94,13 +94,13 @@ DELETE CheckTbl WHERE col1 = 10;
   
 |Attività|Argomento|  
 |----------|-----------|  
-|Viene descritto come creare un vincolo UNIQUE.|[Creare vincoli univoci](../../relational-databases/tables/create-unique-constraints.md)|  
-|Viene descritto come modificare un vincolo UNIQUE.|[Modificare vincoli univoci](../../relational-databases/tables/modify-unique-constraints.md)|  
-|Viene descritto come eliminare un vincolo UNIQUE.|[Eliminazione di vincoli univoci](../../relational-databases/tables/delete-unique-constraints.md)|  
+|Viene descritto come creare un vincolo UNIQUE.|[Creare vincoli UNIQUE](../../relational-databases/tables/create-unique-constraints.md)|  
+|Viene descritto come modificare un vincolo UNIQUE.|[Modificare vincoli UNIQUE](../../relational-databases/tables/modify-unique-constraints.md)|  
+|Viene descritto come eliminare un vincolo UNIQUE.|[Eliminare vincoli UNIQUE](../../relational-databases/tables/delete-unique-constraints.md)|  
 |Viene descritto come disabilitare un vincolo CHECK quando un agente di replica inserisce o aggiorna i dati nella tabella.|[Disabilitare un vincolo CHECK per la replica](../../relational-databases/tables/disable-check-constraints-for-replication.md)|  
-|Viene descritto come disabilitare un vincolo CHECK quando vengono aggiunti, aggiornati o eliminati dati in una tabella.|[Disabilitazione di vincoli CHECK con le istruzioni INSERT e UPDATE](../../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md)|  
-|Viene descritto come modificare l'espressione del vincolo o le opzioni che abilitano o disabilitano il vincolo se si verificano determinate condizioni.|[Modifica di vincoli CHECK](../../relational-databases/tables/modify-check-constraints.md)|  
-|Viene descritto come eliminare un vincolo CHECK.|[Eliminazione dei vincoli CHECK](../../relational-databases/tables/delete-check-constraints.md)|  
+|Viene descritto come disabilitare un vincolo CHECK quando vengono aggiunti, aggiornati o eliminati dati in una tabella.|[Disabilitare i vincoli CHECK con le istruzioni INSERT e UPDATE](../../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md)|  
+|Viene descritto come modificare l'espressione del vincolo o le opzioni che abilitano o disabilitano il vincolo se si verificano determinate condizioni.|[Modificare vincoli CHECK](../../relational-databases/tables/modify-check-constraints.md)|  
+|Viene descritto come eliminare un vincolo CHECK.|[Eliminare vincoli CHECK](../../relational-databases/tables/delete-check-constraints.md)|  
 |Viene descritto come visualizzare le proprietà di un vincolo CHECK.|[Vincoli UNIQUE e CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   
   

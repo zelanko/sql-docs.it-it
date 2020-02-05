@@ -25,18 +25,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914724"
 ---
-# <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
+# <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce il nome dell'oggetto di database per gli oggetti definiti a livello di ambito di schema. Per un elenco degli oggetti con ambito schema, vedere [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ANY per l'oggetto. Per specificare l'ID di un database, è inoltre necessaria l'autorizzazione CONNECT per il database o l'abilitazione dell'account guest.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Per altre informazioni, vedere [Espressioni](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Il valore restituito da questa funzione di sistema utilizza le regole di confronto del database corrente.  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-objectname-in-a-where-clause"></a>A. Utilizzo di OBJECT_NAME in una clausola WHERE  
+### <a name="a-using-object_name-in-a-where-clause"></a>R. Utilizzo di OBJECT_NAME in una clausola WHERE  
  Nell'esempio seguente vengono restituite le colonne dalla vista del catalogo `sys.objects` per l'oggetto specificato da `OBJECT_NAME` nella clausola `WHERE` dell'istruzione `SELECT`.  
   
 ```  
@@ -134,7 +134,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-objectname-in-a-where-clause"></a>D. Utilizzo di OBJECT_NAME in una clausola WHERE  
+### <a name="d-using-object_name-in-a-where-clause"></a>D. Utilizzo di OBJECT_NAME in una clausola WHERE  
  Nell'esempio seguente vengono restituite le colonne dalla vista del catalogo `sys.objects` per l'oggetto specificato da `OBJECT_NAME` nella clausola `WHERE` dell'istruzione `SELECT`. Il numero dell'oggetto (274100017 nell'esempio seguente) sarà diverso.  Per testare l'esempio, cercare un numero di oggetto valido eseguendo `SELECT name, object_id FROM sys.objects;` nel database.  
   
 ```  

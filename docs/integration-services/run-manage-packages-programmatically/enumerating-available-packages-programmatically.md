@@ -15,10 +15,10 @@ ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 80bf829afcbc93e397e8ea797f22905b3b55c0cd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295763"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerazione dei pacchetti disponibili a livello di codice
@@ -31,14 +31,14 @@ ms.locfileid: "71295763"
 ##  <a name="exists"></a> Verifica dell'esistenza di un pacchetto o di una cartella    
  Per determinare a livello di codice se un pacchetto salvato esiste, chiamare uno dei metodi seguenti prima di tentare di caricarlo ed eseguirlo:    
     
-|Percorso di archiviazione|Metodo da chiamare|    
+|Posizione di archiviazione|Metodo da chiamare|    
 |----------------------|--------------------|    
 |Archivio pacchetti SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnSqlServer%2A>|    
     
  Per determinare a livello di codice se una cartella esiste prima di tentare di elencare i pacchetti archiviati al suo interno, chiamare uno dei metodi seguenti:    
     
-|Percorso di archiviazione|Metodo da chiamare|    
+|Posizione di archiviazione|Metodo da chiamare|    
 |----------------------|--------------------|    
 |Archivio pacchetti SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
@@ -48,7 +48,7 @@ ms.locfileid: "71295763"
 ##  <a name="listing"></a> Enumerazione dei pacchetti disponibili    
  Per ottenere a livello di codice un elenco dei pacchetti salvati, chiamare uno dei metodi seguenti:    
     
-|Percorso di archiviazione|Metodo da chiamare|    
+|Posizione di archiviazione|Metodo da chiamare|    
 |----------------------|--------------------|    
 |Archivio pacchetti SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A>|    

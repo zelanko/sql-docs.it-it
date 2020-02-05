@@ -14,10 +14,10 @@ ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a5a408ac1329c11054804902f3e751d6126afa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987347"
 ---
 # <a name="sql-server-agent-alerts-object"></a>Oggetto Avvisi di SQL Server Agent
@@ -26,7 +26,7 @@ ms.locfileid: "67987347"
   
  Nella tabella seguente sono elencati i contatori **SQLAgent:Avvisi** .  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |**Avvisi attivati**|Questo contatore indica il numero totale di avvisi attivati da SQL Server Agent dopo l'ultimo riavvio del servizio.|  
 |**Avvisi attivati/minuto**|Questo contatore indica il numero di avvisi attivati da SQL Server Agent nell'ultimo minuto.|  
@@ -37,6 +37,6 @@ ms.locfileid: "67987347"
 ## <a name="see-also"></a>Vedere anche  
  [Avvisi](../../ssms/agent/alerts.md)   
  [Utilizzo degli oggetti prestazioni](../../ssms/agent/use-performance-objects.md)   
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

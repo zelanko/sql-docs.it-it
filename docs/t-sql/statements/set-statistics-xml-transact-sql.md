@@ -22,10 +22,10 @@ ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68004722"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68004722"
 
   Fa sì che Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegua istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e generi informazioni dettagliate sull'esecuzione delle istruzioni in un documento XML ben definito.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68004722"
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'opzione SET STATISTICS XML viene impostata in fase di esecuzione, non in fase di analisi.  
   
  Se SET STATISTICS XML è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce informazioni sull'esecuzione di ogni istruzione. Quando l'opzione viene impostata su ON, vengono restituite informazioni su tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] successive fino a quando l'opzione non viene impostata su OFF. Non è necessario che SET STATISTICS XML sia l'unica istruzione in un batch.  

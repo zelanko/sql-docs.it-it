@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098835"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
@@ -37,17 +37,17 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="arguments"></a>Argomenti
 
- *inputString* [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa da cercare. *inputString* può essere qualsiasi tipo di dati carattere (nvarchar, varchar, nchar, char).
+ *inputString*[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa da cercare. *inputString* può essere qualsiasi tipo di dati carattere (nvarchar, varchar, nchar, char).
 
- *characters* [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa contenente i caratteri da sostituire. *characters* può essere qualsiasi tipo di dati carattere.
+ *characters*[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa contenente i caratteri da sostituire. *characters* può essere qualsiasi tipo di dati carattere.
 
-*translations* [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa contenente i caratteri sostitutivi. Il tipo di dati e la lunghezza di *translations* devono corrispondere al tipo di dati e alla lunghezza di *characters*.
+*translations*[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa contenente i caratteri sostitutivi. Il tipo di dati e la lunghezza di *translations* devono corrispondere al tipo di dati e alla lunghezza di *characters*.
 
 ## <a name="return-types"></a>Tipi restituiti
 
 Restituisce un'espressione di caratteri dello stesso tipo di dati di `inputString` in cui i caratteri del secondo argomento vengono sostituiti con i caratteri corrispondenti del terzo argomento.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 La funzione `TRANSLATE` restituirà un errore se le espressioni *characters* e *translations* hanno lunghezze diverse. `TRANSLATE` restituisce NULL se uno degli argomenti è NULL.  
 
@@ -57,7 +57,7 @@ Il comportamento della funzione `TRANSLATE` è simile all'uso di più funzioni [
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>A. Sostituire le parentesi quadrate e graffe con parentesi normali
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>R. Sostituire le parentesi quadrate e graffe con parentesi normali
 
 La query seguente sostituisce le parentesi quadrate e graffe nella stringa di input con parentesi normali:
 
@@ -111,7 +111,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|Punto  |Coordinate |  
+|Point  |Coordinate |  
 |---------|--------- |
 |(137.4  72.3) |[137.4,72.3] |
 

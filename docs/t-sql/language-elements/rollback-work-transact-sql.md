@@ -23,10 +23,10 @@ ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072350"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072350"
   Esegue il rollback di una transazione definita dall'utente fino all'inizio della transazione.  
   
  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questa istruzione funziona esattamente come l'istruzione ROLLBACK TRANSACTION, con la sola differenza che ROLLBACK TRANSACTION accetta un nome di transazione definita dall'utente. Questa sintassi ROLLBACK è compatibile con ISO, con o senza la parola chiave facoltativa WORK.  
   
  Quando le transazioni sono nidificate, l'istruzione ROLLBACK WORK esegue sempre il rollback dell'istruzione BEGIN TRANSACTION più esterna e riduce il valore della funzione di sistema @@TRANCOUNT fino a 0.  

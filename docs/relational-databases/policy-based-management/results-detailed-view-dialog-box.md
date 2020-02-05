@@ -14,10 +14,10 @@ ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d362670facc0638b435cfa604777a6631ac87e30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021746"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Finestra di dialogo Visualizzazione dettagliata risultati
@@ -46,7 +46,7 @@ ms.locfileid: "68021746"
  **Descrizione criteri**  
  Descrizione dei criteri.  
   
- **Guida aggiuntiva**  
+ **Informazioni aggiuntive**  
  Fare clic sul collegamento ipertestuale per aprire una pagina Web correlata ai criteri. Il collegamento ipertestuale Guida aggiuntiva viene configurato durante la creazione dei criteri e può essere vuoto o non disponibile.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -17,10 +17,10 @@ ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: aaae21e3a47465011f6644901d0ac886da6846f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930221"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (tipo di dati geography)
@@ -40,7 +40,7 @@ ms.locfileid: "67930221"
   
  Tipo CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  `IsNull` può essere usato per verificare se un'istanza **geography** è Null. Questa verifica potrebbe produrre risultati piuttosto confusi, poiché restituisce 0 se l'istanza è diversa da Null, ma restituisce Null se l'istanza è Null.  
   
  Questo metodo viene usato principalmente dall'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile usare il predicato T-SQL IS NULL per verificare se un'istanza **geography** è Null. Per altre informazioni sul predicato T-SQL IS NULL, vedere [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md).  

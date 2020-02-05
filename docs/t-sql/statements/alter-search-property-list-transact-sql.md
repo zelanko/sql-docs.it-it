@@ -24,10 +24,10 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001632"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
@@ -106,7 +106,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  Elimina la proprietà specificata dall'elenco delle proprietà specificato da *list_name*. L'eliminazione di una proprietà ne annulla la registrazione, pertanto non è più possibile effettuare ricerche che la riguardino.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Ogni indice full-text può disporre di un solo elenco delle proprietà di ricerca.  
   
  Per consentire l'esecuzione di query su una proprietà di ricerca specificata, è necessario aggiungerla all'elenco delle proprietà di ricerca dell'indice full-text, quindi ripopolare l'indice.  
@@ -174,7 +174,7 @@ GO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-adding-a-property"></a>A. Aggiunta di una proprietà  
+### <a name="a-adding-a-property"></a>R. Aggiunta di una proprietà  
  Nell'esempio seguente vengono aggiunte diverse proprietà, come `Title`, `Author` e `Tags`, a un elenco di proprietà denominato `DocumentPropertyList`.  
   
 > [!NOTE]  

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024912"
 ---
 # <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
@@ -72,7 +72,7 @@ ms.locfileid: "68024912"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   
@@ -100,7 +100,7 @@ ms.locfileid: "68024912"
   
 12. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   
@@ -122,6 +122,6 @@ ms.locfileid: "68024912"
     GO  
     ```  
 
-## <a name="related-content"></a>Contenuto correlato  
+## <a name="related-content"></a>Contenuti correlati  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
 [Guida per la progettazione di indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md)   

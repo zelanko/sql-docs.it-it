@@ -24,10 +24,10 @@ ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e4deadd4f48457557019ac02337133466b3df33
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211350"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "70211350"
 
   Sposta una conversazione in un gruppo di conversazioni diverso.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,11 +53,11 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  Variabile o costante contenente l'identificatore del gruppo di conversazioni in cui si trova la conversazione da spostare. *conversation_group_id* deve essere di tipo **uniqueidentifier**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione MOVE CONVERSATION sposta la conversazione specificata da *conversation_handle* nel gruppo di conversazioni identificato da *conversation_group_id*. I dialoghi possono essere reindirizzati solo tra gruppi di conversazioni associati alla stessa coda.  
   
 > [!IMPORTANT]  
->  Se l'istruzione MOVE CONVERSATION non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola (**;**), ovvero il terminatore di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Se l'istruzione MOVE CONVERSATION non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola ( **;** ), ovvero il terminatore di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  L'istruzione MOVE CONVERSATION blocca il gruppo di conversazioni associato a *conversation_handle* e il gruppo di conversazioni specificato da *conversation_group_id* finché non viene eseguito il commit o il rollback della transazione contenente l'istruzione.  
   

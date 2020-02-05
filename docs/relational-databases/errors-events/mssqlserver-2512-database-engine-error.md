@@ -12,13 +12,13 @@ ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f0b8a226e1376aa705ec3644aacbbc761cc1014b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68138589"
 ---
-# <a name="mssqlserver2512"></a>MSSQLSERVER_2512
+# <a name="mssqlserver_2512"></a>MSSQLSERVER_2512
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -30,7 +30,7 @@ ms.locfileid: "68138589"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_DUPLICATE_KEYS|  
-|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ID di unità di allocazione A_ID (tipo TYPE). Chiavi duplicate alla pagina ID1_P, slot SLOT1, e alla pagina ID2_P, slot SLOT2.|  
+|Testo del messaggio|Errore di tabella: ID di oggetto ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TIPO). Chiavi duplicate alla pagina ID1_P, slot SLOT1, e alla pagina ID2_P, slot SLOT2.|  
   
 ## <a name="explanation"></a>Spiegazione  
 I due slot specificati hanno chiavi identiche, inclusi gli **uniqueifiers**.  

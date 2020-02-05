@@ -11,10 +11,10 @@ ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 35e8d152cbffb5a5f34be4cda5c7e97fc8140d2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292810"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Estrarre dati delle modifiche tramite l'origine CDC
@@ -48,15 +48,15 @@ ms.locfileid: "71292810"
   
 8.  Selezionare la modalità di elaborazione più adatta per le esigenze di elaborazione correnti. Di seguito sono elencate le opzioni possibili:  
   
-    -   **All** (Tutto): restituisce le modifiche nell'intervallo CDC corrente senza i valori **Before Update**.  
+    -   **All**: restituisce le modifiche nell'intervallo CDC corrente senza i valori **Before Update** .  
   
-    -   **All with old values** (Tutto con i valori precedenti): restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
+    -   **All with old values**: restituisce le modifiche nell'intervallo di elaborazione CDC corrente inclusi i valori precedenti (**Before Update**). Ogni operazione di aggiornamento prevede due righe: una con i valori prima dell'aggiornamento e una con i valori dopo l'aggiornamento.  
   
     -   **Net**: restituisce una sola riga delle modifiche per ogni riga di origine modificata nell'intervallo di elaborazione CDC corrente. Se una riga di origine è stata aggiornata più volte, viene restituita la modifica combinata (ad esempio, inserimento+aggiornamento viene prodotto come un singolo aggiornamento e aggiornamento+eliminazione viene prodotto come una singola eliminazione). Quando si utilizza la modalità di elaborazione delle modifiche Net, è possibile suddividere le modifiche negli output Delete, Insert e Update e gestirli in parallelo, perché la singola riga di origine viene visualizzata in più output.  
   
-    -   **Net with update mask** (Net con maschera di aggiornamento): questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
+    -   **Net with update mask**: questa modalità è simile alla modalità Net standard, ma aggiunge anche colonne booleane con il modello di nome **__$\<<nome-colonna>\___Changed**, che indica la presenza di colonne modificate nella riga delle modifiche corrente.  
   
-    -   **Net with merge** (Net con unione): questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
+    -   **Net with merge**: questa modalità è simile alla modalità Net standard, ma con le operazioni Insert e Update unite in una singola operazione Merge (UPSERT).  
   
 9. Selezionare la variabile del pacchetto di stringhe SSIS che gestisce lo stato CDC per il contesto CDC corrente. Per altre informazioni sulla variabile di stato CDC, vedere [Definire una variabile di stato](../../integration-services/data-flow/define-a-state-variable.md).  
   

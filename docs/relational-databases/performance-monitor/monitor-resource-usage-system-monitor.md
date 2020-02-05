@@ -26,10 +26,10 @@ ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 02d42e48116e893c6bf7d04c2027762555be06f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68090998"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)
@@ -81,12 +81,12 @@ ms.locfileid: "68090998"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Viene descritto quando utilizzare Monitoraggio di sistema e ne viene illustrato l'impatto sulle prestazioni.|[Eseguire Monitoraggio di sistema](../../relational-databases/performance-monitor/run-system-monitor.md)|  
-|Viene descritto come monitorare i contatori dei dischi per determinare l'attività dei dischi e la quantità di operazioni di I/O generate dai componenti di SQL Server.|[Monitoraggio dell'utilizzo del disco](../../relational-databases/performance-monitor/monitor-disk-usage.md)|  
-|Viene descritto come monitorare un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino in intervalli normali.|[Monitorare l'utilizzo della CPU](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
-|Viene descritto come monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che l'utilizzo della memoria rientri negli intervalli standard.|[Monitoraggio dell'utilizzo della memoria](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
+|Viene descritto come monitorare i contatori dei dischi per determinare l'attività dei dischi e la quantità di operazioni di I/O generate dai componenti di SQL Server.|[Monitorare l'uso del disco](../../relational-databases/performance-monitor/monitor-disk-usage.md)|  
+|Viene descritto come monitorare un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino in intervalli normali.|[Monitorare l'uso della CPU](../../relational-databases/performance-monitor/monitor-cpu-usage.md)|  
+|Viene descritto come monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che l'utilizzo della memoria rientri negli intervalli standard.|[Monitorare l'uso della memoria](../../relational-databases/performance-monitor/monitor-memory-usage.md)|  
 |Viene descritto come creare un avviso generato nel momento in cui viene raggiunto un valore soglia di un contatore di Monitoraggio di sistema.|[Creare un avviso del database di SQL Server](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)|  
 |Viene descritto come creare grafici, avvisi, log e report per monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Creare grafici, avvisi, log e report](../../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md)|  
-|Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Utilizzare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)|  
+|Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Usare oggetti di SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)|  
 |Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività OLTP in memoria.|[Contatori delle prestazioni XTP &#40;OLTP in memoria&#41;](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)|  
   
   

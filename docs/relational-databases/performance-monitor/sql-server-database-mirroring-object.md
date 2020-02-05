@@ -16,17 +16,17 @@ ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 639d661dd9a7196119bbb34f11f0ed5a9161a978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986673"
 ---
 # <a name="sql-server-database-mirroring-object"></a>Oggetto Database Mirroring di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'oggetto prestazioni **SQLServer:Database Mirroring** include contatori delle prestazioni con informazioni sul mirroring del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nella tabella seguente sono elencati i contatori inclusi nell'oggetto.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |**Byte ricevuti/sec**|Numero di byte ricevuti al secondo.|  
 |**Byte inviati/sec**|Numero di byte inviati al secondo.|  
@@ -53,7 +53,7 @@ ms.locfileid: "67986673"
 > [!NOTE]  
 >  Su ogni partner, alcuni dei contatori mostrano un valore zero in base al ruolo attualmente svolto dal partner.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  I contatori delle prestazioni consentono di monitorare le prestazioni del mirroring del database. Ad esempio, è possibile esaminare il contatore **Ritardo transazioni** per verificare se il mirroring del database sta influenzando le prestazioni sul server principale. È possibile esaminare i contatori **Coda rollforward** e **Coda invii log** per verificare se il database mirror è in grado di mantenersi aggiornato rispetto al database principale. Il contatore **Byte log inviati/sec** consente di monitorare il numero di eventi di log inviati al secondo.  
   
 ## <a name="see-also"></a>Vedere anche  

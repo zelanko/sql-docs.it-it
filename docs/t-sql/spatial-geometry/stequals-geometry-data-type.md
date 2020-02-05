@@ -18,10 +18,10 @@ ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8880c5287d65e91ccca3c223d93c7b7b070a8df3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107754"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (tipo di dati geometry)
@@ -45,11 +45,11 @@ Restituisce 1 se un'istanza **geometry** rappresenta lo stesso set di punti di u
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene usato il metodo `STGeomFromText()` per creare due istanze `geometry` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza.  
+ Nell'esempio seguente viene usato il metodo `geometry` per creare due istanze `STGeomFromText()` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza.  
   
 ```  
 DECLARE @g geometry  

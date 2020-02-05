@@ -20,18 +20,18 @@ ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892e4c09154e93ded7718819c86dfe91c18c85ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026253"
 ---
-# <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
+# <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Per un parametro specifico, `CURSOR_STATUS` visualizza se una dichiarazione di cursore ha restituito un cursore e un set di risultati o meno.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   

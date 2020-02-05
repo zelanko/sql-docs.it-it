@@ -22,10 +22,10 @@ ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: f35532913a21ed6f90d1e940dd6346137fc3feda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039091"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68039091"
 
 Restituisce il buffer di output corrente in formato esadecimale e ASCII per l'ID di sessione specificato in *session_id*.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
 ```sql
@@ -55,13 +55,13 @@ FROM sys.dm_exec_requests
 WHERE session_id = @@spid;  
 ```  
   
- con  
+ WITH  
  Consente di specificare opzioni.  
   
  NO_INFOMSGS  
  Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 DBCC OUTPUTBUFFER visualizza i risultati inviati al client specificato (*session_id*). Per processi che non includono flussi di output, viene visualizzato un messaggio di errore.
   
 Per visualizzare l'istruzione che ha restituito i risultati visualizzati da DBCC OUTPUTBUFFER, eseguire DBCC INPUTBUFFER.

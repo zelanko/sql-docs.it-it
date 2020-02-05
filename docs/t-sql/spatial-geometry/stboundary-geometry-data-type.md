@@ -18,10 +18,10 @@ ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1a15d3bdc505c4406c1c5d09dbc9d6f007c34fe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930381"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (tipo di dati geometry)
@@ -41,12 +41,12 @@ ms.locfileid: "67930381"
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  `STBoundary()` restituisce un'istanza **GeometryCollection** vuota se gli endpoint per un'istanza **LineString**, **CircularString** o **CompoundCurve** corrispondono.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. Utilizzo di STBoundary() in un'istanza LineString con endpoint diversi  
+### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>R. Utilizzo di STBoundary() in un'istanza LineString con endpoint diversi  
  Nell'esempio seguente viene creata un'istanza `LineString``geometry`. `STBoundary()` restituisce il limite dell'istanza `LineString`.  
   
 ```  

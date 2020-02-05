@@ -19,10 +19,10 @@ ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 02cb2a76fdf24837546e8fc29326db79c8b2c977
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294910"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>Connessione dei componenti del flusso di dati a livello di programmazione
@@ -37,7 +37,7 @@ ms.locfileid: "71294910"
   
  Chiamare il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> per connettere il percorso e notificare ai componenti partecipanti nel percorso che sono stati connessi. Questo metodo accetta <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> del componente a monte e <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> del componente a valle come parametri. Per impostazione predefinita, la chiamata al metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> del componente crea un singolo input per i componenti che includono input e un singolo output per i componenti che includono output. Nell'esempio seguente vengono utilizzati l'output predefinito dell'origine e l'input predefinito della destinazione.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo aver stabilito un percorso tra due componenti, il passaggio successivo consiste nell'eseguire il mapping delle colonne di input nel componente a valle, descritto nell'argomento successivo [Selezione delle colonne di input a livello di programmazione](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md).  
   
 ## <a name="sample"></a>Esempio  

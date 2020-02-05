@@ -11,10 +11,10 @@ ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
 ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75227508"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati relazionali

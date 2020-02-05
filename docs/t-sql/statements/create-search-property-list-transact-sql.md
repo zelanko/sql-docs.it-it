@@ -24,10 +24,10 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117276"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68117276"
 
   Crea un nuovo elenco delle proprietà di ricerca. Un elenco delle proprietà di ricerca viene utilizzato per specificare una o più proprietà di ricerca da includere in un indice full-text.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
  Nome del nuovo elenco delle proprietà di ricerca. *new_list_name* è un identificatore composto da un massimo di 128 caratteri. *new_list_name* deve essere univoco in tutti gli elenchi di proprietà nel database corrente e conforme alle regole per gli identificatori. *new_list_name* viene usato dopo la creazione dell'indice full-text.  
   
  *database_name*  
- Nome del database in cui si trova l'elenco di proprietà specificato da *source_list_name*. Se non viene specificato, per impostazione predefinita *database_name* è il database corrente.  
+ Nome del database in cui si trova l'elenco di proprietà specificato da *source_list_name*. Se l'argomento *database_name* non viene specificato, il valore predefinito è il database corrente.  
   
  *database_name* deve specificare il nome di un database esistente. L'account di accesso per la connessione corrente deve essere associato a un ID utente esistente nel database specificato da *database_name*. Occorre inoltre avere le [autorizzazioni](#Permissions) necessarie nel database.  
   
@@ -64,7 +64,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  Il proprietario può essere modificato usando l'istruzione [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]  
 >  Per informazioni generali sugli elenchi delle proprietà, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
@@ -95,7 +95,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. Creazione di un elenco di proprietà vuoto e relativa associazione a un indice  
+### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>R. Creazione di un elenco di proprietà vuoto e relativa associazione a un indice  
  Nell'esempio seguente viene creato un nuovo elenco delle proprietà di ricerca denominato `DocumentPropertyList`. Nell'esempio viene quindi usata un'istruzione [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) per associare il nuovo elenco di proprietà all'indice full-text della tabella `Production.Document` nel database `AdventureWorks`, senza avviare un'operazione di popolamento.  
   
 > [!NOTE]  

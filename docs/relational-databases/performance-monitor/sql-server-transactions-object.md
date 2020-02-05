@@ -14,10 +14,10 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995650"
 ---
 # <a name="sql-server-transactions-object"></a>Oggetto Transactions di SQL Server
@@ -35,7 +35,7 @@ ms.locfileid: "67995650"
 |**Spazio disponibile in tempdb (KB)**|Spazio disponibile in **tempdb**espresso in KB. Lo spazio disponibile deve essere sufficiente per contenere sia l'archivio delle versioni del livello di isolamento dello snapshot che tutti i nuovi oggetti temporanei creati in questa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Tempo massimo esecuzione transazione**|Durata in secondi dall'inizio della transazione che è stata attiva più a lungo di tutte le altre transazioni correnti. Questo contatore mostra attività solo quando il database è nel livello di isolamento dello snapshot Read committed. Non registra attività se il database si trova in un altro livello di isolamento.|  
 |**Transazioni di versione non snapshot**|Numero di transazioni attualmente attive che non usano il livello di isolamento dello snapshot e hanno apportato modifiche ai dati che hanno generato versioni di riga nell'archivio delle versioni di riga di **tempdb** .|  
-|**Transazioni snapshot**|Numero delle transazioni attualmente attive che utilizzano il livello di isolamento dello snapshot.<br /><br /> Nota: il contatore dell'oggetto **Transazioni snapshot** risponde al primo accesso ai dati, non quando viene eseguita l'istruzione `BEGIN TRANSACTION`.|  
+|**Transazioni snapshot**|Numero delle transazioni attualmente attive che utilizzano il livello di isolamento dello snapshot.<br /><br /> Nota: il contatore dell'oggetto **Transazioni snapshot** risponde quando viene eseguito il primo accesso ai dati, non quando viene eseguita l'istruzione `BEGIN TRANSACTION` .|  
 |**Transazioni**|Numero delle transazioni attualmente attive di tutti i tipi.|  
 |**Percentuale conflitti aggiornamento**|Percentuale delle transazioni che utilizzano il livello di isolamento dello snapshot e hanno rilevato conflitti di aggiornamento nell'ultimo secondo. Un conflitto di aggiornamento si verifica quando una transazione del livello di isolamento dello snapshot tenta di modificare una riga modificata da un'altra transazione di cui non è stato eseguito il commit all'avvio della transazione del livello di isolamento dello snapshot.|  
 |**Base percentuale conflitti aggiornamento**|Solo per uso interno.|

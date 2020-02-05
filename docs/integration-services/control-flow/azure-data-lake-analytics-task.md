@@ -14,10 +14,10 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947352"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Attività Azure Data Lake Analytics
@@ -85,9 +85,9 @@ La configurazione del processo specifica le proprietà di invio dei processi U-S
 
 Usare la pagina **Mapping parametri** della finestra di dialogo dell'**editor dell'attività Azure Data Lake Analytics** per mappare variabili a parametri (variabili U-SQL) nello script U-SQL.
 
-- **Nome variabile:** dopo aver aggiunto un mapping di parametri selezionando **Aggiungi**, selezionare dall'elenco una variabile di sistema o definita dall'utente. In alternativa, è possibile selezionare <**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**. Per informazioni correlate, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+- **Nome variabile:** dopo aver aggiunto un mapping dei parametri, selezionando **Aggiungi**, selezionare una variabile di sistema o definita dall'utente nell'elenco. In alternativa, è possibile selezionare <**Nuova variabile**> per aggiungere una nuova variabile usando la finestra di dialogo **Aggiungi variabile**. Per informazioni correlate, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
 
-- **Nome parametro:** specificare un nome di parametro o di variabile nello script U-SQL. Assicurarsi che il nome del parametro inizi con il simbolo \@, ad esempio \@Param1. 
+- **Nome parametro:** specificare un nome di parametro/variabile nello script U-SQL. Assicurarsi che il nome del parametro inizi con il simbolo \@, ad esempio \@Param1. 
 
 Ecco un esempio di come passare i parametri per lo script U-SQL.
 
@@ -123,8 +123,8 @@ Si noti che i percorsi di input e output sono definiti nei parametri **\@in** e 
 
 |Nome variabile|Nome parametro|
 |-------------|--------------|
-|Utente: Variabile 1|\@in|
-|Utente: Variabile 2|\@out| 
+|Utente: Variabile1|\@in|
+|Utente: Variabile2|\@out| 
 
 ## <a name="expression-page-configuration"></a>Configurazione della pagina Espressioni
 

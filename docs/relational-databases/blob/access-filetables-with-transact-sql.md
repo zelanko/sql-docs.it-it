@@ -13,10 +13,10 @@ ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68018888"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Accesso a tabelle FileTable tramite Transact-SQL
@@ -28,7 +28,7 @@ ms.locfileid: "68018888"
   
 -   Tutte le colonne di attributi dei file dispongono di vincoli NOT NULL. Se i valori non sono impostati in modo esplicito, vengono forniti valori predefiniti appropriati.  
   
--   Se l'istruzione INSERT imposta **name**, **path_locator**, **parent_path_locator** o gli attributi del file, verranno applicati vincoli definiti dal sistema.  
+-   Se l'istruzione INSERT imposta **name**, **path_locator**, **parent_path_locator**o gli attributi del file, verranno applicati vincoli definiti dal sistema.  
   
 -   L'applicazione può ottenere **path_locator** per un file o una directory passando il percorso del file system alla funzione [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68018888"
   
 ## <a name="see-also"></a>Vedere anche  
  [Caricamento di file in FileTable](../../relational-databases/blob/load-files-into-filetables.md)   
- [Utilizzare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accedere alle tabelle FileTable con API di Input-Output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   
  [DDL, funzioni, stored procedure e viste FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   

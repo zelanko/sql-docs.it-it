@@ -18,10 +18,10 @@ ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a96f4e48c56be6558ecb6523ebd687e50d9f82a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059756"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Funzioni logiche - CHOOSE (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68059756"
 
   Viene restituito l'elemento in corrispondenza dell'indice specificato di un elenco di valori in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,12 +50,12 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce il tipo di dati con precedenza maggiore nel set di tipi passato alla funzione. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  CHOOSE funziona come un indice in una matrice, dove la matrice è costituita dagli argomenti che seguono l'argomento dell'indice. L'argomento dell'indice determina quali tra i valori seguenti saranno restituiti.  
   
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-simple-choose-example"></a>A. Esempio di CHOOSE semplice
+### <a name="a-simple-choose-example"></a>R. Esempio di CHOOSE semplice
 
  Nell'esempio seguente viene restituito il terzo elemento dell'elenco di valori forniti.  
  

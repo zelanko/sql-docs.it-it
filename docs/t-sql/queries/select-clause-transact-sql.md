@@ -27,10 +27,10 @@ ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141059"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT Clause (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68141059"
 
   Specifica le colonne che devono essere restituite dalla query.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -145,7 +145,7 @@ FROM Cities;
   
  È possibile usare *column_alias* in una clausola ORDER BY, ma non in una clausola WHERE, GROUP BY o HAVING. Se l'espressione della query fa parte di un'istruzione DECLARE CURSOR, non è possibile usare l'argomento *column_alias* nella clausola FOR UPDATE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La lunghezza dei dati restituiti per colonne di tipo **text** o **ntext** incluse nell'elenco di selezione viene impostata sul valore più basso tra i seguenti: dimensioni reali della colonna **text**, impostazione predefinita della sessione TEXTSIZE e limite dell'applicazione specificato a livello di codice. Per modificare la lunghezza del testo restituito per una sessione, utilizzare l'istruzione SET. Per impostazione predefinita il limite della lunghezza dei dati di testo restituiti con un'istruzione SELECT è pari a 4.000 byte.  
   
  In [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] viene generata l'eccezione 511 e viene eseguito il rollback dell'istruzione in fase di esecuzione se si verifica una delle condizioni seguenti:  

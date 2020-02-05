@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898598"
 ---
 # <a name="create-unique-indexes"></a>Creare indici univoci
@@ -45,7 +45,7 @@ ms.locfileid: "67898598"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un indice univoco per una tabella utilizzando:**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "67898598"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Per creare un indice univoco tramite Progettazione tabelle  
   
@@ -111,7 +111,7 @@ ms.locfileid: "67898598"
   
 5.  Nella finestra di dialogo **Indici/chiavi** fare clic su **Aggiungi**.  
   
-6.  Selezionare il nuovo indice dalla casella di testo **Indice o chiave primari/univoci selezionati** .  
+6.  Selezionare il nuovo indice dalla casella di testo **Chiave o indice primario/univoco selezionato** .  
   
 7.  In **(Generale)** nella griglia principale selezionare **Tipo** , quindi scegliere **Indice** dall'elenco.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "67898598"
   
 11. In **(Generale)** nella griglia principale selezionare **Univoco** , quindi scegliere **Sì** dall'elenco.  
   
-12. Facoltativo: in **Progettazione tabelle** nella griglia principale selezionare **Ignora chiavi duplicate**, quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
+12. Facoltativo: In **Progettazione tabelle**nella griglia principale selezionare **Ignora chiavi duplicate** , quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
   
-13. Scegliere **Chiudi**.  
+13. Fare clic su **Close**.  
   
 14. Dal menu **File** scegliere **Salva**_nome\_tabella_.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "67898598"
   
 10. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Per creare un indice univoco per una tabella  
   

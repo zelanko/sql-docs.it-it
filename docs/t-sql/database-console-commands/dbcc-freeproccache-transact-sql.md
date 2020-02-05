@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101898"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -40,7 +40,7 @@ Rimuove tutti gli elementi dalla cache dei piani, rimuove un piano specifico dal
 >[!NOTE]
 >DBCC FREEPROCCACHE non comporta la cancellazione delle statistiche di esecuzione delle stored procedure compilate in modo nativo. La cache delle procedure non contiene informazioni sulle stored procedure compilate in modo nativo. Tutte le statistiche di esecuzione raccolte dalle esecuzioni delle procedure verranno visualizzate nelle DMV delle statistiche di esecuzione: [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) e [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
 Sintassi per SQL Server:
@@ -88,7 +88,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], viene usata l'istruzione `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` per cancellare la cache (dei piani) delle procedure per il database nell'ambito.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Usare DBCC FREEPROCCACHE per cancellare con cautela la cache dei piani. Se si cancella la cache (dei piani) delle procedure, tutti i piani vengono rimossi e le esecuzioni delle query in entrata vengono compilate in un nuovo piano, anziché riutilizzare piani precedentemente memorizzati nella cache. 
 
 Ciò può causare una riduzione improvvisa e temporanea delle prestazioni delle query poiché aumenta il numero di nuove compilazioni. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni 'DBCC FREEPROCCACHE' o 'DBCC FREESYSTEMCACHE'". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.
@@ -137,7 +137,7 @@ Quando viene eseguito DBCC FREEPROCCACHE, viene aggiunta una nuova riga alla vis
 
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>Esempi: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>A. Cancellazione di un piano di query dalla cache dei piani  
+### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>R. Cancellazione di un piano di query dalla cache dei piani  
 Nell'esempio seguente viene indicato come cancellare un piano di query dalla cache dei piani specificando l'handle del piano di query. Per verificare che la query di esempio si trovi nella cache dei piani, la query viene prima eseguita. Viene eseguita una query sulle viste a gestione dinamica `sys.dm_exec_cached_plans` e `sys.dm_exec_sql_text` per restituire l'handle di piano per la query. 
 
 Il valore dell'handle di piani dal set di risultati viene quindi inserito nell'istruzione `DBCC FREEPROCACHE` per rimuovere solo quel piano dalla cache dei piani.

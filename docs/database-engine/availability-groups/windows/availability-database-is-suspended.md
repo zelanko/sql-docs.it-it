@@ -15,10 +15,10 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7a0a6d1fa10576eab5e515031e8233af95c2d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934916"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>Il database di disponibilità è sospeso per un gruppo di disponibilità
@@ -30,7 +30,7 @@ ms.locfileid: "67934916"
 |-|-|  
 |**Nome criteri**|Stato di sospensione del database di disponibilità|  
 |**Problema**|Database di disponibilità sospeso.|  
-|**Category**|**Avviso**|  
+|**Categoria**|**Warning**|  
 |**Facet**|Database di disponibilità|  
   
 ## <a name="description"></a>Descrizione  
@@ -50,7 +50,7 @@ ms.locfileid: "67934916"
  Riprendere la sincronizzazione dei dati. Se il problema persistente, controllare il gruppo di disponibilità nel Registro eventi, quindi diagnosticare il motivo per il quale lo spostamento dei dati è stato sospeso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

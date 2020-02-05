@@ -15,10 +15,10 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0fc0dbd2df2d0383e7fd63eddc941170d4b0a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67988651"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>La replica di disponibilità è disconnessa in un gruppo di disponibilità Always On
@@ -30,8 +30,8 @@ ms.locfileid: "67988651"
 |-|-|  
 |**Nome criteri**|Stato di connessione della replica di disponibilità|  
 |**Problema**|La replica di disponibilità è disconnessa.|  
-|**Category**|**Critico**|  
-|**Facet**|Replica di disponibilità|  
+|**Categoria**|**Critico**|  
+|**Facet**|replica di disponibilità|  
   
 ## <a name="description"></a>Descrizione  
  Tramite questi criteri è possibile controllare lo stato di connessione tra le repliche di disponibilità. I criteri sono in uno stato non integro quando lo stato di connessione della replica di disponibilità è DISCONNESSO. Altrimenti, sono in uno stato integro.  
@@ -58,7 +58,7 @@ ms.locfileid: "67988651"
 -   Controllare se la porta è in conflitto, e in questo caso, modificare il numero di porta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Usare il Dashboard AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Usare il dashboard Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

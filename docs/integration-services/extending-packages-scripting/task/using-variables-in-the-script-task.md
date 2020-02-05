@@ -21,10 +21,10 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c01695891e1d41fed5e1e5c293a18f74462a4151
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285980"
 ---
 # <a name="using-variables-in-the-script-task"></a>Utilizzo di variabili nell'attività Script
@@ -120,6 +120,6 @@ public class ScriptMain
   
 ## <a name="see-also"></a>Vedere anche  
  [Variabili di Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md)   
- [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Uso di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

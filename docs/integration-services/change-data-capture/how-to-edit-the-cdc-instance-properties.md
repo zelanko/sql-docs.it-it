@@ -11,10 +11,10 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8662905f72262cede8913c2a549cbca0df470875
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294706"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Procedura di modifica delle proprietà dell'istanza di CDC
@@ -38,11 +38,11 @@ ms.locfileid: "71294706"
   
 5.  Nell'editor delle proprietà modificare le proprietà nelle schede seguenti:  
   
-    -   **Oracle**: Usare la scheda **Oracle** nell'editor delle proprietà per modificare la descrizione fornita nella pagina Create CDC database (Crea database CDC) della New Instance Wizard (Creazione guidata nuova istanza) e le informazioni di connessione al database di log mining Oracle.  
+    -   **Oracle**: utilizzare la scheda **Oracle** nell'editor delle proprietà per modificare la descrizione fornita nella pagina Create CDC database della New Instance Wizard e le informazioni di connessione al database di log mining Oracle.  
   
          Per informazioni sul contenuto di questa scheda che è possibile modificare, vedere [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
-    -   **Tabelle**: Utilizzare la scheda **Tabelle** per apportare modifiche alle tabelle e alle colonne selezionate dal database di origine Oracle.  
+    -   **Tables**: utilizzare la scheda **Tables** per apportare modifiche alle tabelle e alle colonne selezionate dal database di origine Oracle.  
   
          Per informazioni sul contenuto di questa scheda che è possibile modificare, vedere [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71294706"
   
          Per informazioni sulle operazioni possibili in questa scheda, vedere [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md).  
   
-    -   **Avanzate**: Utilizzare la scheda **Avanzate** per aggiungere proprietà speciali all'istanza di CDC.  
+    -   **Advanced**: utilizzare la scheda **Advanced** per aggiungere proprietà speciali all'istanza di CDC.  
   
          Per informazioni sulle operazioni possibili in questa scheda, vedere [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   

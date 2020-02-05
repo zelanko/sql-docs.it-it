@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000125"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Usare PowerShell in Windows per gestire SQL Server in Linux
@@ -25,7 +25,7 @@ Questo articolo presenta [SQL Server PowerShell](../powershell/sql-server-powers
 
 [SQL PowerShell](../powershell/download-sql-server-ps-module.md) in Windows viene gestito in PowerShell Gallery. Quando si lavora con SQL Server, è consigliabile usare sempre la versione più recente del modulo di PowerShell SqlServer.
 
-## <a name="before-you-begin"></a>Operazioni preliminari
+## <a name="before-you-begin"></a>Prima di iniziare
 
 Vedere i [problemi noti](sql-server-linux-release-notes.md) di SQL Server in Linux.
 
@@ -64,8 +64,8 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 Si userà ora PowerShell in Windows per connettersi all'istanza di SQL Server in Linux e visualizzare alcune proprietà del server.
 
 Copiare e incollare i comandi seguenti al prompt di PowerShell. Quando si eseguono questi comandi, PowerShell effettua le operazioni seguenti:
-- Visualizzazione di una finestra di dialogo in cui viene richiesto il nome host o l'indirizzo IP dell'istanza
-- Visualizzazione della finestra di dialogo *Richiesta credenziali di Windows PowerShell*, in cui vengono richieste le credenziali. È possibile usare il *nome utente SQL* e la *password SQL* per connettersi all'istanza di SQL Server in Linux
+- Visualizzano una finestra di dialogo in cui viene richiesto il nome host o l'indirizzo IP dell'istanza
+- Visualizzano la finestra di dialogo *Richiesta credenziali di Windows PowerShell* in cui vengono richieste le credenziali. È possibile usare il *nome utente SQL* e la *password SQL* per connettersi all'istanza di SQL Server in Linux
 - Usare il cmdlet **Get-SqlInstance** per connettersi al **server** e visualizzare alcune proprietà
 
 Facoltativamente, è possibile sostituire la variabile `$serverInstance` con l'indirizzo IP o il nome host dell'istanza di SQL Server.

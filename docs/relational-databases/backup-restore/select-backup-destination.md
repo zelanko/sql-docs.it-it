@@ -13,10 +13,10 @@ ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4bc7ed2ad628e404cd13da1760e74ee8d0a5850d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041456"
 ---
 # <a name="select-backup-destination"></a>Seleziona destinazione di backup
@@ -50,7 +50,7 @@ ms.locfileid: "68041456"
   
 |||  
 |-|-|  
-|**Unità nastro**|Scegliere questa opzione per selezionare un'unità nastro come destinazione del backup dall'elenco delle unità nastro fisicamente collegate al computer che esegue l'istanza del server.<br /><br /> Nota: I dispositivi di backup su nastro collegati a computer remoti non rappresentano destinazioni di backup valide.|  
+|**Unità nastro**|Scegliere questa opzione per selezionare un'unità nastro come destinazione del backup dall'elenco delle unità nastro fisicamente collegate al computer che esegue l'istanza del server.<br /><br /> Nota: i dispositivi di backup su nastro nei computer remoti non rappresentano destinazioni di backup valide.|  
 |**Dispositivo di backup**|Scegliere questa opzione per selezionare un dispositivo di backup logico esistente. Questi dispositivi di backup logici corrispondono a unità nastro fisicamente collegate al computer che esegue l'istanza del server.<br /><br /> Nota: per informazioni su come creare un dispositivo di backup su nastro, vedere [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
   
 ## <a name="see-also"></a>Vedere anche  

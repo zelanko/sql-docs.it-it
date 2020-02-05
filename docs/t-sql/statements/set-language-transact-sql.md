@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac79430a87cccb7b67ce81a3cb6ca9b05d0a04db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928938"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67928938"
   Specifica la lingua per la sessione. La lingua impostata determina i formati dei valori **datetime** e la lingua dei messaggi di sistema.  
   
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
  [**N**] **'** _language_ **'**  |  **@** _language\_var_  
  Nome della lingua archiviata in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Questo argomento può essere un valore Unicode o un valore DBCS convertito in Unicode. Per specificare una lingua in Unicode, usare **N'** _language_ **'** . Se viene specificata come variabile, deve essere una variabile di tipo **sysname**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'opzione SET LANGUAGE viene impostata in fase di esecuzione, non in fase di analisi.  
   
  SET LANGUAGE definisce in modo implicito l'impostazione di [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).  

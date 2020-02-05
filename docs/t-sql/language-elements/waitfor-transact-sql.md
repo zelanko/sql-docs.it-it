@@ -27,10 +27,10 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086107"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68086107"
 
   Blocca l'esecuzione di un batch, una stored procedure o una transazione fino all'ora specificata o fino a quando non è trascorso l'intervallo di tempo specificato oppure finché un'istruzione specificata non modifica o restituisce almeno una riga.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -84,7 +84,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  La specifica di WAITFOR con TIMEOUT è consentita solo per i messaggi di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per altre informazioni, vedere [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) e [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Durante l'esecuzione dell'istruzione WAITFOR la transazione è in esecuzione e pertanto non possono essere eseguite altre richieste nell'ambito della stessa transazione.  
   
  Il ritardo effettivo può variare rispetto al tempo specificato in *time_to_pass*, *time_to_execute* o *timeout* e dipende dal livello di attività del server. Il contatore del tempo viene avviato alla pianificazione del thread dell'istruzione WAITFOR. Se il server è occupato, è possibile che il thread non venga pianificato immediatamente e che il ritardo risulti superiore al tempo specificato.  
@@ -106,7 +106,7 @@ WAITFOR
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-waitfor-time"></a>A. Utilizzo di WAITFOR TIME  
+### <a name="a-using-waitfor-time"></a>R. Utilizzo di WAITFOR TIME  
  Nell'esempio seguente la stored procedure `sp_update_job` viene eseguita nel database msdb alle ore 22:20. (`22:20`).  
   
 ```  

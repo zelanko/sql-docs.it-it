@@ -17,10 +17,10 @@ ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000701"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Impostazione di metaproprietà in OPENXML
@@ -59,7 +59,7 @@ ms.locfileid: "68000701"
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato l'utilizzo di OPENXML per visualizzare i set di righe in modi diversi.  
   
-### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. Mapping tra le colonne del set di righe OPENXML e le metaproprietà  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>R. Mapping tra le colonne del set di righe OPENXML e le metaproprietà  
  In questo esempio, l'istruzione OPENXML viene utilizzata per visualizzare il documento XML di esempio come un set di righe. In particolare, viene illustrato come eseguire il mapping di più attributi delle metaproprietà alle colonne del set di righe in un'istruzione OPENXML usando il parametro *ColPattern* .  
   
  Nell'istruzione OPENXML si noti quanto segue:  
@@ -68,7 +68,7 @@ ms.locfileid: "68000701"
   
 -   La colonna **parent** viene mappata a **\@mp:parentid** a indicare che la colonna contiene l'ID XML del padre dell'elemento.  
   
--   La colonna **parentLocalName** viene mappata a**\@mp:parentlocalname** a indicare che la colonna contiene il nome locale del padre.  
+-   La colonna **parentLocalName** viene mappata a **\@mp:parentlocalname** a indicare che la colonna contiene il nome locale del padre.  
   
  L'istruzione SELECT restituisce quindi il set di righe fornito da OPENXML:  
   

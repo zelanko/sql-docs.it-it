@@ -32,13 +32,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15d684788ee14713c0a6fb2e8d742d7a81a6eed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026408"
 ---
-# <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
+# <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Questa funzione restituisce il timestamp di sistema del database corrente come valore **datetime** senza la differenza di fuso orario del database. `CURRENT_TIMESTAMP` deriva dal sistema operativo del computer in cui viene eseguita l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -50,7 +50,7 @@ Questa funzione è l'equivalente ANSI SQL di [GETDATE](../../t-sql/functions/get
   
 Vedere [Funzioni e tipi di dati di data e ora](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) per una panoramica di tutti i tipi di dati e di tutte le funzioni di data e ora di [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,7 +64,7 @@ Questa funzione non accetta argomenti
 ## <a name="return-type"></a>Tipo restituito  
 **datetime**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a `CURRENT_TIMESTAMP` in qualsiasi punto in cui possono fare riferimento a un'espressione **datetime**.
   
 `CURRENT_TIMESTAMP` è una funzione non deterministica. Le viste e le espressioni in cui viene fatto riferimento a questa colonna non sono indicizzabili.
@@ -72,7 +72,7 @@ Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimen
 ## <a name="examples"></a>Esempi  
 Questi esempi usano le sei funzioni di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che restituiscono valori di data e ora correnti per restituire la data, l'ora o entrambe. Gli esempi restituiscono i valori in serie. Pertanto, i secondi frazionari potrebbero essere diversi. Si noti che i valori effettivi restituiti riflettono il giorno e/o l'ora effettivi di esecuzione.
   
-### <a name="a-get-the-current-system-date-and-time"></a>A. Recupero della data e dell'ora correnti del sistema  
+### <a name="a-get-the-current-system-date-and-time"></a>R. Recupero della data e dell'ora correnti del sistema  
   
 ```sql
 SELECT SYSDATETIME()  

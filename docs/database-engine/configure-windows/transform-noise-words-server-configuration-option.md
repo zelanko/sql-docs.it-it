@@ -17,10 +17,10 @@ ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: df23777c7e9ec22b629133c98da27c8a23ab6ccb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038824"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Opzione di configurazione del server transform noise words Server
@@ -30,7 +30,7 @@ ms.locfileid: "68038824"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|0|Le parole non significative non vengono trasformate. Quando una query full-text contiene parole non significative, la query restituisce zero righe e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generato un avviso. Questo è il comportamento predefinito.<br /><br /> Nota: l'avviso è un avviso di runtime. Pertanto, se la clausola full-text nella query non viene eseguita, l'avviso non viene generato. Per una query locale, viene generato un solo avviso, anche se sono presenti più clausole di query full-text. Per una query remota, il server collegato potrebbe non inoltrare l'errore ed è pertanto possibile che l'avviso non venga generato.|  
+|0|Le parole non significative non vengono trasformate. Quando una query full-text contiene parole non significative, la query restituisce zero righe e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene generato un avviso. Questo è il comportamento predefinito.<br /><br /> Nota: l'avviso generato è un avviso di run-time. Pertanto, se la clausola full-text nella query non viene eseguita, l'avviso non viene generato. Per una query locale, viene generato un solo avviso, anche se sono presenti più clausole di query full-text. Per una query remota, il server collegato potrebbe non inoltrare l'errore ed è pertanto possibile che l'avviso non venga generato.|  
 |1|Le parole non significative vengono trasformate. Tali parole vengono ignorate e viene valutato e il resto della query.<br /><br /> Se vengono specificate parole non significative in un termine di prossimità, queste vengono rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La parola non significativa `is` viene ad esempio rimossa da `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`, trasformando la query di ricerca in `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`. Si noti che la query `CONTAINS(<column_name>, 'NEAR(hello,is)')` verrebbe trasformata semplicemente in `CONTAINS(<column_name>, hello)` in quanto vi è un solo termine di ricerca valido.|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>Effetti dell'impostazione transform noise words  
@@ -41,7 +41,7 @@ ms.locfileid: "68038824"
   
 -   Con transform noise words impostato su 0:  
   
-    |Stringa query|Risultato|  
+    |Stringa di query|Risultato|  
     |------------------|------------|  
     |"`cat`" AND "`the`"|Nessun risultato (il comportamento è lo stesso per "`the`" AND "`cat`").|  
     |"`cat`" NEAR "`the`"|Nessun risultato (il comportamento è lo stesso per "`the`" NEAR "`cat`").|  
@@ -50,7 +50,7 @@ ms.locfileid: "68038824"
   
 -   Con transform noise words impostato su 1:  
   
-    |Stringa query|Risultato|  
+    |Stringa di query|Risultato|  
     |------------------|------------|  
     |"`cat`" AND "`the`"|Riscontro per la riga con ID 1|  
     |"`cat`" NEAR "`the`"|Riscontro per la riga con ID 1|  

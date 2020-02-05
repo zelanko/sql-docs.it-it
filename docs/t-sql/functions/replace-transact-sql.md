@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944530"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67944530"
 
 Sostituisce tutte le occorrenze di un valore stringa specificato con un altro valore stringa.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  Se *string_expression* non è di tipo **varchar(max)** o **nvarchar(max), REPLACE** tronca il valore restituito a 8000 byte. Per restituire valori maggiori di 8000 byte è necessario eseguire il cast esplicito di *string_expression* a un tipo di dati appropriato per valori di grandi dimensioni.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Tramite REPLACE vengono effettuati confronti in base alle regole di confronto dell'input. Per eseguire un confronto in base a regole di confronto specifiche, è possibile usare [COLLATE](~/t-sql/statements/collations.md) per applicare regole di confronto esplicite all'input.  
   
  0x0000 (**char(0)** ) è un carattere non definito nelle regole di confronto di Windows e non può essere incluso in REPLACE.  

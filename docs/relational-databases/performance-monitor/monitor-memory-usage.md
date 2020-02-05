@@ -24,10 +24,10 @@ ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b7ec7d6142bae4a6a0ad21a7f68413b257764e06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091014"
 ---
 # <a name="monitor-memory-usage"></a>Monitoraggio dell'utilizzo della memoria
@@ -44,7 +44,7 @@ ms.locfileid: "68091014"
   
  Valori bassi del contatore **Byte disponibili** possono indicare una quantità di memoria insufficiente nel computer o la presenza di un'applicazione che non rilascia la memoria. Un valore elevato del contatore **Pagine/sec** può indicare un paging eccessivo. Monitorare il contatore **Memoria: Errori di pagina/sec** per assicurarsi che l'attività del disco non sia dovuta al paging.  
   
- Anche nei computer con una notevole quantità di memoria disponibile, la frequenza di paging, e quindi di errori di pagina, dovrebbe essere bassa. Microsoft Windows Virtual Memory Manager (VMM) sottrae pagine a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e agli altri processi in quanto riduce le dimensioni dei set di lavoro di tali processi. L'attività di VMM tende quindi a causare errori di pagina. Per determinare se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro processo provoca un paging eccessivo, monitorare il contatore **Processo: Errori di pagina/sec** alla ricerca dell'istanza del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Anche nei computer con una notevole quantità di memoria disponibile, la frequenza di paging, e quindi di errori di pagina, dovrebbe essere bassa. Microsoft Windows Virtual Memory Manager (VMM) sottrae pagine a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e agli altri processi in quanto riduce le dimensioni dei set di lavoro di tali processi. L'attività di VMM tende quindi a causare errori di pagina. Per determinare se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro processo provoca un paging eccessivo, monitorare il contatore **Processo: Errori di pagina/sec** alla ricerca dell'istanza del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Per altre informazioni su come evitare il paging eccessivo, vedere la documentazione del sistema operativo Windows.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "68091014"
   
 -   **Processo: Working set**  
   
--   **SQL Server: Gestione buffer: Percentuale riscontri cache del buffer**  
+-   **SQL Server: Gestione buffer: Percentuale riscontri cache buffer**  
   
--   **SQL Server: Gestione buffer: Pagine di database**  
+-   **SQL Server: Gestione buffer: Pagine database**  
   
 -   **SQL Server: Gestione memoria: Memoria totale server (KB)**  
   

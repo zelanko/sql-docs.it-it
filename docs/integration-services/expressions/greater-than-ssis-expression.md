@@ -14,10 +14,10 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e154659500155a2a171f03ee18f5c62319142a8c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297569"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (maggiore di) (espressione SSIS)
@@ -42,12 +42,12 @@ expression1 > expression2
   
 ## <a name="arguments"></a>Argomenti  
  *expression1, expression2*  
- Qualsiasi espressione valida. È necessario che il tipo di dati di entrambe le espressioni possa essere convertito in modo implicito.  
+ È qualsiasi espressione valida. È necessario che il tipo di dati di entrambe le espressioni possa essere convertito in modo implicito.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
  Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  
