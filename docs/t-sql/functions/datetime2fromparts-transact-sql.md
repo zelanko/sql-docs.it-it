@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 400de28e3191b953c1f44dfdf0777678f031e140
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119130"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119130"
 
 Questa funzione restituisce un valore di tipo **datetime2** per gli argomenti date e time. Il valore restituito ha una precisione specificata dall'argomento precision.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ Espressione Integer che specifica la precisione del valore **datetime2** che ver
 ## <a name="return-types"></a>Tipi restituiti
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `DATETIME2FROMPARTS` restituisce un valore di tipo **datetime2** completamente inizializzato. `DATETIME2FROMPARTS` genererà un errore se almeno un argomento obbligatorio ha un valore non valido. `DATETIME2FROMPARTS` restituisce null se almeno un argomento obbligatorio ha un valore null. Se tuttavia l'argomento *precision* ha un valore null, `DATETIME2FROMPARTS` genererà un errore.
 
 L'argomento *fractions* dipende dall'argomento *precision*. Ad esempio, per un valore di *precision* pari a 7, ogni frazione rappresenta 100 nanosecondi, mentre per *precision* pari a 3, ogni frazione rappresenta un millisecondo. Per un valore di *precision* pari a zero, anche il valore di *fractions* deve essere zero. In caso contrario, `DATETIME2FROMPARTS` genererà un errore.
@@ -75,7 +75,7 @@ Questa funzione supporta la comunicazione remota con i server [!INCLUDE[ssCurren
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-an-example-without-fractions-of-a-second"></a>A. Esempio senza frazioni di un secondo  
+### <a name="a-an-example-without-fractions-of-a-second"></a>R. Esempio senza frazioni di un secondo  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  

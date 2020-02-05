@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962345"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
@@ -43,7 +43,7 @@ APPROX_COUNT_DISTINCT ( expression )
 ## <a name="return-types"></a>Tipi restituiti
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `APPROX_COUNT_DISTINCT( expression )` valuta un'espressione per ogni riga in un gruppo e restituisce il numero approssimativo di valori univoci non Null in un gruppo. Questa funzione è progettata per fornire aggregazioni su set di dati di grandi dimensioni in cui la velocità di risposta è più importante della precisione assoluta.  
 
 `APPROX_COUNT_DISTINCT` è progettata per l'uso in scenari Big Data ed è ottimizzata per le condizioni seguenti:
@@ -59,7 +59,7 @@ L'implementazione della funzione garantisce un tasso di errore fino al 2% con un
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-approx_count_distinct"></a>A. Uso di APPROX_COUNT_DISTINCT 
+### <a name="a-using-approx_count_distinct"></a>R. Uso di APPROX_COUNT_DISTINCT 
 Questo esempio restituisce il numero approssimativo di chiavi di ordine diverse dalla tabella orders.
   
 ```sql

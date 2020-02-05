@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 37aecafd3506d2cd47b7b4efd93a89f50ce4ec2d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 85d4d245ae71adbd6b1c534381c7683b676d7fbe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905204"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288215"
 ---
 # <a name="initialize-a-subscription-manually"></a>Inizializzazione manuale di una sottoscrizione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "72905204"
   
 -   Se in un database pubblicato tramite la replica transazionale sono in corso delle attività nell'intervallo di tempo che intercorre tra la copia dei dati e dello schema nel Sottoscrittore e l'inizializzazione manuale della sottoscrizione, è possibile che le modifiche risultanti da tali attività non vengano replicate nel Sottoscrittore.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Per inizializzare manualmente una sottoscrizione a una pubblicazione, copiare lo schema e, se necessario, i dati nel database di sottoscrizione. Lo schema e i dati devono corrispondere a quelli presenti nel database di pubblicazione. Specificare quindi che la sottoscrizione non richiede schema e dati nella pagina **Inizializzazione sottoscrizioni** della Creazione guidata nuova sottoscrizione. Per ulteriori informazioni sull'accesso a questa procedura guidata, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) e [Creazione di una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md).  
   
  Quando si sincronizza la sottoscrizione per la prima volta, gli oggetti e i metadati necessari per la replica vengono copiati nel database di sottoscrizione.  
@@ -44,7 +44,7 @@ ms.locfileid: "72905204"
   
 2.  Deselezionare la casella di controllo **Inizializza** nella pagina **Inizializzazione sottoscrizioni** della Creazione guidata nuova sottoscrizione. Eseguire questa procedura per ogni sottoscrizione che richiede la copia solo degli oggetti e dei metadati di replica.  
 
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile inizializzare manualmente le sottoscrizioni tramite le stored procedure di replica.  
   
 #### <a name="to-manually-initialize-a-pull-subscription-to-a-transactional-publication"></a>Per inizializzare manualmente una sottoscrizione pull di una pubblicazione transazionale  
@@ -79,7 +79,7 @@ ms.locfileid: "72905204"
   
 4.  Nel Sottoscrittore eseguire [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-5.  Avviare l'agente di merge per trasferire gli oggetti di replica e scaricare le modifiche più recenti dal server di pubblicazione. Per altre informazioni, vedere [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+5.  Avviare l'agente di merge per trasferire gli oggetti di replica e scaricare le modifiche più recenti dal server di pubblicazione. Per altre informazioni, vedere [Sincronizzazione di una sottoscrizione pull](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 #### <a name="to-manually-initialize-a-push-subscription-to-a-merge-publication"></a>Per inizializzare manualmente una sottoscrizione push di una pubblicazione di tipo merge  
   

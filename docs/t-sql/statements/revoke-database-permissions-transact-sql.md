@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59536e4f4ba418aef0ee49737a67df43f903435d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983277"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE - autorizzazioni per database (Transact-SQL)
@@ -59,7 +59,7 @@ permission | ALL [ PRIVILEGES ]
  Specifica un'autorizzazione che può essere negata per un database. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  ALL  
- Questa opzione non revoca tutte le possibili autorizzazioni. La revoca di ALL equivale a revocare le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.  
+ Questa opzione non revoca tutte le possibili autorizzazioni. L'impostazione di ALL equivale a revocare le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.  
   
  PRIVILEGES  
  Opzione inclusa per compatibilità con lo standard ISO. Non modifica il funzionamento di ALL.  
@@ -112,7 +112,7 @@ permission | ALL [ PRIVILEGES ]
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione avrà esito negativo se non si specifica CASCADE per la revoca di un'autorizzazione a un'entità a cui l'autorizzazione è stata concessa con GRANT OPTION.  
   
  Un database è un'entità a protezione diretta contenuta nel server padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per un database, insieme alle autorizzazioni più generali che le includono in modo implicito.  
@@ -176,7 +176,7 @@ permission | ALL [ PRIVILEGES ]
 |CREATE SERVICE|ALTER ANY SERVICE|CONTROL SERVER|  
 |CREATE SYMMETRIC KEY|ALTER ANY SYMMETRIC KEY|CONTROL SERVER|  
 |CREATE SYNONYM|ALTER|CONTROL SERVER|  
-|CREATE TABLE|ALTER|CONTROL SERVER|  
+|CREA TABELLA|ALTER|CONTROL SERVER|  
 |CREATE TYPE|ALTER|CONTROL SERVER|  
 |CREATE VIEW|ALTER|CONTROL SERVER|  
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ permission | ALL [ PRIVILEGES ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-revoking-permission-to-create-certificates"></a>A. Revoca dell'autorizzazione per la creazione di certificati  
+### <a name="a-revoking-permission-to-create-certificates"></a>R. Revoca dell'autorizzazione per la creazione di certificati  
  Nell'esempio seguente viene revocata l'autorizzazione `CREATE CERTIFICATE` per il database `AdventureWorks2012` all'utente `MelanieK`.  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive

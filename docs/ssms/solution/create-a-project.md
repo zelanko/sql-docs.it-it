@@ -1,5 +1,5 @@
 ---
-title: Creare un progetto | Microsoft Docs
+title: Creazione di un progetto
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 35d326a7820cb8c002dd08b7176f8dc4e30f4c80
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2ad58a10987050bcd89e17e2a3dbef4fd39586d1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264811"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251939"
 ---
 # <a name="create-a-project"></a>Creazione di un progetto
 
@@ -71,7 +71,7 @@ ms.locfileid: "68264811"
   
     -   Nomi riservati di Microsoft Windows o MS-DOS, ad esempio "nul", "aux", "con", "com1", "lpt1" e così via  
   
-    **Percorso**  
+    **Posizione**  
     Immettere il percorso in cui si desidera creare il progetto oppure sceglierne uno dall'elenco.  
   
     **Sfoglia**  
@@ -93,7 +93,7 @@ ms.locfileid: "68264811"
   
 4.  Fare clic su **OK**.  
   
-È possibile stabilire un nome per il progetto script. I nomi delle cartelle vengono invece stabiliti da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e non possono essere modificati. È possibile configurare il percorso e l'unità per il set di cartelle comune mediante la finestra di dialogo **Aggiungi nuovo progetto** . Fare clic con il pulsante destro del mouse sull'icona della soluzione in **Esplora soluzioni**e scegliere **Aggiungi**. Il percorso predefinito per le cartelle dei progetti di script è: C:\Documents and Settings\\*nomeutente*\Documenti\SQL Server Management Studio\Projects\\.  
+È possibile stabilire un nome per il progetto script. I nomi delle cartelle vengono invece stabiliti da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e non possono essere modificati. È possibile configurare il percorso e l'unità per il set di cartelle comune mediante la finestra di dialogo **Aggiungi nuovo progetto** . Fare clic con il pulsante destro del mouse sull'icona della soluzione in **Esplora soluzioni**e scegliere **Aggiungi**. Il percorso predefinito per le cartelle dei progetti script è C:\Documents and Settings\\*nomeutente*\Documenti\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -101,6 +101,6 @@ ms.locfileid: "68264811"
 [Aggiunta di un progetto esistente a una soluzione](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Aggiungere nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)  
 [Aggiungere elementi esistenti a un progetto](../../ssms/solution/add-existing-items-to-a-project.md)  
-[Modifica del percorso predefinito per i progetti](../../ssms/solution/change-the-default-location-for-projects.md)  
+[Modificare il percorso predefinito per i progetti](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Rimuovere o eliminare un elemento o un progetto](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Eliminazione di una soluzione](../../ssms/solution/delete-a-solution.md)  

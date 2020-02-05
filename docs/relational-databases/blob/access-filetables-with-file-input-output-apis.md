@@ -13,10 +13,10 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908781"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
@@ -64,7 +64,7 @@ ms.locfileid: "72908781"
 ##  <a name="supported"></a> Operazioni del file system supportate  
  Le tabelle FileTable supportano le API del file system correlate alle operazioni del file system seguenti:  
   
--   Gestione delle directory  
+-   Gestione directory  
   
 -   Gestione dei file  
   
@@ -103,33 +103,33 @@ ms.locfileid: "72908781"
   
 ##  <a name="funclist"></a> Funzionalità del file system supportate nelle tabelle FileTable  
   
-|Funzionalità|Supported|Commenti|  
+|Funzionalità|Supportato|Commenti|  
 |----------------|---------------|--------------|  
 |**Blocchi opportunistici (oplock)**|Sì|È disponibile il supporto opportunistico per livello 1, livello 2, batch e filtri.|  
-|**Attributi estesi**|no||  
-|**Punti di analisi**|no||  
-|**ACL persistenti**|no||  
-|**Flussi denominati**|no||  
+|**Attributi estesi**|No||  
+|**Punti di analisi**|No||  
+|**ACL persistenti**|No||  
+|**Flussi denominati**|No||  
 |**File sparse**|Sì|Il tipo sparse può essere impostato solo per i file e influisce sull'archiviazione del flusso dei dati. Poiché i dati FILESTREAM vengono archiviati in volumi NTFS, la funzionalità FileTable supporta file sparse inoltrando le richieste al file system NTFS.|  
 |**Compressione**|Sì||  
 |**Crittografia**|Sì||  
-|**TxF**|no||  
-|**ID file**|no||  
-|**ID oggetto**|no||  
-|**Collegamenti simbolici**|no||  
-|**Collegamenti reali**|no||  
-|**Nomi brevi**|no||  
-|**Notifiche di modifica di directory**|no||  
+|**TxF**|No||  
+|**ID file**|No||  
+|**ID oggetto**|No||  
+|**Collegamenti simbolici**|No||  
+|**Collegamenti reali**|No||  
+|**Nomi brevi**|No||  
+|**Notifiche di modifica di directory**|No||  
 |**Blocco di intervalli di byte**|Sì|Le richieste del blocco degli intervalli di byte vengono passate al file system NTFS.|  
-|**File di cui è stato eseguito il mapping in memoria**|no||  
+|**File di cui è stato eseguito il mapping in memoria**|No||  
 |**Annullamento I/O**|Sì||  
-|**Sicurezza**|no|Vengono applicate la sicurezza a livello di condivisione di Windows e la sicurezza a livello di tabella e di colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Journal USN**|no|Le modifiche ai metadati di file e directory in una tabella FileTable sono operazioni DML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vengono pertanto registrate nel file di log del database corrispondente. Non vengono invece registrate nel journal USN NTFS, ad eccezione delle modifiche di dimensione.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per acquisire informazioni simili.|  
+|**Sicurezza**|No|Vengono applicate la sicurezza a livello di condivisione di Windows e la sicurezza a livello di tabella e di colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**Journal USN**|No|Le modifiche ai metadati di file e directory in una tabella FileTable sono operazioni DML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vengono pertanto registrate nel file di log del database corrispondente. Non vengono invece registrate nel journal USN NTFS, ad eccezione delle modifiche di dimensione.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per acquisire informazioni simili.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Caricamento di file in FileTable](../../relational-databases/blob/load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accesso a tabelle FileTable tramite Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
- [DDL FileTable, funzioni, stored Procedure e viste](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
+ [DDL, funzioni, stored procedure e viste FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   

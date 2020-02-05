@@ -18,10 +18,10 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e3b6783969376b20921d960e79c8909b5fda4aa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291462"
 ---
 # <a name="data-mining-query-transformation"></a>Query di data mining - trasformazione
@@ -52,10 +52,10 @@ ms.locfileid: "71291462"
   Utilizzare la scheda **Modello di data mining** della finestra di dialogo **Editor trasformazione Query di data mining** per selezionare la struttura di data mining e i relativi modelli.  
   
 ### <a name="options"></a>Opzioni  
- **Connessione**  
+ **Connection**  
  Consente di selezionare una connessione Analysis Services esistente usando la casella di riepilogo o di creare una nuova connessione usando il pulsante **Nuova** descritto di seguito.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una connessione usando la finestra di dialogo **Aggiungi gestione connessione Analysis Services** .  
   
  **Struttura di data mining**  

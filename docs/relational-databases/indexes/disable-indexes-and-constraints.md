@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107140"
 ---
 # <a name="disable-indexes-and-constraints"></a>Disabilitazione di indici e vincoli
@@ -42,7 +42,7 @@ ms.locfileid: "68107140"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per disabilitare un indice tramite:**  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68107140"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire l'istruzione ALTER INDEX, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   
@@ -130,9 +130,9 @@ ms.locfileid: "68107140"
  Visualizza il nome della tabella o della vista in cui l'indice è stato creato.  
   
  **Tipo di indice**  
- Visualizza il tipo di indice: **Cluster**, **Non cluster**, **Spaziale** o **XML**.  
+ Visualizza il tipo di indice: **Cluster**, **Non cluster**, **Spaziale**o **XML**.  
   
- **Stato**  
+ **Status**  
  Visualizza lo stato dell'operazione di disabilitazione. I valori possibili al termine dell'esecuzione sono:  
   
 -   Vuoto  
@@ -143,11 +143,11 @@ ms.locfileid: "68107140"
   
      L'operazione di disabilitazione degli indici è stata avviata ma non ancora completata.  
   
--   **Operazione completata**  
+-   **Success**  
   
      L'operazione di disabilitazione è stata completata.  
   
--   **Errore**  
+-   **Error (Errore) (Error (Errore)e)**  
   
      Si è verificato un errore durante la disabilitazione degli indici e non è stato possibile completare correttamente l'operazione.  
   
@@ -155,14 +155,14 @@ ms.locfileid: "68107140"
   
      La disabilitazione dell'indice non è stata completata poiché l'operazione è stata arrestata dall'utente.  
   
- **Message**  
+ **Messaggio**  
  Visualizza il testo dei messaggi di errore generati durante l'operazione. Durante l'esecuzione dell'operazione, gli errori vengono visualizzati come collegamenti ipertestuali. Nel testo di tali collegamenti è descritto l'errore verificatosi. La colonna **Messaggio** in genere non è sufficientemente ampia per contenere il testo completo del messaggio. Per leggere il messaggio completo, eseguire una delle seguenti operazioni:  
   
 -   Spostare il puntatore del mouse sulla cella del messaggio per visualizzare una descrizione comando contenente il testo dell'errore.  
   
 -   Fare clic sul collegamento ipertestuale per visualizzare una finestra di dialogo contenente l'errore completo.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Per disabilitare un indice  
   

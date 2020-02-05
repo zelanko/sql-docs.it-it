@@ -10,10 +10,10 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bef4e8032ad605382b3312cac11840ed959a7571
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296352"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati file flat (Importazione/Esportazione guidata SQL Server)
@@ -32,11 +32,11 @@ Se si deve importare un file di testo in SQL Server e non sono necessarie tutte 
  
  Per le origini dati file flat sono disponibili quattro pagine di opzioni. La configurazione di ogni pagina tuttavia non richiede molto tempo. Di seguito sono elencate le operazioni utili da eseguire.
  
-Pagina|Consiglio  |Tipo  
+Pagina|Recommendation  |Type  
 ----|---------|---------
 **Generale**|Assicurarsi di aggiornare le opzioni della sezione **Formato**.|Consigliato    
 **Colonne**|Assicurarsi di controllare i delimitatori di colonna e riga (per un file delimitato) o di contrassegnare le colonne (per un file a larghezza fissa).|Consigliato
-**Advanced**|Facoltativamente, controllare i tipi di dati e le altre proprietà assegnate per impostazione predefinita alle colonne.|Facoltativo
+**Funzionalità avanzate**|Facoltativamente, controllare i tipi di dati e le altre proprietà assegnate per impostazione predefinita alle colonne.|Facoltativo
 **Anteprima**|Facoltativamente, visualizzare in anteprima un campione di dati usando le impostazioni specificate.|Facoltativo
 
 ## <a name="general-page-source"></a>Pagina Generale (origine)
@@ -67,7 +67,7 @@ Pagina|Consiglio  |Tipo
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate da delimitatori. Specificare il delimitatore nella pagina **Colonne**.|  
-|A larghezza fissa|Le colonne hanno una larghezza fissa.|  
+|File a larghezza fissa|Le colonne hanno una larghezza fissa.|  
 |Non allineato a destra|I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa ad eccezione dell'ultima, per la quale viene utilizzato il delimitatore di riga.|  
   
  **Qualificatore di testo**  
@@ -214,9 +214,9 @@ Nello screenshot si noti che il tipo di dati della colonna **id**, che contiene 
 |**DataScale**|Consente di specificare la scala dei dati numerici. Per scala si intende il numero di posizioni decimali.|
 |**DataType**|Consente di selezionare i tipi di dati disponibili nell'apposito elenco.<br/>Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|
 |**OutputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore corrisponde al conteggio di caratteri. Nell'attività Flusso di dati questo valore viene utilizzato per impostare la larghezza della colonna di output per l'origine file flat. Nel modello a oggetti il nome di questa proprietà è MaximumWidth.|  
-|**TextQualified**|Consente di indicare se i dati di tipo testo sono racchiusi tra qualificatori di testo, ad esempio le virgolette.<br /><br /> True: i dati di tipo testo nel file flat sono qualificati. False: I dati di tipo testo nel file flat NON sono qualificati.|  
+|**TextQualified**|Consente di indicare se i dati di tipo testo sono racchiusi tra qualificatori di testo, ad esempio le virgolette.<br /><br /> True: i dati di tipo testo nel file flat sono qualificati. False: i dati di tipo testo nel file flat NON sono qualificati.|  
   
-**Nuova**  
+**Nuovo**  
  Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante dispone inoltre delle opzioni seguenti, disponibili nell'elenco a discesa.  
   
 |valore|Descrizione|  
@@ -290,7 +290,7 @@ Per una destinazione file flat, è disponibile solo una singola pagina di opzion
 |valore|Descrizione|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate da delimitatori. Specificare il delimitatore nella pagina **Colonne**.|  
-|A larghezza fissa|Le colonne hanno una larghezza fissa.|  
+|File a larghezza fissa|Le colonne hanno una larghezza fissa.|  
 |Non allineato a destra|I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa ad eccezione dell'ultima, per la quale viene utilizzato il delimitatore di riga.|  
   
  **Qualificatore di testo**  
@@ -301,5 +301,5 @@ Per una destinazione file flat, è disponibile solo una singola pagina di opzion
 
 ## <a name="see-also"></a>Vedere anche
 [Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+[Scegliere una destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

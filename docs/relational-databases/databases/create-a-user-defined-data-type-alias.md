@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909115"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Creare un alias del tipo di dati definito dall'utente
@@ -33,7 +33,7 @@ ms.locfileid: "72909115"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un alias del tipo di dati definito dall'utente utilizzando:**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "72909115"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CREATE TYPE nel database corrente e l'autorizzazione ALTER per *schema_name*. Se *schema_name* viene omesso, vengono applicate le regole predefinite per la risoluzione dei nomi per determinare lo schema dell'utente corrente.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>Per creare un tipo di dati definito dall'utente  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72909115"
      **Consenti valori Null**  
      Specificare se dal tipo di dati definito dall'utente possono essere accettati valori Null. Il supporto di valori Null di un tipo di dati definito dall'utente esistente non può essere modificato.  
   
-     **Data type**  
+     **Tipo di dati**  
      Selezionare il tipo di dati di base dalla casella di riepilogo. In questa casella vengono visualizzati tutti i tipi di dati, ad eccezione di **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** e **xml** . Il tipo di dati di un tipo di dati definito dall'utente esistente non può essere modificato.  
   
      **Default**  
@@ -75,16 +75,16 @@ ms.locfileid: "72909115"
      **Nome**  
      Se si crea un nuovo alias del tipo di dati definito dall'utente, digitare un nome univoco da utilizzare nel database per rappresentare il tipo di dati definito dall'utente. Il numero massimo di caratteri deve corrispondere al tipo di dati del sistema **sysname** . Il nome di un alias del tipo di dati definito dall'utente esistente non può essere modificato.  
   
-     **Rule**  
+     **Regola**  
      Facoltativamente, selezionare una regola da associare all'alias del tipo di dati definito dall'utente.  
   
-     **Scala**  
+     **Ridimensionare**  
      Specificare il numero massimo di cifre decimali che è possibile archiviare a destra del separatore decimale.  
   
      **Schema**  
      Consente di selezionare uno schema dall'elenco di tutti gli schemi disponibili per l'utente corrente. La selezione predefinita corrisponde allo schema predefinito per l'utente corrente.  
   
-     **Archiviazione**  
+     **Storage**  
      Consente di visualizzare la capacità di memorizzazione massima per l'alias del tipo di dati definito dall'utente. Le dimensioni di archiviazione massime variano in base alla precisione.  
   
     |||  
@@ -110,7 +110,7 @@ ms.locfileid: "72909115"
   
 7.  Nell'area **Associazione** compilare le caselle **Valore predefinito** o **Regola** per associare un valore predefinito o una regola al nuovo alias del tipo di dati. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]non è possibile creare valori predefiniti e regole. Usare [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esempi di codice per la creazione di valori predefiniti e di regole sono disponibili in Esplora modelli.  
 
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>Per creare un alias del tipo di dati definito dall'utente  
   

@@ -29,10 +29,10 @@ ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593908"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -75,7 +75,7 @@ BLOB del valore della chiave di crittografia della colonna crittografato.
 > [!WARNING]  
 >  Non passare mai i valori della chiave di crittografia della colonna in testo non crittografato in questa istruzione, altrimenti sarà compromesso il vantaggio di questa funzionalità.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 L'istruzione `CREATE COLUMN ENCRYPTION KEY` deve includere almeno uno o due valori. È possibile usare l'istruzione [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) per aggiungere un secondo valore in un secondo momento. È inoltre possibile usare l'istruzione `ALTER COLUMN ENCRYPTION KEY` per rimuovere un valore.  
   
 In genere, una chiave di crittografia della colonna viene creata con un solo valore crittografato. In alcuni casi, tuttavia, è necessario ruotare una chiave master della colonna per sostituire la chiave corrente con la nuova chiave master della colonna. In questi casi, aggiungere un nuovo valore della chiave di crittografia della colonna, crittografato con la nuova chiave master della colonna. Questa rotazione consente di garantire alle applicazioni client l'accesso ai dati crittografati con la chiave di crittografia della colonna, mentre la nuova chiave master della colonna sarà resa disponibile alle applicazioni client. Un driver abilitato per Always Encrypted in un'applicazione client che non ha accesso alla nuova chiave master potrà usare il valore della chiave di crittografia della colonna crittografato con la vecchia chiave master della colonna per accedere ai dati sensibili.  
@@ -94,7 +94,7 @@ Usare [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-cat
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-column-encryption-key"></a>A. Creazione di una chiave di crittografia della colonna  
+### <a name="a-creating-a-column-encryption-key"></a>R. Creazione di una chiave di crittografia della colonna  
 Nell'esempio seguente viene creata una chiave di crittografia della colonna denominata `MyCEK`.  
   
 ```sql  

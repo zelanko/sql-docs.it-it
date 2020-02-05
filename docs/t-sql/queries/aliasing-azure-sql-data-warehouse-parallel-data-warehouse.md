@@ -13,16 +13,16 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244774"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Alias (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Gli alias consentono di sostituire temporaneamente un nome di tabella o colonna nelle query [!INCLUDE[DWsql](../../includes/dwsql-md.md)] di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] con una stringa breve e facile da ricordare. Gli alias di tabella vengono spesso usati nelle query JOIN perché la sintassi JOIN richiede nomi di oggetto completi quando si fa riferimento alle colonne.  
+  Gli alias consentono di sostituire temporaneamente un nome di tabella o colonna nelle query [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] o [!INCLUDE[DWsql](../../includes/dwsql-md.md)] con una stringa breve e facile da ricordare. Gli alias di tabella vengono spesso usati nelle query JOIN perché la sintassi JOIN richiede nomi di oggetto completi quando si fa riferimento alle colonne.  
   
  Gli alias devono essere singole parole conformi alle regole di denominazione degli oggetti. Per altre informazioni, vedere la sezione relativa alle regole di denominazione degli oggetti nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Gli alias non possono contenere spazi vuoti e non possono essere racchiusi tra virgolette singole o doppie.  
   

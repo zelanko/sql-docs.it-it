@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077908"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint e tinyint (Transact-SQL)
@@ -40,14 +40,14 @@ ms.locfileid: "68077908"
 
 Tipi di dati numerici esatti che utilizzano dati integer. Per risparmiare spazio nel database, usare il tipo di dati più piccolo che può contenere in modo affidabile tutti i valori possibili. Ad esempio, tinyint sarebbe sufficiente per l'età di una persona perché nessuno raggiunge un'età maggiore di 255 anni. Ma tinyint non sarebbe sufficiente per la durata di un edificio perché un edificio può avere più di 255 anni.
   
-|Tipo di dati|Intervallo|Archiviazione|  
+|Tipo di dati|Range|Archiviazione|  
 |---|---|---|
 |**bigint**|da -2^63 (-9.223.372.036.854.775.808) a 2^63-1 (9.223.372.036.854.775.807)|8 byte|  
 |**int**|da -2^31 (-2.147.483.648) a 2^31-1 (2.147.483.647)|4 byte|  
 |**smallint**|da -2^15 (-32.768) a 2^15-1 (32.767)|2 byte|  
 |**tinyint**|da 0 a 255|1 byte|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Il tipo di dati **int** è il tipo di dati integer primario in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il tipo di dati **bigint** è stato progettato per essere utilizzato quando i valori interi potrebbero non rientrare nell'intervallo supportato dal tipo di dati **int**.
   
 Nell'ordine di precedenza dei tipi di dati **bigint** è compreso tra i tipi di dati **smallmoney** e **int**.

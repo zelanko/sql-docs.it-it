@@ -1,6 +1,6 @@
 ---
-title: Procedura guidata Genera e pubblica script | Microsoft Docs
-ms.custom: ''
+title: Genera e pubblica script
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -43,18 +43,18 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123005"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253897"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   È possibile usare la procedura guidata **Genera e pubblica script** per creare script per il trasferimento di un database tra le istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o di [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.  
 
-Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e pubblica script, vedere [Esercitazione: Procedura guidata Genera script](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Per una esercitazione più dettagliata sull'uso della procedura guidata Genera e pubblica script, vedere [Generare script per database con l'opzione Genera script](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
 
 
   
@@ -172,11 +172,11 @@ Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e 
   
 -   **Genera script per associazioni** : consente di generare uno script per l'associazione di oggetti predefiniti e oggetti della regola. Il valore predefinito è **False**. Per altre informazioni, vedere [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) e [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
--   **Script per regole di confronto**: consente di includere nello script le informazioni sulle regole di confronto. Il valore predefinito è **False**. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   **Script per regole di confronto** : consente di includere nello script le informazioni sulle regole di confronto. Il valore predefinito è **False**. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 -   **Script per valori predefiniti** : consente di includere nelle colonne della tabella gli oggetti predefiniti usati per impostare i valori predefiniti. Il valore predefinito è **True**. Per altre informazioni, vedere [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
--   **Genera script per DROP e CREATE**: se è impostato su **Genera script per CREATE**, vengono incluse le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per creare oggetti. Se impostato su **Genera script per DROP**, vengono incluse le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per eliminare oggetti. Se è impostato su **Genera script per DROP e CREATE**, nello script viene inclusa l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] di eliminazione seguita dall'istruzione di creazione per ogni oggetto inserito nello script. Il valore predefinito è **Genera script per CREATE**.  
+-   **Genera script per DROP e CREATE** : se è impostato su **Genera script per CREATE**, vengono incluse le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per creare oggetti. Se impostato su **Genera script per DROP**, vengono incluse le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per eliminare oggetti. Se è impostato su **Genera script per DROP e CREATE**, nello script viene inclusa l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] di eliminazione seguita dall'istruzione di creazione per ogni oggetto inserito nello script. Il valore predefinito è **Genera script per CREATE**.  
   
 -   **Script per proprietà estese** : consente di includere le proprietà estese nello script, se presenti nell'oggetto. Il valore predefinito è **True**.  
   
@@ -190,9 +190,9 @@ Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e 
   
 -   **Script per statistiche** : se è impostato su **Script per statistiche**, questa opzione include l'istruzione **CREATE STATISTICS** per ricreare le statistiche per l'oggetto. L'opzione **Genera script per statistiche e istogrammi** consente inoltre di creare informazioni sugli istogrammi. Il valore predefinito è **Non generare script per statistiche**. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
--   **Script per USE DATABASE**: consente di aggiungere l'istruzione **USE DATABASE** allo script. Per verificare che gli oggetti di database vengano creati nel database corretto, includere l'istruzione **USE DATABASE** . Se si prevede di usare lo script in un database diverso, selezionare **False** per omettere l'istruzione **USE DATABASE** . Il valore predefinito è **True**. Per altre informazioni, vedere [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
+-   **Script per USE DATABASE** : consente di aggiungere l'istruzione **USE DATABASE** allo script. Per verificare che gli oggetti di database vengano creati nel database corretto, includere l'istruzione **USE DATABASE** . Se si prevede di usare lo script in un database diverso, selezionare **False** per omettere l'istruzione **USE DATABASE** . Il valore predefinito è **True**. Per altre informazioni, vedere [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
   
--   **Tipi di dati per cui generare lo script**: consente di selezionare cosa includere negli script, ovvero **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Solo schema**.  
+-   **Tipi di dati per cui generare lo script** : consente di selezionare cosa deve essere inserito negli script: **Solo dati**, **Solo schema**o entrambi. Il valore predefinito è **Solo schema**.  
   
  **Opzioni tabella/vista** : le opzioni seguenti si applicano solo agli script per tabelle o viste.  
   
@@ -246,7 +246,7 @@ Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e 
   
 3.  **Pubblica valori predefiniti** : consente di includere nelle colonne della tabella gli oggetti predefiniti usati per impostare i valori predefiniti. Il valore predefinito è **True**. Per altre informazioni, vedere [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
-4.  **Pubblica oggetti dipendenti**: consente di pubblicare un oggetto la cui presenza è necessaria quando viene eseguito lo script per l'oggetto selezionato. Il valore predefinito è **True**.  
+4.  **Pubblica oggetti dipendenti** : consente di pubblicare un oggetto la cui presenza è necessaria quando viene eseguito lo script per l'oggetto selezionato. Il valore predefinito è **True**.  
   
 5.  **Pubblica proprietà estese** : consente di includere le proprietà estese nello script che viene inviato al provider per la pubblicazione, se presenti nell'oggetto. Il valore predefinito è **True**.  
   
@@ -256,13 +256,13 @@ Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e 
   
 8.  **Pubblica statistiche** : se è impostato su **Pubblica statistiche**, consente di includere l'istruzione **CREATE STATISTICS** per ricreare le statistiche per l'oggetto. L'opzione **Pubblica statistiche e istogrammi** consente di creare anche informazioni sugli istogrammi. Il valore predefinito è **Non pubblicare statistiche**. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
-9. **Pubblica opzioni vardecimal**: consente di abilitare il formato di tabella **vardecimal** per la tabella del database di destinazione quando è abilitato nella tabella del database di origine. Il valore predefinito è **True**.  
+9. **Pubblica opzioni vardecimal** : consente di abilitare il formato di tabella **vardecimal** per la tabella del database di destinazione quando è abilitato nella tabella del database di origine. Il valore predefinito è **True**.  
   
 10. **Schema per qualifica dei nomi degli oggetti** : consente di includere il nome dello schema nel nome degli oggetti che vengono creati. Il valore predefinito è **True**.  
   
 11. **Genera script per associazioni** : consente di includere nello script inviato al provider per la pubblicazione l'associazione per gli oggetti predefiniti e gli oggetti della regola. Il valore predefinito è **True**. Per altre informazioni, vedere [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) e [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
-12. **Tipi di dati da pubblicare**: consente di selezionare cosa includere negli script, ovvero **Solo dati**, **Solo schema** o entrambi. Il valore predefinito è **Schema e dati**.  
+12. **Tipi di dati da pubblicare** : consente di selezionare cosa deve essere inserito negli script: **Solo dati**, **Solo schema**o entrambi. Il valore predefinito è **Schema e dati**.  
   
  **Opzioni di pubblicazione**: consente di specificare se usare transazioni per la pubblicazione nel provider di hosting Web.  
   
@@ -286,7 +286,7 @@ Per un'esercitazione più dettagliata sull'uso della procedura guidata Genera e 
   
 8.  **Pubblica rilevamento modifiche** : consente di includere il rilevamento delle modifiche nel processo di pubblicazione, se è abilitato nel database di origine o nelle tabelle del database di origine. Il valore predefinito è **False**. Per altre informazioni, vedere [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
-9. **Pubblica opzioni di compressione dati**: consente di includere le opzioni di compressione dati nel processo di pubblicazione, se sono configurate nel database di origine o nelle tabelle del database di origine. Il valore predefinito è **True**. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+9. **Pubblica opzioni di compressione dati** : consente di includere le opzioni di compressione dati nel processo di pubblicazione, se sono configurate nel database di origine o nelle tabelle del database di origine. Il valore predefinito è **True**. Per altre informazioni, vedere [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 ###  <a name="ProvConfig"></a> Pagina Configurazione del provider  
  Usare questa finestra di dialogo per visualizzare o modificare le impostazioni per il provider di hosting. È possibile usare questa finestra di dialogo per eseguire le operazioni seguenti:  
@@ -348,7 +348,7 @@ Per generare script di oggetti con la sintassi di [!INCLUDE[ssSDW_md](../../incl
 1. Fare clic su **Strumenti** e quindi su **Opzioni**.  
 2. In **Opzioni generali di scripting** impostare:  
     1. Script per il tipo di motore di database: **Database SQL di Microsoft Azure**.  
-    2. Script per l'edizione del motore di database: **Edizione Microsoft Azure SQL Data Warehouse**.  
+    2. Script per l'edizione del motore di database: **Edizione di Microsoft Azure SQL Data Warehouse**.  
 3. Fare clic su **OK**.
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>Come generare script per SQL Data Warehouse quando non è l'opzione di scripting predefinita  
@@ -360,13 +360,13 @@ Se si imposta [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] come opzione di s
 3. Scegliere gli oggetti per i quali generare script.  
 4. In **Opzioni di scripting**fare clic su **Avanzate**. In **Generale** impostare:  
     1. Script per il tipo di motore di database: **Database SQL di Microsoft Azure**.  
-    2. Script per l'edizione del motore di database: **Edizione Microsoft Azure SQL Data Warehouse**.  
+    2. Script per l'edizione del motore di database: **Edizione di Microsoft Azure SQL Data Warehouse**.  
 5. Fare clic su **Salva o pubblica script** e quindi su **Fine**.  
 
 Le opzioni impostate nel passaggio 4 non verranno memorizzate. Se si vuole che queste opzioni vengano memorizzate, seguire le istruzioni in **Come impostare le opzioni di scripting su SQL Data Warehouse**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installazione di SMO (SQL Server Management Objects)](../../relational-databases/server-management-objects-smo/installing-smo.md)   
- [Copia di database in altri server](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+ [Copiare database in altri server](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   
   

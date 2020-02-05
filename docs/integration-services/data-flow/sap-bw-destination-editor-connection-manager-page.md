@@ -13,10 +13,10 @@ ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 66365c942bc3f996d834f0217f29bd82cc911457
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298110"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor destinazione SAP BW (pagina Gestione connessione)
@@ -47,7 +47,7 @@ ms.locfileid: "71298110"
  **Gestione connessione SAP BW**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione SAP BW** .  
   
  **Test del carico**  
@@ -65,7 +65,7 @@ ms.locfileid: "71298110"
  **Tipo**  
  Immettere il carattere singolo che identifica il tipo di InfoSource. Nella tabella seguente sono elencati i valori a carattere singolo accettabili.  
   
-|Valore|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**D**|Dati transazione|  
 |**M**|Dati master|  
@@ -91,7 +91,7 @@ ms.locfileid: "71298110"
  Immettere l'ID programma associato alla destinazione RFC.  
   
  **Cerca**  
- Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoPackage](../../integration-services/data-flow/look-up-rfc-destination.md).  
+ Individuare la destinazione RFC usando la finestra di dialogo **Cerca destinazione RFC** . Per altre informazioni su questa finestra di dialogo, vedere [Cerca destinazione RFC](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
 ### <a name="create-sap-bw-objects-options"></a>Opzioni di Crea oggetti SAP BW  
  **Seleziona il tipo di oggetto**  
@@ -108,7 +108,7 @@ ms.locfileid: "71298110"
  **Creare**  
  Creare il tipo selezionato di oggetto SAP Netweaver BW.  
   
-|Tipo oggetto|Risultato|  
+|Tipo di oggetto|Risultato|  
 |-----------------|------------|  
 |**InfoObject**|Creare un nuovo InfoObject usando la finestra di dialogo **Crea nuovo InfoObject** . Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md).|  
 |**InfoCube**|Creare un nuovo InfoCube usando la finestra di dialogo **Crea InfoCube per dati transazione** . Per altre informazioni su questa finestra di dialogo, vedere [Crea InfoCube per dati transazione](../../integration-services/data-flow/create-infocube-for-transaction-data.md).|  

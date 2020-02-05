@@ -20,18 +20,18 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105007"
 ---
-# <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
+# <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Questa funzione restituisce il valore di checksum dei valori di un gruppo. `CHECKSUM_AGG` ignora i valori Null. La [clausola OVER](../../t-sql/queries/select-over-clause-transact-sql.md) può seguire `CHECKSUM_AGG`.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +52,7 @@ Specifica che `CHECKSUM_AGG` restituisce il valore di checksum di valori univoci
 ## <a name="return-types"></a>Tipi restituiti
 Restituisce il valore di checksum di tutti i valori di *expression* come valore **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `CHECKSUM_AGG` consente di rilevare le modifiche in una tabella.
   
 Il risultato `CHECKSUM_AGG` non dipende dall'ordine delle righe nella tabella. Le funzioni `CHECKSUM_AGG` consentono anche l'uso della parola chiave `DISTINCT` e della clausola `GROUP BY`.

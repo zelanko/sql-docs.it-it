@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113719"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
@@ -42,20 +42,20 @@ Definisce una data costituita dalla combinazione di un'ora del giorno e di secon
 |Proprietà|valore|  
 |---|---|
 |Sintassi|**datetime**|  
-|Utilizzo|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
+|Uso|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
 |Formati predefiniti dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|Non applicabile|  
 |Intervallo di date|Da 01.01.53 a 31.12.99|  
 |Intervallo di ore|da 00:00:00 a 23:59:59.997|  
-|Intervallo di differenze di fuso orario|None|  
+|Intervallo di differenze di fuso orario|nessuno|  
 |Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 1753 e 9999 indicante l'anno.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12 indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.<br /><br /> hh rappresenta un numero di due cifre compreso tra 00 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre compreso tra 00 e 59 indicante i secondi.<br /><br /> n* rappresenta un numero composto da un numero di cifre da 0 a 3 e compreso tra 0 e 999, indicante i secondi frazionari.|  
 |Lunghezza in caratteri|Da 19 posizioni minimo a 23 massimo|  
 |Dimensioni dello spazio di archiviazione|8 byte|  
 |Accuratezza|Arrotondato a incrementi di 0,000, 0,003 o 0,007 secondi|  
 |Valore predefinito|1900-01-01 00:00:00|  
 |Calendario|Gregoriano (non include l'intervallo completo di anni)|  
-|Precisione in secondi frazionari definita dall'utente|no|  
-|Considerazione e conservazione delle differenze di fuso orario|no|  
-|Considerazione dell'ora legale|no|  
+|Precisione in secondi frazionari definita dall'utente|No|  
+|Considerazione e conservazione delle differenze di fuso orario|No|  
+|Considerazione dell'ora legale|No|  
   
 ## <a name="supported-string-literal-formats-for-datetime"></a>Formati di valore letterale stringa supportati per datetime  
 Nelle tabelle seguenti sono elencati i formati di valore letterale stringa supportati per **datetime**. Fatta eccezione per ODBC, i valori letterali stringa **datetime** sono compresi tra virgolette singole ('), ad esempio, 'string_literaL'. Se l'ambiente è diverso da **us_english**, i valori letterali stringa devono essere nel formato N'string_literaL'.
@@ -190,7 +190,7 @@ SELECT
 |Tipo di dati|Output|  
 |---|---|
 |**time**|12:35:29. 1234567|  
-|**data**|2007-05-08|  
+|**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  

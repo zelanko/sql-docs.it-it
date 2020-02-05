@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495465"
 ---
 # <a name="set-operators---union-transact-sql"></a>Operatori sui set - UNION (Transact-SQL)
@@ -47,7 +47,7 @@ Di seguito sono riportate le regole di base per la combinazione dei set di risul
   
 -   I tipi di dati devono essere compatibili.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -71,7 +71,7 @@ Incorpora tutte le righe nei risultati, inclusi i duplicati. Se viene omesso, le
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-a-simple-union"></a>A. Utilizzo di un semplice operatore UNION  
+### <a name="a-using-a-simple-union"></a>R. Utilizzo di un semplice operatore UNION  
 Nell'esempio seguente il set di risultati include il contenuto delle colonne `ProductModelID` e `Name` di entrambe le tabelle `ProductModel` e `Gloves`.  
  
 ```sql

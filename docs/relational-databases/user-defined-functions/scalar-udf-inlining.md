@@ -16,10 +16,10 @@ author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75831774"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
@@ -34,11 +34,11 @@ Le funzioni definite dall'utente (UDF) implementate in [!INCLUDE[tsql](../../inc
 ## <a name="performance-of-scalar-udfs"></a>Prestazioni delle funzioni definite dall'utente scalari
 Le funzioni definite dall'utente scalari offrono in genere prestazioni scarse per i motivi seguenti:
 
-- **Chiamata iterativa:** Le funzioni definite dall'utente vengono chiamate in modo iterativo, una volta per ogni tupla idonea. Ciò comporta costi aggiuntivi a causa del cambio di contesto ripetuto dovuto alla chiamata di funzione. Questo aspetto interessa in modo particolarmente grave le funzioni definite dall'utente che eseguono query [!INCLUDE[tsql](../../includes/tsql-md.md)] all'interno della propria definizione.
+- **Chiamata iterativa:** le funzioni definite dall'utente vengono chiamate in modo iterativo, una volta per ogni tupla idonea. Ciò comporta costi aggiuntivi a causa del cambio di contesto ripetuto dovuto alla chiamata di funzione. Questo aspetto interessa in modo particolarmente grave le funzioni definite dall'utente che eseguono query [!INCLUDE[tsql](../../includes/tsql-md.md)] all'interno della propria definizione.
 
-- **Mancanza di determinazione costi:** Durante l'ottimizzazione vengono definiti i costi dei soli operatori relazionali, non degli operatori scalari. Prima dell'introduzione delle funzioni definite dall'utente scalari, i costi degli altri operatori scalari erano in genere bassi e non richiedevano una determinazione costi. Per un'operazione scalare era sufficiente aggiungere un costo ridotto per la CPU. In alcuni scenari, il costo effettivo è significativo ma rimane comunque sottorappresentato.
+- **Mancanza di determinazione costi:** durante l'ottimizzazione, vengono definiti i costi dei soli operatori relazionali, non degli operatori scalari. Prima dell'introduzione delle funzioni definite dall'utente scalari, i costi degli altri operatori scalari erano in genere bassi e non richiedevano una determinazione costi. Per un'operazione scalare era sufficiente aggiungere un costo ridotto per la CPU. In alcuni scenari, il costo effettivo è significativo ma rimane comunque sottorappresentato.
 
-- **Esecuzione interpretata:** Le funzioni definite dall'utente vengono valutate come batch di istruzioni e vengono eseguite istruzione per istruzione. Ogni istruzione viene compilata e il piano compilato viene memorizzato nella cache. Questa strategia di memorizzazione nella cache consente di risparmiare tempo perché consente di evitare le ricompilazioni, ma ogni istruzione viene eseguita in modo isolato. Non vengono eseguite ottimizzazioni tra istruzioni diverse.
+- **Esecuzione interpretata:** le funzioni definite dall'utente vengono valutate come batch di istruzioni e vengono eseguite istruzione per istruzione. Ogni istruzione viene compilata e il piano compilato viene memorizzato nella cache. Questa strategia di memorizzazione nella cache consente di risparmiare tempo perché consente di evitare le ricompilazioni, ma ogni istruzione viene eseguita in modo isolato. Non vengono eseguite ottimizzazioni tra istruzioni diverse.
 
 - **Esecuzione seriale:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente il parallelismo interno alla query nelle query che richiamano funzioni definite dall'utente. 
 
@@ -137,12 +137,12 @@ A seconda della complessità della logica della funzione definita dall'utente, i
 <a name="requirements"></a> È possibile eseguire l'inlining di una funzione definita dall'utente scalare Transact-SQL se si verificano tutte le condizioni seguenti:
 
 - La funzione definita dall'utente è scritta con i costrutti seguenti:
-    - `DECLARE`, `SET`: Dichiarazione e assegnazione di variabili.
-    - `SELECT`: Query SQL con assegnazioni di variabili singole/multiple<sup>1</sup>.
-    - `IF`/`ELSE`: Diramazione con livelli di annidamento arbitrari.
-    - `RETURN`: Istruzione return singola o istruzioni return multiple.
-    - `UDF`: Chiamate di funzioni ricorsive/annidate<sup>2</sup>.
-    - Altri: Operazioni relazionali, ad esempio `EXISTS`, `ISNULL`.
+    - `DECLARE`, `SET`: dichiarazione e assegnazione di variabili.
+    - `SELECT`: query SQL con assegnazioni di variabili singole/multiple<sup>1</sup>.
+    - `IF`/`ELSE`: diramazione con livelli di annidamento arbitrari.
+    - `RETURN`: istruzione return singola o istruzioni return multiple.
+    - `UDF`: chiamate di funzioni ricorsive/annidate<sup>2</sup>.
+    - Altro: operazioni relazionali, ad esempio `EXISTS`, `ISNULL`.
 - La funzione definita dall'utente non chiama alcuna funzione intrinseca dipendente dal tempo (ad esempio `GETDATE()`) o con effetti collaterali<sup>3</sup> (ad esempio `NEWSEQUENTIALID()`).
 - La funzione definita dall'utente usa la clausola `EXECUTE AS CALLER` (comportamento predefinito se la clausola `EXECUTE AS` non viene specificata).
 - La funzione definita dall'utente non fa riferimento a variabili di tabella o a parametri con valori di tabella.

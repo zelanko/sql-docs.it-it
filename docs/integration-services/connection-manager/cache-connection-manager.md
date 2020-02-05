@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294451"
 ---
 # <a name="cache-connection-manager"></a>gestione connessione della cache
@@ -124,13 +124,13 @@ ms.locfileid: "71294451"
  **Precisione**  
  Specifica la precisione per certi tipi di dati di colonna. La precisione è il numero di cifre in un numero. Se applicabile al tipo di dati, è possibile aggiornare **Precision**.  
   
- **Scala**  
+ **Ridimensionare**  
  Specifica la scala per certi tipi di dati di colonna. La scala è il numero di cifre a destra della virgola decimale in un numero. Se applicabile al tipo di dati, è possibile aggiornare **Scale**.  
   
  **Tabella codici**  
  Specifica la tabella codici per il tipo di colonna. Se applicabile al tipo di dati, è possibile aggiornare **Code Page**.  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [Implementazione di una trasformazione Ricerca in modalità Full Cache utilizzando la gestione connessione della cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implementare una trasformazione Ricerca in modalità Full Cache tramite la gestione connessione della cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

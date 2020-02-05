@@ -16,10 +16,10 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75322015"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Creazione di una sottoscrizione per un Sottoscrittore non SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "75322015"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Per creare una sottoscrizione per un sottoscrittore non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 1.  Installare e configurare il software client e il provider o i provider OLE DB appropriati sul database di distribuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) e [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
@@ -143,7 +143,7 @@ ms.locfileid: "75322015"
   
  Al termine della generazione dello snapshot da parte dell'agente, viene visualizzato un messaggio come ""[100%] Generato uno snapshot di 17 articoli."  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  È possibile creare sottoscrizioni push a sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a livello di programmazione usando le stored procedure di replica.  
   
 > [!IMPORTANT]  
@@ -153,7 +153,7 @@ ms.locfileid: "75322015"
   
 1.  Installare il provider OLE DB più recente per il Sottoscrittore non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia nel server di pubblicazione che nel server di distribuzione. Per i requisiti di replica relativi a un provider OLE DB, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md), [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md), [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) per verificare che la pubblicazione supporti Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_helppublication &#40;Transact-SQL&#41;[ per verificare che la pubblicazione supporti Sottoscrittori non ](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md).  
   
     -   Se il valore di **enabled_for_het_sub** è 1, i Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati.  
   
