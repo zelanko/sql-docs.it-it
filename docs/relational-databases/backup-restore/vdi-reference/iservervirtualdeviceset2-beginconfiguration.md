@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: fea109e55b9efa5619bdccb11d692ffebd1a6847
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847482"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
@@ -54,7 +54,7 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 | VD_E_ABORT | È stato richiamato SignalAbort. |
 | VD_E_PROTOCOL | Il set di dispositivi virtuali non si trova nello stato connesso. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Dopo che questa funzione è stata richiamata, il set di dispositivi virtuali passa allo stato configurabile, in cui viene deciso il layout del buffer.
 Una volta impostata la configurazione di base, in base ai parametri, questi valori rimangono fissi per il ciclo di vita del set di dispositivi virtuali. La proprietà di allineamento per il set di dispositivi virtuali viene usata per controllare l'allineamento dei buffer di dati. Questo valore imposta un valore di allineamento minimo che può essere sottoposto a override in base ai singoli buffer.

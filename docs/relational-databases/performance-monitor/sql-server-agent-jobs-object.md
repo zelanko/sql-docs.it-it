@@ -14,10 +14,10 @@ ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 63c2638f6b6f58d3c3cafd8e8dd601a5a467b210
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987338"
 ---
 # <a name="sql-server-agent-jobs-object"></a>Oggetto Processi di SQL Server Agent
@@ -26,7 +26,7 @@ ms.locfileid: "67987338"
   
  Nella tabella seguente sono illustrati i contatori di **SQLAgent:Processi** .  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |**Processi attivi**|Questo contatore indica il numero di processi attualmente in esecuzione.|  
 |**Processi non riusciti**|Questo contatore indica il numero di processi chiusi con un errore.|  
@@ -41,12 +41,12 @@ ms.locfileid: "67987338"
 |--------------|-----------------|  
 |**_Total**|Informazioni relative a tutti i processi.|  
 |**Avvisi**|Informazioni relative ai processi avviati da avvisi.|  
-|**Altri**|Informazioni relative a processi non avviati da avvisi o pianificazioni. In genere, si tratta di processi avviati manualmente tramite **sp_start_job**.|  
+|**Altro**|Informazioni relative a processi non avviati da avvisi o pianificazioni. In genere, si tratta di processi avviati manualmente tramite **sp_start_job**.|  
 |**Pianificazioni**|Informazioni relative ai processi avviati da pianificazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di processi](../../ssms/agent/implement-jobs.md)   
  [Utilizzo degli oggetti prestazioni](../../ssms/agent/use-performance-objects.md)   
- [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

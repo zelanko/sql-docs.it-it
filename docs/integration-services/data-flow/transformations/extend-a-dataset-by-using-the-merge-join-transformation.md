@@ -16,10 +16,10 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c3e144b1e866bd4bce8b7f8709c11f5b125b1f84
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291435"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Estensione di un set di dati tramite la trasformazione Merge join
@@ -29,7 +29,7 @@ ms.locfileid: "71291435"
 
   È possibile aggiungere e configurare una trasformazione Merge join solo se il pacchetto include già almeno un'attività Flusso di dati e due componenti flusso di dati che forniscono input alla trasformazione Merge join.  
   
- La trasformazione Merge join richiede due input ordinati. Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+ La trasformazione Merge join richiede due input ordinati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
 ### <a name="to-extend-a-dataset"></a>Per estendere un set di dati  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71291435"
 11. Per salvare il pacchetto aggiornato, scegliere **Salva elementi selezionati** dal menu **File** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+ [Trasformazione Merge join](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Trasformazioni di Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Percorsi in Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Attività Flusso di dati](../../../integration-services/control-flow/data-flow-task.md)  

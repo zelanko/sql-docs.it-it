@@ -15,10 +15,10 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278167"
 ---
 # <a name="query-method-xml-data-type"></a>Metodo query() con tipo di dati XML
@@ -40,7 +40,7 @@ Stringa costituita da un'espressione XQuery che esegue query su nodi XML, ad ese
 ## <a name="examples"></a>Esempi  
 In questa sezione sono disponibili esempi di uso del metodo query() con tipo di dati **xml**.  
   
-### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Utilizzo del metodo query() in una variabile di tipo XML  
+### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>R. Utilizzo del metodo query() in una variabile di tipo XML  
 L'esempio seguente dichiara una variabile **\@myDoc** di tipo **xml** e assegna a questa un'istanza XML. In seguito viene usato il metodo **query()** per specificare una query XQuery sul documento.  
   
 La query recupera l'elemento figlio <`Features`> dell'elemento <`ProductDescription`>:  

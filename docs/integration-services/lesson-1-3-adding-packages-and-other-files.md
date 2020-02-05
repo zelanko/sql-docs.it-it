@@ -11,10 +11,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be3dcb5bd42624ee943db4393809e2889808a11e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283832"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lezione 1-3 - Aggiunta di pacchetti e altri file
@@ -49,7 +49,7 @@ Nell'attività successiva si procederà all'aggiunta delle configurazioni per i 
   
 1.  Se [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] non è già aperto, fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, **Microsoft SQL Server**, quindi fare clic su **SQL Server Data Tools**.  
   
-2.  Scegliere **Apri** dal menu **File**, fare clic su **Progetto/Soluzione**, selezionare la cartella **Deployment Tutorial** , fare clic su **Apri**e quindi fare doppio clic su **Deployment Tutorial.sln**.  
+2.  Scegliere **Apri** dal menu **File**, fare clic su **Progetto/Soluzione**, selezionare la cartella **Deployment Tutorial** , fare clic su **Apri**e fare doppio clic su **Deployment Tutorial.sln**.  
   
 3.  In Esplora soluzioni fare clic con il pulsante destro del mouse su Deployment Tutorial, scegliere **Aggiungi**e quindi **Pacchetto esistente**.  
   
@@ -72,7 +72,7 @@ Nell'attività successiva si procederà all'aggiunta delle configurazioni per i 
 4.  Scegliere **Salva tutto**dal menu File.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
-[Passaggio 4: Aggiunta di configurazioni pacchetto](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[Passaggio 4: Aggiunta delle configurazioni dei pacchetti](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

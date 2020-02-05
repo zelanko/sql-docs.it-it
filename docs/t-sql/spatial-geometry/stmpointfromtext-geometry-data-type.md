@@ -18,10 +18,10 @@ ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f9f2198595e48c98277215b7ec186c7b7848f0d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894710"
 ---
 # <a name="stmpointfromtext-geometry-data-type"></a>STMPointFromText (tipo di dati geometry)
@@ -50,7 +50,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
  Tipo OGC: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

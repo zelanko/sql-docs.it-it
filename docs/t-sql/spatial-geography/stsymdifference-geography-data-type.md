@@ -18,10 +18,10 @@ ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1e7824f864d7d764529fb6860496316bf00537d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120768"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (tipo di dati geography)
@@ -45,7 +45,7 @@ ms.locfileid: "68120768"
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il set di possibili risultati nel server è stato esteso alle istanze **FullGlobe**.  
@@ -54,7 +54,7 @@ ms.locfileid: "68120768"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>A. Calcolo della differenza simmetrica di due poligoni  
+### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>R. Calcolo della differenza simmetrica di due poligoni  
  Nell'esempio seguente viene utilizzato `STSymDifference()` per calcolare la differenza simmetrica tra due istanze `Polygon`.  
   
 ```  

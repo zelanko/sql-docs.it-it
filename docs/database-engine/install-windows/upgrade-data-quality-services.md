@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934851"
 ---
 # <a name="upgrade-data-quality-services"></a>Aggiornare Data Quality Services
@@ -91,7 +91,7 @@ Questo articolo offre informazioni su come aggiornare l'installazione esistente 
   
 3.  Nell'output verrà visualizzata una voce per ogni aggiornamento, insieme alla data di aggiornamento. Il valore massimo di VERSION_ID e ASSEMBLY_VERSION nella data più recente è la versione corrente. Un valore pari a 2 nella colonna STATUS indica l'esito positivo. Se si è verificato un errore, questo verrà visualizzato nella colonna ERROR. Esempio di output:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|error|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATO|ERRORE|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\NomeUtente>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\NomeUtente>|2||  

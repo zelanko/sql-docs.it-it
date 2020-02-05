@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c0670e972dfb3c93a3b41dea67ebe5300c534843
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769726"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287491"
 ---
 # <a name="publisher-information-agents"></a>Informazioni sul server di pubblicazione, Agenti
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "68769726"
 ## <a name="options"></a>Opzioni  
  Per visualizzare le informazioni su un agente o su un processo, scegliere l'elemento desiderato dal menu a discesa relativo ai **tipi di agente e processo**. Per ulteriori informazioni e per conoscere le attività correlate a un agente o a un processo, fare clic con il pulsante destro del mouse sulla riga dell'agente o del processo, quindi scegliere un'opzione dal menu di scelta rapida. Per modificare la modalità di visualizzazione dei dati nella griglia, fare clic con il pulsante destro del mouse sulla griglia, quindi scegliere una delle opzioni seguenti:  
   
--   **Ordinamento**: consente di ordinare una o più colonne nella finestra di dialogo **Ordina colonne**.  
+-   **Ordinamento**: consente di ordinare una o più colonne nella finestra di dialogo **Ordina colonne** .  
   
--   **Seleziona colonne da visualizzare**: consente di selezionare le colonne da visualizzare e l'ordine di visualizzazione nella finestra di dialogo **Seleziona colonne**.  
+-   **Seleziona colonne da visualizzare**: consente di selezionare le colonne da visualizzare e l'ordine di visualizzazione nella finestra di dialogo **Seleziona colonne** .  
   
--   **Filtro**: consente di filtrare le righe nella griglia in base a valori di colonna nella finestra di dialogo **Impostazioni filtro**.  
+-   **Filtro**: consente di filtrare le righe nella griglia in base a valori di colonna nella finestra di dialogo **Impostazioni filtro** .  
   
 -   **Cancella filtro**: consente di cancellare qualsiasi impostazione di filtro per la griglia.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68769726"
  Nelle sezioni seguenti sono descritti i dati visualizzati in questa scheda per ogni agente o processo.  
   
 ### <a name="snapshot-agent"></a>agente snapshot  
- **Stato**  
+ **Status**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -71,7 +71,7 @@ ms.locfileid: "68769726"
   
 -   In esecuzione  
   
--   Completato  
+-   Completi  
   
  **Pubblicazione**  
  Nome della pubblicazione a cui è associato l'agente.  
@@ -79,7 +79,7 @@ ms.locfileid: "68769726"
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Quantità di tempo di esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
@@ -95,7 +95,7 @@ ms.locfileid: "68769726"
  Numero di comandi di cui è stato eseguito il commit nel database di distribuzione durante la più recente esecuzione dell'agente. Un comando è equivalente a una modifica dei dati, ad esempio un aggiornamento.  
   
 ### <a name="log-reader-agent"></a>Agente di lettura log  
- **Stato**  
+ **Status**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -112,7 +112,7 @@ ms.locfileid: "68769726"
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Quantità di tempo di esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
@@ -121,7 +121,7 @@ ms.locfileid: "68769726"
  **Frequenza recapito**  
  Frequenza, in comandi al secondo, con cui viene eseguito il commit delle modifiche nel database di distribuzione.  
   
- **Latenza**  
+ **Latency**  
  Quantità di tempo, in secondi, trascorsa tra il commit della modifica più recente nel database di pubblicazione e il commit del comando corrispondente nel database di distribuzione.  
   
  **N. transazioni**  
@@ -134,7 +134,7 @@ ms.locfileid: "68769726"
  Numero medio di comandi per transazione durante la più recente esecuzione dell'agente.  
   
 ### <a name="queue-reader-agent"></a>Agente di lettura coda  
- **Stato**  
+ **Status**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -151,7 +151,7 @@ ms.locfileid: "68769726"
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Quantità di tempo di esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
@@ -160,7 +160,7 @@ ms.locfileid: "68769726"
  **Frequenza recapito**  
  Frequenza, in comandi al secondo, con cui viene eseguito il commit delle modifiche nel database di distribuzione.  
   
- **Latenza**  
+ **Latency**  
  Quantità di tempo, in secondi, trascorsa tra il commit della modifica più recente in un database di sottoscrizione e il commit del comando corrispondente nel database di pubblicazione.  
   
  **N. transazioni**  
@@ -173,7 +173,7 @@ ms.locfileid: "68769726"
  Numero medio di comandi per transazione durante la più recente esecuzione dell'agente.  
   
 ### <a name="maintenance-jobs"></a>Processi di manutenzione  
- **Stato**  
+ **Status**  
  Stato di ogni processo. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -190,7 +190,7 @@ ms.locfileid: "68769726"
  **Ultima ora inizio**  
  Ultima ora di inizio del processo.  
   
- **Durata**  
+ **Duration**  
  Tempo di esecuzione del processo. Il valore di durata rappresenta il tempo trascorso se il processo è ancora in esecuzione e la durata totale se il processo è stato eseguito in precedenza.  
   
  **Ultima azione**  

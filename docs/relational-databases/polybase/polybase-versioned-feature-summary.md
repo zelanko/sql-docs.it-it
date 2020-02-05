@@ -10,10 +10,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bd4c7e7bb150a0eafbd855e1703713f3781bdc49
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710450"
 ---
 # <a name="polybase-features-and-limitations"></a>Funzionalità e limitazioni di PolyBase
@@ -29,16 +29,16 @@ Questa tabella elenca le funzionalità principali per PolyBase e i prodotti in c
 ||||||
 |-|-|-|-|-|   
 |**Funzionalità**|**SQL Server 2016**|**Database SQL di Azure**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
-|Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|no|no|Sì|
-|Importare dati da Hadoop|Sì|no|no|Sì|
-|Esportare dati in Hadoop  |Sì|no|no| Sì|
-|Eseguire query, importare da Azure HDInsight |no|no|no|no
-|Eseguire il push down dei calcoli delle query in Hadoop|Sì|no|no|Sì|  
-|Importare dati dall'archivio BLOB di Azure|Sì|no|Sì|Sì| 
-|Esportare dati nell'archivio BLOB di Azure|Sì|no|Sì|Sì|  
-|Importare dati da Azure Data Lake Store|no|no|Sì|no|    
-|Esportare dati da Azure Data Lake Store|no|no|Sì|no|
-|Eseguire query PolyBase da strumenti BI di Microsoft|Sì|no|Sì|Sì|   
+|Eseguire query sui dati di Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|No|Sì|
+|Importare dati da Hadoop|Sì|No|No|Sì|
+|Esportare dati in Hadoop  |Sì|No|No| Sì|
+|Eseguire query, importare da Azure HDInsight |No|No|No|No
+|Eseguire il push down dei calcoli delle query in Hadoop|Sì|No|No|Sì|  
+|Importare dati dall'archivio BLOB di Azure|Sì|No|Sì|Sì| 
+|Esportare dati nell'archivio BLOB di Azure|Sì|No|Sì|Sì|  
+|Importare dati da Azure Data Lake Store|No|No|Sì|No|    
+|Esportare dati da Azure Data Lake Store|No|No|Sì|No|
+|Eseguire query PolyBase da strumenti BI di Microsoft|Sì|No|Sì|Sì|   
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Calcolo della distribuzione dinamica supportata da operatori T-SQL
 
@@ -47,12 +47,12 @@ In SQL Server e APS, non tutti gli operatori T-SQL possono essere distribuiti su
 ||||
 |-|-|-| 
 |**Tipo di operatore**|**Distribuibile su hadoop**|**Distribuibile nell'archiviazione BLOB**|
-|Proiezioni di colonna|Sì|no|
-|Predicati|Sì|no|
-|Aggregazioni|Partial|no|
-|Crea un join tra le tabelle esterne|no|no|
-|Crea un join tra le tabelle esterne e locali|no|no|
-|Ordina|no|no|
+|Proiezioni di colonna|Sì|No|
+|Predicati|Sì|No|
+|Aggregazioni|Parziale|No|
+|Crea un join tra le tabelle esterne|No|No|
+|Crea un join tra le tabelle esterne e locali|No|No|
+|Ordina|No|No|
 
 Aggregazione parziale significa che deve verificarsi un'aggregazione finale dopo che i dati raggiungono SQL Server. Tuttavia, una parte dell'aggregazione viene eseguita in Hadoop. Si tratta di un metodo comune di calcolo delle aggregazioni nei sistemi con la funzionalità di elaborazione parallela massiva.  
 

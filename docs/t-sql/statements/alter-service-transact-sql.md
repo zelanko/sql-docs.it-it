@@ -21,10 +21,10 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3b18eb0d8f848bb57015aa78797d1222b9d92194
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745292"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70745292"
 
   Modifica un servizio esistente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ ALTER SERVICE service_name
  *service_name*  
  Nome del servizio da modificare. Non è possibile specificare i nomi del server, del database e dello schema.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  Specifica la nuova coda per questo servizio. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sposta tutti i messaggi per questo servizio dalla coda corrente alla nuova coda.  
   
  ADD CONTRACT *contract_name*  
@@ -60,7 +60,7 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  Specifica un contratto da eliminare dal set dei contratti esposti da questo servizio. [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio di errore per tutte le conversazioni esistenti con il servizio che utilizzano questo contratto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando l'istruzione ALTER SERVICE elimina un contratto da un servizio, il servizio non può più essere la destinazione per le conversazioni che utilizzano tale contratto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] non consente pertanto nuove conversazioni con il servizio in base a quel contratto. Le conversazioni esistenti che utilizzano il contratto non subiscono variazioni.  
   
  Per modificare il parametro AUTHORIZATION per un servizio, utilizzare l'istruzione ALTER AUTHORIZATION.  
@@ -70,7 +70,7 @@ ALTER SERVICE service_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-queue-for-a-service"></a>A. Modifica della coda per un servizio  
+### <a name="a-changing-the-queue-for-a-service"></a>R. Modifica della coda per un servizio  
  Nell'esempio seguente il servizio `//Adventure-Works.com/Expenses` viene modificato in modo che utilizzi la coda `NewQueue`.  
   
 ```  

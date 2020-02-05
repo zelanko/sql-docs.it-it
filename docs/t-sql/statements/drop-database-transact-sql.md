@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982198"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
@@ -136,7 +136,7 @@ Solo l'account di accesso dell'entità di livello server (creato dal processo di
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-dropping-a-single-database"></a>A. Rimozione di un singolo database
+### <a name="a-dropping-a-single-database"></a>R. Rimozione di un singolo database
 
 Nell'esempio seguente viene rimosso il database `Sales`.
 

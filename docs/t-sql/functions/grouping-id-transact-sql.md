@@ -19,18 +19,18 @@ ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910648"
 ---
-# <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
+# <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   È una funzione che calcola il livello di raggruppamento. È possibile usare GROUPING_ID solo in un elenco di \<selezione> SELECT o nelle clausole HAVING o ORDER BY quando è specificato GROUP BY.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,10 +46,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ## <a name="return-type"></a>Tipo restituito  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  GROUPING_ID \<column_expression> deve corrispondere esattamente all'espressione presente nell'elenco GROUP BY. Se ad esempio si effettua il raggruppamento per DATEPART (yyyy, \<*nome colonna*>), usare GROUPING_ID (DATEPART (yyyy, \<*nome colonna*>)). Se si effettua il raggruppamento per \<*nome colonna*>, usare GROUPING_ID (\<*nome colonna*>).  
   
-## <a name="comparing-groupingid--to-grouping-"></a>Confronto tra GROUPING_ID () e GROUPING ()  
+## <a name="comparing-grouping_id--to-grouping-"></a>Confronto tra GROUPING_ID () e GROUPING ()  
  GROUPING_ID (\<column_expression> [ **,** ...*n* ]) immette l'equivalente del valore GROUPING (\<column_expression>) restituito per ogni colonna nell'elenco di colonne in ogni riga di output come stringa di valori uno e zero. GROUPING_ID interpreta tale stringa come numero in base 2 e restituisce il valore intero equivalente. Si consideri ad esempio l'istruzione seguente: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Nella tabella seguente vengono mostrati i valori di input e output di GROUPING_ID ().  
   
 |Colonne aggregate|Input di GROUPING_ID (a, b, c) = GROUPING (a) + GROUPING (b) + GROUPING (c)|Output di GROUPING_ID ()|  
@@ -62,10 +62,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`bc`|`011`|`3`|  
 |`abc`|`111`|`7`|  
   
-## <a name="technical-definition-of-groupingid-"></a>Definizione tecnica di GROUPING_ID ()  
+## <a name="technical-definition-of-grouping_id-"></a>Definizione tecnica di GROUPING_ID ()  
  Ogni argomento GROUPING_ID deve essere un elemento dell'elenco GROUP BY. GROUPING_ID () restituisce una mappa di bit **integer** i cui N bit più bassi possono essere attivati. Un **bit** attivato indica che l'argomento corrispondente non è una colonna di raggruppamento per la riga di output specificata. Il **bit** dell'ordine più basso corrisponde all'argomento N<sup></sup> e il **bit** dell'ordine più basso alla posizione N-1 corrisponde all'argomento 1.  
   
-## <a name="groupingid--equivalents"></a>Equivalenti GROUPING_ID ()  
+## <a name="grouping_id--equivalents"></a>Equivalenti GROUPING_ID ()  
  Per una singola query di raggruppamento, GROUPING (\<column_expression>) è equivalente a GROUPING_ID (\<column_expression>) ed entrambi restituiscono 0.  
   
  Ad esempio, le istruzioni seguenti sono equivalenti:  
@@ -92,7 +92,7 @@ SELECT 0 FROM T GROUP BY A,B
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-groupingid-to-identify-grouping-levels"></a>A. Utilizzo di GROUPING_ID per identificare i livelli di raggruppamento  
+### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>R. Utilizzo di GROUPING_ID per identificare i livelli di raggruppamento  
  Nell'esempio seguente viene restituito il conteggio di dipendenti per `Name` e `Title`, `Name,` e totale della società nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. `GROUPING_ID()` viene utilizzato per creare un valore per ogni riga nella colonna `Title` per identificare il livello di raggruppamento.  
   
 ```  
@@ -114,7 +114,7 @@ WHERE DH.EndDate IS NULL
 GROUP BY ROLLUP(D.Name, E.JobTitle);  
 ```  
   
-### <a name="b-using-groupingid-to-filter-a-result-set"></a>B. Utilizzo di GROUPING_ID per filtrare un set di risultati  
+### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. Utilizzo di GROUPING_ID per filtrare un set di risultati  
   
 #### <a name="simple-example"></a>Esempio semplice  
  Nel codice seguente, per restituire solo le righe che hanno un conteggio dei dipendenti per titolo, rimuovere i caratteri di commento da `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Per restituire solo le righe con un conteggio dei dipendenti per reparto, rimuovere i caratteri di commento da `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
@@ -138,7 +138,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  Di seguito è riportato il set di risultati non filtrato.  
   
-|nome|Title|Livello di raggruppamento|Conteggio dipendenti|nome|  
+|Nome|Titolo|Livello di raggruppamento|Conteggio dipendenti|Nome|  
 |----------|-----------|--------------------|--------------------|----------|  
 |Controllo documenti|Specialista controllo|0|2|Controllo documenti|  
 |Controllo documenti|Assistente controllo documenti|0|2|Controllo documenti|  
@@ -235,7 +235,7 @@ ORDER BY
     ,(H.SalesPersonID))ASC;  
 ```  
   
-### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. Utilizzo di GROUPING_ID () con ROLLUP e CUBE per identificare i livelli di raggruppamento  
+### <a name="c-using-grouping_id--with-rollup-and-cube-to-identify-grouping-levels"></a>C. Utilizzo di GROUPING_ID () con ROLLUP e CUBE per identificare i livelli di raggruppamento  
  Il codice negli esempi seguenti mostra l'utilizzo di `GROUPING()` per calcolare la colonna `Bit Vector(base-2)`. `GROUPING_ID()` viene utilizzato per calcolare la colonna `Integer Equivalent` corrispondente. L'ordine delle colonne nella funzione `GROUPING_ID()` è il contrario dell'ordine delle colonne delle colonne concatenate dalla funzione `GROUPING()`.  
   
  In questi esempi, `GROUPING_ID()` viene utilizzato per creare un valore per ogni riga nella colonna `Grouping Level` per identificare il livello di raggruppamento. I livelli di raggruppamento non sono sempre un elenco consecutivo di valori interi che iniziano per 1 (0, 1, 2...*n*).  
@@ -304,16 +304,16 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
  Set di risultati parziale:  
   
-|Year|Month|Day|Total Due|Vettore di bit (base 2)|Equivalente integer|Livello di raggruppamento|  
+|Year|Month|Giorno|Total Due|Vettore di bit (base 2)|Equivalente integer|Livello di raggruppamento|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1497452.6066|000|0|Anno Mese Giorno|  
-|2007|1|2|21772.3494|000|0|Anno Mese Giorno|  
-|2007|2|1|2705653.5913|000|0|Anno Mese Giorno|  
-|2007|2|2|21684.4068|000|0|Anno Mese Giorno|  
-|2008|1|1|1908122.0967|000|0|Anno Mese Giorno|  
-|2008|1|2|46458.0691|000|0|Anno Mese Giorno|  
-|2008|2|1|3108771.9729|000|0|Anno Mese Giorno|  
-|2008|2|2|54598.5488|000|0|Anno Mese Giorno|  
+|2007|1|1|1497452.6066|7000|0|Anno Mese Giorno|  
+|2007|1|2|21772.3494|7000|0|Anno Mese Giorno|  
+|2007|2|1|2705653.5913|7000|0|Anno Mese Giorno|  
+|2007|2|2|21684.4068|7000|0|Anno Mese Giorno|  
+|2008|1|1|1908122.0967|7000|0|Anno Mese Giorno|  
+|2008|1|2|46458.0691|7000|0|Anno Mese Giorno|  
+|2008|2|1|3108771.9729|7000|0|Anno Mese Giorno|  
+|2008|2|2|54598.5488|7000|0|Anno Mese Giorno|  
 |2007|1|NULL|1519224.956|100|1|Year Month|  
 |2007|2|NULL|2727337.9981|100|1|Year Month|  
 |2008|1|NULL|1954580.1658|100|1|Year Month|  
@@ -385,16 +385,16 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
   
  Set di risultati parziale:  
   
-|Year|Month|Day|Total Due|Vettore di bit (base 2)|Equivalente integer|Livello di raggruppamento|  
+|Year|Month|Giorno|Total Due|Vettore di bit (base 2)|Equivalente integer|Livello di raggruppamento|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1497452.6066|000|0|Anno Mese Giorno|  
-|2007|1|2|21772.3494|000|0|Anno Mese Giorno|  
-|2007|2|1|2705653.5913|000|0|Anno Mese Giorno|  
-|2007|2|2|21684.4068|000|0|Anno Mese Giorno|  
-|2008|1|1|1908122.0967|000|0|Anno Mese Giorno|  
-|2008|1|2|46458.0691|000|0|Anno Mese Giorno|  
-|2008|2|1|3108771.9729|000|0|Anno Mese Giorno|  
-|2008|2|2|54598.5488|000|0|Anno Mese Giorno|  
+|2007|1|1|1497452.6066|7000|0|Anno Mese Giorno|  
+|2007|1|2|21772.3494|7000|0|Anno Mese Giorno|  
+|2007|2|1|2705653.5913|7000|0|Anno Mese Giorno|  
+|2007|2|2|21684.4068|7000|0|Anno Mese Giorno|  
+|2008|1|1|1908122.0967|7000|0|Anno Mese Giorno|  
+|2008|1|2|46458.0691|7000|0|Anno Mese Giorno|  
+|2008|2|1|3108771.9729|7000|0|Anno Mese Giorno|  
+|2008|2|2|54598.5488|7000|0|Anno Mese Giorno|  
 |2007|1|NULL|1519224.956|100|1|Year Month|  
 |2007|2|NULL|2727337.9981|100|1|Year Month|  
 |2008|1|NULL|1954580.1658|100|1|Year Month|  
@@ -411,8 +411,8 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |NULL|2|2|76282.9556|001|4|Mese Giorno|  
 |NULL|1|NULL|3473805.1218|101|5|Month|  
 |NULL|2|NULL|5890708.5198|101|5|Month|  
-|NULL|NULL|1|9220000.2675|011|6|Day|  
-|NULL|NULL|2|144513.3741|011|6|Day|  
+|NULL|NULL|1|9220000.2675|011|6|Giorno|  
+|NULL|NULL|2|144513.3741|011|6|Giorno|  
 |NULL|NULL|NULL|9364513.6416|111|7|Grand Total|  
   
 ## <a name="see-also"></a>Vedere anche  

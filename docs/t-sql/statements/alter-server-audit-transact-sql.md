@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982030"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
@@ -127,7 +127,7 @@ Forza l'arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversio
  Nome del campo relativo all'evento che consente di identificare l'origine del predicato. I campi del controllo sono descritti in [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). È possibile controllare tutti i campi eccetto `file_name` e `audit_file_offset`.  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
- number  
+ d'acquisto  
  Qualsiasi tipo numerico incluso **decimal**. Le limitazioni sono la mancanza di memoria fisica disponibile o un numero troppo grande per essere rappresentato come un numero intero a 64 bit.  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
@@ -135,7 +135,7 @@ Forza l'arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversio
  Stringa ANSI o Unicode come richiesto dal paragone del predicato. Non viene eseguita alcuna conversione del tipo di stringa implicita per le funzioni del paragone del predicato. Il passaggio del tipo non corretto comporta un errore.  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È necessario specificare almeno una delle clausole TO, WITH o MODIFY NAME quando si chiama ALTER AUDIT.  
   
  Per apportare modifiche a un controllo è necessario impostare lo stato del controllo sull'opzione OFF. Se l'istruzione ALTER AUDIT viene eseguita quando è abilitato un controllo con qualsiasi altra opzione diversa da STATE=OFF, viene visualizzato il messaggio di errore MSG_NEED_AUDIT_DISABLED.  
@@ -151,7 +151,7 @@ Forza l'arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-a-server-audit-name"></a>A. Modifica del nome di un controllo del server  
+### <a name="a-changing-a-server-audit-name"></a>R. Modifica del nome di un controllo del server  
  Nell'esempio seguente il nome del controllo del server `HIPAA_Audit` viene modificato in `HIPAA_Audit_Old`.  
   
 ```  

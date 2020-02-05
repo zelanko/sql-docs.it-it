@@ -22,10 +22,10 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745391"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70745391"
 
   Crea un nuovo servizio. Un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un nome per un'attività specifica o per un set di attività. Il nome del servizio viene utilizzato da [!INCLUDE[ssSB](../../includes/sssb-md.md)] per il routing dei messaggi, il recapito dei messaggi alla coda corretta in un database nonché per l'applicazione del contratto per una conversazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,7 +55,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Imposta come proprietario del servizio l'utente o il ruolo del database specificato. Se l'utente corrente è **dbo** o **sa**, *owner_name* può essere il nome di qualsiasi utente o ruolo valido. In caso contrario, *owner_name* deve corrispondere al nome dell'utente corrente, al nome di un utente per il quale l'utente corrente dispone di autorizzazione IMPERSONATE oppure al nome di un ruolo a cui appartiene l'utente corrente.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  Specifica la coda che riceve i messaggi per il servizio. La coda deve esistere nello stesso database del servizio. Se non si specifica *schema_name* viene usato lo schema predefinito per l'utente che esegue l'istruzione.  
   
  *contract_name*  
@@ -64,7 +64,7 @@ CREATE SERVICE service_name
  **[** DEFAULT **]**  
  Specifica che il servizio può fungere da servizio di destinazione per le conversazioni che seguono il contratto DEFAULT. Nel contesto di questa clausola DEFAULT non è una parola chiave ed è pertanto necessario delimitarlo come identificatore. Il contratto DEFAULT consente a entrambi i lati della conversazione di inviare messaggi di tipo DEFAULT. Per il tipo di messaggi DEFAULT viene utilizzata la convalida NONE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Un servizio espone la funzionalità fornita dai contratti a cui è associato, rendendone possibile l'utilizzo da parte di altri servizi. L'istruzione `CREATE SERVICE` specifica i contratti per cui questo servizio funge da destinatario. Un servizio può fungere da destinatario solo per le conversazioni che utilizzano i contratti specificati dal servizio. Un servizio che non specifica alcun contratto non espone alcuna funzionalità per gli altri servizi.  
   
  Le conversazioni avviate da questo servizio possono utilizzare qualsiasi contratto. Creare un servizio senza specificare alcun contratto se il servizio deve solo avviare conversazioni.  
@@ -80,7 +80,7 @@ CREATE SERVICE service_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-service-with-one-contract"></a>A. Creazione di un servizio con un contratto  
+### <a name="a-creating-a-service-with-one-contract"></a>R. Creazione di un servizio con un contratto  
  Nell'esempio seguente viene creato il servizio `//Adventure-Works.com/Expenses` per la coda `ExpenseQueue` nello schema `dbo`. I dialoghi per questo servizio devono essere basati sul contratto `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
 ```sql  

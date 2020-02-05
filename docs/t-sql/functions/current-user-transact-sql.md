@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844617"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
@@ -45,14 +45,14 @@ CURRENT_USER
 ## <a name="return-types"></a>Tipi restituiti
 **sysname**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `CURRENT_USER` restituisce il nome del contesto di protezione corrente. Se si esegue `CURRENT_USER` dopo una chiamata a `EXECUTE AS` per cambiare contesto, `CURRENT_USER` restituirà il nome del contesto rappresentato. Se un'entità di Windows ha effettuato l'accesso al database in base all'appartenenza a un gruppo, `CURRENT_USER` restituisce il nome dell'entità di Windows anziché il nome del gruppo.
   
 Vedere [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) e [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md) per informazioni su come restituire l'account di accesso dell'utente corrente.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-current_user-to-return-the-current-user-name"></a>A. Utilizzo di CURRENT_USER per restituire il nome dell'utente corrente  
+### <a name="a-using-current_user-to-return-the-current-user-name"></a>R. Utilizzo di CURRENT_USER per restituire il nome dell'utente corrente  
 Questo esempio restituisce il nome dell'utente corrente.
   
 ```sql

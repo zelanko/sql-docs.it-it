@@ -17,10 +17,10 @@ ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b12834eac33fd016279b6f2f3a79cee413c3d23d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072877"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitare le dimensioni di file di traccia e tabelle
@@ -30,7 +30,7 @@ ms.locfileid: "68072877"
 > [!NOTE]  
 >  Se i dati di traccia vengono salvati in un file già esistente, è possibile aggiungere i dati al file o sovrascriverlo. Se si sceglie di aggiungere i dati al file e le dimensioni del file di traccia sono già maggiori o uguali al valore massimo specificato, viene visualizzato un messaggio che richiede se si desidera aumentare le dimensioni massime del file o creare un nuovo file. Il meccanismo è uguale per le tabelle di traccia.  
   
-## <a name="maximum-file-size"></a>Dimensioni massime del file  
+## <a name="maximum-file-size"></a>Massima dimensione di file  
  Se per una traccia vengono impostate le dimensioni massime del file, il salvataggio delle informazioni nel file di traccia viene arrestato dopo il raggiungimento delle dimensioni massime. Questa opzione consente di raggruppare gli eventi in file di dimensioni inferiori e quindi più gestibili. Limitando le dimensioni del file sarà inoltre possibile eseguire in maggior sicurezza tracce automatiche, in quanto la traccia viene arrestata al raggiungimento della dimensione massima del file. È possibile impostare le dimensioni massime del file per tracce create tramite stored procedure Transact-SQL oppure [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  È previsto un limite superiore di 1 GB per le dimensioni massime del file. Il valore predefinito per le dimensioni massime del file è pari a 5 megabyte (MB).  
@@ -52,7 +52,7 @@ ms.locfileid: "68072877"
   
  **Per impostare il numero massimo di righe di una traccia**  
   
- [Impostare le dimensioni massime di una tabella di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
+ [Impostare le dimensioni massime di un file di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  

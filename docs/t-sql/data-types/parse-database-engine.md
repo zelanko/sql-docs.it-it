@@ -18,10 +18,10 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119823"
 ---
 # <a name="parse-database-engine"></a>Parse (Motore di database)
@@ -46,7 +46,7 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>Argomenti  
 *input*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]: valore del tipo di dati carattere convertito.
+[!INCLUDE[tsql](../../includes/tsql-md.md)]: valore del tipo di dati character convertito.
   
 CLR: valore stringa valutato.
   
@@ -55,12 +55,12 @@ CLR: valore stringa valutato.
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Se Parse riceve un valore che non è una rappresentazione stringa valida di un valore **hierarchyid**, viene generata un'eccezione. Se, ad esempio, i tipi di dati **char** contengono spazi finali, viene generata un'eccezione.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-converting-transact-sql-values-without-a-table"></a>A. Conversione di valori Transact-SQL senza una tabella  
+### <a name="a-converting-transact-sql-values-without-a-table"></a>R. Conversione di valori Transact-SQL senza una tabella  
 Nell'esempio di codice seguente viene usato `ToString` per convertire un valore **hierarchyid** in una stringa e `Parse` per convertire un valore stringa in un valore **hierarchyid**.
   
 ```sql

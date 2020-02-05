@@ -11,10 +11,10 @@ ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024963"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Filegroup con ottimizzazione per la memoria
@@ -31,7 +31,7 @@ ms.locfileid: "68024963"
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   È necessario aggiungere uno o più contenitori al filegroup `MEMORY_OPTIMIZED_DATA`. Esempio:  
+-   È necessario aggiungere uno o più contenitori al filegroup `MEMORY_OPTIMIZED_DATA`. Ad esempio:  
   
     ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
@@ -61,7 +61,7 @@ Nel configurare l'archiviazione, è necessario fornire uno spazio libero su disc
 > In questo caso, non provare a impostare il database come OFFLINE o ONLINE, perché il database rimarrebbe nello stato RECOVERY_PENDING.
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+[Creazione e gestione dell'archiviazione per gli oggetti ottimizzati per la memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
 [Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 
 

@@ -11,10 +11,10 @@ ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 901f430f09621c6ad9be20759cddb757e2e96ee7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295510"
 ---
 # <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 
@@ -50,7 +50,7 @@ EXEC create_execution_dump @execution_id = 88
  Quando la stored procedure ha esito negativo viene generato un errore.  
   
 ## <a name="result-set"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessario che gli utenti siano membri del ruolo del database **ssis_admin**.  

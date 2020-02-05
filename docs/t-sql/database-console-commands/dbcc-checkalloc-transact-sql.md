@@ -27,10 +27,10 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056348"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
@@ -82,7 +82,7 @@ I nomi di database devono essere conformi alle regole per gli [identificatori](.
  Non applicabile.  
  Utilizzare le opzioni REPAIR solo come ultima risorsa. Per correggere gli errori, è consigliabile eseguire un ripristino da un backup. Le operazioni di correzione non tengono conto degli eventuali vincoli esistenti per le tabelle o tra le tabelle. Se la tabella specificata è interessata da uno o più vincoli, è consigliabile eseguire DBCC CHECKCONSTRAINTS dopo l'operazione di correzione. Se è necessario utilizzare REPAIR, eseguire DBCC CHECKDB senza opzioni di correzione per individuare il livello di correzione da applicare. Se si utilizza il livello REPAIR_ALLOW_DATA_LOSS, è consigliabile eseguire il backup del database prima di utilizzare DBCC CHECKDB con questa opzione.
 
- con  
+ WITH  
  Consente di specificare opzioni.
 
  ALL_ERRORMSGS  
@@ -97,7 +97,7 @@ I nomi di database devono essere conformi alle regole per gli [identificatori](.
  ESTIMATEONLY  
  Visualizza la quantità stimata di spazio in tempdb necessaria per l'esecuzione di DBCC CHECKALLOC quando vengono specificate tutte le altre opzioni.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 DBCC CHECKALLOC controlla l'allocazione di tutte le pagine nel database, indipendentemente dal tipo di pagina o dal tipo di oggetto a cui la pagina appartiene. Questa istruzione convalida inoltre le varie strutture interne utilizzate per tenere traccia delle pagine e delle relative relazioni.
 Se NO_INFOMSGS viene omesso, DBCC CHECKALLOC raccoglie informazioni relative all'utilizzo dello spazio per tutti gli oggetti del database. Queste informazioni vengono aggiunte a tutti gli errori rilevati.
   

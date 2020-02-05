@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262318"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68262318"
 
 Genera un clone solo schema di un database tramite DBCC CLONEDATABASE per esaminare i problemi di prestazioni relativi a Query Optimizer.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -88,7 +88,7 @@ Specifica se i cataloghi del sistema correlato Service Broker devono essere incl
 BACKUP_CLONEDB  
 Crea e verifica una copia di backup del database clone.  Se utilizzato in combinazione con VERIFY_CLONEDB, il database clone viene verificato prima della creazione della copia di backup.  Questa opzione è disponibile a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 Le convalide seguenti vengono eseguite da DBCC CLONEDATABASE. Il comando non riesce se una delle convalide ha esito negativo.
 - Il database di origine deve essere un database utente. La clonazione dei database di sistema (master, modello, msdb, tempdb, database di distribuzione e così via) non è consentita.
 - Il database di origine deve essere online e leggibile.
@@ -121,7 +121,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 
 ## <a name="stats-blob-for-columnstore-indexes"></a>BLOB di statistiche per gli indici columnstore
 
-In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] `DBCC CLONEDATABASE` acquisisce automaticamente i BLOB di statistiche per gli indici columnstore. Di conseguenza non sono necessari passaggi manuali. `DBCC CLONEDATABASE` crea una copia di un database con il solo schema, che include tutti gli elementi necessari per la risoluzione dei problemi di prestazioni delle query senza copiare i dati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il comando non copiava le statistiche necessarie per rilevare con precisione i problemi delle query dell'indice columnstore e per acquisire queste informazioni erano necessari passaggi manuali.
+In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]`DBCC CLONEDATABASE` acquisisce automaticamente i BLOB di statistiche per gli indici columnstore. Di conseguenza non sono necessari passaggi manuali. `DBCC CLONEDATABASE` crea una copia di un database con il solo schema, che include tutti gli elementi necessari per la risoluzione dei problemi di prestazioni delle query senza copiare i dati. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il comando non copiava le statistiche necessarie per rilevare con precisione i problemi delle query dell'indice columnstore e per acquisire queste informazioni erano necessari passaggi manuali.
 
 Per informazioni correlate alla sicurezza dei dati nei database clonati, vedere [Understanding data security in cloned databases](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287) (Informazioni sulla sicurezza dei dati nei database clonati).
 
@@ -153,7 +153,7 @@ Nel database di destinazione possono essere clonati solo gli oggetti seguenti. G
 - Full-text (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2)
 - FUNCTION
 - INDEX
-- Account di accesso
+- LOGIN
 - PARTITION FUNCTION
 - PARTITION SCHEME
 - PROCEDURE   
@@ -177,7 +177,7 @@ Nel database di destinazione possono essere clonati solo gli oggetti seguenti. G
 - TRIGGER
 - TYPE
 - UPGRADED DB
-- Utente
+- USER
 - VIEW
 - XML INDEX
 - XML SCHEMA COLLECTION  
@@ -211,7 +211,7 @@ I messaggi seguenti sono un esempio di quelli registrati nel registro errori dur
 
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. Creazione del clone di un database che include schema, statistiche e archivio query 
+### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>R. Creazione del clone di un database che include schema, statistiche e archivio query 
 L'esempio seguente crea un clone del database AdventureWorks che include schema, statistiche e dati di Query Store ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive)
 
 ```sql  

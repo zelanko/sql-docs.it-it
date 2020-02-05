@@ -24,10 +24,10 @@ ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116526"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
@@ -40,7 +40,7 @@ Deframmenta gli indici della tabella o vista specificata.
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -70,7 +70,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 L'istruzione DBCC INDEXDEFRAG deframmenta il livello foglia di un indice in modo che l'ordine fisico delle pagine corrisponda all'ordine logico da sinistra a destra dei nodi foglia, con un conseguente miglioramento delle prestazioni di analisi dell'indice.
   
 > [!NOTE]  
@@ -86,7 +86,7 @@ A differenza di DBCC DBREINDEX e dell'operazione di compilazione degli indici in
   
 La deframmentazione viene sempre registrata indipendentemente dal modello di recupero del database impostato. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). La deframmentazione di un indice molto frammentato può generare un log molto maggiore di quello generato per una creazione di indice a registrazione completa. Dato tuttavia che la deframmentazione viene eseguita come una serie di transazioni brevi, se si eseguono backup del log frequenti o si imposta il modello di recupero su SIMPLE, non è necessario un log molto esteso.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
 DBCC INDEXDEFRAG sposta le pagine foglia dell'indice. Pertanto, se un indice è intercalato con altri indici sul disco, l'esecuzione di DBCC INDEXDEFRAG su quell'indice non rende contigue tutte le pagine foglia dell'indice. Per migliorare il raggruppamento delle pagine, è necessario ricompilare l'indice.
 Non è possibile utilizzare DBCC INDEXDEFRAG per deframmentare gli indici seguenti:
 -   Un indice disabilitato.  
@@ -112,7 +112,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Il chiamante deve essere proprietario della tabella o membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** e **db_ddladmin**.
   
 ## <a name="examples"></a>Esempi  
-### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. Utilizzo di DBCC INDEXDEFRAG per deframmentare un indice  
+### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>R. Utilizzo di DBCC INDEXDEFRAG per deframmentare un indice  
 Nell'esempio seguente vengono deframmentate tutte le partizioni dell'indice `PK_Product_ProductID` nella tabella `Production.Product` del database `AdventureWorks`.
   
 ```sql  

@@ -22,10 +22,10 @@ ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 21b49eb9638b4651ff52c6515f6e5f62177fc504
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843438"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
@@ -48,7 +48,7 @@ APP_NAME  ( )
 ## <a name="return-types"></a>Tipi restituiti  
 **nvarchar(128)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Usare `APP_NAME` per distinguere le diverse applicazioni, in modo da eseguire azioni diverse per ognuna. Ad esempio, `APP_NAME` consente di distinguere diverse applicazioni e di applicare quindi un formato data diverso per ognuna. È anche possibile restituire un messaggio informativo in determinate applicazioni.
   
 Per impostare un nome applicazione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], fare clic su **Opzioni** nella finestra di dialogo **Connetti al motore di database**. Nella scheda **Parametri aggiuntivi per la connessione** fornire un attributo **app** nel formato `;app='application_name'`

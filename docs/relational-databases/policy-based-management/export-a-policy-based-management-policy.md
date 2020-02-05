@@ -13,10 +13,10 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 241cd0e4ec225c6627bb47ff6a4312f42aba26d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908624"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Esportare i criteri della gestione basata su criteri
@@ -27,7 +27,7 @@ ms.locfileid: "72908624"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per esportare i criteri tramite:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72908624"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo PolicyAdministratorRole nel database msdb.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-export-a-policy"></a>Per esportare i criteri  
   
@@ -56,5 +56,5 @@ ms.locfileid: "72908624"
   
 6.  Nella finestra di dialogo **Esporta criteri** digitare il percorso e il nome del file nella barra degli indirizzi. In alternativa, individuare un percorso appropriato per il file nel pannello di navigazione della finestra di dialogo, quindi digitare il nome del file XML nella casella **Nome file** .  
   
-7.  Al termine, fare clic su **Salva**.  
+7.  Al termine fare clic su **Salva**.  
 

@@ -11,10 +11,10 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822193"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Aggiornamento delle istanze di replica dei gruppi di disponibilità AlwaysOn
@@ -28,15 +28,15 @@ Quando si aggiorna un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnove
 ## <a name="prerequisites"></a>Prerequisites  
 Prima di iniziare, esaminare le informazioni seguenti:  
   
-- [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione del sistema operativo Windows e di SQL Server in uso. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+- [Aggiornamenti di versione ed edizione supportati](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): verificare che sia possibile eseguire l'aggiornamento a SQL Server 2016 dalla versione in uso del sistema operativo Windows e di SQL Server. Ad esempio, non è possibile eseguire l'aggiornamento diretto da un'istanza di SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-- [Scegliere un metodo di aggiornamento del motore di database](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): per l'aggiornamento nell'ordine corretto selezionare il metodo e la procedura di aggiornamento appropriati in base alla verifica degli aggiornamenti di versione ed edizione supportati e anche agli altri componenti installati nell'ambiente.  
+- [Scegliere un metodo di aggiornamento del motore di database](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): per il corretto ordine di aggiornamento, selezionare il metodo e la procedura di aggiornamento appropriati in base alla verifica degli aggiornamenti di versione ed edizione supportati e anche agli altri componenti installati nell'ambiente.  
   
-- [Pianificare e testare il piano di aggiornamento del motore di database](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti, l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
+- [Pianificare e testare il piano di aggiornamento del motore di database](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): esaminare le note sulla versione, i problemi di aggiornamento noti e l'elenco di controllo pre-aggiornamento e sviluppare e testare il piano di aggiornamento.  
   
-- [Requisiti hardware e software per l'installazione di SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
+- [Requisiti hardware e software per l'installazione di SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): esaminare i requisiti software per l'installazione di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Se è necessario software aggiuntivo, installarlo in ogni nodo prima di iniziare il processo di aggiornamento per ridurre al minimo eventuali tempi di inattività.  
 
-- [Verificare se per i database del gruppo di disponibilità siano in uso Change Data Capture o la replica](#special-steps-for-change-data-capture-or-replication): se i database nel gruppo di disponibilità sono abilitati per Change Data Capture (CDC), seguire queste [istruzioni](#special-steps-for-change-data-capture-or-replication).
+- [Verificare se Change Data Capture o la replica vengono usati per i database del gruppo di disponibilità](#special-steps-for-change-data-capture-or-replication): se un database all'interno del gruppo di disponibilità è abilitato per Change Data Capture (CDC), seguire queste [istruzioni](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
 >L'uso di più versioni delle istanze di SQL Server nello stesso gruppo di disponibilità è supportato solo nel contesto di un aggiornamento in sequenza e non deve rimanere in tale stato per periodi di tempo prolungati perché l'aggiornamento deve essere eseguito rapidamente. L'altra opzione per eseguire l'aggiornamento di SQL Server 2016 e versioni successive prevede l'uso di un gruppo di disponibilità distribuito.
@@ -202,7 +202,7 @@ Per eseguire un aggiornamento in sequenza di un gruppo di disponibilità distrib
 
 >[!IMPORTANT]
 >- Verificare sempre il completamento della sincronizzazione tra i singoli passaggi. Prima di procedere con il passaggio seguente, verificare che all'interno del gruppo di disponibilità le repliche con commit sincrono siano sincronizzate e che l'istanza primaria globale sia sincronizzata con l'istanza di inoltro nel gruppo di disponibilità distribuito. 
->- **Raccomandazione**: ogni volta che si verifica la sincronizzazione, aggiornare sia il nodo del database sia il nodo del gruppo di disponibilità distribuito in SQL Server Management Studio. Dopo il completamento della sincronizzazione, salvare uno screenshot degli stati di ogni replica. In tal modo è possibile tenere traccia della fase in corso, garantire che tutto funzioni correttamente prima del passaggio successivo e facilitare la risoluzione dei problemi in caso di errori. 
+>- **Consiglio**: durante la verifica della sincronizzazione, aggiornare sia il nodo del database sia il nodo del gruppo di disponibilità distribuito in SQL Server Management Studio. Dopo il completamento della sincronizzazione, salvare uno screenshot degli stati di ogni replica. In tal modo è possibile tenere traccia della fase in corso, garantire che tutto funzioni correttamente prima del passaggio successivo e facilitare la risoluzione dei problemi in caso di errori. 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Diagramma di esempio per l'aggiornamento in sequenza di un gruppo di disponibilità distribuito
@@ -234,7 +234,7 @@ Se in ogni gruppo di disponibilità esisteva una terza replica, questa verrà ag
 
 >[!IMPORTANT]
 >- Verificare sempre il completamento della sincronizzazione tra i singoli passaggi. Prima di procedere con il passaggio seguente, verificare che all'interno del gruppo di disponibilità le repliche con commit sincrono siano sincronizzate e che l'istanza primaria globale sia sincronizzata con l'istanza di inoltro nel gruppo di disponibilità distribuito. 
->- Raccomandazione: ogni volta che si verifica la sincronizzazione, aggiornare sia il nodo del database sia il nodo del gruppo di disponibilità distribuito in SQL Server Management Studio. Dopo il completamento della sincronizzazione, salvare uno screenshot dello stato complessivo. In tal modo è possibile tenere traccia della fase in corso, garantire che tutto funzioni correttamente prima del passaggio successivo e facilitare la risoluzione dei problemi in caso di errori. 
+>- Consiglio: ogni volta che si verifica la sincronizzazione, aggiornare sia il nodo del database sia il nodo del gruppo di disponibilità distribuito in SQL Server Management Studio. Dopo il completamento della sincronizzazione, salvare uno screenshot dello stato complessivo. In tal modo è possibile tenere traccia della fase in corso, garantire che tutto funzioni correttamente prima del passaggio successivo e facilitare la risoluzione dei problemi in caso di errori. 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>Passaggi speciali per Change Data Capture o la replica

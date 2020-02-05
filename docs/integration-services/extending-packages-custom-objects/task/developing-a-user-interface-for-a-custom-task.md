@@ -22,10 +22,10 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e12088669f56dce1b6dee69202284f3cc044e274
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286951"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Sviluppo di un'interfaccia utente per un'attività personalizzata
@@ -58,7 +58,7 @@ ms.locfileid: "71286951"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Visualizza il nome dell'attività nella casella degli strumenti del Flusso di controllo.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Descrizione dell'attività (ereditata da <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Questa proprietà è visualizzata nelle descrizioni comandi.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|Icona visualizzata in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)].|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Se utilizzata, impostarla su uno dei valori dell'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Ad esempio, `RequiredProductLevel = DTSProductLevel.None`.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Se utilizzata, impostarla su uno dei valori dell'enumerazione <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Ad esempio: `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Contiene informazioni di contatto per i casi in cui l'attività richiede supporto tecnico.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Assegna un tipo all'attività.|  
 |Attribute.TypeId|Se implementata in una classe derivata, ottiene un identificatore univoco per questo attributo. Per altre informazioni, vedere la proprietà **Attribute.TypeID** nella libreria di classi .NET Framework.|  

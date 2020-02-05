@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73057333"
----
 
 Microsoft accumula e mantiene la documentazione per le versioni molto obsolete di Microsoft SQL Server in un set di pagine Web di archivio. Le pagine Web archiviate non vengono elaborate dai motori di ricerca, ad esempio Bing.com e Google.com. È possibile visualizzare questi archivi all'indirizzo Microsoft Docs _previous-versions/sql/_ :
 

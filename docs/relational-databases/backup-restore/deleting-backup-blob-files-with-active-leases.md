@@ -11,10 +11,10 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908940"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminare i file BLOB di backup con lease attivi
@@ -33,14 +33,14 @@ Se si verifica un errore di ripristino, i ripristini successivi non vengono bloc
 
 Nei passaggi seguenti viene descritto come effettuare una rimozione dopo un backup non riuscito o un'attività di ripristino. È possibile eseguire tutti i passaggi tramite gli script di PowerShell. La sezione seguente include un esempio di script di PowerShell:  
   
-1. **Identificare i BLOB con lease:** se si usa uno script o un processo in cui vengono eseguiti i processi di backup, è possibile rilevare l'errore nello script o nel processo e usarlo per rimuovere i BLOB.  È anche possibile usare le proprietà LeastState e LeaseStats per identificare i BLOB con lease. Dopo aver identificato i BLOB, rivedere l'elenco e verificare la validità del file di backup prima di eliminare il BLOB.  
+1. **Identificare i BLOB con lease:** se si dispone di uno script o un processo in cui vengono eseguiti i processi di backup, è possibile rilevare l'errore nello script o nel processo e usarlo per rimuovere i BLOB.  È anche possibile usare le proprietà LeastState e LeaseStats per identificare i BLOB con lease. Dopo aver identificato i BLOB, rivedere l'elenco e verificare la validità del file di backup prima di eliminare il BLOB.  
   
-1. **Interrompere il lease:** usando una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per altre informazioni, fare clic [qui](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+1. **Interrompere il lease:** tramite una richiesta autorizzata è possibile interrompere il lease senza specificare un relativo ID. Per altre informazioni, fare clic [qui](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     > Tramite SQL Server viene generato un ID lease per stabilire l'accesso esclusivo durante l'operazione di ripristino. L'ID lease di ripristino è BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-1. **Eliminare il BLOB:** per eliminare un BLOB con un lease attivo, per prima cosa è necessario interrompere il lease.  
+1. **Eliminare il BLOB:** per eliminare un BLOB con un lease attivo è innanzitutto necessario interrompere il lease.  
 
 ###  <a name="Code_Example"></a> Esempio di script di PowerShell  
   

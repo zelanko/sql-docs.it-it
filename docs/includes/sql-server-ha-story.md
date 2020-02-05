@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68212268"
----
 Questo articolo offre una panoramica delle soluzioni di continuità aziendale per la disponibilità elevata e il ripristino di emergenza in SQL Server. 
 
 Un'attività comune di cui deve tenere conto chiunque esegua una distribuzione di SQL Server è verificare se tutte le istanze cruciali di SQL Server e i database all'interno delle stesse sono disponibili quando gli utenti finali e aziendali ne hanno bisogno, ovvero in orario di ufficio o 24 ore su 24. L'obiettivo è fare in modo che le interruzioni delle attività aziendali siano minime o inesistenti. Questo concetto è noto anche come continuità aziendale.
@@ -75,8 +67,8 @@ Un cluster di failover di Windows Server e una soluzione Pacemaker sono più sim
 A causa della differenza nello stack di cluster, è necessario apportare alcune modifiche per i gruppi di disponibilità, poiché SQL Server deve gestire alcuni dei metadati gestiti in modo nativo da un cluster WSFC. La modifica più [!IMPORTANT] è l'introduzione di un tipo di cluster per un gruppo di disponibilità. È archiviato in sys.availability_groups nelle colonne cluster_type e cluster_type_desc. Esistono tre tipi di cluster:
 
 * WSFC 
-* External
-* None
+* Esterno
+* nessuno
 
 Tutti i gruppi di disponibilità che richiedono la disponibilità devono usare un cluster sottostante, che nel caso di SQL Server 2017 significa un cluster WSFC o Pacemaker. Per i gruppi di disponibilità basati su Windows Server che usano un cluster WSFC sottostante, il tipo di cluster predefinito è WSFC e non è necessario impostarlo. Per i gruppi di disponibilità basati su Linux, quando si crea il gruppo di disponibilità, il tipo di cluster deve essere impostato su External. L'integrazione con Pacemaker viene configurata dopo la creazione del gruppo di disponibilità, mentre per un cluster WSFC, si esegue al momento della creazione.
 
@@ -91,11 +83,11 @@ La schermata riportata di seguito illustra il supporto per i diversi tipi di clu
 
 ![Opzioni del gruppo di disponibilità SSMS](media/sql-server-ha-story/image2.png)
  
-##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+##### <a name="required_synchronized_secondaries_to_commit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 SQL Server 2016 ha incrementato il supporto per il numero di repliche sincrone da due a tre in Enterprise Edition. Tuttavia, se una replica secondaria viene sincronizzata ma nell'altra si verifica un problema, non esiste un modo per controllare il comportamento in modo da indicare alla replica primaria di attendere la replica che si comporta in modo errato o consentirle di continuare. Ciò significa che la replica primaria a un certo punto continuerebbe a ricevere traffico in scrittura anche se la replica secondaria non è in uno stato sincronizzato, ovvero si ha una perdita di dati nella replica secondaria.
 In SQL Server 2017 ora è disponibile un'opzione in grado di controllare il comportamento dell'azione che si verifica quando sono presenti repliche sincrone denominate REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. L'opzione funziona come indicato di seguito:
-* I tre valori possibili sono: 0, 1 e 2
+* Esistono tre valori possibili: 0, 1 e 2
 * Il valore è il numero di repliche secondarie che devono essere sincronizzate, con implicazioni per la perdita di dati, la disponibilità di gruppo di disponibilità e il failover
 * Per i cluster WSFC e il tipo di cluster None il valore predefinito è 0 e può essere impostato manualmente su 1 o 2
 * Per il tipo di cluster External, per impostazione predefinita, il meccanismo di cluster imposta il valore, che può essere sostituito manualmente. Per tre repliche sincrone, il valore predefinito sarà 1.
@@ -251,7 +243,7 @@ Un warm standby del log shipping può essere tecnicamente configurato per l'uso 
 
 Un aspetto da considerare per tutti gli scenari di scalabilità in lettura con gruppi di disponibilità è che, a differenza della replica transazionale in cui tutti i dati sono live, ogni replica secondaria non è in uno stato in cui è possibile applicare indici univoci e la replica è una copia esatta di quella primaria. Ciò significa che se gli indici sono necessari per la creazione di report o i dati devono essere modificati, l'operazione deve essere eseguita nei database della replica primaria. Se è necessaria questa flessibilità, la replica è una soluzione migliore per i dati leggibili.
 
-## <a name="summary"></a>Riepilogo
+## <a name="summary"></a>Summary
 
 Le istanze e i database di SQL Server 2017 possono essere resi altamente disponibili usando le stesse funzionalità sia in Windows Server che in Linux. Oltre ai normali scenari di disponibilità per disponibilità elevata e ripristino di emergenza a livello locale, è possibile ridurre i tempi di inattività associati gli aggiornamenti e alle migrazioni con le funzionalità di disponibilità di SQL Server. I gruppi di disponibilità consentono inoltre di avere a disposizione copie aggiuntive di un database come parte della stessa architettura per scalare orizzontalmente le copie leggibili. Se si distribuisce una nuova soluzione usando SQL Server 2017 o si prevede di eseguire un aggiornamento, SQL Server 2017 offre la disponibilità e l'affidabilità necessarie.
  

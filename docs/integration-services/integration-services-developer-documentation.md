@@ -19,10 +19,10 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9fdcc10cd21714681578489fd1c71db607226086
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284391"
 ---
 # <a name="integration-services-developer-documentation"></a>Documentazione per gli sviluppatori di Integration Services
@@ -81,7 +81,7 @@ ms.locfileid: "71284391"
  Vengono elencati i codici di errore predefiniti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], oltre ai relativi nomi simbolici e descrizioni.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Strumenti per la risoluzione dei problemi relativi allo sviluppo dei pacchetti](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [Strumenti per la risoluzione dei problemi di sviluppo di pacchetti](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  Descrive le funzionalità e gli strumenti disponibili in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per la risoluzione di problemi relativi ai pacchetti che si verificano durante lo sviluppo.  
   
 ## <a name="external-resources"></a>Risorse esterne  

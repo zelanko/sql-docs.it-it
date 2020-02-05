@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2762e024f3a94ed20c900833e56840b67af1685d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111777"
 ---
 # <a name="scalability"></a>Scalabilità
@@ -37,7 +37,7 @@ Ora l'operazione MERGE è multithread.
 > [!NOTE]
 > L'unione manuale è stata disabilitata perché si prevede che il carico possa essere gestito da un'unione multithread. 
 
-## <a name="dynamic-management-views"></a>DMV  
+## <a name="dynamic-management-views"></a>Viste a gestione dinamica  
 Le DMV [sys.dm_db_xtp_checkpoint_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-stats-transact-sql.md) e [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md) sono state modificate in modo significativo.  
 
 ## <a name="storage-management"></a>Gestione dell'archiviazione

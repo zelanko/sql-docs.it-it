@@ -11,10 +11,10 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283323"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lezione 3-2 - Esecuzione dell'Installazione guidata pacchetti
@@ -85,11 +85,11 @@ In una lezione precedente sono stati modificati i pacchetti inclusi nell'esercit
   
     Poiché i valori delle variabili di ambiente nel computer di destinazione differiscono da quelli delle variabili di ambiente nel computer di sviluppo, nella pagina di convalida dei pacchetti verranno visualizzati diversi avvisi. È probabile che vengano visualizzati quattro avvisi:  
   
-    -   Il file di configurazione: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" non è valido. Controllare il nome del file di configurazione.  
+    -   Il nome del file di configurazione "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" non è valido. Controllare il nome del file di configurazione.  
   
     -   Impossibile caricare almeno una voce di configurazione per il pacchetto. Controllare le voci di configurazione e gli avvisi precedenti per visualizzare le descrizioni delle voci di configurazione con problemi.  
   
-    -   Il file di configurazione: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig non è valido. Controllare il nome del file di configurazione.  
+    -   Il nome del file di configurazione "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig non è valido. Controllare il nome del file di configurazione.  
   
     -   Impossibile caricare almeno una voce di configurazione per il pacchetto. Controllare le voci di configurazione e gli avvisi precedenti per visualizzare le descrizioni delle voci di configurazione con problemi.  
   

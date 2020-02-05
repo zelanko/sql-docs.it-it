@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055944"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Impostazione dell'account del servizio dell'Utilità di avvio del daemon di filtri full-text
@@ -46,7 +46,7 @@ Il servizio Utilità di avvio del daemon filtri full-text di SQL è un servizio 
 ##  <a name="error"></a> Risolvere i problemi di avvio del servizio Utilità di avvio del daemon filtri full-text di SQL  
  Se il servizio Utilità di avvio del daemon filtri full-text di SQL non viene avviato, verificare le possibili cause seguenti:  
   
-### <a name="permissions-issues"></a>Problemi relativi alle autorizzazioni
+### <a name="permissions-issues"></a>Problemi con le autorizzazioni
 -   Il gruppo di servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone dell'autorizzazione necessaria per avviare il servizio Utilità di avvio del daemon filtri full-text di SQL.  
 
      Assicurarsi che il gruppo di servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abbia le autorizzazioni necessarie per l'account del servizio Utilità di avvio del daemon filtri full-text di SQL. Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], al gruppo di servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene concessa l'autorizzazione predefinita per gestire, eseguire query sul e avviare il servizio Utilità di avvio del daemon filtri full-text di SQL. Se le autorizzazioni del gruppo di servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'account del servizio Utilità di avvio del daemon filtri full-text sono state rimosse dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , questo servizio non viene avviato e la ricerca full-text viene disabilitata.     

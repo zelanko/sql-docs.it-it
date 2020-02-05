@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c131954cce8e65cd7f309b59f3780bbd214cb228
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 721347cd8b61497f5ff2c1beeb058a6457c37708
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055937"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761865"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "74055937"
 È possibile importare dati con i comandi `BULK INSERT` o `OPENROWSET(BULK...)`. In genere tali comandi vengono eseguiti in SQL Server Management Studio (SSMS). Per altre informazioni, vedere [Importare dati per operazioni bulk con BULK INSERT o OPENROWSET (BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
 
 ### <a name="use-bcp-from-the-command-prompt"></a>Usare BCP dal prompt dei comandi
-È possibile importare ed esportare i dati con l'utilità della riga di comando BCP. Per altre informazioni, vedere [Importare ed esportare dati per operazioni bulk usando l'utilità BCP](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+È possibile importare ed esportare i dati con l'utilità della riga di comando BCP. Per altre informazioni, vedere [Importare ed esportare dati per operazioni bulk usando l'utilità BCP](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).
 
 ### <a name="use-the-import-flat-file-wizard"></a>Usare la procedura guidata Importa file flat
 Se non sono necessarie tutte le opzioni di configurazione disponibili nell'Importazione/Esportazione guidata e in altri strumenti, è possibile importare un file di testo in SQL Server usando la **procedura guidata Importa file flat** in SQL Server Management Studio (SSMS). Per altre informazioni, vedere gli articoli seguenti:

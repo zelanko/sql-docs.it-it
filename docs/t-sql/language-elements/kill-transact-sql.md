@@ -35,10 +35,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981927"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
@@ -87,7 +87,7 @@ Usare KILL _UOW_ per arrestare le transazioni distribuite orfane. Queste transaz
 WITH STATUSONLY  
 Genera un report di stato su un valore _session ID_ o _UOW_ specificato di cui è in corso il rollback a causa di un'istruzione KILL precedente. KILL WITH STATUSONLY non termina né esegue il rollback di _session ID_ o _UOW_. Il comando visualizza esclusivamente lo stato corrente del rollback.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 L'istruzione KILL viene normalmente usata per terminare un processo che blocca altri processi importanti con blocchi. Può essere usata anche per arrestare un processo che sta eseguendo una query che usa risorse di sistema necessarie. I processi di sistema e i processi che eseguono una stored procedure estesa non possono essere terminati.  
   
 Eseguire l'istruzione KILL con cautela, in particolare quando sono in esecuzione processi critici. Non è possibile terminare un proprio processo. Inoltre, è consigliabile non terminare i processi seguenti:  
@@ -129,7 +129,7 @@ Questo errore si verifica anche se non è in corso il rollback di ID di sessione
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-kill-to-stop-a-session"></a>A. Uso di KILL per arrestare una sessione  
+### <a name="a-using-kill-to-stop-a-session"></a>R. Uso di KILL per arrestare una sessione  
  L'esempio seguente illustra come arrestare l'ID di sessione `53`.  
   
 ```sql  

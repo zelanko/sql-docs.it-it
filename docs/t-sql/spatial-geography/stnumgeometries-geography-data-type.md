@@ -18,10 +18,10 @@ ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7a1150128c281be485ca23dab65db3d82b88e1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120911"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (tipo di dati geography)
@@ -41,7 +41,7 @@ ms.locfileid: "68120911"
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce 1 se l'istanza **geography** non è un'istanza **MultiPoint**, **MultiLineString**, **MultiPolygon** o **GeometryCollection** oppure 0 se l'istanza **geography** è vuota.  
   
 ## <a name="examples"></a>Esempi  

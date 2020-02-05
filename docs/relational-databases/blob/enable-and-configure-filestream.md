@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908763"
 ---
 # <a name="enable-and-configure-filestream"></a>Abilitare e configurare FILESTREAM
@@ -27,7 +27,7 @@ ms.locfileid: "72908763"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Per abilitare e modificare le impostazioni FILESTREAM  
   
-1.  Fare clic sul pulsante **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
+1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
   
 2.  Nell'elenco dei servizi fare clic con il pulsante destro del mouse su **Servizi di SQL Server**e quindi scegliere **Apri**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72908763"
   
 8.  Se ai dati FILESTREAM archiviati in tale condivisione devono accedere client remoti, selezionare **Consenti ai client remoti l'accesso tramite flusso ai dati FILESTREAM**.  
   
-9. Fare clic su **Applica**.  
+9. Fare clic su **Apply**.  
   
 10. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]fare clic su **Nuova query** per visualizzare l'editor di query.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "72908763"
     RECONFIGURE  
     ```  
   
-12. Fare clic su **Esegui**.  
+12. Fare clic su **Execute**.  
   
 13. Riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
@@ -77,9 +77,9 @@ ms.locfileid: "72908763"
   
 ||||||  
 |-|-|-|-|-|  
-|Livello RAID|Prestazioni di scrittura|Prestazioni di lettura|Tolleranza di errore|Remarks|  
+|Livello RAID|Prestazioni di scrittura|Prestazioni di lettura|Tolleranza di errore|Osservazioni|  
 |RAID 5|Normale|Normale|Eccellenti|Le prestazioni sono più elevate rispetto all'utilizzo di un unico disco o di JBOD e meno elevate rispetto all'utilizzo di RAID 0 o RAID 5 con striping.|  
-|RAID 0|Eccellenti|Eccellenti|None||  
+|RAID 0|Eccellenti|Eccellenti|nessuno||  
 |RAID 5 + striping|Eccellenti|Eccellenti|Eccellenti|Opzione più costosa.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   

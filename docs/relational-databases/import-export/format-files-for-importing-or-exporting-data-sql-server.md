@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3cc48298aadc027509adb9d0abf5f5057e0c4fef
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055973"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Formattare i file per importare ed esportare i dati (SQL Server)
@@ -36,12 +36,12 @@ Quando si importando dati in blocco in una tabella di [!INCLUDE[ssNoVersion](../
 
 ## <a name="ExamplesOfFFs"></a> Esempi di file di formato
 
-Negli esempi seguenti viene illustrato il layout di un file di formato non XML e di un file di formato XML. Questi file di formato corrispondono alla tabella `HumanResources.myTeam` nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Questa tabella contiene quattro colonne: `EmployeeID`, `Name`, `Title` e `ModifiedDate`.
+Negli esempi seguenti viene illustrato il layout di un file di formato non XML e di un file di formato XML. Questi file di formato corrispondono alla tabella `HumanResources.myTeam` nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Questa tabella contiene quattro colonne: `EmployeeID`, `Name`, `Title`e `ModifiedDate`.
 
 > [!NOTE]
 > Per informazioni su questa tabella e su come crearla, vedere [Tabella di esempio HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).
 
-### <a name="a-using-a-non-xml-format-file"></a>A. Utilizzo di un file di formato non XML
+### <a name="a-using-a-non-xml-format-file"></a>R. Utilizzo di un file di formato non XML
 
 Il file di formato non XML seguente utilizza il formato di dati nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la tabella `HumanResources.myTeam` . Questo file di formato è stato creato utilizzando il comando `bcp` seguente.
 

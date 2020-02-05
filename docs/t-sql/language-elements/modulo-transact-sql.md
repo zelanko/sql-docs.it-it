@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 67a4a4ad32e1d9471dc9a5b3d2f1c7b067cf480b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122118"
 ---
 # <a name="-modulus-transact-sql"></a>% (modulo) (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68122118"
 
   Viene restituito il resto di una divisione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,12 +55,12 @@ dividend % divisor
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'operatore aritmetico modulo può essere usato nell'elenco di selezione dell'istruzione SELECT con una qualsiasi combinazione di nomi di colonna, costanti numeriche o qualsiasi espressione valida delle categorie di tipi di dati integer e monetary o del tipo di dati **numeric**.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-example"></a>A. Esempio semplice  
+### <a name="a-simple-example"></a>R. Esempio semplice  
  Nell'esempio seguente viene diviso il numero 38 per 5. Viene restituito 7 come parte intera del risultato e viene illustrata la restituzione del resto di 3 da parte del modulo.  
   
 ```  
@@ -82,7 +82,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C: Esempio semplice  
+### <a name="c-simple-example"></a>C. Esempio semplice  
  L'esempio seguente visualizza i risultati per l'operatore `%` quando si divide 3 per 2.  
   
 ```  

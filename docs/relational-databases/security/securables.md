@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986570"
 ---
 # <a name="securables"></a>Entità a protezione diretta
@@ -31,20 +31,20 @@ ms.locfileid: "67986570"
 
   Le entità a protezione diretta sono le risorse il cui accesso è controllato dal sistema di autorizzazioni del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Ad esempio, una tabella è un'entità a protezione diretta. Alcune entità a protezione diretta possono essere contenute da altre, creando gerarchie nidificate denominate ambiti, che possono a loro volta essere protetti. Gli ambiti a protezione diretta sono **server**, **database**e **schema**.  
   
-## <a name="securable-scope-server"></a>Ambito a protezione diretta: Server  
+## <a name="securable-scope-server"></a>Ambito a protezione diretta: server  
  L'ambito a protezione diretta **server** contiene le entità a protezione diretta seguenti:  
   
 -   gruppo di disponibilità  
   
 -   Endpoint  
   
--   Account di accesso  
+-   Login  
   
--   Ruolo del server  
+-   Ruolo server  
   
 -   Database  
   
-## <a name="securable-scope-database"></a>Ambito a protezione diretta: Database  
+## <a name="securable-scope-database"></a>Ambito a protezione diretta: database  
  L'ambito a protezione diretta **database** contiene le entità a protezione diretta seguenti:  
   
 -   Ruolo applicazione  
@@ -69,11 +69,11 @@ ms.locfileid: "67986570"
   
 -   Route  
   
--   schema  
+-   SCHEMA  
   
 -   Elenco delle proprietà di ricerca  
   
--   Servizio  
+-   Service  
   
 -   Chiave simmetrica  
   
@@ -82,7 +82,7 @@ ms.locfileid: "67986570"
 ## <a name="securable-scope-schema"></a>Ambito a protezione diretta: schema  
  L'ambito a protezione diretta **schema** contiene le entità a protezione diretta seguenti:  
   
--   Tipo  
+-   Type  
   
 -   Raccolta di XML Schema  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67986570"
   
     -   Tabella  
   
-    -   Vista 
+    -   Visualizza 
     
     -   Tabella esterna 
   

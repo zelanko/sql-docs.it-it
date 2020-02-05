@@ -18,10 +18,10 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012106"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
@@ -49,7 +49,7 @@ ms.locfileid: "68012106"
  L'associazione di canale stabilisce un canale sicuro (Schannel) tra un client e un'istanza del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il servizio verifica l'autenticità del client confrontando il token CBT (Channel Binding Token) del client specifico di tale canale con il proprio CBT. L'associazione di canale neutralizza sia gli attacchi luring che di spoofing. Comporta tuttavia costi di runtime maggiori in quanto richiede la crittografia TLS (Transport Layer Security) di tutto il traffico della sessione. Si verifica l'associazione di canale quando un'applicazione client utilizza la crittografia per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], indipendentemente dal fatto che la crittografia venga imposta dal client o dal server.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 e SSL 3.0. Se si applica un protocollo diverso, ad esempio TLS 1.1 o TLS 1.2, apportando modifiche nel livello SChannel del sistema operativo, le connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero non riuscire.  
+>  I provider di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano TLS 1.0 e SSL 3.0. Se si applica un protocollo diverso, ad esempio TLS 1.1 o TLS 1.2, apportando modifiche nel livello SChannel del sistema operativo, le connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbero non riuscire.  
   
 ### <a name="operating-system-support"></a>Supporto nei sistemi operativi  
  Nei collegamenti seguenti vengono fornite ulteriori informazioni sul supporto della **protezione estesa**in Windows:  

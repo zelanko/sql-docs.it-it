@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74947173"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Distribuire un progetto SSIS da Visual Studio Code con Transact-SQL
@@ -50,9 +50,9 @@ Per abilitare i comandi `mssql` e Transact-SQL IntelliSense, impostare la modali
  
 3. Nel menu a discesa **Seleziona modalità linguaggio** visualizzato selezionare o immettere **SQL** e quindi premere **INVIO** per impostare la modalità del linguaggio su SQL. 
 
-## <a name="supported-authentication-method"></a>Metodo di autenticazione supportato
+## <a name="supported-authentication-method"></a>Metodo di autenticazione supportata
 
-Vedere i [metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Vedere [Metodi di autenticazione per la distribuzione](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>Connettersi al database del catalogo SSIS
 

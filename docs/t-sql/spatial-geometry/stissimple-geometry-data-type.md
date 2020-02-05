@@ -18,10 +18,10 @@ ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0b91fdde3c6940ffa0a7f2e77591e05578e005c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894913"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (tipo di dati geometry)
@@ -41,7 +41,7 @@ Restituisce 1 se un'istanza **geometry** è semplice, in base alla definizione d
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per essere semplice, un'istanza **geometry** deve soddisfare tutti i requisiti seguenti:  
   
 -   Ogni figura dell'istanza non deve intersecarsi, salvo agli endpoint.  

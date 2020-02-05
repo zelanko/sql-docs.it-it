@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125175"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68125175"
   
  In altre parole, è possibile archiviare file e documenti in speciali tabelle denominate FileTable in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma accedere a tali file e documenti da applicazioni di Windows come se questi fossero archiviati nel file system, senza apportare alcuna modifica alle applicazioni del client.  
   
- La caratteristica FileTable si basa sulla tecnologia FILESTREAM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni su FILESTREAM, vedere [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
+ La caratteristica FileTable si basa sulla tecnologia FILESTREAM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni su FILESTREAM, vedere [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 ##  <a name="Goals"></a> Vantaggi della caratteristica FileTable  
  Tra gli obiettivi della caratteristica FileTable sono inclusi i seguenti:  
@@ -111,16 +111,16 @@ ms.locfileid: "68125175"
  [Creare, modificare ed eliminare FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)  
  Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
   
- [Caricamento di file in FileTable](../../relational-databases/blob/load-files-into-filetables.md)  
+ [Caricare file in FileTable](../../relational-databases/blob/load-files-into-filetables.md)  
  Viene descritto come caricare o eseguire la migrazione dei file in tabelle FileTable.  
   
  [Usare directory e percorsi in FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
  Descrive la struttura di directory nella quale vengono archiviati i file in FileTable.  
   
- [Accesso a tabelle FileTable tramite Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)  
+ [Accedere a tabelle FileTable tramite Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)  
  Viene descritto il funzionamento dei comandi Transact-SQL DML (Data Manipulation Language) con una tabella FileTable.  
   
- [Accedere alle tabelle FileTable con API di Input-Output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
+ [Accedere alle tabelle FileTable con API di input/output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
  Viene descritto il funzionamento dell'I/O del file system in una tabella FileTable.  
   
  [Gestire tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
@@ -133,7 +133,7 @@ ms.locfileid: "68125175"
  [Compatibilità di FileTable con altre funzionalità di SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)  
  Viene descritto il funzionamento delle tabelle FileTable con altre caratteristiche di SQL Server.  
   
- [DDL FileTable, funzioni, stored Procedure e viste](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
+ [DDL, funzioni, stored procedure e viste FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
  Vengono elencate le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e gli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aggiunti o modificati per supportare la funzione FileTable.  
 
 ## <a name="see-also"></a>Vedere anche

@@ -24,10 +24,10 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064695"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
@@ -114,7 +114,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  ENCRYPTION BY PASSWORD = '*password*'  
  Specifica la password con cui crittografare la chiave privata. Se questa clausola è assente, la chiave privata verrà crittografata con la chiave master del database. *password* ha un massimo di 128 caratteri. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Una *chiave asimmetrica* è un'entità a protezione diretta a livello del database. Nella forma predefinita, questa entità contiene sia una chiave pubblica che una chiave privata. Se eseguita senza la clausola FROM, l'istruzione CREATE ASYMMETRIC KEY genera una nuova coppia di chiavi. Se eseguita con la clausola FROM, l'istruzione CREATE ASYMMETRIC KEY importa una coppia di chiavi da un file o importa una chiave pubblica da un assembly o da un file di DLL.  
   
  Per impostazione predefinita, la chiave privata è protetta dalla chiave master del database. Se non esiste una chiave master del database, è necessario proteggere la chiave privata con una password.  
@@ -126,7 +126,7 @@ CREATE ASYMMETRIC KEY asym_key_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-an-asymmetric-key"></a>A. Creazione di una chiave asimmetrica  
+### <a name="a-creating-an-asymmetric-key"></a>R. Creazione di una chiave asimmetrica  
  Nell'esempio seguente viene creata una chiave asimmetrica denominata `PacificSales09` tramite l'algoritmo `RSA_2048` e la chiave privata viene protetta con una password.  
   
 ```sql  

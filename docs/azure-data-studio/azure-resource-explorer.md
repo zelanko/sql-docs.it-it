@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.date: 09/24/2018
 ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
-ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73801143"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Esplorare e gestire risorse SQL di Azure con Azure Resource Explorer
@@ -33,7 +33,7 @@ Per visualizzare le risorse SQL associate a un account Azure, è necessario prim
 
 1. Aprire la finestra di dialogo **Account collegati** tramite l'icona di gestione account in basso a sinistra o tramite il collegamento **Accedi ad Azure...** in Azure Resource Explorer.
 
-    ![Accedi ad Azure](media/azure-resource-explorer/sign-in-to-azure.png)
+    ![Accedere ad Azure](media/azure-resource-explorer/sign-in-to-azure.png)
 
 2. Nella finestra di dialogo **Account collegati** fare clic su **Aggiungi un account**.
 

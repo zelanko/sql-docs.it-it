@@ -20,10 +20,10 @@ ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982465"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73982465"
 ## <a name="return-types"></a>Tipi restituiti  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le opzioni possono derivare dall'uso del comando **SET** o dal valore di **sp_configure user options**. I valori di sessione configurati con il comando **SET** sostituiscono le opzioni di **sp_configure**. Molti strumenti, come ad esempio [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], configurano automaticamente le opzioni impostate. A ogni utente è associata una funzione @@OPTIONS che rappresenta la configurazione.  
   
  Tramite l'istruzione SET è possibile modificare le opzioni di linguaggio e di esecuzione delle query per una sessione utente specifica. **\@\@OPTIONS** è in grado di rilevare solo le opzioni impostate su ON o OFF.  
@@ -53,7 +53,7 @@ ms.locfileid: "73982465"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. Dimostrazione di come le modifiche influiscono sul comportamento  
+### <a name="a-demonstration-of-how-changes-affect-behavior"></a>R. Dimostrazione di come le modifiche influiscono sul comportamento  
  L'esempio seguente illustra la differenza nel comportamento di concatenazione con due diverse impostazioni dell'opzione **CONCAT_NULL_YIELDS_NULL**.  
   
 ```  

@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305171"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Uso di PIVOT e UNPIVOT
@@ -62,7 +62,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Gli identificatori di colonna nella clausola `UNPIVOT` seguono le regole di confronto dei cataloghi. Per il [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], le regole di confronto sono sempre `SQL_Latin1_General_CP1_CI_AS`. Per i database parzialmente indipendenti di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], le regole di confronto sono sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se la colonna è combinata con altre colonne, sarà necessaria una clausola COLLATE, ovvero `COLLATE DATABASE_DEFAULT`, per evitare conflitti.  
 
   

@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cdd1dc130efb795b957911c51d5d8c2243522d38
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281612"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Eseguire un pacchetto SSIS da Visual Studio Code con Transact-SQL
@@ -27,7 +27,7 @@ Visual Studio Code è un editor di codice per Windows, macOS e Linux che support
 ## <a name="prerequisites"></a>Prerequisites
 
 Prima di iniziare, assicurarsi di aver installato la versione più recente di Visual Studio Code e caricato l'estensione `mssql`. Per scaricare questi strumenti, vedere le pagine seguenti:
--   [Scaricare il codice per Visual Studio](https://code.visualstudio.com/Download)
+-   [Download di Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
@@ -54,7 +54,7 @@ Per abilitare i comandi `mssql` e Transact-SQL IntelliSense, la modalità di lin
 
 Per eseguire il pacchetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
-1. Accedere al [portale di Azure](https://portal.azure.com/).
+1. Accedere al [Portale di Azure](https://portal.azure.com/).
 2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
@@ -74,12 +74,12 @@ Usare SQL Visual Studio Code per stabilire una connessione al catalogo SSIS.
 
 4. Seguire le istruzioni per specificare le proprietà di connessione per il nuovo profilo di connessione. Dopo aver specificato ogni valore, premere **INVIO** per continuare. 
 
-   | Impostazione       | Valore suggerito | Altre informazioni |
+   | Impostazione       | Valore consigliato | Altre informazioni |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome server** | Nome completo del server | Se si sta eseguendo la connessione a un server di database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`. |
    | **Nome database** | **SSISDB** | Il nome del database a cui si effettua la connessione. |
-   | **Autenticazione** | Account di accesso SQL | Con l'autenticazione di SQL Server è possibile connettersi a SQL Server o al database SQL di Azure. Se ci si connette a un server di database SQL di Azure, non è possibile usare l'autenticazione di Windows. |
-   | **User name** | Account amministratore del server | Account specificato al momento della creazione del server. |
+   | **autenticazione** | Account di accesso SQL | Con l'autenticazione di SQL Server è possibile connettersi a SQL Server o al database SQL di Azure. Se ci si connette a un server di database SQL di Azure, non è possibile usare l'autenticazione di Windows. |
+   | **Nome utente** | Account amministratore del server | Account specificato al momento della creazione del server. |
    | **Password (account di accesso SQL)** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
    | **Salvare la password?** | Sì o No | Se non si vuole immettere la password ogni volta, selezionare Sì. |
    | **Immettere un nome per questo profilo** | Un nome di profilo, ad esempio **mySSISServer** | Se si salva un nome di profilo, gli accessi successivi saranno più rapidi. | 

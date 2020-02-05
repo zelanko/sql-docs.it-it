@@ -19,16 +19,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278148"
 ---
 # <a name="spatial-data-sql-server"></a>Dati spaziali (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  I dati spaziali rappresentano informazioni sulla posizione fisica e sulla forma di oggetti geometrici. Questi oggetti possono essere posizioni dei punti oppure oggetti più complessi ad esempio paesi, strade o laghi.  
+  I dati spaziali rappresentano informazioni sulla posizione fisica e sulla forma degli oggetti geometrici. Questi oggetti possono essere dei punti oppure oggetti più complessi, come ad esempio paesi, strade o laghi.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta due tipi di dati spaziali: il tipo di dati **geometry** e il tipo di dati **geography** .  
   
@@ -39,23 +39,23 @@ ms.locfileid: "72278148"
  Entrambi i tipi di dati sono implementati come tipi di dati Common Language Runtime (CLR) .NET in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="reltasks"></a> Attività correlate  
- [Creazione, costruzione e query di istanze geometry](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
+ [Creare, costruire ed eseguire query di istanze di geometria](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  Vengono descritti i metodi da utilizzare con le istanze del tipo di dati geometry.  
   
- [Creare, Costruire e Istanze geografiche di Query](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
+ [Creare, costruire ed eseguire query di istanze geografiche](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
  Vengono descritti i metodi che è possibile utilizzare con istanze del tipo di dati geography.  
   
- [Query dei dati spaziali per Nearest Neighbor](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
+ [Eseguire query dei dati spaziali per Nearest Neighbor](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
  Viene descritto il modello di query utilizzato per trovare gli oggetti spaziali più vicini a un oggetto spaziale specifico.  
   
- [Creazione, modifica ed eliminazione di indici spaziali](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
+ [Creare, modificare ed eliminare indici spaziali](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  Fornisce informazioni sulla creazione, la modifica e il rilascio di un indice spaziale.  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md)  
  Sono stati introdotti i tipi di dati spaziali.  
   
--   [Punto](../../relational-databases/spatial/point.md)  
+-   [Point](../../relational-databases/spatial/point.md)  
   
 -   [LineString](../../relational-databases/spatial/linestring.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72278148"
   
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
   
--   [Poligono](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
   
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
   

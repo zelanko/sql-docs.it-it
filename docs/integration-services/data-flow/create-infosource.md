@@ -11,10 +11,10 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1556a98ad812c32c514b8e55ab1ece3e6d7a40e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293255"
 ---
 # <a name="create-infosource"></a>Crea InfoSource
@@ -51,6 +51,6 @@ ms.locfileid: "71293255"
  Se si seleziona questa opzione, viene visualizzata la finestra di dialogo **Crea InfoSource per dati master** . Usare la finestra di dialogo **Crea InfoSource per dati master** per creare il nuovo InfoSource. Per altre informazioni su questa finestra di dialogo, vedere [Crea InfoSource per dati master](../../integration-services/data-flow/create-infosource-for-master-data.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Guida sensibile al contesto di Microsoft Connector per SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

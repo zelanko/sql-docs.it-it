@@ -14,10 +14,10 @@ ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c3583baedb1766944a89b9f4491c53a94a17f3fa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297307"
 ---
 # <a name="year-ssis-expression"></a>YEAR (espressione SSIS)
@@ -35,13 +35,13 @@ YEAR(date)
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *data*  
+ *date*  
  Data in qualsiasi formato di data.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, YEAR restituirà Null.  
   
  Per i valori letterali di data è necessario eseguire il cast esplicito a uno dei tipi di dati date. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

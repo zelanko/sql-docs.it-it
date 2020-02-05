@@ -18,10 +18,10 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066555"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo di dati geography)
@@ -54,13 +54,13 @@ ms.locfileid: "68066555"
   
 -   **NULL** viene passato al metodo, ad esempio `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono illustrati i risultati restituiti per i diversi valori della distanza.  
   
 |Valore del parametro distance|Dimensioni tipo|Tipo spaziale restituito|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|Zero o uno|Istanza **GeometryCollection** vuota|  
-|distance \< 0|Due o più|Istanza **CurvePolygon** o **GeometryCollection** con buffer negativo.<br /><br /> Nota: è possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota|
+|distance \< 0|Due o più|Istanza **CurvePolygon** o **GeometryCollection** con buffer negativo.<br /><br /> Nota: è possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota.|
 |distance = 0|Tutte le dimensioni|Copia dell'istanza **geography** di chiamata|  
 |distance > 0|Tutte le dimensioni|Istanza **CurvePolygon** o **GeometryCollection**|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68066555"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. Chiamata a BufferWithCurves() con un valore di parametro < 0 in un'istanza di geografia unidimensionale  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>R. Chiamata a BufferWithCurves() con un valore di parametro < 0 in un'istanza di geografia unidimensionale  
  Nell'esempio seguente viene restituita un'istanza `GeometryCollection` vuota:  
   
  ```sql

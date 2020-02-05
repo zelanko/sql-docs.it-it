@@ -13,10 +13,10 @@ ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1f2aafff1e63fbacc92dbbac40c93ef090a4aef9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297925"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>Completamento Configurazione guidata dimensioni a modifica lenta
@@ -33,6 +33,6 @@ ms.locfileid: "71297925"
  Consente di verificare che l'elenco degli output sia appropriato per gli scopi desiderati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configurare gli output tramite Configurazione guidata dimensioni a modifica lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

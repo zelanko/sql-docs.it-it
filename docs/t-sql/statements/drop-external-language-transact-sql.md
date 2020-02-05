@@ -11,10 +11,10 @@ ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3767bec1807b68df3eb3f82287a5c871d653a286
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892979"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
@@ -45,7 +45,7 @@ Per eliminare un linguaggio è necessario il privilegio ALTER ANY EXTERNAL LANGU
 
 Se l'istruzione ha esito positivo viene restituito un messaggio informativo.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Prima di poter eliminare un linguaggio esterno, è necessario eliminare tutte le librerie esterne per il linguaggio specificato.
 

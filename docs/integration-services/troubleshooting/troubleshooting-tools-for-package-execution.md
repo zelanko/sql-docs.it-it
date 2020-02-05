@@ -17,10 +17,10 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73637947"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
@@ -81,11 +81,11 @@ ms.locfileid: "73637947"
   
     1.  **Creare una tabella padre per la registrazione di ogni esecuzione di un pacchetto**. In questa tabella padre è inclusa una singola riga per ogni esecuzione di un pacchetto e viene utilizzato l'identificatore ExecutionID per il collegamento ai record figlio nella tabella di registrazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile utilizzare un'attività Esegui SQL all'inizio di ogni pacchetto per creare questa nuova riga e registrare l'ora di inizio. È quindi possibile utilizzare un'altra attività Esegui SQL alla fine del pacchetto per aggiornare la riga con ora di fine, durata e stato.  
   
-    2.  **Aggiungere informazioni di controllo al flusso di dati**. È possibile utilizzare la trasformazione Controllo per aggiungere alle righe del flusso di dati informazioni sull'esecuzione del pacchetto che ha creato o modificato ogni riga. La trasformazione Controllo rende disponibili nove informazioni, incluse quelle relative a PackageName ed ExecutionInstanceGUID. Per altre informazioni, vedere [Trasformazione Controllo](../../integration-services/data-flow/transformations/audit-transformation.md). Se si desidera includere in ogni riga informazioni personalizzate a scopo di controllo, è possibile aggiungere le informazioni desiderate alle righe del flusso di dati utilizzando una trasformazione Colonna derivata. Per altre informazioni, vedere [trasformazione Colonna derivata](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+    2.  **Aggiungere informazioni di controllo al flusso di dati**. È possibile utilizzare la trasformazione Controllo per aggiungere alle righe del flusso di dati informazioni sull'esecuzione del pacchetto che ha creato o modificato ogni riga. La trasformazione Controllo rende disponibili nove informazioni, incluse quelle relative a PackageName ed ExecutionInstanceGUID. Per altre informazioni, vedere [Trasformazione Controllo](../../integration-services/data-flow/transformations/audit-transformation.md). Se si desidera includere in ogni riga informazioni personalizzate a scopo di controllo, è possibile aggiungere le informazioni desiderate alle righe del flusso di dati utilizzando una trasformazione Colonna derivata. Per altre informazioni, vedere [Trasformazione Colonna derivata](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Valutare l'opportunità di acquisire i dati sul conteggio delle righe**. Prendere in considerazione la creazione di una tabella separata per le informazioni sul conteggio delle righe, in cui ogni istanza di esecuzione di un pacchetto è identificata tramite il relativo ExecutionID. Utilizzare la trasformazione Conteggio righe per salvare il conteggio delle righe in una serie di variabili in punti critici del flusso di dati. Al termine del flusso di dati, utilizzare un'attività Esegui SQL per inserire le serie di valori in una riga della tabella, per operazioni successive di analisi e creazione di report.  
   
-     Per altre informazioni su questo approccio, vedere la sezione relativa a registrazione e controllo ETL nel white paper [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582) (Project REAL: Indicazioni di progettazione ETL per Business Intelligence).  
+     Per altre informazioni su questo approccio, vedere la sezione relativa a registrazione e controllo ETL nel white paper [!INCLUDE[msCoName](../../includes/msconame-md.md)][Progetto REAL: progettazione ETL di Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite i file di dump del debug  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Per altre informazioni, vedere [Generazione di file di dump per l'esecuzione del pacchetto](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  

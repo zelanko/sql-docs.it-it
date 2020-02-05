@@ -14,10 +14,10 @@ ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7a0e8974f781f5f69817cf3374416de7bc32580
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288381"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (espressione SSIS)
@@ -41,7 +41,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il tipo di dati dell’argomento *character_expression* deve essere DT_WSTR.  
   
  Se *character_expression* è null, REVERSE restituisce un risultato null.  

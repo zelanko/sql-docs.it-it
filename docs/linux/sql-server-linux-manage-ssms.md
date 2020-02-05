@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000097"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usare SQL Server Management Studio in Windows per gestire SQL Server in Linux
@@ -57,13 +57,13 @@ Per connettersi, seguire questa procedura di base:
 
    | Impostazione | Descrizione |
    |-----|-----|
-   | **Tipo server** | L'impostazione predefinita è il motore di database. Non modificare questo valore. |
+   | **Tipo di server** | L'impostazione predefinita è il motore di database. Non modificare questo valore. |
    | **Nome server** | Immettere il nome o l'indirizzo IP del computer SQL Server Linux di destinazione. |
-   | **Autenticazione** | Per SQL Server in Linux, usare **Autenticazione di SQL Server**. |
-   | **Account di accesso** | Immettere il nome di un utente con accesso a un database sul server (ad esempio, l'account **SA** predefinito creato durante l'installazione). |
+   | **autenticazione** | Per SQL Server in Linux, usare **Autenticazione di SQL Server**. |
+   | **Accesso** | Immettere il nome di un utente con accesso a un database sul server (ad esempio, l'account **SA** predefinito creato durante l'installazione). |
    | **Password** | Immettere la password per l'utente specificato (per l'account **SA** creato durante l'installazione). |
 
-    ![SQL Server Management Studio: connettersi al server di database SQL](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio: Connettersi a un server di database SQL](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. Fare clic su **Connetti**.
 
@@ -91,7 +91,7 @@ Dopo la connessione al server, è possibile connettersi a un database ed eseguir
 
 1. Fare clic sul pulsante **Esegui** per eseguire la query e visualizzare i risultati.
 
-   ![Esito positivo. Connettersi al server di database SQL: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Esito positivo. Connettersi a un server di database SQL: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Nonostante sia possibile eseguire quasi tutte le attività di gestione con le query Transact-SQL, SSMS è uno strumento grafico che rende più semplice la gestione di SQL Server. Le sezioni seguenti forniscono alcuni esempi dell'uso dell'interfaccia utente grafica.
 
@@ -143,6 +143,6 @@ Quando un riquadro è espanso, Monitoraggio attività esegue una query sull'ista
 ## <a name="see-also"></a>Vedere anche
 - [Che cos'è SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Esportare e importare un database con SSMS](sql-server-linux-migrate-ssms.md)
-- [Esercitazione: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Esercitazione su SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 - [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Monitoraggio delle prestazioni e dell'attività del server](../relational-databases/performance/server-performance-and-activity-monitoring.md)

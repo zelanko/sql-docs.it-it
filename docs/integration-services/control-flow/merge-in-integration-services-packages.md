@@ -13,10 +13,10 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f152f3c0115ad2af67a1b258ff19aa0142b277d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294054"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
@@ -54,7 +54,7 @@ ms.locfileid: "71294054"
  Nella tabella FactBuyingHabits del data warehouse viene rilevata l'ultima data in cui un cliente ha acquistato un determinato prodotto. La tabella è costituita dalle colonne ProductID, CustomerID e PurchaseDate. Ogni settimana, il database transazionale genera una tabella PurchaseRecords che include gli acquisti eseguiti durante tale settimana. L'obiettivo è quello di utilizzare una singola istruzione MERGE per unire le informazioni della tabella PurchaseRecords nella tabella FactBuyingHabits. Per le coppie prodotto-cliente che non esistono, l'istruzione MERGE inserisce nuove righe. Per le coppie prodotto-cliente che esistono, l'istruzione MERGE aggiorna la data di acquisto più recente.  
   
 ###### <a name="track-price-history"></a>Rilevare la cronologia dei prezzi  
- La tabella DimBook rappresenta l'elenco di libri nell'inventario di un libraio e identifica la cronologia dei prezzi di ogni libro. Questa tabella contiene queste colonne: ISBN, ProductID, Price, Shelf e IsCurrent. Include inoltre un'unica riga per ogni prezzo assegnato al libro. Una di queste righe contiene il prezzo corrente. Per indicare quale riga contiene il prezzo corrente, il valore della colonna IsCurrent per tale riga è impostato su 1.  
+ La tabella DimBook rappresenta l'elenco di libri nell'inventario di un libraio e identifica la cronologia dei prezzi di ogni libro. La tabella contiene le colonne ISBN, ProductID, Price, Shelf e IsCurrent. Include inoltre un'unica riga per ogni prezzo assegnato al libro. Una di queste righe contiene il prezzo corrente. Per indicare quale riga contiene il prezzo corrente, il valore della colonna IsCurrent per tale riga è impostato su 1.  
   
  Ogni settimana, il database genera una tabella WeeklyChanges che contiene le modifiche di prezzo e i nuovi libri aggiunti durante la settimana. Utilizzando una singola istruzione MERGE, è possibile applicare le modifiche della tabella WeeklyChanges alla tabella DimBook. L'istruzione MERGE inserisce nuove righe per i libri appena aggiunti e imposta la colonna IsCurrent su 0 per le righe di libri esistenti il cui prezzo è stato modificato. Inserisce inoltre nuove righe per i libri il cui prezzo è stato modificato e, per queste nuove righe, imposta il valore della colonna IsCurrent su 1.  
   

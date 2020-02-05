@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982571"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
@@ -219,7 +219,7 @@ MAXDOP = *max_degree_of_parallelism*
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede una di queste autorizzazioni:  
   
--   ALTER TABLE  
+-   MODIFICA TABELLA  
 -   L'utente è il proprietario della tabella  
 -   Appartenenza al ruolo predefinito del database **db_ddladmin**  
   
@@ -248,7 +248,7 @@ MAXDOP = *max_degree_of_parallelism*
 
 ### <a name="examples-use-the-adventureworks-database"></a>Gli esempi usano il database AdventureWorks.  
 
-### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. Utilizzo di CREATE STATISTICS con l'opzione SAMPLE number PERCENT  
+### <a name="a-using-create-statistics-with-sample-number-percent"></a>R. Utilizzo di CREATE STATISTICS con l'opzione SAMPLE number PERCENT  
  Nell'esempio seguente vengono create le statistiche `ContactMail1` usando un campione casuale del 5% delle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Person` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  

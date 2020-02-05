@@ -18,10 +18,10 @@ ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5663bc7a7236a49b6b97c41ed5c96e53f337c186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930178"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (tipo di dati geometry)
@@ -43,12 +43,12 @@ Restituisce il centro geometrico di un'istanza **geometry** costituita da uno o 
   
  Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  `STCentroid()` restituisce Null se l'istanza **geometry** non è di tipo **Polygon, CurvePolygon** o **MultiPolygon**.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Calcolo del centro di un'istanza Polygon  
+### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>R. Calcolo del centro di un'istanza Polygon  
  L'esempio seguente usa `STCentroid()` per calcolare il centro di un'istanza `polygon``geometry`:  
   
 ```  

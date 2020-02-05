@@ -17,10 +17,10 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72916196"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Applicazione dei backup di log delle transazioni (SQL Server)
@@ -52,7 +52,7 @@ ms.locfileid: "72916196"
 ##  <a name="PITrestore"></a> Usare i backup del log per eseguire il ripristino fino al momento dell'errore  
  Si osservi a titolo di esempio la sequenza di eventi seguente:  
   
-|Time|Evento|  
+|Tempo|Event|  
 |----------|-----------|  
 |8\.00|Backup del database per creare un backup completo del database.|  
 |12.00|Backup del log delle transazioni|  
@@ -65,13 +65,13 @@ ms.locfileid: "72916196"
   
  Per ripristinare lo stato del database corrispondente alle ore 21.45 (punto di errore), è possibile utilizzare una delle procedure alternative seguenti:  
 
- **Alternativa 1: ripristinare il database da un backup completo più recente**  
+ **Alternativa 1: ripristino del database dal backup completo più recente**  
   
 1.  Creare un backup della parte finale del log delle transazioni attivo a partire dal momento dell'errore.  
   
 2.  Non ripristinare del backup completo del database delle 18.00. Ripristinare invece il backup completo del database più recente effettuato alle 18.00, quindi applicare il backup del log effettuato alle 20.00 e il backup della parte finale del log.  
   
- **Alternativa 2: ripristinare il database da un backup completo precedente**  
+ **Alternativa 2: ripristino del database da un backup completo precedente**  
   
 > Questa procedura alternativa è utile nel caso non sia possibile utilizzare il backup completo del database effettuato alle 18.00 del backup completo del database delle 18.00. Questa procedura richiede più tempo di quello necessario per il ripristino del backup completo del database delle 18.00.  
   

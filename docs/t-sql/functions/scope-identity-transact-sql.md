@@ -21,18 +21,18 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111328"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce l'ultimo valore Identity inserito in una colonna Identity nello stesso ambito. Un ambito è un modulo, ovvero una stored procedure, un trigger, una funzione o un batch. Se due istruzioni sono incluse nella stessa stored procedure, nella stessa funzione o nello stesso batch, appartengono allo stesso ambito.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Tipi restituiti  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le funzioni SCOPE_IDENTITY, IDENT_CURRENT e @@IDENTITY sono simili, in quanto restituiscono valori inseriti in colonne Identity.  
   
  Per la funzione IDENT_CURRENT non esiste alcuna restrizione di ambito o di sessione. La funzione è limitata tuttavia a una tabella specifica. La funzione IDENT_CURRENT restituisce il valore generato per una tabella specifica in qualsiasi sessione e in qualsiasi ambito. Per altre informazioni, vedere [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
@@ -58,7 +58,7 @@ SCOPE_IDENTITY()
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Uso di @@IDENTITY e SCOPE_IDENTITY con trigger  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>R. Uso di @@IDENTITY e SCOPE_IDENTITY con trigger  
  Nell'esempio seguente vengono create due tabelle, `TZ` e `TY`, e viene definito un trigger INSERT per `TZ`. Quando viene inserita una riga nella tabella `TZ`, viene attivato il trigger (`Ztrig`) che inserisce una riga in `TY`.  
   
 ```sql  
@@ -73,7 +73,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-Set di risultati: la tabella TZ ha l'aspetto seguente.  
+Set di risultati: la tabella TZ ha il seguente aspetto.  
   
 ```  
 Z_id   Z_name  
@@ -92,7 +92,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Set di risultati: la tabella TY ha l'aspetto seguente:  
+Set di risultati: la tabella TY ha il seguente aspetto:  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Uso di @@IDENTITY e SCOPE_IDENTITY() con la replica  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>B. Uso di @@IDENTITY e SCOPE_IDENTITY() con la replica  
  Negli esempi seguenti viene illustrato come utilizzare`@@IDENTITY` e `SCOPE_IDENTITY()` per inserimenti in un database pubblicato per la replica di tipo merge. Entrambe le tabelle degli esempi sono incluse nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. La tabella `Person.ContactType` non viene pubblicata, mentre la tabella `Sales.Customer` viene pubblicata. Con la replica di tipo merge vengono aggiunti trigger alle tabelle pubblicate. `@@IDENTITY` può pertanto restituire il valore dell'inserimento in una tabella del sistema di replica anziché dell'inserimento in una tabella utente.  
   
  Il valore Identity massimo consentito per la tabella `Person.ContactType` è 20. Se si inserisce una riga nella tabella, `@@IDENTITY` e `SCOPE_IDENTITY()` restituiscono lo stesso valore.  

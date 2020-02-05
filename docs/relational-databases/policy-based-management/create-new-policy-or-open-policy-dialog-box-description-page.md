@@ -12,10 +12,10 @@ ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b3d8afca0504f34d2d78794e5fddb0ffbf1a6562
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558276"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Descrizione
@@ -32,10 +32,10 @@ ms.locfileid: "75558276"
  **Collegamento ipertestuale alla Guida aggiuntiva: Testo da visualizzare**  
  Quando si eseguono criteri, il collegamento ipertestuale alla Guida aggiuntiva viene visualizzato nella pagina **Visualizzazione dettagliata risultati** . Digitare il testo da visualizzare come collegamento ipertestuale.  
   
- **Collegamento ipertestuale alla Guida aggiuntiva: indirizzo**  
+ **Collegamento ipertestuale alla Guida aggiuntiva: Indirizzo**  
  Digitare il collegamento ipertestuale di una pagina Web da aprire quando gli utenti fanno clic sul testo del collegamento ipertestuale visualizzato nella pagina **Visualizzazione dettagliata risultati** .  
   
- **Collegamento ipertestuale alla Guida aggiuntiva: test collegamento**  
+ **Collegamento ipertestuale alla Guida aggiuntiva: Collegamento test**  
  Fare clic per aprire il collegamento ipertestuale per testare la validità del collegamento.  
   
  **Data creazione**  

@@ -13,10 +13,10 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249761"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Connettersi a un altro computer (Gestione configurazione SQL Server)
@@ -34,7 +34,7 @@ Per avviare, arrestare, sospendere o riprendere i servizi in un altro computer, 
 
 ### <a name="to-connect-to-another-computer-with-windows-computer-management"></a>Per connettersi a un altro computer utilizzando Gestione computer di Windows
 
-1. Fare clic con il pulsante destro del mouse sul pulsante del menu **Start** e fare clic su **Gestione computer (locale)**.
+1. Fare clic con il pulsante destro del mouse sul pulsante del menu **Start** e fare clic su **Gestione computer (locale)** .
 2. Nel menu **Azione** fare clic su **Connetti a un altro computer**.
 3. Nella finestra di dialogo **Seleziona computer** digitare il nome del computer che si vuole gestire nella casella di testo **Altro computer** quindi fare clic su **OK**.
 
@@ -53,7 +53,7 @@ Per avviare, arrestare, sospendere o riprendere i servizi in un altro computer, 
 6. Nella finestra **Gestione computer** fare clic su **Altro computer**, digitare il nome del computer remoto da gestire e quindi fare clic su **Fine**.
 7. Nella finestra **Aggiungi snap-in autonomo** fare clic su **Chiudi**.
 8. Nella finestra **Aggiungi/Rimuovi snap-in** fare clic su **OK**.
-9. Espandere **Gestione computer (**_\<nome computer>_**)** e **Servizi e applicazioni**.
+9. Espandere **Gestione computer (** _\<nome computer>_ **)** e **Servizi e applicazioni**.
 10. Fare clic con il pulsante destro del mouse su **Gestione configurazione SQL Server**e quindi scegliere **Nuova finestra da qui**.
 11. Scegliere **Radice console** dal menu **Finestra** per tornare alla prima finestra ed eliminare la finestra aperta.
 12. Scegliere **Salva con nome** dal menu **File**e salvare il file nella cartella desiderata con un nome appropriato e l'estensione di file **msc** . Chiudere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.

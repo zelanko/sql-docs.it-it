@@ -26,10 +26,10 @@ ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064647"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
@@ -72,7 +72,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  Specifica il nome di un'entità di database come proprietario dell'elenco di parole non significative. *owner_name* deve essere il nome di un'entità di cui l'utente corrente è membro oppure l'utente corrente deve avere l'autorizzazione IMPERSONATE per *owner_name*. Se viene omesso, la proprietà viene assegnata all'utente corrente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'autore di un elenco di parole non significative è il proprietario dell'elenco.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -83,7 +83,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-new-full-text-stoplist"></a>A. Creazione di un nuovo elenco di parole non significative full-text  
+### <a name="a-creating-a-new-full-text-stoplist"></a>R. Creazione di un nuovo elenco di parole non significative full-text  
  Nell'esempio seguente viene creato un nuovo elenco di parole non significative full-text denominato `myStoplist`.  
   
 ```sql  

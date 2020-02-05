@@ -19,10 +19,10 @@ ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e45060a494fad2fbd0310a31bdf433e624becdc2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294297"
 ---
 # <a name="back-up-database-task"></a>Attività Backup database
@@ -30,7 +30,7 @@ ms.locfileid: "71294297"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  L'attività Backup database consente di eseguire diversi tipi di backup dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+  L'attività Backup database consente di eseguire diversi tipi di backup dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  Tramite l'attività Backup database un pacchetto può eseguire il backup di uno o più database. Se si utilizza l'attività per eseguire il backup di un singolo database, sarà possibile scegliere il componente di cui eseguire il backup, ovvero il database o i relativi file e filegroup.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "71294297"
   
 |modello di recupero|Database|Differenziale del database|Log delle transazioni|File o differenziale del file|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Simple|Obbligatorio|Facoltativo|Non supportato|Non supportato|  
-|Full|Obbligatorio|Facoltativo|Obbligatorio|Facoltativo|  
-|Registrazione minima delle operazioni bulk|Obbligatorio|Facoltativo|Obbligatorio|Facoltativo|  
+|Semplice|Obbligatoria|Facoltativo|Non supportate|Non supportate|  
+|Full|Obbligatoria|Facoltativo|Obbligatoria|Facoltativo|  
+|Registrazione minima delle operazioni bulk|Obbligatoria|Facoltativo|Obbligatoria|Facoltativo|  
   
  L'attività Backup database incapsula l'istruzione Transact-SQL BACKUP. Per altre informazioni, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   

@@ -26,10 +26,10 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121806"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68121806"
 
   Imposta un punto di salvataggio in una transazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
  ## <a name="syntax"></a>Sintassi  
   
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
  @*savepoint_variable*  
  Nome di una variabile definita dall'utente contenente un nome di punto di salvataggio valido. La variabile deve essere dichiarata con un tipo di dati **char**, **varchar**, **nchar** o **nvarchar**. È possibile passare alla variabile più di 32 caratteri, ma in tal caso verranno utilizzati solo i primi 32.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Un utente può impostare un punto di salvataggio o marcatore all'interno di una transazione. Il punto di salvataggio consente di contrassegnare il punto fino a cui conservare una transazione se parte della transazione viene annullata in modo condizionale. Se si esegue il rollback di una transazione fino a un punto di salvataggio, è necessario che la transazione venga completata (se necessario con più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e con un'istruzione COMMIT TRANSACTION) oppure annullata completamente (tramite il rollback fino all'inizio della transazione). Per annullare un'intera transazione, usare la sintassi ROLLBACK TRANSACTION *transaction_name*. In tal caso, verranno annullate tutte le istruzioni o procedure della transazione.  
   
  In una transazione è consentito l'utilizzo di nomi di punto di salvataggio duplicati. Un'istruzione ROLLBACK TRANSACTION contenente un nome di punto di salvataggio, tuttavia, eseguirà il rollback della transazione solo fino all'istruzione SAVE TRANSACTION più recente che utilizza tale nome.  

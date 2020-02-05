@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908561"
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
@@ -29,7 +29,7 @@ ms.locfileid: "72908561"
 > [!NOTE]  
 >  È possibile utilizzare questi metodi anche per connettersi a un'istanza a cui, benché online, non è possibile connettersi tramite una connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per qualche motivo.  
   
-## <a name="before-you-begin"></a>Prima di iniziare  
+## <a name="before-you-begin"></a>Operazioni preliminari  
  Per connettersi ai file di log offline, è necessario che nel computer utilizzato per visualizzare i file di log offline e nel computer in cui si trovano i file di log che si desidera visualizzare sia installata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se in entrambi i computer è installata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è possibile visualizzare file offline per istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e per istanze che eseguono versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno dei computer.  
   
  Se si usa Server registrati, l'istanza a cui ci si vuole connettere deve essere registrata in **Gruppi di server locali** o **Server di gestione centrale**. L'istanza può essere registrata in modo autonomo o essere un membro di un gruppo di server. Per ulteriori informazioni su come aggiungere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Server registrati, vedere gli argomenti seguenti:  
@@ -83,7 +83,7 @@ ms.locfileid: "72908561"
   
      **Root\Microsoft\SqlServer\ComputerManagement10**  
   
-6.  Fare clic su **Sicurezza**.  
+6.  Fare clic su **Security**.  
   
 7.  Verificare che l'account usato abbia l'autorizzazione **Abilita account** . Questa autorizzazione consente accesso in lettura a oggetti WMI.  
 

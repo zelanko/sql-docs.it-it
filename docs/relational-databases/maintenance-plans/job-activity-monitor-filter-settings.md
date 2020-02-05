@@ -13,10 +13,10 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115813"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitoraggio attività processi (Impostazioni filtro)
@@ -43,16 +43,16 @@ ms.locfileid: "68115813"
  **Risultati ultima esecuzione**  
  Consente di filtrare in base allo stato dell'ultima esecuzione dei processi.  
   
- **Abilitata**  
+ **Enabled**  
  Consente di visualizzare solo i processi abilitati o non abilitati.  
   
- **Category**  
+ **Categoria**  
  Consente di filtrare in base alla categoria del processo.  
   
- **Pianificato**  
+ **Pianificata**  
  Consente di visualizzare tutti i processi che dispongono o non dispongono di pianificazioni.  
   
- **Stato**  
+ **Status**  
  Consente di filtrare i processi in base allo stato.  
   
 ## <a name="description-area"></a>Area descrizione  
@@ -62,7 +62,7 @@ ms.locfileid: "68115813"
  **Applica filtro**  
  Per applicare il filtro, fare clic su **Applica filtro** e quindi su **OK**. Per conservare le impostazioni di filtro nella finestra di dialogo **Impostazioni filtro** senza applicarle, deselezionare **Applica filtro** e quindi fare clic su **OK** in modo da visualizzare tutte le righe.  
   
- **Clear**  
+ **Cancella**  
  Consente di ripristinare le impostazioni di filtro predefinite.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68316963"
 ---
 # <a name="modify-an-index"></a>Modificare un indice
@@ -38,7 +38,7 @@ ms.locfileid: "68316963"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-an-index"></a>Per modificare un indice  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68316963"
   
 1.  Per aggiungere, rimuovere o modificare la posizione di una colonna indice, selezionare la pagina **Generale** della finestra di dialogo **Proprietà indice** .  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-modify-an-index"></a>Per modificare un indice  
   
@@ -79,6 +79,6 @@ Nell'esempio seguente viene usato ALTER INDEX per impostare diverse opzioni sull
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Impostare le opzioni di indice](../../relational-databases/indexes/set-index-options.md)   
- [Ridenominazione di indici](../../relational-databases/indexes/rename-indexes.md)  
+ [Rinominare indici](../../relational-databases/indexes/rename-indexes.md)  
   
   

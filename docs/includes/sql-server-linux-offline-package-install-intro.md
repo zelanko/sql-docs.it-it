@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 6c9aedf258e25f1705cf9287ac348757403d73b3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68214891"
----
 Se il computer Linux non dispone di accesso per i repository online usati nelle sezioni precedenti, è possibile scaricare direttamente i file del pacchetto. Questi pacchetti si trovano nel repository di Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
 
 > [!TIP]

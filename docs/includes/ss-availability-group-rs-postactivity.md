@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: bf755ccfe5a1a6816129173dcb6ad5050ea5e114
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213316"
----
 
 ## <a name="add-a-database-to-the-availability-group"></a>Aggiungere un database al gruppo di disponibilità
 

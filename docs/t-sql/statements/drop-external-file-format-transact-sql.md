@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 81df5ad2e93925334149d3fbea37e4612f5a384a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086691"
 ---
 # <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68086691"
 
   Rimuove un formato di file esterno PolyBase.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,12 +52,12 @@ SELECT * FROM sys.external_file_formats;
 ## <a name="general-remarks"></a>Osservazioni generali  
  La rimozione di un formato di file esterno non comporta la rimozione dei dati esterni.  
   
-## <a name="locking"></a>Utilizzo di blocchi  
+## <a name="locking"></a>Blocco  
  Acquisisce un blocco condiviso per l'oggetto formato di file esterno.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-basic-syntax"></a>A. Uso della sintassi di base  
+### <a name="a-using-basic-syntax"></a>R. Uso della sintassi di base  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  

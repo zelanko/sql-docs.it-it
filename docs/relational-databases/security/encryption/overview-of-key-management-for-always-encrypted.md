@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594103"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Panoramica della gestione delle chiavi per Always Encrypted
@@ -92,14 +92,14 @@ Per garantire che Always Encrypted sia efficace nella prevenzione di questi tipi
 - Non generare mai le chiavi master della colonna o le chiavi di crittografia della colonna nel computer che ospita il database. Generare le chiavi in un computer separato dedicato alla gestione delle chiavi o nel computer che ospita le applicazioni che dovrebbero comunque avere accesso alle chiavi. Ciò significa che **non si devono mai eseguire strumenti usati per generare le chiavi nel computer che ospita il database** perché se riuscisse ad accedere a un computer usato per il provisioning o la gestione delle chiavi Always Encrypted, un utente malintenzionato potrebbe ottenere le chiavi, anche se queste compaiono nella memoria dello strumento solo per un breve periodo di tempo.
 - Per assicurarsi che il processo di gestione delle chiavi non riveli inavvertitamente le chiavi master della colonna o le chiavi di crittografia della colonna, è fondamentale identificare potenziali antagonisti e possibili minacce alla sicurezza prima di definire e implementare un processo di gestione delle chiavi. Se ad esempio l'obiettivo è di verificare che gli amministratori del database non abbiano accesso ai dati sensibili, un amministratore del database non può essere incaricato della generazione delle chiavi. Un amministratore del database, tuttavia, *può* gestire i metadati delle chiavi nel database, poiché i metadati non contengono le chiavi sotto forma di testo non crittografato.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted](always-encrypted-wizard.md)
 - [Creare e archiviare chiavi master della colonna per Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
 - [Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Effettuare il provisioning di chiavi Always Encrypted con PowerShell](configure-always-encrypted-keys-using-powershell.md)
 
 ## <a name="see-also"></a>Vedere anche
-- [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Esercitazione guidata su Always Encrypted (insieme di credenziali delle chiavi di Azure)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Esercitazione guidata su Always Encrypted (archivio certificati Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

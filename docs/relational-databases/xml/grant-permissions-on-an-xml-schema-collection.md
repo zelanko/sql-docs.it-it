@@ -14,10 +14,10 @@ ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3beb9b01beafcb247372c49d9219550c95fd1b03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986441"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Concedere autorizzazioni per una raccolta di XML Schema
@@ -67,7 +67,7 @@ ms.locfileid: "67986441"
 ## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di eliminazione necessario.  
   
-### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. Concessione di autorizzazioni per la creazione di una raccolta di XML Schema  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>R. Concessione di autorizzazioni per la creazione di una raccolta di XML Schema  
  Nell'esempio seguente viene illustrato come concedere autorizzazioni per consentire a un'entità di creare una raccolta di XML Schema. Nell'esempio vengono creati un database di esempio e un utente di prova, `TestLogin1`. `TestLogin1` viene fornita quindi l'autorizzazione `ALTER` per lo schema relazionale e l'autorizzazione `CREATE XML SCHEMA COLLECTION` per il database. Con tali autorizzazioni, `TestLogin1` può creare una raccolta di XML Schema di esempio.  
   
 ```  
@@ -507,6 +507,6 @@ GO
  [Dati XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Raccolte di XML Schema &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
- [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per le raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

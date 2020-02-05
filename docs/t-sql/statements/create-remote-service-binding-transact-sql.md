@@ -38,10 +38,10 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117336"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68117336"
 
   Crea un'associazione che definisce le credenziali di sicurezza da utilizzare per avviare una conversazione con un servizio remoto.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -78,7 +78,7 @@ CREATE REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  Specifica se viene utilizzato l'accesso anonimo durante la comunicazione con il servizio remoto. Se ANONYMOUS = ON viene usata l'autenticazione anonima e le operazioni nel database remoto vengono eseguite con un account membro del ruolo predefinito del database **public**. Se ANONYMOUS = OFF, le operazioni nel database remoto vengono eseguite con l'account di un utente specifico di tale database. Se questa clausola viene omessa, il valore predefinito è OFF.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilizza un'associazione al servizio remoto per individuare il certificato da utilizzare per una nuova conversazione. La chiave pubblica nel certificato associato a *user_name* viene usata per autenticare i messaggi inviati al servizio remoto e crittografare una chiave di sessione che verrà quindi usata per crittografare la conversazione. Il certificato per *user_name* deve corrispondere al certificato per un utente nel database che ospita il servizio remoto.  
   
  Un'associazione al servizio remoto è necessaria solo per l'avvio dei servizi che comunicano con servizi di destinazione che si trovano all'esterno dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un database che ospita un servizio di origine deve contenere associazioni ai servizi remoti per tutti i servizi di destinazione esterni all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è necessario che un database che ospita un servizio di destinazione contenga associazioni a servizi remoti per i servizi in fase di inizializzazione che comunicano con il servizio di destinazione. Quando i servizi di origine e di destinazione si trovano nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], non è necessaria alcuna associazione al servizio remoto. Se tuttavia è presente un'associazione al servizio remoto dove il valore di *user_name* specificato per TO SERVICE corrisponde al nome del servizio locale, in [!INCLUDE[ssSB](../../includes/sssb-md.md)] viene usata l'associazione.  
@@ -96,7 +96,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-remote-service-binding"></a>A. Creazione di un'associazione al servizio remoto  
+### <a name="a-creating-a-remote-service-binding"></a>R. Creazione di un'associazione al servizio remoto  
  Nell'esempio seguente viene creata un'associazione per il servizio `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilizza il certificato di proprietà dell'entità database `APUser` per l'autenticazione per il servizio remoto e per scambiare la chiave di crittografia della sessione con il servizio remoto.  
   
 ```  

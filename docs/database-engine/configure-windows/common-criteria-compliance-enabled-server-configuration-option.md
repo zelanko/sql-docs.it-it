@@ -18,10 +18,10 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262216"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Opzione di configurazione del server Common Criteria Compliance Enabled
@@ -42,7 +42,7 @@ L'opzione Common Criteria Compliance Enabled attiva gli elementi seguenti, neces
   
  Se si utilizza la stored procedure di sistema `sp_configure` per modificare l'impostazione, è possibile modificare common criteria compliance enabled solo quando il valore di show advanced options è impostato su 1. L'impostazione diventa effettiva dopo il riavvio del server. I possibili valori sono 0 e 1:  
   
--   0 indica che la conformità ai criteri comuni non è abilitata. Impostazione predefinita.  
+-   0 indica che la conformità ai criteri comuni non è abilitata. Questa è la modalità predefinita.  
   
 -   1 indica che la conformità ai criteri comuni è abilitata.  
   

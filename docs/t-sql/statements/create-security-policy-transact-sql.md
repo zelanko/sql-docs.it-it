@@ -26,10 +26,10 @@ ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117289"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68117289"
 
   Crea un criterio di sicurezza per la sicurezza a livello di riga.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -88,7 +88,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  Tabella di destinazione a cui verrà applicato il predicato di sicurezza. A una singola tabella possono fare riferimento più criteri di sicurezza disabilitati, ma è possibile abilitarne solo uno.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando si usano le funzioni di predicato con tabelle ottimizzate per la memoria, è necessario includere **SCHEMABINDING** e usare l'hint per la compilazione**WITH NATIVE_COMPILATION**.  
   
  I predicati di blocco vengono valutati dopo l'esecuzione dell'operazione DML corrispondente. Pertanto una query READ UNCOMMITTED può rilevare valori temporanei che saranno sottoposti a rollback.  
@@ -107,7 +107,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 ## <a name="examples"></a>Esempi  
  Gli esempi seguenti illustrano l'uso della sintassi di **CREATE SECURITY POLICY** . Per un esempio di scenario completo dei criteri di sicurezza, vedere [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md).  
   
-### <a name="a-creating-a-security-policy"></a>A. Creazione di un criterio di sicurezza  
+### <a name="a-creating-a-security-policy"></a>R. Creazione di un criterio di sicurezza  
  La sintassi seguente crea un criterio di sicurezza con un predicato del filtro per la tabella Customer e lascia il criterio di sicurezza disabilitato.  
   
 ```  

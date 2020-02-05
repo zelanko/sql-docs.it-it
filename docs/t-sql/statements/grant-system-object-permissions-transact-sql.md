@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050675"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT - autorizzazioni per oggetti di sistema (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68050675"
 
   Concede le autorizzazioni per oggetti di sistema come stored procedure di sistema, stored procedure estese, funzioni e viste.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Specifica l'entità a cui viene concessa l'autorizzazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare questa istruzione per concedere le autorizzazioni per particolari stored procedure, stored procedure estese, funzioni con valori di tabella, funzioni scalari, viste, viste del catalogo, viste di compatibilità, viste INFORMATION_SCHEMA, viste a gestione dinamica e tabelle di sistema installate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ognuno di questi oggetti di sistema esiste come record univoco nel database delle risorse del server (mssqlsystemresource). Il database delle risorse è di sola lettura. Un collegamento all'oggetto è disponibile in forma di record nello schema sys di tutti i database. È possibile concedere, negare o revocare le autorizzazioni per l'esecuzione o la selezione di un oggetto di sistema.  
   
  La concessione dell'autorizzazione per l'esecuzione o la selezione di un oggetto non include necessariamente tutte le autorizzazioni necessarie per l'utilizzo dell'oggetto. La maggior parte degli oggetti esegue operazioni per cui sono richieste autorizzazioni aggiuntive. Ad esempio, un utente a cui viene concessa l'autorizzazione EXECUTE per sp_addlinkedserver non potrà creare un server collegato a meno che non sia anche membro del ruolo predefinito del server sysadmin.  
@@ -75,8 +75,8 @@ GO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-granting-select-permission-on-a-view"></a>A. Concessione dell'autorizzazione SELECT per una vista  
- Nell'esempio seguente viene concessa all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Sylvester1` l'autorizzazione per la selezione di una vista che elenca gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'esempio viene poi concessa l'autorizzazione aggiuntiva necessaria per la visualizzazione dei metadati relativi agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui l'utente non è proprietario.  
+### <a name="a-granting-select-permission-on-a-view"></a>R. Concessione dell'autorizzazione SELECT per una vista  
+ Nell'esempio seguente viene concessa all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Sylvester1` l'autorizzazione per la selezione di una vista che elenca gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'esempio viene poi concessa l'autorizzazione aggiuntiva necessaria per la visualizzazione dei metadati relativi agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui l'utente non è proprietario.  
   
 ```  
 USE AdventureWorks2012;  

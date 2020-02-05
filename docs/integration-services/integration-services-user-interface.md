@@ -17,10 +17,10 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284165"
 ---
 # <a name="integration-services-user-interface"></a>Interfaccia utente di Integration Services
@@ -45,11 +45,11 @@ ms.locfileid: "71284165"
   
 |Finestra di dialogo|Scopo|Accesso|  
 |----------------|-------------|------------|  
-|**Introduzione**|Consente di accedere a esempi, esercitazioni e video.|Nell'area di progettazione della scheda **Flusso di controllo** o **Flusso di dati** fare clic con il pulsante destro del mouse e scegliere **Attività iniziali**.<br /><br /> Per visualizzare automaticamente la finestra **Attività iniziali** quando si crea un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , selezionare **Always show in new project** (Mostra sempre nel nuovo progetto) nella parte inferiore della finestra.|  
-|**Configura log SSIS**|Consente di configurare la registrazione per un pacchetto e le relative attività, tramite l'aggiunta di log e l'impostazione dei dettagli di registrazione.|Scegliere **Registrazione** dal menu **SSIS**.<br /><br /> oppure<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** e quindi scegliere **Registrazione**.|  
-|**Libreria configurazioni pacchetto**|Consente di aggiungere e modificare le configurazioni dei pacchetti. Da questa finestra di dialogo è possibile eseguire Configurazione guidata pacchetto.|Scegliere **Configurazioni pacchetto** dal menu **SSIS**.<br /><br /> oppure<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** e scegliere **Configurazioni pacchetto**.|  
-|**Firma digitale**|Consente di firmare o rimuovere la firma da un pacchetto.|Scegliere **Firma digitale** dal menu **SSIS**.<br /><br /> oppure<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** e quindi scegliere **Firma digitale**.|  
-|**Imposta punti di interruzione**|Consente di attivare punti di interruzione sulle attività e impostarne le proprietà.|Nell'area di progettazione della scheda **Flusso di controllo** fare clic con il pulsante destro del mouse su un'attività o contenitore e quindi scegliere **Modifica punti di interruzione**. Per impostare un punto di interruzione per il pacchetto, fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** , quindi scegliere **Modifica punti di interruzione**.|  
+|**Per iniziare**|Consente di accedere a esempi, esercitazioni e video.|Nell'area di progettazione della scheda **Flusso di controllo** o **Flusso di dati** fare clic con il pulsante destro del mouse e scegliere **Attività iniziali**.<br /><br /> Per visualizzare automaticamente la finestra **Attività iniziali** quando si crea un nuovo progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , selezionare **Always show in new project** (Mostra sempre nel nuovo progetto) nella parte inferiore della finestra.|  
+|**Configura log SSIS**|Consente di configurare la registrazione per un pacchetto e le relative attività, tramite l'aggiunta di log e l'impostazione dei dettagli di registrazione.|Scegliere **Registrazione** dal menu **SSIS**.<br /><br /> -oppure-<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** e quindi scegliere **Registrazione**.|  
+|**Libreria configurazioni pacchetto**|Consente di aggiungere e modificare le configurazioni dei pacchetti. Da questa finestra di dialogo è possibile eseguire Configurazione guidata pacchetto.|Scegliere **Configurazioni pacchetto** dal menu **SSIS**.<br /><br /> -oppure-<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** e scegliere **Configurazioni pacchetto**.|  
+|**Firma digitale**|Consente di firmare o rimuovere la firma da un pacchetto.|Scegliere **Firma digitale** dal menu **SSIS**.<br /><br /> -oppure-<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** e quindi scegliere **Firma digitale**.|  
+|**Impostare punti di interruzione**|Consente di attivare punti di interruzione sulle attività e impostarne le proprietà.|Nell'area di progettazione della scheda **Flusso di controllo** fare clic con il pulsante destro del mouse su un'attività o contenitore e quindi scegliere **Modifica punti di interruzione**. Per impostare un punto di interruzione per il pacchetto, fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** , quindi scegliere **Modifica punti di interruzione**.|  
   
  Nella finestra **Attività iniziali** sono disponibili collegamenti a esempi, esercitazioni e video. Per aggiungere collegamenti ad altro contenuto, modificare il file SamplesSites.xml incluso nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È consigliabile non modificare il valore dell'elemento \<GettingStartedSamples> che specifica l'URL del feed RSS. Il file si trova nella cartella *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn. In un computer a 64 bit il file si trova nella cartella *\<unità>* :\Programmi (x86)\Microsoft SQL Server\110\DTS\Binn  
   
@@ -73,8 +73,8 @@ ms.locfileid: "71284165"
   
 |Finestra|Scopo|Accesso|  
 |------------|-------------|------------|  
-|**Variabili**|Consente di aggiungere e gestire variabili personalizzate.|Scegliere **Variabili** dal menu **SSIS**.<br /><br /> oppure<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** o **Flusso di dati** e quindi scegliere **Variabili**.<br /><br /> oppure<br /><br /> Scegliere **Altre finestre** dal menu **Visualizza**e quindi fare clic su **Variabili**.|  
-|**Registra eventi**|Consente di visualizzare le voci di log durante la fase di esecuzione.|Scegliere **Registra eventi** dal menu **SSIS**.<br /><br /> oppure<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** o **Flusso di dati** e quindi scegliere **Registra eventi**.<br /><br /> oppure<br /><br /> Scegliere **Altre finestre** dal menu **Visualizza**e quindi fare clic su **Registra eventi**.|  
+|**Variabili**|Consente di aggiungere e gestire variabili personalizzate.|Scegliere **Variabili** dal menu **SSIS**.<br /><br /> -oppure-<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** o **Flusso di dati** e quindi scegliere **Variabili**.<br /><br /> -oppure-<br /><br /> Scegliere **Altre finestre** dal menu **Visualizza**e quindi fare clic su **Variabili**.|  
+|**Registra eventi**|Consente di visualizzare le voci di log durante la fase di esecuzione.|Scegliere **Registra eventi** dal menu **SSIS**.<br /><br /> -oppure-<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** o **Flusso di dati** e quindi scegliere **Registra eventi**.<br /><br /> -oppure-<br /><br /> Scegliere **Altre finestre** dal menu **Visualizza**e quindi fare clic su **Registra eventi**.|  
   
 ## <a name="custom-editors"></a>Editor personalizzati  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include finestre di dialogo personalizzate per la maggior parte dei contenitori, delle attività, delle origini, delle trasformazioni e delle destinazioni.  

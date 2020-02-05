@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050187"
 ---
 # <a name="memory-optimization-advisor"></a>Ottimizzazione guidata per la memoria
@@ -91,7 +91,7 @@ ms.locfileid: "68050187"
 > [!WARNING]  
 >  Selezionare questa opzione solo se si comprende il rischio della perdita dei dati con le tabelle non durevoli.  
   
- Per continuare, fare clic su **Avanti** .  
+ Fare clic su **Avanti** per continuare.  
   
 ### <a name="review-primary-key-conversion"></a>Verifica conversione chiave primaria  
  La schermata successiva è denominata **Verifica conversione chiave primaria**. In Ottimizzazione guidata per la memoria viene rilevato se nella tabella sono presenti una o più chiavi primarie e viene popolato l'elenco di colonne in base ai metadati delle chiavi primarie. Se non è presente alcuna chiave primaria, per eseguire la migrazione a una tabella ottimizzata per la memoria durevole, sarà necessario crearne una.  

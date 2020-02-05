@@ -15,10 +15,10 @@ ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051304"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Linee guida per l'utilizzo dei metodi con tipo di dati xml
@@ -60,7 +60,7 @@ Msg errorNumber, Level levelNumber, State stateNumber:
 XQuery [database.table.method]: description_of_error
 ```
 
-Esempio:
+Ad esempio:
 
 ```
 Msg 2396, Level 16, State 1:
@@ -69,11 +69,11 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ## <a name="singleton-checks"></a>Verifiche dei singleton
 
-Se il compilatore non è in grado di determinare se un determinato valore singleton è garantito in fase di esecuzione, i passi, i parametri delle funzioni e gli operatori che richiedono un singleton restituiranno un errore. Questo problema si verifica di frequente con i dati non tipizzati. Per la ricerca di un attributo, ad esempio, è necessario un elemento padre singleton. È sufficiente un numero ordinale che seleziona un nodo padre singolo. Per valutare una combinazione **node()**-**value()** per l'estrazione dei valori degli attributi potrebbe non essere necessario specificare il numero ordinale, come illustrato nell'esempio seguente.
+Se il compilatore non è in grado di determinare se un determinato valore singleton è garantito in fase di esecuzione, i passi, i parametri delle funzioni e gli operatori che richiedono un singleton restituiranno un errore. Questo problema si verifica di frequente con i dati non tipizzati. Per la ricerca di un attributo, ad esempio, è necessario un elemento padre singleton. È sufficiente un numero ordinale che seleziona un nodo padre singolo. Per valutare una combinazione **node()** -**value()** per l'estrazione dei valori degli attributi potrebbe non essere necessario specificare il numero ordinale, come illustrato nell'esempio seguente.
 
 ### <a name="example-known-singleton"></a>Esempio: singleton noto
 
-In questo esempio il metodo **nodes()** genera una riga distinta per ogni elemento `<book>`. Il metodo **value()**, valutato su un nodo `<book>`, estrae il valore di `@genre` e, essendo un attributo, è un singleton.
+In questo esempio il metodo **nodes()** genera una riga distinta per ogni elemento `<book>`. Il metodo **value()** , valutato su un nodo `<book>`, estrae il valore di `@genre` e, essendo un attributo, è un singleton.
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName
@@ -84,7 +84,7 @@ Per la verifica dei dati XML tipizzati viene utilizzato un XML Schema. Se un det
 
 La differenza tra `//first-name[1]` e `(//first-name)[1]` è molto importante per la verifica dei tipi. Nel primo caso viene restituita una sequenza di nodi `<first-name>`, in cui ogni nodo è il nodo `<first-name>` più a sinistra tra gli elementi di pari livello. Nel secondo caso viene restituito il primo nodo `<first-name>` singleton nell'ordine del documento nell'istanza XML.
 
-### <a name="example-using-value"></a>Esempio: uso di value()
+### <a name="example-using-value"></a>Esempio: utilizzo del metodo value()
 
 Per la query seguente su una colonna XML non tipizzata viene restituito un errore statico di compilazione, perché il primo argomento del metodo **value()** deve essere un nodo singleton e il compilatore non è in grado di determinare se in fase di esecuzione verrà rilevato un solo nodo `<last-name>`:
 

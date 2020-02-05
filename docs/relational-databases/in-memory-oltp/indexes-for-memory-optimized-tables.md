@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70929692"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria
@@ -219,9 +219,9 @@ Nella tabella seguente sono elencate tutte le operazioni supportate dai vari tip
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Index Scan, recupera tutte le righe della tabella. | Sì | Sì | Sì |  
 | Index Seek su predicati di uguaglianza (=). | Sì <br/> (chiave completa necessaria) | Sì  | Sì |  
-| Index Seek su predicati di disuguaglianza e di intervallo <br/> (>, <, <=, >=, `BETWEEN`). | no <br/> (risultati in un'analisi di indice) | Sì <sup>1</sup> | Sì |  
-| Recupero di righe con un ordinamento corrispondente alla definizione dell'indice. | no | Sì | Sì |  
-| Recupero di righe con un ordinamento inverso rispetto alla definizione dell'indice. | no | no | Sì |  
+| Index Seek su predicati di disuguaglianza e di intervallo <br/> (>, <, <=, >=, `BETWEEN`). | No <br/> (risultati in un'analisi di indice) | Sì <sup>1</sup> | Sì |  
+| Recupero di righe con un ordinamento corrispondente alla definizione dell'indice. | No | Sì | Sì |  
+| Recupero di righe con un ordinamento inverso rispetto alla definizione dell'indice. | No | No | Sì |  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Per un indice non cluster ottimizzato per la memoria, non è necessaria la chiave completa per eseguire una ricerca nell'indice.  

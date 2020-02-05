@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fff507046ae5a53abbffbd91bb245f52d57a53c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594140"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
@@ -56,7 +56,7 @@ SECRET **='** _secret_ **'** specifica il segreto richiesto per l'autenticazione
 > [!WARNING]
 > Il valore della chiave di firma di accesso condiviso può iniziare con "?" (punto interrogativo). Quando si usa la chiave di firma di accesso condiviso, è necessario rimuovere il carattere "?" iniziale, altrimenti potrebbe verificarsi un blocco.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Una credenziale con ambito database è un record contenente le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La maggior parte delle credenziali include un utente e una password di Windows.
 
@@ -86,7 +86,7 @@ Di seguito sono elencate alcune applicazioni delle credenziali con ambito databa
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. Creazione di credenziali con ambito database per l'applicazione
+### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>R. Creazione di credenziali con ambito database per l'applicazione
 
 Nell'esempio seguente viene creata la credenziale con ambito database denominata `AppCred`. La credenziale con ambito database include l'utente Windows `Mary5` e una password.
 

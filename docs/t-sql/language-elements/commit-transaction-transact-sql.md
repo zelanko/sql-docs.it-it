@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278101"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72278101"
 
   Contrassegna la fine di una transazione esplicita o implicita completata correttamente. Se il valore di @@TRANCOUNT è 1, COMMIT TRANSACTION rende permanenti nel database tutte le modifiche apportate ai dati dall'inizio della transazione, libera le risorse della transazione e decrementa il valore di @@TRANCOUNT a 0. Se il valore di @@TRANCOUNT è superiore a 1, COMMIT TRANSACTION decrementa @@TRANCOUNT solo di 1 e la transazione rimane attiva.  
   
- ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,7 +76,7 @@ Nome di una variabile definita dall'utente contenente un nome di transazione val
 
  Opzione che richiede il commit della transazione con durabilità ritardata. La richiesta viene ignorata se il database è stato modificato con `DELAYED_DURABILITY = DISABLED` o `DELAYED_DURABILITY = FORCED`. Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È compito del programmatore [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire COMMIT TRANSACTION solo quando tutti i dati a cui la transazione fa riferimento sono logicamente corretti.  
   
  Se la transazione di cui è stato eseguito il commit è una transazione distribuita di [!INCLUDE[tsql](../../includes/tsql-md.md)], l'istruzione COMMIT TRANSACTION attiva l'utilizzo di un protocollo di commit in due fasi in MS DTC per il commit di tutti i server coinvolti nella transazione. Quando una transazione locale include due o più database nella stessa istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)], l'istanza esegue il commit di tutti i database coinvolti nella transazione usando un commit in due fasi interno.  
@@ -94,7 +94,7 @@ Nome di una variabile definita dall'utente contenente un nome di transazione val
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-committing-a-transaction"></a>A. Esecuzione del commit di una transazione  
+### <a name="a-committing-a-transaction"></a>R. Esecuzione del commit di una transazione  
 **SI APPLICA A:** SQL Server, database SQL di Azure, Azure SQL Data Warehouse e Parallel Data Warehouse   
 
 Nell'esempio seguente viene eliminato un candidato di processo. Viene usato AdventureWorks. 

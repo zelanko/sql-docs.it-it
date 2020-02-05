@@ -13,10 +13,10 @@ ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 605911ebe60c7467db2792737426cc98ce67b52d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113128"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Conversione di colonne esistenti a colonne XML
@@ -35,7 +35,7 @@ ALTER TABLE T
   ALTER COLUMN Col2 xml;
 ```  
   
-È possibile modificare una colonna di tipo `xml` da XML non tipizzato a XML tipizzato. Esempio:  
+È possibile modificare una colonna di tipo `xml` da XML non tipizzato a XML tipizzato. Ad esempio:  
   
 ```sql
 CREATE TABLE T (Col1 int primary key, Col2 xml);

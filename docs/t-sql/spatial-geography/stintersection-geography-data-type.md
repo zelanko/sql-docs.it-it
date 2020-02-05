@@ -18,10 +18,10 @@ ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a06620641fd69479bba3c3b46ab04e337c2dc18d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042055"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (tipo di dati geography)
@@ -45,7 +45,7 @@ ms.locfileid: "68042055"
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Viene restituita l'intersezione di due istanze geografiche  
   
  STIntersection() restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
@@ -56,7 +56,7 @@ ms.locfileid: "68042055"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>A. Calcolo dell'intersezione di Polygon e LineString  
+### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>R. Calcolo dell'intersezione di Polygon e LineString  
  Nell'esempio seguente viene utilizzato `STIntersection()` per calcolare l'intersezione tra `Polygon` e `LineString`.  
   
 ```  

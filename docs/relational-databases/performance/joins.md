@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68419593"
 ---
 # <a name="joins-sql-server"></a>Join (SQL Server)
@@ -173,7 +173,7 @@ Il termine hash bailout è talvolta usato per descrivere grace hash join o hash 
 Per altre informazioni sugli hash bailout, vedere [Hash Warning - classe di evento](../../relational-databases/event-classes/hash-warning-event-class.md).    
 
 ## <a name="adaptive"></a> Informazioni sui join adattivi
-[Modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) I join adattivi consentono di rimandare a **dopo** la scansione del primo input la scelta tra l'esecuzione di un metodo [hash join](#hash) e l'esecuzione di un metodo join a [cicli annidati](#nested_loops). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione, un piano di query può pertanto passare a una strategia di join più efficace senza dover essere ricompilato. 
+[Modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) I join adattivi consentono di rimandare a [dopo](#hash) la scansione del primo input la scelta tra l'esecuzione di un metodo [hash join](#nested_loops) e l'esecuzione di un metodo join a **cicli annidati**. L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione, un piano di query può pertanto passare a una strategia di join più efficace senza dover essere ricompilato. 
 
 > [!TIP]
 > Questa funzionalità è ottimale per i carichi di lavoro con frequenti oscillazioni tra i volumi di input di join rilevati.
@@ -276,7 +276,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
-È anche possibile disabilitare i join adattivi per una query specifica, definendo `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Esempio:
+È anche possibile disabilitare i join adattivi per una query specifica, definendo `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Ad esempio:
 
 ```sql
 SELECT s.CustomerID,

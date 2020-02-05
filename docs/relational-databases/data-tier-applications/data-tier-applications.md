@@ -15,10 +15,10 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278279"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
@@ -107,7 +107,7 @@ ms.locfileid: "72278279"
   
 -   **IMPORT**: l'utente può importare lo schema e i dati in un nuovo database nel server host.  
   
- Entrambe queste funzionalità sono supportate dagli strumenti di gestione database: SQL Server Management Studio, il portale di Azure e l'API DACFx.  
+ Entrambe queste funzionalità sono supportate dagli strumenti di gestione di database SQL Server Management Studio, il Portale di Azure e l'API DACFx.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve essere membro del ruolo **dbmanager** o avere autorizzazioni **CREATE DATABASE** per creare un database, compresa la creazione di un database con la distribuzione di un pacchetto DAC. L'utente deve essere membro del ruolo **dbmanager** o avere autorizzazioni **DROP DATABASE** per eliminare un database.  
@@ -120,11 +120,11 @@ ms.locfileid: "72278279"
 |Viene descritto come utilizzare un nuovo file del pacchetto di applicazione livello dati per aggiornare un'istanza alla nuova versione dell'applicazione livello dati.|[Aggiornare un'applicazione livello dati](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)|  
 |Viene descritto come eliminare un'istanza di applicazione livello dati. È inoltre possibile scollegare o eliminare il database associato o lasciarlo intatto.|[Eliminare un'applicazione livello dati](../../relational-databases/data-tier-applications/delete-a-data-tier-application.md)|  
 |Viene descritto come visualizzare l'integrità dell'applicazione livello dati correntemente distribuita tramite Utilità SQL Server.|[Monitorare le applicazioni livello dati](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)|  
-|Viene descritto come creare un file .bacpac che contiene un archivio dei dati e dei metadati in un'applicazione livello dati.|[Esportare un'applicazione livello dati](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)|  
+|Viene descritto come creare un file .bacpac che contiene un archivio dei dati e dei metadati in un'applicazione livello dati.|[Esportazione di un'applicazione livello dati](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)|  
 |Viene descritto come utilizzare un file di archivio dell'applicazione livello dati (estensione .bacpac) per eseguire un ripristino logico di un'applicazione livello dati o la migrazione dell'applicazione livello dati a un'altra istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Importare un file BACPAC per creare un nuovo database utente](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Viene descritto come importare un file BACPAC per creare un nuovo database utente all'interno di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Estrarre un'applicazione livello dati da un database](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)|  
 |Viene descritto come promuovere un database esistente trasformandolo in un'istanza di applicazione livello dati. Una definizione dell'applicazione livello dati viene compilata e archiviata nei database di sistema.|[Registrare un database come applicazione livello dati](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
-|Viene descritto come rivedere il contenuto di un pacchetto di applicazione livello dati e le azioni che un aggiornamento dell'applicazione livello dati eseguirà prima di utilizzare il pacchetto in un sistema di produzione.|[Convalidare un pacchetto di applicazione livello dati](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
+|Viene descritto come rivedere il contenuto di un pacchetto di applicazione livello dati e le azioni che un aggiornamento dell'applicazione livello dati eseguirà prima di utilizzare il pacchetto in un sistema di produzione.|[Convalidare un pacchetto di applicazioni livello dati](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
 |Viene descritto come posizionare il contenuto di un pacchetto di applicazione livello dati in una cartella dove un amministratore di database può rivedere quello che l'applicazione livello dati fa prima di distribuirlo a un server di produzione.|[Decomprimere un pacchetto di applicazione livello dati](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |Viene descritto come utilizzare una procedura guidata per distribuire un database esistente. Nella procedura guidata vengono utilizzate applicazioni livello dati per effettuare la distribuzione.|[Distribuire un database tramite un'applicazione livello dati](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   

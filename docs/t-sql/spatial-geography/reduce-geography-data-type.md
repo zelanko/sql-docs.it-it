@@ -18,10 +18,10 @@ ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101761"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (tipo di dati geography)
@@ -42,7 +42,7 @@ ms.locfileid: "68101761"
   
 |||  
 |-|-|  
-|Nome|Definizione|  
+|Termine|Definizione|  
 |*tolerance*|Valore di tipo **float**. *tolerance* è la tolleranza per l'input dell'algoritmo Douglas-Peucker. *tolerance* deve essere un numero positivo.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
@@ -50,7 +50,7 @@ ms.locfileid: "68101761"
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per i tipi relativi a una raccolta, questo algoritmo opera indipendentemente su ogni tipo **geography** contenuto nell'istanza. Questo algoritmo non modifica le istanze **Point**.  
   
  Questo metodo prova a mantenere gli endpoint delle istanze **LineString**, ma il tentativo può non riuscire se si vuole mantenere un risultato valido.  

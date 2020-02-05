@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056197"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurare e gestire i file del thesaurus per la ricerca full-text
@@ -115,7 +115,7 @@ Un file del thesaurus vuoto tipico contiene gli elementi XML seguenti:
 </XML>  
 ```
 
-### <a name="expansion"></a> Struttura XML di un set di espansione  
+### <a name="expansion"></a> XML structure of an expansion set  
   
  Ogni set di espansione è racchiuso in un elemento `<expansion>`. All'interno di questo elemento è possibile specificare una o più sostituzioni in un elemento `<sub>`. Nel set di espansione è possibile specificare un gruppo di sostituzioni che sono sinonimi una dell'altra.  
   
@@ -131,7 +131,7 @@ La sezione del set di espansione dell'esempio precedente sarà la seguente:
 </expansion>  
 ```  
   
-### <a name="replacement"></a> Struttura XML di un set di sostituzione  
+### <a name="replacement"></a> XML structure of a replacement set  
   
 Ogni set di sostituzione è racchiuso in un elemento `<replacement>`. All'interno di questo elemento è possibile specificare uno o più criteri in un elemento `<pat>` e zero o più sostituzioni in elementi `<sub>`, uno per sinonimo. È possibile specificare un criterio da sostituire con un set di sostituzione. I criteri e le sostituzioni possono contenere una parola o una sequenza di parole. Se non viene specificata alcuna sostituzione per un criterio, questo verrà rimosso dalla query dell'utente.  
   

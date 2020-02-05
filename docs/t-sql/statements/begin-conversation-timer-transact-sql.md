@@ -33,10 +33,10 @@ ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211222"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "70211222"
 
   Avvia un timer. Alla scadenza del timeout, [!INCLUDE[ssSB](../../includes/sssb-md.md)] inserisce un messaggio di tipo `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` nella coda locale per la conversazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  Specifica, in secondi, quanto tempo deve trascorrere prima che il messaggio venga inserito nella coda.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il timer di conversazione consente a un'applicazione di ricevere un messaggio per una conversazione dopo un periodo di tempo specifico. Se si chiama BEGIN CONVERSATION TIMER per una conversazione prima della scadenza del timer, per il timeout verrà impostato il nuovo valore. A differenza di quanto avviene per la durata della conversazione, ogni lato della conversazione ha un timer indipendente. Il messaggio **DialogTimer** arriva nella coda locale senza che venga interessato il lato remoto della conversazione. Un'applicazione può, quindi, utilizzare un messaggio timer per qualsiasi motivo.  
   
  È possibile, ad esempio, utilizzare il timer di conversazione per evitare che un'applicazione attenda troppo a lungo una risposta scaduta. Se si prevede che un'applicazione completi un dialogo in 30 secondi, è possibile impostare il timer di conversazione per tale dialogo su 60 secondi (30 secondi più altri 30 secondi di tolleranza). Se il dialogo è ancora aperto dopo 60 secondi, l'applicazione riceve un messaggio di timeout nella coda.  

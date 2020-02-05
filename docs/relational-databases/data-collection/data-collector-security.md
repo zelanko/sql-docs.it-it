@@ -14,10 +14,10 @@ ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f81ec185224818060faed79ecf18e08a1743ea7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140736"
 ---
 # <a name="data-collector-security"></a>Sicurezza agente di raccolta dati
@@ -53,7 +53,7 @@ ms.locfileid: "68140736"
 > [!IMPORTANT]  
 >  I membri dei ruoli db_ssisadmin e dc_admin potrebbero essere in grado di elevare i loro privilegi a sysadmin. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere eseguiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza sysadmin di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione dei piani di manutenzione, set di raccolta dati e altri pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo da utilizzare un account proxy con privilegi limitati o aggiungere solo i membri sysadmin ai ruoli db_ssisadmin e dc_admin.  
   
-### <a name="dcadmin-role"></a>Ruolo dc_admin  
+### <a name="dc_admin-role"></a>Ruolo dc_admin  
  Gli utenti assegnati al ruolo **dc_admin** hanno accesso completo di amministratore (creazione, lettura, aggiornamento ed eliminazione) alla configurazione dell'agente di raccolta dati su un'istanza del server. I membri di questo ruolo possono eseguire le seguenti operazioni:  
   
 -   Impostare proprietà a livello di agente di raccolta  
@@ -73,7 +73,7 @@ ms.locfileid: "68140736"
   
 -   **dc_operator**. I membri di **dc_admin** ereditano le autorizzazioni concesse a **dc_operator**.  
   
-### <a name="dcoperator-role"></a>Ruolo dc_operator  
+### <a name="dc_operator-role"></a>Ruolo dc_operator  
  I membri del ruolo **dc_operator** hanno accesso in lettura e aggiornamento. Tale ruolo supporta le attività di operazioni relative all'esecuzione e alla configurazione dei set di raccolta. I membri di questo ruolo possono eseguire le seguenti operazioni:  
   
 -   Avviare o arrestare un set di raccolta.  
@@ -94,7 +94,7 @@ ms.locfileid: "68140736"
   
  Per altre informazioni, vedere [Ruoli Integration Services &#40;servizio SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
-### <a name="dcproxy-role"></a>Ruolo dc_proxy  
+### <a name="dc_proxy-role"></a>Ruolo dc_proxy  
  I membri del ruolo **dc_proxy** hanno accesso in lettura ai set di raccolta dell'agente di raccolta dati e alle proprietà a livello di agente di raccolta. I membri di questo ruolo possono inoltre eseguire processi di cui sono proprietari e creare passaggi di processo eseguibili come un account proxy esistente.  
   
  I membri di questo ruolo possono eseguire le seguenti operazioni:  
@@ -126,7 +126,7 @@ ms.locfileid: "68140736"
   
  Gli utenti membri del ruolo predefinito del server **sysadmin** hanno accesso completo alle viste dell'agente di raccolta dati. Tuttavia è necessario che vengano aggiunti esplicitamente ai ruoli del database per eseguire altre operazioni.  
   
-### <a name="mdwadmin-role"></a>Ruolo mdw_admin  
+### <a name="mdw_admin-role"></a>Ruolo mdw_admin  
  I membri del ruolo **mdw_admin** hanno accesso in lettura, scrittura, aggiornamento ed eliminazione al data warehouse di gestione.  
   
  I membri di questo ruolo possono eseguire le seguenti operazioni:  
@@ -138,10 +138,10 @@ ms.locfileid: "68140736"
   
 -   Eseguire processi di manutenzione sul data warehouse di gestione, ad esempio archiviazione o pulizia.  
   
-### <a name="mdwwriter-role"></a>Ruolo mdw_writer  
+### <a name="mdw_writer-role"></a>Ruolo mdw_writer  
  I membri del ruolo **mdw_writer** possono caricare e scrivere dati nel data warehouse di gestione. Gli agenti di raccolta dati che archiviano dati nel data warehouse di gestione devono essere membri di questo ruolo.  
   
-### <a name="mdwreader-role"></a>Ruolo mdw_reader  
+### <a name="mdw_reader-role"></a>Ruolo mdw_reader  
  I membri del ruolo **mdw_reader** hanno accesso in lettura al data warehouse di gestione. Poiché lo scopo di questo ruolo è supportare la risoluzione dei problemi fornendo accesso ai dati della cronologia, i membri di questo ruolo non possono visualizzare gli altri elementi dello schema del data warehouse di gestione.  
   
 ## <a name="see-also"></a>Vedere anche  

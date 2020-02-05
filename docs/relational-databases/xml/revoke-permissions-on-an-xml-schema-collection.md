@@ -13,10 +13,10 @@ ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d2cdfdf47aad32c9fc669ae054cf84c061c0ee5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000760"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revoca delle autorizzazioni per una raccolta di XML Schema
@@ -45,7 +45,7 @@ ms.locfileid: "68000760"
 ## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di pulizia necessario.  
   
-### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. Revoca delle autorizzazioni per creare una raccolta XML Schema  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>R. Revoca delle autorizzazioni per creare una raccolta XML Schema  
  In questo esempio vengono creati un account di accesso e un database di esempio e nel database viene inoltre aggiunto uno schema relazionale. Innanzitutto, all'account di accesso vengono concesse l'autorizzazione ALTER per entrambi gli schemi relazionali e le altre autorizzazioni necessarie per creare raccolte XML Schema. Viene quindi revocata l'autorizzazione ALTER per uno degli schemi relazionali del database, in modo tale da impedire all'account di accesso di creare una raccolta XML Schema.  
   
 ```  
@@ -146,6 +146,6 @@ Go
  [Dati XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Raccolte di XML Schema &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
- [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per le raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094571"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importare un file BACPAC per creare un nuovo database utente
@@ -44,7 +44,7 @@ ms.locfileid: "74094571"
 2.  Durante l'importazione viene eseguita la copia bulk di dati dal file di esportazione.  
 
 ## <a name="sql-server-utility"></a>Utilità SQL Server  
- Se si importa un'applicazione livello dati in un'istanza del motore di database, il pacchetto di applicazione livello dati importato viene incorporato in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Deployed Data-tier Applications** details page.  
+ Se si importa un'applicazione livello dati in un'istanza del motore di database, il pacchetto di applicazione livello dati importato viene incorporato in Utilità SQL Server al successivo invio del set di raccolta dell'utilità dall'istanza al punto di controllo dell'utilità. L'applicazione livello dati sarà quindi presente nel nodo **Deployed Data-tier Applications** (Applicazioni livello dati distribuite) in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** e segnalata nella pagina dei dettagli **Deployed Data-tier Applications** (Applicazioni livello dati distribuite).  
   
 ## <a name="database-options-and-settings"></a>Opzioni e impostazioni del database  
  Per impostazione predefinita, il database creato durante l'importazione disporrà di tutte le impostazioni predefinite dall'istruzione CREATE DATABASE, con l'eccezione delle regole di confronto del database e del livello di compatibilità che vengono impostati sui valori definiti nel file di esportazione dell'applicazione livello dati. In un file di esportazione dell'applicazione livello dati vengono utilizzati i valori del database originale.  
@@ -122,7 +122,7 @@ ms.locfileid: "74094571"
  **Da un database SQL di Azure:**  
   
  - **[Importare un file BACPAC per creare un database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)** contiene istruzioni dettagliate per eseguire questa operazione usando il portale di Azure, PowerShell, SQL Server Management Studio o SqlPackage.  
- - Vedere le **[opzioni e prestazioni disponibili in ogni livello del servizio del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** per informazioni dettagliate sui diversi livelli del servizio.  
+ - Per un'analisi approfondita ai diversi livelli di servizio, vedere **[Opzioni e prestazioni disponibili in ogni livello di servizio del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** .  
 
 ### <a name="validation-page"></a>Pagina Convalida  
  Usare questa pagina per esaminare gli eventuali problemi che impediscono l'operazione. Per continuare, risolvere i problemi che causano il blocco, quindi fare clic su **Ripeti convalida** per assicurarsi che la convalida venga completata correttamente.  
@@ -140,7 +140,7 @@ ms.locfileid: "74094571"
 ###  <a name="Results"></a> Pagina Risultati  
  In questa pagina viene riportato l'esito positivo o negativo delle operazioni di impostazione e creazione del database, con l'indicazione dei risultati positivi o negativi di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  
   
- Per chiudere la procedura guidata, fare clic su **Chiudi** .  
+ Fare clic su **Chiudi** per chiudere la procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Importare un file BACPAC per creare un database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)  

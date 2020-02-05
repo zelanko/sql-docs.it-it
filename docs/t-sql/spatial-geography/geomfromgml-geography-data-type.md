@@ -19,10 +19,10 @@ ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: bc8173d8be0c5f5c3194667935e3cc7af4f1cca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930734"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (tipo di dati geography)
@@ -30,7 +30,7 @@ ms.locfileid: "67930734"
 
 Costruisce un'istanza **geography** data una rappresentazione nel subset [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Geography Markup Language (GML).
   
-Per altre informazioni su GML, vedere le specifiche Open Geospatial Consortium seguenti: [Specifiche OGC, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
+Per altre informazioni su GML, vedere le specifiche Open Geospatial Consortium (OGC): [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.
   
@@ -53,7 +53,7 @@ GeomFromGml ( GML_input, SRID )
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
  Questo metodo genererà un'eccezione **ArgumentException** se l'input contiene un bordo opposto.  

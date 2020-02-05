@@ -18,10 +18,10 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278364"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Motore di database)
@@ -53,12 +53,12 @@ _newRoot_
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Consente di modificare l'albero spostando nodi da _oldRoot_ a _newRoot_. GetReparentedValue può essere usato per spostare un nodo di una gerarchia in un nuovo percorso della gerarchia. Il tipo di dati **hierarchyid** rappresenta la struttura gerarchica, ma non la applica. Gli utenti devono verificare che hierarchyid sia strutturato in modo appropriato per il nuovo percorso. Un indice univoco applicato al tipo di dati **hierarchyid** può impedire la presenza di voci duplicate. Per un esempio di spostamento di un sottoalbero intero, vedere [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-comparing-two-node-locations"></a>A. Confronto tra due percorsi di nodi  
+### <a name="a-comparing-two-node-locations"></a>R. Confronto tra due percorsi di nodi  
 Nell'esempio seguente viene illustrato il valore hierarchyid corrente di un nodo. Viene anche visualizzato il valore **hierarchyid** del nodo, nel caso in cui quest'ultimo venga spostato e diventi un discendente del nodo **\@NewParent**. Per visualizzare le relazioni gerarchiche, viene utilizzato il metodo `ToString()`.
   
 ```sql

@@ -15,10 +15,10 @@ ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1837e3b57548ec0d4324a408f8f43201ccc3ca6b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768168"
 ---
 # <a name="define-filters"></a>Definisci filtri
@@ -29,10 +29,10 @@ ms.locfileid: "68768168"
  **Operatore**  
  Consente di selezionare un operatore per il filtro, ad esempio **Minore o uguale a**.
   
- **Value**  
+ **Valore**  
  Consente di digitare un valore per il filtro. Per la maggior parte degli operatori è necessario specificare soltanto un valore nella prima colonna **Valore** , tuttavia, gli operatori **Compreso tra** e **Non compreso tra** richiedono un valore in entrambe le colonne **Valore** .  
   
- **Clear**  
+ **Cancella**  
  Fare clic su questo pulsante per cancellare tutti i filtri definiti in precedenza.  
   
 ## <a name="see-also"></a>Vedere anche  

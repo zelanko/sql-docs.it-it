@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff27b763f5bbb658de2d5e762ecdecdaea7fc583
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095716"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Introduzione al motore di database
@@ -45,10 +45,10 @@ Per questa esercitazione non sono richieste nozioni specifiche.
   
 Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](Indici per tabelle con ottimizzazione per la memoria). Per installare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], vedere [Scaricare SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per installare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], vedere [Scaricare SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esercitazione: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+[Esercitazione su SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   
   

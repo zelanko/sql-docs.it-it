@@ -14,10 +14,10 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297790"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordinamento dei dati per le trasformazioni Unione e Merge Join
@@ -42,7 +42,7 @@ ms.locfileid: "71297790"
   
      La trasformazione Ordinamento utilizza le regole di confronto di Windows per ordinare i valori stringa.  
   
-     oppure  
+     -oppure-  
   
 -   Usare l'operatore CAST Transact-SQL per eseguire innanzitutto il cast dei valori **varchar** in valori **nvarchar** e quindi usare la clausola ORDER BY Transact-SQL per ordinare i dati.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71297790"
   
 #### <a name="to-manually-set-sort-attributes-on-a-source-or-transformation-component"></a>Per impostare manualmente gli attributi di ordinamento in un componente dell'origine o della trasformazione  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contenente il pacchetto desiderato.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   

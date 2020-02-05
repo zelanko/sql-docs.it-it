@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982560"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971454"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -111,7 +111,7 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], il campionamento
   
  Per la maggior parte dei carichi di lavoro, non è necessaria un'analisi completa e il campionamento predefinito è adeguato.  
 Tuttavia, alcuni carichi di lavoro sensibili a distribuzioni dei dati con ampie variazioni potrebbero richiedere una dimensione maggiore di esempio, o anche un'analisi completa.  
-Per altre informazioni, vedere il [blog di CSS SQL Escalation Services](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx).  
+Per altre informazioni, vedere il [blog di CSS SQL Escalation Services](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed).  
   
  RESAMPLE  
  Aggiorna ogni statistica utilizzando la frequenza di campionamento più recente.  
@@ -151,7 +151,7 @@ Se **ON**, le statistiche mantengono la percentuale di campionamento impostata p
  Per altre informazioni sull'opzione AUTO_STATISTICS_UPDATE, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  INCREMENTAL = { ON | OFF }  
- Quando è impostata su **ON**, le statistiche vengono ricreate come statistiche per partizione. Quando è impostata su **OFF**, l'albero delle statistiche viene eliminato e le statistiche vengono rielaborate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è **OFF**.  
+ Quando è impostata su **ON**, le statistiche vengono ricreate come statistiche per partizione. Se è specificato **OFF**, l'albero delle statistiche viene eliminato e le statistiche vengono ricalcolate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è **OFF**.  
   
  Se le statistiche per partizione non sono supportate, viene generato un errore. Le statistiche incrementali non sono supportate per i seguenti tipi di statistiche:  
   
@@ -183,7 +183,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ### <a name="when-to-use-update-statistics"></a>Utilizzo di UPDATE STATISTICS  
  Per altre informazioni sulle situazioni in cui si usa `UPDATE STATISTICS`, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
@@ -234,7 +234,7 @@ update statistics t1 (a) with stats_stream = 0x01;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-update-all-statistics-on-a-table"></a>A. Aggiornamento di tutte le statistiche di una tabella  
+### <a name="a-update-all-statistics-on-a-table"></a>R. Aggiornamento di tutte le statistiche di una tabella  
  In questo esempio vengono aggiornate le statistiche per tutti gli indici della tabella `SalesOrderDetail`.  
   
 ```sql  

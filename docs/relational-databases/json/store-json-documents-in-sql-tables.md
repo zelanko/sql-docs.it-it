@@ -10,10 +10,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ea43d88fea017c723177e4b83c86b5c8165b734b
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096029"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Archiviare documenti JSON in SQL Server o nel database SQL
@@ -27,7 +27,7 @@ La prima decisione per la progettazione dell'archiviazione è la modalità di ar
 
 ## <a name="classic-tables"></a>Tabelle classiche
 
-Il modo più semplice per archiviare i documenti JSON in SQL Server o nel database SQL consiste nel creare una tabella a due colonne contenente l'ID e il contenuto del documento. Esempio:
+Il modo più semplice per archiviare i documenti JSON in SQL Server o nel database SQL consiste nel creare una tabella a due colonne contenente l'ID e il contenuto del documento. Ad esempio:
 
 ```sql
 create table WebSite.Logs (
@@ -40,7 +40,7 @@ Questa struttura è equivalente alle raccolte che è possibile trovare nei datab
 
 Il tipo di dati nvarchar(max) consente di archiviare documenti JSON con una dimensione massima di 2 GB. Per motivi di prestazioni, se si è certi che i documenti JSON non superino le dimensioni di 8 KB, è tuttavia consigliabile usare NVARCHAR(4000) anziché NVARCHAR(max).
 
-Nella tabella di esempio creata nell'esempio precedente si presuppone che nella colonna `log` vengano archiviati documenti JSON validi. Per assicurarsi che nella colonna `log` venga salvato contenuto JSON valido è possibile aggiungere un vincolo CHECK nella colonna. Esempio:
+Nella tabella di esempio creata nell'esempio precedente si presuppone che nella colonna `log` vengano archiviati documenti JSON validi. Per assicurarsi che nella colonna `log` venga salvato contenuto JSON valido è possibile aggiungere un vincolo CHECK nella colonna. Ad esempio:
 
 ```sql
 ALTER TABLE WebSite.Logs
@@ -50,7 +50,7 @@ ALTER TABLE WebSite.Logs
 
 Ogni volta che un utente inserisce o aggiorna un documento nella tabella, questo vincolo verifica che il documento JSON sia formattato correttamente. Senza il vincolo, la tabella è ottimizzata per gli inserimenti. I documenti JSON vengono infatti aggiunti direttamente alla colonna senza alcuna elaborazione.
 
-Con i documenti JSON archiviati nella tabella, sarà possibile di usare il linguaggio Transact-SQL standard per eseguire query sui documenti. Esempio:
+Con i documenti JSON archiviati nella tabella, sarà possibile di usare il linguaggio Transact-SQL standard per eseguire query sui documenti. Ad esempio:
 
 ```sql
 SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
@@ -69,7 +69,7 @@ Questa capacità di usare una sintassi di query T-SQL avanzata è la differenza 
 
 Se ci si rende conto che la ricerca nei documenti viene spesso eseguita in base a una proprietà (ad esempio, una proprietà `severity` in un documento JSON) è possibile aggiungere un indice NON CLUSTER classico nella proprietà per velocizzare le query.
 
-È possibile creare una colonna calcolata che espone i valori JSON delle colonne JSON nel percorso specificato, ovvero nel percorso `$.severity`, e creare un indice standard in questa colonna calcolata. Esempio:
+È possibile creare una colonna calcolata che espone i valori JSON delle colonne JSON nel percorso specificato, ovvero nel percorso `$.severity`, e creare un indice standard in questa colonna calcolata. Ad esempio:
 
 ```sql
 create table WebSite.Logs (
@@ -125,7 +125,7 @@ create table WebSite.Logs (
 
 Una tabella ottimizzata per la memoria è l'opzione migliore per i documenti modificati di frequente. Quando si valuta l'uso di tabelle ottimizzate per la memoria è consigliabile tenere presente anche le prestazioni. Se possibile, usare NVARCHAR(4000) anziché NVARCHAR(max) per i documenti JSON presenti nelle raccolte ottimizzate per la memoria poiché le prestazioni potrebbero migliorare in modo significativo.
 
-In modo analogo alle tabelle classiche, è possibile aggiungere indici sui campi esposti nelle tabelle ottimizzate per la memoria usando le colonne calcolate. Esempio:
+In modo analogo alle tabelle classiche, è possibile aggiungere indici sui campi esposti nelle tabelle ottimizzate per la memoria usando le colonne calcolate. Ad esempio:
 
 ```sql
 create table WebSite.Logs (
@@ -141,7 +141,7 @@ create table WebSite.Logs (
 
 Per ottimizzare le prestazioni, eseguire il cast del valore JSON nel tipo più piccolo possibile che si può usare per contenere il valore della proprietà. Nell'esempio precedente viene usato **tinyint**.
 
-Per ottenere il vantaggio della compilazione nativa è anche possibile inserire le query SQL che aggiornano i documenti JSON in stored procedure. Esempio:
+Per ottenere il vantaggio della compilazione nativa è anche possibile inserire le query SQL che aggiornano i documenti JSON in stored procedure. Ad esempio:
 
 ```sql
 CREATE PROCEDURE WebSite.UpdateData(@Id int, @Property nvarchar(100), @Value nvarchar(100))

@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121564"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68121564"
 
   Implementa la gestione degli errori per [!INCLUDE[tsql](../../includes/tsql-md.md)], simile alla gestione delle eccezioni nei linguaggi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un gruppo di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] può essere racchiuso in un blocco TRY. Se si verifica un errore nel blocco TRY, il controllo viene passato a un altro gruppo di istruzioni racchiuso in un blocco CATCH.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,7 +63,7 @@ END CATCH
  *statement_block*  
  Qualsiasi gruppo di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in un batch o racchiuse in un blocco BEGIN…END.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Un costrutto TRY...CATCH intercetta tutti gli errori di esecuzione con livello di gravità superiore a 10 che non determinano la chiusura della connessione al database.  
   
  Un blocco TRY deve essere immediatamente seguito da un blocco CATCH associato. L'inclusione di qualsiasi altra istruzione tra le istruzioni END TRY e BEGIN CATCH genera un errore di sintassi.  
@@ -200,14 +200,14 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>Transazioni bloccate e XACT_STATE  
+## <a name="uncommittable-transactions-and-xact_state"></a>Transazioni bloccate e XACT_STATE  
  Se un errore generato in un blocco TRY invalida lo stato della transazione corrente, la transazione viene classificata come transazione bloccata. Un errore che normalmente termina una transazione all'esterno di un blocco TRY causa il passaggio della transazione a uno stato di transazione bloccata quando si verifica all'interno di un blocco TRY. Una transazione bloccata può eseguire soltanto le operazioni di lettura o ROLLBACK TRANSACTION. La transazione non può eseguire istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che generano una operazione di scrittura o COMMIT TRANSACTION. La funzione XACT_STATE restituisce un valore -1 se una transazione è stata classificata come transazione bloccata. Al termine di un batch, [!INCLUDE[ssDE](../../includes/ssde-md.md)] esegue automaticamente il rollback di qualsiasi transazione bloccata attiva. Se non sono stati inviati messaggi di errore al momento dell'attivazione dello stato di blocco per la transazione, al termine dell'esecuzione del batch, verrà inviato un messaggio di errore all'applicazione client. Viene così indicato che è stata rilevata una transazione bloccata e ne è stato eseguito il rollback.  
   
  Per altre informazioni sulle transazioni di cui non è possibile eseguire il commit e la funzione XACT_STATE, vedere [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-trycatch"></a>A. Utilizzo di TRY...CATCH  
+### <a name="a-using-trycatch"></a>R. Utilizzo di TRY...CATCH  
  Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. L'errore determina il passaggio dell'esecuzione al blocco `CATCH` associato.  
   
 ```sql  
@@ -256,7 +256,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. Utilizzo di TRY...CATCH con XACT_STATE  
+### <a name="c-using-trycatch-with-xact_state"></a>C. Utilizzo di TRY...CATCH con XACT_STATE  
  Nell'esempio seguente viene illustrato come utilizzare il costrutto `TRY...CATCH` per gestire gli errori che si verificano all'interno di una transazione. La funzione `XACT_STATE` determina se è necessario eseguire il commit o il rollback della transazione. In this example, l'evento `SET XACT_ABORT` è `ON`. Rende pertanto bloccata la transazione quando si verifica l'errore di violazione di vincolo.  
   
 ```sql  

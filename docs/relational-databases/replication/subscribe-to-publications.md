@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768364"
 ---
 # <a name="subscribe-to-publications"></a>Subscribe to Publications
@@ -38,7 +38,7 @@ ms.locfileid: "68768364"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-|Sottoscrizione|Caratteristiche|Situazioni in cui utilizzarla|  
+|Subscription|Caratteristiche|Situazioni in cui utilizzarla|  
 |------------------|---------------------|--------------|  
 |Sottoscrizione push|Nelle sottoscrizioni push il server di pubblicazione propaga le modifiche a un Sottoscrittore senza che il Sottoscrittore ne faccia richiesta. È possibile inviare le modifiche ai Sottoscrittori su richiesta, in modo continuato o in base a una pianificazione definita. L'agente di distribuzione o l'agente di merge viene eseguito nel server di distribuzione.|I dati vengono sincronizzati in modo continuato o in modo ricorrente in base a una pianificazione specifica.<br /><br /> Le pubblicazioni richiedono lo spostamento dei dati quasi in tempo reale.<br /><br /> In un server di distribuzione l'aumento dell'overhead del processore non compromette le prestazioni.<br /><br /> Generalmente utilizzato con la replica snapshot e transazionale.|  
 |Sottoscrizione pull|Tramite le sottoscrizioni pull il Sottoscrittore richiede le modifiche eseguite nel server di pubblicazione. Le sottoscrizioni pull consentono al Sottoscrittore di stabilire quando sincronizzare le modifiche apportate ai dati. L'agente di distribuzione o l'agente di merge viene eseguito nel Sottoscrittore.|I dati vengono sincronizzati su richiesta o in base a una pianificazione anziché in modo continuo.<br /><br /> Alla pubblicazione è associato un numero elevato di Sottoscrittori e/o l'esecuzione di tutti gli agenti nel server di distribuzione richiederebbe un numero di risorse eccessivo.<br /><br /> I Sottoscrittori sono autonomi, scollegati e/o mobili. I Sottoscrittori determinano quando eseguire la connessione e quando sincronizzare le modifiche.<br /><br /> Generalmente utilizzato con la replica di tipo merge.|  
@@ -68,7 +68,7 @@ ms.locfileid: "68768364"
   
  **Per creare una sottoscrizione push**  
   
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)  
+ [Creare una sottoscrizione push](../../relational-databases/replication/create-a-push-subscription.md)  
   
  **Per visualizzare o modificare le proprietà di sottoscrizione push**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68768364"
   
  **Per creare una sottoscrizione pull**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Creare una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **Per visualizzare o modificare le proprietà di sottoscrizione pull**  
   

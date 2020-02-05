@@ -11,10 +11,10 @@ ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7af6ce4ebf3e412c2283e16e008cfd97cd34df0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292840"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Indirizzare il flusso CDC in base al tipo di modifica
@@ -40,11 +40,11 @@ ms.locfileid: "71292840"
   
 6.  Selezionare uno degli output seguenti:  
   
-    -   Output di eliminazione: output a cui vengono indirizzate le righe delle modifiche DELETE.  
+    -   Output di eliminazione: output in cui vengono indirizzate le righe delle modifiche DELETE.  
   
-    -   Output di inserimento: output a cui vengono indirizzate le righe delle modifiche INSERT.  
+    -   Output di inserimento: output in cui vengono indirizzate le righe delle modifiche INSERT.  
   
-    -   Output di aggiornamento: output a cui vengono indirizzate le righe delle modifiche prima/dopo UPDATE e le righe delle modifiche MERGE.  
+    -   Output di aggiornamento: output in cui vengono indirizzate le righe delle modifiche before/after UPDATE e le righe delle modifiche MERGE.  
   
 7.  È eventualmente possibile configurare le proprietà avanzate utilizzando la finestra di dialogo **Editor avanzato** .  
   

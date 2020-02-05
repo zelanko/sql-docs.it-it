@@ -19,10 +19,10 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291661"
 ---
 # <a name="character-map-transformation"></a>Trasformazione Mappa caratteri
@@ -49,7 +49,7 @@ ms.locfileid: "71291661"
 |Hiragana|Esegue il mapping da caratteri Katakana a caratteri Hiragana.|  
 |Katakana|Esegue il mapping da caratteri Hiragana a caratteri Katakana.|  
 |Conversione da maiuscole a minuscole (e viceversa) basata sulla lingua|Applica la conversione da maiuscole a minuscole (e viceversa) basata sulla lingua anziché le regole di sistema. La conversione da maiuscole a minuscole (e viceversa) basata sulla lingua fa riferimento a una funzionalità disponibile nell'API Win32 per il mapping Unicode semplice tra maiuscole e minuscole per il turco e altre impostazioni locali.|  
-|Minuscolo|Converte i caratteri in minuscolo.|  
+|Lettere minuscole|Converte i caratteri in minuscolo.|  
 |Cinese semplificato|Esegue il mapping da caratteri in cinese tradizionale a caratteri in cinese semplificato.|  
 |Cinese tradizionale|Esegue il mapping da caratteri in cinese semplificato a caratteri in cinese tradizionale.|  
 |Maiuscolo|Converte i caratteri in maiuscolo.|  
@@ -59,11 +59,11 @@ ms.locfileid: "71291661"
   
 |Operazione A|Operazione B|  
 |-----------------|-----------------|  
-|Minuscolo|Maiuscolo|  
+|Lettere minuscole|Maiuscolo|  
 |Hiragana|Katakana|  
 |Metà larghezza|Larghezza intera|  
 |Cinese tradizionale|Cinese semplificato|  
-|Minuscolo|Hiragana, katakana, metà larghezza, larghezza intera|  
+|Lettere minuscole|Hiragana, katakana, metà larghezza, larghezza intera|  
 |Maiuscolo|Hiragana, katakana, metà larghezza, larghezza intera|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>Configurazione della trasformazione Mappa caratteri  
@@ -105,12 +105,12 @@ ms.locfileid: "71291661"
 |Nuova colonna|Consente di salvare i dati in una nuova colonna. Assegnare il nome alla colonna in **Alias di output**.|  
 |Modifica sul posto|Consente di salvare i dati modificati nella colonna esistente.|  
   
- **Operazione**  
+ **operazione**  
  Consente di selezionare nell'elenco le funzioni per i valori stringa da applicare ai dati della colonna.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|Minuscolo|Consente di convertire la stringa in caratteri minuscoli.|  
+|Lettere minuscole|Consente di convertire la stringa in caratteri minuscoli.|  
 |Maiuscolo|Consente di convertire la stringa in caratteri maiuscoli.|  
 |Inversione byte|Consente di eseguire la conversione invertendo l'ordine dei byte.|  
 |Hiragana|Consente di convertire i caratteri giapponesi katakana in caratteri hiragana.|  

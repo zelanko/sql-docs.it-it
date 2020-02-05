@@ -14,16 +14,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094553"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Procedure per la risoluzione dei problemi generali relativi a Posta elettronica database 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Per risolvere i problemi relativi a Posta elettronica database, è necessario controllare le aree generali seguenti del sistema di Posta elettronica database. Queste procedure vengono presentate in ordine logico, ma possono essere completate in qualsiasi sequenza.
+Per risolvere i problemi relativi a Posta elettronica database, è necessario controllare le aree generali seguenti del sistema di Posta elettronica database. Queste procedure vengono indicate in ordine logico, ma possono essere completate in qualsiasi sequenza.
 
 ## <a name="permissions"></a>Autorizzazioni
 
@@ -43,7 +43,7 @@ Per risolvere i problemi relativi a Posta elettronica database, è necessario co
     ```
 
    Nel riquadro dei risultati confermare che run_value per [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) sia impostato su 1.
-   Se run_value non è 1, Posta elettronica database non è abilitato. Questa funzionalità non è abilitata automaticamente per ridurre il numero di funzionalità che potrebbero essere soggette a un attacco da parte di un utente malintenzionato. Per altre informazioni, vedere [Informazioni su Configurazione superficie di attacco](../security/surface-area-configuration.md).
+   Se run_value non è 1, Posta elettronica database non è abilitato. Tale caratteristica non è abilitata automaticamente per ridurre il numero di caratteristiche che potrebbero essere soggette a un attacco da parte di un utente malintenzionato. Per altre informazioni, vedere [Informazioni su Configurazione superficie di attacco](../security/surface-area-configuration.md).
 
 1. Se si decide che l'abilitazione di Posta elettronica database non comporta alcun problema, eseguire il codice seguente:
 
@@ -87,7 +87,7 @@ Per risolvere i problemi relativi a Posta elettronica database, è necessario co
     EXEC msdb.dbo.sysmail_help_principalprofile_sp;
     ```
 
-1. Usare la Configurazione guidata Posta elettronica database per creare profili e consentire agli utenti di accedervi.
+1. Utilizzare la Configurazione guidata posta elettronica database per creare profili e consentire agli utenti di accedervi.
  
 ## <a name="is-database-mail-started"></a>Posta elettronica database è avviato
 
@@ -96,13 +96,13 @@ Per risolvere i problemi relativi a Posta elettronica database, è necessario co
     ```sql
     EXEC msdb.dbo.sysmail_help_status_sp;
     ```
-1. Se l'attivazione di Posta elettronica database non è stata avviata, eseguire l'istruzione seguente per avviarla:
+1. Se il programma esterno Posta elettronica database non è in esecuzione, eseguire l'istruzione seguente per avviarlo:
 
     ```sql
     EXEC msdb.dbo.sysmail_start_sp;
     ```
 
-1. Se il programma esterno Posta elettronica database è avviato, eseguire l'istruzione seguente per controllare lo stato della coda della posta:
+1. Se il programma esterno Posta elettronica database è in esecuzione, eseguire l'istruzione seguente per controllare lo stato della coda della posta:
 
     ```sql
     EXEC msdb.dbo.sysmail_help_queue_sp @queue_type = 'mail';
@@ -125,7 +125,7 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="do-problems-affect-some-or-all-accounts"></a>I problemi influiscono su alcuni o tutti gli account
 
-1. Se si è appurato che solo alcuni profili possono inviare posta, è possibile che esistano problemi con gli account di Posta elettronica database usati dai profili che non riescono a inviare messaggi. Per verificare quali account possono inviare posta, eseguire l'istruzione seguente:
+1. Se si è appurato che solo alcuni profili possono inviare posta, è possibile che esistano problemi con gli account di Posta elettronica database utilizzati dai profili che non riescono a inviare messaggi. Per verificare quali account possono inviare posta, eseguire l'istruzione seguente:
 
     ```sql
     SELECT sent_account_id, sent_date FROM msdb.dbo.sysmail_sentitems;
@@ -143,11 +143,11 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="retry-mail-delivery"></a>Nuovi tentativi di recapito della posta elettronica
 
-1. Se si è appurato che gli errori di Posta elettronica database sono dovuti a problemi di contatto del server SMTP, potrebbe essere possibile migliorare la frequenza di recapito aumentando il numero di tentativi eseguiti da Posta elettronica database per l'invio di ogni messaggio. Avviare la Configurazione guidata Posta elettronica database e selezionare l'opzione Visualizza o modifica i parametri di sistema. In alternativa, è possibile associare più account al profilo in modo che in caso di errore di recapito con l'account principale sia possibile usare l'account di failover per l'invio dei messaggi di posta elettronica.
+1. Se si è appurato che gli errori di Posta elettronica database sono dovuti a problemi di contatto del server SMTP, potrebbe essere possibile migliorare la frequenza di recapito aumentando il numero di tentativi eseguiti da Posta elettronica database per l'invio di ogni messaggio. Avviare la Configurazione guidata Posta elettronica database e selezionare l'opzione Visualizza o modifica i parametri di sistema. In alternativa, è possibile associare più account al profilo in modo che in caso di errore di recapito con l'account principale sia possibile utilizzare l'account di failover per l'invio dei messaggi di posta elettronica.
 1. Nella pagina Configurazione parametri di sistema i valori predefiniti pari a 60 volte per Tentativi account e cinque per Ritardo tentativi account indicano che il recapito dei messaggi avrà esito negativo se non è possibile contattare il server SMTP entro 5 minuti. Impostare un valore più alto per questi parametri per aumentare il periodo di tempo che deve trascorrere prima che il recapito dei messaggi abbia esito negativo.
 
     > [!NOTE]
-    > Se la quantità di messaggi inviata è notevole, l'impostazione di valori predefiniti elevati può consentire di aumentare l'affidabilità, ma comporta un aumento sostanziale dell'uso delle risorse a causa dei ripetuti tentativi di invio per numerosi messaggi. Affrontare il problema alla radice risolvendo l'errore di rete o del server SMTP che impedisce a Posta elettronica database di contattare tempestivamente il server SMTP.
+    > Se la quantità di messaggi inviata è notevole, l'impostazione di valori predefiniti elevati può consentire di aumentare l'affidabilità, ma comporta un aumento sostanziale dell'utilizzo delle risorse a causa dei ripetuti tentativi di invio per numerosi messaggi. Affrontare il problema alla radice risolvendo l'errore di rete o del server SMTP che impedisce a Posta elettronica database di contattare tempestivamente il server SMTP.
 
 
 

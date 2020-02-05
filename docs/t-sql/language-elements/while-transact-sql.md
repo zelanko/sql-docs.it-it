@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095871"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
@@ -68,12 +68,12 @@ WHILE Boolean_expression
  CONTINUE  
  Consente il riavvio del ciclo WHILE, ignorando tutte le istruzioni che seguono la parola chiave CONTINUE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se due o più cicli WHILE sono nidificati, un'istruzione BREAK nel ciclo più interno passa al ciclo più esterno successivo. Vengono eseguite tutte le istruzioni successive al ciclo più interno, quindi viene riavviato il ciclo successivo più esterno.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>A. Utilizzo di BREAK e CONTINUE con cicli IF...ELSE e WHILE nidificati  
+### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>R. Utilizzo di BREAK e CONTINUE con cicli IF...ELSE e WHILE nidificati  
  Nell'esempio seguente, se il prezzo medio di listino di un prodotto è minore di `$300`, il ciclo `WHILE` raddoppia i prezzi e quindi seleziona il prezzo massimo. Se il prezzo massimo è minore o uguale a `$500`, il ciclo `WHILE` viene riavviato e il prezzo viene nuovamente raddoppiato. Questo ciclo continua a raddoppiare i prezzi fino a quando il prezzo massimo non supera `$500`, quindi il ciclo `WHILE` viene terminato e viene stampato un messaggio.  
   
 ```  
@@ -117,7 +117,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: Ciclo WHILE semplice  
+### <a name="c-simple-while-loop"></a>C. Ciclo WHILE semplice  
  Nell'esempio seguente, se il prezzo medio di listino di un prodotto è minore di `$300`, il ciclo `WHILE` raddoppia i prezzi e quindi seleziona il prezzo massimo. Se il prezzo massimo è minore o uguale a `$500`, il ciclo `WHILE` viene riavviato e il prezzo viene nuovamente raddoppiato. Questo ciclo continua a raddoppiare i prezzi fino a quando il prezzo massimo non supera `$500`, quindi si esce dal ciclo `WHILE`.  
   
 ```  

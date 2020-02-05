@@ -15,10 +15,10 @@ ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001727"
 ---
 # <a name="use-nested-for-xml-queries"></a>Utilizzo di query FOR XML nidificate
@@ -67,7 +67,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- Poiché il risultato è di tipo **xml**, è possibile applicare uno dei metodi con tipo di dati **xml** direttamente al valore XML, come illustrato nella query seguente. Nella query viene usato il [metodo query() con tipo di dati XML](../../t-sql/xml/query-method-xml-data-type.md) per recuperare il primo elemento <`row`> figlio dell'elemento <`myRoot`>.  
+ Poiché il risultato è di tipo **xml** , è possibile applicare uno dei metodi con tipo di dati **xml** direttamente al valore XML, come illustrato nella query seguente. Nella query viene usato il [metodo query() con tipo di dati XML](../../t-sql/xml/query-method-xml-data-type.md) per recuperare il primo elemento <`row`> figlio dell'elemento <`myRoot`>.  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -84,7 +84,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Restituzione di risultati della query FOR XML interna a query esterne come istanze di tipo XML  
- È possibile scrivere query `FOR XML` nidificate in cui il risultato della query interna viene restituito alla query esterna come tipo di dati **xml** . Esempio:  
+ È possibile scrivere query `FOR XML` nidificate in cui il risultato della query interna viene restituito alla query esterna come tipo di dati **xml** . Ad esempio:  
   
 ```  
 SELECT Col1,   
@@ -117,16 +117,16 @@ FOR XML AUTO, TYPE;
 ## <a name="examples"></a>Esempi  
  Negli argomenti seguenti vengono forniti esempi di query FOR XML nidificate.  
   
- [Query FOR XML e query nidificata FOR XML a confronto](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  
+ [Query FOR XML e query FOR XML annidate a confronto](../../relational-databases/xml/for-xml-query-compared-to-nested-for-xml-query.md)  
  Confronto di una query FOR XML con un solo livello con una query FOR XML nidificata. In questo esempio è inclusa una dimostrazione di come specificare valori XML incentrati sia sugli attributi sia sugli elementi come risultato della query.  
   
- [Generare elementi di pari livello tramite query nidificate in modalità AUTO](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)  
+ [Generare elementi di pari livello tramite query annidate in modalità AUTO](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)  
  Procedura di generazione di elementi di pari livello tramite query nidificate in modalità AUTO  
   
- [Utilizzo di query FOR XML nidificate in ASP.NET](../../relational-databases/xml/use-nested-for-xml-queries-in-asp-net.md)  
+ [Usare query FOR XML annidate in ASP.NET](../../relational-databases/xml/use-nested-for-xml-queries-in-asp-net.md)  
  Dimostrazione del modo in cui un'applicazione ASPX può utilizzare FOR XML per restituire XML da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Determinare la struttura dei valori XML tramite query nidificate FOR XML](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md)  
+ [Determinare la struttura dei valori XML tramite query FOR XML annidate](../../relational-databases/xml/shape-xml-with-nested-for-xml-queries.md)  
  Utilizzo di query FOR XML nidificate per controllare la struttura di un documento XML creato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054597"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Pianificare l'esecuzione di pacchetti SSIS distribuiti in Azure con SQL Server Management Studio (SSMS)
@@ -29,7 +29,7 @@ Se si usa il database SQL per ospitare il catalogo SSIS `SSISDB`, è possibile u
 
 Quando si usa SSMS per pianificare un pacchetto, SSIS crea automaticamente tre nuovi oggetti Data Factory, con nomi basati sul nome del pacchetto selezionato e sul timestamp. Se ad esempio il nome del pacchetto SSIS è **MyPackage**, SSMS crea nuovi oggetti Data Factory simili ai seguenti:
 
-| Object | nome |
+| Oggetto | Nome |
 |---|---|
 | Pipeline | **Pipeline_MyPackage_2018-05-08T09_00_00Z** |
 | Attività Esegui pacchetto SSIS | **Activity_MyPackage_2018-05-08T09_00_00Z** |
@@ -75,5 +75,5 @@ La funzionalità descritta in questo articolo richiede SQL Server Management Stu
 Per informazioni su altri metodi per la pianificazione di un pacchetto SSIS, vedere [Pianificare l'esecuzione di un pacchetto SSIS in Azure](ssis-azure-schedule-packages.md).
 
 Per altre informazioni su pipeline, attività e trigger di Azure Data Factory, vedere gli articoli seguenti:
--   [Pipelines and activities in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) (Pipeline e attività in Azure Data Factory)
--   [Pipeline execution and triggers in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers) (Esecuzione di pipeline e trigger in Azure Data Factory)
+-   [Pipeline e attività in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
+-   [Esecuzione e trigger di pipeline in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)

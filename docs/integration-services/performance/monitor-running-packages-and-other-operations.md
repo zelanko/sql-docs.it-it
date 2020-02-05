@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295793"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Esecuzione di pacchetti e altre operazioni di monitoraggio
@@ -86,7 +86,7 @@ ms.locfileid: "71295793"
 |Convalida del pacchetto|301|  
 |Configurazione del catalogo|1000|  
   
- **Arresta**  
+ **Stop**  
  Fare clic per arrestare un'operazione in esecuzione.  
 
 ## <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Visualizzazione e arresto dell'esecuzione dei pacchetti nel server Integration Services
@@ -187,7 +187,7 @@ ms.locfileid: "71295793"
  Per istruzioni su come creare e aggiungere un report personalizzato, vedere [Aggiunta di un report personalizzato a Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md).  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Visualizzare i report per il server Integration Services
-  Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per semplificare il monitoraggio di progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che sono stati distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  Per altre informazioni sui report, vedere [Report per il server Integration Services](#reports).  
+  Nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]sono disponibili report standard in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per monitorare i progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  Per altre informazioni sui report, vedere [Report per il server Integration Services](#reports).  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Per visualizzare i report per il server Integration Services  
   
@@ -209,4 +209,4 @@ ms.locfileid: "71295793"
 
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di progetti e pacchetti](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [Risoluzione dei problemi relativi ai report per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Report per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

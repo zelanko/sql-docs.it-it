@@ -15,10 +15,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 70798b0e967d62b51879cc694c8eb43363d364c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912951"
 ---
 # <a name="semantic-search-sql-server"></a>Ricerca semantica (SQL Server)
@@ -101,7 +101,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Abilitare la ricerca semantica in tabelle e colonne](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)  
  Viene descritto come abilitare o disabilitare l'indicizzazione semantica statistica in colonne selezionate contenenti documenti o testo.  
   
- [Trovare frasi chiave nei documenti mediante ricerca semantica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
+ [Trovare frasi chiave nei documenti tramite la ricerca semantica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  
  Viene descritto come individuare le frasi chiave nei documenti o nelle colonne di testo configurati per l'indicizzazione semantica statistica.  
   
  [Trovare documenti simili e correlati tramite la ricerca semantica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)  
@@ -111,7 +111,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  Vengono descritti il processo di indicizzazione semantica e le attività correlate al monitoraggio e alla gestione degli indici.  
   
 ##  <a name="relcontent"></a> Related content  
- [DDL di ricerca semantica, funzioni, stored procedure e viste](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
+ [DDL, funzioni, stored procedure e viste di ricerca semantica](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md)  
  Sono elencati le istruzioni Transact-SQL e gli oggetti di database di SQL Server aggiunti o modificati per supportare la ricerca semantica statistica.  
   
   

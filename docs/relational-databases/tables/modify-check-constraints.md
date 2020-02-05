@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0aeeeab2e90ebd90068be44f817cd6bd65af061
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907269"
 ---
 # <a name="modify-check-constraints"></a>Modifica di vincoli CHECK
@@ -32,7 +32,7 @@ ms.locfileid: "72907269"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare un vincolo CHECK:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72907269"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-a-check-constraint"></a>Per modificare un vincolo CHECK  
   
@@ -59,7 +59,7 @@ ms.locfileid: "72907269"
   
 4.  Completare un'operazione dalla tabella seguente:  
   
-    |Per|seguire le operazioni di seguito riportate|  
+    |A|seguire le operazioni di seguito riportate|  
     |--------|------------------------|  
     |Modificare l'espressione del vincolo|Digitare la nuova espressione nel campo **Espressione** .|  
     |Rinominare il vincolo|Digitare un nuovo nome nel campo **Nome** .|  
@@ -70,11 +70,11 @@ ms.locfileid: "72907269"
     > [!NOTE]  
     >  Alcuni database dispongono di funzionalità differenti per i vincoli CHECK.  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Close**.  
   
-6.  Nel menu **File** scegliere **Salva**_table name_.  
+6.  Scegliere **Salva** **nome tabella** dal menu _File_.  
 
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare un vincolo CHECK**  
   
  Per modificare un vincolo `CHECK` utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)], è innanzitutto necessario eliminare il vincolo `CHECK` esistente e quindi crearlo di nuovo con la nuova definizione. Per altre informazioni, vedere [Eliminazione dei vincoli CHECK](../../relational-databases/tables/delete-check-constraints.md) e [Creare vincoli CHECK](../../relational-databases/tables/create-check-constraints.md).  

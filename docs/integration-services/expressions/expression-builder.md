@@ -15,10 +15,10 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 885e45267e7527a63f04facd630b2ec72f8a00f8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297604"
 ---
 # <a name="expression-builder"></a>Generatore di espressioni
@@ -42,7 +42,7 @@ ms.locfileid: "71297604"
   
 ## <a name="options"></a>Opzioni  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |**Variabili**|Espandere la cartella **Variabili** e trascinare le variabili nella casella **Espressione** .|  
 |**Funzioni matematiche**<br /><br /> **Funzioni per i valori stringa**<br /><br /> **Funzioni di data/ora**<br /><br /> **Funzioni NULL**<br /><br /> **Cast di tipo**<br /><br /> **Operatori**|Espandere le cartelle e trascinare le funzioni, i cast di tipo e gli operatori nella casella **Espressione** .|  

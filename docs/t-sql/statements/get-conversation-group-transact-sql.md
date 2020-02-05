@@ -25,10 +25,10 @@ ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252183"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "72252183"
 
   Restituisce l'identificatore del gruppo di conversazioni per il messaggio successivo da ricevere e blocca il gruppo di conversazioni per la conversazione contenente il messaggio. L'identificatore del gruppo di conversazioni può essere utilizzato per recuperare le informazioni sullo stato della conversazione prima di recuperare il messaggio stesso.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72252183"
  TIMEOUT *timeout*  
  Specifica la quantità di tempo, in millisecondi, che Service Broker attende l'arrivo di un messaggio nella coda. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se un'istruzione che usa l'istruzione WAITFOR non include questa clausola oppure se *timeout* è -1, il tempo di attesa è illimitato. Se il timeout scade, l'istruzione GET CONVERSATION GROUP imposta la variabile *\@conversation_group_id* su NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 > [!IMPORTANT]  
 >  Se l'istruzione GET CONVERSATION GROUP non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola ( **;** ), ovvero il terminatore di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "72252183"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. Recupero di un gruppo di conversazioni e attesa illimitata  
+### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>R. Recupero di un gruppo di conversazioni e attesa illimitata  
  Nell'esempio seguente `@conversation_group_id` viene impostato sull'identificatore del gruppo di conversazioni per il successivo messaggio disponibile in `ExpenseQueue`. Il comando rimane in attesa finché non è disponibile un messaggio.  
   
 ```  

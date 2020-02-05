@@ -18,10 +18,10 @@ ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 34f63ee6609c93dd9435930bfe347a0fa610ce33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120763"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (tipo di dati geography)
@@ -48,7 +48,7 @@ ms.locfileid: "68120763"
 ## <a name="exceptions"></a>Eccezioni  
  Questo metodo genera un'eccezione **ArgumentException** se l'istanza contiene un bordo opposto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il set di possibili risultati restituito nel server è stato esteso alle istanze **FullGlobe**.  
@@ -59,7 +59,7 @@ ms.locfileid: "68120763"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-computing-the-union-of-two-polygons"></a>A. Calcolo dell'unione di due poligoni  
+### <a name="a-computing-the-union-of-two-polygons"></a>R. Calcolo dell'unione di due poligoni  
  Nell'esempio seguente viene utilizzato `STUnion()` per calcolare l'unione di due istanze `Polygon`.  
   
 ```  

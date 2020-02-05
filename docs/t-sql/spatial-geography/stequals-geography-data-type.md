@@ -18,10 +18,10 @@ ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: caa274b1571a9c0506acbe3f6d5d5d004588fede
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042270"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (tipo di dati geography)
@@ -45,11 +45,11 @@ ms.locfileid: "68042270"
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene usato il metodo `STGeomFromText()` per creare due istanze `geography` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza. Le istanze sono uguali perché `LINESTRING` e `POINT` sono contenuti all'interno di `POLYGON`.  
+ Nell'esempio seguente viene usato il metodo `geography` per creare due istanze `STGeomFromText()` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza. Le istanze sono uguali perché `LINESTRING` e `POINT` sono contenuti all'interno di `POLYGON`.  
   
 ```  
 DECLARE @g geography;  

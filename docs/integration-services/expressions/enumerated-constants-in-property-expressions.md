@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297634"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Costanti enumerate in espressioni di proprietà
@@ -54,7 +54,7 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in DTSPackageType|Valore numerico|  
 |-------------------------------------|-------------------|  
-|Default|0|  
+|Predefinito|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -67,13 +67,13 @@ ms.locfileid: "71297634"
 |-----------------------------------------|-------------------|  
 |Never|0|  
 |IfExists|1|  
-|Always|2|  
+|Sempre|2|  
   
  Proprietà **PackagePriorityClass**: impostata usando i valori dell'enumerazione **DTSPriorityClass**.  
   
 |Nome descrittivo in DTSPriorityClass|Valore numerico|  
 |---------------------------------------|-------------------|  
-|Default|0|  
+|Predefinito|0|  
 |AboveNormal|1|  
 |Normale|2|  
 |BelowNormal|3|  
@@ -95,7 +95,7 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in DTSPrecedenceEvalOp|Valore numerico|  
 |------------------------------------------|-------------------|  
-|Espressione|1|  
+|Expression|1|  
 |Vincolo|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -104,10 +104,10 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo|Valore numerico|  
 |-------------------|-------------------|  
-|Esito positivo|0|  
-|Failure|1|  
+|Operazione completata|0|  
+|Operazioni non riuscite|1|  
 |Completion|2|  
-|Canceled|3|  
+|Cancellati|3|  
   
 ##  <a name="Foreach"></a> Enumeratori per il ciclo Foreach  
  Il ciclo Foreach include un set di enumeratori con proprietà che possono essere impostate tramite espressioni di proprietà.  
@@ -134,8 +134,8 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in EnumerationType|Valore numerico|  
 |--------------------------------------|-------------------|  
-|Navigator|0|  
-|Node|1|  
+|Strumento di spostamento|0|  
+|Nodo|1|  
 |NodeText|2|  
 |ElementCollection|3|  
   
@@ -143,8 +143,8 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in InnerElementType|Valore numerico|  
 |---------------------------------------|-------------------|  
-|Navigator|0|  
-|Node|1|  
+|Strumento di spostamento|0|  
+|Nodo|1|  
 |NodeText|2|  
   
 ##  <a name="Tasks"></a> Attività  
@@ -208,8 +208,8 @@ ms.locfileid: "71297634"
 |Nome descrittivo in DTSFileSystemAttributes|Valore numerico|  
 |----------------------------------------------|-------------------|  
 |Normale|0|  
-|Archive|1|  
-|Hidden|2|  
+|Archiviazione|1|  
+|Nascosto|2|  
 |ReadOnly|4|  
 |Sistema|8|  
   
@@ -219,7 +219,7 @@ ms.locfileid: "71297634"
 |Nome descrittivo in DTSFTPOp|Valore numerico|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|1|  
+|Ricevere|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -267,7 +267,7 @@ ms.locfileid: "71297634"
 |Nome descrittivo in MailPriority|Valore numerico|  
 |-----------------------------------|-------------------|  
 |Alto|1|  
-|Normal|3|  
+|Normale|3|  
 |Basso|5|  
   
 ### <a name="transfer-database-task"></a>Attività Trasferisci database  
@@ -275,8 +275,8 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in TransferAction|Valore numerico|  
 |-------------------------------------|-------------------|  
-|Copia|0|  
-|Visualizzazione Dettagli|1|  
+|Copiare|0|  
+|Spostamento|1|  
   
  Proprietà **Method**: impostata usando i valori dell'enumerazione **TransferMethod**.  
   
@@ -334,7 +334,7 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in ExistingData|Valore numerico|  
 |-----------------------------------|-------------------|  
-|Sostituisci|0|  
+|Replace|0|  
 |Accoda|1|  
   
 ### <a name="web-service-task"></a>Attività Servizio Web  
@@ -423,7 +423,7 @@ ms.locfileid: "71297634"
 |Convalida|0|  
 |XSLT|1|  
 |XPATH|2|  
-|Merge|3|  
+|Unione|3|  
 |Diff|4|  
 |Patch|5|  
   
@@ -453,7 +453,7 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in DTSXMLXPathOperation|Valore numerico|  
 |-------------------------------------------|-------------------|  
-|Copia di valutazione|0|  
+|Versione di valutazione|0|  
 |Valori|1|  
 |NodeList|2|  
   
@@ -461,7 +461,7 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in DTSXMLDiffOptions|Valore numerico|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|nessuno|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -491,26 +491,26 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in DatabaseSelection|Valore numerico|  
 |----------------------------------------|-------------------|  
-|None|0|  
-|All|1|  
+|nessuno|0|  
+|Tutti|1|  
 |Sistema|2|  
 |Utente|3|  
-|Specific|4|  
+|Specifica|4|  
   
  Proprietà **TableSelectionType**: impostata usando i valori dell'enumerazione **TableSelection**.  
   
 |Nome descrittivo in TableSelection|Valore numerico|  
 |-------------------------------------|-------------------|  
-|None|0|  
-|All|1|  
-|Specific|2|  
+|nessuno|0|  
+|Tutti|1|  
+|Specifica|2|  
   
  Proprietà **ObjectTypeSelection**: impostata usando i valori dell'enumerazione **ObjectType**.  
   
 |Nome descrittivo in ObjectType|Valore numerico|  
 |---------------------------------|-------------------|  
 |Tabella|0|  
-|Vista|1|  
+|Visualizza|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Attività Backup database  
@@ -519,7 +519,7 @@ ms.locfileid: "71297634"
 |Nome descrittivo in DestinationType|Valore numerico|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|Manual|1|  
+|Manuale|1|  
   
  Proprietà **ExistingBackupsAction**: impostata usando i valori dell'enumerazione **ActionForExistingBackups**.  
   
@@ -536,7 +536,7 @@ ms.locfileid: "71297634"
 |File|1|  
 |File di log|2|  
   
- Proprietà **BackupDevice**: impostata usando i valori dell'enumerazione **DeviceType** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+ Proprietà **BackupDevice**: impostata usando i valori dell'enumerazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DeviceType**di** Management Objects (SMO).  
   
 |Nome descrittivo in DeviceType|Valore numerico|  
 |---------------------------------|-------------------|  
@@ -558,19 +558,19 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in TimeUnitType|Valore numerico|  
 |-----------------------------------|-------------------|  
-|Day|0|  
+|Giorno|0|  
 |Week|1|  
 |Month|2|  
 |Year|3|  
   
 ### <a name="update-statistics-task"></a>Attività Aggiorna statistiche  
- Proprietà **UpdateType**: impostata usando i valori dell'enumerazione **StatisticsTarget** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+ Proprietà **UpdateType**: impostata usando i valori dell'enumerazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]StatisticsTarget**di** Management Objects (SMO).  
   
 |Nome descrittivo in StatisticsTarget|Valore numerico|  
 |---------------------------------------|-------------------|  
-|colonna|1|  
+|Colonna|1|  
 |Indice|2|  
-|All|3|  
+|Tutti|3|  
   
 ##  <a name="CommonProperties"></a> Proprietà comuni  
  I pacchetti, le attività e i contenitori Ciclo Foreach, Ciclo For e Sequenza possono utilizzare le enumerazioni seguenti per impostare le proprietà specificate.  
@@ -579,9 +579,9 @@ ms.locfileid: "71297634"
   
 |Nome descrittivo in DTSForcedExecResult|Valore numerico|  
 |------------------------------------------|-------------------|  
-|None|-1|  
-|Esito positivo|0|  
-|Failure|1|  
+|nessuno|-1|  
+|Operazione completata|0|  
+|Operazioni non riuscite|1|  
 |Completion|2|  
   
  Proprietà **IsolationLevel**: impostata usando i valori dell'enumerazione **IsolationLevel** di .NET Framework. Per altre informazioni, vedere la libreria di classi di Microsoft .NET Framework in [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
@@ -591,8 +591,8 @@ ms.locfileid: "71297634"
 |Nome descrittivo in DTSLoggingMode|Valore numerico|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Abilitata|1|  
-|Disabilitata|2|  
+|Attivato|1|  
+|Disabled|2|  
   
  Proprietà **TransactionOption**: impostata usando i valori dell'enumerazione **DTSTransactionOption**.  
   
@@ -600,7 +600,7 @@ ms.locfileid: "71297634"
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
 |Supportato|1|  
-|Obbligatorio|2|  
+|Obbligatoria|2|  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Aggiungere o modificare un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md)  

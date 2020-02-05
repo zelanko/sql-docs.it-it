@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 964fdf4d4abb58d7baf27ee9e2f8b6900a7d0bbb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295717"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Eseguire un pacchetto SSIS dal prompt dei comandi con DTExec.exe
@@ -43,7 +43,7 @@ Se la cartella che contiene `DTExec.exe` non si trova nella variabile di ambient
 
 Con i valori dei parametri usati nell'esempio seguente, il programma esegue il pacchetto nel percorso della cartella specificato nel server SSIS, ovvero il server che ospita il database del catalogo SSIS (SSISDB). Il parametro `/Server` specifica il nome del server. Il programma si connette come utente corrente con l'autenticazione integrata di Windows. Per usare l'autenticazione SQL, specificare i parametri `/User` e `Password` con i valori appropriati.
 
-1. Aprire la finestra del prompt dei comandi.
+1. Aprire una finestra del prompt dei comandi.
 
 2. Eseguire `DTExec.exe` e specificare i valori almeno per i parametri `ISServer` e `Server`, come illustrato nell'esempio seguente:
 

@@ -14,10 +14,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71582dbdccc331ec4b43d87071952879f304395c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292268"
 ---
 # <a name="parsing-data"></a>Analisi dei dati
@@ -51,7 +51,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
 ## <a name="numeric-data-formats-fast-parse"></a>Formati di dati numerici (analisi veloce)
 L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dati, indipendenti dalle impostazioni locali. Supporta solo un limitato set di formati per i tipi di dati integer.  
   
-### <a name="integer-data-type"></a>Tipo di dati Integer
+### <a name="integer-data-type"></a>Dati di tipo Integer
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili i tipi di dati integer DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 e DT_UI8. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  L'analisi veloce supporta i formati seguenti per i tipi di dati integer:  
@@ -90,7 +90,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
 -   Formati ISO 8601, elencati nella tabella seguente:  
   
-    |Formato|Descrizione|  
+    |Format|Descrizione|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|Formati di base ed esteso con anno a quattro cifre, a due cifre e giorno a due cifre. Nel formato esteso, le parti della data sono separate da un segno meno (-).|  
     |AAAA-MM|Formati di base ed esteso a precisione ridotta, con anno a quattro cifre e mese a due cifre. Nel formato esteso, le parti della data sono separate da un segno meno (-).|  
@@ -112,7 +112,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
  Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="time-data-type"></a>Tipi di dati per i valori di ora
+### <a name="time-data-type"></a>Dati di tipo Time
  L'analisi veloce supporta i formati stringa seguenti per i dati di ora:  
   
 -   Formati di ora che includono spazi vuoti iniziali. Ad esempio, il valore " 10.24" è valido.  
@@ -121,7 +121,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
 -   Formati di ora ISO 8601, elencati nella tabella seguente:  
   
-    |Formato|Descrizione|  
+    |Format|Descrizione|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Formati di base ed esteso con ora a due cifre, minuto a due cifre e giorno a due cifre. Nel formato esteso, le parti dell'ora sono separate da un punto (.).|  
     |HHMI<br /><br /> HH:MI|Formati troncati di base ed esteso con ora a due cifre e minuto a due cifre. Nel formato esteso, le parti dell'ora sono separate da un punto (.).|  
@@ -130,7 +130,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
 -   Formati ora che specificano un fuso orario, elencati nella tabella seguente:  
   
-    |Formato|Descrizione|  
+    |Format|Descrizione|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Formati di base ed estesi che indicano il numero di ore e minuti da aggiungere all'ora UTC (Coordinated Universal Time) per ottenere l'ora locale.|  
     |-HH:MI<br /><br /> -HHMI|Formati di base ed estesi che indicano il numero di ore e minuti da sottrarre all'ora UTC per ottenere l'ora locale.|  
@@ -148,7 +148,7 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
 -   Formati di ora che includono una frazione decimale, elencati nella tabella seguente:  
   
-    |Formato|Descrizione|  
+    |Format|Descrizione|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n è un valore compreso tra 0 e 9999999 che rappresenta una frazione di ore. Le parentesi quadrate indicano che tale valore è facoltativo.<br /><br /> Il valore 12.750 indica ad esempio le 12:45.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n è un valore compreso tra 0 e 9999999 che rappresenta una frazione di minuti. Le parentesi quadrate indicano che tale valore è facoltativo.<br /><br /> Il valore 1220,500 indica ad esempio le 12:20:30.|  
@@ -178,12 +178,12 @@ L'analisi veloce offre un set di routine semplici e veloci per l'analisi dei dat
   
  Le stringhe di output dell'analisi veloce sono di tipo DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 e DT_DBTIMESTAMPOFFSET. Ai valori di data e ora con formati troncati viene applicato un riempimento. Nella tabella seguente sono elencati i valori aggiunti per le parti mancanti relative a data e ora.  
   
-|Parte della data o dell'ora|Spaziatura interna|  
+|Parte della data o dell'ora|Riempimento|  
 |---------------------|-------------|  
 |Secondi|Viene aggiunto 00.|  
-|Minutes|Aggiungi 00:00.|  
+|Minuti|Aggiungi 00:00.|  
 |Ora|Viene aggiunto 00.00.00.|  
-|Day|Viene aggiunto 01 come giorno del mese.|  
+|Giorno|Viene aggiunto 01 come giorno del mese.|  
 |Month|Viene aggiunto 01 come mese dell'anno.|  
   
  Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

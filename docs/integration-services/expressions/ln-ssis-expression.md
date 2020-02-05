@@ -14,10 +14,10 @@ ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4bbf59211c35a6048c715594d9c298ba041bcf15
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289123"
 ---
 # <a name="ln-ssis-expression"></a>LN (espressione SSIS)
@@ -41,7 +41,7 @@ LN(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Prima del calcolo del logaritmo viene eseguito il cast dell'espressione numerica al tipo di dati DT_R8. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Se tramite il parametro *numeric_expression* viene restituito zero o un valore negativo, il risultato sarà Null.  

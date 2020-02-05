@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9707f0b23d9461418536c2b9f9015623124d5436
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059845"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
@@ -53,13 +53,13 @@ string è un'espressione di qualsiasi tipo di carattere (`nvarchar`, `varchar`, 
 
 Restituisce un'espressione carattere con un tipo di argomento stringa in cui il carattere spazio `char(32)` o altri caratteri specificati vengono rimossi a entrambe le estremità. Restituisce `NULL` se la stringa di input è `NULL`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, la funzione `TRIM` rimuove gli spazi sia dall'inizio che dalla fine della stringa. Questo comportamento è equivalente a `LTRIM(RTRIM(@string))`.
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Rimuove il carattere spazio a entrambe le estremità della stringa
+### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>R.  Rimuove il carattere spazio a entrambe le estremità della stringa
 
 L'esempio seguente rimuove gli spazi prima e dopo la parola `test`.
 
@@ -94,4 +94,4 @@ SELECT TRIM( '.,! ' FROM  '     #     test    .') AS Result;
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

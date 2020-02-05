@@ -13,10 +13,10 @@ ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127485"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>Gestione configurazione SQL Server - Configurare log degli errori di SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "74127485"
 
 2. Nella finestra di dialogo **Configura log degli errori di SQL Server** , scegliere dalle opzioni seguenti.
 
-    A. Conteggio file di log
+    a. Conteggio file di log
 
       **Limita il numero di file di log degli errori creati prima di essere riciclati**
 
@@ -40,7 +40,7 @@ ms.locfileid: "74127485"
 
       Specificare il numero massimo di file di log degli errori archiviati creati prima che vengano riciclati. Il valore predefinito è 6, escluso quello corrente. Questo valore determina il numero di log di backup precedenti conservati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prima del riciclo.
 
-    B. Dimensioni file di log
+    b. Dimensioni file di log
 
       **Dimensioni massime del file di log degli errori in KB**
 

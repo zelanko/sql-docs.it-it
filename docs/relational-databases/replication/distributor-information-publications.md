@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768587"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284026"
 ---
 # <a name="distributor-information-publications"></a>Informazioni sul server di distribuzione, Pubblicazioni
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui 
  Nelle sezioni seguenti sono descritti i dati visualizzati in questa scheda per l'agente del server di distribuzione e per quello di merge.  
   
 ### <a name="distributor-agent"></a>Agente del server di distribuzione  
- **Stato**  
+ **Status**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore    
@@ -61,7 +61,7 @@ Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui 
 -   Non in esecuzione   
 -   Mai avviato  
   
- **Server di pubblicazione**  
+ **Autore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
  **Pubblicazione**  
@@ -76,7 +76,7 @@ Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui 
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Durata dell'esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  
@@ -85,7 +85,7 @@ Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui 
  **Frequenza recapito**  
  Frequenza, in comandi al secondo, con cui viene eseguito il commit dei comandi di inizializzazione nel database di distribuzione durante la più recente esecuzione dell'agente.  
   
- **Latenza**  
+ **Latency**  
  Tempo, espresso in secondi, trascorso tra il commit della modifica più recente nel database di pubblicazione e il commit del comando corrispondente nel database di distribuzione.  
   
  **N. transazioni**  
@@ -98,7 +98,7 @@ Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui 
  Numero medio di comandi per transazione durante la più recente esecuzione dell'agente.  
   
 ### <a name="merge-agent"></a>Agente di merge  
- **Stato**  
+ **Status**  
  Stato dell'agente. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
@@ -111,7 +111,7 @@ Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui 
   
 -   Mai avviato  
   
- **Server di pubblicazione**  
+ **Autore**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione.  
   
  **Pubblicazione**  
@@ -126,7 +126,7 @@ Nella scheda **Agenti** vengono visualizzate le informazioni sugli agenti e sui 
  **Ultima ora inizio**  
  Ultima ora di avvio dell'agente.  
   
- **Durata**  
+ **Duration**  
  Durata dell'esecuzione dell'agente. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e il tempo totale se l'agente è stato eseguito in precedenza.  
   
  **Ultima azione**  

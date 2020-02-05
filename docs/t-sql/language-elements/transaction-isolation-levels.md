@@ -17,10 +17,10 @@ ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072197"
 ---
 # <a name="transaction-isolation-levels"></a>Livelli di isolamento delle transazioni
@@ -50,10 +50,10 @@ ms.locfileid: "68072197"
   
 |Livello di isolamento|Supportato|Rispettato|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|no|Rispetto non garantito|  
+|READ UNCOMMITTED|No|Rispetto non garantito|  
 |READ COMMITTED|Sì|Sì|  
-|REPEATABLE READ|no|no|  
-|SNAPSHOT ISOLATION|no|no|  
-|SERIALIZABLE|no|no|  
+|REPEATABLE READ|No|No|  
+|SNAPSHOT ISOLATION|No|No|  
+|SERIALIZABLE|No|No|  
   
   

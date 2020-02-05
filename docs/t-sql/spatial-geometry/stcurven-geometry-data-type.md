@@ -15,10 +15,10 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930137"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (tipo di dati geometry)
@@ -45,7 +45,7 @@ Restituisce la curva specificata da un'istanza **geometry** e corrispondente a *
 ## <a name="exceptions"></a>Eccezioni  
  Se *curve_index* < 1 viene generata un'eccezione `ArgumentOutOfRangeException`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **NULL** viene restituito in uno dei casi seguenti:  
   
 -   L'istanza **geometry** viene dichiarata, ma non ne viene creata un'istanza  
@@ -58,7 +58,7 @@ Restituisce la curva specificata da un'istanza **geometry** e corrispondente a *
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-stcurven-on-a-circularstring-instance"></a>A. Utilizzo di STCurves() in un'istanza CircularString  
+### <a name="a-using-stcurven-on-a-circularstring-instance"></a>R. Utilizzo di STCurves() in un'istanza CircularString  
  Nell'esempio seguente viene restituita la seconda curva in un'istanza `CircularString`:  
   
 ```

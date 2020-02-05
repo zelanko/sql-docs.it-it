@@ -15,10 +15,10 @@ ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982040"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
@@ -55,7 +55,7 @@ column_name AS computed_column_expression
  Nome della colonna da modificare, aggiungere o eliminare. *column_name* può avere un numero di caratteri compreso tra 1 e 128. Nel caso di nuove colonne, è possibile omettere *column_name* per le colonne che sono state create con il tipo di dati **timestamp**. Se non viene specificato il nome *column_name* per una colonna con il tipo di dati **timestamp**, viene usato il nome **timestamp**.  
   
 *computed_column_expression*  
- Espressione che definisce il valore di una colonna calcolata. Una colonna calcolata è una colonna virtuale non archiviata fisicamente nella tabella, ma calcolata in base a un'espressione che utilizza altre colonne nella stessa tabella. La definizione di una colonna calcolata potrebbe essere: cost AS price * qty. L'espressione può essere un nome di colonna non calcolata, una costante, una funzione, una variabile e qualsiasi combinazione di questi elementi uniti da uno o più operatori. L'espressione non può essere una sottoquery o includere dati di tipo alias.  
+ Espressione che definisce il valore di una colonna calcolata. Una colonna calcolata è una colonna virtuale non archiviata fisicamente nella tabella, ma calcolata in base a un'espressione che utilizza altre colonne nella stessa tabella. La definizione di una colonna calcolata potrebbe ad esempio essere cost AS price * qty. L'espressione può essere un nome di colonna non calcolata, una costante, una funzione, una variabile e qualsiasi combinazione di questi elementi uniti da uno o più operatori. L'espressione non può essere una sottoquery o includere dati di tipo alias.  
   
  È possibile utilizzare colonne calcolate in elenchi di selezione, clausole WHERE, clausole ORDER BY e nelle posizioni in cui è possibile utilizzare espressioni regolari, con le eccezioni seguenti:  
   
@@ -145,7 +145,7 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
 > [!NOTE]  
 >  In questo contesto, default non è una parola chiave, Si tratta di un identificatore del filegroup predefinito e deve essere delimitato, ad esempio ON "default" o ON [default]. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Ogni vincolo PRIMARY KEY e UNIQUE genera un indice. Il numero di vincoli UNIQUE e PRIMARY KEY non deve generare un numero di indici della tabella maggiore di 999 nel caso di indici non cluster e maggiore di 1 nel caso di indici cluster.  
   
 ## <a name="see-also"></a>Vedere anche  

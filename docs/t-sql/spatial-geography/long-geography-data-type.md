@@ -18,10 +18,10 @@ ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 20f1521091a295d1293c9f3e06958f36930ba4e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930207"
 ---
 # <a name="long-geography-data-type"></a>Long (tipo di dati geography)
@@ -41,7 +41,7 @@ ms.locfileid: "67930207"
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Nel modello OpenGIS, la proprietà Long viene definita solo su istanze **geography** costituite da un unico punto. Questa proprietà restituirà Null se le istanze **geography** contengono più di un unico punto. La proprietà è precisa e di sola lettura.  
   
 ## <a name="examples"></a>Esempi  

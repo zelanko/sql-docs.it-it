@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326133"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
@@ -112,10 +112,10 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>Utilizzo del tipo di dati sql_variant  
  Il tipo di dati **sql_variant** consente di archiviare più tipi di dati diversi, ad esempio **int**, **char**e **date**. I set di colonne restituiscono informazioni sul tipo di dati, ad esempio scala, precisione e informazioni sulle impostazioni locali, associate a un valore **sql_variant** come attributi nella colonna XML generata. Se si tenta di specificare questi attributi un'istruzione XML generata dall'utente come input per un'operazione di inserimento o di aggiornamento su un set di colonne, alcuni di questi attributi risultano obbligatori e ad alcuni di essi viene assegnato un valore predefinito. Nella tabella seguente vengono elencati i tipi di dati e i valori predefiniti generati dal server quando il valore non viene specificato.  
   
-|Tipo di dati|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Lunghezza massima|Precisione|Scala|  
+|Tipo di dati|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Lunghezza massima|Precision|Scalabilità|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**, **varchar**, **binary**|-1|Impostazione predefinita|0|0|8000|Non applicabile**|Non applicabile|  
-|**nvarchar**|-1|Impostazione predefinita|0|0|4\.000|Non applicabile|Non applicabile|  
+|**nvarchar**|-1|Impostazione predefinita|0|0|4000|Non applicabile|Non applicabile|  
 |**decimal**, **float**, **real**|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|18|0|  
 |**integer**, **bigint**, **tinyint**, **smallint**|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|  
 |**datetime2**|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|7|  
@@ -142,7 +142,7 @@ GO
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti una tabella in cui sono contenuti i documenti è presente il set di colonne comune `DocID` e `Title`. Il gruppo Production richiede una colonna `ProductionSpecification` e una colonna `ProductionLocation` per tutti i documenti relativi alla produzione, mentre il gruppo Marketing richiede una colonna `MarketingSurveyGroup` per i documenti relativi al marketing.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Creazione di una tabella in cui è presente un set di colonne  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>R. Creazione di una tabella in cui è presente un set di colonne  
  Nell'esempio seguente viene creata la tabella che utilizza colonne di tipo sparse e include il set di colonne `SpecialPurposeColumns`. Vengono inserite due righe nella tabella, quindi vengono selezionati dati dalla tabella.  
   
 > [!NOTE]  

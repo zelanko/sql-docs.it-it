@@ -14,10 +14,10 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 89126793193172dbdc35de2cb059a91173bb6faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296228"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Installazione side-by-side di versioni di Integration Services
@@ -36,8 +36,8 @@ ms.locfileid: "71296228"
 |Versione di destinazione di SQL Server|Ambiente di sviluppo per pacchetti SSIS|  
 |----------------------------------|-----------------------------------------------|  
 |2016|SQL Server Data Tools per Visual Studio 2015|  
-|2014|SQL Server Data Tools per Visual Studio 2015<br /><br /> o Gestione configurazione<br /><br /> SQL Server Data Tools - Business Intelligence per Visual Studio 2013|  
-|2012|SQL Server Data Tools per Visual Studio 2015<br /><br /> o Gestione configurazione<br /><br /> SQL Server Data Tools - Business Intelligence per Visual Studio 2012|  
+|2014|SQL Server Data Tools per Visual Studio 2015<br /><br /> o<br /><br /> SQL Server Data Tools - Business Intelligence per Visual Studio 2013|  
+|2012|SQL Server Data Tools per Visual Studio 2015<br /><br /> o<br /><br /> SQL Server Data Tools - Business Intelligence per Visual Studio 2012|  
 |2008|Business Intelligence Development Studio in SQL Server 2008|  
   
  Quando si aggiunge un pacchetto esistente a un progetto esistente, il pacchetto viene convertito nel formato di destinazione dal progetto.  

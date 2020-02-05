@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139596"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifica di relazioni di chiave esterna
@@ -35,7 +35,7 @@ ms.locfileid: "68139596"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per modificare una chiave esterna tramite:**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68139596"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>Per modificare una chiave esterna  
   
@@ -72,10 +72,10 @@ ms.locfileid: "68139596"
      **Relazione selezionata**  
      Vengono elencate le relazioni esistenti. Selezionarne una per visualizzarne le proprietà nella griglia a destra. Se l'elenco è vuoto, significa che per la tabella non sono state definite relazioni.  
   
-     **Aggiungi**  
+     **Aggiungere**  
      Crea una nuova relazione. È necessario impostare l'opzione **Specifiche di tabelle e colonne** per rendere valida la relazione.  
   
-     **Delete**  
+     **Elimina**  
      Elimina la relazione selezionata dall'elenco **Relazione selezionata** . Per annullare l'aggiunta di una relazione, utilizzare questo pulsante per rimuovere la relazione.  
   
      **Categoria Generale**  
@@ -103,7 +103,7 @@ ms.locfileid: "68139596"
      Viene espansa per visualizzare i campi delle proprietà **Nome** e **Descrizione**.  
   
      **Nome**  
-     Visualizza il nome della relazione. Quando viene creata una nuova relazione, le viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di **Progettazione tabelle**. Il nome può essere modificato in qualunque momento.  
+     Visualizza il nome della relazione. Quando viene creata una nuova relazione, le viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di **Progettazione tabelle**. È possibile modificare il nome in qualsiasi momento.  
   
      **Descrizione**  
      Descrive la relazione. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** , quindi sui puntini di sospensione ( **…** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
@@ -111,7 +111,7 @@ ms.locfileid: "68139596"
      **Categoria Progettazione tabelle**  
      Viene espansa per visualizzare le informazioni relative a **Verifica dati esistenti durante la creazione o la riabilitazione** e **Attiva per replica**.  
   
-     **Enforce For Replication**  
+     **Applicare per replica**  
      Viene indicato se applicare il vincolo quando un agente di replica esegue un'inserimento, un aggiornamento o un'eliminazione in questa tabella.  
   
      **Attiva vincolo della chiave esterna**  
@@ -142,9 +142,9 @@ ms.locfileid: "68139596"
   
     -   **Imposta predefinito** Viene impostato il valore predefinito stabilito per la colonna se per tutte le colonne chiave esterna della tabella sono stati impostati valori predefiniti.  
   
-4.  Nel menu **File** scegliere **Salva**_table name_.  
+4.  Scegliere **Salva** **nome tabella** dal menu _File_.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare una chiave esterna**  
   
  Per modificare un vincolo FOREIGN KEY utilizzando Transact-SQL, è innanzitutto necessario eliminare il vincolo FOREIGN KEY esistente, quindi ricrearlo con la nuova definizione. Per ulteriori informazioni, vedere [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  

@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095740"
 ---
 # <a name="json-path-expressions-sql-server"></a>Espressioni di percorso JSON (SQL Server)
@@ -65,11 +65,11 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
 -   Il percorso proprietà è un insieme di passaggi di percorso. I passaggi di percorso possono contenere gli elementi e gli operatori seguenti.  
   
-    -   Nomi delle chiavi. Ad esempio `$.name` e `$."first name"`. Se il nome della chiave inizia con un segno di dollaro o contiene caratteri speciali quali spazi, racchiuderlo tra virgolette.   
+    -   Nomi delle chiavi. Ad esempio, `$.name` e `$."first name"`. Se il nome della chiave inizia con un segno di dollaro o contiene caratteri speciali quali spazi, racchiuderlo tra virgolette.   
   
-    -   Elementi matrice. Ad esempio, `$.product[3]`. Le matrici sono in base zero.  
+    -   Elementi matrice. Ad esempio: `$.product[3]`. Le matrici sono in base zero.  
   
-    -   L'operatore punto (`.`) indica un membro di un oggetto. Ad esempio, in `$.people[1].surname` `surname` è figlio di `people`.
+    -   L'operatore punto (`.`) indica un membro di un oggetto. Ad esempio, in `$.people[1].surname``surname` è figlio di `people`.
   
 ## <a name="examples"></a>Esempi  
  Gli esempi inclusi in questa sezione fanno riferimento al testo JSON seguente.  
@@ -93,7 +93,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |---------------------|-----------|  
 |$.people[0].name|John|  
 |$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
-|$.people[1].surname|null|  
+|$.people[1].surname|Null|  
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>Modalità di gestione dei percorsi duplicati da parte delle funzioni predefinite  

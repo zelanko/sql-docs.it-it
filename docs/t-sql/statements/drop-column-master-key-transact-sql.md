@@ -20,10 +20,10 @@ ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: f6267189a83816f1c77740e5df176cc2dda86428
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594150"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
@@ -44,7 +44,7 @@ DROP COLUMN MASTER KEY key_name;
  *key_name*  
  Nome della chiave master della colonna.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La chiave master della colonna può essere eliminata solo se non sono presenti valori della chiave di crittografia della colonna crittografati con tale chiave. Per eliminare i valori della chiave di crittografia della colonna, usare l'istruzione [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -52,7 +52,7 @@ DROP COLUMN MASTER KEY key_name;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dropping-a-column-master-key"></a>A. Eliminazione di una chiave master della colonna  
+### <a name="a-dropping-a-column-master-key"></a>R. Eliminazione di una chiave master della colonna  
  Nell'esempio seguente viene eliminata una chiave master della colonna denominata `MyCMK`.  
   
 ```  

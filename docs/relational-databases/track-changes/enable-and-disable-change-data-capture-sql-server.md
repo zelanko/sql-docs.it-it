@@ -16,10 +16,10 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 82ff8e58891d07ccbecfef119c05c0cef1bbb06e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095264"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Abilitare e disabilitare Change Data Capture (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74095264"
   In questo argomento viene descritto come abilitare e disabilitare Change Data Capture per un database e una tabella.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Abilitazione di Change Data Capture per un database  
- Prima di creare un'istanza di acquisizione per le singole tabelle, è necessario che un membro del ruolo predefinito del server **sysadmin** abiliti il database per Change Data Capture. Questa operazione viene eseguita eseguendo la stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) nel contesto del database. Per determinare se un database è già abilitato, eseguire una query sulla colonna **is_cdc_enabled** nella vista del catalogo **sys.databases**.  
+ Prima di creare un'istanza di acquisizione per le singole tabelle, è necessario che un membro del ruolo predefinito del server **sysadmin** abiliti il database per Change Data Capture. Questa operazione viene eseguita eseguendo la stored procedure [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) nel contesto del database. Per determinare se un database è già abilitato, eseguire una query sulla colonna **is_cdc_enabled** nella vista del catalogo **sys.databases** .  
   
  Quando un database è abilitato per Change Data Capture, per il database vengono creati lo schema **cdc** , l'utente **cdc** , le tabelle dei metadati e altri oggetti di sistema. Lo schema **cdc** contiene le tabelle di metadati di Change Data Capture e, dopo l'abilitazione della funzionalità delle tabelle di origine, le singole tabelle delle modifiche fungono da repository per i dati delle modifiche. Lo schema **cdc** contiene anche le funzioni di sistema associate usate per eseguire query sui dati delle modifiche.  
   
@@ -168,7 +168,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [Utilizzare i dati delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
+ [Usare Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

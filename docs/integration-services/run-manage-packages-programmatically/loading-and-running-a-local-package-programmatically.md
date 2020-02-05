@@ -21,10 +21,10 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8f9264a456464b40cfce4382cb7d70cbb7ce4cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295758"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto locale a livello di codice
@@ -45,7 +45,7 @@ ms.locfileid: "71295758"
 ## <a name="loading-a-package-programmatically"></a>Caricamento di un pacchetto a livello di codice  
  Per caricare un pacchetto a livello di codice nel computer locale, indipendentemente dal fatto che il pacchetto sia archiviato in modalità locale o remota, chiamare uno dei metodi seguenti:  
   
-|Percorso di archiviazione|Metodo da chiamare|  
+|Posizione di archiviazione|Metodo da chiamare|  
 |----------------------|--------------------|  
 |File|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A>|  
 |Archivio pacchetti SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>|  

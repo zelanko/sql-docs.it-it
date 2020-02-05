@@ -14,10 +14,10 @@ ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2d332c8cdffae320d602f0581c7641d69c31c4fa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297694"
 ---
 # <a name="abs-ssis-expression"></a>ABS (espressione SSIS)
@@ -41,7 +41,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>Tipi restituiti  
  Tipo di dati dell'espressione numerica inviata alla funzione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, ABS restituirà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  

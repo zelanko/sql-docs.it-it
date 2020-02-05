@@ -21,10 +21,10 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983042"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
@@ -44,7 +44,7 @@ ms.locfileid: "73983042"
   
  L'applicazione livello dati è disponibile e supportata con l'utilità del prompt dei comandi **sqlcmd** usando un'opzione di amministrazione speciale ( **-A**). Per altre informazioni sull'uso di **sqlcmd**, vedere [Utilizzo di sqlcmd con variabili di scripting](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). È anche possibile stabilire la connessione apponendo il prefisso **admin:** al nome dell'istanza nel formato **sqlcmd -S admin:<*nome_istanza*>** . Una connessione DAC può essere stabilita anche da un editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] connettendosi ad **admin:\<*nome_istanza*>** .  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  Dato che l'applicazione livello dati ha il solo scopo di consentire la diagnosi di problemi del server in rare circostanze, vi sono alcune restrizioni nella connessione:  
   
 -   Per garantire che vi siano risorse disponibili per la connessione, per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]è consentita un'unica connessione DAC. Se è già attiva una connessione DAC, qualsiasi nuova richiesta di connessione attraverso la connessione DAC viene negata e restituisce l'errore 17810.  

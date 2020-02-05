@@ -18,10 +18,10 @@ ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: aeaa48534b2a46e5ace697624e425a93afda0d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044629"
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (tipo di dati geometry)
@@ -43,7 +43,7 @@ Restituisce il punto di fine di un'istanza **geometry**.
   
  Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  `STEndPoint()` è equivalente a [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()).  
   
  Se chiamato su un'istanza **geometry** vuota, questo metodo restituisce Null.  

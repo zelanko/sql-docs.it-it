@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e3c8d9876545e1e68a9795b7c327ac1e47e2d6
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096013"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Creazione di trigger DML per gestire più righe di dati
@@ -36,7 +36,7 @@ ms.locfileid: "74096013"
 ## <a name="examples"></a>Esempi  
  I trigger DML negli esempi seguenti sono progettati per archiviare il totale parziale di una colonna in un'altra tabella del database di esempio di [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>A. Archiviazione di un totale parziale per l'inserimento di una riga singola  
+### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>R. Archiviazione di un totale parziale per l'inserimento di una riga singola  
  La prima versione del trigger DML funziona correttamente per l'inserimento di una singola riga, quando una riga di dati viene caricata nella tabella `PurchaseOrderDetail` . Il trigger DML viene attivato da un'istruzione INSERT e la nuova riga viene caricata nella tabella **inserted** per la durata dell'esecuzione del trigger. L'istruzione `UPDATE` legge il valore della colonna `LineTotal` per la riga e lo aggiunge al valore esistente nella colonna `SubTotal` della tabella `PurchaseOrderHeader` . La clausola `WHERE` verifica che la riga aggiornata nella tabella `PurchaseOrderDetail` corrisponda al valore di `PurchaseOrderID` della riga nella tabella **inserted** .  
   
 ```  

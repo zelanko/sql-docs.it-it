@@ -11,10 +11,10 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 13c40349ea5d46ecf1264ae5c7b7aee341d6d8f2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295842"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
@@ -35,7 +35,7 @@ ms.locfileid: "71295842"
 > [!IMPORTANT]  
 >  L'estrazione di dati da SAP Netweaver BW richiede licenze SAP aggiuntive. Contattare SAP per verificare questi requisiti.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Componenti  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW include i componenti seguenti:  
   
 -   **Origine SAP BW**: l'origine SAP BW è un componente di origine del flusso di dati che consente di estrarre dati da un sistema SAP Netweaver BW versione 7.  
@@ -49,13 +49,13 @@ ms.locfileid: "71295842"
 ## <a name="documentation"></a>Documentazione  
  Il file della Guida per [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW contiene gli argomenti e le sezioni indicate di seguito:  
   
- [Installazione di Microsoft Connector for SAP BW](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  
+ [Installazione di Microsoft Connector per SAP BW](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  
  Descrive i requisiti di installazione relativi a [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW.  
   
- [Componenti di Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Componenti di Microsoft Connector per SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
  Descrive ogni componente di [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW.  
   
- [Guida (F1) di Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Guida sensibile al contesto di Microsoft Connector per SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  Descrive l'interfaccia utente di ogni componente di [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW.  
   
   

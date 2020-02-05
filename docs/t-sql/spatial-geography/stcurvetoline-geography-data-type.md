@@ -18,10 +18,10 @@ ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d6c68aa9859fbe7e1066ad392377d6b50289fd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042396"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (tipo di dati geography)
@@ -41,7 +41,7 @@ ms.locfileid: "68042396"
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Restituisce un'istanza **LineString** per un'istanza **CircularString** o **CompoundCurve**.  
   
  Restituisce un'istanza **Polygon** per un'istanza **CurvePolygon**.  

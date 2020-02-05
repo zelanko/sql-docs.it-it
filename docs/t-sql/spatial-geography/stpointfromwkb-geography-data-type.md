@@ -18,10 +18,10 @@ ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 97c519350024947ed6854554526b65754c6621a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120831"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (tipo di dati geography)
@@ -38,7 +38,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_point*  
- Rappresentazione WKB dell'istanza **geographyPoint** da restituire. *WKB_point* è un'espressione **varbinary(max)**.  
+ Rappresentazione WKB dell'istanza **geographyPoint** da restituire. *WKB_point* è un'espressione **varbinary(max)** .  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geographyPoint** da restituire.  
@@ -50,7 +50,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
  Tipo OGC: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  

@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b2155697d4c936c81c082553e2e499f006e7b945
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295632"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Eseguire un pacchetto SSIS da SSMS con Transact-SQL
@@ -28,7 +28,7 @@ SQL Server Management Studio è un ambiente integrato per la gestione di qualsia
 
 Prima di iniziare, verificare di avere l'ultima versione di SQL Server Management Studio (SSMS). Per scaricare SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
+Un server di Database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -44,7 +44,7 @@ Non è possibile usare le informazioni di questa guida introduttiva per eseguire
 
 Per eseguire il pacchetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
-1. Accedere al [portale di Azure](https://portal.azure.com/).
+1. Accedere al [Portale di Azure](https://portal.azure.com/).
 2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
@@ -57,12 +57,12 @@ Usare SQL Server Management Studio per stabilire una connessione al catalogo SSI
 
 2. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
 
-   | Impostazione       | Valore suggerito | Altre informazioni | 
+   | Impostazione       | Valore consigliato | Altre informazioni | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
+   | **Tipo di server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server | Se si sta eseguendo la connessione a un server di database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`. |
-   | **Autenticazione** | autenticazione di SQL Server | Con l'autenticazione di SQL Server è possibile connettersi a SQL Server o al database SQL di Azure. Se ci si connette a un server di database SQL di Azure, non è possibile usare l'autenticazione di Windows. |
-   | **Account di accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
+   | **autenticazione** | Autenticazione di SQL Server | Con l'autenticazione di SQL Server è possibile connettersi a SQL Server o al database SQL di Azure. Se ci si connette a un server di database SQL di Azure, non è possibile usare l'autenticazione di Windows. |
+   | **Accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
    | **Password** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
 
 3.  Fare clic su **Connetti**. In SSMS si apre la finestra Esplora oggetti.
