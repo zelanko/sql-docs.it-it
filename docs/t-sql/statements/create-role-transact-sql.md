@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a8e03235614ce9ae5b2461154c97a2bb5f67f1
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064622"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
@@ -54,7 +54,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  Utente o ruolo del database che sarà proprietario del nuovo ruolo. Se non viene specificato alcun utente, il ruolo sarà di proprietà dell'utente che esegue l'istruzione CREATE ROLE. Il proprietario del ruolo o qualsiasi membro di un ruolo proprietario può aggiungere o rimuovere membri del ruolo.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  I ruoli sono entità a protezione diretta a livello di database. Dopo aver creato un ruolo, configurare le autorizzazioni a livello di database per il ruolo tramite GRANT, DENY e REVOKE. Per aggiungere membri a un ruolo del database, usare [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Per altre informazioni, vedere [Ruoli a livello di database](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  I ruoli del database sono visibili nelle viste del catalogo sys.database_role_members e sys.database_principals.  
@@ -76,7 +76,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 ## <a name="examples"></a>Esempi  
 Tutti gli esempi seguenti usano il database AdventureWorks.   
 
-### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. Creazione di un ruolo del database di proprietà di un utente del database  
+### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>R. Creazione di un ruolo del database di proprietà di un utente del database  
  Nell'esempio seguente viene creato il ruolo del database `buyers` di proprietà dell'utente `BenMiller`.  
   
 ```sql  

@@ -13,10 +13,10 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 05906db66c2bf4948e91dddafa2cdd54aaf936ec
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907301"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lezione 1: Conversione di una tabella in una struttura gerarchica
@@ -223,7 +223,7 @@ Questa attività consente di creare una nuova tabella e popolarla con i dati del
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>Ottimizzazione della tabella NewOrg
-La tabella **NewOrd** creata nell'attività [Popolamento di una tabella con dati gerarchici esistenti](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene tutte le informazioni sul personale e rappresenta la struttura gerarchica usando un tipo di dati **hierarchyid**. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna **hierarchyid** .  
+La tabella **NewOrd** creata nell'attività [Popolamento di una tabella con dati gerarchici esistenti](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene tutte le informazioni sul personale e rappresenta la struttura gerarchica usando un tipo di dati **hierarchyid** . Questa attività aggiunge indici nuovi per supportare ricerche nella colonna **hierarchyid** .  
   
 
 La colonna **hierarchyid** (**OrgNode**) è la chiave primaria della tabella **NewOrg** . Quando la tabella è stata creata, conteneva un indice cluster denominato **PK_NewOrg_OrgNode** per applicare l'univocità della colonna **OrgNode** . Questo indice cluster supporta anche una ricerca in profondità nella tabella.  
@@ -289,7 +289,7 @@ La colonna **hierarchyid** (**OrgNode**) è la chiave primaria della tabella **N
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **Indice EmployeeID**-first: le righe vengono archiviate nella sequenza di **EmployeeID**.  
+    **Indice EmployeeID**-first: le righe vengono archiviate nella sequenza di **EmployeeID** .  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

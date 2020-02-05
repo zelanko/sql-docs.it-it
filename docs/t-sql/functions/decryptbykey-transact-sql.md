@@ -21,10 +21,10 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9ca108b3336a77becc605040b12c0361db4ac903
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251371"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72251371"
 
 Questa funzione usa una chiave simmetrica per decrittografare i dati.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ Variabile contenente i dati dai quali derivare un autenticatore. Deve corrispond
 ## <a name="return-types"></a>Tipi restituiti  
 **varbinary** con un valore massimo di 8.000 byte. `DECRYPTBYKEY` restituisce NULL se la chiave simmetrica usata per crittografare i dati non è aperta o se *ciphertext* è NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `DECRYPTBYKEY` usa una chiave simmetrica. Il database deve avere la chiave simmetrica già aperta. `DECRYPTBYKEY` consente di avere più chiavi aperte contemporaneamente. Non è necessario aprire la chiave subito prima di decrittografare il testo crittografato.  
   
 La crittografia e la decrittografia simmetriche in genere operano in modo relativamente rapido e funzionano anche per le operazioni che includono volumi di dati di grandi dimensioni.  
@@ -73,7 +73,7 @@ La chiave simmetrica deve essere già aperta nella sessione corrente. Per altre 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. Decrittografia di dati tramite una chiave simmetrica  
+### <a name="a-decrypting-by-using-a-symmetric-key"></a>R. Decrittografia di dati tramite una chiave simmetrica  
 In questo esempio viene decrittografato il testo crittografato con una chiave simmetrica.  
   
 ```sql  

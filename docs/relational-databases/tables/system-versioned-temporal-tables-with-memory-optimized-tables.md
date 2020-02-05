@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165465"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
@@ -52,9 +52,9 @@ I fattori seguenti sulle tabelle temporali con controllo delle versioni di siste
 
 La tabella di staging interna ottimizzata per la memoria è un oggetto interno creato dal sistema per ottimizzare le operazioni DML.
 
-- Il nome della tabella viene generato nel formato seguente: **Memory_Optimized_History_Table_<id_oggetto>** dove *<id_oggetto>* è l'identificatore della tabella temporale corrente.
+- Il nome della tabella viene generato nel formato seguente: **Memory_Optimized_History_Table_<object_id>** dove *<object_id>* è l'identificatore della tabella temporale corrente.
 - La tabella consente di replicare lo schema della tabella temporale corrente e una colonna di tipo BIGINT. Questa colonna aggiuntiva garantisce l'univocità delle righe spostate nel buffer interno della cronologia.
-- Il nome della colonna aggiuntiva ha il formato seguente: **Change_ID[_< suffisso>]**, dove *_\<suffisso>* viene aggiunto facoltativamente nel caso in cui la tabella includa già una colonna *Change_ID*.
+- La colonna aggiuntiva presenta il formato nome seguente: **Change_ID[_< suffisso>]** , dove *_\<suffisso>* viene aggiunto facoltativamente nel caso in cui la tabella includa già una colonna *Change_ID*.
 - Le dimensioni massime delle righe per una tabella ottimizzata per la memoria con controllo delle versioni di sistema vengono ridotte di 8 byte a causa della colonna BIGINT aggiuntiva della tabella di staging. La nuova dimensione massima è ora di 8052 byte.
 - La tabella di staging interna ottimizzata per la memoria non è rappresentata in Esplora oggetti di SQL Server Management Studio.
 - I metadati relativi a questa tabella nonché la connessione con la tabella temporale corrente sono disponibili in [sys.internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md).
@@ -67,7 +67,7 @@ L'attività di scaricamento di dati viene attivata su base periodica con una pia
 
 Lo scaricamento dei dati consente di eliminare tutti i record dal buffer in memoria interno precedenti alla transazione corrente meno recente al fine di spostare questi record sulla tabella di cronologia basata su disco.
 
-È possibile applicare uno scaricamento dati chiamando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) e specificando il nome dello schema e della tabella: **sys.sp_xtp_flush_temporal_history @schema_name, @object_name**. Con questo comando eseguito dall'utente viene richiamato lo stesso processo di spostamento dei dati richiamato per questa attività dal sistema su pianificazione interna.
+È possibile applicare uno scaricamento dati chiamando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) e specificando il nome dello schema e della tabella: **sys.sp_xtp_flush_temporal_history @schema_name, @object_name** . Con questo comando eseguito dall'utente viene richiamato lo stesso processo di spostamento dei dati richiamato per questa attività dal sistema su pianificazione interna.
 
 ## <a name="see-also"></a>Vedere anche
 

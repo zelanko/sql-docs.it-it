@@ -11,10 +11,10 @@ ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 14930bfd90b242f30a8b3f265f6ed3b367bd07f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296534"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (database SSISDB)
@@ -29,13 +29,13 @@ ms.locfileid: "71296534"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |id|**bigint**|Identificatore univoco della cartella.|  
-|NAME|**sysname(nvarchar(128)**|Nome della cartella che è univoco all'interno del catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
+|name|**sysname(nvarchar(128)**|Nome della cartella che è univoco all'interno del catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
 |description|**nvarchar(1024)**|Descrizione della cartella.|  
 |created_by_sid|**varbinary(85)**|ID di sicurezza (SID) dell'utente che ha creato la cartella.|  
 |created_by_name|**nvarchar(128)**|Nome dell'utente che ha creato la cartella.|  
 |created_time|**datetimeoffset(7)**|Data e ora di creazione della cartella.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni cartella nel catalogo.  
   
 ## <a name="permissions"></a>Autorizzazioni  

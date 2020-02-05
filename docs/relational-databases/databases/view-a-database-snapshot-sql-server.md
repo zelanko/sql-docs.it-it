@@ -15,10 +15,10 @@ ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5f09f279c82a9fb28e259951be2bf78f9ca93aae
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907908"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>Visualizzazione di uno snapshot del database (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "72907908"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per visualizzare uno snapshot del database**  
   
 1.  In Esplora oggetti connettersi all'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere l'istanza in questione.  
@@ -45,7 +45,7 @@ ms.locfileid: "72907908"
   
 3.  Espandere **Snapshot database**e selezionare lo snapshot da visualizzare.  
 
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per visualizzare uno snapshot del database**  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137332"
 ---
 # <a name="contained-databases"></a>Database indipendenti
@@ -143,16 +143,16 @@ ms.locfileid: "68137332"
 ##  <a name="Identifying"></a> Identificazione dell'indipendenza del database  
  Per consentire l'identificazione dello stato di indipendenza del database sono disponibili due strumenti. [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) è una vista in cui sono riportate tutte le entità potenzialmente non indipendenti nel database. L'evento database_uncontained_usage si verifica quando viene identificata un'entità effettivamente non contenuta in fase di esecuzione.  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  In questa vista vengono riportate tutte entità presenti nel database che potrebbero essere non indipendenti, ad esempio quelle che superano il limite del database. Sono incluse le entità utente che potrebbero usare oggetti al di fuori del modello di database. Poiché non è tuttavia possibile determinare lo stato di indipendenza di alcune entità, ad esempio quelle che usano SQL dinamico, fino alla fase di esecuzione, nella vista potrebbero essere presenti alcune entità che non sono effettivamente non indipendenti. Per altre informazioni, vedere [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage - evento  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage - evento  
  L'evento XEvent viene generato quando viene identificata un'entità non indipendente in fase di esecuzione. Sono incluse le entità che hanno origine nel codice client. Questo evento XEvent verrà generato solo per le entità effettivamente non indipendenti e solo in fase di esecuzione. Pertanto, qualsiasi entità utente non indipendente non eseguita non sarà identificata da questo XEvent.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità modificate &#40;database indipendente&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [Regole di confronto dei database indipendenti](../../relational-databases/databases/contained-database-collations.md)   
+ [Procedure consigliate per la sicurezza in database indipendenti](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   

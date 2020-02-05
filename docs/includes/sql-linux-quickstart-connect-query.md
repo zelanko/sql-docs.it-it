@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215630"
----
 ## <a name="connect-locally"></a>Eseguire la connessione in locale
 
 Nella procedura seguente viene usato **sqlcmd** per connettersi in locale alla nuova istanza di SQL Server.
@@ -92,7 +84,7 @@ A questo punto, eseguire una query per restituire i dati dalla tabella `Inventor
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. Eseguire il comando:
+1. Eseguire il comando seguente:
 
    ```sql
    GO
