@@ -29,10 +29,10 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297760"
 ---
 # <a name="term-extraction-transformation"></a>Estrazione termini - trasformazione
@@ -193,7 +193,7 @@ ms.locfileid: "71297760"
  **Colonne di input disponibili**  
  Utilizzando le caselle di controllo, selezionare un'unica colonna di testo da utilizzare per l'estrazione dei termini.  
   
- **Nome**  
+ **Termine**  
  Consente di digitare un nome per la colonna di output che conterrà i termini estratti.  
   
  **Punteggio**  
@@ -212,7 +212,7 @@ ms.locfileid: "71297760"
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione OLE DB esistente oppure fare clic su **Nuova**per creare una nuova connessione.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione a un database usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Tabella o vista**  
@@ -241,7 +241,7 @@ ms.locfileid: "71297760"
  Consente di specificare che il punteggio è rappresentato dalla frequenza del termine.  
   
  **TFIDF**  
- Consente di specificare che il punteggio è rappresentato dal valore TFIDF del termine. Il punteggio TFIDF è il prodotto tra la frequenza del termine (TF) e l'inverso della frequenza nei documenti (IDF) espresso dalla ponderazione seguente: TFIDF di un termine T = (frequenza di T) * log( (numero di righe nell'input) / (numero di righe contenenti T) )  
+ Consente di specificare che il punteggio è rappresentato dal valore TFIDF del termine. Il punteggio TFIDF è il prodotto della frequenza dei termini e della frequenza inversa dei documenti, definito come: TFIDF di un termine T = (frequenza di T) * log( (numero di righe nell'input) / (numero di righe contenenti T) )  
   
  **Soglia di frequenza**  
  Consente di specificare il numero di volte in cui una parola o una frase deve ricorrere prima che venga estratta. Il valore predefinito è 2.  
