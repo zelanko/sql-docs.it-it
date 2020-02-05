@@ -9,10 +9,10 @@ ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579713"
 ---
 # <a name="report-builder-functions---count-function"></a>Funzioni di Generatore report - Funzione Count
@@ -41,7 +41,7 @@ Count(expression, scope, recursive)
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Integer**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore di *scope* deve essere una costante di tipo stringa e non può essere un'espressione. Per aggregazioni o aggregazioni esterne che non specificano altre aggregazioni, *scope* deve fare riferimento all'ambito corrente o a un ambito contenitore. Per le aggregazioni di aggregazioni, le aggregazioni nidificate possono specificare un ambito figlio.  
   
  *Expression* può contenere chiamate alle funzioni di aggregazione nidificate con le eccezioni e le condizioni seguenti:  
@@ -66,7 +66,7 @@ Count(expression, scope, recursive)
 > [!NOTE]  
 >  Le espressioni non devono contenere ritorni a capo e interruzioni di riga, che sono inclusi nell'esempio per supportare i renderer della documentazione. Se si copia l'esempio seguente, rimuovere i ritorni a capo da ogni riga.  
   
-## <a name="code"></a>codice  
+## <a name="code"></a>Codice  
   
 ```  
 ="Count (Subcategory): " & Count(Fields!Size.Value) &   

@@ -16,10 +16,10 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70809943"
 ---
 # <a name="database-mail-messaging-objects"></a>Oggetti di messaggistica di Posta elettronica database
@@ -33,7 +33,7 @@ ms.locfileid: "70809943"
   
  Tali oggetti rappresentano l'interfaccia per Posta elettronica database all'interno del database host della posta elettronica. Per implementare le funzionalità fornite dagli oggetti elencati sopra, vengono installati altri oggetti che sono tuttavia riservati per utilizzo interno.  
   
-|Nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Visualizza**|Elenca tutti i messaggi inviati a Posta elettronica database.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Visualizza**|Elenca i messaggi relativi al comportamento di [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  

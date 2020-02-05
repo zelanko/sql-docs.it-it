@@ -13,10 +13,10 @@ ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006819"
 ---
 # <a name="example-querying-xmltype-columns"></a>Esempio: esecuzione di query sulle colonne di tipo XML
@@ -115,6 +115,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+ [Usare la modalità RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

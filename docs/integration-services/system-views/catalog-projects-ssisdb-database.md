@@ -11,10 +11,10 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296523"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (database SSISDB)
@@ -30,7 +30,7 @@ ms.locfileid: "71296523"
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|Identificatore (ID) univoco del progetto.|  
 |folder_id|**bigint**|ID univoco della cartella in cui si trova il progetto.|  
-|NAME|**sysname**|Nome del progetto.|  
+|name|**sysname**|Nome del progetto.|  
 |description|**nvarchar(1024)**|Descrizione del progetto (facoltativa).|  
 |project_format_version|**int**|Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per lo sviluppo del progetto.|  
 |deployed_by_sid|**varbinary(85)**|ID di sicurezza (SID) dell'utente che ha installato il pacchetto.|  
@@ -41,7 +41,7 @@ ms.locfileid: "71296523"
 |validation_status|**char(1)**|Stato di convalida.|  
 |last_validation_time|**datetimeoffset(7)**|Ora dell'ultima convalida.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni progetto nel catalogo.  
   
 ## <a name="permissions"></a>Autorizzazioni  

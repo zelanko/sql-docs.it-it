@@ -1,10 +1,9 @@
 ---
-title: Creare un passaggio di processo di Analysis Services | Microsoft Docs
-ms.custom: ''
+title: Create an Analysis Services Job Step
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +11,15 @@ helpviewer_keywords:
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e27f429820039b7d804f52776e9cf5dd33bf27dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 45f053ee1c69e5e36885fd72c6099823647381f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267277"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258492"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 
@@ -33,7 +34,7 @@ In questo argomento viene descritto come creare e definire passaggi del processo
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per creare i passaggi di un processo di SQL Server utilizzando i comandi e/o le query di Analysis Services con:**  
   
@@ -51,9 +52,9 @@ In questo argomento viene descritto come creare e definire passaggi del processo
   
 -   Se il passaggio del processo utilizza una query di Analysis Services, l'istruzione della query deve essere una query di espressioni MDX. Per altre informazioni su MDX, vedere [Elementi fondamentali dell'istruzione MDX (MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
   
 -   Per eseguire un passaggio di processo in cui viene utilizzato il sottosistema Analysis Services, è necessario che l'utente sia membro del ruolo predefinito del server **sysadmin** o che sia autorizzato ad accedere a un account proxy valido definito per l'utilizzo di questo sottosistema. L'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o l'account proxy deve inoltre essere amministratore di Analysis Services, nonché un account di dominio Windows valido.  
   

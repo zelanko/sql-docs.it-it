@@ -20,10 +20,10 @@ ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3b0833c1c10fb8b4be039466594e2c2025a06b91
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299053"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>Individuazione dei componenti del flusso di dati a livello di programmazione
@@ -36,7 +36,7 @@ ms.locfileid: "71299053"
 ## <a name="discovering-components"></a>Individuazione di componenti  
  La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> fornisce la raccolta <xref:Microsoft.SqlServer.Dts.Runtime.Application.PipelineComponentInfos%2A>, che contiene un oggetto <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo> per ogni componente installato correttamente nel computer locale. Ogni oggetto <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo> contiene informazioni su un componente, ad esempio il nome, la descrizione e il nome di creazione. È possibile utilizzare il valore restituito nella proprietà <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> per impostare la proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> di <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> quando si aggiunge un componente a un pacchetto.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo aver individuato i componenti disponibili, il passaggio successivo consiste nell'aggiunta e nella configurazione dei componenti, come descritto nell'argomento seguente, [Aggiunta di componenti del flusso di dati a livello di programmazione](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md).  
   
 ## <a name="sample"></a>Esempio  

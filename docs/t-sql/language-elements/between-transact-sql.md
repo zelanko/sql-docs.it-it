@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d835e68c767866a130ebb62c26fd315f5448416e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947766"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67947766"
 
   Specifica un intervallo da testare.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,10 +51,10 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  Specifica che il risultato del predicato viene negato.  
   
  *begin_expression*  
- Qualsiasi espressione valida. *begin_expression* deve essere dello stesso tipo di dati di *test_expression* e *end_expression*.  
+ È qualsiasi espressione valida. *begin_expression* deve essere dello stesso tipo di dati di *test_expression* e *end_expression*.  
   
  *end_expression*  
- Qualsiasi espressione valida. *end_expression* deve essere dello stesso tipo di dati di *test_expression* e *begin_expression*.  
+ È qualsiasi espressione valida. *end_expression* deve essere dello stesso tipo di dati di *test_expression* e *begin_expression*.  
   
  AND  
  Fa da segnaposto e indica che *test_expression* deve essere compreso nell'intervallo delimitato da *begin_expression* e *end_expression*.  
@@ -67,12 +67,12 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
  NOT BETWEEN restituisce **TRUE** se il valore di *test_expression* è minore del valore di *begin_expression* o maggiore del valore di *end_expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per specificare un intervallo esclusivo, usare gli operatori Maggiore di (>) e Minore di (<). Se l'input per il predicato BETWEEN o NOT BETWEEN è NULL, il risultato è UNKNOWN.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-between"></a>A. Utilizzo di BETWEEN  
+### <a name="a-using-between"></a>R. Utilizzo di BETWEEN  
  Nell'esempio seguente vengono restituite informazioni sui ruoli di database in un database. La prima query restituisce tutti i ruoli. Il secondo esempio usa la clausola `BETWEEN` per limitare i ruoli ai valori `database_id` specificati.  
   
 ```sql  

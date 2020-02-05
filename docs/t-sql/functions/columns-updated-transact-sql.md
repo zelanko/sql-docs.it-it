@@ -21,10 +21,10 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75721926"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)

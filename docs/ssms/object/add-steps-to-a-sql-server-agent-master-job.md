@@ -1,6 +1,6 @@
 ---
-title: Aggiungere passaggi a un processo master di SQL Server Agent | Microsoft Docs
-ms.custom: ''
+title: Add Steps to a SQL Server Agent Master Job
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5d3ac4bbe8083f19e2385bd2310538e80b93aa6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cd7ec0055c31d5e89fab6bdbf1676e855470080a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252293"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ In questo argomento verrà descritto come aggiungere passaggi a un processo mast
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per aggiungere passaggi a un processo master di SQL Server Agent tramite:**  
   
@@ -40,9 +40,9 @@ In questo argomento verrà descritto come aggiungere passaggi a un processo mast
 ### <a name="Restrictions"></a>Limitazioni e restrizioni  
 Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non può essere destinato sia a server locali sia a server remoti.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** . Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  

@@ -17,10 +17,10 @@ ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914276"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE - autorizzazioni per server (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67914276"
 
   Rimuove le autorizzazioni GRANT e DENY a livello del server.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -92,7 +92,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  Specifica un ruolo del server definito dall'utente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile revocare autorizzazioni nell'ambito del server solo se il database corrente è il database master.  
   
  Con REVOKE vengono rimosse sia le autorizzazioni GRANT che le autorizzazioni DENY.  
@@ -145,8 +145,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-revoking-a-permission-from-a-login"></a>A. Revoca di un'autorizzazione a un account di accesso  
- Nell'esempio seguente viene revocata l'autorizzazione `VIEW SERVER STATE` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof`.  
+### <a name="a-revoking-a-permission-from-a-login"></a>R. Revoca di un'autorizzazione a un account di accesso  
+ Nell'esempio seguente viene revocata l'autorizzazione `VIEW SERVER STATE` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof`.  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. Revoca dell'opzione WITH GRANT  
- Nell'esempio seguente viene revocato il diritto di concedere l'autorizzazione `CONNECT SQL` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `JanethEsteves`.  
+ Nell'esempio seguente viene revocato il diritto di concedere l'autorizzazione `CONNECT SQL` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`JanethEsteves`.  
   
 ```  
 USE master;  

@@ -23,10 +23,10 @@ ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980939"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
@@ -67,7 +67,7 @@ Per un trigger DDL, indica che *trigger_name* è stato creato o modificato per e
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 L'abilitazione di un trigger non comporta la sua creazione ex-novo. Un trigger disabilitato continua a esistere come oggetto nel database corrente, ma non viene attivato. Se si abilita un trigger, questo verrà attivato ogni volta che vengono eseguite istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per le quali è stato programmato in origine. I trigger vengono disabilitati tramite [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). I trigger DML definiti su tabelle possono essere disabilitati o abilitati anche tramite [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -77,7 +77,7 @@ Per abilitare un trigger DDL con ambito server (ON ALL SERVER) o un trigger LOGO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. Abilitazione di un trigger DML in una tabella  
+### <a name="a-enabling-a-dml-trigger-on-a-table"></a>R. Abilitazione di un trigger DML in una tabella  
 Nell'esempio seguente il trigger `uAddress` creato nella tabella `Address` del database AdventureWorks viene disabilitato e quindi abilitato.  
   
 ```sql  

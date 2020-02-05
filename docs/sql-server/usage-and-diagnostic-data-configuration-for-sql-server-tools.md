@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68091810"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configurare la raccolta di dati di diagnostica e utilizzo per gli strumenti di SQL Server (Analisi utilizzo software)

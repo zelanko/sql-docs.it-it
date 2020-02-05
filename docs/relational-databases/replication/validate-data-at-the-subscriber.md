@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710761"
 ---
 # <a name="validate-replicated-data"></a>Convalida dei dati replicati
@@ -89,7 +89,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
 ## <a name="articles-in-transactional-replication"></a>Articoli nella replica transazionale 
 
-### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Utilizzare SQL Server Management Studio
   
 1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.    
 2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .    
@@ -104,7 +104,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
     2.  Se l'agente non è in esecuzione, fare clic su **Avvia** nella finestra di dialogo **Visualizza stato sincronizzazione** . Nella finestra di dialogo verranno visualizzati messaggi informativi relativi alla convalida.    
      Se non viene visualizzato alcun messaggio attinente, l'agente deve aver già registrato un messaggio successivo. In questo caso, visualizzare i risultati della convalida in Monitoraggio replica. Per ulteriori informazioni, vedere le procedure per Monitoraggio replica in questo argomento.  
 
-### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
+### <a name="using-transact-sql"></a>Uso di Transact-SQL
 
 #### <a name="all-articles"></a>Tutti gli articoli 
   
@@ -168,7 +168,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>Per una singola sottoscrizione di una pubblicazione di tipo merge
 
-### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Utilizzare SQL Server Management Studio
   
 1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.    
 2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .   
@@ -185,7 +185,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
 ## <a name="for-all-subscriptions-to-a-merge-publication"></a>Per tutte le sottoscrizioni di una pubblicazione di tipo merge
 
-### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Utilizzare SQL Server Management Studio  
 1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.    
 2.  Espandere la cartella **Replica** e quindi la cartella **Pubblicazioni locali** .   
 3.  Fare clic con il pulsante destro del mouse sulla pubblicazione di cui si desidera convalidare le sottoscrizioni e quindi scegliere **Convalida tutte le sottoscrizioni**.    
@@ -213,7 +213,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
     2.  Fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Visualizza dettagli**.    
     3.  Visualizzare le informazioni nella scheda **Cronologia sincronizzazione** all'interno dell'area di testo **Ultimo messaggio della sessione selezionata** .  
 
-### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
+### <a name="using-transact-sql"></a>Uso di Transact-SQL
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Specificare `@publication`, il nome del Sottoscrittore per `@subscriber`, il nome del database di sottoscrizione per `@subscriber_db` e uno dei valori seguenti per `@level`:   
     -   **1** : convalida solo mediante conteggio delle righe.    
     -   **3** : convalida mediante conteggio delle righe e checksum binario.  
@@ -240,7 +240,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
     2.  Fare clic con il pulsante destro del mouse sulla sottoscrizione e quindi scegliere **Visualizza dettagli**.    
     3.  Visualizzare le informazioni nella scheda **Cronologia sincronizzazione** all'interno dell'area di testo **Ultimo messaggio della sessione selezionata** . 
   
-### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
+### <a name="using-transact-sql"></a>Uso di Transact-SQL
 1.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Specificare `@publication` e uno dei valori seguenti per `@level`:    
     -   **1** : convalida solo mediante conteggio delle righe.   
     -   **3** : convalida mediante conteggio delle righe e checksum binario.  
@@ -269,7 +269,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.TransPublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
@@ -289,7 +289,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
@@ -301,7 +301,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione. Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà rimanenti dell'oggetto. Se questo metodo restituisce **false**, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   

@@ -11,10 +11,10 @@ ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc76e5f5d710dfe088a27376af4f3938257a0ec7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296822"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
@@ -36,7 +36,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] *data_tap_id*  
  Identificatore univoco per il data tap creato tramite la stored procedure catalog.add_data_tap. *data_tap_id* è di tipo **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se un pacchetto contiene più di un'attività Flusso di dati con lo stesso nome, il data tap viene aggiunto alla prima attività Flusso di dati con il nome specificato.  
   
 ## <a name="return-codes"></a>Codici restituiti  
@@ -45,9 +45,9 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  Quando la stored procedure ha esito negativo viene generato un errore.  
   
 ## <a name="result-set"></a>Set di risultati  
- None  
+ nessuno  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per rimuovere scelte dei dati, l'istanza di esecuzione deve essere nello stato di creazione (valore di 1 nella colonna **status** della vista [catalog.operations &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -19,10 +19,10 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 826a2b2305354807b6db7bbb167f86d165b98b45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025615"
 ---
 # <a name="server-network-configuration"></a>Configurazione di rete del server
@@ -37,7 +37,7 @@ ms.locfileid: "68025615"
 ### <a name="changing-a-port"></a>Modifica di una porta  
  È possibile configurare il protocollo TCP/IP in attesa su una porta designata. Per impostazione predefinita, l'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] rimane in attesa sulla porta TCP 1433. Le istanze denominate del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e di [!INCLUDE[ssEW](../../includes/ssew-md.md)] sono configurate per porte dinamiche. Questo significa che selezionano una porta disponibile quando viene avviato il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser facilita l'identificazione della porta alla connessione dei client.  
   
- Se configurata per le porte dinamiche, è possibile modificare la porta utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ogni avvio. Se la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviene tramite firewall, è necessario aprire la porta utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo da utilizzare una porta specifica e configurare il firewall per consentire le comunicazioni con il server. Per altre informazioni, vedere [Configurare un server per l'attesa su una porta TCP specifica &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
+ Se configurata per le porte dinamiche, è possibile modificare la porta utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ogni avvio. Se la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviene tramite firewall, è necessario aprire la porta utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo da utilizzare una porta specifica e configurare il firewall per consentire le comunicazioni con il server. Per altre informazioni, vedere [Configurazione di un server per l'attesa su una porta TCP specifica &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Modifica di una named pipe  
  È possibile configurare il protocollo Named Pipes per l'attesa su una named pipe designata. Per impostazione predefinita, l'istanza predefinita del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] resta in attesa sulla pipe \\\\.\pipe\sql\query per l'istanza predefinita e \\\\.\pipe\MSSQL$ *\<nomeistanza>* \sql\query per un'istanza denominata. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può restare in attesa solo su una named pipe, ma è possibile modificare il nome della pipe. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser facilita l'identificazione della pipe alla connessione dei client. Per altre informazioni, vedere [Configurare un server per l'attesa su una pipe alternativa &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  

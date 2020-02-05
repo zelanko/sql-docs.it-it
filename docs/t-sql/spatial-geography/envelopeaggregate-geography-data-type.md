@@ -18,10 +18,10 @@ ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 896a328f0f11570034b71f57e912ec3f460d73e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066449"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (tipo di dati geography)
@@ -43,12 +43,12 @@ EnvelopeAggregate ( geography_operand )
 ## <a name="return-types"></a>Tipi restituiti  
  Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando l'oggetto di delimitazione risultante ha dimensioni maggiori di un emisfero, viene restituito un oggetto **FullGlobe**. Il metodo non è preciso.  
   
  Il metodo restituisce **null** se l'input dispone di SRID diversi. Vedere [Identificatori SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
- Il metodo ignora gli input **null**.  
+ Il metodo ignora gli input **Null**.  
   
 > [!NOTE]  
 >  Il metodo restituisce **Null** se tutti i valori immessi sono **Null**.  

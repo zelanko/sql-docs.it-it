@@ -18,10 +18,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071176"
 ---
 # <a name="insert-sql-graph"></a>INSERT (grafo SQL)
@@ -32,7 +32,7 @@ Consente di aggiungere una o più righe a una tabella `node` o `edge` in [!INCLU
 > [!NOTE]   
 >  Per istruzioni Transact-SQL standard, vedere [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
-![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>INSERT nella sintassi della tabella nodi 
 La sintassi per l'inserimento in una tabella nodi è uguale a quella usata per una normale tabella. 
@@ -116,7 +116,7 @@ Criterio di ricerca specificato per la clausola `MATCH` come parte del predicato
 Gli utenti devono specificare valori per `$from_id` e `$to_id` durante l'inserimento in un bordo. Se in queste colonne non viene specificato alcun valore o se vengono inseriti valori Null, viene restituito un errore. 
   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 L'inserimento in un nodo corrisponde all'inserimento in qualsiasi tabella relazionale. I valori per la colonna $node_id vengono generati automaticamente.
 
 Quando eseguono l'inserimento in una tabella bordi, gli utenti devono specificare valori per le colonne `$from_id` e `$to_id`.   
@@ -129,14 +129,14 @@ Prima dell'inserimento bulk in una tabella bordi, è necessario importare le tab
 ### <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione INSERT per la tabella di destinazione.  
   
-Le autorizzazioni INSERT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
+Le autorizzazioni INSERT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner**, e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
   
 Per eseguire INSERT con l'opzione BULK della funzione OPENROWSET, è necessario essere un membro del ruolo predefinito del server **sysadmin** o **bulkadmin**.  
   
 
 ## <a name="examples"></a>Esempi  
   
-#### <a name="a--insert-into-node-table"></a>A.  INSERT nella tabella nodi  
+#### <a name="a--insert-into-node-table"></a>R.  INSERT nella tabella nodi  
 Nell'esempio seguente viene creata una tabella nodi di persone in cui vengono inserite due righe.
 
 ```sql
