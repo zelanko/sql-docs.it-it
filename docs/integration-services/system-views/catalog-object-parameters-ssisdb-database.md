@@ -11,10 +11,10 @@ ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c462eb1957f1c8014dd9220f86cb9ae3e32ea65f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295188"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (database SSISDB)
@@ -34,7 +34,7 @@ ms.locfileid: "71295188"
 |object_name|**sysname**|Nome del progetto o pacchetto corrispondente.|  
 |parameter_name|**sysname(nvarchar(128))**|Nome del parametro.|  
 |data_type|**nvarchar(128)**|Tipo di dati del parametro.|  
-|required|**bit**|Quando il valore è `1`, il valore del parametro è necessario per avviare l'esecuzione. In caso contrario, il valore è `0`.|  
+|obbligatorio|**bit**|Quando il valore è `1`, il valore del parametro è necessario per avviare l'esecuzione. In caso contrario, il valore è `0`.|  
 |sensitive|**bit**|Quando il valore è `1`, il valore del parametro è importante. In caso contrario, il valore è `0`.|  
 |description|**nvarchar(1024)**|Descrizione del pacchetto (facoltativa).|  
 |design_default_value|**sql_variant**|Valore predefinito per il parametro assegnato durante la progettazione del progetto o del pacchetto.|  

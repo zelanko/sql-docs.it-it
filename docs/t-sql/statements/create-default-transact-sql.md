@@ -22,10 +22,10 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902851"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
@@ -36,7 +36,7 @@ Crea un oggetto denominato valore predefinito. Quando è associato a una colonna
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, utilizzare definizioni di valori predefiniti create con la parola chiave DEFAULT dell'istruzione ALTER TABLE o CREATE TABLE.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +56,7 @@ AS constant_expression [ ; ]
 *constant_expression*  
 [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) che include solo valori costanti. Non può includere i nomi di colonne o di altri oggetti di database. È possibile usare qualsiasi costante, funzione predefinita o espressione matematica, ad eccezione di quelle contenenti tipi di dati alias. Non è possibile usare funzioni definite dall'utente. Racchiudere le costanti per valori di carattere e data tra virgolette singole ( **'** ). Le costanti per valori di valuta, interi e a virgola mobile non richiedono le virgolette. I dati binari devono essere preceduti da 0x, mentre i dati di valuta devono essere preceduti dal simbolo di valuta. Il valore predefinito deve essere compatibile con il tipo di dati della colonna.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile creare un nome predefinito solo nel database corrente. I nomi di valore predefinito in un database devono essere univoci per ogni schema. Quando si crea un valore predefinito, usare **sp_bindefault** per associarlo a una colonna o a un tipo di dati alias.  
   
  Se il valore predefinito non è compatibile con la colonna a cui è associato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un messaggio di errore quando cerca di inserire il valore predefinito. Non è possibile, ad esempio, usare N/D come valore predefinito per una colonna **numerica**.  
@@ -79,8 +79,8 @@ AS constant_expression [ ; ]
   
 |Definizione di colonna|Nessuna voce, nessun valore predefinito|Nessuna voce, valore predefinito|Voce NULL, nessun valore predefinito|Voce NULL, valore predefinito|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|NULL|predefiniti|NULL|NULL|  
-|**NOT NULL**|Errore|predefiniti|errore|errore|  
+|**NULL**|NULL|default|NULL|NULL|  
+|**NOT NULL**|Errore|default|error|error|  
   
  Per rinominare un valore predefinito, usare **sp_rename**. Per ottenere un report relativo a un valore predefinito, usare **sp_help**.  
   
@@ -89,7 +89,7 @@ AS constant_expression [ ; ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-simple-character-default"></a>A. Creazione di un semplice valore predefinito costituito da una stringa di caratteri  
+### <a name="a-creating-a-simple-character-default"></a>R. Creazione di un semplice valore predefinito costituito da una stringa di caratteri  
  Nell'esempio seguente viene creato un valore predefinito costituito dalla stringa di caratteri `unknown`.  
   
 ```sql  
