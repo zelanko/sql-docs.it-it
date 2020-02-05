@@ -16,10 +16,10 @@ ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d94ffd0182bfad3ed95f52640a2aed01ceeaa54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118965"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68118965"
 
 Questa funzione decomprime il valore di un'espressione di input usando l'algoritmo GZIP. `DECOMPRESS` restituisce una matrice di byte (tipo VARBINARY(MAX)).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,11 +42,11 @@ Valore **varbinary(** _n_ **)** , **varbinary(max)** o **binary(** _n_ **)** . P
 ## <a name="return-types"></a>Tipi restituiti  
 Un valore con tipo di dati **varbinary(max)** . Per decomprimere l'argomento di input, `DECOMPRESS` usa l'algoritmo ZIP. Se necessario, l'utente deve eseguire esplicitamente il cast del risultato a un tipo di destinazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-decompress-data-at-query-time"></a>A. Decompressione dei dati al momento della query  
+### <a name="a-decompress-data-at-query-time"></a>R. Decompressione dei dati al momento della query  
 Questo esempio viene illustra come restituire i dati di una tabella compressa:  
   
 ```  

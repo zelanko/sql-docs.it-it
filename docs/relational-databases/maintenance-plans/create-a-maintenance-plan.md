@@ -13,10 +13,10 @@ ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874746"
 ---
 # <a name="create-a-maintenance-plan"></a>Creare un piano di manutenzione
@@ -29,9 +29,9 @@ ms.locfileid: "70874746"
   
      [Limitazioni e restrizioni](#Restrictions)  
      
-     [Prerequisiti](#Prerequisite)  
+     [Prerequisito](#Prerequisite)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un piano di manutenzione utilizzando:**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "70874746"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per creare o gestire piani di manutenzione, è necessario essere membri del ruolo predefinito del server **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>Per creare un piano di manutenzione utilizzando la Creazione guidata piano di manutenzione  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70874746"
   
 4.  Creare un piano di manutenzione seguendo i passaggi illustrati in [Creare un piano di manutenzione &#40;area di progettazione del piano di manutenzione&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md).  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-maintenance-plan"></a>Per creare un piano di manutenzione  
   

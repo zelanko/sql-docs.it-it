@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361059daeb60402f564caa09837046117804ba6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059920"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68059920"
 
   Restituisce la parte iniziale di una stringa di caratteri, di lunghezza pari al numero di caratteri specificato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,12 +55,12 @@ LEFT ( character_expression , integer_expression )
   
  Restituisce **nvarchar** quando *character_expression* è un tipo di dati carattere Unicode.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando si usano le regole di confronto SC, il parametro *integer_expression* considera una coppia di surrogati UTF-16 come un solo carattere. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-left-with-a-column"></a>A. Utilizzo di LEFT con una colonna  
+### <a name="a-using-left-with-a-column"></a>R. Utilizzo di LEFT con una colonna  
  Nell'esempio seguente vengono restituiti i primi cinque caratteri di ciascun nome di prodotto nella tabella `Product` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

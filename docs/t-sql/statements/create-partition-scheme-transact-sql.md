@@ -29,10 +29,10 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048156"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68048156"
 >[!NOTE]
 >Nel database SQL di Azure sono supportati solo i filegroup primari.  
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -86,7 +86,7 @@ AS PARTITION partition_function_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>A. Creazione di uno schema di partizione che esegue il mapping delle singole partizioni a un filegroup diverso  
+### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>R. Creazione di uno schema di partizione che esegue il mapping delle singole partizioni a un filegroup diverso  
  Nell'esempio seguente viene creata una funzione di partizione per suddividere una tabella o indice in quattro partizioni. Viene quindi creato uno schema di partizione che definisce i filegroup in cui archiviare le quattro partizioni. Nell'esempio si presuppone che i filegroup esistano già nel database.  
   
 ```  

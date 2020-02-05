@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3f9bd0669cc8da25a5660462bf8e1ded0ff3e5f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064854"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted - classe di evento
@@ -35,8 +35,8 @@ ms.locfileid: "68064854"
 |Duration|**bigint**|Durata dell'evento in microsecondi.|13|Sì|  
 |EndTime|**datetime**|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting.|15|Sì|  
 |Errore|**int**|Numero di errore dell'evento.<br /><br /> 0=OK<br /><br /> 1=Errore<br /><br /> 2=Interrompi|31|Sì|  
-|EventClass|**int**|Tipo di evento = 12.|27|no|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventClass|**int**|Tipo di evento = 12.|27|No|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
@@ -44,16 +44,16 @@ ms.locfileid: "68064854"
 |LoginSid|**image**|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
 |NTDomainName|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|**nvarchar**|Nome utente di Windows.|6|Sì|  
-|Reads|**bigint**|Numero di I/O di lettura generati dal batch.|16|Sì|  
+|Letture|**bigint**|Numero di I/O di lettura generati dal batch.|16|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
 |RowCounts|**bigint**|Numero di righe influenzate da un evento.|48|Sì|  
-|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TextData|**ntext**|Testo del batch.|1|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
-|Writes|**bigint**|Numero di I/O di scrittura generati dal batch.|17|Sì|  
+|Scritture|**bigint**|Numero di I/O di scrittura generati dal batch.|17|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  

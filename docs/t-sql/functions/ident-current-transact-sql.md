@@ -21,10 +21,10 @@ ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2271bbdd9a5b61fdfbf4985ca68acbffbc0b0b9d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843699"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
@@ -52,8 +52,8 @@ Restituisce NULL in caso di errore o se un chiamante non dispone dell'autorizzaz
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come IDENT_CURRENT possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
-IDENT_CURRENT è simile alle funzioni per valori Identity SCOPE_IDENTITY e @@IDENTITY di [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Queste tre funzioni restituiscono infatti gli ultimi valori Identity generati. Tuttavia, l'ambito e la sessione in cui *ultimo* è definito in ciascuna di queste funzioni differiscono:  
+## <a name="remarks"></a>Osservazioni  
+IDENT_CURRENT è simile alle funzioni per valori Identity SCOPE_IDENTITY e @[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] di @IDENTITY. Queste tre funzioni restituiscono infatti gli ultimi valori Identity generati. Tuttavia, l'ambito e la sessione in cui *ultimo* è definito in ciascuna di queste funzioni differiscono:  
 
 -   La funzione IDENT_CURRENT restituisce l'ultimo valore Identity generato per una tabella specifica in qualsiasi sessione e in qualsiasi ambito.  
 -   La funzione @@IDENTITY restituisce l'ultimo valore Identity generato per qualsiasi tabella della sessione corrente in tutti gli ambiti.  
@@ -70,7 +70,7 @@ Quando si usa IDENT_CURRENT su una vista che contiene join, viene restituito NUL
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>A. Restituzione dell'ultimo valore Identity generato per una tabella specificata  
+### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>R. Restituzione dell'ultimo valore Identity generato per una tabella specificata  
  Nell'esempio seguente viene restituito l'ultimo valore Identity generato per la tabella `Person.Address` nel database `AdventureWorks2012`.  
   
 ```sql  

@@ -24,10 +24,10 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982050"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -157,7 +157,7 @@ A differenza di REORGANIZE nelle tabelle utente, l'operazione REORGANIZE in una 
   
  Una coda con la gestione di messaggi non elaborabili impostata su OFF non verrà disabilitata dopo cinque rollback di transazioni consecutivi. In questo modo è possibile che un sistema di gestione di messaggi non elaborabili venga definito dall'applicazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se una coda per cui viene specificata una stored procedure di attivazione contiene messaggi, la modifica dello stato di attivazione da OFF a ON comporta l'attivazione immediata della stored procedure di attivazione. La modifica dello stato di attivazione da ON a OFF impedisce a Service Broker di attivare altre istanze della stored procedure, ma non arresta le istanze della stored procedure già in esecuzione.  
   
  La modifica di una coda per l'aggiunta di una stored procedure di attivazione non modifica lo stato di attivazione della coda. La modifica della stored procedure di attivazione per la coda non influisce sulle istanze della stored procedure di attivazione già in esecuzione.  
@@ -173,7 +173,7 @@ A differenza di REORGANIZE nelle tabelle utente, l'operazione REORGANIZE in una 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-making-a-queue-unavailable"></a>A. Impostazione di una coda come non disponibile  
+### <a name="a-making-a-queue-unavailable"></a>R. Impostazione di una coda come non disponibile  
  Nell'esempio seguente la coda `ExpenseQueue` viene resa non disponibile per la ricezione di messaggi.  
   
 ```  
@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. Modifica del numero di lettori di coda  
- Nell'esempio seguente il numero massimo di istanze della stored procedure avviate da [!INCLUDE[ssSB](../../includes/sssb-md.md)] per la coda viene impostato su `7`.  
+ Nell'esempio seguente il numero massimo di istanze della stored procedure avviate da `7` per la coda viene impostato su [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

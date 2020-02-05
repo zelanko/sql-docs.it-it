@@ -18,10 +18,10 @@ ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 53b447b2a13c68c2c87536bc3c1f14f9efd74cfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132090"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68132090"
 
 Per una richiesta in arrivo al server, questa funzione restituisce informazioni sulle proprietà della connessione univoca che supporta tale richiesta.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ Proprietà della connessione. *property* può avere uno dei valori seguenti:
   
 |valore|Tipo di dati|Descrizione|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico usato dalla connessione. Questo valore non ammette i valori Null. Valori restituiti possibili:<br /><br /> **HTTP**<br /> **Named pipe**<br /> **Session**<br /> **Shared memory**<br /> **SSL**<br /> **TCP**<br /><br /> e<br /><br /> **VIA**<br /><br /> Nota: viene restituito sempre **Session** quando per una connessione sono abilitati sia la funzionalità MARS (Multiple Active Result Set) che il pool di connessioni.|  
+|net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico usato dalla connessione. Questo valore non ammette i valori Null. Valori restituiti possibili:<br /><br /> **HTTP**<br /> **Named pipe**<br /> **Sessione**<br /> **Shared memory**<br /> **SSL**<br /> **TCP**<br /><br /> e<br /><br /> **VIA**<br /><br /> Nota: viene restituito sempre **Session** quando per una connessione sono abilitati sia la funzionalità MARS (Multiple Active Result Set) che il pool di connessioni.|  
 |protocol_type|**nvarchar(40)**|Restituisce il tipo di protocollo del payload. Attualmente distingue tra TDS (TSQL) e SOAP. Ammette i valori Null.|  
 |auth_scheme|**nvarchar(40)**|Restituisce lo schema di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per una connessione. Lo schema di autenticazione può essere relativo all'autenticazione di Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) o all'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori Null.|  
 |local_net_address|**varchar(48)**|Restituisce l'indirizzo IP del server di destinazione della connessione specifica. Disponibile solo per le connessioni che usano il provider del trasporto TCP. Ammette i valori Null.|  
@@ -52,10 +52,10 @@ Proprietà della connessione. *property* può avere uno dei valori seguenti:
 |physical_net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico usato dalla connessione. È accurato quando per una connessione è abilitata la funzionalità MARS (Multiple Active Result Set).|  
 |\<Qualsiasi altra stringa>||Restituisce NULL per l'input non valido.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 **local_net_address** e **local_tcp_port** restituiscono NULL in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
-I valori restituiti corrispondono alle opzioni mostrate per le colonne corrispondenti nella DMV [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md). Esempio:
+I valori restituiti corrispondono alle opzioni mostrate per le colonne corrispondenti nella DMV [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md). Ad esempio:
   
 ```sql
 SELECT   

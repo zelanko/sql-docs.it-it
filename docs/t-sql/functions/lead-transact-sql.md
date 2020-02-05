@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1eaed4b8cc26cd1705aacb74e102be2e33b443e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059941"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
@@ -60,7 +60,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-compare-values-between-years"></a>A. Confronto di valori tra anni  
+### <a name="a-compare-values-between-years"></a>R. Confronto di valori tra anni  
  La query utilizza la funzione LEAD per restituire la differenza nelle quote vendite per un dipendente specifico negli anni successivi. Si noti che poiché non è presente alcun valore principale disponibile per l'ultima riga, viene restituita l'impostazione predefinita zero (0).  
   
 ```sql  
@@ -139,7 +139,7 @@ b           c           i
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D: Confronto di valori fra trimestri  
+### <a name="d-compare-values-between-quarters"></a>D. Confronto di valori fra trimestri  
  Nell'esempio seguente viene illustrato l'uso della funzione LEAD. La query ottiene la differenza nei valori di quota di vendite per un dipendente specifico in trimestri di calendario successivi. Si noti che poiché non è presente alcun valore principale disponibile dopo l'ultima riga, viene usata l'impostazione predefinita zero (0).  
   
 ```sql  

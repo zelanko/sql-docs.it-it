@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109196"
 ---
-# <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
+# <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Restituisce l'ultimo valore in un set ordinato di valori in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +58,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-lastvalue-over-partitions"></a>A. Utilizzo di LAST_VALUE su partizioni  
+### <a name="a-using-last_value-over-partitions"></a>R. Utilizzo di LAST_VALUE su partizioni  
  Nell'esempio seguente viene restituita la data di assunzione dell'ultimo dipendente in ogni reparto per lo stipendio specificato (valore Rate). La clausola PARTITION BY suddivide i dipendenti in base al reparto e la funzione LAST_VALUE viene applicata indipendentemente a ogni partizione. La clausola ORDER BY specificata nella clausola OVER determina l'ordine logico in cui la funzione FIRST_VALUE viene applicata alle righe in ogni partizione.  
   
 ```  
@@ -99,7 +99,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
 ```  
   
-### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Utilizzo di FIRST_VALUE e LAST_VALUE in un'espressione calcolata  
+### <a name="b-using-first_value-and-last_value-in-a-computed-expression"></a>B. Utilizzo di FIRST_VALUE e LAST_VALUE in un'espressione calcolata  
  Nell'esempio seguente vengono utilizzate le funzioni FIRST_VALUE e LAST_VALUE nelle espressioni calcolate per mostrare la differenza tra il valore della quota vendite per il trimestre corrente e il primo e ultimo trimestre dell'anno rispettivamente per un numero specificato di dipendenti. La funzione FIRST_VALUE restituisce il valore delle quote vendite per il primo trimestre dell'anno e lo sottrae dal valore delle quote vendite per il trimestre corrente. Viene restituito nella colonna derivata denominata DifferenceFromFirstQuarter. Per il primo trimestre dell'anno il valore della colonna DifferenceFromFirstQuarter è 0. La funzione LAST_VALUE restituisce il valore delle quote vendite per l'ultimo trimestre dell'anno e lo sottrae dal valore delle quote vendite per il trimestre corrente. Viene restituito nella colonna derivata denominata DifferenceFromLastQuarter. Per l'ultimo trimestre dell'anno il valore della colonna DifferenceFromLastQuarter è 0.  
   
  In questo esempio è richiesta la clausola "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" per la restituzione di valori diversi da zero nella colonna DifferenceFromLastQuarter, come illustrato di seguito. L'intervallo predefinito è "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". Se nell'esempio si usa l'intervallo predefinito in questione, o se non si include alcun intervallo determinando quindi l'uso dell'intervallo predefinito, nella colonna DifferenceFromLastQuarter verranno restituiti valori pari a zero. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

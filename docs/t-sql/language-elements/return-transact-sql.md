@@ -25,10 +25,10 @@ ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072375"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68072375"
 
   Esce senza condizioni da una query o da una procedura. RETURN è un'istruzione immediata e completa e può essere utilizzata in qualsiasi momento per uscire da una procedura, un batch o un blocco di istruzioni. Le istruzioni che seguono RETURN non vengono eseguite.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,14 +55,14 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  Se non indicato diversamente, tutte le stored procedure di sistema restituiscono il valore 0 ad indicare l'esito positivo e un valore diverso da zero per indicare l'errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando viene utilizzata con una stored procedure, l'istruzione RETURN non può restituire un valore Null. Se una procedura tenta di restituire un valore Null, ad esempio quando si utilizza RETURN @status e il parametro @status è NULL, viene visualizzato un messaggio di avviso e restituito il valore 0.  
   
  Il valore di stato restituito può essere incluso in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] successive nel batch o nella procedura che ha eseguito la procedura corrente, ma deve essere immesso nel formato seguente: `EXECUTE @return_status = <procedure_name>`.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-from-a-procedure"></a>A. Uscita da una procedura  
+### <a name="a-returning-from-a-procedure"></a>R. Uscita da una procedura  
  Nell'esempio seguente viene illustrato come utilizzare `findjobs` per uscire da una procedura dopo la visualizzazione di un messaggio all'utente, se viene omesso il parametro del nome utente durante l'esecuzione di `RETURN`. Se il nome utente viene specificato, i nomi di tutti gli oggetti creati dall'utente nel database corrente vengono recuperati dalle tabelle di sistema appropriate.  
   
 ```  

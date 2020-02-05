@@ -14,10 +14,10 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b226f3886deee5f405bf2726e5a0f51b68fbac4d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294285"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Attività Hive di Azure HDInsight
@@ -25,7 +25,7 @@ ms.locfileid: "71294285"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-Usare l'**attività Hive di Azure HDInsight** per eseguire uno script Hive in un cluster di Azure HDInsight.
+Usare l' **attività Hive di Azure HDInsight** per eseguire uno script Hive in un cluster di Azure HDInsight.
      
 Per aggiungere un' **attività Hive di Azure HDInsight**, trascinare l'attività in Progettazione SSIS e farvi doppio clic oppure clic con il pulsante destro del mouse, quindi scegliere **Modifica** per visualizzare la finestra di dialogo seguente relativa all' **editor dell'attività Hive di Azure HDInsight** .  
   

@@ -1,10 +1,7 @@
 ---
-title: Elemento TestServer (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento TestServer (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 784275fe53edd3e0c7068927c4af299de3d304d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 7d861ec513297bf5c9abe6bf3654731008960c3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105928"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307035"
 ---
 # <a name="testserver-element-dta"></a>Elemento TestServer (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Indica il server di prova da utilizzare durante l'ottimizzazione di un server di produzione.  
+
+Indica il server di prova da utilizzare durante l'ottimizzazione di un server di produzione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,15 +43,15 @@ ms.locfileid: "68105928"
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. È possibile utilizzarlo una volta per ogni elemento **TuningOptions** .|  
+|**Valore predefinito**|No.|  
+|**Occorrenza**|Facoltativa. È possibile utilizzarlo una volta per ogni elemento **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Riduzione del carico di ottimizzazione del server di produzione](../../relational-databases/performance/reduce-the-production-server-tuning-load.md).  

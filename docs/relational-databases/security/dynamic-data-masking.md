@@ -11,16 +11,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c0f2a5d652b23efec6b4dd1c6d021f85e1155247
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997720"
 ---
-# <a name="dynamic-data-masking"></a>Mascheramento dati dinamici
+# <a name="dynamic-data-masking"></a>Dynamic Data Masking
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-![Mascheramento dati dinamici](../../relational-databases/security/media/dynamic-data-masking.png)
+![Maschera dati dinamica](../../relational-databases/security/media/dynamic-data-masking.png)
 
 La maschera dati dinamica (DDM) limita l'esposizione dei dati sensibili nascondendoli agli utenti senza privilegi. Può essere usata per semplificare notevolmente la progettazione e la codifica della sicurezza nell'applicazione.  
 
@@ -31,7 +31,7 @@ La maschera dati dinamica è utile per impedire l'accesso non autorizzato ai dat
 * Le funzionalità DDM offrono funzioni di mascheramento completo e parziale, oltre a una maschera casuale per dati numerici.
 * Semplici comandi [!INCLUDE[tsql_md](../../includes/tsql-md.md)] definiscono e gestiscono le maschere.
 
-Ad esempio, un addetto del call center può identificare i chiamanti da diverse cifre del codice fiscale o dal numero della carta di credito,  ma tali dati non devono essere completamente visibili all'addetto. È possibile definire una regola per la maschera che nasconde nel set di risultati di una query tutte le cifre, ad eccezione delle ultime quattro di qualsiasi codice fiscale o numero di carta di credito. Un altro esempio: usando la maschera dati appropriata per proteggere i dati relativi a informazioni personali, uno sviluppatore può eseguire una query negli ambienti di produzione per la risoluzione dei problemi senza violare la regolamentazione di conformità.
+Ad esempio, un addetto del call center può identificare i chiamanti da diverse cifre del codice fiscale o dal numero della carta di credito,  ma tali dati non devono essere completamente visibili all'addetto. È possibile definire una regola di maschera che renda visibili solo le ultime quattro cifre del codice fiscale o del numero di carta di credito nel set di risultati di tutte le query. Un altro esempio: usando la maschera dati appropriata per proteggere i dati relativi a informazioni personali, uno sviluppatore può eseguire una query negli ambienti di produzione per la risoluzione dei problemi senza violare la regolamentazione di conformità.
 
 Lo scopo della maschera dati dinamica consiste nel limitare l'esposizione dei dati sensibili, impedendo la visualizzazione dei dati agli utenti che non dovrebbero averne accesso. La maschera dati dinamica non mira a impedire agli utenti del database di connettersi direttamente al database ed eseguire query complete che espongano parti dei dati sensibili. La maschera dati dinamica è complementare ad altre funzionalità di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio il controllo, la crittografia e la sicurezza a livello di riga, ed è consigliabile usare questa funzionalità insieme alle altre per ottimizzare la protezione dei dati sensibili nel database.  
   
@@ -42,9 +42,9 @@ Il mascheramento dei dati dinamici è disponibile in [!INCLUDE[ssSQL15](../../in
   
 |Funzione|Descrizione|Esempi|  
 |--------------|-----------------|--------------|  
-|Default|Maschera completa in base al tipo di dati dei campi designati.<br /><br /> Per il tipo di dati stringa usare XXXX o X minori se la dimensione del campo è inferiore a 4 caratteri  (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Per il tipo di dati numerici, usare il valore zero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Per i tipi di dati data e ora, usare 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Per i tipi di dati binati, usare un singolo byte di valore 0 ASCII (**binary**, **varbinary**, **image**).|Esempio di sintassi di definizione della colonna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Predefinito|Maschera completa in base al tipo di dati dei campi designati.<br /><br /> Per il tipo di dati stringa usare XXXX o X minori se la dimensione del campo è inferiore a 4 caratteri  (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Per il tipo di dati numerici, usare il valore zero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Per i tipi di dati data e ora, usare 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Per i tipi di dati binati, usare un singolo byte di valore 0 ASCII (**binary**, **varbinary**, **image**).|Esempio di sintassi di definizione della colonna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Metodo di maschera che espone la prima lettera di un indirizzo di posta elettronica e il suffisso costante ".com", sotto forma di un indirizzo di posta elettronica. `aXXX@XXXX.com`.|Esempio di sintassi di definizione: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
-|Casuale|Una funzione di maschera casuale per l'uso in qualsiasi tipo numerico al fine di mascherare il valore originale con un valore casuale in un intervallo specificato.|Esempio di sintassi di definizione: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
+|Random (Casuale)|Una funzione di maschera casuale per l'uso in qualsiasi tipo numerico al fine di mascherare il valore originale con un valore casuale in un intervallo specificato.|Esempio di sintassi di definizione: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Stringa personalizzata|Metodo di maschera che espone la prima e l'ultima lettera e aggiunge al centro una stringa di riempimento personalizzata. `prefix,[padding],suffix`<br /><br /> Nota: se il valore originale è troppo breve per completare l'intera maschera, parte del prefisso o del suffisso non sarà esposta.|Esempio di sintassi di definizione: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Esempi aggiuntivi:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -93,7 +93,7 @@ WHERE is_masked = 1;
  Poiché l'aggiunta di una maschera di dati dinamici viene implementata come modifica dello schema nella tabella sottostante, l'operazione non può essere eseguita in una colonna con dipendenze. Per aggirare questa limitazione, è possibile rimuovere la dipendenza, aggiungere la maschera di dati dinamici e quindi ricreare la dipendenza. Ad esempio, se la dipendenza è dovuta a un indice che dipende dalla colonna, è possibile eliminare l'indice, aggiungere la maschera e quindi ricreare l'indice dipendente.
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Nota sulla sicurezza: ignorare il mascheramento usando tecniche di attacchi di forza bruta o inferenza
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>Nota sulla sicurezza: Ignorare il mascheramento usando tecniche di attacchi di forza bruta o inferenza
 
 Il mascheramento dei dati dinamici è progettato per semplificare lo sviluppo di applicazioni, limitando l'esposizione dei dati in un set di query predefinito usato dall'applicazione. Nonostante possa essere utile anche per prevenire l'esposizione accidentale dei dati sensibili durante l'accesso diretto a un database di protezione, è importante notare che gli utenti senza privilegi con autorizzazioni per le query ad hoc possono applicare le tecniche per ottenere l'accesso ai dati effettivi. Se è necessario concedere l'accesso ad hoc, usare il Controllo per monitorare tutte le attività del database e attenuare questo scenario.
  
@@ -105,7 +105,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  ID | nome| Stipendio |   
+>    |  ID | Nome| Stipendio |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Valeria Dal Monte | 0 | 
 >    |  91245 | Giorgio Cavaglieri | 0 |  

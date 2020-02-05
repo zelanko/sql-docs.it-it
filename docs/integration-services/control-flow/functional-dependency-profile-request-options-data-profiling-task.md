@@ -13,10 +13,10 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6cf3c23908b3ec391afc7b9073796ab4c2f47100
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298263"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Dipendenza funzionale (Attività Profiling dati)
@@ -113,7 +113,7 @@ ms.locfileid: "71298263"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**None**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato indipendentemente dal valore.|  
+|**Nessuno**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato indipendentemente dal valore.|  
 |**Specified**|Consente di usare la soglia specificata in **FDStrengthThreshold**. Il livello di attendibilità della dipendenza funzionale viene segnalato solo se è maggiore della soglia.|  
 |**Exact**|Non specifica alcuna soglia. Il livello di attendibilità della dipendenza funzionale viene segnalato solo se la dipendenza funzionale tra le colonne selezionate è esatta.|  
   

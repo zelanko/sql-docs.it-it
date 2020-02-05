@@ -18,10 +18,10 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: de59423c368bc966fab3958fbeb4b04888f4e2a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114784"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY - autorizzazioni per server (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68114784"
 
   Nega le autorizzazioni per un server.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -88,7 +88,7 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
  *server_role*  
  Specifica un ruolo del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile negare autorizzazioni nell'ambito del server solo se il database corrente è il database master.  
   
  Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e le informazioni sulle entità server nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Le informazioni sulle appartenenze dei ruoli del server sono visibili nella vista del catalogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
@@ -132,7 +132,7 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sono state aggiunte le tre autorizzazioni server riportate di seguito.  
   
  Autorizzazione **CONNECT ANY DATABASE**  
@@ -149,8 +149,8 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. Negazione dell'autorizzazione CONNECT SQL a un account di accesso di SQL Server e alle entità a cui l'account di accesso ha concesso tale autorizzazione  
- Nell'esempio seguente viene negata l'autorizzazione `CONNECT SQL` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Annika` e a tutte le entità a cui tale account di accesso ha concesso l'autorizzazione.  
+### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>R. Negazione dell'autorizzazione CONNECT SQL a un account di accesso di SQL Server e alle entità a cui l'account di accesso ha concesso tale autorizzazione  
+ Nell'esempio seguente viene negata l'autorizzazione `CONNECT SQL` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Annika` e a tutte le entità a cui tale account di accesso ha concesso l'autorizzazione.  
   
 ```  
 USE master;  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126994"
 ---
 # <a name="sequence-properties-general-page"></a>Proprietà sequenza (pagina Generale)
@@ -28,7 +28,7 @@ ms.locfileid: "68126994"
   
  Per informazioni e scenari in cui vengono usate entrambe le funzioni **CREATE SEQUENCE** e **NEXT VALUE FOR** , vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- È possibile accedere a questa pagina in due modi: facendo clic con il pulsante destro del mouse su **Sequenze** in Esplora oggetti e quindi scegliendo **Nuova sequenza**oppure facendo clic con il pulsante destro del mouse su una sequenza esistente e quindi scegliendo **Proprietà**. In quest'ultimo caso le opzioni in **Proprietà** non possono essere modificate. Per modificare le opzioni relative alle sequenze, usare l'istruzione [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) oppure eliminare e ricreare l'oggetto sequenza.  
+ È possibile accedere a questa pagina in due modi: facendo clic con il pulsante destro del mouse su **Sequenze** in Esplora oggetti e quindi scegliendo **Nuova sequenza**oppure facendo clic con il pulsante destro del mouse su una sequenza esistente e quindi scegliendo **Proprietà**. In quest'ultimo caso le opzioni in **Proprietà**non possono essere modificate. Per modificare le opzioni relative alle sequenze, usare l'istruzione [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) oppure eliminare e ricreare l'oggetto sequenza.  
   
 ## <a name="options"></a>Opzioni  
  **Nome sequenza**  
@@ -40,7 +40,7 @@ ms.locfileid: "68126994"
  **Tipo di dati**  
  Una sequenza può essere definita come qualsiasi tipo Integer. ad esempio:  
   
-|Tipo di dati|Intervallo|  
+|Tipo di dati|Range|  
 |---------------|-----------|  
 |**tinyint**|da 0 a 255|  
 |**smallint**|Da -32.768 a 32.767|  

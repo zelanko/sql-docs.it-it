@@ -22,10 +22,10 @@ ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 83aff89cf0651d338105788a4ca7ef7f751b8528
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109255"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68109255"
 
   Restituisce l'identificatore (ID) di lingua locale in uso.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68109255"
 ## <a name="return-types"></a>Tipi restituiti  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per visualizzare informazioni sulle impostazioni della lingua, compresi gli ID, eseguire la procedura **sp_helplanguage** senza alcun parametro.  
   
 ## <a name="examples"></a>Esempi  
