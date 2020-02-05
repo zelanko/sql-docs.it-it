@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071289"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68071289"
 
 Modifica le proprietà di una chiave master del database.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -98,7 +98,7 @@ ALTER MASTER KEY <alter_option>
 
 PASSWORD ='*password*' specifica una password con cui crittografare o decrittografare la chiave master del database. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 L'opzione REGENERATE rigenera la chiave master del database e tutte le chiavi protette dalla chiave master. Le chiavi vengono prima decrittografate con la chiave master precedente e quindi crittografate con la nuova chiave master. Si tratta di un'operazione che utilizza molte risorse e pertanto dovrebbe essere pianificata in periodi di carico ridotto, a meno che la chiave master non sia stata compromessa.
 

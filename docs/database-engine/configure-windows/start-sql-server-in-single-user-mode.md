@@ -14,10 +14,10 @@ ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1cb488b6ce3dc21567b4f64738f9c26910c61f17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037158"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Avvio di SQL Server in modalità utente singolo
@@ -42,7 +42,7 @@ Quando si usa l'opzione **-m** con **SQLCMD** o [!INCLUDE[ssManStudio](../../inc
 > [!NOTE]
 > In Linux **SQLCMD** deve essere scritto in maiuscolo come illustrato.
 
-Ad esempio, **-m"SQLCMD"** limita le connessioni a una singola connessione che deve identificarsi come programma client **SQLCMD**. Utilizzare questa opzione quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo e un'applicazione client sconosciuta accede all'unica connessione disponibile. Per connettersi con l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], usare **-m"Microsoft SQL Server Management Studio - Query"**.  
+Ad esempio, **-m"SQLCMD"** limita le connessioni a una singola connessione che deve identificarsi come programma client **SQLCMD**. Utilizzare questa opzione quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo e un'applicazione client sconosciuta accede all'unica connessione disponibile. Per connettersi con l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], usare **-m"Microsoft SQL Server Management Studio - Query"** .  
   
 > [!IMPORTANT]  
 >  Non utilizzare tale opzione come caratteristica di sicurezza. L'applicazione client fornisce il nome dell'applicazione client stessa e può indicare un nome falso come parte della stringa di connessione.  
@@ -68,7 +68,7 @@ Ad esempio, **-m"SQLCMD"** limita le connessioni a una singola connessione che d
 ## <a name="see-also"></a>Vedere anche  
  [Avvio, arresto o sospensione del servizio SQL Server Agent](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
  [Connessione di diagnostica per gli amministratori di database](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
+ [Utilità sqlcmd](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md)  

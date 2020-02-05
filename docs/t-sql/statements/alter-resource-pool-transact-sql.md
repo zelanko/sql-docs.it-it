@@ -18,10 +18,10 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982080"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
@@ -116,7 +116,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  Se il valore MAX_IOPS_PER_VOLUME per un pool è impostato su 0, il pool non è governato e può accettare tutti gli IOPS nel sistema anche se in altri pool è stato impostato il valore MIN_IOPS_PER_VOLUME. In questo caso, è consigliabile impostare il valore MAX_IOPS_PER_VOLUME per questo pool su un numero elevato, ad esempio il valore massimo 2^31-1, se si desidera che questo pool sia governato per l'I/O.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  MAX_CPU_PERCENT e MAX_MEMORY_PERCENT devono essere maggiori o uguali rispettivamente a MIN_CPU_PERCENT e MIN_MEMORY_PERCENT.  
   
  MAX_CPU_PERCENT può usare la capacità di CPU superiore al valore di MAX_CPU_PERCENT se è disponibile. Sebbene si possano riscontrare occasionali picchi superiori al valore di CAP_CPU_PERCENT, i carichi di lavoro non devono superare CAP_CPU_PERCENT per periodi prolungati, anche nel caso in cui sia disponibile una capacità di CPU aggiuntiva.  

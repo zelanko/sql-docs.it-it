@@ -20,10 +20,10 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134814"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
@@ -57,7 +57,7 @@ ms.locfileid: "68134814"
 #### <a name="permissions"></a>Autorizzazioni  
  Per la procedura guidata sono richieste autorizzazioni di esportazione dell'applicazione livello dati sul database di origine. Per l'account di accesso sono richieste almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, nonché le autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
- Per la procedura guidata sono richieste autorizzazioni di importazione dell'applicazione livello dati sull'istanza o sul server di destinazione. L'account di accesso deve essere un membro del ruolo predefinito del server **sysadmin** , **serveradmin** o **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  
+ Per la procedura guidata sono richieste autorizzazioni di importazione dell'applicazione livello dati sull'istanza o sul server di destinazione. L'account di accesso deve essere un membro del ruolo predefinito del server **sysadmin** , **serveradmin** o **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati con l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  
   
 ##  <a name="UsingDeployDACWizard"></a> Utilizzo della procedura guidata Distribuisci database  
  **Per eseguire la migrazione di un database utilizzando la procedura guidata Distribuisci database**  
@@ -78,7 +78,7 @@ ms.locfileid: "68134814"
   
     -   [Pagina Riepilogo](#Summary)  
   
-    -   [Stato](#Progress)  
+    -   [Progress](#Progress)  
     
     -   [Risultati](#Results)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68134814"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
   
--   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel menu a discesa.  
+-   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** : selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel menu a discesa.  
   
 -   **Dimensioni massime database**: selezionare le dimensioni massime del database dal menu a discesa.  
   

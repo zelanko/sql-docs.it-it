@@ -20,10 +20,10 @@ ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940213"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67940213"
 
 Restituisce informazioni sulle proprietà del catalogo full-text in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,7 +43,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>Argomenti  
   
 > [!NOTE]  
->  In una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno rimosse le proprietà seguenti: **LogSize** e **PopulateStatus**. Evitare di utilizzare queste proprietà in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
+>  In una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le proprietà seguenti verranno rimosse: **LogSize** e **PopulateStatus**. Evitare di utilizzare queste proprietà in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
   
 _catalog\_name_  
 Espressione che contiene il nome del catalogo full-text.  
@@ -71,7 +71,7 @@ Restituisce NULL in caso di errore o se un chiamante non ha l'autorizzazione nec
   
 In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] un utente può visualizzare solo i metadati delle entità a protezione diretta di cui è proprietario o per cui ha autorizzazioni. Di conseguenza, le funzioni predefinite di creazione dei metadati come FULLTEXTCATALOGPROPERTY possono restituire NULL se l'utente non ha alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') analizza solo i frammenti con stato 4 o 6, come descritto in [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Tali frammenti fanno parte dell'indice logico. Di conseguenza, la proprietà **IndexSize** restituisce solo le dimensioni dell'indice logico. 
 
 Durante un unione degli indici, tuttavia, le dimensioni effettive dell'indice potrebbero essere doppie rispetto a quelle logiche. Per trovare le dimensioni effettive utilizzate da un indice full-text durante un merge, usare la stored procedure di sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Tale procedura analizza tutti i frammenti associati a un indice full-text. 

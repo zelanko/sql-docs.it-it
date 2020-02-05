@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027655"
 ---
 # <a name="search-condition-transact-sql"></a>Condizione di ricerca (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68027655"
 
   Combinazione di uno o più predicati tramite gli operatori logici AND, OR e NOT.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -200,12 +200,12 @@ ms.locfileid: "68027655"
  EXISTS  
  Utilizzato con una sottoquery per verificare l'esistenza delle righe restituite dalla sottoquery. Per altre informazioni, vedere [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'ordine di precedenza degli operatori logici prevede NOT come operatore con precedenza massima, seguito da AND e quindi da OR. È possibile utilizzare le parentesi per ignorare tale ordine di precedenza in una condizione di ricerca. L'ordine di valutazione degli operatori logici può variare a seconda delle scelte effettuate da Query Optimizer. Per altre informazioni sul funzionamento degli operatori logici applicati a valori logici, vedere [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md), [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md) e [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Utilizzo della clausola WHERE con la sintassi LIKE ed ESCAPE  
+### <a name="a-using-where-with-like-and-escape-syntax"></a>R. Utilizzo della clausola WHERE con la sintassi LIKE ed ESCAPE  
  Nell'esempio seguente viene eseguita una ricerca delle righe in cui la colonna `LargePhotoFileName` contiene i caratteri `green_` e si usa l'opzione `ESCAPE` perché _ è un carattere jolly. Se non si specifica l'opzione `ESCAPE`, la query esegue una ricerca di qualsiasi valore di descrizione contenente la parola `green` seguita da qualsiasi singolo carattere diverso dal carattere _ .  
   
 ```  

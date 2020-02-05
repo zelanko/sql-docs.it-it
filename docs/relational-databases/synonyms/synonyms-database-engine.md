@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 267209440bf68ecb2e6f3382823b30f3d19728f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67952330"
 ---
 # <a name="synonyms-database-engine"></a>Sinonimi (Motore di database)
@@ -43,7 +43,7 @@ Un sinonimo appartiene a uno schema e, come gli altri oggetti di uno schema, dev
 |Procedura di filtro della replica|Stored procedure estesa|  
 |Funzione scalare SQL|Funzione con valori di tabella SQL|  
 |Funzione con valori di tabella inline SQL|Stored procedure SQL|  
-|Vista|Tabella* (definita dall'utente)|  
+|Visualizza|Tabella* (definita dall'utente)|  
   
  *Include tabelle temporanee globali e locali  
   
@@ -100,7 +100,7 @@ Le istruzioni di autorizzazione seguenti sono associate solo al sinonimo e non a
   
 |||  
 |-|-|  
-|GRANT|DENY|  
+|GRANT|NEGA|  
 |REVOKE||  
   
 I sinonimi non sono associati a uno schema, pertanto non è possibile farvi riferimento con i seguenti contesti di espressione associati a schema:  

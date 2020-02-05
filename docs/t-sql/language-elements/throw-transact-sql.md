@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072216"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68072216"
 
   Genera un'eccezione e trasferisce l'esecuzione a un blocco CATCH di un costrutto TRY...CATCH in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ THROW [ { error_number | @local_variable },
  *state*  
  Costante o variabile compresa tra 0 e 255 tramite cui viene indicato lo stato da associare al messaggio. *state* è di tipo **tinyint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione che precede l'istruzione THROW deve essere seguita dal carattere di terminazione punto e virgola (;).  
   
  Se non è disponibile un costrutto TRY...CATCH, il batch di istruzioni viene terminato. Vengono impostate la procedura e numero di riga in cui viene generata l'eccezione. La gravità viene impostata su 16.  
@@ -71,7 +71,7 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-throw-to-raise-an-exception"></a>A. Utilizzo di THROW per generare un'eccezione  
+### <a name="a-using-throw-to-raise-an-exception"></a>R. Utilizzo di THROW per generare un'eccezione  
  Nell'esempio seguente viene illustrato come utilizzare l'istruzione `THROW` per generare un'eccezione.  
   
 ```sql  

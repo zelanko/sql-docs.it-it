@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 081802afb9f66380da93f46bf75011b0f4ddb811
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768197"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288268"
 ---
 # <a name="article-properties---ltarticlegt"></a>Proprietà articolo - &lt;Articolo&gt;
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "68768197"
  Se si seleziona il sistema di risoluzione predefinito, i conflitti vengono risolti in base alla priorità assegnata a ogni Sottoscrittore o alla prima modifica scritta nel server di pubblicazione, a seconda del tipo di sottoscrizioni utilizzate. Per altre informazioni, vedere [Rilevare e risolvere i conflitti tra repliche di tipo merge](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usa un sistema di risoluzione personalizzato (registrato nel server di distribuzione)**  
- Se si sceglie di utilizzare un sistema di risoluzione dei conflitti dell'articolo fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o scritto dall'utente, è necessario selezionare un sistema di risoluzione nella casella di riepilogo. Per altre informazioni, vedere [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Se si sceglie di utilizzare un sistema di risoluzione dei conflitti dell'articolo fornito da [!INCLUDE[msCoName](../../includes/msconame-md.md)] o scritto dall'utente, è necessario selezionare un sistema di risoluzione nella casella di riepilogo. Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Se il sistema di risoluzione necessita di un input, specificarlo nella casella di testo **Immettere le informazioni necessarie per il sistema di risoluzione** . Per ulteriori informazioni sull'input richiesto dai sistemi di risoluzione dei conflitti personalizzati forniti da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vedere [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   

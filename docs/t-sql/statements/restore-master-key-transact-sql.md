@@ -26,10 +26,10 @@ ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3f821e16baa3853926da1323457385365ea64807
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141261"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68141261"
 
   Importa una chiave master del database da un file di backup.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  Specifica che il processo RESTORE deve continuare anche se la chiave master del database corrente non viene aperta oppure se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in grado di decrittografare alcune delle chiavi private crittografate con la chiave master.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando si ripristina la chiave master, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono decrittografate tutte le chiavi crittografate con la chiave master attiva corrente. Tali elementi venogno poi crittografati nuovamente con la chiave master ripristinata. Si tratta di un'operazione che utilizza molte risorse e pertanto dovrebbe essere pianificata in periodi di carico ridotto. L'operazione di ripristino avrà esito negativo se la chiave master del database corrente non è aperta e non è possibile aprirla, oppure se non è possibile decrittografare le eventuali chiavi crittografate con tale chiave master.  
   
  Utilizzare l'opzione FORCE solo se la chiave master è irrecuperabile o se la decrittografia ha esito negativo. Le informazioni crittografate esclusivamente da una chiave irrecuperabile andranno perdute.  

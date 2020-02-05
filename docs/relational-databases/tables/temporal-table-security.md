@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72452905"
 ---
 # <a name="temporal-table-security"></a>Sicurezza di una tabella temporale
@@ -61,14 +61,14 @@ Quando SYSTEM_VERSIONING è impostato su ON, le operazioni di modifica dello sch
 ||Creare una nuova tabella di cronologia|Riutilizzare una tabella di cronologia esistente|
 |-|------------------------------|----------------------------------|
 |Autorizzazione necessaria|Autorizzazione**CREATE TABLE** nel database<br /><br /> Autorizzazione**ALTER** per gli schemi in cui vengono create le tabelle corrente e di cronologia|Autorizzazione**CREATE TABLE** nel database<br /><br /> Autorizzazione**ALTER** per lo schema in cui verrà creata la tabella corrente.<br /><br /> Autorizzazione**CONTROL** per la tabella di cronologia specificata come parte dell'istruzione **CREATE TABLE** per la creazione della tabella temporale|
-|Controllare il funzionamento di|Dal controllo risulta che gli utenti hanno tentato di creare due oggetti. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database o a causa della mancanza di autorizzazioni per la modifica degli schemi per entrambe le tabelle.|Il controllo indica che la tabella temporale è stata creata. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database, a causa della mancanza di autorizzazioni per la modifica dello schema per la tabella temporale o a causa della mancanza di autorizzazioni per la tabella di cronologia.|
+|Audit|Dal controllo risulta che gli utenti hanno tentato di creare due oggetti. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database o a causa della mancanza di autorizzazioni per la modifica degli schemi per entrambe le tabelle.|Il controllo indica che la tabella temporale è stata creata. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database, a causa della mancanza di autorizzazioni per la modifica dello schema per la tabella temporale o a causa della mancanza di autorizzazioni per la tabella di cronologia.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Sicurezza dell'istruzione ALTER TABLE SET (SYSTEM_VERSIONING ON/OFF) per le tabelle temporali
 
 ||Creare una nuova tabella di cronologia|Riutilizzare una tabella di cronologia esistente|
 |-|------------------------------|----------------------------------|
 |Autorizzazione necessaria|Autorizzazione**CONTROL** nel database<br /><br /> Autorizzazione**CREATE TABLE** nel database<br /><br /> Autorizzazione**ALTER** per gli schemi in cui viene creata la tabella di cronologia|Autorizzazione**CONTROL** per la tabella originale modificata<br /><br /> Autorizzazione**CONTROL** per la tabella di cronologia specificata come parte dell'istruzione **ALTER TABLE**|
-|Controllare il funzionamento di|Il controllo indica che la tabella temporale è stata modificata e contemporaneamente è stata creata la tabella di cronologia. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database, a causa della mancanza di autorizzazioni per la modifica dello schema per la tabella di cronologia o a causa della mancanza di autorizzazioni per la modifica della tabella temporale.|Il controllo indica che la tabella temporale è stata modificata, ma l'operazione ha richiesto l'accesso alla tabella di cronologia. L'operazione potrebbe non riuscire a causa della mancanza di autorizzazioni per la tabella di cronologia o per la tabella corrente.|
+|Audit|Il controllo indica che la tabella temporale è stata modificata e contemporaneamente è stata creata la tabella di cronologia. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database, a causa della mancanza di autorizzazioni per la modifica dello schema per la tabella di cronologia o a causa della mancanza di autorizzazioni per la modifica della tabella temporale.|Il controllo indica che la tabella temporale è stata modificata, ma l'operazione ha richiesto l'accesso alla tabella di cronologia. L'operazione potrebbe non riuscire a causa della mancanza di autorizzazioni per la tabella di cronologia o per la tabella corrente.|
 
 ## <a name="security-of-select-statement"></a>Sicurezza dell'istruzione SELECT
 

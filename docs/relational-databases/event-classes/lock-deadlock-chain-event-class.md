@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1f9677502f863f63f26cc2e922d14663cd1c3878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68062606"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Classe di evento Lock:Deadlock Chain
@@ -32,8 +32,8 @@ ms.locfileid: "68062606"
 |BinaryData|**image**|Identificatore della risorsa blocco.|2|Sì|  
 |DatabaseID|**int**|ID del database a cui appartiene questa risorsa. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |DatabaseName|**nvarchar**|Nome del database a cui appartiene la risorsa.|35|Sì|  
-|EventClass|**int**|Tipo di evento = 59.|27|no|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventClass|**int**|Tipo di evento = 59.|27|No|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 101 = Tipo di risorsa Lock<br /><br /> 102 = Tipo di risorsa Exchange|21|Sì|  
 |IntegerData|**int**|Numero del deadlock. Dall'avvio del server viene assegnato un numero a partire da 0 che viene incrementato di un'unità per ogni deadlock.|25|Sì|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Sì|  
@@ -44,13 +44,13 @@ ms.locfileid: "68062606"
 |ObjectID2|**bigint**|ID dell'entità o dell'oggetto correlato, se disponibile e applicabile.|56|Sì|  
 |OwnerID|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
-|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sì|  
 |SPID|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TextData|**ntext**|Valore di testo che dipende dal tipo di risorsa.|1|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
-|Tipo|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
+|Type|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

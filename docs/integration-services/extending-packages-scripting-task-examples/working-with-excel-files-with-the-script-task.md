@@ -17,10 +17,10 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9386f146aee229eb4547ad54b4dd576fda1c0bfc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286572"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
@@ -69,7 +69,7 @@ ms.locfileid: "71286572"
   
 5.  Impostare il linguaggio di scripting predefinito per il componente Script usando l'opzione **Linguaggio di scripting** nella pagina **Generale** della finestra di dialogo **Opzioni**. Per ulteriori informazioni, vedere [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Descrizione dell'esempio 1: Verificare l'esistenza di un file di Excel  
+##  <a name="example1"></a> Descrizione dell'esempio 1: verificare l'esistenza di un file di Excel  
  In questo esempio viene determinato se il file della cartella di lavoro di Excel specificato nella variabile `ExcelFile` esiste, quindi il valore booleano della variabile `ExcelFileExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
 ### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -80,7 +80,7 @@ ms.locfileid: "71286572"
   
     -   Digitare **ExcelFile**.  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare la variabile **ExcelFile** nella finestra di dialogo **Seleziona variabili**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "71286572"
   
     -   Digitare **ExcelFileExists**.  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare la variabile **ExcelFileExists** nella finestra di dialogo **Seleziona variabili**.  
   
@@ -139,7 +139,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Descrizione dell'esempio 2: Verificare l'esistenza di una tabella di Excel  
+##  <a name="example2"></a> Descrizione dell'esempio 2: verificare l'esistenza di una tabella di Excel  
  In questo esempio viene determinato se il foglio di lavoro o l'intervallo denominato di Excel specificato nella variabile `ExcelTable` esiste nel file della cartella di lavoro di Excel specificato nella variabile `ExcelFile`, quindi il valore booleano della variabile `ExcelTableExists` viene impostato sul risultato. È possibile utilizzare questo valore booleano per la diramazione nel flusso di lavoro del pacchetto.  
   
 ### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -150,7 +150,7 @@ public class ScriptMain
   
     -   Digitare **ExcelTable** e **ExcelFile** separati da virgole **.**  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare le variabili **ExcelTable** e **ExcelFile** nella finestra di dialogo **Seleziona variabili**.  
   
@@ -158,7 +158,7 @@ public class ScriptMain
   
     -   Digitare **ExcelTableExists**.  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare la variabile **ExcelTableExists** nella finestra di dialogo **Seleziona variabili**.  
   
@@ -246,7 +246,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Descrizione dell'esempio 3: Ottenere un elenco dei file di Excel in una cartella  
+##  <a name="example3"></a> Descrizione dell'esempio 3: ottenere un elenco dei file di Excel in una cartella  
  In questo esempio l'elenco dei file di Excel trovati nella cartella specificata nel valore della variabile `ExcelFolder` viene inserito in una matrice, che viene quindi copiata nella variabile `ExcelFiles`. È possibile utilizzare l'enumeratore Foreach From Variable per scorrere i file nella matrice.  
   
 ### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  
@@ -257,7 +257,7 @@ public class ScriptMain
   
     -   Digitare **ExcelFolder**  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare la variabile ExcelFolder nella finestra di dialogo **Seleziona variabili**.  
   
@@ -265,7 +265,7 @@ public class ScriptMain
   
     -   Digitare **ExcelFiles**.  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare la variabile ExcelFiles nella finestra di dialogo **Seleziona variabili**.  
   
@@ -318,7 +318,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Soluzione alternativa  
  Anziché utilizzare un'attività Script per raccogliere un elenco di file di Excel in una matrice, è anche possibile utilizzare l'enumeratore ForEach File per scorrere tutti i file di Excel presenti in una cartella. Per altre informazioni, vedere [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-##  <a name="example4"></a> Descrizione dell'esempio 4: Ottenere un elenco di tabelle in un file di Excel  
+##  <a name="example4"></a> Descrizione dell'esempio 4: ottenere un elenco di tabelle in un file di Excel  
  In questo esempio l'elenco dei fogli di lavoro e degli intervalli denominati trovati nel file della cartella di lavoro di Excel specificata dal valore della variabile `ExcelFile` viene inserito in una matrice, che viene quindi copiata nella variabile `ExcelTables`. È possibile utilizzare l'enumeratore Foreach From Variable per scorrere le tabelle nella matrice.  
   
 > [!NOTE]  
@@ -332,7 +332,7 @@ public class ScriptMain
   
     -   Digitare **ExcelFile**.  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare la variabile ExcelFile nella finestra di dialogo **Seleziona variabili**.  
   
@@ -340,7 +340,7 @@ public class ScriptMain
   
     -   Digitare **ExcelTables**.  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare la variabile ExcelTables nella finestra di dialogo **Seleziona variabili**.  
   
@@ -445,7 +445,7 @@ public class ScriptMain
   
     -   Digitare i nomi di ogni variabile separati da virgole.  
   
-         oppure  
+         -oppure-  
   
     -   Fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto al campo della proprietà e selezionare le variabili nella finestra di dialogo **Seleziona variabili**.  
   

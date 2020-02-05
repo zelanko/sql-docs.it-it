@@ -11,10 +11,10 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294515"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilizzo del servizio Oracle CDC
@@ -76,13 +76,13 @@ ms.locfileid: "71294515"
   
 |Elemento|Descrizione|  
 |----------|-----------------|  
-|TIMESTAMP|Timestamp UTC esatto della scrittura del record di traccia.|  
-|tipo|Contiene uno dei valori seguenti.<br /><br /> errore<br /><br /> INFO<br /><br /> traccia|  
+|timestamp|Timestamp UTC esatto della scrittura del record di traccia.|  
+|type|Contiene uno dei valori seguenti.<br /><br /> ERRORE<br /><br /> INFO<br /><br /> TRACE|  
 |node|Nome del nodo in cui è stato scritto il record.|  
 |status|Codice di stato utilizzato dalla tabella dello stato.|  
 |sub_status|Codice di stato secondario utilizzato dalla tabella dello stato.|  
 |status_message|Messaggio di stato utilizzato dalla tabella dello stato.|  
-|origine|Nome del componente di Oracle CDC che ha prodotto il record di traccia.|  
+|source|Nome del componente di Oracle CDC che ha prodotto il record di traccia.|  
 |text_data|Dati di testo aggiuntivi per i casi in cui l'errore o il record di traccia contiene un payload testuale.|  
 |binary_data|Dati binari aggiuntivi per i casi in cui l'errore o il record di traccia contiene un payload binario.|  
   
@@ -95,10 +95,10 @@ ms.locfileid: "71294515"
   
 |Elemento|Descrizione|  
 |----------|-----------------|  
-|NAME|Nome del database Oracle nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|name|Nome del database Oracle nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Timestamp (UTC) per l'ultima modifica della tabella **xdbcdc_config** del database CDC corrispondente o timestamp (UTC) per la riga corrente di questa tabella.<br /><br /> Il trigger UPDATE applica un valore di GETUTCDATE () per questo elemento. Tramite**config_version** il servizio CDC identifica l'istanza di CDC che deve essere controllata per la modifica della configurazione o per l'abilitazione o la disabilitazione.|  
 |cdc_service_name|Tramite questo elemento è possibile determinare quale servizio Oracle CDC gestisce il database Oracle selezionato.|  
-|enabled|Indica se l'istanza di Oracle CDC è attiva (1) o disabilitata (0). All'avvio del servizio Oracle CDC verranno avviate solo le istanze contrassegnate come abilitate (1).<br /><br /> **Nota**: un'istanza di Oracle CDC può essere disabilitata in seguito a un errore non ripetibile. In questo caso, è necessario riavviare manualmente l'istanza dopo avere risolto l'errore.|  
+|Enabled|Indica se l'istanza di Oracle CDC è attiva (1) o disabilitata (0). All'avvio del servizio Oracle CDC verranno avviate solo le istanze contrassegnate come abilitate (1).<br /><br /> **Nota**: un'istanza di Oracle CDC può essere disabilitata in seguito a un errore non ripetibile. In questo caso, è necessario riavviare manualmente l'istanza dopo avere risolto l'errore.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  In questa tabella sono elencati i servizi CDC associati all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host. Questa tabella viene utilizzata da CDC Designer Console per determinare l'elenco di servizi CDC configurati per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale. Viene inoltre utilizzata dal servizio CDC per garantire che solo un servizio Windows in esecuzione gestisca un determinato nome di servizio CDC.  
@@ -192,7 +192,7 @@ ms.locfileid: "71294515"
   
 -   [File di configurazione](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_config)  
   
--   [Create](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_create)  
+-   [Creare](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_create)  
   
 -   [Elimina](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_delete)  
   

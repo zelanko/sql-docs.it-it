@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 638e9960af007710b7c9a891109597db14227092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071590"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68071590"
 
   Restituisce il valore esponenziale dell'espressione **float** specificata.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,16 +46,16 @@ EXP ( float_expression )
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La costante **e** (2,718281...) è la base dei logaritmi naturali.  
   
  L'esponente di un numero è la costante **e** elevata alla potenza del numero. Ad esempio, EXP(1.0) = e^1.0 = 2.71828182845905 ed EXP(10) = e^10 = 22026.4657948067.  
   
- Il valore esponenziale del logaritmo naturale di un numero è il numero stesso: EXP (LOG (*n*)) = *n*. Il logaritmo naturale del valore esponenziale di un numero è il numero stesso: LOG (EXP (*n*)) = *n*.  
+ Il valore esponenziale del logaritmo naturale di un numero è il numero stesso: EXP (LOG (*n*)) = *n*. E il logaritmo naturale del valore esponenziale di un numero è il numero stesso: LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-finding-the-exponent-of-a-number"></a>A. Ricerca dell'esponente di un numero  
+### <a name="a-finding-the-exponent-of-a-number"></a>R. Ricerca dell'esponente di un numero  
  Nell'esempio seguente viene dichiarata una variabile e viene restituito il valore esponenziale della variabile specificata (`10`) con un testo descrittivo.  
   
 ```  

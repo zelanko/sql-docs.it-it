@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081762"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
@@ -114,17 +114,17 @@ Quando è interessata una tabella ottimizzata per la memoria, la durata di una t
   
 Seguono le descrizioni delle fasi.  
   
-#### <a name="regular-processing-phase-1-of-3"></a>Elaborazione regolare: fase 1 (di 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>Elaborazione normale: Fase 1 di 3  
   
 - Questa fase comprende l'esecuzione di tutte le query e delle istruzioni DML nella query.  
 - Durante questa fase, le istruzioni vedono la versione delle tabelle ottimizzate per la memoria valida al momento dell'avvio logico della transazione.  
   
-#### <a name="validation-phase-2-of-3"></a>Convalida: fase 2 (di 3)  
+#### <a name="validation-phase-2-of-3"></a>Convalida: Fase 2 di 3  
   
 - La fase di convalida inizia con l'assegnazione dell'ora di fine, contrassegnando la transazione come completata a livello logico. Questo completamento rende visibili tutte le modifiche della transazione per le altre transazioni dipendenti da questa transazione. Il commit delle transazioni dipendenti non è consentito fino al commit di questa transazione. Inoltre, le transazioni che contengono queste dipendenze non possono restituire set di risultati al client per assicurare che il client veda solo i dati di cui è stato eseguito il commit nel database.  
 - Questa fase comprende la lettura ripetibile e la convalida serializzabile. Per la convalida di lettura ripetibile, verifica se le righe lette dalla transazione sono state aggiornate da quel momento. Per la convalida serializzabile, verifica se sono state inserite righe in qualsiasi intervallo di dati analizzato da questa transazione. Come indicato nella tabella [Livelli di isolamento e conflitti](#isolation-levels), la convalida di lettura ripetibile e la convalida serializzabile possono avere luogo quando si usa l'isolamento snapshot, per convalidare la coerenza dei vincoli di chiave univoca ed esterna.  
   
-#### <a name="commit-processing-phase-3-of-3"></a>Elaborazione del commit: fase 3 (di 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>Elaborazione del commit: Fase 3 di 3  
   
 - Durante la fase di commit, le modifiche apportate alle tabelle durevoli vengono scritte nel log, che a sua volta viene scritto su disco. Il controllo viene quindi restituito al client.  
 - Al termine dell'elaborazione del commit, a tutte le transazioni dipendenti viene indicato che possono eseguire il commit.  
@@ -139,7 +139,7 @@ Esistono due tipi di condizioni di errore relative alle transazioni che causano 
 
 Di seguito sono indicate le condizioni di errore che possono causare errori delle transazioni durante l'accesso alle tabelle ottimizzate per la memoria.
 
-| Codice errore | Descrizione | Causa |
+| Codice di errore | Descrizione | Causa |
 | :-- | :-- | :-- |
 | **41302** | Si è tentato di aggiornare una riga che è stata aggiornata in un'altra transazione dopo l'avvio di questa transazione. | Questa condizione di errore si verifica se due transazioni simultanee tentano di aggiornare o eliminare la stessa riga nello stesso momento. Una delle due transazioni riceve questo messaggio di errore e dovrà essere ritentata. <br/><br/>  | 
 | **41305**| Errore di convalida di lettura ripetibile. Una riga letta da una tabella ottimizzata per la memoria è stata aggiornata da un'altra transazione che ha eseguito il commit prima del commit di questa transazione. | Questo errore può verificarsi quando si usa l'isolamento REPEATABLE READ o SERIALIZABLE e anche se le azioni di una transazione simultanea causano la violazione del vincolo di chiave esterna. <br/><br/>Questa violazione simultanea dei vincoli di chiave esterna è rara e solitamente indica un problema relativo alla logica dell'applicazione o all'immissione di dati. Tuttavia, l'errore può verificarsi anche se non esiste alcun indice nelle colonne coinvolte nel vincolo FOREIGN KEY. Per questo motivo è consigliabile creare sempre un indice nelle colonne di chiavi esterne in una tabella ottimizzata per la memoria. <br/><br/> Per considerazioni più specifiche sugli errori di convalida dovuti a violazioni di chiavi esterne, vedere [questo post di blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) del team di consulenza clienti di SQL Server. |  
@@ -263,7 +263,7 @@ go
   - il database tempdb.  
   - Proprietà di sola lettura dal database master.  
   
-- Le transazioni distribuite non sono supportate: Quando si usa BEGIN DISTRIBUTED TRANSACTION, la transazione non può accedere a una tabella ottimizzata per la memoria.  
+- Le transazioni distribuite non sono supportate: quando si usa BEGIN DISTRIBUTED TRANSACTION, la transazione non può accedere a una tabella ottimizzata per la memoria.  
   
 ## <a name="natively-compiled-stored-procedures"></a>stored procedure compilate in modo nativo  
   

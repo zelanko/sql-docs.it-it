@@ -13,10 +13,10 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c8c7429c9352ca7f488317547eb082532c3916eb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909643"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Avviare o arrestare un set di raccolta
@@ -33,7 +33,7 @@ ms.locfileid: "72909643"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per avviare o arrestare un set di raccolta utilizzando:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72909643"
   
 -   È necessario che il servizio SQL Server Agent sia avviato.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Per ottenere informazioni sui set di raccolta, eseguire una query sulla vista del catalogo [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "72909643"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'appartenenza al ruolo predefinito del database **dc_operator** . Se al set di raccolta non è associato un account proxy, è richiesta l'appartenenza al ruolo predefinito del server **sysadmin** . Esempi  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-start-a-collection-set"></a>Per avviare un set di raccolta  
   
@@ -76,11 +76,11 @@ ms.locfileid: "72909643"
   
 1.  In Esplora oggetti espandere il nodo **Gestione** , **Raccolta dati**, quindi **Set di raccolta dati di sistema**.  
   
-2.  Fare clic con il pulsante destro del mouse sul set di raccolta che si vuole arrestare, quindi scegliere **Arrestare il set di raccolta dati**.  
+2.  Fare clic con il pulsante destro del mouse sul set di raccolta che si vuole arrestare e quindi scegliere **Arresta set di raccolta dati**.  
   
      In una finestra di messaggio verranno visualizzati i risultati di questa azione, mentre un cerchio rosso sull'icona del set di raccolta indica che il set di raccolta è stato arrestato.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-start-a-collection-set"></a>Per avviare un set di raccolta  
   

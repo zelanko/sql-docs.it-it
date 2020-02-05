@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951226"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocchi atomici nelle procedure native
@@ -143,23 +143,23 @@ GO
 |Impostazione facoltativa|Descrizione|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Tutti i formati data di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati. Quando viene specificata, **DATEFORMAT** esegue l'override del formato data predefinito associato a **LANGUAGE**.|  
-|**DATEFIRST**|Quando viene specificata, **DATEFIRST** esegue l'override del valore predefinito associato a **LANGUAGE**.|  
+|**DATEFORMAT**|Quando viene specificata, **DATEFIRST** esegue l'override del valore predefinito associato a **LANGUAGE**.|  
 |**DELAYED_DURABILITY**|I valori supportati sono **OFF** e **ON**.<br /><br /> Il commit delle transazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, che è l'impostazione predefinita, oppure con durabilità ritardata. Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).|  
   
  Le opzioni SET seguenti presentano lo stesso valore predefinito di sistema per tutti i blocchi atomici in tutte le stored procedure compilate in modo nativo:  
   
 |Opzione SET|Impostazione predefinita di sistema per i blocchi atomici|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|ATTIVA|  
+|ANSI_PADDING|ATTIVA|  
+|ANSI_WARNING|ATTIVA|  
+|ARITHABORT|ATTIVA|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|ATTIVA|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
+|NOCOUNT|ATTIVA|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|ATTIVA|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Le eccezioni non rilevate causano il rollback dei blocchi atomici, ma non l'interruzione della transazione, a meno che l'errore non comporti la fine della transazione.|  

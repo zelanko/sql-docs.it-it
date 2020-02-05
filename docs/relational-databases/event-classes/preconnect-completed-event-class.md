@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d674bf516dbdf25f940e9b14792d71c01d44806
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940667"
 ---
 # <a name="preconnectcompleted-event-class"></a>classe di evento PreConnect:Completed
@@ -27,7 +27,7 @@ ms.locfileid: "67940667"
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**int**|216|27|no|  
+|EventClass|**int**|216|27|No|  
 |SPID|**int**|ID del processo del server che genera l'evento.|12|Sì|  
 |EventSubClass|**int**|1 per la funzione di classificazione definita dall'utente.|21|Sì|  
 |StartTime|**datetime**|Ora di avvio della funzione di classificazione definita dall'utente.|14|Sì|  
@@ -35,8 +35,8 @@ ms.locfileid: "67940667"
 |Duration|**bigint**|Durata della funzione di classificazione in microsecondi.|13|Sì|  
 |ObjectID|**int**|ID dell'oggetto di classificazione definito dall'utente.|22|Sì|  
 |CPU|**int**|Utilizzo della CPU in millisecondi.|18|Sì|  
-|Reads|**int**|Numero di letture logiche.|16|Sì|  
-|Writes|**int**|Numero di scritture logiche.|17|Sì|  
+|Letture|**int**|Numero di letture logiche.|16|Sì|  
+|Scritture|**int**|Numero di scritture logiche.|17|Sì|  
 |GroupID|**int**|ID del gruppo del carico di lavoro classificato.|66|Sì|  
 |Errore|**int**|Ultimo numero di errore se non è possibile eseguire la funzione di classificazione definita dall'utente.|31|Sì|  
 |State|**int**|Stato dell'ultimo errore.|30|Sì|  

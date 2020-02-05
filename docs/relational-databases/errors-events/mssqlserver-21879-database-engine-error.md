@@ -12,13 +12,13 @@ ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7068229bcfcf63bb08fe46272cf308cee60be022
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056714"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  

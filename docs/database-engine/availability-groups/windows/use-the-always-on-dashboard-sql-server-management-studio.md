@@ -16,10 +16,10 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822669"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usare il dashboard del gruppo di disponibilità Always On in SQL Server Management Studio
@@ -171,7 +171,7 @@ Nel riquadro **Replica di disponibilità** vengono visualizzate le colonne segue
  **1**. In sospeso    
  **2**. Online    
  **3**. Offline   
- **4**. Operazione non riuscita    
+ **4**. Non riuscito    
  **5**. Errore, nessun quorum  
   
  **NULL**. La replica non è locale.  

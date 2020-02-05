@@ -18,10 +18,10 @@ ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065598"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT (autorizzazioni per chiavi asimmetriche) (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68065598"
 
   Concede autorizzazioni per una chiave asimmetrica.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,7 +75,7 @@ AS *granting_principal*
 -   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Una chiave asimmetrica è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Di seguito sono indicate le autorizzazioni più specifiche e limitate che è possibile concedere per una chiave asimmetrica, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione della chiave asimmetrica|Autorizzazione della chiave asimmetrica in cui è inclusa.|Autorizzazione del database in cui è inclusa|  

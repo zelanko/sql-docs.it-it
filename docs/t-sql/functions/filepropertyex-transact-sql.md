@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68425933"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68425933"
 
   Restituisce il valore della proprietà file estesa specificata quando vengono indicati il nome di un file nel database corrente e il nome di una proprietà. Restituisce NULL per i file che non sono nel database corrente o per le proprietà file estese che non esistono. Attualmente le proprietà file estese si applicano solo ai database nell'archivio BLOB di Azure.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +40,7 @@ FILEPROPERTYEX ( name , property )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *name*  
+ *nome*  
  Espressione contenente il nome del file associato al database corrente per cui si desidera restituire le informazioni sulla proprietà. *file_name* è di tipo **nchar(128)** .  
   
  *property*  
@@ -58,7 +58,7 @@ FILEPROPERTYEX ( name , property )
 ## <a name="return-types"></a>Tipi restituiti  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  *file_name* corrisponde alla colonna **name** nella vista del catalogo **sys.master_files** o **sys.database_files**.  
   
 ## <a name="examples"></a>Esempi  
