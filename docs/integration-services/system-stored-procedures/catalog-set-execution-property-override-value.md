@@ -11,10 +11,10 @@ ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8e85c35552a8bcbf4190bd3ce36b4a65be96789
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295300"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
@@ -48,14 +48,14 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [ @sensitive = ] *sensitive*  
  Quando il valore è 1, la proprietà è importante e viene crittografata quando viene archiviata. Quando il valore è 0, la proprietà non è importante e il valore viene archiviato non crittografato. L'argomento *sensitive* è di tipo **bit**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questa routine esegue la stessa funzione della sezione **Override di proprietà** nella scheda **Avanzate** della finestra di dialogo **Esegui pacchetto**. Il percorso della proprietà deriva dalla proprietà **Percorso del pacchetto** dell'attività del pacchetto.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="errors-and-warnings"></a>Errori e avvisi  
  Nell'elenco seguente vengono descritte alcune condizioni che possono generare un errore o un avviso:  

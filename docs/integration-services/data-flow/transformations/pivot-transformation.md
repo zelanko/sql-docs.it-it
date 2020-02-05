@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291218"
 ---
 # <a name="pivot-transformation"></a>Pivot - trasformazione
@@ -97,7 +97,7 @@ ms.locfileid: "71291218"
   
  La tabella seguente mostra un set di dati prima della trasformazione dei dati tramite Pivot in base alla colonna **Year** .  
   
-|Year|Nome prodotto|Total|  
+|Year|Nome prodotto|Totale|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
@@ -135,7 +135,7 @@ ms.locfileid: "71291218"
 -   [Proprietà personalizzate delle trasformazioni](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Per informazioni su come impostare le proprietà del componente, vedere [Impostare le proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Per informazioni su come impostare le proprietà del componente, vedere [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazione UnPivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   

@@ -20,10 +20,10 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072301"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Istruzioni delle utilità SQL Server - GO
@@ -33,7 +33,7 @@ ms.locfileid: "68072301"
   
   GO contrassegna la fine di un batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per le utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ GO [count]
  *count*  
  Numero integer positivo. Il batch che precede GO verrà eseguito il numero specificato di volte.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  GO non è un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], ma un comando riconosciuto dalle utilità **sqlcmd** e **osql** e dall'editor del codice di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Il comando GO viene interpretato dalle utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come un segnale per l'invio del batch corrente di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il batch di istruzioni corrente è composto da tutte le istruzioni immesse dopo l'ultima esecuzione del comando GO oppure dopo l'avvio della sessione ad hoc o dello script se si tratta della prima esecuzione di GO.  

@@ -25,18 +25,18 @@ ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fb566c311d57f9ba04f79798f0d4f50e910456bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071456"
 ---
-# <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
+# <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Questa funzione restituisce il nome del filegroup corrispondente al numero di identificazione (ID) di filegroup specificato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +52,7 @@ Numero dell'ID di filegroup per cui `FILEGROUP_NAME` restituirà il nome di file
 ## <a name="return-types"></a>Tipi restituiti  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 *filegroup_id* corrisponde alla colonna **data_space_id** nella vista del catalogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Esempi  

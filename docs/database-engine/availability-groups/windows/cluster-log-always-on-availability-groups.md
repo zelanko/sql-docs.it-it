@@ -11,10 +11,10 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244378"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Generare e analizzare CLUSTER. LOG per un gruppo di disponibilità Always On
@@ -59,9 +59,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |Identificatore|Source (Sorgente)|Esempio di CLUSTER. LOG|  
 |----------------|------------|------------------------------|  
-|Messaggi preceduti dal prefisso `[RES]` e `[hadrag]`|hadrres.dll (DLL risorse Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] Gruppo di disponibilità SQL Server \<ag>: `[hadrag]` richiesta offline.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] Gruppo di disponibilità SQL Server \<ag>: `[hadrag]` lease thread terminato<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] Gruppo di disponibilità SQL Server \<ag>: `[hadrag]` istruzione SQL libera<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] Gruppo di disponibilità SQL Server \<ag>: `[hadrag]` disconnessione da SQL Server|  
+|Messaggi preceduti dal prefisso `[RES]` e `[hadrag]`|hadrres.dll (DLL risorse Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] Gruppo di disponibilità SQL Server \<ag>: `[hadrag]` richiesta offline.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] Gruppo di disponibilità SQL Server \<ag>: `[hadrag]` lease thread terminato<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] Gruppo di disponibilità SQL Server \<ag>: `[hadrag]` istruzione SQL libera<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] Gruppo di disponibilità SQL Server \<ag>: `[hadrag]` disconnettere da SQL Server|  
 |Messaggi preceduti dal prefisso `[RHS]`|RHS. EXE (Resource Hosting Subsystem, processo host di hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] risorsa gruppo di disponibilità disattivata. RHS segnala lo stato della risorsa a RCM.|  
-|Messaggi preceduti dal prefisso `[RCM]`|Resource Control Monitor (servizio cluster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: prima viene disattivato il gruppo "ag".<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|Messaggi preceduti dal prefisso `[RCM]`|Resource Control Monitor (servizio cluster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: prima viene disattivato il gruppo del gruppo di disponibilità...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|Chiamata API, ovvero SQL Server richiede l'azione|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>Eseguire il debug della DLL risorse Always On in modalità isolata  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Per isolare un gruppo di disponibilità dalle altre DLL risorse del cluster, inclusi altri gruppi di disponibilità, attenersi alla procedura seguente per eseguire hadrres.dll all'interno di un processo rhs.exe distinto:  
   
-1.  Aprire l'**editor del Registro di sistema** e selezionare la chiave seguente: HKEY_LOCAL_MACHINE\Cluster\Resources. Questa chiave contiene le chiavi per tutte le risorse, ognuna con un GUID diverso.  
+1.  Aprire **Editor del Registro di sistema** e passare alla chiave seguente: HKEY_LOCAL_MACHINE\Cluster\Resources. Questa chiave contiene le chiavi per tutte le risorse, ognuna con un GUID diverso.  
   
 2.  Individuare la chiave della risorsa che contiene un valore **Nome** che corrisponde al nome del gruppo di disponibilità.  
   

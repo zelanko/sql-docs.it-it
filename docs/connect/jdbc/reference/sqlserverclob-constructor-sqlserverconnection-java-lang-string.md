@@ -16,10 +16,10 @@ ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a539ef893788be9e0200b9f412f8c3ed7652b26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971806"
 ---
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>Costruttore SQLServerClob (SQLServerConnection, java.lang.String)

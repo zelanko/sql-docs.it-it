@@ -18,10 +18,10 @@ ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050787"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT - autorizzazioni per server (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68050787"
 
   Concede le autorizzazioni per un server. 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -83,7 +83,7 @@ GRANT permission [ ,...n ]
  *server_role*  
  Specifica un ruolo del server definito dall'utente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile concedere autorizzazioni nell'ambito del server solo se il database corrente è il database master.  
   
  Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e le informazioni sulle entità server nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Le informazioni sulle appartenenze dei ruoli del server sono visibili nella vista del catalogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
@@ -127,7 +127,7 @@ GRANT permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sono state aggiunte le tre autorizzazioni server riportate di seguito.  
   
  Autorizzazione **CONNECT ANY DATABASE**  
@@ -144,8 +144,8 @@ GRANT permission [ ,...n ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-granting-a-permission-to-a-login"></a>A. Concessione di un'autorizzazione a un account di accesso  
- Nell'esempio seguente viene concessa l'autorizzazione `CONTROL SERVER` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `TerryEminhizer`.  
+### <a name="a-granting-a-permission-to-a-login"></a>R. Concessione di un'autorizzazione a un account di accesso  
+ Nell'esempio seguente viene concessa l'autorizzazione `CONTROL SERVER` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`TerryEminhizer`.  
   
 ```  
 USE master;  
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Concessione di un'autorizzazione che include l'autorizzazione GRANT  
- Nell'esempio seguente viene concessa l'autorizzazione `ALTER ANY EVENT NOTIFICATION` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `JanethEsteves` con il diritto di concedere tale autorizzazione a un altro account di accesso.  
+ Nell'esempio seguente viene concessa l'autorizzazione `ALTER ANY EVENT NOTIFICATION` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`JanethEsteves` con il diritto di concedere tale autorizzazione a un altro account di accesso.  
   
 ```  
 USE master;  

@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73637989"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
@@ -55,7 +55,7 @@ Una connessione dati contiene le informazioni necessarie per connettersi a un'or
   
 #### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
   
-1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati** .  
+1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
 2.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
@@ -88,13 +88,13 @@ Una connessione dati contiene le informazioni necessarie per connettersi a un'or
   
     Viene visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
-12. Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
+12. Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**.  
   
     Verrà visualizzato il messaggio **Creazione connessione completata** .  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Scegliere **Avanti**.  
+14. Fare clic su **Avanti**.  
   
 ## <a name="DMDXQuery"></a>1b. Creare una query MDX  
 In un report, è possibile utilizzare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da utilizzare solo nel report. In questa esercitazione si creerà un set di dati incorporato.  
@@ -126,7 +126,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 7.  Aprire l'elenco **Espressione filtro** , espandere **Tutte le aree di vendita**, fare clic su **America del Nord**, quindi fare clic su **OK**.  
   
-    La query dispone ora di un filtro per includere solo le vendite in Nord America.  
+    La query dispone ora di un filtro per includere solo le vendite in America del Nord.  
   
 8.  Nel riquadro Gruppo di misure espandere Data, quindi trascinare Anno di calendario nella colonna **Gerarchia** del riquadro filtro.  
   
@@ -163,7 +163,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 6.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)** .  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 ## <a name="DLayout"></a>1c. Organizzare i dati in gruppi  
 Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizzano dati dettagliati e dati aggregati.  
@@ -189,18 +189,18 @@ Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matri
   
     I passaggi 4 e 5 consentono di specificare i dati da visualizzare nella matrice.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 ## <a name="DTotals"></a>1d. Aggiungere subtotali e totali  
 Dopo avere creato i gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare i valori di aggregazione per i campi. È anche possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
   
-1.  Nella pagina **Scegliere il layout** in **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  
   
-2.  Scegliere **Avanti**.  
+2.  Fare clic su **Avanti**.  
   
 2.  Fare clic su **Fine**.  
   
@@ -385,7 +385,7 @@ Verrà aggiunta un'origine dati incorporata al report principale.
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Scegliere **Avanti**.  
+14. Fare clic su **Avanti**.  
   
 ## <a name="MMDXQuery"></a>1b. Creare una query MDX  
 Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettazione query per creare filtri, parametri, membri calcolati e il set di dati stesso.  
@@ -417,7 +417,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
   
 7.  Aprire l'elenco **Espressione filtro** , espandere **Tutte le aree di vendita**, fare clic su **America del Nord**, quindi fare clic su **OK**.  
   
-    La query dispone ora di un filtro per includere solo le vendite in Nord America.  
+    La query dispone ora di un filtro per includere solo le vendite in America del Nord.  
   
 8.  Nel riquadro Gruppo di misure espandere Data, quindi trascinare Anno di calendario nella colonna **Gerarchia** del riquadro filtro.  
   
@@ -483,7 +483,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
   
     Controllare il set di risultati della query  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 ## <a name="MLayout"></a>1c. Organizzare i dati in gruppi  
 Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizza dati dettagliati e dati aggregati.  
@@ -513,7 +513,7 @@ Nei report è possibile mostrare subtotali e totali complessivi. I dati nei repo
   
     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga sarà visualizzata nella modalità seguente: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`e la quarta riga contiene i totali.  
   
-2.  Scegliere **Avanti**.  
+2.  Fare clic su **Avanti**.  
   
 3.  Fare clic su **Fine**.  
   

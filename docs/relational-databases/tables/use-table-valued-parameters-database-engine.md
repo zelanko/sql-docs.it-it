@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72796635"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utilizzare parametri con valori di tabella (Motore di database)
@@ -39,7 +39,7 @@ I parametri con valori di tabella sono analoghi alle matrici di parametri in OLE
 
 [Restrizioni](#Restrictions)
 
-[Parametri con valori di tabella e operazioni BULK INSERT](#BulkInsert)
+[Parametri con valori di tabella  e operazioni BULK INSERT](#BulkInsert)
 
 [Esempio](#Example)
 
@@ -69,7 +69,7 @@ Ai parametri con valori di tabella si applicano le restrizioni seguenti:
 - I parametri con valori di tabella devono essere passati come parametri READONLY di input alle routine [!INCLUDE[tsql](../../includes/tsql-md.md)] . Non è possibile eseguire operazioni DML, ad esempio UPDATE, DELETE o INSERT, su un parametro con valori di tabella nel corpo di una routine.
 - Non è possibile utilizzare un parametro con valori di tabella come destinazione di un'istruzione SELECT INTO o INSERT EXEC. Un parametro con valori di tabella può essere incluso nella clausola FROM di un'istruzione SELECT INTO o nella stringa o stored procedure INSERT EXEC.
 
-## <a name="BulkInsert"></a> Parametri con valori di tabella e operazioni BULK INSERT
+## <a name="BulkInsert"></a> Parametri con valori di tabella  e operazioni BULK INSERT
 
 L'utilizzo di parametri con valori di tabella è confrontabile con altre modalità di utilizzo di variabili basate su set, ma può spesso risultare più rapido nel caso di set di dati di notevoli dimensioni. Rispetto alle operazioni bulk, che comportano costi di avvio maggiori, i parametri con valori di tabella garantiscono livelli di prestazioni ottimali per operazioni di inserimento di non oltre 1.000 righe.
 
@@ -77,7 +77,7 @@ I parametri con valori di tabella riutilizzati possono sfruttare il vantaggio de
 
 I parametri con valori di tabella garantiscono livelli di prestazioni analoghi o migliori rispetto all'implementazione di una matrice di parametri equivalente.
 
-## <a name="Example"></a> Esempio
+## <a name="Example"></a>Esempio
 
 L'esempio seguente usa [!INCLUDE[tsql](../../includes/tsql-md.md)] e illustra come creare un tipo di parametro con valori di tabella, dichiarare una variabile per farvi riferimento, compilare l'elenco di parametri e quindi passare i valori a una stored procedure nel database AdventureWorks.
 

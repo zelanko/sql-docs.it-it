@@ -18,10 +18,10 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115310"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Attività e funzionalità di Utilità SQL Server
@@ -46,18 +46,18 @@ ms.locfileid: "68115310"
 |Viene descritto come creare un punto di controllo di Utilità SQL Server|[Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Viene descritto come effettuare la connessione a Utilità SQL Server.|[Effettuare la connessione a Utilità SQL Server.](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  
 |Viene descritto come registrare un'istanza di SQL Server con un punto di controllo dell'utilità.|[Registrare un'istanza di SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)|  
-|Viene descritto come utilizzare Esplora utilità per gestire Utilità SQL Server.|[Utilizzo di Esplora utilità per gestire Utilità SQL Server](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)|  
+|Viene descritto come utilizzare Esplora utilità per gestire Utilità SQL Server.|[Usare Esplora utilità per gestire Utilità SQL Server](../../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)|  
 |Viene descritto come monitorare le istanze di SQL Server in Utilità SQL Server.|[Monitoraggio di istanze di SQL Server in Utilità SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)|  
-|Viene descritto come visualizzare i risultati dei criteri di integrità delle risorse.|[Visualizzare i risultati dei criteri di integrità delle risorse &#40;Utilità SQL Server&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)|  
+|Viene descritto come visualizzare i risultati dei criteri di integrità delle risorse.|[Visualizzare i risultati dei criteri di integrità delle risorse &#40;SQL Server Utility&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)|  
 |Viene descritto come modificare una definizione dei criteri di integrità delle risorse.|[Modificare una definizione dei criteri di integrità delle risorse &#40;Utilità SQL Server&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)|  
 |Viene descritto come configurare il data warehouse del punto di controllo dell'utilità.|[Configurare il data warehouse del punto di controllo dell'utilità &#40;Utilità SQL Server&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md)|  
 |Viene descritto come configurare i criteri di integrità dell'utilità.|[Configurare i criteri di integrità &#40;Utilità SQL Server&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)|  
-|Viene descritto come regolare l'attenuazione nei criteri di utilizzo della CPU.|[Ridurre le segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
+|Viene descritto come regolare l'attenuazione nei criteri di utilizzo della CPU.|[Riduzione delle segnalazioni non significative nei criteri di utilizzo della CPU &#40;Utilità SQL Server&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
 |Viene descritto come rimuovere un'istanza di SQL Server da un punto di controllo dell'utilità.|[Rimuovere un'istanza di SQL Server da Utilità SQL Server](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
 |Viene descritto come modificare l'account proxy per l'agente di raccolta dati dell'utilità in un'istanza gestita di SQL Server.|[Modificare l'account proxy per il set di raccolta dell'utilità in un'istanza gestita di SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Viene descritto come spostare un punto di controllo dell'utilità da un'istanza di SQL Server a un'altra.|[Spostare un punto di controllo dell'utilità da un'istanza di SQL Server a un'altra &#40;Utilità SQL Server&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Viene descritto come rimuovere un punto di controllo dell'utilità.|[Rimuovere un punto di controllo dell'utilità &#40;Utilità SQL Server&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|Viene descritto come risolvere i problemi relativi a Utilità SQL Server.|[Risoluzione dei problemi relativi a Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|Viene descritto come risolvere i problemi relativi a Utilità SQL Server.|[Attività e funzionalità di Utilità SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
 |Viene descritto come risolvere i problemi relativi all'integrità delle risorse di SQL Server.|[Risolvere i problemi relativi all'integrità delle risorse di SQL Server &#40;Utilità SQL Server&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |Collegamenti agli argomenti della Guida sensibile al contesto di Gestione Utilità.|[Guida sensibile al contesto di Gestione Utilità](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   

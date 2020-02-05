@@ -11,10 +11,10 @@ ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 00387fee6a11d3a2416d8440fdb7ae35665c472b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292508"
 ---
 # <a name="flat-file-custom-properties"></a>Proprietà personalizzate del file flat
@@ -30,7 +30,7 @@ ms.locfileid: "71292508"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|String|Nome di una colonna di output contenente il nome file. Se non si specifica alcun nome, non verrà generata alcuna colonna contenente il nome file.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor origine file flat**, ma può essere impostata tramite **Editor avanzato**.|  
+|FileNameColumnName|string|Nome di una colonna di output contenente il nome file. Se non si specifica alcun nome, non verrà generata alcuna colonna contenente il nome file.<br /><br /> Nota: questa proprietà non è disponibile in **Editor origine file flat**, ma può essere impostata tramite **Editor avanzato**.|  
 |RetainNulls|Boolean|Valore che specifica se i valori Null dal file di origine devono essere mantenuti come tali durante l'elaborazione dei dati tramite il motore della pipeline di trasformazione dati. Il valore predefinito di questa proprietà è **False**.|  
   
  L'output dell'origine file flat non include proprietà personalizzate.  
@@ -39,7 +39,7 @@ ms.locfileid: "71292508"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|Valore che indica se la colonna utilizza le routine di analisi più veloci ma indipendenti dalle impostazioni locali disponibili in DTS oppure le routine di analisi standard dipendenti dalle impostazioni locali. Per altre informazioni, vedere [Analisi veloce](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) e [Analisi standard](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). Il valore predefinito di questa proprietà è **False**.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor origine file flat**, ma può essere impostata tramite **Editor avanzato**.|  
+|FastParse|Boolean|Valore che indica se la colonna utilizza le routine di analisi più veloci ma indipendenti dalle impostazioni locali disponibili in DTS oppure le routine di analisi standard dipendenti dalle impostazioni locali. Per altre informazioni, vedere [Analisi veloce](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) e [Analisi standard](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). Il valore predefinito di questa proprietà è **False**.<br /><br /> Nota: questa proprietà non è disponibile in **Editor origine file flat**, ma può essere impostata tramite **Editor avanzato**.|  
   
  Per altre informazioni, vedere [Origine file flat](../../integration-services/data-flow/flat-file-source.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71292508"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|Intestazione|String|Blocco di testo inserito nel file prima di iniziare a scrivere i dati.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
+|Intestazione|string|Blocco di testo inserito nel file prima di iniziare a scrivere i dati.<br /><br /> È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.|  
 |Overwrite|Boolean|Valore che specifica se sovrascrivere o aggiungere dati a un file di destinazione esistente con lo stesso nome. Il valore predefinito di questa proprietà è **True**.|  
   
  L'input e le colonne di input della destinazione file flat non includono proprietà personalizzate.  

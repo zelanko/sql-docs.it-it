@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142762514f9bdbd7c7984dff218e5ea665d1d4d4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843312"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
@@ -44,12 +44,12 @@ ms.locfileid: "73843312"
 ## <a name="return-types"></a>Tipi restituiti  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione BEGIN TRANSACTION incrementa @@TRANCOUNT di 1. L'istruzione ROLLBACK TRANSACTION decrementa @@TRANCOUNT fino al valore 0, tranne nel caso dell'istruzione ROLLBACK TRANSACTION *savepoint_name* che non ha alcun effetto su @@TRANCOUNT. L'istruzione COMMIT TRANSACTION o COMMIT WORK decrementa @@TRANCOUNT di 1.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. Effetti delle istruzioni BEGIN e COMMIT  
+### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>R. Effetti delle istruzioni BEGIN e COMMIT  
  Nell'esempio seguente vengono illustrati gli effetti delle istruzioni nidificate `BEGIN` e `COMMIT` sulla variabile `@@TRANCOUNT`.  
   
 ```  

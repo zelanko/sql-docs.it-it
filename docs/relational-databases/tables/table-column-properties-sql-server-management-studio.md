@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68016239"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Proprietà delle colonne delle tabelle (SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "68016239"
   Queste proprietà vengono visualizzate nel riquadro inferiore di Progettazione tabelle. Se non specificato diversamente, è possibile modificare tali proprietà nella finestra Proprietà, quando la colonna desiderata è selezionata. Le **Proprietà colonna** possono essere visualizzate in categorie o in ordine alfabetico. Molte proprietà sono visualizzate o possono essere modificate solo per determinati tipi di dati.  
   
 > [!NOTE]  
->  Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.  
+>  Se la tabella viene pubblicata per la replica, è necessario apportare modifiche allo schema usando l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). Quando si apportano modifiche allo schema utilizzando Progettazione tabelle o Progettazione diagrammi di database, viene effettuato il tentativo di rimuovere e rigenerare la tabella. La modifica allo schema non riuscirà, poiché non è consentita la rimozione di oggetti pubblicati.  
   
  **Generale**  
  Viene espansa per visualizzare le proprietà **Nome**, **Consenti valori Null**, **Tipo di dati**, **Valore predefinito dell'associazione**, **Lunghezza**, **Precisione**e **Scala**.  
@@ -36,7 +36,7 @@ ms.locfileid: "68016239"
  **Nome**  
  Visualizza il nome della colonna selezionata.  
   
- **Consenti valori Null**  
+ **Consenti valori NULL**  
  Indica se nella colonna sono consentiti valori Null. Per modificare questa proprietà, selezionare la casella di controllo Consenti valori NULL corrispondente alla colonna desiderata nel riquadro superiore di Progettazione tabelle.  
   
  **Tipo di dati**  
@@ -48,7 +48,7 @@ ms.locfileid: "68016239"
  **Lunghezza**  
  Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri. Questa proprietà è disponibile solo per tipi di dati basati su caratteri.  
   
- **Scala**  
+ **Ridimensionare**  
  Visualizza il numero massimo di cifre consentito dopo la virgola decimale nei valori inclusi nella colonna. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
  **Precisione**  
@@ -99,7 +99,7 @@ ms.locfileid: "68016239"
  **Semantica statistica**  
  Selezionare se abilitare l'indicizzazione semantica statistica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- Se si seleziona una lingua in **Lingua** prima di selezionare **Semantica statistica** e alla lingua selezionata non è associato alcun modello di lingua semantico, l'opzione **Semantica statistica** viene impostata su **No** e non può essere modificata. Se si seleziona **Sì** per l'opzione **Semantica statistica** prima di selezionare una lingua in **Lingua**, le lingue disponibili nella colonna **Lingua** saranno limitate a quelle per cui è disponibile un modello di lingua semantico.  
+ Se si seleziona una lingua in **Lingua** prima di selezionare **Semantica statistica**e alla lingua selezionata non è associato alcun modello di lingua semantico, l'opzione **Semantica statistica** viene impostata su **No** e non può essere modificata. Se si seleziona **Sì** per l'opzione **Semantica statistica** prima di selezionare una lingua in **Lingua**, le lingue disponibili nella colonna **Lingua** saranno limitate a quelle per cui è disponibile un modello di lingua semantico.  
   
  **Con Sottoscrittore non SQL Server**  
  Indica se la colonna viene replicata in un Sottoscrittore non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -125,7 +125,7 @@ ms.locfileid: "68016239"
  **Non applicare in processi di replica**  
  Indica se durante la replica vengono mantenuti i valori di identità originari. Per ulteriori informazioni sulla replica, vedere CREATE TABLE. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
- **Replicata**  
+ **Elementi replicati**  
  Indica se questa colonna è replicata in un'altra posizione.  
   
  **RowGuid**  

@@ -13,10 +13,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8eaed6e70ad457f33dc9587e3004e433da43ae1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298082"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Editor origine SAP BW (pagina Avanzate)
@@ -26,7 +26,7 @@ ms.locfileid: "71298082"
 
   Usare la pagina **Avanzate** dell' **Editor origine SAP BW** per specificare la regola per la conversione di stringhe e il periodo di timeout, nonché per reimpostare lo stato di un ID richiesta specifico.  
   
- Per sapere di più sul componente di origine SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Origine SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
+ Per altre informazioni sul componente di origine SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Origine SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  La documentazione per Microsoft Connector 1.1 for SAP BW presuppone la conoscenza dell'ambiente SAP Netweaver BW. Per ulteriori informazioni su SAP Netweaver BW o per informazioni su come configurare oggetti e processi di SAP Netweaver BW, vedere la documentazione SAP.  
@@ -65,7 +65,7 @@ ms.locfileid: "71298082"
  **ID richiesta**  
  Specificare l'ID richiesta di cui reimpostare lo stato su "G - Green" quando si fa clic su **Reimposta**.  
   
- **Reimposta**  
+ **Reimpostazione**  
  Consente di reimpostare lo stato dell'ID richiesta specificato su "G - Green", dopo la richiesta di conferma. Ciò risulta utile quando si verifica un problema e il sistema SAP Netweaver BW contrassegna la richiesta con uno stato giallo o rosso.  
   
 ## <a name="see-also"></a>Vedere anche  

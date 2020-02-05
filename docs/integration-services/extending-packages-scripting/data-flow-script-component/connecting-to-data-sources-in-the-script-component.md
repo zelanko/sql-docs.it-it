@@ -13,10 +13,10 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 82ec2ddf98780a7230ccc123e3de152ad643669a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296967"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Connessione a origini dati nel componente script
@@ -35,7 +35,7 @@ ms.locfileid: "71296967"
  `Me.Connections.MyADONETConnection`  
   
 > [!NOTE]  
->  È necessario conoscere il tipo di connessione restituito dalla gestione connessione prima di chiamare **AcquireConnection**. Poiché l'oggetto **Option Strict** dell'attività Script è abilitato, è necessario eseguire il cast della connessione, che viene restituita come tipo **Object**, nel tipo di connessione appropriato prima dell'utilizzo.  
+>  È necessario conoscere il tipo di connessione restituito dalla gestione connessione prima di chiamare **AcquireConnection**. Poiché l'oggetto **Option Strict** dell'attività Script è abilitato, è necessario eseguire il cast della connessione, che viene restituita come tipo **Object**, nel tipo di connessione appropriato prima dell'uso.  
   
  Chiamare quindi il metodo **AcquireConnection** della gestione connessione specifica per ottenere la connessione sottostante o le informazioni necessarie per connettersi all'origine dati. Ad esempio, per ottenere un riferimento a **System.Data.SqlConnection** incluso in una gestione connessione ADO.NET, usare il codice seguente:  
   

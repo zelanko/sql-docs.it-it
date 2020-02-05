@@ -20,10 +20,10 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c9229f5bec676f28d92b4ea1aba1ad3aeeb4d6c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065887"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68065887"
 
   Modifica un oggetto specifica controllo database utilizzando la funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -83,7 +83,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Abilita o disabilita la raccolta di record mediante il controllo per questa specifica del controllo. Le modifiche relative allo stato della specifica di controllo devono essere apportate all'esterno di una transazione utente e non possono contenere altre modifiche nella stessa istruzione in presenza di una transizione da ON a OFF.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. È necessario impostare lo stato di una specifica di controllo sull'opzione OFF per apportare modifiche a una specifica del controllo del database. Se ALTER DATABASE AUDIT SPECIFICATION viene eseguita quando un controllo è abilitato con qualsiasi altra opzione diversa da STATE=OFF, verrà visualizzato un messaggio di errore. Per altre informazioni, vedere [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  

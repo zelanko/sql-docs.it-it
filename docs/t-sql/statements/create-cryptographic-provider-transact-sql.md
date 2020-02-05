@@ -23,10 +23,10 @@ ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d17e61de477b896a8fcdaead01d12674d3b9fddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68061026"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68061026"
 
   Crea un provider del servizio di crittografia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un provider EKM (Extensible Key Management).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  *path_of_DLL*  
  Percorso del file dll che implementa l'interfaccia EKM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si usa **Connettore SQL Server per Microsoft Azure Key Vault**, il percorso predefinito è **"C:\Programmi\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll"** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Tutte le chiavi create da un provider faranno riferimento al provider attraverso il GUID. Il GUID viene mantenuto per tutte le versioni della DLL.  
   
  Alla DLL che implementa l'interfaccia SQLEKM deve essere applicata una firma digitale usando qualsiasi certificato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificherà la firma. Include la catena di certificati, la cui radice deve essere installata nel percorso **Autorità di certificazione radice attendibili** in un sistema Windows. Se la firma non viene verificata correttamente, l'istruzione CREATE CRYPTOGRAPHIC PROVIDER avrà esito negativo. Per altre informazioni sui certificati e sulle catene di certificati, vedere [Certificati SQL Server e chiavi simmetriche](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  

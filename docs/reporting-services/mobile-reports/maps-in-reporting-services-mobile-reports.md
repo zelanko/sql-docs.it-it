@@ -9,10 +9,10 @@ ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62683721"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Esegue il mapping nei report di Reporting Services per dispositivi mobili
@@ -78,7 +78,7 @@ Per visualizzare i dati reali nella mappa, è necessario impostare i valori per 
 8. Selezionare l'icona **Salva** nell'angolo in alto a sinistra e quindi selezionare **Salva in locale** nel computer o **Salva nel server**.  
   
 ### <a name="see-also"></a>Vedere anche  
--  [Esegue il mapping personalizzato nei report di Reporting Services per dispositivi mobili](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+-  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Creare e pubblicare report per dispositivi mobili con SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4df2ce8bc53694c74142f843c4656e254e748d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298987"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Applicazione delle modifiche alla destinazione
@@ -27,7 +27,7 @@ ms.locfileid: "71298987"
   Nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che esegue un caricamento incrementale dei dati delle modifiche la terza e ultima attività consistono nell'applicare le modifiche alla destinazione. Sarà necessario un componente per applicare gli inserimenti, uno per applicare gli aggiornamenti e uno per applicare le eliminazioni.  
   
 > [!NOTE]  
->  La seconda attività nel progettare il flusso di dati di un pacchetto che esegue un caricamento incrementale dei dati delle modifiche consiste nel separare inserimenti, aggiornamenti ed eliminazioni. Per altre informazioni su questo componente, vedere [Elaborare inserimenti, aggiornamenti ed eliminazioni](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md). Per una descrizione del processo complessivo di creazione di un pacchetto che esegue un caricamento incrementale dei dati delle modifiche, vedere [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
+>  La seconda attività nel progettare il flusso di dati di un pacchetto che esegue un caricamento incrementale dei dati delle modifiche consiste nel separare inserimenti, aggiornamenti ed eliminazioni. Per altre informazioni su questo componente, vedere [Elaborare inserimenti, aggiornamenti ed eliminazioni](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md). Per una descrizione del processo complessivo di creazione di un pacchetto in cui viene eseguito un caricamento incrementale dei dati delle modifiche, vedere [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md).  
   
 ## <a name="applying-inserts"></a>Applicazione di inserimenti  
  Per applicare inserimenti, è necessario utilizzare una destinazione OLE DB in quanto le nuove righe non richiedono alcuna gestione speciale.  

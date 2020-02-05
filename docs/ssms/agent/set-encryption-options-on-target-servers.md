@@ -1,10 +1,9 @@
 ---
-title: Impostare le opzioni di crittografia nei server di destinazione | Microsoft Docs
-ms.custom: ''
+title: Impostazione delle opzioni di crittografia nei server di destinazione
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 897ae325775119b8f7f588aa399bb850100ad411
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d03b187b3af7778d4c574c41661aa4cb9ed39838
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267830"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253239"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Impostazione delle opzioni di crittografia nei server di destinazione
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,5 +45,5 @@ Se si specifica **1** o **2** , è necessario attivare la crittografia SSL sia n
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura: Abilitare connessioni crittografate al Motore di database (Gestione configurazione SQL Server)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
+[Procedura: Abilitazione di connessioni crittografate al Motore di database (Gestione configurazione SQL Server)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
   

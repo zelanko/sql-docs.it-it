@@ -11,10 +11,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edb7f78fd1d1d64980e7874f953a91030e7ecdc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296033"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lezione 2-1 - Compilazione dell'utilità di distribuzione
@@ -52,7 +52,7 @@ Per poter compilare l'utilità di distribuzione, è necessario modificare le pro
   
 4.  Nella finestra Output verificare le informazioni seguenti:  
   
-    Compilazione avviata: Progetto di SQL Integration Services: Incrementale ...  
+    Compilazione avviata - Progetto SQL Integration Services: Incrementale ...  
   
     Creazione dell'utilità di distribuzione in corso...  
   

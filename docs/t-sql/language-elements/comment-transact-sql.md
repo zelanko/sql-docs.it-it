@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495478"
 ---
 # <a name="---comment-transact-sql"></a>-- (commento) (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68495478"
 
   Evidenzia il testo inserito dall'utente. I commenti possono essere inseriti su una riga distinta oppure nidificati alla fine di una riga di comando di [!INCLUDE[tsql](../../includes/tsql-md.md)] o in un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Nel server il commento non viene valutato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68495478"
  *text_of_comment*  
  Stringa di caratteri contenente il testo del commento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Usare due trattini ( **--** ) per commenti su una sola riga o annidati. I commenti inseriti con **--** vengono terminati da una nuova riga, specificata con un carattere di ritorno a capo (U+000A), un carattere di avanzamento riga (U+000D) o una combinazione dei due. I commenti possono essere di qualsiasi lunghezza. Nella tabella seguente sono elencati i tasti di scelta rapida che è possibile utilizzare per impostare o meno il testo come commento.
   
 |Azione|Standard|  

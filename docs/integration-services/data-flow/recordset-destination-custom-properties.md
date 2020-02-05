@@ -11,10 +11,10 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8c4908e3a2269733a71dc8fe5c6d6a9e697a576
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292044"
 ---
 # <a name="recordset-destination-custom-properties"></a>Proprietà personalizzate della destinazione recordset
@@ -28,7 +28,7 @@ ms.locfileid: "71292044"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|VariableName|String|Nome della variabile che contiene il recordset ADO.|  
+|VariableName|string|Nome della variabile che contiene il recordset ADO.|  
   
  L'input e le colonne di input della destinazione recordset non includono proprietà personalizzate.  
   

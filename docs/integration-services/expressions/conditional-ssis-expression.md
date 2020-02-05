@@ -14,10 +14,10 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 758cd90c3932d59e725f6a8a9bf829e59ecf5474
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290170"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (condizionale) (espressione SSIS)
@@ -40,15 +40,15 @@ boolean_expression?expression1:expression2
  Qualsiasi espressione valida che restituisce TRUE, FALSE o NULL.  
   
  *expression1*  
- Qualsiasi espressione valida.  
+ È qualsiasi espressione valida.  
   
  *expression2*  
- Qualsiasi espressione valida.  
+ È qualsiasi espressione valida.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Il tipo di dati *expression1* o *expression2*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se *boolean_expression* restituisce NULL, il risultato dell'espressione sarà NULL. Se un'espressione selezionata, *expression1* o *expression2* è NULL, il risultato sarà NULL. Se l'espressione selezionata non è NULL, ma quella non selezionata è NULL, il risultato sarà il valore dell'espressione selezionata.  
   
  Se *expression1* e *expression2* hanno lo stesso tipo di dati, anche il risultato sarà di tale tipo. Ai tipi di risultato si applicano le seguenti ulteriori regole:  
@@ -61,7 +61,7 @@ boolean_expression?expression1:expression2
   
 -   **Numeric** Sia *expression1* che *expression2* devono essere un tipo di dati numerici. L'intersezione dei tipi di dati deve essere un tipo di dati numeric come specificato dalle regole relative alle conversioni numeriche implicite eseguite dall'analizzatore di espressioni. L'intersezione dei due tipi di dati numeric non può essere Null. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
--   **String** Sia *expression1* che *expression2* devono avere un tipo di dati string: DT_STR o DT_WSTR. Le due espressioni possono restituire tipi di dati string diversi. Il risultato ha tipo di dati DT_WSTR e lunghezza pari a quella dell'argomento più lungo.  
+-   **String** Sia *expression1* che *expression2* devono avere un tipo di dati string, ovvero DT_STR o DT_WSTR. Le due espressioni possono restituire tipi di dati string diversi. Il risultato ha tipo di dati DT_WSTR e lunghezza pari a quella dell'argomento più lungo.  
   
 -   **Date, Time o Date/Time** Sia *expression1* che *expression2* devono restituire uno dei tipi di dati seguenti: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
   

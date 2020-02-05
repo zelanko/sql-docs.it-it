@@ -14,10 +14,10 @@ ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8115350b3ead26a28c03fce975d058f393e0411b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984790"
 ---
 # <a name="create-xml-indexes"></a>Creazione di indici XML
@@ -56,7 +56,7 @@ ms.locfileid: "67984790"
   
  Quando si crea o si ricrea un indice XML primario in una colonna con tipo di dati XML che contiene valori dei tipi XML Schema **xs:date** o **xs:dateTime** o dei relativi sottotipi, non meno recenti di un anno, la creazione dell'indice non riuscirà in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono consentiti questi valori, quindi questo problema può verificarsi quando si creano indici in un database generato in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-### <a name="example-creating-a-primary-xml-index"></a>Esempio: Creazione di un indice XML primario  
+### <a name="example-creating-a-primary-xml-index"></a>Esempio: creazione di un indice XML primario  
  Nella maggior parte degli esempi viene utilizzata la tabella T (pk INT PRIMARY KEY, xCol XML), che include una colonna XML non tipizzata. Gli esempi possono essere estesi senza difficoltà ai dati XML tipizzati. Per semplicità vengono descritte le query per le istanze di dati XML, come illustrato nel codice seguente:  
   
 ```  
@@ -100,7 +100,7 @@ FROM    sys.xml_indexes;
   
  I valori restituiti nella colonna **seconday_type_desc** possono essere NULL, PATH, VALUE o PROPERTY. Per l'indice XML primario, il valore restituito è NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Esempio: Creazione di indici XML secondari  
+### <a name="example-creating-secondary-xml-indexes"></a>Esempio: creazione di indici XML secondari  
  Nell'esempio seguente viene illustrata la creazione di indici XML secondari. Vengono inoltre fornite informazioni sugli indici XML creati.  
   
 ```  

@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595756"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Effettuare il provisioning di chiavi Always Encrypted con SQL Server Management Studio
@@ -103,7 +103,7 @@ Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna 
 
 Lo strumento [Procedura guidata Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md) consente di eseguire la crittografia, la decrittografia e una nuova crittografia delle colonne di database selezionate. Può usare chiavi già configurate ma, al tempo stesso, consente anche di generare una nuova chiave master della colonna e una nuova crittografia di colonna. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted](always-encrypted-wizard.md)
 - [Configurare la crittografia delle colonne usando Always Encrypted con un pacchetto di applicazione livello dati](configure-always-encrypted-using-dacpac.md)
 - [Ruotare chiavi Always Encrypted con SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
@@ -111,7 +111,7 @@ Lo strumento [Procedura guidata Always Encrypted](../../../relational-databases/
 - [Eseguire la migrazione di dati da o verso colonne usando Always Encrypted con l'Importazione/Esportazione guidata SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>Vedere anche
-- [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Panoramica della gestione delle chiavi per Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Creare e archiviare chiavi master della colonna per Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Configurare Always Encrypted usando SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)

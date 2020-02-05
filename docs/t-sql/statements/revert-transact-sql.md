@@ -23,10 +23,10 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252180"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "72252180"
 
   Riporta il contesto di esecuzione al chiamante dell'ultima istruzione EXECUTE AS.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,9 +46,9 @@ REVERT
   
 ## <a name="arguments"></a>Argomenti  
  WITH COOKIE = @*varbinary_variable*  
- Specifica il cookie creato in un'istruzione autonoma [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) corrispondente. *\@varbinary_variable* è **varbinary(100)**.  
+ Specifica il cookie creato in un'istruzione autonoma [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) corrispondente. *\@varbinary_variable* è **varbinary(100)** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile specificare REVERT all'interno di un modulo, ad esempio una stored procedure o una funzione definita dall'utente, oppure come un'istruzione autonoma. Se specificata all'interno di un modulo, l'istruzione REVERT è applicabile solo alle istruzioni EXECUTE AS definite nel modulo. Ad esempio, la stored procedure seguente esegue un'istruzione `EXECUTE AS` seguita da un'istruzione `REVERT`.  
   
 ```  
@@ -86,7 +86,7 @@ EXECUTE dbo.usp_myproc;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. Utilizzo di EXECUTE AS e REVERT per cambiare contesto  
+### <a name="a-using-execute-as-and-revert-to-switch-context"></a>R. Utilizzo di EXECUTE AS e REVERT per cambiare contesto  
  Nell'esempio seguente viene creato uno stack di contesti di esecuzione utilizzando più entità. Viene quindi utilizzata l'istruzione REVERT per ripristinare il contesto di esecuzione al chiamante precedente. L'istruzione REVERT viene eseguita più volte per innalzare di livello lo stack finché il contesto di esecuzione viene impostato sul chiamante originale.  
   
 ```  

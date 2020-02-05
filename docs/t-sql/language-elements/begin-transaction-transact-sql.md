@@ -31,10 +31,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dc5c823a69d348e3206d55c3c49f8954204a794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910083"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "67910083"
 
   Contrassegna il punto di inizio di una transazione locale esplicita. Le transazioni esplicite iniziano con l'istruzione BEGIN TRANSACTION e terminano con l'istruzione COMMIT o ROLLBACK.  
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -133,7 +133,7 @@ COMMIT TRAN T1;
   
  BEGIN TRAN M2 WITH MARK  
   
- Server: messaggio 3920, livello 16, stato 1, riga 3  
+ Messaggio 3920, livello 16, stato 1, linea 3  
   
  L'opzione WITH MARK viene applicata solo alla prima istruzione BEGIN TRAN WITH MARK.  
   
@@ -144,7 +144,7 @@ COMMIT TRAN T1;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-an-explicit-transaction"></a>A. Uso di una transazione esplicita
+### <a name="a-using-an-explicit-transaction"></a>R. Uso di una transazione esplicita
 **SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 Questo esempio usa AdventureWorks. 

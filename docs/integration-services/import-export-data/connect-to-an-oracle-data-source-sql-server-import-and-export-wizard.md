@@ -10,10 +10,10 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285438"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Oracle (Importazione/Esportazione guidata SQL Server)
@@ -34,7 +34,7 @@ Dopo aver selezionato **Provider di dati .NET Framework per Oracle** nella pagin
 
 |Informazioni obbligatorie|Proprietà Provider di dati .NET Framework per Oracle|
 |---|---|
-|Nome server|**Data Source**|
+|Nome server|**Origine dati**|
 |Informazioni di autenticazione (accesso)|**ID utente** e **Password** oppure **Sicurezza integrata**|
 
 Non è necessario immettere la stringa di connessione nel campo **ConnectionString** dell'elenco. Dopo avere immesso i singoli valori per il nome del server Oracle (**Origine dati**) e le informazioni di accesso, la procedura guidata assembla la stringa di connessione in base alle singole proprietà e ai relativi valori. 
@@ -86,7 +86,7 @@ Eseguire una delle query seguenti per ottenere il nome del server Oracle.
 
 `SELECT host_name FROM v$instance`
 
-o Gestione configurazione
+o
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 
@@ -95,5 +95,5 @@ Per informazioni su come connettersi a Oracle con un provider di dati non elenca
 
 ## <a name="see-also"></a>Vedere anche
 [Scelta origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Scelta destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
+[Scegliere una destinazione](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

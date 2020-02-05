@@ -22,18 +22,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135918"
 ---
-# <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
+# <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Questa funzione restituisce il rango di ogni riga all'interno della partizione di un set di risultati, senza gap nei valori di rango. Il rango di una riga specifica corrisponde a 1 più il numero di valori di rango distinti che precedono tale riga specifica.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ Determina l'ordine in cui la funzione `DENSE_RANK` viene applicata alle righe in
 ## <a name="return-types"></a>Tipi restituiti  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Se due o più righe hanno lo stesso valore di rango nella stessa partizione, ognuna di tali righe riceverà lo stesso rango. Se ad esempio due venditori principali hanno lo stesso valore SalesYTD, avranno entrambi il valore di rango 1. Il venditore con il valore successivo SalesYTD più alto avrà il valore di rango 2, che supera di uno il numero di righe distinte che precedono la riga in questione. I numeri restituiti dalla funzione `DENSE_RANK` sono quindi sempre valori consecutivi e senza gap.  
   
 L'ordinamento usato per l'intera query determina l'ordine delle righe nel set di risultati. Ciò significa che una riga con numero di rango 1 non sarà necessariamente la prima riga nella partizione.  
@@ -60,7 +60,7 @@ L'ordinamento usato per l'intera query determina l'ordine delle righe nel set di
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-ranking-rows-within-a-partition"></a>A. Classificazione di righe all'interno di una partizione  
+### <a name="a-ranking-rows-within-a-partition"></a>R. Classificazione di righe all'interno di una partizione  
 Questo esempio assegna i ranghi per i prodotti nell'inventario, in base alle ubicazioni di inventario specificate, a seconda delle quantità. `DENSE_RANK` partiziona il set di risultati per `LocationID` e ordina in modo logico il set di risultati per `Quantity`. Si noti che la quantità dei prodotti 494 e 495 è la stessa. Poiché hanno entrambi lo stesso valore relativo alla quantità, hanno entrambi il valore di rango 1.  
   
 ```  

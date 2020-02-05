@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000226"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Creare un gruppo di disponibilità indipendente dal dominio
@@ -127,7 +127,7 @@ Attualmente non è possibile creare un gruppo di disponibilità indipendente dal
    ```
 
 10. Per qualsiasi replica che potrebbe essere primaria, creare un account di accesso e un utente in tutte le relative repliche secondarie.
-11. Ripristinare in ogni istanza i certificati per le altre istanze per cui sono stati creati un account di accesso e un utente. Nella replica primaria ripristinare tutti i certificati delle repliche secondarie. Ripristinare il certificato della replica primaria in ogni replica secondaria e anche in qualsiasi altra replica che potrebbe essere primaria. Esempio:
+11. Ripristinare in ogni istanza i certificati per le altre istanze per cui sono stati creati un account di accesso e un utente. Nella replica primaria ripristinare tutti i certificati delle repliche secondarie. Ripristinare il certificato della replica primaria in ogni replica secondaria e anche in qualsiasi altra replica che potrebbe essere primaria. Ad esempio:
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]

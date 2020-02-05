@@ -20,10 +20,10 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72173860"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72173860"
 
 Modifica un criterio di sicurezza.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -88,7 +88,7 @@ Indica che il criterio di sicurezza non deve essere eseguito quando un agente di
 table_schema_name.table_name  
 È la tabella di destinazione per il predicato di sicurezza applicato. A una singola tabella possono fare riferimento più criteri di sicurezza disabilitati, ma è possibile abilitarne solo uno.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 L'istruzione ALTER SECURITY POLICY è nell'ambito di una transazione. L'esecuzione del rollback della transazione comporta il rollback anche per l'istruzione.  
   
 Quando si usano le funzioni di predicato con tabelle ottimizzate per la memoria, i criteri di sicurezza devono includere **SCHEMABINDING** e usare l'hint per la compilazione**WITH NATIVE_COMPILATION**. L'argomento SCHEMABINDING non può essere modificato con l'istruzione ALTER perché si applica a tutti i predicati. Per modificare l'associazione dello schema, è necessario eliminare e ricreare i criteri di sicurezza.  
@@ -107,7 +107,7 @@ Inoltre, per ogni predicato che viene aggiunto sono richieste le autorizzazioni 
 ## <a name="examples"></a>Esempi  
 Negli esempi seguenti viene illustrato l'uso della sintassi di **CREATE SECURITY POLICY** . Per un esempio di scenario completo dei criteri di sicurezza, vedere [Sicurezza a livello di riga](../../relational-databases/security/row-level-security.md).  
   
-### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. Aggiunta di un altro predicato a un criterio  
+### <a name="a-adding-an-additional-predicate-to-a-policy"></a>R. Aggiunta di un altro predicato a un criterio  
 La sintassi seguente modifica un criterio di sicurezza, aggiungendo un predicato del filtro per la tabella `mytable`.  
   
 ```  

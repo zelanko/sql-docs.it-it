@@ -20,10 +20,10 @@ ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b4639ac643e1a7650a55ad9415b3ebd5f02d4388
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745350"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70745350"
 
   Elimina un oggetto specifica controllo server utilizzando la funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Nome di un oggetto specifica controllo server esistente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  DROP SERVER AUDIT SPECIFICATION rimuove i metadati per la specifica del controllo, ma non i dati di controllo raccolti prima dell'esecuzione del comando DROP. Prima di procedere con l'eliminazione, è necessario impostare lo stato di una specifica del controllo del server su OFF usando ALTER SERVER AUDIT SPECIFICATION.  
   
 ## <a name="permissions"></a>Autorizzazioni  

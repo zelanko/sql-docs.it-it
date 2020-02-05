@@ -11,10 +11,10 @@ ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a3e056e60eeab6dfdb79a448b4fc95bf1c01f50
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298940"
 ---
 # <a name="set-parameter-value-dialog-box"></a>Finestra di dialogo Imposta valore parametro

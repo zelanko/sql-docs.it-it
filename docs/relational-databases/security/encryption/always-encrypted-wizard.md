@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594509"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configurare la crittografia delle colonne usando la procedura guidata Always Encrypted
@@ -101,12 +101,12 @@ Per altre informazioni sulla creazione e l'archiviazione delle chiavi master di 
 > [!TIP]
 > La procedura guidata consente di esplorare e creare chiavi solo nell'archivio certificati Windows e in Azure Key Vault. Inoltre, genera automaticamente i nomi delle nuove chiavi e degli oggetti metadati del database che descrivono le chiavi. Per avere un maggiore controllo sulla modalità di provisioning delle chiavi e più possibilità di scelta per un archivio chiavi contenente una chiave master della colonna, è possibile usare le finestre di dialogo **Nuova chiave master della colonna** e **Nuova chiave di crittografia della colonna** per creare le chiavi, quindi eseguire la procedura guidata e selezionare le chiavi create. Vedere [Effettuare il provisioning delle chiavi master di colonna con la finestra di dialogo Nuova chiave master della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) e [Effettuare il provisioning delle chiavi di crittografia di colonna con la finestra di dialogo Nuova chiave di crittografia della colonna](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Vedere anche  
- - [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Panoramica della gestione delle chiavi per Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
  - [Configurare Always Encrypted usando SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
  - [Effettuare il provisioning di chiavi Always Encrypted con PowerShell](configure-always-encrypted-keys-using-powershell.md)

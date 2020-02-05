@@ -24,10 +24,10 @@ ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974397"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71974397"
 
   Recupera una riga specifica da un cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -82,7 +82,7 @@ FETCH
  INTO \@*variable_name*[ ,...*n*]  
  Consente di inserire in variabili locali i dati delle colonne ottenute da un'operazione di recupero. Ogni variabile dell'elenco, da sinistra a destra, è associata alla colonna corrispondente nel set di risultati del cursore. A ogni variabile deve essere associato lo stesso tipo di dati o un tipo di dati che supporti la conversione implicita dal tipo di dati della colonna corrispondente nel set di risultati. Il numero di variabili deve corrispondere al numero di colonne dell'elenco di selezione del cursore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se l'opzione `SCROLL` non è specificata in un'istruzione `DECLARE CURSOR` in formato ISO, `NEXT` è l'unica opzione `FETCH` supportata. Se `SCROLL` viene specificata in formato ISO in un'istruzione `DECLARE CURSOR`, tutte le opzioni `FETCH` sono supportate.  
   
  Quando vengono utilizzate le estensioni del cursore DECLARE di [!INCLUDE[tsql](../../includes/tsql-md.md)], vengono applicate le regole seguenti:  
@@ -100,7 +100,7 @@ FETCH
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-fetch-in-a-simple-cursor"></a>A. Utilizzo dell'istruzione FETCH in un cursore semplice  
+### <a name="a-using-fetch-in-a-simple-cursor"></a>R. Utilizzo dell'istruzione FETCH in un cursore semplice  
  Nell'esempio seguente viene dichiarato un cursore semplice per le righe della tabella `Person.Person` contenenti un cognome che inizia per `B`. Viene inoltre utilizzata l'istruzione `FETCH NEXT` per la riproduzione delle varie righe. Le istruzioni `FETCH` restituiscono il valore delle colonne specificate nell'istruzione `DECLARE CURSOR`, come set di risultati a riga singola.  
   
 ```sql  

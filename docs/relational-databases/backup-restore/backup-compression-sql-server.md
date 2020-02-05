@@ -18,15 +18,15 @@ ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940830"
 ---
 # <a name="backup-compression-sql-server"></a>Compressione backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento viene descritta la compressione dei backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluse le restrizioni, il compromesso di prestazioni previsto dalla compressione di backup, la configurazione della compressione di backup e il rapporto di compressione.  La compressione dei backup è supportata nelle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]: Enterprise, Standard e Developer.  Ogni edizione di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e successiva è in grado di ripristinare un backup compresso. 
+  In questo argomento viene descritta la compressione dei backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluse le restrizioni, il compromesso di prestazioni previsto dalla compressione di backup, la configurazione della compressione di backup e il rapporto di compressione.  La compressione dei backup è supportata nelle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Developer, Standard ed Enterprise.  Ogni edizione di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e successiva è in grado di ripristinare un backup compresso. 
  
   
 ##  <a name="Benefits"></a> Vantaggi  

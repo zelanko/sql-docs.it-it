@@ -11,10 +11,10 @@ ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251321"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (database SSISDB)
@@ -37,10 +37,10 @@ catalog.deploy_project [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [@folder_name =] *folder_name*  
- Nome della cartella in cui è distribuito il progetto. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella in cui è distribuito il progetto. *folder_name* è di tipo **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- Nome del progetto nuovo o aggiornato nella cartella. *project_name* è di tipo **nvarchar(128)**.  
+ Nome del progetto nuovo o aggiornato nella cartella. *project_name* è di tipo **nvarchar(128)** .  
   
  [@projectstream =] *projectstream*  
  Contenuto binario di un file di distribuzione progetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (estensione ispac).  
@@ -56,7 +56,7 @@ catalog.deploy_project [@folder_name =] folder_name
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
@@ -76,7 +76,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   Utente senza autorizzazioni sufficienti.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Durante la distribuzione o aggiornamento di un progetto, il livello di protezione dei singoli pacchetti non viene controllato dalla stored procedure.  
   
   

@@ -20,10 +20,10 @@ ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f1548aa3b7b436f89ad4dee73b7c1ed7034e0f87
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314588"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71314588"
 
 Crittografa dati con la chiave pubblica di un certificato.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,7 +60,7 @@ Variabile di uno dei tipi seguenti contenente i dati che verranno crittografati 
 ## <a name="return-types"></a>Tipi restituiti  
 **varbinary** con un valore massimo di 8.000 byte.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Questa funzione crittografa i dati con la chiave pubblica di un certificato. Il testo crittografato può essere decrittografato solo con la chiave privata corrispondente. Queste trasformazioni asimmetriche sono molto onerose rispetto alla crittografia e alla decrittografia con una chiave simmetrica. Di conseguenza, la crittografia asimmetrica non è consigliabile quando si usano set di dati di grandi dimensioni.
   
 ## <a name="examples"></a>Esempi  

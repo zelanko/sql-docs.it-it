@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d6e0b563d7c75a46c8fd8ea0731c046d3159d94
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843334"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
@@ -54,7 +54,7 @@ STATS_DATE ( object_id , stats_id )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce **datetime** in caso di esito positivo. Restituisce **NULL** se un BLOB di statistiche non è stato creato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione.  
  
  La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB di statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme all'[istogramma](../../relational-databases/statistics/statistics.md#histogram) e al [vettore di densità](../../relational-databases/statistics/statistics.md#density), non nei metadati. Quando non viene letto alcun dato per generare i dati delle statistiche, il BLOB di statistiche non viene creato e la data non è disponibile. È il caso delle statistiche filtrate per le quali il predicato non restituisce alcuna riga o delle nuove tabelle vuote.
@@ -66,7 +66,7 @@ STATS_DATE ( object_id , stats_id )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>A. Recupero delle date delle statistiche più recenti per una tabella  
+### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>R. Recupero delle date delle statistiche più recenti per una tabella  
  L'esempio seguente restituisce la data dell'aggiornamento più recente di ogni oggetto statistiche nella tabella `Person.Address`.  
   
 ```sql  

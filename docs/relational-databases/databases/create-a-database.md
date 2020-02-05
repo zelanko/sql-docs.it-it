@@ -15,10 +15,10 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4233a277fa20a4bd951b717bfad0039612b5e77e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037619"
 ---
 # <a name="create-a-database"></a>Creare un database
@@ -38,7 +38,7 @@ ms.locfileid: "68037619"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un database utilizzando:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68037619"
   
 -   L'istruzione CREATE DATABASE deve essere eseguita in modalità autocommit, la modalità predefinita per la gestione delle transazioni, e non è consentita in una transazione esplicita o implicita.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Il backup del database [master](../../relational-databases/databases/master-database.md) dovrebbe essere eseguito ogni volta che si crea, modifica o si rimuove un database utente.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68037619"
   
  Per mantenere il controllo sull'utilizzo del disco per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorizzazione per la creazione dei database è in genere limitata a pochi account di accesso.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-database"></a>Per creare un database  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68037619"
   
 12. Per creare il database, scegliere **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-database"></a>Per creare un database  
   
@@ -136,9 +136,9 @@ GO
  Per altri esempi, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Filegroup e file di database](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [Aggiungere file di dati o file di log a un database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

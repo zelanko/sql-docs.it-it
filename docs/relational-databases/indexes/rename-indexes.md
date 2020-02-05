@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 83c53aa2e8c7700f5aa7b3c87dc0683f3c7ed447
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906312"
 ---
 # <a name="rename-indexes"></a>Ridenominazione di indici
@@ -33,7 +33,7 @@ ms.locfileid: "72906312"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rinominare un indice utilizzando:**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "72906312"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per l'indice.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-rename-an-index-by-using-the-table-designer"></a>Per rinominare un indice utilizzando Progettazione tabelle  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72906312"
   
 6.  Nella griglia fare clic su **Nome** e digitare un nuovo nome nella casella di testo.  
   
-7.  Scegliere **Chiudi**.  
+7.  Fare clic su **Close**.  
   
 8.  Nel menu **File** scegliere **Salva**_table_name_.  
 
@@ -85,7 +85,7 @@ ms.locfileid: "72906312"
   
 6.  Digitare il nuovo nome dell'indice e premere INVIO.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-rename-an-index"></a>Per rinominare un indice  
   

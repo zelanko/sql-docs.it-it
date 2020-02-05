@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c1f860f69ef95af42627d0d2bad869afbb366fc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107115"
 ---
 # <a name="enable-indexes-and-constraints"></a>Abilitazione di indici e vincoli
@@ -36,7 +36,7 @@ ms.locfileid: "68107115"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per abilitare un indice disabilitato utilizzando:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68107115"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. Se si usa DBCC DBREINDEX, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner**.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>Per abilitare un indice disabilitato  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68107115"
   
  Le informazioni seguenti sono disponibili nella finestra di dialogo **Ricompila indici** :  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>Per abilitare un indice disabilitato utilizzando ALTER INDEX  
   

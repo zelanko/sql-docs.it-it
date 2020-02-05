@@ -13,10 +13,10 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f933683e11229500ceea29c3a10180a13c154baf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294629"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Esecuzione di un caricamento incrementale di più tabelle
@@ -49,7 +49,7 @@ ms.locfileid: "71294629"
   
 4.  Utilizzare più attività Esegui pacchetto per eseguire pacchetti figlio per ogni tabella da caricare. Passare gli endpoint calcolati nel pacchetto padre a ciascun pacchetto figlio utilizzando le configurazioni Variabile pacchetto padre.  
   
-     Per altre informazioni, vedere [Attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task.md) e [Usare i valori di variabili e parametri in un pacchetto figlio](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
+     Per altre informazioni, vedere [Attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task.md) e [Utilizzare i valori di variabili e parametri in un pacchetto figlio](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 #### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>Per creare pacchetti figlio per l'esecuzione dei passaggi necessari per ogni tabella di origine  
   

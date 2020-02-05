@@ -25,10 +25,10 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980990"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
@@ -81,7 +81,7 @@ ON ALL SERVER
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile rimuovere un trigger DML eliminando il trigger stesso o la tabella di trigger corrispondente. Quando si elimina una tabella, vengono eliminati anche tutti i trigger associati.  
   
  Se si elimina un trigger, le informazioni relative al trigger vengono rimosse dalle viste del catalogo **sys.objects**, **sys.triggers** e **sys.sql_modules**.  
@@ -103,7 +103,7 @@ ON ALL SERVER
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dropping-a-dml-trigger"></a>A. Eliminazione di un trigger DML  
+### <a name="a-dropping-a-dml-trigger"></a>R. Eliminazione di un trigger DML  
  Nell'esempio seguente viene eliminato il trigger `employee_insupd` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile usare la sintassi DROP TRIGGER IF EXISTS.  
   
 ```  

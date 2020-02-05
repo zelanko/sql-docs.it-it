@@ -17,10 +17,10 @@ ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 33c1a7821f532249c13400c3937706267e22bf7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914179"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE - autorizzazioni per chiavi simmetriche (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67914179"
 
   Revoca le autorizzazioni concesse e negate per una chiave simmetrica.  
    
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -99,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le informazioni sulle chiavi simmetriche sono visibili nella vista del catalogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  L'istruzione avrà esito negativo se non si specifica CASCADE per la revoca di un'autorizzazione a un'entità a cui l'autorizzazione è stata concessa con GRANT OPTION.  

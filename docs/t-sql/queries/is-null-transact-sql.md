@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90a62fed8292a5d5cbb1945cdfe8b2cee2502235
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901936"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67901936"
 
   Determina se un'espressione specificata è NULL.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,12 +62,12 @@ expression IS [ NOT ] NULL
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  Se il valore di *expression* è NULL, IS NULL restituisce TRUE. In caso contrario, restituisce FALSE.  
   
  Se il valore di *expression* è NULL, IS NOT NULL restituisce FALSE. In caso contrario, restituisce TRUE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per determinare se un'espressione è NULL, utilizzare la funzione IS NULL o IS NOT NULL anziché gli operatori di confronto, ad esempio = o !=, i quali restituiscono UNKNOWN se uno o entrambi gli argomenti sono NULL.  
   
 ## <a name="examples"></a>Esempi  

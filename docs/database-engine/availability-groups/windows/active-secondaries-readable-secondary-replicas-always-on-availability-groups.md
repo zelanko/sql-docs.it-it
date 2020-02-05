@@ -18,10 +18,10 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822406"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Ripartire il carico di lavoro di sola lettura in una replica secondaria di un gruppo di disponibilità Always On
@@ -130,7 +130,7 @@ ms.locfileid: "74822406"
  Ciò significa che si verifica della latenza, in genere solo pochi secondi, tra la replica primaria e quella secondaria. In rari casi, tuttavia, ad esempio se problemi di rete compromettono la velocità effettiva, la latenza può diventare significativa. La latenza aumenta quando si verificano colli di bottiglia I/O e quando viene sospeso lo spostamento dati. Per monitorare lo spostamento dati sospeso, è possibile usare il [dashboard Always On](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) o la DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latenza dei dati nei database con tabelle ottimizzate per la memoria  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] prevede alcune considerazioni speciali in relazione alla latenza dei dati per le repliche secondarie attive, vedere [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Repliche secondarie attive: repliche secondarie leggibili](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], non esistono considerazioni speciali in relazione alla latenza dei dati per le tabelle ottimizzate per la memoria. La latenza dei dati prevista per le tabelle ottimizzate per la memoria è paragonabile a quella per le tabelle basate su disco.  
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] prevede alcune considerazioni speciali in relazione alla latenza dei dati per le repliche secondarie attive (vedere [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Repliche secondarie attive: Repliche secondarie leggibili](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)). A partire da [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)], non esistono considerazioni speciali in relazione alla latenza dei dati per le tabelle ottimizzate per la memoria. La latenza dei dati prevista per le tabelle ottimizzate per la memoria è paragonabile a quella per le tabelle basate su disco.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Impatto sui carichi di lavoro di sola lettura  
  Quando si configura una replica secondaria per l'accesso di sola lettura, nei carichi di lavoro di sola lettura dei database secondari si usano le risorse di sistema, ad esempio CPU e I/O (per le tabella basate su disco) dai thread della fase di rollforward, soprattutto se i carichi di lavoro di sola lettura nelle tabelle basate su disco prevedono l'esecuzione di molte operazioni di I/O. Non esiste alcun impatto I/O quando si accede alle tabelle con ottimizzazione per la memoria perché tutte le righe si trovano in memoria.  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: blog ufficiale del team di SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

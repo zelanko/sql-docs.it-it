@@ -20,10 +20,10 @@ ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71961925"
 ---
 # <a name="shrink-a-file"></a>Compattare un file
@@ -40,7 +40,7 @@ ms.locfileid: "71961925"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per compattare un file di dati o di log usando:**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "71961925"
   
 -   Le dimensioni del file di dati primario non possono essere inferiori a quelle del file primario nel database model.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   I dati spostati per ridurre un file possono essere dispersi in qualsiasi percorso disponibile nel file, provocando la frammentazione dell'indice e rallentando le prestazioni di query che eseguono ricerche in un intervallo dell'indice Per eliminare la frammentazione, valutare la possibilità di ricompilare gli indici sul file dopo la compattazione.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71961925"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-shrink-a-data-or-log-file"></a>Per compattare un file di dati o di log  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71961925"
      **Nome file**  
      Consente di selezionare un file nell'elenco dei file disponibili relativo al filegroup e al tipo di file selezionati.  
   
-     **Percorso**  
+     **Posizione**  
      Visualizza il percorso completo del file attualmente selezionato. Il percorso non è modificabile, ma può essere copiato negli Appunti.  
   
      **Spazio allocato**  
@@ -124,7 +124,7 @@ ms.locfileid: "71961925"
   
 9. Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-shrink-a-data-or-log-file"></a>Per compattare un file di dati o di log  
   

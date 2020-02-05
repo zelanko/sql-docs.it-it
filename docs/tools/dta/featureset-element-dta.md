@@ -1,10 +1,7 @@
 ---
-title: Elemento Featuret (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento FeatureSet (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c0711dc15327cad726e61857f61539f8cadea02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 72aad15cdd024cf1ee0bc3ea5ed1bc2eb7a42917
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034973"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307666"
 ---
 # <a name="featureset-element-dta"></a>Elemento FeatureSet (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contiene le strutture di progettazione fisica, ad esempio indici o viste indicizzate, che dovranno essere utilizzate da Ottimizzazione guidata motore di database durante l'analisi.  
+
+Contiene le strutture di progettazione fisica, ad esempio indici o viste indicizzate, che dovranno essere utilizzate da Ottimizzazione guidata motore di database durante l'analisi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +52,7 @@ ms.locfileid: "68034973"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML semplice &#40;DTA&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
