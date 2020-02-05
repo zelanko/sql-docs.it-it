@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Indici XML (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Indici XML
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2526d2facc494dc102ac6674ac01ab851b0a40c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 38be046b5c99e56a76c716117708d4eeb88ac9fd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262460"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246179"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici XML (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ Usare la finestra di dialogo **Indici XML** per creare indici per le colonne con
 **Indice XML selezionato**  
 Elenca gli indici XML esistenti. Selezionarne uno per visualizzarne le proprietà nella griglia di destra. Se l'elenco è vuoto, per la tabella non sono stati definiti indici.  
   
-**Aggiungi**  
+**Aggiungere**  
 Consente di creare un nuovo indice XML.  
   
 **Elimina**  
@@ -55,7 +56,7 @@ Indica che si tratta di un indice XML.
 Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione** .  
   
 **Nome**  
-Visualizza il nome dell'indice XML. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
+Visualizza il nome dell'indice XML. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. È possibile modificare il nome in qualsiasi momento.  
   
 **Descrizione**  
 Consente di descrivere l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione ( **...** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  

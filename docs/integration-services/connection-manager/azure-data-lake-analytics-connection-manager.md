@@ -15,10 +15,10 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: c2ae186aa7d7fe9ee4ef7da26ed0f5e667b8e2d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904815"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Gestione connessione di Azure Data Lake Analytics
@@ -41,7 +41,7 @@ Gestione connessione di Data Lake Analytics è un componente del [Feature Pack d
   
 3. Nel campo **Autenticazione** scegliere il tipo di autenticazione appropriato per accedere ai dati in Data Lake Analytics.
 
-   A. Se si seleziona l'opzione di autenticazione **Identità utente di Azure AD**:
+   a. Se si seleziona l'opzione di autenticazione **Identità utente di Azure AD**:
    
       i. Specificare i valori per i campi **Nome utente** e **Password**.    
       ii. Fare clic su **Test connessione** per testare la connessione. Se l'utente o l'amministratore del tenant non ha precedentemente autorizzato SSIS ad accedere all'account di Data Lake Analytics, selezionare **Accetto** quando richiesto. Per altre informazioni su questa esperienza di consenso, vedere [Integrazione di applicazioni con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
@@ -49,7 +49,7 @@ Gestione connessione di Data Lake Analytics è un componente del [Feature Pack d
    > [!NOTE] 
    > Quando si seleziona l'autenticazione dell'**identità del servizio di Azure AD** l'autenticazione a più fattori e l'autenticazione dell'account Microsoft non sono supportate.
     
-   B. Se si seleziona l'opzione di autenticazione **Azure AD Service Identity** (Identità del servizio di Azure AD):
+   b. Se si seleziona l'opzione di autenticazione **Azure AD Service Identity** (Identità del servizio di Azure AD):
    
       i. Creare un'applicazione e l'entità servizio di Azure AD per accedere all'account di Data Lake Analytics. Per altre informazioni su questa opzione di autenticazione, vedere [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)(Usare il portale per creare applicazioni ed entità servizio di Active Directory che possano accedere alle risorse).    
       ii. Assegnare le autorizzazioni appropriate per consentire all'applicazione di Azure AD di accedere all'account di Data Lake Analytics. Informazioni su come concedere autorizzazioni all'account di Data Lake Analytics usando l'[Aggiunta guidata utente](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    

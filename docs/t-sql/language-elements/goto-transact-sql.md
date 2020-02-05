@@ -22,10 +22,10 @@ ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9964745ede5eb49dd56fbcf2a8d75aee3633fc3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075197"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075197"
 
   Reindirizza il flusso di esecuzione a un'etichetta. L'istruzione o le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] successive a GOTO vengono ignorate e l'elaborazione viene ripresa in corrispondenza dell'etichetta. È possibile utilizzare istruzioni ed etichette GOTO in qualsiasi punto di una procedura, un batch o un blocco di istruzioni. Le istruzioni GOTO possono essere nidificate.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ GOTO label
  *label*  
  Posizione da cui inizia l'elaborazione se la destinazione dell'istruzione GOTO è impostata su tale etichetta. Le etichette devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). È possibile adottare le etichette come metodo per l'inserimento di commenti indipendentemente dall'utilizzo dell'istruzione GOTO.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione GOTO può essere utilizzata in istruzioni condizionali per il controllo di flusso, in blocchi di istruzioni o in procedure ma non è possibile associarla a un'etichetta all'esterno del batch. Le diramazioni implementate tramite l'istruzione GOTO possono fare riferimento a un'etichetta definita prima o dopo GOTO.  
   
 ## <a name="permissions"></a>Autorizzazioni  

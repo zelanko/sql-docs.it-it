@@ -1,10 +1,7 @@
 ---
-title: Elemento Table per schema (DTA) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento Table per Schema (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0064376a229e2fe9f87fe09048c9e923810d4172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 419420c9d1ecec501ca8a7d92ef6a23a658db713
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105964"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307866"
 ---
 # <a name="table-element-for-schema-dta"></a>Elemento Table per Schema (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifica la tabella per l'ottimizzazione.  
+
+Specifica la tabella per l'ottimizzazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,17 +39,17 @@ ms.locfileid: "68105964"
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|**NumberOfRows**|Facoltativo. Valore intero che consente la simulazione di tabelle di diverse dimensioni.|  
+|**NumberOfRows**|Facoltativa. Valore intero che consente la simulazione di tabelle di diverse dimensioni.|  
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, tra 1 e 255 caratteri.|  
-|**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. Elenca tutte le tabelle appropriate per il carico di lavoro.|  
+|**Valore predefinito**|No.|  
+|**Occorrenza**|Facoltativa. Elenca tutte le tabelle appropriate per il carico di lavoro.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
@@ -55,7 +58,7 @@ ms.locfileid: "68105964"
 |**Elemento padre**|[Elemento Schema per Database &#40;DTA&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
 |**Elementi figlio**|[Elemento Name per Table &#40;DTA&#41;](../../tools/dta/name-element-for-table-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se non si specifica un elemento **Table** , l'Ottimizzazione guidata motore di database considererà ottimizzabili tutte le tabelle contenute nel database specificato.  
   
 ## <a name="example"></a>Esempio  

@@ -18,10 +18,10 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9d8b500415aa5e6812524fff6403735a11cf765a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017541"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo di dati geometry)
@@ -61,7 +61,7 @@ Restituisce un oggetto geometrico che rappresenta l'unione dei valori di tutti i
 > [!NOTE]  
 >  Poiché *tolerance* è di tipo **float**, è possibile che venga generata un'eccezione `System.Runtime.InteropServices.COMException` se il valore specificato per la tolleranza è estremamente ridotto. Ciò è dovuto a problemi di arrotondamento dei tipi a virgola mobile.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se *distance* > 0 viene restituita un'istanza **Polygon** o **MultiPolygon**.  
   
 > [!NOTE]  

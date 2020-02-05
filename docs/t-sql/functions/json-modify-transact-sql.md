@@ -12,19 +12,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109385"
 ---
-# <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
+# <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Aggiorna il valore di una proprietà in una stringa JSON e restituisce la stringa JSON aggiornata.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,13 +47,13 @@ JSON_MODIFY ( expression , path , newValue )
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    Modificatore facoltativo che specifica che il nuovo valore deve essere aggiunto alla matrice a cui fa riferimento  *\<json path>* .  
+    Modificatore facoltativo che specifica che il nuovo valore deve essere aggiunto alla matrice a cui fa riferimento *\<json path>* .  
   
 - *lax*  
-    Specifica che la proprietà a cui fa riferimento  *\<json path>* non deve necessariamente esistere. Se la proprietà non è presente, JSON_MODIFY tenta di inserire il nuovo valore nel percorso specificato. L'inserimento può non riuscire se la proprietà non può essere inserita nel percorso. Se non si specifica né *lax* né *strict*, *lax* è la modalità predefinita.  
+    Specifica che la proprietà a cui fa riferimento *\<json path>* non deve necessariamente esistere. Se la proprietà non è presente, JSON_MODIFY tenta di inserire il nuovo valore nel percorso specificato. L'inserimento può non riuscire se la proprietà non può essere inserita nel percorso. Se non si specifica né *lax* né *strict*, *lax* è la modalità predefinita.  
   
 - *strict*  
-    Specifica che la proprietà a cui fa riferimento  *\<json path>* deve essere presente nell'espressione JSON. Se la proprietà non è presente, JSON_MODIFY restituisce un errore.  
+    Specifica che la proprietà a cui fa riferimento *\<json path>* deve essere presente nell'espressione JSON. Se la proprietà non è presente, JSON_MODIFY restituisce un errore.  
   
 - *\<json path>*  
     Specifica il percorso della proprietà da aggiornare. Per altre informazioni, vedere [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
@@ -73,7 +73,7 @@ Se il tipo del valore è NVARCHAR o VARCHAR, JSON_MODIFY sottopone a escape tutt
 
  Restituisce il valore aggiornato di *expression* come testo JSON correttamente formattato.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
  La funzione JSON_MODIFY consente di aggiornare il valore di una proprietà esistente, inserire una nuova coppia chiave:valore o eliminare una chiave in base a una combinazione di modalità e valori forniti.  
   
@@ -82,9 +82,9 @@ Se il tipo del valore è NVARCHAR o VARCHAR, JSON_MODIFY sottopone a escape tutt
 |Valore esistente|Percorso esistente|Modalità lax|Modalità strict|  
 |--------------------|-----------------|--------------|-----------------|  
 |Non NULL|Sì|Aggiorna il valore esistente.|Aggiorna il valore esistente.|  
-|Non NULL|no|Prova a creare una nuova coppia chiave:valore nel percorso specificato.<br /><br /> Questa operazione può avere esito negativo. Se ad esempio si specifica il percorso `$.user.setting.theme`, JSON_MODIFY non inserisce la chiave `theme` se l'oggetto `$.user` o `$.user.settings` non esiste o se settings è una matrice o un valore scalare.|Errore: INVALID_PROPERTY|  
+|Non NULL|No|Prova a creare una nuova coppia chiave:valore nel percorso specificato.<br /><br /> Questa operazione può avere esito negativo. Se ad esempio si specifica il percorso `$.user.setting.theme`, JSON_MODIFY non inserisce la chiave `theme` se l'oggetto `$.user` o `$.user.settings` non esiste o se settings è una matrice o un valore scalare.|Errore: INVALID_PROPERTY|  
 |NULL|Sì|Elimina la proprietà esistente.|Imposta il valore esistente su Null.|  
-|NULL|no|Nessuna azione. Il primo argomento viene restituito come risultato.|Errore: INVALID_PROPERTY|  
+|NULL|No|Nessuna azione. Il primo argomento viene restituito come risultato.|Errore: INVALID_PROPERTY|  
   
  In modalità lax, JSON_MODIFY tenta di creare una nuova coppia chiave:valore, ma in alcuni casi l'operazione non riesce.  
   

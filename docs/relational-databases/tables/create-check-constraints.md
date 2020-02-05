@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7da76d948774ecbedfc363bdcff3404698d5cf43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085727"
 ---
 # <a name="create-check-constraints"></a>Creare vincoli CHECK
@@ -33,7 +33,7 @@ ms.locfileid: "68085727"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un nuovo vincolo CHECK:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68085727"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre delle autorizzazioni ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   
@@ -83,9 +83,9 @@ ms.locfileid: "68085727"
     |Applicare il vincolo quando si verifica un'operazione di replica su questa tabella|**Applicare per replica**|  
     |Applicare il vincolo ogni qualvolta una riga di questa tabella viene inserita o viene aggiornata|**Attiva per istruzioni INSERTs e UPDATEs**|  
   
-7.  Scegliere **Chiudi**.  
+7.  Fare clic su **Close**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-new-check-constraint"></a>Per creare un nuovo vincolo CHECK  
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cf79a93edcdd8eda031d98a641d0164cc68f9da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109268"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
@@ -61,7 +61,7 @@ LAG (scalar_expression [,offset] [,default])
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-compare-values-between-years"></a>A. Confronto di valori tra anni  
+### <a name="a-compare-values-between-years"></a>R. Confronto di valori tra anni  
  Nell'esempio seguente viene utilizzata la funzione LAG per restituire la differenza nelle quote vendite per un dipendente specifico negli anni precedenti. Si noti che poiché non è presente alcun valore di ritardo disponibile per la prima riga, viene restituita l'impostazione predefinita zero (0).  
   
 ```sql   
@@ -141,7 +141,7 @@ b           c           i
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D: Confronto di valori fra trimestri  
+### <a name="d-compare-values-between-quarters"></a>D. Confronto di valori fra trimestri  
  L'esempio seguente illustra l'utilizzo della funzione LAG. La query usa la funzione LAG per restituire la differenza nelle quote vendite per un dipendente specifico nei trimestri del calendario precedenti. Si noti che poiché non è presente alcun valore di ritardo disponibile per la prima riga, viene restituita l'impostazione predefinita zero (0).  
   
 ```sql   

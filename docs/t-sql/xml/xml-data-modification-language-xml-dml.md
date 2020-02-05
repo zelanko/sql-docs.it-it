@@ -21,10 +21,10 @@ ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140887"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Linguaggio XML di manipolazione dei dati (XML DML)
@@ -46,7 +46,7 @@ ms.locfileid: "68140887"
   
 -   Specificare le istruzioni XML DML appropriate nel metodo **modify()** .  
   
- Si noti che alcuni attributi non possono essere inseriti o eliminati o non è possibile modificarne il valore. Esempio:  
+ Si noti che alcuni attributi non possono essere inseriti o eliminati o non è possibile modificarne il valore. Ad esempio:  
   
 -   Per il codice **xml** tipizzato o non tipizzato, tali attributi sono **xmlns**, **xmlns:\*** e **xml:base**.  
   
