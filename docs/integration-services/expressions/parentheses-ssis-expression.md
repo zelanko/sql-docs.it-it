@@ -15,10 +15,10 @@ ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 968ab3afbdb5d184364758797180102d65293eb7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288524"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (parentesi) (espressione SSIS)
@@ -39,8 +39,8 @@ ms.locfileid: "71288524"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- Qualsiasi espressione valida.  
+ *expression*  
+ È qualsiasi espressione valida.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Tipo di dati di *espressione*. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

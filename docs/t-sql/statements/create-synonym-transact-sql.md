@@ -23,10 +23,10 @@ ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982575"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
@@ -84,7 +84,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  Il database SQL di Azure supporta il formato del nome in tre parti, nome_database.[nome_schema].nome_oggetto, quando nome_database è il database corrente oppure nome_database è tempdb e nome_oggetto inizia con #.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Non è necessario che l'oggetto di base sia esistente in fase di creazione del sinonimo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica l'esistenza dell'oggetto di base in fase di esecuzione.  
   
  È possibile creare sinonimi per i tipi di oggetti seguenti:  
@@ -96,7 +96,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |Procedura di filtro della replica|Stored procedure estesa|  
 |Funzione scalare SQL|Funzione con valori di tabella di SQL|  
 |Funzione SQL inline con valori di tabella|Stored procedure di SQL|  
-|Vista|Tabella<sup>1</sup> (definita dall'utente)|  
+|Visualizza|Tabella<sup>1</sup> (definita dall'utente)|  
   
  <sup>1 Include tabelle temporanee globali e locali</sup>  
   
@@ -117,7 +117,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-synonym-for-a-local-object"></a>A. Creazione di un sinonimo per un oggetto locale  
+### <a name="a-creating-a-synonym-for-a-local-object"></a>R. Creazione di un sinonimo per un oggetto locale  
  Nell'esempio seguente viene prima creato un sinonimo per l'oggetto di base `Product` nel database `AdventureWorks2012`, quindi viene eseguita una query sul sinonimo.  
   
 ```  

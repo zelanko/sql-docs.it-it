@@ -12,10 +12,10 @@ ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0c4060aa1508da72d9b0bd0eb23977074ecac067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67913248"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats - classe di evento
@@ -30,12 +30,12 @@ ms.locfileid: "67913248"
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |**DatabaseID**|**int**|ID del database specificato nell'istruzione USE *database* oppure ID del database predefinito, se per una determinata istanza non viene eseguita un'istruzione USE *database* . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|**Durata**|**bigint**|Durata dell'evento in microsecondi.|13|Sì|  
+|**Duration**|**bigint**|Durata dell'evento in microsecondi.|13|Sì|  
 |**EndTime**|**datetime**|Ora di fine dell'evento.|15|Sì|  
-|**Errore**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo **sys.messages** .|31|Sì|  
-|**EventClass**|**int**|Tipo di evento = 58.|27|no|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
-|**EventSubClass**|**int**|Tipo di sottoclasse di evento:<br /><br /> 1: statistiche create/aggiornate in modo sincrono; la colonna **TextData** indica le statistiche e se sono state create o aggiornate.<br /><br /> 2: aggiornamento statistiche asincrono; processo in coda.<br /><br /> 3: aggiornamento statistiche asincrono; processo in avvio.<br /><br /> 4: aggiornamento statistiche asincrono; processo completato.|21|Sì|  
+|**Error (Errore) (Error (Errore)e)**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo **sys.messages** .|31|Sì|  
+|**EventClass**|**int**|Tipo di evento = 58.|27|No|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|**EventSubClass**|**int**|Tipo di sottoclasse di evento:<br /><br /> 1: statistiche create/aggiornate in modo sincrono; la colonna **TextData** indica le statistiche e dove sono state create o aggiornate.<br /><br /> 2: aggiornamento statistiche asincrono; processo in coda.<br /><br /> 3: aggiornamento statistiche asincrono; processo in avvio.<br /><br /> 4: aggiornamento statistiche asincrono; processo completato.|21|Sì|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**IndexID**|**int**|ID della voce di statistiche/indice nell'oggetto interessato dall'evento. Per determinare l'ID dell'indice per un oggetto, utilizzare la colonna **index_id** della vista del catalogo **sys.indexes** .|24|Sì|  
@@ -48,12 +48,12 @@ ms.locfileid: "67913248"
 |**NTUserName**|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |**ObjectID**|**int**|ID dell'oggetto assegnato dal sistema.|22|Sì|  
 |**RequestID**|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |**SessionLoginName**|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, **SessionLoginName** indica Login1 e **LoginName** indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
-|**Esito positivo**|**int**|0 = errore.<br /><br /> 1 = esito positivo.<br /><br /> 2 = ignorato a causa di limitazione del server (MSDE).|23|Sì|  
-|**TextData**|**ntext**|Il contenuto della colonna dipende dal fatto che le statistiche vengano aggiornate in modo sincrono (**EventSubClass** 1) o asincrono (**EventSubClass** 2, 3 o 4):<br /><br /> 1: elenca le statistiche aggiornate/create<br /><br /> 2, 3 o 4: NULL. La colonna **IndexID** viene popolata con l'ID indice/statistiche per le statistiche aggiornate.|1|Sì|  
+|**Success**|**int**|0 = errore.<br /><br /> 1 = esito positivo.<br /><br /> 2 = ignorato a causa di limitazione del server (MSDE).|23|Sì|  
+|**TextData**|**ntext**|Il contenuto della colonna dipende dal fatto che le statistiche vengano aggiornate in modo sincrono (**EventSubClass** 1) o asincrono (**EventSubClass** 2, 3 o 4):<br /><br /> 1: elenca le statistiche aggiornate/create<br /><br /> 2, 3 o 4: NULL; la colonna **IndexID** viene popolata con l'ID dell'indice/statistiche per le statistiche aggiornate.|1|Sì|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |**Tipo**|**int**|Tipo di processo.|57|Sì|  
   

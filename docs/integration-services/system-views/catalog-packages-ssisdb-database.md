@@ -14,10 +14,10 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295172"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (database SSISDB)
@@ -32,7 +32,7 @@ ms.locfileid: "71295172"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|Identificatore (ID) univoco del pacchetto.|  
-|NAME|**nvarchar(256)**|Nome univoco del pacchetto.|  
+|name|**nvarchar(256)**|Nome univoco del pacchetto.|  
 |package_guid|**uniqueidentifier**|GUID tramite cui viene identificato il pacchetto.|  
 |description|**nvarchar(1024)**|Descrizione del pacchetto (facoltativa).|  
 |package_format_version|**int**|Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzata per lo sviluppo del pacchetto.|  
@@ -46,7 +46,7 @@ ms.locfileid: "71295172"
 |validation_status|**char(1)**|Stato della convalida.|  
 |last_validation_time|**datetimeoffset(7)**|Ora dell'ultima convalida.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni pacchetto nel catalogo.  
   
 ## <a name="permissions"></a>Autorizzazioni  

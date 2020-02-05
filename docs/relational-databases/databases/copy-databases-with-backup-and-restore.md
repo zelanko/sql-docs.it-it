@@ -19,10 +19,10 @@ ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137315"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
@@ -65,7 +65,7 @@ Considerazioni aggiuntive che possono avere effetto su questo processo:
  Per evitare errori e conseguenze impreviste, prima dell'operazione di ripristino è possibile usare la tabella della cronologia [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) per trovare i file di database e di log nel backup che si intende ripristinare.  
   
 ## <a name="moving-the-database-files"></a>Spostamento dei file di database  
- Se non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostarli in un nuovo percorso man mano che vengono ripristinati. Esempio:  
+ Se non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostarli in un nuovo percorso man mano che vengono ripristinati. Ad esempio:  
   
 -   Si supponga di voler ripristinare un database da backup creati nella posizione predefinita di versioni precedenti.  
   
@@ -103,7 +103,7 @@ Considerazioni aggiuntive che possono avere effetto su questo processo:
   
  **Ripristinare file e filegroup in una nuova posizione**  
   
--   [Ripristinare i file in una nuova posizione &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
+-   [Ripristino dei file in una nuova posizione &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
 -   [Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   

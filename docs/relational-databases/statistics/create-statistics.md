@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103419"
 ---
 # <a name="create-statistics"></a>Creare statistiche
@@ -35,7 +35,7 @@ ms.locfileid: "68103419"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Creare statistiche tramite:**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68103419"
 ####  <a name="Permissions"></a> Autorizzazioni  
  L'utente deve essere il proprietario della tabella o della vista indicizzata o un membro di uno dei seguenti ruoli: ruolo predefinito del server **sysadmin** , ruolo predefinito del database **db_owner** o ruolo predefinito del database **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>Per creare statistiche  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68103419"
      **Consenti valori NULL**  
      Consente di indicare se la colonna accetta valori NULL.  
   
-     **Aggiungi**  
+     **Aggiungere**  
      Consente di aggiungere ulteriori colonne dalla tabella alla griglia delle statistiche.  
   
      **Rimuovi**  
@@ -119,7 +119,7 @@ ms.locfileid: "68103419"
      **Espressione filtro**  
      Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, usare `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Nella pagina **Generale** della finestra di dialogo **Nuove statistiche per Tabella** _nome\_tabella_ fare clic su **Aggiungi**.  
+5.  Nella pagina **Generale** della finestra di dialogo _Nuove statistiche per Tabella \__ nome**tabella** fare clic su **Aggiungi**.  
   
      Nella finestra di dialogo **Seleziona colonne** vengono visualizzate le proprietà seguenti. Queste informazioni sono di sola lettura.  
   
@@ -135,14 +135,14 @@ ms.locfileid: "68103419"
      **Identità**  
      Se viene selezionata, questa opzione consente di indicare una colonna di identità.  
   
-     **Allow NULLs**  
+     **Consenti valori Null**  
      Consente di indicare se la colonna accetta valori NULL.  
   
 6.  Nella finestra di dialogo **Seleziona colonne** selezionare le caselle di controllo per tutte le colonne per cui si desidera creare una statistica e quindi fare clic su **OK**.  
   
 7.  Nella finestra di dialogo **Nuove statistiche per Tabella** _nome\_tabella_ fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Per creare statistiche  
   

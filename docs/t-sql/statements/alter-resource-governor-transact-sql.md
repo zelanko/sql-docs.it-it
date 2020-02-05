@@ -21,10 +21,10 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982028"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
@@ -98,7 +98,7 @@ ALTER RESOURCE GOVERNOR
   
  Imposta il numero massimo di operazioni di I/O in coda per ogni volume del disco. Queste operazioni di I/O possono essere letture o scritture di qualsiasi dimensione.  Il valore massimo per MAX_OUTSTANDING_IO_PER_VOLUME è 100. Non è una percentuale. Questa impostazione è progettata per ottimizzare la governance delle risorse rispetto alle caratteristiche di I/O di un volume del disco. È consigliabile provare diversi valori e usare uno strumento di calibrazione come IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), o SQLIO (deprecato) per identificare il valore massimo per il sottosistema di archiviazione usato. Questa impostazione fornisce un controllo di sicurezza a livello di sistema che consente a SQL Server di soddisfare l'IOPS minimo per i pool di risorse anche se per gli altri pool MAX_IOPS_PER_VOLUME è impostato su illimitato. Per altre informazioni su MAX_IOPS_PER_VOLUME, vedere [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE e ALTER RESOURCE GOVERNOR RESET STATISTICS non possono essere utilizzate in una transazione utente.  
   
  Il parametro RECONFIGURE appartiene alla sintassi di Resource Governor e non deve essere confuso con [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), che è un'istruzione DDL diversa.  
@@ -110,7 +110,7 @@ ALTER RESOURCE GOVERNOR
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-starting-the-resource-governor"></a>A. Avvio di Resource Governor  
+### <a name="a-starting-the-resource-governor"></a>R. Avvio di Resource Governor  
  Alla prima installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Resource Governor risulta disabilitato. Nell'esempio seguente viene avviato Resource Governor. Una volta avviato Resource Governor mediante l'istruzione precedente, sarà possibile utilizzare i gruppi del carico di lavoro e i pool di risorse predefiniti.  
   
 ```  

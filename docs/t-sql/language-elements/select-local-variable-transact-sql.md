@@ -26,20 +26,20 @@ author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121784"
 ---
-# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+# <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Imposta una variabile locale sul valore di un'espressione.  
   
  Per l'assegnazione delle variabili è consigliabile usare [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md) anziché SELECT @*local_variable*.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +56,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 Assegna il valore a destra alla variabile a sinistra.  
   
 Operatore di assegnazione composto:  
-  |operatore |action |   
+  |operator |action |   
   |-----|-----|  
   | = | Assegna l'espressione seguente alla variabile |  
   | += | Aggiunta e assegnazione |   
@@ -71,7 +71,7 @@ Operatore di assegnazione composto:
  *expression*  
  Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida. Include una sottoquery scalare.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione SELECT @*local_variable* viene in genere usata per restituire un valore singolo nella variabile. Se tuttavia *expression* corrisponde al nome di una colonna, è possibile che restituisca più valori. Se l'istruzione SELECT restituisce più valori, alla variabile viene assegnato l'ultimo valore restituito.  
   
  Se l'istruzione SELECT non restituisce righe, la variabile mantiene il valore corrente. Se *expression* è una sottoquery scalare che non restituisce valori, la variabile viene impostata su NULL.  
@@ -83,7 +83,7 @@ Operatore di assegnazione composto:
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Usare SELECT @local_variable per restituire un valore singolo  
+### <a name="a-use-select-local_variable-to-return-a-single-value"></a>R. Usare SELECT @local_variable per restituire un valore singolo  
  Nell'esempio seguente alla variabile `@var1` viene assegnato `Generic Name` come valore. La query eseguita nella tabella `Store` non restituisce righe perché il valore specificato per `CustomerID` non esiste nella tabella. La variabile mantiene il valore `Generic Name`.  
   
 ```sql  
@@ -105,7 +105,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. Usare SELECT @local_variable per restituire Null  
+### <a name="b-use-select-local_variable-to-return-null"></a>B. Usare SELECT @local_variable per restituire Null  
  Nell'esempio seguente viene utilizzata una sottoquery per assegnare un valore a `@var1`. Poiché il valore richiesto da `CustomerID` non esiste, la sottoquery non restituisce valori e la variabile viene impostata su `NULL`.  
   
 ```sql  

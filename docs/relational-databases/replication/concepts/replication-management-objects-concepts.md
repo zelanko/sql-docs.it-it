@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3d8792020e540e67bc81aa1bba7453084fa8a65f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908523"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286056"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908523"
  [Configurare la distribuzione](../../../relational-databases/replication/configure-distribution.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per configurare la pubblicazione e la distribuzione.  
   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md)  
  Negli argomenti inclusi in questa sezione viene illustrato come utilizzare RMO per creare, eliminare e modificare pubblicazioni e articoli.  
   
  [Sottoscrizione delle pubblicazioni](../../../relational-databases/replication/subscribe-to-publications.md)  

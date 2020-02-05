@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 771305c30bb4008ee3e4b937296864276cf74b73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908318"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed - classe di evento
@@ -36,8 +36,8 @@ ms.locfileid: "67908318"
 |Duration|**bigint**|Quantità di tempo richiesta dall'evento. In microsecondi a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. In millisecondi nelle versioni precedenti.|13|Sì|  
 |EndTime|**datetime**|Ora di fine della chiamata di procedura remota.|15|Sì|  
 |Errore|**int**|Numero di errore di un evento specifico.<br /><br /> 0=OK<br /><br /> 1=Errore<br /><br /> 2=Interrompi<br /><br /> 3 = Ignorato|31|Sì|  
-|EventClass|**int**|Tipo di evento = 10.|27|no|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventClass|**int**|Tipo di evento = 10.|27|No|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  
@@ -46,7 +46,7 @@ ms.locfileid: "67908318"
 |NTDomainName|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|**nvarchar**|Nome utente di Windows.|6|Sì|  
 |ObjectName|**nvarchar**|Nome dell'oggetto a cui si fa riferimento.|34|Sì|  
-|Reads|**bigint**|Numero di letture di pagine eseguite dalla chiamata di procedura remota.|16|Sì|  
+|Letture|**bigint**|Numero di letture di pagine eseguite dalla chiamata di procedura remota.|16|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
 |RowCounts|**bigint**|Numero di righe del batch della chiamata di procedura remota.|48|Sì|  
 |ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26||  
@@ -55,7 +55,7 @@ ms.locfileid: "67908318"
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TextData|**ntext**|Testo della chiamata di procedura remota.|1|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
-|Writes|**bigint**|Numero di scritture di pagine eseguite dalla chiamata di procedura remota.|17|Sì|  
+|Scritture|**bigint**|Numero di scritture di pagine eseguite dalla chiamata di procedura remota.|17|Sì|  
 |XactSequence|**bigint**|Token utilizzato per descrivere la transazione corrente.|50|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -11,10 +11,10 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 19c8384a389db2032c36291e669d5dd2885ac8dd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293304"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Crea InfoSource per dati transazione
@@ -37,7 +37,7 @@ ms.locfileid: "71293304"
   
 3.  Nell' **Editor destinazione SAP BW**fare clic su **Gestione connessione** per aprire la pagina **Gestione connessione** dell'editor.  
   
-4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoSource**e quindi fare clic su **Crea**.  
+4.  Nella casella di gruppo **Crea oggetti SAP BW** della pagina **Gestione connessione** selezionare **InfoSource**, quindi fare clic su **Crea**.  
   
 5.  Nella finestra di dialogo **Crea InfoSource** selezionare **Dati transazione**e quindi fare clic su **OK**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71293304"
  **Nome InfoSource**  
  Immettere un nome per il nuovo InfoSource.  
   
- **Breve descrizione**  
+ **Descrizione breve**  
  Immettere una breve descrizione per il nuovo InfoSource.  
   
  **Descrizione lunga**  

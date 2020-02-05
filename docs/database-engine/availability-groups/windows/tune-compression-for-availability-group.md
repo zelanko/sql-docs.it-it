@@ -9,10 +9,10 @@ ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013671"
 ---
 # <a name="tune-compression-for-availability-group"></a>Ottimizzare la compressione per un gruppo di disponibilità
@@ -22,7 +22,7 @@ Per impostazione predefinita, SQL Server comprime i flussi di dati quando opport
 | Scenario | Impostazione compressione
 | ---- | ----
 | Replica con commit sincrono | Nessuna compressione
-| Repliche con commit asincrono | Compressione
+| Repliche con commit asincrono | Compresso
 | Durante il seeding automatico | Nessuna compressione
 
 ## <a name="trace-flags-for-availability-group-compression"></a>Flag di traccia per la compressione dei gruppi di disponibilità 

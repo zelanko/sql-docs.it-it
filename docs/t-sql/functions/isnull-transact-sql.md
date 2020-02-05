@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843640"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
@@ -52,7 +52,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce lo stesso tipo di *check_expression*. Se come *check_expression* viene specificato un valore letterale NULL, restituisce il tipo di dati di *replacement_value*. Se come *check_expression* viene specificato un valore letterale NULL e non viene specificato alcun *replacement_value*, restituisce un valore **int**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore di *check_expression* viene restituito se non è NULL. Altrimenti viene restituito *replacement_value* dopo che è stato convertito in modo implicito nel tipo di *check_expression*, se i tipi sono diversi. È possibile che *replacement_value* venga troncato se la lunghezza di *replacement_value* è maggiore di quella di *check_expression*.  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ ISNULL ( check_expression , replacement_value )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-isnull-with-avg"></a>A. Utilizzo di ISNULL con AVG  
+### <a name="a-using-isnull-with-avg"></a>R. Utilizzo di ISNULL con AVG  
  Nell'esempio seguente viene calcolato il valore medio del peso di tutti i prodotti. Viene inoltre sostituito il valore `50` per tutte le voci NULL nella colonna `Weight` della tabella `Product`.  
   
 ```  
@@ -99,17 +99,17 @@ GO
 |  Volume Discount   |  0,02           |   11        |   14                 |
 |  Volume Discount   |  0.05           |   15        |   4                  |
 |  Volume Discount   |  0,10           |   25        |   0                  |
-|  Volume Discount   |  0.15           |   41        |   0                  |
+|  Volume Discount   |  0,15           |   41        |   0                  |
 |  Volume Discount   |  0,20           |   61        |   0                  |
 |  Mountain-100 Cl   |  0,35           |   0         |   0                  |
 |  Sport Helmet Di   |  0,10           |   0         |   0                  |
 |  Road-650 Overst   |  0,30           |   0         |   0                  |
-|  Mountain Tire S   |  0,50           |   0         |   0                  |
-|  Sport Helmet Di   |  0.15           |   0         |   0                  |
+|  Mountain Tire S   |  0.50           |   0         |   0                  |
+|  Sport Helmet Di   |  0,15           |   0         |   0                  |
 |  LL Road Frame S   |  0,35           |   0         |   0                  |
-|  Touring-3000 Pr   |  0.15           |   0         |   0                  |
+|  Touring-3000 Pr   |  0,15           |   0         |   0                  |
 |  Touring-1000 Pr   |  0,20           |   0         |   0                  |
-|  Half-Price Peda   |  0,50           |   0         |   0                  |
+|  Half-Price Peda   |  0.50           |   0         |   0                  |
 |  Mountain-500 Si   |  0,40           |   0         |   0                  |
 
  `(16 row(s) affected)`  

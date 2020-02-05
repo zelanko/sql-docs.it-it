@@ -15,10 +15,10 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 95893aac0b6ca62b60b12f9d35daf15e77e565f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929307"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (tipo di dati geometry)
@@ -48,7 +48,7 @@ Restituisce un'approssimazione poligonale di un'istanza **geometry** contenente 
 ## <a name="exceptions"></a>Eccezioni  
  L'impostazione della tolleranza <= 0 genera un'eccezione `ArgumentOutOfRange`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo può specificare la tolleranza di errore per l'istanza **LineString** risultante.  
   
  Nella tabella seguente viene illustrato il tipo di istanza restituito da `CurveToLineWithTolerance()` per vari tipi.  
@@ -71,7 +71,7 @@ Restituisce un'approssimazione poligonale di un'istanza **geometry** contenente 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Utilizzo di valori di tolleranza diversi in un'istanza CircularString  
+### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>R. Utilizzo di valori di tolleranza diversi in un'istanza CircularString  
  L'esempio seguente illustra l'impatto dell'impostazione della tolleranza sull'istanza `LineString` restituita da un'istanza `CircularString`:  
   
 ```

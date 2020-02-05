@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119112"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68119112"
 
 Restituisce un valore di tipo **datetimeoffset** per gli argomenti date e time. Il valore restituito ha una precisione specificata dall'argomento precision e una differenza specificata dagli argomenti di offset.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,7 +73,7 @@ Valore letterale Integer che specifica la precisione del valore **datetimeoffset
 ## <a name="return-types"></a>Tipi restituiti
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 
 `DATETIMEOFFSETFROMPARTS` restituisce un tipo di dati **datetimeoffset** completamente inizializzato. Gli argomenti di offset rappresentano la differenza di fuso orario. Per gli argomenti di offset omessi, `DATETIMEOFFSETFROMPARTS` presuppone una differenza di fuso orario pari a `00:00`, ovvero nessuna differenza di fuso orario. Per gli argomenti di offset specificati, `DATETIMEOFFSETFROMPARTS` prevede per entrambi gli argomenti valori entrambi positivi o entrambi negativi. Se *minute_offset* ha un valore e *hour_offset* non ha valori, `DATETIMEOFFSETFROMPARTS` genererà un errore. `DATETIMEOFFSETFROMPARTS` genererà un errore se gli altri argomenti hanno valori non validi. Se almeno un argomento obbligatorio ha un valore `NULL`, `DATETIMEOFFSETFROMPARTS` restituirà `NULL`. Se tuttavia l'argomento *precision* ha un valore `NULL`, `DATETIMEOFFSETFROMPARTS` genererà un errore.  
   
@@ -83,7 +83,7 @@ Questa funzione supporta la comunicazione remota con i server [!INCLUDE[ssCurren
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-an-example-without-fractions-of-a-second"></a>A. Esempio senza frazioni di un secondo  
+### <a name="a-an-example-without-fractions-of-a-second"></a>R. Esempio senza frazioni di un secondo  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  

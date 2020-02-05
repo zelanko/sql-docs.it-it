@@ -15,10 +15,10 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084025"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gestire le dimensioni del file di log delle transazioni
@@ -74,7 +74,7 @@ Per altre informazioni, vedere [Indicazioni](#Recommendations) in questo argomen
  Per evitare tale overhead, è possibile incrementare le dimensioni del log delle transazioni di **tempdb** dopo l'avvio o il riavvio dell'istanza del server. Per altre informazioni, vedere [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
 ##  <a name="ControlGrowth"></a> Controllare l'aumento delle dimensioni di un file di log delle transazioni  
- Per gestire la crescita di un file di log delle transazioni, usare l'istruzione descritta in [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md). Si noti quanto segue:  
+ Per gestire la crescita di un file di log delle transazioni, usare l'istruzione descritta in [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md). Tenere presente quanto segue:  
   
 -   Per modificare le dimensioni del file corrente in unità KB, MB, GB e TB usare l'opzione `SIZE`.  
 -   Per modificare l'incremento di crescita, usare l'opzione `FILEGROWTH`. Il valore 0 indica che l'aumento automatico delle dimensioni è disattivato e non è consentita l'allocazione di spazio aggiuntivo.  
@@ -82,7 +82,7 @@ Per altre informazioni, vedere [Indicazioni](#Recommendations) in questo argomen
 
 Per altre informazioni, vedere [Indicazioni](#Recommendations) in questo argomento.
 
-## <a name="Recommendations"></a> Indicazioni
+## <a name="Recommendations"></a> Raccomandazioni
 Di seguito sono elencate alcune indicazioni di carattere generale relative all'uso dei file registro transazioni:
 
 -   L'incremento automatico (autogrow) delle dimensioni del log delle transazioni, definito dall'opzione `FILEGROWTH`, deve essere sufficiente a soddisfare le esigenze delle transazioni del carico di lavoro. È consigliabile specificare un incremento di crescita per un file di log sufficientemente grande da consentire di evitare l'espansione frequente. Un buon indicatore per il dimensionamento corretto di un log delle transazioni è la quantità di spazio del log occupato durante:

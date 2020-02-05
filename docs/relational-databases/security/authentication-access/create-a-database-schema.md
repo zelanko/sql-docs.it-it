@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903749"
 ---
 # <a name="create-a-database-schema"></a>Creazione di uno schema di database
@@ -45,7 +45,7 @@ ms.locfileid: "72903749"
   
 -   Per specificare un altro utente come proprietario dello schema che viene creato, l'utente deve disporre dell'autorizzazione IMPERSONATE per quell'utente. Se si specifica un ruolo di database come proprietario, il chiamante deve appartenere al ruolo oppure deve avere l'autorizzazione ALTER per il ruolo.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 ##### <a name="to-create-a-schema"></a>Per creare uno schema  
   
@@ -65,13 +65,13 @@ ms.locfileid: "72903749"
 > Non verrà visualizzata una finestra di dialogo se si sta creando uno schema tramite SSMS su un **Database SQL di Azure** o un **Azure SQL Data Warehouse**. Sarà necessario eseguire l'istruzione di T-SQL per la creazione del modello schema che è stata generata.
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- La finestra di dialogo **Schema - Nuovo** offre anche opzioni in altre due pagine: **Autorizzazioni** e **Proprietà estese**.  
+ Nella finestra di dialogo **Schema - Nuovo** sono disponibili opzioni anche nelle due pagine aggiuntive **Autorizzazioni** e **Proprietà estese**.  
   
 -   Nella pagina **Autorizzazioni** sono elencate tutte le possibili entità a protezione diretta e le autorizzazioni su quelle entità a protezione diretta che possono essere concesse all'account di accesso.  
   
 -   La pagina **Proprietà estese** consente di aggiungere proprietà personalizzate a utenti di database.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-schema"></a>Per creare uno schema  
   

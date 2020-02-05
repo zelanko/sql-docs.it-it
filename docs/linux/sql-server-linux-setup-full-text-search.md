@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874761"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installare la ricerca full-text di SQL Server in Linux
@@ -88,7 +88,7 @@ La ricerca full-text usa [word breaker](../relational-databases/search/configure
 
 | Linguaggio | ID lingua |
 |---|---|
-| Lingua neutra | 0 |
+| Neutralità | 0 |
 | Arabo | 1025 |
 | Bengalese (India) | 1093 |
 | Bokmål | 1044 |

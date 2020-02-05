@@ -22,10 +22,10 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52acb1db548f6425dcfaf6339d38a4b55e57b76e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297950"
 ---
 # <a name="export-column-transformation"></a>Trasformazione Esporta colonna
@@ -38,12 +38,12 @@ ms.locfileid: "71297950"
 ## <a name="append-and-truncate-options"></a>Opzioni Accoda e tronca  
  Nella tabella seguente vengono descritti gli effetti delle impostazioni delle opzioni relative all'accodamento e al troncamento sui risultati.  
   
-|Accoda|Troncamento|File esistente|Risultati|  
+|Accoda|Truncate|File esistente|Risultati|  
 |------------|--------------|-----------------|-------------|  
-|False|False|no|La trasformazione crea un nuovo file e vi scrive i dati.|  
-|True|False|no|La trasformazione crea un nuovo file e vi scrive i dati.|  
-|False|True|no|La trasformazione crea un nuovo file e vi scrive i dati.|  
-|True|True|no|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su **true**entrambe le proprietà.|  
+|False|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
+|True|False|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
+|False|True|No|La trasformazione crea un nuovo file e vi scrive i dati.|  
+|True|True|No|La trasformazione non supera la convalida in fase di progettazione. Non è consentito impostare su **true**entrambe le proprietà.|  
 |False|False|Sì|Viene generato un errore di run-time. Il file esiste ma la trasformazione non è in grado di scrivervi.|  
 |False|True|Sì|La trasformazione elimina e ricrea il file e vi scrive i dati.|  
 |True|False|Sì|La trasformazione apre il file e scrive i dati alla fine.|  
@@ -61,7 +61,7 @@ ms.locfileid: "71297950"
     > [!NOTE]  
     >  L'indicatore dell'ordine dei byte viene scritto solo se i dati non vengono accodati a un file esistente e hanno tipo di dati DT_NTEXT.  
   
- La trasformazione usa coppie di colonne di input: una colonna contiene un nome di file e l'altra colonna contiene i dati. Ogni riga nel set di dati può specificare un file diverso. A mano a mano che la trasformazione elabora una riga, i dati vengono inseriti nel file specificato. In fase di esecuzione la trasformazione crea i file, se non esistono ancora, e quindi vi scrive i dati. I dati da scrivere devono avere tipo di dati DT_TEXT, DT_NTEXT o DT_IMAGE. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
+ La trasformazione utilizza coppie di colonne di input: una contenente un nome di file e una contenente i dati. Ogni riga nel set di dati può specificare un file diverso. A mano a mano che la trasformazione elabora una riga, i dati vengono inseriti nel file specificato. In fase di esecuzione la trasformazione crea i file, se non esistono ancora, e quindi vi scrive i dati. I dati da scrivere devono avere tipo di dati DT_TEXT, DT_NTEXT o DT_IMAGE. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Questa trasformazione include un input, un output e un output degli errori.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71297950"
  **Colonna**  
  Consente di visualizzare le colonne di output selezionate nella pagina **Colonne** della finestra di dialogo **Editor trasformazione Esportazione colonna** .  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione che deve essere eseguita in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere l'esecuzione del componente.  
   
  **Troncamento**  

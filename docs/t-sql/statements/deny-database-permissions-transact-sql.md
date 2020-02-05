@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983234"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY - autorizzazioni per database (Transact-SQL)
@@ -58,7 +58,7 @@ DENY <permission> [ ,...n ]
 
 *permission* specifica un'autorizzazione che può essere negata per un database. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.
 
-L'opzione ALL non nega tutte le autorizzazioni possibili. La negazione di ALL equivale a negare le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
+L'opzione ALL non nega tutte le autorizzazioni possibili. L'impostazione di ALL equivale a negare le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
 
 PRIVILEGES viene incluso per la conformità allo standard ISO. Non modifica il funzionamento di ALL.
 
@@ -85,7 +85,7 @@ Specifica un ruolo applicazione.
 
 *Database_user_with_no_login* specifica un utente del database senza entità di livello server corrispondente.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Un database è un'entità a protezione diretta contenuta nel server padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per un database, insieme alle autorizzazioni più generali che le includono in modo implicito.
 
@@ -148,7 +148,7 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |CREATE SERVICE|ALTER ANY SERVICE|CONTROL SERVER|
 |CREATE SYMMETRIC KEY|ALTER ANY SYMMETRIC KEY|CONTROL SERVER|
 |CREATE SYNONYM|ALTER|CONTROL SERVER|
-|CREATE TABLE|ALTER|CONTROL SERVER|
+|CREA TABELLA|ALTER|CONTROL SERVER|
 |CREATE TYPE|ALTER|CONTROL SERVER|
 |CREATE VIEW|ALTER|CONTROL SERVER|
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|
@@ -177,7 +177,7 @@ Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria del 
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-denying-permission-to-create-certificates"></a>A. Negazione dell'autorizzazione per la creazione di certificati
+### <a name="a-denying-permission-to-create-certificates"></a>R. Negazione dell'autorizzazione per la creazione di certificati
 
 Nell'esempio seguente viene negata l'autorizzazione `CREATE CERTIFICATE` per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] all'utente `MelanieK`.
 

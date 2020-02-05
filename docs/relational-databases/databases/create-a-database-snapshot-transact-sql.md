@@ -13,10 +13,10 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708282"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "71708282"
 > [!IMPORTANT]
 > Per informazioni relative ad altre considerazioni rilevanti, vedere [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-##  <a name="Recommendations"></a> Indicazioni  
+##  <a name="Recommendations"></a> Raccomandazioni  
  In questa sezione vengono illustrate le procedure consigliate seguenti:  
   
 -   [Procedura consigliata: Denominazione degli snapshot del database](#Naming)  
@@ -101,7 +101,7 @@ AdventureWorks_snapshot_evening
 
      CREATE DATABASE *database_snapshot_name*  
   
-     ON  
+     ATTIVA  
   
      (  
   
@@ -125,9 +125,9 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  L'estensione `.ss` utilizzata negli esempi è arbitraria.  
   
- In questa sezione sono disponibili gli esempi seguenti:  
+ Questa sezione contiene gli esempi seguenti:  
   
--   A. [Creazione di uno snapshot del database AdventureWorks](#Creating_on_AW)  
+-   R. [Creazione di uno snapshot del database AdventureWorks](#Creating_on_AW)  
   
 -   B. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)
   

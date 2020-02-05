@@ -33,10 +33,10 @@ ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: aa626cb69e22e56e1769d45b2cbfd652c51bc3b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68010819"
 ---
 # <a name="password-policy"></a>Criteri password
@@ -119,7 +119,7 @@ ms.locfileid: "68010819"
   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)  
   
- [Creazione di un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Creare un account di accesso](../../relational-databases/security/authentication-access/create-a-login.md)  
   
  [Creazione di un utente di database](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   

@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109450"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68109450"
   
  Per una panoramica di tutti i tipi di dati e delle funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). Si noti che l'intervallo di dati datetime è compreso tra 1753-01-01 e 9999-12-31, mentre l'intervallo di dati relativi alla data è compreso tra 0001-01-01 e 9999-12-31.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ ISDATE ( expression )
 ## <a name="return-type"></a>Tipo restituito  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione ISDATE è deterministica solo quando viene usata con la funzione [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), se il parametro style della funzione CONVERT è specificato e se lo stile è diverso da 0, 100, 9 o 109.  
   
  Il valore restituito di ISDATE dipende dalle impostazioni definite in [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) e [Configurare l'opzione di configurazione del server default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  
@@ -82,7 +82,7 @@ ISDATE ( expression )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. Utilizzo di ISDATE per il test di un'espressione datetime valida  
+### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>R. Utilizzo di ISDATE per il test di un'espressione datetime valida  
  Nell'esempio seguente viene illustrato l'uso di `ISDATE` per testare se una stringa di caratteri è un valore **datetime** valido.  
   
 ```  

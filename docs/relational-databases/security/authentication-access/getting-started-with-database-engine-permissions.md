@@ -14,10 +14,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903025"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
@@ -45,7 +45,7 @@ ms.locfileid: "72903025"
  Esistono 12 tipi di utenti con piccole differenze per la modalità di autenticazione e la relativa rappresentazione. Per vedere un elenco di utenti, vedere [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
 ##### <a name="fixed-database-roles"></a>Ruoli predefiniti del database  
- I ruoli predefiniti del database sono costituiti da un set di ruoli preconfigurati che forniscono una serie appropriata di autorizzazioni a livello di database. Gli utenti del database e i ruoli del database definiti dall'utente possono essere aggiunti ai ruoli predefiniti del database con l'istruzione `ALTER ROLE ... ADD MEMBER`. Per altre informazioni, vedere [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
+ I ruoli predefiniti del database sono costituiti da un set di ruoli preconfigurati che forniscono una serie appropriata di autorizzazioni a livello di database. Gli utenti del database e i ruoli del database definiti dall'utente possono essere aggiunti ai ruoli predefiniti del database con l'istruzione  `ALTER ROLE ... ADD MEMBER` . Per altre informazioni, vedere [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
 ##### <a name="user-defined-database-roles"></a>Ruoli del database definiti dall'utente  
  Gli utenti con l'autorizzazione `CREATE ROLE` possono creare nuovi ruoli del database definiti dall'utente per rappresentare gruppi di utenti con autorizzazioni comuni. In genere, le autorizzazioni vengono concesse o negate per l'intero ruolo, semplificando la gestione e il monitoraggio delle autorizzazioni. Gli utenti di database possono essere aggiunti ai ruoli del database con l'istruzione `ALTER ROLE ... ADD MEMBER` . Per altre informazioni, vedere [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
@@ -225,14 +225,14 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
  Per altri argomenti introduttivi, vedere:  
   
 -   [Esercitazione: Introduzione al motore di database](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 
 -   [Creazione di un database &#40;esercitazione&#41;](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [Esercitazione: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Esercitazione su SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [Esercitazione: Scrittura di istruzioni Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   

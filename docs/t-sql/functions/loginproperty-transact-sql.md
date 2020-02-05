@@ -33,10 +33,10 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059758"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68059758"
 
   Restituisce informazioni sulle impostazioni relative ai criteri di gestione degli account di accesso.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -111,7 +111,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL se l'account di accesso non è un account di accesso di SQL Server valido  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione predefinita restituisce informazioni sulle impostazioni relative ai criteri password per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché i nomi delle proprietà non supportano la distinzione tra maiuscole e minuscole, **BadPasswordCount** e **badpasswordcount** sono equivalenti. I valori delle proprietà **PasswordHash, PasswordHashAlgorithm** e **PasswordLastSetTime** sono disponibili in tutte le configurazioni supportate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre le altre proprietà sono disponibili solo se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] e se sono abilitate entrambe le opzioni CHECK_POLICY e CHECK_EXPIRATION. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -119,8 +119,8 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Verifica della necessità di modificare la password di un account di accesso  
- Nell'esempio seguente viene controllato se la password dell'account di accesso `John3` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere modificata alla connessione successiva a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+### <a name="a-checking-whether-a-login-must-change-its-password"></a>R. Verifica della necessità di modificare la password di un account di accesso  
+ Nell'esempio seguente viene controllato se la password dell'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di `John3` deve essere modificata alla connessione successiva a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -128,7 +128,7 @@ GO
 ```  
   
 ### <a name="b-checking-whether-a-login-is-locked-out"></a>B. Controllo dell'eventuale blocco di un account di accesso  
- Nell'esempio seguente viene controllato se l'account di accesso `John3` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è bloccato.  
+ Nell'esempio seguente viene controllato se l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di `John3` è bloccato.  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  

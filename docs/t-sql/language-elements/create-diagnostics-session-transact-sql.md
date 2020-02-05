@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088968"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
@@ -68,7 +68,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *filter_property_name*  
  Nome della proprietà in base alla quale limitare i risultati. Se ad esempio si vuole applicare la limitazione in base all'ID di sessione *filter_property_name* deve corrispondere a *SessionId*. Vedere *property_name* più avanti per un elenco di valori possibili per *filter_property_name*.  
   
- *Valore*  
+ *value*  
  Valore da valutare rispetto a *filter_property_name*. Il tipo valore deve corrispondere al tipo della proprietà. S ad esempio la proprietà è di tipo decimal, il tipo di *value* deve essere decimal.  
   
  *comp_type*  
@@ -88,7 +88,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |Duration|Durata dell'evento.|  
 |SPID|ID di processo del servizio.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per ogni utente è consentito un massimo di 10 sessioni di diagnostica simultanee. Vedere [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) per un elenco delle sessioni correnti e per rilasciare le sessioni non necessarie tramite `DROP DIAGNOSTICS SESSION`.  
   
  Le sessioni di diagnostica continuano a raccogliere metadati finché non vengono rilasciate.  
@@ -96,12 +96,12 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **ALTER SERVER STATE**.  
   
-## <a name="locking"></a>Utilizzo di blocchi  
+## <a name="locking"></a>Blocco  
  Acquisisce un blocco condiviso sulla tabella delle sessioni di diagnostica.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-diagnostics-session"></a>A. Creazione di una sessione di diagnostica  
+### <a name="a-creating-a-diagnostics-session"></a>R. Creazione di una sessione di diagnostica  
  Questo esempio crea una sessione di diagnostica per la registrazione di metriche delle prestazioni del motore di database. L'esempio crea una sessione di diagnostica in ascolto di eventi di esecuzione o fine di query motore e di un evento del Servizio Migrazione del database bloccante. Vengono restituiti il testo del comando, il nome del computer, l'ID della richiesta (ID query) e la sessione in cui è stato creato l'evento.  
   
 ```  

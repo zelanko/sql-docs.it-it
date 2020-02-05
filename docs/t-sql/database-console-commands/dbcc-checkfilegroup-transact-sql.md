@@ -26,16 +26,16 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102028"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 Controlla l'integrità strutturale e di allocazione di tutte le tabelle e le viste indicizzate nel filegroup specificato del database corrente.
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -92,14 +92,14 @@ DBCC CHECKFILEGROUP
 >  Se si specifica PHYSICAL_ONLY, DBCC CHECKFILEGROUP ignora tutti i controlli dei dati FILESTREAM.  
   
  MAXDOP  
- **Si applica a**: da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 fino alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Si applica a**: da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  Esegue l'override dell'opzione di configurazione **Massimo grado di parallelismo** di **sp_configure** per l'istruzione. MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il motore di database usa il valore MAXDOP di Resource Governor descritto in ALTER WORKLOAD GROUP (Transact-SQL). Quando si utilizza l'hint per la query MAXDOP sono valide tutte le regole semantiche utilizzate con l'opzione di configurazione max degree of parallelism. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!CAUTION]  
 >  Se MAXDOP è impostato su zero, il server sceglie il grado massimo di parallelismo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 DBCC CHECKFILEGROUP e DBCC CHECKDB sono comandi DBCC simili. La differenza principale consiste nel fatto che il comando DBCC CHECKFILEGROUP è limitato al singolo filegroup specificato e alle tabelle obbligatorie.
 Tramite DBCC CHECKFILEGROUP vengono eseguiti i comandi seguenti:
 -   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) per il filegroup.  
@@ -196,7 +196,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  
-### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>A. Controllo del filegroup PRIMARY nel database  
+### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>R. Controllo del filegroup PRIMARY nel database  
 Nell'esempio seguente viene controllato il filegroup primario del database corrente.
   
 ```sql  
