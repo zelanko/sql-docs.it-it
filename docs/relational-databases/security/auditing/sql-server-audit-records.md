@@ -13,10 +13,10 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926028"
 ---
 # <a name="sql-server-audit-records"></a>Record di SQL Server Audit
@@ -25,36 +25,36 @@ ms.locfileid: "73926028"
   
  I controlli sono costituiti da zero o più attività di controllo, che vengono registrate in una *destinazione*del controllo. La destinazione del controllo può essere un file binario, il registro eventi applicazioni di Windows o il registro eventi di sicurezza di Windows. I record inviati alla destinazione possono contenere gli elementi descritti nella tabella seguente:  
   
-|Nome colonna|Descrizione|Tipo|Sempre disponibile|  
+|Nome colonna|Descrizione|Type|Sempre disponibile|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Data e ora di generazione dell'azione controllabile.|**datetime2**|Sì|  
 |**sequence_no**|Viene tenuta traccia della sequenza dei record all'interno di un singolo record di controllo con dimensioni troppo elevate per il buffer di scrittura dei controlli.|**int**|Sì|  
-|**action_id**|ID dell'azione.<br /><br /> Suggerimento: Per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtro di SQL Server Audit con il predicato action_id / class_type).|**varchar(4)**|Sì|  
+|**action_id**|ID dell'azione.<br /><br /> Suggerimento: per usare **action_id** come predicato, è necessario convertirlo da stringa di caratteri in valore numerico. Per altre informazioni, vedere [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)(Filtro di SQL Server Audit con il predicato action_id / class_type).|**varchar(4)**|Sì|  
 |**succeeded**|Indica se il controllo delle autorizzazioni dell'azione che attiva l'evento di controllo è riuscito o meno. |**bit**<br /> - 1 = esito positivo, <br />0 = esito negativo|Sì|  
-|**permission_bitmask**|Se applicabile, visualizza le autorizzazioni concesse, negate o revocate.|**bigint**|no|  
-|**is_column_permission**|Flag indicante un'autorizzazione a livello di colonna.|**bit** <br />- 1 = True, <br />0 = False|no|  
+|**permission_bitmask**|Se applicabile, visualizza le autorizzazioni concesse, negate o revocate.|**bigint**|No|  
+|**is_column_permission**|Flag indicante un'autorizzazione a livello di colonna.|**bit** <br />- 1 = True, <br />0 = False|No|  
 |**session_id**|ID della sessione in cui si è verificato l'evento.|**int**|Sì|  
 |**server_principal_id**|ID del contesto dell'account di accesso utilizzato per eseguire l'azione.|**int**|Sì|  
-|**database_principal_id**|ID del contesto dell'utente del database in cui viene eseguita l'azione.|**int**|no|  
-|**object_id**|ID primario dell'entità in cui si è verificato il controllo. L'ID può essere:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|**int**|no|  
+|**database_principal_id**|ID del contesto dell'utente del database in cui viene eseguita l'azione.|**int**|No|  
+|**object_id**|ID primario dell'entità in cui si è verificato il controllo. L'ID può essere:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema|**int**|No|  
 |**target_server_principal_id**|Entità server cui si applica l'azione controllabile.|**int**|Sì|  
-|**target_database_principal_id**|Entità di database cui si applica l'azione controllabile.|**int**|no|  
+|**target_database_principal_id**|Entità di database cui si applica l'azione controllabile.|**int**|No|  
 |**class_type**|Tipo di entità controllabile in cui si verifica il controllo.|**varchar(2)**|Sì|  
 |**session_server_principal_name**|Entità server per la sessione.|**sysname**|Sì|  
 |**server_principal_name**|Account di accesso corrente.|**sysname**|Sì|  
 |**server_principal_sid**|SID dell'account di accesso corrente.|**varbinary**|Sì|  
-|**database_principal_name**|Utente corrente.|**sysname**|no|  
-|**target_server_principal_name**|Account di accesso di destinazione dell'azione.|**sysname**|no|  
-|**target_server_principal_sid**|SID dell'account di accesso di destinazione.|**varbinary**|no|  
-|**target_database_principal_name**|Utente di destinazione dell'azione.|**sysname**|no|  
+|**database_principal_name**|Utente corrente.|**sysname**|No|  
+|**target_server_principal_name**|Account di accesso di destinazione dell'azione.|**sysname**|No|  
+|**target_server_principal_sid**|SID dell'account di accesso di destinazione.|**varbinary**|No|  
+|**target_database_principal_name**|Utente di destinazione dell'azione.|**sysname**|No|  
 |**server_instance_name**|Nome dell'istanza del server in cui si è verificato il controllo. Viene utilizzato il formato standard computer\istanza.|**nvarchar(120)**|Sì|  
-|**database_name**|Contesto del database in cui si è verificata l'azione.|**sysname**|no|  
-|**schema_name**|Contesto dello schema in cui si è verificata l'azione.|**sysname**|no|  
-|**object_name**|Nome dell'entità in cui si è verificato il controllo. Il nome può essere:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|**sysname**|no|  
-|**istruzione**|istruzione TSQL (se presente)|**nvarchar(4000)**|no|  
-|**additional_information**|Qualsiasi informazione aggiuntiva sull'evento, archiviata in formato XML.|**nvarchar(4000)**|no|  
+|**database_name**|Contesto del database in cui si è verificata l'azione.|**sysname**|No|  
+|**schema_name**|Contesto dello schema in cui si è verificata l'azione.|**sysname**|No|  
+|**object_name**|Nome dell'entità in cui si è verificato il controllo. Il nome può essere:<br /><br /> oggetti server<br /><br /> database<br /><br /> oggetti di database<br /><br /> oggetti dello schema<br /><br /> istruzione TSQL (se presente)|**sysname**|No|  
+|**istruzione**|istruzione TSQL (se presente)|**nvarchar(4000)**|No|  
+|**additional_information**|Qualsiasi informazione aggiuntiva sull'evento, archiviata in formato XML.|**nvarchar(4000)**|No|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Alcune azioni non consentono l'inserimento di un valore di colonna perché il valore potrebbe non essere valido per l'azione.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit archivia 4000 caratteri di dati per ogni campo di tipo carattere in un record di controllo. Quando i valori **additional_information** e **statement** restituiti da un'azione controllabile sono costituiti da più di 4000 caratteri, viene usata la colonna **sequence_no** per scrivere più record nel report del controllo in modo che i dati vengano registrati da una singola azione di controllo. Il processo è il seguente:  

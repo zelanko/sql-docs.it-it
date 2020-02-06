@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325513"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
@@ -131,7 +131,7 @@ Oltre alle impostazioni delle opzioni SET e ai requisiti relativi alle funzioni 
 > [!IMPORTANT]
 > Le viste indicizzate non sono supportate sulle query temporali, ovvero quelle che usano la clausola `FOR SYSTEM_TIME`.
 
-### <a name="Recommendations"></a> Indicazioni
+### <a name="Recommendations"></a> Raccomandazioni
 
 Quando si fa riferimento a valori letterali stringa **datetime** e **smalldatetime** nelle viste indicizzate, è consigliabile convertire in modo esplicito il valore letterale nel tipo di dati desiderato usando uno stile del formato di data deterministico. Per un elenco degli stili del formato di data deterministici, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Per altre informazioni sulle espressioni deterministiche e non deterministiche, vedere la sezione [Considerazioni](#nondeterministic) in questa pagina.
 
@@ -157,7 +157,7 @@ Tutti gli indici di una vista vengono eliminati con la rimozione della vista. Tu
 
 Richiede l'autorizzazione **CREATE VIEW** per il database e l'autorizzazione **ALTER** per lo schema in cui viene creata la vista.
 
-## <a name="TsqlProcedure"></a> Uso di Transact-SQL
+## <a name="TsqlProcedure"></a> Con Transact-SQL
 
 ### <a name="to-create-an-indexed-view"></a>Per creare una vista indicizzata
 

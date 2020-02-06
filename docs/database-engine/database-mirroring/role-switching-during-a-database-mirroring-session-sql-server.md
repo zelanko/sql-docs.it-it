@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252790"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Cambio di ruolo durante una sessione di mirroring del database (SQL Server)
@@ -96,7 +96,7 @@ ms.locfileid: "75252790"
   
  Nella figura seguente è illustrato un esempio di utilizzo del failover manuale per mantenere la disponibilità del database mentre si aggiorna un'istanza del server di database. Al termine dell'aggiornamento, un amministratore può eseguire facoltativamente il failover all'istanza del server originale. Questa operazione è utile se l'amministratore desidera arrestare la sessione di mirroring e utilizzare il server mirror in un'altra posizione. In questo modo, è possibile utilizzare ripetutamente una singola istanza del server per aggiornare una serie di istanze del server di database.  
   
- ![Failover manuale pianificato](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "|::ref2::|")  
+ ![Failover manuale pianificato](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Failover manuale pianificato")  
   
 ###  <a name="ConditionsForManualFo"></a> Condizioni necessarie per un failover manuale  
  Per il failover manuale, è necessario che il livello di protezione delle transazioni sia impostato su FULL (ovvero in modalità a protezione elevata). Se i partner sono connessi e il database è già sincronizzato, è supportato il failover manuale.  
@@ -183,7 +183,7 @@ ms.locfileid: "75252790"
   
  Nella figura seguente viene illustrata una singola istanza di failover automatico.  
   
- ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "|::ref3::|")  
+ ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "Failover automatico")  
   
  La sessione ha inizialmente un quorum completo, ovvero tutti e tre i server sono connessi. **Partner_A** è il server principale e **Partner_B** il server mirror. **Partner_A** , o il database principale del **Partner_A**, diventa non disponibile. Sia il server di controllo del mirroring che **Partner_B** rilevano che il server principale non è più disponibile e la sessione mantiene il quorum. **Partner_B** diviene il server principale e rende disponibile la propria copia del database come nuovo database principale. Quando si riconnette alla sessione, **Partner_A** individua che **Partner_B** detiene ora il ruolo di server principale. **Partner_A** assume quindi il ruolo di server mirror.  
   

@@ -11,10 +11,10 @@ ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7dac194c0ceb54eeb716b9cf5ec676e7fe120d8f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296513"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions (database SSISDB)
@@ -38,7 +38,7 @@ ms.locfileid: "71296513"
 |restored_by|**nvarchar(128)**|Nome dell'utente che ha ripristinato l'oggetto.|  
 |last_restored_time|**datetimeoffset**|Data e ora dell'ultimo ripristino dell'oggetto.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni versione di un oggetto nel catalogo.  
   
 ## <a name="permissions"></a>Autorizzazioni  

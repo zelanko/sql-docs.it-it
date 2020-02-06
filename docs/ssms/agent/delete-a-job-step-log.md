@@ -1,10 +1,9 @@
 ---
-title: Eliminare il log di un passaggio di processo | Microsoft Docs
-ms.custom: ''
+title: Delete a Job Step Log
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8306cd11a038464b9abc93fcd10b0fc549d2f60d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 77ba028a1ee140985a35b513c5c338981f2837e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267184"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246331"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ In questo argomento viene illustrato come eliminare un log dei passaggi di proce
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per eliminare un log dei passaggi di processo di SQL Server Agent mediante:**  
   
@@ -50,9 +51,9 @@ In questo argomento viene illustrato come eliminare un log dei passaggi di proce
 ### <a name="Restrictions"></a>Limitazioni e restrizioni  
 Il log di output dei passaggi di processo eliminati viene eliminato automaticamente.  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 È possibile modificare solo i processi di cui si è proprietari, a meno che non si appartenga al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="SSMS"></a>Utilizzo di SQL Server Management Studio  

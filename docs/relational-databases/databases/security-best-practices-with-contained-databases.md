@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
 ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246134"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Procedure consigliate per la sicurezza in database indipendenti
@@ -65,7 +65,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   Quando sono presenti database indipendenti, gli utenti di database non indipendenti devono connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)] senza utilizzare un catalogo iniziale oppure specificando il nome di un database non indipendente come catalogo iniziale. In questo modo si eviterà di stabilire la connessione al database indipendente, che è meno soggetto al controllo diretto degli amministratori di [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>Aumento del livello di accesso mediante la modifica dello stato di indipendenza di un database  
- Gli account di accesso che dispongono dell'autorizzazione **ALTER ANY DATABASE** , ad esempio i membri del ruolo predefinito del server **dbcreator** , e gli utenti di un database non indipendente che dispongono dell'autorizzazione **CONTROL DATABASE** , ad esempio i membri del ruolo predefinito del database **db_owner** , possono modificare l'impostazione di indipendenza di un database. Se tale impostazione viene modificata da **NONE** a **PARTIAL** o a **FULL**, l'accesso utente può essere concesso creando utenti del database indipendente con password. In questo modo potrebbe essere consentito l'accesso senza che gli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne siano a conoscenza o abbiano concesso l'autorizzazione. Per evitare che un database sia indipendente, impostare l'opzione **contained database authentication** del [!INCLUDE[ssDE](../../includes/ssde-md.md)] su 0. Per impedire connessioni da parte degli utenti del database indipendente con password a determinati database indipendenti, utilizzare trigger di accesso per annullare i tentativi di accesso da parte di tali utenti.  
+ Gli account di accesso che dispongono dell'autorizzazione **ALTER ANY DATABASE** , ad esempio i membri del ruolo predefinito del server **dbcreator** , e gli utenti di un database non indipendente che dispongono dell'autorizzazione **CONTROL DATABASE** , ad esempio i membri del ruolo predefinito del database **db_owner** , possono modificare l'impostazione di indipendenza di un database. Se tale impostazione viene modificata da **NONE** a **PARTIAL** o a **FULL**, l'accesso utente può essere concesso creando utenti del database indipendente con password. In questo modo potrebbe essere consentito l'accesso senza che gli amministratori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne siano a conoscenza o abbiano concesso l'autorizzazione. Per evitare che un database sia indipendente, impostare l'opzione [!INCLUDE[ssDE](../../includes/ssde-md.md)]contained database authentication**del** su 0. Per impedire connessioni da parte degli utenti del database indipendente con password a determinati database indipendenti, utilizzare trigger di accesso per annullare i tentativi di accesso da parte di tali utenti.  
   
 ### <a name="attaching-a-contained-database"></a>Collegamento di un database indipendente  
  Mediante il collegamento di un database indipendente, un amministratore potrebbe concedere a utenti indesiderati l'accesso all'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Un amministratore che voglia evitare questo rischio può portare il database online in modalità **RESTRICTED_USER** , in modo da impedire l'autenticazione per gli utenti del database indipendente con password. Solo le entità autorizzate tramite account di accesso potranno accedere a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155800"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70155800"
 
 Restituisce un valore formattato con il formato specificato e impostazioni cultura facoltative. Utilizzare la funzione FORMAT per formattare in base alle impostazioni locali i valori numerici e di data/ora come stringhe. Per le conversioni di tipi di dati generali, utilizzare CAST o CONVERT.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ FORMAT ( value, format [, culture ] )
   
 ## <a name="arguments"></a>Argomenti
 
- *Valore*  
+ *value*  
  Espressione di un tipo di dati supportato da formattare. Per un elenco di tipi validi, vedere la tabella nella sezione Osservazioni indicata di seguito.  
   
  *format*  
@@ -49,7 +49,7 @@ FORMAT ( value, format [, culture ] )
   
  L'argomento *format* deve contenere una stringa di formato .NET Framework valida, ovvero una stringa di formato standard (ad esempio "C" o "D") o uno schema di caratteri personalizzati per date e valori numerici (ad esempio "MMMM GG, aaaa (gggg)"). La formattazione composta non è supportata. Per una spiegazione completa di questi schemi di formattazione, vedere la documentazione di .NET Framework sulla formattazione di stringhe in formati di data e ora generali e personalizzati e in formati di numero personalizzati. È consigliabile iniziare con l'argomento "[Formattazione di tipi](https://go.microsoft.com/fwlink/?LinkId=211776)."  
   
- *culture*  
+ *Impostazioni cultura*  
  Argomento **nvarchar** facoltativo che specifica le impostazioni cultura.  
   
  Se l'argomento *culture* non è specificato, viene usata la lingua della sessione corrente. Tale lingua viene impostata in modo implicito o in modo esplicito tramite l'istruzione SET LANGUAGE. *culture* accetta come argomento qualsiasi impostazione cultura supportata da .NET Framework e non è limitato alle lingue supportate in modo esplicito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'argomento *culture* non è valido, FORMAT genera un errore.  
@@ -60,7 +60,7 @@ FORMAT ( value, format [, culture ] )
   
  La lunghezza del valore restituito viene determinata da *format*.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
  FORMAT restituisce Null per errori diversi da un valore di *culture* non *valido*. Ad esempio, viene restituito Null se il valore specificato in *format* non è valido.  
 
@@ -74,28 +74,28 @@ FORMAT ( value, format [, culture ] )
   
  Nella tabella seguente vengono elencati i tipi di dati accettabili per l'argomento *value*, insieme con i tipi equivalenti di mapping per .NET Framework.  
   
-|Category|Tipo|Tipo .NET|  
+|Category|Type|Tipo .NET|  
 |--------------|----------|---------------|  
-|Numeric|BIGINT|Int64|  
+|Numeric|bigint|Int64|  
 |Numeric|INT|Int32|  
 |Numeric|SMALLINT|Int16|  
 |Numeric|TINYINT|Byte|  
-|Numeric|Decimal|SqlDecimal|  
+|Numeric|decimal|SqlDecimal|  
 |Numeric|NUMERIC|SqlDecimal|  
-|Numeric|FLOAT|Double|  
-|Numeric|REAL|Single|  
+|Numeric|float|Double|  
+|Numeric|real|Single|  
 |Numeric|SMALLMONEY|Decimal|  
 |Numeric|money|Decimal|  
-|Data e ora|Data|DateTime|  
+|Data e ora|Data|Datetime|  
 |Data e ora|time|TimeSpan|  
-|Data e ora|DATETIME|DateTime|  
-|Data e ora|smalldatetime|DateTime|  
-|Data e ora|datetime2|DateTime|  
+|Data e ora|Datetime|Datetime|  
+|Data e ora|smalldatetime|Datetime|  
+|Data e ora|datetime2|Datetime|  
 |Data e ora|datetimeoffset|DateTimeOffset|  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-format-example"></a>A. Esempio semplice di FORMAT
+### <a name="a-simple-format-example"></a>R. Esempio semplice di FORMAT
 
  Nell'esempio seguente viene restituita una data semplice nel formato per impostazioni cultura diverse.  
   
@@ -246,4 +246,4 @@ select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
 
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

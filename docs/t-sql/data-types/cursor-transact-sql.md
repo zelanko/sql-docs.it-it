@@ -15,10 +15,10 @@ ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682075"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "71682075"
 
 Tipo di dati per variabili o parametri di OUTPUT di stored procedure che contengono un riferimento a un cursore.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Le operazioni in cui è possibile fare riferimento a variabili e parametri con tipo di dati **cursor** sono le seguenti:
 -   Istruzioni DECLARE *\@local_variable* e SET *\@local_variable*.  
 -   Istruzioni di cursore OPEN, FETCH, CLOSE e DEALLOCATE.  
