@@ -22,10 +22,10 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072259"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072259"
 
   Confronta un valore scalare con un set di valori a colonna singola. SOME e ANY sono equivalenti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,12 +62,12 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ## <a name="result-value"></a>Valore restituito  
  SOME o ANY restituisce **TRUE** se il confronto specificato è TRUE per qualsiasi coppia (_scalar_expression_ **,** _x_) dove *x* è un valore del set di valori a colonna singola. In caso contrario restituisce **FALSE**.  
   
-## <a name="remarks"></a>Remarks  
- SOME specifica che l'argomento *scalar_expression* deve essere confrontato in modo univoco con almeno un valore restituito dalla sottoquery. Per le istruzioni che specificano che l'argomento *scalar_expression* deve essere confrontato in modo univoco con ogni valore restituito dalla sottoquery, vedere [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Se ad esempio la sottoquery restituisce i valori 2 e 3, *scalar_expression* = SOME (subquery) restituisce TRUE se il valore di *scalar_expression* è 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (subquery) restituisce FALSE, in quanto alcuni valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
+## <a name="remarks"></a>Osservazioni  
+ SOME specifica che l'argomento *scalar_expression* deve essere confrontato in modo univoco con almeno un valore restituito dalla sottoquery. Per le istruzioni che specificano che l'argomento *scalar_expression* deve essere confrontato in modo univoco con ogni valore restituito dalla sottoquery, vedere [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Se ad esempio la sottoquery restituisce i valori 2 e 3, *scalar_expression* = SOME (subquery) restituisce TRUE se il valore di *scalar_expression* è 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (subquery) restituisce FALSE, perché alcuni valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-running-a-simple-example"></a>A. Esecuzione di un esempio semplice  
+### <a name="a-running-a-simple-example"></a>R. Esecuzione di un esempio semplice  
  Le istruzioni seguenti consentono di creare una tabella semplice e di aggiungere i valori di `1`, `2`, `3` e `4` alla colonna `ID`.  
   
 ```  
@@ -121,7 +121,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
 ```  
   
- Per testare la procedura, eseguirla usando il valore `SalesOrderID``49080`, a cui sono associati un componente che richiede `2` giorni e due componenti che richiedono 0 giorni. La prima istruzione soddisfa i criteri, La seconda query no.  
+ Per testare la procedura, eseguirla usando il valore `SalesOrderID``49080`, a cui sono associati un componente che richiede `2` giorni e due componenti che richiedono 0 giorni. La prima istruzione soddisfa i criteri, la seconda query no.  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  

@@ -18,10 +18,10 @@ ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077819"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Motore di database)
@@ -50,14 +50,14 @@ Nodo **hierarchyid** per cui il test IsDescendantOf deve essere eseguito.
   
 **Tipo CLR restituito: SqlBoolean**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Restituisce true per tutti i nodi nel sottoalbero con radice nel padre specificato e false per tutti gli altri nodi.
   
 Un padre è considerato discendente di se stesso.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-isdescendantof-in-a-where-clause"></a>A. Utilizzo di IsDescendantOf in una clausola WHERE  
+### <a name="a-using-isdescendantof-in-a-where-clause"></a>R. Utilizzo di IsDescendantOf in una clausola WHERE  
 Nell'esempio seguente vengono restituiti un responsabile e i relativi dipendenti diretti:
   
 ```sql

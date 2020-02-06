@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f6978a8344b7a1c9100a701d582193295f34c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098968"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68098968"
 
   Restituisce un valore **datetimeoffset** convertito da un'espressione **datetime2**.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>A. Modifica della differenza di fuso orario della data e ora correnti  
+### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>R. Modifica della differenza di fuso orario della data e ora correnti  
  Nell'esempio seguente viene impostata la differenza di fuso orario della data e ora correnti sul valore `-07:00`.  
   
 ```sql  

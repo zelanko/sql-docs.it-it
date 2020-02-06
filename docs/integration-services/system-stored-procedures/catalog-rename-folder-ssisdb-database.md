@@ -11,10 +11,10 @@ ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90778ec067d914a9f8fc3663ea00a5ff609247ab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295369"
 ---
 # <a name="catalogrename_folder-ssisdb-database"></a>catalog.rename_folder (database SSISDB)
@@ -40,10 +40,10 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
  Nuovo nome della cartella. *new_name* è di tipo **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
- None  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  

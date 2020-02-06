@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c8e23b3f5f291d120a099cae7f3e3e057db8da95
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595786"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>Eseguire la migrazione di dati da o verso colonne usando Always Encrypted con l'Importazione/Esportazione guidata SQL Server 
@@ -75,16 +75,16 @@ Per crittografare o decrittografare i dati archiviati in un database di SQL Serv
 
 - **Archivio certificati - Computer locale**: è necessario avere accesso in lettura al certificato usato come chiave master della colonna o essere l'amministratore del computer.
 - **Azure Key Vault**: sono necessarie le autorizzazioni _get_, _unwrapKey_ e _verify_ per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (CNG)**: l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
-- **Provider del servizio di crittografia (CAPI)**: l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
+- **Provider dell'archivio chiavi (CNG)** : l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.
+- **Provider del servizio di crittografia (CAPI)** : l'autorizzazione e le credenziali necessarie; potrebbero essere richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Vedere anche
-- [Crittografia sempre attiva](always-encrypted-database-engine.md)
+- [Always Encrypted](always-encrypted-database-engine.md)
 - [Esportare e importare database usando Always Encrypted](always-encrypted-migrate-using-bacpac.md)
 - [Eseguire il backup e il ripristino di database usando Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
 - [Caricamento bulk di dati crittografati in colonne tramite Always Encrypted](migrate-sensitive-data-protected-by-always-encrypted.md)

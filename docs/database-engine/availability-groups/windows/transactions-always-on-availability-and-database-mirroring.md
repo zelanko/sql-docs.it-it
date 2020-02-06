@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251229"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transazioni: gruppi di disponibilità Always On e mirroring del database
@@ -45,13 +45,13 @@ Per altre informazioni, vedere:
 - [Guida per gli sviluppatori di DTC](https://msdn.microsoft.com/library/ms679938.aspx)
 - [Riferimento per programmatori di DTC](https://msdn.microsoft.com/library/ms686108.aspx)
 
-## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 e versioni precedenti: Supporto delle transazioni tra database nella stessa istanza di SQL Server  
+## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 e versioni precedenti: supporto delle transazioni tra database nella stessa istanza di SQL Server  
 
 In SQL Server 2016 SP1 e versioni precedenti, le transazioni tra database all'interno della stessa istanza di SQL Server non sono supportate per i gruppi di disponibilità. I due database in una transazione tra database non possono essere ospitati dalla stessa istanza di SQL Server, se uno o entrambi si trovano in un gruppo di disponibilità. Questa limitazione si applica anche quando tali database fanno parte dello stesso gruppo di disponibilità.  
   
 Anche le transazioni tra database non sono supportate per il mirroring del database.  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 e versioni precedenti: Supporto delle transazioni distribuite  
+##  <a name="dtcsupport"></a> SQL Server 2016 SP1 e versioni precedenti: supporto delle transazioni distribuite  
 Le transazioni distribuite sono supportate con i gruppi di disponibilità quando i database sono ospitati da istanze di SQL Server diverse. Questa limitazione si applica anche alle transazioni distribuite tra le istanze di SQL Server e un altro server conforme a DTC.  
  
 Microsoft Distributed Transaction Coordinator (MSDTC o DTC) è un servizio Windows che offre l'infrastruttura delle transazioni per i sistemi distribuiti. MSDTC consente alle applicazioni client di includere più origini dati in un'unica transazione di cui viene quindi eseguito il commit in tutti i server inclusi nella transazione. Ad esempio, è possibile usare MSDTC per coordinare le transazioni che interessano più database in server diversi.
@@ -91,6 +91,6 @@ Una nuova funzionalità di SQL Server 2016 consente di usare le transazioni dist
 >  Non è supportato l'uso del mirroring del database con DTC o di gruppi di disponibilità con DTC in modi non approvati in questo articolo.  Ciò non implica che gli aspetti del prodotto non correlati a DTC non siano supportati. Tuttavia, eventuali problemi causati dall'uso improprio delle transazioni distribuite non sono supportati.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- [Gruppi di disponibilità Always On: Interoperabilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

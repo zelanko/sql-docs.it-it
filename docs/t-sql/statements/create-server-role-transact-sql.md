@@ -25,10 +25,10 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117134"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117134"
 
   Crea un nuovo ruolo del server definito dall'utente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  Account di accesso che diventerà proprietario del nuovo ruolo del server. Se non viene specificato alcun account di accesso, il ruolo del server sarà di proprietà dell'account di accesso che esegue l'istruzione CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  I ruoli del server sono entità a protezione diretta a livello di server. Dopo aver creato un ruolo del server, configurare le autorizzazioni a livello di server per il ruolo tramite GRANT, DENY e REVOKE. Per aggiungere o rimuovere account di accesso a o da un ruolo del server, usare [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Per eliminare un ruolo del server, usare [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Per altre informazioni, vedere [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  È possibile visualizzare i ruoli del server eseguendo una query sulle viste del catalogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) e [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -75,7 +75,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>A. Creazione di un ruolo del server di proprietà di un account di accesso  
+### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>R. Creazione di un ruolo del server di proprietà di un account di accesso  
  Nell'esempio seguente viene creato il ruolo del server `buyers` di proprietà dell'account di accesso `BenMiller`.  
   
 ```  

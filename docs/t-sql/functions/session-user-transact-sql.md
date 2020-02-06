@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c4bdf8b5057fcbf405d78872f7329c70c754ff76
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843337"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
@@ -46,14 +46,14 @@ SESSION_USER
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare la funzione SESSION_USER con vincoli DEFAULT nell'istruzione CREATE TABLE o ALTER TABLE oppure come qualsiasi funzione standard. SESSION_USER può essere inserita in una tabella se non viene specificato alcun valore predefinito. Questa funzione non accetta argomenti e può essere utilizzata nelle query.  
   
  Se viene chiamata dopo uno scambio di contesto, la funzione SESSION_USER restituirà il nome utente del contesto rappresentato.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. Utilizzo di SESSION_USER per recuperare il nome utente della sessione corrente  
+### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>R. Utilizzo di SESSION_USER per recuperare il nome utente della sessione corrente  
  Nell'esempio seguente viene dichiarata una variabile di tipo `nchar`, viene assegnato il valore corrente di `SESSION_USER` a tale variabile e quindi vengono restituite la variabile e una descrizione.  
   
 ```  
@@ -139,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C: Utilizzo di SESSION_USER per recuperare il nome utente della sessione corrente  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C: Uso di SESSION_USER per recuperare il nome utente della sessione corrente  
  Nell'esempio seguente viene restituito l'utente della sessione corrente.  
   
 ```  

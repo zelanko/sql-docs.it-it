@@ -13,10 +13,10 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09b2eafcd061df5c9f407fc08a9eef0002b1bc23
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294281"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
@@ -40,7 +40,7 @@ ms.locfileid: "71294281"
   
 -   Quando si seleziona il carattere jolly **(\*)** in **KeyColumns**, l'attività calcola il livello di attendibilità della chiave di ogni colonna nella tabella o nella vista.  
   
- Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Per **KeyColumns** vengono selezionate le opzioni seguenti:  
+ Si consideri, ad esempio, una tabella di esempio contenente le colonne A, B e C. Per **KeyColumns**vengono selezionate le opzioni seguenti:  
   
 -   Si seleziona (\*) e la colonna C in **KeyColumns**. L'attività calcola il livello di attendibilità della chiave della colonna C, quindi quella delle chiavi candidate composte (A,C) e (B, C).  
   

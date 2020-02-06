@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000557"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
@@ -42,7 +42,7 @@ Definisce una data combinata con un'ora del giorno. L'ora si basa su un formato 
 |||  
 |-|-|  
 |Sintassi|**smalldatetime**|  
-|Utilizzo|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
+|Uso|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |Formati predefiniti dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|Non applicabile|  
 |Intervallo di date|da 01-01-1900 a 06-06-2079<br /><br /> Da 1 gennaio 1900 a 6 giugno 2079|  
 |Intervallo di ore|Da 00:00:00 a 23:59:59<br /><br /> 2007-05-09 23:59:59 verrà arrotondato a<br /><br /> 2007-05-10 00:00:00|  
@@ -52,9 +52,9 @@ Definisce una data combinata con un'ora del giorno. L'ora si basa su un formato 
 |Accuratezza|Un minuto|  
 |Valore predefinito|1900-01-01 00:00:00|  
 |Calendario|Gregoriano<br /><br /> (non include l'intervallo completo di anni)|  
-|Precisione in secondi frazionari definita dall'utente|no|  
-|Considerazione e conservazione delle differenze di fuso orario|no|  
-|Considerazione dell'ora legale|no|  
+|Precisione in secondi frazionari definita dall'utente|No|  
+|Considerazione e conservazione delle differenze di fuso orario|No|  
+|Considerazione dell'ora legale|No|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformità agli standard ANSI e ISO 8601  
 **smalldatetime** non è conforme agli standard ANSI e ISO 8601.
@@ -147,7 +147,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime2 AS ' datetime2(4)';
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-casting-string-literals-with-seconds-to-smalldatetime"></a>A. Cast di valori letterali stringa con secondi a smalldatetime  
+### <a name="a-casting-string-literals-with-seconds-to-smalldatetime"></a>R. Cast di valori letterali stringa con secondi a smalldatetime  
 Nell'esempio seguente viene confrontata la conversione dei secondi nei valori letterali stringa in `smalldatetime`.
   
 ```sql
@@ -182,7 +182,7 @@ SELECT
 |Tipo di dati|Output|  
 |---|---|
 |**time**|12:35:29. 1234567|  
-|**data**|2007-05-08|  
+|**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
