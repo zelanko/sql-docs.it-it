@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929312"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo di dati geometry)
@@ -52,7 +52,7 @@ Tipo SQL Server restituito: **geometry**
   
 -   **NULL** viene passato al metodo, ad esempio `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Nell'illustrazione seguente viene mostrato un esempio di un'istanza di geometria restituita da questo metodo.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -62,7 +62,7 @@ Tipo SQL Server restituito: **geometry**
 |Valore del parametro distance|Dimensioni tipo|Tipo spaziale restituito|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|Zero o uno|Istanza **GeometryCollection** vuota|  
-|distance < 0|Due o più|Istanza **CurvePolygon** o **GeometryCollection** con buffer negativo. **Nota:** è possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota|  
+|distance < 0|Due o più|Istanza **CurvePolygon** o **GeometryCollection** con buffer negativo. **Nota:** è possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota.|  
 |distance = 0|Tutte le dimensioni|Copia dell'istanza **geometry** di chiamata|  
 |distance > 0|Tutte le dimensioni|Istanza **CurvePolygon** o **GeometryCollection**|  
   
@@ -75,7 +75,7 @@ Tipo SQL Server restituito: **geometry**
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>A. Chiamata a BufferWithCurves() con un valore di parametro < 0 in un'istanza di geometria unidimensionale  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>R. Chiamata a BufferWithCurves() con un valore di parametro < 0 in un'istanza di geometria unidimensionale  
  Nell'esempio seguente viene restituita un'istanza `GeometryCollection` vuota:  
   
 ```

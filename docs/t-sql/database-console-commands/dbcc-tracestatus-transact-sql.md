@@ -25,10 +25,10 @@ ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211234"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "70211234"
 
 Visualizza lo stato dei flag di traccia.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,13 +64,13 @@ Nella tabella seguente vengono descritte le informazioni del set di risultati.
 |Nome colonna|Descrizione|  
 |---|---|
 |**TraceFlag**|Nome del flag di traccia|  
-|**Stato**|Indica se il flag di traccia è impostato su ON o OFF, a livello globale o a livello di sessione.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|**Status**|Indica se il flag di traccia è impostato su ON o OFF, a livello globale o a livello di sessione.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Indica se il flag di traccia è impostato a livello globale<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Session**|Indica se il file di traccia è impostato per la sessione<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Sessione**|Indica se il file di traccia è impostato per la sessione<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS restituisce una colonna per il numero del flag di traccia e una colonna per lo stato. Indica se il flag di traccia è impostato su ON (1) o OFF (0). L'intestazione di colonna per il numero del flag di traccia è **Global Trace Flag** o **Session Trace Flag**, a seconda che si stia controllando lo stato di un flag di traccia globale o di sessione.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili due tipi di flag di traccia: di sessione e globali. I flag di traccia di sessione sono attivi per una connessione e sono visibili solo per tale connessione. I flag di traccia globali vengono impostati a livello del server e sono visibili per tutte le connessioni nel server.
   
 ## <a name="permissions"></a>Autorizzazioni  

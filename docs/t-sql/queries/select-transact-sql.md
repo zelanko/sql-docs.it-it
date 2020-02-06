@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948283"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "67948283"
   
  È possibile usare gli operatori UNION, EXCEPT e INTERSECT per combinare o confrontare i risultati di più query in un unico set di risultati.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -100,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  A causa della complessità dell'istruzione SELECT, gli elementi della sintassi e gli argomenti dettagliati sono stati raggruppati e descritti in base alla clausola:  
   
 |||  
@@ -120,11 +120,11 @@ SELECT <select_criteria>
   
  Per le istruzioni SELECT in cui sono coinvolte tabelle remote sono previste alcune limitazioni della sintassi.  
   
-## <a name="logical-processing-order-of-the-select-statement"></a>Ordine di elaborazione logica dell'istruzione SELECT  
+## <a name="logical-processing-order-of-the-select-statement"></a>Ordine di elaborazione logico dell'istruzione SELECT  
  Nei passaggi seguenti viene mostrato l'ordine di elaborazione logica, o ordine di associazione, per un'istruzione SELECT. Questo ordine consente di determinare il momento in cui gli oggetti definiti in un passaggio vengono resi disponibili per le clausole nei passaggi successivi. Ad esempio, se Query Processor può essere associato alle tabelle o alle viste definite nella clausola FROM, ovvero gli viene consentito l'accesso, questi oggetti e le relative colonne vengono resi disponibili in tutti i passaggi successivi. Invece, poiché la clausola SELECT si trova al passaggio 8, tramite le clausole precedenti non è possibile fare riferimento a qualsiasi alias di colonna o colonna derivata definito in tale clausola. Tuttavia, è possibile farvi riferimento tramite clausole successive, ad esempio ORDER BY. L'esecuzione fisica effettiva dell'istruzione viene determinata da Query Processor e l'ordine potrebbe essere diverso rispetto a questo elenco.  
   
 1.  FROM  
-2.  ON  
+2.  ATTIVA  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
@@ -146,7 +146,7 @@ SELECT <select_criteria>
 ## <a name="examples"></a>Esempi:   
 Nell'esempio seguente viene utilizzato il database [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
-### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Utilizzo dell'istruzione SELECT per il recupero di righe e colonne  
+### <a name="a-using-select-to-retrieve-rows-and-columns"></a>R. Utilizzo dell'istruzione SELECT per il recupero di righe e colonne  
  Questa sezione illustra i tre esempi di codice. Nel primo esempio di codice vengono restituite tutte le righe (clausola WHERE omessa) e tutte le colonne, usando `*`, della tabella `DimEmployee`.  
   
 ```sql  

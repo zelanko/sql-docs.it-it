@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 66627b7b430d15afe73ec823c0af90e2d19d9a39
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70123178"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70123178"
 
   Restituisce la parte finale di una stringa di caratteri, di lunghezza pari al numero di caratteri specificato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-right-with-a-column"></a>A: Uso di RIGHT con una colonna  
+### <a name="a-using-right-with-a-column"></a>A. Uso di LEFT con una colonna  
  Nell'esempio seguente vengono restituiti gli ultimi cinque caratteri del nome di ciascuna persona nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

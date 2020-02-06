@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6790d66ad3a5f80a0964ada3c68311ef3d83b25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68016444"
 ---
 # <a name="delete-unique-constraints"></a>Eliminazione di vincoli univoci
@@ -33,7 +33,7 @@ ms.locfileid: "68016444"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per eliminare un vincolo univoco:**  
   
@@ -48,13 +48,13 @@ ms.locfileid: "68016444"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-delete-a-unique-constraint-using-object-explorer"></a>Per eliminare un vincolo univoco utilizzando Esplora oggetti  
   
 1.  In Esplora oggetti, espandere la tabella contenente il vincolo univoco, quindi espandere la cartella **Vincoli**.  
   
-2.  Fare clic con il pulsante destro del mouse sulla chiave e selezionare **Elimina**.  
+2.  Fare clic con il pulsante destro del mouse sulla chiave e scegliere **Elimina**.  
   
 3.  Nella finestra di dialogo **Elimina oggetto** verificare che venga specificata la chiave corretta e fare clic su **OK**.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "68016444"
   
 4.  Fare clic su **Elimina**.  
   
-5.  Scegliere **Salva** _nome tabella_ dal menu **File**.  
+5.  Nel menu **File** fare clic su **Salva** _nome tabella_.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-delete-a-unique-constraint"></a>Per eliminare un vincolo univoco  
   

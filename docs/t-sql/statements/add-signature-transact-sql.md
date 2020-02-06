@@ -18,10 +18,10 @@ ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066106"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68066106"
   Aggiunge una firma digitale a una stored procedure, una funzione, un assembly o un trigger. Aggiunge inoltre una controfirma a una stored procedure, una funzione, un assembly o un trigger.  
   
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  Nome di una chiave asimmetrica con cui firmare o controfirmare la stored procedure, la funzione, l'assembly o il trigger.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il modulo che viene firmato o controfirmato e il certificato o la chiave asimmetrica utilizzati per la firma devono essere già esistenti. Ogni carattere del modulo è utilizzato nel calcolo della firma, inclusi gli avanzamenti di riga e i ritorni a capo iniziali.  
   
  Un modulo può essere firmato e controfirmato da un numero qualsiasi di certificati e chiavi simmetriche.  
@@ -103,7 +103,7 @@ Se invece si controfirma procSelectT1 con lo stesso certificato usato per firmar
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. Firma di una stored procedure tramite un certificato  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>R. Firma di una stored procedure tramite un certificato  
  Nell'esempio seguente la stored procedure `HumanResources.uspUpdateEmployeeLogin` viene firmata tramite il certificato `HumanResourcesDP`.  
   
 ```  

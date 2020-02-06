@@ -13,10 +13,10 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68049030"
 ---
 # <a name="database-properties-options-page"></a>Proprietà database (pagina Opzioni)
@@ -29,7 +29,7 @@ ms.locfileid: "68049030"
  È possibile specificare le regole di confronto del database selezionandole nell'elenco. Per altre informazioni, vedere [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modello di recupero**  
- È possibile specificare uno dei modelli di recupero del database seguenti: **Con registrazione completa**, **Con registrazione minima delle operazioni bulk** o **Con registrazione minima**. Per altre informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ È possibile specificare uno dei modelli di recupero del database seguenti: **Con registrazione completa**, **Con registrazione minima delle operazioni bulk**o **Con registrazione minima**. Per altre informazioni sui modelli di recupero, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Livello di compatibilità**  
  È possibile specificare la versione più recente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportata dal database. Per i valori possibili, vedere [Livello di compatibilità di ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quando un database SQL Server viene aggiornato, il livello di compatibilità per il database viene mantenuto, se possibile. Oppure viene portato al livello minimo supportato per il nuovo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -131,7 +131,7 @@ Quando si è connessi al database SQL di Azure, questa sezione include impostazi
  Specifica il nome di directory per i dati FILESTREAM associati al database selezionato.  
   
  **Accesso FILESTREAM non in transazioni**  
- È possibile specificare una delle opzioni seguenti per l'accesso non transazionale tramite il file system a dati FILESTREAM archiviati in tabelle FileTable: **OFF**, **READ_ONLY** o **FULL**. Se FILESTREAM non è abilitato nel server, questo valore viene impostato su OFF ed è disabilitato. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ È possibile specificare una delle opzioni seguenti per l'accesso non transazionale tramite il file system a dati FILESTREAM archiviati in tabelle FileTable: **OFF**, **READ_ONLY**o **FULL**. Se FILESTREAM non è abilitato nel server, questo valore viene impostato su OFF ed è disabilitato. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Varie  
 **Consenti isolamento snapshot**  
@@ -179,7 +179,7 @@ Abilita questa funzionalità.
  Indica se le parole chiave di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere utilizzate come identificatori (nome di variabile o oggetto) se racchiusi tra virgolette. I valori possibili sono **True** e **False**. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Trigger ricorsivi abilitati**  
- Indica se i trigger possono essere attivati da altri trigger. I valori possibili sono **True** e **False**. Se il valore è **True**, l'attivazione ricorsiva dei trigger è abilitata. Se il valore è **False**, viene impedita solo la ricorsione diretta. Per disabilitare la ricorsione indiretta, impostare l'opzione del server nested triggers su 0 utilizzando sp_configure. Per altre informazioni, vedere [Creare trigger annidati](../../relational-databases/triggers/create-nested-triggers.md).  
+ Indica se i trigger possono essere attivati da altri trigger. I valori possibili sono **True** e **False**. Se il valore è **True**, l'attivazione ricorsiva dei trigger è abilitata. Se il valore è **False**, viene impedita solo la ricorsione diretta. Per disabilitare la ricorsione indiretta, impostare l'opzione del server nested triggers su 0 utilizzando sp_configure. Per altre informazioni, vedere [Creazione di trigger annidati](../../relational-databases/triggers/create-nested-triggers.md).  
   
  **Attendibile**  
  Quando è visualizzato il valore **True**, questa opzione di sola lettura indica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente l'accesso a risorse esterne al database in un contesto di rappresentazione definito all'interno del database. I contesti di rappresentazione possono essere definiti all'interno del database mediante l'istruzione utente EXECUTE AS o la clausola EXECUTE AS sui moduli di database.  
@@ -199,14 +199,14 @@ Abilita questa funzionalità.
  **Formato di archiviazione vardecimal abilitato**  
  A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], questa opzione è di sola lettura. Se impostata su **True**, per il database è abilitato il formato di archiviazione vardecimal. Questo formato non può essere disabilitato se è in uso da una o più tabelle del database. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, tutti i database utente sono abilitati per il formato di archiviazione vardecimal. Questa opzione usa [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
   
-## <a name="recovery"></a>Recupero  
+## <a name="recovery"></a>Ripristino  
  **Verifica pagina**  
  Indica l'opzione utilizzata per individuare e segnalare le transazioni di I/O incomplete causate da errori di I/O su disco. I valori possibili sono **None**, **TornPageDetection**e **Checksum**. Per altre informazioni, vedere [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Tempo di recupero di riferimento (secondi)**  
  Specifica il limite massimo di tempo, in secondi, necessario per recuperare il database specificato in caso di un arresto anomalo del sistema. Per altre informazioni, vedere [Checkpoint di database &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
 
-## <a name="service-broker"></a>Service Broker  
+## <a name="service-broker"></a>Broker di servizio  
 **Broker abilitato**  
 Abilita o disabilita Service Broker.  
 
@@ -221,7 +221,7 @@ Identificatore di sola lettura.
  Indica se il database è di sola lettura. I valori possibili sono **True** e **False**. Se il valore è **True**, gli utenti possono unicamente leggere i dati contenuti nel database. Gli utenti non possono modificare i dati o gli oggetti di database. È tuttavia possibile eliminare il database usando l'istruzione `DROP DATABASE`. Il database non può essere in uso quando si specifica un nuovo valore per l'opzione **Database di sola lettura** . L'unica eccezione riguarda il database master e prevede che solo l'amministratore di sistema possa utilizzare il database master durante l'impostazione di questa opzione.  
   
  **Stato database**  
- Indica lo stato corrente del database. Questa opzione non è modificabile. Per ulteriori informazioni su **Stato database**, vedere [Database States](../../relational-databases/databases/database-states.md).  
+ Indica lo stato corrente del database. Non è modificabile. Per ulteriori informazioni su **Stato database**, vedere [Database States](../../relational-databases/databases/database-states.md).  
 
  **Crittografia abilitata**  
  Se questa opzione è impostata su **True**, la crittografia è abilitata per il database. Per la crittografia è necessaria una chiave di crittografia del database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  

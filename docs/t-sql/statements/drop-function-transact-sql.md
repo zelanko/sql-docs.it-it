@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044218"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68044218"
   
  La funzione DROP supporta le funzioni scalari definite dall'utente e compilate in modo nativo. Per altre informazioni, vedere [Funzioni scalari definite dall'utente per OLTP in memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,7 +65,7 @@ DROP FUNCTION [ schema_name. ] function_name
  *function_name*  
  Nome della funzione o delle funzioni definite dall'utente che si desidera rimuovere. Il nome dello schema è facoltativo. Non è possibile specificare il nome del server e il nome del database.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  DROP FUNCTION ha esito negativo se nel database esistono funzioni o viste [!INCLUDE[tsql](../../includes/tsql-md.md)] che fanno riferimento a questa funzione e sono state create con l'opzione SCHEMABINDING oppure se esistono colonne calcolate, vincoli CHECK o vincoli DEFAULT che fanno riferimento a questa funzione.  
   
  DROP FUNCTION ha esito negativo se esistono colonne calcolate che fanno riferimento a questa funzione e sono state indicizzate.  
@@ -75,7 +75,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dropping-a-function"></a>A. Eliminazione di una funzione  
+### <a name="a-dropping-a-function"></a>R. Eliminazione di una funzione  
  L'esempio seguente elimina la funzione definita dall'utente `fn_SalesByStore` dallo schema `Sales` nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Per creare questa funzione, vedere l'esempio B in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ```  

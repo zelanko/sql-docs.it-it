@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4410c086ed5fdca8fa4812a96c13bac6f692c8ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942958"
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (OR bit per bit) (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67942958"
 
   Esegue un'operazione con OR logico bit per bit tra i due valori interi specificati convertiti in espressioni binarie in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ expression | expression
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce un tipo **int** se i valori di input sono **int**, un tipo **smallint** se i valori di input sono **smallint** o un valore **tinyint** se i valori di input sono **tinyint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'operatore | esegue un'operazione con OR logico bit per bit tra due espressioni, considerando tutti i bit corrispondenti in entrambe le espressioni. I bit nel risultato sono impostati su 1 se il valore di uno o di entrambi i bit (per il bit in fase di risoluzione) delle espressioni di input è uguale a 1. Se nessuno dei bit è uguale a 1, il bit del risultato è impostato su 0.  
   
  Se alle due espressioni viene applicato un tipo di dati Integer diverso, ad esempio se il tipo *expression* a sinistra è **smallint** e il tipo *expression* a destra è **int**, l'argomento del tipo di dati di livello inferiore viene convertito nel tipo di dati di livello superiore. In questo esempio **smallint**_expression_ viene convertito in **int**.  
