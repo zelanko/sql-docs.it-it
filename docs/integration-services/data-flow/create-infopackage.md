@@ -11,10 +11,10 @@ ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25f1497b7801c7891681324b12fa9a5eda4eb842
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293205"
 ---
 # <a name="create-infopackage"></a>Crea InfoPackage
@@ -43,13 +43,13 @@ ms.locfileid: "71293205"
  **InfoSource**  
  Immettere il nome dell'InfoSource su cui deve essere basato il nuovo InfoPackage.  
   
- **Breve descrizione**  
+ **Descrizione breve**  
  Immettere una descrizione per il nuovo InfoPackage.  
   
  **Sistema di origine**  
  Selezionare il sistema di origine con cui deve essere associato il nuovo InfoPackage.  
   
- **Attributi**  
+ **Attributes (Attributi)**  
  Indica che l'InfoPackage caricherà i dati dell'attributo.  
   
  **Testi**  
@@ -62,6 +62,6 @@ ms.locfileid: "71293205"
  Salvare e attivare il nuovo InfoPackage.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida (F1) di Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Guida sensibile al contesto di Microsoft Connector per SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

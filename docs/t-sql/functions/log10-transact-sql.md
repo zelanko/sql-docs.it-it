@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c84d73c0ee48b75c8f31dda4dc87ecfbac5913f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059878"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68059878"
 
   Restituisce il logaritmo in base 10 dell'espressione **float** specificata.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,12 +48,12 @@ LOG10 ( float_expression )
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le funzioni LOG10 e POWER sono inversamente correlate. Ad esempio, 10 ^ LOG10(*n*) = *n*.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>A. Calcolo del logaritmo in base 10 per una variabile.  
+### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>R. Calcolo del logaritmo in base 10 per una variabile.  
  Nell'esempio seguente viene calcolato il valore `LOG10` della variabile specificata.  
   
 ```  

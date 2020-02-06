@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123753"
 ---
 # <a name="create-foreign-key-relationships"></a>Creare relazioni di chiave esterna
@@ -52,7 +52,7 @@ Per la creazione di una chiave esterna in una tabella esistente è richiesta l'a
 
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>Creare una relazione di chiave esterna in Progettazione tabelle
 
-### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Utilizzare SQL Server Management Studio
 
 1. In Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella che si troverà sul lato chiave esterna della relazione e scegliere **Progetta**.
 
@@ -71,7 +71,7 @@ Per la creazione di una chiave esterna in una tabella esistente è richiesta l'a
 
 ## <a name="create-a-foreign-key-in-a-new-table"></a>Creare una chiave esterna in una nuova tabella
 
-### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
+### <a name="using-transact-sql"></a>Uso di Transact-SQL
 
 L'esempio seguente crea una tabella e definisce un vincolo di chiave esterna nella colonna `TempID` alla quale fa riferimento la colonna `SalesReasonID` nella tabella `Sales.SalesReason` nel database AdventureWorks. Le clausole ON DELETE CASCADE e ON UPDATE CASCADE vengono utilizzate per garantire che le modifiche apportate alla tabella `Sales.SalesReason` vengano propagate automaticamente alla tabella `Sales.TempSalesReason` .    
 
@@ -90,7 +90,7 @@ CREATE TABLE Sales.TempSalesReason
 
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>Creare una chiave esterna in una tabella esistente
 
-### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
+### <a name="using-transact-sql"></a>Uso di Transact-SQL
 L'esempio seguente crea una chiave esterna nella colonna `TempID` e fa riferimento alla colonna `SalesReasonID` nella tabella `Sales.SalesReason` nel database AdventureWorks.
 
 ```sql

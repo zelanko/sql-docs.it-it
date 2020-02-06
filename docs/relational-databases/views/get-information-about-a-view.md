@@ -23,15 +23,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909885"
 ---
 # <a name="get-information-about-a-view"></a>Ottenere informazioni su una vista
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-  Tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile acquisire informazioni sulla definizione o sulle proprietà di una vista in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Potrebbe essere necessario visualizzare la definizione della vista per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla vista.  
+  Tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile acquisire informazioni sulla definizione o sulle proprietà di una vista in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Potrebbe essere necessario visualizzare la definizione della vista per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla vista.  
   
 > [!IMPORTANT]  
 >  Se si cambia il nome di un oggetto a cui viene fatto riferimento da una vista, è necessario modificare la vista in modo che per il relativo testo venga fatto riferimento al nuovo nome. Prima di rinominare un oggetto, visualizzare innanzitutto le relative dipendenze per determinare se la modifica proposta interessa le viste.  
@@ -40,7 +40,7 @@ ms.locfileid: "72909885"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per acquisire informazioni su una vista tramite:**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72909885"
 ####  <a name="Permissions"></a> Autorizzazioni  
  L'utilizzo di `sp_helptext` per restituire la definizione di una vista richiede l'appartenenza al ruolo **pubblico** . L'utilizzo di `sys.sql_expression_dependencies` per individuare tutte le dipendenze in una vista richiede l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su `sys.sql_expression_dependencies` per il database. Le definizioni dell'oggetto di sistema, come quelle restituite in SELECT OBJECT_DEFINITION sono visibili pubblicamente.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Acquisire le proprietà di visualizzazione tramite Esplora oggetti  
   
@@ -111,7 +111,7 @@ ms.locfileid: "72909885"
      **(Nome)**  
      Nome della vista corrente.  
   
-     **Database Name**  
+     **Nome database**  
      Nome del database contenente la vista.  
   
      **Descrizione**  
@@ -120,7 +120,7 @@ ms.locfileid: "72909885"
      **Schema**  
      Consente di visualizzare lo schema proprietario della vista.  
   
-     **Server Name**  
+     **Nome server**  
      Nome dell'istanza del server corrente.  
   
      **Associa a schema**  
@@ -153,7 +153,7 @@ ms.locfileid: "72909885"
      **Percentuale**  
      Specifica che la query includerà una clausola **TOP** che restituirà soltanto il primo n percento di righe del set di risultati  
   
-     **With Ties**  
+     **Con valori equivalenti**  
      Specifica che la vista includerà una clausola **WITH TIES** . **WITH TIES** è utile se nella vista sono incluse anche una clausola **ORDER BY** e una **TOP** basate sulla percentuale. Se questa opzione è impostata e la percentuale limite specificata rientra in un set di righe con valori identici nella clausola **ORDER BY** , la vista verrà estesa fino a includere tutte queste righe.  
   
      **Specifica aggiornamento**  
@@ -177,7 +177,7 @@ ms.locfileid: "72909885"
   
 4.  Selezionare **Oggetti da cui dipende [nome vista]** per visualizzare gli oggetti a cui viene fatto riferimento dalla vista.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Per acquisire la definizione e le proprietà di una vista  
   

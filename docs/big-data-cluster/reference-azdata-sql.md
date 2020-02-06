@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 951598c895fe322ee1a8b32cbbc2dc29b20c8e1a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f8fa1ca8df7f4d72c6df9b252d639f8771dee30c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531655"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908743"
 ---
 # <a name="azdata-sql"></a>azdata sql
 
@@ -22,7 +22,7 @@ ms.locfileid: "73531655"
 
 L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [azdata sql shell](#azdata-sql-shell) | L'interfaccia della riga di comando dei database SQL consente agli utenti di interagire con SQL Server tramite T-SQL.
@@ -51,13 +51,12 @@ Aumenta il livello di dettaglio della registrazione. Usare --debug per log di de
 ## <a name="azdata-sql-query"></a>azdata sql query
 Il comando di query consente l'esecuzione di una query T-SQL.
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q --database -d
 ```
 ### <a name="examples"></a>Esempi
 Selezionare l'elenco dei nomi di tabelle.  Il valore predefinito per il database è "master".
 ```bash
-azdata sql query 'SELECT name FROM SYS.TABLES'
+azdata sql query -q 'SELECT name FROM SYS.TABLES'
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--database -d`

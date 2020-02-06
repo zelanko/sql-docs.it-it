@@ -11,10 +11,10 @@ ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f2678853d13436811b53b40473a04191625535db
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295141"
 ---
 # <a name="catalogworker_agents-ssisdb-database"></a>catalog.worker_agents (database SSISDB)
@@ -37,7 +37,7 @@ Visualizza le informazioni su [!INCLUDE[ssISnoversion](../../includes/ssisnovers
 |UserAccount|**nvarchar(256)**|Account che esegue il servizio Scale Out Worker.|
 |LastOnlineTime|**datetimeoffset(7)**|Ultima esecuzione online del servizio Scale Out Worker.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 Questa vista mostra una riga per ogni Scale Out Worker che si connette allo Scale Out Master che interagisce con il catalogo SSISDB.
 
 ## <a name="permissions"></a>Autorizzazioni

@@ -1,10 +1,9 @@
 ---
-title: Proprietà delle query (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Proprietà delle query
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5365ffd384ae7feeee35924388ad0f89b03d629
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0be86ddee956542e2637547acc989cf35407f2dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266288"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255332"
 ---
 # <a name="query-properties-visual-database-tools"></a>Proprietà delle query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ Viene espansa per visualizzare la proprietà **Nome** .
 **Nome**  
 Visualizza il nome della query corrente. Non è possibile modificarlo in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-**Database Name**  
+**Nome database**  
 Visualizza il nome dell'origine dati della tabella selezionata  
   
 **Nome server**  
@@ -77,7 +78,7 @@ Utilizzare questa casella per cambiare il numero di righe restituite o specifica
 **Espressione**  
 Specifica il numero o la percentuale delle righe che verranno restituite dalla query. Se si imposta **Percentuale** su Sì, il numero indicherà la percentuale delle righe che verranno restituite dalla query, mentre se si imposta **Percentuale** su No, il valore rappresenterà il numero di righe da restituire (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
-**Percentualeuale**  
+**Percentuale**  
 Specifica che la query restituirà soltanto il primo *n* percento delle righe del set di risultati (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
 **Con valori equivalenti**  

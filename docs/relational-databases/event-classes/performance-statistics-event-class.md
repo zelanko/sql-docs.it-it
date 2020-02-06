@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6dff2998686c73693f73ecbcad0b9b7f360ca86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940717"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics - classe di evento
@@ -24,7 +24,7 @@ ms.locfileid: "67940717"
   La classe di evento Performance Statistics consente di eseguire il monitoraggio delle prestazioni di query, stored prcoedure e trigger in esecuzione. Ciascuna delle sei sottoclassi di evento indica un evento generato nel corso di query, stored procedure e trigger all'interno del sistema. L'utilizzo di tali sottoclassi di evento in combinazione con le viste a gestione dinamica sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associate consente di ricostituire la cronologia delle prestazioni di qualsiasi query, stored procedure o trigger specifico.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Colonne di dati della classe di evento Performance Statistics  
- Le tabelle seguenti descrivono le colonne dei dati delle classi di evento associate a ognuna delle sottoclassi di evento seguenti: EventSubClass 0, EventSubClass 1,EventSubClass 2,EventSubClass 3, EventSubClass 4 ed EventSubClass 5.  
+ Nelle tabelle seguenti sono descritte le colonne di dati della classe di evento associate a ciascuna delle sottoclassi di evento EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 ed EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
@@ -33,12 +33,12 @@ ms.locfileid: "67940717"
 |BigintData1|**bigint**|NULL|52|Sì|  
 |BinaryData|**image**|NULL|2|Sì|  
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 0 = Nuovo testo SQL del batch non presente nella cache.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per batch ad hoc.<br /><br /> Batch ad hoc con *n* query, dove n rappresenta un numero:<br /><br /> 1 di tipo 0|21|Sì|  
-|IntegerData2|**Int**|NULL|55|Sì|  
+|IntegerData2|**int**|NULL|55|Sì|  
 |ObjectID|**int**|NULL|22|Sì|  
 |Offset|**int**|NULL|61|Sì|  
-|PlanHandle|**Image**|NULL|65|Sì|  
+|PlanHandle|**Immagine**|NULL|65|Sì|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |SqlHandle|**image**|Handle SQL utilizzabile per ottenere il testo SQL del batch tramite la vista a gestione dinamica sys.dm_exec_sql_text.|63|Sì|  
@@ -52,7 +52,7 @@ ms.locfileid: "67940717"
 |BigintData1|**bigint**|Numero cumulativo di ricompilazioni del piano.|52|Sì|  
 |BinaryData|**image**|XML binario del piano compilato.|2|Sì|  
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Le query incluse in una stored procedure sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per stored procedure.<br /><br /> Stored procedure con *n* query, dove n rappresenta un numero:<br /><br /> Numero*n* di tipo 1|21|Sì|  
 |IntegerData2|**int**|Fine dell'istruzione nella stored procedure.<br /><br /> -1 per la fine della stored procedure.|55|Sì|  
@@ -76,7 +76,7 @@ ms.locfileid: "67940717"
 |BigintData1|**bigint**|Numero cumulativo di ricompilazioni del piano.|52|Sì|  
 |BinaryData|**image**|XML binario del piano compilato.|2|Sì|  
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 2 = Le query incluse in un'istruzione SQL ad hoc sono state compilate.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia per batch ad hoc.<br /><br /> Batch ad hoc con *n* query, dove n rappresenta un numero:<br /><br /> Numero*n* di tipo 2|21|Sì|  
 |IntegerData2|**int**|Fine dell'istruzione nel batch.<br /><br /> -1 per la fine del batch.|55|Sì|  
@@ -99,7 +99,7 @@ ms.locfileid: "67940717"
 |BigintData1|**bigint**|Numero cumulativo di ricompilazioni del piano.|52|Sì|  
 |BinaryData|**image**|NULL|2|Sì|  
 |DatabaseID|**int**|ID del database specificato nell'istruzione di *database* USE oppure il database predefinito se per un'istanza specifica l'istruzione di *database* USE non è stata eseguita. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 3 = Una query memorizzata nella cache è stata distrutta e anche i dati relativi alla cronologia delle prestazioni associati al piano stanno per essere distrutti.<br /><br /> Di seguito sono elencati i tipi di sottoclasse EventSubClass generati nella traccia.<br /><br /> Batch ad hoc con *n* query, dove n rappresenta un numero:<br /><br /> 1 di tipo 3 quando la query viene scaricata dalla cache<br /><br /> Stored procedure con *n* query, dove n rappresenta un numero:<br /><br /> 1 di tipo 3 quando la query viene scaricata dalla cache.|21|Sì|  
 |IntegerData2|**int**|Fine dell'istruzione nella stored procedure o nel batch.<br /><br /> -1 per la fine della stored procedure o del batch.|55|Sì|  
@@ -119,10 +119,10 @@ ms.locfileid: "67940717"
 |BigintData1|**bigint**|NULL|52|Sì|  
 |BinaryData|**image**|NULL|2|Sì|  
 |DatabaseID|**int**|ID del database in cui è contenuta la stored procedure specifica.|3|Sì|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 4 = Una stored procedure memorizzata nella cache è stata rimossa dalla cache e i dati relativi alla cronologia delle prestazioni associati verranno distrutti.|21|Sì|  
-|IntegerData2|**Int**|NULL|55|Sì|  
+|IntegerData2|**int**|NULL|55|Sì|  
 |ObjectID|**int**|ID della stored procedure. Tale nome è lo stesso di quello della colonna object_id in sys.procedures.|22|Sì|  
 |Offset|**int**|NULL|61|Sì|  
 |SPID|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
@@ -139,10 +139,10 @@ ms.locfileid: "67940717"
 |BigintData1|**bigint**|NULL|52|Sì|  
 |BinaryData|**image**|NULL|2|Sì|  
 |DatabaseID|**int**|ID del database in cui è contenuto il trigger specifico.|3|Sì|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 5 = Un trigger memorizzato nella cache è stata rimosso dalla cache e i dati relativi alla cronologia delle prestazioni associati verranno distrutti.|21|Sì|  
-|IntegerData2|**Int**|NULL|55|Sì|  
+|IntegerData2|**int**|NULL|55|Sì|  
 |ObjectID|**int**|ID del trigger. Tale ID è lo stesso di quello della colonna object_id nelle viste del catalogo sys.triggers/sys.server_triggers.|22|Sì|  
 |Offset|**int**|NULL|61|Sì|  
 |SPID|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
