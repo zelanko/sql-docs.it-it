@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a8baa16e2b2d7e22bfd3d4045ff77483e198aec
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68354592"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar e nvarchar (Transact-SQL)
@@ -35,8 +35,8 @@ Dati stringa a dimensione fissa. *n* definisce le dimensioni della stringa in co
 **nvarchar** [ ( n | **max** ) ]  
 Dati stringa a dimensione variabile. *n* definisce le dimensioni della stringa in coppie di byte e può essere un valore compreso tra 1 e 4.000. **max** indica che le dimensioni di archiviazione massime sono pari a 2^30-1 caratteri (2 GB). Le dimensioni di archiviazione, espresse in byte, sono pari al doppio di *n* byte + 2 byte. Per la codifica [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), le dimensioni di archiviazione sono pari al doppio di *n* byte + 2 byte e anche il numero di caratteri che possono essere archiviati è *n*. Per la codifica UTF-16, le dimensioni di archiviazione sono ancora pari al doppio di *n* byte + 2 byte, ma il numero di caratteri che possono essere archiviati può essere inferiore a *n* perché i caratteri supplementari usano due coppie di byte, dette anche [coppie di surrogati](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF). I sinonimi ISO per **nvarchar** sono **national char varying** e **national character varying**.
   
-## <a name="remarks"></a>Remarks  
-Si pensa comunemente che in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* definisca il numero di caratteri. Invece in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) *n* definisce la lunghezza della stringa in **coppie di byte** (da 0 a 4.000). *n* non definisce mai il numero di caratteri che è possibile archiviare, analogamente alla definizione di [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
+## <a name="remarks"></a>Osservazioni  
+Si pensa comunemente che in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* definisca il numero di caratteri. Invece in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)*n* definisce la lunghezza della stringa in **coppie di byte** (da 0 a 4.000). *n* non definisce mai il numero di caratteri che è possibile archiviare, analogamente alla definizione di [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
 Si tende a pensare così perché quando si usano i caratteri definiti nell'intervallo Unicode (da 0 a 65.535), è possibile archiviare un carattere per ogni coppia di byte. Tuttavia, negli intervalli Unicode più elevati (65.536-1.114.111) un carattere può usare due coppie di byte. Ad esempio in una colonna definita come NCHAR(10) [!INCLUDE[ssde_md](../../includes/ssde_md.md)] può archiviare 10 caratteri che usano una coppia di byte (intervallo Unicode 0-65.535), ma meno di 10 caratteri quando usano due coppie di byte (intervallo Unicode 65.536-1.114.111). Per altre informazioni sull'archiviazione Unicode e sugli intervalli di caratteri, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).     
 
 Se *n* viene omesso in un'istruzione di definizione dei dati o di dichiarazione di variabili, la lunghezza predefinita è 1. Se *n* viene omesso in una funzione CAST, la lunghezza predefinita è 30.

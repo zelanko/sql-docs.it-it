@@ -10,19 +10,16 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 957d0fa1d5b311fbecfd76340e443e8f2f3f81f5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296428"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76037049"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>Funzioni - dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Restituisce le statistiche sulle prestazioni per un'esecuzione in corso nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -39,7 +36,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  Se non è specificato alcun ID esecuzione, vengono restituite le statistiche per più esecuzioni. Se si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per tutte le esecuzioni in corso.  Se non si è un membro del ruolo del database **ssis_admin** , vengono restituite le statistiche sulle prestazioni per le esecuzioni in corso per cui si dispone delle autorizzazioni di lettura. *execution_id* è di tipo **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente sono elencati i valori dei nomi dei contatori restituiti dalla funzione dm_execution_performance_counter.  
   
 |Nome contatore|Descrizione|  
@@ -60,7 +57,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Return  
  La funzione dm_execution_performance_counters restituisce una tabella con le colonne seguenti per un'esecuzione in corso. Le informazioni restituite riguardano tutti i pacchetti contenuti nell'esecuzione. In assenza di esecuzioni in corso, viene restituita una tabella vuota.  
   
-|Nome colonna|Tipo di colonna|Descrizione|Remarks|  
+|Nome colonna|Tipo di colonna|Descrizione|Osservazioni|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** non è un valore valido.|Identificatore univoco per l'esecuzione che contiene il pacchetto.||  
 |counter_name|**nvarchar(128)**|Nome del contatore.|Vedere la sezione **Osservazioni** relativa ai valori.|  

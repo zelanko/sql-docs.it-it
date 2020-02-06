@@ -12,10 +12,10 @@ ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242567"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure
@@ -32,7 +32,7 @@ ms.locfileid: "75242567"
 ## <a name="configure-encryption"></a>Configurare la crittografia  
  I passaggi seguenti descrivono come specificare le impostazioni di crittografia usando la stored procedure [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
 
-1.  **Determinare l'algoritmo di crittografia:** determinare prima di tutto il nome dell'algoritmo di crittografia da usare. Selezionare uno degli algoritmi seguenti:  
+1.  **Determinare l'algoritmo di crittografia** : stabilire prima di tutto il nome dell'algoritmo di crittografia da usare. Selezionare uno degli algoritmi seguenti:  
   
     -   AES_128  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75242567"
   
     -   NO_ENCRYPTION  
   
-2.  **Creare una chiave master del database:** Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database.  
+2.  **Creare una chiave master del database:** scegliere una password per crittografare la copia della chiave master che verrà archiviata nel database.  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +55,7 @@ ms.locfileid: "75242567"
     GO  
     ```  
   
-3.  **Creare un certificato di backup o una chiave asimmetrica:** è possibile usare un certificato o una chiave asimmetrica per l'uso con la crittografia. L'esempio seguente crea un certificato di backup da usare per la crittografia.  
+3.  **Creare un certificato o una chiave asimmetrica per il backup:** è possibile usare un certificato o una chiave asimmetrica da usare con la crittografia. L'esempio seguente crea un certificato di backup da usare per la crittografia.  
   
     ```sql  
     USE Master;  
@@ -90,11 +90,11 @@ ms.locfileid: "75242567"
   
 3.  **Determinare il giorno della settimana per i backup settimanali:** se il backup è settimanale, scegliere un giorno della settimana per il backup completo.  
   
-4.  **Determinare l'ora di inizio per il backup:** usando la notazione con 24 ore, scegliere un'ora di inizio per il backup.  
+4.  **Determinare l'ora di inizio per il backup:** scegliere l'ora di inizio del backup usando il formato 24 ore.  
   
-5.  **Determinare il periodo di tempo per l'esecuzione del backup:** specificare la quantità di tempo disponibile per il completamento di un backup.  
+5.  **Determinare la durata consentita per il backup:** specificare il periodo di tempo entro il quale deve essere completato un backup.  
   
-6.  **Impostare una pianificazione personalizzata per il backup:** la stored procedure seguente definisce una pianificazione personalizzata per il database `MyDB`. I backup completi vengono eseguiti settimanalmente il giorno `Monday` alle `17:30`. I backup del log vengono eseguiti ogni `5` minuti. Per il completamento del backup sono previste due ore.  
+6.  **Impostare una pianificazione personalizzata per il backup:** la stored procedure seguente definisce una pianificazione personalizzata per il database `MyDB` . I backup completi vengono eseguiti settimanalmente il giorno `Monday` alle `17:30`. I backup del log vengono eseguiti ogni `5` minuti. Per il completamento del backup sono previste due ore.  
   
     ```  
     USE msdb;  

@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109369"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68109369"
   
  Per estrarre un valore scalare da una stringa JSON anziché un oggetto o una matrice, vedere [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md). Per informazioni sulle differenze tra **JSON_VALUE** e **JSON_QUERY**, vedere [Confronto tra JSON_VALUE e JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,7 +69,7 @@ Se il formato di *path* non è valido, **JSON_QUERY** restituisce un errore.
   
 - In modalità strict **JSON_QUERY** restituisce un errore.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 
 ### <a name="lax-mode-and-strict-mode"></a>Modalità lax e modalità strict
 
@@ -92,7 +92,7 @@ Se il formato di *path* non è valido, **JSON_QUERY** restituisce un errore.
   
  Nella tabella seguente viene confrontato il comportamento di **JSON_QUERY** in modalità lax e in modalità strict. Per altre informazioni sulla specifica facoltativa della modalità del percorso (lax o strict), vedere [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Percorso|Valore restituito in modalità lax|Valore restituito in modalità strict|Altre informazioni|  
+|Path|Valore restituito in modalità lax|Valore restituito in modalità strict|Altre informazioni|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|Restituisce l'intero testo JSON.|Restituisce l'intero testo JSON.|N/a|  
 |$.info.type|NULL|Errore|Non è un oggetto o una matrice.<br /><br /> Usare **JSON_VALUE**.|  
@@ -102,7 +102,7 @@ Se il formato di *path* non è valido, **JSON_QUERY** restituisce un errore.
 |$.info.type[0]|NULL|Errore|Non è una matrice.|  
 |$.info.none|NULL|Errore|La proprietà non esiste.|  
 
-### <a name="using-jsonquery-with-for-json"></a>Uso di JSON_QUERY con FOR JSON
+### <a name="using-json_query-with-for-json"></a>Uso di JSON_QUERY con FOR JSON
 
 **JSON_QUERY** restituisce un frammento JSON valido. Di conseguenza, **FOR JSON** non ignora i caratteri speciali nel valore restituito di **JSON_QUERY**.
 

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3006b3258d26f359e5eab98856ca7ffe43d8321a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908235"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287328"
 ---
 # <a name="republish-data"></a>Ripubblicazione dei dati
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "72908235"
   
  La replica supporta gli scenari di ripubblicazione illustrati nella tabella seguente.  
   
-|Server di pubblicazione|Sottoscrittore di pubblicazione|Sottoscrittore|  
+|Editore|Sottoscrittore di pubblicazione|Sottoscrittore|  
 |---------------|---------------------------|----------------|  
 |Pubblicazione transazionale|Sottoscrizione transazionale/pubblicazione transazionale|Sottoscrizione transazionale|  
 |Pubblicazione transazionale|Sottoscrizione transazionale/pubblicazione di tipo merge*|Sottoscrizione di tipo merge|  

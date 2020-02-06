@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3330b9b44f2794daf8e9cd45e9806991a6a815de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999765"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation - classe di evento
@@ -27,26 +27,26 @@ ms.locfileid: "67999765"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Colonne di dati della classe di evento Broker:Conversation  
   
-|Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
+|Colonna di dati|Type|Descrizione|Numero di colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nome dell'applicazione client in cui è stata creata la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa colonna viene popolata con i valori passati dall'applicazione al posto del nome visualizzato del programma.|10|Sì|  
 |**ClientProcessID**|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se l'ID del processo client viene fornito dal client.|9|Sì|  
 |**DatabaseID**|**int**|ID del database specificato dall'istruzione USE *database* oppure ID del database predefinito, se non è stata eseguita un'istruzione USE *database*. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati **ServerName** è acquisita nella traccia e il server è disponibile. È possibile determinare il valore per un database tramite la funzione **DB_ID** .|3|Sì|  
-|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Broker:Conversation** è sempre **124**.|27|no|  
-|**EventSequence**|**int**|Numero di sequenza dell'evento.|51|no|  
+|**EventClass**|**int**|Tipo di classe di evento acquisita. Per **Broker:Conversation** è sempre **124**.|27|No|  
+|**EventSequence**|**int**|Numero di sequenza dell'evento.|51|No|  
 |**EventSubClass**|**nvarchar**|Tipo di sottoclasse di evento. Fornisce ulteriori informazioni su ogni classe di evento.|21|Sì|  
-|**GUID**|**uniqueidentifier**|ID della conversazione della finestra. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|no|  
+|**GUID**|**uniqueidentifier**|ID della conversazione della finestra. Questo identificatore viene trasmesso come parte del messaggio e viene condiviso da entrambi i lati della conversazione.|54|No|  
 |**HostName**|**nvarchar**|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione **HOST_NAME** .|8|Sì|  
-|**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|no|  
+|**IsSystem**|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|No|  
 |**LoginSid**|**image**|ID di sicurezza (SID) dell'utente connesso. Il SID è univoco per ogni account di accesso nel server.|41|Sì|  
-|**MethodName**|**nvarchar**|Gruppo di conversazioni al quale la conversazione appartiene.|47|no|  
+|**MethodName**|**nvarchar**|Gruppo di conversazioni al quale la conversazione appartiene.|47|No|  
 |**NTDomainName**|**nvarchar**|Dominio di Windows a cui appartiene l'utente.|7|Sì|  
 |**NTUserName**|**nvarchar**|Nome dell'utente proprietario della connessione che ha generato questo evento.|6|Sì|  
-|**ObjectName**|**nvarchar**|Handle di conversazione del dialogo.|34|no|  
+|**ObjectName**|**nvarchar**|Handle di conversazione del dialogo.|34|No|  
 |**Priorità**|**int**|Livello di priorità della conversazione|5|Sì|  
-|**RoleName**|**nvarchar**|Ruolo dell'handle di conversazione. I valori possibili sono **initiator** o **target**.|38|no|  
-|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
-|**Severity**|**int**|Gravità dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se l'evento indica un errore.|29|no|  
+|**RoleName**|**nvarchar**|Ruolo dell'handle di conversazione. I valori possibili sono **initiator** o **target**.|38|No|  
+|**ServerName**|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
+|**Severity**|**int**|Gravità dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se l'evento indica un errore.|29|No|  
 |**SPID**|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |**TextData**|**ntext**|Stato corrente della conversazione. I valori consentiti sono i seguenti:|1|Sì|  
@@ -57,7 +57,7 @@ ms.locfileid: "67999765"
 |||**DO**. Disconnessa in uscita (Disconnected outbound). Il lato locale della conversazione ha eseguito un'istruzione END CONVERSATION. La conversazione rimane in questo stato finché il lato remoto della conversazione invia un acknowledgement dell'istruzione END CONVERSATION. Un'applicazione non può inviare o ricevere messaggi per la conversazione. Quando il lato remoto della conversazione invia un acknowledgement per END CONVERSATION, la conversazione passa allo stato CLOSED (CD).|||  
 |||**ER**. Errore. In questo endpoint si è verificato un errore. Le colonne Error, Severity e State contengono informazioni sull'errore specifico verificatosi.|||  
 |||**CD**. Chiusa. L'endpoint di conversazione non è più in uso.|||  
-|**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|no|  
+|**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|No|  
   
  Nella tabella seguente sono elencati i valori delle sottoclassi di questa classe di evento.  
   

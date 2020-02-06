@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026496"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68026496"
 
 Questa funzione restituisce il numero di elementi presenti in un gruppo. Il funzionamento di `COUNT` è analogo a quello della funzione [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md). Queste funzioni differiscono solo per i tipi di dati dei valori restituiti. `COUNT` restituisce sempre un valore con tipo di dati **int**. `COUNT_BIG` restituisce sempre un valore con tipo di dati **bigint**.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,7 +67,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 ## <a name="return-types"></a>Tipi restituiti
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 La funzione COUNT(\*) restituisce il numero di elementi di un gruppo, inclusi valori NULL e duplicati.
   
 COUNT(ALL *expression*) valuta *expression* per ogni riga in un gruppo e restituisce il numero di valori non Null.
@@ -80,7 +80,7 @@ Per i valori restituiti che superano 2^31-1, `COUNT` restituisce un errore. Per 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-count-and-distinct"></a>A. Utilizzo della funzione COUNT e dell'opzione DISTINCT  
+### <a name="a-using-count-and-distinct"></a>R. Utilizzo della funzione COUNT e dell'opzione DISTINCT  
 Questo esempio restituisce il numero di titoli diversi che può avere un dipendente di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].
   
 ```sql
@@ -136,7 +136,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D. Utilizzo della clausola OVER  
-Questo esempio usa le funzioni `MIN`, `MAX`, `AVG` e `COUNT` con la clausola `OVER` per restituire valori aggregati per ogni reparto nella tabella `HumanResources.Department` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+Questo esempio usa le funzioni `MIN`, `MAX`, `AVG` e `COUNT` con la clausola `OVER` per restituire valori aggregati per ogni reparto nella tabella [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] del database `HumanResources.Department`.
   
 ```sql
 SELECT DISTINCT Name  
