@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212300"
 ---
 # <a name="secure-the-subscriber"></a>Sicurezza del Sottoscrittore
@@ -57,7 +57,7 @@ ms.locfileid: "70212300"
  Per altre informazioni, vedere [Creare una sottoscrizione aggiornabile di una pubblicazione transazionale](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) e [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione. Concedere autorizzazioni per le viste del database di pubblicazione con nomi nel formato **syncobj_**_\<NumeroEsadecimale>_ all'account configurato in ogni Sottoscrittore.  
+>  È consigliabile concedere all'account specificato per la connessione solo le autorizzazioni necessarie per l'inserimento, l'aggiornamento e l'eliminazione dei dati delle viste create dalla replica nel database di pubblicazione. Concedere autorizzazioni per le viste del database di pubblicazione con nomi nel formato **syncobj_** _\<NumeroEsadecimale>_ all'account configurato in ogni Sottoscrittore.  
   
 ## <a name="queued-updating-subscriptions"></a>Sottoscrizioni ad aggiornamento in coda  
  Quando si configurano sottoscrizioni ad aggiornamento in coda, è necessario tenere in considerazione due aspetti relativi alla sicurezza.  
@@ -75,7 +75,7 @@ ms.locfileid: "70212300"
     > [!IMPORTANT]  
     >  Utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per le connessioni ai Sottoscrittori e specificare un diverso account per la connessione a ogni Sottoscrittore. Se si utilizza una sottoscrizione pull, la connessione viene sempre impostata dalla replica in modo da utilizzare l'autenticazione di Windows. Per le sottoscrizioni pull, la replica non può infatti accedere ai metadati nel Sottoscrittore necessari per utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In questo caso, modificare la connessione in modo da utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dopo la configurazione della sottoscrizione.  
   
-     Per altre informazioni, vedere Procedura: Creare una sottoscrizione aggiornabile di una pubblicazione transazionale (SQL Server Management Studio) e [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
+     Per altre informazioni, vedere "Procedura: Creare una sottoscrizione aggiornabile di una pubblicazione transazionale (SQL Server Management Studio)" e [Visualizzare e modificare le impostazioni di sicurezza della replica](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Abilitare connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

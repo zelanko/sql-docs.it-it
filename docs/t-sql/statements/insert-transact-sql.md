@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982222"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -295,7 +295,7 @@ Clausola OUTPUT
 > [!NOTE]
 >  Se non viene specificato un elenco di colonne, viene generato un errore di sintassi.  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Per informazioni specifiche sull'inserimento di dati in tabelle grafici SQL, vedere [INSERT (grafico SQL)](../../t-sql/statements/insert-sql-graph.md). 
 
 ## <a name="best-practices"></a>Procedure consigliate  
@@ -407,7 +407,7 @@ In Parallel Data Warehouse la clausola ORDER BY non è valida in VIEWS, CREATE T
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione INSERT per la tabella di destinazione.  
   
- Le autorizzazioni INSERT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
+ Le autorizzazioni INSERT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner**, e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
   
  Per eseguire INSERT con l'opzione BULK della funzione OPENROWSET, è necessario essere un membro del ruolo predefinito del server **sysadmin** o **bulkadmin**.  
   
@@ -427,7 +427,7 @@ In Parallel Data Warehouse la clausola ORDER BY non è valida in VIEWS, CREATE T
 ###  <a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base dell'istruzione INSERT tramite la sintassi minima richiesta.  
   
-#### <a name="a-inserting-a-single-row-of-data"></a>A. Inserimento di una sola riga di dati  
+#### <a name="a-inserting-a-single-row-of-data"></a>R. Inserimento di una sola riga di dati  
  Nell'esempio seguente viene inserita una riga nella tabella `Production.UnitMeasure` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Le colonne nella tabella sono `UnitMeasureCode`, `Name` e `ModifiedDate`. Poiché vengono specificati valori per tutte le colonne e questi vengono elencati nello stesso ordine delle colonne nella tabella, non è necessario specificare i nomi delle colonne nell'elenco delle colonne *.*  
   
 ```sql

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075274"
 ---
 # <a name="-equals-transact-sql"></a>= (uguale a) (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68075274"
 
   Esegue un confronto per determinare se due espressioni sono uguali (operatore di confronto) in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ expression = expression
 ## <a name="result-types"></a>Tipi restituiti  
  Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se si esegue il confronto usando un'espressione NULL, il risultato dipende dall'impostazione `ANSI_NULLS`:  
   
 -   Se `ANSI_NULLS` è impostata su ON, il risultato di qualsiasi confronto con NULL è UNKNOWN, in base alla convenzione ANSI secondo la quale NULL è un valore sconosciuto che non può essere confrontato con nessun altro valore, neanche con altri valori NULL.  
@@ -62,7 +62,7 @@ Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-s
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using--in-a-simple-query"></a>A. Utilizzo di = in una query semplice  
+### <a name="a-using--in-a-simple-query"></a>R. Utilizzo di = in una query semplice  
  Nell'esempio seguente l'operatore Uguale a viene utilizzato per restituire tutte le righe della tabella `HumanResources.Department` in cui il valore della colonna `GroupName` è uguale alla parola "Manufacturing".  
   
 ```  
@@ -88,7 +88,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>B. Confronto tra valori NULL e non NULL  
- Nell'esempio seguente vengono utilizzati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null di una tabella. L'esempio evidenzia anche il fatto che l'impostazione dell'opzione `SET ANSI_NULLS` non influisce su `IS NULL`.  
+ Nell'esempio seguente vengono utilizzati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null di una tabella. L'esempio evidenzia anche il fatto che l'impostazione dell'opzione `IS NULL` non influisce su `SET ANSI_NULLS`.  
   
 ```  
 -- Create table t1 and insert 3 rows.  

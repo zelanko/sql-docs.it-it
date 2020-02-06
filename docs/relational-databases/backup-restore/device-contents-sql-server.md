@@ -13,10 +13,10 @@ ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068495"
 ---
 # <a name="device-contents-sql-server"></a>Contenuto dispositivo (SQL Server)
@@ -57,8 +57,8 @@ ms.locfileid: "68068495"
 |Intestazione|Valori|  
 |------------|------------|  
 |**Nome**|Nome del set di backup.|  
-|**Tipo**|Tipo di operazione di backup eseguita: Completo, Differenziale o Log delle transazioni.|  
-|**Componente**|Componente di cui è stato eseguito il backup: Database, File o *\<vuoto>* (per i log delle transazioni).|  
+|**Tipo**|Tipo di backup eseguito, ovvero Completo, Differenziale o Log delle transazioni.|  
+|**Componente**|Componente incluso nel backup, ovvero Database, File o *\<vuoto>* (nel caso dei log delle transazioni).|  
 |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
 |**Database**|Nome del database di cui è stato eseguito il backup.|  
 |**Posizione**|Posizione del set di backup nel volume.|  

@@ -11,10 +11,10 @@ ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d131ebd8d532e0844774fc675165750832f964c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295466"
 ---
 # <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project (database SSISDB)
@@ -71,7 +71,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Quando viene ripristinato un progetto, a tutti i parametri vengono assegnati i valori predefiniti mentre tutti i riferimenti all'ambiente rimangono invariati. Il numero massimo di versioni del progetto mantenute nel catalogo è determinato dalla proprietà del catalogo **MAX_VERSIONS_PER_PROJECT**, come mostrato nella vista [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 > [!WARNING]  
