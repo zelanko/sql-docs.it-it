@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e23c4794b00daca7a228a3cd189835fcdf32628a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050656"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68050656"
 
   Concede a un'entità autorizzazioni per un'entità a protezione diretta.  Il formato da usare è GRANT \<autorizzazione> ON \<oggetto> TO \<utente, account di accesso o gruppo>. Per una descrizione generale delle autorizzazioni, vedere [Autorizzazioni &#40;Motore di database&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
- ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -119,7 +119,7 @@ L'uso della clausola AS in genere non è consigliabile, a meno che non sia neces
 
 L'uso di AS in questa istruzione non implica la possibilità di rappresentare un altro utente. 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La sintassi completa dell'istruzione GRANT è complessa. Il diagramma della sintassi precedente è stato semplificato per evidenziarne la struttura. La sintassi completa per la concessioni di autorizzazioni per entità a protezione diretta specifiche viene descritta negli articoli riportati di seguito.  
   
  È possibile utilizzare l'istruzione REVOKE per rimuovere le autorizzazioni concesse e l'istruzione DENY per negare un'autorizzazione specifica a un'entità anche in caso di esecuzione di un'istruzione GRANT.  
@@ -174,25 +174,25 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |Catalogo full-text|[GRANT - Autorizzazioni per il catalogo full-text &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
 |Elenco di parole non significative full-text|[GRANT - Autorizzazioni per il catalogo full-text &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
 |Funzione|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Account di accesso|[GRANT - Autorizzazioni per entità server &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
+|Login|[GRANT - Autorizzazioni per entità server &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
 |Tipo di messaggio|[GRANT - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Object|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Oggetto|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Coda|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Associazione al servizio remoto|[GRANT - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Role|[GRANT - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Ruolo|[GRANT - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |Route|[GRANT - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|schema|[GRANT - Autorizzazioni per schemi &#40;Transact-SQL&#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
+|SCHEMA|[GRANT - Autorizzazioni per schemi &#40;Transact-SQL&#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
 |Elenco delle proprietà di ricerca|[GRANT - Autorizzazioni per l'elenco delle proprietà di ricerca &#40;Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
 |Server|[GRANT - autorizzazioni per server &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
-|Servizio|[GRANT - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Stored procedure|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Service|[GRANT - Autorizzazioni di Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Stored Procedure|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Chiave simmetrica|[GRANT - Autorizzazioni per chiavi asimmetriche &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
 |Sinonimo|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Oggetti di sistema|[GRANT - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
 |Tabella|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Tipo|[GRANT - Autorizzazioni per tipi &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
+|Type|[GRANT - Autorizzazioni per tipi &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
 |Utente|[GRANT - Autorizzazioni per entità di database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Vista|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Visualizza|[GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Raccolta di XML Schema|[GRANT - Autorizzazioni per raccolte di XML Schema &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -23,10 +23,10 @@ ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68670530"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68670530"
   
  Per una descrizione completa della creazione e dell'uso delle sequenze, vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md). Usare [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) per generare un intervallo di numeri di sequenza.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce un numero utilizzando il tipo della sequenza.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione **NEXT VALUE FOR** può essere usata nelle stored procedure e nei trigger.  
   
  Quando la funzione **NEXT VALUE FOR** viene usata in una query o in un vincolo predefinito, se lo stesso oggetto sequenza viene usato più di una volta o se lo stesso oggetto sequenza viene usato sia nell'istruzione che specifica i valori sia in un vincolo predefinito di cui è in corso l'esecuzione, viene restituito lo stesso valore per tutte le colonne che fanno riferimento alla stessa sequenza all'interno di una riga nel set di risultati.  
@@ -163,7 +163,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Se il vincolo predefinito e l'oggetto sequenza non appartengono allo stesso utente, sono necessarie autorizzazioni per l'oggetto sequenza anche se viene chiamato attraverso il vincolo predefinito.  
   
-### <a name="audit"></a>Controllare il funzionamento di  
+### <a name="audit"></a>Audit  
  Per controllare la funzione **NEXT VALUE FOR**, monitorare SCHEMA_OBJECT_ACCESS_GROUP.  
   
 ## <a name="examples"></a>Esempi  
@@ -184,7 +184,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="a-using-a-sequence-in-a-select-statement"></a>A. Utilizzo di una sequenza in un'istruzione SELECT  
+### <a name="a-using-a-sequence-in-a-select-statement"></a>R. Utilizzo di una sequenza in un'istruzione SELECT  
  Nell'esempio seguente viene creata una sequenza denominata `CountBy1` che aumenta di uno ogni volta che viene utilizzata.  
   
 ```  

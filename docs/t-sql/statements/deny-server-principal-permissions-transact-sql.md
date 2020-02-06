@@ -22,10 +22,10 @@ ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984510"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>Autorizzazioni per entità server DENY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67984510"
   Nega le autorizzazioni concesse per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,10 +60,10 @@ DENY permission [ ,...n ] }
  Specifica un'autorizzazione che può essere negata per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  LOGIN **::** *SQL_Server_login*  
- Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui viene negata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  SERVER ROLE **::** *server_role*  
- Specifica il ruolo del server a cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica il ruolo del server a cui viene negata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  TO \<server_principal>  
  Specifica il ruolo del server o l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene concessa l'autorizzazione.  
@@ -92,7 +92,7 @@ DENY permission [ ,...n ] }
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile negare autorizzazioni nell'ambito del server solo se il database corrente è il database master.  
   
  Le informazioni sulle autorizzazioni del server sono disponibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Le informazioni sulle entità server sono disponibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -115,8 +115,8 @@ DENY permission [ ,...n ] }
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-denying-impersonate-permission-on-a-login"></a>A. Negazione dell'autorizzazione IMPERSONATE per un account di accesso  
- Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creato dall'utente di Windows `AdvWorks\YoonM`.  
+### <a name="a-denying-impersonate-permission-on-a-login"></a>R. Negazione dell'autorizzazione IMPERSONATE per un account di accesso  
+ Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creato dall'utente di Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Negazione dell'autorizzazione VIEW DEFINITION con CASCADE  
- Nell'esempio seguente viene negata l'autorizzazione `VIEW DEFINITION` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` all'account accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan`. L'opzione `CASCADE` indica che l'autorizzazione `VIEW DEFINITION` per `EricKurjan` verrà negata anche alle entità a cui `RMeyyappan` ha concesso tale autorizzazione.  
+ Nell'esempio seguente viene negata l'autorizzazione `VIEW DEFINITION` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` all'account accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan`. L'opzione `CASCADE` indica che l'autorizzazione `VIEW DEFINITION` per `EricKurjan` verrà negata anche alle entità a cui `RMeyyappan` ha concesso tale autorizzazione.  
   
 ```  
 USE master;  

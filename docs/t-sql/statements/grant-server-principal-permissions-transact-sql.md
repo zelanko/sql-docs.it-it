@@ -22,10 +22,10 @@ ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050781"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>Autorizzazioni per entità server GRANT (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68050781"
 
   Concede le autorizzazioni per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -88,7 +88,7 @@ GRANT permission [ ,...n ] }
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile concedere autorizzazioni nell'ambito del server solo se il database corrente è il database master.  
   
  Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Le informazioni sulle entità server sono visibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -109,8 +109,8 @@ GRANT permission [ ,...n ] }
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-granting-impersonate-permission-on-a-login"></a>A. Concessione dell'autorizzazione IMPERSONATE per un account di accesso  
- Nell'esempio seguente viene concessa l'autorizzazione `IMPERSONATE` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creato dall'utente di Windows `AdvWorks\YoonM`.  
+### <a name="a-granting-impersonate-permission-on-a-login"></a>R. Concessione dell'autorizzazione IMPERSONATE per un account di accesso  
+ Nell'esempio seguente viene concessa l'autorizzazione `IMPERSONATE` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creato dall'utente di Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. Concessione dell'autorizzazione VIEW DEFINITION con GRANT OPTION  
- Nell'esempio seguente viene concessa l'autorizzazione `VIEW DEFINITION` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan` con `GRANT OPTION`.  
+ Nell'esempio seguente viene concessa l'autorizzazione `VIEW DEFINITION` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan` con `GRANT OPTION`.  
   
 ```  
 USE master;  

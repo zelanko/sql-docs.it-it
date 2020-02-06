@@ -55,10 +55,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75924915"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
@@ -249,21 +249,21 @@ Se non diversamente specificato, il tipo di indice predefinito è NONCLUSTERED.
 
 In una singola chiave di indice composto è possibile combinare al massimo 32 colonne. Tutte le colonne di una chiave di indice composto devono appartenere alla stessa tabella o vista. La dimensione massima consentita dei valori combinati dell'indice è 900 byte per un indice cluster o 1700 per un indice non cluster. I limiti sono 16 colonne e 900 byte per le versioni precedenti a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
 
-Le colonne con tipo di dati LOB (Large Object) **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** o **image** non possono essere specificate come colonne chiave di un indice. Inoltre, una definizione di vista non può includere colonne di tipo **ntext**, **text** o **image** anche se non vi viene fatto riferimento nell'istruzione CREATE INDEX.
+Le colonne con tipo di dati LOB (Large Object) **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** o **image** non possono essere specificate come colonne chiave di un indice. Inoltre, una definizione di vista non può includere colonne di tipo **ntext**, **text** o **image** anche se non vi viene fatto riferimento nell'istruzione CREATE INDEX.
 
 È possibile creare indici su colonne di tipo CLR definito dall'utente se il tipo supporta l'ordinamento binario. È inoltre possibile creare indici su colonne calcolate definite come chiamate di metodo da una colonna con tipo definito dall'utente, a condizione che i metodi siano contrassegnati come deterministici e non eseguano operazioni di accesso ai dati. Per altre informazioni sull'indicizzazione di colonne di tipo CLR definito dall'utente, vedere [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 
 [ **ASC** | DESC ]      
 Determina se il tipo di ordinamento della colonna di indice specificata è crescente o decrescente. Il valore predefinito è ASC.
 
-INCLUDE **(**_column_ [ **,**... *n* ] **)**      
+INCLUDE **(** _column_ [ **,** ... *n* ] **)**       
 Specifica le colonne non chiave da aggiungere al livello foglia dell'indice non cluster. L'indice non cluster può essere univoco o non univoco.
 
 I nomi di colonna non possono essere ripetuti nell'elenco INCLUDE e non possono essere utilizzati contemporaneamente per colonne chiave e non chiave. Gli indici non cluster contengono sempre le colonne dell'indice cluster se nella tabella è definito un indice cluster. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md).
 
-È possibile usare qualsiasi tipo di dati, ad eccezione di **text**, **ntext**e **image**. L'indice dovrà essere creato o ricompilato offline (ONLINE = OFF) se una delle colonne non chiave specificate è di tipo **varchar(max)**, **nvarchar(max)** o **varbinary(max)**.
+È possibile usare qualsiasi tipo di dati, ad eccezione di **text**, **ntext**e **image**. L'indice dovrà essere creato o ricompilato offline (ONLINE = OFF) se una delle colonne non chiave specificate è di tipo **varchar(max)** , **nvarchar(max)** o **varbinary(max)** .
 
-Come colonne incluse è possibile utilizzare colonne calcolate che sono deterministiche, sia precise che imprecise. Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** possono essere incluse in colonne non chiave purché il tipo di dati della colonna calcolata sia consentito come colonna inclusa. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md).
+Come colonne incluse è possibile utilizzare colonne calcolate che sono deterministiche, sia precise che imprecise. Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** possono essere incluse in colonne non chiave purché il tipo di dati della colonna calcolata sia consentito come colonna inclusa. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
 Per informazioni sulla creazione di un indice XML, vedere [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md).
 
@@ -312,7 +312,7 @@ ON **"** default **"**
 
 Crea l'indice specificato nello stesso filegroup o schema di partizione della tabella o della vista.
 
-In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"** default **"** o ON **[** default **]** . Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 > [!NOTE]
 > "default" non indica il filegroup predefinito del database nel contesto di CREATE INDEX, a differenza di CREATE TABLE dove "default" individua la tabella nel filegroup predefinito del database.
@@ -352,7 +352,7 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] l'oggetto può es
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] supporta il formato del nome in tre parti _database_name_.[_schema_name_]._object_name_ quando *database_name* è il database corrente o _database_name_ è `tempdb`e _object_name_ inizia con #.
 
-**\<relational_index_option\>::=**      
+**\<relational_index_option\>::=**       
 Specifica le opzioni da usare quando si crea l'indice.
 
 PAD_INDEX = { ON | **OFF** }      
@@ -371,7 +371,7 @@ L'opzione PAD_INDEX risulta utile solo quando si specifica FILLFACTOR, in quanto
 
 Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH PAD_INDEX equivale a WITH PAD_INDEX = ON.
 
-FILLFACTOR **=**_fillfactor_      
+FILLFACTOR **=** _fillfactor_      
 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -489,7 +489,7 @@ Per altre informazioni, vedere [Perform Index Operations Online](../../relationa
 - Indici cluster disabilitati
 - Indici columnstore
 - Indice cluster, se la tabella sottostante contiene tipi di dati LOB (**image**, **ntext**, **text**) e tipi spaziali
-- Le colonne **varchar(max)** e **varbinary(max)** non possono fare parte di un indice. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], quando una tabella contiene le colonne **varchar(max)** o **varbinary(max)**, è possibile compilare o ricompilare un indice cluster contenente altre colonne usando l'opzione **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non consente l'opzione **ONLINE** quando la tabella di base contiene le colonne **varchar(max)** o **varbinary(max)**
+- Le colonne **varchar(max)** e **varbinary(max)** non possono fare parte di un indice. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], quando una tabella contiene le colonne **varchar(max)** o **varbinary(max)** , è possibile compilare o ricompilare un indice cluster contenente altre colonne usando l'opzione **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non consente l'opzione **ONLINE** quando la tabella di base contiene le colonne **varchar(max)** o **varbinary(max)**
 
 Per altre informazioni, vedere [Funzionamento delle operazioni sugli indici online](../../relational-databases/indexes/how-online-index-operations-work.md).
 
@@ -579,7 +579,7 @@ L'indice o le partizioni specificate vengono compressi utilizzando la compressio
 
 Per altre informazioni sulla compressione, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ ] **)**      
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)**       
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifica le partizioni alle quali si applica l'impostazione DATA_COMPRESSION. Se l'indice non è partizionato, l'argomento ON PARTITIONS genererà un errore. Se la clausola ON PARTITIONS non viene fornita, l'opzione DATA_COMPRESSION si applica a tutte le partizioni di un indice partizionato.
@@ -698,7 +698,7 @@ Le colonne calcolate persistenti richiedono l'impostazione delle seguenti opzion
 
 Il vincolo UNIQUE o PRIMARY KEY può includere una colonna calcolata a condizione che vengano soddisfatte tutte le condizioni per l'indicizzazione. In particolare, la colonna calcolata deve essere deterministica e precisa oppure deterministica e persistente. Per altre informazioni sul determinismo, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
-Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** possono essere indicizzate come colonne chiave o colonne non chiave incluse purché il tipo di dati della colonna calcolata sia consentito come colonna chiave o colonna non chiave dell'indice. Ad esempio, non è possibile creare un indice XML primario per una colonna **xml** calcolata. Se la dimensione della chiave di indice supera i 900 byte, viene visualizzato un messaggio di avviso.
+Le colonne calcolate derivate dai tipi di dati **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** possono essere indicizzate come colonne chiave o colonne non chiave incluse purché il tipo di dati della colonna calcolata sia consentito come colonna chiave o colonna non chiave dell'indice. Ad esempio, non è possibile creare un indice XML primario per una colonna **xml** calcolata. Se la dimensione della chiave di indice supera i 900 byte, viene visualizzato un messaggio di avviso.
 
 La creazione di un indice su una colonna calcolata può impedire l'esecuzione di un'operazione di inserimento o di aggiornamento che in precedenza veniva eseguita correttamente. Questo problema si può verificare quando la colonna calcolata genera un errore aritmetico. Nella tabella seguente, ad esempio, nonostante la colonna calcolata `c` generi un errore aritmetico, l'istruzione INSERT viene eseguita correttamente.
 
@@ -721,11 +721,11 @@ Per altre informazioni, vedere [Indici per le colonne calcolate](../../relationa
 È possibile aggiungere colonne non chiave, o incluse, al livello foglia di un indice non cluster per migliorare le prestazioni di esecuzione delle query tramite la copertura della query. Questo significa che tutte le colonne a cui la query fa riferimento sono incluse nell'indice come colonne chiave o non chiave. In questo modo, per individuare tutte le informazioni necessarie, in Query Optimizer verrà eseguita un'analisi dell'indice, senza necessità di accedere ai dati della tabella o dell'indice cluster. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md) e [Architettura e guida per la progettazione degli indici di SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="specifying-index-options"></a>Impostazione di opzioni per gli indici
-In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state introdotte nuove opzioni per gli indici ed è stata modificata la modalità di impostazione di tali opzioni. Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH *option_name* equivale a WITH **(** \<option_name> **= ON )**. Quando si impostano opzioni per gli indici, è necessario rispettare le regole seguenti:
+In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state introdotte nuove opzioni per gli indici ed è stata modificata la modalità di impostazione di tali opzioni. Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH *option_name* equivale a WITH **(** \<option_name> **= ON )** . Quando si impostano opzioni per gli indici, è necessario rispettare le regole seguenti:
 
-- Le nuove opzioni per gli indici possono essere specificate solo usando WITH (**_option\_name_ = ON | OFF**).
+- Le nuove opzioni per gli indici possono essere specificate solo usando WITH ( **_option\_name_ = ON | OFF**).
 - Non è possibile specificare opzioni utilizzando in una stessa istruzione sia la sintassi compatibile con le versioni precedenti, sia la nuova sintassi. Se ad esempio si specifica WITH (**DROP_EXISTING, ONLINE = ON**), l'istruzione avrà esito negativo.
-- Quando si crea un indice XML le opzioni devono essere specificate usando WITH (**_option_name_= ON | OFF**).
+- Quando si crea un indice XML le opzioni devono essere specificate usando WITH ( **_option_name_= ON | OFF**).
 
 ## <a name="drop_existing-clause"></a>Clausola DROP_EXISTING
 È possibile utilizzare la clausola DROP_EXISTING per ricompilare l'indice, aggiungere o eliminare colonne, modificare opzioni, modificare il tipo di ordinamento delle colonne oppure cambiare lo schema di partizione o il filegroup.

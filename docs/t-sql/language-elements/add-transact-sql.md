@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd94844a068ee9c91a4976ac2aec5cbd3d432c56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927399"
 ---
 # <a name="-addition-transact-sql"></a>+ (Addizione) (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67927399"
 
   Esegue la somma di due numeri. Questo operatore aritmetico di addizione consente inoltre di aggiungere un numero, espresso in giorni, a una data.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ expression + expression
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. Utilizzo dell'operatore di addizione per calcolare il numero totale di ore di assenza per ogni dipendente  
+### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>R. Utilizzo dell'operatore di addizione per calcolare il numero totale di ore di assenza per ogni dipendente  
  In questo esempio viene calcolato il numero totale di ore di assenza per ogni dipendente tramite la somma del numero di ore di ferie e il numero di ore di assenza per malattia.  
   
 ```  
