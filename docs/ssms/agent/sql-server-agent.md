@@ -1,8 +1,7 @@
 ---
-title: SQL Server Agent | Microsoft Docs
+title: SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,17 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552664"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257928"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 
@@ -42,8 +43,8 @@ ms.locfileid: "69552664"
 ## <a name="Components"></a>Componenti di SQL Server Agent  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i componenti seguenti per definire le attività da eseguire, quando eseguirle e come fornire informazioni in merito alla riuscita o meno delle attività.  
   
-### <a name="jobs"></a>processi  
-Un *processo* è una serie specificata di azioni eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. I processi consentono la definizione di un'attività amministrativa eseguibile una o più volte e il monitoraggio della riuscita o non riuscita di ogni esecuzione. Un processo può essere eseguito su un server locale oppure su più server remoti.  
+### <a name="jobs"></a>Processi  
+Un *processo* è una serie specificata di azioni eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Usare i processi per definire un'attività amministrativa eseguibile una o più volte e monitorabile per verificarne l'esito positivo o negativo. Un processo può essere eseguito in un server locale o in più server remoti.  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che sono in esecuzione al momento di un evento di failover su un'istanza del cluster di failover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riprendono dopo il failover su un altro nodo del cluster di failover. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] I processi di Agent che sono in esecuzione quando un nodo Hyper-V viene messo in pausa non riprendono se la pausa provoca un failover in un altro nodo. I processi che iniziano ma che non riescono a essere completati a causa di un evento di failover vengono registrati come avviati, ma non mostrano voci di log aggiuntive per il completamento o l'errore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in questi scenari sembrano non avere mai termine.  
@@ -61,7 +62,7 @@ Ogni azione di un processo viene definita *passaggio del processo*. Un passaggio
 Ogni passaggio del processo viene eseguito in un contesto di sicurezza specifico. Nel caso dei passaggi di processo che utilizzano [!INCLUDE[tsql](../../includes/tsql-md.md)], specificare l'istruzione EXECUTE AS per impostare il contesto di sicurezza corrispondente. Per gli altri tipi di passaggi di processo, utilizzare un account proxy per impostare il contesto di sicurezza corrispondente.  
   
 ### <a name="schedules"></a>Pianificazioni  
-Una *pianificazione* specifica quando viene eseguito un processo. È possibile eseguire più processi sulla stessa pianificazione e applicare più di una pianificazione allo stesso processo. Una pianificazione consente di definire le condizioni seguenti relativi al momento in cui un processo viene eseguito:  
+Una *pianificazione* specifica quando viene eseguito un processo. La stessa pianificazione può includere l'esecuzione di più processi e allo stesso processo possono essere applicate più pianificazioni. Per quanto riguarda quando un processo deve essere eseguito, una pianificazione può definire le condizioni seguenti:  
   
 -   All'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -69,7 +70,7 @@ Una *pianificazione* specifica quando viene eseguito un processo. È possibile e
   
 -   Una sola volta in corrispondenza di una data e un'ora specifiche.  
   
--   Su base periodica.  
+-   In base a una pianificazione ricorrente.  
   
 Per altre informazioni, vedere [Creare e collegare le pianificazioni ai processi](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
@@ -88,12 +89,12 @@ Un avviso può eseguire le azioni seguenti:
   
 -   Invio di una notifica a uno o più operatori  
   
--   Esecuzione di un processo  
+-   Eseguire un processo  
   
 Per altre informazioni, vedere [Avvisi](../../ssms/agent/alerts.md).  
   
 ### <a name="operators"></a>Operatori  
-Un *operatore* definisce le informazioni di contatto relative al responsabile della manutenzione di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In alcune organizzazioni le mansioni di operatore vengono assegnate a un unico dipendente. In organizzazioni con più server, tali mansioni possono essere ripartite tra più dipendenti. Un operatore non include informazioni di sicurezza e non definisce alcuna entità di sicurezza.  
+Un *operatore* definisce le informazioni di contatto relative al responsabile della manutenzione di una o più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In alcune organizzazioni le mansioni di operatore vengono assegnate a un unico dipendente. In organizzazioni con più server, tali mansioni possono essere ripartite tra più dipendenti. Un operatore non include informazioni di sicurezza e non definisce un'entità di sicurezza.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in grado di segnalare gli avvisi agli operatori tramite:  
   

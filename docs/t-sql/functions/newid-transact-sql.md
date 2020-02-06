@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843646"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
@@ -43,12 +43,12 @@ NEWID ( )
 ## <a name="return-types"></a>Tipi restituiti  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  `NEWID()` è conforme a RFC4122.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-newid-function-with-a-variable"></a>A. Utilizzo della funzione NEWID con una variabile  
+### <a name="a-using-the-newid-function-with-a-variable"></a>R. Utilizzo della funzione NEWID con una variabile  
  Nell'esempio seguente viene usata `NEWID()` per assegnare un valore a una variabile dichiarata con il tipo di dati **uniqueidentifier**. Il valore della variabile di tipo **uniqueidentifier** viene stampato prima di essere verificato.  
   
 ```  

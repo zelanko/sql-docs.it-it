@@ -11,10 +11,10 @@ ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c4580c6b6b4dc6ea0d7ab9bb93f9614b90feb1d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295181"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
@@ -38,7 +38,7 @@ ms.locfileid: "71295181"
 |end_time|**datetimeoffset(7)**|Ora di fine della fase.|  
 |execution_path|**nvarchar(max)**|Percorso di esecuzione dell'attività del flusso di dati.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni fase di esecuzione di un componente del flusso di dati, ad esempio Convalida, Pre-esecuzione, Post-esecuzione, PrimeOutput e ProcessInput. In ogni riga viene visualizzata l'ora di inizio e di fine per una fase di esecuzione specifica.  
   
 ## <a name="example"></a>Esempio  

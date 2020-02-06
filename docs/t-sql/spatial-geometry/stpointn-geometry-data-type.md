@@ -18,10 +18,10 @@ ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 81808f6387942bd3ba8aa01f4eeaa5bd93b2dcba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066407"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (tipo di dati geometry)
@@ -47,7 +47,7 @@ Restituisce un punto specificato in un'istanza **geometry**.
   
  Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se un'istanza **geometry** è creata dall'utente, `STPointN()` restituisce il punto specificato da *expression* ordinando i punti con l'ordine di immissione originale.  
   
  Se un'istanza **geometry** è stata costruita dal sistema, `STPointN()` restituisce il punto specificato da *expression* ordinando tutti i punti nello stesso ordine di restituzione, ovvero prima in base alla geometria, quindi in base all'anello all'interno della geometria (se appropriato), infine in base ai punti all'interno dell'anello. Questo ordine è deterministico.  

@@ -11,10 +11,10 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 87acb8f9b15fa2b22f4a7f1dbe01669eff08b92e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281012"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
@@ -76,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id* è di tipo **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per combinare più valori in Transact-SQL per l'argomento *profile_value* o *events_value*, seguire questo esempio. Per acquisire gli eventi OnError (8) e DiagnosticEx (15), la formula per il calcolo di *events_value* è `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Codici restituiti  
@@ -85,7 +85,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  Quando la stored procedure ha esito negativo viene generato un errore.  
   
 ## <a name="result-set"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  

@@ -11,10 +11,10 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ca9674a5bb3128e86d9cceaca4a971066da0fef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283676"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lezione 1-4 - Aggiunta delle configurazioni dei pacchetti
@@ -53,7 +53,7 @@ Verificare il modello di distribuzione corrente del progetto e impostarlo su **M
     > [!NOTE]  
     > Dopo aver aggiunto la variabile di ambiente, potrebbe essere necessario riavviare il computer affinché risulti disponibile nell'elenco. Se non si desidera riavviare il computer, è possibile digitare il nome della variabile di ambiente.  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina Completamento procedura guidata digitare **DataTransfer EV Configuration** nella casella **Nome configurazione** , esaminare il contenuto della configurazione nel riquadro **Anteprima** e quindi fare clic su **Fine**.  
   
@@ -81,7 +81,7 @@ Verificare il modello di distribuzione corrente del progetto e impostarlo su **M
   
 10. In Gestioni connessioni espandere NewCustomers e quindi selezionare la casella di controllo **Stringa di connessione** .  
   
-11. Scegliere **Avanti**.  
+11. Fare clic su **Avanti**.  
   
 12. Nella pagina Completamento procedura guidata digitare **DataTransfer Configuration** nella casella **Nome configurazione** , esaminare il contenuto della configurazione e quindi fare clic su **Fine**.  
   
@@ -104,7 +104,7 @@ Verificare il modello di distribuzione corrente del progetto e impostarlo su **M
     > [!NOTE]  
     > Dopo aver aggiunto la variabile di ambiente, potrebbe essere necessario riavviare il computer affinché risulti disponibile nell'elenco.  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina Completamento procedura guidata digitare **LoadXMLData EV Configuration** nella casella **Nome configurazione** , esaminare il contenuto della configurazione e quindi fare clic su **Fine**.  
   
@@ -128,7 +128,7 @@ Verificare il modello di distribuzione corrente del progetto e impostarlo su **M
   
 9. Nella pagina Selezione proprietà da esportare espandere LoadXMLData, File eseguibili, Load XML Data e Properties, quindi selezionare le caselle di controllo **[XMLSource].[XMLData]** e **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Scegliere **Avanti**.  
+10. Fare clic su **Avanti**.  
   
 11. Nella pagina Completamento procedura guidata digitare **LoadXMLData Configuration** nella casella **Nome configurazione** , esaminare il contenuto della configurazione e quindi fare clic su **Fine**.  
   

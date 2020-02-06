@@ -14,10 +14,10 @@ ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4750f030dc1193ef8ed8be1b14198ca21e99be6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288722"
 ---
 # <a name="null-ssis-expression"></a>NULL (espressione SSIS)
@@ -41,7 +41,7 @@ NULL(typespec)
 ## <a name="result-types"></a>Tipi restituiti  
  Qualsiasi tipo di dati valido con valore Null.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se l'argomento è Null, NULL restituirà Null.  
   
  Per ottenere un valore Null per determinati tipi di dati, è necessario specificare i parametri appropriati. Nella tabella seguente vengono elencati tali tipi di dati e i parametri corrispondenti.  
@@ -51,12 +51,12 @@ NULL(typespec)
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252): esegue il cast di 30 caratteri al tipo di dati DT_STR utilizzando la tabella codici 1252.|  
 |DT_WSTR|*charcount*|(DT_WSTR,20): esegue il cast di 20 caratteri al tipo di dati DT_WSTR.|  
 |DT_BYTES|*bytecount*|(DT_BYTES,50): esegue il cast di 50 byte al tipo di dati DT_BYTES.|  
-|DT_DECIMAL|*scala*|(DT_DECIMAL,2): esegue il cast di un valore numerico al tipo di dati DT_DECIMAL, utilizzando una scala pari a 2.|  
-|DT_NUMERIC|*precisione*<br /><br /> *scala*|(DT_NUMERIC,10,3): esegue il cast di un valore numerico al tipo di dati DT_NUMERIC, utilizzando una precisione pari a 10 e una scala pari a 3.|  
+|DT_DECIMAL|*scale*|(DT_DECIMAL,2): esegue il cast di un valore numerico al tipo di dati DT_DECIMAL, utilizzando una scala pari a 2.|  
+|DT_NUMERIC|*precisione*<br /><br /> *scale*|(DT_NUMERIC,10,3): esegue il cast di un valore numerico al tipo di dati DT_NUMERIC, utilizzando una precisione pari a 10 e una scala pari a 3.|  
 |DT_TEXT|*codepage*|(DT_TEXT,1252): esegue il cast di un valore al tipo di dati DT_TEXT utilizzando la tabella codici 1252.|  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
- Questi esempi restituiscono il valore Null per i tipi di dati DT_STR, DT_DATE e DT_BOOL.  
+ In questi esempi viene restituito il valore Null per i tipi di dati DT_STR, DT_DATE e DT_BOOL.  
   
 ```  
 NULL(DT_STR,10,1252)  

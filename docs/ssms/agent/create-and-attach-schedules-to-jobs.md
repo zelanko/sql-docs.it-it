@@ -1,10 +1,9 @@
 ---
-title: Creare e collegare pianificazioni ai processi | Microsoft Docs
-ms.custom: ''
+title: Creazione e collegamento di pianificazioni ai processi
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,13 +17,15 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2213390f252fdd07f1c8aacc6570940f759e7579
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5e515bcf14eff0ce4d4b6c5913803ee8e322365d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267265"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252135"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Creazione e collegamento di pianificazioni ai processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ Una pianificazione può essere basata sul tempo o su un evento. Ad esempio, è p
   
 -   Una sola volta in corrispondenza di una data e un'ora specifiche.  
   
--   Su base periodica.  
+-   In base a una pianificazione ricorrente.  
   
 In alternativa alle pianificazioni di processi, è possibile creare un avviso che risponda a un evento tramite l'esecuzione di un processo.  
   

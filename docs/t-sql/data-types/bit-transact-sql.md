@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e5ff96f07db7b368acc7ee36296516e047bc0475
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125995"
 ---
 # <a name="bit-transact-sql"></a>bit (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68125995"
 
   Tipo di dati integer che può accettare un valore di 1, 0 o NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ottimizza l'archiviazione delle colonne di tipo **bit**. Se una tabella contiene al massimo 8 colonne di tipo **bit**, le colonne vengono archiviate come singolo byte. Se la tabella contiene da 9 a 16 colonne di tipo **bit**, le colonne vengono archiviate in 2 byte e così via.
   
 I valori di stringa TRUE e FALSE possono essere convertiti in valori di tipo **bit**: TRUE viene convertito in 1 e FALSE viene convertito in 0.
