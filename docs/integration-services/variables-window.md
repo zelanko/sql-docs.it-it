@@ -16,10 +16,10 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef2e4b408dabf7b054465149b2489e07fbdefef8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295032"
 ---
 # <a name="variables-window"></a>Finestra Variabili
@@ -51,7 +51,7 @@ ms.locfileid: "71295032"
  **Opzioni griglia**  
  Fare clic su questo pulsante per aprire la finestra di dialogo **Opzioni griglia variabili** , in cui è possibile modificare la selezione delle colonne e applicare i filtri alla finestra **Variabili** . Per altre informazioni, vedere [Opzioni griglia variabili](../integration-services/variable-grid-options.md).  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome della variabile. È possibile aggiornare il nome delle variabili definite dall'utente.  
   
  **Ambito**  
@@ -65,10 +65,10 @@ ms.locfileid: "71295032"
 > [!NOTE]  
 >  Se si assegna un'espressione alla variabile, non è possibile modificare il tipo di dati.  
   
- **Value**  
+ **Valore**  
  Consente di visualizzare il valore della variabile. È possibile aggiornare il valore per le variabili definite dall'utente. Questo valore può essere letterale, un'espressione e una stringa su più righe. Per assegnare un'espressione alla variabile, fare clic sul pulsante con i puntini di sospensione accanto alla colonna **Espressione** nella finestra **Variabili** .  
   
- **Namespace**  
+ **Spazio dei nomi**  
  Consente di visualizzare il nome dello spazio dei nomi. Le variabili definite dall'utente vengono inizialmente create nello spazio dei nomi **User** , ma è possibile modificare il nome dello spazio dei nomi nel campo **Spazio dei nomi** . Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
   
  **Raise Change Event**  
@@ -101,11 +101,11 @@ ms.locfileid: "71295032"
   
 -   **Ambito**  
   
--   **Data type**  
+-   **Tipo di dati**  
   
--   **Value**  
+-   **Valore**  
   
--   **Namespace**  
+-   **Spazio dei nomi**  
   
 -   **Genera evento alla modifica del valore della variabile**  
   
@@ -117,6 +117,6 @@ ms.locfileid: "71295032"
  [Variabili di Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Espressioni di Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Generazione di file di dump per l'esecuzione del pacchetto](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Generazione di file di dump per l'esecuzione dei pacchetti](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

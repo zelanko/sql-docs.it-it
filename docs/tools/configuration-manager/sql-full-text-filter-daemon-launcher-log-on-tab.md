@@ -1,6 +1,6 @@
 ---
-title: Utilità di avvio del daemon filtri full-text di SQL (scheda Accesso) | Microsoft Docs
-ms.custom: ''
+title: Utilità di avvio del daemon filtri full-text di SQL (scheda Accesso)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 791079d881cf48c8eb5cdaa74f932cb29738003a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 81cca06132cd63bf344d54004895f1bd9a0ab2e7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058294"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306739"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>Utilità di avvio del daemon filtri full-text di SQL (scheda Accesso)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68058294"
  **Account seguente**  
  Specificare un account utente locale o di dominio che utilizza l’autenticazione di Windows. È consigliabile utilizzare un account utente di dominio con diritti minimi per i servizi.  
   
- **Nome account**  
+ **Account Name** (Nome account)  
  Specificare il nome dell'account utente locale o di dominio.  
   
  **Password**  
@@ -52,10 +52,10 @@ ms.locfileid: "68058294"
  **Conferma password**  
  Digitare nuovamente la password dell'account.  
   
- **Start**  
+ **Inizia**  
  Avviare il servizio.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare il servizio.  
   
  **Sospendi**  

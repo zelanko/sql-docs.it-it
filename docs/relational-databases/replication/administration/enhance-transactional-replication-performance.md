@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710382"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288178"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Miglioramento delle prestazioni della replica transazionale
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -142,11 +142,11 @@ Il risultato di questo esempio è uno stato in cui nessuna sessione esegue i com
 
 Durante questo periodo di timeout query è possibile rilevare le tendenze seguenti nei contatori delle prestazioni dell'agente di distribuzione: 
 
-- Il valore del contatore delle prestazioni **Dist: Comandi recapitati/sec** è sempre 0.
-- Il valore del contatore delle prestazioni **Dist: Transazioni recapitate/sec** è sempre 0.
-- Il valore del contatore delle prestazioni **Dist: Latenza recapito** aumenta fino a quando non viene risolto il deadlock del thread.
+- Il valore del contatore delle prestazioni **Dist:Comandi recapitati/sec** è sempre 0.
+- Il valore del contatore delle prestazioni **Dist:Transazioni recapitate/sec** è sempre 0.
+- Il valore del contatore delle prestazioni **Dist:Latenza recapito** aumenta fino a quando non viene risolto il deadlock del thread.
 
-L'argomento relativo all'agente di distribuzione repliche nella documentazione online di Microsoft SQL Server contiene la descrizione seguente per il parametro *SubscriptionStreams*: "Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente utilizzerà un singolo flusso per ripetere i batch non riusciti".
+L'argomento "Replication Distribution Agent" della documentazione online di SQL Server contiene la descrizione seguente per il parametro *SubscriptionStreams*: "Se si verifica un errore di esecuzione o di commit di una delle connessioni, tutte le connessioni interromperanno il batch corrente e l'agente userà un singolo flusso per ripetere i batch non riusciti."
 
 L'agente di distribuzione usa una sessione per riprovare l'applicazione del batch che non era riuscita. Dopo aver applicato correttamente il batch, l'agente di distribuzione riprende l'uso di più sessioni senza riavviare il computer.
 

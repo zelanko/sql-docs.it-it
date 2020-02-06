@@ -18,13 +18,13 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014994"
 ---
-# <a name="sqlsrvprepare"></a>sqlsrv_prepare
+# <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Crea una risorsa di istruzione associata alla connessione specificata. Questa funzione è utile per l'esecuzione di più query.  
@@ -67,7 +67,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* [facoltativo]: matrice associativa che imposta le <a name="properties">proprietà delle query</a>. Nella tabella seguente sono elencate le chiavi supportate e i valori corrispondenti:
 
-|Key|Valori supportati|Descrizione|  
+|Chiave|Valori supportati|Descrizione|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|Numero intero positivo|Consente di configurare le dimensioni del buffer che contiene il set di risultati per un cursore sul lato client.<br /><br />Il valore predefinito è 10240 KB. Per altre informazioni, vedere [Specifica di un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |DecimalPlaces|Un numero intero compreso tra 0 e 4 inclusi|Specifica i numeri decimali quando si formattano valori money recuperati.<br /><br />Qualsiasi numero intero negativo o valore maggiore di 4 verrà ignorato.<br /><br />Questa opzione funziona solo quando FormatDecimals è **true**.|
@@ -80,7 +80,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="return-value"></a>Valore restituito  
 Risorsa di istruzione. Se non è possibile creare la risorsa di istruzione, viene restituito **false** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Quando si prepara un'istruzione che usa variabili come parametri, le variabili vengono associate all'istruzione. Ciò significa che se si aggiornano i valori delle variabili, alla successiva esecuzione l'istruzione verrà eseguita con i valori aggiornati dei parametri.  
   
 La combinazione di **sqlsrv_prepare** e **sqlsrv_execute** , che separa la preparazione e l'esecuzione dell'istruzione in due chiamate di funzione, può essere usata per eseguire query con parametri. Questa funzione è ideale per eseguire un'istruzione più volte con valori di parametro diversi per ciascuna esecuzione.  

@@ -11,10 +11,10 @@ ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281185"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (database SSISDB)
@@ -43,7 +43,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)** .  
   
  [@environment_name =] *environment_name*  
- Nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
+ Il nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [@variable_name =] *variable_name*  
  Nome della variabile di ambiente. *variable_name* è di tipo **nvarchar(128)** .  
@@ -64,7 +64,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
@@ -84,13 +84,13 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Una variabile di ambiente può essere utilizzata per assegnare in modo efficace un valore a un parametro del progetto o a un parametro del pacchetto da utilizzare nell'esecuzione di un pacchetto. Le variabili di ambiente consentono l'organizzazione dei valori del parametro. I nomi della variabile devono essere univoci all'interno di un ambiente.  
   
  La stored procedure consente di convalidare il tipo di dati della variabile per assicurarsi che sia supportato dal catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 > [!TIP]  
->  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] si consideri di usare il tipo di dati **Int16** al posto del tipo di dati **Sbyte** non supportato.  
+>  In **si consideri di usare il tipo di dati**Int16[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al posto del tipo di dati **Sbyte** non supportato.  
   
  Il valore passato a questa stored procedure con il parametro *value* viene convertito da un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in un tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in base alla tabella seguente:  
   
@@ -104,7 +104,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
 |**Singolo**|Numerico esatto: **decimale**, **numerico**; numerico approssimato: **float**, **reale**|  
-|**String**|**varchar**, **nvarchar**, **char**|  
+|**Stringa**|**varchar**, **nvarchar**, **char**|  
 |**UInt32**|**int** (**int** è il mapping disponibile più vicino a **Uint32**).|  
 |**UInt64**|**bigint** (**int** è il mapping disponibile più vicino a **Uint64**).|  
   
