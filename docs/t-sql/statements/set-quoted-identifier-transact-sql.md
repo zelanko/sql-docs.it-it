@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008885"
 ---
-# <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
+# <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Impone in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la conformità alle regole ISO relative all'utilizzo delle virgolette per delimitare identificatori e stringhe letterali. Gli identificatori delimitati da virgolette doppie possono essere parole chiave riservate [!INCLUDE[tsql](../../includes/tsql-md.md)] o possono includere caratteri normalmente non consentiti dalle regole della sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] per gli identificatori.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -54,7 +54,7 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 SET QUOTED_IDENTIFIER ON
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Quando l'opzione SET QUOTED_IDENTIFIER è impostata su ON, è possibile delimitare gli identificatori con virgolette doppie, mentre i valori letterali devono essere delimitati da virgolette singole. Quando l'opzione SET QUOTED_IDENTIFIER è impostata su OFF, non è possibile racchiudere tra virgolette gli identificatori, i quali devono essere conformi alle regole per gli identificatori di [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md). È possibile delimitare i valori letterali con virgolette singole o doppie.
 
@@ -105,7 +105,7 @@ SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>A. Utilizzo dell'impostazione per l'identificatore delimitato e di nomi di oggetto corrispondenti a parole chiave riservate
+### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>R. Utilizzo dell'impostazione per l'identificatore delimitato e di nomi di oggetto corrispondenti a parole chiave riservate
 
 Nell'esempio seguente viene illustrato come, per poter creare e utilizzare oggetti con nomi che corrispondono a parole chiave riservate, sia necessario impostare l'opzione `SET QUOTED_IDENTIFIER` su `ON` e racchiudere tra virgolette doppie le parole chiave nei nomi di tabella.
 

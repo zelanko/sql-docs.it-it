@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d76080b714d2ede1f2368ab2a98e8d3a216bf85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906908"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67906908"
 
   Restituisce la deviazione statistica standard relativa al popolamento di tutti i valori dell'espressione specificata.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,14 +61,14 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se la funzione STDEVP viene utilizzata per tutti gli elementi di un'istruzione SELECT, ogni valore del set di risultati viene incluso nel calcolo. STDEVP può essere utilizzata solo con colonne numeriche. I valori Null vengono ignorati.  
   
  STDEVP è una funzione deterministica quando viene utilizzata senza le clausole ORDER BY e OVER. Non è deterministica quando viene specificata con le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-stdevp"></a>A: Uso di STDEVP  
+### <a name="a-using-stdevp"></a>A: uso di STDEVP  
  Nell'esempio seguente viene restituita la deviazione standard per il popolamento per tutti i valori dei premi di produttività nella tabella `SalesPerson` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -79,7 +79,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-stdevp"></a>B: Uso di STDEVP  
+### <a name="b-using-stdevp"></a>B: uso di STDEVP  
  Nell'esempio seguente viene restituita la `STDEVP` dei valori quota di vendite nella tabella `dbo.FactSalesQuota`. La prima colonna contiene la deviazione standard di tutti i valori distinct e la seconda colonna contiene la deviazione standard di tutti i valori, compresi eventuali valori duplicati.  
   
 ```  

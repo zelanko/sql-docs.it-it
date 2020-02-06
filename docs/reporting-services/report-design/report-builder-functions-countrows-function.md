@@ -9,10 +9,10 @@ ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9295abe7d34ee0b799517137163d4581d8b34ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579606"
 ---
 # <a name="report-builder-functions---countrows-function"></a>Funzioni di Generatore report - Funzione CountRows
@@ -38,7 +38,7 @@ CountRows(scope, recursive)
 ## <a name="return-type"></a>Tipo restituito  
  Restituisce un valore **Integer**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **CountRows** conteggia tutte le righe nell'ambito specificato, incluse le righe con valori Null.  
   
  Il valore di *scope* non può essere un'espressione e deve fare riferimento all'ambito corrente o a un ambito di contenuto.  

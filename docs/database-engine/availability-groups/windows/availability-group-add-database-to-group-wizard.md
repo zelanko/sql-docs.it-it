@@ -16,10 +16,10 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934881"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Aggiungere un database a un gruppo di disponibilità Always On con la "Creazione guidata Gruppo di disponibilità"
@@ -56,21 +56,21 @@ ms.locfileid: "67934881"
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria del gruppo di disponibilità ed espandere l'albero del server.  
   
-2.  Espandere il nodo **Disponibilità elevata Always On** e il nodo **Gruppi di disponibilità** .  
+2.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità**.  
   
 3.  Fare clic con il pulsante destro del mouse sul gruppo di disponibilità a cui si aggiunge un database e selezionare il comando **Aggiungi database** . Verrà avviata la procedura guidata Aggiungi database a gruppo di disponibilità.  
   
 4.  Nella pagina **Seleziona database** selezionare uno o più database. Per altre informazioni, vedere [Pagina Selezione database &#40;Creazione guidata Gruppo di disponibilità/Aggiungi database&#41;](../../../database-engine/availability-groups/windows/select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
-     Se il database contiene una chiave master di database, immettere la relativa password nella colonna **Password**.  
+     Se il database contiene una chiave master di database, immettere la password per la chiave master di database nella colonna **Password** .  
   
-5.  Nella pagina **Seleziona sincronizzazione dei dati iniziale** specificare come creare e aggiungere i nuovi database secondari al gruppo di disponibilità. Selezionare una delle opzioni seguenti:  
+5.  Nella pagina **Seleziona sincronizzazione dei dati iniziale** specificare come creare e aggiungere i nuovi database secondari al gruppo di disponibilità. Scegliere una delle opzioni seguenti:  
 
     - **Seeding automatico**
       
       Selezionare questa opzione per usare il seeding automatico. Il seeding automatico usa il trasporto del flusso di log per trasmettere il backup mediante un'infrastruttura VDI nella replica secondaria per ogni database del gruppo di disponibilità tramite endpoint configurati. Ciò consente di ripristinare il backup del database nella replica secondaria senza doverlo fare manualmente. Per altre informazioni sul seeding automatico, vedere [Seeding automatico](automatic-seeding-secondary-replicas.md).
   
-    -   **Full**  
+    -   **Completo**  
   
          Selezionare questa opzione se l'ambiente soddisfa i requisiti per l'avvio automatico della sincronizzazione dei dati iniziale. Per altre informazioni, vedere [Prerequisiti, restrizioni e raccomandazioni](#Prerequisites), più indietro in questo argomento.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "67934881"
   
      Per altre informazioni, vedere la pagina [Connetti a repliche secondarie esistenti &#40;procedura guidata Aggiungi replica: procedura guidata Aggiungi database&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
-7.  Nella pagina **Convalida** viene verificato se i valori specificati in questa procedura guidata soddisfano i requisiti della Creazione guidata Gruppo di disponibilità. Per apportare una modifica, è possibile fare clic su **Precedente** per tornare a una pagina precedente della procedura guidata per modificare uno o più valori. Scegliere **Avanti** per tornare alla pagina **Convalida**, quindi fare clic su **Ripeti convalida**.  
+7.  Nella pagina **Convalida** viene verificato se i valori specificati in questa procedura guidata soddisfano i requisiti della Creazione guidata Gruppo di disponibilità. Per apportare una modifica, è possibile fare clic su **Precedente** per tornare a una pagina precedente della procedura guidata per modificare uno o più valori. Scegliere **Avanti** per tornare alla pagina **Convalida** , quindi fare clic su **Ripeti convalida**.  
   
      Per altre informazioni, vedere [Pagina Convalida &#40;procedure guidate Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67934881"
   
      Se si è soddisfatti delle selezioni, è possibile fare clic su Script per creare uno script dei passaggi eseguiti dalla procedura guidata. Per creare e configurare il nuovo gruppo di disponibilità, fare quindi clic su **Fine**.  
   
-9. La pagina **Stato** visualizza lo stato di avanzamento dei passaggi per la creazione del gruppo di disponibilità, ovvero configurazione di endpoint, creazione del gruppo di disponibilità e creazione di un join della replica secondaria al gruppo.  
+9. Nella pagina **Stato** viene visualizzato lo stato di avanzamento dei passaggi per la creazione del gruppo di disponibilità, ovvero configurazione di endpoint, creazione del gruppo di disponibilità e creazione di un join della replica secondaria al gruppo.  
   
      Per altre informazioni, vedere [Pagina Stato installazione &#40;procedure guidate Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards.md).  
   
@@ -113,7 +113,7 @@ ms.locfileid: "67934881"
   
      Al termine della procedura guidata, fare clic su **Chiudi** per uscire.  
   
-     Per altre informazioni, vedere [Pagina Risultati &#40;procedure guidate Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md).  
+     Per altre informazioni, vedere [Pagina Risultati &#40;procedure guidate gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/results-page-always-on-availability-group-wizards.md).  
   
 11. Se la sincronizzazione dati iniziale non è stata avviata automaticamente su tutti i database secondari, è necessario configurare eventuali database secondari non ancora aggiunti. Per altre informazioni, vedere [Avviare lo spostamento dati su un database secondario Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   

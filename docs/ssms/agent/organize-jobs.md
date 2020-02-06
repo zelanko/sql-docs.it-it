@@ -1,10 +1,9 @@
 ---
-title: Organizzare processi | Microsoft Docs
-ms.custom: ''
+title: organizzare processi
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,13 +12,15 @@ helpviewer_keywords:
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b2167ec7aaf1656312e81abc842c3910a5522947
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a02f50ed88a2883d0149dbbd37df63b27e87dfa4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247608"
 ---
 # <a name="organize-jobs"></a>organizzare processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,6 +41,6 @@ Le categorie consentono di organizzare i processi per semplificare le operazioni
 |Descrive come creare una categoria di processi.|[Creare una categoria di processi](../../ssms/agent/create-a-job-category.md)|  
 |Descrive come eliminare una categoria di processi.|[Eliminare una categoria di processi](../../ssms/agent/delete-a-job-category.md)|  
 |Descrive come assegnare un processo a una categoria di processi.|[Assegnare un processo a una categoria di processi](../../ssms/agent/assign-a-job-to-a-job-category.md)|  
-|Descrive come modificare l'appartenenza a una categoria di processi.|[Change the Membership of a Job Category](../../ssms/agent/change-the-membership-of-a-job-category.md)|  
+|Descrive come modificare l'appartenenza a una categoria di processi.|[Modificare l'appartenenza a una categoria di processi](../../ssms/agent/change-the-membership-of-a-job-category.md)|  
 |Descrive come visualizzare un elenco di informazioni sulla categoria.|[Elencare le informazioni sulle categorie di processi](../../ssms/agent/list-job-category-information.md)|  
   

@@ -1,10 +1,9 @@
 ---
-title: Categorie di processi - Gestisci categorie di processi | Microsoft Docs
-ms.custom: ''
+title: Categorie di processi - Gestisci categorie di processi
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 792191baaa7b1b0ae8cae65471946104e17b13de
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dac1ce3e62ad1a6b11212273df9cf21d6fbbce19
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262339"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242304"
 ---
 # <a name="job-categories---manage-job-categories"></a>Categorie di processi - Gestisci categorie di processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ Numero di processi definiti per la categoria corrente.
 **Visualizza processi**  
 Consente di aprire la finestra di dialogo **Proprietà** relativa alla categoria selezionata in cui sono elencati tutti i processi attualmente definiti per quella categoria.  
   
-**Aggiungi**  
+**Aggiungere**  
 Consente di aprire la finestra di dialogo **Nuova categoria di processi** per aggiungere una nuova categoria di processi  
   
 **Elimina**  

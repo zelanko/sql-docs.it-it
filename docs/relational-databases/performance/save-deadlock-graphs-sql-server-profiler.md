@@ -14,10 +14,10 @@ ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: c27ed8ea6fbd2e4b89d27cb7772f533150cf0e5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099369"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Salvare eventi Deadlock Graph (SQL Server Profiler)

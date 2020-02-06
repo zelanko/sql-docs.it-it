@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8e41abc4ab3f798a3ee970061ddc21539403ef6b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907505"
 ---
 # <a name="modify-data-through-a-view"></a>Modificare i dati tramite una vista
@@ -37,7 +37,7 @@ ms.locfileid: "72907505"
 ###  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione UPDATE, INSERT o DELETE per la tabella di destinazione, a seconda dell'azione eseguita.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>Per modificare i dati della tabella tramite una vista  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72907505"
 
     > **IMPORTANTE** Non è possibile inserire una riga se la vista fa riferimento a più di una tabella di base.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-update-table-data-through-a-view"></a>Per aggiornare i dati della tabella tramite una vista  
   

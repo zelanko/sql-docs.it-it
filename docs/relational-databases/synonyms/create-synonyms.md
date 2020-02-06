@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5b6ccdce58ca96a26a607996943e6d48d9bac1d8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909734"
 ---
 # <a name="create-synonyms"></a>Creare sinonimi
@@ -29,7 +29,7 @@ ms.locfileid: "72909734"
   
 -   **Prima di iniziare:**  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un sinonimo utilizzando:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "72909734"
   
 ####  <a name="Permissions"></a> Autorizzazioni  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-synonym"></a>Per creare un sinonimo  
   
@@ -75,7 +75,7 @@ ms.locfileid: "72909734"
      **Nome oggetto**  
      Digitare il nome dell'oggetto al quale fa riferimento il sinonimo.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-synonym"></a>Per creare un sinonimo  
   

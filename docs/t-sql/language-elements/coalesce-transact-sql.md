@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950299"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67950299"
 
 Valuta gli argomenti seguendo l'ordine e restituisce il valore corrente della prima espressione che inizialmente non restituisce `NULL`. Ad esempio, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` restituisce il terzo valore perché il terzo valore è il primo non Null. 
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +48,7 @@ _expression_
 ## <a name="return-types"></a>Tipi restituiti  
 Restituisce il tipo di dati dell'_espressione_ con la precedenza del tipo di dati più alta. Se tutte le espressioni non ammettono valori Null, il risultato non ammetterà valori Null.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Quando tutti gli argomenti sono `NULL`, `COALESCE`restituisce `NULL`. Almeno uno dei valori Null deve essere un valore `NULL` tipizzato.  
   
 ## <a name="comparing-coalesce-and-case"></a>Confronto tra COALESCE e CASE  
@@ -115,7 +115,7 @@ Le finalità della funzione `ISNULL` e dell'espressione `COALESCE` sono simili, 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-running-a-simple-example"></a>A. Esecuzione di un esempio semplice  
+### <a name="a-running-a-simple-example"></a>R. Esecuzione di un esempio semplice  
 Nell'esempio seguente viene illustrato il modo in cui `COALESCE` seleziona i dati dalla prima colonna in cui è presente un valore non Null. In questo esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
@@ -189,7 +189,7 @@ Total Salary
 (12 row(s) affected)
 ```  
   
-### <a name="c-simple-example"></a>C: Esempio semplice  
+### <a name="c-simple-example"></a>C: esempio semplice  
 Nell'esempio seguente viene illustrato come `COALESCE` seleziona i dati dalla prima colonna in cui è presente un valore non Null. Si supponga per questo esempio che la tabella `Products` contenga i dati seguenti:  
   
 ```  
@@ -219,7 +219,7 @@ NULL         White      PN9876         White
   
 Si noti che nella prima riga, il valore `FirstNotNull` è `PN1278`, non `Socks, Mens`. Questo valore è determinato dal fatto che la colonna `Name`non è stata specificata come parametro per `COALESCE` nell'esempio.  
   
-### <a name="d-complex-example"></a>D: Esempio complesso  
+### <a name="d-complex-example"></a>D: esempio complesso  
 L'esempio seguente usa `COALESCE` per confrontare i valori in tre colonne e restituire solo il valore non Null trovato nelle colonne.  
   
 ```sql  

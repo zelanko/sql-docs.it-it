@@ -35,10 +35,10 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982830"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
@@ -159,7 +159,7 @@ CONTAINS (
 >  Perché la query restituisca delle righe, è necessario specificare *property_name* nell'elenco delle proprietà di ricerca dell'indice full-text e l'indice full-text deve contenere voci specifiche per la proprietà *property_name*. Per altre informazioni, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
  LANGUAGE *language_term*  
- Lingua da usare per word breaking, stemming, espansioni e sostituzioni del thesaurus e rimozione di [parole non significative](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) come parte della query. Questo parametro è facoltativo.  
+ Lingua da usare per word breaking, stemming, espansioni e sostituzioni del thesaurus e rimozione di [parole non significative](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) come parte della query. Questo parametro è facoltativo e,  
   
  Se documenti di lingue diverse vengono archiviati insieme come oggetti BLOB in una singola colonna, l'identificatore delle impostazioni locali (LCID) di un documento specifico determina la lingua da utilizzare per indicizzarne il contenuto. Se quando si esegue una query su una colonna di questo tipo si specifica LANGUAGE *language_term*, è possibile aumentare la probabilità di una corrispondenza soddisfacente.  
   
@@ -225,7 +225,7 @@ Specifica che deve essere trovata l'esatta corrispondenza di una parola o di una
  INFLECTIONAL  
  Specifica che deve essere utilizzato lo stemmer specifico della lingua per il termine semplice specificato. Il comportamento dello stemmer dipende dalle regole di stemming di ogni lingua specifica. Alla lingua neutra non è associato alcuno stemmer. Per individuare lo stemmer corretto, viene utilizzata la lingua delle colonne in cui viene eseguita la ricerca. Se si specifica *language_term*, viene usato lo stemmer corrispondente a tale lingua.  
   
- Un  *\<simple_term>* specifico all'interno di un  *\<generation_term>* non troverà corrispondenza né tra sostantivi né tra verbi.  
+ Un *\<simple_term>* specifico all'interno di un *\<generation_term>* non troverà corrispondenza né tra sostantivi né tra verbi.  
   
  THESAURUS  
  Specifica che verrà utilizzato il thesaurus corrispondente alla lingua full-text per le colonne oppure alla lingua specificata nella query. Il modello o i modelli più lunghi di *\<simple_term>* vengono confrontati con il thesaurus e vengono generati termini aggiuntivi per espandere o sostituire il modello originale. Se non viene trovata alcuna corrispondenza per il valore *\<simple_term>* o parte di esso, la parte per cui non è stata trovata alcuna corrispondenza viene considerata *simple_term*. Per altre informazioni sul thesaurus di ricerca full-text, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
@@ -285,7 +285,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  Si noti che il termine di ricerca interno, `CC`, non viene preso in considerazione.  
   
  **MAX**  
- Restituisce le righe che contengono i termini specificati indipendentemente dalla distanza esistente tra di essi. Impostazione predefinita.  
+ Restituisce le righe che contengono i termini specificati indipendentemente dalla distanza esistente tra di essi. Questa è la modalità predefinita.  
   
  \<match_order>  
  Specifica se i termini devono trovarsi nell'ordine specificato che deve essere restituito da una query di ricerca. Per specificare \<match_order> è anche necessario specificare \<maximum_distance>.  
@@ -298,7 +298,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **FALSE**  
  Ignora l'ordine specificato. Ad esempio, `NEAR(A,B)` corrisponderebbe sia a `A ... B` sia a `B ... A`.  
   
- Impostazione predefinita.  
+ Questa è la modalità predefinita.  
   
  Ad esempio, il termine vicino seguente cerca le parole "`Monday`", "`Tuesday`" e "`Wednesday`" nell'ordine specificato indipendentemente dalla distanza esistente tra di essi:  
   
@@ -312,7 +312,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Specifica che le righe restituite dalla query corrispondono a un elenco di parole e di frasi, a ognuna delle quali può essere associato un valore di ponderazione facoltativo.  
   
  ISABOUT  
- Specifica la parola chiave  *\<weighted_term >* .  
+ Specifica la parola chiave *\<weighted_term >* .  
   
  WEIGHT(*weight_value*)  
  Specifica un valore di ponderazione compreso tra 0.0 e 1.0. Ogni componente di *\<weighted_term>* può includere un valore *weight_value*. *weight_value* consente di modificare l'effetto delle varie parti di una query sul valore di pertinenza assegnato a ogni riga che soddisfa la query. WEIGHT non ha alcun effetto sui risultati delle query CONTAINS, ma ha effetto sul valore di pertinenza nelle query [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-contains-with-simple_term"></a>A. Uso di CONTAINS con \<simple_term>  
+### <a name="a-using-contains-with-simple_term"></a>R. Uso di CONTAINS con \<simple_term>  
  Nell'esempio seguente vengono trovati tutti i prodotti il cui prezzo è `$80.99` e contenenti la parola `Mountain`.  
   
 ```sql  

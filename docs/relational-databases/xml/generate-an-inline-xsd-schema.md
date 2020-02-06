@@ -19,10 +19,10 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943152"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generazione di uno schema XSD inline
@@ -37,7 +37,7 @@ ms.locfileid: "67943152"
   
  Se si specifica la parola chiave XMLSCHEMA in una query FOR XML, si otterrà sia uno schema che i dati XML, ovvero il risultato della query. Ogni elemento di livello principale dei dati fa riferimento allo schema precedente tramite una dichiarazione dello spazio dei nomi predefinito che, a sua volta, fa riferimento allo spazio dei nomi di destinazione dello schema inline.  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -222,7 +222,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Conflitti dei nomi di elementi  
  Nelle query FOR XML è possibile utilizzare lo stesso nome per indicare due sottoelementi. Ad esempio, la query seguente recupera i valori ListPrice e DealerPrice dei prodotti, ma specifica lo stesso alias per le due colonne, ovvero Price. Nel set di righe risultante saranno pertanto presenti due colonne con lo stesso nome.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Caso 1: entrambi i sottoelementi sono colonne non chiave dello stesso tipo e possono essere NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Caso 1: Entrambi i sottoelementi sono colonne non chiave dello stesso tipo e possono essere NULL  
  Nella query seguente, entrambi i sottoelementi sono colonne non chiave dello stesso tipo e possono essere NULL.  
   
 ```  
@@ -274,7 +274,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  Nello schema XSD si noti quanto segue:  
   
--   ListPrice e DealerPrice sono dello stesso tipo, `money` ed entrambi possono essere NULL nella tabella. Dato che non possono essere restituiti nel codice XML risultante, nella dichiarazione del tipo complesso dell'elemento <`row`> esiste pertanto un solo elemento figlio <`Price`> con minOccurs=0 e maxOccurs=2.  
+-   ListPrice e DealerPrice sono dello stesso tipo, `money`ed entrambi possono essere NULL nella tabella. Dato che non possono essere restituiti nel codice XML risultante, nella dichiarazione del tipo complesso dell'elemento <`Price`> esiste pertanto un solo elemento figlio <`row`> con minOccurs=0 e maxOccurs=2.  
   
 -   Poiché il valore `DealerPrice` è NULL nella tabella, nel risultato viene restituito solo `ListPrice` come elemento <`Price`>. Se si aggiunge il parametro `XSINIL` alla direttiva ELEMENTS, si otterranno entrambi gli elementi con il valore `xsi:nil` impostato su TRUE per l'elemento <`Price`> corrispondente a DealerPrice. Si otterranno inoltre due elementi figlio <`Price`> nella definizione del tipo complesso <`row`> dello schema XSD inline, con l'attributo `nillable` impostato su TRUE per entrambi. Di seguito è riportato un frammento che rappresenta un risultato parziale:  
   
@@ -314,7 +314,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Caso 2: una colonna chiave e una colonna non chiave dello stesso tipo  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Caso 2: Una colonna chiave e una colonna non chiave dello stesso tipo  
  La query seguente illustra una colonna chiave e una colonna non chiave dello stesso tipo.  
   
 ```  
@@ -392,7 +392,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Si noti che per l'elemento <`Col`> dello schema XSD inline, minOccurs è impostato su 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Caso 3: entrambi gli elementi sono di tipo diverso e le colonne corrispondenti possono essere NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Caso 3: Entrambi gli elementi sono di tipo diverso e le colonne corrispondenti possono essere NULL  
  La query seguente viene eseguita sulla tabella di esempio illustrata nel caso 2:  
   
 ```  
@@ -465,7 +465,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Col2 e Col3 possono entrambe essere NULL e pertanto nella dichiarazione dell'elemento <`Col`> è specificato che minOccurs è 0 e maxOccurs è 2.  
   
--   Poiché gli elementi <`Col`> sono di pari livello, nello schema è presente una singola dichiarazione di elemento. Inoltre, dato che entrambi gli elementi sono anche di tipo diverso, benché di tipo semplice, il tipo dell'elemento nello schema è `xsd:anySimpleType`. Nel risultato, ogni tipo di istanza è identificato dall'attributo `xsi:type`.  
+-   Poiché gli elementi <`Col`> sono di pari livello, nello schema è presente una singola dichiarazione di elemento. Inoltre, dato che entrambi gli elementi sono anche di tipo diverso, benché di tipo semplice, il tipo dell'elemento nello schema è `xsd:anySimpleType`. Nel risultato, ogni tipo di istanza è identificato dall'attributo `xsi:type` .  
   
 -   Nel risultato, ogni istanza dell'elemento <`Col`> fa riferimento al proprio tipo di istanza con l'attributo `xsi:type`.  
   

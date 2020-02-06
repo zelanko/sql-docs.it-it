@@ -20,10 +20,10 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914589"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67914589"
 
   OpenXML fornisce una vista di un documento XML basata su un set di righe. In quanto provider di set di righe, è possibile utilizzare OPENXML nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che supportano provider di set di righe quali una tabella, una vista o la funzione OPENROWSET.  
   
- ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Può essere utilizzato in combinazione (OR logico) con XML_ATTRIBUTES o XML_ELEMENTS. Nel contesto di operazioni di recupero, questo flag indica che i dati consumati non devono essere copiati nella proprietà di overflow **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
- Definizione dello schema nel formato seguente: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ È la definizione dello schema nel formato: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  Nome della colonna nel set di righe.  
@@ -80,7 +80,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  Nome di tabella che è possibile assegnare in sostituzione di *SchemaDeclaration* se una tabella avente lo schema desiderato esiste già e non sono necessari modelli di colonna specifici.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La clausola WITH restituisce un formato di set di righe (e informazioni aggiuntive relative al mapping, se necessario) tramite *SchemaDeclaration* o specificando un valore esistente per *TableName*. Se la clausola facoltativa WITH viene omessa, i risultati vengono restituiti nel formato di tabella **edge**. Le tabelle edge rappresentano la struttura specifica del documento XML, ad esempio nomi di elementi/attributi, gerarchia del documento, spazi dei nomi, istruzioni di elaborazione e così via, in un'unica tabella.  
   
  Nella tabella seguente viene descritta la struttura della tabella **edge**.  
@@ -99,7 +99,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. Utilizzo di un'istruzione SELECT semplice con OPENXML  
+### <a name="a-using-a-simple-select-statement-with-openxml"></a>R. Utilizzo di un'istruzione SELECT semplice con OPENXML  
  Nell'esempio seguente viene creata una rappresentazione interna dell'immagine XML tramite `sp_xml_preparedocument`. Su tale rappresentazione viene quindi eseguita un'istruzione `SELECT` che utilizza un provider di set di righe `OPENXML`.  
   
  Il valore di *flag* viene impostato su `1`, a indicare il mapping **incentrato sugli attributi**. Sugli attributi XML viene pertanto eseguito il mapping alle colonne del set di righe. Il valore di *rowpattern* specificato come `/ROOT/Customer` identifica i nodi `<Customers>` da elaborare.  
@@ -211,7 +211,7 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 ### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. Restituzione di risultati in formato di tabella edge  
  Il documento XML utilizzato nell'esempio seguente è composto dagli elementi `<Customers>`, `<Orders>` e `<Order_0020_Details>`. Viene innanzitutto richiamata la stored procedure **sp_xml_preparedocument** per ottenere un handle di documento, quindi l'handle di documento viene passato a `OPENXML`.  
   
- Nell'istruzione `OPENXML` *rowpattern* (`/ROOT/Customers`) identifica i nodi `<Customers>` da elaborare. Poiché la clausola WITH non è specificata, `OPENXML` restituisce il set di righe nel formato di tabella **edge**.  
+ Nell'istruzione `OPENXML`*rowpattern* (`/ROOT/Customers`) identifica i nodi `<Customers>` da elaborare. Poiché la clausola WITH non è specificata, `OPENXML` restituisce il set di righe nel formato di tabella **edge**.  
   
  L'istruzione `SELECT` recupera infine tutte le colonne della tabella **edge**.  
   
@@ -245,5 +245,5 @@ EXEC sp_xml_removedocument @idoc;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi: uso di OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
+ [Esempi d'uso di OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   

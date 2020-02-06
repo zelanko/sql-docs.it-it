@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906883"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configurare gruppi con scalabilità orizzontale PolyBase in Windows
@@ -39,7 +39,7 @@ I passaggi seguenti riepilogano il processo per la creazione di un gruppo con sc
 
 4. Monitorare i nodi nel gruppo usando [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).
 
-5. Facoltativo. Rimuovere un nodo di calcolo usando [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
+5. Facoltativa. Rimuovere un nodo di calcolo usando [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
 
 ## <a name="example-walk-through"></a>Procedura dettagliata di esempio
 
@@ -51,7 +51,7 @@ Di seguito vengono illustrati i passaggi per configurare un gruppo di PolyBase c
   
    - PQTH4A-CMP02  
   
-2. Account di dominio: *PQTH4A\PolyBaseUser*  
+2. Account di dominio: *PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Installare SQL Server con PolyBase in tutti i computer
 

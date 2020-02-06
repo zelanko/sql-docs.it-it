@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245242"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Utilizzo della modalità RAW con FOR XML
@@ -38,19 +38,19 @@ Nella modalità RAW ogni riga del set di risultati della query viene trasformata
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Questa sezione contiene gli esempi seguenti:  
   
--   [Esempio: Recupero delle informazioni relative al modello del prodotto in formato XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [Esempio: recupero delle informazioni relative al modello del prodotto in formato XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [Esempio: Specifica di XSINIL con la direttiva ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Esempio: specifica di XSINIL con la direttiva ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Richiedere schemi come risultati con XMLDATA e XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [Esempio: Recupero di dati binari](../../relational-databases/xml/example-retrieving-binary-data.md)  
+-   [Esempio: recupero di dati binari](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [Esempio: Ridenominazione dell'elemento &#60;row&#62;](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [Esempio: ridenominazione dell'elemento &#60;row&#62;](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [Esempio: Specifica di un elemento radice per codice XML generato da FOR XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Esempio: specifica di un elemento radice per codice XML generato da FOR XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Esempio: Esecuzione di query sulle colonne di tipo XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
+-   [Esempio: esecuzione di query sulle colonne di tipo XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

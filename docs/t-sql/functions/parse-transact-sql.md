@@ -18,10 +18,10 @@ ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892505"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68892505"
 
   Restituisce il risultato di un'espressione, convertito nel tipo di dati richiesto in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,7 +47,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  Valore letterale che rappresenta il tipo di dati richiesto per il risultato.  
   
- *culture*  
+ *Impostazioni cultura*  
  Stringa facoltativa che identifica le impostazioni cultura in cui viene formattato *string_value*.  
   
  Se l'argomento *culture* non è specificato, viene usata la lingua della sessione corrente. Tale lingua viene impostata in modo implicito o in modo esplicito tramite l'istruzione SET LANGUAGE. *culture* accetta qualsiasi impostazione cultura supportata da .NET Framework e non è limitato alle lingue supportate in modo esplicito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'argomento *culture* non è valido, PARSE genera un errore.  
@@ -55,7 +55,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce il risultato dell'espressione, convertito nel tipo di dati richiesto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Eventuali valori Null passati come argomenti a PARSE vengono trattati in due modalità:  
   
 1.  Se viene passata una costante Null, viene generato un errore. Un valore Null non può essere analizzato in un tipo di dati diverso in modo consapevole.  
@@ -72,23 +72,23 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  I valori per il parametro *data_type* sono limitati ai tipi visualizzati nella tabella seguente, insieme con gli stili. Le informazioni sugli stili vengono fornite per determinare i tipi di modelli consentiti. Per altre informazioni sugli stili, vedere la documentazione di .NET Framework relativa alle enumerazioni **System.Globalization.NumberStyles** e **DateTimeStyles**.  
   
-|Category|Tipo|Tipo .NET Framework|Stili utilizzati|  
+|Category|Type|Tipo .NET Framework|Stili utilizzati|  
 |--------------|----------|-------------------------|-----------------|  
-|Numeric|BIGINT|Int64|NumberStyles.Number|  
+|Numeric|bigint|Int64|NumberStyles.Number|  
 |Numeric|INT|Int32|NumberStyles.Number|  
 |Numeric|SMALLINT|Int16|NumberStyles.Number|  
 |Numeric|TINYINT|Byte|NumberStyles.Number|  
-|Numeric|Decimal|Decimal|NumberStyles.Number|  
+|Numeric|decimal|Decimal|NumberStyles.Number|  
 |Numeric|NUMERIC|Decimal|NumberStyles.Number|  
-|Numeric|FLOAT|Double|NumberStyles.Float|  
-|Numeric|REAL|Single|NumberStyles.Float|  
+|Numeric|float|Double|NumberStyles.Float|  
+|Numeric|real|Single|NumberStyles.Float|  
 |Numeric|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |Numeric|money|Decimal|NumberStyles.Currency|  
-|Data e ora|Data|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Data e ora|Data|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e ora|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Data e ora|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Data e ora|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Data e ora|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Data e ora|Datetime|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Data e ora|smalldatetime|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Data e ora|datetime2|Datetime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e ora|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
  **Ulteriori informazioni sul parametro relativo alle impostazioni cultura**  
@@ -97,7 +97,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |Nome completo|Alias|LCID|Impostazioni cultura specifiche|  
 |---------------|-----------|----------|----------------------|  
-|us_english|Inglese|1033|en-US|  
+|us_english|Inglese|1033|it-IT|  
 |Deutsch|Tedesco|1031|de-DE|  
 |Français|Francese|1036|fr-FR|  
 |日本語|Giapponese|1041|ja-JP|  
@@ -133,7 +133,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-parse-into-datetime2"></a>A. PARSE in datetime2  
+### <a name="a-parse-into-datetime2"></a>R. PARSE in datetime2  
   
 ```  
 SELECT PARSE('Monday, 13 December 2010' AS datetime2 USING 'en-US') AS Result;  

@@ -19,10 +19,10 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bf40ce38bf96ae4d31c9102290e74d5db2230240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927381"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67927381"
 
   Confronta un valore scalare con un set di valori a colonna singola.  
   
- ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## <a name="result-value"></a>Valore restituito  
  Restituisce TRUE se il confronto specificato è TRUE per tutte le coppie (_scalar_expression_ **,** x _)_ , dove *x* è un valore del set a colonna singola. In caso contrario restituisce FALSE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  ALL specifica che l'argomento *scalar_expression* deve essere confrontato in modo univoco con ogni valore restituito dalla sottoquery. Se ad esempio la sottoquery restituisce i valori 2 e 3, *scalar_expression* <= ALL (sottoquery) restituisce TRUE se il valore di *scalar_expression* è 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (subquery) restituisce FALSE, perché alcuni valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
   
  Per le istruzioni che specificano che l'argomento *scalar_expression* deve essere confrontato in modo univoco con un solo valore restituito dalla sottoquery, vedere [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  

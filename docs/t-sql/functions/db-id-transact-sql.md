@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995745"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68995745"
 
 Questa funzione restituisce il numero di identificazione (ID) di un database specificato.
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +50,7 @@ Nome del database il cui numero di ID database verrà restituito da `DB_ID`. Se 
 ## <a name="return-types"></a>Tipi restituiti
 **int**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 `DB_ID` può essere usato solo per restituire l'identificatore del database corrente nel database SQL di Azure. Se il nome del database specificato è diverso da quello del database corrente, viene restituito NULL.
 
 > [!NOTE]
@@ -64,7 +64,7 @@ Se il chiamante di `DB_ID` non è proprietario di un database non **master** o n
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-database-id-of-the-current-database"></a>A. Restituzione dell'ID del database corrente  
+### <a name="a-returning-the-database-id-of-the-current-database"></a>R. Restituzione dell'ID del database corrente  
 Questo esempio restituisce l'ID del database corrente.
   
 ```sql

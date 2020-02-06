@@ -1,5 +1,5 @@
 ---
-title: 'Esempi: Utilizzo di OPENXML | Microsoft Docs'
+title: Esempi d'uso di OPENXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -27,13 +27,13 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943380"
 ---
-# <a name="examples-using-openxml"></a>Esempi: Uso di OPENXML
+# <a name="examples-using-openxml"></a>Esempi: utilizzo di OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Negli esempi presentati in questo argomento viene illustrato come utilizzare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67943380"
   
  Il mapping predefinito è determinato dal valore di *flags* . Se in *SchemaDeclaration* non è specificato *ColPattern*, viene usato il mapping specificato in *flags* . Se invece in *SchemaDeclaration* è specificato *ColPattern* , il valore *flags*viene ignorato. Il valore specificato per *ColPattern* determina il tipo di mapping, che può essere incentrato sugli attributi o sugli elementi, nonché la modalità di gestione dei dati di overflow e di quelli non utilizzati.  
   
-### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. Esecuzione di una semplice istruzione SELECT con OPENXML  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>R. Esecuzione di una semplice istruzione SELECT con OPENXML  
  Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`>, <`Order`> e <`OrderDetail`>. L'istruzione OPENXML recupera dal documento XML le informazioni sui clienti in un set di righe con due colonne, **CustomerID** e **ContactName**.  
   
  Prima di tutto, viene chiamata la stored procedure **sp_xml_preparedocument** per ottenere un handle di documento. L'handle del documento viene quindi passato a OPENXML.  
@@ -144,7 +144,7 @@ LILAS      Carlos Gonzlez
 ### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. Impostazione del parametro ColPattern per il mapping tra le colonne del set di righe e attributi o elementi XML  
  Questo esempio mostra l'impostazione del modello XPath nel parametro facoltativo *ColPattern* per specificare il mapping tra le colonne del set di righe e gli attributi o elementi XML.  
   
- Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`>, <`Order`> e <`OrderDetail`>. L'istruzione OPENXML recupera dal documento XML le informazioni sui clienti e sugli ordini in un set di righe che include le colonne **CustomerID**, **OrderDate**, **ProdID** e **Qty**.  
+ Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`>, <`Order`> e <`OrderDetail`>. L'istruzione OPENXML recupera dal documento XML le informazioni sui clienti e sugli ordini in un set di righe che include le colonne**CustomerID**, **OrderDate**, **ProdID**e **Qty**.  
   
  Prima di tutto, viene chiamata la stored procedure **sp_xml_preparedocument** per ottenere un handle di documento. L'handle del documento viene quindi passato a OPENXML.  
   
@@ -152,7 +152,7 @@ LILAS      Carlos Gonzlez
   
 -   Il parametro *rowpattern* (/ROOT/Customer/Order/OrderDetail) identifica i nodi <`OrderDetail`> da elaborare.  
   
- Nell'esempio il valore del parametro *flags* è impostato su **2**, per indicare che il mapping è incentrato sugli elementi, ma tale mapping viene sovrascritto da quello specificato in *ColPattern* . In altre parole, il modello XPath specificato in *ColPattern* esegue il mapping delle colonne del set di righe agli attributi, il che determina un mapping incentrato sugli attributi.  
+ Nell'esempio il valore del parametro *flags* è impostato su **2** , per indicare che il mapping è incentrato sugli elementi, ma tale mapping viene sovrascritto da quello specificato in *ColPattern* . In altre parole, il modello XPath specificato in *ColPattern* esegue il mapping delle colonne del set di righe agli attributi, il che determina un mapping incentrato sugli attributi.  
   
  Nella clausola WITH di *SchemaDeclaration*il parametro *ColPattern* è specificato anche con i parametri *ColName* e *ColType* . Il parametro *ColPattern* facoltativo è il modello XPath specificato e indica quanto segue:  
   
@@ -282,7 +282,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- A **CustomerID** viene applicato il mapping incentrato sugli attributi. Nell'elemento <`Customer`> non è presente l'attributo **ContactName**, quindi verrà applicato il mapping incentrato sugli elementi.  
+ A **CustomerID**viene applicato il mapping incentrato sugli attributi. Nell'elemento < **> non è presente l'attributo** ContactName`Customer`, quindi verrà applicato il mapping incentrato sugli elementi.  
   
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. Impostazione della funzione XPath text() come parametro ColPattern  
  Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`> e <`Order`>. L'istruzione OPENXML recupera un set di righe composto dall'attributo **oid** dell'elemento <`Order`>, dall'ID dell'elemento padre del nodo identificato da *rowpattern* e dalla stringa del valore foglia del contenuto dell'elemento.  
@@ -293,7 +293,7 @@ LILAS      Carlos Gonzlez
   
 -   Il parametro *rowpattern* (/root/Customer/Order) identifica i nodi <`Order`> da elaborare.  
   
--   Il valore del parametro *flags* è impostato su **1**, per indicare che il mapping è incentrato sugli attributi. Per gli attributi XML viene eseguito il mapping alle colonne del set di righe definite in *SchemaDeclaration*.  
+-   Il valore del parametro *flags* è impostato su **1** , per indicare che il mapping è incentrato sugli attributi. Per gli attributi XML viene eseguito il mapping alle colonne del set di righe definite in *SchemaDeclaration*.  
   
 -   In *SchemaDeclaration* , nella clausola WITH, i nomi delle colonne del set di righe **oid** e **amount** corrispondono ai nomi degli attributi XML associati. Di conseguenza, il parametro *ColPattern* non viene specificato. Per la colonna **comment** del set di righe, la funzione XPath **text()** viene specificata come parametro *ColPattern*. Questo parametro sovrascrive il mapping incentrato sugli attributi specificato nel parametro *flags*e la colonna contiene la stringa del valore foglia del contenuto dell'elemento.  
   
@@ -342,9 +342,9 @@ O4    10000.0       NULL
 ```  
   
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. Impostazione del parametro TableName nella clausola WITH  
- Questo esempio specifica *TableName* con la clausola WITH invece di *SchemaDeclaration*. Questo risulta utile se è disponibile una tabella con la struttura desiderata e se non sono necessari i modelli di colonna definiti dal parametro *ColPattern*.  
+ Questo esempio specifica *TableName* con la clausola WITH invece di *SchemaDeclaration*. Questo risulta utile se è disponibile una tabella con la struttura desiderata e se non sono necessari i modelli di colonna definiti dal parametro *ColPattern* .  
   
- Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`> e <`Order`>. L'istruzione OPENXML recupera dal documento XML le informazioni sugli ordini in un set di righe con tre colonne, **oid**, **date** e **amount**.  
+ Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`> e <`Order`>. L'istruzione OPENXML recupera dal documento XML le informazioni sugli ordini in un set di righe con tre colonne,**oid**, **date**e **amount**.  
   
  Prima di tutto, viene chiamata la stored procedure **sp_xml_preparedocument** per ottenere un handle di documento. L'handle del documento viene quindi passato a OPENXML.  
   
@@ -352,7 +352,7 @@ O4    10000.0       NULL
   
 -   Il parametro *rowpattern* (/root/Customer/Order) identifica i nodi <`Order`> da elaborare.  
   
--   Nella clausola WITH non è presente *SchemaDeclaration*, ma viene specificato un nome di tabella. Come schema del set di righe viene pertanto utilizzato lo schema della tabella.  
+-   Nella clausola WITH non è presente *SchemaDeclaration* , ma viene specificato un nome di tabella. Come schema del set di righe viene pertanto utilizzato lo schema della tabella.  
   
 -   Il valore del parametro *flags* è impostato su **1** , per indicare che il mapping è incentrato sugli attributi. Per gli attributi degli elementi identificati da *rowpattern*viene quindi eseguito il mapping alle colonne del set di righe con lo stesso nome.  
   
@@ -443,7 +443,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Esempio:  
+ Il risultato viene restituito sotto forma di tabella edge. È possibile creare query da eseguire sulla tabella edge per recuperare informazioni specifiche. Ad esempio:  
   
 -   La query seguente restituisce il numero di nodi **Customer** presenti nel documento. Poiché non è stata specificata la clausola WITH, l'istruzione OPENXML restituisce una tabella edge. L'istruzione SELECT esegue la query sulla tabella edge.  
   
@@ -463,7 +463,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. Impostazione di un parametro rowpattern che termina con un attributo  
- Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`>, <`Order`> e <`OrderDetail`>. L'istruzione OPENXML recupera dal documento XML le informazioni sui dettagli degli ordini in un set di righe con tre colonne, **ProductID**, **Quantity** e **OrderID**.  
+ Il documento XML utilizzato nell'esempio è costituito da elementi <`Customer`>, <`Order`> e <`OrderDetail`>. L'istruzione OPENXML recupera dal documento XML le informazioni sui dettagli degli ordini in un set di righe con tre colonne,**ProductID**, **Quantity**e **OrderID**.  
   
  Prima di tutto, viene chiamata la stored procedure **sp_xml_preparedocument** per ottenere un handle di documento. L'handle del documento viene quindi passato a OPENXML.  
   
@@ -524,7 +524,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Impostazione di un documento XML con più nodi di testo  
- Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()** restituirà solo il primo, invece di tutti i nodi di testo. Esempio:  
+ Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()** restituirà solo il primo, invece di tutti i nodi di testo. Ad esempio:  
   
 ```  
 DECLARE @h int  
@@ -598,7 +598,7 @@ id  lname   xmlname                   OverFlow
   
 -   Il valore della colonna **lname** di tipo **varchar(30)** viene recuperato dall'elemento <`lname`> corrispondente.  
   
--   Come valore della colonna **xmlname** di tipo **xml**, viene restituito l'elemento con lo stesso nome.  
+-   Come valore della colonna **xmlname** di tipo **xml** , viene restituito l'elemento con lo stesso nome.  
   
 -   Il flag è impostato su 10, ovvero 2 + 8, dove 2 indica il mapping incentrato sugli elementi e 8 indica che solo i dati XML non utilizzati devono essere aggiunti alla colonna OverFlow definita nella clausola WITH. Se si imposta il flag su 2, nella colonna OverFlow specificata nella clausola WITH verrà copiato l'intero documento XML.  
   

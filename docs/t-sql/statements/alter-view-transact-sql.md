@@ -21,10 +21,10 @@ ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981945"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
@@ -67,7 +67,7 @@ AS select_statement
 >  Nelle colonne di una vista, le autorizzazioni assegnate per un nome di colonna rimangono valide tra istruzioni CREATE VIEW e ALTER VIEW, indipendentemente dall'origine dei dati sottostanti. Se ad esempio si concedono autorizzazioni per la colonna **SalesOrderID** con un'istruzione CREATE VIEW, è possibile usare un'istruzione ALTER VIEW per rinominare la colonna **SalesOrderID**, ad esempio come **OrderRef**, e mantenere comunque le autorizzazioni associate alla vista che usa la colonna **SalesOrderID**.  
   
  ENCRYPTION  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Crittografa le voci nella tabella [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) contenenti il testo dell'istruzione ALTER VIEW. Se si utilizza WITH ENCRYPTION, la vista non viene pubblicata nell'ambito della replica di SQL Server.  
   
@@ -92,7 +92,7 @@ AS select_statement
  WITH CHECK OPTION  
  Forza il rispetto del set di criteri specificato in *select_statement* per tutte le istruzioni di modifica dei dati eseguite sulla vista.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per altre informazioni su ALTER VIEW, vedere la sezione Osservazioni in [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  

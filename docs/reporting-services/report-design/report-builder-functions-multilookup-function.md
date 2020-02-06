@@ -9,10 +9,10 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577157"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funzioni di Generatore report - Funzione Multilookup
@@ -33,10 +33,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (**VariantArray**) Espressione valutata nell'ambito corrente che specifica il set di nomi o chiavi da ricercare. Ad esempio per un parametro multivalore, `=Parameters!IDs.value`.  
   
  *destination_expression*  
- (**Variant**) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui stabilire la corrispondenza. Ad esempio, `=Fields!ID.Value`.  
+ (**Variant**) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui stabilire la corrispondenza. Ad esempio: `=Fields!ID.Value`.  
   
  *result_expression*  
- (**Variant**) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, e che specifica il valore da recuperare. Ad esempio, `=Fields!Name.Value`.  
+ (**Variant**) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, e che specifica il valore da recuperare. Ad esempio: `=Fields!Name.Value`.  
   
  *set di dati*  
  Costante che specifica il nome di un set di dati nel report, ad esempio "Colori".  
@@ -44,7 +44,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>Return  
  Restituisce **VariantArray**o **Nothing** se non viene rilevata alcuna corrispondenza.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Usare **Multilookup** per recuperare un set di valori da un set di dati per coppie nome/valore in ciascuna delle quali è presente una relazione uno-a-uno. **MultiLookup** è l'equivalente alla chiamata di **Lookup** per un set di nomi o chiavi. Per un parametro multivalore basato su identificatori di chiave primaria, ad esempio, è possibile utilizzare la funzione **Multilookup** in un'espressione in una casella di testo di una tabella per recuperare i valori associati da un set di dati non associato al parametro o alla tabella.  
   
  Tramite la funzione**Multilookup** vengono effettuate le operazioni seguenti:  
@@ -57,7 +57,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Per recuperare un singolo valore da un set di dati con coppie nome/valore per un nome specificato in cui è presente una relazione uno-a-uno, usare la [Funzione Lookup &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Per recuperare più valori da un set di dati con coppie nome/valore per un nome in cui è presente una relazione uno-a-molti, usare la [Funzione LookupSet &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md).  
   
- Sono previste le restrizioni seguenti:  
+ Si applicano le restrizioni seguenti:  
   
 -   La funzione**Multilookup** viene valutata dopo l'applicazione di tutte le espressioni di filtro  
   
@@ -88,12 +88,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Nel set di dati CategoryNames sono contenuti l'identificatore e il nome della categoria, come illustrato nella tabella seguente.  
   
-|ID|nome|  
+|ID|Nome|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|Componenti|  
   
  Per cercare i nomi che corrispondono all'elenco di identificatori, utilizzare **Multilookup**. È necessario innanzitutto suddividere l'elenco in una matrice di stringhe, chiamare la funzione **Multilookup** per recuperare i nomi di categoria e concatenare i risultati in una stringa.  
   
@@ -110,7 +110,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ColorID|Colore|  
 |-------------|-----------|  
-|1|Red|  
+|1|Rosso|  
 |2|Blu|  
 |3|Green|  
   

@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927376"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927376"
 
   Combina due espressioni booleane e restituisce **TRUE** se entrambe le espressioni sono **TRUE**. Quando un'istruzione include più operatori logici, gli operatori **AND** vengono valutati per primi. È tuttavia possibile modificare l'ordine di valutazione tramite l'utilizzo delle parentesi.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +52,7 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Valore restituito  
  Restituisce TRUE quando entrambe le espressioni sono TRUE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Nella tabella seguente vengono illustrati i risultati dei confronti eseguiti tra valori TRUE e FALSE tramite l'operatore AND.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -63,7 +63,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-and-operator"></a>A. Utilizzo dell'operatore AND  
+### <a name="a-using-the-and-operator"></a>R. Utilizzo dell'operatore AND  
  Nell'esempio seguente vengono selezionate le informazioni sui dipendenti che dispongono sia del titolo di `Marketing Assistant` e di oltre `41` ore di ferie disponibili.  
   
 ```  
