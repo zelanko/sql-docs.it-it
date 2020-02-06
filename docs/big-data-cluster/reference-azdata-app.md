@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 371321c8b91d3d7c56ac2721deb29a664209f004
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7cb67f55af03fc8c948df6f17ee2924dea12825f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531911"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820974"
 ---
 # <a name="azdata-app"></a>azdata app
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-L'articolo seguente offre informazioni di riferimento sui comandi `sql` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
+L'articolo seguente offre informazioni di riferimento sui comandi `app` dello strumento `azdata`. Per altre informazioni su altri comandi `azdata`, vedere [Informazioni di riferimento su azdata](reference-azdata.md)
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Modelli.
@@ -64,7 +64,7 @@ azdata app init --name reduce --template ssis
 #### `--spec -s`
 Genera solo un'applicazione spec.yaml.
 #### `--name -n`
-Nome applicazione
+Nome dell'applicazione.
 #### `--version -v`
 Versione dell'applicazione.
 #### `--template -t`
@@ -156,7 +156,7 @@ azdata app list
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--name -n`
-Nome applicazione
+Nome dell'applicazione.
 #### `--version -v`
 Versione dell'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
@@ -183,7 +183,7 @@ azdata app delete --name reduce --version v1
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--name -n`
-Nome applicazione
+Nome dell'applicazione.
 #### `--version -v`
 Versione dell'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
@@ -219,7 +219,7 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--name -n`
-Nome applicazione
+Nome dell'applicazione.
 #### `--version -v`
 Versione dell'applicazione.
 ### <a name="optional-parameters"></a>Parametri facoltativi
@@ -252,7 +252,7 @@ azdata app describe --name reduce --version v1
 #### `--spec -s`
 Percorso di una directory con un file di specifiche YAML che descrive l'applicazione.
 #### `--name -n`
-Nome applicazione
+Nome dell'applicazione.
 #### `--version -v`
 Versione dell'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali

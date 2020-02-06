@@ -24,10 +24,10 @@ ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 360b597b8cd122ede57426cc879dd041b3414078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927550"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927550"
 
   Verifica se i dati con firma digitale sono stati modificati dopo la firma.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  Restituisce 1 se i dati firmati risultano invariati; in caso contrario, restituisce 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **VerifySignedBycert** decrittografa la firma dei dati usando la chiave pubblica del certificato specificato e confronta il valore decrittografato con un nuovo hash MD5 dei dati calcolato. Se i valori corrispondono, viene confermata la validità della firma.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -67,7 +67,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. Verifica che i dati firmati non siano stati alterati  
+### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>R. Verifica che i dati firmati non siano stati alterati  
  Nell'esempio seguente viene verificato se le informazioni incluse in `Signed_Data` sono state modificate dopo la firma tramite il certificato denominato `Shipping04`. La firma viene archiviata in `DataSignature`. Il certificato `Shipping04` viene passato a `Cert_ID`, che restituisce l'ID del certificato nel database. Se `VerifySignedByCert` restituisce 1, la firma è corretta. Se invece `VerifySignedByCert` restituisce 0, i dati in `Signed_Data` non corrispondono ai dati utilizzati per generare `DataSignature`. In questo caso, i dati in `Signed_Data` sono stati modificati dopo la firma oppure la firma di `Signed_Data` è stata eseguita con un certificato diverso.  
   
 ```  

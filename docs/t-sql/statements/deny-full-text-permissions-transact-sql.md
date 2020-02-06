@@ -19,10 +19,10 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5451cddba8a1719e9672c0d10ffe4a62c960d38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114817"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY - autorizzazioni per il catalogo full-text (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68114817"
   Nega le autorizzazioni per un catalogo full-text ed elenchi di parole non significative full-text.  
   
 
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,10 +51,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti nella sezione "Osservazioni" più avanti in questo argomento.  
   
- ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
  Specifica il catalogo full-text per cui viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
  Specifica l'elenco di parole non significative full-text per cui viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  

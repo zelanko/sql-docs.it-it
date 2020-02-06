@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6a0c3acfaafd2e079901f52d1dd925a604a4c23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130296"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68130296"
 
   Restituisce il valore massimo dell'espressione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,7 +62,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce un valore uguale a *expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione MAX ignora tutti i valori Null.  
  
  MAX restituisce NULL quando non vi è alcuna riga da selezionare.  
@@ -73,7 +73,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-example"></a>A. Esempio semplice  
+### <a name="a-simple-example"></a>R. Esempio semplice  
  Nell'esempio seguente viene restituita l'aliquota fiscale più alta (massima) nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  

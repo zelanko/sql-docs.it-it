@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115787"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Attività Pulizia contenuto cronologia (Piano di manutenzione)
@@ -27,10 +27,10 @@ ms.locfileid: "68115787"
  Questa istruzione usa le istruzioni **sp_purge_jobhistory** e **sp_delete_backuphistory** .  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Connessione**  
+ **Connection**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** viene descritta più avanti in questo argomento.  
   
  **Cronologia operazioni di backup e ripristino**  
@@ -70,7 +70,7 @@ ms.locfileid: "68115787"
  **Usa nome utente e password specifici**  
  Consente di connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di SQL Server utilizzando l'autenticazione di SQL Server. Questa opzione non è disponibile.  
   
- **User name**  
+ **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  
   
  **Password**  

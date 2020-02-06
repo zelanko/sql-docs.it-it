@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e3560501061819b3911d7dd628d29e5dda09f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999867"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error - classe di evento
@@ -29,9 +29,9 @@ ms.locfileid: "67999867"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID del database specificato dal processo. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
 |**DatabaseName**|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
-|**Errore**|**int**|Numero di errore relativo all'ultimo tentativo (solo**EventSubClass** 1).|31|Sì|  
-|**EventClass**|**int**|Tipo di evento = 193.|27|no|  
-|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|**Error (Errore) (Error (Errore)e)**|**int**|Numero di errore relativo all'ultimo tentativo (solo**EventSubClass** 1).|31|Sì|  
+|**EventClass**|**int**|Tipo di evento = 193.|27|No|  
+|**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Il processo in background è in fase di terminazione dopo l'errore.<br /><br /> 2 = Il processo in background è stato eliminato, coda piena.<br /><br /> 3 = Il processo in background ha restituito un errore.|21|Sì|  
 |**IndexID**|**int**|ID dell'indice dell'oggetto interessato dall'evento. Per determinare l'ID di indice di un oggetto, utilizzare la colonna **indid** della tabella di sistema **sysindexes** .|24|Sì|  
 |**IntegerData**|**int**|Numero di tentativi eseguiti dal processo (solo**EventSubClass** 1).|25|Sì|  

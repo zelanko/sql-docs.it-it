@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71341999"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "71341999"
 
   La funzione STUFF consente di inserire una stringa in un'altra stringa eliminando un numero di caratteri specificato nella posizione iniziale della prima stringa e inserendo la seconda stringa in tale posizione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,7 +60,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce dati di tipo carattere se *character_expression* è un tipo di dati carattere supportato. Restituisce dati binari se *character_expression* è un tipo di dati binary supportato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se la posizione iniziale o la lunghezza è negativa oppure la posizione iniziale è maggiore della lunghezza della prima stringa, viene restituita una stringa Null. Se la posizione iniziale è 0, viene restituito un valore Null. Se il numero di caratteri da eliminare è maggiore del numero di caratteri che compongono la prima stringa, l'eliminazione arriva fino al primo carattere della prima stringa.  
 
 Viene generato un errore se il valore risultante è maggiore del massimo supportato dal tipo restituito.  

@@ -11,10 +11,10 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19a8597136f073d609c7a9cc77ce8e2b73c72004
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71688296"
 ---
 # <a name="backup-encryption"></a>Crittografia dei backup
@@ -28,7 +28,7 @@ ms.locfileid: "71688296"
   
 - **Algoritmo di crittografia:** gli algoritmi di crittografia supportati sono AES 128, AES 192, AES 256 e Triple DES  
   
-- **Componente di crittografia:** un certificato o una chiave asimmetrica  
+- **Componente di crittografia:** certificato o chiave asimmetrica  
   
 > [!CAUTION]  
 > È molto importante eseguire il backup del certificato o della chiave asimmetrica e preferibilmente in un percorso diverso dal file di backup utilizzato per la crittografia. Senza il certificato o la chiave asimmetrica, non è possibile ripristinare il backup, rendendo il file di backup inutilizzabile.  
@@ -39,7 +39,7 @@ ms.locfileid: "71688296"
   
 ##  <a name="Benefits"></a> Vantaggi  
   
-1. La crittografia dei backup dei database aiuta a proteggere i dati: SQL Server consente di scegliere di crittografare i dati di backup durante la creazione di un backup.  
+1. La crittografia dei backup dei database facilita la protezione dei dati: in SQL Server è possibile scegliere di crittografare i dati di backup durante la creazione di un backup.  
   
 1. La crittografia può essere utilizzata anche per i database crittografati tramite TDE.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71688296"
 ##  <a name="Prerequisites"></a> Prerequisiti  
  Di seguito sono riportati i prerequisiti per crittografare un backup:  
   
-1. **Creare una chiave master del database per il database master:** La chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Per altre informazioni, vedere [Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1. **Creare una chiave master del database per il database master:** la chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Per altre informazioni, vedere [Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 1. Creare un certificato o una chiave asimmetrica da utilizzare per la crittografia dei backup. Per altre informazioni sulla creazione di un certificato, vedere [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md). Per altre informazioni sulla creazione di una chiave asimmetrica, vedere [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).  
   
@@ -80,14 +80,14 @@ Per crittografare un backup o per eseguire il ripristino da un backup crittograf
 ## <a name="Methods"></a> Metodi di crittografia dei backup  
  Nelle sezioni seguenti viene fornita una breve introduzione ai passaggi per crittografare i dati durante il backup. Per una procedura dettagliata completa per la crittografia del backup con Transact-SQL, vedere [Creare un backup crittografato](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Utilizzare SQL Server Management Studio  
  È possibile crittografare un backup durante la creazione del backup di un database in una delle finestre di dialogo seguenti:  
   
 1. [Backup database &#40;pagina Opzioni di backup&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) Nella pagina **Opzioni di backup** è possibile selezionare **Crittografia** e specificare l'algoritmo di crittografia e il certificato o la chiave asimmetrica da usare per la crittografia.  
   
 1. [Utilizzo di Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Quando si seleziona un'attività di backup, nella scheda **Opzioni** della pagina **Definizione attività Backup database ()** è possibile selezionare **Crittografia backup**e specificare l'algoritmo di crittografia e il certificato o la chiave da usare per la crittografia.  
   
-### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
+### <a name="using-transact-sql"></a>Uso di Transact-SQL  
  Di seguito è riportata un'istruzione T-SQL di esempio per crittografare il file di backup:  
   
 ```sql  
@@ -129,7 +129,7 @@ Backup-SqlDatabase -ServerInstance . -Database "<myDatabase>" -BackupFile "<myDa
 |Argomento/Attività|Descrizione|  
 |-----------------|-----------------|  
 |[Creare un backup crittografato](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Vengono descritti i passaggi di base necessari per creare un backup crittografato|  
-|[Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fornisce un esempio di creazione di un backup crittografato protetto da chiavi nell'insieme di credenziali delle chiavi di Azure.|  
+|[Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Fornisce un esempio di creazione di un backup crittografato protetto da chiavi nell'insieme di credenziali delle chiavi di Azure.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  

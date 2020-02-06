@@ -29,10 +29,10 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297941"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
@@ -97,7 +97,7 @@ ms.locfileid: "71297941"
 ## <a name="related-tasks"></a>Attività correlate  
  Per informazioni dettagliate sull'impostazione di questa attività, fare clic su uno degli argomenti seguenti:  
   
--   [Identificazione di righe di dati simili tramite la trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+-   [Identificare righe di dati simili tramite la trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [Impostazione delle proprietà di un componente del flusso di dati](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "71297941"
  **Gestione connessione OLE DB**  
  Consente di selezionare una gestione connessione OLE DB esistente usando la casella di riepilogo o di creare una nuova connessione tramite il pulsante **Nuova** .  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Colonne)

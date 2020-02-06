@@ -11,10 +11,10 @@ ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9202cf969f87c23af7af7d68b01b4a42cff167d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298705"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Procedura di utilizzo dei servizi CDC
@@ -59,6 +59,6 @@ ms.locfileid: "71298705"
          Per informazioni su come immettere le credenziali per un account di accesso che ha l'autorizzazione di scrittura per il database MSXDBCDC, ad esempio il ruolo del database **db_owner** , vedere [Creare e modificare un servizio Oracle CDC](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) e [Connessione a SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare i servizi CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
+ [Usare i servizi CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

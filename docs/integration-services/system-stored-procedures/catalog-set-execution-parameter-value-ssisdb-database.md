@@ -11,10 +11,10 @@ ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f75065f38d47964ab3bbc07f22bb809061fb22d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295308"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (database SSISDB)
@@ -70,7 +70,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  Valore del parametro. *parameter_value* è di tipo **sql_variant**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per individuare i valori dei parametri utilizzati per una determinata esecuzione, eseguire una query sulla vista catalog.execution_parameter_values.  
   
  Per specificare l'ambito delle informazioni registrate durante un'esecuzione del pacchetto, impostare *parameter_name* su LOGGING_LEVEL e *parameter_value* su uno dei valori seguenti.  
@@ -79,8 +79,8 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|0|None<br /><br /> La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.|  
-|1|Standard<br /><br /> Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
+|0|nessuno<br /><br /> La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.|  
+|1|Basic<br /><br /> Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
 |2|Prestazioni<br /><br /> Vengono registrati solo le statistiche sulle prestazioni e gli eventi OnError e OnWarning.|  
 |3|Dettagliato<br /><br /> Tutti gli eventi vengono registrati, inclusi gli eventi personalizzati e di diagnostica. <br />Gli eventi personalizzati includono gli eventi registrati dalle attività di Integration Services. Per altre informazioni, vedere [Messaggi personalizzati per la registrazione](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
 |4|Derivazione di runtime<br /><br /> Raccoglie i dati necessari a tenere traccia della derivazione nel flusso di dati.|  
@@ -137,7 +137,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  

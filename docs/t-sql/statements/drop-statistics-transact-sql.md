@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca0183f72823073d36181c63273972928ab7aee4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929161"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67929161"
 
   Elimina le statistiche di più raccolte all'interno delle tabelle specificate del database corrente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,7 +60,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
  *statistics_name*  
  Nome del gruppo di statistiche da eliminare. I nomi dei gruppi di statistiche devono essere conformi alle regole per gli identificatori.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Eliminare le statistiche con cautela, in quanto l'operazione può influire sul piano di esecuzione scelto da Query Optimizer.  
   
  Le statistiche negli indici non possono essere eliminate tramite DROP STATISTICS. Le statistiche vengono mantenute per tutta l'esistenza dell'indice.  
@@ -72,7 +72,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dropping-statistics-from-a-table"></a>A. Eliminazione di statistiche da una tabella  
+### <a name="a-dropping-statistics-from-a-table"></a>R. Eliminazione di statistiche da una tabella  
  Nell'esempio seguente vengono eliminati i gruppi (raccolte) di statistiche di due tabelle, ossia il gruppo (raccolta) di statistiche `VendorCredit` della tabella `Vendor` e il gruppo (raccolta) di statistiche `CustomerTotal` della tabella `SalesOrderHeader`.  
   
 ```  

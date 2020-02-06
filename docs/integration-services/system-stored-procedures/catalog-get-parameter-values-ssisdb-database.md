@@ -11,10 +11,10 @@ ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73049945"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (database SSISDB)
@@ -47,7 +47,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  Nome del pacchetto. Specificare il nome del pacchetto per recuperare tutti i parametri del progetto e i parametri da un pacchetto specifico. *package_name* è di tipo **nvarchar(260)** .  
   
  [ @reference_id = ] *reference_id*  
- Identificatore univoco di un riferimento all'ambiente. Questo parametro è facoltativo. *reference_id* è di tipo **bigint**.  
+ Identificatore univoco di un riferimento all'ambiente. Questo parametro è facoltativo e, *reference_id* è di tipo **bigint**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
@@ -62,7 +62,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |parameter_name|**sysname**|Nome del parametro.|  
 |parameter_value|**sql_variant**|Valore del parametro.|  
 |sensitive|**bit**|Quando il valore è `1`, il valore del parametro è importante. In caso contrario, il valore è `0`.|  
-|required|**bit**|Quando il valore è `1`, il valore del parametro è necessario per avviare l'esecuzione. In caso contrario, il valore è `0`.|  
+|obbligatorio|**bit**|Quando il valore è `1`, il valore del parametro è necessario per avviare l'esecuzione. In caso contrario, il valore è `0`.|  
 |value_set|**bit**|Quando il valore è `1`, il valore del parametro è stato assegnato. In caso contrario, il valore è `0`.|  
   
 > [!NOTE]  

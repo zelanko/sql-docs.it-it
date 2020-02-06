@@ -11,10 +11,10 @@ ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a48cb51b363d036f57dfd4f175ab862645ebca1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296783"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project (database SSISDB)
@@ -43,7 +43,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
@@ -63,7 +63,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Tutti gli oggetti e i riferimenti all'ambiente del progetto corrispondente vengono eliminati insieme al progetto. Tuttavia, le versioni del progetto e i record delle relative operazioni vengono mantenuti fino alla prossima esecuzione del processo di pulizia delle operazioni.  
   
   

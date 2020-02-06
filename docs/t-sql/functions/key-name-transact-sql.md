@@ -18,18 +18,18 @@ ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd2246ed1a6c2c03e3a9f5c1989ce9e544c8b199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109328"
 ---
-# <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
+# <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce il nome della chiave simmetrica dal GUID di una chiave simmetrica o da un testo crittografato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,7 +53,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Visualizzazione del nome di una chiave simmetrica mediante key_guid  
+### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>R. Visualizzazione del nome di una chiave simmetrica mediante key_guid  
  Il database **master** contiene una chiave simmetrica denominata ##MS_ServiceMasterKey##. Nell'esempio seguente il GUID di tale chiave viene recuperato dalla vista a gestione dinamica sys.symmetric_keys e viene assegnato a una variabile che viene quindi passata alla funzione KEY_NAME per illustrare come restituire il nome corrispondente al GUID.  
   
 ```  

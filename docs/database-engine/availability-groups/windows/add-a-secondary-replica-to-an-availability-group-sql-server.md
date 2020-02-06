@@ -14,10 +14,10 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 615659a84dcf318adb598451626f5282fa8e3d36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014810"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Aggiungere una replica secondaria a un gruppo di disponibilità Always On
@@ -38,7 +38,7 @@ ms.locfileid: "68014810"
 
 [!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  **Per aggiungere una replica**  
   
 1.  In Esplora oggetti connettersi all'istanza del server che ospita la replica primaria ed espandere l'albero del server.  
@@ -57,7 +57,7 @@ ms.locfileid: "68014810"
   
          Per aggiungere repliche aggiuntive, ripetere i passaggi precedenti. Dopo avere specificato le repliche, fare clic su **OK** per completare l'operazione.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per aggiungere una replica**  
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica primaria.  
@@ -75,7 +75,7 @@ ms.locfileid: "68014810"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell  
+##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per aggiungere una replica**  
   
 1.  Cambiare la directory (**cd**) impostandola sull'istanza del server che ospita la replica primaria.  

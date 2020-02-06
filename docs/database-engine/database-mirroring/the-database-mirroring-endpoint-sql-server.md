@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68047995"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Endpoint del mirroring del database (SQL Server)
@@ -89,7 +89,7 @@ ms.locfileid: "68047995"
   
 -   [Specifica dell'URL dell'endpoint quando si aggiunge o si modifica una replica di disponibilità (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Utilizzare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Usare la Creazione guidata Gruppo di disponibilità (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
  **Per visualizzare informazioni sull'endpoint del mirroring del database**  
   

@@ -11,10 +11,10 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 618499b25914ea4f521fa694ac14b9e9049ca330
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296693"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (database SSISDB)
@@ -52,7 +52,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Viene restituito l'identificatore (ID) univoco della convalida. *validation_id* è di tipo **bigint**.  
   
  [ @use32bitruntime = ] *use32bitruntime*  
- Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Usare il valore `1` per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a `0` per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo. *use32bitruntime* è di tipo **bit**.  
+ Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Usare il valore `1` per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a `0` per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo e, *use32bitruntime* è di tipo **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
  Vengono indicati i riferimenti all'ambiente considerati dalla convalida. Quando il valore è `A`, tutti i riferimenti all'ambiente associati al progetto sono inclusi nella convalida. Quando il valore è `S`, è incluso solo un singolo riferimento all'ambiente. Quando il valore è `D`, non è incluso alcun riferimento all'ambiente e ogni parametro deve disporre di un valore predefinito letterale per passare la convalida. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `D`. *environment_scope* è di tipo **char(1)** .  
@@ -60,7 +60,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  [ @reference_id = ] *reference_id*  
  ID univoco del riferimento all'ambiente. Questo parametro è richiesto solo quando un singolo riferimento all'ambiente è incluso nella convalida, quando *environment_scope* è di tipo `S`. *reference_id* è di tipo **bigint**.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
@@ -88,7 +88,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   Utente senza autorizzazioni appropriate.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La convalida consente di identificare i problemi che impediscono il completamento dell'esecuzione dei pacchetti nel progetto. Usare la vista [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) o [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) per monitorare lo stato della convalida.  
   
  Solo ambienti che sono accessibili dall'utente possono essere utilizzati nella convalida. L'output della convalida viene inviato al client come set di risultati.  

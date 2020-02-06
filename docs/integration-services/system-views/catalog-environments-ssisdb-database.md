@@ -11,10 +11,10 @@ ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6b2aa0ce2b9fe4d61d9a2fc2f81b2a41e23ab488
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295217"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (database SSISDB)
@@ -29,14 +29,14 @@ ms.locfileid: "71295217"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |environment_id|**bigint**|Identificatore (ID) univoco dell'ambiente.|  
-|NAME|**sysname**|Nome dell'ambiente.|  
+|name|**sysname**|Il nome dell'ambiente.|  
 |folder_id|**bigint**|ID univoco della cartella in cui si trova l'ambiente.|  
 |description|**nvarchar(1024)**|Descrizione dell'ambiente. Questo valore è facoltativo.|  
 |created_by_sid|**varbinary(85)**|ID di sicurezza (SID) dell'utente che ha creato l'ambiente.|  
 |created_by_name|**nvarchar(128)**|Nome dell'utente che ha creato l'ambiente.|  
 |created_time|**datetimeoffset**|Data e ora di creazione dell'ambiente.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni ambiente nel catalogo. I nomi degli ambienti sono univoci solo per quanto riguarda la cartella in cui vengono individuati. Ad esempio, un ambiente denominato `E1` può esistere in più cartelle nel catalogo, ma ogni cartella può disporre solo di un ambiente denominato `E1`.  
   
 ## <a name="permissions"></a>Autorizzazioni  

@@ -13,10 +13,10 @@ ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099614"
 ---
 # <a name="database-properties-files-page"></a>Proprietà database (pagina File)
@@ -75,7 +75,7 @@ ms.locfileid: "68099614"
   
  Questo campo non è valido per i file FILESTREAM, inclusi i file nei filegroup ottimizzati per la memoria.  
   
- **Aggiungi**  
+ **Aggiungere**  
  È possibile aggiungere un nuovo file al database.  
   
  **Rimuovi**  
