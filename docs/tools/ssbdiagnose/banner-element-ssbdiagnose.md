@@ -1,10 +1,7 @@
 ---
-title: Elemento banner (ssbdiagnose) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Elemento Banner
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +11,23 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 202652271b9d8de9603706b9d1c7be8ca9411bb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 446a022570781aa6f965ee6f4728e833620158c2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986212"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257705"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
+
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Identifica l'utilità che ha generato il file di output XML di **ssbdiagnose** .  
+
+Identifica l'utilità che ha generato il file di output XML di **ssbdiagnose** .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +41,7 @@ ms.locfileid: "67986212"
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |**title**|Identifica l'utilità che ha generato il file di output XML di **ssbdiagnose** .|  
 |**product**|Identifica il prodotto che ha generato il file di output XML di **ssbdiagnose** .|  
@@ -47,8 +51,8 @@ ms.locfileid: "67986212"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|Nessuna.|  
-|**Valore predefinito**|Nessuna.|  
+|**Tipo di dati e lunghezza**|No.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Una volta per ogni file di output XML di **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -56,7 +60,7 @@ ms.locfileid: "67986212"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Di seguito viene riportato un esempio di un elemento Banner.  

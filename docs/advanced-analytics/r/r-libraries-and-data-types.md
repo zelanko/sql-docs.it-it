@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727420"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapping dei tipi di dati tra R e SQL Server
@@ -46,7 +46,7 @@ La tabella seguente mostra le modifiche del tipo di dati e dei valori quando i d
 |**bit**|`logical`|**bit**||
 |**char(n)**<br /><br /> n <= 8000|`character`|**ntext**||
 |**datetime**|`POSIXct`|**datetime**|Rappresentato come GMT|
-|**data**|`POSIXct`|**datetime**|Rappresentato come GMT|
+|**date**|`POSIXct`|**datetime**|Rappresentato come GMT|
 |**decimal(p,s)**|`numeric`|**float**||
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||
@@ -140,7 +140,7 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1|1|Ciao|6e225611-4b58-4995-a0a5-554d19012ef1|4|
 |1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 Si noti l'uso della funzione `str` in R per ottenere lo schema di dati di output. Questa funzione restituisce le informazioni seguenti:

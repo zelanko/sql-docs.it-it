@@ -22,10 +22,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: dbf87499f1bc5c23ae272daa393ef981a97e66d5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892562"
 ---
 # <a name="upgrade-analysis-services"></a>Aggiornare Analysis Services
@@ -79,10 +79,10 @@ ms.locfileid: "68892562"
   
 ||||  
 |-|-|-|  
-|Tabella|1400|SQL Server 2017|
-|Tabella|1200|SQL Server 2016|  
-|Tabella|1103|SQL Server 2014|  
-|Tabella|1100|SQL Server 2012|  
+|Tabulare|1400|SQL Server 2017|
+|Tabulare|1200|SQL Server 2016|  
+|Tabulare|1103|SQL Server 2014|  
+|Tabulare|1100|SQL Server 2012|  
 |Multidimensionale|1100|SQL Server 2012 e versioni successive|  
 |Multidimensionale|1050|SQL Server 2005, 2008, 2008 R2|  
   

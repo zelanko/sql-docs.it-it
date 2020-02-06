@@ -1,6 +1,6 @@
 ---
-title: Connettersi a SQL Server o al database SQL di Azure | Microsoft Docs
-ms.custom: ''
+title: Connettersi a SQL Server o al database SQL di Azure
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264606"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257208"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Connettersi a SQL Server o al database SQL di Azure
 
@@ -28,7 +28,7 @@ Per usare server e database, è prima di tutto necessario connettersi al server.
 
 1. In **Esplora oggetti** fare clic su **Connetti > Motore di database**.
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![connessione](../media/connect-to-server/connect-db-engine.png)
 
 1. Compilare il modulo **Connetti al server** e fare clic su **Connetti**:
 
@@ -46,9 +46,9 @@ Per usare server e database, è prima di tutto necessario connettersi al server.
 
 1. Il server viene visualizzato in **Esplora oggetti** dopo il completamento della connessione:
 
-   ![Connessione completata](../media/connect-to-server/connected.png)
+   ![connected](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 
 [Progettare, creare e aggiornare le tabelle](../visual-db-tools/design-tables-visual-database-tools.md)
 

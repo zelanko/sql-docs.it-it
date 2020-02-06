@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056375"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)
@@ -78,13 +78,13 @@ ms.locfileid: "74056375"
 |**bit**|0|1|0|1|  
 |**uniqueidentifier**|1|1|0|1|  
 |**timestamp**|1|1|1|1|  
-|**varchar(max)**|8|8|8|8|  
+|**ntext**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
 |**UDT** (tipo di dati definito dall'utente)|8|8|8|8|  
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \*I tipi di dati **ntext**, **text**e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. In alternativa, usare i tipi di dati **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
+ \*I tipi di dati **ntext**, **text**e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
   
 ##  <a name="PrefixLengthsImport"></a> Lunghezze del prefisso per il caricamento bulk  
  Quando si esegue l'importazione bulk di dati, la lunghezza del prefisso corrisponde al valore specificato al momento della creazione del file di dati. Se il file di dati non è stato creato da un comando **bcp** , i caratteri di prefisso di lunghezza probabilmente non esistono. In tal caso, specificare il valore 0 come lunghezza del prefisso.  
@@ -96,7 +96,7 @@ ms.locfileid: "74056375"
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Specificare la lunghezza del campo tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
- [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   
+ [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   
  [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

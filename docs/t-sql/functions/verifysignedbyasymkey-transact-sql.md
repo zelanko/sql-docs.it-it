@@ -23,10 +23,10 @@ ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 414c5df86e58472bc1aa3f5df9ee25a54f8bc590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927541"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67927541"
 
   Verifica se i dati con firma digitale sono stati modificati dopo la firma.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +58,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
  Restituisce 1 se le firme corrispondono. In caso contrario, 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **VerifySignedByAsymKey** decrittografa la firma dei dati usando la chiave pubblica della chiave asimmetrica specificata e confronta il valore decrittografato con un nuovo hash MD5 dei dati calcolato. Se i valori corrispondono, viene confermata la validità della firma.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -66,7 +66,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-testing-for-data-with-a-valid-signature"></a>A. Verifica dei dati contenenti una firma valida  
+### <a name="a-testing-for-data-with-a-valid-signature"></a>R. Verifica dei dati contenenti una firma valida  
  Nell'esempio seguente viene restituito 1 se i dati selezionati non sono stati modificati dopo la firma tramite la chiave asimmetrica `WillisKey74`. Viene restituito 0 se invece i dati sono stati alterati.  
   
 ```  

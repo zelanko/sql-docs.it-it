@@ -18,10 +18,10 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70026226"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70026226"
 
   Modifica una configurazione esistente del gruppo di carico di lavoro di Resource Governor e facoltativamente la assegna a un pool di risorse di Resource Governor.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -142,7 +142,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > Per l'opzione "default" si applica la distinzione tra maiuscole e minuscole.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  ALTER WORKLOAD GROUP è consentito nel gruppo predefinito.  
   
  Le modifiche alla configurazione del gruppo di carico di lavoro non hanno effetto fino all'esecuzione di ALTER RESOURCE GOVERNOR RECONFIGURE. Quando si modifica un'impostazione che influisce sul piano, la nuova impostazione diventerà effettiva nei piani memorizzati precedentemente nella cache solo dopo l'esecuzione di DBCC FREEPROCCACHE (*pool_name*), dove *pool_name* è il nome di un pool di risorse di Resource Governor in cui è associato il gruppo del carico di lavoro.  
@@ -156,7 +156,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], per la creazione dell'indice è consentito l'uso di una maggiore quantità di memoria per l'area di lavoro di quella concessa inizialmente, al fine di migliorare le prestazioni. Questa speciale gestione è supportata da Resource Governor nelle versioni successive, tuttavia, la concessione iniziale ed eventuali concessioni di memoria aggiuntiva sono limitate dalle impostazioni di gruppo del carico di lavoro e dal pool di risorse.  
+ REQUEST_MEMORY_GRANT_PERCENT: in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] al fine di ottenere prestazioni ottimali è possibile utilizzare per la creazione dell'indice una quantità di memoria per l'area di lavoro maggiore di quella concessa inizialmente. Questa speciale gestione è supportata da Resource Governor nelle versioni successive, tuttavia, la concessione iniziale ed eventuali concessioni di memoria aggiuntiva sono limitate dalle impostazioni di gruppo del carico di lavoro e dal pool di risorse.  
   
  **Creazione dell'indice in una tabella partizionata**  
   

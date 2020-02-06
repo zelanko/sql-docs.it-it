@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7864be7bbf270e235fd1948a1f70f34417a8dec4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982776"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
@@ -161,7 +161,7 @@ CREATE CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Rende il certificato disponibile per un initiator di una conversazione di dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Il valore predefinito è ON.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Un certificato è un'entità a protezione diretta a livello di database conforme allo standard X.509 e che supporta i campi della specifica X.509 V1. L'istruzione CREATE CERTIFICATE consente di caricare un certificato da un file, una costante binaria o un assembly e può inoltre essere utilizzata per generare una coppia di chiavi e creare un certificato autofirmato.  
   
  La chiave privata deve essere \<= 2500 byte nel formato crittografato. Le chiavi private generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono lunghe 1024 bit fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e 2048 bit a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Le chiavi private importate da un'origine esterna devono avere una lunghezza compresa tra 384 bit e 4,096 bit. La lunghezza di una chiave privata importata deve essere un valore intero multiplo di 64 bit. I certificati usati per TDE sono limitati a chiavi private con dimensioni di 3456 bit.  
@@ -188,7 +188,7 @@ CREATE CERTIFICATE certificate_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-self-signed-certificate"></a>A. Creazione di un certificato autofirmato  
+### <a name="a-creating-a-self-signed-certificate"></a>R. Creazione di un certificato autofirmato  
  Nell'esempio seguente viene creato un certificato denominato `Shipping04`. La chiave privata di questo certificato è protetta con una password.  
   
 ```sql  

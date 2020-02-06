@@ -22,18 +22,18 @@ ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4b354807fedda0f273d5f3822591f7f84912b028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127411"
 ---
-# <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
+# <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce il numero di righe modificate dall'ultima istruzione eseguita. Questa funzione opera esattamente come [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md), con la sola differenza che il valore restituito da ROWCOUNT_BIG è di tipo **bigint**.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ ROWCOUNT_BIG ( )
 ## <a name="return-types"></a>Tipi restituiti  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se segue l'istruzione SELECT, questa funzione restituisce il numero di righe restituite dall'istruzione SELECT.  
   
  Se eseguita dopo le istruzioni INSERT, UPDATE o DELETE, questa funzione restituisce il numero di righe modificate dall'istruzione di modifica dei dati.  

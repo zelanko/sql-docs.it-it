@@ -24,10 +24,10 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 61dad85fb7857b8694712f79b860f58d88e7d650
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291198"
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
@@ -130,10 +130,10 @@ ms.locfileid: "71291198"
   Usare la scheda **Tabella di riferimento** della finestra di dialogo **Editor trasformazione Ricerca termini** per specificare la connessione alla tabella di riferimento o tabella di ricerca.  
   
 ### <a name="options"></a>Opzioni  
- **gestione connessione OLE DB**  
+ **Gestione connessione OLE DB**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Nome tabella di riferimento**  

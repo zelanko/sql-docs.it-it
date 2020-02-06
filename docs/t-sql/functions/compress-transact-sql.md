@@ -16,10 +16,10 @@ ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943126"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "67943126"
 
 Questa funzione comprime l'espressione di input usando l'algoritmo GZIP. La funzione restituisce una matrice di byte di tipo **varbinary (max)** .
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,7 +37,7 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>Argomenti  
 *expression*  
-Un
+Una
 
 * **binary(***n***)**
 * **char(***n***)**
@@ -48,7 +48,7 @@ Un
 * **varbinary(***n***)**
 * **ntext**
 
-o Gestione configurazione
+o
 
 * **varchar(***n***)**
 
@@ -57,14 +57,14 @@ expression. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](
 ## <a name="return-types"></a>Tipi restituiti
 **varbinary (max)** che rappresenta il contenuto compresso dell'input.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 I dati compressi non possono essere indicizzati.
   
 La funzione `COMPRESS` comprime i dati di espressione dell'input. Richiamare questa funzione per ogni sezione di dati da comprimere. Vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md) per altre informazioni sulla compressione automatica dei dati durante l'archiviazione a livello di riga o pagina.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-compress-data-during-the-table-insert"></a>A. Comprimere i dati durante l'inserimento nella tabella  
+### <a name="a-compress-data-during-the-table-insert"></a>R. Comprimere i dati durante l'inserimento nella tabella  
 L'esempio illustra come comprimere i dati inseriti in una tabella:
   
 ```sql

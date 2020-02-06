@@ -16,10 +16,10 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822302"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "74822302"
   
 ## <a name="establish-a-witness"></a>Creare un server di controllo  
   
-1.  Sull'istanza del server di controllo, assicurarsi che sia presente un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, è necessario che l'istanza del server disponga di un unico endpoint di mirroring del database. Se si desidera usare l'istanza del server esclusivamente come server di controllo nelle sessioni di mirroring del database, assegnare il ruolo di server di controllo all'endpoint (ROLE**=** WITNESS). Se si desidera utilizzare l'istanza del server come partner in una o più sessioni di mirroring del database, assegnare il ruolo di server dell'endpoint come ALL.  
+1.  Sull'istanza del server di controllo, assicurarsi che sia presente un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, è necessario che l'istanza del server disponga di un unico endpoint di mirroring del database. Se si desidera usare l'istanza del server esclusivamente come server di controllo nelle sessioni di mirroring del database, assegnare il ruolo di server di controllo all'endpoint (ROLE **=** WITNESS). Se si desidera utilizzare l'istanza del server come partner in una o più sessioni di mirroring del database, assegnare il ruolo di server dell'endpoint come ALL.  
   
      Per eseguire un'istruzione SET WITNESS, è necessario che la sessione di mirroring del database sia già iniziata (tra i partner) e che il valore STATE dell'endpoint del server di controllo sia impostato su STARTED.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "74822302"
   
 3.  Connettersi al server principale ed eseguire la seguente istruzione:  
   
-     ALTER DATABASE *<database_name>* SET WITNESS **=**_<server_network_address>_  
+     ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
   
      dove *<database_name>* è il nome del database di cui eseguire il mirroring (tale nome è lo stesso per entrambi i partner) e *<server_network_address>* è l'indirizzo di rete dell'istanza del server di controllo del mirroring.  
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP<b>://</b>_\<indirizzo_sistema>_<b>:</b>_\<porta>_  
+     TCP<b>://</b> _\<indirizzo_sistema>_ <b>:</b> _\<porta>_  
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   

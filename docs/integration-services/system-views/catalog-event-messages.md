@@ -11,10 +11,10 @@ ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296642"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
@@ -28,13 +28,13 @@ ms.locfileid: "71296642"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|BIGINT|ID univoco del messaggio dell'evento.|  
-|Operation_id|BIGINT|Tipo di operazione.<br /><br /> Per un elenco dei tipi di operazioni, vedere [catalog.operations &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Event_message_ID|bigint|ID univoco del messaggio dell'evento.|  
+|Operation_id|bigint|Tipo di operazione.<br /><br /> Per un elenco dei tipi di operazioni, vedere [catalog.operations &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|Ora di creazione del messaggio.|  
 |Message_type|SMALLINT|Tipo di messaggio visualizzato. Per altre informazioni sui tipi di messaggi, vedere [catalog.operation_messages &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
 |Message_source_type|SMALLINT|Origine del messaggio.|  
 |message|nvarchar(max)|Testo del messaggio.|  
-|Extended_info_id|BIGINT|ID di informazioni aggiuntive correlate al messaggio dell'operazione, individuato nella vista [catalog.extended_operation_info &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
+|Extended_info_id|bigint|ID di informazioni aggiuntive correlate al messaggio dell'operazione, individuato nella vista [catalog.extended_operation_info &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|Nome del file del pacchetto.|  
 |Event_name|nvarchar(1024)|Evento di run-time associato al messaggio.|  
 |Message_source_name|nvarchar(4000)|Componente del pacchetto che rappresenta l'origine del messaggio.|  
@@ -45,7 +45,7 @@ ms.locfileid: "71296642"
 |threadID|INT|ID per il thread in esecuzione al momento della registrazione del messaggio.|  
 |Message_code|INT|Codice associato al messaggio.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista vengono visualizzati i tipi di origine del messaggio seguenti.  
   
 |**message_source_type**|Descrizione|  

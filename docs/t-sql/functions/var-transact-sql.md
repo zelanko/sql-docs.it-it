@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9d80c74338ad69cc2ba0fdc0f3cbcf5b452ae4f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927581"
 ---
 # <a name="var-transact-sql"></a>VAR (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67927581"
 
   Restituisce lo scostamento statistico di tutti i valori dell'espressione specificata. Può essere seguita dalla [clausola OVER](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,14 +60,14 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se la funzione VAR viene applicata a tutte le voci di un'istruzione SELECT, ogni valore nel set di risultati viene incluso nel calcolo. VAR può essere utilizzata solo con colonne numeriche. I valori Null vengono ignorati.  
   
  VAR è una funzione deterministica quando viene utilizzata senza le clausole ORDER BY e OVER. Non è deterministica quando viene specificata con le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-var"></a>A: Uso di VAR  
+### <a name="a-using-var"></a>A: Utilizzo di VAR  
  Nell'esempio seguente viene restituita la varianza per tutti i valori relativi ai premi di produttività nella tabella `SalesPerson` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -78,7 +78,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-var"></a>B: Uso di VAR  
+### <a name="b-using-var"></a>B: Utilizzo di VAR  
  L'esempio seguente restituisce la varianza statistica dei valori quota di vendite nella tabella `dbo.FactSalesQuota`. La prima colonna contiene la varianza di tutti i valori distinct e la seconda colonna contiene la varianza di tutti i valori, compresi eventuali valori duplicati.  
   
 ```  

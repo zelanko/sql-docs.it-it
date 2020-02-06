@@ -7,7 +7,7 @@ ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
 keywords:
-- Raccolta dati
+- Raccolta di dati
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
@@ -16,10 +16,10 @@ ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 53869016813d3950f35fa5b926cbba295df63237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133613"
 ---
 # <a name="manage-data-collection"></a>Gestire raccolta dati
@@ -62,7 +62,7 @@ ms.locfileid: "68133613"
   
  È possibile utilizzare le stored procedure, le funzioni e le viste fornite per creare i propri scenari di raccolta dati end-to-end.  
   
->**IMPORTANTE!!** A differenza delle normali stored procedure, le stored procedure dell'agente di raccolta dati utilizzano parametri fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
+>**IMPORTANTE** A differenza delle normali stored procedure, le stored procedure dell'agente di raccolta dati utilizzano parametri fortemente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
   
  Usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare ed eseguire gli esempi di codice forniti. Per altre informazioni, vedere [Esplora oggetti](../../ssms/object/object-explorer.md). In alternativa, è possibile creare la query con un editor qualsiasi e salvarla in un file di testo con estensione sql. È possibile eseguire la query dal prompt dei comandi di Windows mediante l'utilità **sqlcmd** . Per altre informazioni, vedere [Usare l'utilità sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
@@ -165,7 +165,7 @@ ms.locfileid: "68133613"
 ### <a name="functions"></a>Funzioni  
  Nella tabella seguente vengono descritte le funzioni che è possibile utilizzare per ottenere informazioni di esecuzione e di traccia.  
   
-|Nome funzione|Descrizione|  
+|Nome della funzione|Descrizione|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|Ottenere dati del log di esecuzione [!INCLUDE[ssIS](../../includes/ssis-md.md)] relativi a un pacchetto specifico.|  
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Ottenere statistiche di esecuzione relative a un set di raccolta o un pacchetto. Tali informazioni comprendono gli errori registrati.|  

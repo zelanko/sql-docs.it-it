@@ -9,10 +9,10 @@ ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513163"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lezione 1: Creazione di un database di esempio del Sottoscrittore
@@ -55,11 +55,11 @@ In questa lezione si presuppone che si usi [!INCLUDE[ssManStudioFull_md](../incl
     GO  
     ```  
   
-7.  Fare clic su  **Esegui** sulla barra degli strumenti.  
+7.  Fare clic su **Esegui** sulla barra degli strumenti.  
   
-8.  Utilizzare un'istruzione SELECT per verificare che siano disponibili tre righe di dati. Esempio: `select * from OrderInfo`  
+8.  Utilizzare un'istruzione SELECT per verificare che siano disponibili tre righe di dati. Ad esempio: `select * from OrderInfo`  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 + In tal modo sono stati creati i dati di sottoscrizione per la distribuzione dei report e per la variazione dell'output del report per ogni sottoscrittore. 
 + Sarà quindi possibile modificare le proprietà dell'origine dati del report per l'uso delle credenziali archiviate. 
 + Inoltre, verrà modificata la progettazione report per includere un parametro che verrà utilizzato dalla sottoscrizione con i dati del sottoscrittore. [Lezione 2: Modifica delle proprietà dell'origine dei dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  

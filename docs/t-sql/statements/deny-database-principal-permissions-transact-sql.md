@@ -29,10 +29,10 @@ ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244577"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY - autorizzazioni per entità di database (Transact-SQL)
@@ -172,7 +172,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Negazione dell'autorizzazione IMPERSONATE per un utente a un ruolo applicazione  
- Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione `AccountsPayable17` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+ Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] del database `AccountsPayable17`.  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

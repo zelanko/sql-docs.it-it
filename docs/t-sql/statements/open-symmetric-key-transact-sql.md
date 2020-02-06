@@ -19,10 +19,10 @@ ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129390"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68129390"
 
   Decrittografa una chiave simmetrica e la rende disponibile per l'uso.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,7 +67,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='*password*'  
  Password utilizzata per proteggere la chiave simmetrica.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le chiavi simmetriche aperte sono associate alla sessione, non al contesto di sicurezza. Una chiave aperta resterà disponibile finché non viene chiusa in modo esplicito o la sessione non viene terminata. Se si apre una chiave simmetrica e quindi si cambia contesto, la chiave resterà aperta e disponibile nel contesto rappresentato. Le informazioni sulle chiavi simmetriche aperte sono visibili nella vista del catalogo [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
  Se la chiave simmetrica è stata crittografata con un'altra chiave, è necessario aprire innanzitutto la chiave.  
@@ -89,7 +89,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>A. Apertura di una chiave simmetrica tramite un certificato  
+### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>R. Apertura di una chiave simmetrica tramite un certificato  
  Nell'esempio seguente la chiave simmetrica `SymKeyMarketing3` viene aperta e quindi decrittografata tramite la chiave privata del certificato `MarketingCert9`.  
   
 ```  

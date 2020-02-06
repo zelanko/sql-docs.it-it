@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117296"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117296"
 
   Crea uno schema nel database corrente. La transazione CREATE SCHEMA può anche creare tabelle e viste all'interno del nuovo schema e impostare le autorizzazioni GRANT, DENY o REVOKE per tali oggetti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -87,7 +87,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  Specifica un'istruzione DENY che nega le autorizzazioni per ogni entità a protezione diretta ad eccezione del nuovo schema.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 > [!NOTE]  
 >  Le istruzioni che contengono CREATE SCHEMA AUTHORIZATION ma non specificano un nome sono supportate unicamente per compatibilità con le versioni precedenti. L'istruzione non causa un errore ma non crea uno schema.  
@@ -112,7 +112,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  **Schema implicito e creazione di utenti**  
   
- In alcuni casi un utente può usare un database senza disporre di un account utente di database, ovvero un'entità database nel database. Usare i vincoli nelle situazioni seguenti:  
+ In alcuni casi un utente può usare un database senza disporre di un account utente di database, ovvero un'entità database nel database. L'errore può verificarsi nelle situazioni seguenti:  
   
 -   Un account di accesso dispone di privilegi **CONTROL SERVER**.  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  Questo comportamento è necessario per permettere agli utenti che usano gruppi di Windows di creare e possedere oggetti. Può tuttavia comportare la creazione accidentale di schemi e utenti. Per evitare di creare implicitamente utenti e schema, creare sempre, quando possibile, in modo esplicito le entità database e assegnare uno schema predefinito. In alternativa, dichiarare in modo esplicito uno schema esistente quando si creano oggetti in un database, usando nomi oggetto costituiti da due o tre parti.  
 
 > [!NOTE]
->  La creazione implicita di un utente di Azure Active Directory non è possibile in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Poiché per la creazione di un utente Azure AD da un provider esterno è necessario verificare lo stato dell'utente in AAD, la creazione dell'utente non riesce con errore 2760: **Il nome di schema specificato "\<user_name@domain>" non esiste oppure non si ha l'autorizzazione per usarlo.** E quindi l'errore 2759: **Istruzione CREATE SCHEMA non riuscita a causa di errori precedenti.** Per evitare questi errori, in primo luogo creare l'utente di Azure AD dal provider esterno, quindi eseguire nuovamente l'istruzione che crea l'oggetto.
+>  La creazione implicita di un utente di Azure Active Directory non è possibile in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Poiché per la creazione di un utente Azure AD da un provider esterno è necessario verificare lo stato dell'utente in AAD, la creazione dell'utente non riesce e viene visualizzato il messaggio di errore 2760: **Il nome di schema specificato "\<user_name@domain>" non esiste oppure non si ha l'autorizzazione per usarlo.** Quindi viene visualizzato l'errore 2759: **Istruzione CREATE SCHEMA non riuscita a causa di errori precedenti.** Per evitare questi errori, in primo luogo creare l'utente di Azure AD dal provider esterno, quindi eseguire nuovamente l'istruzione che crea l'oggetto.
  
   
 ## <a name="deprecation-notice"></a>Informativa sulle funzionalità deprecate  
@@ -141,7 +141,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Creazione di uno schema e concessione di autorizzazioni  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>R. Creazione di uno schema e concessione di autorizzazioni  
  Nell'esempio seguente viene creato lo schema `Sprockets`, di proprietà di `Annik`, contenente la tabella `NineProngs`. L'istruzione concede `SELECT` a `Mandar` e nega `SELECT` a `Prasanna`. Si noti che `Sprockets` e `NineProngs` vengono creati in una singola istruzione.  
   
 ```  

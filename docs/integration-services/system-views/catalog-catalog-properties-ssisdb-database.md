@@ -11,10 +11,10 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295233"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (database SSISDB)
@@ -31,7 +31,7 @@ ms.locfileid: "71295233"
 |property_name|**nvarchar(256)**|Nome della proprietà del catalogo.|  
 |property_value|**nvarchar(256)**|Valore della proprietà del catalogo.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In questa vista viene visualizzata una riga per ogni proprietà del catalogo.
   
 |Nome proprietà|Descrizione|  
@@ -41,7 +41,7 @@ ms.locfileid: "71295233"
 |**IS_SCALEOUT_ENABLED**|Quando il valore è `True`, la funzionalità SSIS Scale Out è abilitata. Se questa funzionalità non è stata abilitata, questa proprietà potrebbe non comparire nella vista.|
 |**MAX_PROJECT_VERSIONS**|Numero di nuove versioni del progetto che vengono mantenute per un progetto singolo. Se la pulizia delle versioni è abilitata, le versioni precedenti oltre questo conteggio vengono eliminate.|  
 |**OPERATION_CLEANUP_ENABLED**|Se il valore è `TRUE`, i dettagli e i messaggi delle operazioni anteriori a **RETENTION_WINDOW** (giorni) vengono eliminati dal catalogo. Quando il valore è `FALSE`, tutti i dettagli e i messaggi dell'operazione vengono archiviati nel catalogo. Nota: la pulizia dell'operazione viene eseguita da un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**RETENTION_WINDOW**|Numero di giorni di archiviazione nel catalogo dei dettagli e dei messaggi dell'operazione. Quando il valore è `-1`, il periodo di memorizzazione è infinito. Nota: se non si vuole eseguire la pulizia, impostare **OPERATION_CLEANUP_ENABLED** su **FALSE**.|
+|**RETENTION_WINDOW**|Numero di giorni di archiviazione nel catalogo dei dettagli e dei messaggi dell'operazione. Quando il valore è `-1`, il periodo di memorizzazione è infinito. Nota: se non si vuole effettuare la pulizia, impostare **OPERATION_CLEANUP_ENABLED** su **FALSE**.|
 |**SCHEMA_BUILD**|Numero di build dello schema del database del catalogo SSISDB. Questo numero cambia ogni volta che il catalogo SSISDB viene creato o aggiornato.|
 |**SCHEMA_VERSION**|Numero di versione principale dello schema del database del catalogo SSISDB. Questo numero cambia ogni volta che il catalogo SSISDB viene creato o che la versione principale viene aggiornata.|
 |**VALIDATION_TIMEOUT**|La convalida viene interrotta se non viene completata nel numero di secondi specificato da questa proprietà.|  

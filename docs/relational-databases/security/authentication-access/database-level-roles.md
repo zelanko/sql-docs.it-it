@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742837"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
@@ -90,7 +90,7 @@ Non è possibile modificare le autorizzazioni concesse ai ruoli predefiniti del 
 
 Questi ruoli del database si trovano solo nel database master virtuale. Le autorizzazioni di questi ruoli sono limitate alle azioni eseguite nel database master. Solo gli utenti di database nel database master possono essere aggiunti a questi ruoli. Gli account di accesso non possono essere aggiunti a questi ruoli, ma è possibile creare utenti in base agli account di accesso e quindi aggiungere questi utenti ai ruoli. Anche gli utenti di database indipendenti nel database master possono essere aggiunti a questi ruoli. Gli utenti di database indipendenti aggiunti al ruolo **dbmanager** non possono essere tuttavia usati per creare nuovi database.
 
-|Nome ruolo|Descrizione|  
+|Nome del ruolo|Descrizione|  
 |--------------------|-----------------|
 |**dbmanager** | Può creare ed eliminare database. Un membro del ruolo dbmanager che crea un database diventa il proprietario del database e questo permette all'utente di connettersi al database come utente dbo. L'utente dbo ha tutte le autorizzazioni database nel database. I membri del ruolo dbmanager non hanno necessariamente l'autorizzazione necessaria per accedere ai database di cui non sono proprietari.|
 |**loginmanager** | Può creare ed eliminare account di accesso nel database master virtuale.|
@@ -110,15 +110,15 @@ Questi ruoli del database si trovano solo nel database master virtuale. Le autor
 |**dbm_monitor**|Creato nel database **msdb** quando il primo database viene registrato in Monitoraggio mirroring del database. Il ruolo **dbm_monitor** non include alcun membro fino a quando un amministratore di sistema non provvede all'assegnazione di utenti al ruolo stesso.|  
   
 > [!IMPORTANT]  
->  I membri dei ruoli **db_ssisadmin** e **dc_admin** possono essere in grado di elevare i propri privilegi a sysadmin. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e i pacchetti [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possono essere eseguiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza sysadmin di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di manutenzione, set di raccolta dati e altri pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo da utilizzare un account proxy con privilegi limitati o aggiungere solo i membri **sysadmin** ai ruoli **db_ssisadmin** e **dc_admin** .  
+>  I membri dei ruoli **db_ssisadmin** e **dc_admin** possono essere in grado di elevare i propri privilegi a sysadmin. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] e i pacchetti [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possono essere eseguiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza sysadmin di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione di piani di manutenzione, set di raccolta dati e altri pacchetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo che usino un account proxy con privilegi limitati o aggiungere solo i membri **sysadmin** ai ruoli **db_ssisadmin** e **dc_admin** .  
 
 ## <a name="working-with-r-services"></a>Utilizzo di R Services  
 
 **Si applica a:** SQL Server a partire da [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
 
-Quando R Services è installato, i ruoli di database aggiuntivi sono disponibili per la gestione dei pacchetti. Per altre informazioni, vedere [R Package management for SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)(Gestione dei pacchetti R per SQL Server).
+Quando R Services è installato, i ruoli di database aggiuntivi sono disponibili per la gestione dei pacchetti. Per altre informazioni, vedere [R Package management for SQL Server](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md) (Gestione dei pacchetti R per SQL Server).
 
-|Nome ruolo |Descrizione|  
+|Nome del ruolo |Descrizione|  
 |-------------|-----------------|
 |**rpkgs-users** |Consente agli utenti di usare i pacchetti condivisi installati dai membri del ruolo condiviso rpkgs.|
 |**rpkgs-private** |Fornisce accesso ai pacchetti condivisi con le stesse autorizzazioni del ruolo rpkgs-users. I membri di questo ruolo possono inoltre installare, rimuovere e usare pacchetti con ambito privato.|
@@ -127,7 +127,7 @@ Quando R Services è installato, i ruoli di database aggiuntivi sono disponibili
 ## <a name="working-with-database-level-roles"></a>Utilizzo di ruoli a livello di database  
  Nella tabella seguente vengono spiegati i comandi, le viste e le funzioni necessari per l'utilizzo dei ruoli a livello di database.  
   
-|Funzionalità|Tipo|Descrizione|  
+|Funzionalità|Type|Descrizione|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)|Metadati|Restituisce un elenco dei ruoli predefiniti del database.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)|Metadati|Visualizza le autorizzazioni di un ruolo predefinito del database.|  

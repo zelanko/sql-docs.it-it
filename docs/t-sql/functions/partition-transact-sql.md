@@ -19,10 +19,10 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914378"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67914378"
 
   Restituisce il numero della partizione a cui verrebbe eseguito il mapping di un set di valori di una colonna di partizionamento per una funzione di partizione specificata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,14 +52,14 @@ ms.locfileid: "67914378"
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  $PARTITION restituisce un valore **int** compreso tra 1 e il numero di partizioni della funzione di partizione.  
   
  $PARTITION restituisce il numero di partizione per qualsiasi valore valido, indipendentemente dal fatto che il valore esista in una tabella o in un dice partizionato che utilizza la funzione di partizione.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. Recupero del numero di partizione per un set di valori di colonne di partizionamento  
+### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>R. Recupero del numero di partizione per un set di valori di colonne di partizionamento  
  Nell'esempio seguente viene creata una funzione di partizione `RangePF1` che esegue il partizionamento di una tabella o di un indice in quattro partizioni. $PARTITION consente di stabilire che il valore `10`, che rappresenta la colonna di partizionamento di `RangePF1`, verrebbe inserito nella partizione 1 della tabella.  
   
 ```  

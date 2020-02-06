@@ -30,10 +30,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 2a3c1885d6796977ea48585858fa5d2a271e6a46
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72798366"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
@@ -85,14 +85,14 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
  Le correzioni specifiche apportate al valore Identity corrente dipendono dalle specifiche di parametro.  
   
 |Comando DBCC CHECKIDENT|Correzione o correzioni Identity apportate|  
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|Il valore Identity corrente non viene reimpostato. DBCC CHECKIDENT restituisce il valore Identity corrente e il valore massimo corrente della colonna Identity. Se i due valori non corrispondono, è consigliabile reimpostare il valore Identity per evitare potenziali errori o gap nella sequenza dei valori.|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> o Gestione configurazione<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Se il valore Identity corrente di una tabella è inferiore al valore Identity massimo archiviato nella colonna Identity, questo viene reimpostato in base al valore massimo della colonna Identity. Vedere la sezione "Eccezioni" riportata di seguito.|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> o<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Se il valore Identity corrente di una tabella è inferiore al valore Identity massimo archiviato nella colonna Identity, questo viene reimpostato in base al valore massimo della colonna Identity. Vedere la sezione "Eccezioni" riportata di seguito.|  
 |DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|Il valore Identity corrente è impostato su *new_reseed_value*. Se dopo la creazione della tabella non è stata inserita alcuna riga o se tutte le righe sono state rimosse mediante l'istruzione TRUNCATE TABLE, la prima riga inserita dopo l'esecuzione di DBCC CHECKIDENT usa *new_reseed_value* come valore Identity. Se sono presenti righe nella tabella o se tutte le righe sono state rimosse tramite l'istruzione DELETE, per la successiva riga inserita viene usato *new_reseed_value* più il valore di [incremento corrente](../../t-sql/functions/ident-incr-transact-sql.md). Se una transazione inserisce una riga e viene in seguito sottoposta a rollback, per la successiva riga inserita viene usato *new_reseed_value* + il valore di [incremento corrente](../../t-sql/functions/ident-incr-transact-sql.md) come se la riga fosse stata eliminata. Se la tabella non è vuota, l'impostazione del valore Identity su un numero inferiore al valore massimo della colonna Identity può determinare una delle condizioni seguenti:<br /><br /> \- Se esiste un vincolo PRIMARY KEY o UNIQUE nella colonna Identity, verrà generato il messaggio di errore 2627 per le successive operazioni di inserimento nella tabella poiché il valore Identity generato è in conflitto con i valori esistenti.<br /><br /> \- Se non esiste un vincolo PRIMARY KEY o UNIQUE, le successive operazioni di inserimento causeranno valori Identity duplicati.|  
   
 ## <a name="exceptions"></a>Eccezioni
@@ -101,7 +101,7 @@ DBCC CHECKIDENT
   
 |Condizione|Metodi di reimpostazione|  
 |---------------|-------------------|  
-|Il valore Identity corrente è maggiore del valore massimo della tabella.|Eseguire DBCC CHECKIDENT (*table_name*, NORESEED) per determinare il valore massimo corrente nella colonna. Specificare quindi tale valore come *new_reseed_value* in un comando DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*).<br /><br /> oppure<br /><br /> Eseguire DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) con *new_reseed_value* impostato su un valore molto basso, quindi eseguire DBCC CHECKIDENT (*table_name*, RESEED) per correggere il valore.|  
+|Il valore Identity corrente è maggiore del valore massimo della tabella.|Eseguire DBCC CHECKIDENT (*table_name*, NORESEED) per determinare il valore massimo corrente nella colonna. Specificare quindi tale valore come *new_reseed_value* in un comando DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*).<br /><br /> -OPPURE-<br /><br /> Eseguire DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) con *new_reseed_value* impostato su un valore molto basso, quindi eseguire DBCC CHECKIDENT (*table_name*, RESEED) per correggere il valore.|  
 |Tutte le righe sono state eliminate dalla tabella.|Eseguire DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) con *new_reseed_value* impostato sul nuovo valore iniziale.|  
   
 ## <a name="changing-the-seed-value"></a>Modifica del valore di inizializzazione
@@ -134,7 +134,7 @@ Con Azure SQL Data Warehouse sono richieste le autorizzazioni di **db_owner**.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>A. Reimpostazione del valore Identity corrente, se necessario  
+### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>R. Reimpostazione del valore Identity corrente, se necessario  
  Nell'esempio seguente viene reimpostato il valore Identity corrente, se necessario, della tabella specificata nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql

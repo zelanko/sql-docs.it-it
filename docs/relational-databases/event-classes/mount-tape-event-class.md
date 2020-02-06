@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7742b42395ced53ecbe479a463a41c640cf0d395
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116112"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape - classe di evento
@@ -33,8 +33,8 @@ ms.locfileid: "68116112"
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Sì|  
 |Duration|**bigint**|Durata dell'evento in microsecondi.|13|Sì|  
 |EndTime|**datetime**|Per gli eventi Mount Request, eventuale timeout di montaggio; altrimenti, durata dell'evento stesso. In questo caso, StartTime indica la durata della richiesta di montaggio corrispondente.|15|Sì|  
-|EventClass|**int**|Tipo di evento = 195.|27|no|  
-|EventSequence|**int**|Sequenza di un evento specificato nella richiesta.|51|no|  
+|EventClass|**int**|Tipo di evento = 195.|27|No|  
+|EventSequence|**int**|Sequenza di un evento specificato nella richiesta.|51|No|  
 |EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Richiesta di montaggio nastro<br /><br /> 2 = Montaggio nastro completato<br /><br /> 3 = Montaggio nastro annullato|21|Sì|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
@@ -42,7 +42,7 @@ ms.locfileid: "68116112"
 |LoginName|**nvarchar**|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\\*nomeutente*).|11|Sì|  
 |NTDomainName|**nvarchar**|Dominio Windows di appartenenza dell'utente.|7|Sì|  
 |NTUserName|**nvarchar**|Nome utente di Windows.|6|Sì|  
-|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|**int**|ID della sessione in cui è stato generato l'evento.|12|Sì|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  

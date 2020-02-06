@@ -14,10 +14,10 @@ ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0dedb0034099dcb803bb6354a0806b613108da8d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296801"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (database SSISDB)
@@ -51,7 +51,7 @@ catalog.revoke_permission [ @object_type = ] object_type
  [ @permission_type = ] *permission_type*  
  Tipo di autorizzazione. *permission_type* è di tipo **smallint**.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo)  
   
  1 (object_class non è valido)  
@@ -65,10 +65,10 @@ catalog.revoke_permission [ @object_type = ] object_type
  5 (altro errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
-## <a name="remarks"></a>Remarks  
- None  
+## <a name="remarks"></a>Osservazioni  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
@@ -79,7 +79,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Appartenenza al ruolo del server **sysadmin**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se permission_type viene specificato, la stored procedure rimuove l'autorizzazione assegnata in modo esplicito all'entità per l'oggetto. Anche se non esiste nessuna di tali istanze, tramite la routine viene restituito un valore di codice con esito positivo (`0`). Se permission_type viene omesso, la stored procedure rimuove tutte le autorizzazioni dell'entità sull'oggetto.  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Consente all'entità di leggere le informazioni considerate parte dell'oggetto, ad esempio le proprietà. Non consente all'entità di enumerare o leggere il contenuto di altri oggetti inseriti all'interno dell'oggetto.|Cartella, progetto, ambiente, operazione|  
 |`2`|MODIFY|Consente all'entità di modificare le informazioni considerate parte dell'oggetto, ad esempio le proprietà. Non consente all'entità di modificare gli altri oggetti contenuti all'interno dell'oggetto.|Cartella, progetto, ambiente, operazione|  
-|`3`|EXECUTE|Consente all'entità di eseguire tutti i pacchetti nel progetto.|Progetto|  
+|`3`|EXECUTE|Consente all'entità di eseguire tutti i pacchetti nel progetto.|Project|  
 |`4`|MANAGE_PERMISSIONS|Consente all'entità di assegnare autorizzazioni agli oggetti.|Cartella, progetto, ambiente, operazione|  
 |`100`|CREATE_OBJECTS|Consente all'entità di creare oggetti nella cartella.|Cartella|  
 |`101`|READ_OBJECTS|Consente all'entità di leggere tutti gli oggetti nella cartella.|Cartella|  

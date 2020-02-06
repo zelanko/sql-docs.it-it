@@ -26,10 +26,10 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326099"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "71326099"
 
 Crea una nuova coda in un database. Le code vengono utilizzate per archiviare i messaggi. Quando viene recapitato un messaggio per un servizio, esso viene inserito da [!INCLUDE[ssSB](../../includes/sssb-md.md)] nella coda associata al servizio.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -110,7 +110,7 @@ Una coda con la gestione di messaggi non elaborabili impostata su OFF non verrà
 
 ON *filegroup |* [**DEFAULT**] Specifica il filegroup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui creare la coda. È possibile usare il parametro *filegroup* per specificare un filegroup oppure usare l'identificatore DEFAULT per usare il filegroup predefinito del database di Service Broker. Nel contesto di questa clausola DEFAULT non è una parola chiave ed è pertanto necessario delimitarlo come identificatore. Se non si specifica un filegroup, per la coda viene utilizzato il filegroup predefinito del database.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Una coda può essere la destinazione di un'istruzione SELECT. È tuttavia possibile modificare il contenuto di una coda solo tramite istruzioni che operano in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)], quali SEND, RECEIVE e END CONVERSATION. Non è possibile specificare una coda come destinazione di un'istruzione INSERT, UPDATE, DELETE o TRUNCATE.
 
@@ -156,7 +156,7 @@ L'autorizzazione `RECEIVE` per una coda viene assegnata per impostazione predefi
 
 ## <a name="examples"></a>Esempi
 
-### <a name="a-creating-a-queue-with-no-parameters"></a>A. Creazione di una coda senza parametri
+### <a name="a-creating-a-queue-with-no-parameters"></a>R. Creazione di una coda senza parametri
 
 Nell'esempio seguente viene creata una coda disponibile per la ricezione di messaggi. Per la coda non viene specificata alcuna stored procedure di attivazione.
 

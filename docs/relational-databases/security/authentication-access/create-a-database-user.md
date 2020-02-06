@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981934"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
@@ -56,7 +56,7 @@ ms.locfileid: "73981934"
   
 > **SUGGERIMENTO** Per le persone all'interno dell'organizzazione, l'autenticazione di Windows è una scelta migliore, perché non dovranno ricordare un'altra password e perché l'autenticazione di Windows offre funzionalità di sicurezza aggiuntive, come Kerberos.  
   
-##  <a name="Restrictions"></a> Informazioni preliminari  
+##  <a name="Restrictions"></a> Background  
  Un utente è un'entità di sicurezza a livello di database. Affinché gli account di accesso possano eseguire la connessione al database, è necessario eseguirne il mapping a un utente di database. È possibile eseguire il mapping di un account di accesso a database diversi come utenti diversi, ma come un singolo utente per ogni database. In un database parzialmente indipendente, può essere creato un utente che non dispone di un account di accesso. Per altre informazioni sugli utenti di database indipendenti, vedere [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Se è abilitato l'utente guest in un database, un account di accesso di cui non è stato eseguito il mapping a un utente del database può accedere al database come utente guest.  
   
 > **IMPORTANTE** L'utente guest è in genere disabilitato. Non abilitarlo, a meno che non sia strettamente necessario.  
@@ -115,7 +115,7 @@ ms.locfileid: "73981934"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- Nella finestra di dialogo **Utente di database - Nuovo** sono disponibili opzioni anche in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta** e **Proprietà estese**.  
+ La finestra di dialogo **Utente database - Nuovo** presenta diverse opzioni anche in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta** e **Proprietà estese**.  
   
 -   Nella pagina **Schemi di proprietà** sono elencati tutti i possibili schemi che possono essere di proprietà del nuovo utente del database. Per aggiungere schemi o rimuoverli da un utente del database, in **Schemi di proprietà di questo utente**selezionare o deselezionare le caselle di controllo accanto agli schemi.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "73981934"
  Per altre informazioni, vedere [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) che contiene molti altri esempi per [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Entità &#40;Motore di database&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Entità &#40;motore di database&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Creare un account di accesso](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   

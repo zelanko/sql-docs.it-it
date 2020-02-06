@@ -23,10 +23,10 @@ author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ed31eae6817216a694337ed5bc606dcba52fb89
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844514"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
@@ -52,7 +52,7 @@ DATALENGTH ( expression )
 ## <a name="return-types"></a>Tipi restituiti
 **bigint** se *expression* è del tipo di dati **nvarchar(max)** , **varbinary(max)** o **varchar(max)** . In caso contrario, **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 `DATALENGTH` risulta molto utile quando viene usata con tipi di dati che possono archiviare dati a lunghezza variabile, ad esempio:
 - **image**
 - **ntext**

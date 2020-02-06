@@ -18,10 +18,10 @@ ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 17c5ec83217c072ada5d112bab1dd4f0105e0971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120667"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (tipo di dati geography)
@@ -43,10 +43,10 @@ UnionAggregate ( geography_operand )
 ## <a name="return-types"></a>Tipi restituiti  
  Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il metodo restituisce **null** se l'input dispone di SRID diversi. Vedere [Identificatori SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
- Il metodo ignora gli input **null**.  
+ Il metodo ignora gli input **Null**.  
   
 > [!NOTE]  
 >  Il metodo restituisce **Null** se tutti i valori immessi sono **Null**.  

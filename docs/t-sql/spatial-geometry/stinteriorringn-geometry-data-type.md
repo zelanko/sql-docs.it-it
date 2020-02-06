@@ -18,10 +18,10 @@ ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 328e77c0a5be561f795d1892512e7a72fd21340a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950152"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (tipo di dati geometry)
@@ -47,7 +47,7 @@ Restituisce l'anello interno specificato di un'istanza **Polygongeometry**.
   
  Tipo OGC (Open Geospatial Consortium): **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo restituisce **null** se l'istanza **geometry** non è un poligono. Questo metodo genererà anche un'eccezione **ArgumentOutOfRangeException** se l'espressione è maggiore del numero di anelli. Il numero di anelli può essere restituito usando `STNumInteriorRing``()`.  
   
 ## <a name="examples"></a>Esempi  

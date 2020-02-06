@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907072"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67907072"
 
   Restituisce un codice di quattro caratteri (SOUNDEX) per valutare la similarità di due stringhe.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,7 +49,7 @@ SOUNDEX ( character_expression )
 ## <a name="return-types"></a>Tipi restituiti  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Tramite SOUNDEX una stringa alfanumerica viene convertita in un codice a quattro caratteri basato sul risultato della pronuncia della stringa. Il primo carattere del codice è il primo carattere di *character_expression*, convertito in maiuscolo. I caratteri compresi tra il secondo e il quarto del codice sono numeri che rappresentano le lettere dell'espressione. Le lettere A, E, I, O, U, H, W e Y vengono ignorate, a meno che non rappresentino la prima lettera della stringa. Se necessario per generare un codice di quattro caratteri, vengono aggiunti gli zeri finali. Per altre informazioni sul codice SOUNDEX, vedere [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html) (Sistema di indicizzazione di Soundex).  
   
  È possibile confrontare i codici SOUNDEX di stringhe diverse per vedere le pronunce simili della stringa. Tramite la funzione DIFFERENCE viene eseguito SOUNDEX in due stringhe e viene restituito un Integer che rappresenta la similitudine dei codici SOUNDEX per le stringhe in questione.  
@@ -68,7 +68,7 @@ SOUNDEX ( character_expression )
 -   Negli indici (viste indicizzate incluse) contenenti una colonna calcolata persistente definita con la funzione SOUNDEX non possono essere eseguite query finché l'indice non viene ricompilato eseguendo l'istruzione `ALTER INDEX ALL ON <object> REBUILD`.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrata la funzione SOUNDEX e la funzione DIFFERENCE correlata. Nel primo esempio vengono restituiti i valori `SOUNDEX` standard per tutte le consonanti. Per le stringhe `SOUNDEX` e `Smith` `Smythe` restituisce lo stesso risultato in quanto le vocali, la lettera `y`, le doppie e la lettera `h` non vengono incluse.  
+ Nell'esempio seguente viene illustrata la funzione SOUNDEX e la funzione DIFFERENCE correlata. Nel primo esempio vengono restituiti i valori `SOUNDEX` standard per tutte le consonanti. Per le stringhe `SOUNDEX` e `Smith``Smythe` restituisce lo stesso risultato in quanto le vocali, la lettera `y`, le doppie e la lettera `h` non vengono incluse.  
   
 ```  
 -- Using SOUNDEX  

@@ -11,10 +11,10 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1fb9be98dbbdf2935fe79c6f579be7ab0e357624
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293204"
 ---
 # <a name="create-infosource-for-master-data"></a>Crea InfoSource per dati master
@@ -45,17 +45,17 @@ ms.locfileid: "71293204"
  **Nome InfoObject**  
  Immettere il nome dell'InfoObject su cui deve essere basato il nuovo InfoSource.  
   
- **Ricerca**  
+ **Cerca**  
  Cercare l'InfoObject. Tramite questa opzione viene visualizzata la finestra di dialogo **Cerca InfoObject** in cui è possibile selezionare l'InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
   
  Dopo aver selezionato un InfoObject, la casella di testo **Nome InfoObject** viene compilata dal componente con il nome dell'InfoObject selezionato.  
   
- **Nuova**  
+ **Nuovo**  
  Creare un nuovo InfoObject. Tramite questa opzione viene visualizzata la finestra di dialogo **Crea nuovo InfoObject** in cui è possibile creare il nuovo InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Crea nuovo InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
   
  Dopo aver creato un InfoObject, la casella di testo **Nome InfoObject** viene compilata dal componente con il nome del nuovo InfoObject.  
   
- **Breve descrizione**  
+ **Descrizione breve**  
  Immettere una breve descrizione per il nuovo InfoSource.  
   
  **Descrizione lunga**  
@@ -67,7 +67,7 @@ ms.locfileid: "71293204"
  **Applicazione**  
  Immettere il nome dell'applicazione da associare al nuovo InfoSource.  
   
- **Attributi**  
+ **Attributes (Attributi)**  
  Indica che i dati master sono costituiti da attributi.  
   
  **Testi**  

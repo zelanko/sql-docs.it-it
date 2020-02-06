@@ -11,10 +11,10 @@ ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4e8da4de862bf67a552da61a5d921e7c6c4c51fa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281344"
 ---
 # <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (database SSISDB)
@@ -39,13 +39,13 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
  [ @property_value = ] *property_value*  
  Valore della proprietà del catalogo. *property_value* è di tipo **nvarchar(255)** . Per altre informazioni sui valori delle proprietà, vedere [catalog.catalog_properties &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questa stored procedure determina se *property_value* è valido per ogni *property_name*.  
   
  La stored procedure può essere eseguita solo se non esiste alcuna esecuzione attiva, ad esempio in sospeso, in coda, in esecuzione e sospesa.  

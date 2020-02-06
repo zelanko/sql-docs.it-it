@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929242"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67929242"
   
  I ruoli del server definiti dall'utente sono una novità di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,7 +45,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  Specifica il ruolo del server definito dall'utente da rimuovere dal server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  I ruoli del server definiti dall'utente proprietari di entità a protezione diretta non possono essere rimossi dal server. Per rimuovere un ruolo del server definito dall'utente proprietario di entità a protezione diretta, è innanzitutto necessario trasferire la proprietà di tali entità oppure eliminarle.  
   
  I ruoli del server definiti dall'utente che includono membri non possono essere rimossi. Per rimuovere un ruolo del server definito dall'utente che include membri, è prima necessario rimuovere i membri del ruolo usando [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
@@ -59,7 +59,7 @@ DROP SERVER ROLE role_name
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-to-drop-a-server-role"></a>A. Per eliminare un ruolo del server  
+### <a name="a-to-drop-a-server-role"></a>R. Per eliminare un ruolo del server  
  Nell'esempio seguente viene eliminato il ruolo del server `purchasing`.  
   
 ```  

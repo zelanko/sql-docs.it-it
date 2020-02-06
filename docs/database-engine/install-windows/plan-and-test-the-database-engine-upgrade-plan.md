@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0476871b5788e47648e96abe2f9c12d2ee98e2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67990871"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Pianificare e testare il piano di aggiornamento del motore di database
@@ -31,13 +31,13 @@ ms.locfileid: "67990871"
 - Articolo [Compatibilità con le versioni precedenti del motore di database di SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
 ## <a name="pre-upgrade-planning-checklist"></a>Elenco di controllo per la pianificazione pre-aggiornamento  
- Prima di aggiornare il [!INCLUDE[ssDE](../../includes/ssde-md.md)], esaminare il seguente elenco di controllo e gli articoli correlati. Questi articoli si applicano a tutti gli aggiornamenti, indipendentemente dal metodo di aggiornamento e consentono di determinare il metodo di aggiornamento più appropriato: aggiornamento in sequenza, aggiornamento con nuova installazione o aggiornamento sul posto. Ad esempio, potrebbe non essere possibile eseguire un aggiornamento in sequenza o sul posto se si esegue l'aggiornamento del sistema operativo, l'aggiornamento da SQL Server 2005 o l'aggiornamento da una versione a 32 bit di SQL Server. Per l'albero delle decisioni, vedere [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+ Prima di aggiornare il [!INCLUDE[ssDE](../../includes/ssde-md.md)], esaminare il seguente elenco di controllo e gli articoli correlati. Questi articoli si applicano a tutti gli aggiornamenti, indipendentemente dal metodo di aggiornamento, e consentono di determinare il metodo di aggiornamento più appropriato: aggiornamento in sequenza, aggiornamento con nuova installazione o aggiornamento sul posto. Ad esempio, potrebbe non essere possibile eseguire un aggiornamento in sequenza o sul posto se si esegue l'aggiornamento del sistema operativo, l'aggiornamento da SQL Server 2005 o l'aggiornamento da una versione a 32 bit di SQL Server. Per l'albero delle decisioni, vedere [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
--   **Requisiti hardware e software:** vedere i requisiti hardware e software per l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi requisiti sono disponibili in: [Requisiti hardware e software per l'installazione di SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Nel ciclo di pianificazione dell'aggiornamento è opportuno considerare l'aggiornamento dell'hardware (un hardware più recente è più veloce e può consentire di ridurre le licenze grazie a un minor numero di processori o al consolidamento di database e server) e l'aggiornamento del sistema operativo. Questi tipi di modifiche hardware e software influiscono sul tipo di metodo di aggiornamento.  
+-   **Requisiti hardware e software:** consultare i requisiti hardware e software per l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi requisiti sono disponibili in: [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Nel ciclo di pianificazione dell'aggiornamento è opportuno considerare l'aggiornamento dell'hardware (un hardware più recente è più veloce e può consentire di ridurre le licenze grazie a un minor numero di processori o al consolidamento di database e server) e l'aggiornamento del sistema operativo. Questi tipi di modifiche hardware e software influiscono sul tipo di metodo di aggiornamento.  
   
 -   **Ambiente corrente:** eseguire ricerche nell'ambiente corrente per comprendere i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso e i client connessi all'ambiente.  
   
-    -   **Provider client:** anche se l'aggiornamento non richiede di aggiornare il provider dei singoli client, è possibile scegliere di eseguire questa operazione. Se si esegue l'aggiornamento da [!INCLUDE[sql14](../../includes/sssql14-md.md)] o versione precedente, le funzionalità [!INCLUDE[sql15](../../includes/sssql15-md.md)] seguenti richiedono un provider aggiornato per ogni client o per offrire funzionalità aggiuntive:  
+    -   **Provider client:** l'aggiornamento non richiede di aggiornare il provider dei singoli clienti, ma è possibile scegliere di eseguire questa operazione. Se si esegue l'aggiornamento da [!INCLUDE[sql14](../../includes/sssql14-md.md)] o versione precedente, le funzionalità [!INCLUDE[sql15](../../includes/sssql15-md.md)] seguenti richiedono un provider aggiornato per ogni client o per offrire funzionalità aggiuntive:  
   
        -   [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "67990871"
   
 -   **Scegliere il metodo di aggiornamento:** vedere [Scegliere un metodo di aggiornamento del motore di database](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
--   **Sviluppare un piano di ripristino dello stato precedente:** l'esecuzione di questo piano consente di ripristinare l'ambiente originale se è necessario eseguire il rollback.  
+-   **Sviluppare un piano di rollback:** l'esecuzione di questo piano consentirà di ripristinare l'ambiente originale se è necessario eseguire il rollback.  
   
 -   **Determinare i criteri di accettazione:** verificare che l'aggiornamento sia riuscito prima di trasferire gli utenti nell'ambiente aggiornato.  
   
@@ -97,4 +97,4 @@ ms.locfileid: "67990871"
 [Aggiornare il motore di database](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>Risorse aggiuntive 
-[Guida alla migrazione del database](https://aka.ms/datamigration)  
+[Guida alla migrazione dei database](https://aka.ms/datamigration)  

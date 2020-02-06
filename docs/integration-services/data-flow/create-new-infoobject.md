@@ -11,10 +11,10 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293169"
 ---
 # <a name="create-new-infoobject"></a>Crea nuovo InfoObject
@@ -65,7 +65,7 @@ ms.locfileid: "71293169"
  **Nome InfoObject**  
  Immettere un nome per l'InfoObject.  
   
- **Breve descrizione**  
+ **Descrizione breve**  
  Immettere una breve descrizione per l'InfoObject.  
   
  **Descrizione lunga**  
@@ -143,7 +143,7 @@ ms.locfileid: "71293169"
 ### <a name="attributes-options"></a>Opzioni degli attributi  
  Utilizzare le opzioni seguenti per aggiungere e rimuovere attributi per l'InfoObject che viene creato:  
   
- **Aggiungi**  
+ **Aggiungere**  
  Aggiungere un InfoObject esistente come attributo.  
   
  Per aggiungere un InfoObject esistente, fare clic su Aggiungi e quindi usare la finestra di dialogo **Cerca InfoObject** per trovare l'InfoObject. Per altre informazioni su questa finestra di dialogo, vedere [Cerca InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  

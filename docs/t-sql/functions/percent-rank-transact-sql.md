@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b6e1144572288b2bc56fd434278ecda6cdc56f8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914386"
 ---
-# <a name="percentrank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
+# <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Calcola il rango relativo di una riga all'interno di un gruppo di righe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Utilizzare PERCENT_RANK per valutare la posizione relativa di un valore in un set di risultati della query o di una partizione. PERCENT_RANK è simile alla funzione CUME_DIST.  

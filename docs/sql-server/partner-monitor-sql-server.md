@@ -8,22 +8,16 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: bbf66098bcc2b091ffd97a3f3aebf73c599fbf17
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 8012c6a4fecf4155615460da8bd568eb4007aa48
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974463"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656944"
 ---
 # <a name="sql-server-monitoring-partners"></a>Partner di monitoraggio per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Per monitorare i servizi di SQL Server, è possibile scegliere tra una vasta gamma di strumenti leader nel settore. In questo articolo vengono evidenziate le aziende partner Microsoft con soluzioni di monitoraggio che supportano Microsoft SQL Server.
-
-<!--
-
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
-
--->
 
 ## <a name="microsoft-monitoring-partners"></a>Partner di monitoraggio Microsoft
 
@@ -41,7 +35,7 @@ Per monitorare i servizi di SQL Server, è possibile scegliere tra una vasta gam
 Per saperne di più su altri partner Microsoft, vedere i [partner di disponibilità elevata e ripristino di emergenza][hadr_partners], i [partner di gestione][management_partners] e i [partner di sviluppo][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 [2]: ./media/partner-hadr-sql-server/sentryone.png
 [3]: ./media/partner-hadr-sql-server/quest.png
 [4]: ./media/partner-hadr-sql-server/redgate.png

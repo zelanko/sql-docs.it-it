@@ -1,10 +1,9 @@
 ---
-title: Finestra di dialogo Stampa | Microsoft Docs
-ms.custom: ''
+title: Finestra di dialogo Stampa
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7591ac6ca80aabe5a9895b729184c2b4a6c4beb1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8c1eb1ef3959052fb285c713bf172521b74bc46b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266338"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255347"
 ---
 # <a name="print-dialog-box"></a>Finestra di dialogo Stampa
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ Mediante le opzioni disponibili nella finestra di dialogo **Stampa** è possibil
 **Nome**  
 Specifica la stampante. Selezionare una stampante dall'elenco. La stampante selezionata diviene la stampante predefinita fino alla chiusura di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o alla selezione di un'altra stampante. Le informazioni visualizzate nei campi sotto l'elenco si applicano alla stampante selezionata.  
   
-**Stato**  
+**Status**  
 Descrive la stato della stampante selezionata, che può essere ad esempio occupata o pronta.  
   
 **Tipo**  

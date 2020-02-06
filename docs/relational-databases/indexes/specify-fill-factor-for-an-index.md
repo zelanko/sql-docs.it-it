@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909519"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Specificare un fattore di riempimento per un indice
@@ -39,7 +39,7 @@ ms.locfileid: "67909519"
   
      [Considerazioni sulle prestazioni](#Performance)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per specificare un fattore di riempimento in un indice tramite:**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "67909519"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Per specificare un fattore di riempimento tramite Progettazione tabelle  
   
@@ -80,7 +80,7 @@ ms.locfileid: "67909519"
   
 6.  Espandere **Specifica riempimento**, selezionare la riga **Fattore di riempimento** e immettere il fattore di riempimento desiderato nella riga.  
   
-7.  Scegliere **Chiudi**.  
+7.  Fare clic su **Close**.  
   
 8.  Selezionare **Salva** table_name **dal menu**_File_.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "67909519"
   
 8.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Per specificare un fattore di riempimento in un indice esistente  
   

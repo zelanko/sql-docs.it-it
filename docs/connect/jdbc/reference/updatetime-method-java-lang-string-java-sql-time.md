@@ -16,10 +16,10 @@ ms.assetid: fbbcef68-b903-4cfd-911c-a7e239d17c74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d0c97f49c4d865b5f0aa99b602e5524a0a97b1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998184"
 ---
 # <a name="updatetime-method-javalangstring-javasqltime"></a>Metodo updateTime (java.lang.String, java.sql.Time)
@@ -47,7 +47,7 @@ public void updateTime(java.lang.String columnName,
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questo metodo updateTime viene specificato dal metodo updateTime nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  

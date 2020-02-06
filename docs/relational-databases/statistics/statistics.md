@@ -24,10 +24,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982814"
 ---
 # <a name="statistics"></a>Statistiche
@@ -52,7 +52,7 @@ Più in dettaglio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cre
 
 - **Inizializzazione dell'istogramma**: nel primo passaggio viene elaborata una sequenza di valori a partire dall'inizio del set ordinato e vengono raccolti fino a 200 valori di *range_high_key*, *equal_rows*, *range_rows* e *distinct_range_rows* (in questo passaggio *range_rows* e *distinct_range_rows* sono sempre pari a zero). Il primo passaggio termina quando è stato esaurito tutto l'input o quando sono stati trovati 200 valori. 
 - **Analisi con unione di bucket**: nel secondo passaggio viene elaborato ogni valore aggiuntivo della colonna iniziale della chiave delle statistiche in base all'ordinamento. Ogni valore successivo viene aggiunto all'ultimo intervallo o viene creato un nuovo intervallo alla fine (questo è possibile perché i valori di input sono ordinati). Se viene creato un nuovo intervallo, una coppia di intervalli esistenti adiacenti viene compressa in un intervallo singolo. Questa coppia di intervalli viene selezionata per ridurre al minimo la perdita di informazioni. Questo metodo usa un algoritmo per il calcolo della *differenza massima*, per ridurre al minimo il numero di intervalli nell'istogramma, aumentando contemporaneamente la differenza tra i valori limite. Durante questa fase il numero di passaggi dopo la compressione degli intervalli rimane 200.
-- **Consolidamento dell'istogramma**: nel terzo passaggio, può essere eseguita la compressione di più intervalli se non viene persa una quantità significativa di informazioni. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. Pertanto, anche se la colonna ha più di 200 valori univoci, l'istogramma può avere meno di 200 intervalli. Per una colonna costituita solo da valori univoci, quindi, l'istogramma consolidato ha un minimo di tre intervalli.
+- **Consolidamento dell'istogramma**: nel terzo passaggio, può essere effettuata la compressione di più intervalli se non viene persa una quantità significativa di informazioni. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. Pertanto, anche se la colonna ha più di 200 valori univoci, l'istogramma può avere meno di 200 intervalli. Per una colonna costituita solo da valori univoci, quindi, l'istogramma consolidato ha un minimo di tre intervalli.
 
 > [!NOTE]
 > Se l'istogramma è stato creato tramite un campione anziché tramite l'analisi completa, i valori di *equal_rows*, *range_rows*, *distinct_range_rows* e  *average_range_rows* vengono stimati e pertanto non devono necessariamente essere valori integer.
@@ -199,7 +199,7 @@ In questo esempio, l'oggetto statistiche `LastFirst` dispone delle densità per 
 ### <a name="query-selects-from-a-subset-of-data"></a>La query effettua la selezione da un subset di dati  
 La creazione di statistiche per indici e colonne singole in Query Optimizer implica la creazione di statistiche per i valori in tutte le righe. Quando le query effettuano la selezione da un subset di righe che dispone di una distribuzione dei dati univoca, le statistiche filtrate possono migliorare i piani di query. È possibile creare le statistiche filtrate usando l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) con la clausola [WHERE](../../t-sql/queries/where-transact-sql.md) per definire l'espressione del predicato del filtro.  
   
-Ad esempio, se si usa [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella `Production.Product` appartiene a una delle quattro categorie della tabella `Production.ProductCategory`: Bikes, Components, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
+Ad esempio, se si usa [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], ogni prodotto nella tabella `Production.Product` appartiene a una delle quattro categorie della tabella `Production.ProductCategory`, ovvero Bikes, Components, Clothing e Accessories. Ogni categoria dispone di una distribuzione dei dati diversa in relazione al peso. I pesi nella categoria Bikes sono compresi tra 13,77 e 30, quelli della categoria Components sono compresi tra 2,12 e 1.050 con alcuni valori NULL e quelli delle categorie Clothing e Accessories sono tutti NULL.  
   
 Prendendo come esempio la categoria Bikes, le statistiche filtrate per tutti i pesi consentono di fornire a Query Optimizer statistiche più accurate e di migliorare la qualità del piano di query rispetto alle statistiche di tabella completa o alle statistiche inesistenti nella colonna relativa al peso (Weight). La colonna Weight della categoria Bikes rappresenta un candidato valido per le statistiche filtrate. Nel caso di un numero relativamente ridotto di ricerche correlate al peso, tale colonna non è tuttavia necessariamente un candidato valido per un indice filtrato. È possibile che i vantaggi derivanti dai miglioramenti alle prestazioni delle ricerche offerti da un indice filtrato siano inferiori rispetto agli svantaggi derivanti dai costi di manutenzione e archiviazione supplementari dovuti all'aggiunta di un indice filtrato al database.  
   

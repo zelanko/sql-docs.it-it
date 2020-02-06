@@ -1,23 +1,24 @@
 ---
-title: "Procedura: Creare un progetto di test per l'esecuzione di unit test del database di SQL Server | Microsoft Docs"
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creare un progetto di test per l'esecuzione di unit test del database di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cff6d8342ea1fe4d40616bf07e1189e0ffba030e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897137"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241524"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Procedura: Creare un progetto di test per l'esecuzione di unit test del database di SQL Server
+
 Prima di iniziare a scrivere unit test per valutare gli oggetti di database, è necessario creare innanzitutto un progetto di test. Il progetto contiene unit test di SQL Server, ma può includere altri tipi di test.  
   
 È possibile inserire tutti gli unit test di SQL Server di un determinato progetto di database all'interno di un solo progetto di test. Può tuttavia essere opportuno creare progetti di test aggiuntivi, in base alle risposte fornite alle domande seguenti:  
@@ -52,7 +53,7 @@ Ogni approccio viene descritto nelle procedure riportate di seguito.
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>Per creare un progetto di test con una classe di test di SQL Server  
   
--   Seguire la procedura descritta in [Procedura: Creare uno unit test di SQL Server vuoto](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) o [Procedura: Creare unit test di SQL Server per funzioni, trigger e stored procedure](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
+-   Seguire la procedura descritta in [Procedura: Creare uno unit test di SQL Server vuoto](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) o in [Procedura: Creare unit test di SQL Server per funzioni, trigger e stored procedure](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

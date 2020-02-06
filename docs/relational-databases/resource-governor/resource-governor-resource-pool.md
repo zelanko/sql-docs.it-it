@@ -14,10 +14,10 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 0a65cb01d34082e59d85198505740c345bb7bd08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942661"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool di risorse di Resource Governor
@@ -54,10 +54,10 @@ Se per un pool è definito un valore MIN diverso da zero, il valore MAX effettiv
   
 Nella seguente tabella vengono illustrati alcuni concetti precedenti. Nella tabella vengono mostrate le impostazioni per il pool interno, il pool predefinito e due pool definiti dall'utente. 
   
-|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Commento|  
+|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Comment|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interno|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
-|predefiniti|0|100|30|30|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50)) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
+|default|0|100|30|30|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50)) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
 |Pool 1|20|100|50|30|Il valore MAX effettivo viene calcolato come: min(100,100-50) = 50. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
 |Pool 2|50|70|70|20|Il valore MAX effettivo viene calcolato come: min(70,100-20) = 70. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 20.|  
 
@@ -75,10 +75,10 @@ Le seguenti formule vengono utilizzate per calcolare il valore MAX% effettivo e 
 
 Utilizzando la tabella precedente come esempio, è possibile descrivere ulteriormente le regolazioni che si verificano quando viene creato un altro pool. Il pool descritto è il pool 3 e ha una impostazione MIN% di 5.  
   
-|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Commento|  
+|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Comment|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interno|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
-|predefiniti|0|100|25|25|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50+5) = 25. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
+|default|0|100|25|25|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50+5) = 25. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
 |Pool 1|20|100|45|25|Il valore MAX effettivo viene calcolato come: min(100,100-55) = 45. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
 |Pool 2|50|70|70|20|Il valore MAX effettivo viene calcolato come: min(70,100-25) = 70. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 20.|  
 |Pool 3|5|100|30|25|Il valore MAX effettivo viene calcolato come: min(100,100-70) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  

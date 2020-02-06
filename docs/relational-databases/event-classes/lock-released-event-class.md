@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4baedd8ebfa5fecc5ed93414a96f76a2312411a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118288"
 ---
 # <a name="lockreleased-event-class"></a>Classe di evento Lock:Released
@@ -25,7 +25,7 @@ ms.locfileid: "68118288"
   
  Le classi di evento Lock:Acquired e Lock:Released consentono di monitorare i blocchi acquisiti sugli oggetti, il tipo di blocco applicato e la durata del blocco. I blocchi mantenuti per lunghi periodi di tempo possono causare problemi di contesa. Per questo è necessario esaminarli. Ad esempio, è possibile che un'applicazione acquisisca i blocchi sulle righe di una tabella e quindi rimanga in attesa dell'input utente. L'attesa dell'input utente può essere prolungata e pertanto bloccare altri utenti. In tal caso, sarà necessario riprogettare l'applicazione in modo che le richieste di blocco vengano attivate soltanto quando necessario e che al momento dell'acquisizione dei blocchi non venga richiesto l'input utente.  
   
-## <a name="lock-released-event-class-data-columns"></a>Lock: Released - Colonne di dati della classe di evento  
+## <a name="lock-released-event-class-data-columns"></a>Colonne di dati della classe di evento Lock: Released  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -33,8 +33,8 @@ ms.locfileid: "68118288"
 |BinaryData|**image**|Identificatore della risorsa blocco.|2|Sì|  
 |ClientProcessID|**int**|ID assegnato dal computer host al processo in cui è in esecuzione l'applicazione client. Questa colonna di dati viene popolata se tramite il client viene indicato l'ID del processo client.|9|Sì|  
 |DatabaseID|**int**|ID del database in cui è stato rilasciato il blocco. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] visualizza il nome del database se la colonna di dati ServerName è acquisita nella traccia e il server è disponibile. Determinare il valore per un database utilizzando la funzione DB_ID.|3|Sì|  
-|EventClass|**int**|Tipo di evento = 23.|27|no|  
-|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
+|EventClass|**int**|Tipo di evento = 23.|27|No|  
+|EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Sì|  
@@ -48,13 +48,13 @@ ms.locfileid: "68118288"
 |ObjectID2|**bigint**|ID dell'entità o dell'oggetto correlato, se disponibile e applicabile.|56|Sì|  
 |OwnerID|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Sì|  
 |RequestID|**int**|ID della richiesta contenente l'istruzione.|49|Sì|  
-|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SessionLoginName|**nvarchar**|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Sì|  
 |SPID|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |StartTime|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |TextData|**ntext**|Valore di testo che dipende dalla classe di evento acquisita nella traccia.|1|Sì|  
 |TransactionID|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
-|Tipo|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
+|Type|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

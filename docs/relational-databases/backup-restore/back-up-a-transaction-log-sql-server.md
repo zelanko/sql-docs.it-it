@@ -15,10 +15,10 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708730"
 ---
 # <a name="back-up-a-transaction-log"></a>Eseguire il backup di un log delle transazioni
@@ -30,7 +30,7 @@ ms.locfileid: "71708730"
   
 Non è possibile usare l'istruzione `BACKUP` in una transazione esplicita o [implicita](../../t-sql/statements/set-implicit-transactions-transact-sql.md). Per transazione esplicita si intende una transazione di cui vengono definiti in modo esplicito l'inizio e la fine.
 
-### <a name="Recommendations"></a> Indicazioni  
+### <a name="Recommendations"></a> Raccomandazioni  
   
 - Se un database usa il [modello di recupero](recovery-models-sql-server.md) con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk, è necessario eseguire il backup del log delle transazioni con una frequenza sufficiente per garantire la protezione dei dati e per evitare il [riempimento del log delle transazioni](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) stesso. Tronca il log e supporta il ripristino del database in corrispondenza di uno specifico punto nel tempo. 
   
@@ -42,13 +42,13 @@ Le autorizzazioni `BACKUP DATABASE` e `BACKUP LOG` richieste vengono assegnate p
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. I problemi relativi alle autorizzazioni del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla [risorsa fisica](backup-devices-sql-server.md) quando si prova a eseguire il backup o il ripristino. Anche in questo caso, controllare le autorizzazioni prima di iniziare.
 
-## <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a>Utilizzare SQL Server Management Studio
 
 1. Dopo aver effettuato la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
 1. Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-1. Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Back Up**. Verrà visualizzata la finestra di dialogo **Backup database** .  
+1. Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
  
 1. Verificare il nome del database nella casella di riepilogo **Database** . È possibile selezionare facoltativamente un database diverso nell'elenco.  
   
@@ -129,7 +129,7 @@ Le autorizzazioni `BACKUP DATABASE` e `BACKUP LOG` richieste vengono assegnate p
   
    - Triple DES  
 
-## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
+## <a name="using-transact-sql"></a>Uso di Transact-SQL  
   
 Per eseguire il backup del log delle transazioni, eseguire l'istruzione BACKUP LOG specificando gli elementi seguenti:  
   
@@ -150,7 +150,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Utilizzo di PowerShell
+##  <a name="PowerShellProcedure"></a> Con PowerShell
 
 Impostare e usare il [provider SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Usare il cmdlet **Backup-SqlDatabase** e specificare **Log** per il valore del parametro **-BackupAction** .  
   
@@ -164,7 +164,7 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
   
 - [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-- [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+- [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 - [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   

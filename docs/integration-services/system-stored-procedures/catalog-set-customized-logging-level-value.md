@@ -11,10 +11,10 @@ ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc237875d0ba5b4f28838609f6b172c55ffe0e90
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296743"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
@@ -52,7 +52,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  *property_value* è di tipo **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="return-codes"></a>Codici restituiti  
  0 (esito positivo)  
@@ -60,7 +60,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  Quando la stored procedure ha esito negativo viene generato un errore.  
   
 ## <a name="result-set"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  
