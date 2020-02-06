@@ -15,10 +15,10 @@ ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051221"
 ---
 # <a name="value-method-xml-data-type"></a>Metodo value() (tipo di dati xml)
@@ -49,7 +49,7 @@ value (XQuery, SQLType)
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>A. Utilizzo del metodo value() su una variabile di tipo xml  
+### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>R. Utilizzo del metodo value() su una variabile di tipo xml  
  Nell'esempio seguente, un'istanza XML viene archiviata in una variabile di tipo `xml`. Il metodo `value()` recupera il valore dell'attributo `ProductID` dal codice XML e quindi lo assegna a una variabile `int`.  
   
 ```  
@@ -135,7 +135,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. Utilizzo del metodo exist() in sostituzione del metodo value()  
- Per motivi relativi alle prestazioni, anziché utilizzare il metodo `value()` in un predicato per eseguire il confronto con un valore relazionale, è consigliabile utilizzare `exist()` con `sql:column()`. Esempio:  
+ Per motivi relativi alle prestazioni, anziché utilizzare il metodo `value()` in un predicato per eseguire il confronto con un valore relazionale, è consigliabile utilizzare `exist()` con `sql:column()`. Ad esempio:  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  

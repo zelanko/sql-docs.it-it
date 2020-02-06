@@ -17,10 +17,10 @@ ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082284"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE - autorizzazioni per endpoint (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68082284"
 
   Revoca le autorizzazioni concesse o negate per un endpoint.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -83,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile revocare autorizzazioni nell'ambito del server solo se il database corrente è il database **master**.  
   
  Le informazioni sugli endpoint sono visibili nella vista del catalogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e le informazioni sulle entità server sono visibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -103,8 +103,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. Revoca dell'autorizzazione VIEW DEFINITION per un endpoint  
- Nell'esempio seguente viene revocata l'autorizzazione `VIEW DEFINITION` per l'endpoint `Mirror7` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `ZArifin`.  
+### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>R. Revoca dell'autorizzazione VIEW DEFINITION per un endpoint  
+ Nell'esempio seguente viene revocata l'autorizzazione `VIEW DEFINITION` per l'endpoint `Mirror7` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`ZArifin`.  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
- Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'utente `PKomosinski` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a tutte le entità a cui l'utente `PKomosinski` ha concesso l'autorizzazione `TAKE OWNERSHIP` per `Shipping83`.  
+ Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'utente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di `PKomosinski` e a tutte le entità a cui l'utente `PKomosinski` ha concesso l'autorizzazione `TAKE OWNERSHIP` per `Shipping83`.  
   
 ```  
 USE master;  

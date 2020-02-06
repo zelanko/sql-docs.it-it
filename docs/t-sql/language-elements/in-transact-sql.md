@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075066"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68075066"
 
   Determina se il valore specificato corrisponde a un valore in una sottoquery o in un elenco.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Qualsiasi valore Null restituito da *subquery* o *expression* che viene confrontato con *test_expression* usando IN o NOT IN restituisce UNKNOWN. L'utilizzo di valori Null insieme a IN o NOT IN può generare risultati imprevisti.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'inclusione esplicita di un numero estremamente elevato di valori (molte migliaia di valori delimitati da virgole) all'interno di parentesi, in una clausola IN può determinare un uso elevato delle risorse e restituire gli errori 8623 o 8632. Per risolvere questo problema, archiviare gli elementi dell'elenco IN in una tabella e usare una sottoquery SELECT all'interno della clausola IN.  
   
  Errore 8623:  
@@ -79,7 +79,7 @@ test_expression [ NOT ] IN
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-comparing-or-and-in"></a>A. Confronto di OR e IN  
+### <a name="a-comparing-or-and-in"></a>R. Confronto di OR e IN  
  Nell'esempio seguente viene selezionato un elenco di nomi dei dipendenti con il titolo di Design Engineer, Tool Designer o Marketing Assistant.  
   
 ```  

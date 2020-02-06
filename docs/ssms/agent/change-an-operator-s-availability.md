@@ -1,10 +1,9 @@
 ---
-title: Modificare la disponibilità di un operatore | Microsoft Docs
-ms.custom: ''
+title: Modificare la disponibilità di un operatore
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,13 +21,15 @@ helpviewer_keywords:
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b9fa196aefb37de169439853704e9b52153c6a7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 21445e5a736159123c797e18d4dae3ece58c6a02
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553331"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255707"
 ---
 # <a name="change-an-operator39s-availability"></a>Modificare la disponibilità di un operatore
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,9 +41,9 @@ In questo argomento viene descritto come modificare la pianificazione di un oper
   
 ## <a name="BeforeYouBegin"></a>Prima di iniziare  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>Sicurezza  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorizzazioni  
 Solo i membri del ruolo predefinito del server **sysadmin** possono modificare gli operatori.  
   
 ## <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
@@ -57,7 +58,7 @@ Solo i membri del ruolo predefinito del server **sysadmin** possono modificare g
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore che si vuole abilitare o disabilitare, selezionare **Proprietà**e fare clic sulla scheda **Generale** .  
   
-5.  Nella finestra di dialogo **Proprietà**_nome\_operatore_ selezionare o deselezionare la casella di controllo **Abilitato**.  
+5.  Nella finestra di dialogo _Proprietà\__ nome**operatore** selezionare o deselezionare la casella di controllo **Abilitato**.  
   
 6.  Fare clic su **OK**.  
   

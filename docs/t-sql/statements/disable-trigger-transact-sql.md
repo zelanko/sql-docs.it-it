@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d658b63e8c2b80c277ed9d8c3647717d07c96c48
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 8e426d6af578cd822befdeab928c522a55f98d7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982984"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259419"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per impostazione predefinita, i trigger vengono abilitati in fase di creazione. La disabilitazione di un trigger non ne comporta l'eliminazione. Il trigger continua a esistere come oggetto nel database corrente ma non viene attivato quando viene eseguita una qualsiasi istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in cui è stato programmato. I trigger possono essere riabilitati tramite [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). I trigger DML definiti su tabelle possono essere disabilitati o abilitati anche tramite [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
  La modifica del trigger tramite l'istruzione **ALTER TRIGGER** comporta l'abilitazione del trigger.  
@@ -84,8 +84,8 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="examples"></a>Esempi  
 Gli esempi seguenti sono descritti nel database AdventureWorks2012.
   
-### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. Disabilitazione di un trigger DML in una tabella  
- Nell'esempio seguente viene disabilitato il trigger `uAddress` creato per la tabella `Address`.  
+### <a name="a-disabling-a-dml-trigger-on-a-table"></a>R. Disabilitazione di un trigger DML in una tabella  
+ Nell'esempio seguente viene disabilitato il trigger `uAddress` creato per la tabella `Person`.  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

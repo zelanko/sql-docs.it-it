@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846719"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (grafo SQL)
@@ -47,7 +47,7 @@ Crea una nuova tabella di grafi SQL come tabella `NODE` o `EDGE`.
 > [!NOTE]   
 >  Per le istruzioni Transact-SQL standard, vedere [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -99,7 +99,7 @@ CREATE TABLE
 Questo documento include solo gli argomenti relativi al grafo SQL. Per un elenco completo e una descrizione degli argomenti supportati, vedere [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
  *database_name*    
- Nome del database in cui è viene creata la tabella. *database_name* deve specificare il nome di un database esistente. Se non viene specificato, per impostazione predefinita *database_name* è il database corrente. L'account di accesso per la connessione corrente deve essere associato a un ID utente esistente nel database specificato da *database_name*. Questo ID utente deve avere le autorizzazioni CREATE TABLE.  
+ Nome del database in cui è viene creata la tabella. *database_name* deve specificare il nome di un database esistente. Se l'argomento *database_name* non viene specificato, il valore predefinito è il database corrente. L'account di accesso per la connessione corrente deve essere associato a un ID utente esistente nel database specificato da *database_name*. Questo ID utente deve avere le autorizzazioni CREATE TABLE.  
   
  *schema_name*    
  Nome dello schema a cui appartiene la nuova tabella.  
@@ -122,7 +122,7 @@ Questo documento include solo gli argomenti relativi al grafo SQL. Per un elenco
  ON {partition_scheme | filegroup | "default"}    
  Può essere specificato anche in un vincolo PRIMARY KEY o UNIQUE. Questi vincoli comportano la creazione di indici. Se si specifica filegroup, l'indice viene archiviato nel filegroup indicato. Se si specifica "default" oppure si omette ON, l'indice viene archiviato nello stesso filegroup della tabella. Se il vincolo PRIMARY KEY o UNIQUE crea un indice cluster, le pagine di dati della tabella vengono archiviate nello stesso filegroup dell'indice. Se si specifica CLUSTERED o se il vincolo crea in altro modo un indice cluster e si specifica un valore partition_scheme diverso dal valore partition_scheme o filegroup della definizione della tabella, o viceversa, verrà rispettata solo la definizione del vincolo e gli altri valori verranno ignorati.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 La creazione di una tabella temporanea come tabella nodi o bordi non è supportata.  
 
 La creazione di una tabella nodi o bordi come tabella temporanea non è supportata.
@@ -136,7 +136,7 @@ Non è possibile modificare una tabella nodi/archi di grafo non partizionata in 
  
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-create-a-node-table"></a>A. Creare una tabella `NODE`
+### <a name="a-create-a-node-table"></a>R. Creare una tabella `NODE`
  L'esempio seguente illustra come creare una tabella `NODE`
 
 ```

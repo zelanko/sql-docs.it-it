@@ -23,10 +23,10 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101993"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
@@ -38,7 +38,7 @@ Ricompila uno o più indici di una tabella nel database specificato.
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 DBCC DBREINDEX ricompila un indice di tabella o tutti gli indici definiti per una tabella. Quando è supportata la ricostruzione dinamica di un indice, è possibile ricostruire gli indici che applicano vincoli PRIMARY KEY o UNIQUE senza dover eliminare o ricreare tali vincoli. Ciò significa che un indice può essere ricostruito anche se la struttura di una tabella o i relativi vincoli non sono noti. Questa situazione potrebbe verificarsi dopo una copia bulk di dati in una tabella.
 
 L'istruzione DBCC DBREINDEX può ricompilare tutti gli indici di una tabella in un'unica istruzione. Ciò risulta più semplice rispetto alla specificazione di più istruzioni DROP INDEX e CREATE INDEX a livello di codice. Poiché l'intera operazione viene eseguita da un'unica istruzione, DBCC DBREINDEX risulta automaticamente un'istruzione atomica. Le singole istruzioni DROP INDEX e CREATE INDEX invece risultano atomiche solo quando vengono inserite in una transazione. L'istruzione DBCC DBREINDEX è inoltre caratterizzata da un maggior numero di ottimizzazioni rispetto alle singole istruzioni DROP INDEX e CREATE INDEX.
@@ -75,7 +75,7 @@ A differenza di DBCC INDEXDEFRAG oppure di ALTER INDEX con l'opzione REORGANIZE,
 
 Per altre informazioni sulla scelta di un metodo di riorganizzazione e ricompilazione di un indice, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
 DBCC DBREINDEX non è utilizzabile con gli oggetti seguenti:
 -   Tabelle di sistema  
 -   Indici spaziali  
@@ -92,7 +92,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Il chiamante deve essere proprietario della tabella o membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** e **db_ddladmin**.
   
 ## <a name="examples"></a>Esempi  
-### <a name="a-rebuilding-an-index"></a>A. Ricompilazione di un indice  
+### <a name="a-rebuilding-an-index"></a>R. Ricompilazione di un indice  
 Nell'esempio seguente viene ricompilato l'indice cluster `Employee_EmployeeID` con un fattore di riempimento pari a `80` nella tabella `Employee` del database `AdventureWorks`.
   
 ```sql  

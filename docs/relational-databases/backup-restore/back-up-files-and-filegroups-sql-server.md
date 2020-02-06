@@ -17,10 +17,10 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708682"
 ---
 # <a name="back-up-files-and-filegroups"></a>Backup di file e filegroup
@@ -39,7 +39,7 @@ Per altre informazioni sul backup dei file, vedere [Backup completi del file &#4
   
 Per altre informazioni sulle limitazioni e restrizioni, vedere [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Indicazioni
+###  <a name="Recommendations"></a> Raccomandazioni
   
 Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questo caso è possibile eliminare tali voci di log usando il flag di traccia 3226 se nessuno degli script dipende da esse. Vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
@@ -49,13 +49,13 @@ Le autorizzazioni `BACKUP DATABASE` e `BACKUP LOG` vengono assegnate per imposta
   
  Eventuali problemi correlati alla proprietà e alle autorizzazioni sul file fisico del dispositivo di backup possono interferire con l'operazione di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia possibile leggere e scrivere sul dispositivo e che l'account utilizzato per eseguire il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponga delle autorizzazioni di scrittura. Le autorizzazioni di accesso ai file, tuttavia, non vengono controllate dalla stored procedure [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)che aggiunge una voce per un dispositivo di backup nelle tabelle di sistema. Di conseguenza, i problemi relativi all'accesso e alla proprietà del file fisico del dispositivo di backup potrebbero emergere solo in fase di accesso alla risorsa fisica durante un tentativo di backup o ripristino.
 
-## <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio   
+## <a name="using-sql-server-management-studio"></a>Utilizzare SQL Server Management Studio   
   
 1. Dopo aver effettuato la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
 1. Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-1. Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Back Up**. Verrà visualizzata la finestra di dialogo **Backup database** .  
+1. Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
   
 1. Verificare il nome del database nell'elenco **Database** . È possibile selezionare facoltativamente un database diverso nell'elenco.  
   
@@ -112,7 +112,7 @@ Le autorizzazioni `BACKUP DATABASE` e `BACKUP LOG` vengono assegnate per imposta
     
          Per altre informazioni sui checksum, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
-1. Se si esegue il backup su un'unità nastro, come specificato nella sezione **Destinazione** della pagina **Generale**, l'opzione **Scarica nastro al termine del backup** sarà attiva. Selezionando questa opzione viene abilitata anche l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
+1. Se si esegue il backup su un'unità nastro, come specificato nella sezione **Destinazione** della pagina **Generale** , l'opzione **Scarica nastro al termine del backup** sarà attiva. Selezionando questa opzione viene abilitata anche l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
   
     > [!NOTE]
     > Le opzioni presenti nella sezione **Log delle transazioni** sono attive solo in caso di backup di un log delle transazioni, come specificato nella sezione **Tipo backup** nella pagina **Generale** .  
@@ -121,7 +121,7 @@ Le autorizzazioni `BACKUP DATABASE` e `BACKUP LOG` vengono assegnate per imposta
   
      Per visualizzare l'impostazione predefinita di compressione dei backup, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
 
-## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
+## <a name="using-transact-sql"></a>Uso di Transact-SQL
   
 Per creare un backup del file o del filegroup, usare un'istruzione [BACKUP DATABASE <file_or_filegroup>](../../t-sql/statements/backup-transact-sql.md). In questa istruzione è necessario specificare almeno gli elementi seguenti:  
   
@@ -161,7 +161,7 @@ Negli esempi seguenti viene eseguito il backup di uno o più file dei filegroup 
   
 - Un filegroup denominato `SalesGroup2` che include i file `SGrp2Fi1` e `SGrp2Fi2`.  
   
-#### <a name="a-create-a-file-backup-of-two-files"></a>A. Creare un backup di due file  
+#### <a name="a-create-a-file-backup-of-two-files"></a>R. Creare un backup di due file  
 Nell'esempio seguente viene creato un backup differenziale del file solo per il file `SGrp1Fi2` del filegroup `SalesGroup1` e per il file `SGrp2Fi2` del filegroup `SalesGroup2` .  
   
 ```sql  
@@ -199,7 +199,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> Utilizzo di PowerShell
+## <a name="PowerShellProcedure"></a> Con PowerShell
 
 Impostare e usare il [provider SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
   
