@@ -10,10 +10,10 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285211"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introduzione a un esempio semplice di importazione/esportazione guidata
@@ -72,7 +72,7 @@ La pagina visualizza un elenco di proprietà del provider. Molti dei nomi visual
 
 |Informazioni obbligatorie|Proprietà Provider di dati .NET Framework per SQL Server|
 |---|---|
-|Nome server|**Data Source**|
+|Nome server|**Origine dati**|
 |Informazioni di autenticazione (accesso)|**Sicurezza integrata** oppure **ID utente** e **Password**<br/>Per visualizzare un elenco a discesa dei database nel server, è necessario prima specificare informazioni di accesso valide.|
 |Nome database|**Catalogo iniziale**|
 

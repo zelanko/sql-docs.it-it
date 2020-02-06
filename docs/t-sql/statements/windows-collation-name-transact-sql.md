@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874461"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "70874461"
 
 Specifica il nome delle regole di confronto Windows nella clausola COLLATE in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nome delle regole di confronto Windows è composto dalla designazione delle regole di confronto e dagli stili di confronto.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -72,12 +72,12 @@ Omettendo questa opzione si specifica che la distinzione Kana non è rilevante. 
 Omettendo questa opzione si specifica che la distinzione di larghezza non è rilevante. **WS** specifica che la distinzione di larghezza è rilevante.
 
 *VariationSelectorSensitivity*  
-- **Si applica a**: A partire da [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Si applica a** : a partire da [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - Omettendo questa opzione si specifica che il selettore di variazione non è rilevante, **VSS** specifica che il selettore di variazione è rilevante.
 
 **UTF8**  
-- **Si applica a**: A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Si applica a** : a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Specifica la codifica UTF-8 da usare per i tipi di dati idonei. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -87,7 +87,7 @@ Specifica che deve essere usato il tipo di ordinamento binario compatibile con l
 **BIN2**  
 Specifica l'ordinamento binario che utilizza la semantica del confronto dei punti di codice.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 A seconda della versione delle regole di confronto, per alcuni punti di codice potrebbero non essere stati definiti pesi di ordinamento e/o il mapping tra caratteri maiuscoli e minuscoli. Ad esempio, confrontare l'output della funzione `LOWER` quando viene assegnato lo stesso carattere, ma con versioni diverse delle stesse regole di confronto:
 
 ```sql
@@ -233,7 +233,7 @@ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows 
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Hindi|Hindi|
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Lithuanian_Classic|Lithuanian_Classic|
-|Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Macedonian|Macedonian|
+|Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Macedone|Macedone|
 
 <sup>1</sup> Le regole di confronto solo Unicode di Windows possono essere applicate solo a dati a livello di colonna o a livello di espressione. Tali regole non possono essere usate come regole di confronto del server o del database.
 
@@ -247,5 +247,5 @@ Nella tabella seguente vengono elencate tutte le regole di confronto di Windows 
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [table](../../t-sql/data-types/table-transact-sql.md)
+- [tabella](../../t-sql/data-types/table-transact-sql.md)
 - [sys.fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)

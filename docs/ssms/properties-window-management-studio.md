@@ -1,6 +1,6 @@
 ---
-title: Finestra Proprietà (Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Finestra Proprietà (Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51aff80cb84f5ff066917f5ba35d966c0f49d08d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 44110ee4d46cbd0ef25544b3cf410a1c8312d460
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262016"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257588"
 ---
 # <a name="properties-window-management-studio"></a>Finestra Proprietà (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982588"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -314,7 +314,7 @@ PAD_INDEX = { ON | **OFF** }
   
 Specifica il riempimento dell'indice. Il valore predefinito è OFF.  
   
-ON     
+ATTIVA     
 Indica che la percentuale di spazio disponibile specificata in *fillfactor* viene applicata alle pagine di livello intermedio dell'indice.  
   
 OFF o *fillfactor* non è specificato     
@@ -342,7 +342,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
   
  Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in tempdb. Il valore predefinito è OFF.  
   
- ON     
+ ATTIVA     
  I risultati intermedi dell'ordinamento utilizzati per la compilazione dell'indice vengono archiviati in tempdb. Questo potrebbe ridurre il tempo necessario per creare un indice se tempdb si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
   
  OFF     
@@ -356,7 +356,7 @@ Non ha effetto per gli indici spaziali perché il tipo di indice non è mai univ
 STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 Specifica se le statistiche di distribuzione vengono ricalcolate. Il valore predefinito è OFF.  
   
- ON    
+ ATTIVA    
  Le statistiche non aggiornate non vengono ricalcolate automaticamente.  
   
  OFF    
@@ -372,7 +372,7 @@ DROP_EXISTING = { ON | **OFF** }
   
  Specifica che è necessario eliminare e quindi ricompilare l'indice spaziale denominato preesistente. Il valore predefinito è OFF.  
   
- ON     
+ ATTIVA     
  L'indice esistente deve essere eliminato e ricompilato. Il nome di indice specificato deve corrispondere a quello dell'indice esistente, mentre la definizione dell'indice può essere modificata. È possibile, ad esempio, specificare valori diversi per le colonne, il tipo di ordinamento, lo schema di partizione o le opzioni dell'indice.  
   
  OFF     
@@ -393,7 +393,7 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
   
  Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.  
   
- ON     
+ ATTIVA     
  I blocchi di riga sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando usare blocchi di riga.  
   
  OFF     
@@ -404,7 +404,7 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
   
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
- ON    
+ ATTIVA    
  I blocchi a livello di pagina sono consentiti durante l'accesso all'indice. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando utilizzare blocchi a livello di pagina.  
   
  OFF     
@@ -432,7 +432,7 @@ MAXDOP =*max_degree_of_parallelism*
  Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]
-> Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Le operazioni parallele sugli indici non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -448,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  Compressione di pagina utilizzata sui dati dall'indice  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 Ogni opzione può essere specificata una sola volta per ogni istruzione CREATE SPATIAL INDEX. Se un'opzione viene specificata due volte, viene generato un errore.  
   
 È possibile creare fino a 249 indici spaziali in ogni colonna spaziale di una tabella. La creazione di più di un indice spaziale in una specifica colonna spaziale può essere utile, ad esempio, per indicizzare parametri di schema a mosaico diversi in un'unica colonna.  
@@ -491,7 +491,7 @@ L'utente deve avere l'autorizzazione `ALTER` per la tabella o vista oppure esser
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. Creazione di un indice spaziale in una colonna geometrica
+### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>R. Creazione di un indice spaziale in una colonna geometrica
 Nell'esempio seguente viene creata una tabella denominata `SpatialTable` contenente una colonna del tipo **geometry**, `geometry_col`. Viene quindi creato un indice spaziale, `SIndx_SpatialTable_geometry_col1`, in `geometry_col` Nell'esempio viene utilizzato lo schema a mosaico predefinito e viene specificato il rettangolo di selezione.  
   
 ```sql  

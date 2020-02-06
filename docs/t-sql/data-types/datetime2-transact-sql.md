@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086767"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
@@ -39,11 +39,11 @@ Definisce una data costituita dalla combinazione di un'ora del giorno espressa n
 |Proprietà|valore|  
 |--------------|-----------|  
 |Sintassi|**datetime2** [ (*precisione in secondi frazionari*) ]|  
-|Utilizzo|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|Uso|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|AAAA-MM-GG hh:mm:ss[.secondi frazionari]<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
 |Intervallo di date|Da 01-01-0001 a 31-12-9999<br /><br /> Dal 1º gennaio 1 e.c. al 31 dicembre 9999 e.c.|  
 |Intervallo di ore|da 00:00:00 a 23:59:59.9999999|  
-|Intervallo di differenze di fuso orario|None|  
+|Intervallo di differenze di fuso orario|nessuno|  
 |Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 0001 e 9999, indicante l'anno.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12, indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante il giorno del mese specificato.<br /><br /> hh rappresenta un numero di due cifre compreso tra 00 e 23, indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre compreso tra 00 e 59, indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre compreso tra 00 e 59, indicante i secondi.<br /><br /> n* rappresenta un numero composto da 0 a 7 cifre e compreso tra 0 e 9999999, indicante i secondi frazionari. In Informatica i secondi frazionari verranno troncati quando n > 3.|  
 |Lunghezza in caratteri|Da un minimo di 19 posizioni (AAAA-MM-GG hh:mm:ss ) a un massimo di 27 posizioni (AAAA-MM-GG hh:mm:ss.0000000)|  
 |Precisione, scala|Da 0 a 7 cifre, con un'accuratezza di 100 nanosecondi. La precisione predefinita è 7 cifre.|  
@@ -52,8 +52,8 @@ Definisce una data costituita dalla combinazione di un'ora del giorno espressa n
 |Valore predefinito|1900-01-01 00:00:00|  
 |Calendario|Gregoriano|  
 |Precisione in secondi frazionari definita dall'utente|Sì|  
-|Considerazione e conservazione delle differenze di fuso orario|no|  
-|Considerazione dell'ora legale|no|  
+|Considerazione e conservazione delle differenze di fuso orario|No|  
+|Considerazione dell'ora legale|No|  
 
 <sup>1</sup> Il primo byte di un valore **datetime2** consente di archiviare la precisione del valore pertanto, l'effettivo spazio di archiviazione necessario per un valore **datetime2** corrisponde alla dimensione di archiviazione indicata nella tabella precedente più 1 byte aggiuntivo per archiviare la precisione.  Ne risulta che le dimensioni massime di un valore **datetime2** sono di 9 byte: 1 byte per l'archiviazione della precisione più 8 byte per l'archiviazione dei dati con precisione massima.
 
@@ -79,7 +79,7 @@ Alcune versioni precedenti dei client non supportano i tipi di dati **time**, **
 |Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Formato predefiniti dei valori letterali stringa passati al client legacy|ODBC delle versioni precedenti|OLEDB delle versioni precedenti|JDBC delle versioni precedenti|SQLCLIENT delle versioni precedenti|  
 | --- | --- | --- | --- | --- | --- |
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
-|**data**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
+|**date**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetime2**|AAAA-MM-GG hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
   
@@ -103,7 +103,7 @@ SELECT @datetime2 AS '@datetime2', @date AS '@date';
 --2016-12-21 00:00:00.0000000 2016-12-21
 ```  
   
-Quando la conversione è da **time(n)**, il componente relativo all'ora viene copiato e quello relativo alla data viene impostato su "1900-01-01". Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(7)` in un valore `datetime2`.  
+Quando la conversione è da **time(n)** , il componente relativo all'ora viene copiato e quello relativo alla data viene impostato su "1900-01-01". Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(7)` in un valore `datetime2`.  
   
 ```sql
 DECLARE @time time(7) = '12:10:16.1234567';
@@ -131,7 +131,7 @@ SELECT @datetime2 AS '@datetime2', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.0000000 2016-12-01 12:32:00 
 ```  
   
-Quando la conversione viene eseguita da **datetimeoffset(n)**, i componenti di data e ora vengono copiati. Il fuso orario viene troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(7)` in un valore `datetime2`.  
+Quando la conversione viene eseguita da **datetimeoffset(n)** , i componenti di data e ora vengono copiati. Il fuso orario viene troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(7)` in un valore `datetime2`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(7) = '2016-10-23 12:45:37.1234567 +10:0';
@@ -199,7 +199,7 @@ SELECT
 |Tipo di dati|Output|  
 |---|---|
 |**time**|12:35:29. 1234567|  
-|**data**|2007-05-08|  
+|**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
