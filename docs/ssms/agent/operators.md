@@ -1,10 +1,9 @@
 ---
-title: Operatori | Microsoft Docs
-ms.custom: ''
+title: Operatori
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260078"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247625"
 ---
 # <a name="operators"></a>Operatori
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ Gli attributi principali di un operatore sono i seguenti:
   
 -   Nome operatore  
   
--   Informazioni sul contatto  
+-   Informazioni contatto  
   
 ### <a name="naming-an-operator"></a>Denominazione di un operatore  
 A ogni operatore deve essere assegnato un nome. I nomi degli operatori devono essere univoci nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non possono essere formati da più di **128** caratteri.  
@@ -77,7 +78,7 @@ Le informazioni sul contatto di un operatore definiscono la modalità di trasmis
   
         Se tutti gli operatori utilizzano lo stesso provider di cercapersone, è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per specificare l'eventuale formattazione speciale richiesta dal sistema di comunicazione tra il cercapersone e la posta elettronica. La formattazione speciale può essere costituita da un prefisso o da un suffisso e inserita nelle righe seguenti del messaggio di posta elettronica:  
   
-        **Subject:**  
+        **Soggetto:**  
   
         **Cc**:  
   

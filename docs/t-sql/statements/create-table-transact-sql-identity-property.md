@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938936"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (proprietà)
@@ -36,7 +36,7 @@ ms.locfileid: "67938936"
 > [!NOTE]  
 >  La proprietà IDENTITY è diversa dalla proprietà **Identity** di SQL-DMO, la quale espone la proprietà di identità di riga di una colonna.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,7 +54,7 @@ IDENTITY [ (seed , increment) ]
   
  È necessario specificare sia il valore di inizializzazione che l'incremento oppure nessuno dei due valori. In questo secondo caso, il valore predefinito è (1,1).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le colonne Identity possono essere usate per la generazione di valori di chiave. Tramite la proprietà Identity in una colonna viene garantito quanto riportato di seguito:  
   
 -   Ogni nuovo valore viene generato in base all'incremento e al valore di inizializzazione correnti.  
@@ -77,11 +77,11 @@ IDENTITY [ (seed , increment) ]
   
  Ogni tabella può includere una sola colonna Identity.  
   
- Nelle tabelle ottimizzate per la memoria il valore di inizializzazione e l'incremento devono essere impostati su 1,1. Se il valore di inizializzazione o l'incremento vengono impostati su un valore diverso da 1, viene restituito l'errore seguente: L'uso di valori diversi da 1 per il valore di inizializzazione e l'incremento non è supportato con tabelle ottimizzate per la memoria.  
+ Nelle tabelle ottimizzate per la memoria il valore di inizializzazione e l'incremento devono essere impostati su 1,1. Se si imposta il valore di inizializzazione o incremento su un valore diverso da 1 viene visualizzato l'errore seguente: L'uso di valori di inizializzazione e di incremento diversi da 1 non è supportato in tabelle con ottimizzazione per la memoria.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-identity-property-with-create-table"></a>A. Uso della proprietà IDENTITY con CREATE TABLE  
+### <a name="a-using-the-identity-property-with-create-table"></a>R. Uso della proprietà IDENTITY con CREATE TABLE  
  Nell'esempio seguente viene creata una nuova tabella tramite la proprietà `IDENTITY` per un numero di identificazione a incremento automatico.  
   
 ```  

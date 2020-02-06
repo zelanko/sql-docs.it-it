@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997922"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configurazione della connettività di PolyBase (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "67997922"
 
   Visualizza o modifica le impostazioni di configurazione globali per la connettività tra PolyBase, Hadoop e l'archivio BLOB di Azure.
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,25 +58,25 @@ RECONFIGURE
   
 -   Opzione 0: disabilitazione della connettività Hadoop  
   
--   Opzione 1: Hortonworks HDP 1.3 in Windows Server  
+-   Opzione 1: Hortonworks HDP 1.3 su Windows Server  
   
 -   Opzione 1: archivio BLOB di Azure (WASB[S])  
   
--   Opzione 2: Hortonworks HDP 1.3 in Linux  
+-   Opzione 2: Hortonworks HDP 1.3 su Linux  
   
 -   Opzione 3: Cloudera CDH 4.3 su Linux  
   
--   Opzione 4: Hortonworks HDP 2.0 in Windows Server  
+-   Opzione 4: Hortonworks HDP 2.0 su Windows Server  
   
 -   Opzione 4: archivio BLOB di Azure (WASB[S])  
   
--   Opzione 5: Hortonworks HDP 2.0 in Linux  
+-   Opzione 5: Hortonworks HDP 2.0 su Linux  
   
--   Opzione 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 in Linux  
+-   Opzione 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 e 5.13 su Linux  
   
 -   Opzione 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 in Linux  
   
--   Opzione 7: Hortonworks 2.1, 2.2 e 2.3 in Windows Server  
+-   Opzione 7: Hortonworks 2.1, 2.2 e 2.3 su Windows Server  
   
 -   Opzione 7: archivio BLOB di Azure (WASB[S])  
   
@@ -85,15 +85,15 @@ RECONFIGURE
   
  Dopo l'esecuzione di RECONFIGURE è necessario arrestare e riavviare il servizio SQL Server. Si noti che con l'arresto del servizio SQL Server verranno arrestati automaticamente i due servizi aggiuntivi Motore PolyBase e Polybase Data Movement. Dopo il riavvio del servizio SQL Server, riavviare questi due servizi, che non vengono riavviati automaticamente.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ##  <a name="ResultSets"></a> Set di risultati  
  Se eseguita senza parametri, **sp_configure** restituisce un set di risultati con cinque colonne.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(35)**|Nome dell'opzione di configurazione.|  
+|**nome**|**nvarchar(35)**|Nome dell'opzione di configurazione.|  
 |**minimum**|**int**|Valore minimo dell'opzione di configurazione.|  
 |**maximum**|**int**|Valore massimo dell'opzione di configurazione.|  
 |**config_value**|**int**|Valore impostato con **sp_configure**.|  
@@ -113,7 +113,7 @@ In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], dopo aver eseguito RECONFIGURE
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-list-all-available-configuration-settings"></a>A. Elencare tutte le impostazioni di configurazione disponibili  
+### <a name="a-list-all-available-configuration-settings"></a>R. Elencare tutte le impostazioni di configurazione disponibili  
  L'esempio seguente mostra come impostare ed elencare tutte le opzioni di configurazione.  
   
 ```  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958345"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287119"
 ---
-# <a name="sql-server-replication"></a>Replica di SQL Server
+# <a name="sql-server-replication"></a>Replica SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La replica è costituita da un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database in modo che risultino consistenti. Usare la replica per distribuire dati a diverse posizioni e a utenti remoti o mobili tramite reti locali e WAN, connessioni remote, connessioni wireless e Internet.  
   
@@ -48,7 +48,7 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
   
 ## <a name="publications-and-articles"></a>Pubblicazioni e articoli 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [Creare una pubblicazione](publish/create-a-publication.md)    
 -   [Define an Article](publish/define-an-article.md)   
 -   [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
 -   [Visualizzare e modificare le proprietà degli articoli](publish/view-and-modify-article-properties.md)    
@@ -116,7 +116,7 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
 ## <a name="administration"></a>Amministrazione 
   
 -   [Usare i profili agenti di replica](agents/work-with-replication-agent-profiles.md)   
--   [Convalidare i dati nel sottoscrittore](validate-data-at-the-subscriber.md)    
+-   [Convalidare i dati nel Sottoscrittore](validate-data-at-the-subscriber.md)    
 -   [Gestire le partizioni di una pubblicazione di tipo merge con filtri con parametri](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
 -   [Caricamento bulk dei dati nelle tabelle in una pubblicazione di tipo merge &#40;programmazione Transact-SQL della replica&#41;](bulk-load-data-into-tables-in-a-merge-publication.md)    
 -   [Eseguire la pulizia dei metadati di merge &#40;programmazione Transact-SQL della replica&#41;](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
@@ -128,7 +128,7 @@ Per informazioni sulla compatibilità con le versioni precedenti, vedere [Compat
 -   [Configurare il processo del set di transazioni per un server di pubblicazione Oracle &#40;programmazione Transact-SQL della replica&#41;](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [Aggiornare gli script di replica &#40;programmazione Transact-SQL della replica&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>Monitoraggio
+## <a name="monitor"></a>Monitorare
   
 -   [Consentire a utenti non amministratori di usare Monitoraggio replica](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Monitorare la replica a livello di programmazione](monitor/programmatically-monitor-replication.md)    

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914898"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67914898"
 
   Distribuisce le righe di una partizione ordinata in un numero specificato di gruppi. I gruppi sono numerati a partire da 1. Per ogni riga, NTILE restituisce il numero del gruppo a cui appartiene la riga.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,14 +54,14 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ## <a name="return-types"></a>Tipi restituiti  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se il numero di righe in una partizione non è divisibile per *integer_expression* vengono creati gruppi di due dimensioni che differiscono per un membro. I gruppi più grandi precedono i gruppi più piccoli nell'ordine specificato dalla clausola OVER. Se ad esempio il numero totale di righe è 53 e il numero di gruppi è 5, i primi 3 gruppi includeranno 11 righe e i 2 gruppi rimanenti 10 righe ognuno. Se invece il numero totale delle righe è divisibile per il numero di gruppi, le righe verranno distribuite uniformemente tra di essi. Se ad esempio il numero totale di righe è 50 e sono disponibili 5 gruppi, ogni bucket conterrà 10 righe.  
   
  NTILE è non deterministico. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-dividing-rows-into-groups"></a>A. Divisione di righe in gruppi  
+### <a name="a-dividing-rows-into-groups"></a>R. Divisione di righe in gruppi  
  Nell'esempio seguente vengono divise le righe in quattro gruppi di dipendenti in base alle relative vendite da inizio anno. Poiché il numero totale di righe non è divisibile per il numero di gruppi, i primi due gruppi conterranno 4 righe e gli altri 3 righe ognuno.  
   
 ```  

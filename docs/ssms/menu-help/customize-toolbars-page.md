@@ -1,6 +1,6 @@
 ---
-title: Personalizza (pagina Barre degli strumenti) | Microsoft Docs
-ms.custom: ''
+title: Personalizza (pagina Barre degli strumenti)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09926451f7dc8f2e9ef8a6fd355b86eb9230bfd8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d6297151c5f31c88d108835f1c6c4955bfbccf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264020"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242193"
 ---
 # <a name="customize-toolbars-page"></a>Personalizza (pagina Barre degli strumenti)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,16 +30,16 @@ Consente di visualizzare le barre degli strumenti predefinite e tutte le barre d
 > [!NOTE]  
 > La barra dei menu non può essere nascosta, ma solo reimpostata.  
   
-**Nuova**  
+**Nuovo**  
 Consente di visualizzare la finestra di dialogo **Nuova barra degli strumenti** , in cui è possibile creare una barra degli strumenti personalizzata e assegnarle un nome.  
   
-**Rename**  
+**Rinominare**  
 Consente di visualizzare la finestra di dialogo **Rinomina barra degli strumenti** , in cui è possibile modificare il nome di una barra degli strumenti personalizzata.  
   
 **Elimina**  
 Consente di eliminare la barra degli strumenti personalizzata selezionata nell'elenco **Barre degli strumenti** .  
   
-**Reimposta**  
+**Reimpostazione**  
 Consente di eliminare le modifiche apportate alla barra degli strumenti predefinita selezionata nell'elenco **Barre degli strumenti** e di ripristinarne lo stato originale. Questo pulsante è disponibile solo se si seleziona una barra degli strumenti predefinita.  
   
 **Icone grandi**  
