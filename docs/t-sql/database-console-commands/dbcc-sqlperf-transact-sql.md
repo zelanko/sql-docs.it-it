@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982411"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -71,10 +71,10 @@ Evita la visualizzazione di tutti i messaggi informativi con livello di gravità
   
 |Nome colonna|Definizione|  
 |---|---|
-|**Database Name**|Nome del database a cui si riferiscono le statistiche del log visualizzate.|  
+|**Nome database**|Nome del database a cui si riferiscono le statistiche del log visualizzate.|  
 |**Log Size (MB)**|Dimensione corrente allocata al log. Questo valore è sempre inferiore rispetto alla quantità di spazio allocata inizialmente per il log in quanto [!INCLUDE[ssDE](../../includes/ssde-md.md)] riserva una piccola quantità di spazio su disco per informazioni di intestazione interne.|  
 |**Log Space Used (%)**|Percentuale del file di log attualmente usata per archiviare informazioni del log delle transazioni.|  
-|**Stato**|Stato del file di log. Sempre 0.|  
+|**Status**|Stato del file di log. Sempre 0.|  
   
 ## <a name="Remarks"></a> Osservazioni  
 A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usare la DMV [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) anziché `DBCC SQLPERF(LOGSPACE)` per restituire informazioni sull'uso dello spazio per il log transazioni di ogni database.    
@@ -88,7 +88,7 @@ Nei livelli Premium e Business Critical di [!INCLUDE[ssSDS](../../includes/sssds
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-displaying-log-space-information-for-all-databases"></a>A. Visualizzazione delle informazioni relative allo spazio del log per tutti i database  
+### <a name="a-displaying-log-space-information-for-all-databases"></a>R. Visualizzazione delle informazioni relative allo spazio del log per tutti i database  
 Nell'esempio seguente vengono visualizzate le informazioni relative a `LOGSPACE` per tutti i database inclusi nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ```sql  

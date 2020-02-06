@@ -12,10 +12,10 @@ author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412684"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria
@@ -60,7 +60,7 @@ OLTP in memoria offre gli oggetti seguenti che possono essere usati per l'ottimi
     - `DECLARE @mytablevariable my_type;`.  
   
   
-## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Scenario: sostituire la &#x23;&#x23;tabella tempdb globale  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Scenario: sostituire la tabella temporanea globale  
   
 La sostituzione di una tabella temporanea globale con una tabella SCHEMA_ONLY con ottimizzazione per la memoria è piuttosto semplice. La principale modifica consiste nel creare la tabella in fase di distribuzione, non in fase di esecuzione. La creazione di tabelle con ottimizzazione per la memoria richiede più tempo rispetto alla creazione di tabelle tradizionali, a causa delle ottimizzazioni in fase di compilazione. La creazione e il rilascio di tabelle con ottimizzazione per la memoria come parte del carico di lavoro online influirebbe sulle prestazioni del carico di lavoro, nonché sulle prestazioni della fase di rollforward nei database secondari AlwaysOn e nel ripristino del database.
 
@@ -104,7 +104,7 @@ Per convertire la tabella temporanea globale in SCHEMA_ONLY, eseguire i passaggi
 3. In T-SQL sostituire tutti i riferimenti di **&#x23;&#x23;tempGlobalB** con **dbo.soGlobalB**.  
   
   
-## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. Scenario: sostituire la &#x23;tabella tempdb di sessione  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. Scenario: sostituire la tabella temporanea di sessione  
   
 Le operazioni preliminari per la sostituzione di una tabella temporanea di sessione implicano un uso maggiore di T-SQL rispetto allo scenario della tabella temporanea globale precedente. Fortunatamente, una maggior quantità di T-SQL non implica alcuna altra operazione per eseguire la conversione.  
 
@@ -190,7 +190,7 @@ Infine, nel codice T-SQL generale:
   
   
   
-## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. Scenario: una variabile di tabella può essere MEMORY_OPTIMIZED=ON  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. Scenario: la variabile di tabella può essere MEMORY_OPTIMIZED=ON  
   
   
 Una variabile di tabella tradizionale rappresenta una tabella del database tempdb. Per ottenere migliori prestazioni è possibile convertire la variabile di tabella in variabile di tabella con ottimizzazione per la memoria.  
@@ -269,7 +269,7 @@ In Microsoft SQL Server per usare le funzionalità ottimizzate per la memoria, �
 - Il database SQL di Azure non richiede la creazione del FILEGROUP.  
   
   
-*Prerequisito:* il codice Transact-SQL seguente per un FILEGROUP è un prerequisito per i lunghi esempi di codice T-SQL riportati nelle sezioni successive di questo articolo.  
+*Prerequisito:* il seguente codice Transact-SQL per un FILEGROUP è un prerequisito per i lunghi esempi di codice T-SQL riportati nelle sezioni successive di questo articolo.  
   
 1. È necessario usare SSMS.exe o un altro strumento che può inviare T-SQL.  
 2. Incollare il codice T-SQL di FILEGROUP di esempio in SQL Server Management Studio.  
@@ -420,7 +420,7 @@ Batch execution completed 5001 times.
 È possibile imparare a prevedere la quantità di memoria attiva richiesta dalle tabelle ottimizzate per la memoria con le risorse seguenti:  
   
 - [Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [Dimensioni di tabelle e righe in tabelle ottimizzate per la memoria: esempio di calcolo](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria: esempio di calcolo](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 Per le variabili di tabella di dimensioni maggiori, gli indici non cluster usano una maggior quantità di memoria rispetto a quella usata per le *tabelle* ottimizzate per la memoria. Maggiore è il totale delle righe e la chiave di indice, maggiore sarà la differenza.  
   
