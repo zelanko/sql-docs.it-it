@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056809"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -140,7 +140,7 @@ CREATE USER user_name
 ```
 
 > [!NOTE]
-> L'interfaccia di amministrazione di Azure AD per il funzionamento delle istanze gestite dopo la creazione è stata modificata. Per altre informazioni, vedere [Nuova funzionalità di amministrazione di Azure per MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> L'amministratore di Azure AD per la funzionalità dell'istanza gestita dopo la creazione è stato modificato. Per altre informazioni, vedere [Nuove funzionalità di amministrazione di Azure AD per l'istanza gestita](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -202,7 +202,7 @@ CREATE USER user_name
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
- Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
+ Per altre informazioni, vedere [Connessione al database SQL tramite l'autenticazione di Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
 WITH PASSWORD = '*password*'  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
@@ -243,7 +243,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
 > [!WARNING]  
 >  L'uso improprio di questa opzione può causare il danneggiamento dei dati. Per altre informazioni, vedere [Migrare dati sensibili protetti da Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se si omette FOR LOGIN, per il nuovo utente del database verrà eseguito il mapping all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con lo stesso nome.  
   
  Lo schema predefinito sarà il primo schema in cui verrà eseguita la ricerca nel server durante la risoluzione dei nomi di oggetti per l'utente del database. Se non specificato diversamente, lo schema predefinito sarà il proprietario degli oggetti creati dall'utente del database.  
@@ -340,14 +340,14 @@ Quando si crea l'utente nel database dell'istanza gestita di database SQL, login
   
  Quando si usano utenti di database indipendenti in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configurare l'accesso usando una regola del firewall a livello di database, invece di una regola del firewall a livello di server. Per altre informazioni, vedere[sp_set_database_firewall_rule &#40;Database di SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-Per gli utenti di database indipendenti [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], SQL Server Management Studio supporta Multi-Factor Authentication. Per altre informazioni, vedere [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+Per gli utenti di database indipendenti [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], SQL Server Management Studio supporta Multi-Factor Authentication. Per altre informazioni [Supporto di SQL Server Management Studio (SSMS) per l'autenticazione MFA di Azure AD con il database SQL e SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
 ### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY USER per il database.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. Creazione di un utente del database basato su un account di accesso di SQL server  
+### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>R. Creazione di un utente del database basato su un account di accesso di SQL server  
  Nell'esempio seguente viene innanzitutto creato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominato `AbolrousHazem`, quindi viene creato un utente del database corrispondente `AbolrousHazem` in `AdventureWorks2012`.  
   
 ```  

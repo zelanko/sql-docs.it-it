@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982673"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
@@ -142,7 +142,7 @@ OR ALTER
 >  Tutti gli aggiornamenti eseguiti direttamente sulle tabelle sottostanti di una vista non vengono verificati in base alla vista, anche se la clausola CHECK OPTION è specificata.  
   
  ENCRYPTION  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **SI APPLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Esegue la crittografia delle voci della tabella [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) contenenti il testo dell'istruzione CREATE VIEW. Se si utilizza WITH ENCRYPTION, la vista non viene pubblicata nell'ambito della replica di SQL Server.  
   
@@ -158,7 +158,7 @@ OR ALTER
   
  Quando si crea una vista con la clausola WITH VIEW_METADATA, tutte le relative colonne, escluse quelle di tipo **timestamp**, sono aggiornabili se la vista include trigger INSTEAD OF INSERT o INSTEAD OF UPDATE. Per ulteriori informazioni sulle viste aggiornabili, vedere la sezione Osservazioni.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile creare una vista solo nel database corrente. CREATE VIEW deve essere la prima istruzione di un batch di query. Una vista può includere al massimo 1.024 colonne.  
   
  Quando si esegue una query tramite una vista, [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica che tutti gli oggetti di database a cui viene fatto riferimento nell'istruzione esistano e siano validi nel contesto dell'istruzione e che le istruzioni di modifica dei dati non violino le regole di integrità dei dati. Se la verifica ha esito negativo, viene visualizzato un messaggio di errore. In caso contrario, l'azione viene convertita automaticamente in un'operazione sulla tabella o sulle tabelle sottostanti.  
@@ -353,7 +353,7 @@ FROM Tn;
 
 Negli esempi seguenti vengono usati i database AdventureWorks 2012 o AdventureWorksDW.  
 
-### <a name="a-using-a-simple-create-view"></a>A. Utilizzo di un'istruzione CREATE VIEW semplice  
+### <a name="a-using-a-simple-create-view"></a>R. Utilizzo di un'istruzione CREATE VIEW semplice  
  Nell'esempio seguente viene creata una vista tramite l'utilizzo di un'istruzione `SELECT` semplice. Una vista semplice risulta utile quando vengono eseguite query frequenti su una combinazione di colonne. I dati di questa vista derivano dalle tabelle `HumanResources.Employee` e `Person.Person` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. I dati contengono informazioni sul nome e la data di assunzione dei dipendenti di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. È possibile creare la vista per la persona incaricata di tenere traccia del periodo di assunzione dei dipendenti, senza però consentire a tale utente di accedere a tutti i dati di queste tabelle.  
   
 ```  
