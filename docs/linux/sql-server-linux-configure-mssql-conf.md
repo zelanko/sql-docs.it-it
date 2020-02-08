@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72783394"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
@@ -26,7 +26,7 @@ ms.locfileid: "72783394"
 
 |||
 |---|---|
-| [Agente](#agent) | Abilitare SQL Server Agent. |
+| [Agent](#agent) | Abilitare SQL Server Agent. |
 | [Regole di confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
 | [Commenti e suggerimenti degli utenti](#customerfeedback) | Scegliere se in SQL Server è possibile o meno inviare commenti e suggerimenti a Microsoft. |
 | [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo predefinito di Posta elettronica database per SQL Server in Linux. |
@@ -54,7 +54,7 @@ ms.locfileid: "72783394"
 
 |||
 |---|---|
-| [Agente](#agent) | Abilitare SQL Server Agent |
+| [Agent](#agent) | Abilitare SQL Server Agent |
 | [Regole di confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
 | [Commenti e suggerimenti degli utenti](#customerfeedback) | Scegliere se in SQL Server è possibile o meno inviare commenti e suggerimenti a Microsoft. |
 | [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo predefinito di Posta elettronica database per SQL Server in Linux. |
@@ -393,7 +393,7 @@ La prima fase di acquisizione è controllata dall'impostazione **coredump.coredu
 
     Nella tabella seguente sono elencati i valori possibili per **coredump.coredumptype**.
 
-    | Tipo | Descrizione |
+    | Type | Descrizione |
     |-----|-----|
     | **mini** | Mini è il tipo di file di dump più piccolo. Usa le informazioni di sistema di Linux per determinare i thread e i moduli nel processo. Il dump contiene solo i moduli e gli stack di thread dell'ambiente host. Non contiene riferimenti alla memoria indiretta o elementi globali. |
     | **miniplus** | MiniPlus è simile a mini, ma include memoria aggiuntiva. Riconosce gli elementi interni di SQLPAL e l'ambiente host, aggiungendo al dump le aree di memoria seguenti:</br></br> - Vari elementi globali</br> - Tutta la memoria sopra 64 TB</br> - Tutte le aree denominate disponibili in **/proc/$pid/maps**</br> - Memoria indiretta da thread e stack</br> - Informazioni sui thread</br> - TEB e PEB associati</br> - Informazioni sui moduli</br> - Albero VMM e VAD |

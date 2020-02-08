@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7822cd56a52e47493fe175c293dbfe491a9524af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727441"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare previsioni e stime usando modelli di Machine Learning in SQL Server
@@ -27,7 +27,7 @@ Nella tabella seguente sono riepilogati i framework di assegnazione dei punteggi
 
 | Metodologia           | Interfaccia         | Requisiti di libreria | Velocità di elaborazione |
 |-----------------------|-------------------|----------------------|----------------------|
-| Framework di estendibilità | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Nessuna. I modelli possono essere basati su qualsiasi funzione R o Python | Centinaia di millisecondi. <br/>Il caricamento di un ambiente di runtime ha un costo fisso, che va in media da 300 a 600 millisecondi, prima che vengano assegnati punteggi ai nuovi dati. |
+| Framework di estendibilità | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | No. I modelli possono essere basati su qualsiasi funzione R o Python | Centinaia di millisecondi. <br/>Il caricamento di un ambiente di runtime ha un costo fisso, che va in media da 300 a 600 millisecondi, prima che vengano assegnati punteggi ai nuovi dati. |
 | [Estensione CLR per punteggio in tempo reale](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) in un modello serializzato | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | In media, decine di millisecondi. |
 | [Estensione C++ per assegnazione dei punteggi nativa](../sql-native-scoring.md) | [Funzione PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) in un modello serializzato | R: RevoScaleR <br/>Python: revoscalepy | In media, meno di 20 millisecondi. | 
 
@@ -97,7 +97,7 @@ Serializzare un modello in un formato binario è utile, ma non è necessario se 
 
 ## <a name="scoring-in-related-products"></a>Assegnazione dei punteggi nei prodotti correlati
 
-Se si usa il [server autonomo](r-server-standalone.md) o [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), oltre alle stored procedure e alle funzioni T-SQL sono disponibili altre opzioni per la generazione rapida delle stime. Sia il server autonomo che Machine Learning Server supportano il concetto di *servizio Web* per la distribuzione del codice. È possibile distribuire un modello con training preliminare R o Python come servizio Web, chiamato in fase di esecuzione per valutare i nuovi input di dati. Per altre informazioni, vedere gli articoli seguenti:
+Se si usa il [server autonomo](r-server-standalone.md) o [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), oltre alle stored procedure e alle funzioni T-SQL sono disponibili altre opzioni per la generazione rapida delle stime. Sia il server autonomo che Machine Learning Server supportano il concetto di *servizio Web* per la distribuzione del codice. È possibile distribuire un modello con training preliminare R o Python come servizio Web, chiamato in fase di esecuzione per valutare i nuovi input di dati. Per altre informazioni, vedere questi articoli:
 
 + [Cosa sono i servizi Web in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [Cos'è l'operazionalizzazione?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)

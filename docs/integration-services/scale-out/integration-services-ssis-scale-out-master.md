@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082118"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Master di scalabilità orizzontale di Integration Services (SSIS)
@@ -52,7 +52,7 @@ Scale Out Master è un servizio Windows responsabile delle comunicazioni con i c
 È possibile configurare il servizio Scale Out Master usando il file `<drive>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`. Il servizio deve essere riavviato dopo l'aggiornamento del file di configurazione.
 
 
-|Configurazione  |Descrizione  |Valore predefinito  |
+|Configurazione  |Descrizione  |Default Value  |
 |---------|---------|---------|
 |PortNumber|Numero di porta di rete usato per comunicare con un ruolo di lavoro di scalabilità orizzontale.|8391|
 |SSLCertThumbprint|Identificazione personale del certificato SSL usato per proteggere la comunicazione con un ruolo di lavoro di scalabilità orizzontale.|Identificazione personale del certificato SSL specificato durante l'installazione del master di scalabilità orizzontale.|

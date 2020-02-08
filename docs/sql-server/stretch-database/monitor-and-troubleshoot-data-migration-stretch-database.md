@@ -12,20 +12,20 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843784"
 ---
-# <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Monitorare e risolvere i problemi relativi alla migrazione dei dati (Stretch Database)
+# <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Monitoraggio e risoluzione dei problemi di migrazione dei dati (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  Per monitorare la migrazione dei dati in Monitoraggio di Stretch Database, selezionare **Attività | Stretch | Monitoraggio** per un database in SQL Server Management Studio.  
+  Per monitorare la migrazione dei dati in Stretch Database Monitor selezionare **Attività | Stretch | Monitoraggio** per un database in SQL Server Management Studio.  
   
 ## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Controllare lo stato della migrazione dei dati in Stretch Database Monitor  
- Selezionare **Attività | Stretch | Monitoraggio** per un database in SQL Server Management Studio per aprire Monitoraggio di Stretch Database e monitorare la migrazione dei dati.  
+ Selezionare **Attività | Stretch | Monitoraggio** per un database in SQL Server Management Studio per aprire Stretch Database Monitor e monitorare la migrazione dei dati.  
   
 -   Nella parte superiore della finestra di monitoraggio vengono visualizzate informazioni generali sul database SQL Server abilitato per l'estensione e sul database Azure remoto.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73843784"
   
 -   Verificare la connettività di rete per il computer SQL Server.  
   
--   Verificare che il firewall di Azure non impedisca a SQL Server di connettersi all'endpoint remoto.  
+-   Verificare che il firewall di Azure non stia bloccando la connessione di SQL Server all'endpoint remoto.  
   
 -   Verificare lo stato dell'ultimo batch nella DMV **sys.dm_db_rda_migration_status** . Se si è verificato un errore, controllare i valori error_number, error_state, ed error_severity per il batch.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "73843784"
     -   Per altre informazioni sul contenuto di un messaggio di errore di SQL Server, vedere [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
  **Il firewall di Azure blocca le connessioni dal server locale.**  
- Può essere necessario aggiungere una regola nelle impostazioni del firewall di Azure del server di Azure per consentire a SQL Server di comunicare con il server remoto di Azure.  
+ Potrebbe essere necessario aggiungere una regola nelle impostazioni del firewall di Azure per il server Azure per consentire a SQL Server di comunicare con il server Azure remoto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione e risoluzione dei problemi di Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+ [Gestire e risolvere i problemi di Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680958"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Distribuire progetti e pacchetti di Integration Services (SSIS)
@@ -135,7 +135,7 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
 1.  Aprire il progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], quindi in Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Converti nel modello di distribuzione del progetto**.  
   
-     oppure  
+     -oppure-  
   
      Da Esplora oggetti di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse sul nodo **Progetti** e selezionare **Importa pacchetto**.  
   
@@ -145,17 +145,17 @@ Per altre informazioni sull'errore descritto in questa sezione e sulle autorizza
   
 1.  Aprire il progetto in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], quindi scegliere **Distribuisci** dal menu **Progetto** per avviare la **Distribuzione guidata Integration Services**.  
   
-     o Gestione configurazione  
+     o  
   
      In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere il nodo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** in Esplora oggetti e individuare la cartella Progetti per il progetto da distribuire. Fare clic con il pulsante destro del mouse sulla cartella **Progetti** , quindi scegliere **Distribuzione progetto**.  
   
-     o Gestione configurazione  
+     o  
   
      Al prompt dei comandi eseguire **isdeploymentwizard.exe** da **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Nei computer a 64 bit è presente anche una versione a 32 bit dello strumento in **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  Nella pagina **Seleziona origine** fare clic su **File distribuzione progetto** per selezionare il file di distribuzione per il progetto.  
   
-     o Gestione configurazione  
+     o  
   
      Fare clic su **Catalogo di Integration Services** per selezionare un progetto che è già stato distribuito nel catalogo SSISDB.  
   
@@ -296,17 +296,17 @@ Avviare la procedura guidata in uno dei due modi seguenti:
 
  - Digitare **"Distribuzione guidata di SQL Server"** in Windows Search 
 
- o Gestione configurazione
+ o
 
  - Cercare il file eseguibile **ISDeploymentWizard.exe** nella cartella di installazione di SQL Server, ad esempio: "C:\Programmi (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
- > **NOTA:** Se viene visualizzata la pagina **Introduzione** , fare clic su **Avanti** per passare alla pagina **Seleziona origine** . 
+ > **NOTA** Se viene visualizzata la pagina **Introduzione** , fare clic su **Avanti** per passare alla pagina **Seleziona origine** . 
  
  Le impostazioni in questa pagina sono diverse per ogni modello di distribuzione. Seguire la procedura nella sezione [Project Deployment Model](#ProjectModel) o nella sezione [Package Deployment Model](#PackageModel) in base al modello selezionato in questa pagina.  
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>Seleziona origine
+#### <a name="select-source"></a>Selezionare l'origine
 
  Per distribuire un file di distribuzione del progetto creato, selezionare **File distribuzione progetto** e immettere il percorso al file con estensione ispac. Per distribuire un progetto che si trova nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , selezionare **Catalogo di Integration Services**, quindi immettere il nome del server e il percorso del progetto nel catalogo. Fare clic su **Avanti** per visualizzare la pagina **Seleziona destinazione** .  
   
@@ -324,7 +324,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>Seleziona origine
+#### <a name="select-source"></a>Selezionare l'origine
 
  La pagina **Seleziona origine** in **Distribuzione guidata Integration Services** mostra le impostazioni specifiche per il modello di distribuzione del pacchetto al momento della selezione dell'opzione **Distribuzione di pacchetti** per il **modello di distribuzione**.  
   
@@ -359,7 +359,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
 ### <a name="to-create-and-use-a-server-environment"></a>Per creare e utilizzare un ambiente server  
   
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] espandere il nodo Cataloghi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **SSISDB** in Esplora oggetti e individuare la cartella **Ambienti** del progetto per il quale si vuole creare un ambiente.  
+1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] espandere il nodo Cataloghi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**SSISDB** in Esplora oggetti e individuare la cartella **Ambienti** del progetto per il quale si vuole creare un ambiente.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Ambienti** e quindi scegliere **Creazione ambiente**.  
   
@@ -416,7 +416,7 @@ Avviare la procedura guidata in uno dei due modi seguenti:
   
     2.  Fare clic su **Usa variabile di ambiente**, quindi selezionare la variabile di ambiente creata.  
   
-14. Fare clic su **OK** due volte per salvare le modifiche.  
+14. Fare due volte clic su **OK** per salvare le modifiche.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Distribuire ed eseguire pacchetti SSIS utilizzando le stored procedure
 
@@ -593,7 +593,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Usa autenticazione di SQL Server**  
  Quando un utente si connette da una connessione non trusted con un nome di account di accesso e una password specificati, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica la connessione controllando se è stato impostato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se la password specificata corrisponde a quella registrata in precedenza. Se non è stato impostato alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'autenticazione non viene completata e viene segnalato un errore all'utente.  
   
- **User name**  
+ **Nome utente**  
  Specificare un nome utente quando si utilizza l'autenticazione di SQL Server.  
   
  **Password**  
@@ -606,10 +606,10 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Nome pacchetto**  
  Viene elencato il file del pacchetto.  
   
- **Stato**  
+ **Status**  
  Viene indicato se un pacchetto è pronto per la conversione nel modello di distribuzione del progetto.  
   
- **Message**  
+ **Messaggio**  
  Viene visualizzato un messaggio associato al pacchetto.  
   
  **Password**  
@@ -680,7 +680,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Stringa di configurazione**  
  Viene elencato il percorso del file di configurazione.  
   
- **Stato**  
+ **Status**  
  Viene visualizzato un messaggio di stato per la configurazione. Fare clic sul messaggio per visualizzare il relativo testo completo.  
   
  **Aggiungi configurazioni**  
@@ -713,7 +713,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Ambito**  
  Viene elencato l'ambito del parametro.  
   
- **Value**  
+ **Valore**  
  Viene elencato il valore del parametro.  
   
  Fare clic sul pulsante con i puntini di sospensione accanto al campo del valore per configurare le proprietà del parametro.  

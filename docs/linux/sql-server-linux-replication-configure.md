@@ -13,10 +13,10 @@ ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0979f05808c59336dec7a6e4a664b2e970029dd6
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952503"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurare la replica di SQL Server in Linux
@@ -73,7 +73,7 @@ Per configurare il server di distribuzione:
 
 1. In SSMS connettersi all'istanza di SQL Server in Esplora oggetti.
 
-1. Fare clic con il pulsante destro del mouse su **Replica** e scegliere **Configura distribuzione...**.
+1. Fare clic con il pulsante destro del mouse su **Replica** e scegliere **Configura distribuzione...** .
 
 1. Seguire le istruzioni della **Configurazione guidata distribuzione**.
 
@@ -81,13 +81,13 @@ Per configurare il server di distribuzione:
 
 Per creare la pubblicazione e gli articoli:
 
-1. In Esplora oggetti fare clic su **Replica** > **Pubblicazioni locali**> **Nuova pubblicazione...**.
+1. In Esplora oggetti fare clic su **Replica** > **Pubblicazioni locali**> **Nuova pubblicazione...** .
 
 1. Seguire le istruzioni della **Creazione guidata nuova pubblicazione** per configurare il tipo di replica e gli articoli che appartengono alla pubblicazione.
 
 ### <a name="configure-the-subscription"></a>Configurare la sottoscrizione
 
-Per configurare la sottoscrizione in Esplora oggetti, fare clic su **Replica** > **Sottoscrizioni locali**> **Nuova sottoscrizione...**.
+Per configurare la sottoscrizione in Esplora oggetti, fare clic su **Replica** > **Sottoscrizioni locali**> **Nuova sottoscrizione...** .
 
 ### <a name="monitor-replication-jobs"></a>Eseguire il monitoraggio dei processi di replica
 

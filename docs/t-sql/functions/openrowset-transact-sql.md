@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74542280"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910144"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -422,7 +422,7 @@ Per esempi di `OPENROWSET` completi che includono la configurazione di credenzia
 L'esempio seguente illustra come usare il comando OPENROWSET per caricare dati da un file CSV in una posizione di Archiviazione BLOB di Azure in cui è stata creata una chiave di firma di accesso condiviso. La posizione di Archiviazione BLOB di Azure è configurata come origine dati esterna. Questa operazione richiede credenziali con ambito database che usano una firma di accesso condiviso crittografata con una chiave master nel database utente.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

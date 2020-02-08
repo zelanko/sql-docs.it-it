@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055931"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Specificare i formati di dati per la compatibilità con bcp (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74055931"
 ##  <a name="bcpDataFormatAttr"></a> Attributi di formato e dati di bcp  
  Il comando **bcp** consente di specificare la struttura di tutti i campi di un file di dati con i seguenti attributi di formato dati:  
   
--   Tipo di archiviazione di file  
+-   tipo di archiviazione di file  
   
      Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. I dati possono essere esportati in un file usando il tipo di dati della tabella del database in cui si trovano (formato nativo), come caratteri (formato carattere) oppure usando qualsiasi tipo di dati nel caso in cui sia supportata la conversione implicita. È possibile ad esempio copiare il tipo **smallint** come **int**. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente. Per altre informazioni, vedere [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "74055931"
 ### <a name="example"></a>Esempio  
  L'esempio seguente usa il comando **bcp** per l'esportazione in blocco interattiva dei dati dalla tabella `HumanResources.myTeam` al file `myTeam.txt` . Prima di eseguire l'esempio è necessario creare questa tabella. Per informazioni sulla modalità di creazione e sulla tabella, vedere [Tabella di esempio HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  
   
- Il comando non specifica un file di formato né un tipo di dati. Ciò provoca la richiesta di informazioni di formato dati da parte di **bcp**. Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  
+ Il comando non specifica un file di formato né un tipo di dati. Ciò provoca la richiesta di informazioni di formato dati da parte di **bcp** . Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  
   
 ```cmd
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
@@ -109,14 +109,14 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
   
 -   [Specifica del tipo di archiviazione di file tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
--   [Specificare la lunghezza del prefisso nei file di dati tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Specificare la lunghezza del prefisso nei file di dati con bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
 -   [Definizione della lunghezza di campo tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)  
   
 -   [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sull'importazione ed esportazione bulk di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   

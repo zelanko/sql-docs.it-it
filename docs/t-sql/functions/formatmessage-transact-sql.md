@@ -22,10 +22,10 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843759"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
@@ -56,7 +56,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  In modo analogo all'istruzione RAISERROR, l'istruzione FORMATMESSAGE modifica il messaggio mediante la sostituzione delle variabili di segnaposto con i valori di parametro specificati. Per altre informazioni sui segnaposto consentiti nei messaggi di errore e sul processo di modifica, vedere [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  L'istruzione FORMATMESSAGE esegue la ricerca del messaggio nella lingua corrente dell'utente. Se non esiste una versione localizzata del messaggio, viene usata la versione inglese (Stati Uniti).  
@@ -65,7 +65,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-example-with-a-message-number"></a>A. Esempio con un numero di messaggio  
+### <a name="a-example-with-a-message-number"></a>R. Esempio con un numero di messaggio  
  Nell'esempio seguente viene usato un messaggio di replica `20009` archiviato in sys.messages, ad esempio "Impossibile aggiungere l'articolo '%s' alla pubblicazione '%s'". FORMATMESSAGE sostituisce i valori `First Variable` e `Second Variable` per i segnaposti dei parametri. La stringa risultante, "Impossibile aggiungere l'articolo 'First Variable' alla pubblicazione 'Second Variable'", viene archiviata nella variabile locale `@var1`.  
   
 ```  

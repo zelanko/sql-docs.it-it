@@ -13,10 +13,10 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f02243a8b331ac96dce55ed39813b39fa697b0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294254"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
@@ -29,7 +29,7 @@ ms.locfileid: "71294254"
 > [!NOTE]  
 >  Le opzioni descritte in questo argomento vengono visualizzate nella pagina **Richieste profilo** in **Editor attività Profiling dati**. Per altre informazioni su questa pagina dell'editor, vedere [Editor attività Profiling dati &#40;pagina Richieste profilo&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
- Per altre informazioni su come usare l'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni su come usare il Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
+ Per altre informazioni su come usare l'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
   
 ## <a name="understanding-the-use-of-delimiters-and-symbols"></a>Informazioni sull'utilizzo di delimitatori e simboli  
  Prima di calcolare i criteri di ricerca per una **Richiesta profilo Criteri di ricerca colonna**, l'attività Profiling dati suddivide in token i dati, ovvero separa i valori stringa in unità minori note come token. L'attività separa le stringhe in token in base ai delimitatori e i simboli specificati per le proprietà **Delimiters** e **Symbols** :  
@@ -47,7 +47,7 @@ ms.locfileid: "71294254"
   
  È possibile, ad esempio, raggruppare i valori "East", "West", "North" e "South" eventualmente visualizzati negli indirizzi stradali statunitensi utilizzando il singolo tag "Direction". La tabella seguente rappresenta un esempio di tale tabella dei tag.  
   
-|Tag|Nome|  
+|Tag|Termine|  
 |---------|----------|  
 |Direction|East|  
 |Direction|West|  
@@ -56,11 +56,11 @@ ms.locfileid: "71294254"
   
  È possibile utilizzare un altro tag per raggruppare le parole diverse che esprimono la nozione di strada negli indirizzi stradali:  
   
-|Tag|Nome|  
+|Tag|Termine|  
 |---------|----------|  
 |Street|Street|  
 |Street|Avenue|  
-|Street|Place|  
+|Street|Posizione|  
 |Street|Way|  
   
  In base a questa combinazione di tag, il criterio di ricerca risultante per un indirizzo stradale potrebbe essere simile al seguente:  
@@ -90,7 +90,7 @@ ms.locfileid: "71294254"
   
  Per ulteriori informazioni, vedere la sezione "Opzioni TableorView" in questo argomento.  
   
- **Column**  
+ **Colonna**  
  Consente di selezionare la colonna esistente da analizzare. Selezionare **(\*)** per analizzare tutte le colonne.  
   
  Per ulteriori informazioni, vedere la sezione "Opzioni Column" in questo argomento.  

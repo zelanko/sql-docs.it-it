@@ -27,10 +27,10 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593891"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
@@ -167,7 +167,7 @@ Specifica che la chiave master di colonna è abilitata per l'enclave. È possibi
 Valore letterale binario risultante dalla firma digitale del *percorso della chiave* e dall'impostazione di ENCLAVE_COMPUTATIONS con la chiave master di colonna. La firma riflette se ENCLAVE_COMPUTATIONS è stato specificato o meno. La firma consente di proteggere i valori firmati dalla modifica da parte di utenti non autorizzati. Un driver client abilitato per Always Encrypted verifica la firma e restituisce un errore all'applicazione se la firma non è valida. La firma deve essere generata usando gli strumenti lato client. Per altre informazioni, vedere [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 
 Creare una voce di metadati della chiave master di colonna prima di creare una voce di metadati della chiave di crittografia di colonna nel database e prima che qualsiasi colonna nel database possa essere crittografata con Always Encrypted. Una voce della chiave master di colonna nei metadati non contiene la chiave master di colonna effettiva. La chiave master di colonna deve essere archiviata in un archivio chiavi di colonna esterno, ossia all'esterno di SQL Server. Il nome del provider dell'archivio chiavi e il percorso della chiave master di colonna nei metadati devono essere validi per un'applicazione client. L'applicazione client deve usare la chiave master di colonna per decrittografare una chiave di crittografia di colonna. La chiave di crittografia di colonna viene crittografata con la chiave master di colonna. L'applicazione client deve anche eseguire query sulle colonne crittografate.
 
@@ -179,7 +179,7 @@ Per gestire le chiavi master della colonna, si consiglia di usare strumenti qual
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-column-master-key"></a>A. Creazione di una chiave master della colonna  
+### <a name="a-creating-a-column-master-key"></a>R. Creazione di una chiave master della colonna  
 L'esempio seguente crea una voce di metadati per una chiave master di colonna. La chiave master di colonna viene archiviata nell'archivio certificati per consentire alle applicazioni client che usano il provider MSSQL_CERTIFICATE_STORE di accedere alla chiave master di colonna:  
   
 ```sql  
@@ -247,7 +247,7 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Crittografia sempre attiva](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 * [Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Panoramica della gestione delle chiavi per Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [Gestire le chiavi per Always Encrypted con enclave sicuri](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   

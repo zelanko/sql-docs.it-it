@@ -20,10 +20,10 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111184"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Ripristinare un backup del log delle transazioni (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "68111184"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ripristinare un backup del log delle transazioni utilizzando:**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68111184"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>Per ripristinare un backup del log delle transazioni  
   
-1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espandere l'albero del server.  
+1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
 2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68111184"
   
     -   **Da file o nastro**  
   
-         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
+         Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
@@ -116,7 +116,7 @@ ms.locfileid: "68111184"
     |**Posizione**|Posizione del set di backup nel volume.|  
     |**Scadenza**|Data e ora di scadenza del set di backup.|  
   
-7.  Selezionare una delle opzioni seguenti:  
+7.  Selezionare uno degli elementi seguenti:  
   
     -   **Temporizzazione**  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68111184"
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### <a name="a-applying-a-single-transaction-log-backup"></a>A. Applicazione di un singolo backup del log delle transazioni  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>R. Applicazione di un singolo backup del log delle transazioni  
  Nell'esempio seguente viene innanzitutto ripristinato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] da un backup completo del database che risiede in un dispositivo di backup denominato `AdventureWorks2012_1`. Viene quindi applicato il primo backup del log delle transazioni che risiede nel dispositivo di backup denominato `AdventureWorks2012_log`e infine viene recuperato il database.  
   
 ```sql  

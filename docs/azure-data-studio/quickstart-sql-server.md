@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
 ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75884056"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Avvio rapido: Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -35,7 +35,7 @@ Se non si ha accesso a SQL Server, selezionare la piattaforma dai collegamenti s
 
 ## <a name="connect-to-a-sql-server"></a>Connettersi a SQL Server
 
-1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Avviare **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
 
 2. La prima volta che si esegue [!INCLUDE[name-sos](../includes/name-sos-short.md)] viene visualizzata la pagina di **introduzione**. Se la pagina di **introduzione** non viene visualizzata, selezionare **Help** > **Introduzione**. Selezionare **Nuova connessione** per aprire il riquadro **Connessione**:
 

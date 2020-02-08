@@ -1,11 +1,7 @@
 ---
-title: 'Procedura: Usare il confronto schema per confrontare definizioni di database diverse | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Usare il confronto schema per confrontare definizioni di database diverse
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097508"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226846"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procedura: Usare il confronto schema per confrontare definizioni di database diverse
+
 In SQL Server Data Tools (SSDT) è inclusa un'utilità Confronto schema che è possibile usare per confrontare due definizioni di database.  L'origine e la destinazione del confronto possono essere qualsiasi combinazione di un database connesso, un progetto di database di SQL Server, uno snapshot o un file con estensione dacpac.  I risultati del confronto vengono visualizzati come un set di azioni da intraprendere sulla destinazione per renderla uguale all'origine.  Una volta completato il confronto, è possibile aggiornare direttamente la destinazione (se la destinazione è un progetto o un database) oppure generare uno script di aggiornamento che produce gli stessi effetti.  
   
 Le differenze tra l'origine e la destinazione sono visualizzate in una griglia per facilitarne la revisione.  È possibile esaminare e rivedere tutte le differenze nella griglia dei risultati o sotto forma di script.  È possibile quindi escludere in maniera selettiva specifiche differenze.  

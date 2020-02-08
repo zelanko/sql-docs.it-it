@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095708"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
@@ -218,7 +218,7 @@ ms.locfileid: "74095708"
  **Autenticazione di base**  
  Consente di specificare il nome utente e la password necessari per il server SMTP.  
   
- **User name**  
+ **Nome utente**  
  Consente di visualizzare o aggiornare il nome utente utilizzato da Posta elettronica database per accedere al server SMTP. Il nome utente è necessario se il server SMTP richiede l'autenticazione di base.  
   
  **Password**  
@@ -246,7 +246,7 @@ ms.locfileid: "74095708"
  **Account SMTP**  
  Consente di selezionare uno o più account per il profilo. L'ordine in cui Posta elettronica utilizza gli account è determinato dal livello di priorità. Se non è elencato alcun account, è necessario fare clic su **Aggiungi** per continuare e aggiungere un nuovo account SMTP.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un account al profilo.  
   
  **Rimuovi**  
@@ -277,7 +277,7 @@ ms.locfileid: "74095708"
  **Account SMTP**  
  Consente di selezionare uno o più account per il profilo. La proprietà di failover imposta l'ordine in cui Posta elettronica database utilizza l'account in caso si verifichi un failover.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un account al profilo.  
   
  **Rimuovi**  
@@ -341,7 +341,7 @@ ms.locfileid: "74095708"
   
  Un profilo può essere predefinito. In questo caso, gli utenti o i ruoli possono inviare messaggi di posta elettronica utilizzando il profilo senza specificarlo esplicitamente. Se l'utente o il ruolo che invia il messaggio di posta elettronica dispone di un profilo privato predefinito, Posta elettronica database utilizzerà tale profilo. Se all'utente o ruolo non è associato alcun profilo privato predefinito, **sp_send_dbmail** usa il profilo pubblico predefinito per il database **msdb** . Se non è disponibile un profilo privato predefinito per l'utente o il ruolo oppure un profilo pubblico predefinito per il database, **sp_send_dbmail** restituisce un errore. È possibile contrassegnare come predefinito un unico profilo.  
   
- **Pubblico**  
+ **Pubblica**  
  Selezionare questa opzione per rendere pubblico il profilo specificato.  
   
  **Profile Name**  
@@ -362,10 +362,10 @@ ms.locfileid: "74095708"
   
  Un profilo può essere predefinito. In questo caso, gli utenti o i ruoli possono inviare messaggi di posta elettronica utilizzando il profilo senza specificarlo esplicitamente. Se l'utente o il ruolo che invia il messaggio di posta elettronica dispone di un profilo privato predefinito, Posta elettronica database utilizzerà tale profilo. Se all'utente o ruolo non è associato alcun profilo privato predefinito, **sp_send_dbmail** usa il profilo pubblico predefinito per il database **msdb** . Se non è disponibile un profilo privato predefinito per l'utente o il ruolo oppure un profilo pubblico predefinito per il database, **sp_send_dbmail** restituisce un errore.  
   
- **User name**  
+ **Nome utente**  
  Consente di selezionare il nome di un utente o di un ruolo nel database **msdb** .  
   
- **Accesso**  
+ **Accedere**  
  Consente di specificare se l'utente o il ruolo dispone dell'accesso al profilo specificato.  
   
  **Nome profilo**  
@@ -424,7 +424,7 @@ ms.locfileid: "74095708"
  **Profilo di Posta elettronica database**  
  Selezionare un profilo di Posta elettronica database nell'elenco. Questo campo è obbligatorio. Se non viene visualizzato alcun profilo, non esiste alcun profilo oppure non si dispone dell'autorizzazione per esso. Per creare e configurare profili, usare la **Configurazione guidata posta elettronica database** . Se non è elencato alcun profilo, utilizzare la Configurazione guidata posta elettronica database per crearne uno.  
   
- **Per**  
+ **To**  
  Indirizzo di posta elettronica dei destinatari del messaggio. È necessario specificare almeno un destinatario.  
   
  **Oggetto**  
@@ -438,7 +438,7 @@ ms.locfileid: "74095708"
  **Messaggio inviato**  
  Valore **mailitem_id** del messaggio di posta elettronica di prova.  
   
- **Risoluzione dei problemi**  
+ **Risolvere i problemi**  
  Fare clic su questo pulsante per aprire la documentazione online relativa all'argomento [Risoluzione dei problemi relativi a Posta elettronica database](https://msdn.microsoft.com/library/ms188663.aspx).  
   
  [Configurazione guidata Posta elettronica database](#DBWizard)  
@@ -458,6 +458,6 @@ ms.locfileid: "74095708"
   
 6.  Eseguire lo script per creare la configurazione.  
   
-7.  Lo script non concede l'accesso al profilo ad alcun utente del database. Per impostazione predefinita, quindi, il profilo può essere usato solo dai membri del ruolo di sicurezza predefinito **sysadmin**. Per altre informazioni sulla concessione dell'accesso ai profili, vedere [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
+7.  Lo script non concede l'accesso al profilo ad alcun utente del database. Per impostazione predefinita, quindi, il profilo può essere usato solo dai membri del ruolo di sicurezza predefinito **sysadmin** . Per altre informazioni sulla concessione dell'accesso ai profili, vedere [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
   
   

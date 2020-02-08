@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6523da9177f15673461880cbad0fc0a751a4391d
-ms.sourcegitcommit: cc20a148c785ac43832f47d096fe53508a4b1940
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75871133"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
@@ -96,22 +96,22 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE abilita o disabilita questo account di accesso. La disabilitazione di un account di accesso non influisce sul comportamento degli account di accesso già connessi. (Usare l'istruzione `KILL` per terminare le connessioni esistenti.) Gli account di accesso disabilitati conservano le autorizzazioni e possono essere ancora rappresentati.
 
-PASSWORD **='**_password_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
+PASSWORD **='** _password_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
-PASSWORD **=**_hashed\_password_ si applica solo alle parole chiave HASHED. Specifica il valore hash della password per l'account di accesso in fase di creazione.
+PASSWORD **=** _hashed\_password_ si applica solo alle parole chiave HASHED. Specifica il valore hash della password per l'account di accesso in fase di creazione.
 
 > [!IMPORTANT]
 > Quando un account di accesso (o un utente di database indipendente) si connette e viene autenticato, tramite la connessione vengono memorizzate nella cache le informazioni relative all'identità sull'account di accesso. In caso di un account di accesso con l'autenticazione di Windows, sono incluse informazioni sull'appartenenza ai gruppi di Windows. L'identità dell'account di accesso rimane autenticata, a condizione che la connessione venga mantenuta. Per forzare le modifiche nell'identità, ad esempio una reimpostazione della password o una modifica dell'appartenenza al gruppo di Windows, l'account di accesso deve disconnettersi dall'autorità di autenticazione (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e accedere di nuovo. Un membro del ruolo predefinito del server **sysadmin** o qualsiasi account di accesso con l'autorizzazione **ALTER ANY CONNECTION** può usare il comando **KILL** per terminare una connessione e forzare la riconnessione di un account di accesso. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile usare di nuovo le informazioni di connessione quando si aprono più connessioni alle finestre Esplora oggetti ed Editor di query. Chiudere tutte le connessioni per forzare la riconnessione.
 
 HASHED si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica che è già stato eseguito l'hashing per la password immessa dopo l'argomento PASSWORD. Se si include questa opzione, viene eseguito l'hashing della password prima che questa venga archiviata nel database. Questa opzione deve essere utilizzata solo per la sincronizzazione degli account di accesso tra due server. Non utilizzare l'opzione HASHED per le normali operazioni di modifica delle password.
 
-OLD_PASSWORD **='**_oldpassword_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
+OLD_PASSWORD **='** _oldpassword_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 MUST_CHANGE si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si include questa opzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiederà una password aggiornata al primo utilizzo dell'account di accesso modificato.
 
-DEFAULT_DATABASE **=**_database_ specifica il database predefinito da assegnare all'account di accesso.
+DEFAULT_DATABASE **=** _database_ specifica il database predefinito da assegnare all'account di accesso.
 
-DEFAULT_LANGUAGE **=**_language_ specifica la lingua predefinita da assegnare all'account di accesso. La lingua predefinita per tutti gli account di accesso dei database SQL è l'inglese e non può essere modificata. La lingua predefinita dell'account di accesso `sa` per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su Linux, è l'inglese, ma può essere modificata.
+DEFAULT_LANGUAGE **=** _language_ specifica la lingua predefinita da assegnare all'account di accesso. La lingua predefinita per tutti gli account di accesso dei database SQL è l'inglese e non può essere modificata. La lingua predefinita dell'account di accesso `sa` per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su Linux, è l'inglese, ma può essere modificata.
 
 NAME = *login_name* è il nuovo nome dell'account di accesso da rinominare. Se si tratta di un account di accesso di Windows, il SID dell'entità di Windows corrispondente al nuovo nome deve corrispondere al SID associato all'account di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nuovo nome di un account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può contenere una barra rovesciata (\\).
 
@@ -303,14 +303,14 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE abilita o disabilita questo account di accesso. La disabilitazione di un account di accesso non influisce sul comportamento degli account di accesso già connessi. (Usare l'istruzione `KILL` per terminare le connessioni esistenti.) Gli account di accesso disabilitati conservano le autorizzazioni e possono essere ancora rappresentati.
 
-PASSWORD **='**_password_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
+PASSWORD **='** _password_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 Le connessioni continuamente attive a database SQL richiedono la riautorizzazione (eseguita dal motore di database) almeno ogni 10 ore. Il motore di database prova la riautorizzazione usando la password inviata originariamente e non richiede alcun input da parte dell'utente. Per motivi di prestazioni, quando si reimposta una password nel database SQL la connessione non viene nuovamente autenticata, anche se viene reimpostata a causa del pool di connessioni. Questo comportamento è diverso da quello dell'istanza locale di SQL Server. Se la password è stata cambiata dopo l'autorizzazione iniziale della connessione, è necessario terminare la connessione e stabilirne una nuova usando la nuova password. Un utente con l'autorizzazione KILL DATABASE CONNECTION può terminare in modo esplicito una connessione al database SQL usando il comando KILL. Per altre informazioni, vedere [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Quando un account di accesso (o un utente di database indipendente) si connette e viene autenticato, tramite la connessione vengono memorizzate nella cache le informazioni relative all'identità sull'account di accesso. In caso di un account di accesso con l'autenticazione di Windows, sono incluse informazioni sull'appartenenza ai gruppi di Windows. L'identità dell'account di accesso rimane autenticata, a condizione che la connessione venga mantenuta. Per forzare le modifiche nell'identità, ad esempio una reimpostazione della password o una modifica dell'appartenenza al gruppo di Windows, l'account di accesso deve disconnettersi dall'autorità di autenticazione (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e accedere di nuovo. Un membro del ruolo predefinito del server **sysadmin** o qualsiasi account di accesso con l'autorizzazione **ALTER ANY CONNECTION** può usare il comando **KILL** per terminare una connessione e forzare la riconnessione di un account di accesso. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile usare di nuovo le informazioni di connessione quando si aprono più connessioni alle finestre Esplora oggetti ed Editor di query. Chiudere tutte le connessioni per forzare la riconnessione.
 
-OLD_PASSWORD **='**_oldpassword_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
+OLD_PASSWORD **='** _oldpassword_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 NAME = *login_name* è il nuovo nome dell'account di accesso da rinominare. Se si tratta di un account di accesso di Windows, il SID dell'entità di Windows corrispondente al nuovo nome deve corrispondere al SID associato all'account di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nuovo nome di un account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può contenere una barra rovesciata (\\).
 
@@ -497,21 +497,21 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE abilita o disabilita questo account di accesso. La disabilitazione di un account di accesso non influisce sul comportamento degli account di accesso già connessi. Usare l'istruzione `KILL` per terminare la connessione esistente. Gli account di accesso disabilitati conservano le autorizzazioni e possono essere ancora rappresentati.
 
-DEFAULT_DATABASE **=**_database_ specifica il database predefinito da assegnare all'account di accesso.
+DEFAULT_DATABASE **=** _database_ specifica il database predefinito da assegnare all'account di accesso.
 
-DEFAULT_LANGUAGE **=**_language_ specifica la lingua predefinita da assegnare all'account di accesso. La lingua predefinita per tutti gli account di accesso dei database SQL è l'inglese e non può essere modificata. La lingua predefinita dell'account di accesso `sa` per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su Linux, è l'inglese, ma può essere modificata.
+DEFAULT_LANGUAGE **=** _language_ specifica la lingua predefinita da assegnare all'account di accesso. La lingua predefinita per tutti gli account di accesso dei database SQL è l'inglese e non può essere modificata. La lingua predefinita dell'account di accesso `sa` per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su Linux, è l'inglese, ma può essere modificata.
 
 ### <a name="arguments-applicable-only-to-sql-logins"></a>Argomenti applicabili solo agli account di accesso SQL
 
-PASSWORD **='**_password_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole. Le password inoltre non sono valide se usate con account di accesso esterni, ad esempio gli account di accesso di Azure AD.
+PASSWORD **='** _password_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole. Le password inoltre non sono valide se usate con account di accesso esterni, ad esempio gli account di accesso di Azure AD.
 
 Le connessioni continuamente attive a database SQL richiedono la riautorizzazione (eseguita dal motore di database) almeno ogni 10 ore. Il motore di database prova la riautorizzazione usando la password inviata originariamente e non richiede alcun input da parte dell'utente. Per motivi di prestazioni, quando si reimposta una password nel database SQL la connessione non viene nuovamente autenticata, anche se viene reimpostata a causa del pool di connessioni. Questo comportamento è diverso da quello dell'istanza locale di SQL Server. Se la password è stata cambiata dopo l'autorizzazione iniziale della connessione, è necessario terminare la connessione e stabilirne una nuova usando la nuova password. Un utente con l'autorizzazione KILL DATABASE CONNECTION può terminare in modo esplicito una connessione al database SQL usando il comando KILL. Per altre informazioni, vedere [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
-PASSWORD **=**_hashed\_password_ si applica solo alle parole chiave HASHED. Specifica il valore hash della password per l'account di accesso in fase di creazione.
+PASSWORD **=** _hashed\_password_ si applica solo alle parole chiave HASHED. Specifica il valore hash della password per l'account di accesso in fase di creazione.
 
 HASHED si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica che è già stato eseguito l'hashing per la password immessa dopo l'argomento PASSWORD. Se si include questa opzione, viene eseguito l'hashing della password prima che questa venga archiviata nel database. Questa opzione deve essere utilizzata solo per la sincronizzazione degli account di accesso tra due server. Non utilizzare l'opzione HASHED per le normali operazioni di modifica delle password.
 
-OLD_PASSWORD **='**_oldpassword_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
+OLD_PASSWORD **='** _oldpassword_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 MUST_CHANGE<br>
 Si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si include questa opzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiederà una password aggiornata al primo utilizzo dell'account di accesso modificato.
@@ -710,14 +710,14 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE abilita o disabilita questo account di accesso. La disabilitazione di un account di accesso non influisce sul comportamento degli account di accesso già connessi. (Usare l'istruzione `KILL` per terminare le connessioni esistenti.) Gli account di accesso disabilitati conservano le autorizzazioni e possono essere ancora rappresentati.
 
-PASSWORD **='**_password_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
+PASSWORD **='** _password_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 Le connessioni continuamente attive a database SQL richiedono la riautorizzazione (eseguita dal motore di database) almeno ogni 10 ore. Il motore di database prova la riautorizzazione usando la password inviata originariamente e non richiede alcun input da parte dell'utente. Per motivi di prestazioni, quando si reimposta una password nel database SQL la connessione non viene nuovamente autenticata, anche se viene reimpostata a causa del pool di connessioni. Questo comportamento è diverso da quello dell'istanza locale di SQL Server. Se la password è stata cambiata dopo l'autorizzazione iniziale della connessione, è necessario terminare la connessione e stabilirne una nuova usando la nuova password. Un utente con l'autorizzazione KILL DATABASE CONNECTION può terminare in modo esplicito una connessione al database SQL usando il comando KILL. Per altre informazioni, vedere [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Quando un account di accesso (o un utente di database indipendente) si connette e viene autenticato, tramite la connessione vengono memorizzate nella cache le informazioni relative all'identità sull'account di accesso. In caso di un account di accesso con l'autenticazione di Windows, sono incluse informazioni sull'appartenenza ai gruppi di Windows. L'identità dell'account di accesso rimane autenticata, a condizione che la connessione venga mantenuta. Per forzare le modifiche nell'identità, ad esempio una reimpostazione della password o una modifica dell'appartenenza al gruppo di Windows, l'account di accesso deve disconnettersi dall'autorità di autenticazione (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e accedere di nuovo. Un membro del ruolo predefinito del server **sysadmin** o qualsiasi account di accesso con l'autorizzazione **ALTER ANY CONNECTION** può usare il comando **KILL** per terminare una connessione e forzare la riconnessione di un account di accesso. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile usare di nuovo le informazioni di connessione quando si aprono più connessioni alle finestre Esplora oggetti ed Editor di query. Chiudere tutte le connessioni per forzare la riconnessione.
 
-OLD_PASSWORD **='**_oldpassword_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
+OLD_PASSWORD **='** _oldpassword_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 NAME = *login_name* è il nuovo nome dell'account di accesso da rinominare. Se si tratta di un account di accesso di Windows, il SID dell'entità di Windows corrispondente al nuovo nome deve corrispondere al SID associato all'account di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nuovo nome di un account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può contenere una barra rovesciata (\\).
 
@@ -869,12 +869,12 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE abilita o disabilita questo account di accesso. La disabilitazione di un account di accesso non influisce sul comportamento degli account di accesso già connessi. Usare l'istruzione `KILL` per terminare la connessione esistente. Gli account di accesso disabilitati conservano le autorizzazioni e possono essere ancora rappresentati.
 
-PASSWORD **='**_password_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
+PASSWORD **='** _password_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 > [!IMPORTANT]
 > Quando un account di accesso (o un utente di database indipendente) si connette e viene autenticato, tramite la connessione vengono memorizzate nella cache le informazioni relative all'identità sull'account di accesso. In caso di un account di accesso con l'autenticazione di Windows, sono incluse informazioni sull'appartenenza ai gruppi di Windows. L'identità dell'account di accesso rimane autenticata, a condizione che la connessione venga mantenuta. Per forzare le modifiche nell'identità, ad esempio una reimpostazione della password o una modifica dell'appartenenza al gruppo di Windows, l'account di accesso deve disconnettersi dall'autorità di autenticazione (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e accedere di nuovo. Un membro del ruolo predefinito del server **sysadmin** o qualsiasi account di accesso con l'autorizzazione **ALTER ANY CONNECTION** può usare il comando **KILL** per terminare una connessione e forzare la riconnessione di un account di accesso. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile usare di nuovo le informazioni di connessione quando si aprono più connessioni alle finestre Esplora oggetti ed Editor di query. Chiudere tutte le connessioni per forzare la riconnessione.
 
-OLD_PASSWORD **='**_oldpassword_**'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
+OLD_PASSWORD **='** _oldpassword_ **'** si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Password corrente dell'account di accesso a cui verrà assegnata una nuova password. Per le password viene fatta distinzione tra maiuscole e minuscole.
 
 MUST_CHANGE si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si include questa opzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiederà una password aggiornata al primo utilizzo dell'account di accesso modificato.
 

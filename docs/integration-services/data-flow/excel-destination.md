@@ -19,10 +19,10 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 418d3c214f667807df997902f97bfa271c8c4742
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292816"
 ---
 # <a name="excel-destination"></a>Destinazione Excel
@@ -69,7 +69,7 @@ ms.locfileid: "71292816"
  **Gestione connessione Excel**  
  Consente di selezionare una gestione connessione Excel esistente dall'elenco o di creare una nuova connessione facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione nella finestra di dialogo **Gestione connessione Excel** .  
   
  **Modalità di accesso ai dati**  
@@ -84,7 +84,7 @@ ms.locfileid: "71292816"
  **Nome del foglio di Excel**  
  Selezionare la destinazione Excel dall'elenco a discesa. Se l'elenco è vuoto, fare clic su **Nuovo**.  
   
- **Nuova**  
+ **Nuovo**  
  Fare clic su **Nuova** per avviare la finestra di dialogo **Crea tabella** . Quando si fa clic su **OK**viene creato il file di Excel a cui fa riferimento **Gestione connessione Excel** .  
   
  **Visualizza dati esistenti**  
@@ -139,7 +139,7 @@ ms.locfileid: "71292816"
  **Colonna**  
  Consente di visualizzare le colonne esterne (di origine) selezionate nel nodo **Gestione connessione** della finestra di dialogo **Editor origine Excel**.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  

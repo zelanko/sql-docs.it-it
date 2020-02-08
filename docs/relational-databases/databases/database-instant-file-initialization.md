@@ -18,17 +18,17 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982452"
 ---
 # <a name="database-file-initialization"></a>Inizializzazione di file di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 I file di dati e di log vengono inizializzati per sovrascrivere eventuali dati esistenti rimasti nel disco in seguito all'eliminazione precedente di file. I file di dati e di log vengono prima di tutto inizializzati azzerando i file (riempiendoli con zeri) quando si esegue una di queste operazioni:  
   
-- Creazione di un database.  
+- Creare un database.  
 - Aggiungere dati o file di log a un database esistente.  
 - Aumento delle dimensioni di un file esistente (incluse operazioni di aumento automatico delle dimensioni).  
 - Ripristino di un database o un filegroup.  
@@ -69,7 +69,7 @@ Per concedere l'autorizzazione `Perform volume maintenance tasks` a un account:
 > [!NOTE]
 > A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 e versioni successive, è possibile usare la colonna *instant_file_initialization_enabled* nella DMV [sys.dm server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) per stabilire se è abilitata l'inizializzazione immediata dei file.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 Se all'[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]account di avvio del servizio viene concesso  *SE_MANAGE_VOLUME_NAME*, viene registrato un messaggio informativo simile al seguente nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registro errori all'avvio: 
 
 `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
@@ -80,7 +80,7 @@ Se all'[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]account di avvio
 
 **Si applica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive)
 
-## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
+## <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
 Se si utilizza l'inizializzazione immediata dei file, poiché il contenuto eliminato del disco viene sovrascritto solo quando vengono scritti nuovi dati nei file, il contenuto eliminato potrebbe essere accessibile a utenti o servizi non autorizzati, finché non vengono eseguite altre scritture dati in tale area specifica del file di dati. Finché il file di database è collegato all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questo rischio di diffusione di informazioni è ridotto dall'elenco di controllo di accesso discrezionale (DACL) per il file. Questo elenco consente l'accesso al file solo all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'amministratore locale. Quando il file viene scollegato, tuttavia, diventa accessibile a un utente o a un servizio privo del diritto *SE_MANAGE_VOLUME_NAME*. Una considerazione di questo tipo è necessaria quando viene eseguito un backup del database: se il file di backup non è protetto con un elenco di controllo di accesso discrezionale (DACL) appropriato, il contenuto eliminato può diventare disponibile a un utente o a un servizio non autorizzato.  
 
 Tenere presente anche che quando un file usa l'inizializzazione immediata, un amministratore SQL Server può potenzialmente accedere ai contenuti delle pagine non elaborati e visualizzare i contenuti precedentemente eliminati.

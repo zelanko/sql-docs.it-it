@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee0119ccd051912551c1274860265d48750ac969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111343"
 ---
-# <a name="schemaname-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
+# <a name="schema_name-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce il nome dello schema associato a un ID di schema.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ SCHEMA_NAME ( [ schema_id ] )
   
 ## <a name="arguments"></a>Argomenti  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |*schema_id*|ID dello schema. *schema_id* è di tipo **int**. Se *schema_id* viene omesso, SCHEMA_NAME restituirà il nome dello schema predefinito del chiamante.|  
   
@@ -50,12 +50,12 @@ SCHEMA_NAME ( [ schema_id ] )
   
  Restituisce NULL se *schema_id* non è un ID valido.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  SCHEMA_NAME restituisce i nomi degli schemi di sistema e degli schemi definiti dall'utente. SCHEMA_NAME può essere chiamato in un elenco di selezione, in una clausola WHERE e dovunque è consentita un'espressione.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-name-of-the-default-schema-of-the-caller"></a>A. Visualizzazione del nome dello schema predefinito del chiamante  
+### <a name="a-returning-the-name-of-the-default-schema-of-the-caller"></a>R. Visualizzazione del nome dello schema predefinito del chiamante  
   
 ```  
 SELECT SCHEMA_NAME();  

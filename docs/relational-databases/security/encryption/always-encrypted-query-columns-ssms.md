@@ -12,12 +12,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c97d3ae0dd6b334e129134ba391124d8de3e8260
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595796"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910234"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,8 +72,8 @@ Oltre a queste autorizzazioni, per decrittografare i risultati delle query o per
 
 - **Archivio certificati - Computer locale**: è necessario avere l'accesso `Read` al certificato usato come chiave master della colonna o essere l'amministratore del computer.   
 - **Azure Key Vault**: sono necessarie le autorizzazioni `get`, `unwrapKey` e `verify` per l'insieme di credenziali contenente la chiave master della colonna.
-- **Provider dell'archivio chiavi (KSP)**: l'autorizzazione e le credenziali necessarie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.   
-- **Provider del servizio di crittografia (CSP)**: l'autorizzazione e le credenziali richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
+- **Provider dell'archivio chiavi (KSP)** : l'autorizzazione e le credenziali necessarie quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione KSP.   
+- **Provider del servizio di crittografia (CSP)** : l'autorizzazione e le credenziali richieste quando si usa un archivio chiavi o una chiave, in base all'archivio e alla configurazione CSP.
 
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -90,10 +90,10 @@ Se non si Abilita Always Encrypted per una connessione, il provider di dati .NET
 
 Per abilitare o disabilitare Always Encrypted:
 1. Aprire la finestra di dialogo **Connetti al server**. Per informazioni dettagliate, vedere [Connessione a un'istanza di SQL Server](../../../ssms/tutorials/connect-query-sql-server.md#connect-to-a-sql-server-instance).
-1. Fare clic su **Opzioni >>**.
+1. Fare clic su **Opzioni >>** .
 1. Se si usa SSMS 18 o versione successiva:
     1. Selezionare la scheda **Always Encrypted**.
-    1. Per abilitare Always Encrypted, selezionare **Abilita Always Encrypted (crittografia colonna)**. Per disabilitare Always Encrypted, verificare che **Abilita Always Encrypted (crittografia colonna)** non sia selezionato.
+    1. Per abilitare Always Encrypted, selezionare **Abilita Always Encrypted (crittografia colonna)** . Per disabilitare Always Encrypted, verificare che **Abilita Always Encrypted (crittografia colonna)** non sia selezionato.
     1. Se si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] e l'istanza di SQL Server è configurata con un'enclave sicuro, è possibile specificare un URL di attestazione dell'enclave. Se l'istanza di SQL Server non usa un'enclave sicuro, assicurarsi di lasciare vuota la casella di testo **URL di attestazione enclave**. Per altre informazioni, vedere [Always Encrypted con enclave sicuri](always-encrypted-enclaves.md).
 1. Se si usa SSMS 17 o versione precedente:
     1. Selezionare la scheda **Proprietà aggiuntive**.
@@ -162,7 +162,7 @@ DECLARE @Salary money = $30000;
 Di seguito sono riportati invece alcuni esempi di variabili che non verranno parametrizzate da SQL Server Management Studio:
 
 ```sql
-DECLARE @Name nvarchar(50); --Initialization seperate from declaration
+DECLARE @Name nvarchar(50); --Initialization separate from declaration
 SET @Name = 'Abel';
 
 DECLARE @StartDate date = GETDATE(); -- a function used instead of a literal
@@ -214,9 +214,9 @@ WHERE [SSN] = @SSN;
 > [!NOTE]
 > Senza la parametrizzazione, l'intera query, incluse le conversioni dei tipi, viene elaborata all'interno di SQL Server o del database SQL di Azure. Con parametrizzazione abilitata, alcune conversioni dei tipi vengono eseguite da .NET Framework all'interno di SQL Server Management Studio. A causa delle differenze tra il sistema dei tipi .NET Framework e il sistema dei tipi SQL Server (ad esempio diversa precisione di alcuni tipi come float), una query eseguita con la parametrizzazione abilitata può produrre risultati diversi rispetto alla query eseguita senza la parametrizzazione abilitata. 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md)
 
 
 ## <a name="see-also"></a>Vedere anche
-- [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

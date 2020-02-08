@@ -13,17 +13,17 @@ ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf224dd8c5d6973c6aaf5b0af869ace7d43c891c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032066"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Log shipping - Impostazioni backup log delle transazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilizzare questa finestra di dialogo per configurare e modificare le impostazioni di backup del log delle transazioni di una configurazione per il log shipping.  
   
- Per una spiegazione dei concetti correlati al log shipping, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+ Per approfondimenti sui concetti correlati al log shipping, vedere [Informazioni sul log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 ## <a name="options"></a>Opzioni  
  **Percorso di rete della cartella di backup**  
@@ -46,11 +46,11 @@ ms.locfileid: "68032066"
  **Nome processo**  
  Consente di visualizzare il nome del processo di SQL Server Agent utilizzato per creare i backup del log delle transazioni per il log shipping. Durante la creazione iniziale del processo, è possibile modificare il nome digitandolo nella casella.  
   
- **Pianificazione**  
- Consente di visualizzare la pianificazione corrente per il backup dei log delle transazioni del database primario. Prima che il processo di backup venga creato, è possibile modificare la pianificazione facendo clic su **Pianificazione...**. Dopo la creazione del processo, è possibile modificare la pianificazione facendo clic su **Modifica processo...**.  
+ **Pianificare**  
+ Consente di visualizzare la pianificazione corrente per il backup dei log delle transazioni del database primario. Prima che il processo di backup venga creato, è possibile modificare la pianificazione facendo clic su **Pianificazione...** . Dopo la creazione del processo, è possibile modificare la pianificazione facendo clic su **Modifica processo...** .  
   
 ### <a name="backup-job"></a>Processo di backup  
- **Pianificazione...**  
+ **Pianificazione**  
  Consente di modificare la pianificazione creata al momento della creazione del processo di SQL Server Agent.  
   
  **Modifica processo...**  

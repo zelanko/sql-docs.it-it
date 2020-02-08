@@ -18,10 +18,10 @@ ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b12ad1dcc054f7c59f52b3aee23d5d6368f1459b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948251"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Costruttore di valori di tabella (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67948251"
 
   Specifica un set di espressioni valore di riga da costruire in una tabella. Il costruttore di valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di specificare più righe di dati in una sola istruzione DML. È possibile specificare il costruttore di valori di tabella come clausola VALUES di un'istruzione INSERT ... VALUES oppure come tabella derivata nella clausola USING dell'istruzione MERGE o nella clausola FROM.
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Quando usato come tabella derivata non esiste alcun limite per il numero di righe.  
  
- Quando usato come clausola VALUES di un'istruzione INSERT ... VALUES esiste un limite di 1000 righe. Se il numero massimo di righe viene superato, viene restituito l'errore 10738. Per inserire più di 1000 righe usare uno dei metodi seguenti:  
+ Quando usato come clausola VALUES di un'istruzione INSERT ... VALUES esiste un limite di 1000 righe. Se il numero massimo di righe viene superato, viene restituito l'errore 10738. Per inserire più di 1000 righe, utilizzare uno dei metodi seguenti:  
   
 - Creare più istruzioni INSERT  
   
@@ -111,7 +111,7 @@ INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-inserting-multiple-rows-of-data"></a>A. Inserimento di più righe di dati  
+### <a name="a-inserting-multiple-rows-of-data"></a>R. Inserimento di più righe di dati  
  Nell'esempio seguente viene creata la tabella `dbo.Departments` e successivamente viene utilizzato il costruttore di valori di tabella per inserire cinque righe nella tabella stessa. Poiché i valori per tutte le colonne vengono specificati ed elencati nello stesso ordine delle colonne nella tabella, non è necessario specificare i nomi delle colonne nell'elenco delle colonne.  
   
 ```sql

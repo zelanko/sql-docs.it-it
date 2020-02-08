@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903859"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
@@ -29,7 +29,7 @@ Un catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegro
 ##  <a name="creating"></a> Creare un catalogo full-text  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Creare un catalogo full-text con Transact-SQL
-Usare [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Esempio:
+Usare [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Ad esempio:
 
 ```sql 
 USE AdventureWorks;  
@@ -53,7 +53,7 @@ GO
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ##  <a name="props"></a> Ottenere le proprietà di un catalogo full-text  
-Usare la funzione di [!INCLUDE[tsql](../../includes/tsql-md.md)] **FULLTEXTCATALOGPROPERTY** per ottenere il valore di varie proprietà correlate ai cataloghi full-text. Per altre info, vedere [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
+Usare la funzione di [!INCLUDE[tsql](../../includes/tsql-md.md)]**FULLTEXTCATALOGPROPERTY** per ottenere il valore di varie proprietà correlate ai cataloghi full-text. Per altre info, vedere [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
 Ad esempio, eseguire la query seguente per ottenere il conteggio degli indici nel catalogo full-text `Catalog1`.
 
@@ -120,4 +120,4 @@ Eseguire l'istruzione Transact-SQL [DROP FULLTEXT CATALOG](
 4.  Nella finestra di dialogo **Elimina oggetti** fare clic su **OK**.  
 
 ## <a name="next-step"></a>Passaggio successivo
-[Creare e gestire indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md)
+[Creazione e gestione di indici full-text](../../relational-databases/search/create-and-manage-full-text-indexes.md)

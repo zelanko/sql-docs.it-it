@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68698309"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Cmdlet di PowerShell per la valutazione della migrazione
@@ -62,12 +62,12 @@ Viceversa, se _non_ si specifica `-InputObject`, è necessario specificare `-Ser
 | Database | Nome del database di SQL Server di destinazione. Obbligatorio quando `-Server` è obbligatorio.<br/><br/> Facoltativo in SQLPS. |
 | FolderPath | Cartella in cui il cmdlet deve archiviare i report generati.<br/><br/> Obbligatorio. |
 | InputObject | Oggetto SMO a cui il cmdlet deve fare riferimento.<br/><br/> Obbligatorio nell'ambiente Windows Powershell se non si specifica `-Server`.<br/><br/> Facoltativo in SQLPS. |
-| MigrationType | Tipo di scenario di migrazione specificato come destinazione dal cmdlet. Attualmente l'unico valore è il valore predefinito **'OLTP'** .<br/><br/> Facoltativo. |
-| Object | Nome dell'oggetto per cui creare il report. Può essere una tabella o una stored procedure. |
+| MigrationType | Tipo di scenario di migrazione specificato come destinazione dal cmdlet. Attualmente l'unico valore è il valore predefinito **'OLTP'** .<br/><br/> Facoltativa. |
+| Oggetto | Nome dell'oggetto per cui creare il report. Può essere una tabella o una stored procedure. |
 | Password | Obbligatorio quando `-Username` è obbligatorio. |
-| schema | Nome dello schema a cui appartiene l'oggetto per cui creare il report.<br/><br/> Facoltativo. |
+| SCHEMA | Nome dello schema a cui appartiene l'oggetto per cui creare il report.<br/><br/> Facoltativa. |
 | Server | Nome dell'istanza di SQL Server di destinazione. Obbligatorio nell'ambiente Windows PowerShell se non viene specificato il parametro `-InputObject`.<br/><br/> Facoltativo in SQLPS. |
-| Nome utente | Obbligatorio quando si esegue la connessione tramite l'autenticazione di SQL Server, anziché l'autenticazione di Windows. In caso contrario, omettere. |
+| Username | Obbligatorio quando si esegue la connessione tramite l'autenticazione di SQL Server, anziché l'autenticazione di Windows. In caso contrario, omettere. |
 | &nbsp; | &nbsp; |
 
 ## <a name="prerequisites"></a>Prerequisites

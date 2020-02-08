@@ -16,10 +16,10 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571243"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrare un provider di dati .NET Framework standard (SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "65571243"
   
 4.  Aggiungere una voce per il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |attribute|Descrizione|  
+    |Attributo|Descrizione|  
     |---------------|-----------------|  
     |**Nome**|Specificare un nome univoco per il provider di dati, ad esempio **ProviderDatiNET**. La lunghezza massima consentita per l'attributo **Name** è 255 caratteri. Il nome deve essere univoco tra tutte le voci dell'elemento **Extension** di un file di configurazione. Il valore indicato qui viene inserito nell'elenco a discesa dei tipi di origini dei dati per la creazione di una nuova origine.|  
     |**Tipo**|Immettere un elenco delimitato da virgole che includa lo spazio dei nomi completo della classe che implementa l'interfaccia <xref:System.Data.IDbConnection> , seguito dal nome dell'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , senza l'estensione dll.|  
@@ -67,7 +67,7 @@ ms.locfileid: "65571243"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Se si carica l'assembly nella Global Assembly Cache (GAC), è necessario impostare le proprietà del nome sicuro. Esempio:  
+     Se si carica l'assembly nella Global Assembly Cache (GAC), è necessario impostare le proprietà del nome sicuro. Ad esempio:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -129,7 +129,7 @@ ms.locfileid: "65571243"
   
 4.  Aggiungere una voce per il provider di dati.  
   
-    |attribute|Descrizione|  
+    |Attributo|Descrizione|  
     |---------------|-----------------|  
     |**Nome**|Specificare un nome univoco per il provider di dati, ad esempio **ProviderDatiNET**. La lunghezza massima consentita per l'attributo **Name** è 255 caratteri. Il nome deve essere univoco tra tutte le voci dell'elemento **Extension** di un file di configurazione. Il valore indicato qui viene inserito nell'elenco a discesa dei tipi di origini dei dati per la creazione di una nuova origine.|  
     |**Tipo**|Immettere un elenco delimitato da virgole che includa lo spazio dei nomi completo della classe che implementa l'interfaccia <xref:System.Data.IDbConnection> , seguito dal nome dell'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , senza l'estensione dll.|  
@@ -140,7 +140,7 @@ ms.locfileid: "65571243"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Se si carica l'assembly nella cache di assembly globale (CAG), è necessario impostare le proprietà del nome sicuro. Esempio:  
+     Se si carica l'assembly nella cache di assembly globale (CAG), è necessario impostare le proprietà del nome sicuro. Ad esempio:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727585"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare dalla riga di comando i componenti R e Python di SQL Server per il Machine Learning
@@ -206,7 +206,7 @@ Per aprire una finestra della console R, passare a `\Program files\Microsoft SQL
 
 Per aprire un comando Python, passare a `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` e fare doppio clic su **python.exe**.
 
-## <a name="get-help"></a>Supporto
+## <a name="get-help"></a>Ottenere aiuto
 
 Serve aiuto per l'installazione o l'aggiornamento? Per le risposte alle domande più comuni e ai problemi noti, vedere l'articolo seguente:
 

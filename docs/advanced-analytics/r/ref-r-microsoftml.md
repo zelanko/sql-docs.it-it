@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707918"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (libreria R in SQL Server)
@@ -31,7 +31,7 @@ La libreria **MicrosoftML** è distribuita in più prodotti Microsoft, ma l'util
 La libreria **MicrosoftML** è basata su R 3.4.3 ed è disponibile solo quando si installa uno dei prodotti o download Microsoft seguenti:
 
 + [R Services per SQL Server 2016](../install/sql-r-services-windows-install.md)
-+ [Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 o versione successiva](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
@@ -55,7 +55,7 @@ Questa sezione elenca le funzioni per categoria per offrire un'idea di come veng
 
 ## <a name="1-machine-learning-algorithms"></a>1 - Algoritmi di Machine Learning
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | Implementazione di FastRank, un'implementazione efficiente dell'algoritmo di gradient boosting MART.  |
 |[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | Implementazione della foresta casuale e della foresta di regressione quantile tramite [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees).  |
@@ -69,7 +69,7 @@ Questa sezione elenca le funzioni per categoria per offrire un'idea di come veng
 
 ## <a name="2-transformation-functions"></a>2 - Funzioni di trasformazione
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | Trasformazione per creare una singola colonna con valori di vettore da più colonne.  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | Creare il vettore indicatore usando la trasformazione categorica con il dizionario.  |
@@ -87,7 +87,7 @@ Questa sezione elenca le funzioni per categoria per offrire un'idea di come veng
 
 ## <a name="3-scoring-and-training-functions"></a>3 - Funzioni di assegnazione dei punteggi e training
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | Esegue la libreria di punteggi da SQL Server, usando la stored procedure, o dal codice R abilitando il punteggio in tempo reale per offrire prestazioni della stima molto più veloci.|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | Trasforma i dati da un set di dati di input a un set di dati di output.|
@@ -96,7 +96,7 @@ Questa sezione elenca le funzioni per categoria per offrire un'idea di come veng
 
 ## <a name="4-loss-functions-for-classification-and-regression"></a>4 - Funzioni di perdita per la regressione e la classificazione
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Specifiche per la funzione di perdita per la classificazione esponenziale. | 
 |[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Specifiche per la funzione di perdita per la classificazione dei log.  |
@@ -107,14 +107,14 @@ Questa sezione elenca le funzioni per categoria per offrire un'idea di come veng
 
 ## <a name="5-feature-selection-functions"></a>5 - Funzioni di selezione delle caratteristiche
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | Specifica per la selezione delle caratteristiche in modalità di conteggio. |
 |[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | Specifica per la selezione delle caratteristiche in modalità di informazione mutua. |
 
 ## <a name="6-ensemble-modeling-functions"></a>6 - Funzioni di modellazione di ensemble
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | Crea un elenco contenente il nome della funzione e gli argomenti per eseguire il training di un modello Fast Tree con [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
 |[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | Crea un elenco contenente il nome della funzione e gli argomenti per eseguire il training di un modello Fast Forest con [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
@@ -124,14 +124,14 @@ Questa sezione elenca le funzioni per categoria per offrire un'idea di come veng
 
 ## <a name="7-neural-networking-functions"></a>7 - Funzioni di rete neurale
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Specifica gli algoritmi di ottimizzazione per l'algoritmo di Machine Learning [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet).|
 
 
 ## <a name="8-package-state-functions"></a>8 - Funzioni di stato del pacchetto
 
-| Nome funzione | Descrizione |
+| Nome della funzione | Descrizione |
 |---------------|-------------|
 |[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | Oggetto ambiente usato per archiviare lo stato a livello di pacchetto. |
 

@@ -16,10 +16,10 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77e07cd5493220f14b177292e9065c355fca866f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000176"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Abilitare o disabilitare la funzionalità gruppo di disponibilità Always On
@@ -67,7 +67,7 @@ ms.locfileid: "68000176"
   
     -   **False**, se la funzionalità Gruppi di disponibilità Always On è disabilitata.  
   
-###  <a name="Tsql1Procedure"></a> Utilizzo di Transact-SQL  
+###  <a name="Tsql1Procedure"></a> Uso di Transact-SQL  
  **Per determinare se la funzionalità Gruppi di disponibilità Always On è abilitata**  
   
 1.  Utilizzare l'istruzione [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) seguente:  
@@ -203,7 +203,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
     ```  
   
     > [!IMPORTANT]  
-    >  Per informazioni su come controllare se il cmdlet **Disable-SqlAlwaysOn** riavvia il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vedere [Situazioni in cui un cmdlet comporta il riavvio del servizio SQL Server](#WhenCmdletRestartsSQL), più avanti in questo argomento.  
+    >  Per informazioni su come controllare se il cmdlet **Disable-SqlAlwaysOn** riavvia il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [Situazioni in cui un cmdlet comporta il riavvio del servizio SQL Server](#WhenCmdletRestartsSQL), più avanti in questo argomento.  
   
      Per visualizzare la sintassi di un cmdlet, usare il cmdlet **Get-Help** nell'ambiente PowerShell di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
@@ -237,9 +237,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 |Specifica del parametro -NoServiceRestart|Specifica del parametro -Force|Riavvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|no|no|Per impostazione predefinita. Tuttavia dal cmdlet è richiesto quanto segue:<br /><br /> **Per completare l'azione, è necessario riavviare il servizio SQL Server per l'istanza del server '<nome_istanza>'. Continuare?**<br /><br /> **[Y] Sì [N] No [S] Sospendi [?] Guida (l'impostazione predefinita è "Y"):**<br /><br /> Se si specifica **N** o **S**, il servizio non viene riavviato.|  
-|no|Sì|Servizio riavviato.|  
-|Sì|no|Servizio non riavviato.|  
+|No|No|Per impostazione predefinita. Tuttavia dal cmdlet è richiesto quanto segue:<br /><br /> **Per completare l'azione, è necessario riavviare il servizio SQL Server per l'istanza del server '<nome_istanza>'. Continuare?**<br /><br /> **[Y] Sì [N] No [S] Sospendi [?] Guida (l'impostazione predefinita è "Y"):**<br /><br /> Se si specifica **N** o **S**, il servizio non viene riavviato.|  
+|No|Sì|Servizio riavviato.|  
+|Sì|No|Servizio non riavviato.|  
 |Sì|Sì|Servizio non riavviato.|  
   
 ## <a name="see-also"></a>Vedere anche  

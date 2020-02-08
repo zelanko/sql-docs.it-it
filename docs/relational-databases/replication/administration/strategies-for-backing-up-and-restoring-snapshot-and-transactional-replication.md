@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 94135f0fea3373dbab2b1bfba363e9cd9e8385e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710337"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
@@ -80,7 +80,7 @@ ms.locfileid: "71710337"
   
  La replica supporta il ripristino dei database replicati nello stesso server e nello stesso database da cui è stato creato il backup. Se si ripristina un backup di un database replicato in un altro server o database, le impostazioni di replica non potranno essere mantenute. In questo caso, è necessario ricreare tutte le pubblicazioni e le sottoscrizioni dopo il ripristino dei backup.  
   
-### <a name="publisher"></a>Server di pubblicazione  
+### <a name="publisher"></a>Editore  
  Sono disponibili procedure di ripristino per i tipi di replica seguenti:  
   
 -   Replica snapshot  

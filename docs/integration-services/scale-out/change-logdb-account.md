@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 92cf3e13f1e386a77ba4621b817567af95b42884
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896979"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Modificare l'account per la registrazione di Scale Out
@@ -32,7 +32,7 @@ Se si vuole modificare l'account usato per la registrazione in Scale Out, esegui
 ## <a name="1-create-a-user-for-ssisdb"></a>1. Creare un utente di SSISDB
 Per istruzioni sulla creazione di un utente del database, vedere [Creare un utente di database](../../relational-databases/security/authentication-access/create-a-database-user.md).
 
-## <a name="2-add-the-user-to-the-database-role-ssisclusterworker"></a>2. Aggiungere l'utente al ruolo del database ssis_cluster_worker
+## <a name="2-add-the-user-to-the-database-role-ssis_cluster_worker"></a>2. Aggiungere l'utente al ruolo del database ssis_cluster_worker
 
 Per istruzioni sull'aggiunta di un ruolo del database, vedere [Aggiungere un ruolo](../../relational-databases/security/authentication-access/join-a-role.md).
 

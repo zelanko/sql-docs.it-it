@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 42250d8edbd646f9bd89f3663f2591b3404fe05f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007943"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Esercitazione: Distribuire ed eseguire un pacchetto di SQL Server Integration Services (SSIS) in Azure
@@ -34,7 +34,7 @@ Verificare anche che il database SSISDB sia configurato in Azure e che sia stato
 
 Per eseguire il pacchetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
-1. Accedere al [portale di Azure](https://portal.azure.com/).
+1. Accedere al [Portale di Azure](https://portal.azure.com/).
 2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
@@ -48,19 +48,19 @@ Ecco i due aspetti più importanti da ricordare. Questi passaggi sono descritti 
 -   Selezionare `SSISDB` come database per la connessione.
 
 > [!IMPORTANT]
-> Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si tenta di connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
+> Un server di Database SQL di Azure è in ascolto sulla porta 1433. Se si tenta di connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
 
 1. Aprire SQL Server Management Studio.
 
 2. **Connettersi al server**. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
 
-   | Impostazione       | Valore suggerito | Descrizione | 
+   | Impostazione       | Valore consigliato | Descrizione | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
+   | **Tipo di server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server | Il nome deve essere nel formato **mysqldbserver.database.windows.net**. Per sapere qual è il nome del server, vedere [Connettersi al database del catalogo SSISDB in Azure](ssis-azure-connect-to-catalog-database.md). |
-   | **Autenticazione** | autenticazione di SQL Server | Non è possibile connettersi al database SQL di Azure con l'autenticazione di Windows. |
-   | **Account di accesso** | Account amministratore del server | Account specificato al momento della creazione del server. |
-   | **Password** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
+   | **autenticazione** | Autenticazione di SQL Server | Non è possibile connettersi al database SQL di Azure con l'autenticazione di Windows. |
+   | **Accesso** | Account amministratore del server | Account specificato quando è stato creato il server. |
+   | **Password** | Password per l'account amministratore del server | Password specificata quando è stato creato il server. |
 
 3. **Connettersi al database SSISDB**. Selezionare **Opzioni** per espandere la finestra di dialogo **Connetti al server**. Nella finestra di dialogo **Connetti al server** espansa selezionare la scheda **Proprietà connessione**. Nel campo **Connetti al database** selezionare o immettere `SSISDB`.
 
@@ -102,7 +102,7 @@ Per altre informazioni sulla distribuzione di pacchetti e sulla distribuzione gu
   
 4.  Nella pagina **Verifica** rivedere le impostazioni selezionate.
     -   Per apportare modifiche alle impostazioni, selezionare **Indietro** o uno dei passaggi nel riquadro sinistro.
-    -   Selezionare **Distribuisci** per avviare il processo di distribuzione.
+    -   Fare clic su **Distribuisci** per avviare il processo di distribuzione.
 
     > [!NOTE]
     > Se viene visualizzato il messaggio di errore **Nessun agente di lavoro attivo. (provider di dati SqlClient .Net)** , assicurarsi che il runtime di integrazione SSIS di Azure sia in esecuzione. Questo errore si verifica se si tenta di eseguire la distribuzione mentre il runtime di integrazione SSIS di Azure è arrestato.

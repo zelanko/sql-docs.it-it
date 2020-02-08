@@ -1,11 +1,7 @@
 ---
-title: 'Procedura: Cambiare la piattaforma di destinazione e pubblicare un progetto di database | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Modificare la piattaforma di destinazione e pubblicare un progetto di database
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.publish.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a2dd22b47da751294b60f57aaad246234004e946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897362"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241596"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procedura: Modificare la piattaforma di destinazione e pubblicare un progetto di database
+
 È possibile impostare la versione di destinazione di SQL Server per il progetto di database SQL Server Data Tools (SSDT) su qualsiasi istanza supportata di SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 o SQL Azure). In questo modo, è possibile centralizzare lo sviluppo del database in un unico progetto, ma la pubblicazione viene eseguita in più versioni di istanze di SQL Server in base alle esigenze.  
   
 In SSDT, l'esecuzione di questa attività risulta semplice poiché viene presa in considerazione la piattaforma di destinazione e vengono rilevati automaticamente eventuali errori nel codice, ad esempio se si utilizzano funzionalità non supportate per un progetto che verrà pubblicato in SQL Azure.  

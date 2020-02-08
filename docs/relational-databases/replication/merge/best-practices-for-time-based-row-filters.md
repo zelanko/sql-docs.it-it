@@ -13,10 +13,10 @@ ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6182b480c83b8e6b2d0f0a50217823fd14f30c30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033347"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Procedure consigliate per i filtri di riga basati sul tempo
@@ -61,7 +61,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replica**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
-|2|Pranzo|112|2006-10-10|0|  
+|2|Pasto principale|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Matrimonio|112|2006-10-12|0|  
   
@@ -85,7 +85,7 @@ GO
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replica**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
-|2|Pranzo|112|2006-10-10|1|  
+|2|Pasto principale|112|2006-10-10|1|  
 |3|Party|112|2006-10-11|1|  
 |4|Matrimonio|112|2006-10-12|1|  
   
@@ -93,7 +93,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
- [Implementare processi](../../../ssms/agent/implement-jobs.md)   
+ [Implementazione di processi](../../../ssms/agent/implement-jobs.md)   
  [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Utilità sqlps | Microsoft Docs
-ms.custom: ''
+title: sqlps - utilità
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,19 +14,19 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cbc4492aa3c52e08eb6cbce71012da9f91f371aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 6d76286b8632797ab871693a26ff6e19523cc256
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223746"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304828"
 ---
 # <a name="sqlps-utility"></a>sqlps - utilità
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   L'utilità **sqlps** avvia una sessione di Windows PowerShell con il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell e i cmdlet caricati e registrati. È possibile immettere comandi o script di PowerShell che utilizzano componenti di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per utilizzare istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e i relativi oggetti.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Usare invece il modulo di PowerShell **sqlps** . Per altre informazioni sul modulo **sqlps** , vedere [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Usare invece il modulo di PowerShell **sqlps**. Per altre informazioni sul modulo **sqlps** , vedere [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,7 +76,7 @@ sqlps
  [ **-?** |  **-Help** ]  
  Visualizza il riepilogo della sintassi delle opzioni dell'utilità **sqlps** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'utilità **sqlps** avvia l'ambiente PowerShell (PowerShell.exe) e carica il modulo di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Il modulo, denominato anche **sqlps**, carica e registra gli snap-in di PowerShell per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seguenti:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  

@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810583"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server
@@ -51,7 +51,7 @@ ms.locfileid: "68810583"
 |FUNZIONE: con valori di tabella con istruzioni multiple|FUNZIONE: Scalare|  
 |INDICE: Cluster|INDICE: Non cluster|  
 |INDICE: spaziale|INDICE: Univoco|  
-|Account di accesso|Autorizzazioni|  
+|LOGIN|Autorizzazioni|  
 |Appartenenze a ruoli|SCHEMA|  
 |Statistiche|STORED PROCEDURE: Transact-SQL|  
 |Sinonimi|TABELLA: Vincolo CHECK|  
@@ -60,7 +60,7 @@ ms.locfileid: "68810583"
 |TABELLA: vincolo, indice|TABELLA: vincolo, chiave primaria|  
 |TABELLA: vincolo, valore univoco|TRIGGER: DML|  
 |TIPO: HIERARCHYID, GEOMETRY, GEOGRAPHY|TIPO: tipo di dati definito dall'utente|  
-|TIPO: tipo di tabella definito dall'utente|Utente|  
+|TIPO: tipo di tabella definito dall'utente|USER|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Supporto dell'applicazione livello dati con le versioni di SQL Server  
@@ -118,7 +118,7 @@ ms.locfileid: "68810583"
   
 -   **Estrazione/Esportazione**: queste limitazioni non sono applicabili alle azioni che usano DAC Framework per creare un pacchetto da un database, ad esempio l'estrazione di un file con estensione dacpac e l'esportazione di un file con estensione bacpac. I dati del pacchetto sono una rappresentazione totalmente fedele dei dati nel database di origine. Se una di queste condizioni è presente nel pacchetto, nel registro di estrazione/esportazione sarà contenuto un riepilogo dei problemi tramite i messaggi indicati in precedenza. In questo modo, l'utente verrà avvisato di potenziali problemi di distribuzione dati con il pacchetto creato. L'utente visualizzerà anche il messaggio di riepilogo seguente nel log:  **Queste limitazioni non influiscono sulla fedeltà dei valori e tipi di dati archiviati nel pacchetto di applicazione livello dati (DAC) creato da DAC Framework. Le limitazioni sono applicabili unicamente ai valori e tipi di dati derivanti dalla distribuzione di un pacchetto di applicazione livello dati (DAC) in un database. Per altre informazioni sui dati interessati e su come risolvere questa limitazione, vedere** [questo argomento](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
--   **Distribuzione/Pubblicazione/Importazione**: queste limitazioni si applicano alle azioni che usano DAC Framework per distribuire un pacchetto in un database, ad esempio la distribuzione o pubblicazione di un file con estensione dacpac e l'importazione di un file con estensione bacpac. I dati presenti nel database di destinazione potrebbero non rappresentare in modo totalmente fedele quelli del pacchetto. Nel registro di distribuzione/importazione sarà contenuto un messaggio, indicato in precedenza, per ogni situazione in cui si è verificato il problema. L'operazione verrà bloccata da errori (vedere la categoria 3 precedente), ma continuerà con gli altri avvisi.  
+-   **Distribuzione/Pubblicazione/Importazione** : queste limitazioni si applicano alle azioni che usano DAC Framework per distribuire un pacchetto in un database, ad esempio la distribuzione o pubblicazione di un file con estensione dacpac e l'importazione di un file con estensione bacpac. I dati presenti nel database di destinazione potrebbero non rappresentare in modo totalmente fedele quelli del pacchetto. Nel registro di distribuzione/importazione sarà contenuto un messaggio, indicato in precedenza, per ogni situazione in cui si è verificato il problema. L'operazione verrà bloccata da errori (vedere la categoria 3 precedente), ma continuerà con gli altri avvisi.  
   
      Per altre informazioni sui dati interessati in questo scenario e su come risolvere questa limitazione per le azioni di distribuzione/pubblicazione/importazione, vedere [questo argomento](https://go.microsoft.com/fwlink/?LinkId=267087).  
   

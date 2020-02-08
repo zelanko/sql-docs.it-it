@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727761"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Monitorare Machine Learning Services per SQL Server tramite DMV
@@ -37,11 +37,11 @@ Per informazioni più generali sulle DMV, vedere [DMV di sistema](../../relation
 > [!TIP]
 > È anche possibile usare report personalizzati per monitorare Machine Learning Services per SQL Server. Per altre informazioni, vedere [Monitorare l'apprendimento automatico tramite report personalizzati in Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-## <a name="dynamic-management-views"></a>DMV
+## <a name="dynamic-management-views"></a>Viste a gestione dinamica
 
 Per il monitoraggio dei carichi di lavoro di apprendimento automatico in SQL Server, è possibile usare DMV seguenti. Per eseguire una query sulle DMV, è necessaria l'autorizzazione `VIEW SERVER STATE` per l'istanza.
 
-| Vista a gestione dinamica | Tipo | Descrizione |
+| Vista a gestione dinamica | Type | Descrizione |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Esecuzione | Restituisce una riga per ogni account di lavoro attivo che esegue uno script esterno. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Esecuzione | Restituisce una riga per ogni tipo di richiesta di script esterni. |
@@ -79,7 +79,7 @@ WHERE name = 'external scripts enabled';
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | IsMLServicesInstalled | Restituisce 1 se Machine Learning Services per SQL Server è installato per l'istanza. In caso contrario, restituisce 0. |
 | ExternalScriptsEnabled | Restituisce 1 se gli script esterni sono abilitati per l'istanza. In caso contrario, restituisce 0. |
@@ -107,7 +107,7 @@ ON s.session_id = r.session_id;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | session_id | Identifica la sessione associata a ogni connessione principale attiva. |
 | blocking_session_id | ID della sessione che sta bloccando la richiesta. Se questa colonna è NULL, la richiesta non è bloccata oppure non sono disponibili o identificabili informazioni di sessione per la sessione da cui è bloccata. |
@@ -122,7 +122,7 @@ La query restituisce le colonne seguenti:
 | reads | Numero di letture effettuate dalla richiesta. |
 | logical_reads | Numero di letture logiche effettuate dalla richiesta. |
 | writes | Numero di scritture effettuate dalla richiesta. |
-| language | Parola chiave che rappresenta un linguaggio di scripting supportato. |
+| Linguaggio | Parola chiave che rappresenta un linguaggio di scripting supportato. |
 | degree_of_parallelism | Numero che indica il numero di processi paralleli che sono stati creati. Questo valore potrebbe essere diverso dal numero di processi paralleli che sono stati richiesti. |
 | external_user_name | Account di lavoro di Windows con cui è stato eseguito lo script. |
 
@@ -143,9 +143,9 @@ ORDER BY language, counter_name;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
-| language | Nome del linguaggio di script esterni registrato. |
+| Linguaggio | Nome del linguaggio di script esterni registrato. |
 | counter_name | Nome di una funzione di script esterni registrata. |
 | counter_value | Numero totale di istanze chiamate dalla funzione di script esterni registrata nel server. Questo valore è cumulativo, parte dall'ora di installazione della funzionalità nell'istanza e non può essere reimpostato. |
 
@@ -193,7 +193,7 @@ FROM sys.dm_os_sys_info;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | physical_memory_kb | Quantità totale di memoria fisica disponibile nel computer. |
 | committed_kb | Memoria di cui è stato eseguito il commit in kilobyte (KB) nel gestore della memoria. Non include la memoria riservata nel gestore della memoria. |
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
-| NAME | Nome del pool di risorse esterne o di SQL Server. |
+| name | Nome del pool di risorse esterne o di SQL Server. |
 | max_memory_percent | Memoria massima che può essere usata da SQL Server o dal pool di risorse esterne. |
 
 ## <a name="resource-pools"></a>Pool di risorse
@@ -247,7 +247,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | pool_name | Nome del pool di risorse. I nomi dei pool di risorse di SQL Server sono preceduti da `SQL Server`, mentre quelli dei pool di risorse esterne sono preceduti da `External Pool`.
 | total_cpu_usage_hours | Utilizzo cumulativo della CPU, espresso in millisecondi, dalla reimpostazione delle statistiche di Resource Governor. |
@@ -276,7 +276,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 Le colonne restituite sono le seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
 | Versione | Versione del pacchetto. |
@@ -302,11 +302,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 Le colonne restituite sono le seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
 | Versione | Versione del pacchetto. |
-| Percorso | Directory in cui si trova il pacchetto. |
+| Location | Directory in cui si trova il pacchetto. |
 
 ## <a name="next-steps"></a>Passaggi successivi
 

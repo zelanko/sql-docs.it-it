@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037175"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Connettersi al catalogo SSIS (SSISDB) in Azure
@@ -35,7 +35,7 @@ Trovare le informazioni di connessione necessarie per connettersi al catalogo SS
 Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Server Management Studio (SSMS). Se il database del catalogo SSISDB è ospitato nell'Istanza gestita di database SQL, verificare di avere SSMS 17.6 o versioni successive. Per scaricare la versione più recente di SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Ottenere le informazioni di connessione dal portale di Azure
-1. Accedere al [portale di Azure](https://portal.azure.com/).
+1. Accedere al [Portale di Azure](https://portal.azure.com/).
 2. Nel portale di Azure selezionare **Database SQL** dal menu a sinistra e quindi selezionare il database `SSISDB` nella pagina dei **database SQL**. 
 3. Nella pagina **Panoramica** del database `SSISDB` controllare il nome completo del server come illustrato nella figura seguente. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**.
 
@@ -48,12 +48,12 @@ Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Serv
 
 2. **Connettersi al server**. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
 
-   | Impostazione       | Valore suggerito | Descrizione | 
+   | Impostazione       | Valore consigliato | Descrizione | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
+   | **Tipo di server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server | Il nome deve essere nel formato **mysqldbserver.database.windows.net**. |
-   | **Autenticazione** | autenticazione di SQL Server | |
-   | **Account di accesso** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
+   | **autenticazione** | Autenticazione di SQL Server | |
+   | **Accesso** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
    | **Password** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
 
     ![Connettersi al server con SSMS](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)

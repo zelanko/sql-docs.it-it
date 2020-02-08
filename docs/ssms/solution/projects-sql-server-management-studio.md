@@ -1,6 +1,6 @@
 ---
-title: Progetti (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Progetti (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c994120589a4fa31c5968743a38f89a8ad2d1dfc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b1a0df1686543cfe69a998149ede45ea2f845894
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259452"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251864"
 ---
 # <a name="projects-sql-server-management-studio"></a>Progetti (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ Per modificare le informazioni su una connessione, utilizzare la finestra delle 
 |--------------------|---------|  
 |Viene descritto come creare un nuovo progetto in una soluzione.|[Creare un progetto](../../ssms/solution/create-a-project.md)|  
 |Viene descritto come aggiungere un progetto esistente a una soluzione.|[Aggiunta di un progetto esistente a una soluzione](../../ssms/solution/add-an-existing-project-to-a-solution.md)|  
-|Viene descritto come modificare il percorso predefinito in cui vengono salvati i file di progetto.|[Modifica del percorso predefinito per i progetti](../../ssms/solution/change-the-default-location-for-projects.md)|  
+|Viene descritto come modificare il percorso predefinito in cui vengono salvati i file di progetto.|[Modificare il percorso predefinito per i progetti](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |Viene descritto come visualizzare le proprietà correnti di un progetto.|[Visualizzare le proprietà di un progetto](../../ssms/solution/view-project-properties.md)|  
 |Viene descritto come aggiungere nuovi elementi, ad esempio connessioni o file di script, a un progetto.|[Aggiungere nuovi elementi a un progetto](../../ssms/solution/add-new-items-to-a-project.md)|  
 |Viene descritto come definire le informazioni di connessione per una query.|[Associazione di una query a una connessione in un progetto](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  

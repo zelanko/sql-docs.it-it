@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: 3c65b43ba5a00585be7840df300d9183dc6fb606
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75521731"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
@@ -114,7 +114,7 @@ ms.locfileid: "75521731"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemi noti
-- Notebooks
+- Notebook
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso raro in cui il notebook viene serializzato in modo non corretto
 
 ## <a name="september-2019"></a>Settembre 2019
@@ -133,7 +133,7 @@ ms.locfileid: "75521731"
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemi noti
-- Notebooks
+- Notebook
     - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Caso raro in cui il notebook viene serializzato in modo non corretto
 
 
@@ -196,7 +196,7 @@ ms.locfileid: "75521731"
     - Non tutti gli oggetti hanno finestre di dialogo delle proprietà
     - L'avvio delle finestre di dialogo richiede molto tempo
     - Errori di avvio dei server con alcuni tipi di connessioni, ad esempio AAD
-- Notebooks
+- Notebook
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) Consentire agli utenti di usare la versione di sistema di Python per i notebook
 - Confronto schema
     - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Le attività di confronto schema mostrano un menu di scelta rapida Annulla predefinito che non esegue alcuna operazione

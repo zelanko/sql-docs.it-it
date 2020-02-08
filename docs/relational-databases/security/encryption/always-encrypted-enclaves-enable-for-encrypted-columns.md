@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ad9346cacd3cb29b19245fb11b0d21c373d93738
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595656"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>Abilitare Always Encrypted con enclave sicuri per le colonne crittografate esistenti 
@@ -72,6 +72,6 @@ Questo metodo implica la nuova crittografia di una colonna con una chiave di cri
 
 Per altre informazioni su come ruotare la crittografia di una colonna tramite uno strumento lato client, vedere [Ruotare le chiavi Always Encrypted con SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) e [Ruotare le chiavi Always Encrypted con PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Eseguire query delle colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-query-columns.md)
 - [Sviluppare applicazioni usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-client-development.md)

@@ -16,10 +16,10 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093605"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, oggetto di database
@@ -72,7 +72,7 @@ ms.locfileid: "68093605"
 |**Troncamenti log**|Numero di volte in cui il log delle transazioni è stato troncato (nel modello di recupero con registrazione minima).|  
 |**Percentuale log utilizzata**|Percentuale di spazio del log utilizzata.|  
 |**Transazioni replica in sospeso**|Numero di transazioni nel log delle transazioni del database di pubblicazione contrassegnate per la replica, ma non ancora recapitate al database di distribuzione.|  
-|**Velocità transazioni replica**|Numero di transazioni al secondo lette dal log delle transazioni del database di pubblicazione e recapitate al database di distribuzione.|  
+|**Transazioni replica transazioni replica**|Numero di transazioni al secondo lette dal log delle transazioni del database di pubblicazione e recapitate al database di distribuzione.|  
 |**Byte/sec spostamento dati per compattazione**|Quantità di dati spostati al secondo tramite le operazioni di compattazione automatica o l'istruzione DBCC SHRINKDATABASE o DBCC SHRINKFILE.|  
 |**Transazioni rilevate al secondo**|Numero di transazioni di cui è stato eseguito il commit nella tabella di commit per il database.|  
 |**Transazioni/sec**|Numero di transazioni avviate al secondo per il database.<br /><br /> **Transazioni/sec** non conteggia le transazioni solo XTP (transazioni avviate da una stored procedure compilata in modo nativo).|  
@@ -85,6 +85,6 @@ ms.locfileid: "68093605"
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server, replica di database](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+ [Replica di database di SQL Server](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
   

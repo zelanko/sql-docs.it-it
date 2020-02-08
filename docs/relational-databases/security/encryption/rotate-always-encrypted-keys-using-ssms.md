@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595706"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Ruotare chiavi Always Encrypted con SQL Server Management Studio
@@ -56,7 +56,7 @@ SQL Server Management Studio ottiene i metadati delle chiavi di crittografia del
 
 ### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>Passaggio 3: Configurare le applicazioni con la nuova chiave master della colonna
 
-In questo passaggio è necessario verificare che tutte le applicazioni client in uso che eseguono query nelle colonne del database protette dalla chiave master della colonna in fase di rotazione siano in grado di accedere alla nuova chiave master della colonna, ad esempio le colonne del database crittografate con una chiave di crittografia della colonna crittografata con la chiave master della colonna. Questo passaggio dipende dal tipo di archivio chiavi in cui si trova la nuova chiave master della colonna. Esempio:
+In questo passaggio è necessario verificare che tutte le applicazioni client in uso che eseguono query nelle colonne del database protette dalla chiave master della colonna in fase di rotazione siano in grado di accedere alla nuova chiave master della colonna, ad esempio le colonne del database crittografate con una chiave di crittografia della colonna crittografata con la chiave master della colonna. Questo passaggio dipende dal tipo di archivio chiavi in cui si trova la nuova chiave master della colonna. Ad esempio:
 
 - Se la nuova chiave master della colonna è un certificato archiviato nell'archivio certificati di Windows, è necessario distribuire il certificato nella posizione dell'archivio dei certificati (*Utente corrente* o *Computer locale*) e nella posizione specificata nel percorso della chiave master della colonna nel database. L'applicazione deve poter accedere al certificato:
   - Se il certificato viene archiviato nel percorso dell'archivio certificati *Utente corrente*, deve essere importato nell'archivio Utente corrente dell'identità Windows dell'applicazione (utente).
@@ -93,7 +93,7 @@ Se si sceglie di rimuovere la definizione della chiave master della colonna prec
 3. Fare clic su **OK**.
 
 > [!NOTE]
-> Si consiglia di non eliminare definitivamente la chiave master della colonna precedente dopo la rotazione. È opportuno invece mantenere la chiave master della colonna precedente nell'archivio chiavi in cui si trova o archiviarla in un altro posto sicuro. Se si ripristina il database da un file di backup creato prima della configurazione della nuova chiave master della colonna, sarà necessaria la chiave precedente per accedere ai dati.
+> Si consiglia di non eliminare definitivamente la chiave master precedente della colonna dopo la rotazione. È opportuno invece conservare la chiave master precedente della colonna nell'archivio chiavi corrente o archiviarla in un altro posto sicuro. Se si ripristina il database da un file di backup creato prima della configurazione della nuova chiave master della colonna, sarà necessaria la chiave precedente per accedere ai dati.
 
 ### <a name="permissions-for-rotating-column-master-key"></a>Autorizzazioni per la rotazione della chiave master della colonna
 
@@ -141,12 +141,12 @@ La rotazione di una chiave master della colonna richiede le autorizzazioni di da
 
 Per altre informazioni, vedere [Creare e archiviare chiavi master della colonna per Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Eseguire query sulle colonne usando Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Sviluppare applicazioni usando Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Vedere anche
-- [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Panoramica della gestione delle chiavi per Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
 - [Configurare Always Encrypted usando SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configurare Always Encrypted tramite PowerShell](configure-always-encrypted-using-powershell.md)

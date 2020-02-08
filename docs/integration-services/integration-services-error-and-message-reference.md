@@ -15,10 +15,10 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d55050b132a3367ecc495d0afedcad6f0d2351b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284429"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
@@ -1463,7 +1463,7 @@ ms.locfileid: "71284429"
 |0xC0204010|-1071628272|DTS_E_CANONLYSETCOMPFLAGSONSOURCE|Impossibile impostare la proprietà ComparisonFlags su un valore diverso da zero per "%1" perché "%2" non è un output di origine. La proprietà ComparisonFlags della colonna di output "nomecolonna" (ID) non può essere impostata su un valore diverso da zero perché l'output corrispondente "nomeoutput" (ID) non è un output di origine.|  
 |0xC0204011|-1071628271|DTS_E_NONSTRINGCOMPARISONFLAGSNOTZERO|I flag di confronto per "%1" devono essere zero perché il tipo non è string. La proprietà ComparisonFlags può essere impostata solo su valori diversi da zero per le colonne di tipo string.|  
 |0xC0204012|-1071628270|DTS_E_COMPFLAGSONLYONSORTCOL|Impossibile impostare la proprietà ComparisonFlags per "%1" su un valore diverso da zero perché la relativa proprietà SortKeyPosition è impostata su zero. La proprietà ComparisonFlags di una colonna di output può essere impostata solo su valori diversi da zero se anche la proprietà SortKeyPosition è diversa da zero.|  
-|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|La proprietà è di sola lettura.|  
+|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|la proprietà è di sola lettura.|  
 |0xC0204014|-1071628268|DTS_E_INVALIDDATATYPE|Per %1 è stato impostato un valore di tipo di dati non valido (%2!ld!).|  
 |0xC0204015|-1071628267|DTS_E_CODEPAGEREQUIRED|Per "%1" è necessario impostare una tabella codici ma è stato passato il valore zero.|  
 |0xC0204016|-1071628266|DTS_E_INVALIDSTRINGLENGTH|La lunghezza di "%1" non è valida. Deve essere compresa tra %2!ld! e %3!ld!.|  
@@ -2272,7 +2272,7 @@ ms.locfileid: "71284429"
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Funzione non corretta.|  
-|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Impossibile trovare il file specificato.|  
+|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Non è possibile trovare il file specificato.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|È in corso l'avvio del servizio Microsoft SSIS.<br /><br /> Versione server %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Servizio Microsoft SSIS avviato.<br /><br /> Versione server %1|  
 |0x102|258|DTS_MSG_SERVER_STOPPING|Tempo di attesa scaduto.|  

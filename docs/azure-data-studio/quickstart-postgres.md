@@ -11,10 +11,10 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127246"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Avvio rapido: Connettersi ed eseguire query in PostgreSQL con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -46,9 +46,9 @@ Per completare questo argomento di avvio rapido sono necessari [!INCLUDE[name-so
    | Impostazione       | Valore di esempio | Descrizione |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome server** | localhost | Nome completo del server |
-   | **User name** | postgres | Nome utente con cui si desidera eseguire l'accesso. |
+   | **Nome utente** | postgres | Nome utente con cui si desidera eseguire l'accesso. |
    | **Password (account di accesso SQL)** | *password* | Password dell'account con cui si esegue l'accesso. |
-   | **Password** | *Controlla* | Selezionare questa casella se non si vuole immettere la password ogni volta che ci si connette. |
+   | **Password** | *Controllo* | Selezionare questa casella se non si vuole immettere la password ogni volta che ci si connette. |
    | **Nome database** | \<Default\> | Compilare questo campo se si vuole che nella connessione sia specificato un database. |
    | **Gruppo di server** | \<Default\> | Questa opzione consente di assegnare la connessione a uno specifico gruppo di server precedentemente creato. | 
    | **Nome (facoltativo)** | *lasciare vuoto* | Questa opzione consente di specificare un nome descrittivo per il server. | 
@@ -131,6 +131,6 @@ Incollare il frammento di codice seguente nella finestra di query e fare clic su
 
    ![Visualizzazione dei risultati](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 
 Informazioni sugli [scenari disponibili per Postgres in Azure Data Studio](postgres-extension.md). 

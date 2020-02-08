@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294186"
 ---
 # <a name="execute-package-task"></a>Attività Esegui pacchetto
@@ -82,11 +82,11 @@ ms.locfileid: "71294186"
   
  È possibile utilizzare i metodi seguenti per passare valori a un pacchetto figlio:  
   
--   **Configurazioni di pacchetto**  
+-   **SSIS**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre un tipo di configurazione, cioè Variabile pacchetto padre, per il passaggio dei valori dal pacchetto padre a quello figlio. Tale configurazione è compilata in base al pacchetto figlio e utilizza una variabile del pacchetto padre. Viene quindi eseguito il mapping della configurazione a una variabile nel pacchetto figlio o alla proprietà di un oggetto nel pacchetto figlio. La variabile può anche essere utilizzata negli script eseguiti dall'attività Script o dal componente script.  
   
--   **Parametri**  
+-   **Parameters**  
   
      È possibile configurare l'attività Esegui pacchetto per eseguire il mapping delle variabili o dei parametri del pacchetto padre o dei parametri del progetto ai parametri del pacchetto figlio. Il progetto deve utilizzare il modello di distribuzione del progetto e il pacchetto figlio deve essere contenuto nello stesso progetto in cui è contenuto il pacchetto padre. Per altre informazioni, vedere [Editor attività Esegui pacchetto](../../integration-services/control-flow/execute-package-task-editor.md).  
   
@@ -169,7 +169,7 @@ ms.locfileid: "71294186"
 #### <a name="referencetype-dynamic-options"></a>Opzioni dinamiche relative a ReferenceType  
   
 ##### <a name="referencetype--external-reference"></a>ReferenceType = Riferimento esterno  
- **Percorso**  
+ **Posizione**  
  Selezionare il percorso del pacchetto figlio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
 |valore|Descrizione|  
@@ -177,7 +177,7 @@ ms.locfileid: "71294186"
 |**SQL Server**|Impostare il percorso su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**File system**|Impostare il percorso sul file system.|  
   
- **Connessione**  
+ **Connection**  
  Selezionare il tipo di posizione di archiviazione del pacchetto figlio.  
   
  **PackageNameReadOnly**  
@@ -190,7 +190,7 @@ ms.locfileid: "71294186"
 #### <a name="location-dynamic-options"></a>Opzioni dinamiche relative al percorso  
   
 ##### <a name="location--sql-server"></a>Percorso = SQL Server  
- **Connessione**  
+ **Connection**  
  Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -199,7 +199,7 @@ ms.locfileid: "71294186"
  Digitare il nome del pacchetto figlio oppure fare clic sul pulsante con i puntini di sospensione (...) e quindi individuare il pacchetto.  
   
 ##### <a name="location--file-system"></a>Percorso = File system  
- **Connessione**  
+ **Connection**  
  Selezionare una gestione connessione file nell'elenco o fare clic su \<**Nuova connessione**> per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -218,7 +218,7 @@ ms.locfileid: "71294186"
  **Parametro o variabile di associazione**  
  Selezionare il parametro o la variabile contenente il valore che si desidera passare al pacchetto figlio.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su questa opzione per eseguire il mapping di un parametro o una variabile a un parametro del pacchetto figlio.  
   
  **Rimuovi**  

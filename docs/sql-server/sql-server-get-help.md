@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926953"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244412"
 ---
 # <a name="sql-server-help-and-feedback"></a>Guida e commenti di SQL Server
 
@@ -22,7 +22,7 @@ In questo articolo vengono illustrati diversi modi per ottenere assistenza per e
 
 ## <a name="contact-microsoft-support"></a>Contattare il supporto tecnico Microsoft
 
-I clienti con un piano di supporto possono [aprire un ticket](https://support.microsoft.com/en-us/hub/4343728/support-for-business) per il supporto tecnico Microsoft.  Per altre informazioni, vedere le [opzioni di supporto per le aziende](https://support.microsoft.com/en-us/help/4341255/support-for-business). 
+I clienti con un piano di supporto possono [aprire un ticket](https://support.microsoft.com/hub/4343728/support-for-business) per il supporto tecnico Microsoft.  Per altre informazioni, vedere le [opzioni di supporto per le aziende](https://support.microsoft.com/help/4341255/support-for-business). 
 
 I clienti che non dispongono di un piano di supporto possono richiedere assistenza alla community o inviare un bug tramite UserVoice all'indirizzo [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback).
 
@@ -38,7 +38,7 @@ In diversi forum MSDN è possibile trovare le risposte alle domande su SQL Serve
 - [Installazione e aggiornamento](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [Disponibilità elevata e ripristino di emergenza](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
 - [Strumenti di SQL Server](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [Security](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
+- [Sicurezza](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [Replica](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
 - [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
 - [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
@@ -63,7 +63,7 @@ Alcune community sono in grado di offrire assistenza per i problemi relativi a S
 - **Problemi di Azure Data Studio**: [Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
  
 
-###  <a name="sql-server-documentation"></a>Documentazione di SQL Server
+###  <a name="sql-server-documentation"></a>documentazione di SQL Server
 
 Il modo migliore per contattare il team del contenuto di SQL Server è tramite problemi Git. Nella parte inferiore della maggior parte delle pagine è disponibile un'opzione per inviare un problema Git: 
 

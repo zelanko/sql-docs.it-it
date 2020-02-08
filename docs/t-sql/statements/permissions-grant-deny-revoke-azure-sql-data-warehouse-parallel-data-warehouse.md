@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255471"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorizzazioni: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
@@ -36,7 +36,7 @@ ms.locfileid: "75255471"
   
 -   **REVOKE** rimuove le autorizzazioni **GRANT** o **DENY** esistenti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -242,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>Grafico delle autorizzazioni  
  Nel poster seguente sono rappresentate graficamente tutte le autorizzazioni. Il poster consente di visualizzare chiaramente la gerarchia nidificata delle autorizzazioni. Ad esempio, l'autorizzazione **ALTER ON LOGIN** può essere concessa singolarmente ma è inclusa anche nel caso in cui venga concessa l'autorizzazione **CONTROL** per l'account di accesso specifico oppure nel caso in cui venga concessa a un account di accesso l'autorizzazione **ALTER ANY LOGIN**.  
   
- ![Poster delle autorizzazioni di sicurezza APS](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
+ ![Poster delle autorizzazioni di sicurezza APS](../../t-sql/statements/media/aps-security-perms-poster.png "Poster delle autorizzazioni di sicurezza APS")  
   
  Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica ad **apsdoc\@microsoft.com**).  
   

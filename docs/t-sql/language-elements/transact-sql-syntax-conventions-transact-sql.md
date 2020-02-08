@@ -29,10 +29,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981908"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenzioni della sintassi Transact-SQL (Transact-SQL)
@@ -42,14 +42,14 @@ Nella tabella seguente vengono elencate e descritte le convenzioni utilizzate ne
   
 |Convenzione|Utilizzo|  
 |----------------|--------------|  
-|MAIUSCOLE|Parole chiave [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|LETTERE MAIUSCOLE|Parole chiave [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |_corsivo_|Parametri della sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] specificati dall'utente.|  
 |**grassetto**|Digitare nomi di database, tabelle, colonne, indici, stored procedure, utilità, tipi di dati e testo esattamente come indicato.|  
 |sottolineato|Indica il valore predefinito applicato quando la clausola che include il valore sottolineato viene omessa dall'istruzione.|  
 |&#124; (barra verticale)|Separazione di elementi sintattici racchiusi tra parentesi quadre o graffe. Indica che è possibile utilizzare solo uno degli elementi.|  
 |`[ ]` (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |{ } (parentesi graffe)|Elementi sintattici obbligatori. Le parentesi graffe non devono essere digitate.|  
-|[ **,** ..._n_]|Indica che l'elemento precedente può essere ripetuto _n_ volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
+|[ **,** ..._n_]|Indica che l'elemento precedente può essere ripetuto _n_ volte. Le occorrenze sono separate da virgole.|  
 |[..._n_]|Indica che l'elemento precedente può essere ripetuto _n_ volte. Le varie occorrenze dell'elemento sono separate da spazi.|  
 |;|Carattere di terminazione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Anche se per la maggior parte delle istruzioni in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è necessario usare il punto e virgola, questo requisito verrà introdotto in una versione futura.|  
 |\<label> ::=|Nome di un blocco della sintassi. Usare questa convenzione per raggruppare ed etichettare sezioni di sintassi estese oppure un'unità sintattica che è possibile usare in più posizioni di un'istruzione. Ogni posizione in cui si potrebbe usare il blocco di sintassi è indicata dall'etichetta racchiusa tra parentesi angolari: \<label>.<br /><br /> Un set è una raccolta di espressioni, ad esempio \<grouping set>, mentre un elenco è una raccolta di set, ad esempio \<composite element list>.|  

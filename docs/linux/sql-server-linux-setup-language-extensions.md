@@ -6,17 +6,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660774"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971218"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Installare le estensioni del linguaggio di SQL Server in Linux
 
@@ -86,7 +86,7 @@ Per ogni set di istruzioni di installazione specifico del sistema operativo, il 
 
 In un dispositivo connesso a Internet i pacchetti vengono scaricati e installati in modo indipendente dal motore di database usando il programma di installazione del pacchetto per ogni sistema operativo. Nella tabella seguente vengono descritti tutti i pacchetti disponibili.
 
-| Nome pacchetto | Applicabile a | Descrizione |
+| Nome del pacchetto | Applicabile a | Descrizione |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | Tutte le lingue | Framework di estendibilità usato per l'estensione del linguaggio Java |
 |mssql-server-extensibility-java | Java | Framework di estendibilità usato per l'estensione del linguaggio Java che include un runtime Java supportato |
@@ -262,19 +262,19 @@ Per la procedura di installazione dei pacchetti, seguire le istruzioni contenute
 
 |||
 |--|----|
-| Pacchetti mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Pacchetti mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Percorsi Ubuntu/16.04
 
 |||
 |--|----|
-| Pacchetti mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Pacchetti mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>Percorsi SUSE/12
 
 |||
 |--|----|
-| Pacchetti mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Pacchetti mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>Elenco di pacchetti
 

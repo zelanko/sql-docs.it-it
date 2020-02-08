@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041235"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72041235"
 
 Restituisce un valore numerico arrotondato alla lunghezza o alla precisione specificata.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,7 +63,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |Categoria **money** e **smallmoney**|**money**|  
 |Categoria **float** e **real**|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  La funzione ROUND restituisce sempre un valore. Se l'argomento *length* è negativo e maggiore del numero di cifre che precedono il separatore decimale, la funzione ROUND restituisce 0.  
   
 |Esempio|Risultato|  
@@ -77,11 +77,11 @@ ROUND ( numeric_expression , length [ ,function ] )
 |ROUND(748.58, -1)|750.00|  
 |ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|Genera un overflow aritmetico, perché 748.58 assume il valore decimal(5,2), tramite il quale non può essere restituito 1000.00.|  
-|Per un arrotondamento fino a 4 cifre, modificare il tipo di dati di input. Esempio:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|Per un arrotondamento fino a 4 cifre, modificare il tipo di dati di input. Ad esempio:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-round-and-estimates"></a>A. Utilizzo della funzione ROUND e delle stime  
+### <a name="a-using-round-and-estimates"></a>R. Utilizzo della funzione ROUND e delle stime  
  In questo esempio vengono utilizzate due espressioni per illustrare che con la funzione `ROUND` l'ultima cifra è sempre una stima.  
   
 ```  

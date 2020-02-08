@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e867584c9c9a0e50022d0964a1772ac2c3a1b1e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099976"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>Nome delle regole di confronto di SQL Server (Transact-SQL)
@@ -32,7 +32,7 @@ Singola stringa che specifica il nome regole di confronto per le regole di confr
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportate le regole di confronto di Windows. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inoltre supportato un numero limitato (<80) di regole di confronto definite regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sviluppate prima che le regole di confronto di Windows venissero supportate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono ancora supportate per la compatibilità con le versioni precedenti, ma è consigliabile non utilizzarle per nuovi progetti di sviluppo. Per altre informazioni sulle regole di confronto di Windows, vedere [Nome delle regole di confronto di Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -60,7 +60,7 @@ _CaseSensitivity_AccentSensitivity | _BIN
 
 **BIN** specifica che deve essere usato il tipo di ordinamento binario.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Osservazioni
 
 Per elencare le regole di confronto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportati dal server, eseguire la query seguente.
 
@@ -70,7 +70,7 @@ WHERE name LIKE 'SQL%';
 ```
 
 > [!NOTE]
-> Per l'ID del tipo di ordinamento 80, usare le regole di confronto di Windows desiderate con la tabella codici 1250 e l'ordinamento binario, Esempio: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.
+> Per l'ID del tipo di ordinamento 80, usare le regole di confronto di Windows desiderate con la tabella codici 1250 e l'ordinamento binario, Ad esempio: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -79,5 +79,5 @@ WHERE name LIKE 'SQL%';
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [table](../../t-sql/data-types/table-transact-sql.md)
+- [tabella](../../t-sql/data-types/table-transact-sql.md)
 - [sys.fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)

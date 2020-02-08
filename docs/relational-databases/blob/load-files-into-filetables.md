@@ -15,10 +15,10 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908704"
 ---
 # <a name="load-files-into-filetables"></a>Caricamento di file in FileTable
@@ -126,6 +126,6 @@ UPDATE PhotoMetadata
   
 ## <a name="see-also"></a>Vedere anche  
  [Accesso a tabelle FileTable tramite Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
- [Accedere alle tabelle FileTable con API di Input-Output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
+ [Accedere alle tabelle FileTable con API di input/output dei file](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   

@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19019a0493ef20aac9ab51090d64646d5d626185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041797"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68041797"
   
  Per una panoramica di tutti i tipi di dati e delle funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,15 +61,15 @@ SET DATEFIRST 7 ;
   
 |valore|Primo giorno della settimana|  
 |-----------|------------------------------|  
-|**1**|Lunedì|  
-|**2**|Martedì|  
-|**3**|Mercoledì|  
-|**4**|Giovedì|  
-|**5**|Venerdì|  
+|**1**|Monday|  
+|**2**|Tuesday|  
+|**3**|Wednesday|  
+|**4**|Thursday|  
+|**5**|Friday|  
 |**6**|Sabato|  
-|**7** (impostazione predefinita, Stati Uniti Inglese)|Domenica|  
+|**7** (impostazione predefinita, Stati Uniti Inglese)|Sunday|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Per visualizzare l'impostazione corrente di SET DATEFIRST, usare la funzione [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  L'opzione SET DATEFIRST viene impostata in fase di esecuzione, non in fase di analisi.  

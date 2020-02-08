@@ -20,10 +20,10 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113475"
 ---
 # <a name="plan-guides"></a>Guide di piano
@@ -56,7 +56,7 @@ BEGIN
 END;  
 ```  
   
- Si supponga che questa stored procedure è stata compilata e ottimizzata per `@Country_region = N'AU'` (Australia). Tuttavia, poiché sono presenti relativamente pochi ordini di vendita con origine in Australia, le prestazioni diminuiscono quando viene eseguita la query utilizzando i valori del parametro dei paesi con più ordini di vendita. Poiché il paese da cui proviene la maggior parte degli ordini di vendita sono gli Stati Uniti, un piano di query generato per `@Country_region = N'US'` offrirebbe probabilmente prestazioni migliori per tutti i possibili valori del parametro `@Country_region` .  
+ Si supponga che questa stored procedure è stata compilata e ottimizzata per `@Country_region = N'AU'` (Australia). Tuttavia, poiché sono presenti relativamente pochi ordini di vendita con origine in Australia, le prestazioni diminuiscono quando viene eseguita la query utilizzando i valori del parametro dei paesi con più ordini di vendita. Poiché la maggior parte degli ordini di vendita proviene dagli Stati Uniti, un piano di query generato per `@Country_region = N'US'` offrirebbe probabilmente prestazioni migliori per tutti i possibili valori del parametro `@Country_region`.  
   
  Per risolvere il problema è possibile modificare la stored procedure aggiungendo alla query l'hint `OPTIMIZE FOR` . Poiché la stored procedure si trova in un'applicazione distribuita, non è possibile modificare direttamente il codice dell'applicazione. È invece possibile creare la guida di piano seguente nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -162,9 +162,9 @@ where SalesOrderID =  @so_id',
 |----------|-----------|  
 |Viene descritto come creare una guida di piano.|[Creare una nuova guida di piano](../../relational-databases/performance/create-a-new-plan-guide.md)|  
 |Viene descritto come creare una guida di piano per le query con parametri.|[Creare una guida di piano per le query con parametri](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  
-|Viene descritto come controllare il comportamento di parametrizzazione delle query utilizzando guide di piano.|[Definizione delle funzionalità di parametrizzazione delle query tramite guide di piano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)|  
+|Viene descritto come controllare il comportamento di parametrizzazione delle query utilizzando guide di piano.|[Specificare il comportamento di parametrizzazione delle query tramite guide di piano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)|  
 |Viene descritto come includere un piano di query fisso in una guida di piano.|[Applicare un piano di query fisso a una guida di piano](../../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md)|  
-|Viene descritto come specificare hint per la query in una guida di piano.|[Associazione degli hint per le query a una guida di piano](../../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  
+|Viene descritto come specificare hint per la query in una guida di piano.|[Associare gli hint per le query a una guida di piano](../../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  
 |Viene descritto come visualizzare le proprietà di una guida di piano.|[Visualizzare le proprietà delle guide di piano](../../relational-databases/performance/view-plan-guide-properties.md)|  
 |Viene descritto come utilizzare SQL Server Profiler per creare e testare guide di piano.|[Usare SQL Server Profiler per creare e testare guide di piano](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Viene descritto come convalidare una guida di piano.|[Convalidare le guide di piano dopo l'aggiornamento](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  

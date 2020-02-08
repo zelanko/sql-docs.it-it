@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 926822356c6e7f9f4d775ca0710ee2f815c0e7f5
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094500"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database
@@ -35,7 +35,7 @@ ms.locfileid: "74094500"
 ###  <a name="Prerequisites"></a> Prerequisiti  
  Le nuove tabelle per archiviare i dati dell'archivio possono trovarsi in un database di archiviazione speciale. In alternativa le righe possono essere esportate in un file di testo.  
    
-###  <a name="Recommendations"></a> Raccomandazioni  
+###  <a name="Recommendations"></a> Indicazioni  
  Nell'ambiente di produzione è consigliabile aggiungere un ulteriore controllo degli errori e inviare un messaggio di posta elettronica agli operatori se l'esecuzione del processo non viene completata.  
   
   
@@ -72,7 +72,7 @@ ms.locfileid: "74094500"
   
 5.  Nella casella **Descrizione** digitare **Archiviazione messaggi di Posta elettronica database**, quindi fare clic su **Passaggi**.  
 
- [Panoramica](#Process_Overview)  
+ [Overview](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>Per creare un passaggio per l'archiviazione dei messaggi di Posta elettronica database  
   
@@ -98,7 +98,7 @@ ms.locfileid: "74094500"
   
 6.  Fare clic su **OK** per salvare il passaggio.  
   
- [Panoramica](#Process_Overview)  
+ [Overview](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>Per creare un passaggio per l'archiviazione degli allegati di Posta elettronica database  
   
@@ -125,7 +125,7 @@ ms.locfileid: "74094500"
   
 6.  Fare clic su **OK** per salvare il passaggio.  
   
- [Panoramica](#Process_Overview)  
+ [Overview](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>Per creare un passaggio per l'archiviazione del log di Posta elettronica database  
   
@@ -152,7 +152,7 @@ ms.locfileid: "74094500"
   
 6.  Fare clic su **OK** per salvare il passaggio.  
   
- [Panoramica](#Process_Overview)  
+ [Overview](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>Per creare un passaggio per la rimozione da Posta elettronica database delle righe archiviate  
   
@@ -174,7 +174,7 @@ ms.locfileid: "74094500"
   
 6.  Fare clic su **OK** per salvare il passaggio.  
   
- [Panoramica](#Process_Overview)  
+ [Overview](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>Per creare un passaggio per la rimozione dal log eventi di Posta elettronica database degli elementi archiviati  
   
@@ -194,7 +194,7 @@ ms.locfileid: "74094500"
   
 5.  Fare clic su **OK** per salvare il passaggio.  
   
- [Panoramica](#Process_Overview)  
+ [Overview](#Process_Overview)  
   
 ## <a name="to-schedule-the-job-to-run-periodically"></a>Per pianificare l'esecuzione periodica del processo  
   
@@ -214,6 +214,6 @@ ms.locfileid: "74094500"
   
 8.  Fare clic su **OK** per salvare il processo.  
   
- [Panoramica](#Process_Overview)  
+ [Overview](#Process_Overview)  
   
   

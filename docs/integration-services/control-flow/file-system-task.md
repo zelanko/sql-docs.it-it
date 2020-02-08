@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294132"
 ---
 # <a name="file-system-task"></a>Attività File system
@@ -40,14 +40,14 @@ ms.locfileid: "71294132"
 |---------------|-----------------|  
 |Copia directory|Copia una cartella da un percorso a un altro.|  
 |Copia file|Copia un file da un percorso a un altro.|  
-|Crea directory|Crea una cartella in un percorso specificato.|  
+|Creare la directory|Crea una cartella in un percorso specificato.|  
 |Elimina directory|Elimina una cartella in un percorso specificato.|  
 |Elimina contenuto directory|Elimina tutti i file e le cartelle contenute in una cartella.|  
 |Elimina file|Elimina un file in un percorso specificato.|  
 |Sposta directory|Sposta una cartella da un percorso a un altro.|  
 |Sposta file|Sposta un file da un percorso a un altro.|  
 |Rinomina file|Rinomina un file in un percorso specificato.|  
-|Imposta attributi|Imposta attributi su file e cartelle. Tali attributi includono Archive, Hidden, Normal, ReadOnly e System. Normal indica la mancanza di attributi e non può essere combinato con altri attributi. Tutti gli altri attributi possono essere utilizzati in combinazione.|  
+|Impostare gli attributi|Imposta attributi su file e cartelle. Tali attributi includono Archive, Hidden, Normal, ReadOnly e System. Normal indica la mancanza di attributi e non può essere combinato con altri attributi. Tutti gli altri attributi possono essere utilizzati in combinazione.|  
   
  L'attività File system opera su un singolo file o directory. Pertanto, questa attività non supporta l'utilizzo di caratteri jolly per eseguire la stessa operazione su più file. Affinché l'attività File system ripeta un'operazione su più file o directory, inserire l'attività File system in un contenitore Ciclo Foreach, come descritto nella procedura seguente:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "71294132"
  È necessario specificare una gestione connessione di origine e di destinazione impostando le proprietà SourceConnection e DestinationConnection. È possibile specificare i nomi delle gestioni connessione file che puntano ai file utilizzati dall'attività come origine o come destinazione oppure, se i percorsi dei file sono archiviati in variabili, è possibile specificare i nomi delle variabili. Per usare variabili per l'archiviazione dei percorsi dei file, è innanzitutto necessario impostare su **True**l'opzione IsSourcePathVariable per la connessione di origine e l'opzione IsDestinationPathVariable per la connessione di destinazione. È quindi possibile scegliere quali variabili utilizzare tra le variabili di sistema o definite dall'utente esistenti, oppure creare nuove variabili. Nella finestra di dialogo **Aggiungi variabile** è possibile configurare e specificare l'ambito delle variabili. L'ambito deve essere l'attività File system o un contenitore padre. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 > [!NOTE]  
->  Per eseguire l'override delle variabili selezionate per le proprietà **SourceConnection** e **DestinationConnection**, immettere un'espressione per le proprietà **Source** e **Destination**. Le espressioni devono essere immesse nella pagina **Espressioni** di **Editor attività File system**. Ad esempio, per impostare il percorso dei file utilizzati dall'attività come destinazione, potrebbe essere necessario utilizzare la variabile A in determinate condizione e la variabile B in altre.  
+>  Per eseguire l'override delle variabili selezionate per le proprietà **SourceConnection** e **DestinationConnection** , immettere un'espressione per le proprietà **Source** e **Destination** . Le espressioni devono essere immesse nella pagina **Espressioni** di **Editor attività File system**. Ad esempio, per impostare il percorso dei file utilizzati dall'attività come destinazione, potrebbe essere necessario utilizzare la variabile A in determinate condizione e la variabile B in altre.  
   
 > [!NOTE]  
 >  L'attività File system opera su un singolo file o directory. Pertanto, questa attività non supporta l'utilizzo di caratteri jolly per eseguire la stessa operazione su più file o directory. Affinché l'attività File system ripeta un'operazione su più file o directory, inserirla in un contenitore Ciclo Foreach. Per altre informazioni, vedere [Attività File system](../../integration-services/control-flow/file-system-task.md).  
@@ -116,14 +116,14 @@ ms.locfileid: "71294132"
  **Descrizione**  
  Consente di digitare una descrizione dell'attività File system.  
   
- **Operazione**  
+ **operazione**  
  Consente di selezionare l'operazione di file system da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**Copia directory**|Consente di copiare una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.|  
 |**Copia file**|Consente di copiare un file. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine e la destinazione.|  
-|**Crea directory**|Consente di creare una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per una directory di origine e di destinazione.|  
+|**Crea directory**|Creare una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per una directory di origine e di destinazione.|  
 |**Elimina directory**|Consente di eliminare una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine.|  
 |**Elimina contenuto directory**|Consente di eliminare il contenuto di una directory. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine.|  
 |**Elimina file**|Consente di eliminare un file. Quando si seleziona questo valore vengono visualizzate le opzioni dinamiche per l'origine.|  
@@ -177,10 +177,10 @@ ms.locfileid: "71294132"
  **ReadOnly**  
  Consente di specificare se il file è di sola lettura.  
   
- **Archive**  
+ **Archiviazione**  
  Consente di specificare se il file o la directory è pronta per l'archiviazione.  
   
- **Di sistema**  
+ **Sistema**  
  Consente di specificare se il file è un file di sistema.  
   
 #### <a name="operation--create-directory"></a>Operation = Crea directory  

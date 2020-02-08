@@ -41,10 +41,10 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982789"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -333,7 +333,7 @@ Valore predefinito del parametro. Se viene definito un valore *default*, è poss
   
  Nelle funzioni inline con valori di tabella il valore restituito TABLE viene definito tramite una sola istruzione SELECT. Alle funzioni inline non sono associate variabili restituite.  
   
- <a name="mstvf"></a> Nelle funzioni con valori di tabella con istruzioni multiple \@*return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione. È possibile specificare \@ *return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
+ <a name="mstvf"></a> Nelle funzioni con valori di tabella con istruzioni multiple \@*return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione. È possibile specificare \@*return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
   
  *select_stmt*  
  Istruzione SELECT che definisce il valore restituito di una funzione inline con valori di tabella.  
@@ -670,7 +670,7 @@ La clausola `ORDER` non garantisce risultati ordinati quando viene eseguita una 
 > [!NOTE]
 > Per altri esempi e considerazioni sulle prestazioni delle funzioni definite dall'utente, vedere [Creare funzioni definite dall'utente &#40;Motore di database&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
 
-### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>A. Utilizzo di una funzione definita dall'utente a valori scalari per il calcolo della settimana ISO  
+### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>R. Utilizzo di una funzione definita dall'utente a valori scalari per il calcolo della settimana ISO  
  Nell'esempio seguente viene creata la funzione definita dall'utente `ISOweek`. Questa funzione calcola il numero di settimana ISO in base a un argomento di data specificato. Per consentire alla funzione di eseguire il calcolo correttamente, è necessario richiamare `SET DATEFIRST 1` prima della funzione.  
   
  L'esempio illustra anche l'uso della clausola [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) per specificare il contesto di protezione in cui è possibile eseguire una stored procedure. Nell'esempio, l'opzione `CALLER` specifica che la procedura verrà eseguita nel contesto dell'utente che l'ha richiamata. Le altre opzioni che è possibile specificare sono `SELF`, `OWNER` e *user_name*.  

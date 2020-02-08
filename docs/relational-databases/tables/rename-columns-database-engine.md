@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082579"
 ---
 # <a name="rename-columns-database-engine"></a>Ridenominazione di colonne (motore di database)
@@ -34,7 +34,7 @@ ms.locfileid: "68082579"
 
    [Limitazioni e restrizioni](#Restrictions)
 
-   [Security](#Security)
+   [Sicurezza](#Security)
 
 - **Per rinominare colonne utilizzando:**
 
@@ -66,7 +66,7 @@ Se una colonna viene ridenominata, i riferimenti a tale colonna non vengono ride
 
 1. In **Esplora oggetti**fare clic con il pulsante destro del mouse sulla tabella di cui si vuole rinominare le colonne e selezionare **Progetta**.
 2. In **Nome colonna**, selezionare il nome da cambiare e digitarne uno nuovo.
-3. Scegliere **Salva** _nome tabella_ dal menu **File**.
+3. Nel menu **File** fare clic su **Salva** _nome tabella_.
 
 > [!NOTE]
 > Per cambiare il nome di una colonna, è anche possibile utilizzare la scheda **Proprietà colonne** . A tale scopo, selezionare la colonna di cui si desidera cambiare il nome e digitare un nuovo valore per **Nome**.

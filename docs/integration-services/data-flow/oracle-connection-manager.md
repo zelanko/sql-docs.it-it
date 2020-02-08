@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 092760fdd99a6840e77278fce96e2d321ea4edc9
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553253"
 ---
 # <a name="oracle-connection-manager"></a>Gestione connessione Oracle
@@ -78,9 +78,9 @@ In Gestione connessione Oracle sono disponibili le proprietà personalizzate seg
 
 - **EnableDetailedTracing**: non usata.
 
-- **OracleHome**: specificare il nome 32-bit Oracle Home o la cartella che verrà usata dal connettore. (Facoltativo)
+- **OracleHome**: specificare il nome 32-bit Oracle Home o la cartella che verrà usata dal connettore. Facoltativa
 
-- **OracleHome64**: specificare il nome 64-bit Oracle Home o la cartella che verrà usata dal connettore in esecuzione in modalità a 64 bit. (Facoltativo)
+- **OracleHome64**: specificare il nome 64-bit Oracle Home o la cartella che verrà usata dal connettore in esecuzione in modalità a 64 bit. Facoltativa
 
 Le proprietà personalizzate non sono elencate in Editor gestione connessione Oracle. Per impostare le proprietà **OracleHome** e **OracleHome64**:
 

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727706"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemi comuni con il servizio Launchpad e l'esecuzione di script esterni in SQL Server
@@ -131,9 +131,9 @@ Se è stato installato e abilitato il Machine Learning, ma si riceve questo erro
 
 4. Il riavvio del servizio in genere corregge il problema, permettendo l'esecuzione di script di Machine Learning. Se il riavvio non risolve il problema, prendere nota del percorso e degli argomenti nella proprietà **Percorso binario**, quindi procedere come segue:
 
-    A. Esaminare il file .config dell'utilità di avvio e verificare che la directory di lavoro sia valida.
+    a. Esaminare il file .config dell'utilità di avvio e verificare che la directory di lavoro sia valida.
 
-    B. Verificare che il gruppo di Windows usato da Launchpad possa connettersi all'istanza di SQL Server.
+    b. Verificare che il gruppo di Windows usato da Launchpad possa connettersi all'istanza di SQL Server.
 
     c. Se si apportano modifiche alle proprietà del servizio, riavviare Launchpad.
 

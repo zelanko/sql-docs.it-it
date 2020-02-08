@@ -11,10 +11,10 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296042"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Lezione 2-2: Aggiungere e configurare il contenitore Ciclo Foreach
@@ -48,7 +48,7 @@ Dopo aver apportato tali modifiche al pacchetto, quando questo viene eseguito, i
   
 3.  Fare clic con il pulsante destro del mouse sul nuovo **Contenitore Ciclo Foreach** e scegliere **Modifica**.  
   
-4.  Nella pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** immettere **Foreach File in Folder** per **Nome**. Fare clic su **OK**.  
+4.  Nella pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** immettere **Foreach File in Folder** per **Nome**. Selezionare **OK**.  
   
 5.  Fare clic con il pulsante destro del mouse sul contenitore Ciclo Foreach, scegliere **Proprietà** e verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti)** nella finestra **Proprietà**.  
   
@@ -77,7 +77,7 @@ Dopo aver apportato tali modifiche al pacchetto, quando questo viene eseguito, i
     > [!NOTE]  
     > Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
-4.  Fare clic su **OK**.  
+4.  Selezionare **OK**.  
   
 5.  Selezionare di nuovo **OK** per chiudere la finestra di dialogo **Editor ciclo Foreach**.  
   

@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228418"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Posta elettronica database: Posta elettronica accodata, non recapitata 
@@ -52,7 +52,7 @@ Se la vista **sysmail_event_log** contiene errori, verificare lo stato dei messa
 
 ## <a name="message-status-unsent"></a>Stato del messaggio non inviato 
 
-Lo stato **non inviato** indica che il [programma esterno Posta elettronica database](database-mail-external-program.md) non ha ancora elaborato il messaggio. È possibile che il programma sia in ritardo con l'elaborazione dei messaggi. La velocità di elaborazione dipende dalle condizioni della rete, dal timeout fra i tentativi di invio, dal volume dei messaggi e dalla capacità del server SMTP. Se il problema persiste, è consigliabile usare più di un profilo per distribuire i messaggi tra più server SMTP.
+Lo stato **non inviato** indica che il [programma esterno Posta elettronica database](database-mail-external-program.md) non ha ancora elaborato il messaggio. È possibile che il programma sia in ritardo con l'elaborazione dei messaggi. La velocità di elaborazione dipende dalle condizioni della rete, dal timeout fra i tentativi di invio, dal volume dei messaggi e dalla capacità del server SMTP. Se il problema persiste, è consigliabile utilizzare più di un profilo per la distribuzione di messaggi fra più server SMTP.
 
 Controllare la data dell'ultimo recapito senza errori. Se è trascorso del tempo dall'ultimo recapito senza errori, controllare la vista sysmail_event_log per verificare che il programma esterno sia stato avviato in modo corretto da Service Broker. Se durante l'ultimo tentativo il programma esterno non è stato avviato, verificare che il programma esterno Posta elettronica database si trovi nella directory corretta e che l'account del servizio per SQL Server abbia l'autorizzazione per l'avvio dell'eseguibile.
 
@@ -61,15 +61,15 @@ Controllare la data dell'ultimo recapito senza errori. Se è trascorso del tempo
 
 ## <a name="message-status-retrying"></a>Stato del messaggio nuovo tentativo in corso
 
-Questo stato indica che Posta elettronica database ha tentato di recapitare il messaggio al server SMTP, ma l'operazione non è riuscita. In genere, questo problema è causato da un'interruzione di rete, un errore sul server SMTP o un account di Posta elettronica database configurato in modo non corretto. L'invio del messaggio dovrebbe alla fine riuscire o non riuscire e verrà pubblicato un messaggio nel registro eventi.
+Questo stato indica che Posta elettronica database ha tentato di recapitare il messaggio al server SMTP, ma l'operazione non è riuscita. In genere, questo problema è causato da un'interruzione di rete, un errore sul server SMTP o un account di Posta elettronica database configurato in modo non corretto. Alla fine il messaggio dovrebbe riuscire o non riuscire e pubblicare un messaggio nel log eventi.
 
 ## <a name="message-status-sent"></a>Stato del messaggio inviato
 
-Lo stato **inviato** indica che il programma esterno Posta elettronica database ha recapitato correttamente il messaggio al server SMTP. Se il messaggio non è giunto a destinazione, il server SMTP ha accettato il messaggio da Posta elettronica database, ma non lo ha recapitato al destinatario finale. Verificare i log del server SMTP oppure rivolgersi all'amministratore del server SMTP. È anche possibile eseguire un test del server di posta elettronica SMTP utilizzando un altro client, ad esempio Outlook Express.
+Lo stato **inviato** indica che il programma esterno Posta elettronica database ha recapitato correttamente il messaggio al server SMTP. Se il messaggio non è giunto a destinazione, il server SMTP ha accettato il messaggio da Posta elettronica database, ma non lo ha recapitato al destinatario finale. Verificare i log del server SMTP, oppure rivolgersi all'amministratore del server SMTP. È inoltre possibile eseguire un test del server di posta elettronica SMTP utilizzando un altro client, ad esempio Outlook Express.
 
 ## <a name="message-status-failed"></a>Stato del messaggio non riuscito
 
-Lo stato non riuscito indica che il programma esterno Posta elettronica database non è stato in grado di recapitare il messaggio al server SMTP. In questo caso, la vista **sysmail_event_log** contiene informazioni dettagliate provenienti dal programma esterno. Per un esempio di query che unisce **sysmail_faileditems** e **sysmail_event_log** per recuperare i messaggi di errore dettagliati, vedere [Controllare lo stato di messaggi di posta elettronica inviati con Posta elettronica database](check-the-status-of-e-mail-messages-sent-with-database-mail.md). Le cause di errore più frequenti sono la presenza di un indirizzo di destinazione errato oppure problemi di rete che impediscono al programma esterno di raggiungere uno o più account di failover. È anche possibile che la posta venga respinta per problemi specifici a livello del server SMTP. Usando Configurazione guidata Posta elettronica database, modificare l'impostazione dell'opzione **Livello di registrazione** su **Dettagliato** e inviare un messaggio di prova per individuare il punto di errore.
+Lo stato non riuscito indica che il programma esterno Posta elettronica database non è stato in grado di recapitare il messaggio al server SMTP. In questo caso, la vista **sysmail_event_log** contiene informazioni dettagliate provenienti dal programma esterno. Per un esempio di query che unisce **sysmail_faileditems** e **sysmail_event_log** per recuperare i messaggi di errore dettagliati, vedere [Controllare lo stato di messaggi di posta elettronica inviati con Posta elettronica database](check-the-status-of-e-mail-messages-sent-with-database-mail.md). Le cause di errore più frequenti sono la presenza di un indirizzo di destinazione errato oppure problemi di rete che impediscono al programma esterno di raggiungere uno o più account di failover. È inoltre possibile che la posta venga respinta per problemi specifici a livello del server SMTP. Usando Configurazione guidata Posta elettronica database, modificare l'impostazione dell'opzione **Livello di registrazione** su **Dettagliato** e inviare un messaggio di prova per individuare il punto di errore.
 
 
 

@@ -37,10 +37,10 @@ ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7f0d3d07f6f4a0ef3a35991c4805c478ed702bdf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982439"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
@@ -54,7 +54,7 @@ Le istruzioni DBCC sono suddivise nelle categorie seguenti.
 |---|---|
 |Manutenzione|Attività di manutenzione di un database, un indice o un filegroup.|  
 |Varie|Attività varie, ad esempio l'attivazione di flag di traccia o la rimozione di una DLL dalla memoria.|  
-|Istruzioni informative|Attività mirate alla raccolta e alla visualizzazione di vari tipi di informazioni.|  
+|Informativo|Attività mirate alla raccolta e alla visualizzazione di vari tipi di informazioni.|  
 |Convalida|Operazioni di convalida di un database, una tabella, un indice, un catalogo, un filegroup o dell'allocazione delle pagine del database.|  
   
 I comandi DBCC accettano parametri di input e restituiscono valori. Tutti i parametri dei comandi DBCC accettano valori letterali sia Unicode che DBCS.

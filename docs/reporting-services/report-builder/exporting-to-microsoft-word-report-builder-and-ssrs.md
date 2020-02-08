@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413560"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688204"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
 
@@ -55,7 +55,7 @@ ms.locfileid: "66413560"
   
 |Proprietà degli elementi del report|Descrizione|  
 |-------------------------------|-----------------|  
-|Report Title (titolo del report)|Title|  
+|Report Title (titolo del report)|Titolo|  
 |Report.Author|Autore|  
 |Report.Description|Commenti|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66413560"
   
 -   **Espressione complessa:**  l'espressione è `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Espressione con sequenze di testo:** testo, **Average Sales**, espressione,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, testo, **Page Number**ed espressione `=Globals!PageNumber`  
+-   **Espressione con sequenze di testo:** testo, **vendite medie** ed espressione, `=Avg(Fields!YTDPurchase.Value, "Sales)` e testo, **numero di pagina** ed espressione `=Globals!PageNumber`  
   
  Per evitare questo problema, usare più sequenze di testo invece di una sola espressione complessa quando si usano espressioni nei piè di pagina e nelle intestazioni. Le due espressioni seguenti sono equivalenti. La prima è un'espressione complessa, mentre nella seconda vengono utilizzate sequenze di testo. Il renderer di Word consente di analizzare correttamente solo la seconda espressione.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66413560"
 > [!IMPORTANT]  
 >  L'estensione doc per il rendering di [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 è deprecata. Per altre informazioni, vedere [Funzionalità deprecate di SQL Server Reporting Services in SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Il rendering di Word è compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 grazie al [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack per i formati di file Word, Excel e PowerPoint. Per altre informazioni, vedere [Microsoft Office Compatibility Pack per i formati di file Word, Excel e PowerPoint](https://www.microsoft.com/download/details.aspx?id=12439).  
+ Il rendering di Word è compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 grazie al [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack per i formati di file Word, Excel e PowerPoint. Per altre informazioni, vedere [Microsoft Office Compatibility Pack per i formati di file Word, Excel e PowerPoint](https://www.microsoft.com/download/details.aspx?id=1285).
   
  La versione precedente dell'estensione per il rendering di Word, compatibile con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, è rinominata Word 2003. Per impostazione predefinita, è disponibile solo l'estensione per il rendering di Word. È necessario aggiornare i file di configurazione di Reporting Services per rendere disponibile l'estensione per il rendering di Word 2003. Il tipo di contenuto dei file generati dal renderer di Word 2003 è **application/vnd.ms-word** e l'estensione dei file è doc.  
   

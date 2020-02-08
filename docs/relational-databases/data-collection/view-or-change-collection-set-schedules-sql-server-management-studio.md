@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055325"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Visualizzazione o modifica delle pianificazioni dei set di raccolta (SQL Server Management Studio)
@@ -49,7 +49,7 @@ ms.locfileid: "74055325"
   
 2.  Fare clic con il pulsante destro del mouse su un set di raccolta che usa una modalità cache, ad esempio **Statistiche query**e scegliere **Proprietà** per aprire la finestra di dialogo [Proprietà set di raccolta dati](#CollectionSet) .  
   
-3.  Per modificare la frequenza di raccolta, utilizzare la pagina **Generale** . A tale scopo, eseguire le operazioni seguenti:  
+3.  Per modificare la frequenza di raccolta, utilizzare la pagina **Generale** . A questo scopo, seguire questa procedura:  
   
     1.  Nel riquadro dei dettagli fare doppio clic sul numero visualizzato per la colonna **Frequenza di raccolta (sec)** nella tabella **Elementi della raccolta** .  
   

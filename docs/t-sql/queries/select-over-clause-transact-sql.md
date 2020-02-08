@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981701"
 ---
 # <a name="select---over-clause-transact-sql"></a>Clausola SELECT - OVER (Transact-SQL)
@@ -188,7 +188,7 @@ Se viene specificato ROWS/RANGE e \<window frame preceding> viene usato come \<w
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. Utilizzo della clausola OVER con la funzione ROW_NUMBER  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>R. Utilizzo della clausola OVER con la funzione ROW_NUMBER  
  Nell'esempio seguente viene illustrato l'utilizzo della clausola OVER con la funzione ROW_NUMBER per visualizzare un numero di riga per ogni riga all'interno di una partizione. La clausola ORDER BY specificata nella clausola OVER ordina le righe in ogni partizione in base alla colonna `SalesYTD`. La clausola ORDER BY nell'istruzione SELECT determina l'ordine in cui viene restituito l'intero set di risultati della query.  
   
 ```sql  

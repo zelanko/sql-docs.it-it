@@ -12,10 +12,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
 ms.openlocfilehash: 2269c594bd0fff036d4fe5d5d722aa5d78d4ca6d
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75883990"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Dashboard dell'istanza gestita di database SQL di Azure per Azure Data Studio (anteprima)

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896957"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Gestire i certificati in SQL Server Integration Services Scale Out
@@ -47,7 +47,7 @@ Creare e installare un nuovo certificato SLL nel nodo master con il comando segu
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
-Esempio:
+Ad esempio:
 
 ```dos
 MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -60,7 +60,7 @@ Controllare l'associazione originale con il comando seguente:
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
-Esempio:
+Ad esempio:
 
 ```dos
 netsh http show sslcert ipport=0.0.0.0:8391
@@ -73,7 +73,7 @@ netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
-Esempio:
+Ad esempio:
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:8391
@@ -88,9 +88,9 @@ Aggiornare il file di configurazione del servizio Scale Out Master `\<drive\>:\P
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Ricollegare le istanze di Scale Out Worker a Scale Out Master
 Per ogni istanza di Scale Out Worker, eliminare il ruolo di lavoro e aggiungerlo di nuovo usando [Scale Out Manager](integration-services-ssis-scale-out-manager.md) oppure eseguire le operazioni seguenti:
 
-A.  Installare il certificato SSL client nell'archivio Radice del computer locale nel nodo di lavoro.
+a.  Installare il certificato SSL client nell'archivio Radice del computer locale nel nodo di lavoro.
 
-B.  Aggiornare il file di configurazione del servizio Scale Out Worker.
+b.  Aggiornare il file di configurazione del servizio Scale Out Worker.
 
 Aggiornare il file di configurazione del servizio Scale Out Worker `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` nel nodo di lavoro. Aggiornare **MasterHttpsCertThumbprint** all'identificazione personale del nuovo certificato SSL.
 
@@ -111,7 +111,7 @@ Creare e installare un certificato con il comando seguente:
 MakeCert.exe -n CN={worker machine name};CN={worker machine ip} SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
 
-Esempio:
+Ad esempio:
 
 ```dos
 MakeCert.exe -n CN=WorkerMachine;CN=10.0.2.8 SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
@@ -127,7 +127,7 @@ certmgr.exe /del /c /s /r localmachine My /n {CN of the old certificate}
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the new certificate} -a {the account running Scale Out Worker service}
 ```
 
-Esempio:
+Ad esempio:
 
 ```dos
 certmgr.exe /del /c /s /r localmachine My /n WorkerMachine

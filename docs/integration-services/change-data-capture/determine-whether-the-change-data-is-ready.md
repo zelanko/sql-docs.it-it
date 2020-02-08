@@ -13,10 +13,10 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294767"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Come determinare se i dati delle modifiche sono pronti
@@ -102,9 +102,9 @@ ms.locfileid: "71294767"
   
 1.  Aggiungere un'attività Esegui SQL all'interno del contenitore Ciclo For.  
   
-2.  Nella pagina **Generale**di **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+2.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
-    1.  Per **ResultSet**selezionare **Riga singola**.  
+    1.  Per **ResultSet**, selezionare **Riga singola**.  
   
     2.  Configurare una connessione valida al database di origine.  
   
@@ -179,9 +179,9 @@ ms.locfileid: "71294767"
   
     4.  Selezionare **AND logico. Se questa opzione non è già selezionata, tutti i vincoli devono restituire il valore True**.  
   
-4.  Nella pagina**Script** di **Editor attività Script** per **ReadOnlyVariables** selezionare dall'elenco la variabile di tipo integer **User::DelaySeconds**.  
+4.  Nella pagina **Script**di **Editor attività Script** per **ReadOnlyVariables**selezionare dall'elenco la variabile di tipo integer **User::DelaySeconds** .  
   
-5.  Nella pagina **Script**di **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
+5.  Nella pagina **Script**in **Editor attività Script** fare clic su **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   
 6.  Nella routine Main immettere una delle righe di codice seguenti:  
   
@@ -203,7 +203,7 @@ ms.locfileid: "71294767"
         > [!NOTE]  
         >  Come argomento del metodo **Thread.Sleep** è previsto un argomento specificato in millisecondi.  
   
-7.  Lasciare la linea di codice predefinita, che restituisce **DtsExecResult.Success** dall'esecuzione dello script.  
+7.  Lasciare la riga di codice predefinita, che restituisce **DtsExecResult.Success** dall'esecuzione dello script.  
   
 8.  Chiudere l'ambiente di sviluppo dello script ed **Editor attività Script**.  
   
@@ -221,21 +221,21 @@ ms.locfileid: "71294767"
   
          Il valore **Esito positivo** del vincolo si riferisce al risultato dell'attività Esegui SQL precedente.  
   
-    3.  Per **Espressione** immettere `@DataReady == 0`.  
+    3.  Per **Espressione**, immettere `@DataReady == 0`.  
   
     4.  Selezionare **AND logico. Se questa opzione non è già selezionata, tutti i vincoli devono restituire il valore True**.  
   
          Questa opzione richiede che entrambe le condizioni, il vincolo e l'espressione, siano True.  
   
-4.  Nella pagina **Generale**di **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
+4.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
-    1.  Per **ResultSet**selezionare **Riga singola**.  
+    1.  Per **ResultSet**, selezionare **Riga singola**.  
   
     2.  Configurare una connessione valida al database di origine.  
   
     3.  Per **SQLSourceType**, selezionare **Input diretto**.  
   
-    4.  Per **SQLStatement**, immettere l'istruzione SQL seguente:  
+    4.  Per **SQLStatement**immettere l'istruzione SQL seguente:  
   
         ```  
         WAITFOR DELAY ?  
@@ -335,7 +335,7 @@ ms.locfileid: "71294767"
   
 8.  Chiudere l'ambiente di sviluppo dello script ed **Editor attività Script**.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo avere determinato che i dati delle modifiche sono pronti, il passaggio successivo consiste nel prepararsi a eseguire una query per tali dati delle modifiche.  
   
  **Argomento successivo:** [Preparare l'esecuzione di una query per i dati delle modifiche](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

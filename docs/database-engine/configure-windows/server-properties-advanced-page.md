@@ -13,10 +13,10 @@ ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1672b245f061f521c9114bca71f723fe75553c96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025588"
 ---
 # <a name="server-properties---advanced-page"></a>Proprietà server (pagina Avanzate)
@@ -35,7 +35,7 @@ ms.locfileid: "68025588"
  **Livello di accesso FILESTREAM**  
  Indica il livello corrente del supporto FILESTREAM nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per modificare il livello di accesso, selezionare uno dei valori seguenti:  
   
- **Disabilitata**  
+ **Disabilitato**  
  I dati di oggetti binari di grandi dimensioni (BLOB) non possono essere archiviati nel file system. Si tratta del valore predefinito.  
   
  **Accesso Transact-SQL abilitato**  
@@ -77,10 +77,10 @@ ms.locfileid: "68025588"
   
  Se un catalogo full-text non è disponibile, gli indici full-text associati vengono ricreati. Questa opzione è disponibile solo per i database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- **Ricompilazione**  
+ **Ricostruzione**  
  I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker ottimizzati. La ricompilazione degli indici può richiedere tempo e dopo l'aggiornamento potrebbe essere necessaria una quantità significativa di CPU e di memoria.  
   
- **Reimposta**  
+ **Reimpostazione**  
  I cataloghi full-text vengono ripristinati. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] I file del catalogo full-text vengono rimossi, ma i metadati per i cataloghi e per gli indici full-text vengono mantenuti. Dopo l'aggiornamento, in tutti gli indici full-text il rilevamento delle modifiche viene disabilitato e le ricerche per indicizzazione non vengono avviate automaticamente. Il catalogo resterà vuoto fino a quando non si eseguirà manualmente un popolamento completo al termine dell'aggiornamento.  
   
  Per informazioni sulla scelta dell'opzione di aggiornamento full-text, vedere [Aggiornamento della ricerca full-text](../../relational-databases/search/upgrade-full-text-search.md).  
@@ -113,7 +113,7 @@ ms.locfileid: "68025588"
   
  La modifica dell'impostazione diventa effettiva immediatamente.  
   
-## <a name="parallelism"></a>Parallelismo  
+## <a name="parallelism"></a>Parallelism (Parallelismo):  
  **Cost Threshold for Parallelism**  
  Consente di specificare la soglia oltre la quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea ed esegue piani paralleli per le query. Il costo equivale al tempo (in secondi) stimato per l'esecuzione del piano seriale in una configurazione hardware specifica. Impostare questa opzione solo su multiprocessori simmetrici. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md).  
   

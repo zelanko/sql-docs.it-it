@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077437"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
@@ -30,7 +30,7 @@ L'esercitazione include le attività seguenti:
 > * Creare l'account di accesso di [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] e le autorizzazioni per Pacemaker.
 > * Creare risorse dei gruppi di disponibilità in un cluster Pacemaker (solo di tipo Esterno).
 
-## <a name="prerequisite"></a>Prerequisiti
+## <a name="prerequisite"></a>Prerequisito
 - Distribuire il cluster a disponibilità elevata Pacemaker come descritto in [Distribuire un cluster Pacemaker per SQL Server in Linux](sql-server-linux-deploy-pacemaker-cluster.md).
 
 
@@ -324,11 +324,11 @@ Questa sezione illustra come creare un gruppo di disponibilità con un tipo di c
 
 2.  Nella finestra di dialogo Introduzione fare clic su **Avanti**.
 
-3.  Nella finestra di dialogo Specificare le opzioni del gruppo di disponibilità immettere un nome per il gruppo di disponibilità e selezionare il tipo di cluster ESTERNO o NESSUNO nell'elenco a discesa. Per distribuire Pacemaker occorre usare il tipo Esterno. Il tipo Nessuno è riservato per scenari specializzati, come la scalabilità in lettura. La selezione dell'opzione per il rilevamento dell'integrità a livello di database è facoltativa. Per altre informazioni su questa opzione, vedere [Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Scegliere **Avanti**.
+3.  Nella finestra di dialogo Specificare le opzioni del gruppo di disponibilità immettere un nome per il gruppo di disponibilità e selezionare il tipo di cluster ESTERNO o NESSUNO nell'elenco a discesa. Per distribuire Pacemaker occorre usare il tipo Esterno. Il tipo Nessuno è riservato per scenari specializzati, come la scalabilità in lettura. La selezione dell'opzione per il rilevamento dell'integrità a livello di database è facoltativa. Per altre informazioni su questa opzione, vedere [Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Fare clic su **Avanti**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  Nella finestra di dialogo Seleziona database selezionare i database che faranno parte del gruppo di disponibilità. Prima di aggiungere ogni database a un gruppo di disponibilità è necessario effettuarne un backup completo. Scegliere **Avanti**.
+4.  Nella finestra di dialogo Seleziona database selezionare i database che faranno parte del gruppo di disponibilità. Prima di aggiungere ogni database a un gruppo di disponibilità è necessario effettuarne un backup completo. Fare clic su **Avanti**.
 
 5.  Nella finestra di dialogo Specifica repliche fare clic su **Aggiungi replica**.
 
@@ -354,17 +354,17 @@ Questa sezione illustra come creare un gruppo di disponibilità con un tipo di c
 
 11. Se si crea un listener per scenari di repliche leggibili, SSMS 17.3 o versioni successive consente la creazione del routing di sola lettura nella procedura guidata. Il listener può anche essere aggiunto successivamente tramite SSMS o Transact-SQL. Per aggiungere subito il routing di sola lettura:
 
-    A.  Selezionare la scheda Routing di sola lettura.
+    a.  Selezionare la scheda Routing di sola lettura.
 
-    B.  Immettere gli URL per le repliche di sola lettura. Questi URL sono simili agli endpoint, ad eccezione del fatto che usano la porta dell'istanza, non l'endpoint.
+    b.  Immettere gli URL per le repliche di sola lettura. Questi URL sono simili agli endpoint, ad eccezione del fatto che usano la porta dell'istanza, non l'endpoint.
 
     c.  Selezionare ogni URL e nella parte inferiore selezionare le repliche leggibili. Per effettuare una selezione multipla, tenere premuto MAIUSC o fare clic e trascinare.
 
-12. Scegliere **Avanti**.
+12. Fare clic su **Avanti**.
 
-13. Specificare la modalità di inizializzazione delle repliche secondarie. L'impostazione predefinita prevede l'uso del [seeding automatico](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), che richiede lo stesso percorso in tutti i server che fanno parte del gruppo di disponibilità. È anche possibile indicare alla procedura guidata di eseguire un backup, una copia e un ripristino (seconda opzione), di procedere con l'aggiunta se è stato eseguito manualmente il backup, la copia e il ripristino del database nelle repliche (terza opzione) o di aggiungere il database in un secondo momento (ultima opzione). Come accade con i certificati, se si eseguono manualmente i backup e li si copia, le autorizzazioni per i file di backup devono essere impostate sulle altre repliche. Scegliere **Avanti**.
+13. Specificare la modalità di inizializzazione delle repliche secondarie. L'impostazione predefinita prevede l'uso del [seeding automatico](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), che richiede lo stesso percorso in tutti i server che fanno parte del gruppo di disponibilità. È anche possibile indicare alla procedura guidata di eseguire un backup, una copia e un ripristino (seconda opzione), di procedere con l'aggiunta se è stato eseguito manualmente il backup, la copia e il ripristino del database nelle repliche (terza opzione) o di aggiungere il database in un secondo momento (ultima opzione). Come accade con i certificati, se si eseguono manualmente i backup e li si copia, le autorizzazioni per i file di backup devono essere impostate sulle altre repliche. Fare clic su **Avanti**.
 
-14. Se nella finestra di dialogo Convalida alcune operazioni sono indicate come non riuscite, ricercarne la causa. Alcuni avvisi sono accettabili e non indicano errori irreversibili, ad esempio nel caso in cui non si crea un listener. Scegliere **Avanti**.
+14. Se nella finestra di dialogo Convalida alcune operazioni sono indicate come non riuscite, ricercarne la causa. Alcuni avvisi sono accettabili e non indicano errori irreversibili, ad esempio nel caso in cui non si crea un listener. Fare clic su **Avanti**.
 
 15. Nella finestra di dialogo Riepilogo fare clic su **Fine**. Verrà avviato il processo di creazione del gruppo di disponibilità.
 

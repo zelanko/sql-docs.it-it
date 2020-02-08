@@ -27,10 +27,10 @@ ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0faddc5b763a2728dc507d2aad17b26501846452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125315"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68125315"
   Contrassegna il punto di inizio di una transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)] gestita da [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
     
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +57,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @*tran_name_variable*  
  Nome di una variabile definita dall'utente contenente un nome di transazione utilizzato per tenere traccia della transazione distribuita nelle utilità MS DTC. La variabile deve essere dichiarata con un tipo di dati **char**, **varchar**, **nchar** o **nvarchar**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in cui viene eseguita l'istruzione BEGIN DISTRIBUTED TRANSACTION è l'origine della transazione e controlla il completamento della transazione. Quando viene successivamente eseguita un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION per la sessione, l'istanza di controllo richiede che il completamento della transazione distribuita in tutte le istanze coinvolte venga gestito da MS DTC.  
   
  L'isolamento dello snapshot a livello di transazione non supporta le transazioni distribuite.  

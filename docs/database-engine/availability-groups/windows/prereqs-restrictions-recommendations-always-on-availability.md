@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258078"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831938"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "75258078"
   
 3.  Usare il cmdlet **Get-ClusterResource** per cercare la risorsa nome di rete, quindi usare il cmdlet **Set-ClusterParameter** per impostare il valore **HostRecordTTL** , come segue:  
   
-     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      Nell'esempio di PowerShell seguente impostare HostRecordTTL su 300 secondi per una risorsa nome di rete denominata `SQL Network Name (SQL35)`.  
   
@@ -157,17 +157,14 @@ ms.locfileid: "75258078"
     -   Se un thread specificato è inattivo per un certo periodo di tempo, viene rilasciato nuovamente nel pool di thread generale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In genere, un thread inattivo viene rilasciato dopo ~15 secondi di inattività. Tuttavia, a seconda dell'ultima attività, un thread inattivo potrebbe essere mantenuto più a lungo.  
 
     -   Un'istanza di SQL Server usa fino a 100 thread per la fase di rollforward parallelo per le repliche secondarie. Ogni database usa fino a metà del numero totale di core CPU, ma non più di 16 thread per ogni database. Se il numero totale di thread necessari per una singola istanza supera 100, SQL Server usa un unico thread di fase di rollforward per tutti i database rimanenti. I thread di rollforward seriale vengono rilasciati dopo ~15 secondi di inattività. 
-    
-    > [!NOTE]
-    > I database vengono scelti per il passaggio al thread singolo in base ai relativi ID di database in ordine crescente. Di conseguenza, l'ordine di creazione dei database deve essere considerato per le istanze di SQL Server che ospitano più database nel gruppo di disponibilità rispetto ai thread di lavoro disponibili. Ad esempio, in un sistema con 32 core CPU o più, i primi sei database (ordinati in base all'ID di database) in un gruppo di disponibilità o i gruppi useranno la modalità di rollforward parallelo e tutti i database successivi useranno la modalità di rollforward singolo.
-  
+     
 -   Inoltre, nei gruppi di disponibilità vengono utilizzati thread non condivisi, come riportato di seguito:  
   
     -   In ogni replica primaria viene utilizzato 1 thread di acquisizione del log per ogni database primario. Inoltre, viene utilizzato 1 thread di invio del log per ogni database secondario. I thread di invio del log vengono rilasciati dopo ~15 secondi di inattività.    
   
     -   Tramite un backup di una replica secondaria un thread viene mantenuto nella replica primaria per la durata dell'operazione di backup.  
   
- Per altre informazioni, vedere l'articolo relativo alla [serie di informazioni su Always On - HADRON: utilizzo del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (blog degli ingegneri del supporto tecnico di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ Per altre informazioni, vedere l'articolo relativo alla [serie di informazioni su Always On - HADRON: utilizzo del pool di lavoro per database abilitati HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (blog degli ingegneri del supporto tecnico di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 ###  <a name="PermissionsSI"></a> Autorizzazioni (istanza del server)  
   
@@ -186,7 +183,7 @@ ms.locfileid: "75258078"
   
 ###  <a name="RelatedContentSI"></a> Contenuto correlato (istanza del server)  
   
--   [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ##  <a name="NetworkConnect"></a> Consigli sulla connettività di rete  
  Si consiglia di usare gli stessi collegamenti di rete per le comunicazioni tra nodi WSFC e le comunicazioni tra repliche di disponibilità.  L'utilizzo di collegamenti di rete separati può provocare comportamenti imprevisti in caso di errore di alcuni collegamenti (anche in modo intermittente).  
@@ -386,7 +383,7 @@ ms.locfileid: "75258078"
   
 -   [Blog del team di SQL Server Always On: blog ufficiale del team di SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Serie di informazioni su Always On - HADRON: Uso del pool di lavoro per database abilitati HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

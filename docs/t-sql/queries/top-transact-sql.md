@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948245"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67948245"
 
 Limita le righe restituite nel set di risultati di una query a un numero specificato o a una percentuale di righe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Quando si usa TOP con la clausola ORDER BY, il set di risultati è limitato alle prime *N* righe ordinate. In caso contrario, TOP restituisce le prime *N* righe in un ordine non definito. Usare questa clausola per specificare il numero di righe restituito da un'istruzione SELECT. In alternativa, usare TOP per specificare le righe interessate da un'istruzione INSERT, UPDATE, MERGE o DELETE.  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
  
@@ -137,7 +137,7 @@ GO
   
 L'uso di TOP e ORDER BY in un'operazione sub-SELECT assicura che i risultati della clausola ORDER BY vengano applicati alla clausola TOP e non all'ordinamento del risultato dell'operazione UNION.  
   
- Set di risultati:  
+ Questo è il set di risultati.  
   
  ```
  Model         Color      Price  
@@ -164,7 +164,7 @@ Non è possibile combinare TOP con OFFSET e FETCH nella stessa espressione di qu
 ###  <a name="BasicSyntax"></a> Sintassi di base  
 Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base della clausola ORDER BY utilizzando la sintassi minima necessaria.  
   
-#### <a name="a-using-top-with-a-constant-value"></a>A. Utilizzo di TOP con un valore costante  
+#### <a name="a-using-top-with-a-constant-value"></a>R. Utilizzo di TOP con un valore costante  
 Negli esempi seguenti viene utilizzato un valore costante per specificare il numero di dipendenti restituiti nel set di risultati della query. Nel primo esempio vengono restituite le prime 10 righe non definite perché non viene usata una clausola ORDER BY. Nel secondo esempio viene utilizzata una clausola ORDER BY per restituire i primi 10 dipendenti assunti di recente.  
   
 ```sql  
@@ -208,7 +208,7 @@ GO
   
 ###  <a name="tie"></a> Inclusione di valori equivalenti  
   
-#### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. Utilizzo di WITH TIES per includere righe corrispondenti ai valori nell'ultima riga  
+#### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>R. Utilizzo di WITH TIES per includere righe corrispondenti ai valori nell'ultima riga  
 L'esempio seguente recupera il primo `10`% di tutti i dipendenti con lo stipendio più alto e restituisce i dipendenti in ordine decrescente in base allo stipendio. Specificando `WITH TIES`, nel set di risultati vengono inclusi anche i dipendenti con stipendio pari allo stipendio più basso restituito (ultima riga), anche se in questo modo il set di risultati supera il `10`% dei dipendenti.  
   
 ```sql  
@@ -227,7 +227,7 @@ GO
   
 ###  <a name="DML"></a> Limitazione delle righe interessate da DELETE, INSERT o UPDATE  
   
-#### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilizzo di TOP per limitare il numero di righe eliminate  
+#### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>R. Utilizzo di TOP per limitare il numero di righe eliminate  
 Quando si usa una clausola TOP (*n*) con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di *n* righe. In altre parole, l'istruzione DELETE sceglie un numero (*n*) di righe che soddisfano i criteri definiti nella clausola WHERE. L'esempio seguente elimina `20` righe con scadenze precedenti al 1° luglio 2002 dalla tabella `PurchaseOrderDetail`.  
   
 ```sql  

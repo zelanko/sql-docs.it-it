@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031517"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68031517"
   
  L'implementazione di **AT TIME ZONE** si basa su un meccanismo di Windows per convertire i valori **datetime** tra fusi orari.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-value"></a>Valore restituito  
  Il valore **datetimeoffset** nel fuso orario di destinazione.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  **AT TIME ZONE** applica regole specifiche per la conversione dei valori di input in tipi di dati **smalldatetime**, **datetime** e **datetime2** che rientrano in un intervallo interessato da un passaggio all'ora legale (DST):  
   
 -   Quando l'orologio viene spostato in avanti, vi è uno scostamento nell'ora locale uguale alla durata della regolazione dell'orologio. Questa durata è in genere di 1 ora, ma può essere di 30 o 45 minuti, a seconda del fuso orario. I singoli momenti contenuti in questo scostamento vengono convertiti con la differenza *dopo* il passaggio all'ora legale.  
@@ -121,7 +121,7 @@ Poiché alcune informazioni, come ad esempio le regole di fuso orario, vengono m
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Aggiungere la differenza di fuso orario di destinazione a datetime senza informazioni relative alla differenza  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>R. Aggiungere la differenza di fuso orario di destinazione a datetime senza informazioni relative alla differenza  
  Usare **AT TIME ZONE** per aggiungere la differenza in base alle regole del fuso orario, quando si è certi che i valori di **datetime** originali siano specificati nello stesso fuso orario:  
   
 ```sql

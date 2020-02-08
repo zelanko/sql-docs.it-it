@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 71ab699e99a3d22b6b04299b8de1ccb18e5f0708
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531254"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971368"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Installare SQL Server Machine Learning Services (Python e R) in Linux
 
@@ -170,9 +170,9 @@ zypper update
 
 In un dispositivo connesso a Internet i pacchetti vengono scaricati e installati in modo indipendente dal motore di database usando il programma di installazione del pacchetto per ogni sistema operativo. La tabella seguente descrive tutti i pacchetti disponibili, ma per R e Python si specificano pacchetti che forniscono l'installazione completa delle funzionalità o l'installazione minima delle funzionalità.
 
-| Nome pacchetto | Applicabile a | Descrizione |
+| Nome del pacchetto | Applicabile a | Descrizione |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All | Framework di estendibilità usato per eseguire il codice R e Python. |
+|mssql-server-extensibility  | Tutti | Framework di estendibilità usato per eseguire il codice R e Python. |
 | microsoft-openmpi  | Python, R | Interfaccia per la trasmissione di messaggi usata dalle librerie Revo* per la parallelizzazione in Linux. |
 | mssql-mlservices-python | Python | Distribuzione open source di Anaconda e Python. |
 |mssql-mlservices-mlm-py  | Python | *Installazione completa*. Fornisce revoscalepy, microsoftml, modelli con training preliminare per la definizione di un immagine e l'analisi del sentiment del testo.| 
@@ -426,7 +426,7 @@ Per la procedura di installazione dei pacchetti, seguire le istruzioni contenute
 
 |||
 |--|----|
-| Pacchetti mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Pacchetti mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | Pacchetti microsoft-r-open | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
@@ -434,14 +434,14 @@ Per la procedura di installazione dei pacchetti, seguire le istruzioni contenute
 
 |||
 |--|----|
-| Pacchetti mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Pacchetti mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | Pacchetti microsoft-r-open | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>Percorsi SLES/12
 
 |||
 |--|----|
-| Pacchetti mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Pacchetti mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | Pacchetti microsoft-r-open | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>Elenco di pacchetti

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113706"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
@@ -38,10 +38,10 @@ Definisce una data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 |Proprietà|valore|  
 |--------------|-----------|  
-|Sintassi|**data**|  
-|Utilizzo|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|Sintassi|**date**|  
+|Uso|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|YYYY-MM-DD<br /><br /> Per ulteriori informazioni, vedere la sezione seguente relativa alla compatibilità con le versioni precedenti per i client legacy.|  
-|Intervallo|da 0001-01-01 a 9999-12-31 (da 1582-10-15 a 9999-12-31 per Informatica)<br /><br /> Da 1 gennaio 1 d.C. a 31 dicembre 9999 d.C. (da 15 ottobre 1582 d.C. a 31 dicembre 9999 d.C. per Informatica)|  
+|Range|da 0001-01-01 a 9999-12-31 (da 1582-10-15 a 9999-12-31 per Informatica)<br /><br /> Da 1 gennaio 1 d.C. a 31 dicembre 9999 d.C. (da 15 ottobre 1582 d.C. a 31 dicembre 9999 d.C. per Informatica)|  
 |Intervalli di elementi|AAAA rappresenta un numero di quattro cifre compreso tra 0001 e 9999 indicante l'anno. Per Informatica, AAAA è limitato all'intervallo compreso tra 1582 e 9999.<br /><br /> MM rappresenta un numero di due cifre compreso tra 01 e 12 indicante un mese dell'anno specificato.<br /><br /> GG rappresenta un numero di due cifre compreso tra 01 e 31, a seconda del mese, indicante un giorno del mese specificato.|  
 |Lunghezza in caratteri|10 posizioni|  
 |Precisione, scala|10, 0|  
@@ -50,9 +50,9 @@ Definisce una data in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Accuratezza|Un giorno|  
 |Valore predefinito|1900-01-01<br /><br /> Questo valore viene usato per la parte relativa all'orario aggiunta per la conversione implicita da **time** a **datetime2** o **datetimeoffset**.|  
 |Calendario|Gregoriano|  
-|Precisione in secondi frazionari definita dall'utente|no|  
-|Considerazione e conservazione delle differenze di fuso orario|no|  
-|Considerazione dell'ora legale|no|  
+|Precisione in secondi frazionari definita dall'utente|No|  
+|Considerazione e conservazione delle differenze di fuso orario|No|  
+|Considerazione dell'ora legale|No|  
   
 ## <a name="supported-string-literal-formats-for-date"></a>Formati di valore letterale stringa supportati per date
 Nelle tabelle seguenti sono illustrati i formati di valore letterale stringa supportati per il tipo di dati **date**.
@@ -95,7 +95,7 @@ Alcune versioni precedenti dei client non supportano i tipi di dati **time**, **
 |Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Formato predefiniti dei valori letterali stringa passati al client legacy|ODBC delle versioni precedenti|OLEDB delle versioni precedenti|JDBC delle versioni precedenti|SQLCLIENT delle versioni precedenti|  
 | --- | --- | --- | --- | --- | --- |
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
-|**data**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
+|**date**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetime2**|AAAA-MM-GG hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
   
@@ -175,7 +175,7 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 ### <a name="converting-string-literals-to-date"></a>Conversione di valori letterali stringa nel tipo di dati date
 Le conversioni da valori letterali stringa a tipi di data e ora sono consentite se tutte le parti delle stringhe hanno formati validi. In caso contrario, viene generato un errore di runtime. Le conversioni implicite o esplicite che non specificano uno stile, dai tipi di data e ora ai valori letterali stringa, saranno nel formato predefinito della sessione corrente. Nella tabella seguente vengono illustrate le regole per la conversione di un valore letterale stringa nel tipo di dati **date**.
   
-|Valore letterale stringa di input|**data**|  
+|Valore letterale stringa di input|**date**|  
 |---|---|
 |ODBC DATE|Viene eseguito il mapping dei valori letterali stringa ODBC al tipo di dati **datetime**. Tutte le operazioni di assegnazione dai valori letterali di ODBC DATETIME in tipi di dati **date** determinano una conversione implicita tra **datetime** e il tipo definito dalle regole di conversione.|  
 |ODBC TIME|Vedere la regola relativa a ODBC DATE.|  
@@ -209,7 +209,7 @@ SELECT
 |Tipo di dati|Output|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
-|**data**|2007-05-08|  
+|**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  

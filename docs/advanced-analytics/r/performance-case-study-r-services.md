@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727403"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Prestazioni per R Services: risultati e risorse
@@ -92,7 +92,7 @@ Questa sezione confronta i risultati prima e dopo ogni test.
 
 Il primo test ha confrontato l'uso della compressione e di una tabella a colonne per ridurre le dimensioni dei dati.
 
-| Nome tabella            | Righe     | Riservato   | data       | index_size | Non utilizzato  | % salvataggio (riservato) |
+| Nome tabella            | Righe     | Riservato   | Data       | index_size | Non utilizzato  | % salvataggio (riservato) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -238,7 +238,7 @@ Nella tabella il fattore *DayOfWeek* è archiviato come stringa.
 | CubeArgEffect | `cube = F`     | 1        | 91.0725      | 9.959204                        |
 |               |                | 4        | 44.09        | 9.959204                        |
 |               | `cube = T`     | 1        | 21.1125      | 9.959204                        |
-|               |                | 4        | 8.08         | 9.959204                        |
+|               |                | 4        | 8,08         | 9.959204                        |
 
 **Conclusioni**
 

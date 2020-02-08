@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165680"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
@@ -89,7 +89,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
         -  Impostare il livello di compatibilità del database di destinazione previsto per il database utente al termine il flusso di lavoro l'Assistente ottimizzazione query.
         Al termine, fare clic su **Avanti**.
     
-       ![Finestra di configurazione della sessione di aggiornamento del nuovo database](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
+       ![Finestra di configurazione della sessione di aggiornamento del nuovo database](../../relational-databases/performance/media/qta-new-session-setup.png "Finestra di configurazione di aggiornamento del nuovo database")  
   
     2.  Nella finestra **Impostazioni** due colonne indicano lo stato **Corrente** di Query Store nel database di destinazione, nonché le impostazioni **Consigliate**. 
         -  Le impostazioni consigliate sono selezionate per impostazione predefinita, ma, se si fa clic sul pulsante di opzione sopra la colonna Corrente, si accettano le impostazioni correnti ed è anche possibile ottimizzare la configurazione corrente di Query Store. 
@@ -153,7 +153,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
 
         La pagina seguente conferma che il livello di compatibilità del database è stato aggiornato correttamente.
 
-        ![Passaggio secondario 2 del passaggio 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
+        ![Passaggio secondario 2 del passaggio 2](../../relational-databases/performance/media/qta-step2-substep2.png "Passaggio secondario 2 del passaggio 2 dell'Assistente ottimizzazione query")
 
     3.  **Raccolta dati osservati** richiede all'utente di eseguire nuovamente il ciclo del carico di lavoro rappresentativo, per consentire a Query Store di acquisire una baseline di confronto che verrà usata per la ricerca di opportunità di ottimizzazione. Durante l'esecuzione del carico di lavoro, usare il pulsante **Aggiorna** per aggiornare l'elenco delle query regredite, se presenti. Modificare il valore **Query da mostrare** per limitare il numero di query visualizzate. L'ordine dell'elenco è influenzato dai valori **Metrica** (Durata o CpuTime) e **Aggregazione** (il valore predefinito è Media). Selezionare anche un valore per **Query da mostrare**. Dopo il completamento del carico di lavoro, selezionare **Esecuzione del carico di lavoro completata** e fare clic su **Avanti**.
 

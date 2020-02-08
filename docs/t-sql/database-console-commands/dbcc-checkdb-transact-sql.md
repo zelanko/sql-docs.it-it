@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982416"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -168,7 +168,7 @@ DATA_PURITY
 > [!WARNING] 
 > Se MAXDOP è impostato su zero, SQL Server sceglie il grado massimo di parallelismo.    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Osservazioni    
 DBCC CHECKDB non esamina gli indici disabilitati. Per altre informazioni sugli indici disabilitati, vedere [Disabilitare indici e vincoli](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
 
 Se un tipo definito dall'utente (UDT) viene contrassegnato come ordinato per byte, è necessario che sia presente un'unica serializzazione di tale tipo. In assenza di una serializzazione consistente dei tipi definiti dall'utente (UDT) ordinati per byte, durante l'esecuzione di DBCC CHECKDB viene generato l'errore 2537. Per altre informazioni, vedere [Creazione di tipi definiti dall'utente - requisiti](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
@@ -369,7 +369,7 @@ DBCC CHECKDB restituisce il set di risultati seguente quando viene specificato E
     
 ## <a name="examples"></a>Esempi    
     
-### <a name="a-checking-both-the-current-and-another-database"></a>A. Controllo del database corrente e di un altro database    
+### <a name="a-checking-both-the-current-and-another-database"></a>R. Controllo del database corrente e di un altro database    
 Nell'esempio seguente viene eseguito `DBCC CHECKDB` per il database corrente e per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
     
 ```sql    

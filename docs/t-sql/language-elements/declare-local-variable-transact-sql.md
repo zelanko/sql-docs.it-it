@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed6848494d9d9673905dadbff036ad97f3be834c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894889"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67894889"
 
   Le variabili vengono dichiarate nel corpo di un batch o di una routine tramite l'istruzione DECLARE e i relativi valori vengono assegnati tramite un'istruzione SET o SELECT. È possibile dichiarare variabili di cursore con questa istruzione e utilizzarle insieme ad altre istruzioni correlate ai cursori. Dopo la dichiarazione, tutte le variabili vengono inizializzate con valore NULL, a meno che non venga fornito un valore nella dichiarazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -158,7 +158,7 @@ Definisce il tipo di dati **table**. La dichiarazione di tabella include definiz
  *logical_expression*  
  Espressione logica che restituisce TRUE o FALSE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Le variabili spesso vengono utilizzate in un batch o una procedura come contatori per istruzioni WHILE e LOOP oppure per un blocco IF...ELSE.  
   
  Le variabili possono essere utilizzate solo nelle espressioni e non in sostituzione di parole chiave o nomi di oggetto. Per creare istruzioni SQL dinamiche, utilizzare EXECUTE.  
@@ -193,7 +193,7 @@ Definisce il tipo di dati **table**. La dichiarazione di tabella include definiz
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-declare"></a>A. Utilizzo di DECLARE  
+### <a name="a-using-declare"></a>R. Utilizzo di DECLARE  
  Nell'esempio seguente viene utilizzata una variabile locale denominata `@find` per recuperare le informazioni sul contatto per tutti i cognomi che iniziano con `Man`.  
   
 ```  
@@ -224,7 +224,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 ```  
   
 ### <a name="b-using-declare-with-two-variables"></a>B. Utilizzo di DECLARE con due variabili  
- Nell'esempio seguente vengono recuperati i nomi dei rappresentanti di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] che svolgono la propria attività nel Nord America e per cui l'ammontare delle vendite annue è pari almeno a $ 2.000.000.  
+ Nell'esempio seguente vengono recuperati i nomi dei rappresentanti di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] che svolgono la propria attività nel America del Nord e per cui l'ammontare delle vendite annue è pari almeno a $ 2.000.000.  
   
 ```  
 USE AdventureWorks2012;  

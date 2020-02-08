@@ -27,10 +27,10 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982320"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
@@ -130,7 +130,7 @@ MAXDOP
  > [!NOTE]  
  > Se MAXDOP è impostato su zero, il server sceglie il grado massimo di parallelismo.  
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Osservazioni    
     
 > [!NOTE]    
 > Per eseguire DBCC CHECKTABLE su ogni tabella del database, usare [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).    
@@ -221,7 +221,7 @@ L'utente deve essere il proprietario della tabella oppure un membro del ruolo pr
     
 ## <a name="examples"></a>Esempi    
     
-### <a name="a-checking-a-specific-table"></a>A. Controllo di una tabella specifica    
+### <a name="a-checking-a-specific-table"></a>R. Controllo di una tabella specifica    
 Nell'esempio seguente viene controllata l'integrità delle pagine di dati della tabella `HumanResources.Employee` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
     
 ```sql    

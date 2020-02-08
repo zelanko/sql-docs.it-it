@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000452"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -42,10 +42,10 @@ ms.locfileid: "68000452"
 |Proprietà|valore|  
 |--------------|-----------|  
 |Sintassi|**time** [ (*fractional seconds scale*) ]|  
-|Utilizzo|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|Uso|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|Specifica il numero di cifre per la parte frazionaria dei secondi.<br /><br /> Può essere un numero intero compreso tra 0 e 7. Per Informatica, può essere un numero intero compreso tra 0 e 3.<br /><br /> La scala frazionaria predefinita è 7 (100 ns).|  
 |Formato predefinito dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|hh:mm:ss[.nnnnnnn] per Informatica)<br /><br /> Per altre informazioni, vedere la sezione [Compatibilità con le versioni precedenti dei client legacy](#BackwardCompatibilityforDownlevelClients).|  
-|Intervallo|da 00:00:00.0000000 a 23:59:59.9999999 (da 00:00:00.000 a 23:59:59.999 per Informatica)|  
+|Range|da 00:00:00.0000000 a 23:59:59.9999999 (da 00:00:00.000 a 23:59:59.999 per Informatica)|  
 |Intervalli di elementi|hh rappresenta un numero di due cifre tra 0 e 23 indicante l'ora.<br /><br /> mm rappresenta un numero di due cifre tra 0 e 59 indicante i minuti.<br /><br /> ss rappresenta un numero di due cifre tra 0 e 59 indicante i secondi.<br /><br /> n\* rappresenta un numero composto da un numero di cifre da 0 a 7 e compreso tra 0 e 9999999, indicante i secondi frazionari. Per Informatica, n\* è un numero composto da un numero di cifre da zero a tre, compreso tra 0 e 999.|  
 |Lunghezza in caratteri|da 8 posizioni minimo (hh:mm:ss) a 16 massimo (hh:mm:ss.nnnnnnn). Per Informatica, il massimo è 12 (hh:mm:ss.nnn).|  
 |Precisione, scala<br /><br /> (l'utente specifica solo la scala)|Vedere la tabella riportata di seguito.|  
@@ -53,10 +53,10 @@ ms.locfileid: "68000452"
 |Accuratezza|100 nanosecondi (1 millisecondo in Informatica)|  
 |Valore predefinito|00:00:00<br /><br /> Questo valore viene usato per la parte relativa all'orario aggiunta per la conversione implicita da **date** a **datetime2** o **datetimeoffset**.|  
 |Precisione in secondi frazionari definita dall'utente|Sì|  
-|Considerazione e conservazione delle differenze di fuso orario|no|  
-|Considerazione dell'ora legale|no|  
+|Considerazione e conservazione delle differenze di fuso orario|No|  
+|Considerazione dell'ora legale|No|  
   
-|Scala specificata|Risultato (precisione, scala)|Lunghezza della colonna (byte)|Precisione<br /><br /> secondi<br /><br /> precisione|  
+|Scala specificata|Risultato (precisione, scala)|Lunghezza della colonna (byte)|Precisione<br /><br /> secondi<br /><br /> precision|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) [(12,3) in Informatica]|5 (4 in Informatica)|7 (3 in Informatica)|  
 |**time(0)**|(8,0)|3|0-2|  
@@ -94,7 +94,7 @@ ms.locfileid: "68000452"
 |Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Formato predefiniti dei valori letterali stringa passati al client legacy|ODBC delle versioni precedenti|OLEDB delle versioni precedenti|JDBC delle versioni precedenti|SQLCLIENT delle versioni precedenti|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
-|**data**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
+|**date**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetime2**|AAAA-MM-GG hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
   
@@ -165,7 +165,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Se viene eseguita la conversione in **datetimeoffset(n)**, la data viene impostata su "1900-01-01" e l'ora viene copiata. La differenza di fuso orario è impostata su +00:00. Quando la precisione dei secondi frazionari del valore **time(n)** è maggiore di quella del valore **datetimeoffset(n)**, la prima precisione verrà arrotondata per rispettare la seconda. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un tipo `datetimeoffset(3)`.  
+ Se viene eseguita la conversione in **datetimeoffset(n)** , la data viene impostata su "1900-01-01" e l'ora viene copiata. La differenza di fuso orario è impostata su +00:00. Quando la precisione dei secondi frazionari del valore **time(n)** è maggiore di quella del valore **datetimeoffset(n)** , la prima precisione verrà arrotondata per rispettare la seconda. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un tipo `datetimeoffset(3)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -182,7 +182,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Quando viene eseguita la conversione in **datetime2(n)**, la data viene impostata su "1900-01-01", il componente relativo all'ora viene copiato e la differenza di fuso orario viene impostata su 00:00. Quando la precisione dei secondi frazionari del valore **datetime2(n)** è maggiore di quella del valore **time(n)**, la prima precisione verrà arrotondata per rispettare la seconda.  Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `datetime2(2)`.  
+ Quando viene eseguita la conversione in **datetime2(n)** , la data viene impostata su "1900-01-01", il componente relativo all'ora viene copiato e la differenza di fuso orario viene impostata su 00:00. Quando la precisione dei secondi frazionari del valore **datetime2(n)** è maggiore di quella del valore **time(n)** , la prima precisione verrà arrotondata per rispettare la seconda.  Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `datetime2(2)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -216,7 +216,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-comparing-date-and-time-data-types"></a>A. Confronto dei tipi di dati di data e ora  
+### <a name="a-comparing-date-and-time-data-types"></a>R. Confronto dei tipi di dati di data e ora  
  Nell'esempio seguente vengono confrontati i risultati dell'esecuzione del cast di una stringa ai tipi di dati **date** e **time**.  
   
 ```  
@@ -235,7 +235,7 @@ SELECT
 |Tipo di dati|Output|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
-|**data**|2007-05-08|  
+|**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
@@ -259,10 +259,10 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. Inserimento del valore letterale stringa nelle colonne di ogni tipo di dati relativi a data e ora  
  Nella tabella seguente la prima colonna indica il valore letterale stringa dell'ora da inserire nella colonna della tabella del database della data o dell'ora visualizzate nella seconda colonna. La terza colonna indica il valore che verrà memorizzato nella colonna della tabella del database.  
   
-|Valore letterale stringa inserito|Tipo di dati colonna|Valore archiviato nella colonna|Descrizione|  
+|Valore letterale stringa inserito|Tipo di dati della colonna|Valore archiviato nella colonna|Descrizione|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|Se la precisione frazionaria dei secondi supera il valore specificato per la colonna, la stringa sarà troncata senza errori.|  
-|'2007-05-07'|**data**|NULL|Qualsiasi valore dell'ora genererà un errore nell'istruzione INSERT|  
+|'2007-05-07'|**date**|NULL|Qualsiasi valore dell'ora genererà un errore nell'istruzione INSERT|  
 |'12:12:12'|**smalldatetime**|1900-01-01 12:12:00|Qualsiasi valore della precisione frazionaria dei secondi genererà un errore nell'istruzione INSERT.|  
 |'12:12:12.123'|**datetime**|1900-01-01 12:12:12.123|Qualsiasi precisione dei secondi maggiore di tre posizioni genera un errore nell'espressione INSERT.|  
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|Se la precisione frazionaria dei secondi supera il valore specificato per la colonna, la stringa sarà troncata senza errori.|  

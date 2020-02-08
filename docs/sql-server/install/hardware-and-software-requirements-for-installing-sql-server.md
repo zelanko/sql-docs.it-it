@@ -1,7 +1,7 @@
 ---
-title: Requisiti hardware e software per l'installazione di SQL Server | Microsoft Docs
-ms.custom: sqlfreshmay19
-ms.date: 07/24/2019
+title: Requisiti hardware e software
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 553c01ea02c83a57370e596d67ad077b43328d9b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 25f925b53f93a1d03282a7113ce6946679283c2b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056800"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75657023"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Hardware and Software Requirements for Installing SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,11 +88,11 @@ I requisiti seguenti si applicano a tutte le installazioni:
   
 |Componente|Requisito|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 e versioni successive richiedono [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 per il motore di database, Master Data Services o la replica. Il programma di installazione di SQL Server installa automaticamente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. È anche possibile installare manualmente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] da [Microsoft .NET Framework 4.6 (programma di installazione Web) per Windows](https://support.microsoft.com/kb/3045560).<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] richiede .NET Framework 4.6.2. Disponibile dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=53344)<br/><br/> Per altre informazioni, suggerimenti e indicazioni su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 vedere [Guida alla distribuzione di .NET Framework per sviluppatori](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]e [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] richiedono [KB2919355](https://support.microsoft.com/kb/2919355) prima di installare [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 e versioni successive richiedono [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 per il motore di database, Master Data Services o la replica. Il programma di installazione di SQL Server installa automaticamente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. È anche possibile installare manualmente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] da [Microsoft .NET Framework 4.6 (programma di installazione Web) per Windows](https://support.microsoft.com/kb/3045560).<br/><br/> Per altre informazioni, suggerimenti e indicazioni su [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 vedere [Guida alla distribuzione di .NET Framework per sviluppatori](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]e [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] richiedono [KB2919355](https://support.microsoft.com/kb/2919355) prima di installare [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
 |Software di rete|I sistemi operativi supportati per [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] includono software di rete integrato. Le istanze denominate e predefinite di un'installazione autonoma supportano i protocolli di rete seguenti: Memoria condivisa, named pipe, TCP/IP e VIA.<br/><br/> **Nota:** il protocollo VIA non è supportato nei cluster di failover. I client o le applicazioni in esecuzione sullo stesso nodo del cluster di failover dell'istanza di SQL Server, possono usare il protocollo Shared Memory per la connessione a SQL Server tramite il relativo indirizzo pipe locale. Tuttavia questo tipo di connessione non è in grado di riconoscere il cluster e avrà esito negativo dopo un failover dell'istanza. Pertanto non è consigliata e deve essere usata solo in scenari molto specifici.<br/><br/> **Importante:** Il protocollo VIA è deprecato. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Per ulteriori informazioni su protocolli e librerie di rete, vedere [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 |Disco rigido|Per[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] sono necessari almeno 6 GB di spazio libero su disco rigido.<br/><br/> I requisiti di spazio su disco variano a seconda dei componenti di [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] installati. Per altre informazioni, vedere [Requisiti di spazio su disco rigido](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) più avanti in questo articolo. Per informazioni sui tipi di archiviazione supportati per i file di dati, vedere [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Unità|Per l'installazione da disco è necessaria un'unità DVD.|  
-|Monitoraggio|Per[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] è necessario un monitor con risoluzione Super-VGA (800 x 600) o superiore.|  
+|Monitorare|Per[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] è necessario un monitor con risoluzione Super-VGA (800 x 600) o superiore.|  
 |Internet|Per la funzionalità Internet è necessario l'accesso a Internet (potrebbero essere applicati costi aggiuntivi).|  
   
 > [!NOTE]
@@ -122,19 +122,6 @@ I requisiti seguenti si applicano a tutte le installazioni:
 
 **Supporto di Server Core:**
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-
-L'installazione di SQL Server 2019 nella modalità Server Core è supportata dalle edizioni di Windows Server seguenti:
-
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-   | &nbsp; | &nbsp; |
-
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 L'installazione di SQL Server 2016 e 2017 nella modalità Server Core è supportata dalle edizioni di Windows Server seguenti:
 
@@ -145,7 +132,6 @@ L'installazione di SQL Server 2016 e 2017 nella modalità Server Core è support
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
 | Windows Server 2012 Standard | Windows Server 2012 Datacenter |
 | &nbsp; | &nbsp; |
-::: moniker-end
 
 Per altre informazioni sull'installazione di SQL Server in Server Core, vedere [Installare SQL Server in Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
@@ -168,22 +154,6 @@ Per altre informazioni sull'installazione di SQL Server in Server Core, vedere [
   
 ###  <a name="TOP_Principal"></a> Compatibilità del sistema operativo   
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-Nella tabella seguente sono indicate le edizioni di SQL Server 2019 compatibili con le varie versioni di Windows:  
-  
-
-| Edizione di SQL Server:               | Enterprise | Developer | Standard | Web | Express |  
-| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
-| Windows Server 2019 Standard      |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
-| Windows Server 2019 Essentials    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
-| Windows Server 2016 Datacenter    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
-| Windows Server 2016 Standard      |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
-| Windows Server 2016 Essentials    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
-| &nbsp; | &nbsp; |
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 Nella tabella seguente sono indicate le edizioni di SQL Server 2016 e 2017 compatibili con le varie versioni di Windows:  
   
@@ -203,22 +173,21 @@ Nella tabella seguente sono indicate le edizioni di SQL Server 2016 e 2017 compa
 | Windows Server 2012 Standard      |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
 | Windows Server 2012 Essentials    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
 | Windows Server 2012 Foundation    |    Sì     |    Sì    |    Sì   | Sì |   Sì   |
-| Windows 10 IoT Enterprise         |    no      |    Sì    |    Sì   | no  |   Sì   |
-| Windows 10 Enterprise             |    no      |    Sì    |    Sì   | no  |   Sì   |
-| Windows 10 Professional           |    no      |    Sì    |    Sì   | no  |   Sì   |
-| Windows 10 Home                   |    no      |    Sì    |    Sì   | no  |   Sì   |
-| Windows 8.1 Enterprise            |    no      |    Sì    |    Sì   | no  |   Sì   |
-| Windows 8.1 Pro                   |    no      |    Sì    |    Sì   | no  |   Sì   |
-| Windows 8.1 Enterprise            |    no      |    Sì    |    Sì   | no  |   Sì   |
-| Windows 8 Pro                     |    no      |    Sì    |    Sì   | no  |   Sì   |
-| Windows 8                         |    no      |    Sì    |    Sì   | no  |   Sì   | 
+| Windows 10 IoT Enterprise         |    No      |    Sì    |    Sì   | No  |   Sì   |
+| Windows 10 Enterprise             |    No      |    Sì    |    Sì   | No  |   Sì   |
+| Windows 10 Professional           |    No      |    Sì    |    Sì   | No  |   Sì   |
+| Windows 10 Home                   |    No      |    Sì    |    Sì   | No  |   Sì   |
+| Windows 8.1 Enterprise            |    No      |    Sì    |    Sì   | No  |   Sì   |
+| Windows 8.1 Pro                   |    No      |    Sì    |    Sì   | No  |   Sì   |
+| Windows 8.1 Enterprise            |    No      |    Sì    |    Sì   | No  |   Sì   |
+| Windows 8 Pro                     |    No      |    Sì    |    Sì   | No  |   Sì   |
+| Windows 8                         |    No      |    Sì    |    Sì   | No  |   Sì   | 
 
 > [!NOTE]  
 > Le seguenti funzionalità di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni precedenti costituiscono un'eccezione rispetto ai sistemi operativi supportati elencati in questa sezione in quanto possono essere installate in Windows Server 2008 R2 SP1 o versioni successive:  
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - Componente aggiuntivo per prodotti SharePoint  
-::: moniker-end
 
 
   

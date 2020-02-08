@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073139"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -61,7 +61,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
+ [ [ *database_name* . [ *schema_name* ]. ] | *schema_name* . ] *table_name*  
  Nome della tabella da creare nel database, composto da una, due o tre parti. Per una tabella esterna, solo i metadati della tabella vengono archiviati nel database relazionale.  
   
  LOCATION =  '*hdfs_folder*'  
@@ -186,12 +186,12 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  Quando CREATE EXTERNAL TABLE AS SELECT effettua una selezione da un file RCFILE, i valori delle colonne del file RCFILE non devono contenere il carattere pipe "|".  
   
-## <a name="locking"></a>Utilizzo di blocchi  
+## <a name="locking"></a>Blocco  
  Accetta un blocco condiviso per l'oggetto SCHEMARESOLUTION.  
   
 ##  <a name="Examples"></a> Esempi  
   
-### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. Creare una tabella di Hadoop usando CREATE EXTERNAL TABLE AS SELECT (CETAS)  
+### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>R. Creare una tabella di Hadoop usando CREATE EXTERNAL TABLE AS SELECT (CETAS)  
  L'esempio seguente crea una nuova tabella esterna denominata `hdfsCustomer` usando le definizioni e i dati delle colonne della tabella di origine `dimCustomer`.  
   
  La definizione della tabella è archiviata nel database e i risultati dell'istruzione SELECT vengono esportati nel file "/pdwdata/customer.tbl" nell'origine dati esterna Hadoop *customer_ds*. Il file viene formattato in base al formato di file esterno *customer_ff*.  

@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5e78b5e1efbcc082c49cd80737b35d76cd1aeddb
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155495"
 ---
 # <a name="database-engine-tutorials"></a>Esercitazioni del motore di database
@@ -26,7 +26,7 @@ In questa sezione sono disponibili le esercitazioni per il [!INCLUDE[ssDECurrent
 In questa esercitazione viene illustrato come connettersi a un'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 [Esercitazione: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
-In questa esercitazione viene illustrato l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offre un'interfaccia grafica per la configurazione, il monitoraggio e l'amministrazione di istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Inoltre, consente di distribuire, monitorare e aggiornare i componenti livello dati utilizzati dalle applicazioni, ad esempio i database e i data warehouse. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
+In questa esercitazione viene illustrato l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] presenta un'interfaccia grafica per la configurazione, il monitoraggio e l'amministrazione di istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Inoltre, consente di distribuire, monitorare e aggiornare i componenti livello dati utilizzati dalle applicazioni, ad esempio i database e i data warehouse. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
   
 [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
 In questa esercitazione vengono illustrate le competenze necessarie per scrivere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] al fine di creare e gestire gli oggetti in un database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

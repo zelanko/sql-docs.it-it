@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f83f028772a93dbd2104d9f449fcd7aa3b1be0d8
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74543009"
 ---
 # <a name="data-type-support"></a>Supporto dei tipi di dati
@@ -69,6 +69,6 @@ Nella tabella seguente vengono illustrati i tipi di dati di database Teradata e 
 ## <a name="next-steps"></a>Passaggi successivi
 
 - Configurare la [gestione connessione Teradata](teradata-connection-manager.md)
-- Configurare l'[origine di Teradata](teradata-source.md)
-- Configurare la [destinazione di Teradata](teradata-destination.md)
+- Configurare l'[origine Teradata](teradata-source.md)
+- Configurare la [destinazione Teradata](teradata-destination.md)
 - Per eventuali domande, visitare [TechCommunity](https://aka.ms/AA6iwdw).

@@ -53,7 +53,7 @@ Specifica una variabile contenente i dati di cui eseguire l'hashing. `@input` è
 '*input*'  
 Specifica un'espressione che restituisce un carattere o una stringa binaria di cui eseguire l'hashing.  
   
- L'output è conforme allo standard dell'algoritmo, ovvero 128 bit (16 byte) per MD2, MD4 e MD5 e 160 bit (20 byte) per SHA e SHA1; 256 bit (32 byte) per SHA2_256 e 512 bit (64 byte) per SHA2_512.  
+ L'output è conforme allo standard dell'algoritmo: 128 bit (16 byte) per MD2, MD4 e MD5; 160 bit (20 byte) per SHA e SHA1; 256 bit (32 byte) per SHA2_256 e 512 bit (64 byte) per SHA2_512.  
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive
   
