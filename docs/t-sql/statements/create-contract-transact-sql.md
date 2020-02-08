@@ -22,10 +22,10 @@ ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064645"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
@@ -75,7 +75,7 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  Indica che il contratto supporta messaggi del tipo predefinito. Per impostazione predefinita, tutti i database contengono un tipo di messaggio denominato DEFAULT. Questo tipo di messaggio utilizza la convalida di tipo NONE. Nel contesto di questa clausola DEFAULT non è una parola chiave ed è pertanto necessario delimitarlo come identificatore. In Microsoft SQL Server è inoltre disponibile un contratto DEFAULT che specifica il tipo di messaggio DEFAULT.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  L'ordine dei tipi di messaggio nel contratto non è significativo. Dopo che il servizio di destinazione ha ricevuto il primo messaggio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] consente ai lati della conversazione di inviare qualsiasi messaggio consentito al lato specifico della conversazione in qualsiasi momento. Se ad esempio il servizio initiator della conversazione può inviare messaggi di tipo **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] consente a tale servizio di inviare un numero qualsiasi di messaggi **SubmitExpense** durante la conversazione.  
   
  In un contratto non è possibile modificare i tipi di messaggio e la direzione dei messaggi. Per modificare il parametro AUTHORIZATION per un contratto, utilizzare l'istruzione ALTER AUTHORIZATION.  

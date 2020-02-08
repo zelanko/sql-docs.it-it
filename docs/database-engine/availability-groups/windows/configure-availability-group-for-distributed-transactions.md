@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713273"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurare le transazioni distribuite per un gruppo di disponibilità Always On
@@ -118,7 +118,7 @@ A livello dell'applicazione le transazioni distribuite vengono gestite in modo s
    
    Se la fase preparatoria ha esito positivo in tutti gli strumenti di gestione delle risorse, il gestore delle transazioni invia comandi di commit agli strumenti di gestione, i quali possono quindi completare il commit. Se il commit viene eseguito correttamente da parte di tutti gli strumenti di gestione delle risorse, il gestore delle transazioni invia all'applicazione una notifica di operazione riuscita. Se viene segnalato un tentativo di preparazione non riuscito in uno strumento di gestione delle risorse, il gestore delle transazioni invia un comando di rollback a tutti gli strumenti di gestione e segnala all'applicazione che il commit ha avuto esito negativo.
 
-### <a name="detailed-steps"></a>Passaggi dettagliati
+### <a name="detailed-steps"></a>Procedura dettagliata
 
 L'elenco seguente illustra il funzionamento dell'applicazione con DTC per completare le transazioni distribuite.
 
@@ -195,7 +195,7 @@ Dopo il commit o il rollback della transazione, è possibile usare `ALTER DATABA
 
 Per altre informazioni sulla risoluzione delle transazioni in dubbio, vedere [Risolvere le transazioni manualmente](https://technet.microsoft.com/library/cc754134.aspx).
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 
 [Transazioni distribuite](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

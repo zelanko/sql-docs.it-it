@@ -13,10 +13,10 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 92f6384d099a6f29ec43387283a1e52a3e600076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298926"
 ---
 # <a name="access-the-cdc-designer-console"></a>Accedere a CDC Designer Console
@@ -35,8 +35,8 @@ ms.locfileid: "71298926"
 ### <a name="server-name"></a>Server Name  
  Digitare il nome del server in cui si trova [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="authentication"></a>Autenticazione  
- Selezionare una delle opzioni seguenti:  
+### <a name="authentication"></a>Authentication  
+ Selezionare uno degli elementi seguenti:  
   
 -   **Autenticazione di Windows**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71298926"
  **Encrypt Connection**  
  Selezionare **Encrypt Connection** (Crittografa connessione) per la comunicazione tra il servizio Oracle CDC e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione tramite una connessione crittografata. **Advanced (Avanzate)** : Fare clic su **Advanced** e digitare eventuali proprietà di connessione aggiuntive nella finestra di dialogo Advanced Connection Properties.  
   
- **Advanced**  
+ **Funzionalità avanzate**  
  Fare clic su **Advanced** e digitare eventuali proprietà di connessione aggiuntive nella finestra di dialogo Advanced Connection Properties.  
   
  Per informazioni sulla finestra di dialogo Advanced Connection Properties, vedere [Advanced Connection Properties](../../integration-services/change-data-capture/advanced-connection-properties.md).  

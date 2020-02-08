@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6b87620704416df94cf21cda05d1a64a8159eb32
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595586"
 ---
 # <a name="provision-enclave-enabled-keys"></a>Effettuare il provisioning delle chiavi abilitate per l'enclave
@@ -146,7 +146,7 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName
 ```
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Passaggi successivi
 - [Eseguire query delle colonne usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-query-columns.md)
 - [Configurare la crittografia delle colonne sul posto usando Always Encrypted con enclave sicuri](always-encrypted-enclaves-configure-encryption.md)
 - [Abilitare Always Encrypted con enclave sicuri per le colonne crittografate esistenti](always-encrypted-enclaves-enable-for-encrypted-columns.md)

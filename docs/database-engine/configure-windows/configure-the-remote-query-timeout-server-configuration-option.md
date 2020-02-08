@@ -14,10 +14,10 @@ ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d1559e997270712dd701a1295de4a896a2425642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012300"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>Configurare l'opzione di configurazione del server remote query timeout
@@ -35,7 +35,7 @@ ms.locfileid: "68012300"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per configurare l'opzione remote query timeout utilizzando:**  
   

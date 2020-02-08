@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165337"
 ---
 # <a name="linked-servers-database-engine"></a>Server collegati (Motore di database)
@@ -64,7 +64,7 @@ Il provider OLE DB di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCL
 ## <a name="linked-server-details"></a>Dettagli relativi ai server collegati  
  Nella figura seguente vengono illustrati i componenti di base di una configurazione con server collegati.  
   
- ![Livello client, livello server e livello server di database](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
+ ![Livello client, livello server e livello server di database](../../relational-databases/linked-servers/media/lsvr.gif "Livello client, livello server e livello server di database")  
   
 I server collegati vengono in genere utilizzati per la gestione delle query distribuite. Quando un'applicazione client esegue una query distribuita tramite un server collegato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analizza il comando e invia le richieste a OLE DB. È possibile richiedere l'esecuzione di una query sul provider o l'apertura di una tabella di base dal provider.  
 
@@ -93,7 +93,7 @@ Per gestire le definizioni dei server collegati è possibile utilizzare stored p
   
 Per definire i server collegati è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In Esplora oggetti fare clic con il pulsante destro del mouse su **Oggetti server**, scegliere **Nuovo**e quindi **Server collegato**. Per eliminare la definizione di un server collegato, è possibile fare clic con il pulsante destro del mouse sul nome del server collegato e scegliere **Elimina**.  
   
- Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome composto da quattro parti deve essere nel formato _nome\_server\_collegato.catalog_**.**_schema_**.**_nome\_oggetto_.  
+ Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome composto da quattro parti deve essere nel formato _nome\_server\_collegato.catalog_ **.** _schema_ **.** _nome\_oggetto_.  
   
 > [!NOTE]  
 > È possibile definire un server collegato in modo che punti all'indietro (loopback) al server in cui è stato definito. I server di loopback risultano particolarmente utili durante il test di un'applicazione in cui vengono utilizzate query distribuite in una rete con un solo server. I server collegati di loopback sono destinati ai test e non sono supportati per molte operazioni, ad esempio le transazioni distribuite.  

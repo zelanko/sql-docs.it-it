@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908029"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introduzione a columnstore per l'analisi operativa in tempo reale
@@ -28,7 +28,7 @@ ms.locfileid: "72908029"
   
 -   **Complessità.** L'implementazione di ETL può richiedere una notevole quantità di codifica, soprattutto per caricare solo le righe modificate. L'identificazione delle righe che sono state modificate può risultare difficile.  
   
--   **Costi.** L'implementazione di ETL richiede il costo di acquisto di licenze software e hardware aggiuntive.  
+-   **Costo.** L'implementazione di ETL richiede il costo di acquisto di licenze software e hardware aggiuntive.  
   
 -   **Latenza dei dati.** L'implementazione di ETL aggiunge un ritardo per l'esecuzione delle analisi. Se, ad esempio, il processo ETL viene eseguito al termine di ogni giornata lavorativa, le query di analisi verranno eseguite sui dati che risalgono ad almeno un giorno prima. Per molte aziende questo ritardo è inaccettabile, perché le loro attività dipendono dall'analisi dei dati in tempo reale. Ad esempio, il rilevamento di frodi richiede l'analisi in tempo reale sui dati operativi.  
   

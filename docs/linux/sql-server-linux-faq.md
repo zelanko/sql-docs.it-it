@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72929910"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Domande frequenti su SQL Server in Linux

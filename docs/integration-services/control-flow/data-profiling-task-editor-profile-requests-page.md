@@ -15,10 +15,10 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294175"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
@@ -28,7 +28,7 @@ ms.locfileid: "71294175"
 
   Utilizzare la pagina **Richieste profilo** di **Editor attività Profiling dati** per selezionare e configurare i profili che si desidera calcolare. In una singola attività Profiling dati è possibile calcolare più profili per più colonne o combinazioni di colonne in più tabelle o viste.  
   
- Per altre informazioni sull'uso dell'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
+ Per altre informazioni su come usare l'attività Profiling dati, vedere [Impostazione dell'attività Profiling dati](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Per altre informazioni sull'uso del Visualizzatore profilo dati per analizzare l'output dell'attività Profiling dati, vedere [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  
   
  **Per aprire la pagina Richieste profilo in Editor attività Profiling dati**  
   

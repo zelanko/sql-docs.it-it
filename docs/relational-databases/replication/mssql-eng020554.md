@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a9ad1938f94c090bd0f7e3746d565d2f0fce25d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6172f4e209c1c8d7ecb5768494f2c5fea0497d83
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770459"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288461"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Dettagli messaggio  
@@ -73,10 +73,10 @@ ms.locfileid: "68770459"
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione dell'agente di replica](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Guida di riferimento a errori ed eventi &#40;replica&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Agente distribuzione repliche](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Agente lettura log repliche](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Agente merge repliche](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Agente di lettura coda repliche](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Agente snapshot repliche](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

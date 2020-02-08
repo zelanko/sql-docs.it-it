@@ -13,10 +13,10 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251980"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Creazione della funzione per il recupero dei dati delle modifiche
@@ -214,13 +214,13 @@ go
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Valore LSN associato al commit della transazione per la modifica.<br /><br /> Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit. Se, ad esempio, un'operazione di aggiornamento nella tabella di origine modifica due diverse righe, la tabella delle modifiche conterrà quattro righe, due con i valori precedenti e due con i nuovi valori, ognuna delle quali con lo stesso valore **__$start_lsn** .|  
 |**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
-|**__$operation**|**int**|Operazione DML (Data Manipulation Language) associata alla modifica. I possibili valori sono i seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
+|**__$operation**|**int**|Operazione DML (Data Manipulation Language) associata alla modifica. Può essere uno dei valori seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori precedenti all'operazione di aggiornamento)<br /><br /> 4 = aggiornamento (valori successivi all'operazione di aggiornamento)|  
 |**__$update_mask**|**varbinary(128)**|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identifica le colonne modificate. È possibile esaminare questo valore se è necessario determinare le colonne modificate.|  
 |**\<colonne della tabella di origine acquisite>**|variabile|Le colonne rimanenti restituite dalla funzione sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se in origine non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, verranno restituite tutte le colonne della tabella di origine.|  
   
  Per altre informazioni, vedere [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo avere creato la funzione con valori di tabella per l'esecuzione di query per i dati delle modifiche, il passaggio successivo consiste nell'iniziare a progettare il flusso di dati nel pacchetto.  
   
  **Argomento successivo:** [Recuperare e interpretare i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  

@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255927"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
@@ -675,7 +675,7 @@ L'archivio differenziale è costituito da uno o più rowgroup detti **rowgroup d
 
 Ogni colonna dispone di alcuni dei relativi valori in ogni rowgroup. Questi valori sono denominati **segmenti di colonna**. Ogni rowgroup contiene un segmento di colonna per ogni colonna della tabella. Ogni colonna ha un segmento di colonna in ogni rowgroup.
 
-![Segmento di colonna](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
+![Segmento di colonna](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "segmento di colonna") 
  
 Quando l'indice columnstore comprime un rowgroup, ogni segmento di colonna viene compresso separatamente. Per decomprimere un'intera colonna, l'indice columnstore deve semplicemente decomprimere un segmento di colonna da ogni rowgroup.   
 

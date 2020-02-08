@@ -1,7 +1,7 @@
 ---
-title: Configurare Windows Firewall per consentire l'accesso a SQL Server |Microsoft Docs
-ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+title: Configurare Windows Firewall
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: abae05ff73ff1da46bda029b32320a9deccfbf51
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637975"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253471"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ Per accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
  Gli utenti esperti nella gestione di **Windows Firewall** e che sanno quali impostazioni del firewall vogliono configurare possono passare direttamente agli articoli più avanzati:  
   
--   [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
+-   [Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
 -   [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
@@ -105,7 +105,7 @@ Per impostazione predefinita, le tipiche porte usate da SQL Server e dai servizi
  
  Nella tabella seguente sono indicate le porte più utilizzate dal [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-|Scenario|Port|Commenti|  
+|Scenario|Porta|Commenti|  
 |--------------|----------|--------------|  
 |Istanza predefinita in esecuzione su TCP|Porta TCP 1433|Si tratta della porta più comune consentita dal firewall. Viene utilizzata nelle connessioni di routine all'installazione predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a un'istanza denominata che rappresenta l'unica istanza in esecuzione nel computer. Le istanze denominate presuppongo alcune considerazioni speciali. Vedere [Porte dinamiche](#BKMK_dynamic_ports) più avanti in questo articolo.|  
 |Istanze denominate con porta predefinita|La porta TCP è una porta dinamica determinata all'avvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|Vedere la discussione che segue nella sezione [Porte dinamiche](#BKMK_dynamic_ports). La porta UDP 1434 potrebbe essere richiesta per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser durante l'utilizzo di istanze denominate.|  
@@ -124,22 +124,22 @@ Per impostazione predefinita, le tipiche porte usate da SQL Server e dai servizi
 ####  <a name="BKMK_dynamic_ports"></a> Porte dinamiche  
  Per impostazione predefinita, per le istanze denominate, inclusa [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], vengono utilizzate porte dinamiche. Ciò significa che ogni volta che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato, identifica una porta disponibile e ne utilizza il numero. Se l'istanza denominata è l'unica istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] installata, è probabile che venga utilizzata la porta TCP 1433. Se sono installate altre istanze del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , è probabile che venga utilizzata una porta TCP diversa. Poiché la porta selezionata potrebbe cambiare ogni volta che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene avviato, è difficile configurare il firewall per abilitare l'accesso al numero di porta corretto. Pertanto, se si utilizza un firewall, è consigliabile riconfigurare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] affinché utilizzi ogni volta lo stesso numero di porta. In questi casi si parla quindi di porta fissa o porta statica. Per altre informazioni, vedere [Configurazione di un server per l'attesa su una porta TCP specifica &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
- Un'alternativa alla configurazione di un'istanza denominata in modo che si metta in attesa su una porta fissa consiste nel creare un'eccezione nel firewall per un programma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio **sqlservr.exe** per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Anche se può risultare utile, il numero di porta non verrà visualizzato nella colonna **Porta locale** della pagina **Regole in entrata** quando si usa lo snap-in MMC Windows Firewall con sicurezza avanzata. Questa operazione può rendere più difficile il controllo delle porte aperte. Tenere anche presente che un Service Pack o un aggiornamento cumulativo può modificare il percorso del file eseguibile di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo non valida la regola del firewall.  
+ Un'alternativa alla configurazione di un'istanza denominata in modo che si metta in attesa su una porta fissa consiste nel creare un'eccezione nel firewall per un programma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio **sqlservr.exe** per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Anche se può risultare utile, il numero di porta non verrà visualizzato nella colonna **Porta locale** della pagina **Regole in entrata** quando si usa lo snap-in MMC Windows Firewall con sicurezza avanzata. Questa operazione può rendere più difficile il controllo delle porte aperte. Tenere anche presente che un Service Pack o un aggiornamento cumulativo può modificare il percorso del file eseguibile di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo non valida la regola del firewall.  
   
 ##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>Per aggiungere un'eccezione del programma al firewall usando Windows Firewall con protezione avanzata
   
 1. Dal menu Start digitare *wf.msc*. Selezionare **Windows Firewall con sicurezza avanzata**.
 1. Nel riquadro sinistro selezionare **Regole connessioni in entrata**.
 1. Nel riquadro destro in **Azioni** fare clic su **Nuova regola**. Verrà aperta la **Creazione guidata nuova regola connessioni in entrata**.
-1. In **Tipo di regola** selezionare **Programma**. Fare clic su **Avanti**.
+1. In **Tipo di regola** selezionare **Programma**. Selezionare **Avanti**.
 1. In **Programma** selezionare **Percorso programma**. Selezionare **Sfoglia** per individuare l'istanza di SQL Server. Il programma è chiamato sqlservr.exe e in genere si trova in:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
-   Fare clic su **Avanti**.
+   Selezionare **Avanti**.
 
 1. In **Operazione** fare clic su **Consenti la connessione**.  
-1. In Profilo includere tutti e tre i profili. Fare clic su **Avanti**.
+1. In Profilo includere tutti e tre i profili. Selezionare **Avanti**.
 1. In **Nome** digitare un nome per la regola. Selezionare **Fine**.
 
 Per altre informazioni sugli endpoint, vedere [Configurazione del Motore di database per l'attesa su più porte TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) e [Viste del catalogo degli endpoint &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
@@ -150,7 +150,7 @@ Per impostazione predefinita le porte tipiche usate da SQL Server Analysis Servi
  
  Nella tabella seguente sono indicate le porte più utilizzate da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Funzionalità|Port|Commenti|  
+|Funzionalità|Porta|Commenti|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Porta TCP 2383 per l'istanza predefinita|La porta standard per l'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|Porta TCP 2382 necessaria solo per un'istanza denominata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Le richieste di connessione client per un'istanza denominata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che non specificano un numero di porta vengono indirizzate alla porta 2382, ovvero la porta su cui è in attesa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser la richiesta viene quindi reindirizzata alla porta utilizzata dall'istanza denominata.|  
@@ -168,7 +168,7 @@ Per impostazione predefinita le porte tipiche usate da SQL Server Reporting Serv
 
 Nella tabella seguente sono indicate le porte più utilizzate da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-|Funzionalità|Port|Commenti|  
+|Funzionalità|Porta|Commenti|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Servizi Web|Porta TCP 80|Utilizzata per una connessione HTTP a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tramite un URL. È consigliabile non usare la regola preconfigurata **Servizi Web (HTTP)** . Per ulteriori informazioni, vedere la sezione [Interazione con altre regole del firewall](#BKMK_other_rules) più avanti.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato per l'utilizzo tramite HTTPS|Porta TCP 443|Utilizzata per una connessione HTTPS tramite un URL. HTTPS è una connessione HTTP che utilizza il protocollo SSL (Secure Sockets Layer). È consigliabile non usare la regola preconfigurata **Servizi Web protetti (HTTP)** . Per ulteriori informazioni, vedere la sezione [Interazione con altre regole del firewall](#BKMK_other_rules) più avanti.|  
@@ -178,7 +178,7 @@ Quando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si connette
 ###  <a name="BKMK_ssis"></a> Porte utilizzate da Integration Services  
  Nella tabella seguente sono indicate le porte utilizzate dal servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|Funzionalità|Port|Commenti|  
+|Funzionalità|Porta|Commenti|  
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Remote Procedure Call (MS RPC)<br /><br /> Utilizzate dal runtime di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|Porta TCP 135<br /><br /> Vedere [Considerazioni speciali per la porta 135](#BKMK_port_135)|Il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizza il protocollo DCOM sulla porta 135. Gestione controllo servizi utilizza la porta 135 per eseguire operazioni come l'avvio e l'arresto del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e la trasmissione di richieste di controllo al servizio in esecuzione. Il numero di porta non può essere modificato.<br /><br /> Questa porta deve essere aperta solo se si sta effettuando la connessione a un'istanza remota del servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o da un'applicazione personalizzata.|  
   
@@ -187,7 +187,7 @@ Per istruzioni dettagliate su come configurare Windows Firewall per [!INCLUDE[ss
 ###  <a name="BKMK_additional_ports"></a> Porte e servizi aggiuntivi  
 Nella tabella riportata di seguito sono elencati i servizi e le porte da cui potrebbe dipendere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Scenario|Port|Commenti|  
+|Scenario|Porta|Commenti|  
 |--------------|----------|--------------|  
 |Strumentazione gestione Windows (WMI)<br /><br /> Per ulteriori informazioni su Strumentazione gestione Windows (WMI), vedere [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md).|WMI viene eseguito come parte di un host del servizio condiviso con porte assegnate tramite DCOM e potrebbe utilizzare la porta TCP 135.<br /><br /> Vedere [Considerazioni speciali per la porta 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza WMI per elencare e gestire servizi. È consigliabile usare il gruppo di regole preconfigurate **Strumentazione gestione Windows (WMI)** . Per ulteriori informazioni, vedere la sezione [Interazione con altre regole del firewall](#BKMK_other_rules) più avanti.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)|Porta TCP 135<br /><br /> Vedere [Considerazioni speciali per la porta 135](#BKMK_port_135)|Se l'applicazione utilizza transazioni distribuite, può essere necessario configurare il firewall in modo da consentire il flusso del traffico di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) tra istanze MS DTC separate e tra MS DTC e strumenti di gestione delle risorse come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È consigliabile utilizzare il gruppo di regole preconfigurato **Distributed Transaction Coordinator** .<br /><br /> Quando è configurato un solo oggetto MS DTC condiviso per l'intero cluster in un gruppo di risorse distinto, è necessario aggiungere sqlservr.exe come eccezione al firewall.|  
@@ -241,7 +241,7 @@ Nella tabella riportata di seguito sono elencati i servizi e le porte da cui pot
   
 2.  Nella finestra di dialogo **Modifica programma** o **Modifica porta** fare clic su **Cambia ambito**.  
   
-3.  Selezionare una delle opzioni seguenti:  
+3.  Scegliere una delle opzioni seguenti:  
   
     -   **Tutti i computer (compresi quelli in Internet)** : Non consigliata. Questa opzione consente a tutti i computer che riescono a comunicare con il computer dell'utente di connettersi al programma o alla porta specificata. Questa impostazione potrebbe essere necessaria per consentire la presentazione delle informazioni a utenti anonimi su Internet, ma aumenta l'esposizione a utenti malintenzionati. L'esposizione può essere ulteriormente aumentata se insieme a questa impostazione viene abilitato anche l'attraversamento NAT (Network Address Translation), ad esempio l'opzione Consenti attraversamento confini.  
   
@@ -250,7 +250,7 @@ Nella tabella riportata di seguito sono elencati i servizi e le porte da cui pot
     -   **Elenco personalizzato**: Solo i computer che dispongono degli indirizzi IP elencati possono connettersi. Questa opzione offre un livello di protezione ancora più elevato di **Solo la rete (subnet) locale**, anche se i computer client che usano DHCP possono modificare occasionalmente l'indirizzo IP. Pertanto il computer desiderato non sarà in grado di connettersi. Un altro computer, a cui non è stata concessa l'autorizzazione, potrebbe accettare l'indirizzo IP elencato ed essere in grado di connettersi. L'opzione **Elenco personalizzato** può risultare adatta per elencare altri server configurati per l'uso di un indirizzo IP fisso anche se gli indirizzi IP possono essere soggetti a spoofing da parte di un intruso. L'efficacia delle regole di limitazione del firewall equivale solo a quella dell'infrastruttura di rete.  
   
 ##  <a name="BKMK_WF_msc"></a> Utilizzo dello snap-in Windows Firewall con sicurezza avanzata  
- È possibile configurare impostazioni del firewall avanzate aggiuntive tramite lo snap-in MMC Windows Firewall con sicurezza avanzata. Lo snap-in include una procedura guidata di creazione delle regole ed espone impostazioni aggiuntive non disponibili nell'elemento **Windows Firewall** del Pannello di controllo. Sono incluse le seguenti impostazioni:  
+ È possibile configurare impostazioni del firewall avanzate aggiuntive tramite lo snap-in MMC Windows Firewall con sicurezza avanzata. Lo snap-in include una procedura guidata di creazione delle regole ed espone impostazioni aggiuntive non disponibili nell'elemento **Windows Firewall** del Pannello di controllo. Tali impostazioni includono quanto segue:  
   
 -   Impostazioni di crittografia  
 -   Restrizioni dei servizi   

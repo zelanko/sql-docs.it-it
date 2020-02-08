@@ -11,10 +11,10 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4e670cf37550734d672047f2d7cf4a9f8045473
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293500"
 ---
 # <a name="ado-net-custom-properties"></a>Proprietà personalizzate ADO NET
@@ -30,8 +30,8 @@ ms.locfileid: "71293500"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|CommandTimeout|String|Valore che specifica il numero di secondi di attesa prima che si verifichi il timeout del comando SQL. Il valore 0 indica che non è impostato alcun timeout del comando.|  
-|SqlCommand|String|Istruzione SQL utilizzata dall'origine ADO.NET per l'estrazione dei dati.<br /><br /> Durante il caricamento del pacchetto, è possibile aggiornare dinamicamente la proprietà con l'istruzione SQL che verrà utilizzata dall'origine ADO.NET. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) e [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md).|  
+|CommandTimeout|string|Valore che specifica il numero di secondi di attesa prima che si verifichi il timeout del comando SQL. Il valore 0 indica che non è impostato alcun timeout del comando.|  
+|SqlCommand|string|Istruzione SQL utilizzata dall'origine ADO.NET per l'estrazione dei dati.<br /><br /> Durante il caricamento del pacchetto, è possibile aggiornare dinamicamente la proprietà con l'istruzione SQL che verrà utilizzata dall'origine ADO.NET. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) e [Utilizzo delle espressioni di proprietà nei pacchetti](../../integration-services/expressions/use-property-expressions-in-packages.md).|  
 |AllowImplicitStringConversion|Boolean|Valore che indica se si verificano le condizioni seguenti:<br /><br /> \- Nessuna generazione di un errore di convalida in caso di mancata corrispondenza tra i tipi di metadati esterni e i tipi stringa delle colonne di output (DT_WSTR o DT_NTEXT).<br /><br /> \- Conversione implicita dei tipi di metadati esterni nel tipo di dati stringa usato dalla colonna di output.<br /><br /> <br /><br /> Il valore predefinito è TRUE.<br /><br /> Per altre informazioni, vedere [Origine ADO NET](../../integration-services/data-flow/ado-net-source.md).|  
   
  L'output e le colonne di output dell'origine ADO.NET non includono proprietà personalizzate.  
@@ -46,9 +46,9 @@ ms.locfileid: "71293500"
   
 |Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|BatchSize|Valore intero|Numero di righe in un batch inviato al server. Il valore **0** indica che le dimensioni del batch corrispondono alle dimensioni del buffer interno. Il valore predefinito di questa proprietà è **0**.|  
-|CommandTimeout|Valore intero|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.|  
-|TableOrViewName|String|Nome della tabella o vista di destinazione.|  
+|BatchSize|Integer|Numero di righe in un batch inviato al server. Il valore **0** indica che le dimensioni del batch corrispondono alle dimensioni del buffer interno. Il valore predefinito di questa proprietà è **0**.|  
+|CommandTimeout|Integer|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.|  
+|TableOrViewName|string|Nome della tabella o vista di destinazione.|  
   
  Per altre informazioni, vedere [Destinazione ADO NET](../../integration-services/data-flow/ado-net-destination.md).  
   

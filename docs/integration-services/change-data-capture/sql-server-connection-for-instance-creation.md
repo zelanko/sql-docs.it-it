@@ -11,10 +11,10 @@ ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e3eee4812124b44a679762d42931b7fa7048b92a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294563"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Connessione di SQL Server per la creazione dell'istanza
@@ -32,8 +32,8 @@ ms.locfileid: "71294563"
  **Nome server**  
  Digitare il nome del server in cui si trova [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Autenticazione**  
- Selezionare una delle opzioni seguenti:  
+ **autenticazione**  
+ Selezionare uno degli elementi seguenti:  
   
 -   **Autenticazione di Windows**  
   

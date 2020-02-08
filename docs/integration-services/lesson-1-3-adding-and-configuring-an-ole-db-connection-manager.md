@@ -11,10 +11,10 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4bf9a4a922c8aeed7ca344b423193e8b01c19037
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296149"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>Lezione 1-3: Aggiungere e configurare una gestione connessione OLE DB
@@ -45,9 +45,9 @@ In questa attività verrà creata una gestione connessione OLE DB che usa l'aute
   
 6. Selezionare **Test connessione** per verificare che le impostazioni di connessione specificate siano valide.  
   
-7. Fare clic su **OK**.  
+7. Selezionare **OK**.  
   
-8. Fare clic su **OK**.  
+8. Selezionare **OK**.  
   
 9. Nel riquadro **Gestioni connessioni** verificare che sia selezionato **localhost. AdventureWorksDW2012**.  
   

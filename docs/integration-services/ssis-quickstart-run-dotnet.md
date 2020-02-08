@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63fdc82f3ecfe2dec42bbc760883e7ccca599f81
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281425"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Eseguire un pacchetto SSIS con codice C# in un'app .NET
@@ -28,13 +28,13 @@ Per creare un'app C#, è possibile usare Visual Studio, Visual Studio Code o un 
 
 Prima di iniziare, verificare che Visual Studio o Visual Studio Code sia installato. Scaricare l'edizione Community gratuita di Visual Studio o lo strumento gratuito Visual Studio Code dalla pagina dei [download di Visual Studio](https://www.visualstudio.com/downloads/).
 
-Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
+Un server di Database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Ottenere le informazioni di connessione per il database SQL di Azure
 
 Per eseguire il pacchetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
-1. Accedere al [portale di Azure](https://portal.azure.com/).
+1. Accedere al [Portale di Azure](https://portal.azure.com/).
 2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.

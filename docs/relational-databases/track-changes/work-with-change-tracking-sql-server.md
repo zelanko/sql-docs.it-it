@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11cfb403fb6bd038549f2273810bb937e625eaf7
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564777"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utilizzare il rilevamento delle modifiche (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "74564777"
   
      Nella figura seguente viene illustrato il modo in cui CHANGETABLE(CHANGES ...) viene utilizzata per ottenere modifiche.  
   
-     ![Esempio di output di query per il rilevamento delle modifiche](../../relational-databases/track-changes/media/queryoutput.gif "|::ref1::|")  
+     ![Esempio di output di query per il rilevamento delle modifiche](../../relational-databases/track-changes/media/queryoutput.gif "Esempio di output di query per il rilevamento delle modifiche")  
   
  Funzione CHANGE_TRACKING_CURRENT_VERSION()  
  Questa funzione viene utilizzata per ottenere la versione corrente che verrà utilizzata alla successiva esecuzione di query sulle modifiche. Tale versione è quella relativa all'ultima transazione di cui è stato eseguito il commit.  

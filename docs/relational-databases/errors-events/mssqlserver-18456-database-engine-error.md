@@ -12,13 +12,13 @@ ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137090"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Dettagli  
@@ -93,7 +93,7 @@ Per risolvere questo problema, includere **TRUSTED_CONNECTION = TRUE** nella str
 ## <a name="examples"></a>Esempi  
 In questo esempio, lo stato dell'errore di autenticazione è 8 e indica che la password non è corretta.  
   
-|date|Origine|Message|  
+|Data|Source (Sorgente)|Message|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|Accesso|Errore: 18456, Gravità: 14, Stato: 8.|  
 |2007-12-05 20:12:56.34|Accesso|Accesso non riuscito per l'utente '<nome_utente>'. [CLIENT: <ip address>]|  

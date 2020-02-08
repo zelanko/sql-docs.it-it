@@ -20,10 +20,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 40ce8094d651ee9ae1423b9c3feb636c33befca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901947"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67901947"
 
   Specifica una condizione di ricerca per un grafo. Il criterio MATCH può essere usato solo con il nodo del grafico e le tabelle bordi, nell'istruzione SELECT come parte della clausola WHERE. 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -134,14 +134,14 @@ Il criterio di lunghezza arbitraria accetta quantificatori di criteri nello stil
 * **+** : Ripetere il criterio una o più volte. Terminare non appena viene trovato un percorso più breve.    
 * **{1,n}** : Ripetere il criterio da una a "n" volte. Terminare non appena viene trovato un percorso più breve.     
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 I nomi dei nodi all'interno del criterio MATCH possono essere ripetuti.  In altre parole, un nodo può essere attraversato un numero arbitrario di volte nella stessa query.  
 Il nome di un bordo non può essere ripetuto all'interno del criterio MATCH.  
 Un bordo può puntare in entrambe le direzioni, ma deve avere una direzione esplicita.  
 Gli operatori OR e NOT non sono supportati nel criterio MATCH. Il criterio MATCH può essere combinato con altre espressioni tramite l'operatore AND nella clausola WHERE. Non può tuttavia essere combinato con altre espressioni tramite l'operatore OR o NOT. 
 
 ## <a name="examples"></a>Esempi  
-### <a name="a--find-a-friend"></a>A.  Trovare un amico 
+### <a name="a--find-a-friend"></a>R.  Trovare un amico 
  Nell'esempio seguente viene creata una tabella nodi di persone e una tabella bordi di amici, vengono inseriti alcuni dati e quindi viene usato il criterio MATCH per trovare gli amici di Alice, una persona nel grafo.
 
  ```

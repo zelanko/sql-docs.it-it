@@ -23,10 +23,10 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134659"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
@@ -105,7 +105,7 @@ ms.locfileid: "68134659"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >**: consente di passare alla pagina **Seleziona pacchetto**.  
+ **Avanti >** : consente di passare alla pagina **Seleziona pacchetto**.  
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "68134659"
   
  **< Indietro**: consente di tornare alla pagina **Introduzione**.  
   
- **Avanti >**: consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
+ **Avanti >** : consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "68134659"
   
  **< Indietro**: consente di tornare allo stato iniziale della pagina **Seleziona pacchetto**.  
   
- **Avanti >**: consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
+ **Avanti >** : consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "68134659"
   
  **< Indietro**: consente di tornare alla pagina **Seleziona pacchetto**.  
   
- **Avanti >**: consente di passare alla pagina **Rileva modifiche**.  
+ **Avanti >** : consente di passare alla pagina **Rileva modifiche**.  
   
  **Annulla** : consente di terminare la procedura guidata senza aggiornare l'applicazione livello dati.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68134659"
   
  **< Indietro**: consente di tornare alla pagina **Selezione pacchetto di applicazione livello dati**.  
   
- **Avanti >**: consente di passare alla pagina **Opzioni**.  
+ **Avanti >** : consente di passare alla pagina **Opzioni**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "68134659"
   
  **< Indietro**: consente di tornare alla pagina **Rileva modifiche**.  
   
- **Avanti >**: consente di passare alla pagina **Revisione del piano di aggiornamento**.  
+ **Avanti >** : consente di passare alla pagina **Revisione del piano di aggiornamento**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "68134659"
   
  **< Indietro**: consente di tornare alla pagina **Rileva modifiche**.  
   
- **Avanti >**: consente di passare alla pagina **Riepilogo**.  
+ **Avanti >** : consente di passare alla pagina **Riepilogo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68134659"
   
  **< Indietro**: consente di tornare alla pagina **Revisione del piano di aggiornamento**.  
   
- **Avanti >**: consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Aggiorna applicazione livello dati**.  
+ **Avanti >** : consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Aggiorna applicazione livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   

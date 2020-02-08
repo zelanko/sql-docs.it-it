@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3c2a2777ca1679cbc8fe0748c4c5ec1cdfa92f1d
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 89b1af5d49fbcd3223e6ed0e4a8aea56a0308465
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811484"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286168"
 ---
 # <a name="mssql_eng014114"></a>MSSQL_ENG014114
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68811484"
  Non sarà possibile eseguire la replica, se una qualsiasi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene registrata utilizzando l'indirizzo IP o il nome di dominio completo (FQDN, Fully Qualified Domain Name). Se durante la configurazione della replica una delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata registrata utilizzando l'indirizzo IP o il nome di dominio completo in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , è possibile che venga generato questo errore.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- Se nel messaggio di errore viene specificata una particolare istanza, configurare il server come server di distribuzione. Per altre informazioni, vedere [Configurazione della distribuzione](../../relational-databases/replication/configure-distribution.md).  
+ Se nel messaggio di errore viene specificata una particolare istanza, configurare il server come server di distribuzione. Per altre informazioni, vedere [Configure Distribution](../../relational-databases/replication/configure-distribution.md).  
   
  Se nel messaggio non viene specificata una particolare istanza ('null'), verificare che l'istanza del server di distribuzione sia registrata correttamente. Se il nome di rete del computer e il nome dell'istanza di SQL Server sono diversi, procedere in uno dei modi seguenti:  
   

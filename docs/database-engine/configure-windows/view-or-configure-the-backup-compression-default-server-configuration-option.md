@@ -14,10 +14,10 @@ ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 139d5e3b2ec72917ed021fba005cacc306bce191
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67945678"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Visualizzare o configurare l'opzione di configurazione del server backup compression default
@@ -33,7 +33,7 @@ ms.locfileid: "67945678"
   
      [Indicazioni](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per visualizzare o configurare l'opzione backup compression default tramite:**  
   

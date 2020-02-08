@@ -11,10 +11,10 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283266"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lezione 3-2: Aggiungere e configurare le funzionalità di registrazione
@@ -60,7 +60,7 @@ In questa attività viene abilitata la registrazione per il flusso di dati del p
   
 13. Nella colonna **Nome** della scheda **Provider e log** selezionare **Lesson 3 Log File**. Dopo aver creato un provider di log per il pacchetto, è possibile disabilitare la registrazione senza la necessità di eliminarlo e ricrearlo.  
   
-14. Fare clic su **OK**.  
+14. Selezionare **OK**.  
   
 ## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo  
 [Passaggio 3: Testare il pacchetto della lezione 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  

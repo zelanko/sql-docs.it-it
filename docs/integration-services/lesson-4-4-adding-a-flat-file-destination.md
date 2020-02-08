@@ -11,10 +11,10 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae02b9188ecc9917d26532633e4d5a253d4f326b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295950"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lezione 4-4: Aggiungere una destinazione file flat
@@ -53,7 +53,7 @@ In questa attività, tutte queste informazioni sulle righe con esito negativo ve
   
     Oltre alle colonne dal file di dati di origine, sono presenti tre nuove colonne: ErrorCode, ErrorColumn ed ErrorDescription. Queste colonne rappresentano l'output degli errori della trasformazione Lookup Currency Key e dello script nella trasformazione Get Error Description e possono essere utilizzate per la risoluzione dei problemi relativi alla riga con esito negativo.  
   
-12. Fare clic su **OK**.  
+12. Selezionare **OK**.  
   
 13. In **Editor destinazione file flat**deselezionare la casella di controllo **Sovrascrivi dati nel file** .  
   
@@ -61,7 +61,7 @@ In questa attività, tutte queste informazioni sulle righe con esito negativo ve
   
 14. In **Editor destinazione file flat** selezionare **Mapping** per verificare che tutte le colonne siano corrette. Facoltativamente è possibile rinominare le colonne nella destinazione.  
   
-15. Fare clic su **OK**.  
+15. Selezionare **OK**.  
   
 ## <a name="go-to-next-task"></a>Esecuzione del passaggio successivo
 [Passaggio 5: Testare il pacchetto creato nella lezione 4 dell'esercitazione](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  

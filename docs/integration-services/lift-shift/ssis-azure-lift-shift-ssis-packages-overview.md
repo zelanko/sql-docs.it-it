@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896187"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud
@@ -35,7 +35,7 @@ Nella tabella seguente vengono evidenziate le differenze tra SSIS in locale e SS
 
 La differenza più significativa è la separazione dell'archiviazione dal runtime. Azure Data Factory ospita il motore di runtime per i pacchetti SSIS in Azure. Il motore di runtime è definito Runtime di integrazione Azure-SSIS (Azure-SSIS IR). Per altre informazioni, vedere [Runtime di integrazione Azure-SSIS](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
 
-| Percorso | Archiviazione | Runtime | Scalabilità |
+| Location | Archiviazione | Runtime | Scalabilità |
 |---|---|---|---|
 | Locale | SQL Server | Runtime SSIS ospitato da SQL Server | SQL Server Integration Services Scale Out (in SQL Server 2017 e versioni successive)<br/><br/>Soluzioni personalizzate (nelle versioni precedenti di SQL Server) |
 | In Azure | Database SQL o Istanza gestita di database SQL | Runtime di integrazione Azure-SSIS, un componente di Azure Data Factory | Opzioni di scalabilità per il runtime di integrazione Azure-SSIS |
@@ -75,7 +75,7 @@ Per connettersi a file e condivisioni file, vedere [Aprire e salvare file in loc
 
 ### <a name="available-ssis-components"></a>Componenti SSIS disponibili
 
-Quando si esegue il provisioning di un'istanza del database SQL per ospitare SSISDB, vengono installati anche Azure Feature Pack per SSIS e le funzionalità di accesso ridistribuibili. Questi componenti offrono la connettività a varie origini dati di **Azure** e ai file di **Excel e Access**, oltre che alle origini dati supportate dai componenti predefiniti.
+Quando si effettua il provisioning di un'istanza del database SQL per ospitare SSISDB, vengono installati anche il Feature Pack di Azure per SSIS e Access Redistributable. Questi componenti offrono la connettività a varie origini dati di **Azure** e ai file di **Excel e Access**, oltre che alle origini dati supportate dai componenti predefiniti.
 
 È anche possibile installare componenti aggiuntivi, ad esempio un driver non installato per impostazione predefinita. Per altre informazioni, vedere [Personalizzare l'installazione del runtime di integrazione Azure-SSIS](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
@@ -85,7 +85,7 @@ Se l'utente è un ISV può aggiornare l'installazione dei componenti concessi in
 
 ### <a name="transaction-support"></a>Supporto delle transazioni
 
-Con SQL Server in locale e nelle macchine virtuali Azure, è possibile usare le transazioni Microsoft Distributed Transaction Coordinator (MSDTC). Per configurare MSDTC in ogni nodo del runtime di integrazione Azure-SSIS usare la funzionalità di installazione personalizzata. Per altre informazioni, vedere [Custom setup for the Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) (Configurazione personalizzata del runtime di integrazione SSIS di Azure).
+Con SQL Server in locale e nelle macchine virtuali Azure, è possibile usare le transazioni Microsoft Distributed Transaction Coordinator (MSDTC). Per configurare MSDTC in ogni nodo del runtime di integrazione Azure-SSIS usare la funzionalità di installazione personalizzata. Per altre informazioni, vedere [Installazione personalizzata per il runtime di integrazione Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 Con il database SQL di Azure è possibile usare solo le transazioni elastiche. Per altre informazioni, vedere [Transazioni distribuite in database cloud](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview).
 

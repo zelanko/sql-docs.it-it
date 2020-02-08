@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981952"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -227,7 +227,7 @@ Execute a character string
   
  Per impostazione predefinita, i parametri ammettono valori Null.  
   
- *Valore*  
+ *value*  
  Valore del parametro da passare al modulo o al comando pass-through. Se i nomi dei parametri vengono omessi, è necessario immettere i relativi valori in base all'ordine definito nel modulo.  
   
  Durante l'esecuzione di comandi pass-through in server collegati, l'ordine dei valori dei parametri dipende dal provider OLE DB del server collegato. La maggior parte dei provider OLE DB associa i valori ai parametri da sinistra a destra.  
@@ -266,12 +266,12 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
  AS \<context_specification>  
  Specifica il contesto in cui viene eseguita l'istruzione.  
   
- Account di accesso  
+ LOGIN  
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive
   
  Specifica che il contesto da rappresentare è un account di accesso. L'ambito di rappresentazione è il server.  
   
- Utente  
+ USER  
  Specifica che il contesto da rappresentare è un utente nel database corrente. L'ambito di rappresentazione è limitato al database corrente. Un cambio di contesto a un utente del database non eredita le autorizzazioni a livello di server di tale utente.  
   
 > [!IMPORTANT]  
@@ -282,7 +282,7 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
   
  *name* non può essere un account predefinito, ad esempio NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
   
- Per altre informazioni, vedere [Indicazione di un nome utente o di un ID di accesso](#_user) più avanti in questo argomento.  
+ Per altre informazioni, vedere [Specifica di un nome utente o un nome account di accesso](#_user) di seguito in questo argomento.  
   
  [N] '*command_string*'  
  Stringa costante contenente il comando da passare al server collegato. Se si specifica N, la stringa viene interpretata come di tipo **nvarchar**.  
@@ -298,7 +298,7 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
  WITH \<execute_option>  
  Opzioni di esecuzione possibili. Non è possibile specificare opzioni RESULT SETS in un'istruzione INSERT...EXEC.  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |RECOMPILE|Forza la compilazione, l'utilizzo e l'eliminazione di un nuovo piano dopo l'esecuzione del modulo. Se per il modulo è disponibile un piano di query esistente, tale piano rimane nella cache.<br /><br /> Utilizzare questa opzione se il parametro fornito è atipico oppure se i dati sono cambiati notevolmente. Questa opzione non viene utilizzata per stored procedure estese. È consigliabile utilizzarla solo quando è strettamente necessario, in quanto si tratta di un'opzione onerosa.<br /><br /> **Nota:** non è possibile usare WITH RECOMPILE quando viene chiamata una stored procedure che usa la sintassi OPENDATASOURCE. Quando viene specificato un nome di oggetto composto da quattro parti, l'opzione WITH RECOMPILE viene ignorata.<br /><br /> **Nota:** le funzioni scalari definite dall'utente compilate in modo nativo non supportano RECOMPILE. Se è necessario ricompilare, usare [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**RESULT SETS UNDEFINED**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Questa opzione non fornisce alcuna garanzia sugli eventuali risultati restituiti e non viene specificata alcuna definizione. L'istruzione viene eseguita senza errore se vengono restituiti risultati o se non ne vengono restituiti. RESULT SETS UNDEFINED rappresenta il comportamento predefinito se result_sets_option non viene specificato.<br /><br /> Per le funzioni scalari definite dall'utente interpretate e per le funzioni scalari definite dall'utente compilate in modo nativo, questa opzione non è operativa perché le funzioni non restituiscono mai un set di risultati.|  
@@ -309,7 +309,7 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
   
  Descrive i set di risultati restituiti dalle istruzioni eseguite. Le clausole di result_sets_definition hanno il significato seguente  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124; NOT NULL]<br /><br /> }|Vedere la tabella riportata di seguito.|  
 |db_name|Nome del database contenente la tabella, la vista o la funzione con valori di tabella.|  
@@ -318,7 +318,7 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
 |AS TYPE [schema_name.]table_type_name|Specifica che le colonne restituite saranno quelle specificate nel tipo della tabella.|  
 |AS FOR XML|Specifica che i risultati XML dell'istruzione o della stored procedure chiamata dall'istruzione EXECUTE vengono convertiti nel formato come se fossero prodotti da un'istruzione SELECT ... FOR XML ... Tutta la formattazione dalle direttive type nell'istruzione originale viene rimossa e i risultati vengono restituiti come se non fosse stata specificata alcuna direttiva type. AS FOR XML non converte i risultati tabulari non XML dall'istruzione o dalla stored procedure eseguita in XML.|  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |column_name|Nomi di ogni colonna. Se il numero di colonne è diverso dal set di risultati, si verifica un errore e il batch viene interrotto. Se il nome di una colonna è diverso dal set di risultati, il nome della colonna restituito verrà impostato sul nome definito.|  
 |data_type|Tipi di dati di ogni colonna. Se i tipi di dati sono diversi, viene eseguita una conversione implicita al tipo di dati definito. Se la conversione ha esito negativo il batch viene interrotto|  
@@ -327,7 +327,7 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
   
  Il set di risultati effettivo restituito durante l'esecuzione può essere diverso dal risultato definito tramite la clausola WITH RESULT SETS in uno dei modi seguenti: numero di set di risultati, numero di colonne, nome della colonna, ammissione di valori Null e tipo di dati. Se il numero di set di risultati è diverso, si verifica un errore e il batch viene interrotto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  È possibile specificare parametri usando *value* o @*parameter_name*=*value*. Un parametro non fa parte di una transazione. Se un parametro viene modificato in una transazione per la quale verrà eseguito il rollback, il valore del parametro non viene ripristinato al suo valore precedente. Il valore restituito al chiamante corrisponde sempre al valore specificato al termine del modulo.  
   
  La nidificazione si verifica quando un modulo ne chiama un altro o quando esegue codice gestito tramite riferimenti a un modulo CLR (Common Language Runtime), un tipo definito dall'utente o una funzione di aggregazione. Il livello di nidificazione viene incrementato quando il modulo chiamato o il riferimento al codice gestito viene eseguito, mentre viene decrementato al termine dell'esecuzione del modulo chiamato o del riferimento al codice gestito. Se viene superato il numero massimo di 32 livelli di nidificazione, l'intera catena di chiamata ha esito negativo. Il livello di annidamento corrente viene archiviato nella funzione di sistema @@NESTLEVEL.  
@@ -391,7 +391,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. Utilizzo dell'istruzione EXECUTE per passare un parametro singolo  
+### <a name="a-using-execute-to-pass-a-single-parameter"></a>R. Utilizzo dell'istruzione EXECUTE per passare un parametro singolo  
  La stored procedure `uspGetEmployeeManagers` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] prevede un parametro (`@EmployeeID`). Gli esempi seguenti eseguono la stored procedure `uspGetEmployeeManagers` con `Employee ID 6` come valore di parametro.  
   
 ```  

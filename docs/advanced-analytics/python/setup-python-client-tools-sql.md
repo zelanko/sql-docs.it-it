@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727526"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurare un client di data science per lo sviluppo Python in SQL Server Machine Learning Services
@@ -57,7 +57,7 @@ Uno script di installazione aggiunge tre librerie specifiche di Microsoft al cli
 
 2. Aprire una finestra di PowerShell con autorizzazioni di amministratore con privilegi elevati (fare clic con il pulsante destro del mouse su **Esegui come amministratore**).
 
-3. Passare alla cartella in cui è stato scaricato il programma di installazione ed eseguire lo script. Aggiungere l'argomento della riga di comando `-InstallFolder` per specificare il percorso di una cartella per le librerie. Esempio: 
+3. Passare alla cartella in cui è stato scaricato il programma di installazione ed eseguire lo script. Aggiungere l'argomento della riga di comando `-InstallFolder` per specificare il percorso di una cartella per le librerie. Ad esempio: 
 
    ```python
    cd {{download-directory}}

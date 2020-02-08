@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594409"
 ---
 # <a name="always-encrypted-cryptography"></a>Crittografia Always Encrypted
@@ -31,7 +31,7 @@ ms.locfileid: "73594409"
   
  La chiave CEK (Column Encryption Key, chiave di crittografia della colonna) è una chiave di crittografia del contenuto, ovvero una chiave usata per proteggere i dati, protetta da una chiave CMK.  
   
- Tutti i provider di archiviazione CMK di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] eseguono la crittografia delle chiavi CEK con riempimento RSA-OAEP. Il provider dell'archivio chiavi che supporta l'API Cryptography Next Generation (CNG) in .NET Framework ([classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) usa i parametri predefiniti specificati da RFC 8017 nella sezione A.2.1. Tali parametri usano una funzione hash SHA-1 e una funzione di generazione della maschera MGF1 con SHA-1. Tutti gli altri provider di archivi di chiavi usano SHA-256. 
+ Tutti i provider di archiviazione CMK di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] eseguono la crittografia delle chiavi CEK con riempimento RSA-OAEP. Il provider dell'archivio chiavi che supporta l'API Cryptography Next Generation (CNG) in .NET Framework ([classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) usa i parametri predefiniti specificati da RFC 8017 nella sezione A.2.1. Tali parametri predefiniti usano una funzione hash di SHA-1 e una funzione di generazione della maschera MGF1 con SHA-1. Tutti gli altri provider di archivi di chiavi usano SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Algoritmo di crittografia dei dati  
  La funzionalità Always Encrypted usa l'algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** per crittografare i dati nel database.  
@@ -99,7 +99,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Passaggio 4: Concatenation  
+### <a name="step-4-concatenation"></a>Passaggio 4: Concatenazione  
  Infine, il valore crittografato è generato concatenando il byte della versione dell'algoritmo, il MAC, l'IV e il testo crittografato AES_256_CBC:  
   
 ```  
@@ -129,7 +129,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 1 + 32 + 16 + (FLOOR(DATALENGTH(cell_data)/16) + 1) * 16  
 ```  
   
- Esempio:  
+ Ad esempio:  
   
 -   Dopo la crittografia, un valore di testo non crittografato **int** lungo 4 byte diventa un valore binario lungo 65 byte.  
   
@@ -143,7 +143,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**binary**|Variabile. Utilizzare la formula precedente.|  
 |**bit**|65|  
 |**char**|Variabile. Utilizzare la formula precedente.|  
-|**data**|65|  
+|**date**|65|  
 |**datetime**|65|  
 |**datetime2**|65|  
 |**datetimeoffset**|65|  
@@ -178,7 +178,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
  Per i dettagli sugli algoritmi illustrati in questo documento, vedere i file **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs** e **SqlColumnEncryptionCertificateStoreProvider.cs** nella [Guida di riferimento a .NET](https://referencesource.microsoft.com/).  
   
 ## <a name="see-also"></a>Vedere anche  
- - [Crittografia sempre attiva](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Sviluppare applicazioni usando Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

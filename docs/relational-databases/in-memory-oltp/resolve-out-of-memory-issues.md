@@ -11,10 +11,10 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908444"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
@@ -154,7 +154,7 @@ Quando si esegue la virtualizzazione di un database con tabelle ottimizzate per 
 
 Se si seguono le procedure sopra indicate per un database con tabelle ottimizzate per la memoria, un tentativo di ripristinare e recuperare il database potrebbe determinare lo stato di "Recupero in sospeso" anche se la quantità di memoria disponibile è sufficiente per il recupero del database. Il motivo è che all'avvio di OLTP in memoria i dati vengono inseriti nella memoria in maniera più drastica rispetto all'allocazione della memoria al database da parte dell'allocazione dinamica della memoria.
 
-### <a name="resolution"></a>Soluzione
+### <a name="resolution"></a>Risoluzione
 Per risolvere questo problema, preallocare al database una quantità di memoria sufficiente per il recupero o il riavvio del database, anziché un valore minimo che si basa sulla memoria dinamica per ottenere memoria aggiuntiva se necessario.
   
 ## <a name="see-also"></a>Vedere anche  

@@ -13,10 +13,10 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 610f75fa8b706dab60b9691b4f5e5e82c2bdb93f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294618"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparazione dell'esecuzione di una query per i dati delle modifiche
@@ -141,7 +141,7 @@ ms.locfileid: "71294618"
   
 2.  Nella pagina **Generale**in **Editor attività Esegui SQL** selezionare le opzioni seguenti:  
   
-    1.  Per **ResultSet**selezionare **Riga singola**.  
+    1.  Per **ResultSet**, selezionare **Riga singola**.  
   
     2.  Configurare una connessione valida al database di origine.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "71294618"
   
 -   Nella scheda **Flusso di controllo** aggiungere un'attività Flusso di dati e connettere l'attività che ha concatenato la stringa di query.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo avere preparato la stringa di query e avere configurato l'attività Flusso di dati, il passaggio successivo consiste nel creare la funzione valutata a livello di tabella per il recupero dei dati delle modifiche dal database.  
   
  **Argomento successivo:** [Creare la funzione per il recupero dei dati delle modifiche](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  

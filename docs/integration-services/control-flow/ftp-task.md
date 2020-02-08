@@ -17,10 +17,10 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294137"
 ---
 # <a name="ftp-task"></a>Attività FTP
@@ -41,7 +41,7 @@ ms.locfileid: "71294137"
 > [!IMPORTANT]  
 >  La gestione connessione FTP supporta solo l'autenticazione anonima e l'autenticazione di base. Non supporta l'autenticazione di Windows.  
   
- Per l'accesso a un file o a una directory locale, l'attività FTP utilizza un percorso archiviato in una variabile o una gestione connessione file. Per l'accesso a un file o a una directory remota, invece, l'attività FTP utilizza un percorso archiviato in una variabile oppure specificato direttamente sul server remoto, come indicato nella gestione connessione FTP. Per altre informazioni, vedere [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md) e [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+ Per l'accesso a un file o a una directory locale, l'attività FTP utilizza un percorso archiviato in una variabile o una gestione connessione file. Per l'accesso a un file o a una directory remota, invece, l'attività FTP utilizza un percorso archiviato in una variabile oppure specificato direttamente sul server remoto, come indicato nella gestione connessione FTP. Per altre informazioni, vedere [Gestione connessione File](../../integration-services/connection-manager/file-connection-manager.md) e [Variabili di Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
  Questo significa che l'attività FTP può ricevere più file ed eliminare più file remoti, ma se utilizza una gestione connessione può inviare ed eliminare un solo file locale alla volta, poiché una gestione connessione file può accedere a un solo file. Per accedere a più file locali, è necessario specificarne il percorso utilizzando una variabile. Una variabile contenente "C:\Test\&#42;.txt" specifica ad esempio un percorso per l'eliminazione o l'invio di tutti i file con estensione txt presenti nella directory Test.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "71294137"
 |**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **LocalVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **LocalPath**.|  
   
- **Operazione**  
+ **operazione**  
  Consente di selezionare l'operazione FTP da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
 |valore|Descrizione|  

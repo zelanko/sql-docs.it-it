@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e9616620b0d8683d0158bfb76b5145f1bff52054
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 2f8529b7fca4782709f8c8981a27e62dae2029a2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258013"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76364109"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Funzionalità del motore di database deprecate in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -120,6 +120,7 @@ Le funzionalità del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 
 |Security|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
 |Security|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
 |Security|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|Security|sp_changedbowner|ALTER AUTHORIZATION|sp_changedbowner|243|
 |Security|sp_changeobjectowner|ALTER SCHEMA o ALTER AUTHORIZATION|sp_changeobjectowner|58|  
 |Security|sp_control_dbmasterkey_password|La chiave master è obbligatoria e la password deve essere corretta.|sp_control_dbmasterkey_password|274|  
 |Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  

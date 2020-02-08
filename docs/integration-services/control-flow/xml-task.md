@@ -17,10 +17,10 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca59166f994a0bd982c2f00c5c60c39207e9e02a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293657"
 ---
 # <a name="xml-task"></a>Attività XML
@@ -61,7 +61,7 @@ ms.locfileid: "71293657"
 |Operazione|Descrizione|  
 |---------------|-----------------|  
 |Diff|Consente di confrontare due documenti XML. Utilizzando il documento XML di origine come documento di base, l'operazione Diff esegue un confronto con un secondo documento XML, rileva le differenze e le scrive in un documento Diffgram in formato XML. Questa operazione include proprietà per la personalizzazione del confronto.|  
-|Merge|Consente di unire due documenti XML. Utilizzando il documento XML di origine come documento di base, l'operazione Merge aggiunge il contenuto di un secondo documento al documento di base. L'operazione può specificare una posizione di unione nel documento di base.|  
+|Unione|Consente di unire due documenti XML. Utilizzando il documento XML di origine come documento di base, l'operazione Merge aggiunge il contenuto di un secondo documento al documento di base. L'operazione può specificare una posizione di unione nel documento di base.|  
 |Patch|Applica l'output dell'operazione Diff, detto documento Diffgram, a un documento XML, per creare un nuovo documento padre che include il contenuto del documento Diffgram.|  
 |Convalida|Consente di convalidare il documento XML in base a una schema di definizione DTD (Document Type Definition) o XSD (XML Schema Definition).|  
 |XPath|Consente di eseguire valutazioni e query XPath.|  
@@ -339,7 +339,7 @@ ms.locfileid: "71293657"
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**Copia di valutazione**|Restituisce i risultati di una funzione XPath.|  
+|**Versione di valutazione**|Restituisce i risultati di una funzione XPath.|  
 |**Elenco dei nodi**|Restituisce i nodi selezionati come frammento XML.|  
 |**Valori**|Restituisce il valore di testo interno di tutti i nodi selezionati, concatenato all'interno di una stringa.|  
   

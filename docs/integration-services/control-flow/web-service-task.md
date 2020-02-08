@@ -18,10 +18,10 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293804"
 ---
 # <a name="web-service-task"></a>Attività Servizio Web
@@ -75,7 +75,7 @@ ms.locfileid: "71293804"
   
  Per altre informazioni sull'impostazione di queste proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configurazione dell'attività Servizio Web a livello di codice  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic su uno degli argomenti seguenti:  
@@ -133,7 +133,7 @@ ms.locfileid: "71293804"
   Utilizzare la pagina **Input** della finestra di dialogo **Editor attività Servizio Web** per specificare il servizio Web, il metodo Web e i valori da fornire come input al metodo Web. I valori possono essere immessi digitando direttamente le stringhe nella colonna Valore o selezionando le variabili nella colonna Valore.  
   
 ### <a name="options"></a>Opzioni  
- **Servizio**  
+ **Service**  
  Consente di selezionare un servizio Web nell'elenco da utilizzare per l'esecuzione del metodo Web.  
   
  **Metodo**  
@@ -154,7 +154,7 @@ ms.locfileid: "71293804"
  **Variabile**  
  Selezionare le caselle di controllo per utilizzare le variabili per l'invio degli input.  
   
- **Value**  
+ **Valore**  
  Se le caselle di controllo Variabile sono selezionate, selezionare le variabili nell'elenco per l'invio degli input. In caso contrario, digitare i valori da utilizzare negli input.  
   
 ## <a name="web-service-task-editor-output-page"></a>Editor attività Servizio Web (pagina Output)

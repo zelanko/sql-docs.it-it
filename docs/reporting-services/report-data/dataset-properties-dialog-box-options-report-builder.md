@@ -13,10 +13,10 @@ ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e1db5bcd2401d1888fb6dc76e42c5840ed3b0b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573126"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Finestra di dialogo Proprietà set di dati, Opzioni (Generatore report)
@@ -29,7 +29,7 @@ ms.locfileid: "65573126"
  Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opzioni  
- **Confronto**  
+ **Regole di confronto**  
  Consente di selezionare le impostazioni locali che determinano la sequenza di regole di confronto da utilizzare per l'ordinamento dei dati. Il valore**Default** indica che il server di report eseguirà un tentativo di recupero del valore dal provider di dati quando si esegue il report. Se non è possibile recuperare il valore, il valore predefinito viene ottenuto in base alle impostazioni locali del computer.  
   
  **Distinzione maiuscole/minuscole**  
@@ -49,7 +49,7 @@ ms.locfileid: "65573126"
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione di aggregazione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
- [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà set di dati, Query &#40;Generatore report&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)  
   

@@ -17,10 +17,10 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1e4cddbdad631a5602096f92915a4fe78b23d67
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298008"
 ---
 # <a name="conditional-split-transformation"></a>Suddivisione condizionale - trasformazione
@@ -28,7 +28,7 @@ ms.locfileid: "71298008"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  La trasformazione Suddivisione condizionale consente di indirizzare righe di dati verso output diversi a seconda del contenuto dei dati. L'implementazione della trasformazione Suddivisione condizionale è simile a una struttura decisionale CASE in un linguaggio di programmazione. La trasformazione valuta una o più espressioni e, in base ai risultati, dirige la riga di dati verso l'output specificato. Questa trasformazione prevede inoltre un output predefinito, verso il quale vengono indirizzate le righe che non corrispondono ad alcuna espressione.  
+  La trasformazione Suddivisione condizionale consente di indirizzare righe di dati verso output diversi a seconda del contenuto dei dati. L'implementazione della trasformazione Suddivisione condizionale è simile a una struttura decisionale CASE in un linguaggio di programmazione. La trasformazione valuta una o più espressioni e, in base ai risultati, dirige la riga di dati verso l'output specificato. Questa trasformazione prevede inoltre un output predefinito, in modo che se una riga non corrisponde ad alcuna espressione venga indirizzata all'output predefinito.  
   
 ## <a name="configuration-of-the-conditional-split-transformation"></a>Configurazione della trasformazione Suddivisione condizionale  
  Per configurare la trasformazione Suddivisione condizionale, procedere nel modo seguente:  
@@ -79,13 +79,13 @@ ms.locfileid: "71298008"
 >  La trasformazione Suddivisione condizionale indirizza ogni riga di input a un unico output. Se si immettono più condizioni, la trasformazione invierà ogni riga al primo output per cui la condizione è verificata e ignorerà le successive condizioni per tale riga. Per valutare più condizioni consecutivamente, potrebbe essere necessario concatenare più trasformazioni Suddivisione condizionale nel flusso di dati.  
   
 ### <a name="options"></a>Opzioni  
- **JSON**  
+ **Order**  
  Selezionare una riga e utilizzare i tasti di direzione a destra per modificare l'ordine in base a cui valutare le espressioni.  
   
  **Nome output**  
  Consente di specificare un nome per l'output. Per impostazione predefinita viene suggerito un elenco numerato di casi. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
- **Condizione**  
+ **Condition**  
  Consente di digitare un'espressione o di compilarne una eseguendo un'operazione di trascinamento dall'elenco di operatori, funzioni, variabili e colonne disponibili.  
   
  È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.  

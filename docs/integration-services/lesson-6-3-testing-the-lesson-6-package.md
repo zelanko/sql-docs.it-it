@@ -11,10 +11,10 @@ ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a0c50372c199d80dc0e6d3d7e3326918011f8a28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283071"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>Lezione 6-3: Testare il pacchetto della lezione 6

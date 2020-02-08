@@ -10,10 +10,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71149928"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Che cos'è R Services per SQL Server 2016?
@@ -45,8 +45,8 @@ Tra gli esempi del tipo di stime per cui è possibile usare R Services per SQL S
 |-|-|
 |Classificazione/categorizzazione|Suddivisione automatica dei commenti e dei suggerimenti degli utenti in categorie positive e negative|
 |Regressione/stima di valori continui|Previsione del prezzo delle case in base alle dimensioni e alla posizione|
-|Rilevamento di anomalie|Rilevamento di transazioni bancarie fraudolente |
-|Indicazioni|Suggerimento di prodotti che gli acquirenti online potrebbero voler acquistare, in base agli acquisti precedenti|
+|Anomaly Detection|Rilevamento di transazioni bancarie fraudolente |
+|Consigli|Suggerimento di prodotti che gli acquirenti online potrebbero voler acquistare, in base agli acquisti precedenti|
 
 ### <a name="how-to-execute-r-scripts"></a>Come eseguire script R
 

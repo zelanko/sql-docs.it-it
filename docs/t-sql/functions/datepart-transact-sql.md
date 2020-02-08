@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ac0817f4dcbcefd3fc783d2cf0d0ae35afc0c546
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255810"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
@@ -148,7 +148,7 @@ funge da valore predefinito. Dopo avere impostato DATEFIRST, usare questa istruz
 I valori restituiti per DATEPART (**year**, *date*), DATEPART (**month**, *date*) e DATEPART (**day**, *date*) corrispondono a quelli restituiti rispettivamente dalle funzioni [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md) e [DAY](../../t-sql/functions/day-transact-sql.md).
   
 ## <a name="iso_week-datepart"></a>iso_week datepart  
-ISO 8601 include il sistema settimana-relativo alla data ISO, un sistema di numerazione per settimane. Ogni settimana è associata all'anno che inizia con un giovedì. Ad esempio, la settimana 1 del 2004 (2004W01) ha coperto il periodo da lunedì 29 dicembre 2003 a domenica 4 gennaio 2004. I paesi e le aree geografiche europei usano in genere questo stile di numerazione. I paesi e le aree geografiche non europei in genere non lo usano.
+ISO 8601 include il sistema settimana-relativo alla data ISO, un sistema di numerazione per settimane. Ogni settimana è associata all'anno che inizia con un giovedì. Ad esempio, la settimana 1 del 2004 (2004W01) ha coperto il periodo da lunedì 29 dicembre 2003 a domenica 4 gennaio 2004. I paesi e le aree geografiche Europai usano in genere questo stile di numerazione. I paesi e le aree geografiche non Europai in genere non lo usano.
 
 Nota: il numero massimo di settimane in un anno può essere 52 o 53.
   

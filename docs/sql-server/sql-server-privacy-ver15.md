@@ -11,10 +11,10 @@ author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71150294"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>Supplemento alla privacy di SQL Server 2019
@@ -23,11 +23,11 @@ ms.locfileid: "71150294"
 
 Questo articolo riepiloga le funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi di diagnostica e di utilizzo delle funzionalità. SQL Server può raccogliere informazioni standard sul computer e dati relativi all'uso e alle prestazioni che possono venire trasmessi a Microsoft e analizzati al fine di migliorare la qualità, la sicurezza e l'affidabilità del prodotto. Questo articolo funge da supplemento all'[Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). La classificazione dei dati in questo articolo si applica solo alle versioni del prodotto SQL Server locale. Non si applica agli elementi seguenti:
 
-- Database SQL di Azure
+- database SQL di Azure
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
-- Data Migration Assistant
+- Database Migration Assistant
 - SQL Server Migration Assistant
 - Estensione MS-SQL
 

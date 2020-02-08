@@ -18,10 +18,10 @@ ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 09dc970627cb282ed2597c191727b57c173c7bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930637"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (tipo di dati geography)
@@ -45,7 +45,7 @@ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit
   
 Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Restituisce 1 se il tipo di un'istanza **geography** corrisponde al tipo specificato o se il tipo specificato è un predecessore del tipo di istanza. In caso contrario, restituisce 0.  
   
 Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  

@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: e1e07db85220c9312ab71bb5fb020b9a9d611a5f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710521"
 ---
 # <a name="polybase-transact-sql-reference"></a>Informazioni di riferimento su Transact-SQL per PolyBase
@@ -554,4 +554,4 @@ Per esempi di query, vedere l'argomento relativo alle [query PolyBase](../../rel
   
 ## <a name="see-also"></a>Vedere anche  
 [Introduzione a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
-[Guida a PolyBase](../../relational-databases/polybase/polybase-guide.md)
+[guida di PolyBase](../../relational-databases/polybase/polybase-guide.md)

@@ -13,10 +13,10 @@ ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 52d6f73b585f3d0857186bef9c6c440e8655adc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012338"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurare l'opzione di configurazione del server remote access
@@ -59,7 +59,7 @@ ms.locfileid: "68012338"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per configurare l'opzione remote access utilizzando:**  
   

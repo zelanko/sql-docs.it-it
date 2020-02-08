@@ -9,10 +9,10 @@ ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574824"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
@@ -26,7 +26,7 @@ Informazioni su come aggiungere azioni con collegamento ipertestuale a caselle d
  
  *  È possibile **aggiungere un segnalibro a un punto specifico** dello stesso report. 
   
-Provare ad aggiungere collegamenti ipertestuali con i dati di esempio forniti in [Esercitazione: formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Provare ad aggiungere collegamenti ipertestuali con i dati di esempio forniti in [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  I collegamenti associati ai campi del set di dati possono essere esposti ad alterazioni per finalità dannose. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../../reporting-services/security/secure-reports-and-resources.md).  
@@ -73,9 +73,9 @@ Provare ad aggiungere collegamenti ipertestuali con i dati di esempio forniti in
   
 4.  In **Selezionare un URL**digitare o selezionare un URL o un'espressione che restituisca un URL oppure fare clic sulla freccia a discesa e selezionare il nome di un campo contenente un URL. 
 
-    Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio, `https://<servername>/images/image1.jpg`. 
+    Per un elemento pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo. Ad esempio: `https://<servername>/images/image1.jpg`. 
     
-    Per un elemento pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo. Ad esempio, `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
+    Per un elemento pubblicato in un server di report configurato per la modalità integrata SharePoint, utilizzare un URL completo. Ad esempio: `https://<SharePointservername>/<site>/Documents/images/image1.jpg`.
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

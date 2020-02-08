@@ -19,10 +19,10 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292238"
 ---
 # <a name="ole-db-source"></a>Origine OLE DB
@@ -72,7 +72,7 @@ ms.locfileid: "71292238"
 ### <a name="specifying-parameters-by-using-ordinal-positions"></a>Indicazione dei parametri tramite la posizione ordinale  
  Se non viene restituito alcun nome di parametro, gli indicatori di parametro a cui viene eseguito il mapping dei parametri in fase di esecuzione sono determinati dall'ordine in cui compaiono i parametri nell'elenco **Parametri** della finestra di dialogo **Imposta parametri query** . Viene eseguito il mapping del primo parametro dell'elenco al primo ? nell'istruzione SQL, il secondo al secondo? e così via.  
   
- L'istruzione SQL seguente seleziona righe dalla tabella **Product[!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] del database** . Sul primo parametro nell'elenco **Mapping** viene eseguito il mapping al primo parametro nella colonna**Color**, mentre sul secondo parametro viene eseguito il mapping alla colonna **Size**.  
+ L'istruzione SQL seguente seleziona righe dalla tabella **Product[!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] del database** . Sul primo parametro nell'elenco **Mapping** viene eseguito il mapping al primo parametro nella colonna **Color** , mentre sul secondo parametro viene eseguito il mapping alla colonna **Size** .  
   
  `SELECT * FROM Production.Product WHERE Color = ? AND Size = ?`  
   
@@ -106,7 +106,7 @@ ms.locfileid: "71292238"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Estrazione dei dati tramite l'origine OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
+-   [Estrarre dati tramite l'origine OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
 -   [Mapping dei parametri di query a variabili in un componente flusso di dati](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71292238"
 >  Per caricare dati da un'origine dei dati che utilizza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 o versione precedente, utilizzare un'origine Excel. Per altre informazioni, vedere [Editor origine Excel &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
->  La proprietà **CommandTimeout** dell'origine OLE DB non è disponibile nell'**Editor origine OLE DB**, tuttavia può essere impostata usando l'**Editor avanzato**. Per ulteriori informazioni su questa proprietà, vedere la sezione relativa all'origine Excel in [Proprietà personalizzate OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
+>  La proprietà **CommandTimeout** dell'origine OLE DB non è disponibile nell' **Editor origine OLE DB**, tuttavia può essere impostata usando l' **Editor avanzato**. Per ulteriori informazioni su questa proprietà, vedere la sezione relativa all'origine Excel in [Proprietà personalizzate OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
 ### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Aprire Editor origine OLE DB (pagina Gestione connessione)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "71292238"
  **Gestione connessione OLE DB**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Modalità di accesso ai dati**  
@@ -173,11 +173,11 @@ ms.locfileid: "71292238"
  **Testo comando SQL**  
  Immettere il testo di una query SQL, fare clic su **Compila query**per compilare la query o fare clic su **Sfoglia**per individuare il file che contiene il testo della query.  
   
- **Parametri**  
+ **Parameters**  
  Se è stata immessa una query con parametri utilizzando ? come segnaposto per il parametro nel testo della query, usare la finestra di dialogo **Imposta parametri query** per eseguire il mapping tra i parametri di input della query e le variabili del pacchetto.  
   
- **Build query**  
- Usare la finestra di dialogo **Generatore query** per creare la query SQL con strumenti grafici.  
+ **Compila query**  
+ Usare la finestra di dialogo **Generatore query** per creare la query SQL con strumenti grafici visuali.  
   
  **Sfoglia**  
  Usare la finestra di dialogo **Apri** per individuare il file contenente il testo della query SQL.  
@@ -212,7 +212,7 @@ ms.locfileid: "71292238"
  **Colonna**  
  Consente di visualizzare le colonne esterne (origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine OLE DB**.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](../../integration-services/data-flow/error-handling-in-data.md)  

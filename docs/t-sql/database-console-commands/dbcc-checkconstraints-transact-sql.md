@@ -24,10 +24,10 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982403"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
@@ -57,7 +57,7 @@ DBCC CHECKCONSTRAINTS
  Tabella o vincolo da controllare. Se si specifica *table_name* o *table_id* vengono controllati tutti i vincoli abilitati nella tabella. Se si specifica *constraint_name* o *constraint_id* viene controllato solo il vincolo specificato. Se non si specifica un identificatore di tabella o un identificatore di vincolo, vengono controllati tutti i vincoli abilitati in tutte le tabelle del database corrente.  
  Un nome di vincolo identifica in modo univoco la tabella a cui appartiene. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
- con  
+ WITH  
  Consente di specificare opzioni.  
   
  ALL_CONSTRAINTS  
@@ -69,7 +69,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 DBCC CHECKCONSTRAINTS consente di creare ed eseguire una query per ottenere tutti i vincoli FOREIGN KEY e CHECK di una tabella.
   
 Una query di chiave esterna, ad esempio, presenta il seguente formato:
@@ -92,7 +92,7 @@ L'istruzione DBCC CHECKCONSTRAINTS controlla l'integrità dei vincoli FOREIGN KE
   
 Se si specifica *table_name* o *table_id* e la tabella è abilitata per il controllo delle versioni di sistema, DBCC CHECKCONSTRAINTS esegue anche le verifiche di coerenza dei dati temporali sulla tabella specificata. Se non è stato specificato *NO_INFOMSGS*, questo comando restituirà ogni violazione della coerenza nell'output in una riga separata. Il formato dell'output sarà ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<le anomalie riscontrate nel record di tabella temporale>.
   
-|Controlla|Informazioni aggiuntive nell'output in caso di verifica non riuscita|  
+|Controllo|Informazioni aggiuntive nell'output in caso di verifica non riuscita|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
@@ -116,7 +116,7 @@ DBCC CHECKCONSTRAINTS restituisce un set di righe con le colonne seguenti.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-checking-a-table"></a>A. Controllo di una tabella  
+### <a name="a-checking-a-table"></a>R. Controllo di una tabella  
 Nell'esempio seguente viene controllata l'integrità dei vincoli della tabella `Table1` del database `AdventureWorks`.
   
 ```sql  

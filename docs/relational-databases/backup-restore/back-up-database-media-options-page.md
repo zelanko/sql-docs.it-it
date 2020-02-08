@@ -14,10 +14,10 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155556"
 ---
 # <a name="back-up-database-media-options-page"></a>Backup database (pagina Opzioni multimediali)
@@ -34,7 +34,7 @@ ms.locfileid: "70155556"
 >  È possibile definire un piano di manutenzione database per creare backup di database. Per altre informazioni, vedere [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md) e [Usare la Creazione guidata piano di manutenzione](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Quando si specifica un'attività di backup usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) corrispondente facendo clic sul pulsante **Script** e quindi selezionando una destinazione per lo script.  
+>  Quando si specifica un'attività di backup usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) corrispondente facendo clic sul pulsante **Script** e selezionando una destinazione per lo script.  
   
 ## <a name="options"></a>Opzioni  
   
@@ -50,7 +50,7 @@ ms.locfileid: "70155556"
   
 **Esegui backup nel set di supporti esistente**: Consente di eseguire il backup del database in un set di supporti esistente. Selezionando questa opzione, vengono attivate tre opzioni.  
   
- Selezionare una delle opzioni seguenti:  
+ Scegliere una delle opzioni seguenti:  
   
  - **Accoda al set di backup esistente**: Consente di accodare il set di backup a quello dei supporti esistente e di mantenere tutti i backup precedenti.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "70155556"
 >  Per informazioni sui backup del log delle transazioni, vedere [Backup di log delle transazioni &#40; SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  **Tronca il log delle transazioni**  
- Consente di eseguire il backup del log delle transazioni e di troncarlo per liberare spazio per i log. Il database rimane online. Si tratta dell'opzione predefinita.  
+ Consente di eseguire il backup del log delle transazioni e di troncarlo per liberare spazio per i log. Il database rimane online. Questa è l'opzione predefinita.  
   
  **Esegui backup della parte finale del log e lascia il database in stato di ripristino**  
  Consente di eseguire il backup della parte finale del log lasciando il database in stato di ripristino. Questa opzione crea un *backup della parte finale del log*, che consente di eseguire il backup dei log non ancora sottoposti a questa procedura (il log attivo), in genere per la preparazione del ripristino di un database. Il database non sarà disponibile per gli utenti finché non viene ripristinato completamente.  

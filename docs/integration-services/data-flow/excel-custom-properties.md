@@ -11,10 +11,10 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8ced076a2f8985e1734b36d4795cf81ffe538278
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292795"
 ---
 # <a name="excel-custom-properties"></a>Proprietà personalizzate di Excel
@@ -30,13 +30,13 @@ ms.locfileid: "71292795"
   
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Valore intero|Modalità utilizzata per accedere al database. I valori possibili sono **OpenRowset**, **OpenRowset da variabile**, **Comando SQL**e **Comando SQL da variabile**. Il valore predefinito è **OpenRowset**.|  
-|CommandTimeout|Valore intero|Numero di secondi prima del timeout del comando.  Il valore 0 indica un timeout infinito.<br /><br /> **Nota** Questa proprietà non è disponibile in **Editor origine Excel**, ma può essere impostata tramite **Editor avanzato**.|  
-|OpenRowset|String|Nome dell'oggetto di database utilizzato per aprire un set di righe.|  
-|OpenRowsetVariable|String|Variabile che contiene il nome dell'oggetto di database utilizzato per aprire un set di righe.|  
-|ParameterMapping|String|Mapping tra i parametri nel comando SQL e le variabili.|  
-|SqlCommand|String|Comando SQL da eseguire.|  
-|SqlCommandVariable|String|Variabile che contiene il comando SQL da eseguire.|  
+|AccessMode|Integer|Modalità utilizzata per accedere al database. I valori possibili sono **OpenRowset**, **OpenRowset da variabile**, **Comando SQL**e **Comando SQL da variabile**. Il valore predefinito è **OpenRowset**.|  
+|CommandTimeout|Integer|Numero di secondi prima del timeout del comando.  Il valore 0 indica un timeout infinito.<br /><br /> **Nota** Questa proprietà non è disponibile in **Editor origine Excel**, ma può essere impostata tramite **Editor avanzato**.|  
+|OpenRowset|string|Nome dell'oggetto di database utilizzato per aprire un set di righe.|  
+|OpenRowsetVariable|string|Variabile che contiene il nome dell'oggetto di database utilizzato per aprire un set di righe.|  
+|ParameterMapping|string|Mapping tra i parametri nel comando SQL e le variabili.|  
+|SqlCommand|string|Comando SQL da eseguire.|  
+|SqlCommandVariable|string|Variabile che contiene il comando SQL da eseguire.|  
   
  L'output e le colonne di output dell'origine Excel non includono proprietà personalizzate.  
   
@@ -51,14 +51,14 @@ ms.locfileid: "71292795"
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (enumerazione)|Valore che specifica la modalità di accesso della destinazione al relativo database di destinazione.<br /><br /> Di seguito vengono indicati i possibili valori della proprietà.<br /><br /> **OpenRowset** (0): specificare il nome di una tabella o di una vista.<br /><br /> **OpenRowset da variabile** (1): specificare il nome di una variabile contenente il nome di una tabella o di una vista.<br /><br /> **OpenRowset con Fastload** (3): specificare il nome di una tabella o di una vista.<br /><br /> **OpenRowset con Fastload da variabile** (4): specificare il nome di una variabile contenente il nome di una tabella o di una vista.<br /><br /> **Comando SQL** (2): specificare un'istruzione SQL.|  
-|CommandTimeout|Valore intero|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor destinazione Excel**, ma può essere impostata tramite **Editor avanzato**.|  
+|CommandTimeout|Integer|Numero massimo di secondi durante i quali è possibile eseguire il comando SQL prima del timeout. Il valore **0** corrisponde a un intervallo infinito. Il valore predefinito di questa proprietà è **0**.<br /><br /> Nota: Questa proprietà non è disponibile in **Editor destinazione Excel**, ma può essere impostata tramite **Editor avanzato**.|  
 |FastLoadKeepIdentity|Boolean|Valore che specifica se copiare i valori Identity durante il caricamento dei dati. Questa proprietà è disponibile solo quando si utilizza una delle opzioni di caricamento rapido. Il valore predefinito di questa proprietà è **False**.|  
 |FastLoadKeepNulls|Boolean|Valore che specifica se copiare i valori Null durante il caricamento dei dati. Questa proprietà è disponibile solo con una delle opzioni di caricamento rapido. Il valore predefinito di questa proprietà è **False**.|  
-|FastLoadMaxInsertCommitSize|Valore intero|Valore che specifica le dimensioni del batch di cui la destinazione Excel tenta di eseguire il commit durante le operazioni di caricamento rapido. Il valore predefinito è **2147483647**. Il valore **0** indica una singola operazione di commit in seguito all'elaborazione di tutte le righe.|  
-|FastLoadOptions|String|Raccolta di opzioni di caricamento rapido. Tra le opzioni di caricamento rapido sono inclusi il blocco delle tabelle e la verifica dei vincoli. È possibile specificare una, nessuna o entrambe le opzioni.<br /><br /> Nota: Alcune opzioni valide per questa proprietà non sono disponibili in **Editor destinazione Excel**, ma possono essere impostate tramite **Editor avanzato**.|  
-|OpenRowset|String|Quando AccessMode è **OpenRowset**, nome della tabella o della vista a cui accede la destinazione Excel.|  
-|OpenRowsetVariable|String|Quando AccessMode è **OpenRowset da variabile**, nome della variabile che contiene il nome della tabella o della vista a cui accede la destinazione Excel.|  
-|SqlCommand|String|Quando AccessMode è **Comando SQL**, istruzione Transact-SQL usata dalla destinazione Excel per specificare le colonne di destinazione per i dati.|  
+|FastLoadMaxInsertCommitSize|Integer|Valore che specifica le dimensioni del batch di cui la destinazione Excel tenta di eseguire il commit durante le operazioni di caricamento rapido. Il valore predefinito è **2147483647**. Il valore **0** indica una singola operazione di commit in seguito all'elaborazione di tutte le righe.|  
+|FastLoadOptions|string|Raccolta di opzioni di caricamento rapido. Tra le opzioni di caricamento rapido sono inclusi il blocco delle tabelle e la verifica dei vincoli. È possibile specificare una, nessuna o entrambe le opzioni.<br /><br /> Nota: Alcune opzioni valide per questa proprietà non sono disponibili in **Editor destinazione Excel**, ma possono essere impostate tramite **Editor avanzato**.|  
+|OpenRowset|string|Quando AccessMode è **OpenRowset**, nome della tabella o della vista a cui accede la destinazione Excel.|  
+|OpenRowsetVariable|string|Quando AccessMode è **OpenRowset da variabile**, nome della variabile che contiene il nome della tabella o della vista a cui accede la destinazione Excel.|  
+|SqlCommand|string|Quando AccessMode è **Comando SQL**, istruzione Transact-SQL usata dalla destinazione Excel per specificare le colonne di destinazione per i dati.|  
   
  L'input e le colonne di input della destinazione Excel non includono proprietà personalizzate.  
   

@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710459"
 ---
 # <a name="type-mapping-with-polybase"></a>Mapping dei tipi con PolyBase
@@ -36,37 +36,37 @@ Per le tabelle esterne che fanno riferimento a file in origini dati esterne, è 
 | TINYINT       | Byte                      | TINYINT        | ByteWritable          | Solo per numeri non firmati.     |
 | SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
 | INT           | Int32                     | INT            | IntWritable           |
-| BIGINT        | Int64                     | BIGINT         | LongWritable          |
+| bigint        | Int64                     | bigint         | LongWritable          |
 | bit           | Boolean                   | boolean        | BooleanWritable       |
-| FLOAT         | Double                    | double         | DoubleWritable        |
-| REAL          | Single                    | FLOAT          | FloatWritable         |
+| float         | Double                    | double         | DoubleWritable        |
+| real          | Single                    | float          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
-| NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
-| NVARCHAR      | String<br /><br /> Char[] | string         | Varchar               |
-| char          | String<br /><br /> Char[] | string         | Varchar               |
-| varchar       | String<br /><br /> Char[] | string         | Varchar               |
+| NCHAR         | string<br /><br /> Char[] | string         | Varchar               |
+| NVARCHAR      | string<br /><br /> Char[] | string         | Varchar               |
+| char          | string<br /><br /> Char[] | string         | Varchar               |
+| varchar       | string<br /><br /> Char[] | string         | Varchar               |
 | BINARY        | Byte[]                    | BINARY         | BytesWritable         | Si applica a Hive 0.8 e versioni successive. |
 | varbinary     | Byte[]                    | BINARY         | BytesWritable         | Si applica a Hive 0.8 e versioni successive. |
-| Data          | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| smalldatetime | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| datetime2     | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| DATETIME      | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| time          | TimeSpan                  | TIMESTAMP      | TimestampWritable     |
-| Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | Si applica a Hive 0.11 e versioni successive. |
+| Data          | Datetime                  | timestamp      | TimestampWritable     |
+| smalldatetime | Datetime                  | timestamp      | TimestampWritable     |
+| datetime2     | Datetime                  | timestamp      | TimestampWritable     |
+| Datetime      | Datetime                  | timestamp      | TimestampWritable     |
+| time          | TimeSpan                  | timestamp      | TimestampWritable     |
+| decimal       | Decimal                   | decimal        | BigDecimalWritable    | Si applica a Hive 0.11 e versioni successive. |
 
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a name="oracle-type-mapping-reference"></a>Informazioni di riferimento per i mapping dei tipi Oracle
 
-| Tipo di dati Oracle | Tipo di SQL Server | 
+| Tipo di dati Oracle | Tipo SQL Server | 
 | -------------    | --------------- |
-|float             |float            |
+|Float             |Float            |
 |NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |Char             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -91,14 +91,14 @@ Per le tabelle esterne che fanno riferimento a file in origini dati esterne, è 
 
 ## <a name="mongodb-type-mapping"></a>Mapping dei tipi MongoDB
 
-| Tipo di dati BSON     | Tipo di SQL Server |
+| Tipo di dati BSON     | Tipo SQL Server |
 | ------------------ | --------------- |
-| Double             | float           |
-| String             | nvarchar        |
+| Double             | Float           |
+| string             | nvarchar        |
 | Dati binari        | nvarchar        |
 | ID dell'oggetto.          | nvarchar        |
 | Boolean            | bit             |
-| date               | Datetime2       |
+| Data               | Datetime2       |
 | Intero a 32 bit     | Int             |
 | Timestamp          | nvarchar        |
 | Intero a 64 bit     | BigInt          |
@@ -117,7 +117,7 @@ MongoDB Usa documenti BSON per archiviare i record dei dati. A differenza di all
 
 ## <a name="teradata-type-mapping-reference"></a>Informazioni di riferimento per i mapping dei tipi Teradata
 
-| Tipo di dati Teradata | Tipo di SQL Server | 
+| Tipo di dati Teradata | Tipo SQL Server | 
 | -------------      | -------------   |
 |INTEGER             |Int              |
 |SMALLINT            |SmallInt         |
@@ -125,7 +125,7 @@ MongoDB Usa documenti BSON per archiviare i record dei dati. A differenza di all
 |BYTEINT             |SmallInt         |
 |DECIMAL             |Decimal          |
 |FLOAT               |Decimal          |
-|BYTE                |Binario           |
+|BYTE                |Binary           |
 |VARBYTE             |Varbinary        |
 |BLOB                |varbinary        |
 |CHAR                |Nchar            |
@@ -134,11 +134,11 @@ MongoDB Usa documenti BSON per archiviare i record dei dati. A differenza di all
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|DATE                |date             |
+|DATE                |Data             |
 |timestamp           |Datetime2        |
-|TIME                |Time             |
-|TIME WITH TIME ZONE |Time             |
-|TIMESTAMP WITH TIME ZONE|Time         |
+|TIME                |Tempo             |
+|TIME WITH TIME ZONE |Tempo             |
+|TIMESTAMP WITH TIME ZONE|Tempo         |
 
 ::: moniker-end
 

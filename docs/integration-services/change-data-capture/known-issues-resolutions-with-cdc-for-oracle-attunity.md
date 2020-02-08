@@ -9,10 +9,10 @@ ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713426"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Errori noti e soluzioni con Change Data Capture per Oracle di Attunity
@@ -144,7 +144,7 @@ Si tratta di un errore comune visualizzato nel campo del messaggio **Status** (S
 
 Questo errore si verifica quando l'account Oracle che si connette dall'istanza di CDC al server Oracle non è autorizzato a visualizzare le viste del registro di sistema. 
 
-### <a name="resolution"></a>Soluzione
+### <a name="resolution"></a>Risoluzione
 
 Per correggere l'errore, concedere all'utente attualmente configurato le autorizzazioni appropriate all'interno del sistema di database Oracle o cambiare l'account usato per la connessione al server Oracle dall'istanza di CDC. 
 
@@ -159,7 +159,7 @@ L'elenco di tutte le autorizzazioni necessarie è riportato nei dettagli nel fil
 ## <a name="see-also"></a>Vedere anche  
  [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
- [Utilizzare i dati delle modifiche &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
+ [Usare Change Data &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [Amministrare e monitorare Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

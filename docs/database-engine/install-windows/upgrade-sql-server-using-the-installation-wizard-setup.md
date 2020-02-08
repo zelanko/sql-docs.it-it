@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258802"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Aggiornare SQL Server usando l'Installazione guidata (programma di installazione)

@@ -13,10 +13,10 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 035c31286e0594763c1063b606ad56473c41fbf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294613"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Elaborazione di inserimenti, aggiornamenti ed eliminazioni
@@ -68,13 +68,13 @@ select
   
     3.  Immettere una riga con la condizione `CDC_OPERATION == "D"` per indirizzare le righe eliminate all'output per le eliminazioni.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo avere suddiviso le righe per l'elaborazione, il passaggio successivo consiste nell'applicare le modifiche alla destinazione.  
   
  **Argomento successivo:** [Applicare le modifiche alla destinazione](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Trasformazione Suddivisione condizionale](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [Divisione di un set di dati tramite la trasformazione Suddivisione condizionale](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
+ [Dividere un set di dati tramite la trasformazione Suddivisione condizionale](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

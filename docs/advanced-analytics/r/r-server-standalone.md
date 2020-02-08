@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727392"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Informazioni su Machine Learning Server o R Server autonomo in SQL Server
@@ -26,7 +26,7 @@ In SQL Server 2016 questa funzionalità è denominata **R Server (Standalone)** 
 > [!Note]
 > Essendo installato dal programma di installazione di SQL Server, un server autonomo è equivalente, dal punto di vista funzionale, alle versioni non SQL di [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) e supporta gli stessi scenari utente, tra cui esecuzione remota, operazionalizzazione e servizi Web, e la raccolta completa di librerie R e Python.
 
-## <a name="components"></a>Components
+## <a name="components"></a>Componenti
 
 SQL Server 2016 è solo R. SQL Server 2017 supporta R e Python. La tabella seguente descrive le caratteristiche di ogni versione.
 
@@ -50,7 +50,7 @@ Come server indipendente, separato da SQL Server, l'ambiente R e Python viene co
 
 A complemento di SQL Server, un server autonomo è utile anche come ambiente avanzato di sviluppo se è necessaria l'elaborazione sia locale che remota. I pacchetti R e Python in un server autonomo sono uguali a quelli forniti con un'installazione del motore di database, consentendo la portabilità del codice e il [cambio del contesto di calcolo](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
 
-## <a name="how-to-get-started"></a>Come iniziare
+## <a name="how-to-get-started"></a>Attività iniziali
 
 Iniziare con il programma di installazione, associare i file binari allo strumento di sviluppo preferito e scrivere il primo script.
 

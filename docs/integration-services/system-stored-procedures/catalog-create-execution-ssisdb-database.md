@@ -11,10 +11,10 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295555"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (database SSISDB)
@@ -52,13 +52,13 @@ catalog.create_execution [@folder_name = folder_name
  Nome del pacchetto che deve essere eseguito. *package_name* è di tipo **nvarchar(260)** .  
   
  [@reference_id =] *reference_id*  
- Identificatore univoco per un riferimento all'ambiente. Questo parametro è facoltativo. *reference_id* è di tipo **bigint**.  
+ Identificatore univoco per un riferimento all'ambiente. Questo parametro è facoltativo e, *reference_id* è di tipo **bigint**.  
   
  [@use32bitruntime =] *use32bitruntime*  
- Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Usare il valore 1 per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a 0 per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo. *use32bitruntime* è di tipo **bit**.  
+ Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Usare il valore 1 per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a 0 per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo e, *use32bitruntime* è di tipo **bit**.  
  
  [@runinscaleout =] *runinscaleout*  
- Indica se l'esecuzione è in Scale Out. Usare il valore 1 per eseguire il pacchetto in Scale Out. Usare il valore 0 per eseguire il pacchetto senza Scale Out. Questo parametro è facoltativo. Se non specificato, il valore di questo è impostato su DEFAULT_EXECUTION_MODE in [SSISDB].[catalog].[catalog_properties]. *runinscaleout* è di tipo **bit**. 
+ Indica se l'esecuzione è in Scale Out. Usare il valore 1 per eseguire il pacchetto in Scale Out. Usare il valore 0 per eseguire il pacchetto senza Scale Out. Questo parametro è facoltativo e, Se non specificato, il valore di questo è impostato su DEFAULT_EXECUTION_MODE in [SSISDB].[catalog].[catalog_properties]. *runinscaleout* è di tipo **bit**. 
  
 [@useanyworker =] *useanyworker*  
 Indica se a un qualsiasi ruolo di lavoro Scale Out è consentita l'esecuzione.
@@ -67,13 +67,13 @@ Indica se a un qualsiasi ruolo di lavoro Scale Out è consentita l'esecuzione.
 
 -   Usare il valore 0 per indicare che non tutti i ruoli di lavoro Scale Out sono autorizzati a eseguire il pacchetto. Quando si imposta `@useanyworker` su false è necessario specificare i ruoli di lavoro autorizzati a eseguire il pacchetto mediante Scale Out Manager oppure chiamando l'istruzione `[catalog].[add_execution_worker]` della stored procedure. Se si specifica un ruolo di lavoro che esegue già un altro pacchetto, il ruolo di lavoro completa l'esecuzione del pacchetto corrente prima di richiedere un'altra esecuzione.
 
-Questo parametro è facoltativo. Se non specificato, il valore viene impostato su 1. *useanyworker* è di tipo **bit**. 
+Questo parametro è facoltativo e, Se non specificato, il valore viene impostato su 1. *useanyworker* è di tipo **bit**. 
   
  [@execution_id =] *execution_id*  
  Viene restituito l'identificatore univoco per un'istanza di esecuzione. *execution_id* è di tipo **bigint**.  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Un'esecuzione viene utilizzata per specificare i valori del parametro utilizzati da un pacchetto durante una singola istanza di esecuzione del pacchetto.  
   
  Se viene specificato un riferimento all'ambiente con il parametro *reference_id*, i parametri di progetto e di pacchetto vengono popolati dalla stored procedure con valori letterali o valori di riferimento dalle variabili di ambiente corrispondenti. Se viene specificato il riferimento all'ambiente, durante l'esecuzione del pacchetto vengono utilizzati i valori di parametro predefiniti. Per determinare esattamente quali valori vengono usati per un'istanza di esecuzione specifica, usare il valore del parametro di output *execution_id* di questa stored procedure ed eseguire una query sulla vista [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
@@ -101,7 +101,7 @@ GO
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  

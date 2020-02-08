@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039058"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -40,7 +40,7 @@ Visualizza informazioni sulla frammentazione dei dati e degli indici per la tabe
   
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
  *index_name* | *index_id*  
  Indice di cui controllare le informazioni sulla frammentazione. Se viene omesso, l'istruzione elabora l'indice di base per la tabella o vista specificata. Per ottenere l'ID dell'indice, usare la vista del catalogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
- con  
+ WITH  
  Specifica le opzioni per il tipo di informazioni restituite dall'istruzione DBCC.  
   
  FAST  
@@ -118,7 +118,7 @@ Se si specifica TABLERESULTS, DBCC SHOWCONTIG restituisce le colonne seguenti ol
 |**IndexId**|ID dell'indice. 0 per un heap.|  
 |**Level**|Livello dell'indice. Il livello 0 corrisponde al livello foglia (o dati) dell'indice.<br /><br /> Il livello è 0 per un heap.|  
 |**Pagine**|Numero di pagine che compongono tale livello dell'indice o l'intero heap.|  
-|**Righe**|Numero di record di dati o dell'indice a tale livello dell'indice. Nel caso di un heap, corrisponde al numero di record di dati dell'intero heap.<br /><br /> Per un heap, il numero di record restituito da questa funzione potrebbe non corrispondere al numero di righe restituito eseguendo un SELECT COUNT (*) sull'heap. Questo perché una riga potrebbe contenere più record. Ad esempio, in alcune situazioni di aggiornamento, un'unica riga dell'heap potrebbe presentare un record di inoltro e un record inoltrato a seguito dell'operazione di aggiornamento. Inoltre, nell'archiviazione LOB_DATA la maggior parte delle righe LOB viene suddivisa in più record.|  
+|**prime righe**|Numero di record di dati o dell'indice a tale livello dell'indice. Nel caso di un heap, corrisponde al numero di record di dati dell'intero heap.<br /><br /> Per un heap, il numero di record restituito da questa funzione potrebbe non corrispondere al numero di righe restituito eseguendo un SELECT COUNT (*) sull'heap. Questo perché una riga potrebbe contenere più record. Ad esempio, in alcune situazioni di aggiornamento, un'unica riga dell'heap potrebbe presentare un record di inoltro e un record inoltrato a seguito dell'operazione di aggiornamento. Inoltre, nell'archiviazione LOB_DATA la maggior parte delle righe LOB viene suddivisa in più record.|  
 |**MinimumRecordSize**|Dimensioni minime dei record in tale livello dell'indice o nell'intero heap.|  
 |**MaximumRecordSize**|Dimensioni massime dei record in tale livello dell'indice o nell'intero heap.|  
 |**AverageRecordSize**|Dimensioni medie dei record in tale livello dell'indice o nell'intero heap.|  
@@ -142,13 +142,13 @@ Se si specificano le opzioni WITH TABLERESULTS e FAST, il set di risultati è ug
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
 Quando si specifica *index_id*, l'istruzione DBCC SHOWCONTIG attraversa la catena di pagine al livello foglia dell'indice specificato. Se si specifica solo *table_id* oppure *index_id* è 0, viene eseguita l'analisi delle pagine di dati della tabella specificata. L'operazione richiede esclusivamente un blocco a livello di tabella preventivo condiviso (IS). In questo modo è possibile eseguire tutti gli aggiornamenti e gli inserimenti, con l'eccezione delle operazioni che richiedono un blocco a livello di tabella esclusivo (X). Ciò consente di ottenere una velocità di esecuzione accettabile senza riduzione della concorrenza per il numero di statistiche restituite. Tuttavia, se il comando viene utilizzato esclusivamente per ottenere dati di misurazione della frammentazione, è consigliabile utilizzare l'opzione WITH FAST per ottenere prestazioni ottimali. Durante un'analisi rapida non vengono lette le pagine del livello foglia o dati dell'indice. L'opzione WITH FAST non si applica a un heap.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
 DBCC SHOWCONTIG non visualizza dati di tipo **ntext**, **text** e **image**. La mancata visualizzazione è dovuta al fatto gli indici di testo che archiviano dati di tipo text e image non esistono più.
   
-Inoltre, DBCC SHOWCONTIG non supporta alcune nuove caratteristiche. Esempio:
+Inoltre, DBCC SHOWCONTIG non supporta alcune nuove caratteristiche. Ad esempio:
 -   Se la tabella o l'indice specificato è partizionato, DBCC SHOWCONTIG visualizza solo la prima partizione della tabella o dell'indice specificato.  
 -   DBCC SHOWCONTIG non supporta la visualizzazione di informazioni di archiviazione per i dati di overflow della riga e di altri tipi nuovi per dati all'esterno di righe, come **nvarchar(max)** , **varchar(max)** , **varbinary(max)** e **xml**.  
 -   Gli indici spaziali non sono supportati da DBCC SHOWCONTIG.  
@@ -188,7 +188,7 @@ Il numero **Media byte disponibili per pagina** e **Media densità pagina (compl
 L'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** o **db_ddladmin**.
   
 ## <a name="examples"></a>Esempi  
-### <a name="a-displaying-fragmentation-information-for-a-table"></a>A. Visualizzazione delle informazioni sulla frammentazione di una tabella  
+### <a name="a-displaying-fragmentation-information-for-a-table"></a>R. Visualizzazione delle informazioni sulla frammentazione di una tabella  
 Nell'esempio seguente vengono visualizzate informazioni sulla frammentazione della tabella `Employee`.
   
 ```sql  
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Utilizzo di OBJECT_ID per ottenere l'ID della tabella e di sys.indexes per ottenere l'ID dell'indice  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Utilizzo di OBJECT_ID per ottenere l'ID della tabella e di sys.indexes per ottenere l'ID dell'indice  
 Nell'esempio seguente vengono usate la funzione `OBJECT_ID` e la vista del catalogo `sys.indexes` per ottenere l'ID di tabella e l'ID di indice per l'indice `AK_Product_Name` della tabella `Production.Product` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  

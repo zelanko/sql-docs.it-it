@@ -14,10 +14,10 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909503"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Ripristinare un database a uno snapshot del database
@@ -30,7 +30,7 @@ ms.locfileid: "72909503"
   
      [Prerequisiti](#Prerequisites)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per ripristinare un database a uno snapshot del database tramite:**  [Transact-SQL](#TsqlProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72909503"
   
  Prima di ripristinare un database, considerare le limitazioni seguenti:  
   
--   Non è previsto il ripristino per il recupero di supporti. Un snapshot del database è una copia incompleta dei file di database, pertanto se il database o lo snapshot del database è danneggiato, è probabile che il ripristino da uno snapshot risulti impossibile. Anche quando possibile, è inoltre improbabile che il ripristino in caso di danneggiamento consenta di risolvere il problema. Per proteggere un database è pertanto essenziale eseguire backup regolari e testare il piano di ripristino. Per altre informazioni, vedere [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Non è previsto il ripristino per il recupero di supporti. Un snapshot del database è una copia incompleta dei file di database, pertanto se il database o lo snapshot del database è danneggiato, è probabile che il ripristino da uno snapshot risulti impossibile. Anche quando possibile, è inoltre improbabile che il ripristino in caso di danneggiamento consenta di risolvere il problema. Per proteggere un database è pertanto essenziale eseguire backup regolari e testare il piano di ripristino. Per altre informazioni, vedere [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Se è necessario essere in grado di ripristinare il database di origine al punto nel tempo in cui è stato creato uno snapshot del database, utilizzare il modello di recupero completo e implementare criteri di backup che consentano di eseguire tale operazione.  
@@ -77,7 +77,7 @@ ms.locfileid: "72909503"
   
 -   Identificare un recente snapshot creato prima dell'errore. Per altre informazioni, vedere [Visualizzare uno snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
   
--   Eliminare qualsiasi altro snapshot del database attualmente presente nel database. Per altre informazioni, vedere [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+-   Eliminare qualsiasi altro snapshot del database attualmente presente nel database. Per altre informazioni, vedere [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)o a un'istanza diversa.  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -121,7 +121,7 @@ ms.locfileid: "72909503"
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questa sezione sono inclusi i seguenti esempi di ripristino di un database a uno snapshot del database:  
   
--   A. [Ripristino di uno snapshot nel database AdventureWorks](#Reverting_AW)  
+-   R. [Ripristino di uno snapshot nel database AdventureWorks](#Reverting_AW)  
   
 -   B. [Ripristino di uno snapshot del database Sales](#Reverting_Sales)  
   
@@ -162,7 +162,7 @@ GO
   
 -   [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [Visualizzare uno snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [Visualizzazione di uno snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
 -   [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   

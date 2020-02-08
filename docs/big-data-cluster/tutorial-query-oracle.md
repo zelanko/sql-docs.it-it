@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71708359"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire query su dati Oracle da un cluster Big Data di SQL Server

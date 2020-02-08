@@ -11,10 +11,10 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 74e56788741b36e68884db823fa46eb24856081e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296130"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Lezione 1-1: Creazione di un nuovo progetto di Integration Services
@@ -44,7 +44,7 @@ I pacchetti usati nelle lezioni da 2 a 6 vengono copiati dal pacchetto creato in
   
 5.  Accettare il percorso predefinito o selezionare **Sfoglia** per individuare la cartella che si vuole usare. Nella finestra di dialogo **Percorso progetto** selezionare la cartella e quindi **Seleziona cartella**.  
   
-6.  Fare clic su **OK**.  
+6.  Selezionare **OK**.  
   
     Per impostazione predefinita viene creato e aggiunto al progetto un pacchetto vuoto in **Pacchetti SSIS**, denominato **Package.dtsx**.  
   

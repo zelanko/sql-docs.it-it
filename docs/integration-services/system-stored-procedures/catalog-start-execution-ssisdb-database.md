@@ -11,10 +11,10 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296715"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (database SSISDB)
@@ -37,9 +37,9 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  Identificatore univoco per l'istanza di esecuzione. *execution_id* è di tipo **bigint**.
  
  [@retry_count =] *retry_count*  
- Numero di tentativi in caso di esecuzione non riuscita. Ha effetto solo se l'esecuzione è in Scale Out. Questo parametro è facoltativo. Se non specificato, il valore viene impostato su 0. *retry_count* è di tipo **int**.
+ Numero di tentativi in caso di esecuzione non riuscita. Ha effetto solo se l'esecuzione è in Scale Out. Questo parametro è facoltativo e, Se non specificato, il valore viene impostato su 0. *retry_count* è di tipo **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Un'esecuzione viene usata per specificare i valori del parametro usati da un pacchetto durante una singola istanza di esecuzione del pacchetto. Dopo che è stata creata un'istanza di esecuzione, prima che venga avviata, il progetto corrispondente potrebbe essere ridistribuito. In questo caso, l'istanza di esecuzione fa riferimento a un progetto obsoleto. Questo riferimento non valido impedisce il completamento della stored procedure.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ GO
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ nessuno  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  

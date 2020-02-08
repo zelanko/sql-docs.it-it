@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982878"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
@@ -154,7 +154,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  Nome dell'entità di sicurezza a cui verrà trasferita la proprietà dell'entità. Gli oggetti di database devono essere di proprietà di un'entità di database oppure di un utente o ruolo del database. Gli oggetti server, ad esempio i database, devono essere di proprietà di un'entità server (un account di accesso). Specificare **SCHEMA OWNER** come *principal_name* per indicare che l'oggetto deve essere di proprietà dell'entità che possiede lo schema dell'oggetto.    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Osservazioni    
  È possibile utilizzare l'istruzione ALTER AUTHORIZATION per modificare la proprietà di qualsiasi entità associata a un proprietario. La proprietà di entità incluse in un database può essere trasferita a qualsiasi entità a livello di database. La proprietà di entità a livello di server può essere trasferita solo a entità a livello di server.    
     
 > [!IMPORTANT]    
@@ -229,10 +229,10 @@ Nella tabella seguente vengono riepilogati i requisiti:
   
 Esecutore  |Destinazione  |Risultato    
 ---------|---------|---------  
-Account di accesso con autenticazione di SQL Server     |Account di accesso con autenticazione di SQL Server         |Esito positivo  
+Account di accesso con autenticazione di SQL Server     |Account di accesso con autenticazione di SQL Server         |Operazione completata  
 Account di accesso con autenticazione di SQL Server     |Utente di Azure AD         |Esito negativo           
-Utente di Azure AD     |Account di accesso con autenticazione di SQL Server         |Esito positivo           
-Utente di Azure AD     |Utente di Azure AD         |Esito positivo           
+Utente di Azure AD     |Account di accesso con autenticazione di SQL Server         |Operazione completata           
+Utente di Azure AD     |Utente di Azure AD         |Operazione completata           
   
 Per verificare un proprietario del database di Azure AD, eseguire il comando Transact-SQL seguente in un database utente (in questo esempio `testdb`).  
     
@@ -260,11 +260,11 @@ Anziché usare gli utenti di Azure AD come singoli proprietari del database, usa
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  Creare un gruppo di Azure AD che diventerà proprietario del database e aggiungerlo come utente al database utente. Esempio:  
+2.  Creare un gruppo di Azure AD che diventerà proprietario del database e aggiungerlo come utente al database utente. Ad esempio:  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  Nel database utente aggiungere l'utente che rappresenta il gruppo di Azure AD al ruolo predefinito del database **db_owner**. Esempio:  
+3.  Nel database utente aggiungere l'utente che rappresenta il gruppo di Azure AD al ruolo predefinito del database **db_owner**. Ad esempio:  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -287,7 +287,7 @@ Se il valore restituito è 1, significa che l'utente è un membro del ruolo.
     
 ## <a name="examples"></a>Esempi    
     
-### <a name="a-transfer-ownership-of-a-table"></a>A. Trasferire la proprietà di una tabella    
+### <a name="a-transfer-ownership-of-a-table"></a>R. Trasferire la proprietà di una tabella    
  Nell'esempio seguente la proprietà della tabella `Sprockets` viene trasferita all'utente `MichikoOsada`. La tabella è inclusa nello schema `Parts`.    
     
 ```    
@@ -302,7 +302,7 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- Se lo schema degli oggetti non è incluso come parte dell'istruzione, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] cercherà l'oggetto nello schema predefinito degli utenti. Esempio:    
+ Se lo schema degli oggetti non è incluso come parte dell'istruzione, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] cercherà l'oggetto nello schema predefinito degli utenti. Ad esempio:    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    

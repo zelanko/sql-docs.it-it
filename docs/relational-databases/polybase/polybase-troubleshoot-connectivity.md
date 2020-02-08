@@ -11,10 +11,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909148"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Risolvere i problemi di connettività di PolyBase Kerberos
@@ -229,10 +229,10 @@ In Active Directory è possibile visualizzare i nomi dell'entità servizio passa
 
 Se si riscontrano ancora problemi ad accedere a Kerberos, attenersi alla procedura seguente per eseguire il debug:
 
-1. Verificare di poter accedere ai dati di HDFS Kerberos dall'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile effettuare le operazioni seguenti: 
+1. Verificare di poter accedere ai dati di HDFS Kerberos dall'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile: 
 
     - Scrivere un programma Java proprio oppure
-    - Usare la classe `HdfsBridge` dalla cartella di installazione di PolyBase. Esempio:
+    - Usare la classe `HdfsBridge` dalla cartella di installazione di PolyBase. Ad esempio:
 
       ```java
       -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt

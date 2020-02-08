@@ -13,10 +13,10 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9298d2ff1dc79d14fa5de943d2d7cfccf8bcbd4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298834"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Creare e modificare un servizio Oracle CDC
@@ -62,8 +62,8 @@ ms.locfileid: "71298834"
   
  **Nome server**: selezionare l'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione a cui connettersi, ad esempio, **\\\\<nome_computer>\\<nome_istanza>** . Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
- **Autenticazione**  
- Selezionare una delle opzioni seguenti:  
+ **autenticazione**  
+ Selezionare uno degli elementi seguenti:  
   
 -   **Windows Authentication**: se si seleziona questa opzione, il servizio Oracle CDC si connette all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di destinazione usando l'identità dell'account del servizio. Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in un computer diverso, è necessario utilizzare l'autenticazione di Windows con gli account di dominio.  
   

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959530"
 ---
 # <a name="integrated-terminal"></a>Terminale integrato
@@ -93,7 +93,7 @@ Il comando **Visualizza: Attiva/Disattiva terminale integrato** è associato a *
 
 Di seguito sono riportate le scelte rapide da tastiera per spostarsi rapidamente all'interno del terminale integrato:
 
-|Key|Comando|  
+|Chiave|Comando|  
 |---|---|  
 |**CTRL+\`**|Mostra terminale integrato|  
 |**CTRL+MAIUSC+\`**|Crea nuovo terminale|  
@@ -132,7 +132,7 @@ I tasti di scelta rapida per copiare e incollare seguono gli standard della piat
 * Mac: **CMD+C** e **CMD+V**
 * Windows: **CTRL+C** e **CTRL+V**
 
-### <a name="find"></a>Trova
+### <a name="find"></a>Find
 
 Il terminale integrato ha una funzionalità di ricerca di base che è possibile attivare con **CTRL+F**.
 

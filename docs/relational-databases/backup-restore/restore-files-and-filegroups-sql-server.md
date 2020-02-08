@@ -18,10 +18,10 @@ ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5398b371ea4c969fedf54502d160ebd183cc2bdb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908853"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Ripristino di file e filegroup (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "72908853"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
--   [Security](#Security)  
+-   [Sicurezza](#Security)  
   
 -   **Ripristino di file e filegroup utilizzando:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72908853"
   
 -   Con il modello di recupero con registrazione minima, il file deve appartenere a un filegroup di sola lettura.  
   
--   In base al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare file è necessario eseguire il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   In base al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, prima di poter ripristinare file è necessario eseguire il backup del log delle transazioni attivo, noto come parte finale del log. Per altre informazioni, vedere [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 -   Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72908853"
   
     |Intestazione della colonna|Valori|  
     |-----------------|------------|  
-    |**Ripristina**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
+    |**Restore**|Le caselle di controllo selezionate indicano i set di backup da ripristinare.|  
     |**Nome**|Nome del set di backup.|  
     |**Tipo di file**|Specifica il tipo di dati nel backup: **dati**, **registro** o **dati FILESTREAM**. I dati contenuti nelle tabelle sono nei file **Dati** . I dati del log delle transazioni sono nei file **Log** . I dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni) archiviati nel file system si trovano nei file **Dati FILESTREAM** .|  
     |**Tipo**|Tipo di operazione di backup eseguita: **Completo**, **Differenziale** o **Log delle transazioni**.|  
@@ -209,9 +209,9 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
+ [Backup di file e filegroup &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
- [Eseguire il backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
+ [Backup di un log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   

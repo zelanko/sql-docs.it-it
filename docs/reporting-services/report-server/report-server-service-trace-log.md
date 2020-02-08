@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68254861"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
