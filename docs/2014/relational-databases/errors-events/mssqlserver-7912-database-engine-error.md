@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b46cd9ea4d461b4b6f5755e8fb9bb9199d1bdbbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913153"
 ---
-# <a name="mssqlserver7912"></a>MSSQLSERVER_7912
+# <a name="mssqlserver_7912"></a>MSSQLSERVER_7912
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62913153"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_REPAIR_EXTENT_ALLOCATED|  
-|Testo del messaggio|Correzione: L'extent P_ID è stato allocato all'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE).|  
+|Testo del messaggio|Correzione: l'extent P_ID è stato allocato all'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, unità di allocazione con ID A_ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Spiegazione  
  Messaggio informativo inviato da REPAIR che indica che un extent è stato allocato all'oggetto specificato.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- None  
+ nessuno  
   
   

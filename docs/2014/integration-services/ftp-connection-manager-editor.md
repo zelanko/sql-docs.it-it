@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058493"
 ---
 # <a name="ftp-connection-manager-editor"></a>Editor gestione connessione FTP
@@ -43,7 +43,7 @@ ms.locfileid: "66058493"
  Consente di specificare una password per l'accesso al server FTP.  
   
  **Timeout (in secondi)**  
- Consente di specificare il numeri di secondi di attesa prima che si verifichi il timeout dell'attività. Il valore **0** indica un periodo di tempo infinito. Il valore predefinito di questa proprietà è **60**.  
+ Consente di specificare il numero di secondi necessari per l'attività prima del timeout. Il valore **0** indica un periodo di tempo infinito. Il valore predefinito di questa proprietà è **60**.  
   
  **Usa modalità passiva**  
  Consente di specificare se la connessione viene iniziata dal server o dal client. Il server inizia la connessione in modalità attiva, mentre il client attiva la connessione in modalità passiva. Il valore predefinito di questa proprietà è **active mode**.  

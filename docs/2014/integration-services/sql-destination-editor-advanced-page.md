@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione SQL Server (pagina avanzate) | Microsoft Docs
+title: Editor destinazione SQL (pagina Avanzate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055454"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Editor destinazione SQL Server (pagina Avanzate)
@@ -27,19 +27,19 @@ ms.locfileid: "66055454"
  Per ulteriori informazioni sulla destinazione SQL Server, vedere [SQL Server Destination](data-flow/sql-server-destination.md).  
   
 ## <a name="options"></a>Opzioni  
- **Mantieni valori Identity**  
+ **Mantieni identità**  
  Consente di specificare se l'attività deve inserire valori nelle colonne Identity. Il valore predefinito di questa proprietà è `False`.  
   
- **Mantieni valori Null**  
+ **Mantieni valori null**  
  Consente di specificare se l'attività deve mantenere i valori Null. Il valore predefinito di questa proprietà è `False`.  
   
- **Blocco a livello di tabella**  
+ **Blocco di tabella**  
  Consente di specificare se la tabella viene bloccata durante il caricamento dei dati. Il valore predefinito di questa proprietà è `True`.  
   
  **Vincoli CHECK**  
  Consente di specificare se l'attività deve verificare i vincoli. Il valore predefinito di questa proprietà è `True`.  
   
- **Attive trigger**  
+ **Attiva trigger**  
  Consente di specificare se l'inserimento bulk deve attivare i trigger nelle tabelle. Il valore predefinito di questa proprietà è `False`.  
   
  **Prima riga**  
@@ -49,7 +49,7 @@ ms.locfileid: "66055454"
 >  Deselezionare la casella in **Editor destinazione SQL** per indicare che non si vuole assegnare alcun valore alla proprietà. Usare -1 nella finestra **Proprietà** , in **Editor avanzato**e nel modello a oggetti.  
   
  **Ultima riga**  
- Consente di specificare l'ultima riga da inserire. Il valore predefinito della proprietà è **-1**, a indicare che non è stato assegnato alcun valore.  
+ Consente di specificare l'ultima riga da inserire. Il valore predefinito di questa proprietà è **-1**, a indicare che non è stato assegnato alcun valore.  
   
 > [!NOTE]  
 >  Deselezionare la casella in **Editor destinazione SQL** per indicare che non si vuole assegnare alcun valore alla proprietà. Usare -1 nella finestra **Proprietà** , in **Editor avanzato**e nel modello a oggetti.  
@@ -63,13 +63,13 @@ ms.locfileid: "66055454"
  **Timeout**  
  Consente di specificare il numero di secondi di attesa prima che l'inserimento bulk venga arrestato a causa di un timeout.  
   
- **Colonne di ordinamento**  
+ **Colonne degli ordini**  
  Consente di digitare i nomi delle colonne di ordinamento. È possibile ordinare ogni colonna in ordine crescente o decrescente. Se si utilizzando più colonne di ordinamento, delimitare l'elenco con virgole.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione SQL &#40;pagina Gestione connessione&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [Editor destinazione SQL &#40;pagina Mapping&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [Editor destinazione SQL &#40;pagina mapping&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [Caricamento bulk dei dati tramite la destinazione SQL Server](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

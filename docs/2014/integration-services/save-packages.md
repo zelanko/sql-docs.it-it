@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e4e9c8ea3300c35cb75d451206ab9869f932814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889324"
 ---
 # <a name="save-packages"></a>Salvataggio di pacchetti
@@ -28,7 +28,7 @@ ms.locfileid: "62889324"
   
  Se si salva un pacchetto nel file system, successivamente sarà possibile utilizzare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per importarlo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o nell'archivio pacchetti. Per altre informazioni, vedere [Importare ed esportare pacchetti &#40;servizio SSIS&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md).  
   
- È inoltre possibile usare l'utilità della riga di comando **dtutil** per copiare un pacchetto dal file system al database msdb e viceversa. Per altre informazioni, vedere [dtutil Utility](dtutil-utility.md).  
+ È inoltre possibile usare l'utilità della riga di comando **dtutil**per copiare un pacchetto dal file system al database msdb e viceversa. Per altre informazioni, vedere [dtutil Utility](dtutil-utility.md).  
   
 ### <a name="to-save-a-package"></a>Per salvare un pacchetto  
   

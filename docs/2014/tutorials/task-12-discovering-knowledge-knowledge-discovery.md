@@ -1,5 +1,5 @@
 ---
-title: 'Attività 12: Individuazione delle informazioni (individuazione informazioni) | Microsoft Docs'
+title: 'Attività 12: individuazione delle informazioni (individuazione informazioni) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,62 +11,62 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484678"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Attività 12: Individuazione delle informazioni (Individuazione informazioni)
-  In questa attività viene eseguita la **individuazione informazioni** attività nei **Supplier ID** e **Supplier Name** domini. In questo scenario, tramite il processo di individuazione delle informazioni vengono importati principalmente i valori per questi due domini.  
+  In questa attività viene eseguita l'attività di **individuazione delle informazioni** sui domini **Supplier ID** e **Supplier Name** . In questo scenario, tramite il processo di individuazione delle informazioni vengono importati principalmente i valori per questi due domini.  
   
- In questa esercitazione viene avviata la compilazione di una Knowledge Base nuova. Inoltre, è possibile avviare la creazione di una Knowledge Base eseguendo un'attività di individuazione delle informazioni. Quando fa clic su **creare una Knowledge Base** nella pagina principale, il client DQS consente di visualizzare una pagina con **Domain Management** attività selezionata per l'attività. È possibile modificare il **attività** al **Knowledge Discovery** e quindi nella pagina successiva è possibile creare domini come parte del processo di individuazione della Knowledge Base. Visualizzare [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) per altri dettagli.  
+ In questa esercitazione viene avviata la compilazione di una Knowledge Base nuova. Inoltre, è possibile avviare la creazione di una Knowledge Base eseguendo un'attività di individuazione delle informazioni. Quando si fa clic su **Crea una Knowledge base** nella pagina principale, il client DQS porta a una pagina con l'attività di **gestione del dominio** selezionata per l'attività. È possibile modificare l' **attività** in **Individuazione informazioni** , quindi nella pagina successiva è possibile creare domini come parte del processo di individuazione delle informazioni. Per ulteriori informazioni, vedere [eseguire l'individuazione delle informazioni](https://msdn.microsoft.com/library/hh510398.aspx) .  
   
-1.  Nella pagina principale del Client DQS, nelle **Knowledge Base recente** fare clic su **freccia destra** accanto al **Suppliers** knowledge base e fare clic su **della Knowledge Base Individuazione**. In alternativa, è possibile fare clic su **Apri Knowledge Base**, selezionare **Suppliers** dal **elenco di knowledge base**, selezionare **Knowledge Discovery**come **impegno** e fare clic su **successiva**.  
+1.  Nella sezione **Knowledge Base recente** della pagina principale del client DQS fare clic sulla freccia a **destra** accanto alla Knowledge base **Suppliers** e scegliere **Individuazione informazioni**. In alternativa, è possibile fare clic su **Apri Knowledge base**, selezionare **Suppliers** dall' **elenco di Knowledge**base, selezionare **Individuazione informazioni** come **attività** e fare clic su **Avanti**.  
   
-     ![Menu individuazione informazioni su Main pagina](../../2014/tutorials/media/et-discoveringknowledge-01.jpg "Menu individuazione informazioni su Main pagina")  
+     ![Menu Individuazione informazioni nella pagina principale](../../2014/tutorials/media/et-discoveringknowledge-01.jpg "Menu Individuazione informazioni nella pagina principale")  
   
-2.  Selezionare **File di Excel** per **Zdroj dat**.  
+2.  Selezionare il **file di Excel** per **origine dati**.  
   
-3.  Fare clic su **esplorare**, individuare e selezionare **Suppliers. xls**, fare clic su **Open**.  
+3.  Fare clic su **Sfoglia**, spostarsi e selezionare **Suppliers. xls**, quindi fare clic su **Apri**.  
   
-4.  Selezionare **Suppliers for Discovery** per **foglio di lavoro**.  
+4.  Selezionare **Suppliers for Discovery** for **Worksheet**.  
   
-5.  Nel **mapping** sezione, eseguire il mapping **SupplierID** colonna dal **Excel** file per il **Supplier ID** dominio e  **Supplier Name** colonna per il **Supplier Name** dominio utilizzando **elenchi a discesa**. Il file di Excel contiene dati di esempio per la **Supplier ID** e **Supplier Name** domini. Durante il processo di individuazione, è possibile selezionare i domini di cui si desidera individuare i valori. È possibile creare i domini in questa pagina e, successivamente, eseguire il mapping delle colonne di origine ai domini in questione. In genere i domini vengono creati durante l'attività di individuazione delle informazioni e non durante l'attività di gestione dei domini.  
+5.  Nella sezione **mapping** , eseguire il mapping della colonna **SupplierID** dal file di **Excel** alla colonna Supplier **ID** Domain e **Supplier** Name al dominio **Supplier Name** usando gli **elenchi a discesa**. Il file di Excel contiene dati di esempio per i domini **Supplier ID** e **Supplier Name** . Durante il processo di individuazione, è possibile selezionare i domini di cui si desidera individuare i valori. È possibile creare i domini in questa pagina e, successivamente, eseguire il mapping delle colonne di origine ai domini in questione. In genere i domini vengono creati durante l'attività di individuazione delle informazioni e non durante l'attività di gestione dei domini.  
   
-     ![Eseguire il mapping di pagina del processo di individuazione](../../2014/tutorials/media/et-discoveringknowledge-02.jpg "eseguire il mapping di pagina del processo di individuazione")  
+     ![Pagina Mappa del processo di individuazione](../../2014/tutorials/media/et-discoveringknowledge-02.jpg "Pagina Mappa del processo di individuazione")  
   
-6.  Fare clic su **successivo** per passare alle **Discover** pagina.  
+6.  Fare clic su **Avanti** per passare alla pagina **individua** .  
   
-7.  Nel **Discover** pagina, fare clic su **avviare** per avviare il processo di individuazione. L'individuazione viene eseguita sulle colonne **SupplierID** e **Supplier Name** nel **Suppliers. xls** file. Il **Supplier ID** e **Supplier Name** domini devono essere popolati con le informazioni ricavate dall'individuazione.  
+7.  Nella pagina **individua** fare clic su **Avvia** per avviare il processo di individuazione. L'individuazione viene eseguita sulle colonne **SupplierID** e **Supplier Name** nel file **Suppliers. xls** . I domini **Supplier ID** e **Supplier Name** devono essere popolati con le informazioni ricavate dall'individuazione.  
   
-     ![Pagina del processo di individuazione individua](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "pagina del processo di individuazione individua")  
+     ![Pagina Individua del processo di individuazione](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "Pagina Individua del processo di individuazione")  
   
-8.  Una volta completata l'analisi, esaminare i **statistiche origine** nel **scheda Profiler** nella parte inferiore della pagina. Si noti che 10 nuovi record con 20 valori totali (**SupplierID** e **Supplier Name** i valori di **foglio di lavoro di Excel**) sono stati individuati. Sarà possibile anche visualizzare quanti valori sono nuovi, univoci, nuovi e univoci, nonché validi. Nella casella di riepilogo a destra è possibile visualizzare ulteriori dettagli per ogni dominio coinvolto nel processo di individuazione. Se si posiziona il mouse sulla barra di stato nella colonna Completezza è possibile verificare l'eventuale mancanza di valori nelle colonne dell'origine.  
+8.  Al termine dell'analisi, esaminare le **statistiche di origine** nella **scheda Profiler** nella parte inferiore della pagina. Si noti che sono stati individuati 10 nuovi record con 20 valori totali (valori**SupplierID** e **Supplier Name** del foglio di lavoro di **Excel**). Sarà possibile anche visualizzare quanti valori sono nuovi, univoci, nuovi e univoci, nonché validi. Nella casella di riepilogo a destra è possibile visualizzare ulteriori dettagli per ogni dominio coinvolto nel processo di individuazione. Se si posiziona il mouse sulla barra di stato nella colonna Completezza è possibile verificare l'eventuale mancanza di valori nelle colonne dell'origine.  
   
-     ![I risultati dell'individuazione Knowledge](../../2014/tutorials/media/et-discoveringknowledge-04.jpg "i risultati dell'individuazione della Knowledge Base")  
+     ![Risultati dell'individuazione delle informazioni](../../2014/tutorials/media/et-discoveringknowledge-04.jpg "Risultati dell'individuazione delle informazioni")  
   
-9. Fare clic su **successivo** per passare alle **Gestisci valori di dominio** pagina.  
+9. Fare clic su **Avanti** per passare alla pagina **Gestisci valori di dominio** .  
   
-10. Nel **Gestisci valori di dominio** pagina, fare clic su **Supplier Name** dominio dall'elenco di domini.  
+10. Nella pagina **Gestisci valori di dominio** fare clic su **Fornitore nome** dominio nell'elenco di domini.  
   
-11. Nel riquadro di destra, fare doppio clic su **Lazy Country Storex** (si noti che "x" alla fine) e selezionare **Lazy Country Store**. In DQS questa modifica viene suggerita dopo l'esecuzione del correttore ortografico nel dominio. Per impostazione predefinita, il correttore ortografico è abilitato nei domini creati.  
+11. Nel riquadro destro fare clic con il pulsante destro del mouse su **Lazy Country Storex** (avviso ' x ' alla fine) e selezionare **Lazy Country Store**. In DQS questa modifica viene suggerita dopo l'esecuzione del correttore ortografico nel dominio. Per impostazione predefinita, il correttore ortografico è abilitato nei domini creati.  
   
-     ![Correzione nome fornitore - Lazy Country Store](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "correzione nome fornitore - Lazy Country Store")  
+     ![Correzione nome fornitore - Archivio paesi differito](../../2014/tutorials/media/et-discoveringknowledge-05.jpg "Correzione nome fornitore - Archivio paesi differito")  
   
-12. Nell'elenco dei valori di dominio, verificare che il valore **Lazy Country Storex** viene impostato come un errore (rosso **X** contrassegnare) con **Lazy Country Store** come la correzione e anche il **Lazy Country Store** viene inoltre aggiunto come un valore valido.  
+12. Nell'elenco dei valori di dominio verificare che il valore **Lazy Country Storex** sia impostato come errore (contrassegno **X** rosso) con **Lazy Country Store** come correzione e anche l' **Archivio Lazy Country** venga aggiunto come valore valido.  
   
-     ![Dominio valore e di correzione](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "dominio valore e di correzione")  
+     ![Valori di dominio e di correzione](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "Valori di dominio e di correzione")  
   
-13. Scegliere **Fine**.  
+13. Fare clic su **Fine**.  
   
-14. Sul **SQL Server Data Quality Services** finestra di dialogo, fare clic su **Publish**.  
+14. Nella finestra di dialogo **SQL Server Data Quality Services** fare clic su **pubblica**.  
   
-15. Fare clic su **OK** nella finestra di messaggio di esito positivo.  
+15. Fare clic su **OK** nella finestra di messaggio operazione riuscita.  
   
      È stata completata la prima lezione dell'esercitazione.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Lezione 2: Pulizia dei dati fornitore mediante la Knowledge Base Suppliers](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

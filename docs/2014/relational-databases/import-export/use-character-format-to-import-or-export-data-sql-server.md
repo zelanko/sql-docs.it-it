@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011672"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere per l'importazione o l'esportazione di dati (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "66011672"
 ## <a name="considerations-for-using-character-format"></a>Considerazioni sull'utilizzo del formato carattere  
  Quando si utilizza il formato carattere, è necessario tenere presenti i fattori seguenti:  
   
--   Per impostazione predefinita, quando si esegue l'utilità **bcp** i campi dei dati di tipo carattere vengono separati da un carattere di tabulazione e alla fine dei record viene inserito un carattere di nuova riga. Per informazioni su come specificare caratteri di terminazione alternativi, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
+-   Per impostazione predefinita, l'utilità **bcp** separa i campi dati di tipo carattere con il carattere di tabulazione e termina i record con il carattere di nuova riga. Per informazioni su come specificare caratteri di terminazione alternativi, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 -   Per impostazione predefinita, prima dell'esportazione o dell'importazione bulk di dati in modalità carattere, vengono eseguite le conversioni seguenti:  
   
@@ -44,19 +44,19 @@ ms.locfileid: "66011672"
   
 -   I dati `sql_variant` archiviati in un file in formato carattere risultano privi di metadati. Ogni valore viene convertito nel formato `char` in base alle regole di conversione dei dati implicita. I dati importati in colonne `sql_variant` risultano di tipo `char`. I dati importati in colonne con tipo di dati diverso da `sql_variant` vengono convertiti dal tipo di dati `char` tramite una conversione implicita. Per altre informazioni sulla conversione dei dati, vedere [Conversione del tipo di dati &#40;Motore di database&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
--   Il **bcp** esportazioni utilità `money` valori come file di dati in formato carattere con quattro cifre dopo il separatore decimale e senza alcun simbolo di raggruppamento cifre, quali i separatori. Ad esempio, una colonna `money` contenente il valore 1,234,567.123456 viene copiata in un file di dati come stringa di caratteri 1234567.1235 tramite l'esportazione bulk.  
+-   L'utilità **bcp** Esporta `money` i valori come file di dati in formato carattere con quattro cifre dopo il separatore decimale e senza simboli di raggruppamento delle cifre, ad esempio separatori di virgole. Ad esempio, una colonna `money` contenente il valore 1,234,567.123456 viene copiata in un file di dati come stringa di caratteri 1234567.1235 tramite l'esportazione bulk.  
   
 ## <a name="command-options-for-character-format"></a>Opzioni del comando per il formato carattere  
- È possibile importare dati in formato carattere in una tabella con **bcp**, BULK INSERT o INSERT. SELECT \* FROM OPENROWSET(BULK...). Per un comando **bcp** o un'istruzione BULK INSERT, è possibile specificare il formato dati nella riga di comando. Per un'istruzione INSERT ... SELECT * FROM OPENROWSET(BULK...) è necessario specificare il formato dei dati in un file di formato.  
+ È possibile importare dati in formato carattere in una tabella utilizzando **bcp**, BULK INSERT o INSERT... SELECT \* FROM OPENROWSET (bulk...). Per un comando **bcp** o un'istruzione BULK INSERT, è possibile specificare il formato dati nella riga di comando. Per un'istruzione INSERT ... SELECT * FROM OPENROWSET(BULK...) è necessario specificare il formato dati in un file di formato.  
   
  Il formato carattere è supportato dalle opzioni della riga di comando seguenti:  
   
 |Comando|Opzione|Descrizione|  
 |-------------|------------|-----------------|  
-|**bcp**|**-c**|Fa sì che il **bcp** utilità usare dati di tipo carattere.<sup> 1</sup>|  
-|BULK INSERT|DATAFILETYPE **='char'**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  
+|**BCP**|**-c**|Comporta l'utilizzo di dati di tipo carattere da parte dell'utilità **bcp** . <sup>1</sup>|  
+|BULK INSERT|FileType **=' Char '**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  
   
- <sup>1</sup> per caricare il carattere ( **- c**) dei dati in un formato compatibile con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client, utilizzare il **-V** passare. Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> per caricare i dati di tipo carattere (**-c**) in un formato compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le versioni precedenti dei client, usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Per altre informazioni, vedere [Utilità bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) o [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -97,8 +97,8 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**-c**|Specifica il formato carattere.|  
-|**-t** `,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: Il valore predefinito è il carattere di tabulazione (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
-|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T**, è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
+|**-t**`,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: il carattere di terminazione del campo predefinito è il carattere di tabulazione (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Nell'esempio seguente viene eseguita l'esportazione bulk di dati in formato carattere dalla tabella `myTestCharData` a un nuovo file di dati denominato `myTestCharData-c.Dat` in cui il carattere di terminazione dei campi è la virgola (,). Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  
   
@@ -130,14 +130,14 @@ GO
   
 -   [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   

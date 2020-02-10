@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055795"
 ---
 # <a name="set-the-properties-of-a-package"></a>Impostazione delle proprietà di un pacchetto
-  In questa procedura viene descritto come configurare le proprietà di un pacchetto usando la finestra **Proprietà**.  
+  In questa procedura viene descritto come configurare le proprietà di un pacchetto usando la finestra **Proprietà** .  
   
 > [!NOTE]  
 >  Affinché nella finestra Proprietà vengano visualizzate le proprietà da impostare per configurare il pacchetto, è necessario aprire quest'ultimo in Progettazione SSIS.  
@@ -47,6 +47,6 @@ ms.locfileid: "66055795"
   
 ## <a name="see-also"></a>Vedere anche  
  [Pacchetti di Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Impostare le proprietà di un pacchetto](set-package-properties.md)  
+ [Impostazione delle proprietà di un pacchetto](set-package-properties.md)  
   
   

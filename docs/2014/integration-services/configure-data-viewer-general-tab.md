@@ -1,5 +1,5 @@
 ---
-title: Configura visualizzatore dati (scheda Generale) | Microsoft Docs
+title: Configura visualizzatore dati (scheda generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060666"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configura visualizzatore dati (scheda Generale)
@@ -27,7 +27,7 @@ ms.locfileid: "66060666"
  Utilizzare la scheda **Generale** della finestra di dialogo **Configura visualizzatore dati** per assegnare un nome al visualizzatore dati e impostare il tipo di grafico in cui visualizzare i dati.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare un nome univoco per il visualizzatore dati.  
   
  **Tipo**  
@@ -37,10 +37,10 @@ ms.locfileid: "66060666"
  Visualizza un grafico di esempio seguito da una descrizione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configura visualizzatore dati &#40;scheda grafico a colonne&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [Configura visualizzatore dati &#40;scheda griglia&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [Configura visualizzatore dati &#40;scheda istogramma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
- [Configura visualizzatore dati &#40;scheda grafico a dispersione&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+ [Configurare Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
+ [Configurare la scheda griglia &#40;visualizzatore dati&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
+ [Configurare il Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
+ [Configurare il Visualizzatore dati &#40;scheda grafico a dispersione&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Flusso di dati](data-flow/data-flow.md)   
  [Debug di un flusso di dati](troubleshooting/debugging-data-flow.md)  
   

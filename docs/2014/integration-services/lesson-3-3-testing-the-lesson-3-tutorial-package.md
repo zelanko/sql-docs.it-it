@@ -1,5 +1,5 @@
 ---
-title: "Passaggio 3: Test del pacchetto dell'esercitazione della lezione 3 | Microsoft Docs"
+title: "Passaggio 3: Test del pacchetto creato nella lezione 3 dell'esercitazione | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891589"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Passaggio 3: Test del pacchetto creato nella lezione 3 dell'esercitazione
@@ -43,9 +43,9 @@ ms.locfileid: "62891589"
   
 -   Aprire il file TutorialLog.log in Blocco note o in un altro editor di testo.  
   
--   Sebbene la semantica delle informazioni generate per il `PipelineExecutionPlan` e `PipelineExecutionTrees` eventi esulano dall'ambito di questa esercitazione, si può notare che la prima riga sono elencati i campi di informazione specificati nella **dettagli** scheda della finestra il **Configura log SSIS** nella finestra di dialogo. È inoltre possibile verificare che i due eventi selezionati, PipelineExecutionPlan e PipelineExecutionTrees, sono stati inseriti nel log per ogni iterazione del ciclo Foreach.  
+-   Sebbene la semantica delle informazioni generate per gli `PipelineExecutionPlan` eventi `PipelineExecutionTrees` e esula dall'ambito di questa esercitazione, è possibile notare che la prima riga elenca i campi di informazioni specificati nella scheda **Dettagli** della finestra di dialogo **Configura log SSIS** . È inoltre possibile verificare che i due eventi selezionati, PipelineExecutionPlan e PipelineExecutionTrees, sono stati inseriti nel log per ogni iterazione del ciclo Foreach.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: Aggiunta del reindirizzamento del flusso di errore](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Lezione 4: Aggiunta del reindirizzamento del flusso degli errori](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

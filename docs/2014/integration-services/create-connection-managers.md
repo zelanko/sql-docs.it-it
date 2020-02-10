@@ -1,5 +1,5 @@
 ---
-title: Creare gestioni connessioni | Microsoft Docs
+title: Creazione di gestioni connessioni | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a82ef5c249dd1bc15bc91e9ccc502ebffe3f1728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060116"
 ---
 # <a name="create-connection-managers"></a>Creazione di gestioni connessioni
@@ -52,7 +52,7 @@ ms.locfileid: "66060116"
   
  In fase di esecuzione viene utilizzata la versione corretta, anche se in fase di progettazione era stata specificata la versione a 32 bit del provider. È possibile eseguire la versione a 64 bit del provider anche se il pacchetto viene eseguito in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- Entrambe le versioni del provider hanno lo stesso ID. Per specificare se il runtime [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] deve usare la versione a 64 bit del provider, è necessario impostare la proprietà Run64BitRuntime del progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se la proprietà Run64BitRuntime è impostata su `true`, il runtime trova e Usa il provider a 64 bit, se è Run64BitRuntime `false`, il runtime trova e Usa il provider a 32 bit. Per altre informazioni sulle proprietà che è possibile impostare per i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vedere [Integration Services &#40;SSIS&#41; e ambienti Studio](integration-services-ssis-development-and-management-tools.md).  
+ Entrambe le versioni del provider hanno lo stesso ID. Per specificare se il runtime [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] deve usare la versione a 64 bit del provider, è necessario impostare la proprietà Run64BitRuntime del progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se la proprietà Run64BitRuntime è impostata su `true`, il runtime trova e utilizza il provider a 64 bit; Se Run64BitRuntime è `false`, il runtime trova e utilizza il provider a 32 bit. Per altre informazioni sulle proprietà che è possibile impostare per i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vedere [Integration Services &#40;SSIS&#41; e ambienti Studio](integration-services-ssis-development-and-management-tools.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Flusso di controllo](control-flow/control-flow.md)   

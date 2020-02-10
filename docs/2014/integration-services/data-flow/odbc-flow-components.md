@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901431"
 ---
 # <a name="odbc-flow-components"></a>Componenti di flusso ODBC
@@ -110,8 +110,8 @@ I tipi di dati C estensibili non sono supportati, come descritto nelle specifich
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Viene mappato il tipo di dati numeric a DT_NUMERIC quando P è maggiore o uguale a 38 e S è maggiore o uguale a 0 e minore o uguale a P. Viene mappato il tipo di dati numeric a DT_R8 quando viene soddisfatta almeno una delle operazioni seguenti:<br /><br />La precisione è maggiore di 38<br /><br />La scala è minore di zero<br /><br />La scala è maggiore di 38<br /><br />La scala è maggiore della precisione<br /><br /><br /><br />Si noti che viene mappato il tipo di dati numeric a DT_CY quando viene dichiarato come tipo di dati money.|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Viene mappato il tipo di dati decimal a DT_NUMERIC quando P è maggiore o uguale a 38 e S è maggiore o uguale a 0 e minore o uguale a P. Viene mappato il tipo di dati decimal a DT_R8 quando viene soddisfatta almeno una delle operazioni seguenti:<br /><br />La precisione è maggiore di 38<br /><br />La scala è minore di zero<br /><br />La scala è maggiore di 38<br /><br />La scala è maggiore della precisione<br /><br />Si noti che viene mappato il tipo di dati decimal a DT_CY quando viene dichiarato come tipo di dati money.|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Il tipo di dati numeric è mappato a DT_NUMERIC quando P è maggiore o uguale a 38 e S è maggiore o uguale a 0 e S è minore o uguale a P. Viene eseguito il mapping del tipo di dati numerico a DT_R8 quando si verifica almeno una delle condizioni seguenti:<br /><br />La precisione è maggiore di 38<br /><br />La scala è minore di zero<br /><br />La scala è maggiore di 38<br /><br />La scala è maggiore della precisione<br /><br /><br /><br />Si noti che il tipo di dati numeric viene mappato a DT_CY quando viene dichiarato come tipo di dati Money.|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|Il tipo di dati Decimal viene mappato a DT_NUMERIC quando P è maggiore o uguale a 38 e S è maggiore o uguale a 0 e S è minore o uguale a P. Viene eseguito il mapping del tipo di dati Decimal a DT_R8 quando si verifica almeno una delle condizioni seguenti:<br /><br />La precisione è maggiore di 38<br /><br />La scala è minore di zero<br /><br />La scala è maggiore di 38<br /><br />La scala è maggiore della precisione<br /><br />Si noti che il tipo di dati Decimal viene mappato a DT_CY quando viene dichiarato come tipo di dati Money.|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|Viene eseguito il mapping dei tipi di dati SQL_TIMESTAMP a DT_DBTIMESTAMP2 se la scala è maggiore di 3. In tutti gli altri casi, viene eseguito il mapping dei tipi di dati a DT_DBTIMESTAMP.|  
@@ -125,7 +125,7 @@ I tipi di dati C estensibili non sono supportati, come descritto nelle specifich
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |Tipi di dati specifici del provider|DT_BYTES<br /><br />DT_IMAGE|DT_BYTES viene utilizzato se la lunghezza di colonna è minore o uguale a 8000.<br /><br />DT_IMAGE viene utilizzato se la lunghezza di colonna è uguale a zero o maggiore di 8000.|  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Origine ODBC](odbc-source.md)  
   

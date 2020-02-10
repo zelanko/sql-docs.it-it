@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900901"
 ---
 # <a name="raw-file-custom-properties"></a>Proprietà personalizzate del file non elaborato
@@ -27,7 +27,7 @@ ms.locfileid: "62900901"
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (enumerazione)|Modalità utilizzata per accedere ai dati non elaborati. I valori possibili sono `File name` (0) e `File name from variable` (1). Il valore predefinito è `File name` (0).|  
-|FileName|String|Percorso e nome del file di origine.|  
+|FileName|string|Percorso e nome del file di origine.|  
   
  L'output e le colonne di output dell'origine file non elaborato non includono proprietà personalizzate.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62900901"
 |Nome proprietà|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (enumerazione)|Valore che specifica se la proprietà FileName include un nome file o il nome di una variabile che contiene un nome file. Le opzioni valide sono `File name` (0) e `File name from variable` (1).|  
-|FileName|String|Nome del file in cui la destinazione file non elaborato scrive.|  
+|FileName|string|Nome del file in cui la destinazione file non elaborato scrive.|  
 |WriteOption|Integer (enumerazione)|Valore che specifica se la destinazione file non elaborato elimina un file esistente con lo stesso nome. Le opzioni valide sono `Create Always` (0), `Create Once` (1), `Truncate and Append` (3) e `Append` (2). Il valore predefinito di questa proprietà è `Create Always` (0).|  
   
 > [!NOTE]  

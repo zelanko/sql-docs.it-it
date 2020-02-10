@@ -1,5 +1,5 @@
 ---
-title: "Coercizioni dei tipi di dati e l'annotazione SQL: DataType (SQLXML 4.0) | Microsoft Docs"
+title: 'Coercizioni dei tipi di dati e annotazione sql: DataType (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013947"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coercizioni dei tipi di dati e annotazione sql:datatype (SQLXML 4.0)
@@ -34,18 +34,19 @@ ms.locfileid: "66013947"
  Oltre a specificare un tipo XSD in uno schema, è inoltre possibile specificare un tipo di dati di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'annotazione `sql:datatype`. Le annotazioni `xsd:type` e `sql:datatype` controllano il mapping tra i tipi di dati XSD e i tipi di dati di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="xsdtype-attribute"></a>Attributo xsd:type  
- È possibile utilizzare l'attributo `xsd:type` per specificare il tipo di dati XML di un attributo o di un elemento con mapping a una colonna. `xsd:type` influisce sul documento restituito dal server nonché sulla query XPath eseguita. Quando viene eseguita una query XPath su uno schema di mapping contenente `xsd:type`, XPath utilizza il tipo di dati specificato durante l'elaborazione della query. Per altre informazioni sull'utilizzo di XPath `xsd:type`, vedere [Mapping di tipi di dati XSD ai tipi di dati XPath &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+ È possibile utilizzare l'attributo `xsd:type` per specificare il tipo di dati XML di un attributo o di un elemento con mapping a una colonna. 
+  `xsd:type` influisce sul documento restituito dal server nonché sulla query XPath eseguita. Quando viene eseguita una query XPath su uno schema di mapping contenente `xsd:type`, XPath utilizza il tipo di dati specificato durante l'elaborazione della query. Per ulteriori informazioni sull'utilizzo `xsd:type`di XPath, vedere [mapping dei tipi di dati XSD ai tipi di dati xpath &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
  In un documento restituito tutti i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono convertiti in rappresentazioni di stringa. Alcuni tipi di dati richiedono conversioni aggiuntive. Nella tabella seguente sono elencate le conversioni utilizzate per i diversi valori di `xsd:type`.  
   
 |Tipo di dati XSD|Conversione SQL Server|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|Decimal|CONVERT(money, COLUMN)|  
+|Data|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Tempo|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Tutti gli altri|Nessuna conversione aggiuntiva|  
   
 > [!NOTE]  
@@ -86,18 +87,18 @@ ms.locfileid: "66013947"
 ## <a name="sqldatatype-annotation"></a>Annotazione sql:datatype  
  L'annotazione `sql:datatype` viene utilizzata per indicare il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve essere specificata nei casi seguenti:  
   
--   Si esegue un caricamento bulk in una `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonna da uno schema XSD `dateTime`, `date`, o `time` tipo. In questo caso, è necessario identificare il tipo di dati della colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando `sql:datatype="dateTime"`. Questa regola si applica anche agli updategram.  
+-   Si esegue il caricamento bulk in `dateTime` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una colonna da un `dateTime`tipo `date`XSD, `time` o. In questo caso, è necessario identificare il tipo di dati della colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando `sql:datatype="dateTime"`. Questa regola si applica anche agli updategram.  
   
--   Si esegue un caricamento bulk in una colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier` tipo e il valore XSD è un GUID che include parentesi graffe ({e}). Quando si specifica `sql:datatype="uniqueidentifier"`, le parentesi graffe vengono rimosse dal valore prima che questo venga inserito nella colonna. Se non si specifica `sql:datatype`, il valore viene inviato con le parentesi graffe e l'inserimento o l'aggiornamento non viene eseguito.  
+-   Si esegue il caricamento bulk in una colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `uniqueidentifier` di tipo e il valore XSD è un GUID che include parentesi graffe ({e}). Quando si specifica `sql:datatype="uniqueidentifier"`, le parentesi graffe vengono rimosse dal valore prima che questo venga inserito nella colonna. Se non si specifica `sql:datatype`, il valore viene inviato con le parentesi graffe e l'inserimento o l'aggiornamento non viene eseguito.  
   
 -   Viene eseguito il mapping del tipo di dati XML `base64Binary` a diversi tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`binary`, `image` o `varbinary`). Per eseguire il mapping del tipo di dati XML `base64Binary` a un tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specifico, utilizzare l'annotazione `sql:datatype`. Questa annotazione specifica il tipo di dati esplicito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna a cui viene mappato l'attributo. Ciò risulta utile durante l'archiviazione dei dati nei database. Specificando l'annotazione `sql:datatype`, è possibile identificare il tipo di dati esplicito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  È in genere consigliabile specificare `sql:datatype` nello schema.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>A. Definizione dell'attributo xsd:type  
+### <a name="a-specifying-xsdtype"></a>R. Definizione dell'attributo xsd:type  
  In questo esempio viene illustrato il modo in cui un tipo XSD `date` specificato tramite l'attributo `xsd:type` nello schema influisce sul documento XML risultante. Lo schema fornisce una vista XML della tabella Sales.SalesOrderHeader nel database AdventureWorks.  
   
 ```  
@@ -117,11 +118,11 @@ ms.locfileid: "66013947"
   
  In questo schema XSD sono inclusi tre attributi che restituiscono un valore di data da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esaminare i casi seguenti per lo schema:  
   
--   Specifica `xsd:type=date` nella **OrderDate** dell'attributo, la parte della data del valore restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il **OrderDate** attributo viene visualizzato.  
+-   Specifica `xsd:type=date` sull'attributo **OrderDate** , viene visualizzata la parte relativa alla data del valore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito da per l'attributo **OrderDate** .  
   
--   Specifica `xsd:type=time` nella **ShipDate** dell'attributo, la parte dell'ora del valore restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il **ShipDate** attributo viene visualizzato.  
+-   Specifica `xsd:type=time` nell'attributo **ShipDate** , viene visualizzata la parte relativa all'ora del valore restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'attributo **ShipDate** .  
   
--   Non specifica `xsd:type` nella **DueDate** dell'attributo, lo stesso valore restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato.  
+-   Non specifica `xsd:type` sull'attributo **DueDate** , viene visualizzato lo stesso valore restituito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Per testare una query Xpath di esempio sullo schema  
   
@@ -145,7 +146,7 @@ ms.locfileid: "66013947"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati parziale:  
   
@@ -190,6 +191,6 @@ ms.locfileid: "66013947"
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. Definizione del tipo di dati SQL tramite sql:datatype  
- Per un esempio funzionante, vedere l'esempio G in [esempi di caricamento Bulk XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). In questo esempio viene eseguito il caricamento bulk di un valore GUID che include"{" e "}". Lo schema in questo esempio specifica `sql:datatype` per identificare il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come `uniqueidentifier`. In questo esempio vengono indicati i casi in cui è necessario specificare `sql:datatype` nello schema.  
+ Per un esempio funzionante, vedere l'esempio G in [esempi di caricamento bulk XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). In questo esempio viene eseguito il caricamento bulk di un valore GUID che include"{" e "}". Lo schema in questo esempio specifica `sql:datatype` per identificare il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come `uniqueidentifier`. In questo esempio vengono indicati i casi in cui è necessario specificare `sql:datatype` nello schema.  
   
   

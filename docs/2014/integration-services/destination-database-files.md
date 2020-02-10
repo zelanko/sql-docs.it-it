@@ -1,5 +1,5 @@
 ---
-title: File di Database di destinazione | Microsoft Docs
+title: File di database di destinazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059551"
 ---
 # <a name="destination-database-files"></a>File di database di destinazione
@@ -44,7 +44,7 @@ ms.locfileid: "66059551"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Trasferisci database &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor attività Trasferisci database &#40;pagina Database&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Editor attività Trasferisci database &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor attività Trasferisci database &#40;pagina database&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

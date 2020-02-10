@@ -1,5 +1,5 @@
 ---
-title: Connettere le attività e contenitori tramite un vincolo di precedenza predefinito | Microsoft Docs
+title: Connessione di attività e contenitori tramite un vincolo di precedenza predefinito | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060425"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Connessione di attività e contenitori tramite un vincolo di precedenza predefinito
@@ -56,8 +56,8 @@ ms.locfileid: "66060425"
   
 ## <a name="see-also"></a>Vedere anche  
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
- [Impostare il valore di un vincolo di precedenza tramite il Menu di scelta rapida](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [Impostare il valore di un vincolo di precedenza tramite il menu di scelta rapida](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [Impostare le proprietà di un vincolo di precedenza](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
- [Uso di un'espressione in un vincolo di precedenza](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+ [Utilizzo di un'espressione in un vincolo di precedenza](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
   

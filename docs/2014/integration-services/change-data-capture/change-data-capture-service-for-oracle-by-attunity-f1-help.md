@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2d9e58d622efd5951f95d3e3b9907a4289df9e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835822"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Guida del servizio Change Data Capture per Oracle di Attunity
@@ -22,7 +22,7 @@ ms.locfileid: "62835822"
   
  Negli argomenti di questa sezione vengono fornite informazioni sui dati che occorre fornire quando si utilizza CDC Service Configuration Console.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Connessione a SQL Server](connection-to-sql-server.md)  
   

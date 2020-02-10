@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione script (pagina colonne di Input) | Microsoft Docs
+title: Editor trasformazione script (pagina colonne di input) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056084"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Editor trasformazione Script (pagina Colonne di input)
@@ -27,7 +27,7 @@ ms.locfileid: "66056084"
 > [!NOTE]  
 >  La pagina **Colonne di input** non viene visualizzata per i componenti di origine, che hanno output ma non input.  
   
- Per altre informazioni sul componente Script, vedere [componente Script](data-flow/transformations/script-component.md) e [configurazione del componente Script nell'Editor del componente di Script](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per una panoramica sulla programmazione del componente Script, vedere [Estensione del flusso di dati con il componente script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Per ulteriori informazioni sul componente Script, vedere [Script Component](data-flow/transformations/script-component.md) e [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Estensione del flusso di dati con il componente script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Opzioni  
  **Nome input**  
@@ -42,15 +42,15 @@ ms.locfileid: "66056084"
  **Alias di output**  
  Consente di digitare un alias per ogni colonna di output. Per impostazione predefinita viene suggerito il nome della colonna di input. È comunque possibile scegliere qualsiasi nome descrittivo univoco.  
   
- **Tipo di utilizzo**  
+ **Usage Type**  
  Consente di specificare se la trasformazione script deve considerare ogni colonna come `ReadOnly` o `ReadWrite`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Seleziona tipo componente script](../../2014/integration-services/select-script-component-type.md)   
- [Editor trasformazione Script &#40;pagina Input e output&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [Editor trasformazione Script &#40;pagina Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Editor trasformazione Script &#40;pagina Gestioni connessioni&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Editor trasformazione script &#40;pagina input e output&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [Editor trasformazione script &#40;pagina script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Editor trasformazione script &#40;pagina Gestioni connessioni&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Ulteriori esempi di componente script](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

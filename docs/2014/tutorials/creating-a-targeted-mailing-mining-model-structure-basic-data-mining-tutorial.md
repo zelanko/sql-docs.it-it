@@ -1,5 +1,5 @@
 ---
-title: Creazione di una struttura modello di Data Mining Targeted Mailing (esercitazione di base di Data Mining) | Microsoft Docs
+title: Creazione di una struttura del modello di data mining Targeted Mailing (esercitazione di base sul data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,58 +11,58 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856168"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Creazione di una struttura del modello di data mining Targeted Mailing (Esercitazione di base sul data mining)
   Il primo passaggio nella creazione di uno scenario relativo al mailing diretto consiste nell'utilizzo di Creazione guidata modello di data mining in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una nuova struttura e un nuovo modello di data mining basato su un albero delle decisioni.  
   
- In questa attività viene impostata una nuova struttura di data mining e viene aggiunto un modello di data mining iniziale in base il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Decision Trees. Per creare la struttura, verranno innanzitutto selezionate le tabelle e le viste, quindi si identificheranno le colonne da utilizzare rispettivamente per il training e per il testing.  
+ In questa attività verrà configurata una nuova struttura di data mining e verrà aggiunto un modello di data mining [!INCLUDE[msCoName](../includes/msconame-md.md)] iniziale basato sull'algoritmo Decision Trees. Per creare la struttura, verranno innanzitutto selezionate le tabelle e le viste, quindi si identificheranno le colonne da utilizzare rispettivamente per il training e per il testing.  
   
 ### <a name="to-create-a-mining-structure-for-the-targeted-mailing-scenario"></a>Per creare una struttura di data mining per lo scenario relativo al mailing diretto  
   
-1.  In Esplora soluzioni fare doppio clic su **strutture di Data Mining** e selezionare **nuova struttura di Data Mining** per avviare Creazione guidata di Data Mining.  
+1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **strutture di data** mining e scegliere **nuova struttura di data** mining per avviare Creazione guidata modello di data mining  
   
 2.  Nella pagina iniziale **Creazione guidata modello di data mining** fare clic su **Avanti**.  
   
-3.  Nel **Selezione metodo di definizione** verificare che **da esistenti database relazionale o data warehouse** sia selezionata e quindi fare clic su **Next**.  
+3.  Nella pagina **Selezione metodo di definizione** verificare che sia selezionato **da database relazionale o data warehouse esistente** e quindi fare clic su **Avanti**.  
   
-4.  Nel **creare la struttura di Data Mining** nella pagina **tecnica di data mining si desidera utilizzare?** , selezionare **Microsoft Decision Trees**.  
-  
-    > [!NOTE]  
-    >  Se viene visualizzato un avviso relativo al mancato rilevamento di algoritmi di data mining, è possibile che le proprietà del progetto non siano state configurate correttamente. Questo avviso viene visualizzato quando il progetto tenta di recuperare un elenco di algoritmi di data mining dal server di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e quest'ultimo non viene rilevato. Per impostazione predefinita [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] userà **localhost** del server. Se si utilizza un'istanza diversa o un'istanza denominata, è necessario modificare le proprietà del progetto. Per altre informazioni, vedere [creazione di un progetto di Analysis Services &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  
-  
-5.  Scegliere **Avanti**.  
-  
-6.  Nel **selezione vista origine dati** pagina il **viste origine dati disponibili** riquadro, selezionare **Targeted Mailing**. È possibile fare clic su **esplorare** per visualizzare le tabelle nella vista origine dati e quindi fare clic su **Chiudi** per tornare alla procedura guidata.  
-  
-7.  Scegliere **Avanti**.  
-  
-8.  Nel **specificare i tipi di tabella** pagina, selezionare la casella di controllo la **Case** colonna vTargetMail per usarlo come tabella del case, quindi fare clic su per **successiva**. La tabella ProspectiveBuyer verrà utilizzata in un secondo momento per il testing. Per il momento, ignorarla.  
-  
-9. Nel **specificare i dati di Training** pagina, sarà possibile identificare almeno una colonna stimabile, una colonna chiave e una colonna per il modello di input. Selezionare la casella di controllo di **stimabile** colonna il **BikeBuyer** riga.  
+4.  Nella pagina **Crea la struttura di data mining** in **cui data mining tecnica si desidera utilizzare?** selezionare **Microsoft Decision Trees**.  
   
     > [!NOTE]  
-    >  Si noti il messaggio di avviso nella parte inferiore della finestra. Non sarà in grado di passare alla pagina successiva finché non si seleziona ad almeno uno **Input** e una **stimabile** colonna.  
+    >  Se viene visualizzato un avviso relativo al mancato rilevamento di algoritmi di data mining, è possibile che le proprietà del progetto non siano state configurate correttamente. Questo avviso viene visualizzato quando il progetto tenta di recuperare un elenco di algoritmi di data mining dal server di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e quest'ultimo non viene rilevato. Per impostazione predefinita [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , utilizzerà **localhost** come server. Se si utilizza un'istanza diversa o un'istanza denominata, è necessario modificare le proprietà del progetto. Per ulteriori informazioni, vedere la pagina relativa alla [creazione di un progetto Analysis Services &#40;esercitazione di base sul Data Mining&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  
   
-10. Fare clic su **Suggerisci** per aprire il **Suggerisci colonne correlate** nella finestra di dialogo.  
+5.  Fare clic su **Avanti**.  
   
-     Il **Suggerisci** pulsante viene attivato ogni volta che è stato selezionato almeno un attributo stimabile. Il **Suggerisci colonne correlate** nella finestra di dialogo sono elencate le colonne che sono più strettamente correlate alla colonna stimabile e gli attributi per la correlazione con l'attributo stimabile. Le colonne che presentano una correlazione significativa (confidenza maggiore del 95%) vengono selezionate automaticamente per essere incluse nel modello.  
+6.  Nella pagina **Selezione vista origine dati** , nel riquadro **viste origine dati disponibili** , selezionare **Targeted Mailing**. È possibile fare clic su **Sfoglia** per visualizzare le tabelle nella vista origine dati e quindi fare clic su **Chiudi** per tornare alla procedura guidata.  
   
-     Esaminare i suggerimenti e quindi fare clic su **annullare** toignore i suggerimenti.  
+7.  Fare clic su **Avanti**.  
+  
+8.  Nella pagina **impostazione tipi di tabelle** selezionare la casella di controllo nella colonna **case** per vTargetMail per utilizzarla come tabella del case, quindi fare clic su **Avanti**. La tabella ProspectiveBuyer verrà utilizzata in un secondo momento per il testing. Per il momento, ignorarla.  
+  
+9. Nella pagina **impostazione dati di training** si identificherà almeno una colonna stimabile, una colonna chiave e una colonna di input per il modello. Selezionare la casella di controllo nella colonna **stimabile** nella riga **BikeBuyer** .  
   
     > [!NOTE]  
-    >  Se si sceglie **OK**, tutti i suggerimenti verranno contrassegnati come colonne di input nella procedura guidata. Se si accetta solo una parte dei suggerimenti, è necessario modificare i valori manualmente.  
+    >  Si noti il messaggio di avviso nella parte inferiore della finestra. Non sarà possibile passare alla pagina successiva fino a quando non si seleziona almeno una colonna di **input** e una colonna **stimabile** .  
   
-11. Verificare che la casella di controllo la **chiave** viene selezionata nella colonna il **CustomerKey** riga.  
+10. Fare clic su **Suggerisci** per aprire la finestra di dialogo **Suggerisci colonne correlate** .  
+  
+     Il pulsante **Suggerisci** è abilitato ogni volta che è stato selezionato almeno un attributo stimabile. Nella finestra di dialogo **Suggerisci colonne correlate** sono elencate le colonne più strettamente correlate alla colonna stimabile e gli attributi vengono ordinati in base alla relativa correlazione con l'attributo stimabile. Le colonne che presentano una correlazione significativa (confidenza maggiore del 95%) vengono selezionate automaticamente per essere incluse nel modello.  
+  
+     Esaminare i suggerimenti e quindi fare clic su **Annulla** per ignorare i suggerimenti.  
+  
+    > [!NOTE]  
+    >  Se si fa clic su **OK**, tutti i suggerimenti elencati verranno contrassegnati come colonne di input nella procedura guidata. Se si accetta solo una parte dei suggerimenti, è necessario modificare i valori manualmente.  
+  
+11. Verificare che la casella di controllo nella colonna **chiave** sia selezionata nella riga **CustomerKey** .  
   
     > [!NOTE]  
     >  Se la tabella di origine nella vista origine dati indica una chiave, Creazione guidata modello di data mining sceglierà automaticamente tale colonna come chiave per il modello.  
   
-12. Selezionare le caselle di controllo di **Input** colonna nelle righe seguenti. È possibile selezionare più colonne evidenziando un intervallo di celle e premendo CTRL mentre si seleziona una casella di controllo.  
+12. Selezionare le caselle di controllo nella colonna **input** nelle righe seguenti. È possibile selezionare più colonne evidenziando un intervallo di celle e premendo CTRL mentre si seleziona una casella di controllo.  
   
     -   **Età**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62856168"
   
     -   **EnglishOccupation**  
   
-    -   **Gender**  
+    -   **Genere**  
   
     -   **GeographyKey**  
   
@@ -104,15 +104,15 @@ ms.locfileid: "62856168"
   
     -   **LastName**  
   
-     Assicurarsi che queste righe contengano segni di spunta solo nella colonna sinistra. Le colonne corrispondenti verranno aggiunte alla struttura ma non verranno incluse nel modello. Tuttavia, dopo la compilazione del modello, saranno disponibili per il drill-through e il testing. Per altre informazioni sul drill-through, vedere [query drill-through &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+     Assicurarsi che queste righe contengano segni di spunta solo nella colonna sinistra. Le colonne corrispondenti verranno aggiunte alla struttura ma non verranno incluse nel modello. Tuttavia, dopo la compilazione del modello, saranno disponibili per il drill-through e il testing. Per ulteriori informazioni sul drill-through, vedere [query drill-through &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
-14. Scegliere **Avanti**.  
+14. Fare clic su **Avanti**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Specifica il tipo di dati e il tipo di contenuto &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
+ [Impostazione del tipo di dati e del tipo di contenuto &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specificare i tipi di tabella &#40;Creazione guidata di Data Mining&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
+ [Impostazione tipi di tabella &#40;creazione guidata modello di data mining&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
  [Progettazione modelli di data mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algoritmo Microsoft Decision Trees](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   

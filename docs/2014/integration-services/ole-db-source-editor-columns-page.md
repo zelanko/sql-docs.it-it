@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057025"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Editor origine OLE DB (pagina Colonne)
@@ -39,8 +39,8 @@ ms.locfileid: "66057025"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [Editor origine OLE DB &#40;pagina Output degli errori&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [Estrazione dei dati tramite l'origine OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [Editor origine OLE DB &#40;pagina output degli errori&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Estrarre dati tramite l'origine OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

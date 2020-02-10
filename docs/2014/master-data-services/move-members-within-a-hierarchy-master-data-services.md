@@ -16,23 +16,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58b39d2dc660fd51d1ba21308ff056874a239731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054085"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>Spostare membri all'interno di una gerarchia (Master Data Services)
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] è possibile spostare i membri all'interno di una gerarchia per modificarne l'assegnazione della posizione o dell'elemento padre.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
   
--   Per le gerarchie esplicite, è necessario disporre di almeno **Update** dell'autorizzazione per l'entità.  
+-   Per le gerarchie esplicite, è necessario disporre almeno dell'autorizzazione **aggiornamento** per l'entità.  
   
--   Per le gerarchie derivate, è necessario disporre di almeno **Update** al modello e per tutti gli attributi basati su dominio usati nella gerarchia.  
+-   Per le gerarchie derivate, è necessario disporre almeno dell' **aggiornamento** del modello e degli attributi basati su dominio utilizzati nella gerarchia.  
   
 ### <a name="to-move-members-within-a-hierarchy"></a>Per spostare membri in una gerarchia  
   
@@ -44,11 +44,11 @@ ms.locfileid: "66054085"
   
 4.  Dalla barra dei menu scegliere **gerarchie** e fare clic su *hierarchy_name*.  
   
-5.  Nel **gerarchia** riquadro, in cui la gerarchia viene visualizzata in una struttura ad albero, fare clic sulla casella di controllo per ogni membro che si desidera spostare.  
+5.  Nel riquadro **gerarchia** , in cui la gerarchia viene visualizzata in una struttura ad albero, fare clic sulla casella di controllo relativa a ogni membro che si desidera spostare.  
   
-6.  In cima il **gerarchia** riquadro, fare clic su **Taglia**.  
+6.  Nella parte superiore del riquadro **gerarchia** fare clic su **taglia**.  
   
-7.  Nel **gerarchia** riquadro, selezionare la casella di controllo per il membro che si desidera spostare i membri.  
+7.  Nel riquadro **gerarchia** fare clic sulla casella di controllo per il membro in cui si desidera spostare i membri.  
   
 8.  Fare clic su **Incolla**.  
   

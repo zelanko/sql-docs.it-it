@@ -1,5 +1,5 @@
 ---
-title: 'Attività 3 (facoltativa): Verifica delle viste sottoscrizioni | Microsoft Docs'
+title: 'Attività 3 (facoltativo): Revisione delle viste sottoscrizioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489258"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>Attività 3 (facoltativa): Verifica delle viste sottoscrizioni
   In questa attività viene verificato che le viste SQL vengano create tramite SQL Server Management Studio.  
   
-1.  Avvio veloce **SQL Server Management Studio**. Fare clic sul **avviare** e fare clic **tutti i programmi**, fare clic su **Microsoft SQL Server 2012**, quindi fare clic su **SQL Server Management Studio**.  
+1.  Avviare **SQL Server Management Studio**. Fare clic sul pulsante **Start** , scegliere **tutti i programmi**, fare clic su **Microsoft SQL Server 2012**, quindi fare clic su **SQL Server Management Studio**.  
   
-2.  Nel **Connetti al Server** impostare nella finestra **tipo di Server** al **motore di Database**, tipo il **nome del server** (oppure selezionare **( Local)** e selezionare appropriato **authentication**, fare clic su **Connect**.  
+2.  Nella finestra **Connetti al server** impostare tipo di **Server** su **motore di database**, digitare il **nome del server** (oppure selezionare **(locale)**, quindi selezionare **autenticazione**appropriata e fare clic su **Connetti**.  
   
-3.  Nel **Esplora oggetti** riquadro, espandere **database**, espandere **MDS**, quindi espandere **viste**.  
+3.  Nel riquadro **Esplora oggetti** , espandere **database**, **MDS**, quindi espandere **viste**.  
   
-4.  Verificare che venga visualizzato il **MDM. Fornitori** visualizzazione nell'elenco.  
+4.  Verificare che il MDM sia visualizzato **. **Visualizzazione dei fornitori nell'elenco.  
   
-     ![SQL Server Management Studio - MDM. Visualizzazione di fornitori](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio - MDM. Visualizzazione di fornitori")  
+     ![SQL Server Management Studio - Vista mdm.Suppliers](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio - Vista mdm.Suppliers")  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Attività 4: Creazione di un progetto SSIS tramite SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

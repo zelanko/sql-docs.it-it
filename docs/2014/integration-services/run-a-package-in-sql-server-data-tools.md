@@ -16,18 +16,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056417"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Eseguire un pacchetto in SQL Server Data Tools
   I pacchetti vengono eseguiti in genere in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] durante lo sviluppo, il debug e il test di pacchetti. In Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] l'esecuzione dei pacchetti è sempre immediata.  
   
- Durante l'esecuzione di un pacchetto, in Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] viene visualizzato lo stato dell'esecuzione nella scheda **Stato**. È possibile visualizzare l'ora di inizio e di fine del pacchetto e delle attività e contenitori del pacchetto, oltre a informazioni sulle attività o contenitori che hanno avuto esito negativo. Dopo l'esecuzione del pacchetto, nella scheda **Risultati esecuzione** sono disponibili le informazioni di run-time. Per altre informazioni, vedere la sezione "Report di stato" nell'argomento [Debug del flusso di controllo](control-flow/control-flow.md).  
+ Durante l'esecuzione di un pacchetto [!INCLUDE[ssIS](../includes/ssis-md.md)] , in progettazione viene visualizzato lo stato di avanzamento dell'esecuzione del pacchetto nella scheda **stato** . È possibile visualizzare l'ora di inizio e di fine del pacchetto e le relative attività e contenitori, oltre a informazioni su eventuali attività o contenitori nel pacchetto non riusciti. Al termine dell'esecuzione del pacchetto, le informazioni di run-time rimangono disponibili nella scheda **Risultati esecuzione** . Per ulteriori informazioni, vedere la sezione relativa alla creazione di report sullo stato di avanzamento nell'argomento [debug del flusso di controllo](control-flow/control-flow.md).  
   
- **Distribuzione in fase di progettazione**. Quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], il pacchetto viene compilato e quindi distribuito in una cartella. Prima di eseguire il pacchetto è possibile specificare la cartella in cui deve essere distribuito. Se non si specifica alcuna cartella, per impostazione predefinita viene usata la cartella **bin** . Questo tipo di distribuzione è detto distribuzione in fase di progettazione.  
+ **Distribuzione in fase di progettazione**. Quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], il pacchetto viene compilato e quindi distribuito in una cartella. Prima di eseguire il pacchetto è possibile specificare la cartella in cui deve essere distribuito. Se non si specifica alcuna cartella, per impostazione predefinita viene usata la cartella **bin**. Questo tipo di distribuzione è detto distribuzione in fase di progettazione.  
   
 ### <a name="to-run-a-package-in-sql-server-data-tools"></a>Per eseguire un pacchetto in SQL Server Data Tools  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66056417"
   
 1.  In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella del progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenente il pacchetto da eseguire e quindi scegliere **Proprietà**.  
   
-2.  Nella finestra di dialogo **\<Pagine delle proprietà di <nome progetto** fare clic su **Compila**.  
+2.  Nella finestra di dialogo ** \<nome progetto> pagine delle proprietà** fare clic su **Compila**.  
   
 3.  Aggiornare il valore della proprietà OutputPath per specificare la cartella da usare per la distribuzione in fase di progettazione e quindi fare clic su **OK**.  
   

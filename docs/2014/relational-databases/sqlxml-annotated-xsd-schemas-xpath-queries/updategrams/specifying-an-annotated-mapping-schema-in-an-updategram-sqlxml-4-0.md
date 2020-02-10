@@ -1,5 +1,5 @@
 ---
-title: Specifica uno Schema di Mapping con annotazioni in un Updategram (SQLXML 4.0) | Microsoft Docs
+title: Specifica di uno schema di mapping con annotazioni in un updategram (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,32 +21,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014659"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Specifica di uno schema di mapping con annotazioni in un updategram (SQLXML 4.0)
-  In questo argomento viene illustrata la modalità di utilizzo dello schema di mapping (XSD o XDR) specificato in un updategram per l'elaborazione degli aggiornamenti. In un updategram, è possibile fornire il nome di uno schema di mapping con annotazioni da utilizzare per eseguire il mapping di elementi e attributi nell'updategram alle tabelle e colonne in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando si specifica uno schema di mapping in un updategram, è necessario eseguire il mapping dei nomi di elemento e di attributo specificati nell'updategram agli elementi e agli attributi dello schema di mapping.  
+  In questo argomento viene illustrata la modalità di utilizzo dello schema di mapping (XSD o XDR) specificato in un updategram per l'elaborazione degli aggiornamenti. In un updategram è possibile specificare il nome di uno schema di mapping con annotazioni da utilizzare per eseguire il mapping degli elementi e degli attributi nell'updategram alle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]tabelle e alle colonne in. Quando si specifica uno schema di mapping in un updategram, è necessario eseguire il mapping dei nomi di elemento e di attributo specificati nell'updategram agli elementi e agli attributi dello schema di mapping.  
   
- Per specificare uno schema di mapping, utilizzare il `mapping-schema` attributo del  **\<sync >** elemento. Negli esempi seguenti sono illustrati due updategram, uno che utilizza uno schema di mapping semplice e uno che utilizza uno schema più complesso.  
+ Per specificare uno schema di mapping, utilizzare l' `mapping-schema` attributo dell'elemento ** \<Sync>** . Negli esempi seguenti sono illustrati due updategram, uno che utilizza uno schema di mapping semplice e uno che utilizza uno schema più complesso.  
   
 > [!NOTE]  
->  In questa documentazione si presuppone che l'utente disponga di una certa familiarità con i modelli e il supporto dello schema di mapping in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Per le applicazioni legacy che utilizzano XDR, vedere [schemi XDR con annotazioni &#40;deprecato in SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  In questa documentazione si presuppone che l'utente disponga di una certa familiarità con i modelli e il supporto dello schema di mapping in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Introduzione agli schemi XSD con Annotazioni &#40;SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Per le applicazioni legacy che usano XDR, vedere la pagina relativa agli [schemi XDR con Annotazioni &#40;deprecati in SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Gestione dei tipi di dati  
- Se lo schema specifica la `image`, `binary`, o `varbinary` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati (tramite `sql:datatype`) e non viene specificato un tipo di dati XML, l'updategram presuppone che il tipo di dati XML è `binary base 64`. Se i dati sono di tipo `bin.base`, è necessario specificare in modo esplicito il tipo (`dt:type=bin.base` o `type="xsd:hexBinary"`).  
+ Se lo schema specifica il `image`tipo `binary`di dati `varbinary` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o (utilizzando `sql:datatype`) e non specifica un tipo di dati XML, l'updategram presuppone che il tipo di dati XML sia `binary base 64`. Se i dati sono di tipo `bin.base`, è necessario specificare in modo esplicito il tipo (`dt:type=bin.base` o `type="xsd:hexBinary"`).  
   
  Se lo schema specifica il tipo di dati XSD `dateTime`, `date` o `time`, è necessario specificare anche il tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] corrispondente utilizzando `sql:datatype="dateTime"`.  
   
- Quando si gestiscono parametri di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `money` tipo, è necessario specificare esplicitamente `sql:datatype="money"` nel nodo appropriato nello schema di mapping.  
+ Quando si gestiscono [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `money` parametri di tipo, è necessario specificare `sql:datatype="money"` in modo esplicito nel nodo appropriato nello schema di mapping.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nelle [requisiti per l'esecuzione di esempi di SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Creazione di un updategram con uno schema di mapping semplice  
- Lo schema XSD seguente (SampleSchema. XML) è uno schema di mapping che esegue il mapping di  **\<cliente >** elemento alla tabella Sales. Customer:  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>R. Creazione di un updategram con uno schema di mapping semplice  
+ Lo schema XSD seguente (SampleSchema. Xml) è uno schema di mapping che esegue il mapping dell' ** \<elemento Customer>** alla tabella Sales. Customer:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -64,7 +64,7 @@ ms.locfileid: "66014659"
 </xsd:schema>  
 ```  
   
- L'updategram seguente inserisce un record nella tabella Sales.Customer e si basa sullo schema di mapping precedente per eseguire il mapping di questi dati alla tabella correttamente. Si noti che l'updategram utilizza lo stesso nome di elemento,  **\<cliente >** , come definito nello schema. Questa condizione è obbligatoria perché l'updategram specifica uno schema particolare.  
+ L'updategram seguente inserisce un record nella tabella Sales.Customer e si basa sullo schema di mapping precedente per eseguire il mapping di questi dati alla tabella correttamente. Si noti che l'updategram utilizza lo stesso nome di elemento, ** \<Customer>**, come definito nello schema. Questa condizione è obbligatoria perché l'updategram specifica uno schema particolare.  
   
 ##### <a name="to-test-the-updategram"></a>Per testare l'updategram  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66014659"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito viene indicato lo schema XDR equivalente:  
   
@@ -113,9 +113,9 @@ ms.locfileid: "66014659"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Inserimento di un record tramite la relazione padre-figlio specificata nello schema di mapping  
- Gli elementi dello schema possono essere correlati. Il  **\<SQL: Relationship >** elemento specifica la relazione padre-figlio tra gli elementi dello schema. Queste informazioni vengono utilizzate per aggiornare le tabelle corrispondenti che presentano una relazione chiave primaria/chiave esterna.  
+ Gli elementi dello schema possono essere correlati. L' ** \<elemento SQL: Relationship>** specifica la relazione padre-figlio tra gli elementi dello schema. Queste informazioni vengono utilizzate per aggiornare le tabelle corrispondenti che presentano una relazione chiave primaria/chiave esterna.  
   
- Lo schema di mapping seguente (SampleSchema. XML) è costituito da due elementi  **\<ordine >** e  **\<OD >** :  
+ Lo schema di mapping seguente (SampleSchema. Xml) è costituito da due elementi, ** \<Order>** e ** \<od>**:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -154,7 +154,7 @@ ms.locfileid: "66014659"
 </xsd:schema>  
 ```  
   
- Nell'updategram seguente viene utilizzato questo schema XSD per aggiungere un nuovo record di dettaglio ordine (un  **\<OD >** elemento il  **\<dopo >** blocco) per ordine numero 43860. L'attributo `mapping-schema` viene utilizzato per specificare lo schema di mapping nell'updategram.  
+ Nell'updategram seguente viene utilizzato questo schema XSD per aggiungere un nuovo record di dettagli dell' ** \<** ordine (un elemento>nel blocco ** \<after>** ) per l'ordine 43860. L'attributo `mapping-schema` viene utilizzato per specificare lo schema di mapping nell'updategram.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -186,7 +186,7 @@ ms.locfileid: "66014659"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito viene indicato lo schema XDR equivalente:  
   
@@ -230,13 +230,15 @@ ms.locfileid: "66014659"
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. Inserimento di un record tramite la relazione padre-figlio e l'annotazione inverse specificata nello schema XSD  
- In questo esempio viene illustrato in che modo la logica dell'updategram utilizza la relazione padre-figlio specificata in XSD per elaborare gli aggiornamenti e viene descritta la modalità di utilizzo dell'annotazione `inverse`. Per altre informazioni sul `inverse` annotazione, vedere [specificando l'attributo SQL: inverse in SQL: Relationship &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ In questo esempio viene illustrato in che modo la logica dell'updategram utilizza la relazione padre-figlio specificata in XSD per elaborare gli aggiornamenti e viene descritta la modalità di utilizzo dell'annotazione `inverse`. Per ulteriori informazioni sull' `inverse` annotazione, vedere [specifica dell'attributo SQL: inverse in sql: relationship &#40;SQLXML 4,0&#41;](../../sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- Questo esempio si presuppone che le tabelle seguenti sono nel **tempdb** database:  
+ In questo esempio si presuppone che le tabelle seguenti si trovino nel database **tempdb** :  
   
--   `Cust (CustomerID, CompanyName)`, dove `CustomerID` è la chiave primaria  
+-   
+  `Cust (CustomerID, CompanyName)`, dove `CustomerID` è la chiave primaria  
   
--   `Ord (OrderID, CustomerID)`, dove `CustomerID` è una chiave esterna che fa riferimento alla chiave primaria `CustomerID` nella tabella `Cust`.  
+-   
+  `Ord (OrderID, CustomerID)`, dove `CustomerID` è una chiave esterna che fa riferimento alla chiave primaria `CustomerID` nella tabella `Cust`.  
   
  L'updategram utilizza lo schema XSD seguente per inserire i record nelle tabelle Cust e Ord:  
   
@@ -273,11 +275,11 @@ ms.locfileid: "66014659"
 </xsd:schema>  
 ```  
   
- Lo schema XSD in questo esempio include  **\<cliente >** e  **\<ordine >** elementi e specifica una relazione padre-figlio tra i due elementi. Identifica  **\<ordine >** come elemento padre e  **\<cliente >** come elemento figlio.  
+ Lo schema XSD in questo esempio include ** \<gli elementi Customer>** e ** \<Order>** e specifica una relazione padre-figlio tra i due elementi. Identifica ** \<>Order** come elemento padre e ** \<Customer>** come elemento figlio.  
   
- La logica di elaborazione dell'updategram utilizza le informazioni sulla relazione padre-figlio per determinare l'ordine in cui i record vengono inseriti nelle tabelle. In questo esempio, la logica dell'updategram tenta innanzitutto di inserire un record nella tabella Ord (perché  **\<ordine >** è l'elemento padre) e quindi tenta di inserire un record nella tabella Cust (perché  **\<Cliente >** figlio). A causa delle informazioni su chiave primaria/chiave esterna contenute nello schema della tabella di database, questa operazione di inserimento genera tuttavia una violazione di chiave esterna nel database e pertanto l'inserimento ha esito negativo.  
+ La logica di elaborazione dell'updategram utilizza le informazioni sulla relazione padre-figlio per determinare l'ordine in cui i record vengono inseriti nelle tabelle. In questo esempio, la logica dell'updategram tenta innanzitutto di inserire un record nella tabella Ord (perché ** \<Order>** è l'elemento padre), quindi tenta di inserire un record nella tabella Cust (perché ** \<il cliente>** è l'elemento figlio). A causa delle informazioni su chiave primaria/chiave esterna contenute nello schema della tabella di database, questa operazione di inserimento genera tuttavia una violazione di chiave esterna nel database e pertanto l'inserimento ha esito negativo.  
   
- Per indicare alla logica dell'updategram di invertire la relazione padre-figlio durante l'operazione di aggiornamento, il `inverse` annotazione viene specificata per il  **\<relazione >** elemento. Di conseguenza, i record vengono aggiunti prima nella tabella Cust e successivamente nella tabella Ord e l'operazione riesce.  
+ Per indicare alla logica dell'updategram di invertire la relazione padre-figlio durante l'operazione di `inverse` aggiornamento, l'annotazione viene specificata nell'elemento ** \<Relationship>** . Di conseguenza, i record vengono aggiunti prima nella tabella Cust e successivamente nella tabella Ord e l'operazione riesce.  
   
  Nell'updategram seguente viene inserito un ordine (OrderID=2) nella tabella Ord e un cliente (CustomerID='AAAAA) nella tabella Cust tramite lo schema XSD specificato:  
   
@@ -296,7 +298,7 @@ ms.locfileid: "66014659"
   
 ##### <a name="to-test-the-updategram"></a>Per testare l'updategram  
   
-1.  Creare le tabelle nel **tempdb** database:  
+1.  Creare le tabelle seguenti nel database **tempdb** :  
   
     ```  
     USE tempdb  
@@ -320,9 +322,9 @@ ms.locfileid: "66014659"
   
 4.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Aggiunta di modelli di Data Mining per la struttura di Data Mining Time Series | Microsoft Docs'
+title: 'Lezione 2: aggiunta di modelli di data mining alla struttura di data mining Time Series | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855711"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Time Series
-  In questa lezione si aggiungerà un nuovo modello di data mining alla struttura di data mining appena creato in [lezione 1: Creazione di una serie temporale, modello di Data Mining e struttura di Data Mining](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
+  In questa lezione verrà aggiunto un nuovo modello di data mining alla struttura di data mining appena creata nella [lezione 1: creazione di un modello di data mining Time Series e di una struttura di data mining](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Istruzione ALTER MINING STRUCTURE  
- Per aggiungere un nuovo modello di data mining a una struttura di data mining esistente, viene utilizzata la [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) istruzione. Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
+ Per aggiungere un nuovo modello di data mining a una struttura di data mining esistente, utilizzare l'istruzione [ALTER mining structure &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) . Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
   
 -   Identificazione della struttura di data mining  
   
@@ -57,7 +57,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- Per informazioni sulla denominazione di un oggetto in DMX, vedere [identificatori &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Per informazioni sulla denominazione di un oggetto in DMX, vedere [identificatori &#40;&#41;DMX ](/sql/dmx/identifiers-dmx).  
   
  Le successive righe del codice definiscono le colonne della struttura di data mining che verranno utilizzate dal modello di data mining:  
   
@@ -75,7 +75,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- Per altre informazioni sui parametri dell'algoritmo che è possibile modificare, vedere [riferimento tecnico algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+ Per ulteriori informazioni sui parametri dell'algoritmo che è possibile modificare, vedere [riferimento tecnico per l'algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
  Per specificare che una colonna nel modello di data mining deve essere utilizzata per la stima, è possibile utilizzare la sintassi seguente:  
   
@@ -95,7 +95,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>Per aggiungere un modello di data mining Time Series ARIMA  
   
-1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX** per aprire l'Editor di Query e una nuova query vuota.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX** per aprire l'editor di query e una nuova query vuota.  
   
 2.  Copiare l'esempio generico dell'istruzione ALTER MINING STRUCTURE nella query vuota.  
   
@@ -181,11 +181,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-8.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+8.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-9. Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Forecasting_ARIMA.dmx`.  
+9. Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Forecasting_ARIMA.dmx`il nome.  
   
-10. Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
+10. Sulla barra degli strumenti fare clic sul pulsante **Esegui** .  
   
 ## <a name="adding-an-artxp-time-series-model-to-the-structure"></a>Aggiunta di un modello Time Series ARTXP alla struttura  
  L'algoritmo ARTXP era l'algoritmo Time Series predefinito in SQL Server 2005 ed è ottimizzato per le stime a breve termine. Per confrontare le stime tramite tutti e tre gli algoritmi Time Series, si aggiungerà un ulteriore modello basato sull'algoritmo ARTXP.  
@@ -209,16 +209,16 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-2.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+2.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-3.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Forecasting_ARTXP.dmx`.  
+3.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Forecasting_ARTXP.dmx`il nome.  
   
-4.  Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
+4.  Sulla barra degli strumenti fare clic sul pulsante **Esegui** .  
   
  Nella lezione successiva verranno elaborati tutti i modelli e la struttura di data mining.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 3: La serie temporale di elaborazione struttura e modelli](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [Lezione 3: Elaborazione di strutture e modelli Time Series](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

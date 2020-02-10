@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: db5ec327ab7f7672a55fbaa0d2cd086bbcfc67cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896303"
 ---
 # <a name="creating-a-custom-log-provider"></a>Creazione di un provider di log personalizzato
@@ -33,7 +33,7 @@ ms.locfileid: "62896303"
   
 -   Eseguire l'override dell'implementazione dei metodi e delle proprietà della classe di base. Per un provider di log, questi includono la proprietà <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> e i metodi <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  
   
--   Le interfacce utente personalizzate per i provider di log personalizzati non sono implementate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+-   Le interfacce utente personalizzate per i provider di log personalizzati non [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]sono implementate in.  
   
 ## <a name="getting-started-with-a-custom-log-provider"></a>Introduzione ai provider di log personalizzati  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62896303"
 >  Molti provider di log di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] hanno un'interfaccia utente personalizzata che implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> e sostituisce la casella di testo **Configurazione** nella finestra di dialogo **Configura log SSIS** con un elenco a discesa filtrato di gestioni connessioni disponibili. Tuttavia, le interfacce utente personalizzate per i provider di log personalizzati non sono implementate in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
 ### <a name="applying-the-dtslogprovider-attribute"></a>Applicazione dell'attributo DtsLogProvider  
- Applicare l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> alla classe creata per identificarla come provider di log. Questo attributo fornisce informazioni in fase di progettazione, ad esempio il nome e la descrizione del provider di log. Il `DisplayName` e `Description` proprietà dell'attributo corrispondono al **nome** e `Description` le colonne visualizzate nel **Configura log SSIS** editor, che viene visualizzato quando configurazione della registrazione per un pacchetto in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Applicare l'attributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> alla classe creata per identificarla come provider di log. Questo attributo fornisce informazioni in fase di progettazione, ad esempio il nome e la descrizione del provider di log. Le `DisplayName` proprietà `Description` e dell'attributo corrispondono al **nome** e `Description` alle colonne visualizzate nell'editor **Configura log SSIS** , visualizzato quando si configura la registrazione per un pacchetto in. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]  
   
 > [!IMPORTANT]  
 >  La proprietà <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> dell'attributo non viene utilizzata. È tuttavia necessario immettere un valore per tale proprietà, altrimenti il provider di log personalizzato non verrà visualizzato nell'elenco di provider di log disponibili.  
@@ -73,10 +73,10 @@ public class MyLogProvider : LogProviderBase
 ## <a name="building-deploying-and-debugging-a-custom-log-provider"></a>Compilazione, distribuzione e debug di un provider di log personalizzato  
  I passaggi per la compilazione, la distribuzione e il debug di un provider di log personalizzato in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono molto simili a quelli richiesti per altri tipi di oggetti personalizzati. Per altre informazioni, vedere [Compilazione, distribuzione e debug di oggetti personalizzati](../building-deploying-and-debugging-custom-objects.md).  
   
-![Icona di Integration Services (piccola)](../../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scrittura del codice di un provider di log personalizzato](coding-a-custom-log-provider.md)   
+ [Codifica di un provider di log personalizzato](coding-a-custom-log-provider.md)   
  [Sviluppo di un'interfaccia utente per un provider di log personalizzato](developing-a-user-interface-for-a-custom-log-provider.md)  
   
   

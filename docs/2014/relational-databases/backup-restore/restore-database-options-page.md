@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875640"
 ---
 # <a name="restore-database-options-page"></a>Ripristina database (pagina Opzioni)
@@ -26,7 +26,7 @@ ms.locfileid: "62875640"
   
 -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
--   [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
 >  Quando si specifica un'attività di ripristino mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è possibile generare uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] corrispondente in cui siano contenute le istruzioni RESTORE relative a tale operazione di ripristino. Per generare lo script, fare clic sul pulsante **Script** , quindi selezionare una destinazione. Per informazioni sulla sintassi di RESTORE, vedere [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
@@ -98,7 +98,7 @@ ms.locfileid: "62875640"
  **Chiudi connessioni esistenti**  
  Le operazioni di ripristino potrebbero non riuscire in presenza di connessioni attive al database. Selezionare l'opzione **Chiudi connessioni esistenti** per garantire che tutte le connessioni attive tra [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e il database vengano chiuse. Questa casella di controllo imposta il database sulla modalità utente singolo prima di effettuare qualsiasi operazione di ripristino e imposta il database sulla modalità multiutente al termine.  
   
-### <a name="prompt"></a>Messaggio di richiesta  
+### <a name="prompt"></a>Prompt  
  **Chiedi conferma prima del ripristino di ogni backup**  
  Consente di specificare che dopo il ripristino di ogni backup venga visualizzata la finestra di dialogo **Continua con il ripristino** per richiedere se continuare la sequenza di ripristino. In questa finestra di dialogo vengono visualizzati il nome del set di supporti successivo, se noto, nonché il nome e la descrizione del set di backup successivo.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62875640"
   
 ## <a name="see-also"></a>Vedere anche  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Ripristinare un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
+ [Ripristino di un backup da un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
  [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

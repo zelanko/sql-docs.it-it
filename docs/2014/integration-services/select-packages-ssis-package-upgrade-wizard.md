@@ -1,5 +1,5 @@
 ---
-title: Selezionare i pacchetti (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
+title: Selezione pacchetti (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056016"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Seleziona pacchetti (Aggiornamento guidato pacchetti SSIS)
   Utilizzare la pagina **Seleziona pacchetti** per selezionare i pacchetti da aggiornare. In questa pagina vengono elencati i pacchetti archiviati nel percorso specificato nella pagina **Seleziona posizione di origine** della procedura guidata.  
   
- **Per eseguire l'Aggiornamento guidato pacchetti SSIS**  
+ **Per eseguire l'aggiornamento guidato pacchetti SSIS**  
   
 -   [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ## <a name="options"></a>Opzioni  
- **Nome del pacchetto esistente**  
+ **Nome pacchetto esistente**  
  Selezionare uno o più pacchetti da aggiornare.  
   
  **Nome del pacchetto di aggiornamento**  

@@ -1,5 +1,5 @@
 ---
-title: 'Attività 6: Impostazione di sinonimi | Microsoft Docs'
+title: 'Attività 6: impostazione di sinonimi | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,32 +11,32 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 41c11138d00b4aea7332dac9984cbd609eba05e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489080"
 ---
 # <a name="task-6-setting-synonyms"></a>Attività 6: Impostazione di sinonimi
-  In questa attività si definiscono due valori di dominio, **negli Stati Uniti** e **Stati Uniti**, del **Country** dominio come sinonimi con **United States** come il valore iniziale. Poiché il **utilizza valori iniziali** è stata selezionata l'opzione quando si crea il **paese** dominio, qualsiasi **negli Stati Uniti** valori per il **paese** dominio verranno restituiti come **Stati Uniti** (quanto United States è il valore iniziale). Visualizzare [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) per altri dettagli.  
+  In questa attività vengono impostati due valori di dominio, **Stati Uniti** e **Stati Uniti**, del dominio **Country** come sinonimi con **Stati Uniti** come valore principale. Poiché l'opzione **Usa valori iniziali** è stata selezionata durante la creazione del dominio **Country** , tutti i valori **USA** per il dominio **Country** verranno restituiti come **Stati Uniti** (Stati Uniti è il valore principale). Per altri dettagli, vedere [modificare i valori di dominio](https://msdn.microsoft.com/library/hh510408.aspx) .  
   
-1.  Selezionare **paese** dall'elenco di domini.  
+1.  Selezionare **Country** nell'elenco dei domini.  
   
-2.  Passare al **i valori di dominio** scheda.  
+2.  Passare alla scheda **valori di dominio** .  
   
-3.  Fare clic su **Aggiungi nuovo valore dominio** pulsante sulla barra degli strumenti.  
+3.  Fare clic sul pulsante **Aggiungi nuovo valore di dominio** sulla barra degli strumenti.  
   
-4.  Tipo di **Stati Uniti** per il valore e premere **invio**.  
+4.  Digitare **USA** per il valore e premere **invio**.  
   
-5.  Selezione multipla **Stati Uniti** e **Stati Uniti** usando CTRL o MAIUSC, fare doppio clic sugli elementi selezionati e quindi fare clic su **impostati come sinonimi**. Tramite DQS questi valori vengono raggruppati e uno di essi viene definito come valore iniziale con cui vengono sostituiti gli altri valori.  
+5.  Selezionare **Stati Uniti** e **USA** con il tasto CTRL o MAIUSC, fare clic con il pulsante destro del mouse sugli elementi selezionati e quindi scegliere **Imposta come sinonimi**. Tramite DQS questi valori vengono raggruppati e uno di essi viene definito come valore iniziale con cui vengono sostituiti gli altri valori.  
   
      ![Menu Imposta come sinonimi](../../2014/tutorials/media/et-settingsynonyms-01.jpg "Menu Imposta come sinonimi")  
   
-6.  Si noti che **Stati Uniti** è impostato come valore iniziale. Se si desidera che USA come valore iniziale, è possibile fare clic su USA e selezionare **imposta come iniziale** opzione. Per questa esercitazione viene usato **Stati Uniti** come valore iniziale.  
+6.  Si noti che **Stati Uniti** è impostato come valore principale. Se si vuole che gli Stati Uniti siano i valori iniziali, è possibile fare clic con il pulsante destro del mouse su USA e selezionare **Imposta come opzione leader** . Per questa esercitazione si userà **Stati Uniti** come valore principale.  
   
-     ![Stati Uniti e USA come sinonimi](../../2014/tutorials/media/et-settingsynonyms-02.jpg "negli Stati Uniti e USA come sinonimi")  
+     ![Stati Uniti e USA come sinonimi](../../2014/tutorials/media/et-settingsynonyms-02.jpg "Stati Uniti e USA come sinonimi")  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 7: Creazione di un dominio composito](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 7: Creazione di una regola per un dominio composito](../../2014/tutorials/task-7-creating-a-composite-domain.md)  
   
   

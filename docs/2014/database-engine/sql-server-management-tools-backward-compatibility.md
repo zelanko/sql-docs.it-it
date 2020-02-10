@@ -1,5 +1,5 @@
 ---
-title: Compatibilità con le versioni precedenti degli strumenti di gestione di SQL Server | Microsoft Docs
+title: Compatibilità con le versioni precedenti di Strumenti di gestione di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842977"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>Compatibilità con le versioni precedenti degli strumenti di gestione di SQL Server

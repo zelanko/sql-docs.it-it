@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c06abe4d6adb3916028b3501c16b68d2491af47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900398"
 ---
 # <a name="dqs-cleansing-transformation"></a>Trasformazione DQS Cleansing
@@ -40,9 +40,9 @@ ms.locfileid: "62900398"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Apertura di progetti di Integration Services nel client Data Quality](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
+-   [Aprire progetti di Integration Services in Data Quality Client](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [Import Cleansing Project Values into a Domain](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [Importare i valori di un progetto di pulizia in un dominio](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [Applicare le regole relative alla qualità dei dati all'origine dati](apply-data-quality-rules-to-data-source.md)  
   

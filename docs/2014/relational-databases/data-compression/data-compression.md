@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873550"
 ---
 # <a name="data-compression"></a>Compressione dei dati
@@ -63,7 +63,7 @@ ms.locfileid: "62873550"
   
 -   La compressione consente di archiviare più righe in una pagina, ma non di modificare le dimensioni massime delle righe di una tabella o di un indice.  
   
--   Una tabella non può essere abilitata per la compressione quando la somma delle dimensioni massime delle righe e dell'overhead relativo alla compressione supera le dimensioni massime di 8.060 byte delle righe. Ad esempio, una tabella contenente le colonne c1`char(8000)` e c2`char(53)` non può essere compressa a causa dell'overhead di compressione aggiuntiva. Se si utilizza il formato di archiviazione vardecimal, il controllo delle dimensioni delle righe viene eseguito al momento dell'abilitazione del formato stesso. Per la compressione di riga e di pagina, il controllo delle dimensioni delle righe viene eseguito quando l'oggetto viene compresso inizialmente e successivamente in occasione dell'inserimento o della modifica di ogni riga. Quando viene utilizzata la compressione, vengono applicate le due regole seguenti:  
+-   Una tabella non può essere abilitata per la compressione quando la somma delle dimensioni massime delle righe e dell'overhead relativo alla compressione supera le dimensioni massime di 8.060 byte delle righe. Una tabella con le colonne C1`char(8000)` e C2`char(53)` , ad esempio, non può essere compressa a causa dell'overhead aggiuntivo della compressione. Se si utilizza il formato di archiviazione vardecimal, il controllo delle dimensioni delle righe viene eseguito al momento dell'abilitazione del formato stesso. Per la compressione di riga e di pagina, il controllo delle dimensioni delle righe viene eseguito quando l'oggetto viene compresso inizialmente e successivamente in occasione dell'inserimento o della modifica di ogni riga. Quando viene utilizzata la compressione, vengono applicate le due regole seguenti:  
   
     -   Un aggiornamento a un tipo a lunghezza fissa deve sempre avere esito positivo.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "62873550"
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (da alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
-### <a name="basics"></a>Nozioni fondamentali  
+### <a name="basics"></a>Nozioni di base  
  Gli indici e le tabelle columnstore vengono sempre archiviati con la compressione columnstore. È possibile ridurre ulteriormente le dimensioni dei dati columnstore configurando una compressione aggiuntiva denominata compressione dell'archivio.  Per eseguire la compressione dell'archivio, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito l'algoritmo di compressione Microsoft XPRESS sui dati. Aggiungere o rimuovere la compressione dell'archivio utilizzando i tipi di compressione dati seguenti:  
   
 -   Utilizzare la compressione dei dati `COLUMNSTORE_ARCHIVE` per comprimere i dati columnstore con la compressione dell'archivio.  
@@ -167,9 +167,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>Metadati  
  Nelle viste di sistema seguenti sono contenute informazioni sulla compressione dei dati per gli indici cluster:  
   
--   [Sys. Indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - il `type` e `type_desc` colonne includono CLUSTERED COLUMNSTORE e NONCLUSTERED COLUMNSTORE.  
+-   [sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) : `type` le `type_desc` colonne e includono columnstore cluster e columnstore non cluster.  
   
--   [Sys. Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - il `data_compression` e `data_compression_desc` colonne includono COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
+-   [sys. partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) : `data_compression` le `data_compression_desc` colonne e includono columnstore e COLUMNSTORE_ARCHIVE.  
   
  La procedura [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) non si applica agli indici columnstore.  
   
@@ -255,8 +255,8 @@ REBUILD PARTITION = ALL WITH (
  [Implementazione della compressione di riga](row-compression-implementation.md)   
  [Implementazione della compressione di pagina](page-compression-implementation.md)   
  [Implementazione della compressione Unicode](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
+ [CREAZIONE dello schema di partizione &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [CREAZIONE di una funzione di partizione &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

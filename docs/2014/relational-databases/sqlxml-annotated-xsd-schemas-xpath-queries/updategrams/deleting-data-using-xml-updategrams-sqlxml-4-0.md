@@ -1,5 +1,5 @@
 ---
-title: L'eliminazione dei dati mediante Updategram XML (SQLXML 4.0) | Microsoft Docs
+title: Eliminazione di dati mediante updategram XML (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014873"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Eliminazione di dati mediante updategram XML (SQLXML 4.0)
-  Un updategram indica un'operazione di eliminazione quando un'istanza di record è presente il  **\<prima di >** blocco senza record corrispondenti nel  **\<dopo >** blocco. In questo caso, l'updategram Elimina il record nel  **\<prima di >** blocco dal database.  
+  Un updategram indica un'operazione di eliminazione quando un'istanza di record viene visualizzata nel blocco ** \<before>** senza record corrispondenti nel blocco ** \<after>** . In questo caso, l'updategram elimina il record nel ** \<>prima** del blocco dal database.  
   
  Di seguito viene illustrato il formato dell'updategram per un'operazione di eliminazione:  
   
@@ -41,21 +41,21 @@ ms.locfileid: "66014873"
 </ROOT>  
 ```  
   
- È possibile omettere il  **\<dopo >** contrassegnerà se l'updategram esegue solo un'operazione di eliminazione. Se non si specifica l'opzione facoltativa `mapping-schema` attributo, il  **\<ElementName >** specificato nell'updategram esegue il mapping a una tabella di database e la mappa di elementi o attributi figlio alle colonne nella tabella.  
+ È possibile omettere il ** \<Tag after>** se l'updategram sta eseguendo solo un'operazione di eliminazione. Se non si specifica l'attributo facoltativo `mapping-schema` , l' ** \<elemento ElementName>** specificato nell'updategram esegue il mapping a una tabella di database e gli attributi o gli elementi figlio eseguono il mapping alle colonne della tabella.  
   
- Se un elemento specificato nell'updategram corrisponde più di una riga nella tabella o non corrisponde ad alcuna riga, l'updategram restituisce un errore e Annulla l'intera  **\<sync >** blocco. Un elemento dell'updategram può eliminare un solo record per volta.  
+ Se un elemento specificato nell'updategram corrisponde a più di una riga nella tabella o non corrisponde ad alcuna riga, l'updategram restituisce un errore e Annulla l'intero ** \<blocco>di sincronizzazione** . Un elemento dell'updategram può eliminare un solo record per volta.  
   
 ## <a name="examples"></a>Esempi  
- Negli esempi presentati in questa sezione viene utilizzato il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per altri esempi di updategram che utilizzano schemi di mapping, vedere [specifica uno Schema di Mapping con annotazioni in un Updategram &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Negli esempi presentati in questa sezione viene utilizzato il mapping predefinito, ovvero non viene specificato alcuno schema di mapping nell'updategram. Per ulteriori esempi di updategram che utilizzano schemi di mapping, vedere [specifica di uno schema di mapping con annotazioni in un Updategram &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nelle [requisiti per l'esecuzione di esempi di SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi funzionanti utilizzando gli esempi seguenti, è necessario soddisfare i requisiti specificati nei [requisiti per l'esecuzione di esempi SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-deleting-a-record-by-using-an-updategram"></a>A. Eliminazione di un record mediante un updategram  
+### <a name="a-deleting-a-record-by-using-an-updategram"></a>R. Eliminazione di un record mediante un updategram  
  Negli updategram seguenti vengono eliminati due record dalla tabella HumanResources.Shift.  
   
  In questi esempi l'updategram non specifica uno schema di mapping, pertanto utilizza il mapping predefinito nel quale il nome dell'elemento esegue il mapping a un nome di tabella e gli attributi o i sottoelementi eseguono il mapping alle colonne.  
   
- Questo primo updategram è incentrato sugli attributi e identifica due turni (giorno-sera e sera-notte) nel  **\<prima di >** blocco. Poiché non vi è alcun record corrispondente nel  **\<dopo >** blocco, si tratta di un'operazione di eliminazione.  
+ Il primo updategram è incentrato sugli attributi e identifica due turni (giorno-sera e sera-notte) nel blocco ** \<before>** . Poiché non esiste un record corrispondente nel blocco ** \<after>** , si tratta di un'operazione di eliminazione.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -80,15 +80,15 @@ ms.locfileid: "66014873"
   
 ##### <a name="to-test-the-updategram"></a>Per testare l'updategram  
   
-1.  Completare l'esempio B ("inserimento di più record mediante un updategram") nella [inserimento di dati mediante Updategram XML &#40;SQLXML 4.0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+1.  Completare l'esempio B ("inserimento di più record utilizzando un updategram") nell' [inserimento di dati tramite UPDATEGRAM XML &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
-2.  Copiare l'updategram sopra indicato in blocco note e salvarlo Updategram-removeshifts nella stessa cartella utilizzata per il completamento ("inserimento di più record mediante un updategram") nella [inserimento di dati mediante Updategram XML &#40;SQLXML 4.0&#41; ](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+2.  Copiare l'updategram precedente nel blocco note e salvarlo come Updategram-RemoveShifts. XML nella stessa cartella utilizzata per completare ("inserimento di più record utilizzando un updategram") nell' [inserimento di dati mediante UPDATEGRAM xml &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire l'updategram.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

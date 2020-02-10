@@ -14,37 +14,37 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054284"
 ---
 # <a name="add-metadata-master-data-services"></a>Aggiungere metadati (Master Data Services)
-  Nelle [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], aggiungere metadati definiti dall'utente per il **metadati** modello per descrivere gli oggetti modello.  
+  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]aggiungere metadati definiti dall'utente al modello di **metadati** per descrivere gli oggetti modello.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
   
--   Per il **dei metadati** modello, è necessario disporre **Add** dell'autorizzazione per l'entità o foglia tipo membro di metadati che si desidera aggiungere.  
+-   Per il modello di **metadati** , è necessario disporre dell'autorizzazione **Aggiungi** all'entità di metadati o al tipo di membro foglia che si desidera aggiungere.  
   
 -   Lo stato della versione deve essere **Aperto**.  
   
 ### <a name="to-add-metadata"></a>Per aggiungere metadati  
   
-1.  Nel [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] homepage del **modello** elenco, selezionare il **metadati** modello.  
+1.  Nella [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Home page selezionare il modello di **metadati** nell'elenco **modello** .  
   
 2.  Selezionare una versione dall'elenco **Versione** .  
   
 3.  Fare clic su **Esplora**.  
   
-4.  Dalla barra dei menu scegliere **entità** e fare clic sull'entità di metadati da aggiungere.  
+4.  Scegliere **entità** dalla barra dei menu, quindi fare clic sull'entità di metadati che si desidera aggiungere.  
   
-5.  Scegliere il **Add Member** pulsante. Il **aggiunta nuovo membro** pagina verrà visualizzata a destra della pagina.  
+5.  Fare clic sul pulsante **Aggiungi membro** . Nella parte destra della pagina verrà visualizzata la pagina aggiunta di un **nuovo membro** .  
   
-6.  Immettere il nuovo nome, codice e la descrizione e quindi fare clic su **OK**.  
+6.  Immettere il nuovo nome, il codice e la descrizione, quindi fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metadati &#40;Master Data Services&#41;](metadata-master-data-services.md)  

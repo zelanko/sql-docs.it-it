@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione File non elaborato (pagina Gestione connessione) | Microsoft Docs
+title: Editor destinazione file non elaborato (pagina Gestione connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056572"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>Editor destinazione file non elaborato (pagina Gestione connessione)
@@ -62,6 +62,6 @@ ms.locfileid: "66056572"
  Specificare un nome alternativo da utilizzare per la colonna di output.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Destinazione file non elaborato](data-flow/raw-file-destination.md)  
+ [file non elaborato - destinazione](data-flow/raw-file-destination.md)  
   
   

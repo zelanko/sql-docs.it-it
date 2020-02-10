@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833785"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono utilizzate le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]i pacchetti utilizzano le connessioni per eseguire diverse attività e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementare le funzionalità di: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
 -   Connessione ad archivi dati di origine e destinazione, ad esempio file di testo, file XML, cartelle di lavoro di Excel e database relazionali, per l'estrazione e il caricamento dei dati.  
   
@@ -51,11 +51,12 @@ ms.locfileid: "62833785"
  Per stabilire queste connessioni, in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono utilizzate le gestioni connessioni, come descritto nella sezione successiva.  
   
 ## <a name="connection-managers"></a>Gestioni connessioni  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene utilizzata la gestione connessione come rappresentazione logica di una connessione. In fase di progettazione si impostano le proprietà della gestione connessione per descrivere la connessione fisica che verrà creata da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] durante l'esecuzione del pacchetto. Le gestioni connessioni includono ad esempio la proprietà `ConnectionString`, che viene impostata in modalità progettazione. In fase di esecuzione verrà quindi creata una connessione fisica utilizzando il valore archiviato nella proprietà relativa alla stringa di connessione.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene utilizzata la gestione connessione come rappresentazione logica di una connessione. In fase di progettazione si impostano le proprietà della gestione connessione per descrivere la connessione fisica che verrà creata da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] durante l'esecuzione del pacchetto. Le gestioni connessioni includono ad esempio la proprietà `ConnectionString`, che viene impostata in modalità progettazione. In fase di esecuzione verrà quindi creata una connessione fisica utilizzando il valore archiviato nella proprietà relativa alla stringa di connessione.  
   
  In un pacchetto è possibile utilizzare più istanze di un determinato tipo di gestione connessione ed è possibile impostare proprietà specifiche per ogni istanza. In fase di esecuzione ogni istanza di un determinato tipo di gestione connessione crea una connessione con attributi diversi.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consentono di stabilire connessioni tra i pacchetti e un'ampia gamma di server e origini dati:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in sono disponibili diversi tipi di gestioni connessioni che consentono ai pacchetti di connettersi a un'ampia gamma di origini dati e server:  
   
 -   Durante l'installazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]vengono installate le gestioni connessioni predefinite.  
   
@@ -64,26 +65,26 @@ ms.locfileid: "62833785"
 -   Se le gestioni connessioni esistenti non soddisfano le proprie esigenze, è possibile creare una gestione connessione personalizzata.  
   
 ### <a name="built-in-connection-managers"></a>Gestioni connessioni predefinite  
- Nella tabella seguente sono elencati i tipi di gestione connessione disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ Nella tabella seguente sono elencati i tipi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gestione connessione disponibili in.  
   
 |Type|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
 |ADO|Consente di connettersi a oggetti ADO (ActiveX Data Objects).|[Gestione connessione ADO](ado-connection-manager.md)|  
 |ADO.NET|Consente di connettersi a un'origine dei dati tramite un provider .NET.|[Gestione connessione ADO.NET](ado-net-connection-manager.md)|  
-|CACHE|Consente di leggere i dati dal flusso di dati o da un file di cache (caw) e di salvare i dati nel file di cache.|[Gestione connessione della cache](cache-connection-manager.md)|  
+|CACHE|Consente di leggere i dati dal flusso di dati o da un file di cache (caw) e di salvare i dati nel file di cache.|[gestione connessione della cache](cache-connection-manager.md)|  
 |DQS|Consente di connettersi a un server Data Quality Services e a un database Data Quality Services nel server.|[Gestione connessione DQS Cleansing](dqs-cleansing-connection-manager.md)|  
 |EXCEL|Consente di connettersi a un file della cartella di lavoro di Excel.|[Gestione connessione Excel](excel-connection-manager.md)|  
-|FILE|Consente di connettersi a un file o a una cartella.|[Gestione connessione file](file-connection-manager.md)|  
+|FILE|Consente di connettersi a un file o a una cartella.|[gestione connessione file](file-connection-manager.md)|  
 |FLATFILE|Consente di connettersi ai dati contenuti in un singolo file flat.|[Gestione connessione file flat](flat-file-connection-manager.md)|  
-|FTP|Consente di connettersi a un server FTP.|[Gestione connessione FTP](ftp-connection-manager.md)|  
-|HTTP|Consente di connettersi a un server Web.|[Gestione connessione HTTP](http-connection-manager.md)|  
-|MSMQ|Consente di connettersi a una coda di messaggi.|[Gestione connessione MSMQ](msmq-connection-manager.md)|  
-|MSOLAP100|Consente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Gestione connessione Analysis Services](analysis-services-connection-manager.md)|  
-|MULTIFILE|Consente di connettersi a più file e cartelle.|[Gestione connessione per più file](multiple-files-connection-manager.md)|  
-|MULTIFLATFILE|Consente di connettersi a più file e cartelle di dati.|[Gestione connessione per più file flat](multiple-flat-files-connection-manager.md)|  
-|OLEDB|Consente di connettersi a un'origine dei dati tramite un provider OLE DB.|[Gestione connessione OLE DB](ole-db-connection-manager.md)|  
-|ODBC|Consente di connettersi a un'origine dei dati tramite ODBC.|[Gestione connessione ODBC](odbc-connection-manager.md)|  
-|SMOServer|Consente di connettersi a un server SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects).|[Gestione connessione SMO](smo-connection-manager.md)|  
+|FTP|Consente di connettersi a un server FTP.|[gestione connessione FTP](ftp-connection-manager.md)|  
+|HTTP|Consente di connettersi a un server Web.|[gestione connessione HTTP](http-connection-manager.md)|  
+|MSMQ|Consente di connettersi a una coda di messaggi.|[gestione connessione MSMQ](msmq-connection-manager.md)|  
+|MSOLAP100|Consente di connettersi a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un progetto di.|[Analysis Services - gestione connessione](analysis-services-connection-manager.md)|  
+|MULTIFILE|Consente di connettersi a più file e cartelle.|[gestione connessione per più file](multiple-files-connection-manager.md)|  
+|MULTIFLATFILE|Consente di connettersi a più file e cartelle di dati.|[gestione connessione per più file flat](multiple-flat-files-connection-manager.md)|  
+|OLEDB|Consente di connettersi a un'origine dei dati tramite un provider OLE DB.|[gestione connessione OLE DB](ole-db-connection-manager.md)|  
+|ODBC|Consente di connettersi a un'origine dei dati tramite ODBC.|[gestione connessione ODBC](odbc-connection-manager.md)|  
+|SMOServer|Consente di connettersi a un server SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects).|[gestione connessione SMO](smo-connection-manager.md)|  
 |SMTP|Consente di connettersi a un server di posta SMTP.|[Gestione connessione SMTP](smtp-connection-manager.md)|  
 |SQLMOBILE|Consente di connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.|[Gestione connessione SQL Server Compact Edition](sql-server-compact-edition-connection-manager.md)|  
 |WMI|Consente di connettersi a un server e specifica l'ambito della gestione WMI (Windows Management Instrumentation, Strumentazione gestione Windows) sul server.|[Gestione connessione WMI](wmi-connection-manager.md)|  
@@ -96,9 +97,9 @@ ms.locfileid: "62833785"
   
 |Type|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
-|ORACLE|Si connette a un Oracle \<informazioni versione > server.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Consente di connettersi a \<un> server di informazioni sulla versione di Oracle.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Si connette a un Teradata \<informazioni versione > server.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|TERADATA|Stabilisce la connessione a \<un> server di informazioni sulla versione di Teradata.|La gestione connessione Teradata è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Teradata di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Gestioni connessioni personalizzate  
  È inoltre possibile scrivere gestioni connessioni personalizzate. Per ulteriori informazioni, vedere [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  

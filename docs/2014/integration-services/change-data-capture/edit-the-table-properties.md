@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835989"
 ---
 # <a name="edit-the-table-properties"></a>Modificare le proprietà delle tabelle
@@ -40,13 +40,13 @@ ms.locfileid: "62835989"
   
 2.  Salvare l'istanza di acquisizione come:  
   
-    -   **New Capture Instance** (Nuova istanza di acquisizione): in questo caso viene salvata una nuova istanza di acquisizione e l'istanza di acquisizione precedente non viene eliminata.  
+    -   **New Capture Instance**: viene salvata una nuova istanza di acquisizione e l'istanza di acquisizione precedente non viene eliminata.  
   
          **Nota**: non possono esistere più di due istanze di acquisizione per tabella. Se sono già presenti due istanze di acquisizione, l'opzione non è disponibile.  
   
-    -   **Replace Existing** (Sostituisci esistente): l'istanza di acquisizione corrente viene eliminata e sostituita dall'istanza di acquisizione creata. Se per la tabella sono state definite due istanze di acquisizione, è necessario selezionarne una da sostituire.  
+    -   **Replace Existing**: l'istanza di acquisizione corrente viene eliminata e sostituita dall'istanza di acquisizione creata. Se per la tabella sono state definite due istanze di acquisizione, è necessario selezionarne una da sostituire.  
   
- **Nota**: è possibile rimuovere un'istanza di acquisizione dall'elenco di tabelle nella scheda **Table** (Tabella).  
+ **Nota**: è possibile rimuovere un'istanza di acquisizione dall'elenco di tabelle nella scheda **Table** .  
   
  Dopo avere immesso le informazioni in questa finestra di dialogo, scegliere **OK** per accettare le modifiche.  
   

@@ -1,5 +1,5 @@
 ---
-title: Creare, eliminare o modificare un'origine dati condivisa (gestione Report) | Microsoft Docs
+title: Creare, eliminare o modificare un'origine dati condivisa (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109609"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Creare, eliminare o modificare un'origine dei dati condivisa (Gestione report)
@@ -28,7 +28,7 @@ ms.locfileid: "66109609"
   
  L'icona seguente indica un'origine dei dati condivisa nella gerarchia di cartelle di Gestione report:  
   
- ![Icona di origine dati condivisa](media/hlp-16datasource.png "Icona di origine dati condivisa")  
+ ![Icona dell'origine dati condivisa](media/hlp-16datasource.png "Icona di origine dati condivisa")  
 Icona dell'origine dati condivisa  
   
 ### <a name="to-create-a-shared-data-source"></a>Per creare un'origine dati condivisa  
@@ -39,7 +39,7 @@ Icona dell'origine dati condivisa
   
 3.  Fare clic su **Nuova origine dati**. Verrà visualizzata la pagina **Nuova origine dati** .  
   
-4.  Digitare un nome per l'elemento. Un nome deve includere almeno un carattere e deve iniziare con una lettera. È inoltre possibile utilizzare alcuni simboli, con l'esclusione degli spazi e dei caratteri ; ? : \@ & = + , $ / * \< > | " /.  
+4.  Digitare un nome per l'elemento. Un nome deve includere almeno un carattere e deve iniziare con una lettera. È inoltre possibile utilizzare alcuni simboli, con l'esclusione degli spazi e dei caratteri ; ? : \@ & = +, $/* \< > | " /.  
   
 5.  È possibile digitare facoltativamente una descrizione per fornire agli utenti informazioni sulla connessione. La descrizione verrà visualizzata nella pagina **Contenuto** in Gestione report.  
   
@@ -47,7 +47,7 @@ Icona dell'origine dati condivisa
   
 7.  Per **Stringa di connessione**specificare la stringa usata dal server di report per la connessione all'origine dati. È consigliabile evitare di specificare credenziali nella stringa di connessione.  
   
-     L'esempio seguente illustra una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database:  
+     Nell'esempio seguente viene illustrata una stringa di connessione per la connessione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] al database locale:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -88,17 +88,17 @@ Icona dell'origine dati condivisa
   
          Fare clic sull'elemento per aprirlo. Verrà visualizzata la pagina Proprietà generali.  
   
-         Fare clic su **Elimina**e quindi su **OK**.  
+         Fare clic su **Elimina**, quindi su **OK**.  
   
     -   Nella pagina **Contenuto** passare alla cartella contenente l'origine dati che si vuole eliminare.  
   
-         Posizionare il puntatore del mouse sull'elemento, fare clic sull'elenco a discesa e scegliere **Elimina** dal menu di scelta rapida.  
+         Posizionare il puntatore del mouse sull'elemento, fare clic sull'elenco a discesa e scegliere **Elimina**dal menu di scelta rapida.  
   
          [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Gestire origini dati dei report](report-data/manage-report-data-sources.md)   
  [Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  

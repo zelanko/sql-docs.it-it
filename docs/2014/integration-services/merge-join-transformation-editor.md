@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione Merge Join | Microsoft Docs
+title: Editor trasformazione Merge join | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057704"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor trasformazione Merge join
@@ -49,8 +49,8 @@ ms.locfileid: "66057704"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Estensione di un set di dati tramite la trasformazione Merge join](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [Ordinare i dati per le trasformazioni Unione e merge join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Estendere un set di dati tramite la trasformazione Merge join](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Trasformazione Unione](data-flow/transformations/merge-transformation.md)   
  [Trasformazione Unione input multipli](data-flow/transformations/union-all-transformation.md)  
   

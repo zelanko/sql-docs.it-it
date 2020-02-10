@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059273"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor gestione connessione Excel
-  Usare la finestra di dialogo **Editor gestione connessione Excel[!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]per aggiungere una connessione a un file di cartella di lavoro di**  nuovo o esistente.  
+  Usare la finestra di dialogo **Editor gestione connessione Excel**per aggiungere una connessione a un file di cartella di lavoro di [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] nuovo o esistente.  
   
  Per altre informazioni sulla gestione connessioni Excel, vedere [Gestione connessione Excel](connection-manager/excel-connection-manager.md).  
   
@@ -34,10 +34,10 @@ ms.locfileid: "66059273"
  Consente di digitare il percorso e il nome del file di una cartella di lavoro di Excel (xls) nuova o esistente.  
   
 > [!WARNING]  
->  Il **Editor destinazione Excel** crea automaticamente il file di Excel quando si seleziona un' **connessione Excel** che punta a un nuovo/inesistente file e quindi fare clic su **New** per **Nome del foglio di Excel**.  
+>  **Editor destinazione Excel** crea automaticamente il file di Excel quando si seleziona una **connessione Excel** che fa riferimento a un file nuovo o non esistente e quindi si fa clic su **nuovo** per **nome del foglio di Excel**.  
   
  **Sfoglia**  
- Usare la finestra di dialogo **Apri** per passare alla cartella che contiene il file di Excel o in cui creare il nuovo file.  
+ Utilizzare la finestra di dialogo **Apri** per passare alla cartella in cui è presente il file di Excel o in cui si desidera creare il nuovo file.  
   
  **Versione di Excel**  
  Consente di specificare la versione di Microsoft Excel utilizzata per creare il file.  
@@ -45,15 +45,15 @@ ms.locfileid: "66059273"
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |Microsoft Excel 97-2005|Il file è stato creato utilizzando Microsoft Excel 97 o versione successiva.|  
-|Excel 3.0|File è stato creato tramite Excel 3.0.|  
-|Excel 4.0|Il file è stato creato utilizzando Microsoft Excel 4.0.|  
-|Excel 5.0|Il file è stato creato utilizzando Microsoft Excel 95 (versione 7.0).|  
+|Excel 3,0|Il file è stato creato con Excel 3,0.|  
+|Excel 4,0|Il file è stato creato utilizzando Microsoft Excel 4.0.|  
+|Excel 5,0|Il file è stato creato utilizzando Microsoft Excel 95 (versione 7.0).|  
   
  **Nomi di colonna nella prima riga**  
  Consente di specificare se la prima riga di dati del foglio di lavoro selezionato contiene nomi di colonna. Il valore predefinito di questa opzione è **True**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
+ [Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   

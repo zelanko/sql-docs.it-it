@@ -1,5 +1,5 @@
 ---
-title: Impostare le proprietà di un'attività o contenitore | Microsoft Docs
+title: Impostare le proprietà di un'attività o di un contenitore | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055664"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Impostazione delle proprietà di un'attività o di un contenitore
@@ -55,7 +55,7 @@ ms.locfileid: "66055664"
   
      Per informazioni sulla configurazione di un contenitore Ciclo For, vedere [Configurazione di un contenitore Ciclo For](control-flow/for-loop-container.md).  
   
-     Per informazioni sulla configurazione di un contenitore Ciclo Foreach, vedere [Configurazione di un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md).  
+     Per informazioni su come configurare il contenitore Ciclo Foreach, vedere [Configurare un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md).  
   
     > [!NOTE]  
     >  Il contenitore Sequenza non dispone di un editor personalizzato.  

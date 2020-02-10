@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8f8c9fd4f0a7f377640b99ac0bc7831c3f43de3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055005"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Editor attività Trasferisci processi (pagina Generale)
@@ -28,7 +28,7 @@ ms.locfileid: "66055005"
 >  Solo i membri del ruolo predefinito del server **sysadmin** o di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent nel server di destinazione sono autorizzati alla creazione di processi in tale server. Per accedere ai processi nel server di origine, gli utenti devono essere membri almeno del ruolo predefinito del database **SQLAgentUserRole** nel server di origine. Per altre informazioni sui ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent e sulle relative autorizzazioni, vedere [Ruoli di database predefiniti di SQL Server Agent](../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare un nome univoco per l'attività Trasferisci processi. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "66055005"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
- [Editor attività Trasferisci processi &#40;pagina Processi&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
+ [Editor attività Trasferisci processi &#40;pagina processi&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

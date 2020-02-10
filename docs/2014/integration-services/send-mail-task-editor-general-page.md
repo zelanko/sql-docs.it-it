@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055855"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Editor attività Invia messaggi (pagina Generale)
@@ -27,17 +27,17 @@ ms.locfileid: "66055855"
  Per ulteriori informazioni su questa attività, vedere [Send Mail Task](control-flow/send-mail-task.md).  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di specificare un nome univoco per l'attività Invia messaggi. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
- **Nota** i nomi delle attività devono essere univoci all'interno di un pacchetto.  
+ **Nota** I nomi delle attività devono essere univoci all'interno di un pacchetto.  
   
  **Descrizione**  
  Consente di digitare una descrizione dell'attività Invia messaggi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Invia messaggi &#40;pagina Messaggio&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
+ [Editor attività Invia messaggi &#40;pagina di posta elettronica&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

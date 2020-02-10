@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872094"
 ---
 # <a name="database-instant-file-initialization"></a>Inizializzazione immediata dei file di database
   I file di dati e di log vengono inizializzati per sovrascrivere eventuali dati esistenti rimasti nel disco in seguito all'eliminazione precedente di file. I file di dati e di log vengono innanzitutto inizializzati riempiendo i file con zeri quando si eseguono le operazioni seguenti:  
   
--   Creazione di un database.  
+-   Creare un database.  
   
 -   Aggiunta di file, log o dati a un database esistente.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62872094"
   
 4.  Fare clic su **Aggiungi utente o gruppo** e aggiungere tutti gli account utente usati per i backup.  
   
-5.  Fare clic su **Apply**, quindi chiudere tutte `Local Security Policy` finestre di dialogo.  
+5.  Fare clic su **applica**, quindi chiudere `Local Security Policy` tutte le finestre di dialogo.  
   
-### <a name="security-considerations"></a>Considerazioni sulla sicurezza  
+### <a name="security-considerations"></a>Considerazioni relative alla sicurezza  
  Poiché il contenuto eliminato del disco viene sovrascritto solo quando vengono scritti nuovi dati nei file, il contenuto eliminato potrebbe essere accessibile a utenti o servizi non autorizzati. Finché il file di database è collegato all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa minaccia di accesso alle informazioni è ridotta dall'elenco di controllo di accesso discrezionale (DACL) per il file. Questo elenco consente l'accesso al file solo all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e all'amministratore locale. Quando il file viene scollegato, tuttavia, diventa accessibile a un utente o a un servizio privo del diritto SE_MANAGE_VOLUME_NAME. Una minaccia analoga è presente quando si esegue il backup del database. Il contenuto eliminato può diventare disponibile a un utente o a un servizio non autorizzato se il file di backup non è protetto con un elenco di controllo di accesso discrezionale (DACL) appropriato.  
   
  Se la potenziale diffusione del contenuto eliminato rappresenta un problema, è consigliabile eseguire una o entrambe le operazioni seguenti:  

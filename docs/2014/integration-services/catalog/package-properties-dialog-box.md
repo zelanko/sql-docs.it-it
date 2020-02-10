@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836335"
 ---
 # <a name="package-properties-dialog-box"></a>Finestra di dialogo Proprietà pacchetto
-  Utilizzare la finestra di dialogo **Proprietà pacchetto** per visualizzare le proprietà dei pacchetti archiviati nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Utilizzare la finestra di dialogo **Proprietà pacchetto** per visualizzare le proprietà dei pacchetti archiviati nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Per altre informazioni, vedere [Server Integration Services &#40;SSIS&#41;](integration-services-ssis-server-and-catalog.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62836335"
   
  Tutte le proprietà nella pagina **Generale** sono di sola lettura.  
   
- **Name**  
+ **Nome**  
  Viene visualizzato il nome del pacchetto.  
   
  **Identificatore**  

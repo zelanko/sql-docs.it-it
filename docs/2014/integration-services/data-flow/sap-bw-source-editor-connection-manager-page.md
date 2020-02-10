@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901112"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor origine SAP BW (pagina Gestione connessione)
@@ -44,7 +44,7 @@ ms.locfileid: "62901112"
  **Gestione connessione SAP BW**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Creare una nuova gestione connessione usando la finestra di dialogo **Gestione connessione SAP BW** .  
   
  Per altre informazioni sulla questa finestra di dialogo, vedere [Editor gestione connessione SAP BW](../sap-bw-connection-manager-editor.md).  

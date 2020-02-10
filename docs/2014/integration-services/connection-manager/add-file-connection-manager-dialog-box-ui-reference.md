@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833873"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione file
@@ -33,7 +33,7 @@ ms.locfileid: "62833873"
  **Tipo di utilizzo**  
  Consente di specificare il tipo di file da utilizzare per la gestione connessione per più file.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Creazione file**|La gestione connessione creerà i file.|  
 |**File esistenti**|La gestione connessione utilizzerà i file esistenti.|  
@@ -43,7 +43,7 @@ ms.locfileid: "62833873"
  **File/Cartelle**  
  Consente di visualizzare i file o le cartelle aggiunti tramite i pulsanti descritti di seguito.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un file usando la finestra di dialogo **Seleziona file** o di aggiungere una cartella usando la finestra di dialogo **Sfoglia cartella** .  
   
  **Modifica**  

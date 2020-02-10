@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877876"
 ---
 # <a name="variables-window"></a>Finestra Variabili
@@ -49,7 +49,7 @@ ms.locfileid: "62877876"
  `Name`  
  Consente di visualizzare il nome della variabile. È possibile aggiornare il nome delle variabili definite dall'utente.  
   
- **Ambito**  
+ **Scope**  
  Consente di visualizzare l'ambito della variabile, che può essere costituito dall'intero pacchetto oppure da un contenitore o da un'attività. L'ambito della variabile deve essere sufficiente affinché la variabile sia visibile per qualsiasi altro componente o attività che necessita di leggerne o impostarne il valore.  
   
  È possibile modificare l'ambito facendo clic sulla variabile e quindi selezionando **Sposta variabile** nella finestra **Variabili** .  
@@ -64,9 +64,9 @@ ms.locfileid: "62877876"
  Consente di visualizzare il valore della variabile. È possibile aggiornare il valore per le variabili definite dall'utente. Questo valore può essere letterale, un'espressione e una stringa su più righe. Per assegnare un'espressione alla variabile, fare clic sul pulsante con i puntini di sospensione accanto alla colonna **Espressione** nella finestra **Variabili** .  
   
  `Namespace`  
- Consente di visualizzare il nome dello spazio dei nomi. Variabili definite dall'utente vengono inizialmente create nel **utente** dello spazio dei nomi, ma è possibile modificare il nome dello spazio dei nomi nel `Namespace` campo. Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
+ Consente di visualizzare il nome dello spazio dei nomi. Le variabili definite dall'utente vengono inizialmente create nello spazio dei nomi **User** , ma è possibile modificare il nome dello `Namespace` spazio dei nomi nel campo. Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
   
- **Raise Change Event**  
+ **Genera evento di modifica**  
  Consente di indicare se generare l'evento `OnVariableValueChanged` alla modifica di un valore. È possibile aggiornare il valore per le variabili definite dall'utente e le variabili di sistema. Per impostazione predefinita, questa colonna non viene visualizzata nella finestra **Variabili** . Per visualizzare questa colonna, fare clic su **Opzioni griglia**.  
   
  **Descrizione**  
@@ -79,8 +79,8 @@ ms.locfileid: "62877876"
   
 ## <a name="see-also"></a>Vedere anche  
  [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
- [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
+ [Usare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Generazione di file di dump per l'esecuzione del pacchetto](troubleshooting/generating-dump-files-for-package-execution.md)  
+ [Generazione di file di dump per l'esecuzione dei pacchetti](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
