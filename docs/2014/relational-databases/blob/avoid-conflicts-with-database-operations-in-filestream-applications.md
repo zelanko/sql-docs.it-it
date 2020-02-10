@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010366"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitare conflitti con le operazioni del database nelle applicazioni di FILESTREAM
@@ -26,9 +26,9 @@ ms.locfileid: "66010366"
   
 |istruzioni Transact-SQL|Aperte per l'accesso in lettura|Aperte per l'accesso in scrittura|  
 |------------------------------|---------------------|----------------------|  
-|Istruzioni DDL che funzionano con i metadati del database, ad esempio CREATE TABLE, CREATE INDEX, DROP TABLE e ALTER TABLE.|Allowed|Bloccate ed errore di timeout.|  
-|Istruzioni DML che funzionano con i dati archiviati nel database, ad esempio UPDATE, DELETE e INSERT.|Allowed|Negate|  
-|SELECT|Allowed|Allowed|  
+|Istruzioni DDL che funzionano con i metadati del database, ad esempio CREATE TABLE, CREATE INDEX, DROP TABLE e ALTER TABLE.|Consentito|Bloccate ed errore di timeout.|  
+|Istruzioni DML che funzionano con i dati archiviati nel database, ad esempio UPDATE, DELETE e INSERT.|Consentito|Negate|  
+|SELECT|Consentito|Consentito|  
 |COMMIT TRANSACTION|Negate*|Negate*|  
 |SAVE TRANSACTION|Negate*|Negate*|  
 |ROLLBACK|Consentite*|Consentite*|  
@@ -38,7 +38,7 @@ ms.locfileid: "66010366"
 ## <a name="examples"></a>Esempi  
  Gli esempi seguenti illustrano come le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e l'accesso Win32 FILESTREAM possano creare conflitti.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Apertura di dati BLOB FILESTREAM per l'accesso in scrittura  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>R. Apertura di dati BLOB FILESTREAM per l'accesso in scrittura  
  Nell'esempio seguente viene mostrato l'effetto dell'apertura di un file per il solo accesso in scrittura.  
   
 ```  

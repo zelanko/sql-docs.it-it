@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483688"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Creazione di codice automatica (Master Data Services)
@@ -31,24 +31,24 @@ ms.locfileid: "65483688"
  Quando si immettono i valori di attributo in MDS in uno degli strumenti o utilizzando il processo di gestione temporanea, è possibile lasciare vuoto il valore dell'attributo. Quando vengono applicate le regole business, i valori verranno incrementati in base al valore esistente più elevato. Ad esempio, se la regola è "Attributo predefinito a un valore generato che inizia da 1 e aumenta di 4" e il valore corrente più elevato per l'attributo è 700, il valore per il membro successivo aggiunto sarà 704.  
   
 ## <a name="deleting-automatically-generated-values"></a>Eliminazione dei valori generati automaticamente  
- Dopo che un amministratore ha abilitato i valori generati automaticamente per l'attributo Code, gli utenti potrebbero eliminare per errore un membro che conteneva un valore Code che desiderano riutilizzare. Verrà visualizzato il messaggio di errore "il codice membro è già utilizzato da un membro eliminato". Esistono due possibili soluzioni:  
+ Dopo che un amministratore ha abilitato i valori generati automaticamente per l'attributo Code, gli utenti potrebbero eliminare per errore un membro che conteneva un valore Code che desiderano riutilizzare. Verrà visualizzato il messaggio di errore "il codice membro è già utilizzato da un membro eliminato". Le soluzioni possono essere due:  
   
--   Nel **Gestione versioni** area funzionale, un amministratore può invertire la transazione che si sono verificati quando il membro è stato eliminato. Tuttavia, ciò significa che tutti gli attributi del membro precedente e l'appartenenza a gerarchie e raccolte viene ripristinato. Per altre informazioni, vedere [invertire una transazione &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
+-   Nell'area funzionale **Gestione versioni** , un amministratore può invertire la transazione che si è verificata quando il membro è stato eliminato. Ciò significa tuttavia che tutti gli attributi del membro precedente e l'appartenenza a gerarchie e raccolte vengono ripristinati. Per ulteriori informazioni, vedere [invertire una transazione &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
   
--   Un amministratore può utilizzare il processo di gestione temporanea per eliminare in modo permanente il membro. Per altre informazioni, vedere [disattivare o eliminare membri tramite il processo di gestione temporanea &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
+-   Un amministratore può utilizzare il processo di gestione temporanea per eliminare in modo permanente il membro. Per ulteriori informazioni, vedere [disattivare o eliminare membri utilizzando il processo di gestione temporanea &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Generare automaticamente valori per l'attributo Code.|[Generare automaticamente valori per l'attributo Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|Generare automaticamente valori per altri attributi.|[Generare automaticamente valori di attributi diversi da Code &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|Generare automaticamente valori per l'attributo Code.|[Generare automaticamente valori di attributo del codice &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|Generare automaticamente valori per altri attributi.|[Generare automaticamente valori di attributo diversi dal codice &#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
 -   [Panoramica di Master Data Services](master-data-services-overview-mds.md)  
   
--   [Regole di business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Regole business &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
 -   [Entità &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   

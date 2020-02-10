@@ -1,5 +1,5 @@
 ---
-title: In SQLXML 4.0 di schemi XSD con annotazioni | Microsoft Docs
+title: Schemi XSD con annotazioni in SQLXML 4,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,42 +18,42 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5eecc52bb683f19582a539992b0668d3fe6e175
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014523"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Schemi XSD con annotazioni in SQLXML 4.0
   In questa sezione vengono fornite informazioni sull'utilizzo degli schemi XSD con annotazioni in SQLXML 4.0. Nelle versioni precedenti di SQLXML, una funzionalità simile veniva fornita con gli schemi XDR (XML-Data Reduced). In questa sezione vengono inoltre fornite le informazioni su XDR per le applicazioni legacy.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4,0&#41;](introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  Viene fornita una panoramica degli schemi XSD con annotazioni in SQLXML 4.0.  
   
- [Utilizzo delle annotazioni negli schemi XSD &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  
+ [Utilizzo di annotazioni negli schemi XSD &#40;SQLXML 4,0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  
  Viene illustrato l'utilizzo delle annotazioni negli schemi XSD in molti scenari e vengono forniti esempi.  
   
- [Utilizzando schemi XSD nelle query con annotazioni &#40;SQLXML 4.0&#41;](using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Utilizzo di schemi XSD con annotazioni nelle query &#40;SQLXML 4,0&#41;](using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
  Viene illustrato l'utilizzo degli schemi XSD con annotazioni nelle query.  
   
- [Conversione di schemi con annotazioni XDR in schemi XSD equivalenti &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
+ [Conversione di schemi XDR con annotazioni in schemi XSD equivalenti &#40;SQLXML 4,0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
  Viene illustrata la conversione degli schemi XDR negli schemi XSD equivalenti per SQLXML 4.0.  
   
- [Schemi XDR con annotazioni &#40;deprecate in SQLXML 4.0&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [Schemi XDR con annotazioni &#40;deprecati in SQLXML 4,0&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
  Le versioni precedenti di SQLXML supportavano le annotazioni negli schemi XDR. Gli schemi XDR con annotazioni sono deprecati in SQLXML 4.0. Questa sezione viene tuttavia fornita come riferimento per le applicazioni legacy.  
   
-## <a name="other-resources"></a>Altre risorse  
+## <a name="other-resources"></a>Risorse aggiuntive  
  Ulteriori informazioni sul linguaggio di definizione di XML Schema (XSD), sul linguaggio XML Path (XPath) e su Extensible Stylesheet Language Transformations (XSLT) sono disponibili nei siti Web seguenti:  
   
--   XML Schema Part 0: Nozioni di base, W3C Recommendation (http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: primer, raccomandazione W3C (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: Strutture, W3C Recommendation (http://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: Structures, raccomandazione W3C (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: Datatypes W3C Recommendation (http://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: Datatypes, raccomandazione W3C (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
+-   XPath (XML Path Language) (http://www.w3.org/TR/xpath)  
   
--   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
+-   Trasformazioni XSL (XSLT) (http://www.w3.org/TR/xslt)  
   
   

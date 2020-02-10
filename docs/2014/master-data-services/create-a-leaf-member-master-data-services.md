@@ -15,21 +15,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483402"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Creare un membro foglia (Master Data Services)
-  Nelle [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], creare un membro foglia quando si desidera aggiungere dati master al sistema e non usa le tabelle di staging o il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] per importare i dati.  
+  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]creare un membro foglia quando si desidera aggiungere dati master al sistema e non si utilizzano tabelle [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] di staging o per importare dati.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
   
--   È necessario disporre almeno **Update** dell'autorizzazione per l'oggetto modello foglia per l'entità a cui si desidera aggiungere un membro.  
+-   È necessario disporre almeno dell'autorizzazione **aggiornamento** per l'oggetto modello foglia per l'entità a cui si desidera aggiungere un membro.  
   
 ### <a name="to-create-a-leaf-member"></a>Per creare un membro foglia  
   
@@ -45,13 +45,13 @@ ms.locfileid: "65483402"
   
 6.  Nel riquadro **Dettagli** completare i campi.  
   
-7.  Facoltativo. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
+7.  Facoltativa. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
   
 8.  Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Caricare o aggiornare membri in Master Data Services tramite il processo di gestione temporanea](add-update-and-delete-data-master-data-services.md)   
- [Creare membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
+ [Creazione di un membro consolidato &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Membri &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
   

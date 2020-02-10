@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856647"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitoraggio attività processi (Impostazioni filtro)
@@ -27,7 +27,7 @@ ms.locfileid: "62856647"
 ## <a name="all-jobs"></a>Tutti i processi  
  Questo gruppo di criteri di filtro è disponibile per il filtraggio di Monitoraggio attività processi.  
   
- **Name**  
+ **Nome**  
  Consente di filtrare i processi in base al nome.  
   
  **Prossima esecuzione**  
@@ -42,16 +42,16 @@ ms.locfileid: "62856647"
  **Risultati ultima esecuzione**  
  Consente di filtrare in base allo stato dell'ultima esecuzione dei processi.  
   
- **Abilitata**  
+ **Enabled**  
  Consente di visualizzare solo i processi abilitati o non abilitati.  
   
  **Categoria**  
  Consente di filtrare in base alla categoria del processo.  
   
- **Pianificato**  
+ **Pianificata**  
  Consente di visualizzare tutti i processi che dispongono o non dispongono di pianificazioni.  
   
- **Stato**  
+ **Status**  
  Consente di filtrare i processi in base allo stato.  
   
 ## <a name="description-area"></a>Area descrizione  
@@ -59,9 +59,9 @@ ms.locfileid: "62856647"
  In questa casella senza nome viene visualizzata una breve descrizione dei criteri nel momento in cui vengono selezionati.  
   
  **Applica filtro**  
- Per applicare il filtro, fare clic su **Applica filtro** e quindi fare clic su **OK**. Per conservare le impostazioni di filtro nel **impostazioni filtro** finestra di dialogo casella, ma non applicarle, deselezionare **Applica filtro**e quindi fare clic su **OK**, per visualizzare tutte le righe.  
+ Per applicare il filtro, fare clic su **Applica filtro** e quindi su **OK**. Per mantenere le impostazioni di filtro nella finestra di dialogo **Impostazioni filtro** , ma non applicarle, deselezionare **Applica filtro**e quindi fare clic su **OK**per visualizzare tutte le righe.  
   
- **Clear**  
+ **Cancella**  
  Consente di ripristinare le impostazioni di filtro predefinite.  
   
 ## <a name="see-also"></a>Vedere anche  

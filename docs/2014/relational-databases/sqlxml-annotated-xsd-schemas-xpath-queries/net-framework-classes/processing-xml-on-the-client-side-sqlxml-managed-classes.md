@@ -1,5 +1,5 @@
 ---
-title: L'elaborazione di XML sul lato Client (classi gestite SQLXML) | Microsoft Docs
+title: Elaborazione di XML sul lato client (classi gestite SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a75d9fb1d4f77cb41cfdc3578af675533fbb6bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010813"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Elaborazione di XML sul lato client (classi gestite SQLXML)
-  In questo esempio viene illustrato l'utilizzo della proprietà ClientSideXml. L'applicazione esegue una stored procedure nel server. Il risultato della stored procedure, ovvero un set di righe a due colonne, viene elaborato sul lato client per produrre un documento XML.  
+  Questo esempio illustra l'uso della proprietà ClientSideXml. L'applicazione esegue una stored procedure nel server. Il risultato della stored procedure, ovvero un set di righe a due colonne, viene elaborato sul lato client per produrre un documento XML.  
   
- Il seguente GetContacts stored procedure restituisce **FirstName** e **LastName** dei dipendenti nella tabella Person. Contact nel database AdventureWorks.  
+ Il stored procedure GetContacts seguente restituisce **FirstName** e **LastName** dei dipendenti nella tabella Person. Contact del database AdventureWorks.  
   
 ```  
 USE AdventureWorks  
@@ -38,7 +38,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Questa applicazione c# esegue la stored procedure e specifica l'opzione FOR XML AUTO nello specificare il valore CommandText. Nell'applicazione, la proprietà ClientSideXml dell'oggetto SqlXmlCommand è impostata su true. In questo modo è possibile eseguire stored procedure preesistenti che restituiscono un set di righe e applicano a questo una trasformazione XML sul client.  
+ Questa applicazione C# esegue il stored procedure e specifica l'opzione FOR XML AUTO in specificando il valore CommandText. Nell'applicazione, la proprietà ClientSideXml dell'oggetto SqlXmlCommand è impostata su true. In questo modo è possibile eseguire stored procedure preesistenti che restituiscono un set di righe e applicano a questo una trasformazione XML sul client.  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione.  

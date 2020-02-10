@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058361"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor trasformazione Raggruppamento fuzzy (scheda Colonne)
@@ -30,7 +30,7 @@ ms.locfileid: "66058361"
  **Colonne di input disponibili**  
  Consente di selezionare le colonne di input utilizzate per raggruppare le righe contenenti valori duplicati.  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare i nomi delle colonne di input disponibili.  
   
  **Pass-through**  
@@ -42,7 +42,7 @@ ms.locfileid: "66058361"
  **Alias di output**  
  Consente di immettere un nome descrittivo per la colonna di output corrispondente. Per impostazione predefinita, il nome della colonna di output corrisponde al nome della colonna di input.  
   
- **Alias di output gruppo**  
+ **Alias di output del gruppo**  
  Consente di immettere un nome descrittivo per la colonna che conterrà il valore canonico per i duplicati raggruppati. Il nome predefinito di questa colonna di output è il nome della colonna di input con l'aggiunta di _clean.  
   
  **Tipo di corrispondenza**  
@@ -54,13 +54,13 @@ ms.locfileid: "66058361"
  **Alias di output somiglianza**  
  Consente di specificare il nome di una nuova colonna di output contenente i punteggi di somiglianza per il join selezionato. Se non si specifica un valore, la colonna di output non viene creata.  
   
- **Numerali**  
+ **Numeri**  
  Consente di specificare l'importanza dei numerali iniziali e finali nel confronto dei dati della colonna. Ad esempio, se i numerali iniziali sono significativi, "2005 Vendite" non verrà raggruppato con "2004 Vendite".  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**Nessuno**|I numerali iniziali e finali non sono significativi.|  
-|**Iniziali**|Sono significativi solo i numerali iniziali.|  
+|**Né**|I numerali iniziali e finali non sono significativi.|  
+|**Leader**|Sono significativi solo i numerali iniziali.|  
 |**Finali**|Sono significativi solo i numerali finali.|  
 |**Iniziali e finali**|Sono significativi i numerali sia iniziali che finali.|  
   

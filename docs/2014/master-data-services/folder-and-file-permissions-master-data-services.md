@@ -16,14 +16,14 @@ ms.author: lle
 manager: craigg
 robots: noindex,nofollow
 ms.openlocfilehash: 06ae01a097b164abb1b55267853ee99f7e5bf445
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483830"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Autorizzazioni per file e cartelle [Master Data Services]
-  Quando si installa [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cartelle e file vengono installati nel file system nel percorso di installazione specificato per le funzionalità condivise di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se si usa il percorso di installazione predefinito per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funzionalità condivise, il percorso di installazione per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] viene *unità*: \Programmi\Microsoft SQL Server\120\Master Data Services. Sebbene sia possibile modificare il percorso di installazione delle funzionalità condivise, è necessario considerare le autorizzazioni ereditate dalla cartella padre e quelle impostate in modo esplicito per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+  Quando si installa [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cartelle e file vengono installati nel file system nel percorso di installazione specificato per le funzionalità condivise di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se si usa il percorso di installazione predefinito [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per le funzionalità condivise, il percorso [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] di installazione per è *unità*: \Programmi\Microsoft SQL Server\120\Master Data Services. Sebbene sia possibile modificare il percorso di installazione delle funzionalità condivise, è necessario considerare le autorizzazioni ereditate dalla cartella padre e quelle impostate in modo esplicito per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="inherited-permissions"></a>Autorizzazioni ereditate  
  Le autorizzazioni della cartella di **Microsoft SQL Server** , della cartella di **Master Data Services** e della maggior parte delle sottocartelle e dei file sono ereditate dalla cartella padre specificata nel programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Se si sceglie il percorso di installazione predefinito, la cartella padre dalla quale vengono ereditate le autorizzazioni è *unità*:\Programmi. Nella tabella seguente vengono descritte le autorizzazioni predefinite per la cartella **Programmi**.  
@@ -33,7 +33,7 @@ ms.locfileid: "65483830"
   
 ###### <a name="program-files-default-permissions"></a>Autorizzazioni predefinite di Programmi  
   
-|Nome di gruppo o di account|Permissions|  
+|Nome di gruppo o di account|Autorizzazioni|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|Autorizzazioni speciali|  
 |SYSTEM|Autorizzazioni speciali|  
@@ -46,7 +46,7 @@ ms.locfileid: "65483830"
   
 ###### <a name="mdstempdir-permissions"></a>Autorizzazioni di MDSTempDir  
   
-|Nome di gruppo o di account|Permissions|  
+|Nome di gruppo o di account|Autorizzazioni|  
 |---------------------------|-----------------|  
 |SYSTEM|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
 |Administrators|Modifica, Lettura ed esecuzione, Visualizzazione contenuto cartella, Lettura, Scrittura|  
@@ -54,7 +54,7 @@ ms.locfileid: "65483830"
   
 ###### <a name="webconfig-permissions"></a>Autorizzazioni di Web.config  
   
-|Nome di gruppo o di account|Permissions|  
+|Nome di gruppo o di account|Autorizzazioni|  
 |---------------------------|-----------------|  
 |SYSTEM|Controllo completo, Modifica, Lettura ed esecuzione, Lettura, Scrittura|  
 |Administrators|Controllo completo, Modifica, Lettura ed esecuzione, Lettura, Scrittura|  

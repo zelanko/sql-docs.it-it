@@ -1,5 +1,5 @@
 ---
-title: 'SQL: mappato (SQLXML 4.0) | Documenti di Microsoft'
+title: 'SQL: mappato (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013481"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  Caricamento Bulk XML elabora il `sql:mapped` annotazione nello schema XSD come che previsto è, se lo schema di mapping specifica `sql:mapped="false"` per qualsiasi elemento o attributo, il caricamento Bulk XML non tenta di archiviare i dati associati nella colonna corrispondente.  
+  Il caricamento bulk XML elabora `sql:mapped` l'annotazione nello schema XSD come previsto, ovvero se lo schema di mapping `sql:mapped="false"` specifica per qualsiasi elemento o attributo, il caricamento bulk XML non tenta di archiviare i dati associati nella colonna corrispondente.  
   
  Il caricamento bulk XML ignora gli elementi e gli attributi di cui non è stato eseguito il mapping (perché non sono descritti nello schema oppure perché vengono annotati nello schema XSD con `sql:mapped="false"`). Tutti i dati di cui non è stato eseguito il mapping vengono inseriti nella colonna di overflow, se tale colonna viene specificata tramite `sql:overflow-field`.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66013481"
 </xsd:schema>  
 ```  
   
- Poiché il **HomePhone** attributo specifica `sql:mapped="false"`, il caricamento Bulk XML non è associato questo attributo alla colonna corrispondente. Lo schema XSD identifica una colonna di overflow (**OverflowColumn**) in cui il caricamento di massa XML memorizza i dati non utilizzati.  
+ Poiché l'attributo **HomePhone** specifica `sql:mapped="false"`, il caricamento bulk XML non esegue il mapping di questo attributo alla colonna corrispondente. Lo schema XSD identifica una colonna di overflow (**OverflowColumn**) in cui il caricamento bulk XML archivia i dati non utilizzati.  
   
 ### <a name="to-test-a-working-sample"></a>Per testare un esempio reale  
   
-1.  Creare la tabella seguente nel **tempdb** database:  
+1.  Creare la tabella seguente nel database **tempdb** :  
   
     ```  
     USE tempdb  

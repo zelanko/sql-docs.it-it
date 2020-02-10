@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870880"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Visualizzare le dimensioni del file sparse di uno snapshot del database (Transact-SQL)
@@ -44,11 +44,11 @@ ms.locfileid: "62870880"
 ## <a name="find-out-the-actual-size-of-a-sparse-file"></a>Conoscere le dimensioni effettive di un file sparse  
   
 > [!NOTE]  
->  Le dimensioni dei file sparse aumentano con incrementi di 64 kilobyte (KB) e corrispondono quindi sempre a un multiplo di 64 KB.  
+>  Le dimensioni dei file sparse aumentano con incrementi di 64 kilobyte (KB) e corrispondono quindi sempre a un multiplo di 64 KB.  
   
- Per visualizzare il numero di byte usati nel disco da ogni file sparse di uno snapshot, eseguire una query nella colonna **size_on_disk_bytes** della DMV [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per visualizzare il numero di byte usati nel disco da ogni file sparse di uno snapshot, eseguire una query nella colonna **size_on_disk_bytes** della DMV [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sys.dm_io_virtual_file_stats[ di ](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql).  
   
- Per visualizzare lo spazio su disco usato da un file sparse, fare clic con il pulsante destro del mouse sul file in Microsoft Windows, scegliere **Proprietà** e quindi verificare il valore in **Dimensioni su disco**.  
+ Per visualizzare lo spazio su disco usato da un file sparse, fare clic con il pulsante destro del mouse sul file in Microsoft Windows, scegliere **Proprietà**e quindi verificare il valore in **Dimensioni su disco** .  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>Per rilevare la dimensione massima di un file sparse  
  La dimensione massima consentita per un file sparse equivale alla dimensione del file di database di origine corrispondente al momento della creazione dello snapshot. Per informazioni su tale dimensione, è possibile eseguire una delle operazioni seguenti:  
@@ -67,7 +67,7 @@ ms.locfileid: "62870880"
   
 ## <a name="see-also"></a>Vedere anche  
  [Snapshot del database &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
- [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
+ [sys. fn_virtualfilestats &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
  [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: Editor gestione connessione (pagina colonne) più file Flat | Microsoft Docs
+title: Editor gestione connessione per più file flat (pagina colonne) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057502"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor gestione connessione per più file flat (pagina Colonne)
@@ -39,29 +39,29 @@ ms.locfileid: "66057502"
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
-|**{LF}**|Le righe sono delimitate da un avanzamento riga.|  
+|**CR Se**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**CR**|Le righe sono delimitate da un ritorno a capo.|  
+|**Se**|Le righe sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le righe sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le righe sono delimitate da un carattere due punti.|  
-|**Virgola {,}**|Le righe sono delimitate da una virgola.|  
-|**Tabulazione {t}**|Le righe sono delimitate da un carattere di tabulazione.|  
+|**Virgole{,}**|Le righe sono delimitate da una virgola.|  
+|**Tab {t}**|Le righe sono delimitate da un carattere di tabulazione.|  
 |**Barra verticale {&#124;}**|Le righe sono delimitate da una barra verticale.|  
   
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
-|**{LF}**|Le colonne sono delimitate da un avanzamento riga.|  
+|**CR Se**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**CR**|Le colonne sono delimitate da un ritorno a capo.|  
+|**Se**|Le colonne sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le colonne sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le colonne sono delimitate da due punti.|  
-|**Virgola {,}**|Le colonne sono delimitate da una virgola.|  
-|**Tabulazione {t}**|Le colonne sono delimitate da una tabulazione.|  
+|**Virgole{,}**|Le colonne sono delimitate da una virgola.|  
+|**Tab {t}**|Le colonne sono delimitate da una tabulazione.|  
 |**Barra verticale {&#124;}**|Le colonne sono delimitate da una barra verticale.|  
   
  **Reimposta colonne**  
@@ -71,10 +71,10 @@ ms.locfileid: "66057502"
  **Carattere**  
  Consente di selezionare il tipo di carattere per la visualizzazione in anteprima dei dati.  
   
- **Colonne dati di origine**  
+ **Colonne di dati di origine**  
  Per modificare la larghezza della riga, trascinare l'indicatore di riga verticale, mentre per modificare la larghezza delle colonne, fare clic sul righello nella parte superiore della finestra di anteprima.  
   
- **Larghezza riga**  
+ **Lunghezza riga**  
  Consente di specificare la larghezza della riga prima dell'aggiunta dei delimitatori per le singole colonne. In alternativa, trascinare la linea verticale nella finestra di anteprima per contrassegnare la fine della riga. Il valore relativo alla larghezza della riga viene aggiornato automaticamente.  
   
  **Reimposta colonne**  
@@ -88,21 +88,21 @@ ms.locfileid: "66057502"
  **Carattere**  
  Consente di selezionare il tipo di carattere per la visualizzazione in anteprima dei dati.  
   
- **Colonne dati di origine**  
+ **Colonne di dati di origine**  
  Per modificare la larghezza della riga, trascinare l'indicatore di riga verticale, mentre per modificare la larghezza delle colonne, fare clic sul righello nella parte superiore della finestra di anteprima.  
   
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
-|**{LF}**|Le righe sono delimitate da un avanzamento riga.|  
+|**CR Se**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**CR**|Le righe sono delimitate da un ritorno a capo.|  
+|**Se**|Le righe sono delimitate da un avanzamento riga.|  
 |**Punto e virgola {;}**|Le righe sono delimitate da un punto e virgola.|  
 |**Due punti {:}**|Le righe sono delimitate da un carattere due punti.|  
-|**Virgola {,}**|Le righe sono delimitate da una virgola.|  
-|**Tabulazione {t}**|Le righe sono delimitate da un carattere di tabulazione.|  
+|**Virgole{,}**|Le righe sono delimitate da una virgola.|  
+|**Tab {t}**|Le righe sono delimitate da un carattere di tabulazione.|  
 |**Barra verticale {&#124;}**|Le righe sono delimitate da una barra verticale.|  
   
  **Reimposta colonne**  
@@ -110,8 +110,8 @@ ms.locfileid: "66057502"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor gestione connessione per più file flat &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor gestione connessione per più file flat &#40;pagina Avanzate&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor gestione connessione per più file flat &#40;pagina Anteprima&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor gestione connessione per più file flat &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor gestione connessione per più file flat &#40;pagina avanzate&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor gestione connessione per più file flat &#40;pagina anteprima&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

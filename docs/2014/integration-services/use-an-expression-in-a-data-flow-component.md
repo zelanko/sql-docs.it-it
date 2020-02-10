@@ -1,5 +1,5 @@
 ---
-title: Usare un'espressione in un componente flusso di dati | Microsoft Docs
+title: Utilizzare un'espressione in un componente flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054815"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Utilizzo di un'espressione in un componente flusso di dati
@@ -25,12 +25,12 @@ ms.locfileid: "66054815"
   
  Per implementare un'espressione in una trasformazione, è necessario che il pacchetto includa almeno un'attività Flusso di dati e un'origine. Per informazioni sull'aggiunta di questi elementi ai pacchetti, vedere gli argomenti seguenti:  
   
--   [Aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+-   [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
     
   
 -   [Aggiunta o eliminazione di un componente in un flusso di dati](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
--   [Connettere componenti in un flusso di dati](data-flow/connect-components-in-a-data-flow.md)  
+-   [Connessione di componenti in un flusso di dati](data-flow/connect-components-in-a-data-flow.md)  
   
 ### <a name="to-create-an-expression"></a>Per creare un'espressione  
   

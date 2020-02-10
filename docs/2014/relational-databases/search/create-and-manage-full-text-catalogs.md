@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011466"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Creazione e gestione dei cataloghi full-text
   Un catalogo full-text è un oggetto virtuale che non appartiene ad alcun filegroup. Si tratta di un concetto logico che fa riferimento a un gruppo di indici full-text.  
   
-##  <a name="creating"></a> Creazione di un catalogo Full-Text  
+##  <a name="creating"></a>Creazione di un catalogo full-text  
   
 #### <a name="to-create-a-full-text-catalog"></a>Per creare un catalogo full-text  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011466"
   
   
   
-##  <a name="props"></a> Visualizzare le proprietà di un catalogo Full-Text  
+##  <a name="props"></a>Visualizzazione delle proprietà di un catalogo full-text  
  Per ottenere il valore di varie proprietà di indicizzazione full-text, è possibile utilizzare funzioni quali [!INCLUDE[tsql](../../includes/tsql-md.md)] FULLTEXTCATALOGPROPERTY. Queste informazioni sono utili per l'amministrazione e la risoluzione dei problemi relativi alla ricerca full-text.  
   
  Nella tabella seguente sono elencate le proprietà correlate ai cataloghi full-text.  
@@ -60,7 +60,7 @@ ms.locfileid: "66011466"
   
   
   
-##  <a name="rebuildone"></a> La ricompilazione di un catalogo Full-Text  
+##  <a name="rebuildone"></a>Ricompilazione di un catalogo full-text  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>Per ricompilare un catalogo full-text  
   
@@ -70,13 +70,13 @@ ms.locfileid: "66011466"
   
 3.  Fare clic con il pulsante destro sul nome del catalogo full-text da ricompilare e scegliere **Ricompila**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?** , fare clic su **OK**.  
+4.  Quando viene visualizzato il messaggio **Eliminare il catalogo full-text e ricompilarlo?**, fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **Ricompila catalogo full-text** fare clic su **Chiudi**.  
   
   
   
-##  <a name="rebuildall"></a> La ricompilazione di tutti i cataloghi Full-Text per un Database  
+##  <a name="rebuildall"></a>Ricompilazione di tutti i cataloghi full-text per un database  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>Per ricompilare i cataloghi full-text di un database  
   
@@ -86,13 +86,13 @@ ms.locfileid: "66011466"
   
 3.  Scegliere **Ricompila tutto**.  
   
-4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?** , fare clic su **OK**.  
+4.  Quando viene visualizzato il messaggio **Eliminare tutti i cataloghi full-text e ricompilarli?**, fare clic su **OK**.  
   
 5.  Nella finestra di dialogo **Ricompila tutti i cataloghi full-text** scegliere **Chiudi**.  
   
   
   
-##  <a name="removing"></a> Rimozione di un catalogo Full-Text da un Database  
+##  <a name="removing"></a>Rimozione di un catalogo full-text da un database  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>Per rimuovere un catalogo full-text da un database  
   

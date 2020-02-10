@@ -13,35 +13,35 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5a8bec1ab4bd19fdf11310fb467035eab1ac34b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483614"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Modificare il nome di una gerarchia derivata (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare il nome di una gerarchia derivata.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-a-derived-hierarchy-name"></a>Per modificare il nome di una gerarchia derivata  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
   
-2.  Nel **Vista modelli** pagina, dalla barra dei menu scegliere **Gestisci** e fare clic su **gerarchie derivate**.  
+2.  Nella pagina **vista modelli** scegliere **Gestisci** dalla barra dei menu, quindi fare clic su **gerarchie derivate**.  
   
-3.  Nella pagina **Gestione gerarchia derivata** selezionare un modello dall'elenco **Modello** .  
+3.  Nella pagina **Gestione gerarchia derivata** dall'elenco **Modello** selezionare un modello.  
   
 4.  Selezionare la riga della gerarchia derivata che si desidera rinominare.  
   
-5.  Fare clic su **selezionato Modifica gerarchia derivata**.  
+5.  Fare clic su **Modifica gerarchia derivata selezionata**.  
   
-6.  Nel **Modifica gerarchia derivata** pagina, fare clic su **derivato di modifica nome gerarchia**.  
+6.  Nella pagina **Modifica gerarchia derivata** fare clic su **modifica nome gerarchia derivata**.  
   
 7.  Nella casella **Nome gerarchia derivata** digitare il nome aggiornato della gerarchia.  
   

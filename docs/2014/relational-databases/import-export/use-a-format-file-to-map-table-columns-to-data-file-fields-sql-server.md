@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011736"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)
   Un file di dati può includere campi disposti in un ordine diverso da quello delle colonne corrispondenti presenti nella tabella. In questo argomento vengono descritti file di formato sia non XML che XML, modificati per adattarli a un file di dati contenente campi disposti un ordine diverso da quello delle colonne della tabella. Il file di formato modificato esegue il mapping tra i campi dati e le colonne corrispondenti della tabella.  
   
 > [!NOTE]  
->  Per eseguire l'importazione bulk di un file di dati nella tabella mediante un comando **bcp** o un'istruzione BULK INSERT o INSERT ..., è possibile usare un file di formato non XLM o un file di formato XML. Istruzione SELECT * FROM OPENROWSET(BULK...). Per altre informazioni, vedere [Utilizzo di un file di formato per l'importazione bulk dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  È possibile utilizzare un file di formato non XML o un file di formato XML per l'importazione bulk di un file di dati nella tabella tramite un comando **bcp** , un'istruzione BULK INSERT o un'istruzione INSERT... Istruzione SELECT * FROM OPENROWSET (BULK...). Per altre informazioni, vedere [Utilizzo di un file di formato per l'importazione bulk dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-table-and-data-file"></a>Tabella e file di dati di esempio  
  Gli esempi di file di formato modificati contenuti in questo argomento sono basati sulla tabella e sul file di dati seguenti.  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Usare un file di formato per ignorare una colonna di tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   

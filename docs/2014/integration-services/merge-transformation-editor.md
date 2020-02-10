@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione unione | Microsoft Docs
+title: Editor trasformazione Unione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057674"
 ---
 # <a name="merge-transformation-editor"></a>Editor trasformazione Unione
-  L'**Editor trasformazione Unione** consente di specificare le colonne di due set di dati ordinati di cui eseguire l'unione.  
+  L' **Editor trasformazione Unione** consente di specificare le colonne di due set di dati ordinati di cui eseguire l'unione.  
   
 > [!IMPORTANT]  
 >  Per eseguire la trasformazione Unione, è necessario che i relativi dati di input siano ordinati. Per altre informazioni su questo requisito importante, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "66057674"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Ordinare i dati per le trasformazioni Unione e merge join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Trasformazione Merge join](data-flow/transformations/merge-join-transformation.md)   
  [Trasformazione Unione input multipli](data-flow/transformations/union-all-transformation.md)  
   

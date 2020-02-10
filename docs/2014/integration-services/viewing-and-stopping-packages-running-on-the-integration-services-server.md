@@ -1,5 +1,5 @@
 ---
-title: Server di servizi di visualizzazione e l'arresto di pacchetti in esecuzione sull'integrazione | Microsoft Docs
+title: Visualizzazione e arresto dei pacchetti in esecuzione nel server Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054603"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Visualizzazione e arresto dell'esecuzione dei pacchetti nel server Integration Services
@@ -62,6 +62,6 @@ ms.locfileid: "66054603"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di progetti e pacchetti](packages/run-integration-services-ssis-packages.md)   
- [Risoluzione dei problemi relativi ai report per l'esecuzione del pacchetto](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Report per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

@@ -14,20 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011773"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utilizzo di un file di formato per l'importazione bulk dei dati (SQL Server)
-  In questo argomento viene illustrato l'utilizzo di un file di formato per operazioni di importazione bulk. Il file di formato esegue il mapping dei campi del file di dati alle colonne della tabella.  È possibile usare un file in formato XML o non XML per eseguire un'importazione in blocco dei dati quando si usa un comando **bcp** o un'istruzione BULK INSERT o INSERT. Comando SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene illustrato l'utilizzo di un file di formato per operazioni di importazione bulk. Il file di formato esegue il mapping dei campi del file di dati alle colonne della tabella.  È possibile utilizzare un file di formato XML o non XML per eseguire un'importazione bulk dei dati quando si utilizza un comando **bcp** o un BULK INSERT o un'istruzione INSERT... SELECT * FROM OPENROWSET (BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
   
 > [!IMPORTANT]  
 >  Affinché un file di formato sia funzionante con un file di dati di formato carattere Unicode, è necessario che tutti i campi di input siano stringhe di testo Unicode, ovvero stringhe Unicode di dimensioni fisse o che terminano con un carattere.  
   
 > [!NOTE]  
->  Se non si ha familiarità con i file di formato, vedere [i file di formato Non XML &#40;SQL Server&#41; ](xml-format-files-sql-server.md) e [i file di formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+>  Se non si ha familiarità con i file di formato, vedere [file di formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md) e [file di formato xml &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>Opzioni del file di formato per comandi di importazione bulk  
  Nella tabella seguente vengono riepilogate le opzioni del file di formato per ogni comando di importazione bulk.  
@@ -41,10 +41,10 @@ ms.locfileid: "66011773"
  Per altre informazioni, vedere [Utilità bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) o [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Per eseguire l'esportazione o l'importazione bulk di dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato: SQLCHAR o SQLVARYCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita nelle regole di confronto), SQLNCHAR o SQLNVARCHAR (i dati vengono inviati come Unicode) oppure SQLBINARY o SQLVARYBIN (i dati vengono inviati senza conversione).  
+>  Per eseguire l'esportazione o l'importazione bulk dei dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato: SQLCHAR o SQLVARYCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita nelle regole di confronto), SQLNCHAR o SQLNVARCHAR (i dati vengono inviati come Unicode) oppure SQLBINARY o SQLVARYBIN (i dati vengono inviati senza conversione).  
   
 ## <a name="examples"></a>Esempi  
- Gli esempi di questa sezione illustrano come usare i file di formato per l'importazione in blocco di dati con il comando **bcp** e le istruzioni BULK INSERT e INSERT. SELECT * FROM OPENROWSET(BULK...). Prima di eseguire uno degli esempi di importazione bulk, è necessario creare una tabella, un file di dati e un file di formato di esempio.  
+ Negli esempi di questa sezione viene illustrato come utilizzare i file di formato per eseguire l'importazione bulk dei dati utilizzando il comando **bcp** e il BULK INSERT e INSERT... SELECT * FROM OPENROWSET (BULK...). Prima di eseguire uno degli esempi di importazione bulk, è necessario creare una tabella, un file di dati e un file di formato di esempio.  
   
 ### <a name="sample-table"></a>Tabella di esempio  
  Gli esempi richiedono la creazione di una tabella denominata **myTestFormatFiles** nel database di esempio [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] in base allo schema **dbo**. Per creare la tabella, nell'editor di query di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] eseguire:  
@@ -193,10 +193,10 @@ DROP TABLE myTestFormatFiles
  [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [File in formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [File di formato non XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [File in formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
   
   

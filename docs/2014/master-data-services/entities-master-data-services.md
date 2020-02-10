@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483899"
 ---
 # <a name="entities-master-data-services"></a>Entità (Master Data Services)
@@ -49,13 +49,13 @@ ms.locfileid: "65483899"
  È possibile concedere agli utenti l'autorizzazione per un'entità che include oggetti modello correlati. Per altre informazioni, vedere [Autorizzazioni per le entità &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md).  
   
 ## <a name="entity-examples"></a>Esempi di entità  
- L'esempio seguente illustra un'entità con questi attributi: Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
+ Nell'esempio seguente viene illustrata un'entità che dispone degli attributi Name, Code, Subcategory, StandardCost, ListPrice e FilePhoto. Tali attributi descrivono i membri. Ogni membro viene rappresentato da una singola riga di valori di attributo.  
   
- ![Tabella dell'entità prodotto bicicletta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità prodotto bicicletta")  
+ ![Tabella dell'entità relativa al prodotto biciclette](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabella dell'entità relativa al prodotto biciclette")  
   
  Nel seguente esempio, l'entità Product è l'entità centrale. L'entità Subcategory è un attributo basato su dominio dell'entità Product. L'entità Category è un attributo basato su dominio dell'entità Subcategory. StandardCost e ListPrice sono attributi in formato libero dell'entità Product mentre FilePhoto è un attributo di file dell'entità Product.  
   
- ![Struttura ad albero dell'entità prodotto](../../2014/master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità prodotto")  
+ ![Struttura ad albero dell'entità relativa al prodotto](../../2014/master-data-services/media/mds-conc-entity-ui.gif "Struttura ad albero dell'entità relativa al prodotto")  
   
 > [!NOTE]  
 >  Si tratta di un esempio basato sull'interfaccia utente di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . La struttura ad albero gerarchica mostra le relazioni tra le entità e gli attributi basati su dominio. Lo scopo è illustrare le relazioni anziché rappresentare i livelli di importanza.  
@@ -65,8 +65,8 @@ ms.locfileid: "65483899"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Creare una nuova entità.|[Creare un'entità &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
-|Specificare che un'entità può contenere attributi, gerarchie esplicite e raccolte.|[Abilitare un'entità per gerarchie esplicite e raccolte di &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Modificare il nome di un'entità esistente.|[Modificare un nome di entità &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
+|Specificare che un'entità può contenere attributi, gerarchie esplicite e raccolte.|[Abilitare un'entità per le gerarchie esplicite e le raccolte &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Modificare il nome di un'entità esistente.|[Modificare il nome di un'entità &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
 |Eliminare un'entità esistente.|[Eliminare un'entità &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
 |Assegnare autorizzazioni alle entità.|[Assegnare autorizzazioni per oggetti modello &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   

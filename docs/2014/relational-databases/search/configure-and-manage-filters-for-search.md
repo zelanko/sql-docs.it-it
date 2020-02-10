@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011574"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurazione e gestione di filtri per la ricerca
@@ -25,7 +25,7 @@ ms.locfileid: "66011574"
   
  Un determinato filtro è specifico di un determinato tipo di documento (file con estensione doc, pdf, xls, xml e così via). Questi filtri implementano l'interfaccia IFilter. Per altre informazioni su questi tipi di documento, eseguire una query nella vista del catalogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
- I documenti binari possono essere archiviati in una singola colonna `varbinary(max)` o `image`. Per ogni documento, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sceglie il filtro corretto da utilizzare in base all'estensione file. Poiché l'estensione non è visibile quando il file viene archiviato in una colonna `varbinary(max)` o `image`, l'estensione file (doc, docx, xls, xlsx, pdf e così via) deve essere archiviata in una colonna distinta della tabella, denominata colonna del tipo. Questa colonna può includere qualsiasi tipo di dati basato su caratteri e contiene l'estensione file del documento, ad esempio l'estensione doc per un documento di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. Nel **documento** nella tabella [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], il **documento** sloupec JE typu `varbinary(max)`e la colonna con tipo **FileExtension**, JE typu `nvarchar(8)`.  
+ I documenti binari possono essere archiviati in una singola colonna `varbinary(max)` o `image`. Per ogni documento, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sceglie il filtro corretto da utilizzare in base all'estensione file. Poiché l'estensione non è visibile quando il file viene archiviato in una colonna `varbinary(max)` o `image`, l'estensione file (doc, docx, xls, xlsx, pdf e così via) deve essere archiviata in una colonna distinta della tabella, denominata colonna del tipo. Questa colonna può includere qualsiasi tipo di dati basato su caratteri e contiene l'estensione file del documento, ad esempio l'estensione doc per un documento di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. Nella [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]tabella **Document** di la colonna **Document** è di tipo `varbinary(max)`e la colonna del tipo, **FileExtension**, è di tipo `nvarchar(8)`.  
   
 > [!NOTE]  
 >  Un filtro potrebbe essere in grado di gestire gli oggetti incorporati nell'oggetto padre, a seconda della relativa implementazione. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , tuttavia, i filtri non vengono configurati per seguire collegamenti ad altri oggetti.  

@@ -1,5 +1,5 @@
 ---
-title: Mapping esplicito di attributi ed elementi XSD a tabelle e colonne (SQLXML 4.0) | Microsoft Docs
+title: Mapping esplicito di elementi e attributi XSD a tabelle e colonne (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013839"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapping esplicito di attributi ed elementi XSD a tabelle e colonne (SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "66013839"
   
  Quando `sql:relation` viene specificata su un elemento, l'ambito di questa annotazione si applica a tutti gli attributi e gli elementi figlio descritti nella definizione dei tipi complessi di quell'elemento, rendendo in questo modo più veloce la scrittura di annotazioni.  
   
- Il `sql:relation` annotazione è utile anche quando gli identificatori validi in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono validi in XML. "Order Details", ad esempio, è un nome di tabella valido in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma non in XML. In queste situazioni, l'annotazione `sql:relation` può essere utilizzata per specificare il mapping, ad esempio:  
+ L' `sql:relation` annotazione è utile anche quando gli identificatori validi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in non sono validi in XML. "Order Details", ad esempio, è un nome di tabella valido in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ma non in XML. In queste situazioni, l'annotazione `sql:relation` può essere utilizzata per specificare il mapping, ad esempio:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -55,14 +55,14 @@ ms.locfileid: "66013839"
  L'annotazione `sql-field` esegue il mapping di un elemento o attributo a una colonna di database. L'annotazione `sql:field` viene aggiunta per eseguire il mapping di un nodo XML nello schema a una colonna di database. Non è possibile specificare `sql:field` su un elemento di contenuto vuoto.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Specifica delle annotazioni sql:relation e sql:field  
- In questo esempio, lo schema XSD è costituito un  **\<contatto >** elemento di tipo complesso con  **\<FName >** e  **\<LName >** gli elementi figlio e il **ContactID** attributo.  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>R. Specifica delle annotazioni sql:relation e sql:field  
+ In questo esempio lo schema XSD è costituito da un ** \<elemento Contact>** di tipo complesso con ** \<fname>** e ** \<lname>** elementi figlio e l'attributo **ContactID** .  
   
- Il `sql:relation` annotazione esegue il mapping di  **\<contatto >** elemento alla tabella Person. Contact nel database AdventureWorks. Il `sql:field` annotazione esegue il mapping di  **\<FName >** elemento alla colonna FirstName e il  **\<LName >** elemento alla colonna LastName.  
+ L' `sql:relation` annotazione esegue il mapping dell' ** \<elemento Contact>** alla tabella Person. Contact del database AdventureWorks. L' `sql:field` annotazione esegue il mapping dell' ** \<elemento fname>** alla colonna FirstName e dell' ** \<elemento>lname** alla colonna LastName.  
   
- Viene specificata alcuna annotazione per la **ContactID** attributo. Il risultato ottenuto è un mapping predefinito dell'attributo alla colonna con lo stesso nome.  
+ Non è stata specificata alcuna annotazione per l'attributo **ContactID** . Il risultato ottenuto è un mapping predefinito dell'attributo alla colonna con lo stesso nome.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -106,7 +106,7 @@ ms.locfileid: "66013839"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati parziale:  
   

@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione Ricerca termini (scheda Ricerca termini) | Microsoft Docs
+title: Editor trasformazione Ricerca termini (scheda ricerca termini) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2939d160773d60944a2e8a786e5495cea366edb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055125"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Editor trasformazione Ricerca termini (scheda Ricerca termini)
@@ -44,8 +44,8 @@ ms.locfileid: "66055125"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Ricerca fuzzy &#40;scheda Tabella di riferimento&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [Editor trasformazione Ricerca termini &#40;scheda tabella di riferimento&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
  [Editor trasformazione Ricerca termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
- [Trasformazione Estrazione termini](data-flow/transformations/term-extraction-transformation.md)  
+ [Estrazione termini - trasformazione](data-flow/transformations/term-extraction-transformation.md)  
   
   

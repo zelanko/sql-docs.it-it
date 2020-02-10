@@ -15,18 +15,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f96ab2cb9c2076d36ae36d3aa3358ae4886a1b23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483437"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]creare un membro consolidato quando si desidera un nodo padre per una gerarchia esplicita. I membri consolidati possono avere attributi specifici, che vengono usati per il raggruppamento. Come illustrato nell'esempio seguente, i membri consolidati possono essere usati per i gruppi di account che includono account sottostanti.  
   
- ![I membri consolidati MDS](../../2014/master-data-services/media/mds-consolidated-members.png "MDS membri consolidati")  
+ ![Membri consolidati MDS](../../2014/master-data-services/media/mds-consolidated-members.png "Membri consolidati MDS")  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Esplora** .  
@@ -45,17 +45,17 @@ ms.locfileid: "65483437"
   
 5.  Sopra la griglia, selezionare l'opzione **Membri consolidati** o **Tutti i membri consolidati nella gerarchia** .  
   
-6.  Scegliere **Aggiungi**.  
+6.  Fare clic su **Aggiungi**.  
   
 7.  Nel riquadro sulla destra, completare i campi.  
   
-8.  Facoltativo. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
+8.  Facoltativa. Nella casella **Annotazioni** , digitare un commento indicando il perché è stato aggiunto il membro. Tutti gli utenti che dispongono di accesso al membro possono visualizzare l'annotazione.  
   
 9. Fare clic su **OK**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
--   [Spostare membri all'interno di una gerarchia di &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
+-   [Spostare i membri all'interno di una gerarchia &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare una gerarchia esplicita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

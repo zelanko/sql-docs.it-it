@@ -1,5 +1,5 @@
 ---
-title: Editor origine OLE DB (pagina Output degli errori) | Microsoft Docs
+title: Editor origine OLE DB (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddadfc3ab85afbecdff9b9969f7835c749a92bf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057007"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Editor origine OLE DB (pagina Output degli errori)
@@ -33,7 +33,7 @@ ms.locfileid: "66057007"
  **Colonna**  
  Consente di visualizzare le colonne esterne (origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine OLE DB**.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  
@@ -53,8 +53,8 @@ ms.locfileid: "66057007"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine OLE DB &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [Editor origine OLE DB &#40;pagina Colonne&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Estrazione dei dati tramite l'origine OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [Gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)  
+ [Editor origine OLE DB &#40;pagina colonne&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Estrarre dati tramite l'origine OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [gestione connessione OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

@@ -16,23 +16,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054040"
 ---
 # <a name="metadata-master-data-services"></a>Metadati (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i metadati definiti dall'utente sono informazioni utilizzate per descrivere gli oggetti modello. È ad esempio possibile tenere traccia dei proprietari di un particolare modello o entità oppure dei sistemi di origine tramite cui vengono forniti dati a un'entità.  
   
- Metadati definiti dall'utente sono gestiti da un modello chiamato **metadati**. Questo modello viene incluso automaticamente durante [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] è installato, ed è simile a tutti gli altri modelli MDS, ad eccezione del fatto che non è possibile creare le relative versioni.  
+ I metadati definiti dall'utente sono gestiti da un modello denominato **metadati**. Questo modello viene incluso automaticamente durante [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] l'installazione di ed è simile a tutti gli altri modelli MDS, ad eccezione del fatto che non è possibile crearne versioni.  
   
  Dopo aver popolato il modello Metadati con metadati definiti dall'utente, è possibile includerlo nelle viste sottoscrizioni, in modo che possa essere utilizzato dai sistemi di sottoscrizione.  
   
 ## <a name="metadata-entities"></a>Entità dei metadati  
- Nel modello Metadati sono incluse cinque entità, ognuna delle quali rappresenta un tipo di oggetto modello di dati master che supporta i metadati definiti dall'utente. Ad esempio, il **definizione metadati modello** entità contiene membri che rappresentano modelli e il **definizione metadati attributo** entità contiene membri che rappresentano tutti gli attributi in tutti i modelli.  
+ Nel modello Metadati sono incluse cinque entità, ognuna delle quali rappresenta un tipo di oggetto modello di dati master che supporta i metadati definiti dall'utente. L'entità di **definizione dei metadati del modello** , ad esempio, contiene membri che rappresentano modelli e l'entità di **definizione dei metadati dell'attributo** dispone di membri che rappresentano tutti gli attributi in tutti i modelli.  
   
- Per definire i metadati per un oggetto modello, è necessario popolare uno di questi attributi del membro. Ad esempio, nelle **definizione metadati entità** entità, è possibile popolare l'attributo Description del membro Price con il testo: **Il prezzo del prodotto quando è venduto a un cliente**.  
+ Per definire i metadati per un oggetto modello, è necessario popolare uno di questi attributi del membro. Nell'entità **definizione dei metadati dell'entità** , ad esempio, è possibile popolare l'attributo Description del membro Price con il testo: **il prezzo del prodotto quando è venduto a un cliente**.  
   
  I membri nel modello Metadati vengono aggiornati automaticamente ogni volta che gli oggetti modello che supportano i metadati definiti dall'utente vengono aggiunti o eliminati.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66054040"
   
 -   Un attributo in formato libero chiamato Last Review Date da utilizzare per tenere traccia dell'ultima data in cui un oggetto è stato rivisto dal proprietario.  
   
--   Un attributo basato su dominio denominato Sources da utilizzare per tenere traccia e gestire i sistemi di origine che interagiscono con il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] istanza.  
+-   Un attributo basato su dominio denominato Sources, che consente di tenere traccia e gestire i sistemi di origine che interagiscono con l' [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] istanza di.  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
@@ -58,6 +58,6 @@ ms.locfileid: "66054040"
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   [Esportazione di dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [Esportazione dei dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

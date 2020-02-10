@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento pacchetti (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
+title: Aggiornamento dei pacchetti (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,37 +13,37 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054741"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Aggiornamento pacchetti (Aggiornamento guidato pacchetti SSIS)
   Utilizzare la pagina **Aggiornamento pacchetti** per visualizzare lo stato dell'aggiornamento dei pacchetti e per interrompere l'aggiornamento. L'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] consente di aggiornare uno per uno i pacchetti selezionati.  
   
- **Per visualizzare i pacchetti salvati in un database di SQL Server o nell'archivio pacchetti aggiornati**  
+ **Per visualizzare i pacchetti aggiornati salvati in un database SQL Server o nell'archivio pacchetti**  
   
 -   In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], in Esplora oggetti connettersi a un'istanza locale di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], quindi espandere il nodo **Pacchetti archiviati** per visualizzare i pacchetti aggiornati.  
   
- **Per visualizzare i pacchetti aggiornati che sono stati aggiornati da SQL Server Data Tools**  
+ **Per visualizzare i pacchetti aggiornati da SQL Server Data Tools**  
   
 -   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], in Esplora soluzioni aprire il progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , quindi espandere il nodo **Pacchetti SSIS** per visualizzare i pacchetti aggiornati.  
   
 ## <a name="options"></a>Opzioni  
- **Riquadro Messaggio**  
+ **Riquadro messaggi**  
  Consente di visualizzare messaggi di stato e informazioni di riepilogo durante il processo di aggiornamento.  
   
  **Azione**  
  Consente di visualizzare le azioni incluse nell'aggiornamento.  
   
- **Stato**  
+ **Status**  
  Consente di visualizzare il risultato di ogni azione.  
   
- **Message**  
+ **Messaggio**  
  Consente di visualizzare i messaggi di errore generati da ogni azione.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare l'aggiornamento del pacchetto.  
   
  **Report**  

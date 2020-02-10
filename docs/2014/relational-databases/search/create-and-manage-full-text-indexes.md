@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011551"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
@@ -31,7 +31,7 @@ ms.locfileid: "66011551"
   
  Il processo di creazione e gestione di un indice full-text è definito *popolamento* (noto anche come *ricerca per indicizzazione*). Sono disponibili tre tipi di popolamento dell'indice full-text: popolamento completo, popolamento basato sul rilevamento delle modifiche e popolamento incrementale basato su timestamp. Per altre informazioni sugli indici full-text, vedere [Popolamento degli indici full-text](populate-full-text-indexes.md).  
   
-##  <a name="tasks"></a> Attività comuni  
+##  <a name="tasks"></a>Attività comuni  
  **Per creare un indice full-text**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
@@ -44,9 +44,9 @@ ms.locfileid: "66011551"
   
 -   [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-index-transact-sql)  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-##  <a name="structure"></a> Struttura dell'indice full-Text  
+##  <a name="structure"></a>Struttura dell'indice full-text  
  Comprendere a fondo la struttura di un indice full-text è fondamentale per comprendere il funzionamento del motore di ricerca full-text. In questo argomento viene usato come esempio l'estratto seguente della tabella **Document** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] . In questo estratto sono visualizzate solo due colonne, la colonna **DocumentID** e la colonna **Title** , e tre righe della tabella.  
   
  In questo esempio si suppone che nella colonna **Title** sia stato creato un indice full-text.  
@@ -70,7 +70,7 @@ ms.locfileid: "66011551"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Maintenance|1|1|5|  
+|Manutenzione |1|1|5|  
 |Front|1|2|1|  
 |Front|1|3|1|  
 |Reflector|1|2|2|  
@@ -86,13 +86,13 @@ ms.locfileid: "66011551"
   
  La colonna **ColId** contiene un valore che corrisponde a una particolare colonna con indicizzazione full-text.  
   
- Il `DocId` colonna contiene valori per un integer a otto byte con mapping a un determinato valore chiave full-text in una tabella con indicizzazione full-text. Questo mapping è necessario se la chiave full-text non è un tipo di dati integer. In questi casi, i valori di chiave i mapping tra full-text e `DocId` vengono mantenuti i valori in una tabella separata denominata DocId Mapping. Per eseguire una query per questi mapping usare la stored procedure di sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Per soddisfare una condizione di ricerca, è necessario creare un join tra i valori DocId della tabella precedente e la tabella DocId Mapping per recuperare le righe dalla tabella di base su cui viene eseguita la query. Se il valore della chiave full-text della tabella di base è di tipo integer, il valore viene utilizzato direttamente come DocId e non è necessario alcun mapping. Pertanto, l'utilizzo di valori chiave full-text di tipo integer può contribuire all'ottimizzazione delle query full-text.  
+ La `DocId` colonna contiene valori per un numero intero a otto byte che esegue il mapping a un particolare valore della chiave full-text in una tabella con indicizzazione full-text. Questo mapping è necessario se la chiave full-text non è un tipo di dati integer. In questi casi, i mapping tra i valori e `DocId` i valori della chiave full-text vengono mantenuti in una tabella separata denominata tabella di mapping docid. Per eseguire una query per questi mapping usare la stored procedure di sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Per soddisfare una condizione di ricerca, è necessario creare un join tra i valori DocId della tabella precedente e la tabella DocId Mapping per recuperare le righe dalla tabella di base su cui viene eseguita la query. Se il valore della chiave full-text della tabella di base è di tipo integer, il valore viene utilizzato direttamente come DocId e non è necessario alcun mapping. Pertanto, l'utilizzo di valori chiave full-text di tipo integer può contribuire all'ottimizzazione delle query full-text.  
   
  La colonna **Occurrence** contiene un valore di tipo integer. Per ogni valore DocId è presente un elenco di valori di occorrenza corrispondenti agli offset relativi di una particolare parola chiave all'interno di DocId. I valori di occorrenza sono utili per determinare le corrispondenze di frase o prossimità, ad esempio frasi con valori di occorrenza numericamente adiacenti. Sono inoltre utili per calcolare i punteggi di pertinenza, ad esempio il numero di occorrenze di una parola chiave in un DocId può essere utilizzato per l'assegnazione del punteggio.  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-##  <a name="fragments"></a> Frammenti di indice full-Text  
+##  <a name="fragments"></a>Frammenti di indice full-text  
  L'indice full-text logico viene in genere suddiviso tra più tabelle interne. Ogni tabella interna viene definita un frammento di indice full-text. Alcuni di questi frammenti potrebbero contenere dati più recenti di altri. Ad esempio, se un utente aggiorna la riga seguente il cui DocId è 3 e per la tabella è impostato il rilevamento automatico delle modifiche, viene creato un nuovo frammento.  
   
 |DocumentID|Titolo|  
@@ -108,7 +108,7 @@ ms.locfileid: "66011551"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- Come si può vedere da Fragment 2, le query full-text devono essere eseguite internamente su ogni frammento e le voci più obsolete devono essere eliminate. Un numero eccessivo di frammenti di indice full-text nell'indice full-text può causare un calo sensibile delle prestazioni di esecuzione delle query. Per ridurre il numero di frammenti, riorganizzare il catalogo full-text tramite l'opzione REORGANIZE dell'istruzione [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] . Questa istruzione consente di eseguire un' *unione nell'indice master*, ovvero un'unione dei frammenti in un singolo frammento più grande e la rimozione di tutte le voci obsolete dall'indice full-text.  
+ Come si può vedere da Fragment 2, le query full-text devono essere eseguite internamente su ogni frammento e le voci più obsolete devono essere eliminate. Un numero eccessivo di frammenti di indice full-text nell'indice full-text può causare un calo sensibile delle prestazioni di esecuzione delle query. Per ridurre il numero di frammenti, riorganizzare il catalogo full-text utilizzando l'opzione REORGANIZE dell'istruzione [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] . Questa istruzione consente di eseguire un' *unione nell'indice master*, ovvero un'unione dei frammenti in un singolo frammento più grande e la rimozione di tutte le voci obsolete dall'indice full-text.  
   
  Dopo essere stato riorganizzato, l'indice di esempio dovrebbe contenere le righe seguenti:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66011551"
 |Crank|1|1|1|  
 |Arm|1|1|2|  
 |Tire|1|1|4|  
-|Maintenance|1|1|5|  
+|Manutenzione |1|1|5|  
 |Front|1|2|1|  
 |Rear|1|3|1|  
 |Reflector|1|2|2|  
@@ -127,6 +127,6 @@ ms.locfileid: "66011551"
 |Assembly|1|2|6|  
 |3|1|2|7|  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
   

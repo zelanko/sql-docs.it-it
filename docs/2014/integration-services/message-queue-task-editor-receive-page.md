@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057667"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor attività Message Queue (pagina Ricezione)
@@ -39,10 +39,10 @@ ms.locfileid: "66057667"
  **MessageType**  
  Consente di selezionare il tipo di messaggio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Messaggio file di dati**|Il messaggio viene archiviato in un file. La selezione del valore determina la visualizzazione dell'opzione dinamica **DataFileMessage**.|  
-|**Messaggio variabili**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
+|**Messaggio variabile**|Il messaggio viene archiviato in una variabile. La selezione del valore determina la visualizzazione dell'opzione dinamica **VariableMessage**.|  
 |**Messaggio stringa**|Il messaggio viene archiviato nell'attività Message Queue. La selezione del valore determina la visualizzazione dell'opzione dinamica **StringMessage**.|  
 |**Messaggio stringa in variabile**|Il messaggio viene archiviato in una variabile.<br /><br /> La selezione del valore determina la visualizzazione dell'opzione dinamica **StringMessage**.|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66057667"
  **Filter**  
  Consente di specificare se applicare un filtro al messaggio. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Nessun filtro**|L'attività non filtra i messaggi. La selezione del valore determina la visualizzazione dell'opzione dinamica **IdentifierReadOnly**.|  
 |**Dal pacchetto**|Il messaggio riceve solo messaggi dal pacchetto specificato. La selezione del valore determina la visualizzazione dell'opzione dinamica **Identifier**.|  
@@ -73,21 +73,21 @@ ms.locfileid: "66057667"
  **Identificatore**  
  Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto da cui si possono ricevere i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(...)** e specificare il pacchetto.  
   
- **Argomenti correlati:** [Seleziona pacchetto](control-flow/select-a-package.md)  
+ **Argomenti correlati:** [selezionare un pacchetto](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Messaggio variabili  
  **Filter**  
  Consente di specificare se applicare un filtro ai messaggi. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Nessun filtro**|L'attività non filtra i messaggi. La selezione del valore determina la visualizzazione dell'opzione dinamica **IdentifierReadOnly**.|  
 |**Dal pacchetto**|Il messaggio riceve solo messaggi dal pacchetto specificato. La selezione del valore determina la visualizzazione dell'opzione dinamica **Identifier**.|  
   
  **Variabile**  
- Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...** > per configurare una nuova variabile.  
+ Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...**> per configurare una nuova variabile.  
   
- **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati:** [aggiungere una variabile](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>Opzioni dinamiche di filtro  
   
@@ -99,45 +99,45 @@ ms.locfileid: "66057667"
  **Identificatore**  
  Se si sceglie di applicare un filtro, digitare l'identificatore univoco del pacchetto da cui si possono ricevere i messaggi oppure fare clic sul pulsante con i puntini di sospensione **(...)** e specificare il pacchetto.  
   
- **Argomenti correlati:** [Seleziona pacchetto](control-flow/select-a-package.md)  
+ **Argomenti correlati:** [selezionare un pacchetto](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = Messaggio stringa  
- **Compare**  
+ **Confrontare**  
  Consente di specificare se applicare un filtro ai messaggi. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**None**|I messaggi non vengono confrontati.|  
+|**Nessuno**|I messaggi non vengono confrontati.|  
 |**Corrispondenza esatta**|I messaggi devono corrispondere esattamente alla stringa nell'opzione indicata **CompareString** .|  
 |**Ignora maiuscole/minuscole**|I messaggi devono corrispondere alla stringa indicata nell'opzione **CompareString** , ma nel confronto non viene rilevata la distinzione tra maiuscole e minuscole.|  
-|**Stringa contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
+|**Contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
   
  **CompareString**  
  Specificare la stringa con cui confrontare il messaggio, a meno che l'opzione **Compare** sia impostata su **Nessuno**.  
   
 ### <a name="messagetype--string-message-to-variable"></a>MessageType = Messaggio stringa in variabile  
- **Compare**  
+ **Confrontare**  
  Consente di specificare se applicare un filtro ai messaggi. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**None**|I messaggi non vengono confrontati.|  
+|**Nessuno**|I messaggi non vengono confrontati.|  
 |**Corrispondenza esatta**|I messaggi devono corrispondere esattamente alla stringa indicata nell'opzione **CompareString** .|  
 |**Ignora maiuscole/minuscole**|I messaggi devono corrispondere alla stringa indicata nell'opzione **CompareString** , ma nel confronto non viene rilevata la distinzione tra maiuscole e minuscole.|  
-|**Stringa contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
+|**Contenente**|Il messaggio deve contenere la stringa indicata nell'opzione **CompareString** .|  
   
  **CompareString**  
  Specificare la stringa con cui confrontare il messaggio, a meno che l'opzione **Compare** sia impostata su **Nessuno**.  
   
  **Variabile**  
- Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...** > e quindi configurare una nuova variabile.  
+ Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...**> e quindi configurare una nuova variabile.  
   
- **Argomenti correlati:** [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati:** [aggiungere una variabile](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Message Queue &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor attività Message Queue &#40;pagina Invio&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Editor attività Message Queue &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor attività Message Queue &#40;Invia pagina&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)   
  [Message Queue Task](control-flow/message-queue-task.md)  
   

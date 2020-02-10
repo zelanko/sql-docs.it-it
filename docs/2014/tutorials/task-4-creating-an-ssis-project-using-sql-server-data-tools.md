@@ -1,5 +1,5 @@
 ---
-title: 'Attività 4: Creazione di un progetto SSIS tramite SQL Server Data Tools | Microsoft Docs'
+title: 'Attività 4: creazione di un progetto SSIS con SQL Server Data Tools | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,34 +11,34 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8fb38cb068aca480756db7d962540137c8d4bfac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489201"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Attività 4: Creazione di un progetto SSIS tramite SQL Server Data Tools
-  In questa attività si crea un progetto SSIS mediante **SQL Server Data Tools** per automatizzare la pulizia e corrispondenza dei dati fornitore.  
+  In questa attività viene creato un progetto SSIS utilizzando **SQL Server Data Tools** per automatizzare la pulizia e la corrispondenza dei dati fornitore.  
   
-1.  Avviare **SQL Server Data Tools**. Fare clic su Start, scegliere **tutti i programmi**, espandere **Microsoft SQL Server 2012**, fare clic su **SQL Server Data Tools**.  
+1.  Avviare **SQL Server Data Tools**. Fare clic sul pulsante Start, scegliere **tutti i programmi**, espandere **Microsoft SQL Server 2012**e fare clic su **SQL Server Data Tools**.  
   
 2.  Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-3.  Espandere **Business Intelligence** nel **modelli installati** riquadro e selezionare **Integration Services**.  
+3.  Espandere **Business Intelligence** nel riquadro **modelli installati** e selezionare **Integration Services**.  
   
-     ![Visual Studio - finestra di dialogo Nuovo progetto](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-01.jpg "Visual Studio - finestra di dialogo Nuovo progetto")  
+     ![Visual Studio - Finestra di dialogo Nuovo progetto](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-01.jpg "Visual Studio - Finestra di dialogo Nuovo progetto")  
   
-4.  Selezionare **progetto di Integration Services** nel **elenco dei tipi di progetto**.  
+4.  Selezionare **Integration Services progetto** nell' **elenco dei tipi di progetto**.  
   
-5.  Tipo di **CleanseAndCurateSuppliers** per **Name** e fare clic su **OK**.  
+5.  Digitare **CleanseAndCurateSuppliers** per **nome** e fare clic su **OK**.  
   
-6.  Nelle **Esplora soluzioni** finestra, fare doppio clic su **package. dtsx** e selezionare **rinominare**. Se non viene visualizzata **Esplora soluzioni** finestra, fare clic su **View** nella barra dei menu e fare clic su **Esplora**.  
+6.  Nella finestra **Esplora soluzioni** fare clic con il pulsante destro del mouse su **Package. dtsx** e scegliere **Rinomina**. Se non viene visualizzata **Esplora soluzioni** finestra, fare clic su **Visualizza** nella barra dei menu e fare clic su **Esplora soluzioni**.  
   
-     ![Package. dtsx - Menu Rinomina](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "package. dtsx - Menu Rinomina")  
+     ![Package.dtsx - Menu Rinomina](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "Package.dtsx - Menu Rinomina")  
   
-7.  Tipo di **Cleanseandcurate** , quindi premere **invio**. Assicurarsi che il **estensione** rimane **dtsx**.  
+7.  Digitare **CleanseAndCurate. dtsx** e premere **invio**. Verificare che l' **estensione** rimanga **. dtsx**.  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 5: Aggiunta di attività flusso di dati](task-5-adding-data-flow-task.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 5: Aggiunta dell'attività Flusso di dati](task-5-adding-data-flow-task.md)  
   
   

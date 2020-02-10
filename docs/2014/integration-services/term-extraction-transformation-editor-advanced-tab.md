@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione estrazione termini (scheda Avanzate) | Microsoft Docs
+title: Editor trasformazione Estrazione termini (scheda Avanzate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055264"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor trasformazione Estrazione termini (Scheda Avanzate)
-  Usare la scheda**Avanzate** della finestra di dialogo **Editor trasformazione Estrazione termini** per specificare le proprietà per l'estrazione, ad esempio la frequenza, la lunghezza e le eventuali parole o frasi da estrarre.  
+  Usare la scheda **Avanzate** della finestra di dialogo **Editor trasformazione Estrazione termini** per specificare le proprietà per l'estrazione, ad esempio la frequenza, la lunghezza e le eventuali parole o frasi da estrarre.  
   
  Per ulteriori informazioni sulla trasformazione Estrazione termini, vedere [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
@@ -40,15 +40,15 @@ ms.locfileid: "66055264"
  Consente di specificare che il punteggio è rappresentato dalla frequenza del termine.  
   
  **TFIDF**  
- Consente di specificare che il punteggio è rappresentato dal valore TFIDF del termine. Il punteggio TFIDF è il prodotto tra la frequenza del termine (TF) e l'inverso della frequenza nei documenti (IDF) espresso dalla ponderazione seguente: TFIDF di un termine T = (frequenza di T) * log( (numero di righe nell'input) / (numero di righe contenenti T) )  
+ Consente di specificare che il punteggio è rappresentato dal valore TFIDF del termine. Il punteggio TFIDF è il prodotto della frequenza dei termini e della frequenza inversa dei documenti, definito come: TFIDF di un termine T = (frequenza di T) * log( (numero di righe nell'input) / (numero di righe contenenti T) )  
   
- **Soglia di frequenza**  
+ **Soglia frequenza**  
  Consente di specificare il numero di volte in cui una parola o una frase deve ricorrere prima che venga estratta. Il valore predefinito è 2.  
   
- **Lunghezza massima termine**  
+ **Lunghezza massima del termine**  
  Consente di specificare la lunghezza massima in parole di una frase. Questa opzione ha effetto soltanto sui sintagmi nominali. Il valore predefinito è 12.  
   
- **Estrazione con distinzione maiuscole/minuscole**  
+ **Estrazione del termine con distinzione tra maiuscole e minuscole**  
  Consente di specificare se eseguire l'estrazione rilevando la distinzione tra maiuscole e minuscole. Il valore predefinito è `False`.  
   
  **Configura output errori**  
@@ -57,7 +57,7 @@ ms.locfileid: "66055264"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor trasformazione Estrazione termini &#40;scheda Estrazione termini&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Editor trasformazione Estrazione termini &#40;scheda Esclusione&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [Trasformazione Ricerca termini](data-flow/transformations/lookup-transformation.md)  
+ [Editor trasformazione Estrazione termini &#40;scheda esclusione&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Ricerca termini - trasformazione](data-flow/transformations/lookup-transformation.md)  
   
   

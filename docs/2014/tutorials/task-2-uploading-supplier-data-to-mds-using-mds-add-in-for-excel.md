@@ -1,5 +1,5 @@
 ---
-title: 'Attività 2: Caricamento dei dati fornitore in MDS utilizzando il componente aggiuntivo MDS per Excel | Microsoft Docs'
+title: 'Attività 2: caricamento dei dati fornitore in MDS tramite Componente aggiuntivo MDS per Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,58 +11,58 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484667"
 ---
-# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Attività 2: Caricamento dei dati fornitore in MDS tramite il componente aggiuntivo MDS per Excel
-  In questa attività si pubblicano i dati puliti e fornitore **MDS** usando la **il componente aggiuntivo MDS per Excel**. Creare un'entità denominata **Supplier** nel **Suppliers** modello creato nella lezione precedente. All'entità sarà associato un attributo per ogni colonna nel file di Excel. Gli attributi Name e Code dell'entità Supplier corrispondono per la **SupplierID** e **Supplier Name** colonne in Excel.  
+# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Attività 2: Caricamento dei dati fornitore in MDS utilizzando il componente aggiuntivo MDS per excel
+  In questa attività verranno pubblicati i dati puliti e fornitore in **MDS** utilizzando il **componente aggiuntivo MDS per Excel**. Si crea un'entità denominata **Supplier** nel modello **Suppliers** creato nella lezione precedente. All'entità sarà associato un attributo per ogni colonna nel file di Excel. Gli attributi di codice e nome dell'entità Supplier corrispondono alle colonne **SupplierID** e **Supplier Name** in Excel.  
   
-1.  Aprire **puliti e Matched Suppliers. xls** nelle **Excel**.  
+1.  Aprire **cleand and Matched Suppliers. xls** in **Excel**.  
   
-2.  Premere **CTRL + A** per selezionare tutti i dati. Si tratta **importante** di selezionare tutti i dati nel foglio di calcolo.  
+2.  Premere **CTRL + a** per selezionare tutti i dati. È **importante** selezionare tutti i dati nel foglio di calcolo.  
   
-3.  Fare clic su **dati Master** nella barra dei menu.  
+3.  Fare clic su **dati master** sulla barra dei menu.  
   
-4.  Fare clic su **Crea entità** pulsante della barra multifunzione.  
+4.  Fare clic sul pulsante **Crea entità** sulla barra multifunzione.  
   
-     ![Excel - scheda dati Master - pulsante Crea entità](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel - scheda dati Master - pulsante Crea entità")  
+     ![Excel - Scheda Dati master - Pulsante Crea entità](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel - Scheda Dati master - Pulsante Crea entità")  
   
-5.  Nelle **Gestisci connessioni** finestra di dialogo, se non è possibile visualizzare la connessione al **server MDS locale** sotto **connessioni esistenti**, eseguire le operazioni seguenti:  
+5.  Nella finestra di dialogo **Gestisci connessioni** , se non si visualizza la connessione al **Server MDS locale** in **connessioni esistenti**, effettuare le seguenti operazioni:  
   
-    1.  Selezionare **creare una nuova connessione**, fare clic su **New** pulsante.  
+    1.  Selezionare **Crea una nuova connessione**e fare clic sul pulsante **nuovo** .  
   
-    2.  Nel **Aggiungi nuova connessione** finestra di dialogo, digitare **Server MDS locale** per **descrizione** e **http://localhost/MDS** per  **Indirizzo server MDS**, fare clic su **OK** per chiudere la finestra di dialogo.  
+    2.  Nella finestra di dialogo **Aggiungi nuova connessione** digitare **Server MDS locale** per **Descrizione** e **http://localhost/MDS** per **Indirizzo server MDS**, quindi fare clic su **OK** per chiudere la finestra di dialogo.  
   
-6.  Nelle **Gestisci connessioni** finestra di dialogo **Server MDS locale** (http://localhost/MDS), fare clic su **testare** per testare la connessione. Fare clic su **OK** nella finestra di messaggio.  
+6.  Nella finestra di dialogo **Gestisci connessioni** selezionare **Server MDS locale** (http://localhost/MDS), fare clic su **test** per testare la connessione. Fare clic su **OK** nella finestra di messaggio.  
   
-7.  Fare clic su **Connect** per connettersi al server MDS.  
+7.  Fare clic su **Connetti** per connettersi al server MDS.  
   
-8.  Nel **Crea entità** finestra di dialogo **Suppliers** per il **modello**.  
+8.  Nella finestra di dialogo **Crea entità** selezionare **Suppliers** per il **modello**.  
   
-9. Assicurarsi che **VERSION_1** sia selezionata per **versione**.  
+9. Verificare che sia selezionato **VERSION_1** per la **versione**.  
   
-10. Immettere **Supplier** per **Nome nuova entità**.  
+10. Immettere **Supplier** per **nome nuova entità**.  
   
-11. Selezionare **SupplierID** per **la colonna che contiene un identificatore univoco** campo (è anche possibile generare un codice automaticamente). Essenzialmente esegue il mapping del **SupplierID** colonna **Excel** per il **codice** attributo del **Supplier** entità.  
+11. Selezionare **SupplierID** per **la colonna contenente un campo identificatore univoco** . è anche possibile generare automaticamente un codice. Si sta essenzialmente eseguendo il mapping della colonna **SupplierID** in **Excel** all'attributo **Code** dell'entità **Supplier** .  
   
-12. Selezionare **Supplier Name** per **la colonna che contiene i nomi** campo. Essenzialmente esegue il mapping del **Supplier Name** colonna **Excel** per il **nome** attributo del **Supplier** entità. Il **codice** e **nome** gli attributi sono attributi obbligatori per un'entità in MDS.  
+12. Selezionare **Supplier Name** per **la colonna che contiene il campo names** . Si sta essenzialmente eseguendo il mapping della colonna **Supplier Name** in **Excel** all'attributo **Name** dell'entità **Supplier** . Gli attributi del **nome** e del **codice** sono attributi obbligatori per un'entità in MDS.  
   
-     ![Creare la finestra di dialogo Entity](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-02.jpg "dialogo Crea entità")  
+     ![Finestra di dialogo Crea entità](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-02.jpg "Finestra di dialogo Crea entità")  
   
-13. Fare clic su **OK** per creare l'entità in MDS, pubblicare i dati master all'entità e chiudere **Crea entità** nella finestra di dialogo.  
+13. Fare clic su **OK** per creare l'entità in MDS, pubblicare i dati master nell'entità e chiudere la finestra di dialogo **Crea entità** .  
   
-14. Ora, verrà visualizzato un nuovo foglio denominato **Supplier**, ovvero il nome dell'entità, aggiunto al foglio di calcolo di Excel e nella parte superiore del foglio di lavoro si dovrebbe vedere che il foglio di lavoro è connesso al server MDS. Si noti che il foglio di lavoro originale (intitolata **Sheet1**) esiste ancora.  
+14. A questo punto, verrà visualizzato un nuovo foglio denominato **Supplier**, che è il nome dell'entità, aggiunto al foglio di calcolo di Excel e nella parte superiore del foglio di lavoro si noterà che il foglio di lavoro è connesso al server MDS. Si noti che il foglio di foglio originale (denominato **Sheet1**) esiste ancora.  
   
-     ![Excel - schede fornitore e Foglio1](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-03.jpg "Excel - schede fornitore e Foglio1")  
+     ![Excel - Schede Fornitore e Foglio1](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-03.jpg "Excel - Schede Fornitore e Foglio1")  
   
-     ![Excel - visualizzazione Dettagli connessione MDS](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-04.jpg "Excel - visualizzazione Dettagli connessione MDS")  
+     ![Excel - Visualizzazione dettagli connessione MDS](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-04.jpg "Excel - Visualizzazione dettagli connessione MDS")  
   
-15. Mantieni **Excel** aprire.  
+15. Mantieni aperto **Excel** .  
   
 ## <a name="next-task"></a>Attività successiva  
- [Attività 3: Verifica per determinare se i dati in Gestione dati Master](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [Attività 3: Verifica dei dati in Gestione dati master](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

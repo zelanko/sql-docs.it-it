@@ -1,5 +1,5 @@
 ---
-title: 'Attività 2: Mapping delle colonne di Excel ai domini DQS | Microsoft Docs'
+title: 'Attività 2: mapping delle colonne di Excel ai domini DQS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,44 +11,44 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484698"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Attività 2: Mapping delle colonne di Excel ai domini DQS
     
 1.  Nella pagina **Mappa** selezionare **File di Excel** per **Origine dati**.  
   
-2.  Fare clic su **esplorare**, selezionare **Suppliers. xlsx**, fare clic su **Open**.  
+2.  Fare clic su **Sfoglia**, selezionare **Suppliers. xlsx**, quindi fare clic su **Apri**.  
   
-3.  Selezionare **IncomingSuppliers$** per il **foglio di lavoro**.  
+3.  Selezionare **IncomingSuppliers $** per il **foglio di foglio**.  
   
-4.  Eseguire il mapping delle colonne come illustrato nella tabella e schermata seguenti. Durante la creazione di mapping per il **lo stato** dominio, fare clic su **Aggiungi un mapping colonne** pulsante sulla barra degli strumenti posizionata proprio sopra l'elenco.  
+4.  Eseguire il mapping delle colonne come illustrato nella tabella e schermata seguenti. Quando si creano i mapping per il dominio di **stato** , fare clic sul pulsante **Aggiungi un mapping colonne** sulla barra degli strumenti posizionata sopra l'elenco.  
   
     > [!TIP]  
-    >  Non si usa **Supplier ID** colonna/il dominio per la pulizia. Si userà il **Supplier ID** dominio in un secondo momento nell'attività di corrispondenza.  
+    >  Per la pulizia non si utilizza la colonna o il dominio **Supplier ID** . Il dominio **Supplier ID** viene usato più avanti nell'attività di corrispondenza.  
   
     |Colonna di Excel|Dominio DQS|  
     |------------------|----------------|  
     |Supplier Name|Supplier Name|  
-    |ContactEmailAddress|Contact Email|  
+    |ContactEmailAddress|Indirizzo di posta elettronica del contatto|  
     |Riga indirizzo|Riga indirizzo|  
-    |Città|Città|  
+    |city|city|  
     |State|State|  
-    |Paese (fare clic su **+ (Aggiungi un mapping colonne)** sulla barra degli strumenti per aggiungere una riga)|Country|  
-    |Zip Code|CAP|  
+    |Country (fare clic su **+ (Aggiungi una colonna Mapping)** barra degli strumenti per aggiungere una riga|Country|  
+    |Zip Code|Zip|  
   
-     ![I mapping delle colonne di Excel ai domini](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "i mapping delle colonne di Excel ai domini")  
+     ![Mapping delle colonne di Excel ai domini](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "Mapping delle colonne di Excel ai domini")  
   
-5.  Come è stato eseguito il mapping di tutti i singoli domini all'interno di **Address Validation** dominio composito, il dominio composito partecipa automaticamente anche il processo di pulizia. Fare clic su **Visualizza/seleziona domini compositi** pulsante per verificare che il **Address Validation** dominio composito viene selezionata automaticamente e quindi fare clic su **OK**.  
+5.  Poiché è stato eseguito il mapping di tutti i singoli domini all'interno del dominio composito **Address Validation** , il dominio composito partecipa automaticamente al processo di pulizia. Fare clic sul pulsante **Visualizza/Seleziona domini compositi** per verificare che il dominio composito **Address Validation** sia selezionato automaticamente, quindi fare clic su **OK**.  
   
-     ![Finestra di dialogo Visualizza/seleziona domini compositi](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-02.jpg "finestra di dialogo Visualizza/seleziona domini compositi")  
+     ![Finestra di dialogo Visualizza/Seleziona domini compositi](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-02.jpg "Finestra di dialogo Visualizza/Seleziona domini compositi")  
   
-6.  Fare clic su **successivo** per passare alle **Pulisci** pagina.  
+6.  Fare clic su **Avanti** per passare alla pagina **Pulisci** .  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 3: Pulizia dei dati rispetto alla Knowledge Base Suppliers](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 3: Pulizia dei dati fornitore rispetto alla Knowledge Base Suppliers](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

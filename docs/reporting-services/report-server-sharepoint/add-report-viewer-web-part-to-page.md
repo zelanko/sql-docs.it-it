@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574783"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Aggiungere la web part Visualizzatore di report di SQL Server Reporting Services in una pagina di SharePoint
@@ -42,7 +42,7 @@ Visualizzare un report, da SQL Server Reporting Services o dal server di report 
 
     ![Inserire una web part dalla barra multifunzione di Office.](media/sharepoint-insert-web-part.png)
 
-4. In **Categorie** selezionare **SQL Server Reporting Services (modalità nativa). In **Parts** selezionare **Visualizzatore report**. Selezionare quindi **Aggiungi**.
+4. In **Categorie** selezionare **SQL Server Reporting Services (modalità nativa). In **Parts** selezionare **Visualizzatore report**. Quindi selezionare **Aggiungi**.
 
     ![Aggiungere la web part Visualizzatore di report.](media/sharepoint-report-viewer-web-part.png)
 
@@ -68,7 +68,7 @@ Per configurare la web part in modo da puntare al report specifico, eseguire le 
 
 ![Web part Visualizzatore di report in una pagina di SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="considerations-and-limitations"></a>Considerazioni e limitazioni
+## <a name="considerations-and-limitations"></a>Considerazioni e limiti
 
 * La web part Visualizzatore di report non può essere usata nelle pagine moderne all'interno di SharePoint.
 * I report di Power BI non possono essere usati con la web part Visualizzatore di report.

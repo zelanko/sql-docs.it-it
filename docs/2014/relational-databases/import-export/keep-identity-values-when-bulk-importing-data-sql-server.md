@@ -15,16 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011911"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenere i valori Identity durante l'importazione bulk dei dati (SQL Server)
-  È possibile eseguire l'importazione bulk di file di dati contenenti valori Identity in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, i valori per la colonna Identity del file di dati importato vengono ignorati e sostituiti automaticamente da valori univoci assegnati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori univoci si basano sui valori di inizializzazione e incremento specificati durante la creazione della tabella.  
+  È possibile eseguire l'importazione bulk dei file di dati contenenti valori Identity in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]un'istanza di. Per impostazione predefinita, i valori per la colonna Identity del file di dati importato vengono ignorati e sostituiti automaticamente da valori univoci assegnati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori univoci si basano sui valori di inizializzazione e incremento specificati durante la creazione della tabella.  
   
- Se il file di dati non contiene valori per la colonna dell'identificatore nella tabella, utilizzare un file di formato per specificare di ignorare la colonna dell'identificatore nella tabella durante l'importazione dei dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna automaticamente valori univoci per la colonna.  
+ Se il file di dati non contiene valori per la colonna dell'identificatore nella tabella, utilizzare un file di formato per specificare di ignorare la colonna dell'identificatore nella tabella durante l'importazione dei dati. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna automaticamente valori univoci per la colonna.  
   
  Per impedire l'assegnazione da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di valori Identity durante l'importazione bulk delle righe di dati in una tabella, utilizzare il qualificatore per il mantenimento dei valori Identity corretto. Quando si specifica un qualificatore per il mantenimento dei valori Identity, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza i valori Identity nel file di dati. Sono disponibili i qualificatori seguenti:  
   
@@ -40,7 +41,7 @@ ms.locfileid: "66011911"
 >  Per creare un numero a incremento automatico da usare in più tabelle o da chiamare dalle applicazioni senza fare riferimento ad alcuna tabella, vedere [Numeri di sequenza](../sequence-numbers/sequence-numbers.md).  
   
 ## <a name="examples"></a>Esempi  
- Negli esempi di questo argomento viene eseguita un'importazione bulk dei dati tramite INSERT ... SELECT * FROM OPENROWSET(BULK...) mantenendo i valori predefiniti.  
+ Negli esempi di questo argomento viene utilizzata l'importazione bulk dei dati tramite INSERT... Selezionare * FROM OPENROWSET (BULK...) e mantenere i valori predefiniti.  
   
 ### <a name="sample-table"></a>Tabella di esempio  
  Gli esempi di importazione in blocco richiedono la creazione di una tabella denominata **myTestKeepNulls** nel database di esempio **AdventureWorks** nello schema **dbo**. Per creare la tabella seguente. nell'editor di query di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] eseguire:  
@@ -73,13 +74,13 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
   
  Per altre informazioni sulla creazione di un file di formato, vedere [Creazione di un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
-### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Utilizzo di bcp mantenendo i valori Identity  
+### <a name="a-using-bcp-and-keeping-identity-values"></a>R. Utilizzo di bcp mantenendo i valori Identity  
  Nell'esempio seguente viene illustrato come mantenere i valori Identity quando si utilizza `bcp` per l'importazione bulk dei dati. Il comando `bcp` utilizza il file di formato `myDepartment-f-n-x.Xml` e include le opzioni seguenti:  
   
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**-E**|Specifica che il valore o i valori Identity inclusi nel file di dati devono essere utilizzati per la colonna Identity.|  
-|**-T**|Specifica che il `bcp` utilità si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite una connessione trusted.|  
+|**-T**|Specifica che l' `bcp` utilità si connette [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a con una connessione trusted.|  
   
  Al prompt dei comandi di Windows digitare:  
   
@@ -134,19 +135,19 @@ GO
   
 -   [Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Preparazione dei dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Preparare i dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
- **Per utilizzare un file di formato**  
+ **Per usare un file di formato**  
   
--   [Creare un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
+-   [Creazione di un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
 -   [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
--   [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Usare un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  
   
@@ -154,19 +155,19 @@ GO
   
 -   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Per specificare i formati di dati per la compatibilità mediante bcp**  
+ **Per specificare i formati di dati per la compatibilità con bcp**  
   
-1.  [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+1.  [Specificare i terminatori del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [Specificare la lunghezza del prefisso nei file di dati con bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [Specificare la lunghezza del prefisso nei file di dati tramite bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Specificare il tipo di archiviazione di file con bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Specificare il tipo di archiviazione di file utilizzando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

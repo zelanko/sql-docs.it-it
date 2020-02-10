@@ -1,5 +1,5 @@
 ---
-title: I report per il Server Integration Services | Microsoft Docs
+title: Report per il server di Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056437"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Report per il server Integration Services
@@ -31,7 +31,7 @@ ms.locfileid: "66056437"
   
  Nel report sono mostrate le sezioni di informazioni seguenti.  
   
-|`Section`|Descrizione|  
+|Sezione|Descrizione|  
 |-------------|-----------------|  
 |**Informazioni sulle esecuzioni**|Viene mostrato il numero di esecuzioni che si trovano in stati diversi (operazione non riuscita, in esecuzione, operazione riuscita e altri) nelle ultime 24 ore.|  
 |**Informazioni sui pacchetti**|Viene mostrato il numero totale di pacchetti eseguiti nelle ultime 24 ore.|  
@@ -45,7 +45,7 @@ ms.locfileid: "66056437"
   
  Nel report sono mostrate le sezioni di informazioni seguenti.  
   
-|`Section`|Descrizione|  
+|Sezione|Descrizione|  
 |-------------|-----------------|  
 |Filtro|Mostra il filtro corrente applicato al report, ad esempio l'intervallo Ora inizio.|  
 |Informazioni sulle esecuzioni|Indica l'ora di inizio, l'ora di fine e la durata di ogni esecuzione del pacchetto. È possibile visualizzare un elenco di valori dei parametri utilizzati con l'esecuzione di un pacchetto, ad esempio i valori passati a un pacchetto figlio utilizzando l'attività Esegui pacchetto. Per visualizzare l'elenco dei parametri, fare clic su Panoramica.|  
@@ -59,7 +59,7 @@ ms.locfileid: "66056437"
   
  Nel report sono mostrate le sezioni di informazioni seguenti.  
   
-|`Section`|Descrizione|  
+|Sezione|Descrizione|  
 |-------------|-----------------|  
 |Filtro|Mostra il filtro corrente applicato al report, ad esempio le connessioni con una stringa specificata e il valore di **Intervallo di ore ultimo errore** .<br /><br /> Impostare un valore per **Intervallo di ore ultimo errore** per visualizzare solo gli errori di connessione che si sono verificati durante un intervallo di date. L'intervallo può estendersi per più giorni, mesi o anni.|  
 |Dettagli|Mostra la stringa di connessione, il numero di esecuzioni durante le quali una connessione non è riuscita e la data in cui l'ultima connessione non è riuscita.|  

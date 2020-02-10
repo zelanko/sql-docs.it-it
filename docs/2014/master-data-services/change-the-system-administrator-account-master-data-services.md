@@ -1,5 +1,5 @@
 ---
-title: Modificare l'Account di amministratore di sistema (Master Data Services) | Microsoft Docs
+title: Modificare l'account amministratore di sistema (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054143"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Modificare l'account amministratore di sistema (Master Data Services)
-  È possibile modificare l'account utente che è designato come il [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] amministratore di sistema.  
+  È possibile modificare l'account utente designato come amministratore di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sistema.  
   
 > [!WARNING]  
 >  Al termine di questa procedura, l'account utente dell'amministratore di sistema precedente viene eliminato.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario aggiungere il nome utente del nuovo amministratore all'elenco degli utenti di [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Per altre informazioni, vedere [aggiungere un utente &#40;Master Data Services&#41;](add-a-user-master-data-services.md).  
@@ -36,11 +36,11 @@ ms.locfileid: "66054143"
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e connettersi all'istanza [!INCLUDE[ssDE](../includes/ssde-md.md)] per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-2.  In MDM. tbluser individuare l'utente che sarà il nuovo amministratore e copiare il valore di `SID` colonna.  
+2.  In MDM. tblUser trovare l'utente che sarà il nuovo amministratore e copiare il valore nella `SID` colonna.  
   
 3.  Creare una nuova query.  
   
-4.  Digitare il testo seguente, sostituendo *DOMINIO\nome_utente.* con il nome utente dell'amministratore e *SID* con il valore copiato nel passaggio 2.  
+4.  Digitare il testo seguente, sostituendo *Domain \ user_name* con il nome utente e il *SID* del nuovo amministratore con il valore copiato nel passaggio 2.  
   
     ```  
     EXEC [mdm].[udpSecuritySetAdministrator] @UserName='DOMAIN\user_name', @SID = 'SID', @PromoteNonAdmin = 1  

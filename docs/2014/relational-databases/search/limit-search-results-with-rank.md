@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011152"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitazione dei risultati della ricerca mediante RANK
@@ -37,7 +37,7 @@ ms.locfileid: "66011152"
   
 ##  <a name="examples"></a> Esempi di utilizzo di RANK per limitare i risultati della ricerca  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Esempio a: Ricerca delle prime tre corrispondenze  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Esempio A: Ricerca delle prime tre corrispondenze  
  Nell'esempio seguente viene utilizzato CONTAINSTABLE per restituire solo le prime tre corrispondenze.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Esempio b: Ricerca delle prime dieci corrispondenze  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Esempio B: Ricerca delle prime dieci corrispondenze  
  Nell'esempio seguente viene utilizzato CONTAINSTABLE per restituire la descrizione dei primi 5 prodotti la cui colonna `Description` include la parola "aluminum" accanto alla parola "light" o "lightweight".  
   
 ```  
@@ -143,7 +143,7 @@ GO
   
  Statistiche quali `IndexRowCount` possono variare notevolmente. Se, ad esempio, un catalogo presenta 2 miliardi di righe nell'indice master, un nuovo documento viene indicizzato in un indice intermedio in memoria e la pertinenza corrispondente basata sul numero di documenti dell'indice in memoria potrebbe essere asimmetrica rispetto alla pertinenza per i documenti dall'indice master. Per questo motivo, dopo ogni popolamento che determini l'indicizzazione o la reindicizzazione di un grande numero di righe è consigliabile unire gli indici in un indice master utilizzando l'istruzione ALTER FULLTEXT CATALOG ... Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Il motore di ricerca full-text, inoltre, unirà automaticamente gli indici in base a parametri quali il numero e le dimensioni di indici intermedi.  
   
- I valori `MaxOccurrence` vengono normalizzati in 1 di 32 intervalli. Ciò significa, ad esempio, che un documento di 50 parole di lunghezza viene gestito come un documento di 100 parole. Di seguito viene riportata la tabella utilizzata per la normalizzazione. Poiché le lunghezze di documento sono compresi nell'intervallo tra i valori di tabella adiacenti 32 e 128, essi vengono di fatto gestiti come se avessero la stessa lunghezza, 128 (32 < `docLength` < = 128).  
+ I valori `MaxOccurrence` vengono normalizzati in 1 di 32 intervalli. Ciò significa, ad esempio, che un documento di 50 parole di lunghezza viene gestito come un documento di 100 parole. Di seguito viene riportata la tabella utilizzata per la normalizzazione. Poiché le lunghezze dei documenti rientrano nell'intervallo tra i valori di tabella adiacenti 32 e 128, vengono trattati in modo efficace con la stessa `docLength` lunghezza, 128 (32 < <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -204,6 +204,6 @@ qtf is the frequency of the term in the query.
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione della query con ricerca Full-Text](query-with-full-text-search.md)  
+ [Eseguire query con ricerca full-text](query-with-full-text-search.md)  
   
   

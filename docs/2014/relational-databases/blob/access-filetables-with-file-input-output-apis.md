@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010363"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
@@ -63,7 +63,7 @@ ms.locfileid: "66010363"
 ##  <a name="supported"></a> Operazioni del file system supportate  
  Le tabelle FileTable supportano le API del file system correlate alle operazioni del file system seguenti:  
   
--   Gestione delle directory  
+-   Gestione directory  
   
 -   Gestione dei file  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66010363"
   
 ##  <a name="considerations"></a> Considerazioni aggiuntive relative all'accesso di I/O dei file in tabelle FileTable  
   
-###  <a name="vnn"></a> Utilizzo di nomi di rete virtuale con i gruppi di disponibilità AlwaysOn  
+###  <a name="vnn"></a>Uso dei nomi di rete virtuale (VNN) con Gruppi di disponibilità AlwaysOn  
  Quando il database che contiene dati FILESTREAM o FileTable appartiene a un gruppo di disponibilità AlwaysOn, quindi ogni accesso a dati FILESTREAM o FileTable tramite le API del file system deve utilizzare VNN anziché nomi computer. Per altre informazioni, vedere [FILESTREAM e FileTable con i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="partial"></a> Aggiornamenti parziali  
@@ -102,33 +102,33 @@ ms.locfileid: "66010363"
   
 ##  <a name="funclist"></a> Funzionalità del file system supportate nelle tabelle FileTable  
   
-|Funzionalità|Supported|Commenti|  
+|Funzionalità|Supportato|Commenti|  
 |----------------|---------------|--------------|  
-|**Blocchi opportunistici (oplock)**|Yes|È disponibile il supporto opportunistico per livello 1, livello 2, batch e filtri.|  
+|**Blocchi opportunistici (oplock)**|Sì|È disponibile il supporto opportunistico per livello 1, livello 2, batch e filtri.|  
 |**Attributi estesi**|No||  
-|**Punti di analisi**|no||  
+|**Punti di analisi**|No||  
 |**ACL persistenti**|No||  
 |**Flussi denominati**|No||  
-|**File sparse**|Yes|Il tipo sparse può essere impostato solo per i file e influisce sull'archiviazione del flusso dei dati. Poiché i dati FILESTREAM vengono archiviati in volumi NTFS, la funzionalità FileTable supporta file sparse inoltrando le richieste al file system NTFS.|  
-|**Compressione**|Yes||  
-|**Crittografia**|Yes||  
-|**TxF**|no||  
-|**ID file**|no||  
+|**File sparse**|Sì|Il tipo sparse può essere impostato solo per i file e influisce sull'archiviazione del flusso dei dati. Poiché i dati FILESTREAM vengono archiviati in volumi NTFS, la funzionalità FileTable supporta file sparse inoltrando le richieste al file system NTFS.|  
+|**Compressione**|Sì||  
+|**Encryptiion**|Sì||  
+|**TxF**|No||  
+|**ID file**|No||  
 |**ID oggetto**|No||  
 |**Collegamenti simbolici**|No||  
 |**Collegamenti reali**|No||  
 |**Nomi brevi**|No||  
 |**Notifiche di modifica di directory**|No||  
-|**Blocco di intervalli di byte**|Yes|Le richieste del blocco degli intervalli di byte vengono passate al file system NTFS.|  
+|**Blocco di intervalli di byte**|Sì|Le richieste del blocco degli intervalli di byte vengono passate al file system NTFS.|  
 |**File di cui è stato eseguito il mapping in memoria**|No||  
-|**Annullamento I/O**|Yes||  
-|**Sicurezza**|no|Vengono applicate la sicurezza a livello di condivisione di Windows e la sicurezza a livello di tabella e di colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**Annullamento I/O**|Sì||  
+|**Sicurezza**|No|Vengono applicate la sicurezza a livello di condivisione di Windows e la sicurezza a livello di tabella e di colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Journal USN**|No|Le modifiche ai metadati di file e directory in una tabella FileTable sono operazioni DML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vengono pertanto registrate nel file di log del database corrispondente. Non vengono invece registrate nel journal USN NTFS, ad eccezione delle modifiche di dimensione.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per acquisire informazioni simili.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Caricamento di file in FileTable](load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Accesso a tabelle FileTable tramite Transact-SQL](access-filetables-with-transact-sql.md)   
- [DDL FileTable, funzioni, stored Procedure e viste](../views/views.md)  
+ [DDL, funzioni, stored procedure e viste FileTable](../views/views.md)  
   
   

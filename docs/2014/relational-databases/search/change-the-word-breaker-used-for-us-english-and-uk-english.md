@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012749"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)
@@ -35,7 +35,7 @@ ms.locfileid: "66012749"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Per passare dalla versione corrente del word breaker per la lingua inglese Stati Uniti alla versione precedente  
   
-1.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 2.  Utilizzare i passaggi seguenti per aggiungere nuove chiavi per i ClassID COM per le interfacce del word breaker e dello stemmer per la lingua inglese Stati Uniti precedenti per l'LCID 1033:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66012749"
   
     4.  Aggiornare i dati (predefiniti) del valore della chiave a **infosoft.dll**.  
   
-3.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\enu**.  
+3.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\enu**.  
   
 4.  Aggiornare il valore della chiave **WBreakerClass** a **{188D6CC5-CB03-4C01-912E-47D21295D77E}** .  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66012749"
   
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Per passare dalla versione corrente del word breaker per la lingua inglese Regno Unito alla versione precedente  
   
-1.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 2.  Utilizzare i passaggi seguenti per aggiungere una nuova chiave per i ClassID COM per le interfacce del word breaker e dello stemmer per la lingua inglese Regno Unito precedenti per l'LCID 2057:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66012749"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Per tornare alla versione corrente del word breaker per la lingua inglese Stati Uniti dalla versione precedente  
   
-1.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 2.  Se le chiavi seguenti non sono presenti, utilizzare la procedura indicata di seguito per aggiungere una nuova chiave per i ClassID COM per le interfacce del word breaker e dello stemmer per la lingua inglese Stati Uniti correnti per l'LCID 1033:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66012749"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Per tornare alla versione corrente del word breaker per la lingua inglese Regno Unito dalla versione precedente  
   
-1.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
+1.  Nel Registro di sistema spostarsi sul nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
   
 2.  Se le chiavi seguenti non sono presenti, utilizzare la procedura indicata di seguito per aggiungere una nuova chiave per i ClassID COM per le interfacce del word breaker e dello stemmer per la lingua inglese Regno Unito correnti per l'LCID 2057:  
   

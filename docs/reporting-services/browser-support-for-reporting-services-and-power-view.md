@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574813"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Supporto browser per Reporting Services e Power View
@@ -98,7 +98,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 |**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Negotiate|Sì. Le impostazioni di autenticazione predefinite funzionano con Internet Explorer.|
 |**Google Chrome**(+)|Negotiate, NTLM, Basic|Negotiate|Sì. Le impostazioni di autenticazione predefinite funzionano con Chrome.|
 |**Mozilla Firefox**(+)|NTLM, Basic|NTLM|Sì. Le impostazioni di autenticazione predefinite funzionano con Firefox.|
-|**Apple Safari**(+)|NTLM, Basic|Standard|Sì. Le impostazioni di autenticazione predefinite funzionano con Safari.|
+|**Apple Safari**(+)|NTLM, Basic|Basic|Sì. Le impostazioni di autenticazione predefinite funzionano con Safari.|
 
  **(+)** Ultima versione rilasciata pubblicamente
 
@@ -157,7 +157,7 @@ Di seguito è riportato l'elenco corrente dei browser supportati per il portale 
 [Ricerca e visualizzazione di report nel portale Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Strumenti di Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Portale Web (modalità nativa SSRS)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[Visualizzatore HTML e barra degli strumenti dei report](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Riferimento ai parametri di accesso con URL](../reporting-services/url-access-parameter-reference.md)  
 
 Altre domande? [Visitare il forum su Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056637"
 ---
 # <a name="query-builder"></a>Generatore di query
@@ -26,13 +26,13 @@ ms.locfileid: "66056637"
   
  È possibile utilizzare Generatore query per eseguire le attività seguenti:  
   
--   **Utilizzare la rappresentazione grafica di una query o comandi SQL** Generatore query include un riquadro che contiene una rappresentazione grafica della query e un riquadro in cui viene visualizzato il testo SQL della query. È possibile utilizzare indifferentemente il riquadro del grafico o il riquadro del testo. Generatore query sincronizza le visualizzazioni in modo che siano sempre aggiornate.  
+-   **Utilizzo di una rappresentazione grafica di una query o di comandi SQL** Generatore di query include un riquadro che consente di visualizzare graficamente la query e un riquadro in cui viene visualizzato il testo SQL della query. È possibile utilizzare indifferentemente il riquadro del grafico o il riquadro del testo. Generatore query sincronizza le visualizzazioni in modo che siano sempre aggiornate.  
   
--   **Unire in join tabelle correlate** Se in una query si aggiungono più tabelle, Generatore query determina automaticamente il tipo di relazione tra le tabelle e formula il comando di join appropriato.  
+-   **Unione di tabelle correlate** Se si aggiungono più tabelle alla query, Generatore di query determina automaticamente il modo in cui le tabelle sono correlate e crea il comando join appropriato.  
   
--   **Aggiornare o eseguire query di database** È possibile usare Generatore query per restituire dati usando istruzioni Transact-SQL di tipo SELECT e creare query per l'aggiornamento, l'inserimento e l'eliminazione di record in un database.  
+-   **Esecuzione di query o aggiornamento di database** È possibile utilizzare Generatore di query per restituire i dati utilizzando le istruzioni Transact-SQL SELECT e creare query per l'aggiornamento, l'aggiunta o l'eliminazione di record in un database.  
   
--   **Visualizzare e modificare immediatamente i risultati** È possibile eseguire una query ed eseguire operazioni su un recordset in una griglia che consente di scorrere e modificare i record nel database.  
+-   **Visualizzazione e modifica immediata dei risultati** È possibile eseguire la query e utilizzare un recordset in una griglia che consente di scorrere e modificare i record nel database.  
   
  Gli strumenti grafici inclusi nella finestra di dialogo **Generatore query** consentono di costruire query mediante operazioni di trascinamento. Per impostazione predefinita, la finestra di dialogo Generatore query consente di compilare query SELECT, ma è possibile creare anche query INSERT, UPDATE o DELETE. Nella finestra di dialogo **Generatore query** è inoltre possibile analizzare ed eseguire tutti i tipi di istruzioni SQL. Per altre informazioni sulle istruzioni SQL nei pacchetti, vedere [Query di Integration Services &#40;SSIS&#41;](integration-services-ssis-queries.md).  
   
@@ -46,18 +46,18 @@ ms.locfileid: "66056637"
  **Barra degli strumenti**  
  Utilizzare la barra degli strumenti per gestire set di dati, selezionare i riquadri da visualizzare e controllare le funzioni di query.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Mostra/Nascondi riquadro diagramma**|Consente di visualizzare o nascondere il riquadro **diagramma**.|  
 |**Mostra/Nascondi riquadro griglia**|Consente di visualizzare o nascondere il riquadro **griglia**.|  
 |**Mostra/Nascondi riquadro SQL**|Consente di visualizzare o nascondere il riquadro **SQL**.|  
-|**Mostra/Nascondi riquadro Risultati**|Consente di visualizzare o nascondere il riquadro dei **risultati**.|  
+|**Mostra/Nascondi riquadro risultati**|Consente di visualizzare o nascondere il riquadro dei **risultati**.|  
 |**Esegui**|Consente di eseguire la query. I risultati verranno visualizzati nel riquadro dei risultati.|  
-|**Verifica istruzione SQL**|Consente di verificare che l'istruzione sia valida.|  
+|**Verifica SQL**|Consente di verificare che l'istruzione sia valida.|  
 |**Ordinamento crescente**|Consente di disporre in ordine crescente le righe di output della colonna selezionata nel riquadro griglia.|  
 |**Ordinamento decrescente**|Consente di disporre in ordine decrescente le righe di output della colonna selezionata nel riquadro griglia.|  
 |**Rimuovi filtro**|Selezionare un nome di colonna nel riquadro griglia e quindi fare clic su **Rimuovi filtro** per rimuovere i criteri di ordinamento per la colonna.|  
-|**Usa Group By**|Consente di aggiungere funzionalità di raggruppamento GROUP BY alla query.|  
+|**USA Group by**|Consente di aggiungere funzionalità di raggruppamento GROUP BY alla query.|  
 |**Aggiungi tabella**|Consente di aggiungere una nuova tabella alla query.|  
   
  **Definizione query**  
@@ -65,17 +65,17 @@ ms.locfileid: "66056637"
   
 |Riquadro|Descrizione|  
 |----------|-----------------|  
-|**Riquadro diagramma**|Visualizza la query in un diagramma. Nel diagramma vengono visualizzate le tabelle incluse nella query e indicate le relative modalità di unione in join. Selezionare o deselezionare la casella di controllo accanto a una colonna nella tabella per aggiungere o rimuovere la colonna dall'output della query.<br /><br /> Quando si aggiungono tabelle alla query, in Generatore query vengono creati join tra le tabelle basati sulle tabelle, in base alle chiavi della tabella. Per aggiungere un join, trascinare un campo da una tabella in un campo di un'altra tabella. Per gestire un join, fare clic su di esso con il pulsante destro del mouse e quindi scegliere un'opzione dal menu.<br /><br /> Fare clic con il pulsante destro del mouse sul riquadro **Diagramma** per aggiungere o rimuovere tabelle, selezionare tutte le tabelle e visualizzare o nascondere i riquadri.|  
-|**Riquadro griglia**|Visualizza la query in una griglia. È possibile utilizzare questo riquadro per aggiungere o rimuovere colonne da un query e modificare le impostazioni per ogni colonna.|  
-|**Riquadro SQL**|Visualizza la query come testo di istruzione SQL. Le modifiche apportate nei riquadri **diagramma** e **griglia** vengono visualizzati qui e viceversa, le modifiche apportate qui vengono visualizzate nei riquadri **diagramma** e **griglia**.|  
-|Riquadro**Risultati**|Visualizza i risultati della query quando si fa clic su **Esegui** sulla barra degli strumenti.|  
+|Riquadro **diagramma**|Visualizza la query in un diagramma. Nel diagramma vengono visualizzate le tabelle incluse nella query e indicate le relative modalità di unione in join. Selezionare o deselezionare la casella di controllo accanto a una colonna nella tabella per aggiungere o rimuovere la colonna dall'output della query.<br /><br /> Quando si aggiungono tabelle alla query, in Generatore query vengono creati join tra le tabelle basati sulle tabelle, in base alle chiavi della tabella. Per aggiungere un join, trascinare un campo da una tabella in un campo di un'altra tabella. Per gestire un join, fare clic su di esso con il pulsante destro del mouse e quindi scegliere un'opzione dal menu.<br /><br /> Fare clic con il pulsante destro del mouse sul riquadro **diagramma** per aggiungere o rimuovere tabelle, selezionare tutte le tabelle e visualizzare o nascondere i riquadri.|  
+|Riquadro **griglia**|Visualizza la query in una griglia. È possibile utilizzare questo riquadro per aggiungere o rimuovere colonne da un query e modificare le impostazioni per ogni colonna.|  
+|Riquadro **SQL**|Visualizza la query come testo di istruzione SQL. Le modifiche apportate nei riquadri **diagramma** e **griglia** vengono visualizzati qui e viceversa, le modifiche apportate qui vengono visualizzate nei riquadri **diagramma** e **griglia**.|  
+|Riquadro **risultati**|Visualizza i risultati della query quando si fa clic su **Esegui** sulla barra degli strumenti.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività Esegui SQL](control-flow/execute-sql-task.md)   
  [Origine OLE DB](data-flow/ole-db-source.md)   
  [Destinazione OLE DB](data-flow/ole-db-destination.md)   
  [Trasformazione Ricerca](data-flow/transformations/lookup-transformation.md)   
- [Integration Services &#40;SSIS&#41; le query](integration-services-ssis-queries.md)   
+ [Integration Services &#40;query&#41; SSIS](integration-services-ssis-queries.md)   
  [MERGE nei pacchetti di Integration Services](control-flow/merge-in-integration-services-packages.md)  
   
   

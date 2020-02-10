@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011272"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Migliorare le prestazioni delle query full-text
@@ -26,7 +26,8 @@ ms.locfileid: "66011272"
   
 -   Riorganizzare il catalogo full-text tramite [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). È necessario eseguire queste operazioni prima del test delle prestazioni poiché l'esecuzione di questa istruzione determina un'unione nell'indice master degli indici full-text in tale catalogo.  
   
--   Limitare la scelta delle colonne chiave full-text a una a colonna di dimensioni ridotte. Benché le colonne a 900 byte siano supportate, è consigliabile utilizzare una colonna chiave di dimensioni inferiori per un indice full-text. `int` e `bigint` forniscono le migliori prestazioni.  
+-   Limitare la scelta delle colonne chiave full-text a una a colonna di dimensioni ridotte. Benché le colonne a 900 byte siano supportate, è consigliabile utilizzare una colonna chiave di dimensioni inferiori per un indice full-text. 
+  `int` e `bigint` forniscono le migliori prestazioni.  
   
 -   L'uso di una chiave full-text a numero intero evita la creazione di un join con la tabella di mapping **docid** . Una chiave full-text di tipo integer, pertanto, consente di migliorare le prestazioni di esecuzione delle query di un ordine di grandezza e le prestazioni della ricerca per indicizzazione. Nel caso in cui la chiave full-text corrisponda anche alla chiave di indice cluster, i vantaggi a livello di prestazioni saranno ancora maggiori.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "66011272"
 -   Per le applicazioni che contengono affermazioni a relazione selettiva, le prestazioni di esecuzione delle query che utilizzano predicati relazionali selettivi e predicati full-text non selettivi potrebbero risultare migliori se le query sono scritte per l'utilizzo di Query Optimizer. In questo modo, Query Optimizer sarà in grado di stabilire la possibilità o meno di utilizzare l'impostazione di intervalli o di predicati per produrre un piano di query efficace. Questo metodo è più semplice e spesso più efficiente rispetto all'indicizzazione di dati relazionali come dati full-text.  
   
 ## <a name="related-resources"></a>Risorse correlate  
- [SQL Server 2008 Full-Text Search: Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544) (Ricerca full-text di SQL Server 2008: elementi interni e miglioramenti)  
+ [SQL Server 2008 Full-Text Search: Internals and Enhancements](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

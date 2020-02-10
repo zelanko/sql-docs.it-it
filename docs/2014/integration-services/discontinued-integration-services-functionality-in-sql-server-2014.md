@@ -1,5 +1,5 @@
 ---
-title: Funzionalità di Integration Services in SQL Server 2014 non più disponibili | Microsoft Docs
+title: Funzionalità di Integration Services sospese in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 915cb42726d27526342870ca39abd7012166270a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059377"
 ---
 # <a name="discontinued-integration-services-functionality-in-sql-server-2014"></a>Funzionalità di Integration Services non più utilizzate in SQL Server 2014
-  Questo argomento descrive [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] le funzionalità che non sono più disponibili nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  In questo argomento [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vengono descritte le funzionalità di che non sono più disponibili nella [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]versione corrente di.  
   
  Non sono presenti funzionalità di Integration Services non più utilizzate in SQL Server 2014.  
   

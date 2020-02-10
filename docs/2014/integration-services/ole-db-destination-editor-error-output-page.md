@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione OLE DB (pagina Output degli errori) | Microsoft Docs
+title: Editor destinazione OLE DB (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3398a56ef3428376ca8c50b0fbd2b53e75b9491e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057114"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Editor destinazione OLE DB (pagina Output degli errori)
@@ -33,7 +33,7 @@ ms.locfileid: "66057114"
  **Colonna**  
  Non usato.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "66057114"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor destinazione OLE DB &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [Editor destinazione OLE DB &#40;pagina Mapping&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
- [Caricare dati tramite la destinazione OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
+ [Editor destinazione OLE DB &#40;pagina mapping&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [Caricamento dei dati tramite la destinazione OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

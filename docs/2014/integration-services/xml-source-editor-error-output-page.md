@@ -1,5 +1,5 @@
 ---
-title: Editor origine XML (pagina Output degli errori) | Microsoft Docs
+title: Editor origine XML (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054307"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Editor origine XML (pagina Output degli errori)
@@ -33,7 +33,7 @@ ms.locfileid: "66054307"
  **Colonna**  
  Consente di visualizzare le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine XML**.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "66054307"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine XML &#40;pagina Gestione connessione&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Editor origine XML &#40;pagina Colonne&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Estrarre i dati tramite l'origine XML](data-flow/extract-data-by-using-the-xml-source.md)  
+ [Editor origine XML &#40;pagina colonne&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Estrazione dei dati tramite l'origine XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Specifica un asse (SQLXML 4.0) | Microsoft Docs
+title: Specifica di un asse (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012645"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Specifica di un asse (SQLXML 4.0)
@@ -33,31 +33,33 @@ ms.locfileid: "66012645"
   
      Contiene l'elemento figlio del nodo di contesto.  
   
-     L'espressione XPath seguente (percorso) seleziona dal nodo di contesto corrente tutti i  **\<cliente >** figli:  
+     L'espressione XPath seguente (percorso) Seleziona dal nodo di contesto corrente tutti gli elementi figlio del ** \<cliente>** :  
   
     ```  
     child::Customer  
     ```  
   
-     Nella query XPath seguente, `child` è l'asse. `Customer` è il test del nodo.  
+     Nella query XPath seguente, `child` è l'asse. 
+  `Customer` è il test del nodo.  
   
 -   `parent`  
   
      Contiene l'elemento padre del nodo di contesto.  
   
-     L'espressione XPath seguente seleziona tutti i  **\<cliente >** padri del  **\<ordine >** figli:  
+     L'espressione XPath seguente seleziona tutti gli ** \<** elementi padre>del cliente dell' ** \<ordine>** figli:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     L'espressione equivale a specificare `child::Customer`. In questa query XPath, `child` e `parent` sono le assi. `Customer` e `Order` sono i test di nodo.  
+     L'espressione equivale a specificare `child::Customer`. In questa query XPath, `child` e `parent` sono le assi. 
+  `Customer` e `Order` sono i test di nodo.  
   
 -   `attribute`  
   
      Contiene l'attributo del nodo di contesto.  
   
-     L'espressione XPath seguente seleziona il **CustomerID** attributo del nodo di contesto:  
+     L'espressione XPath seguente seleziona l'attributo **CustomerID** del nodo di contesto:  
   
     ```  
     attribute::CustomerID  
@@ -67,7 +69,7 @@ ms.locfileid: "66012645"
   
      Contiene il nodo di contesto stesso.  
   
-     L'espressione XPath seguente seleziona il nodo corrente se è il  **\<ordine >** nodo:  
+     L'espressione XPath seguente seleziona il nodo corrente se si tratta dell' ** \<ordine>** nodo:  
   
     ```  
     self::Order  

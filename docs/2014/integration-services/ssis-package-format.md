@@ -1,5 +1,5 @@
 ---
-title: Formato dei pacchetti SSIS | Microsoft Docs
+title: Formato del pacchetto SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055345"
 ---
 # <a name="ssis-package-format"></a>Formato del pacchetto SSIS
-  Nella versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sono state apportate modifiche significative al formato dei pacchetti (file DTSX) per semplificare la lettura del formato e il confronto dei pacchetti. È inoltre possibile unire in modo più affidabile i pacchetti che non contengono modifiche in conflitto o modifiche archiviate in formato binario.  
+  Nella versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sono state apportate modifiche significative al formato dei pacchetti (file DTSX) per semplificare la lettura del formato e il confronto dei pacchetti. È anche possibile unire in modo più affidabile pacchetti che non contengono modifiche in conflitto o modifiche archiviate in formato binario.  
   
- Per visualizzare il formato di file di pacchetto DTSX corrente, vedere [ \[MS-DTSX\]: Specifica di formato di File XML del pacchetto Data Transformation Services](https://go.microsoft.com/fwlink/?LinkId=233251).  
+ Per visualizzare il formato di file del pacchetto DTSX corrente, vedere [ \[MS\]-dtsx: specifica del formato di file XML del pacchetto Data Transformation Services](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
  Nell'elenco seguente vengono indicate le modifiche al formato del file. Per visualizzare gli esempi di codice di queste modifiche, vedere la pagina relativa alle [modifiche al formato del pacchetto in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255).  
   

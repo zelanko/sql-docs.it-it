@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054520"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor attività Servizio Web (pagina Input)
@@ -36,7 +36,7 @@ ms.locfileid: "66054520"
  **WebMethodDocumentation**  
  Digitare una descrizione del metodo Web oppure fare clic sul pulsante sfoglia **(...)** e quindi digitare la descrizione nella finestra di dialogo **Documentazione metodo Web**.  
   
- **Name**  
+ **Nome**  
  Elenca i nomi degli input per il metodo Web.  
   
  **Tipo**  
@@ -53,8 +53,8 @@ ms.locfileid: "66054520"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Servizio Web &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor attività Servizio Web &#40;pagina Output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor attività servizio Web &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor attività servizio Web &#40;pagina output&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

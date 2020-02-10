@@ -21,14 +21,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011899"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk (SQL Server)
-  Per impostazione predefinita, durante l'importazione di dati in una tabella il comando **bcp** e l'istruzione BULK INSERT osservano gli eventuali valori predefiniti che sono stati definiti per le colonne della tabella. Ad esempio, se un file di dati contiene un campo Null, verrà caricato nel campo il valore predefinito della colonna. Il comando **bcp** e l'istruzione BULK INSERT consentono entrambi di specificare che dovranno essere mantenuti i valori Null.  
+  Per impostazione predefinita, durante l'importazione di dati in una tabella il comando **bcp** e l'istruzione BULK INSERT osservano gli eventuali valori predefiniti che sono stati specificati per le colonne della tabella. Ad esempio, se un file di dati contiene un campo Null, verrà caricato nel campo il valore predefinito della colonna. Il comando **bcp** e l'istruzione BULK INSERT consentono entrambi di specificare che dovranno essere mantenuti i valori Null.  
   
  Un'istruzione INSERT regolare mantiene invece il valore Null anziché inserire un valore predefinito. L'istruzione INSERT ... SELECT * FROM OPENROWSET(BULK...) funziona in modo analogo a un'istruzione INSERT regolare, ma supporta inoltre un hint di tabella per l'inserimento di valori predefiniti.  
   
@@ -79,10 +79,10 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |Comando|Qualifier|Tipo di qualificatore|  
 |-------------|---------------|--------------------|  
-|**bcp**|`-k`|Opzione|  
+|**BCP**|`-k`|Opzione|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argomento|  
   
- <sup>1</sup> per BULK INSERT, se i valori predefiniti non sono disponibili, la colonna della tabella deve essere definita per consentire valori null.  
+ <sup>1</sup> per BULK INSERT, se i valori predefiniti non sono disponibili, è necessario definire la colonna della tabella in modo da consentire i valori null.  
   
 > [!NOTE]  
 >  Questi qualificatori disabilitano il controllo delle definizioni DEFAULT di una tabella mediante i comandi per l'importazione bulk. Per le istruzioni INSERT simultanee, le definizioni DEFAULT sono tuttavia previste.  
@@ -99,7 +99,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Per inserire "`NULL`"invece di"`Default value of Col2`", è necessario utilizzare il `-k` commutatore o keepnull, come illustrato nell'esempio seguente **bcp** ed esempi di BULK INSERT.  
+ Per inserire "`NULL`" anziché "`Default value of Col2`", è necessario usare l' `-k` opzione switch o KEEPNULL, come illustrato negli esempi di **bcp** ed BULK INSERT seguenti.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Utilizzo di bcp e mantenimento dei valori Null  
  L'esempio seguente mostra come mantenere i valori Null in un comando **bcp**. Il comando **bcp** contiene le opzioni seguenti:  
@@ -134,22 +134,22 @@ GO
   
 ```  
   
-## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>Mantenimento dei valori predefiniti con INSERT ... SELECT * FROM OPENROWSET(BULK...).  
- Per impostazione predefinita, le colonne che non sono specificate nell'operazione di importazione bulk vengono impostate su NULL da INSERT ... SELECT * FROM OPENROWSET(BULK...). È tuttavia possibile specificare che la colonna della tabella corrispondente a un campo vuoto del file di dati utilizzerà il relativo valore predefinito (se disponibile). Per utilizzare i valori predefiniti, specificare l'hint di tabella seguente:  
+## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>Mantenimento dei valori predefiniti con INSERT... SELECT * FROM OPENROWSET (BULK...)  
+ Per impostazione predefinita, tutte le colonne non specificate nell'operazione di caricamento bulk vengono impostate su NULL da INSERT... SELECT * FROM OPENROWSET (BULK...). Tuttavia, è possibile specificare che per un campo vuoto nel file di dati, nella colonna della tabella corrispondente viene utilizzato il valore predefinito, se disponibile. Per utilizzare i valori predefiniti, specificare l'hint di tabella seguente:  
   
 |Comando|Qualifier|Tipo di qualificatore|  
 |-------------|---------------|--------------------|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...).|WITH(KEEPDEFAULTS)|Hint di tabella|  
   
 > [!NOTE]  
->  Per altre informazioni, vedere [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) e [Hint di tabella &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
+>  Per ulteriori informazioni, vedere [INSERT &#40;Transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql), [Select &#40;transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)e [hint di tabella &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   
 ### <a name="examples"></a>Esempi  
- L'esempio seguente relativo a INSERT ... SELECT * FROM OPENROWSET(BULK...) esegue l'importazione bulk di dati e mantiene i valori predefiniti.  
+ L'istruzione INSERT seguente... SELECT * FROM OPENROWSET (BULK...) esegue l'importazione bulk di dati e mantiene i valori predefiniti.  
   
  Per eseguire gli esempi, è necessario creare la tabella di esempio **MyTestDefaultCol2**, il file di dati `MyTestEmptyField2-c.Dat` e usare un file di formato, `MyTestDefaultCol2-f-c.Fmt`. Per informazioni sulla creazione di questi esempi, vedere la sezione relativa alla tabella e file di dati di esempio più indietro in questo argomento.  
   
- La seconda colonna della tabella, **Col2**, ha un valore predefinito. Il campo corrispondente del file di dati contiene una stringa vuota. Quando l'istruzione INSERT ... SELECT \* FROM OPENROWSET(BULK...) importa i campi del file di dati nella tabella **MyTestDefaultCol2**, per impostazione predefinita in **Col2** viene inserito NULL invece del valore predefinito. Questo comportamento predefinito genera il risultato seguente:  
+ La seconda colonna della tabella, **Col2**, ha un valore predefinito. Il campo corrispondente del file di dati contiene una stringa vuota. Quando si inserisce... SELECT \* FROM OPENROWSET (bulk...) importa i campi del file di dati nella tabella **MyTestDefaultCol2** . per impostazione predefinita, il valore null viene inserito in **col2** anziché nel valore predefinito. Questo comportamento predefinito genera il risultato seguente:  
   
 ||||  
 |-|-|-|  
@@ -173,21 +173,21 @@ GO
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
--   [Mantenere i valori Identity durante l'importazione in blocco dei dati &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Mantieni i valori Identity durante l'importazione bulk dei dati &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [Preparare i dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Preparare i dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
- **Per utilizzare un file di formato**  
+ **Per usare un file di formato**  
   
--   [Creare un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
+-   [Creazione di un file di formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
 -   [Usare un file di formato per l'importazione in blocco dei dati &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
--   [Usare un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+-   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Usare un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
+-   [Utilizzo di un file di formato per ignorare una colonna di una tabella &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
  **Per utilizzare formati di dati per l'importazione o l'esportazione bulk**  
   
@@ -195,19 +195,19 @@ GO
   
 -   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Per specificare i formati di dati per la compatibilità mediante bcp**  
+ **Per specificare i formati di dati per la compatibilità con bcp**  
   
--   [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Specificare i terminatori del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [Specificare la lunghezza del prefisso nei file di dati con bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Specificare la lunghezza del prefisso nei file di dati tramite bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Specificare il tipo di archiviazione di file con bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Specificare il tipo di archiviazione di file utilizzando bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

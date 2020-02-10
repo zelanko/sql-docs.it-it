@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95deda34b673161bf63c29a912564f39425583a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011848"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Prepararsi all'importazione bulk dei dati (SQL Server)
@@ -34,11 +34,11 @@ ms.locfileid: "66011848"
 > [!NOTE]  
 >  L'importazione bulk di dati in una tabella remota non è supportata.  
   
- Quando si esegue un'importazione bulk di dati da un file di dati in un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], attenersi alle linee guida seguenti:  
+ Utilizzare le linee guida seguenti quando si esegue l'importazione bulk di dati da un file di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dati a un'istanza di:  
   
 -   Ottenere le autorizzazioni necessarie per l'account utente in uso.  
   
-     L'account utente usato per l'esecuzione dell'utilità **bcp**, dell'istruzione BULK INSERT oppure dell'istruzione INSERT ... L'istruzione SELECT * FROM OPENROWSET(BULK...) deve disporre delle autorizzazioni necessarie per la tabella, che vengono assegnate dal proprietario della tabella. Per altre informazioni sulle autorizzazioni necessarie per ogni metodo, vedere [Utilità bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) e [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
+     L'account utente usato per l'esecuzione dell'utilità **bcp** , dell'istruzione BULK INSERT oppure dell'istruzione INSERT ... L'istruzione SELECT * FROM OPENROWSET(BULK...) deve disporre delle autorizzazioni necessarie per la tabella, che vengono assegnate dal proprietario della tabella. Per altre informazioni sulle autorizzazioni necessarie per ogni metodo, vedere [Utilità bcp](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)e [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 -   Utilizzare il modello di recupero con registrazione minima delle operazioni bulk.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "66011848"
      In molte utilità ed editor di testo vengono visualizzati i caratteri nascosti, che in genere sono presenti nella parte finale del file di dati. Durante un'operazione di importazione bulk, i caratteri nascosti in un file di dati ASCII possono causare problemi che generano un errore di tipo carattere NULL imprevisto. L'individuazione e la rimozione di tutti i caratteri nascosti dovrebbero consentire di risolvere questo problema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Importare ed esportare dati per operazioni bulk usando l'utilità bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
- [Importare dati per operazioni bulk usando BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
+ [Importazione ed esportazione di dati per operazioni bulk tramite l'utilità bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
+ [Importazione di dati per operazioni bulk utilizzando BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Formati di dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Formati di dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   
   

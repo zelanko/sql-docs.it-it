@@ -1,5 +1,5 @@
 ---
-title: Editor attività Trasferisci Database (pagina generale) | Microsoft Docs
+title: Editor attività Trasferisci database (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a78fb3dd052a7e275b91073ccf2089510b97e44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055100"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Editor attività Trasferisci database (pagina Generale)
   Utilizzare la pagina **Generale** dell' **Editor attività Trasferisci database** per assegnare un nome all'attività Trasferisci database e descriverla. Questa attività consente di copiare o spostare un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server. Per altre informazioni su questa attività, vedere [Attività Trasferisci database](control-flow/transfer-database-task.md).  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare un nome univoco per l'attività Trasferisci database. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "66055100"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
- [Editor attività Trasferisci database &#40;pagina Database&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
+ [Editor attività Trasferisci database &#40;pagina database&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)  
   
   

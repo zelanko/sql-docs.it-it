@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010353"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Confrontare opzioni per l'archiviazione di BLOB (SQL Server)
@@ -38,7 +38,8 @@ ms.locfileid: "66010353"
 -   Le applicazioni di Windows richiedono compatibilità con le API del file system per i dati di file e directory.  
   
 ##  <a name="Filestream"></a> FILESTREAM  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone già della funzione FILESTREAM, che fornisce funzionalità di archiviazione, gestione e flusso dati efficienti per i dati non strutturati archiviati come file nel file system. Una soluzione FILESTREAM, tuttavia, richiede programmazione personalizzata e non soddisfa i requisiti per la piena compatibilità delle applicazioni Windows descritta sopra.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone già della funzione FILESTREAM, che fornisce funzionalità di archiviazione, gestione e flusso dati efficienti per i dati non strutturati archiviati come file nel file system. Una soluzione FILESTREAM, tuttavia, richiede programmazione personalizzata e non soddisfa i requisiti per la piena compatibilità delle applicazioni Windows descritta sopra.  
   
 ##  <a name="FileTables"></a> FileTable  
  La caratteristica FileTable si basa sulle funzionalità FILESTREAM esistenti per consentire ai clienti aziendali di archiviare dati di file non strutturati e gerarchie di directory in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , soddisfacendo i requisiti per l'accesso non transazionale e la compatibilità delle applicazioni Windows per i dati basati su file.  
@@ -47,19 +48,19 @@ ms.locfileid: "66010353"
   
 |Funzionalità|Soluzione file server e database|Soluzione FILESTREAM|Soluzione FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Singola soluzione per le attività di gestione**|No|Yes|**Sì**|  
-|**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|No|Yes|**Sì**|  
-|**Modello di sicurezza integrata**|No|Yes|**Sì**|  
-|**Aggiornamenti sul posto di dati FILESTREAM**|Yes|No|**Sì**|  
-|**Gerarchia di file e directory gestita nel database**|no|no|**Sì**|  
-|**Compatibilità delle applicazioni di Windows**|Yes|no|**Sì**|  
-|**Accesso relazionale agli attributi dei file**|no|No|**Sì**|  
+|**Singola soluzione per le attività di gestione**|No|Sì|**Sì**|  
+|**Singolo set di servizi**: ricerca, creazione di report, esecuzione di query e così via|No|Sì|**Sì**|  
+|**Modello di sicurezza integrata**|No|Sì|**Sì**|  
+|**Aggiornamenti sul posto di dati FILESTREAM**|Sì|No|**Sì**|  
+|**Gerarchia di file e directory gestita nel database**|No|No|**Sì**|  
+|**Compatibilità delle applicazioni di Windows**|Sì|No|**Sì**|  
+|**Accesso relazionale agli attributi dei file**|No|No|**Sì**|  
   
 ##  <a name="CompareRBS"></a> Confronto tra FILESTREAM e Archivio BLOB remoti (Remote BLOB Store, RBS)  
- Per un confronto tra queste due funzionalità, vedere questo blog post del team RBS: [Confronto tra le funzionalità FILESTREAM e SQL Server Remote BLOB Store](https://go.microsoft.com/fwlink/?LinkId=210317).  
+ Per un confronto tra queste due caratteristiche, vedere il post di blog del team RBS: [Confronto tra le funzionalità Archivio BLOB remoti e FILESTREAM di SQL Server](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Ulteriori informazioni  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  
  [FileTables &#40;SQL Server&#41;](filetables-sql-server.md)  
- [Archivio BLOB remoto &#40;RBS&#41; &#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  
+ [Archivio Blob remoto &#40;RBS&#41; &#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  
   

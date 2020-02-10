@@ -1,5 +1,5 @@
 ---
-title: Editor attività script (pagina Script) | Microsoft Docs
+title: Editor attività script (pagina script) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056193"
 ---
 # <a name="script-task-editor-script-page"></a>Editor attività Script (pagina Script)
@@ -27,7 +27,7 @@ ms.locfileid: "66056193"
 > [!NOTE]  
 >  In [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] e versioni successive, tutti gli script sono precompilati. Nelle versioni precedenti, si imposta una proprietà **PrecompileScriptIntoBinaryCode** per specificare che lo script è stato precompilato.  
   
- Per ulteriori informazioni sull'attività Script, vedere [Script Task](control-flow/script-task.md) e [Configurazione dell'attività Script nell'editor attività Script](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Per informazioni sulla programmazione dell'attività Script, vedere [Estensione del pacchetto con l'attività Script](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Per ulteriori informazioni sull'attività Script, vedere [Script Task](control-flow/script-task.md) e [Configurazione dell'attività Script nell'editor attività Script](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Per informazioni sulla programmazione dell'attività Script, vedere [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ## <a name="options"></a>Opzioni  
  **ScriptLanguage**  
@@ -59,10 +59,10 @@ ms.locfileid: "66056193"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [General Page](general-page-of-integration-services-designers-options.md)   
- [Editor attività Script &#40;pagina Generale&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Pagina generale](general-page-of-integration-services-designers-options.md)   
+ [Editor attività script &#40;pagina generale&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)   
- [Esempi di attività Script](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Esempi di attività script](extending-packages-scripting-task-examples/script-task-examples.md)   
  [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Aggiungere, eliminare o modificare l'ambito di una variabile definita dall'utente in un pacchetto](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

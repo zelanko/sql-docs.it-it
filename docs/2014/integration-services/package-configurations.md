@@ -1,5 +1,5 @@
 ---
-title: Le configurazioni del pacchetto | Microsoft Docs
+title: Configurazioni pacchetto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,17 +22,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056888"
 ---
 # <a name="package-configurations"></a>SSIS
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dispone di configurazioni di pacchetto che è possibile usare per aggiornare i valori delle proprietà in fase di esecuzione.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornisce le configurazioni di pacchetto che è possibile usare per aggiornare i valori delle proprietà in fase di esecuzione.  
   
 > [!NOTE]  
->  Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Le configurazioni sono disponibili per il modello di distribuzione del pacchetto. I parametri vengono utilizzati al posto delle configurazioni per il modello di distribuzione del progetto. Con il modello di distribuzione del progetto è possibile distribuire i progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Per altre informazioni sui modelli di distribuzione, vedere [Distribuzione di progetti e pacchetti](packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Una configurazione è una coppia proprietà/valore che viene aggiunta a un pacchetto completo. In genere, si crea un pacchetto, si impostano le proprietà per gli oggetti di pacchetto durante lo sviluppo del pacchetto e quindi si aggiunge la configurazione al pacchetto. Quando il pacchetto viene eseguito, ottiene i nuovi valori della proprietà dalla configurazione. Utilizzando ad esempio una configurazione, è possibile modificare la stringa di connessione di una gestione connessione o aggiornare il valore di una variabile.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66056888"
   
 -   Le configurazioni rendono i pacchetti più flessibili. Una configurazione, ad esempio, può aggiornare il valore di una variabile utilizzata in un'espressione di proprietà.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] supporta diversi metodi di archiviazione delle configurazioni di pacchetto, ad esempio file XML, tabelle di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e variabili di ambiente e di pacchetto.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]supporta diversi metodi di archiviazione delle configurazioni dei pacchetti, ad esempio file XML, tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] un database di e variabili di ambiente e di pacchetto.  
   
  Ogni configurazione corrisponde a una coppia proprietà/valore. Il file di configurazione XML e i tipi di configurazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possono includere più configurazioni.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66056888"
   
  Durante il caricamento e l'esecuzione del pacchetto da parte dell'utilità, gli eventi si verificano nel seguente ordine:  
   
-1.  Il pacchetto viene caricato con l'utilità **dtexec** .  
+1.  Il pacchetto viene caricato con l'utilità **dtexec**.  
   
 2.  L'utilità consente di applicare le configurazioni specificate nel pacchetto in fase di progettazione, nell'ordine indicato nel pacchetto. L'unica eccezione è rappresentata dalle configurazioni Variabile pacchetto padre, le quali vengono applicate dall'utilità solo una volta e in una fase successiva del processo.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66056888"
   
 -   Non è possibile usare l'opzione **/ConfigFile** per caricare configurazioni che sostituiscono quelle specificate in fase di progettazione.  
   
- Per altre informazioni su queste opzioni e sulla differenza di comportamento di queste opzioni [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] e versioni precedenti, vedere [le modifiche apportate alle funzionalità di Integration Services in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+ Per ulteriori informazioni su queste opzioni e sulla differenza tra [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] il comportamento di queste opzioni e le versioni precedenti, vedere modifiche del comportamento delle [funzionalità di Integration Services in SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 ## <a name="package-configuration-types"></a>Tipi di configurazioni di pacchetto  
  Nella tabella seguente vengono descritti i tipi di configurazione di pacchetto.  
@@ -90,7 +90,7 @@ ms.locfileid: "66056888"
 |Variabile di ambiente|La configurazione è contenuta in una variabile di ambiente.|  
 |Voce del Registro di sistema|La configurazione è inclusa in una voce del Registro di sistema.|  
 |Variabile pacchetto padre|La configurazione è contenuta in una variabile del pacchetto. Questo tipo di configurazione viene in genere utilizzato per l'aggiornamento di proprietà in pacchetti figlio.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|La configurazione è inclusa in una tabella di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La tabella può includere più configurazioni.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tavolo|La configurazione è inclusa in una tabella di un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La tabella può includere più configurazioni.|  
   
 ### <a name="xml-configuration-files"></a>File di configurazione XML  
  Se si seleziona il tipo di configurazione **File di configurazione XML** è possibile creare un nuovo file di configurazione, riusare un file esistente e aggiungere nuove configurazioni oppure riusare un file esistente sovrascrivendone il contenuto.  
@@ -123,7 +123,7 @@ ms.locfileid: "66056888"
 ### <a name="registry-entry"></a>Voce del Registro di sistema  
  Se si desidera utilizzare una voce del Registro di sistema per archiviare la configurazione, è possibile utilizzare una chiave esistente oppure crearne una nuova in HKEY_CURRENT_USER. La chiave del Registro di sistema usata deve contenere un valore denominato `Value`. Il valore può essere un DWORD o una stringa.  
   
- Se si seleziona il tipo di configurazione **Voce del Registro di sistema** , è necessario digitare il nome della chiave del Registro di sistema nella casella Voce del Registro di sistema. Il formato è \<chiave del Registro di sistema>. Se si vuole usare una chiave del Registro di sistema che non si trova nella radice HKEY_CURRENT_USER, per identificare la chiave usare il formato \<chiave Registro di sistema\chiave Registro di sistema\\...>. Per usare la chiave MyPackage in SSISPackages, ad esempio, digitare `SSISPackages\MyPackage`.  
+ Se si seleziona il tipo di configurazione **Voce del Registro di sistema**, è necessario digitare il nome della chiave del Registro di sistema nella casella Voce del Registro di sistema. Il formato è \<chiave del Registro di sistema>. Se si vuole usare una chiave del Registro di sistema che non si trova nella radice HKEY_CURRENT_USER, per identificare la chiave usare il formato \<chiave Registro di sistema\chiave Registro di sistema\\...>. Per usare la chiave MyPackage in SSISPackages, ad esempio, digitare `SSISPackages\MyPackage`.  
   
 ### <a name="sql-server"></a>SQL Server  
  Se si seleziona il tipo di configurazione **SQL Server**, è necessario specificare la connessione al database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui si desidera archiviare le configurazioni. È possibile salvare le configurazioni in una tabella esistente oppure creare una nuova tabella nel database specificato.  
@@ -141,10 +141,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ```  
   
- Il nome specificato per la configurazione corrisponde al valore archiviato nella colonna **ConfigurationFilter** .  
+ Il nome specificato per la configurazione corrisponde al valore archiviato nella colonna **ConfigurationFilter**.  
   
 ## <a name="direct-and-indirect-configurations"></a>Configurazioni dirette e indirette  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dispone di configurazioni dirette e indirette. Se le configurazioni vengono specificate in modo diretto, in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene creato un collegamento diretto tra l'elemento di configurazione e la proprietà dell'oggetto di pacchetto. È consigliabile utilizzare le configurazioni dirette quando la posizione dell'origine non cambia. Ad esempio, se per tutte le distribuzioni di pacchetto viene utilizzato sempre lo stesso percorso di file, è possibile specificare un file di configurazione XML.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]fornisce configurazioni dirette e indirette. Se le configurazioni vengono specificate in modo diretto, in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene creato un collegamento diretto tra l'elemento di configurazione e la proprietà dell'oggetto di pacchetto. È consigliabile utilizzare le configurazioni dirette quando la posizione dell'origine non cambia. Ad esempio, se per tutte le distribuzioni di pacchetto viene utilizzato sempre lo stesso percorso di file, è possibile specificare un file di configurazione XML.  
   
  Nelle configurazioni indirette vengono utilizzate variabili di ambiente. Anziché specificare l'impostazione di configurazione in modo diretto, la configurazione punta a una variabile di ambiente, la quale contiene il valore di configurazione. È consigliabile utilizzare le configurazioni indirette quando la posizione della configurazione può essere diversa nelle varie distribuzioni di un pacchetto.  
   
@@ -153,10 +153,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>Contenuto correlato  
   
--   Articolo tecnico [Informazioni sulle configurazioni dei pacchetti di Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643) sul sito Web msdn.microsoft.com  
+-   Articolo tecnico [Understanding Integration Services Package Configurations](https://go.microsoft.com/fwlink/?LinkId=165643) (Informazioni sulle configurazioni dei pacchetti di Integration Services) sul sito Web msdn.microsoft.com  
   
--   Intervento nel blog concernente [creazione di pacchetti nel codice, le configurazioni di pacchetto](https://go.microsoft.com/fwlink/?LinkId=217663), su www.sqlis.com.  
+-   Intervento nel Blog sulla [creazione di pacchetti in configurazioni di pacchetti di codice](https://go.microsoft.com/fwlink/?LinkId=217663)in www.sqlis.com.  
   
--   Intervento nel blog concernente [esempio di API: a livello di codice aggiunge un file di configurazione a un pacchetto](https://go.microsoft.com/fwlink/?LinkId=217664), su blogs.msdn.com.  
+-   Intervento nel Blog relativo [all'esempio di API: aggiungere a livello di codice un file di configurazione a un pacchetto](https://go.microsoft.com/fwlink/?LinkId=217664), in Blogs.msdn.com.  
   
   

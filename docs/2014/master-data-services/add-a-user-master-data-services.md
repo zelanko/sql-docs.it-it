@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483774"
 ---
 # <a name="add-a-user-master-data-services"></a>Aggiungere un utente (Master Data Services)
   Aggiungere un utente all'elenco **Utenti** in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] per iniziare il processo di assegnazione dell'autorizzazione all'applicazione Web. Prima che un utente nell'elenco possa accedere a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], è necessario assegnare all'utente l'autorizzazione per una o più aree funzionali e oggetti modello.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre di autorizzazione per accedere all'area funzionale **Autorizzazioni utenti e gruppi** .  
@@ -34,7 +34,7 @@ ms.locfileid: "65483774"
   
 2.  Nella pagina **Utenti** fare clic su **Aggiungi utenti**.  
   
-3.  Digitare il nome dell'utente preceduto dal nome di dominio Active Directory o dal nome del computer server, come in *dominio*\\*nome_utente* o *computer\nome_utente*.  
+3.  Digitare il nome dell'utente preceduto dal nome di dominio Active Directory o dal nome del computer server, come in*user_name* di *dominio*\\o *computer \ user_name*.  
   
 4.  Facoltativamente, fare clic su **Controlla nomi**.  
   
@@ -45,6 +45,6 @@ ms.locfileid: "65483774"
 -   [Assegnare autorizzazioni per aree funzionali &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [&#40;di sicurezza Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

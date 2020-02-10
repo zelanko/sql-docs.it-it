@@ -1,5 +1,5 @@
 ---
-title: Per gli sviluppatori&#39;Guida (Master Data Services) | Microsoft Docs
+title: Guida a Developer&#39;s (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2f87f812ad9f4f12f5f78828e88c220e3dcf494d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483032"
 ---
-# <a name="developer39s-guide-master-data-services"></a>Per gli sviluppatori&#39;Guida (Master Data Services)
-  Vengono fornite informazioni su come scrivere il codice per personalizzare la modalità di interazione degli utenti con [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Viene illustrato come:  
+# <a name="developer39s-guide-master-data-services"></a>Guida a Developer&#39;s (Master Data Services)
+  Vengono fornite informazioni su come scrivere il codice per personalizzare la modalità di interazione degli utenti con [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. È possibile passare agli argomenti seguenti:  
   
 -   Scrivere un programma che acceda al servizio Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Il servizio Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] è un servizio di Windows Communication Foundation (WCF) che gli sviluppatori utilizzano per controllare le funzionalità di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] tramite codice.  
   
@@ -35,18 +35,19 @@ ms.locfileid: "65483032"
  [Creare le classi proxy del servizio Web Gestione dati master](create-master-data-manager-web-service-proxy-classes.md)  
  Viene descritto come abilitare la pubblicazione dei metadati dal sito Web di [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] e come creare le classi proxy che possono essere utilizzate per accedere a livello di programmazione alle operazioni del servizio Web.  
   
- [Operazioni del servizio Web per categoria &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
+ [Operazioni del servizio Web categorizzate &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
  Elenco per categoria delle operazioni del servizio Web della classe <xref:Microsoft.MasterDataServices.ServiceClient>.  
   
 ## <a name="custom-workflows"></a>Flussi di lavoro personalizzati  
  In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate le regole business per creare soluzioni di base per il flusso di lavoro. È possibile aggiornare e convalidare automaticamente i dati, nonché inviare notifiche mediante posta elettronica in base alle condizioni specificate. Le regole business in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] vengono utilizzate per gestire gli scenari di flussi di lavoro più comuni. Se il flusso di lavoro richiede l'elaborazione di eventi più complessi, ad esempio approvazioni multilivello o alberi delle decisioni complessi, è possibile configurare [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in modo da inviare i dati a un assembly personalizzato creato. Per gestire i flussi di lavoro personalizzati, è necessario configurare e avviare SQL Server MDS Workflow Integration Service sul computer dell'applicazione Web e creare un assembly che implementi l'interfaccia <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
   
 ### <a name="custom-workflow-content"></a>Contenuto del flusso di lavoro personalizzato  
- [Creare un flusso di lavoro personalizzato &#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
+ [Creare un &#40;del flusso di lavoro personalizzato Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
  Istruzioni sulla creazione di un assembly del gestore dei flussi di lavoro, sulla configurazione e l'avvio di SQL Server MDS Workflow Integration Service e sulla creazione di una regola business in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] per avviare un flusso di lavoro personalizzato.  
   
 ## <a name="web-server-namespaces"></a>Spazi dei nomi del server Web  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installa un set di assembly nel computer del server Web. Questi assembly contengono spazi dei nomi utilizzabili per scenari avanzati che consentono di personalizzare il comportamento del computer del server Web. Nella tabella seguente vengono descritti tali spazi dei nomi.  
+ 
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installa un set di assembly nel computer del server Web. Questi assembly contengono spazi dei nomi utilizzabili per scenari avanzati che consentono di personalizzare il comportamento del computer del server Web. Nella tabella seguente vengono descritti tali spazi dei nomi.  
   
 |Spazio dei nomi|Descrizione|  
 |---------------|-----------------|  

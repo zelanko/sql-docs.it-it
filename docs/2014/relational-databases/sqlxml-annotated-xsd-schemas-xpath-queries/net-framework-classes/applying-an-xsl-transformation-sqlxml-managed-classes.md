@@ -1,5 +1,5 @@
 ---
-title: Applicare una trasformazione XSL (classi gestite SQLXML) | Microsoft Docs
+title: Applicazione di una trasformazione XSL (classi gestite SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79f30fdbdd2db468e2dcb3690254463001f0fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012597"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Applicazione di una trasformazione XSL (classi gestite SQLXML)
   In questo esempio viene eseguita una query SQL sul database AdventureWorks. La trasformazione XSL viene applicata al risultato della query per generare una tabella a due colonne con i nomi e i cognomi dei dipendenti.  
   
- Xslpath-proprietà dell'oggetto SqlXmlCommand consente di specificare il file XSL e il relativo percorso di directory.  
+ La proprietà XslPath dell'oggetto SqlXmlCommand viene utilizzata per specificare il file XSL e il relativo percorso di directory.  
   
 > [!NOTE]  
 >  Nel codice è necessario specificare il nome dell'istanza di Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stringa di connessione.  

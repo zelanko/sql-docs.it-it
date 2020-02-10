@@ -1,5 +1,5 @@
 ---
-title: Editor origine OData (pagina Output degli errori) | Microsoft Docs
+title: Editor origine OData (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057289"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Editor origine OData (pagina Output degli errori)
@@ -29,7 +29,7 @@ ms.locfileid: "66057289"
  **Colonna**  
  Vengono visualizzate le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine OData** .  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  
@@ -47,8 +47,8 @@ ms.locfileid: "66057289"
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine OData &#40;pagina Connessione &#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Editor origine OData &#40;pagina Colonne&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Editor origine OData &#40;pagina connessione&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Editor origine OData &#40;pagina colonne&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Origine OData](data-flow/odata-source.md)   
  [Gestione connessione OData](connection-manager/odata-connection-manager.md)  
   

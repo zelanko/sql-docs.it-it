@@ -1,5 +1,5 @@
 ---
-title: SQL Server Editor attività Trasferisci oggetti (pagina oggetti) | Microsoft Docs
+title: Editor attività Trasferisci oggetti SQL Server (pagina oggetti) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054871"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor attività Trasferisci oggetti di SQL Server (pagina Oggetti)
@@ -29,13 +29,13 @@ ms.locfileid: "66054871"
   
 ## <a name="static-options"></a>Opzioni statiche  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di origine.  
   
  **SourceDatabase**  
  Consente di selezionare un database nel server di origine dal quale verranno copiati gli oggetti.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **Nuova connessione...>\<** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di destinazione.  
   
  **DestinationDatabase**  
  Consente di selezionare un database nel server di destinazione nel quale verranno copiati gli oggetti.  
@@ -52,13 +52,13 @@ ms.locfileid: "66054871"
  **ExistingData**  
  Consente di specificare la modalità di copia dei dati nel server di destinazione. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**Sostituisci**|I dati nel server di destinazione verranno sovrascritti.|  
+|**Sostituire**|I dati nel server di destinazione verranno sovrascritti.|  
 |**Accoda**|I dati copiati dal server di origine verranno accodati a quelli esistenti nel server di destinazione.|  
   
 > [!NOTE]  
->  L'opzione **ExistingData** è disponibile solo se **CopyData** è impostata su **True**.  
+>  L'opzione **ExistingData** è disponibile solo se **CopyData** è impostato su **true**.  
   
  **CopySchema**  
  Consente di indicare se lo schema deve essere copiato durante l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -79,7 +79,7 @@ ms.locfileid: "66054871"
  Espandere **ObjectsToCopy** per specificare quali oggetti devono essere copiati dal database di origine a quello di destinazione.  
   
 > [!NOTE]  
->  **ObjectsToCopy** è disponibile solo se **CopyAllObjects** è impostata su **False**.  
+>  **ObjectsToCopy** è disponibile solo se **CopyAllObjects** è impostato su **false**.  
   
  Le opzioni per la copia dei tipi di oggetti seguenti sono supportate solo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -211,9 +211,9 @@ ms.locfileid: "66054871"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
- [Editor attività Trasferisci oggetti di SQL Server &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor attività Trasferisci oggetti SQL Server &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina Espressioni](expressions/expressions-page.md)   
- [Formati di dati per l'importazione o l'esportazione in blocco &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Formati di dati per l'importazione o l'esportazione bulk &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Considerazioni sulla sicurezza per un'installazione di SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

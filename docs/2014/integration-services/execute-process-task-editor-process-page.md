@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059027"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Execute Process Task Editor (Process Page)
@@ -30,7 +30,7 @@ ms.locfileid: "66059027"
  **RequireFullFileName**  
  Consente di indicare se l'attività deve avere esito negativo nel caso in cui il file eseguibile non venga trovato nel percorso specificato.  
   
- **File eseguibile**  
+ **Eseguibile**  
  Consente di digitare il nome del file eseguibile da avviare.  
   
  **Argomenti**  
@@ -40,15 +40,15 @@ ms.locfileid: "66059027"
  Digitare il percorso della cartella contenente il file eseguibile oppure fare clic sul pulsante sfoglia **(...)** per individuare la cartella.  
   
  **StandardInputVariable**  
- Selezionare una variabile per l'invio dell'input al processo oppure fare clic su \<**Nuova variabile...** > per crearne una nuova:  
+ Selezionare una variabile per l'invio dell'input al processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova:  
   
- **Argomenti correlati:**  [Aggiungi variabile](../../2014/integration-services/add-variable.md)  
+ **Argomenti correlati:**  [aggiungere una variabile](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- Selezionare una variabile per l'acquisizione dell'output del processo oppure fare clic su \<**Nuova variabile...** > per crearne una nuova.  
+ Selezionare una variabile per l'acquisizione dell'output del processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova.  
   
- **StandardErrorVariable**  
- Selezionare una variabile per l'acquisizione dell'output di errore del processore oppure fare clic su \<**Nuova variabile...** > per crearne una nuova.  
+ **StandardErrorVariable che consentono**  
+ Selezionare una variabile per l'acquisizione dell'output di errore del processore oppure fare clic su \<**Nuova variabile...**> per crearne una nuova.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Consente di indicare se l'attività deve avere esito negativo nel caso in cui il codice di uscita del processo non corrisponda al valore specificato in **SuccessValue**.  

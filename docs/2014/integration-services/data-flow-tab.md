@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059903"
 ---
 # <a name="data-flow-tab"></a>Scheda Flusso di dati
@@ -37,7 +37,7 @@ ms.locfileid: "66059903"
 ## <a name="see-also"></a>Vedere anche  
  [Percorsi in Integration Services](data-flow/integration-services-paths.md)   
  [Attività Flusso di dati](control-flow/data-flow-task.md)   
- [SSIS Designer](ssis-designer.md)   
+ [Progettazione SSIS](ssis-designer.md)   
  [Flusso di dati](data-flow/data-flow.md)  
   
   

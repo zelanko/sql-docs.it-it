@@ -1,5 +1,5 @@
 ---
-title: 'Attività 12: Aggiunta di trasformazione colonna derivata ad Aggiungi colonne richieste da MDS | Microsoft Docs'
+title: 'Attività 12: aggiunta della trasformazione colonna derivata per aggiungere le colonne richieste da MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,52 +11,52 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65485245"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Attività 12: Aggiunta della trasformazione Colonna derivata ad Aggiungi colonne richieste da MDS
-  In questa attività viene aggiunta la trasformazione Colonna derivata al flusso di dati. Si aggiungono due colonne derivate, **ImportType** e **BatchTag**a record passati a questa trasformazione. È consigliabile aggiungere queste colonne prima di caricare i dati nelle tabelle di staging in MDS. Queste due colonne sono necessarie per le tabelle di staging in MDS. Visualizzare [tabelle di gestione temporanea di membri foglia](../master-data-services/leaf-member-staging-table-master-data-services.md) per altri dettagli.  
+  In questa attività viene aggiunta la trasformazione Colonna derivata al flusso di dati. Si aggiungono due colonne derivate, **ImportType** e **BatchTag**, ai record passati a questa trasformazione. È consigliabile aggiungere queste colonne prima di caricare i dati nelle tabelle di staging in MDS. Queste due colonne sono necessarie per le tabelle di staging in MDS. Per altri dettagli, vedere [tabelle di staging dei membri foglia](../master-data-services/leaf-member-staging-table-master-data-services.md) .  
   
-1.  Trascinare **trasformazione colonna derivata** dalla **comuni** sezione la **casella degli strumenti SSIS** per il **del flusso di dati** scheda.  
+1.  Trascinare la **trasformazione colonna derivata** dalla sezione **comune** nella **casella degli strumenti SSIS** alla scheda **flusso di dati** .  
   
-2.  Fare doppio clic su **colonna derivata** trasformare nel **flusso di dati** scheda, quindi scegliere **rinominare**. Tipo di **Aggiungi colonne richieste da MDS** , quindi premere **invio**.  
+2.  Fare clic con il pulsante destro del mouse su trasformazione **colonna derivata** nella scheda **flusso di dati** e quindi scegliere **Rinomina**. Digitare **Aggiungi colonne richieste da MDS** e premere **invio**.  
   
-3.  Connettere **Filtra duplicati** al **Aggiungi colonne richieste da MDS** usando il collegamento blu. Dovrebbero vedere le **selezione Input e Output** nella finestra di dialogo.  
+3.  Connettere i **duplicati del filtro** per **aggiungere le colonne richieste da MDS** usando il connettore blu. Verrà visualizzata la finestra di dialogo **Selezione output input** .  
   
-4.  Nel **selezione Input e Output** finestra di dialogo **record univoci**, fare clic su **OK**.  
+4.  Nella finestra di dialogo **Selezione output input** selezionare **record univoci**, quindi fare clic su **OK**.  
   
-     ![Finestra di dialogo di selezione di Output di input](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "Output finestra di dialogo di selezione di Input")  
+     ![Finestra di dialogo Selezione input e output](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "Finestra di dialogo Selezione input e output")  
   
-5.  Fare clic su **SSIS** nella barra dei menu e fare clic su **variabili**.  
+5.  Fare clic su **SSIS** sulla barra dei menu e fare clic su **variabili**.  
   
-6.  Nel **variabili** finestra, fare clic su **Aggiungi variabile** pulsante sulla barra degli strumenti.  
+6.  Nella finestra **variabili** fare clic sul pulsante **Aggiungi variabile** sulla barra degli strumenti.  
   
-     ![Finestra variabili SSIS](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "finestra variabili SSIS")  
+     ![Finestra Variabili SSIS](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "Finestra Variabili SSIS")  
   
-7.  Tipo di **ImportType** per il **Name** e **2** per il **valore**. Specificare il valore 2 dal momento che si desidera aggiungere nuovi membri a un'entità in MDS. Per informazioni dettagliate su questo parametro, vedere [tabella di Staging dei membri foglia](../master-data-services/leaf-member-staging-table-master-data-services.md).  
+7.  Digitare **ImportType** per **nome** e **2** per il **valore**. Specificare il valore 2 dal momento che si desidera aggiungere nuovi membri a un'entità in MDS. Per informazioni dettagliate su questo parametro, vedere [tabella di staging dei membri foglia](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
-8.  Fare clic su **Aggiungi variabile** nuovo clic sul pulsante della barra degli strumenti.  
+8.  Fare nuovamente clic sul pulsante **Aggiungi variabile** della barra degli strumenti.  
   
-9. Tipo **BatchTag** per il **Name**, selezionare **stringa** per il **tipo di dati**, e **EIMBatch** per il **Valore**. **BatchTag** è semplicemente un nome univoco per il batch sarà inviata a MDS.  
+9. Digitare **BatchTag** per **nome**, selezionare **stringa** per il **tipo di dati**e **EIMBatch** per il **valore**. **BatchTag** è semplicemente un nome univoco per il batch che verrà inviato a MDS.  
   
-10. Nel **flusso di dati** scheda, fare doppio clic su **Aggiungi colonne richieste da MDS**.  
+10. Nella scheda **flusso di dati** fare doppio clic su **Aggiungi colonne richieste da MDS**.  
   
-11. Nel **Editor trasformazione colonna derivata** nella finestra di dialogo il **casella di riepilogo nel riquadro inferiore**, digitare **ImportType** per il **nome colonna derivata**.  
+11. Nella **casella di riepilogo nel riquadro inferiore**della finestra di dialogo **Editor trasformazione colonna derivata** digitare **ImportType** per **nome colonna derivata**.  
   
-12. Espandere **variabili e parametri** nel riquadro superiore sinistro, trascinare **User:: importtype** per il **espressione** colonna.  
+12. Espandere **variabili e parametri** nel riquadro in alto a sinistra e trascinare **User:: ImportType** nella colonna **espressione** .  
   
-     ![Editor trasformazione colonna derivata](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "Editor trasformazione colonna derivata")  
+     ![Editor trasformazione Colonna derivata](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "Editor trasformazione Colonna derivata")  
   
-13. Tipo di **BatchTag** nella riga successiva per il **nome colonna derivata**.  
+13. Digitare **BatchTag** nella riga successiva per il **nome della colonna derivata**.  
   
-14. Funzionalità di trascinamento **User:: batchtag** dalla **variabili e parametri** per il **espressione** colonna.  
+14. Trascinare **User:: BatchTag** da **variabili e parametri** nella colonna **espressione** .  
   
-15. Fare clic su **OK** per chiudere la **trasformazione colonna derivata** nella finestra di dialogo.  
+15. Fare clic su **OK** per chiudere la finestra di dialogo **trasformazione colonna derivata** .  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 13: Aggiunta di destinazione OLE DB per scrivere dati nella tabella di gestione temporanea MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 13: Aggiunta di Destinazione OLE DB a Scrivi dati fornitore nella tabella di gestione temporanea MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

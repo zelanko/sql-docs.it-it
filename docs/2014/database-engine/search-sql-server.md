@@ -1,5 +1,5 @@
 ---
-title: Ricerca (SQL Server) | Microsoft Docs
+title: Cerca (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843717"
 ---
 # <a name="search-sql-server"></a>Cerca (SQL Server)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce funzionalità di ricerca per testo e documentazione che vanno oltre le funzionalità dei [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` (parola chiave).  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fornisce funzionalità di ricerca per testo e documenti che vanno oltre la funzionalità della [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` parola chiave.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Ricerca full-text](../relational-databases/search/full-text-search.md)  
  Consente di identificare testo o documenti contenenti parole o frasi specifiche che soddisfano condizioni di ricerca aggiuntive quali la prossimità dei termini di ricerca.  
   

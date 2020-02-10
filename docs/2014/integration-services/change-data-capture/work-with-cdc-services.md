@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0aefc386d2da3cc17c7ed335a6438667b715d11a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835148"
 ---
 # <a name="work-with-cdc-services"></a>Utilizzare i servizi CDC
@@ -35,7 +35,7 @@ ms.locfileid: "62835148"
  **Creare un nuovo servizio CDC**  
  Fare clic su **New Service** dal riquadro **Actions** sul lato destro di CDC Service Configuration Console.  
   
- È anche possibile fare clic con il pulsante destro del mouse su **Local CDC Services** e scegliere **New Service**.  
+ È inoltre possibile fare clic con il pulsante destro del mouse su **Local CDC Services** (Servizi CDC locali) e selezionare **New Service**(Nuovo servizio).  
   
  Verrà aperta la finestra di dialogo New Oracle CDC Service.  
   

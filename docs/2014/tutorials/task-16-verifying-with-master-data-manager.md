@@ -1,5 +1,5 @@
 ---
-title: 'Attività 16: Verifica con gestione dati Master | Microsoft Docs'
+title: 'Attività 16: verifica con Gestione dati master | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 35dd2da7f6cf6598918cd9d109b97f3d314556d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484695"
 ---
 # <a name="task-16-verifying-with-master-data-manager"></a>Attività 16: Verifica con Gestione dati master
   In questa attività viene verificato lo stato del processo batch inviato dal pacchetto SSIS e viene controllato che i dati siano stati caricati nel server MDS tramite Gestione dati master.  
   
-1.  Avvio veloce **gestione dati Master** ([http://localhost/MDS](http://localhost/MDS)). Se è già aperto, fare clic su **Microsoft SQL Server Master Data Services** nella parte superiore per passare alle **homepage**.  
+1.  Avviare **Gestione dati master** ([http://localhost/MDS](http://localhost/MDS)). Se è già aperto, fare clic su **Microsoft SQL Server Master Data Services** nella parte superiore per passare al **Home page**.  
   
 2.  Fare clic su **Gestione integrazione**.  
   
-3.  Si noti che è presente un batch con denominato **EIMBatch** che è stato inviato nell'elenco. Fare clic su **Import Data** nella barra dei menu se non viene visualizzata la schermata seguente.  
+3.  Si noti che è presente un batch con il nome **EIMBatch** inviato nell'elenco. Se non viene visualizzata la schermata seguente, fare clic su **Importa dati** nella barra dei menu.  
   
-     ![EIM Batch](../../2014/tutorials/media/et-verifyingwithmasterdatamanager.jpg "EIM Batch")  
+     ![Batch EIM](../../2014/tutorials/media/et-verifyingwithmasterdatamanager.jpg "Batch EIM")  
   
-4.  Tornare alla home page, fare clic su **SQL Server 2012 Master Data Services** nella parte superiore.  
+4.  Tornare al home page facendo clic **SQL Server Master Data Services 2012** nella parte superiore.  
   
-5.  Assicurarsi che **Suppliers** modello selezionato per **Model** e **VERSION_1** sia selezionato per **versione**e fare clic su  **Esplora**.  
+5.  Verificare che il **modello Suppliers** sia selezionato **per modello** e **VERSION_1** sia selezionato per **versione**, quindi fare clic su **Esplora**.  
   
-6.  È possibile visualizzare il pacchetto di dati SSIS importato in MDS. I dati devono essere puliti e non sono duplicati **codice** valori (Nota: **SupplierID** colonna in Excel corrisponde al **codice** attributo dell'entità Supplier in MDS).  
+6.  È possibile visualizzare il pacchetto di dati SSIS importato in MDS. I dati devono essere puliti e non contengono valori di **codice** duplicati (Nota: la colonna **SupplierID** in Excel corrisponde all'attributo **Code** dell'entità Supplier in MDS).  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Attività 17: Verifica del progetto DQS Cleansing creato dal pacchetto SSIS](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
   
   

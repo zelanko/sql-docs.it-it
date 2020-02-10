@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011814"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Specifica del tipo di archiviazione di file tramite bcp (SQL Server)
-  Il *tipo di archiviazione di file* indica la modalità con la quale vengono archiviati i dati in un file. I dati possono essere esportati in un file utilizzando il tipo di dati della tabella del database in cui si trovano (formato nativo), come caratteri (formato carattere) o utilizzando qualsiasi tipo di dati nel caso in cui sia supportata la conversione implicita. È possibile ad esempio copiare il tipo `smallint` come `int`. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente.  
+  Il *tipo di archiviazione di file* descrive il modo in cui i dati vengono archiviati nel file di dati. I dati possono essere esportati in un file utilizzando il tipo di dati della tabella del database in cui si trovano (formato nativo), come caratteri (formato carattere) o utilizzando qualsiasi tipo di dati nel caso in cui sia supportata la conversione implicita. È possibile ad esempio copiare il tipo `smallint` come `int`. I tipi di dati definiti dall'utente vengono esportati utilizzando il tipo di dati di base corrispondente.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Richiesta del tipo di archiviazione di dati con bcp  
- Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato ( **-f**) o al formato dei dati ( **-n**, **-c**, **-w**o **-N**), viene richiesto il tipo di archiviazione di file di ogni campo di dati, come illustrato di seguito:  
+ Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato (**-f**) o al formato dei dati (**-n**, **-c**, **-w**o **-N**), viene richiesto il tipo di archiviazione di file di ogni campo di dati, come illustrato di seguito:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -41,16 +41,16 @@ ms.locfileid: "66011814"
   
     |tipo di archiviazione di file|Parametro da specificare nel prompt dei comandi|  
     |-----------------------|-----------------------------|  
-    |`char` <sup>1</sup>|`c`[`har`]|  
+    |`char`<sup>1</sup>|`c`[`har`]|  
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text` <sup>2</sup>|`T`[`ext`]|  
+    |`text`<sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image` <sup>2</sup>|`I`[`mage`]|  
-    |`datetime`|**d[ate]**|  
+    |`image`<sup>2</sup>|`I`[`mage`]|  
+    |`datetime`|**d [ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
     |`date`|`de`|  
@@ -58,39 +58,39 @@ ms.locfileid: "66011814"
     |`datetimeoffset`|`do`|  
     |`decimal`|`n`|  
     |`numeric`|`n`|  
-    |`float`|**f[loat]**|  
+    |`float`|**f [Loat]**|  
     |`real`|`r`|  
-    |`Int`|**i[nt]**|  
+    |`Int`|**i [NT]**|  
     |`bigint`|`B[igint]`|  
-    |`smallint`|**s[mallint]**|  
-    |`tinyint`|**t[inyint]**|  
-    |`money`|**m[oney]**|  
+    |`smallint`|**s [mallint]**|  
+    |`tinyint`|**t [inyint]**|  
+    |`money`|**m [Oney]**|  
     |`smallmoney`|`M`|  
     |`bit`|`b[it]`|  
     |`uniqueidentifier`|`u`|  
     |`sql_variant`|`V[ariant]`|  
     |`timestamp`|`x`|  
-    |`UDT` (tipo di dati definito dall'utente)|`U`|  
+    |`UDT`(tipo di dati definito dall'utente)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> l'interazione tra lunghezza del campo, lunghezza del prefisso e i caratteri di terminazione determina la quantità di spazio di archiviazione allocata in un file di dati per dati non carattere esportati come il `char` tipo archiviazione di file.  
+     <sup>1</sup> l'interazione tra lunghezza del campo, lunghezza del prefisso e caratteri di terminazione determina la quantità di spazio di archiviazione allocata in un file di dati per i dati non carattere `char` esportati come tipo di archiviazione file.  
   
-     <sup>2</sup> il `ntext`, `text`, e `image` tipi di dati verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. In alternativa, usare `nvarchar(max)`, `varchar(max)` e `varbinary(max)`.  
+     <sup>2</sup> i `ntext`tipi `text`di dati `image` , e verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. In alternativa, usare `nvarchar(max)`, `varchar(max)` e `varbinary(max)`.  
   
 ## <a name="native-file-storage-types"></a>Tipi di archiviazione di file nativi  
  I tipi di archiviazione di file nativi vengono registrati nel file di formato come tipo di dati del file host corrispondente.  
   
 |tipo di archiviazione di file|Tipo di dati del file host|  
 |-----------------------|-------------------------|  
-|`char` <sup>1</sup>|SQLCHAR|  
+|`char`<sup>1</sup>|SQLCHAR|  
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text` <sup>2</sup>|SQLCHAR|  
-|`ntext` <sup>2</sup>|SQLNCHAR|  
+|`text`<sup>2</sup>|SQLCHAR|  
+|`ntext`<sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image` <sup>2</sup>|SQLBINARY|  
+|`image`<sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -109,16 +109,16 @@ ms.locfileid: "66011814"
 |`timestamp`|SQLBINARY|  
 |UDT (tipo di dati definito dall'utente)|SQLUDT|  
   
- <sup>1</sup> file di dati archiviati nel carattere formato `char` come tipo di archiviazione file. Per questi file di dati di tipo carattere SQLCHAR costituisce pertanto l'unico tipo di dati incluso in file di formato.  
+ <sup>1</sup> i file di dati archiviati in formato carattere utilizzano `char` come tipo di archiviazione di file. Per questi file di dati di tipo carattere SQLCHAR costituisce pertanto l'unico tipo di dati incluso in file di formato.  
   
- <sup>2</sup> non è possibile importazione bulk in `text`, `ntext`, e `image` colonne con valori predefiniti.  
+ <sup>2</sup> non è possibile eseguire l'importazione `text`bulk `ntext`di dati `image` in colonne, e con valori predefiniti.  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>Ulteriori considerazioni sui tipi di archiviazione di file  
  Quando si esegue l'esportazione bulk da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file di dati:  
   
 -   È sempre possibile specificare il tipo di archiviazione di file `char`.  
   
--   Se si immette un tipo di archiviazione di file che rappresenta una conversione implicita non valida, **bcp** avrà esito negativo; ad esempio, tuttavia è possibile specificare `int` per `smallint` dati, se si specifica `smallint` per `int` dati, risultato di errori di overflow.  
+-   Se si immette un tipo di archiviazione di file che rappresenta una conversione implicita non valida, **bcp** avrà esito negativo. ad esempio, anche se è possibile `int` specificare `smallint` per i dati, se `smallint` si `int` specifica per i dati, risultano errori di overflow.  
   
 -   Se i tipi di dati non carattere, quali `float`, `money`, `datetime` o `int`, vengono archiviati in base al tipo dei relativi database, i dati verranno scritti nel file di dati nel formato nativo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -128,8 +128,8 @@ ms.locfileid: "66011814"
 ## <a name="see-also"></a>Vedere anche  
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Specificare la lunghezza del campo tramite bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Specificare la lunghezza del prefisso nei file di dati con bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+ [Specificare la lunghezza del campo utilizzando bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Specificare i terminatori del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Specificare la lunghezza del prefisso nei file di dati tramite bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

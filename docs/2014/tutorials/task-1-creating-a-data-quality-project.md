@@ -1,5 +1,5 @@
 ---
-title: 'Attività 1: Creazione di un progetto Data Quality | Microsoft Docs'
+title: 'Attività 1: creazione di un progetto Data Quality | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484899"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>Attività 1: Creazione di un progetto Data Quality
@@ -22,7 +22,7 @@ ms.locfileid: "65484899"
   
 1.  Nel riquadro **Progetto Data Quality** della pagina principale fare clic su **Nuovo progetto Data Quality**.  
   
-     ![Nuovo pulsante di progetto di qualità di dati in Main pagina](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "nuovo pulsante di progetto di qualità di dati in Main pagina")  
+     ![Pulsante Nuovo progetto Data Quality nella pagina principale](../../2014/tutorials/media/et-creatingadataqualityproject-01.jpg "Pulsante Nuovo progetto Data Quality nella pagina principale")  
   
 2.  Digitare **Cleanse Supplier List** come **Nome** del progetto.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "65484899"
   
 4.  Assicurarsi che sia selezionato **Pulizia** come **Attività** nella parte inferiore del riquadro destro, quindi fare clic su **Avanti**.  
   
-     ![Data Quality pagina nuovo progetto - pulizia selezionata](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "Data Quality pagina nuovo progetto - pulizia selezionata")  
+     ![Pagina Nuovo progetto Data Quality - Pulizia selezionata](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "Pagina Nuovo progetto Data Quality - Pulizia selezionata")  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 2: Mapping di colonne di Excel ai domini DQS](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 2: Mapping delle colonne di Excel ai domini DQS](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
   
   

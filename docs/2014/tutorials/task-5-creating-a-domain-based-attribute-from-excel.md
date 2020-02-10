@@ -1,5 +1,5 @@
 ---
-title: 'Attività 5: Creazione di un attributo basato su dominio da Excel | Microsoft Docs'
+title: 'Attività 5: creazione di un attributo basato su dominio da Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,36 +11,36 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489100"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Attività 5: Creazione di un attributo basato su dominio di Excel
-  In questa attività si converte il **lo stato** attributo delle **Supplier** entità sotto forma di un **attributo basato su dominio**. Dopo aver configurato l'attributo State da uno basato su dominio e pubblicarlo in MDS, una nuova entità denominata **lo stato** verrà creato nel server MDS con tutti i valori nella colonna e il **stato** attributo del **Supplier** entità verrà popolato con i valori di **stato** entità. A questo punto, il **Suppliers** modello deve disporre di due entità: **Supplier** e **stato** in cui il **stato** attributo del **Supplier** entità è un attributo basato su dominio che dipende da **stato** entità.  
+  In questa attività viene convertito l'attributo **state** dell'entità **Supplier** come **attributo basato su dominio**. Dopo aver configurato l'attributo State in modo che sia basato su dominio e pubblicato in MDS, viene creata una nuova entità denominata **state** nel server MDS con tutti i valori nella colonna e l'attributo **state** dell'entità **Supplier** verrà popolato con i valori dell'entità **state** . A questo punto, il modello **Suppliers** deve avere due entità: **Supplier** e **state** , dove l'attributo **state** dell'entità **Supplier** è un attributo basato su dominio che dipende dall'entità **state** .  
   
-1.  Passare a **Excel** finestra dotata **Cleansed and Matched Suppliers. xlsx** aprire.  
+1.  Passa alla finestra di **Excel** con i **fornitori puliti e corrispondenti. xlsx** aperto.  
   
-2.  Fare clic su **Aggiorna** pulsante della barra multifunzione per ottenere gli aggiornamenti più recenti da MDS. Si dovrebbe vedere altri due record se è stata eseguita l'opzione facoltativa **attività 4**.  
+2.  Fare clic sul pulsante **Aggiorna** sulla barra multifunzione per ottenere gli aggiornamenti più recenti da MDS. Verranno visualizzati i due record più se è stata eseguita l'attività facoltativa **4**.  
   
-3.  Fare clic sul nome della colonna **lo stato** (cella **I1**) nella **riga intestazione**.  
+3.  Fare clic su **stato** nome colonna (cella **I1**) nella **riga di intestazione**.  
   
-     ![Excel - pulsante Proprietà attributi](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-01.jpg "Excel - pulsante Proprietà attributi")  
+     ![Excel - Pulsante Proprietà attributi](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-01.jpg "Excel - Pulsante Proprietà attributi")  
   
-4.  Fare clic su **delle proprietà degli attributi** sulla barra multifunzione.  
+4.  Fare clic su **Proprietà attributo** sulla barra multifunzione.  
   
-5.  Nel **delle proprietà degli attributi** finestra di dialogo **elenco vincolato (basato su dominio)** per il **tipo di attributo**.  
+5.  Nella finestra di dialogo **Proprietà attributo** selezionare **elenco vincolato (basato su dominio)** per il tipo di **attributo**.  
   
-6.  Tipo di **lo stato** per il **Nome nuova entità** e fare clic su **OK**.  
+6.  Digitare **state** per il **nome della nuova entità** e fare clic su **OK**.  
   
-     ![Excel - finestra di dialogo Proprietà attributi](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-02.jpg "Excel - finestra di dialogo Proprietà attributo")  
+     ![Excel - Finestra di dialogo Proprietà attributi](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-02.jpg "Excel - Finestra di dialogo Proprietà attributi")  
   
-7.  A questo punto, in Excel, dovrebbe **freccia giù** quando si fa clic su qualsiasi valore nel **stato** colonna. Se necessario, il valore può essere modificato utilizzando l'elenco a discesa.  
+7.  A questo punto, in Excel dovrebbe essere visualizzata la **freccia in giù** quando si fa clic su qualsiasi valore nella colonna **stato** . Se necessario, il valore può essere modificato utilizzando l'elenco a discesa.  
   
-     ![Excel - elenco a discesa elenco con gli stati](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - elenco a discesa elenco con gli Stati")  
+     ![Excel - Elenco a discesa con gli Stati](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - Elenco a discesa con gli Stati")  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 6: Verificare che l'attributo basato su dominio viene creato tramite Gestione dati Master](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 6: Verifica della creazione dell'attributo basato su dominio tramite Gestione dati master](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

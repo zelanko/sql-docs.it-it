@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d56a6e32818296343b711769ad594bf7cadce57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011236"
 ---
 # <a name="full-text-search"></a>Ricerca full-text
@@ -25,14 +25,14 @@ ms.locfileid: "66011236"
  Attraverso le query full-text è possibile eseguire ricerche linguistiche rispetto ai dati di testo contenuti negli indici full-text, utilizzando parole e frasi in base alle regole di una determinata lingua, come ad esempio l'inglese o il giapponese. Le query full-text possono contenere semplici parole e frasi oppure più forme di una parola o frase. Una query full-text restituisce qualsiasi documento contenente almeno una corrispondenza, nota anche come *riscontro*. Si ottiene una corrispondenza quando un documento di destinazione contiene tutti i termini specificati nella query full-text e soddisfa qualsiasi altra condizione di ricerca, come ad esempio la distanza entro i termini corrispondenti.  
   
 > [!NOTE]  
->  La ricerca full-text è un componente facoltativo del Motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [installare SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
+>  La ricerca full-text è un componente facoltativo del Motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).  
   
-##  <a name="benefits"></a> Che cosa può fare con ricerca Full-Text?  
- Ricerca full-text è applicabile a una vasta gamma di scenari aziendali, ad esempio e le aziende-ricerca per gli elementi in un sito web. legge le aziende-cercando le cronologie di case in un repository di dati legali; o descrizioni del processo di ricerca i reparti delle risorse umane ai curriculum. Le attività di sviluppo e amministrazione di base della ricerca full-text sono equivalenti indipendentemente dagli scenari aziendali. In uno scenario aziendale, tuttavia, l'indice e le query full-text possono essere modificati in base agli obiettivi aziendali da raggiungere. È ad esempio probabile che per un'attività di commercio elettronico l'ottimizzazione delle prestazioni sia ritenuta più importante della classificazione dei risultati, dell'accuratezza delle chiamate (quante delle corrispondenze esistenti vengono effettivamente restituite da una query full-text) o del supporto di più lingue. Per un ufficio legale, invece, l'aspetto più importante potrebbe essere la restituzione di ogni possibile occorrenza (*richiamo totale* delle informazioni).  
+##  <a name="benefits"></a>Cosa è possibile fare con la ricerca full-text?  
+ La ricerca full-text è applicabile a un'ampia gamma di scenari aziendali, ad esempio e-business, per la ricerca di elementi in un sito Web; aziende legali: ricerca di cronologie di casi in un repository di dati legali; o reparti risorse umane: descrizioni dei processi corrispondenti con riavvii archiviati. Le attività di sviluppo e amministrazione di base della ricerca full-text sono equivalenti indipendentemente dagli scenari aziendali. In uno scenario aziendale, tuttavia, l'indice e le query full-text possono essere modificati in base agli obiettivi aziendali da raggiungere. È ad esempio probabile che per un'attività di commercio elettronico l'ottimizzazione delle prestazioni sia ritenuta più importante della classificazione dei risultati, dell'accuratezza delle chiamate (quante delle corrispondenze esistenti vengono effettivamente restituite da una query full-text) o del supporto di più lingue. Per un ufficio legale, invece, l'aspetto più importante potrebbe essere la restituzione di ogni possibile occorrenza (*richiamo totale* delle informazioni).  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-###  <a name="queries"></a> Query di ricerca full-Text  
+###  <a name="queries"></a>Query di ricerca full-text  
  Dopo l'aggiunta delle colonne a un indice full-text, gli utenti e le applicazioni possono eseguire query full-text sul testo contenuto all'interno delle colonne. Queste query possono consentire la ricerca degli elementi seguenti:  
   
 -   Una o più parole o frasi specifiche (*termine semplice*)  
@@ -72,14 +72,14 @@ ms.locfileid: "66011236"
   
  Per altre informazioni, vedere [Esecuzione della query con ricerca Full-Text](query-with-full-text-search.md).  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-###  <a name="like"></a> Confronto tra LIKE e la ricerca Full-Text  
- Contrariamente alla ricerca full-text, il predicato [LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] funziona unicamente con i modelli di caratteri. Non è inoltre possibile utilizzare il predicato LIKE per eseguire query su dati binari formattati. Inoltre, l'esecuzione di una query LIKE su una grande quantità di dati di testo non strutturati è molto più lenta dell'esecuzione di una query full-text equivalente sugli stessi dati. Una query LIKE eseguita su milioni di righe di dati di testo può richiedere diversi minuti, mentre per una query full-text sugli stessi dati possono essere necessari al massimo pochi secondi, a seconda del numero di righe restituite.  
+###  <a name="like"></a>Confronto tra LIKE e la ricerca full-text  
+ Diversamente dalla ricerca full-text, il predicato [like](/sql/t-sql/language-elements/like-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] funziona solo con i modelli di caratteri. Non è inoltre possibile utilizzare il predicato LIKE per eseguire query su dati binari formattati. Inoltre, l'esecuzione di una query LIKE su una grande quantità di dati di testo non strutturati è molto più lenta dell'esecuzione di una query full-text equivalente sugli stessi dati. Una query LIKE eseguita su milioni di righe di dati di testo può richiedere diversi minuti, mentre per una query full-text sugli stessi dati possono essere necessari al massimo pochi secondi, a seconda del numero di righe restituite.  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-##  <a name="architecture"></a> Componenti e dell'architettura della ricerca Full-Text  
+##  <a name="architecture"></a>Componenti e architettura della ricerca full-text  
  L'architettura della ricerca full-text è costituita dai processi seguenti:  
   
 -   Processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (sqlservr.exe).  
@@ -92,9 +92,9 @@ ms.locfileid: "66011236"
   
  ![architettura della ricerca full-text](../../database-engine/media/ifts-arch.gif "architettura della ricerca full-text")  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-###  <a name="sqlprocess"></a> SQL Server Process  
+###  <a name="sqlprocess"></a>SQL Server processo  
  Nel processo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono utilizzati i componenti seguenti per la ricerca full-text:  
   
 -   **Tabelle utente.** In queste tabelle sono contenuti i dati da inserire nell'indice full-text.  
@@ -103,38 +103,38 @@ ms.locfileid: "66011236"
   
 -   **File del thesaurus.** In questi file sono contenuti i sinonimi dei termini da cercare. Per altre informazioni, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
--   **Oggetti dell'elenco di parole non significative.** Negli oggetti dell'elenco di parole non significative sono inclusi un insieme di parole comuni che non risultano utili per la ricerca. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+-   **Oggetti di parole non significative.** Negli oggetti dell'elenco di parole non significative sono inclusi un insieme di parole comuni che non risultano utili per la ricerca. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Query Processor.** Query Processor consente di compilare ed eseguire query SQL. Se in una query SQL è inclusa una query di ricerca full-text, la query viene inviata al motore di ricerca full-text sia durante la compilazione sia durante l'esecuzione. Il risultato della query viene messo a confronto con l'indice full-text.  
+-   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Query Processor.** Query Processor consente di compilare ed eseguire query SQL. Se in una query SQL è inclusa una query di ricerca full-text, la query viene inviata al motore di ricerca full-text sia durante la compilazione sia durante l'esecuzione. Il risultato della query viene messo a confronto con l'indice full-text.  
   
 -   **Motore di ricerca full-text.** Il motore di ricerca full-text in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è attualmente completamente integrato con Query Processor. Il motore di ricerca full-text compila ed esegue query full-text. Come parte dell'esecuzione di query, il motore di ricerca full-text può ricevere input dal thesaurus e dall'elenco di parole non significative.  
   
 -   **Writer di indici (indicizzatore).** Il writer di indici consente di compilare la struttura utilizzata per archiviare i token indicizzati.  
   
--   **Strumento di gestione del daemon di filtri.** Lo strumento di gestione del daemon di filtri consente di monitorare lo stato dell'host del daemon di filtri per il motore di ricerca full-text.  
+-   **Gestione daemon di filtri.** Lo strumento di gestione del daemon di filtri consente di monitorare lo stato dell'host del daemon di filtri per il motore di ricerca full-text.  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-###  <a name="fdhostprocess"></a> Processo Host del Daemon di filtri  
+###  <a name="fdhostprocess"></a>Processo host del daemon di filtri  
  L'host del daemon di filtri è un processo avviato dal motore di ricerca full-text e consente l'esecuzione dei componenti della ricerca full-text seguenti, responsabili dell'accesso, del filtraggio e del word breaking di dati dalle tabelle, nonché del word breaking e dello stemming dell'input della query.  
   
  I componenti dell'host del daemon di filtri sono i seguenti:  
   
--   **Protocol handler.** Questo componente consente di effettuare il pull dei dati dalla memoria per un'ulteriore elaborazione e di accedere ai dati da una tabella utente in un database specificato. È inoltre responsabile della raccolta dei dati dalle colonne oggetto dell'indicizzazione full-text e del loro passaggio all'host del daemon di filtri tramite il quale verrà applicato il filtro e il word breaker in base alle specifiche esigenze.  
+-   **Gestore del protocollo.** Questo componente consente di effettuare il pull dei dati dalla memoria per un'ulteriore elaborazione e di accedere ai dati da una tabella utente in un database specificato. È inoltre responsabile della raccolta dei dati dalle colonne oggetto dell'indicizzazione full-text e del loro passaggio all'host del daemon di filtri tramite il quale verrà applicato il filtro e il word breaker in base alle specifiche esigenze.  
   
 -   **Filtri.** Per alcuni tipi di dati è richiesta l'applicazione di un filtro prima che i dati di un documento possano essere sottoposti all'indicizzazione full-text, inclusi i dati nelle colonne `varbinary`, `varbinary(max)`, `image` o `xml`. Il filtro utilizzato per un documento dipende dal relativo tipo. Vengono infatti utilizzati filtri diversi per documenti di Microsoft Word (doc), documenti di Microsoft Excel (xls) e documenti XML (xml). Il filtro estrae blocchi di testo dal documento, rimuovendo la formattazione incorporata e mantenendo il testo e, potenzialmente, le informazioni sulla posizione del testo. Il risultato è un flusso di informazioni testuali. Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md).  
   
 -   **Word breaker e stemmer.** Un word breaker è un componente specifico della lingua che consente di trovare i delimitatori di parola in base alle regole lessicali di una determinata lingua (*word breaking*). Ogni word breaker è associato a uno stemmer specifico della lingua che coniuga i verbi ed esegue le espansioni flessionali. In fase di indicizzazione, l'host del daemon di filtri utilizza un word breaker e uno stemmer per eseguire l'analisi linguistica sui dati testuali di una colonna di tabella specificata. Il word breaker e lo stemmer utilizzati per l'indicizzazione della colonna sono determinati dalla lingua associata a una colonna di tabella nell'indice full-text. Per altre informazioni, vedere [Configurare e gestire word breaker e stemmer per la ricerca](configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-##  <a name="processing"></a> Elaborazione della ricerca full-Text  
+##  <a name="processing"></a>Elaborazione della ricerca full-text  
  La ricerca full-text è supportata dal motore di ricerca full-text che svolge due ruoli, vale a dire il supporto per l'indicizzazione e quello per l'esecuzione di query.  
   
-###  <a name="indexing"></a> Processo di indicizzazione full-Text  
+###  <a name="indexing"></a>Processo di indicizzazione full-text  
  Quando viene iniziato un popolamento full-text, noto anche come ricerca per indicizzazione, tramite il motore di ricerca full-text viene eseguito il push di batch di grandi dimensioni di dati in memoria e viene inviata una notifica all'host del daemon di filtri. L'host filtra ed esegue il word breaking dei dati ed esegue inoltre la conversione dei dati convertiti in elenchi di parole invertiti. La ricerca full-text effettua quindi il pull dei dati convertiti dagli elenchi di parole, elabora i dati per rimuovere le parole non significative e salva in modo permanente gli elenchi di parole per un batch in uno o più indici invertiti.  
   
- Durante l'indicizzazione dei dati archiviati in un `varbinary(max)` oppure `image` colonna, il filtro, che implementa il **IFilter** interfaccia, estrae testo in base al formato di file specificato per tali dati (ad esempio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). In alcuni casi, i componenti filtro richiedono la `varbinary(max)`, o `image` dati devono essere scritti nella cartella filterdata e non esserne eseguito il push in memoria.  
+ Quando si indicizzano i dati archiviati `varbinary(max)` in `image` una colonna o, il filtro, che implementa l'interfaccia **IFilter** , estrae il testo in base al formato di file specificato per tali dati [!INCLUDE[msCoName](../../includes/msconame-md.md)] , ad esempio Word. In alcuni casi, i componenti filtro richiedono che `varbinary(max)`i dati `image` , o vengano scritti nella cartella FilterData, anziché essere inseriti in memoria.  
   
  Nell'ambito dell'elaborazione, i dati di testo raccolti vengono sottoposti a un word breaker per separare il testo in singoli token o parole chiave. La lingua utilizzata per la suddivisione in token viene specificata a livello di colonna o può essere identificata all'interno dei dati `varbinary(max)`, `image` o `xml` dal componente filtro.  
   
@@ -142,29 +142,30 @@ ms.locfileid: "66011236"
   
  Al termine di un popolamento, viene attivato un processo di unione conclusivo che associa i frammenti di indice in un singolo indice full-text master. Ciò consente prestazioni di query superiori poiché è necessario eseguire query solo sull'indice master anziché su alcuni frammenti di indice ed è possibile utilizzare statistiche di punteggio migliori per la classificazione della pertinenza.  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-###  <a name="querying"></a> Processo di esecuzione delle query full-Text  
+###  <a name="querying"></a>Processo di esecuzione di query full-text  
  Query Processor consente di passare le parti full-text di una query al motore di ricerca full-text affinché vengano elaborate. Il motore di ricerca full-text esegue il word breaking e, facoltativamente, le espansioni del thesaurus, lo stemming e l'elaborazione delle parole non significative. Le parti full-text della query vengono rappresentate come operatori SQL, principalmente come funzioni di flusso con valori di tabella. Durante l'esecuzione della query, queste funzioni accedono all'indice invertito per recuperare i risultati corretti. I risultati vengono restituiti al client immediatamente oppure dopo essere stati ulteriormente elaborati.  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
-##  <a name="components"></a> Componenti linguistici e supporto della lingua nella ricerca Full-Text  
+##  <a name="components"></a>Componenti linguistici e supporto per la lingua nella ricerca full-text  
  La ricerca full-text supporta quasi 50 lingue, tra cui inglese, spagnolo, cinese, giapponese, arabo, bengali e hindi. Per un elenco completo delle lingue full-text supportate, vedere [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). A ognuna delle colonne contenute nell'indice full-text è associato un identificatore delle impostazioni locali (LCID) di Microsoft Windows che corrisponde a una lingua supportata dalla ricerca full-text. L'identificatore LCID 1033, ad esempio, corrisponde all'inglese americano, mentre l'identificatore LCID 2057 corrisponde all'inglese britannico. Per ogni lingua full-text supportata, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono forniti componenti linguistici che supportano l'indicizzazione e l'esecuzione di query su dati full-text archiviati in quella lingua.  
   
  Tra i componenti specifici della lingua sono inclusi gli elementi seguenti:  
   
 -   **Word breaker e stemmer.** Un word breaker consente di trovare i delimitatori di parola in base alle regole lessicali di una determinata lingua (*word breaking*). A ogni word breaker è associato uno stemmer tramite cui vengono coniugati i verbi per la stessa lingua. Per altre informazioni, vedere [Configurare e gestire word breaker e stemmer per la ricerca](configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
--   **Elenchi di parole non significative.** Viene inoltre fornito un elenco di parole non significative di sistema. Per *parola non significativa* si intende una parola inutile ai fini della ricerca e quindi ignorata dalle query full-text. Ad esempio, nelle impostazioni locali della lingua italiana parole quali "circa", "con", "devo" e "cui" sono considerate non significative. In genere, è necessario configurare uno o più file del thesaurus ed elenchi di parole non significative. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+-   **Elenchi.** Viene inoltre fornito un elenco di parole non significative di sistema. Per *parola non significativa* si intende una parola inutile ai fini della ricerca e quindi ignorata dalle query full-text. Ad esempio, nelle impostazioni locali della lingua italiana parole quali "circa", "con", "devo" e "cui" sono considerate non significative. In genere, è necessario configurare uno o più file del thesaurus ed elenchi di parole non significative. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   **File del thesaurus.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installa anche un file del thesaurus per ogni lingua full-text e un file del thesaurus globale. I file del thesaurus installati sono praticamente vuoti, ma è possibile modificarli per definire sinonimi per una lingua o uno scenario aziendale specifico. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. Per altre informazioni, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](configure-and-manage-thesaurus-files-for-full-text-search.md).  
+-   **File del thesaurus.** 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installa anche un file del thesaurus per ogni lingua full-text e un file del thesaurus globale. I file del thesaurus installati sono praticamente vuoti, ma è possibile modificarli per definire sinonimi per una lingua o uno scenario aziendale specifico. Sviluppando un thesaurus basato sui dati full-text in uso, è possibile ampliare in modo efficace l'ambito delle query full-text su tali dati. Per altre informazioni, vedere [Configurare e gestire i file del thesaurus per la ricerca full-text](configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
 -   **Filtri (iFilters).**  L'indicizzazione di un documento in una colonna con tipo di dati `varbinary(max)`, `image` o `xml` richiede l'applicazione di un filtro per eseguire ulteriori operazioni di elaborazione. Il filtro deve essere specifico del tipo di documento (doc, pdf, xls, xml e così via). Per altre informazioni, vedere [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md).  
   
  I word breaker, gli stemmer e i filtri vengono eseguiti nel processo host del daemon di filtri (fdhost.exe).  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
 ##  <a name="reltasks"></a> Attività correlate  
   
@@ -174,9 +175,9 @@ ms.locfileid: "66011236"
   
     -   [Eseguire query con ricerca full-text](query-with-full-text-search.md)  
   
-    -   [Cercare parole vicine a un'altra parola con NEAR](search-for-words-close-to-another-word-with-near.md)  
+    -   [Ricerca di parole vicine a un'altra parola con NEAR](search-for-words-close-to-another-word-with-near.md)  
   
-    -   [Limitare i risultati della ricerca mediante RANK](limit-search-results-with-rank.md)  
+    -   [Limitazione dei risultati della ricerca mediante RANK](limit-search-results-with-rank.md)  
   
     -   [Migliorare le prestazioni delle query full-text](improve-the-performance-of-full-text-queries.md)  
   
@@ -186,19 +187,19 @@ ms.locfileid: "66011236"
   
 -   Gestione di cataloghi e indici  
   
-    -   [Creare e gestire cataloghi full-text](create-and-manage-full-text-catalogs.md)  
+    -   [Creazione e gestione dei cataloghi full-text](create-and-manage-full-text-catalogs.md)  
   
     -   [Creazione e gestione di indici full-text](create-and-manage-full-text-indexes.md)  
   
-    -   [Scegliere una lingua durante la creazione di un indice full-text](choose-a-language-when-creating-a-full-text-index.md)  
+    -   [Scelta di una lingua durante la creazione di un indice full-text](choose-a-language-when-creating-a-full-text-index.md)  
   
     -   [Popolamento degli indici full-text](populate-full-text-indexes.md)  
   
-    -   [Gestire indici full-text](../../database-engine/manage-full-text-indexes.md)  
+    -   [Gestione di indici full-text.](../../database-engine/manage-full-text-indexes.md)  
   
     -   [Migliorare le prestazioni degli indici full-text](improve-the-performance-of-full-text-indexes.md)  
   
-    -   [Risolvere i problemi nell'indicizzazione full-text](troubleshoot-full-text-indexing.md)  
+    -   [Risoluzione dei problemi nell'indicizzazione full-text](troubleshoot-full-text-indexing.md)  
   
     -   [Backup e ripristino di indici e cataloghi full-text](back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
@@ -208,13 +209,13 @@ ms.locfileid: "66011236"
   
     -   [Configurazione e gestione di word breaker e stemmer per la ricerca](configure-and-manage-word-breakers-and-stemmers-for-search.md)  
   
-    -   [Visualizzare o modificare word breaker e filtri registrati](view-or-change-registered-filters-and-word-breakers.md)  
+    -   [Visualizzazione o modifica di word breaker e filtri registrati](view-or-change-registered-filters-and-word-breakers.md)  
   
-    -   [Ripristinare i word breaker usati dalla ricerca alla versione precedente](revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
+    -   [Ripristinare i word breaker utilizzati dalla ricerca alla versione precedente](revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
   
-    -   [Modificare il word breaker usato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](change-the-word-breaker-used-for-us-english-and-uk-english.md)  
+    -   [Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)](change-the-word-breaker-used-for-us-english-and-uk-english.md)  
   
-    -   [Personalizzare il comportamento dei word breaker con un dizionario personalizzato](customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)  
+    -   [Personalizzare Comportamento di word breaker con un dizionario personalizzato](customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)  
   
     -   [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
@@ -222,18 +223,18 @@ ms.locfileid: "66011236"
   
 -   Gestione della ricerca full-text  
   
-    -   [Gestire e monitorare la ricerca full-text per un'istanza del server](manage-and-monitor-full-text-search-for-a-server-instance.md)  
+    -   [Gestione e monitoraggio della ricerca full-text per un'istanza del server](manage-and-monitor-full-text-search-for-a-server-instance.md)  
   
     -   [Impostare l'account del servizio dell'Utilità di avvio del daemon di filtri full-text](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
   
 -   [Aggiornare la ricerca full-text](upgrade-full-text-search.md)  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
 ##  <a name="relcontent"></a> Contenuto correlato  
   
--   [DDL, funzioni, stored procedure e viste di ricerca full-text](../views/views.md)  
+-   [DDL di ricerca full-text, funzioni, stored procedure e viste](../views/views.md)  
   
- [Contenuto dell'argomento](#top)  
+ [Contenuto dell'articolo](#top)  
   
   

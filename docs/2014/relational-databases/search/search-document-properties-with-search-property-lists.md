@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011074"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca
@@ -39,7 +39,7 @@ ms.locfileid: "66011074"
   
  Nella figura seguente viene illustrata una vista logica di un elenco di proprietà di ricerca in cui sono specificate due proprietà, Title e Keywords. Il nome dell'elenco di proprietà per Keywords è "Tags". Queste proprietà appartengono allo stesso set di proprietà il cui GUID è F29F85E0-4FF9-1068-AB91-08002B27B3D9. Gli identificatori di tipo integer della proprietà sono 2 per Title e 5 per Tags (Keywords). Tramite il motore di ricerca full-text viene arbitrariamente eseguito il mapping di ogni proprietà a un ID di proprietà interno univoco per l'elenco di proprietà di ricerca. L'ID di proprietà interno per la proprietà Title è 1, mentre per la proprietà Tags è 2.  
   
- ![Mapping dell'elenco di proprietà di ricerca con la tabella interna](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "Mapping dell'elenco di proprietà di ricerca con la tabella interna")  
+ ![Mapping dell'elenco di proprietà di ricerca alla tabella interna](../../database-engine/media/ifts-spl-w-title-and-keywords.gif "Mapping dell'elenco di proprietà di ricerca alla tabella interna")  
   
  È probabile che l'ID di proprietà interno sia diverso dall'identificatore di tipo integer della proprietà relativo alla proprietà. Se una determinata proprietà viene registrata in più elenchi di proprietà di ricerca, è possibile che a ciascun elenco di proprietà di ricerca venga assegnato un ID di proprietà interno. L'ID di proprietà interno potrebbe essere, ad esempio, 4 in un elenco di proprietà di ricerca, 1 in un altro, 3 in un altro ancora e così via. Al contrario, l'identificatore di tipo integer della proprietà è intrinseco della proprietà stessa e rimane uguale ovunque venga utilizzata la proprietà.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66011074"
 ##  <a name="impact"></a> Impatto dell'abilitazione della ricerca basata su proprietà  
  La configurazione di un indice full-text per supportare la ricerca basata su una o più proprietà aumenta le dimensioni dell'indice, a seconda del numero di proprietà specificate nell'elenco di proprietà di ricerca e del contenuto di ogni proprietà.  
   
- Test di corpi tipici di Microsoft Word<sup>?? </sup>, Excel<sup>?? </sup>e PowerPoint<sup>??</sup> documenti, è stato configurato un proprietà di ricerca tipica dell'indice a indice full-text. L'indicizzazione di queste proprietà ha comportato l'aumento delle dimensioni dell'indice full-text di circa il 5%. Si prevede che tale aumento approssimativo delle dimensioni caratterizzerà la maggior parte dei corpi di documento. In ultima analisi l'aumento delle dimensioni dipenderà, tuttavia, dalla quantità di dati della proprietà nel corpo di un determinato documento rispetto alla quantità di dati complessivi.  
+ Per testare i tipici corpi di<sup>Microsoft Word?</sup>, Excel<sup>??</sup>e PowerPoint<sup>?</sup> Documents, è stato configurato un indice full-text per indicizzare le tipiche proprietà di ricerca. L'indicizzazione di queste proprietà ha comportato l'aumento delle dimensioni dell'indice full-text di circa il 5%. Si prevede che tale aumento approssimativo delle dimensioni caratterizzerà la maggior parte dei corpi di documento. In ultima analisi l'aumento delle dimensioni dipenderà, tuttavia, dalla quantità di dati della proprietà nel corpo di un determinato documento rispetto alla quantità di dati complessivi.  
   
   
   
@@ -241,6 +241,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Trovare GUID del set di proprietà e ID di tipo integer delle proprietà per le proprietà di ricerca](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
- [Configurazione e gestione di filtri per la ricerca](configure-and-manage-filters-for-search.md)  
+ [Configurare e gestire filtri per la ricerca](configure-and-manage-filters-for-search.md)  
   
   

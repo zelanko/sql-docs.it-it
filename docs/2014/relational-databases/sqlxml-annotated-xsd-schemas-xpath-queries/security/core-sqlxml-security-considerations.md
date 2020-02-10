@@ -1,5 +1,5 @@
 ---
-title: Considerazioni sulla sicurezza SQLXML di base | Microsoft Docs
+title: Considerazioni sulla sicurezza di SQLXML Core | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc25af8e18e826ce6b8323d714f090ac3d571a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010549"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Considerazioni principali sulla sicurezza di SQLXML 4.0
   Di seguito sono riportate alcune linee guida relative alla sicurezza quando si utilizza SQLXML per l'accesso ai dati.  
   
--   Il provider SQLXMLOLEDB espone una proprietà `StreamFlags` che consente di impostare flag per indicare la funzionalità di SQLXML da abilitare o disabilitare per ogni istanza specifica. È possibile utilizzare questa proprietà per personalizzare l'utilizzo di SQLXML e assicurarsi che siano abilitati solo i componenti desiderati. Per altre informazioni, vedere [Provider SQLXMLOLEDB &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md).  
+-   Il provider SQLXMLOLEDB espone una proprietà `StreamFlags` che consente di impostare flag per indicare la funzionalità di SQLXML da abilitare o disabilitare per ogni istanza specifica. È possibile utilizzare questa proprietà per personalizzare l'utilizzo di SQLXML e assicurarsi che siano abilitati solo i componenti desiderati. Per ulteriori informazioni, vedere [provider SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md).  
   
 -   Gli eventuali errori SQLXML restituiti possono includere informazioni sullo schema del database, come i nomi delle tabelle o delle colonne oppure informazioni sui tipi. Prestare attenzione nella gestione di questi errori in modo tale da rendere difficile l'individuazione delle informazioni sull'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da parte di utenti laddove non sia previsto o necessario.  
   

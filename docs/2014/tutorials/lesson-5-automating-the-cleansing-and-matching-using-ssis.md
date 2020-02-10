@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 5: Automatizzazione della pulizia e corrispondenza tramite SSIS | Microsoft Docs'
+title: 'Lezione 5: automazione della pulizia e della corrispondenza tramite SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489758"
 ---
-# <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lezione 5: Automazione della pulizia e della corrispondenza tramite SSIS
-  Nella lezione 1 è compilata la knowledge base Suppliers e usato per pulire i dati nella lezione 2 e corrispondenza dei dati nella lezione 3 mediante lo strumento **Client DQS**. In uno scenario reale, potrebbe essere necessario eseguire il pull dei dati da un'origine che DQS non supporta o si desidera automatizzare il processo di pulizia e di un processo di corrispondenza senza dover usare il **Client DQS** dello strumento. SQL Server Integration Services (SSIS) include componenti che è possibile utilizzare per integrare dati da diverse origini eterogenee e un **[trasformazione DQS Cleansing](https://msdn.microsoft.com/library/ee677619.aspx)** componente da richiamare operazioni di pulizia funzionalità esposta da DQS. Attualmente, DQS non viene esposta la funzionalità corrispondente per SSIS, ma è possibile usare la **[trasformazione Raggruppamento Fuzzy](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** per identificare duplicati nei dati.  
+# <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lezione 5: Automatizzazione della pulizia e della corrispondenza tramite SSIS
+  Nella lezione 1 è stata compilata la Knowledge Base Suppliers e utilizzata per pulire i dati nella lezione 2 e le corrispondenze dei dati della lezione 3 mediante lo strumento **client DQS**. In uno scenario reale, potrebbe essere necessario effettuare il pull dei dati da un'origine non supportata da DQS o si desidera automatizzare il processo di pulizia e di corrispondenza senza dover utilizzare lo strumento **client DQS** . SQL Server Integration Services (SSIS) include componenti che è possibile utilizzare per integrare dati da varie origini eterogenee e un componente di **[trasformazione di pulizia DQS](https://msdn.microsoft.com/library/ee677619.aspx)** per richiamare la funzionalità di pulizia esposta da DQS. Attualmente, DQS non espone la funzionalità di corrispondenza per l'utilizzo di SSIS, ma è possibile utilizzare la **[trasformazione Raggruppamento fuzzy](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** per identificare i duplicati nei dati.  
   
- È possibile caricare i dati in MDS utilizzando il **funzionalità di gestione temporanea basata su entità**. Quando si crea un'entità in MDS, vengono create automaticamente le tabelle di staging e le stored procedure corrispondenti. Ad esempio, quando è creata l'entità Supplier, il **stg. supplier_leaf** tabella e il **stg. udp_supplier_leaf** stored procedure create automaticamente. È possibile utilizzare le stored procedure e le tabelle di staging per creare, aggiornare ed eliminare membri di entità. In questa lezione vengono creati nuovi membri entità per l'entità Supplier. Per caricare i dati nel server MDS, tramite il pacchetto SSIS vengono innanzitutto caricati i dati nella tabella di staging stg.supplier_Leaf e, successivamente, viene attivata la stored procedure associata stg.udp_Supplier_Leaf. Visualizzare [importazione di dati](../master-data-services/overview-importing-data-from-tables-master-data-services.md) per altri dettagli.  
+ È possibile caricare i dati in MDS usando la **funzionalità di gestione temporanea basata su entità**. Quando si crea un'entità in MDS, vengono create automaticamente le tabelle di staging e le stored procedure corrispondenti. Ad esempio, quando è stata creata l'entità Supplier, la tabella **STG. supplier_Leaf** e il stored procedure **STG. udp_Supplier_Leaf** sono stati creati automaticamente. È possibile utilizzare le stored procedure e le tabelle di staging per creare, aggiornare ed eliminare membri di entità. In questa lezione vengono creati nuovi membri entità per l'entità Supplier. Per caricare i dati nel server MDS, tramite il pacchetto SSIS vengono innanzitutto caricati i dati nella tabella di staging stg.supplier_Leaf e, successivamente, viene attivata la stored procedure associata stg.udp_Supplier_Leaf. Per altri dettagli, vedere [importazione di dati](../master-data-services/overview-importing-data-from-tables-master-data-services.md) .  
   
  In questa lezione vengono effettuate le attività seguenti:  
   
@@ -28,13 +28,13 @@ ms.locfileid: "65489758"
   
 2.  Creazione di una vista sottoscrizioni nell'entità Supplier per esporre i dati nell'entità ad altre applicazioni. Tramite questa azione viene creata una vista SQL che verrà verificata utilizzando SQL Server Management Studio. Questa vista non verrà utilizzata in questa versione dell'esercitazione.  
   
-3.  Creare ed eseguire un progetto SSIS mediante **SQL Server Data Tools**. Il progetto usa **pulizia dei dati** trasformazione per inviare una richiesta di pulizia al server DQS. DQS non ancora, espone la funzionalità di corrispondenza, quindi si utilizzerà **raggruppamento Fuzzy** trasformazione per identificare i duplicati.  
+3.  Creare ed eseguire un progetto SSIS utilizzando **SQL Server Data Tools**. Il progetto utilizza la trasformazione **pulizia dati** per inviare una richiesta di pulizia al server DQS. DQS non espone ancora la funzionalità di corrispondenza, pertanto si utilizzerà la trasformazione **Raggruppamento fuzzy** per identificare i duplicati.  
   
 4.  Verifica dell'effettiva creazione dei dati in MDS tramite Gestione dati master.  
   
 5.  Analisi dei risultati del progetto DQS Cleansing creato dal pacchetto SSIS e, facoltativamente, esecuzione della pulizia interattiva per continuare a compilare la Knowledge Base.  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 1 &#40;prerequisiti&#41;: Rimozione dei dati fornitore in MDS](../../2014/tutorials/task-1-prerequisite-removing-supplier-data-in-mds.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 1 &#40;&#41; prerequisiti: rimozione dei dati fornitore in MDS](../../2014/tutorials/task-1-prerequisite-removing-supplier-data-in-mds.md)  
   
   

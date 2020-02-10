@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento di SSIS guidata (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
+title: Aggiornamento guidato SSIS (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec51fbd40031f330a85e8b1c0613c05ce90ae0e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055323"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>Aggiornamento guidato SSIS (Aggiornamento guidato pacchetti SSIS)
   Utilizzare l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] per eseguire la migrazione di pacchetti sviluppati in [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] e [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] nel formato utilizzato dalla versione corrente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- **Per eseguire l'Aggiornamento guidato pacchetti SSIS**  
+ **Per eseguire l'aggiornamento guidato pacchetti SSIS**  
   
 -   [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   

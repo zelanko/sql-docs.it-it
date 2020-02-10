@@ -1,5 +1,5 @@
 ---
-title: "Attività 8: Aggiunta di Conditional Split trasformazione per suddividere l'Output di pulizia | Microsoft Docs"
+title: 'Attività 8: aggiunta della trasformazione Suddivisione condizionale a Split output di pulizia | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489675"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Attività 8: Aggiunta della trasformazione Suddivisione condizionale all'output di pulizia della suddivisione
-  In questa trasformazione viene aggiunta la trasformazione Suddivisione condizionale al flusso di dati. La trasformazione Suddivisione condizionale consente di indirizzare le righe verso output diversi in base al contenuto dei dati. Per questa esercitazione, si utilizza il **stato Record** colonna di output dalla trasformazione DQS Cleansing. In questa esercitazione verranno caricati solo i record corretti o con correzione nel server MDS. Pertanto, controllare se il **stato Record** viene **correggere** oppure **con correzione**e combinare i record prima di caricarli in MDS.  
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Attività 8: Aggiunta della trasformazione Suddivisione condizionale aggiunta dell'output di pulizia della suddivisione
+  In questa trasformazione viene aggiunta la trasformazione Suddivisione condizionale al flusso di dati. La trasformazione Suddivisione condizionale consente di indirizzare le righe verso output diversi in base al contenuto dei dati. Per questa esercitazione, è possibile utilizzare la colonna di output **stato record** dalla trasformazione pulizia DQS. In questa esercitazione verranno caricati solo i record corretti o con correzione nel server MDS. Verificare quindi se lo **stato del record** è **corretto** o **corretto**e combinare i record prima di caricare i record in MDS.  
   
-1.  Trascinare **trasformazione Suddivisione condizionale** dalla **comuni** sezione la **casella degli strumenti SSIS** per il **del flusso di dati** scheda in **Pulisci dati fornitore**.  
+1.  Trascinare la **trasformazione Suddivisione condizionale** dalla **sezione comune** nella **casella degli strumenti SSIS** alla scheda flusso di **dati** in **Pulisci dati fornitore**.  
   
-2.  Fare doppio clic su **suddivisione condizionale**, fare clic su **rinominare**. Tipo di **Seleziona record corretti e** , quindi premere **invio**.  
+2.  Fare clic con il pulsante destro del mouse su **Suddivisione condizionale**e scegliere **Rinomina**. Digitare **Seleziona record corretti e con correzione** e premere **invio**.  
   
-3.  Connettere **Pulisci dati fornitore** e **Seleziona record corretti e** usando il collegamento blu.  
+3.  Connettere **Pulisci dati fornitore** e **selezionare i record corretti e corretti** usando il connettore blu.  
   
-     ![CLEANSE Supplier Data -> scegliere corretti con correzione](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "Cleanse Supplier Data -> scegliere corretti con correzione")  
+     ![Pulisci dati fornitore-> scelta corretta & corretta](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "Pulisci dati fornitore -> Scegliere Corretti Con correzione")  
   
-4.  Fare doppio clic su **Seleziona record corretti e** nel **flusso di dati** scheda.  
+4.  Fare doppio clic su **Seleziona record corretti e con correzione** nella scheda **flusso di dati** .  
   
-5.  Modifica il **nome Output predefinito** nella parte inferiore della schermata per **correggere**.  
+5.  Modificare il **nome dell'output predefinito** nella parte inferiore della schermata per **correggerlo**.  
   
 6.  Espandere **colonne** nel **riquadro superiore sinistro**.  
   
      ![Editor trasformazione Suddivisione condizionale](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-02.jpg "Editor trasformazione Suddivisione condizionale")  
   
-7.  Funzionalità di trascinamento **stato Record** per il **condizione** colonna.  
+7.  Trascinare **lo stato del record** nella colonna **condizione** .  
   
-8.  Tipo di **= = "Corrected"** accanto a **[Record Status]** per il **condizione** colonna.  
+8.  Digitare **= = "corretto"** accanto a **[record status]** per la colonna **Condition** .  
   
-9. Fare clic su **caso 1** nel **colonna nome Output**e denominarlo **con correzione**.  
+9. Fare clic su **case 1** nella **colonna Nome output**e modificare il nome in con **correzione**.  
   
-10. Fare clic su **OK** per chiudere la **Editor trasformazione Suddivisione condizionale** nella finestra di dialogo.  
+10. Fare clic su **OK** per chiudere la finestra di dialogo **Editor trasformazione Suddivisione condizionale** .  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 9: Aggiunta della Union trasformazione multipli a combina record corretti e con correzione](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 9: Aggiunta della trasformazione Unione input multipli a Combina record corretti e con correzione](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

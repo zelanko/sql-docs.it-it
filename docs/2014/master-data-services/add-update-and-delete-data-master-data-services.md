@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054270"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Aggiungere, aggiornare ed eliminare dati (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66054270"
   
 -   Il modello non deve avere uno stato di **Commit completato**.  
   
- **Per aggiungere, aggiornare ed eliminare dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
+ **Per aggiungere, aggiornare ed eliminare dati nel [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database**  
   
 1.  Preparare i membri da importare nella tabella di staging appropriata del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], ad esempio fornire valori per i campi obbligatori. Per una panoramica delle tabelle di staging, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
@@ -38,11 +38,11 @@ ms.locfileid: "66054270"
   
     -   Per spostare la posizione dei membri nelle gerarchie esplicite, la tabella è stg.\<name>_Relationship. Per informazioni sui campi obbligatori, vedere [Tabella di gestione temporanea delle relazioni &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
   
-         Per una panoramica sullo spostamento dei membri nelle gerarchie esplicite, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+         Per una panoramica sullo stato di trasferimento di membri nelle gerarchie esplicite, vedere [&#40;di importazione dati Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
     -   Usare il valore del campo **ImportType** per specificare che si stanno creando nuovi membri, disattivando membri o eliminando membri. Per altre informazioni sui valori, vedere [Tabella di gestione temporanea dei membri foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md) e [Tabella di gestione temporanea di membri consolidati &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-         Per una panoramica della disattivazione ed eliminazione di membri, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+         Per una panoramica sulla disattivazione e l'eliminazione di membri, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 2.  Aprire [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e connettersi all'istanza del motore di database per il database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -56,17 +56,17 @@ ms.locfileid: "66054270"
   
     -   Eseguire la stored procedure di staging che corrisponde alla tabella di staging in cui spostare i dati.  
   
-         Per una panoramica di gestione temporanea di stored procedure e tabelle di staging, vedere [importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Per altre informazioni sui parametri delle stored procedure di gestione temporanea e un esempio di codice, vedere [Stored procedure di gestione temporanea &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
+         Per una panoramica sulle stored procedure di staging e sulle tabelle di staging, vedere [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Per altre informazioni sui parametri delle stored procedure di gestione temporanea e un esempio di codice, vedere [Stored procedure di gestione temporanea &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
     -   Usare l'area funzionale **Gestione integrazione** di Gestione dati master.  
   
          Nella pagina **Batch di gestione temporanea** selezionare dall'elenco a discesa il modello al quale si aggiungeranno dati e quindi fare clic su **Avvia batch**. Lo stato dell'elaborazione batch è indicato nel campo **Stato** . Per altre informazioni sugli stati, vedere [Stati di importazione &#40;Master Data Services&#41;](../../2014/master-data-services/import-statuses-master-data-services.md).  
   
-         ![Pagina Batch di gestione temporanea in Gestione dati master](../../2014/master-data-services/media/mds-staging-batches.png "Pagina Batch di gestione temporanea in Gestione dati master")  
+         ![Batch di gestione temporanea in Gestione dati master](../../2014/master-data-services/media/mds-staging-batches.png "Batch di gestione temporanea in Gestione dati master")  
   
          Il processo di gestione temporanea viene avviato a intervalli determinati dall'impostazione **Intervallo batch di gestione temporanea** in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
-5.  Visualizzare gli errori che si sono verificati durante la gestione temporanea. Per altre informazioni, vedere [visualizzare gli errori che si verificano durante il processo di gestione temporanea &#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md) e [errori del processo di gestione temporanea &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
+5.  Visualizzare gli errori che si sono verificati durante la gestione temporanea. Per ulteriori informazioni, vedere [visualizzare gli errori che si verificano durante il processo di gestione temporanea &#40;Master Data Services&#41;e gli](view-errors-that-occur-during-staging-master-data-services.md) [errori del processo di gestione temporanea &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
 6.  Convalidare i dati rispetto a regole di business.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "66054270"
      Quando si caricano dati dalle tabelle di staging, i dati non vengono convalidati automaticamente rispetto alle regole di business. Per altre informazioni sulla convalida e sulla sua esecuzione, vedere [Convalida &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Importazione di dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ [Importazione dati &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

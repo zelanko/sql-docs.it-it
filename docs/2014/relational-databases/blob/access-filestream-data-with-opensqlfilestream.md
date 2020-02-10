@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 74dad8dc9795a30637a9ab08c56ce8d0940b6f0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010481"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accesso ai dati FILESTREAM con OpenSqlFilestream
-  L'API OpenSqlFilestream Ottiene un handle di file compatibile con Win32 per un oggetto binario FILESTREAM grandi dimensioni (BLOB) che viene archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
+  L'API OpenSqlFilestream ottiene un handle di file compatibile con Win32 per un BLOB (Binary Large Object) FILESTREAM archiviato nel file system. L'handle può essere passato a una qualsiasi delle API Win32 seguenti: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)o [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Se si passa questo handle a qualsiasi altra API Win32, viene restituito l'errore ERROR_ACCESS_DENIED. L'handle deve essere chiuso passandolo all'API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) Win32 prima che venga eseguito il commit o il rollback della transazione. La mancata chiusura dell'handle provoca perdite di risorse sul lato server.  
   
  L'accesso al contenitore di tutti i dati FILESTREAM deve essere eseguito in una transazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] Anche le istruzioni possono essere eseguite nella stessa transazione. In questo modo viene mantenuta la coerenza tra i dati SQL e dati BLOB FILESTREAM.  
   
@@ -48,12 +48,12 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### <a name="parameters"></a>Parametri  
  *FilestreamPath*  
- [in] È il `nvarchar(max)` percorso restituito dal [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) (funzione). La funzione PathName deve essere chiamata dal contesto di un account che dispone dell'autorizzazione SELECT o UPDATE di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la tabella e la colonna FILESTREAM.  
+ in `nvarchar(max)` Percorso restituito dalla funzione [pathname](/sql/relational-databases/system-functions/pathname-transact-sql) . La funzione PathName deve essere chiamata dal contesto di un account che dispone dell'autorizzazione SELECT o UPDATE di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la tabella e la colonna FILESTREAM.  
   
  *DesiredAccess*  
  [in] Imposta la modalità utilizzata per accedere ai dati BLOB FILESTREAM. Questo valore viene passato alla [funzione DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527).  
   
-|Nome|Value|Significato|  
+|Nome|valore|Significato|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|I dati possono essere letti dal file.|  
 |SQL_FILESTREAM_WRITE|1|I dati possono essere scritti nel file.|  
@@ -65,7 +65,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  *OpenOptions*  
  [in] Attributi e flag del file. Questo parametro può includere inoltre qualsiasi combinazione dei flag seguenti.  
   
-|Flag|Value|Significato|  
+|Flag|valore|Significato|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_OPEN_NONE|0x00000000:|Il file è aperto o creato senza opzioni speciali.|  
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|Il file è aperto o creato per gli I/O asincroni.|  
@@ -95,7 +95,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per utilizzare questa API, è necessario che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sia installato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene installato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con gli strumenti client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Installazione di SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="see-also"></a>Vedere anche  

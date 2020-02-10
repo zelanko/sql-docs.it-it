@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054411"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Editor attività Lettore di dati WMI (pagina Generale)
@@ -27,7 +27,7 @@ ms.locfileid: "66054411"
  Per ulteriori informazioni su questa attività, vedere [WMI Data Reader Task](control-flow/wmi-data-reader-task.md). Per altre informazioni su WQL (WMI Query Language), vedere l'argomento relativo a WMI (Windows Management Instrumentation) [Query con WQL](https://go.microsoft.com/fwlink/?LinkId=79045)in MSDN Library.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare un nome univoco per l'attività Lettore di dati WMI. Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -38,7 +38,7 @@ ms.locfileid: "66054411"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Lettore di dati WMI &#40;pagina Opzioni WMI&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
+ [Editor attività lettore di dati WMI &#40;pagina Opzioni WMI&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)   
  [Attività Monitoraggio eventi WMI](control-flow/wmi-event-watcher-task.md)  
   

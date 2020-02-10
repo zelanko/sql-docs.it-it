@@ -10,19 +10,19 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014245"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un'istanza `CurvePolygon` è una superficie topologicamente chiusa definita da un anello di delimitazione esterno e nessuno o più anelli interni  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], tra cui la `CurvePolygon` sottotipo, scaricare il white paper [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Per una descrizione dettagliata ed esempi delle funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluso il `CurvePolygon` sottotipo, scaricare il white paper, [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
- I criteri seguenti vengono definiti attributi di un `CurvePolygon` istanza:  
+ I criteri seguenti definiscono gli attributi di `CurvePolygon` un'istanza:  
   
 -   Il limite dell'istanza `CurvePolygon` viene definito dall'anello esterno e da tutti gli anelli interni.  
   
@@ -55,7 +55,8 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` viene accettata anche se i punti iniziale e finale hanno valori Z diversi perché i valori Z vengono ignorati. `@g5` viene accettata anche se l'istanza del tipo `geography` non è valida.  
+ `@g3` viene accettata anche se i punti iniziale e finale hanno valori Z diversi perché i valori Z vengono ignorati. 
+  `@g5` viene accettata anche se l'istanza del tipo `geography` non è valida.  
   
  Gli esempi seguenti generano `System.FormatException`.  
   
@@ -122,7 +123,7 @@ SELECT @g.STIsValid();
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Creazione di un'istanza Geometry con un'istanza CurvePolygon vuota  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>R. Creazione di un'istanza Geometry con un'istanza CurvePolygon vuota  
  In questo esempio viene illustrato come creare un'istanza `CurvePolygon` vuota:  
   
 ```sql  

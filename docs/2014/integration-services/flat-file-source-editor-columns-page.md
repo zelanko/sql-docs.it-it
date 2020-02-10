@@ -1,5 +1,5 @@
 ---
-title: Flat File Source Editor (pagina colonne) | Microsoft Docs
+title: Editor origine file flat (pagina colonne) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058604"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Editor origine file flat (pagina Colonne)
   Usare il nodo **Colonne** della finestra di dialogo **Editor origine file flat** per eseguire il mapping tra una colonna di output e ogni colonna esterna (di origine).  
   
 > [!NOTE]  
->  Il `FileNameColumnName` proprietà dell'origine File Flat e il `FastParse` proprietà delle colonne di output non sono disponibili nel **Editor origine File Flat**, ma può essere impostata utilizzando il **Editor avanzato** . Per ulteriori informazioni su queste proprietà, vedere la sezione relativa all'origine file flat in [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
+>  La `FileNameColumnName` proprietà dell'origine file flat e la `FastParse` proprietà delle colonne di output non sono disponibili nell' **Editor origine file flat**, ma possono essere impostate tramite il **Editor avanzato**. Per ulteriori informazioni su queste proprietà, vedere la sezione relativa all'origine file flat in [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
   
  Per ulteriori informazioni sull'origine file flat, vedere [Flat File Source](data-flow/flat-file-source.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66058604"
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor origine file flat &#40;pagina Gestione connessione&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [Editor origine file flat &#40;pagina Output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Editor origine file flat &#40;pagina output degli errori&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Gestione connessione file flat](connection-manager/file-connection-manager.md)  
   
   

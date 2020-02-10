@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012814"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Backup e ripristino di indici e cataloghi full-text
@@ -80,7 +80,7 @@ GO
   
  **Per eseguire il backup di file e filegroup**  
   
--   [Eseguire il backup di file e filegroup &#40;SQL Server&#41;](../backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Backup di file e filegroup &#40;SQL Server&#41;](../backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)  
   
@@ -97,7 +97,7 @@ GO
   
 -   [Ripristinare file e filegroup sovrascrivendo file esistenti &#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
--   [Ripristinare i file in una nuova posizione &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
+-   [Ripristino dei file in una nuova posizione &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
 -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
@@ -105,6 +105,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione e monitoraggio della ricerca full-text per un'istanza del server](manage-and-monitor-full-text-search-for-a-server-instance.md)   
- [Aggiornamento della ricerca full-text](upgrade-full-text-search.md)  
+ [Aggiornare la ricerca full-text](upgrade-full-text-search.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di file modello tramite la proprietà CommandText | Documenti di Microsoft
+title: Esecuzione di file modello tramite la proprietà CommandText | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012504"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Esecuzione di file modello mediante la proprietà CommandText
-  Questo esempio viene illustrato come specificare i file modello costituiti da query SQL o XPath mediante la CommandTextproperty. Anziché specificare la query SQL o XPath come valore di CommandText, è possibile specificare un nome di file come valore. Nell'esempio seguente, la proprietà CommandType è specificata come SqlXmlCommandType.TemplateFile.  
+  Questo esempio illustra il modo in cui è possibile specificare i file modello che sono costituiti da query SQL o XPath usando CommandTextproperty. Anziché specificare la query SQL o XPath come valore di CommandText, è possibile specificare un nome di file come valore. Nell'esempio seguente la proprietà CommandType viene specificata come SqlXmlCommandType. TemplateFile.  
   
  L'applicazione di esempio esegue questo modello:  
   
@@ -91,7 +91,7 @@ class Test
   
 5.  Al prompt dei comandi eseguire DocSample.exe.  
   
- Se si passa un parametro a un modello, il nome del parametro deve iniziare con simbolo di chiocciola (@); ad esempio, p.Name= "@ContactID", dove p è un oggetto SqlXmlParameter.  
+ Se si passa un parametro a un modello, il nome del parametro deve iniziare con il simbolo di chiocciola (@); ad esempio, p.Name = "@ContactID", dove p è un oggetto SqlXmlParameter.  
   
  Si tratta del modello aggiornato che accetta solo un parametro.  
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c832fe601eb7151e438d7f93c3e39e9b249ea246
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483327"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Creare un gruppo di attributi (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65483327"
 > [!NOTE]  
 >  Quando si crea un gruppo di attributi, questo viene automaticamente nascosto a tutti gli utenti ad eccezione di quello che lo creato. Per altre informazioni su come rendere visibile un gruppo, vedere [Rendere visibile un gruppo di attributi per gli utenti &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md).  
   
 -   È necessario che esista almeno un attributo. Per altre informazioni, vedere [Creare un attributo di testo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md).  
   
@@ -39,9 +39,9 @@ ms.locfileid: "65483327"
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], fare clic su **Amministrazione sistema**.  
   
-2.  Nel **Vista modelli** pagina, dalla barra dei menu scegliere **Gestisci** e fare clic su **gruppi di attributi**.  
+2.  Nella pagina **vista modelli** scegliere **Gestisci** dalla barra dei menu, quindi fare clic su **gruppi di attributi**.  
   
-3.  Selezionare un modello dall'elenco **Modello** .  
+3.  Dall'elenco **Modello** , selezionare un modello.  
   
 4.  Dall'elenco **Entità** selezionare un'entità.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "65483327"
   
 6.  Fare clic su **Aggiungi gruppo di attributi**.  
   
-7.  Nel **nome gruppo di foglie** , digitare un nome per il gruppo. Si tratta del nome visualizzato nella scheda **Explorer**.  
+7.  Nella casella **nome gruppo foglia** Digitare un nome per il gruppo. Si tratta del nome visualizzato nella scheda in **Esplora**.  
   
     > [!NOTE]  
-    >  Se è stato selezionato **gruppi consolidati** oppure **gruppi di raccolte** nel passaggio 5, questa casella è **nome gruppo consolidato** o **nome del gruppo di raccolta**rispettivamente.  
+    >  Se nel passaggio 5 sono stati selezionati **gruppi consolidati** o **gruppi di raccolte** , questa casella corrisponde rispettivamente al nome del **gruppo consolidato** o al **nome del gruppo di raccolte**.  
   
 8.  Fare clic su **Salva gruppo**.  
   
@@ -60,24 +60,24 @@ ms.locfileid: "65483327"
   
 10. Fare clic su **Attributi**.  
   
-11. Fare clic su **Modifica elemento selezionato**.  
+11. Fare clic su **modifica elemento selezionato**.  
   
-12. Fare clic sugli attributi nel **Available** casella e fare clic sul **Add** freccia. Per aggiungere tutto, fare clic sulla freccia **Aggiungi tutto** .  
+12. Fare clic su attributi nella casella **disponibile** e fare clic sulla freccia **Aggiungi** . Per aggiungere tutto, fare clic sulla freccia **Aggiungi tutto** .  
   
-13. Facoltativamente, fare clic il **iscrizione** e **verso il basso** frecce per modificare l'ordine da sinistra a destra degli attributi.  
+13. Facoltativamente, fare clic sulle frecce **su** e **giù** per modificare l'ordine degli attributi da sinistra a destra.  
   
 14. Fare clic su **Salva**.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
--   [Rendere visibile un gruppo di attributi per gli utenti &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [Rendere visibile un gruppo di attributi agli utenti &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
  [Attributi &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [Modificare il nome di un gruppo di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [Eliminare un gruppo di attributi &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
- [Autorizzazioni per elementi foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
- [Consolidare le autorizzazioni &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+ [Autorizzazioni foglia &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   
+ [Autorizzazioni consolidate &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Specifica di operatori booleani nelle query XPath (SQLXML 4.0) | Microsoft Docs
+title: Specifica di operatori booleani in query XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010624"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori booleani in query XPath (SQLXML 4.0)
-  Negli esempi seguenti viene illustrato come specificare operatori booleani in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Negli esempi seguenti viene illustrato come specificare operatori booleani in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-specify-the-or-boolean-operator"></a>A. Specificare l'operatore booleano OR  
- Questa query XPath restituisce il  **\<cliente >** figli del nodo di contesto con il **CustomerID** attributo pari a 13 o 31:  
+### <a name="a-specify-the-or-boolean-operator"></a>R. Specificare l'operatore booleano OR  
+ Questa query XPath restituisce **** gli ** \<** elementi figlio del>Customer del nodo di contesto con il valore dell'attributo CustomerID 13 o 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,11 +41,11 @@ ms.locfileid: "66010624"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un  **\<attributo >** nodo, in quanto il  **\<attributo >** nodo è il nodo primario per il `attribute` asse). Il predicato filtra le  **\<cliente >** elementi e restituisce solo quelli che soddisfano le condizioni specificate nel predicato.  
+ Nel predicato `attribute` , è l'asse `CustomerID` e è il test di nodo (true se **CustomerID** è un ** \<attributo>** nodo, perché l' ** \<attributo>** nodo è il nodo primario `attribute` per l'asse). Il predicato filtra gli ** \<elementi Customer>** e restituisce solo quelli che soddisfano la condizione specificata nel predicato.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Per testare query Xpath sullo schema di mapping  
   
-1.  Copia il [esempi di codice schema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copiare il [codice dello schema di esempio](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (BooleanOperatorsA.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66010624"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati relativo all'esecuzione del modello:  
   

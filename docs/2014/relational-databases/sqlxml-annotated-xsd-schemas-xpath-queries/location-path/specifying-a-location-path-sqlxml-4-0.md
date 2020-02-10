@@ -1,5 +1,5 @@
 ---
-title: Specificare un percorso (SQLXML 4.0) | Documenti di Microsoft
+title: Specifica di un percorso (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012661"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Definizione di un percorso (SQLXML 4.0)
@@ -35,38 +35,38 @@ ms.locfileid: "66012661"
   
 -   **Percorso relativo**  
   
-     Un percorso relativo inizia in corrispondenza del nodo di contesto nel documento. Un percorso è costituito da una sequenza di uno o più passi separati da una barra (/). Ogni passo seleziona un set di nodi relativi al nodo di contesto. La sequenza iniziale dei passi seleziona un set di nodi relativi a un nodo di contesto. Ogni nodo nel set viene utilizzato come nodo di contesto per il passo successivo. I set di nodi identificati dal passo vengono uniti in join. Ad esempio, **child:: Order/child::** consente di selezionare la  **\<OrderDetail >** figlio dell'elemento il  **\<ordine >** elemento elementi figlio del nodo di contesto.  
+     Un percorso relativo inizia in corrispondenza del nodo di contesto nel documento. Un percorso è costituito da una sequenza di uno o più passi separati da una barra (/). Ogni passo seleziona un set di nodi relativi al nodo di contesto. La sequenza iniziale dei passi seleziona un set di nodi relativi a un nodo di contesto. Ogni nodo nel set viene utilizzato come nodo di contesto per il passo successivo. I set di nodi identificati dal passo vengono uniti in join. Ad esempio, **child:: Order/child:: OrderDetail** seleziona ** \<OrderDetail>** elemento figlio dell' ** \<ordine>** elementi figlio del nodo di contesto.  
   
     > [!NOTE]  
-    >  Nell'implementazione SQLXML 4.0 di XPath, ogni query XPath inizia in corrispondenza del contesto radice, anche se XPath non è assoluto in modo esplicito. Una query XPath che inizia con "Customer", ad esempio, viene considerata come "/Customer". Nella query XPath **Customer [Order]** , Customer inizia in corrispondenza del contesto radice, ma Order inizia in corrispondenza del contesto di Customer. Per altre informazioni, vedere [Introduzione alle query XPath utilizzando &#40;SQLXML 4.0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  Nell'implementazione SQLXML 4.0 di XPath, ogni query XPath inizia in corrispondenza del contesto radice, anche se XPath non è assoluto in modo esplicito. Una query XPath che inizia con "Customer", ad esempio, viene considerata come "/Customer". Nella query XPath **Customer [Order]** il cliente inizia in corrispondenza del contesto radice, ma Order inizia in corrispondenza del contesto del cliente. Per ulteriori informazioni, vedere [Introduzione all'utilizzo di query XPath &#40;SQLXML 4,0&#41;](../introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="location-steps"></a>Passi  
  Un percorso (assoluto o relativo) è costituito da passi che contengono tre parti:  
   
--   **Axis**  
+-   **Asse**  
   
      L'asse specifica la relazione all'interno dell'albero tra i nodi selezionati dal passo e dal nodo di contesto. Sono supportati gli assi `parent`, `child`, `attribute` e `self`. Se nel percorso viene specificato un asse `child`, tutti i nodi selezionati dalla query sono figli del nodo di contesto. Se viene specificato un asse `parent`, il nodo selezionato è il nodo padre del nodo di contesto. Se viene specificato un asse `attribute`, i nodi selezionati sono gli attributi del nodo di contesto.  
   
--   **test di nodo**  
+-   **Test di nodo**  
   
-     Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse, `child`, `parent`, `attribute` e `self`, è associato a un tipo di nodo principale. Per il `attribute` asse, il tipo di nodo principale viene  **\<attributo >** . Per il `parent`, `child`, e `self` assi, il tipo di nodo principale viene  **\<elemento >** .  
+     Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse, `child`, `parent`, `attribute` e `self`, è associato a un tipo di nodo principale. Per l' `attribute` asse, il tipo di nodo principale è ** \<attribute>**. Per gli `parent`assi `child`, e `self` , il tipo di nodo principale è ** \<elemento>**.  
   
-     Ad esempio, se il percorso specifica **child:: Customer**, il  **\<cliente >** sono selezionati gli elementi figlio del nodo di contesto. Poiché il `child` asse ha  **\<elemento >** come tipo di nodo principale, il test di nodo Customer è TRUE se Customer è un  **\<elemento >** nodo.  
+     Se, ad esempio, il percorso specifica **child:: Customer**, verranno selezionati gli ** \<** elementi figlio del>Customer del nodo di contesto. Poiché l' `child` asse ha ** \<>elemento** come tipo di nodo principale, il test di nodo Customer è true se Customer è un ** \<elemento>** nodo.  
   
--   **Predicati di selezione (zero o più)**  
+-   **Predicati di selezione (zero o più predicati)**  
   
      Un predicato filtra un set di nodi rispetto a un asse. La definizione di predicati di selezione in un'espressione XPath è un'operazione simile alla definizione di una clausola WHERE in un'istruzione SELECT. Il predicato viene specificato tra parentesi. L'applicazione del test specificato nei predicati di selezione filtra i nodi restituiti dal test di nodo. Per filtrare ogni nodo nel set di nodi, l'espressione del predicato viene valutata con il nodo come nodo di contesto e con il numero di nodi nel set di nodi come dimensioni del contesto. Se l'espressione del predicato restituisce TRUE per il nodo, il nodo viene incluso nel set di nodi risultante.  
   
-     La sintassi per un passo è costituita dal nome dell'asse e dal test di nodo separati da due caratteri due punti (::), seguiti da zero o più espressioni, ciascuna tra parentesi quadre. Ad esempio, l'espressione XPath (percorso) **child:: Customer [@CustomerID= 'ALFKI']** Seleziona tutti i  **\<cliente >** gli elementi figlio del nodo di contesto. Quindi il test nel predicato viene applicato al set di nodi, che restituisce solo le  **\<cliente >** nodi elemento con attributo valore 'ALFKI' per la relativa **CustomerID** attributo.  
+     La sintassi per un passo è costituita dal nome dell'asse e dal test di nodo separati da due caratteri due punti (::), seguiti da zero o più espressioni, ciascuna tra parentesi quadre. Ad esempio, l'espressione XPath (percorso) **child:: Customer@CustomerID[=' ALFKI ']** seleziona tutti gli ** \<** elementi figlio del>Customer del nodo di contesto. Il test nel predicato viene quindi applicato al set di nodi, che restituisce solo i nodi elemento ** \<>del cliente** con valore di attributo ' ALFKI ' per il relativo attributo **CustomerID** .  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Specifica di un asse &#40;SQLXML 4.0&#41;](specifying-an-axis-sqlxml-4-0.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Specifica di un asse &#40;SQLXML 4,0&#41;](specifying-an-axis-sqlxml-4-0.md)  
  Vengono forniti esempi di definizione di un asse.  
   
- [Specifica di un Test di nodo nel percorso &#40;SQLXML 4.0&#41;](specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
+ [Specifica di un test di nodo nel percorso &#40;SQLXML 4,0&#41;](specifying-a-node-test-in-the-location-path-sqlxml-4-0.md)  
  Vengono forniti esempi di definizione di un test di nodo.  
   
- [Specificando selezione predicati nel percorso &#40;SQLXML 4.0&#41;](specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
+ [Specifica di predicati di selezione nel percorso &#40;SQLXML 4,0&#41;](specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md)  
  Vengono forniti esempi di definizione di predicati di selezione.  
   
   

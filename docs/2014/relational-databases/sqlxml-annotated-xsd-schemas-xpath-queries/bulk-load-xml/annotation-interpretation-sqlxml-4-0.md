@@ -1,5 +1,5 @@
 ---
-title: Interpretazione delle annotazioni (SQLXML 4.0) | Microsoft Docs
+title: Interpretazione delle annotazioni (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,32 +17,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db54a2bec501c3422cf19b1efab7cdb581420e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013444"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>Interpretazione delle annotazioni (SQLXML 4.0)
   Negli argomenti riportati in questa sezione viene descritto in che modo il caricamento bulk XML interpreta le annotazioni nello schema XSD. Il comportamento descritto è applicabile anche alle annotazioni nello schema XDR.  
   
 > [!NOTE]  
->  Nelle informazioni contenute in questi argomenti vengono descritte solo le annotazioni utilizzate durante l'elaborazione del caricamento bulk XML. Per un elenco completo di annotazioni per lo schema XSD che sono supportate in SQLXML 4.0, vedere [utilizzo delle annotazioni negli schemi XSD &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md). Per un elenco di annotazioni supportate per gli schemi XDR, vedere [schemi XDR con annotazioni &#40;deprecato in SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Nelle informazioni contenute in questi argomenti vengono descritte solo le annotazioni utilizzate durante l'elaborazione del caricamento bulk XML. Per un elenco completo delle annotazioni per lo schema XSD supportate da SQLXML 4,0, vedere [utilizzo di annotazioni negli schemi xsd &#40;sqlxml 4,0&#41;](../../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md). Per un elenco delle annotazioni supportate per gli schemi XDR, vedere la pagina relativa agli [schemi XDR con Annotazioni &#40;deprecati in SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
- [SQL: Relationship e regola di ordinamento delle chiavi &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [SQL: relationship e regola di ordinamento delle chiavi &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
  Viene descritto in che modo l'annotazione `sql:relationship` viene interpretata nel caricamento bulk XML.  
   
- [SQL: il mapping &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-mapped.md)  
+ [SQL: mappato &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-mapped.md)  
  Viene descritto in che modo l'annotazione `sql:mapped` viene interpretata nel caricamento bulk XML.  
   
- [SQL: limit-field e SQL: limit-valore &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
+ [SQL: limit-field e SQL: Limit-Value &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  Viene descritto in che modo le annotazioni `sql:limit-field` e `sql:limit-value` vengono interpretate nel caricamento bulk XML.  
   
- [SQL: overflow-campo &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-overflow-field.md)  
+ [SQL: overflow-field &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-overflow-field.md)  
  Viene descritto in che modo l'annotazione `sql:overflow` viene interpretata nel caricamento bulk XML.  
   
- [Altre annotazioni &#40;SQLXML 4.0&#41;](annotation-interpretation-other-annotations.md)  
+ [Altre annotazioni &#40;SQLXML 4,0&#41;](annotation-interpretation-other-annotations.md)  
  Viene descritto in che modo le annotazioni seguenti vengono interpretate nel caricamento bulk XML: `sql:id-prefix`, `sql:use-cdata`, `sql:url-encode`, `sql:is-mapping-schema`, `sql:key-fields`.  
   
   

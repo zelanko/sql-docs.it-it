@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011645"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati (SQL Server)
@@ -37,14 +37,14 @@ ms.locfileid: "66011645"
  Per usare un carattere di terminazione del campo o della riga diverso da quello predefinito del formato carattere Unicode, vedere [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ## <a name="command-options-for-unicode-character-format"></a>Opzioni di comando per il formato carattere Unicode  
- È possibile importare dati in formato carattere Unicode in una tabella usando **bcp**, BULK INSERT o INSERT... SELECT \* FROM OPENROWSET(BULK...). Per un comando **bcp** o un'istruzione BULK INSERT, è possibile specificare il formato dati nella riga di comando. Per un'istruzione INSERT ... SELECT * FROM OPENROWSET(BULK...) è necessario specificare il formato dei dati in un file di formato.  
+ È possibile importare dati in formato carattere Unicode in una tabella usando **bcp**, BULK INSERT o INSERT... SELECT \* FROM OPENROWSET (bulk...). Per un comando **bcp** o un'istruzione BULK INSERT, è possibile specificare il formato dati nella riga di comando. Per un'istruzione INSERT ... SELECT * FROM OPENROWSET(BULK...) è necessario specificare il formato dati in un file di formato.  
   
  Il formato carattere Unicode è supportato dalle opzioni della riga di comando riportate di seguito:  
   
 |Comando|Opzione|Descrizione|  
 |-------------|------------|-----------------|  
-|**bcp**|**-w**|Utilizza il formato carattere Unicode.|  
-|BULK INSERT|DATAFILETYPE **='** widechar **'**|Utilizza il formato carattere Unicode durante l'importazione bulk di dati.|  
+|**BCP**|**-w**|Utilizza il formato carattere Unicode.|  
+|BULK INSERT|FileType **='** widechar **'**|Utilizza il formato carattere Unicode durante l'importazione bulk di dati.|  
   
  Per altre informazioni, vedere [Utilità bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) o [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66011645"
  Gli esempi seguenti illustrano come eseguire l'esportazione in blocco di dati di tipo carattere Unicode con **bcp** e l'importazione in blocco degli stessi dati con BULK INSERT.  
   
 ### <a name="sample-table"></a>Tabella di esempio  
- Gli esempi richiedono che nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] venga creata una tabella denominata `myTestUniCharData` in base allo schema `dbo`. Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. Per creare la tabella, nell'editor di query di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] eseguire:  
+ Gli esempi richiedono che nel database di esempio `myTestUniCharData` venga creata una tabella denominata [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in base allo schema `dbo`. Prima di eseguire le procedure illustrate negli esempi, è necessario creare la tabella. Per creare la tabella, nell'editor di query di [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] eseguire:  
   
 ```  
 USE AdventureWorks2012;  
@@ -84,8 +84,8 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |Qualificatori|Descrizione|  
 |----------------|-----------------|  
 |**-w**|Specifica il formato carattere Unicode.|  
-|**-t** `,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: Il valore predefinito è il carattere di tabulazione Unicode (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
-|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T**, è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
+|**-t**`,`|Specifica la virgola (`,`) come carattere di terminazione del campo.<br /><br /> Nota: il carattere di terminazione del campo predefinito è il carattere di tabulazione Unicode (\t). Per altre informazioni, vedere [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Nell'esempio seguente viene eseguita l'esportazione bulk di dati in formato carattere Unicode dalla tabella `myTestUniCharData` in un nuovo file di dati denominato `myTestUniCharData-w.Dat` che utilizza la virgola (`,`) come carattere di terminazione del campo. Al prompt dei comandi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows digitare:  
   
@@ -124,7 +124,7 @@ GO
 -   [Usare il formato Unicode nativo per importare o esportare dati &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilità bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   

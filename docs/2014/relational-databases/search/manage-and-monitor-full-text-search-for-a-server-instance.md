@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011165"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gestione e monitoraggio della ricerca full-text per un'istanza del server
@@ -34,7 +34,7 @@ ms.locfileid: "66011165"
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Per visualizzare e modificare le proprietà del server per la ricerca full-text  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server e scegliere **Proprietà**.  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server, quindi scegliere **Proprietà**.  
   
 2.  Nella finestra di dialogo **Proprietà server** fare clic sulla pagina **Avanzate** per visualizzare le informazioni del server sulla ricerca full-text. Le proprietà full-text sono le seguenti:  
   
@@ -56,13 +56,13 @@ ms.locfileid: "66011165"
   
          Se un catalogo full-text non è disponibile, gli indici full-text associati vengono ricreati. Questa opzione è disponibile solo per i database di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
-         **Ricompilazione**  
+         **Ricostruzione**  
          I cataloghi full-text vengono ricompilati utilizzando i nuovi word breaker ottimizzati. La ricompilazione degli indici può richiedere tempo e dopo l'aggiornamento potrebbe essere necessaria una quantità significativa di CPU e di memoria.  
   
-         **Reimposta**  
+         **Reimpostazione**  
          I cataloghi full-text vengono ripristinati. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] I file del catalogo full-text vengono rimossi, ma i metadati per i cataloghi e per gli indici full-text vengono mantenuti. Dopo l'aggiornamento, in tutti gli indici full-text il rilevamento delle modifiche viene disabilitato e le ricerche per indicizzazione non vengono avviate automaticamente. Il catalogo resterà vuoto fino a quando non si eseguirà manualmente un popolamento completo al termine dell'aggiornamento.  
   
-         Per informazioni sulla scelta di un'opzione di aggiornamento full-text, vedere [aggiornamento della ricerca Full-Text](upgrade-full-text-search.md).  
+         Per informazioni sulla scelta di un'opzione di aggiornamento full-text, vedere [aggiornamento della ricerca full-text](upgrade-full-text-search.md).  
   
         > [!NOTE]  
         >  L'opzione di aggiornamento full-text può anche essere impostata con l'azione [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** .  
@@ -78,7 +78,7 @@ ms.locfileid: "66011165"
 |`LoadOSResources`|Indica se i word breaker e i filtri del sistema operativo sono registrati e utilizzati in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Specifica se il motore di ricerca full-text deve caricare solo i file binari firmati.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Monitoraggio dell'attività di ricerca full-text  
+##  <a name="monitor"></a>Monitoraggio dell'attività di ricerca full-text  
  Numerose funzioni e viste a gestione dinamica consentono di monitorare l'attività di ricerca full-text in un'istanza del server.  
   
  **Per visualizzare informazioni sui cataloghi full-text con un'attività di popolamento in corso**  
@@ -93,11 +93,11 @@ ms.locfileid: "66011165"
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)  
   
- **Per visualizzare i buffer di memoria in un pool di memoria utilizzati come parte di una ricerca per indicizzazione o di un intervallo di ricerche per indicizzazione**  
+ **Per visualizzare i buffer di memoria in un pool di memoria utilizzato come parte di un intervallo di ricerca per indicizzazione o di ricerca per indicizzazione.**  
   
 -   [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)  
   
- **Per visualizzare i pool di memoria condivisi disponibili per il componente gatherer full-text per una ricerca per indicizzazione o un intervallo di ricerche per indicizzazione**  
+ **Per visualizzare i pool di memoria condivisi disponibili per il componente gatherer full-text per una ricerca per indicizzazione full-text o un intervallo di ricerca per indicizzazione full-text**  
   
 -   [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054681"
 ---
 # <a name="variable-grid-options"></a>Opzioni griglia variabili
-  Utilizzare la finestra di dialogo **Opzioni griglia variabili** per selezionare le colonne che verranno visualizzate nella finestra **Variabili** e per selezionare i filtri da applicare all'elenco di variabili. Per altre informazioni sulle proprietà delle variabili corrispondenti, vedere [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+  Utilizzare la finestra di dialogo **Opzioni griglia variabili** per selezionare le colonne che verranno visualizzate nella finestra **Variabili** e per selezionare i filtri da applicare all'elenco di variabili. Per altre informazioni sulle proprietà delle variabili corrispondenti, vedere [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ## <a name="options-for-filter"></a>Opzioni per il filtro  
  **Mostra variabili di sistema**  
@@ -38,24 +38,24 @@ ms.locfileid: "66054681"
 ## <a name="options-for-columns"></a>Opzioni per le colonne  
  Selezionare le colonne che si desidera visualizzare nella finestra **Variabili** .  
   
--   **Ambito**  
+-   **Scope**  
   
--   **Data type**  
+-   **Tipo di dati**  
   
 -   **Valore**  
   
--   **Namespace**  
+-   **Spazio dei nomi**  
   
--   **Genera evento alla modifica del valore della variabile**  
+-   **Genera evento quando cambia il valore della variabile**  
   
 -   **Descrizione**  
   
 -   **Espressione**  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra Variabili](../../2014/integration-services/variables-window.md)   
+ [Finestra variabili](../../2014/integration-services/variables-window.md)   
  [Variabili di Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
- [Utilizzo di variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
+ [Usare variabili nei pacchetti](../../2014/integration-services/use-variables-in-packages.md)   
  [Gestori eventi di Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   
   

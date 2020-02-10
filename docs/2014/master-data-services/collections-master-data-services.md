@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483539"
 ---
 # <a name="collections-master-data-services"></a>Raccolte (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "65483539"
 >  Prima di creare una raccolta, è necessario abilitare l'entità per le gerarchie esplicite. Per altre informazioni, vedere [abilitare un'entità per gerarchie esplicite e raccolte &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ## <a name="subscription-views-for-collections"></a>Viste sottoscrizioni per le raccolte  
- Sono disponibili due tipi di viste sottoscrizioni che mostrano le raccolte. Il formato **Attributi raccolta** mostra un elenco di raccolte e degli attributi correlati alle raccolte (come descrizione o proprietario). Il formato **Raccolte** mostra tutti i membri di tutte le raccolte,, nonché il peso e l'ordinamento dei membri. Per altre informazioni, vedere [esportazione di dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
+ Sono disponibili due tipi di viste sottoscrizioni che mostrano le raccolte. Il formato **Attributi raccolta** mostra un elenco di raccolte e degli attributi correlati alle raccolte (come descrizione o proprietario). Il formato **Raccolte** mostra tutti i membri di tutte le raccolte,, nonché il peso e l'ordinamento dei membri. Per ulteriori informazioni, vedere [esportazione di dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md).  
   
  Se si impostano valori di peso per membri specifici di una raccolta, questi valori sono disponibili nelle viste sottoscrizioni correlate.  
   
@@ -44,14 +44,14 @@ ms.locfileid: "65483539"
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Abilitare un'entità per le gerarchie esplicite e le raccolte.|[Abilitare un'entità per gerarchie esplicite e raccolte di &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Abilitare un'entità per le gerarchie esplicite e le raccolte.|[Abilitare un'entità per le gerarchie esplicite e le raccolte &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Creare una nuova raccolta.|[Creare una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
-|Aggiungere membri a una raccolta esistente.|[Aggiungere membri a una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|Aggiungere membri a una raccolta esistente.|[Aggiunta di membri a una raccolta &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenuto correlato  
   
 -   [Gerarchie esplicite &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [Esportazione di dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [Esportazione dei dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

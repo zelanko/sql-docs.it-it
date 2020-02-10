@@ -25,22 +25,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011183"
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
   La creazione e la gestione di un indice full-text comporta il popolamento dell'indice con un processo denominato *popolamento* , noto anche con il termine *ricerca per indicizzazione*.  
   
-##  <a name="types"></a> Tipi di popolamento  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i tipi seguenti di popolamento: popolamento completo, modifica basato sul rilevamento delle popolamento automatico o manuale e popolamento incrementale basato su timestamp.  
+##  <a name="types"></a>Tipi di popolamento  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta i tipi seguenti di popolamento: popolamento completo, popolamento automatico o manuale basato sul rilevamento delle modifiche e popolamento incrementale basato su timestamp.  
   
 ### <a name="full-population"></a>Popolamento completo  
  Durante un popolamento completo, vengono compilate voci di indice per tutte le righe di una tabella o di una vista indicizzata. Durante un popolamento completo di un indice full-text, vengono compilate voci di indice per tutte le righe di una tabella di base o di una vista indicizzata.  
   
- Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un nuovo indice full-text viene popolato completamente non appena viene creato. Un popolamento completo può tuttavia richiedere una quantità significativa di risorse. Di conseguenza, quando si crea un indice full-text durante periodi di intensa attività è spesso consigliabile rimandare il popolamento completo a un periodo di attività meno intensa, in particolare se la tabella di base di un indice full-text è di grandi dimensioni. Tuttavia, il catalogo full-text a cui appartiene l'indice non può essere utilizzato finché non vengono popolati tutti i relativi indici full-text. Per creare un indice full-text senza popolarlo immediatamente, specificare la clausola CHANGE_TRACKING OFF, NO POPULATION nell'istruzione CREATE FULLTEXT INDEX. Se viene specificato CHANGE_TRACKING MANUAL, il motore di ricerca full-text utilizza l'istruzione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non popolerà il nuovo indice full-text finché non viene eseguita un'istruzione ALTER FULLTEXT INDEX utilizzando la clausola di START INCREMENTAL POPULATION o START FULL POPULATION. Per ulteriori informazioni, vedere gli esempi A. Creazione di un indice full-text senza eseguire un popolamento completo" e "B. Esecuzione di un popolamento completo nella tabella", più avanti in questo argomento.  
+ Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un nuovo indice full-text viene popolato completamente non appena viene creato. Un popolamento completo può tuttavia richiedere una quantità significativa di risorse. Di conseguenza, quando si crea un indice full-text durante periodi di intensa attività è spesso consigliabile rimandare il popolamento completo a un periodo di attività meno intensa, in particolare se la tabella di base di un indice full-text è di grandi dimensioni. Tuttavia, il catalogo full-text a cui appartiene l'indice non può essere utilizzato finché non vengono popolati tutti i relativi indici full-text. Per creare un indice full-text senza popolarlo immediatamente, specificare la clausola CHANGE_TRACKING OFF, NO POPULATION nell'istruzione CREATE FULLTEXT INDEX. Se viene specificato CHANGE_TRACKING MANUAL, il motore di ricerca full-text utilizza l'istruzione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il nuovo indice full-text non verrà popolato fino a quando non si esegue un'istruzione ALTER FULLTEXT INDEX utilizzando la clausola START FULL POPULATION o START INCREMENTAl population. Per ulteriori informazioni, vedere gli esempi A. Creazione di un indice full-text senza eseguire un popolamento completo" e "B. Esecuzione di un popolamento completo nella tabella", più avanti in questo argomento.  
   
 
   
@@ -58,31 +58,31 @@ ms.locfileid: "66011183"
   
      Per impostazione predefinita o se si specifica CHANGE_TRACKING AUTO, il motore di ricerca full-text utilizza il popolamento automatico per l'indice full-text. Al termine del popolamento completo iniziale, le modifiche vengono rilevate man mano che i dati vengono modificati nella tabella di base e le modifiche rilevate vengono propagate automaticamente. L'indice full-text viene aggiornato in background, pertanto le modifiche propagate potrebbero non venire riflesse immediatamente nell'indice.  
   
-     **Per configurare il rilevamento delle modifiche con popolamento automatico**  
+     **Per configurare il rilevamento delle modifiche con il popolamento automatico**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING AUTO  
+    -   [Crea indice full-text](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... CON CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... IMPOSTA CHANGE_TRACKING AUTO  
   
      Per ulteriori informazioni, vedere l'esempio "E. Modifica di un indice full-text per l'utilizzo del rilevamento delle modifiche automatico", più avanti in questo argomento.  
   
 -   Popolamento manuale  
   
-     Se si specifica CHANGE_TRACKING MANUAL, il motore di ricerca full-text utilizza il popolamento manuale per l'indice full-text. Al termine del popolamento completo iniziale, le modifiche vengono rilevate man mano che i dati vengono modificati nella tabella di base. Non vengono invece propagate nell'indice full-text finché non viene eseguita un'istruzione ALTER FULLTEXT INDEX ... START UPDATE POPULATION . Per chiamare questa istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente, è possibile utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.  
+     Se si specifica CHANGE_TRACKING MANUAL, il motore di ricerca full-text utilizza il popolamento manuale per l'indice full-text. Al termine del popolamento completo iniziale, le modifiche vengono rilevate man mano che i dati vengono modificati nella tabella di base. Tuttavia, non vengono propagate all'indice full-text finché non viene eseguita un'istruzione ALTER FULLTEXT INDEX... START UPDATE POPULATION (istruzione). Per chiamare questa istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente, è possibile utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.  
   
      **Per avviare il rilevamento delle modifiche con il popolamento manuale**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING MANUAL  
+    -   [Crea indice full-text](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... CON CHANGE_TRACKING MANUALE  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... IMPOSTA CHANGE_TRACKING MANUALE  
   
      Per ulteriori informazioni, vedere gli esempi "C. Creazione di un indice full-text con il rilevamento delle modifiche manuale" e "D. Esecuzione di un popolamento manuale" di seguito in questo argomento.  
   
  **Per disattivare il rilevamento delle modifiche**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING OFF  
+-   [Crea indice full-text](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... CON CHANGE_TRACKING DISATTIVATO  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... IMPOSTA CHANGE_TRACKING DISATTIVATO  
   
 
   
@@ -99,12 +99,12 @@ ms.locfileid: "66011183"
   
 
   
-##  <a name="examples"></a> Esempi di popolamento di indici Full-Text  
+##  <a name="examples"></a>Esempi di popolamento di indici full-text  
   
 > [!NOTE]  
 >  Negli esempi inclusi in questa sezione viene utilizzata la tabella `Production.Document` o `HumanResources.JobCandidate` del database di esempio `AdventureWorks` .  
   
-### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>A. Creazione di un indice full-text senza eseguire un popolamento completo  
+### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>R. Creazione di un indice full-text senza eseguire un popolamento completo  
  Nell'esempio seguente viene creato un indice full-text nella tabella `Production.Document` del database di esempio `AdventureWorks` . In questo esempio viene utilizzato WITH CHANGE_TRACKING OFF, NO POPULATION per rimandare il popolamento completo iniziale.  
   
 ```  
@@ -124,7 +124,7 @@ GO
 ```  
   
 ### <a name="b-running-a-full-population-on-table"></a>B. Esecuzione di un popolamento completo nella tabella  
- Nell'esempio seguente viene eseguito un popolamento completo nella tabella `Production.Document` del database di esempio `AdventureWorks`.  
+ Nell'esempio seguente viene eseguito un popolamento completo nella tabella `Production.Document` del database di esempio `AdventureWorks` .  
   
 ```  
 ALTER FULLTEXT INDEX ON Production.Document  
@@ -167,7 +167,7 @@ GO
   
 
   
-##  <a name="create"></a> La creazione o modifica una pianificazione per popolamento incrementale  
+##  <a name="create"></a>Creazione o modifica di una pianificazione per il popolamento incrementale  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>Per creare o modificare una pianificazione per popolamento incrementale in Management Studio  
   
@@ -177,23 +177,23 @@ GO
   
 3.  Espandere **Tabelle**.  
   
- Fare clic con il pulsante destro del mouse sulla tabella in cui viene definito l'indice full-text, scegliere **Indice full-text**e quindi **Proprietà** dal menu di scelta rapida **Indice full-text**. Verrà visualizzata la finestra di dialogo **Proprietà indice full-text**.  
+ Fare clic con il pulsante destro del mouse sulla tabella in cui viene definito l'indice full-text, scegliere **Indice full-text**e quindi **Proprietà** dal menu di scelta rapida **Indice full-text**. Verrà visualizzata la finestra di dialogo **Proprietà indice full-text** .  
   
-1.  Nel riquadro **Selezione pagina** selezionare Pianificazioni.  
+1.  Nel riquadro **Selezione pagina** Selezionare pianificazioni.  
   
      Utilizzare questa pagina per creare o gestire le pianificazioni per un processo di SQL Server Agent che consente di avviare un popolamento incrementale della tabella di base o della vista indicizzata dell'indice full-text.  
   
     > [!IMPORTANT]  
     >  Se la tabella di base o la vista indicizzata non contiene una colonna del tipo di dati `timestamp`, viene eseguito un popolamento completo.  
   
-     Sono disponibili le opzioni seguenti:  
+     descritte di seguito:  
   
     -   Per creare una nuova pianificazione, fare clic su **Nuova**.  
   
          Verrà visualizzata la finestra di dialogo **Nuova pianificazione tabella indicizzazione full-text** , in cui è possibile creare una pianificazione. Per salvare la pianificazione, fare clic su **OK**.  
   
         > [!IMPORTANT]  
-        >  Dopo la chiusura della finestra di dialogo **Proprietà indice full-text**, alla nuova pianificazione viene associato un processo di SQL Server Agent, Start Incremental Table Population on *database_name*.*table_name* (Avvio popolamento incrementale tabella in nome_database.nome_tabella). Se vengono create più pianificazioni per l'indice full-text, tutte utilizzano lo stesso processo.  
+        >  Dopo la chiusura della finestra di dialogo *Proprietà indice full-text*, alla nuova pianificazione viene associato un processo di SQL Server Agent, Start Incremental Table Population on*database_name*. **table_name** (Avvio popolamento incrementale tabella in nome_database.nome_tabella). Se vengono create più pianificazioni per l'indice full-text, tutte utilizzano lo stesso processo.  
   
     -   Per modificare una pianificazione, selezionarla e fare clic su **Modifica**.  
   
@@ -208,16 +208,16 @@ GO
   
 
   
-##  <a name="crawl"></a> Risoluzione degli errori in un popolamento Full-Text (ricerca per indicizzazione)  
- Quando si verifica un errore durante una ricerca per indicizzazione, la funzionalità di registrazione corrispondente per la ricerca full-text crea e gestisce un log di tipo ricerca per indicizzazione in formato testo normale. Ogni log di tipo ricerca per indicizzazione corrisponde a un catalogo full-text specifico. Per i log di ricerca per indicizzazione predefinita per una determinata istanza, in questo caso, la prima istanza, si trovano in %ProgramFiles%\Microsoft SQL Server\MSSQL12. Cartella MSSQLSERVER\MSSQL\LOG. Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazione seguente:  
+##  <a name="crawl"></a>Risoluzione degli errori in un popolamento full-text (Ricerca per indicizzazione)  
+ Quando si verifica un errore durante una ricerca per indicizzazione, la funzionalità di registrazione corrispondente per la ricerca full-text crea e gestisce un log di tipo ricerca per indicizzazione in formato testo normale. Ogni log di tipo ricerca per indicizzazione corrisponde a un catalogo full-text specifico. Per impostazione predefinita, i log di tipo ricerca per indicizzazione per un'istanza specifica, in questo caso la prima, si trovano nella cartella %Programmi%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazione seguente:  
   
- SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
+ SQLFT\<DatabaseID>\<idcatalogofulltext>. LOG [\<n>]  
   
  <`DatabaseID`>  
- ID di un database. <`dbid`> è una cifra cinque numeri con zeri iniziali.  
+ ID di un database. <`dbid`> è un numero a cinque cifre con zeri iniziali.  
   
  <`FullTextCatalogID`>  
- ID del catalogo full-text. <`catid`> è una cifra cinque numeri con zeri iniziali.  
+ ID del catalogo full-text. <`catid`> è un numero a cinque cifre con zeri iniziali.  
   
  <`n`>  
  È un numero intero che indica l'esistenza di uno o più log di tipo ricerca per indicizzazione per lo stesso catalogo full-text.  
@@ -227,7 +227,7 @@ GO
 
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
+ [sys. dm_fts_index_population &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
  [Introduzione alla ricerca full-text](get-started-with-full-text-search.md)   
  [Creazione e gestione di indici full-text](create-and-manage-full-text-indexes.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   

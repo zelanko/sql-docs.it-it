@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483068"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Distribuire un pacchetto di distribuzione di modelli tramite MDSModelDeploy
@@ -29,14 +29,14 @@ ms.locfileid: "65483068"
 > [!IMPORTANT]  
 >  I pacchetti possono essere distribuiti solo nella versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzata per crearli. Pertanto non è possibile distribuire pacchetti creati in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] o versione successiva.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** nell'ambiente [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] di destinazione.  
   
 -   È necessario che sia già disponibile un pacchetto di distribuzione di modelli. Per altre informazioni, vedere  [Creare un pacchetto di distribuzione di modelli tramite MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
--   È necessario essere un amministratore nell'ambiente in cui viene distribuito il modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore nell'ambiente in cui viene distribuito il modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Se si aggiorna un modello con i dati, lo stato della versione nella quale si esegue la distribuzione non può essere **Bloccato** o **Commit eseguito**.  
   
@@ -46,17 +46,17 @@ ms.locfileid: "65483068"
   
 2.  Aprire un prompt dei comandi e spostarsi su MDSModelDeploy.exe.  
   
-    -   Se MDS è stato installato nel percorso predefinito, lo strumento è disponibile all'indirizzo *unità*: \Programmi\Microsoft SQL Server\120\Master Data services\configuration\mdsmodeldeploy.exe.  
+    -   Se MDS è installato nel percorso predefinito, lo strumento è disponibile in *unità*: \Programmi\microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe.  
   
     -   Se MDS non è stato installato nel percorso predefinito, cercare MDSModelDeploy.exe nel computer locale.  
   
-3.  Facoltativo. Visualizzare le opzioni e la Guida.  
+3.  Facoltativa. Visualizzare le opzioni e la Guida.  
   
     -   Per visualizzare tutte le opzioni disponibili, digitare `MDSModelDeploy` e premere Invio.  
   
     -   Per visualizzare la Guida per un'opzione, digitare quanto segue, dove *OptionName* è il nome dell'opzione: `MDSModelDeploy help OptionName`.  
   
-4.  Facoltativo. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
+4.  Facoltativa. Se sono disponibili più applicazioni Web, determinare il nome del servizio in cui verrà eseguita la distribuzione digitando questo comando e premendo INVIO:  
   
     ```  
     MDSModelDeploy listservices  
@@ -91,9 +91,9 @@ ms.locfileid: "65483068"
   
 6.  Al termine della distribuzione del pacchetto, verrà visualizzato un messaggio "Operazione MDSModelDeploy completata".  
   
- **Note:**  
+ **Note**  
   
--   Se una vista sottoscrizioni nel pacchetto ha lo stesso nome di una vista sottoscrizioni in un modello esistente, la vista viene creata come *subscriptionviewname*. Se questo nome è già in uso, la vista della sottoscrizione non viene creata.  
+-   Se una vista sottoscrizioni nel pacchetto ha lo stesso nome di una vista sottoscrizioni in un modello esistente, la vista viene creata come *modelname. subscriptionviewname*. Se questo nome è già in uso, la vista della sottoscrizione non viene creata.  
   
 -   Il processo di distribuzione si svolge in quattro passaggi:  
   

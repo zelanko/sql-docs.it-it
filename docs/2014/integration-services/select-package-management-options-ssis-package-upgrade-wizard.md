@@ -1,5 +1,5 @@
 ---
-title: Selezionare opzioni di gestione pacchetti (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
+title: Selezione opzioni di Gestione pacchetti (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056032"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Seleziona opzioni di gestione pacchetti (Aggiornamento guidato pacchetti SSIS)
   Usare la pagina **Seleziona opzioni di gestione pacchetti** per specificare le opzioni per l'aggiornamento dei pacchetti.  
   
- **Per eseguire l'Aggiornamento guidato pacchetti SSIS**  
+ **Per eseguire l'aggiornamento guidato pacchetti SSIS**  
   
 -   [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
@@ -43,13 +43,13 @@ ms.locfileid: "66056032"
   
  La convalida influisce sulla durata del processo di aggiornamento. Si consiglia di non selezionare questa opzione per pacchetti grandi che probabilmente verranno aggiornati in modo corretto.  
   
- **Crea nuovi ID pacchetti**  
+ **Crea nuovi ID pacchetto**  
  Consente di creare nuovi ID per i pacchetti di aggiornamento.  
   
- **Continua aggiornamento in caso di mancato aggiornamento dei pacchetti**  
+ **Continua il processo di aggiornamento quando un aggiornamento del pacchetto non riesce**  
  Consente di specificare che quando un pacchetto non può essere aggiornato, l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] continua ad aggiornare i pacchetti rimanenti.  
   
- **Conflitti di nome pacchetti**  
+ **Conflitti di nomi di pacchetto**  
  Consente di specificare come vengono gestiti i pacchetti che hanno lo stesso nome. Per questa opzione sono disponibili i valori elencati nella tabella seguente.  
   
  **Sovrascrivi file di pacchetto esistenti**  
@@ -58,7 +58,7 @@ ms.locfileid: "66056032"
  **Aggiungi suffissi numerici a nomi di pacchetti di aggiornamento**  
  Consente di aggiungere un suffisso numerico al nome del pacchetto di aggiornamento.  
   
- **Non aggiornare pacchetti**  
+ **Non aggiornare i pacchetti**  
  Consente di arrestare l'aggiornamento dei pacchetti e di visualizzare un errore quando la procedura guidata viene completata.  
   
  Queste opzioni non sono disponibili quando si seleziona l'opzione **Salva in posizione di origine** nella pagina **Seleziona posizione di destinazione** della procedura guidata.  

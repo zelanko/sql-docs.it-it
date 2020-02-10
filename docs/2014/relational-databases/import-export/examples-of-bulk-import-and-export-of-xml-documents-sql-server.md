@@ -19,15 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011964"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Esempi di importazione ed esportazione bulk di documenti XML (SQL Server)
     
-##  <a name="top"></a> È possibile eseguire bulk di documenti XML di importazione in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database o esportazioni bulk da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. In questo argomento vengono forniti esempi di entrambe le situazioni.  
+##  <a name="top"></a>È possibile eseguire l'importazione bulk di documenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML in un database di o esportarli in blocco da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database di. In questo argomento vengono forniti esempi di entrambe le situazioni.  
   
  Per l'importazione bulk di dati da un file di dati a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a una vista non partizionata, è possibile utilizzare quanto segue:  
   
@@ -39,18 +39,18 @@ ms.locfileid: "66011964"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...).  
   
- Per altre informazioni, vedere [importazione ed esportazione Bulk di dati tramite l'utilità bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) e [importazione Bulk dei dati usando BULK INSERT o OPENROWSET&#40;BULK... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Per ulteriori informazioni, vedere [importare ed esportare dati per operazioni bulk tramite l'utilità bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) e [importare dati in blocco utilizzando BULK INSERT o OPENROWSET&#40;bulk... &#41; &#40;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)SQL Server&#41;.  
   
 ## <a name="examples"></a>Esempi  
  Gli esempi sono i seguenti:  
   
--   A. [Importazione BULK di dati XML come flusso di byte binario](#binary_byte_stream)  
+-   R. [Importazione BULK di dati XML come flusso di byte binario](#binary_byte_stream)  
   
 -   B. [Importazione bulk di dati XML in una riga esistente](#existing_row)  
   
--   C. [Importazione bulk di dati XML da un file contenente una definizione DTD](#file_contains_dtd)  
+-   C. [Importazione bulk di dati XML da un file che contiene una DTD](#file_contains_dtd)  
   
--   D. [Specifica il carattere di terminazione del campo in modo esplicito usando un file di formato](#field_terminator_in_format_file)  
+-   D. [Impostazione esplicita del carattere di terminazione del campo tramite un file di formato](#field_terminator_in_format_file)  
   
 -   E. [Esportazione bulk di dati XML](#bulk_export_xml_data)  
   
@@ -88,7 +88,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Note  
+#### <a name="remarks"></a>Osservazioni  
  L'utilizzo di SINGLE_BLOB in questo caso consente di evitare una mancata corrispondenza tra la codifica del documento XML (come specificata dalla dichiarazione di codifica XML) e la tabella codici della stringa implicita del server.  
   
  Se si utilizzano tipi di dati NCLOB o CLOB e si verifica un conflitto di tabella codici o di codifica, è necessario eseguire una delle operazioni seguenti:  
@@ -182,7 +182,7 @@ INSERT T1
   
  [&#91;Torna all'inizio&#93;](#top)  
   
-###  <a name="field_terminator_in_format_file"></a> D. Definizione esplicita del carattere di terminazione del campo tramite un file di formato  
+###  <a name="field_terminator_in_format_file"></a>D. Definizione esplicita del carattere di terminazione del campo tramite un file di formato  
  Nell'esempio seguente viene descritta la procedura per l'importazione bulk del documento XML `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>File di dati di esempio  
@@ -212,7 +212,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 ```  
   
 #### <a name="sample-table"></a>Tabella di esempio  
- Per l'importazione o l'esportazione bulk di un documento XML, è consigliabile usare un [carattere di terminazione del campo](specify-field-and-row-terminators-sql-server.md) che non sia contenuto in alcun documento, ad esempio una serie di quattro valori Null (`\0`) seguita dalla lettera `z`: `\0\0\0\0z`.  
+ Quando si esegue l'importazione o l'esportazione bulk di un documento XML, è consigliabile utilizzare un carattere di [terminazione del campo](specify-field-and-row-terminators-sql-server.md) che non può essere visualizzato in nessuno dei documenti; ad esempio, una serie di quattro valori null (`\0`) seguita dalla lettera `z`:. `\0\0\0\0z`  
   
  In questo esempio viene illustrato come utilizzare questo carattere di terminazione del campo per la tabella di esempio `xTable` . Per creare questa tabella di esempio, utilizzare l'istruzione `CREATE TABLE` seguente:  
   
@@ -245,7 +245,7 @@ GO
   
  [&#91;Torna all'inizio&#93;](#top)  
   
-###  <a name="bulk_export_xml_data"></a> E. Esportazione bulk di dati XML  
+###  <a name="bulk_export_xml_data"></a>E. Esportazione bulk di dati XML  
  Nell'esempio seguente viene utilizzata l'utilità `bcp` per l'esportazione bulk di dati XML dalla tabella creata nell'esempio precedente tramite lo stesso file di formato XML. Nel comando `bcp` seguente, `<server_name>` e `<instance_name>` rappresentano segnaposto da sostituire con valori appropriati:  
   
 ```  
@@ -253,7 +253,9 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non salva la codifica XML in caso di persistenza di dati XML nel database. La codifica originale dei campi XML, pertanto, non è disponibile quando vengono esportati i dati XML. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la codifica UTF-16 durante l'esportazione di dati XML.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non salva la codifica XML in caso di persistenza di dati XML nel database. La codifica originale dei campi XML, pertanto, non è disponibile quando vengono esportati i dati XML. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la codifica UTF-16 durante l'esportazione di dati XML.  
   
  [&#91;Torna all'inizio&#93;](#top)  
   
@@ -261,7 +263,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [Clausola SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [Utilità bcp](../../tools/bcp-utility.md)   
- [Informazioni sull'importazione ed esportazione bulk di dati &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [Importazione ed esportazione bulk di dati &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   

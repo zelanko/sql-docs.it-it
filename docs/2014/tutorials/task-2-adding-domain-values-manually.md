@@ -1,5 +1,5 @@
 ---
-title: 'Attività 2: Aggiunta manuale di valori di dominio | Microsoft Docs'
+title: 'Attività 2: aggiunta manuale di valori di dominio | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488381"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>Attività 2: Aggiunta manuale di valori di dominio
-  In questa attività, si aggiunge un valore per il **paese** dominio manualmente. Visualizzare [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) per altre informazioni sui campi in questa pagina.  
+  In questa attività viene aggiunto manualmente un valore per il dominio **Country** . Per ulteriori informazioni sui campi in questa pagina, vedere l'argomento [modificare i valori di dominio](https://msdn.microsoft.com/library/hh510408.aspx) .  
   
-1.  Fare clic su **Country** dominio le **elenco di domini**.  
+1.  Fare clic su **Country** Domain nell' **elenco di domini**.  
   
-2.  Nel riquadro destro passare al **i valori di dominio** scheda.  
+2.  Nel riquadro destro passare alla scheda valori di **dominio** .  
   
-3.  Fare clic su **Aggiungi nuovo valore dominio** pulsante sulla barra degli strumenti nel riquadro di destra.  
+3.  Fare clic sul pulsante **Aggiungi nuovo valore di dominio** sulla barra degli strumenti nel riquadro destro.  
   
-     ![Aggiungi nuovo valore di dominio - pulsante della barra degli strumenti](../../2014/tutorials/media/et-addingdomainvaluesmanually-01.jpg "Aggiungi nuovo valore di dominio - pulsante della barra degli strumenti")  
+     ![Aggiungi nuovo valore di dominio - Pulsante della barra degli strumenti](../../2014/tutorials/media/et-addingdomainvaluesmanually-01.jpg "Aggiungi nuovo valore di dominio - Pulsante della barra degli strumenti")  
   
-4.  Tipo di **Stati Uniti** per il **valore** campo e premere **invio**. È possibile vedere che, per impostazione predefinita, il **tipo** è impostata su **correggere** (segno di spunta verde). Il tipo può essere impostato su **errore** (croce rossa) o **valido** (triangolo arancione), ed è possibile immettere un valore corretto nel **Correggi in** campo.  
+4.  Digitare **Stati Uniti** per il campo **valore** e premere **invio**. Si può notare che, per impostazione predefinita, il **tipo** è impostato su **Correct** (segno di spunta verde). Il tipo può essere impostato su **errore** (croce rossa) o **non valido** (triangolo arancione) ed è possibile immettere un valore corretto nel campo **Correggi** in.  
   
      ![Stati Uniti per valore di dominio](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "Stati Uniti per valore di dominio")  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 3: Importazione di valori di dominio da un File di Excel](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 3: Importazione dei valori di dominio da un file di Excel](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   
