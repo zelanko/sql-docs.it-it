@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871138"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
@@ -49,7 +49,7 @@ ms.locfileid: "62871138"
   
  Oltre a copiare i database, è possibile effettuare la stessa operazione con i metadati associati, ad esempio gli account di accesso e gli oggetti del database **master** necessari per un database copiato.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -61,13 +61,13 @@ ms.locfileid: "62871138"
   
      [Sicurezza](#Security)  
   
--   **Usando la copia guidata Database per:**  
+-   **Utilizzo di Copia guidata database per:**  
   
      [Copiare, spostare o aggiornare i database](#Copy_Move)  
   
 -   **Completamento dopo l'aggiornamento:**  
   
-     [Dopo l'aggiornamento di un database SQL Server](#FollowUp)  
+     [Dopo l'aggiornamento di un database di SQL Server](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -87,14 +87,14 @@ ms.locfileid: "62871138"
   
 -   Se si seleziona l'opzione **Sposta** , il database di origine verrà automaticamente eliminato dopo lo spostamento del database. Se si seleziona l'opzione **Copia** , il database di origine non verrà eliminato.  
   
--   Se si utilizza il metodo SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) per spostare il catalogo full-text, è necessario ripopolare l'indice dopo lo spostamento.  
+-   Se si usa il metodo SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) per spostare il catalogo full-text, è necessario ripopolare l'indice dopo lo spostamento.  
   
 -   Il metodo di collegamento e scollegamento consente di scollegare il database, spostare o copiare i file con estensione mdf, ndf e ldf del database e ricollegare quest'ultimo nella nuova posizione. Nel caso di questo metodo, non è possibile collegare sessioni attive al database da spostare o copiare, al fine di evitare la perdita o l'inconsistenza dei dati. Se sono presenti sessioni attive, l'operazione di copia o spostamento non verrà eseguita. Nel caso del metodo SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object), l'utilizzo delle sessioni attive è consentito, poiché il database non viene mai portato offline.  
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
  Assicurarsi che SQL Server Agent sia stato avviato nel server di destinazione.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Per garantire prestazioni ottimali del database aggiornato, aggiornare le statistiche eseguendo sp_updatestats (aggiornamento delle statistiche) sul database aggiornato.  
   
@@ -105,19 +105,19 @@ ms.locfileid: "62871138"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario essere membri del ruolo predefinito del server **sysadmin** sia nel server di origine sia in quello di destinazione.  
   
-##  <a name="Copy_Move"></a> Copiare, spostare o aggiornare i database  
+##  <a name="Copy_Move"></a>Copiare, spostare o aggiornare i database  
   
 1.  In Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il nodo **Database**, fare clic con il pulsante destro del mouse su un database, scegliere **Attività**, quindi **Copia database**.  
   
 2.  Nella pagina **Selezione server di origine** specificare il server in cui si trova il database da spostare o copiare e immettere le informazioni relative all'account di accesso. Dopo aver selezionato il metodo di autenticazione e immesso le informazioni per l'accesso, fare clic su **Avanti** per stabilire la connessione al server di origine. La connessione rimane aperta durante tutta la sessione.  
   
      **Server di origine**  
-     Selezionare il nome del server in cui risiedono i database che si desidera spostare o copiare oppure fare clic sul pulsante Sfoglia ( **...** ) per individuare il server desiderato. La versione del server deve essere almeno [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     Selezionare il nome del server in cui risiedono i database che si desidera spostare o copiare oppure fare clic sul pulsante Sfoglia (**...**) per individuare il server desiderato. La versione del server deve essere almeno [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Usa autenticazione di Windows**  
      Consente a un utente di connettersi tramite un account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-     **Usa autenticazione di SQL Server**  
+     **Usa autenticazione SQL Server**  
      Consente all'utente di specificare una password e un nome utente dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
      **Nome utente**  
@@ -126,13 +126,13 @@ ms.locfileid: "62871138"
      **Password**  
      Immettere la password per l'account di accesso. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
-     **Avanti**  
+     **Prossimo**  
      Consente di connettersi al server e di convalidare l'utente. Questo processo consente di controllare se l'utente è un membro del ruolo predefinito del server **sysadmin** nel computer selezionato.  
   
 3.  Nella pagina **Selezione server di destinazione** specificare il server in cui verrà spostato o copiato il database. Se si impostano il server di origine e quello di destinazione sulla stessa istanza del server, verrà effettuata una copia di un database. In questo caso, è necessario rinominare il database in un punto successivo della procedura guidata. È possibile utilizzare il nome del database di origine per il database copiato o spostato solo se non si verificano conflitti di nome nel server di destinazione. Se sono presenti conflitti di nome, è necessario risolverli manualmente nel server di destinazione per potervi utilizzare il nome del database di origine.  
   
      **Server di destinazione**  
-     Selezionare il nome del server in cui verranno copiati o spostati i database oppure fare clic sul pulsante Sfoglia ( **...** ) per individuare un server di destinazione.  
+     Selezionare il nome del server in cui verranno copiati o spostati i database oppure fare clic sul pulsante Sfoglia (**...**) per individuare un server di destinazione.  
   
     > [!NOTE]  
     >  È possibile utilizzare una destinazione costituita da un server cluster. Nella Copia guidata database sarà possibile selezionare solo unità condivise in un server di destinazione cluster.  
@@ -140,7 +140,7 @@ ms.locfileid: "62871138"
      **Usa autenticazione di Windows**  
      Consente a un utente di connettersi tramite un account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-     **Usa autenticazione di SQL Server**  
+     **Usa autenticazione SQL Server**  
      Consente all'utente di specificare una password e un nome utente dell'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
      **Nome utente**  
@@ -149,21 +149,21 @@ ms.locfileid: "62871138"
      **Password**  
      Immettere la password per l'account di accesso. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **Avanti**  
+     **Prossimo**  
      Consente di connettersi al server e di convalidare l'utente. Questo processo consente di controllare se l'utente dispone delle autorizzazioni elencate in precedenza per i computer selezionati.  
   
 4.  Nella pagina **Selezione metodo di trasferimento** selezionare il metodo di trasferimento.  
   
-     **Usa metodo di collegamento e scollegamento**  
+     **Usare il metodo di collegamento e scollegamento**  
      Consente di scollegare il database dal server di origine, copiare i file di database (con estensione mdf, ndf e ldf) nel server di destinazione e collegare il database nel server di destinazione. Questo è in genere il metodo più rapido poiché il lavoro principale è rappresentato dalla lettura del disco di origine e dalla scrittura del disco di destinazione. Per creare oggetti strutture di archiviazione dei dati o oggetti all'interno del database non è necessaria alcuna logica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se il database contiene molto spazio allocato ma inutilizzato, questo metodo può risultare più lento. Ad esempio, nel caso di un database nuovo e quasi vuoto creato allocando 100 MB, vengono copiati tutti i 100 MB anche se nel database sono effettivamente utilizzati solo 5 MB.  
   
     > [!NOTE]  
     >  L'utilizzo di questo metodo rende il database non disponibile per gli utenti durante il trasferimento.  
   
-     **In caso di errore, ricollega il database di origine**  
+     **Se si verifica un errore, ristabilire la connessione del database di origine**  
      Quando un database viene copiato, i rispettivi file originali vengono sempre ricollegati al server di origine. Utilizzare questa casella per ricollegare i file originali al database di origine se non è possibile completare lo spostamento di un database.  
   
-     **Usa metodo SMO (SQL Management Objects)**  
+     **Usare il metodo dell'oggetto di gestione SQL**  
      Questo metodo consente di leggere le definizioni di ogni oggetto di database nel database di origine e di creare ciascun oggetto nel database di destinazione. Consente quindi di trasferire i dati dalle tabelle di origine a quelle di destinazione, ricreando gli indici e i metadati.  
   
     > [!NOTE]  
@@ -171,7 +171,7 @@ ms.locfileid: "62871138"
   
 5.  Nella pagina **Selezione database** selezionare i database che si desidera spostare o copiare dal server di origine a quello di destinazione. Vedere [Limitazioni e Restrizioni](#Restrictions) nella sezione "Prima di Iniziare" di questo argomento.  
   
-     **Sposta**  
+     **Spostamento**  
      Consente di spostare il database nel server di destinazione.  
   
      **Copia**  
@@ -180,18 +180,18 @@ ms.locfileid: "62871138"
      **Origine**  
      Consente di visualizzare i database disponibili nel server di origine.  
   
-     **Stato**  
+     **Status**  
      Se il database può essere spostato, viene visualizzato **OK** . In caso contrario, viene visualizzato il motivo per cui il database non può essere spostato.  
   
      **Aggiorna**  
      Consente di aggiornare l'elenco dei database.  
   
-     **Avanti**  
+     **Prossimo**  
      Consente di avviare il processo di convalida, quindi di visualizzare la schermata successiva.  
   
 6.  Nella pagina **Configurazione database di destinazione** modificare il nome del database, se necessario, e specificare il percorso e i nomi dei file di database. Questa pagina viene visualizzata solo una volta per ogni database spostato o copiato.  
   
-7.  Nella pagina **Selezione oggetti database** selezionare gli oggetti da spostare o copiare. Questa pagina è disponibile solo se l'origine e la destinazione si trovano in server diversi. Per includere un oggetto, fare clic sul relativo nome nella casella **Oggetti correlati disponibili** , quindi fare clic sul pulsante **>>** per spostare l'oggetto nella casella **Oggetti correlati selezionati** . Per escludere un oggetto, fare clic sul relativo nome nella casella **Oggetti correlati selezionati** , quindi fare clic sul pulsante **<\<** per spostare l'oggetto nella casella **Oggetti correlati disponibili** . Per impostazione predefinita, vengono trasferiti tutti gli oggetti di ogni tipo selezionato, ad eccezione degli account di accesso. Per scegliere singoli oggetti di un tipo, fare clic sul pulsante con i puntini di sospensione accanto al tipo di oggetti nella casella **Oggetti correlati selezionati** . Verrà aperta una finestra di dialogo in cui è possibile selezionare i singoli oggetti.  
+7.  Nella pagina **Selezione oggetti database** selezionare gli oggetti da spostare o copiare. Questa pagina è disponibile solo se l'origine e la destinazione si trovano in server diversi. Per includere un oggetto, fare clic sul relativo nome nella casella **Oggetti correlati disponibili** , quindi fare clic sul pulsante **>>** per spostare l'oggetto nella casella **Oggetti correlati selezionati** . Per escludere un oggetto, fare clic sul nome dell'oggetto nella casella **oggetti correlati selezionati** , quindi fare ** < ** clic sul pulsante per spostare l'oggetto nella casella **oggetti correlati disponibili** . Per impostazione predefinita, vengono trasferiti tutti gli oggetti di ogni tipo selezionato, ad eccezione degli account di accesso. Per scegliere singoli oggetti di un tipo, fare clic sul pulsante con i puntini di sospensione accanto al tipo di oggetti nella casella **Oggetti correlati selezionati** . Verrà aperta una finestra di dialogo in cui è possibile selezionare i singoli oggetti.  
   
      **Account di accesso (tutti gli account di accesso in fase di esecuzione)**  
      Consente di includere gli account di accesso nell'operazione di spostamento o di copia. L'opzione è selezionata per impostazione predefinita.  
@@ -202,13 +202,13 @@ ms.locfileid: "62871138"
     > [!NOTE]  
     >  Le stored procedure estese e le DLL a loro associate non sono idonee alla copia automatizzata.  
   
-     **SQL Server Agent - processi**  
+     **SQL Server Agent processi**  
      Consente di includere i processi del database **msdb** nell'operazione di copia o spostamento.  
   
      **Messaggi di errore definiti dall'utente**  
      Consente di includere i messaggi di errore definiti dall'utente nell'operazione di copia o spostamento.  
   
-     **Endpoint**  
+     **Endpoints**  
      Consente di includere gli endpoint definiti nel database di origine.  
   
      **Catalogo full-text**  
@@ -228,12 +228,12 @@ ms.locfileid: "62871138"
      **Percorso cartella**  
      Consente di specificare il percorso dei file di database di origine nel file system.  
   
-     Ad esempio:  C:\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\DATA  
+     Ad esempio: C:\Programmi\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
   
      **Condivisione file nel server di origine**  
      Consente di specificare il percorso dei file del database di origine come percorso di una condivisione file.  
   
-     Ad esempio: "\\\\*nome_server*\C$\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
+     Ad esempio: "\\\\*server_name*\c $ \Programmi\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\Data  
   
 9. Tramite Copia guidata database è possibile creare un pacchetto [!INCLUDE[ssIS](../../includes/ssis-md.md)] per trasferire il database dalla pagina **Configurazione pacchetto** e, se necessario, personalizzare il pacchetto.  
   
@@ -246,18 +246,18 @@ ms.locfileid: "62871138"
      **Opzioni di registrazione**  
      Consente di indicare se le informazioni di registrazione devono essere archiviate nel registro eventi di Windows o in un file di testo.  
   
-     **Percorso file log degli errori**  
+     **Percorso del file di log degli errori**  
      Consente di fornire un percorso per il file di log. Questa opzione è disponibile solo se è selezionata l'opzione per la registrazione di file di testo.  
   
 10. Nella pagina **Pianificazione pacchetto** specificare il momento in cui si desidera venga avviata l'operazione di copia o spostamento. Se non si è un amministratore di sistema, è necessario specificare un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con accesso al sottosistema di esecuzione dei pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS).  
   
-     **Run immediately**  
+     **Esegui immediatamente**  
      L'operazione di spostamento o copia viene avviata dopo aver fatto clic su **Avanti**.  
   
-     **Pianificazione**  
+     **Pianificare**  
      L'operazione di spostamento o copia viene avviata in un secondo momento. Le impostazioni di pianificazione correnti vengono visualizzate nella casella della descrizione. Per modificare la pianificazione fare clic su **Cambia pianificazione**.  
   
-     **Modifica**  
+     **Modificare**  
      Consente di aprire la finestra di dialogo **Nuova pianificazione processo** .  
   
      **Account proxy Integration Services**  
@@ -272,19 +272,19 @@ ms.locfileid: "62871138"
      **Azione**  
      Vengono elencate tutte le azioni eseguite.  
   
-     **Stato**  
+     **Status**  
      Viene indicato se l'azione è stata completata correttamente o meno.  
   
-     **Message**  
+     **Messaggio**  
      Viene fornito qualsiasi messaggio restituito a ogni passaggio.  
   
-##  <a name="FollowUp"></a> Completamento: Dopo l'aggiornamento di un database di SQL Server  
- Dopo aver utilizzato Copia guidata database per aggiornare un database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestire e monitorare la ricerca full-text per un'istanza del server](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+##  <a name="FollowUp"></a>Completamento: dopo l'aggiornamento di un database di SQL Server  
+ Dopo aver utilizzato Copia guidata database per aggiornare un database da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene reso immediatamente disponibile e aggiornato automaticamente. Se il database include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server **Opzione di aggiornamento full-text** . Se l'opzione di aggiornamento è impostata su **Importa** o **Ricompila**, gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti anche che, quando l'opzione di aggiornamento è impostata su **Importa**e un catalogo full-text non è disponibile, gli indici full-text associati vengono ricompilati. Per informazioni sulla visualizzazione o sulla modifica dell'impostazione della proprietà **Opzione di aggiornamento full-text** , vedere [Gestire e monitorare la ricerca full-text per un'istanza del server](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Se il livello di compatibilità di un database utente è 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento. Se il livello di compatibilità era 90 prima dell'aggiornamento, nel database aggiornato questo valore viene impostato su 100, cioè sul livello di compatibilità più basso supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiornamento di un database utilizzando le operazioni di scollegamento e collegamento &#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)   
- [Creare un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
+ [Aggiornare un database utilizzando le operazioni di scollegamento e collegamento &#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)   
+ [Creazione di un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   
   

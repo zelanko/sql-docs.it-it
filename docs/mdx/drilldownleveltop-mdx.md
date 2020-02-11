@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 461c91d7261b42b5828e2c515a89e8203f40e357
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049271"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
@@ -32,7 +32,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Count*  
+ *Conteggio*  
  Espressione numerica valida che specifica il numero di tuple che devono essere restituite.  
   
  *Level_Expression*  
@@ -44,14 +44,14 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Include_Calc_Members*  
  Parola chiave per l'aggiunta di membri calcolati ai risultati del drill-down.  
   
-## <a name="remarks"></a>Note  
- Se viene specificata un'espressione numerica, la **DrilldownLevelTop** funzione dispone in ordine decrescente, gli elementi figlio di ogni membro nel set specificato in base al valore dell'espressione numerica, valutato sul set di figlio membri. Se non viene specificata un'espressione numerica, la funzione dispone in ordine decrescente i membri figlio di ogni membro nel set specificato in base ai valori delle celle rappresentate dal set di membri figlio, come determinato dal contesto della query.  
+## <a name="remarks"></a>Osservazioni  
+ Se viene specificata un'espressione numerica, la funzione **DrilldownLevelTop** Ordina in ordine decrescente gli elementi figlio di ogni membro nel set specificato in base al valore dell'espressione numerica, valutato sul set di membri figlio. Se non viene specificata un'espressione numerica, la funzione dispone in ordine decrescente i membri figlio di ogni membro nel set specificato in base ai valori delle celle rappresentate dal set di membri figlio, come determinato dal contesto della query.  
   
- Dopo l'ordinamento, il **DrilldownLevelTop** funzione restituisce un set che contiene i membri padre e il numero di membri figlio, specificato in *conteggio,* con il valore più alto.  
+ Dopo l'ordinamento, la funzione **DrilldownLevelTop** restituisce un set contenente i membri padre e il numero di membri figlio, specificato in *Count,* con il valore massimo.  
   
- Il **DrilldownLevelTop** funzione è simile al [DrilldownLevel](../mdx/drilldownlevel-mdx.md) funzione, ma anziché includere tutti gli elementi figlio di ogni membro nel livello specificato, il **DrilldownLevelTop** funzione restituisce il numero più alto di membri figlio.  
+ La funzione **DrilldownLevelTop** è simile alla funzione [DrilldownLevel](../mdx/drilldownlevel-mdx.md) , ma anziché includere tutti gli elementi figlio per ogni membro al livello specificato, la funzione **DrilldownLevelTop** restituisce il numero più alto di membri figlio.  
   
- L'esecuzione di query la proprietà XMLA MdpropMdxDrillFunctions consente di verificare il livello di supporto che il server garantisce per le funzioni di drill; visualizzare [proprietà XMLA supportate &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) per informazioni dettagliate.  
+ Eseguendo una query sulla proprietà XMLA MdpropMdxDrillFunctions è possibile verificare il livello di supporto fornito dal server per le funzioni di drill-through. per informazioni dettagliate, vedere [Proprietà XMLA supportate &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente restituisce i primi tre membri figlio del livello Product Category in base alla misura predefinita. Nel cubo di esempio Adventure Work i primi tre membri figlio per Accessories sono Bike Racks, Bike Stands e Bottles and Cages. Nella finestra Query MDX di Management Studio è possibile passare a Products | Product Categories | Members | All Products | Accessories per visualizzare l'elenco completo. È possibile incrementare l'argomento Count per restituire più membri.  
@@ -65,7 +65,7 @@ SELECT DrilldownLevelTop
    FROM [Adventure Works]  
 ```  
   
- L'esempio seguente viene illustrato l'utilizzo di **include_calc_members** flag, per includere i membri calcolati di drill-down a livello di. La misura [Reseller Order Count] viene inclusa nella **DrilldownLevelTop** istruzione per assicurare che i valori restituiti vengono ordinati in base a tale misura.  
+ Nell'esempio seguente viene illustrato l'uso del flag di **INCLUDE_CALC_MEMBERS** , usato per includere i membri calcolati nel livello di drill-down. La misura [Reseller Order Count] è inclusa nell'istruzione **DrilldownLevelTop** per garantire che i valori restituiti siano ordinati in base a tale misura.  
   
 ```  
 WITH MEMBER   
@@ -83,7 +83,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [DrilldownLevel &#40;&#41;MDX](../mdx/drilldownlevel-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -18,30 +18,30 @@ ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106325"
 ---
-# <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
+# <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSmerge_settingshistory** tabella viene utilizzata per memorizzare una cronologia delle modifiche apportate alle proprietà di articolo e pubblicazione di replica di tipo merge con una riga per ogni modifica apportata a una topologia di replica di tipo merge. Nella tabella sono inoltre archiviate informazioni sulle impostazioni iniziali delle proprietà. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
+  La tabella **MSmerge_settingshistory** viene utilizzata per mantenere una cronologia delle modifiche apportate alle proprietà degli articoli e delle pubblicazioni per la replica di tipo merge, con una riga per ogni modifica apportata a una topologia di replica di tipo merge. Nella tabella sono inoltre archiviate informazioni sulle impostazioni iniziali delle proprietà. Questa tabella è archiviata nei database di pubblicazione e di sottoscrizione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**eventtime**|**datetime**|Data e ora in cui è stato generato l'evento.|  
+|**EventTime**|**datetime**|Data e ora in cui è stato generato l'evento.|  
 |**pubid**|**uniqueidentifier**|Identificatore univoco per la pubblicazione specificata.|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
-|**eventtype**|**tinyint**|Specifica il tipo di evento registrato. I possibili valori sono i seguenti:<br /><br /> **1** -impostazione di proprietà del livello di pubblicazione iniziale.<br /><br /> **2** -modifica di una proprietà di pubblicazione.<br /><br /> **101** -impostazione di proprietà di articolo iniziale.<br /><br /> **102** -modifica di una proprietà di articolo.|  
-|**propertyname**|**sysname**|Nome della proprietà impostata o modificata.|  
+|**EventType**|**tinyint**|Specifica il tipo di evento registrato. I possibili valori sono i seguenti:<br /><br /> **1** : impostazione della proprietà del livello di pubblicazione iniziale.<br /><br /> **2** -modifica di una proprietà di pubblicazione.<br /><br /> **101** -impostazione iniziale della proprietà dell'articolo.<br /><br /> **102** -modifica in una proprietà di articolo.|  
+|**propertyName**|**sysname**|Nome della proprietà impostata o modificata.|  
 |**previousvalue**|**sysname**|Valore precedente di una proprietà modificata.|  
-|**newvalue**|**sysname**|Valore con cui viene modificata o creata la proprietà.|  
-|**eventtext**|**nvarchar(2000)**|Stringa di caratteri che descrive l'evento.|  
+|**NewValue**|**sysname**|Valore con cui viene modificata o creata la proprietà.|  
+|**eventtext**|**nvarchar (2000)**|Stringa di caratteri che descrive l'evento.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

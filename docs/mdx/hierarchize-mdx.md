@@ -1,5 +1,5 @@
 ---
-title: HIERARCHIZE (MDX) | Microsoft Docs
+title: Hierarchize (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105427"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
@@ -31,15 +31,15 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- Il **Hierarchize** funzione Organizza i membri del set specificato in ordine gerarchico. e mantiene sempre i duplicati.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Hierarchize** organizza i membri del set specificato in ordine gerarchico. e mantiene sempre i duplicati.  
   
--   Se **POST** non viene specificato, la funzione Ordina membri in un livello in base all'ordine naturale. ovvero, se non sono specificate altre condizioni di ordinamento, secondo l'ordinamento predefinito dei membri nella gerarchia. I membri figlio seguono immediatamente i membri padre corrispondenti.  
+-   Se non si specifica **post** , la funzione ordina i membri in un livello nell'ordine naturale. ovvero, se non sono specificate altre condizioni di ordinamento, secondo l'ordinamento predefinito dei membri nella gerarchia. I membri figlio seguono immediatamente i membri padre corrispondenti.  
   
--   Se **POST** è specificato, il **Hierarchize** funzione consente di ordinare i membri di un livello usando un ordine di post-naturale. In altri termini, i membri figlio precedono i relativi elementi padre.  
+-   Se viene specificato **post** , la funzione **Hierarchize** Ordina i membri in un livello usando un ordine post-naturale. In altri termini, i membri figlio precedono i relativi elementi padre.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene eseguito il drill-up del membro Canada. Il **Hierarchize** funzione viene utilizzata per organizzare i membri del set specificato in ordine gerarchico, necessario per il **DrillUpMember** (funzione).  
+ Nell'esempio seguente viene eseguito il drill-up del membro Canada. La funzione **Hierarchize** viene usata per organizzare i membri del set specificato in ordine gerarchico, che è richiesto dalla funzione **DrillupMember** .  
   
 ```  
 SELECT DrillUpMember   
@@ -58,7 +58,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- Nell'esempio seguente restituisce la somma del `Measures.[Order Quantity]` membro, aggregato sui primi nove mesi del 2003 contenuti nella `Date` dimensione, dalle **Adventure Works** cubo. Il **PeriodsToDate** funzione definisce le tuple del set su cui opera la funzione di aggregazione. Il **Hierarchize** funzione Organizza i membri del set specificato di membri della dimensione Product in ordine gerarchico.  
+ Nell'esempio seguente viene restituita la somma `Measures.[Order Quantity]` del membro, aggregato sui primi nove mesi di 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** . La funzione **PeriodsToDate** definisce le tuple nel set su cui opera la funzione di aggregazione. La funzione **Hierarchize** organizza i membri del set specificato di membri dalla dimensione Product in ordine gerarchico.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -86,6 +86,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

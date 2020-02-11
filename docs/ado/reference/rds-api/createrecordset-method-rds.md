@@ -1,5 +1,5 @@
 ---
-title: Esempio di metodo CreateRecordset (Servizi Desktop remoto) | Microsoft Docs
+title: Metodo CreateRecordset (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,17 +20,17 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964518"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
-Crea un oggetto vuoto, disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Crea un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)vuoto e disconnesso.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,53 +40,53 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Oggetto*  
- Una variabile oggetto che rappresenta un' [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) o [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
+ *Object*  
+ Variabile oggetto che rappresenta un [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) o Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *ColumnsInfos*  
- Oggetto **Variant** matrice di attributi che definiscono ciascuna colonna il **Recordset** creato. Ogni definizione di colonna contiene una matrice di quattro attributi obbligatori e un attributo facoltativo.  
+ Matrice **Variant** di attributi che definisce ogni colonna del **Recordset** creato. Ogni definizione di colonna contiene una matrice di quattro attributi obbligatori e un attributo facoltativo.  
   
-|attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|Name|Nome dell'intestazione di colonna.|  
-|type|Valore intero del tipo di dati.|  
-|Size|Valore intero della larghezza in caratteri, indipendentemente dal tipo di dati.|  
+|Nome|Nome dell'intestazione di colonna.|  
+|Type|Integer del tipo di dati.|  
+|Dimensione|Integer della larghezza in caratteri, indipendentemente dal tipo di dati.|  
 |Supporto di valori Null|Valore booleano.|  
-|Scalabilità (facoltativo)|Questo attributo facoltativo definisce la scala per i campi numerici. Se questo valore viene omesso, verranno troncati in una scala pari a tre valori numerici. Precisione non è interessata, ma verrà troncato a tre il numero di cifre dopo il separatore decimale.|  
+|Scala (facoltativo)|Questo attributo facoltativo definisce la scala per i campi numerici. Se questo valore non viene specificato, i valori numerici verranno troncati a una scala di tre. La precisione non è interessata, ma il numero di cifre che seguono il separatore decimale verrà troncato a tre.|  
   
- Il set di matrici di colonna viene quindi raggruppati in una matrice, che definisce il **Recordset**.  
+ Il set di matrici di colonne viene quindi raggruppato in una matrice, che definisce il **Recordset**.  
   
-## <a name="remarks"></a>Note  
- L'oggetto business sul lato server è possibile popolare l'oggetto risultante **Recordset** con i dati da un provider di dati non OLE DB, ad esempio un sistema operativo file contenenti le quotazioni di borsa.  
+## <a name="remarks"></a>Osservazioni  
+ L'oggetto business sul lato server può popolare il **Recordset** risultante con i dati di un provider di dati non OLE DB, ad esempio un file del sistema operativo contenente le virgolette predefinite.  
   
- La tabella seguente elenca i [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) i valori supportati per il **CreateRecordset** (metodo). Il numero indicato è il numero di riferimento usato per definire i campi.  
+ Nella tabella seguente sono elencati i valori [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) supportati dal metodo **CreateRecordset** . Il numero elencato è il numero di riferimento utilizzato per definire i campi.  
   
- Ognuno dei tipi di dati è a lunghezza fissa o a lunghezza variabile. Tipi a lunghezza fissa devono essere definiti con una dimensione di -1, perché la dimensione è predeterminata e una definizione di dimensioni è ancora necessaria. Tipi di dati a lunghezza variabile consentono una dimensione compreso tra 1 e 32767.  
+ Ognuno dei tipi di dati è a lunghezza fissa o a lunghezza variabile. I tipi a lunghezza fissa devono essere definiti con una dimensione di-1, perché le dimensioni sono predeterminate e la definizione delle dimensioni è ancora richiesta. I tipi di dati a lunghezza variabile consentono una dimensione compresa tra 1 e 32767.  
   
- Per alcuni dei tipi di dati della variabile, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Non si vedranno le sostituzioni fino a dopo il **Recordset** creato e riempito. È quindi possibile cercare il tipo di dati effettivo, se necessario.  
+ Per alcuni tipi di dati delle variabili, il tipo può essere assegnato al tipo indicato nella colonna di sostituzione. Le sostituzioni non vengono visualizzate finché non viene creato e compilato il **Recordset** . È quindi possibile verificare il tipo di dati effettivo, se necessario.  
   
 |Length|Costante|Number|Sostituzione|  
 |------------|--------------|------------|------------------|  
-|Fisso|**adTinyInt**|16||  
-|Fisso|**adSmallInt**|2||  
-|Fisso|**adInteger**|3||  
-|Fisso|**adBigInt**|20||  
-|Fisso|**adUnsignedTinyInt**|17||  
-|Fisso|**adUnsignedSmallInt**|18||  
-|Fisso|**adUnsignedInt**|19||  
-|Fisso|**adUnsignedBigInt**|21||  
-|Fisso|**adSingle**|4||  
-|Fisso|**adDouble**|5||  
-|Fisso|**adCurrency**|6||  
-|Fisso|**adDecimal**|14||  
-|Fisso|**adNumeric**|131||  
-|Fisso|**adBoolean**|11||  
-|Fisso|**adError**|10||  
-|Fisso|**adGuid**|72||  
-|Fisso|**adDate**|7||  
-|Fisso|**adDBDate**|133||  
-|Fisso|**adDBTime**|134||  
-|Fisso|**adDBTimestamp**|135|7|  
+|Correzione|**adTinyInt**|16||  
+|Correzione|**adSmallInt**|2||  
+|Correzione|**adInteger**|3||  
+|Correzione|**adBigInt**|20||  
+|Correzione|**adUnsignedTinyInt**|17||  
+|Correzione|**adUnsignedSmallInt**|18||  
+|Correzione|**adUnsignedInt**|19||  
+|Correzione|**adUnsignedBigInt**|21||  
+|Correzione|**adSingle**|4||  
+|Correzione|**adDouble**|5||  
+|Correzione|**adCurrency**|6||  
+|Correzione|**adDecimal**|14||  
+|Correzione|**adNumeric**|131||  
+|Correzione|**adBoolean**|11||  
+|Correzione|**adError**|10||  
+|Correzione|**adGuid**|72||  
+|Correzione|**adDate**|7||  
+|Correzione|**adDBDate**|133||  
+|Correzione|**adDBTime**|134||  
+|Correzione|**adDBTimestamp**|135|7|  
 |Variabile|**adBSTR**|8|130|  
 |Variabile|**adChar**|129|200|  
 |Variabile|**adVarChar**|200||  

@@ -1,5 +1,5 @@
 ---
-title: Le associazioni e le conversioni (OLE DB) | Documenti di Microsoft
+title: Associazioni e conversioni (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638208"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Associazioni e conversioni (OLE DB)
@@ -28,20 +28,20 @@ ms.locfileid: "62638208"
   
 -   Formato delle stringhe `datetime` e `datetimeoffset`:  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ?? *hh*:*mm*]]  
+     *aaaa*-** mm-*GG*[ *HH*:*mm*:*SS*[.* 9999999*] [?? *HH*:*mm*]]  
   
 -   Formato delle stringhe `time`:  
   
-     *hh*:*mm*:*ss*[.*9999999*]  
+     *HH*:*mm*:*SS*[.* 9999999*]  
   
 -   Formato delle stringhe `date`:  
   
-     *aaaa*-*mm*-*gg*  
+     *aaaa*-** mm-*GG*  
   
 > [!NOTE]  
 >  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementano conversioni OLE se le conversioni standard non vengono eseguite correttamente. Di conseguenza, alcune conversioni eseguite in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 e versioni successive differiscono dalla specifica OLE DB.  
   
- Le conversioni dalle stringhe consentono flessibilità nella larghezza degli spazi vuoti e dei campi. Per altre informazioni, vedere la "i formati di dati: Sezione stringhe e valori letterali"in [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Le conversioni dalle stringhe consentono flessibilità nella larghezza degli spazi vuoti e dei campi. Per ulteriori informazioni, vedere la sezione "formati di dati: stringhe e valori letterali" in [supporto dei tipi di dati per OLE DB miglioramenti di data e ora](data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Di seguito vengono fornite le regole di conversione generali:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62638208"
   
 -   Se si verifica un troncamento di secondi o di secondi frazionari durante la conversione dal server al client, viene impostato lo stato DBSTATUS_S_TRUNCATED.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Conversioni eseguite da client a server](conversions-performed-from-client-to-server.md)  
  Vengono descritte le conversioni di data/ora eseguite tra un'applicazione client scritta con la specifica OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva).  
   
@@ -69,6 +69,6 @@ ms.locfileid: "62638208"
  Vengono descritte le conversioni di data/ora eseguite tra [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versione successiva) e un'applicazione client scritta con la specifica OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Miglioramenti di data e ora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

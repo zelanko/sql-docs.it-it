@@ -1,5 +1,5 @@
 ---
-title: sys.dm_repl_tranhash (Transact-SQL) | Microsoft Docs
+title: sys. dm_repl_tranhash (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0c44c5c08dc46da5a0f2f3dfd2c53ab6cb20f27d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067870"
 ---
-# <a name="sysdmrepltranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
+# <a name="sysdm_repl_tranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulle transazioni replicate in una pubblicazione transazionale.  
@@ -36,17 +36,17 @@ ms.locfileid: "68067870"
 |**hashed_trans**|**bigint**|Numero di transazioni replicate nel batch corrente di cui è stato eseguito il commit.|  
 |**completed_trans**|**bigint**|Numero di transazioni finora completate.|  
 |**compensated_trans**|**bigint**|Numero di transazioni contenenti rollback parziali.|  
-|**first_begin_lsn**|**nvarchar(64)**|Numero di sequenza del file di log (LSN) iniziale meno recente nel batch corrente.|  
-|**last_commit_lsn**|**nvarchar(64)**|Ultimo LSN di commit nel batch corrente.|  
+|**first_begin_lsn**|**nvarchar (64)**|Numero di sequenza del file di log (LSN) iniziale meno recente nel batch corrente.|  
+|**last_commit_lsn**|**nvarchar (64)**|Ultimo LSN di commit nel batch corrente.|  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione VIEW DATABASE STATE nel database di pubblicazione per chiamare **dm_repl_tranhash**.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione VIEW DATABASE STATE per il database di pubblicazione per chiamare **dm_repl_tranhash**.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Vengono restituite informazioni solo per gli oggetti di database replicati caricati nella cache dell'articolo di replica.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica relative alle repliche &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica relative alla replica &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

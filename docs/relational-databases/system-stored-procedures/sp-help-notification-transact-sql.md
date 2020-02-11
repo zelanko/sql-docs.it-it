@@ -18,18 +18,18 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906101"
 ---
-# <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
+# <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce un elenco di avvisi per un determinato operatore o un elenco di operatori per un determinato avviso.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,34 +44,34 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @object_type = ] 'object_type'` Il tipo di informazioni da restituire. *object_type*viene **char(9)** , non prevede alcun valore predefinito. *object_type* sono ALERTS, con cui sono elencati gli avvisi assegnati al nome dell'operatore specificato *,* operatori, in cui sono elencati gli operatori responsabili del nome dell'avviso specificato o *.*  
+`[ @object_type = ] 'object_type'`Tipo di informazioni da restituire. *object_type*è **char (9)** e non prevede alcun valore predefinito. *object_type* possono essere avvisi, che elenca gli avvisi assegnati al nome dell'*operatore o agli operatori specificati, che* elenca gli operatori responsabili del nome di avviso specificato *.*  
   
-`[ @name = ] 'name'` Nome di un operatore (se *object_type* è OPERATORS) o nome di un avviso (se *object_type* è ALERTS). *nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'`Nome di un operatore (se *object_type* è Operators) o nome di un avviso (se *object_type* è alerts). *Name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @enum_type = ] 'enum_type'` Il *object_type*informazioni restituite. *enum_type* è ACTUAL nella maggior parte dei casi. *enum_type*viene **char (10)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
+`[ @enum_type = ] 'enum_type'`Informazioni *object_type*restituite. nella maggior parte dei casi *enum_type* è effettivo. *enum_type*è di **carattere (10)** e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|ACTUAL|Elenca solo le *oggetti object_type* associati *nome*.|  
-|ALL|Elenca tutti i*oggetti object_type* inclusi quelli che non sono associati *nome*.|  
-|TARGET|Elenca solo le *oggetti object_type* corrispondenza fornito *target_name*, indipendentemente dall'associazione con*nome*.|  
+|ACTUAL|Elenca solo le *object_types* associate al *nome*.|  
+|ALL|Elenca tutti i*object_types* inclusi quelli non associati al *nome*.|  
+|TARGET|Elenca solo le *object_types* che corrispondono al *target_name*fornito, indipendentemente dall'associazione con il*nome*.|  
   
-`[ @notification_method = ] notification_method` Valore numerico che determina le colonne di metodo di notifica da restituire. *notification_method* viene **tinyint**, e può essere uno dei valori seguenti.  
+`[ @notification_method = ] notification_method`Valore numerico che determina le colonne del metodo di notifica da restituire. *notification_method* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Messaggio di posta elettronica: restituisce solo le **use_email** colonna.|  
-|**2**|Cercapersone: restituisce solo le **use_pager** colonna.|  
-|**4**|NetSend: restituisce solo le **use_netsend** colonna.|  
+|**1**|Posta elettronica: restituisce solo la colonna **use_email** .|  
+|**2**|Cercapersone: restituisce solo la colonna **use_pager** .|  
+|**4**|NetSend: restituisce solo la colonna **use_netsend** .|  
 |**7**|Tutto: restituisce tutte le colonne.|  
   
-`[ @target_name = ] 'target_name'` Il nome di un avviso da cercare (se *object_type* è ALERTS) o il nome di un operatore da cercare (se *object_type* è OPERATORS). *target_name* è necessario solo se *enum_type* è TARGET. *target_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @target_name = ] 'target_name'`Nome dell'avviso da cercare (se *object_type* è alerts) o nome di un operatore da cercare (se *object_type* è Operators). *target_name* è necessario solo se *ENUM_TYPE* è la destinazione. *target_name* è di **tipo sysname**e il valore predefinito è null.  
   
 ## <a name="return-code-valves"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Se *object_type* viene **avvisi**, il set di risultati sono elencati tutti gli avvisi per un dato operatore.  
+ Se *object_type* è **Alerts**, il set di risultati elenca tutti gli avvisi per un operatore specificato.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -82,9 +82,9 @@ sp_help_notification
 |**use_netsend**|**int**|Specifica se il metodo di notifica utilizzato è NetSend:<br /><br /> **1** = Sì<br /><br /> **0** = No|  
 |**has_email**|**int**|Numero di notifiche inviate tramite posta elettronica per l'avviso specificato.|  
 |**has_pager**|**int**|Numero di notifiche inviate tramite cercapersone per l'avviso specificato.|  
-|**has_netsend**|**int**|Numerosi **net send** notifiche per l'avviso.|  
+|**has_netsend**|**int**|Numero di notifiche **net send** inviate per l'avviso.|  
   
- Se **object_type** viene **operatori**, il set di risultati vengono elencati tutti gli operatori per un determinato avviso.  
+ Se **object_type** è **Operators**, il set di risultati elenca tutti gli operatori per un determinato avviso.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -97,10 +97,10 @@ sp_help_notification
 |**has_pager**|**int**|Specifica se all'operatore è associato un indirizzo cercapersone:<br /><br /> **1** = Sì<br /><br /> **0** = No|  
 |**has_netsend**|**int**|Specifica se per l'operatore è stata specificata la notifica tramite Net Send.<br /><br /> **1** = Sì<br /><br /> **0** = No|  
   
-## <a name="remarks"></a>Note  
- Questa stored procedure deve essere eseguita dal **msdb** database.  
+## <a name="remarks"></a>Osservazioni  
+ Questo stored procedure deve essere eseguito dal database **msdb** .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, è necessario che gli utenti siano membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -136,9 +136,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

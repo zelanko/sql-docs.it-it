@@ -1,5 +1,5 @@
 ---
-title: Funzione UPPER-case (XQuery) | Microsoft Docs
+title: Funzione Upper-Case (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004613"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funzioni su valori stringa - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Questa funzione converte ogni carattere *$arg* equivalente maiuscolo. La modalità di conversione dei caratteri nell'equivalente maiuscolo viene specificata dalla conversione binaria di maiuscole e minuscole di Microsoft Windows per i punti di codice Unicode. Questo standard è diverso dal mapping per lo standard dei punti di codice Unicode.  
+  Questa funzione converte ogni carattere in *$arg* nell'equivalente maiuscolo. La modalità di conversione dei caratteri nell'equivalente maiuscolo viene specificata dalla conversione binaria di maiuscole e minuscole di Microsoft Windows per i punti di codice Unicode. Questo standard è diverso dal mapping per lo standard dei punti di codice Unicode.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,16 +38,16 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 |||  
 |-|-|  
-|Nome|Definizione|  
+|Termine|Definizione|  
 |*$arg*|Valore della stringa da convertire in lettere maiuscole.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se il valore di *$arg* è vuoto, viene restituita una stringa di lunghezza zero.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>R. Conversione di una stringa in lettere maiuscole  
- L'esempio seguente modifica la stringa di input ' abcDEF! @4"in lettere maiuscole.  
+ Nell'esempio seguente viene modificata la stringa di input ' abcDEF!' @4in lettere maiuscole.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
