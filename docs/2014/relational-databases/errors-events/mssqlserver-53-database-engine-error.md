@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1607d1b6122c4a703ee93cd17705807626e2f0db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867753"
 ---
-# <a name="mssqlserver53"></a>MSSQLSERVER_53
+# <a name="mssqlserver_53"></a>MSSQLSERVER_53
     
 ## <a name="details"></a>Dettagli  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62867753"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico||  
-|Testo del messaggio|Si è verificato un errore durante il tentativo di stabilire una connessione al server.  Quando ci si connette a SQL Server, è possibile che l'errore sia determinato dal fatto che le impostazioni predefinite di SQL Server non consentono le connessioni remote. (provider: Provider named pipe, errore: 40 - Impossibile aprire una connessione a SQL Server) (.Net SqlClient Data Provider)|  
+|Testo del messaggio|Si è verificato un errore durante il tentativo di stabilire una connessione al server.  Quando ci si connette a SQL Server, è possibile che l'errore sia determinato dal fatto che le impostazioni predefinite di SQL Server non consentono le connessioni remote. (provider: provider named pipe, errore: 40 - Impossibile aprire una connessione a SQL Server) (.Net SqlClient Data Provider)|  
   
 ## <a name="explanation"></a>Spiegazione  
  Non è possibile stabilire la connessione tra il client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il server. Questo errore potrebbe verificarsi poiché il client non è in grado di risolvere il nome del server oppure il nome del server non è corretto.  
@@ -41,9 +41,9 @@ ms.locfileid: "62867753"
  Verificare di avere immesso il nome corretto del server sul client e che dal client sia possibile risolvere il nome del server. Per verificare la risoluzione dei nomi TCP/IP, con il sistema operativo Windows è possibile usare il comando **ping**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Protocolli e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
+ [Protocolli di rete e librerie di rete](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Configurazione di rete dei client](../../database-engine/configure-windows/client-network-configuration.md)   
- [Configurazione di protocolli Client](../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Configurare i protocolli client](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
   
