@@ -1,5 +1,5 @@
 ---
-title: La proprietà NumericScale e Precision Properties di esempio con una colonna (VC + +) | Microsoft Docs
+title: Proprietà NumericScale e Precision dell'esempio di colonna (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f4ed0336ef7994346af3ad673de2107bd3ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6dac85217a3f815511fa94e19a9adccc1f2ba1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965765"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918405"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Esempio delle proprietà NumericScale e Precision dell'oggetto Column (VC++)
-Questo esempio viene illustrato il [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [precisione](../../../ado/reference/adox-api/precision-property-adox.md) le proprietà del [colonna](../../../ado/reference/adox-api/column-object-adox.md) oggetto. Questo codice consente di visualizzare il valore per il **Order Details** sommario è la *Northwind* database.  
+In questo esempio vengono illustrate le proprietà [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [Precision](../../../ado/reference/adox-api/precision-property-adox.md) dell'oggetto [Column](../../../ado/reference/adox-api/column-object-adox.md) . Questo codice Visualizza il relativo valore per la tabella **Order Details** del database *Northwind* .  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  
@@ -86,7 +86,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in NumericScalePrecX...." << endl;  
+      cout << "Error occurred in NumericScalePrecX...." << endl;  
    }  
    ::CoUninitialize();  
 }  

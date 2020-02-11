@@ -13,61 +13,61 @@ ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922416"
 ---
 # <a name="rds-tutorial"></a>Esercitazione su RDS
-Questa esercitazione viene illustrato l'utilizzo del modello di programmazione di servizi desktop remoto per eseguire query e aggiornare un'origine dati. In primo luogo, la descrive i passaggi necessari per completare questa attività. Quindi l'esercitazione viene ripetuta in Microsoft® Visual Basic Scripting Edition (con ADO per Windows Foundation Classes (ADO/WFC)).  
+In questa esercitazione viene illustrato l'utilizzo del modello di programmazione RDS per eseguire query e aggiornare un'origine dati. In primo luogo, vengono descritti i passaggi necessari per eseguire questa attività. L'esercitazione viene quindi ripetuta in Microsoft® Visual Basic Scripting Edition (con ADO for Windows Foundation Classes (ADO/WFC)).  
   
- Questa esercitazione viene codificata in linguaggi diversi per due motivi:  
+ Questa esercitazione è codificata in lingue diverse per due motivi:  
   
--   La documentazione relativa a Servizi Desktop remoto si presuppone che i codici di lettura in Visual Basic. In questo modo la documentazione utile per i programmatori Visual Basic, ma meno utili per chi utilizza altri linguaggi.  
+-   La documentazione per Servizi Desktop remoto presuppone i codici Reader in Visual Basic. In questo modo la documentazione risulta utile per i programmatori Visual Basic, ma meno utile per i programmatori che utilizzano altri linguaggi.  
   
--   Se si è incerti su una determinata funzionalità di servizi desktop remoto e ha una conoscenza minima di un altro linguaggio, potrebbe essere in grado di risolvere la domanda cercando la stessa funzionalità in un altro linguaggio.  
+-   Se non si è certi di una particolare funzionalità di Servizi Desktop remoto e si conosce un'altra lingua, si potrebbe essere in grado di risolvere la domanda cercando la stessa funzionalità espressa in un'altra lingua.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="how-the-tutorial-is-presented"></a>La modalità di presentazione dell'esercitazione  
- Questa esercitazione è basata sul modello di programmazione di servizi desktop remoto. Viene descritto ogni passaggio del modello di programmazione singolarmente. Inoltre, viene illustrato ogni passaggio con un frammento di codice Visual Basic.  
+## <a name="how-the-tutorial-is-presented"></a>Presentazione dell'esercitazione  
+ Questa esercitazione è basata sul modello di programmazione RDS. Viene illustrato ogni singolo passaggio del modello di programmazione. Viene inoltre illustrato ogni passaggio con un frammento di codice Visual Basic.  
   
- L'esempio di codice viene ripetuto in altri linguaggi con discussione minimo. Ogni passaggio in un'esercitazione sul linguaggio di programmazione specificato è contrassegnato con il passaggio corrispondente nel modello di programmazione ed esercitazione descrittivo. Usare il numero del passaggio per fare riferimento alla trattazione nell'esercitazione descrittivo.  
+ L'esempio di codice viene ripetuto in altri linguaggi con una discussione minima. Ogni passaggio di un'esercitazione specifica del linguaggio di programmazione è contrassegnato con il passaggio corrispondente nel modello di programmazione e nell'esercitazione descrittiva. Usare il numero del passaggio per fare riferimento alla discussione nell'esercitazione descrittiva.  
   
- Il modello di programmazione RDS è indicato nella sezione seguente. Usarla come una Guida di orientamento mentre si esegue l'esercitazione.  
+ Il modello di programmazione RDS è indicato nella sezione seguente. Usarlo come roadmap mentre si procede con l'esercitazione.  
   
 ## <a name="rds-programming-model-with-objects"></a>Modello di programmazione RDS con oggetti  
   
--   Specificare il programma da richiamare sul server e ottenere un modo (proxy) per farvi riferimento dal client.  
+-   Specificare il programma da richiamare sul server e ottenere un metodo (proxy) per farvi riferimento dal client.  
   
--   Richiamare il programma del server. Passare parametri all'applicazione server che identifica l'origine dati e il comando da eseguire.  
+-   Richiamare il programma server. Passare i parametri al programma server che identifica l'origine dati e il comando da emettere.  
   
--   L'applicazione server Ottiene un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto dall'origine dati, in genere utilizzando ADO. Facoltativamente, il **Recordset** oggetto viene elaborato nel server.  
+-   Il programma server ottiene un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dall'origine dati, in genere tramite ADO. Facoltativamente, l'oggetto **Recordset** viene elaborato nel server.  
   
--   Il programma del server restituisce l'elemento finale **Recordset** oggetto all'applicazione client.  
+-   Il programma server restituisce l'oggetto **Recordset** finale all'applicazione client.  
   
--   Sul client, il **Recordset** oggetto facoltativamente viene inserito in un form che può essere facilmente utilizzato dai controlli visual.  
+-   Nel client, l'oggetto **Recordset** viene inserito facoltativamente in un modulo che può essere facilmente utilizzato dai controlli visivi.  
   
--   Modifiche per il **Recordset** oggetto vengono inviati al server e consente di aggiornare l'origine dati.  
+-   Le modifiche apportate all'oggetto **Recordset** vengono restituite al server e utilizzate per aggiornare l'origine dati.  
   
  Questa esercitazione contiene gli argomenti seguenti.  
   
--   [Passaggio 1: Specificare un'applicazione Server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Passaggio 1: Specificare un programma del server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Passaggio 2: Richiamare il programma di Server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Passaggio 2: Richiamare il programma del server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Passaggio 3: Server otterrà un Recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Passaggio 3: Il server ottiene un recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Passaggio 4: Server restituisce il Recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Passaggio 4: Il server restituisce il recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
   
 -   [Passaggio 5: L'oggetto DataControl viene reso utilizzabile (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Passaggio 6: Le modifiche vengono inviate al Server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Passaggio 6: Le modifiche vengono inviate al server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
 -   [Esercitazione su RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Passaggio 1: Specificare un'applicazione Server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
+ [Passaggio 1: specificare un programma server (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [Esercitazione su RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

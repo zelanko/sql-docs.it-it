@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74761480"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
@@ -32,28 +32,28 @@ ms.locfileid: "74761480"
 
   Contiene una riga per ogni indice o heap di un oggetto in formato tabella, come una tabella, una vista o una funzione con valori di tabella.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene l'indice.|  
 |**nome**|**sysname**|Nome dell'indice. il **nome** è univoco solo all'interno dell'oggetto.<br /><br /> NULL = Heap|  
 |**index_id**|**int**|ID dell'indice. **index_id** è univoco solo all'interno dell'oggetto.<br /><br /> 0 = heap<br /><br /> 1 = indice cluster<br /><br /> > 1 = Indice non cluster|  
 |**tipo**|**tinyint**|Tipo di indice:<br /><br /> 0 = heap<br /><br /> 1 = Cluster<br /><br /> 2 = Non cluster<br /><br /> 3 = XML<br /><br /> 4 = Spaziale<br /><br /> 5 = indice columnstore cluster. **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> 6 = indice columnstore non cluster. **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> 7 = indice hash non cluster. **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.|  
 |**type_desc**|**nvarchar (60)**|Descrizione del tipo di indice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> Columnstore cluster: **si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.<br /><br /> Columnstore non cluster: **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive.<br /><br /> HASH non CLUSTER: gli indici HASH non CLUSTER sono supportati solo nelle tabelle ottimizzate per la memoria. Nella vista sys.hash_indexes vengono mostrati gli indici hash correnti e le proprietà hash. Per ulteriori informazioni, vedere [sys. hash_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive.|  
-|**is_unique**|**po'**|1 = Indice univoco.<br /><br /> 0 = Indice non univoco.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
+|**is_unique**|**bit**|1 = Indice univoco.<br /><br /> 0 = Indice non univoco.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
 |**data_space_id**|**int**|ID dello spazio dati per l'indice. Lo spazio dati può essere un filegroup o uno schema di partizione.<br /><br /> 0 = **object_id** è una funzione con valori di tabella o un indice in memoria.|  
-|**ignore_dup_key**|**po'**|1 = IGNORE_DUP_KEY è ON.<br /><br /> 0 = IGNORE_DUP_KEY è OFF.|  
-|**is_primary_key**|**po'**|1 = L'indice fa parte di un vincolo PRIMARY KEY.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
-|**is_unique_constraint**|**po'**|1 = L'indice fa parte di un vincolo UNIQUE.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
+|**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY è ON.<br /><br /> 0 = IGNORE_DUP_KEY è OFF.|  
+|**is_primary_key**|**bit**|1 = L'indice fa parte di un vincolo PRIMARY KEY.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
+|**is_unique_constraint**|**bit**|1 = L'indice fa parte di un vincolo UNIQUE.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
 |**fill_factor**|**tinyint**|> 0 = percentuale di FILLFACTOR utilizzata al momento della creazione o della ricompilazione dell'indice.<br /><br /> 0 = Valore predefinito<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
-|**is_padded**|**po'**|1 = PADINDEX è ON.<br /><br /> 0 = PADINDEX è OFF.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
-|**is_disabled**|**po'**|1 = L'indice è disabilitato.<br /><br /> 0 = L'indice non è disabilitato.|  
-|**is_hypothetical**|**po'**|1 = L'indice è ipotetico e non può essere utilizzato direttamente come percorso di accesso ai dati. Gli indici ipotetici contengono le statistiche a livello di colonna.<br /><br /> 0 = L'indice non è ipotetico.|  
-|**allow_row_locks**|**po'**|1 = L'indice consente blocchi di riga.<br /><br /> 0 = L'indice non consente blocchi di riga.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
-|**allow_page_locks**|**po'**|1 = L'indice consente blocchi di pagina.<br /><br /> 0 = L'indice non consente blocchi di pagina.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
-|**has_filter**|**po'**|1 = L'indice dispone di un filtro e contiene solo righe che soddisfanno la definizione del filtro.<br /><br /> 0 = L'indice non dispone di un filtro.|  
-|**filter_definition**|**nvarchar (max)**|Espressione per il subset di righe incluso nell'indice filtrato.<br /><br /> NULL per l'heap o l'indice non filtrato.|  
-|**auto_created**|**po'**|1 = l'indice è stato creato dall'ottimizzazione automatica.<br /><br />0 = l'indice è stato creato dall'utente.
-|**optimize_for_sequential_key**|**po'**|1 = nell'indice è abilitata l'ottimizzazione dell'inserimento dell'ultima pagina.<br><br>0 = valore predefinito. Nell'indice è stata disabilitata l'ottimizzazione dell'inserimento dell'ultima pagina.|
+|**is_padded**|**bit**|1 = PADINDEX è ON.<br /><br /> 0 = PADINDEX è OFF.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
+|**is_disabled**|**bit**|1 = L'indice è disabilitato.<br /><br /> 0 = L'indice non è disabilitato.|  
+|**is_hypothetical**|**bit**|1 = L'indice è ipotetico e non può essere utilizzato direttamente come percorso di accesso ai dati. Gli indici ipotetici contengono le statistiche a livello di colonna.<br /><br /> 0 = L'indice non è ipotetico.|  
+|**allow_row_locks**|**bit**|1 = L'indice consente blocchi di riga.<br /><br /> 0 = L'indice non consente blocchi di riga.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
+|**allow_page_locks**|**bit**|1 = L'indice consente blocchi di pagina.<br /><br /> 0 = L'indice non consente blocchi di pagina.<br /><br /> Sempre 0 per gli indici columnstore cluster.|  
+|**has_filter**|**bit**|1 = L'indice dispone di un filtro e contiene solo righe che soddisfanno la definizione del filtro.<br /><br /> 0 = L'indice non dispone di un filtro.|  
+|**filter_definition**|**nvarchar(max)**|Espressione per il subset di righe incluso nell'indice filtrato.<br /><br /> NULL per l'heap o l'indice non filtrato.|  
+|**auto_created**|**bit**|1 = l'indice è stato creato dall'ottimizzazione automatica.<br /><br />0 = l'indice è stato creato dall'utente.
+|**optimize_for_sequential_key**|**bit**|1 = nell'indice è abilitata l'ottimizzazione dell'inserimento dell'ultima pagina.<br><br>0 = valore predefinito. Nell'indice è stata disabilitata l'ottimizzazione dell'inserimento dell'ultima pagina.|
 
 > [!NOTE]
 > Il bit **optimize_for_sequential_key** è supportato solo nelle versioni SQL Server 2019 CTP 3,1 e versioni successive.
@@ -89,14 +89,14 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo oggetti &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Viste del catalogo &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. index_columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. xml_indexes &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
- [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. key_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
  [sys. filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. partition_schemes &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [Domande frequenti sull'esecuzione di query sul catalogo di sistema SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

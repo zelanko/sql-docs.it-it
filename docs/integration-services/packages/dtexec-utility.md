@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b27fc68fc3c7685583248b39a7c27d4d33efa38c
-ms.sourcegitcommit: e0067f3687003e1b59a83619fdd19b666cf61e10
+ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74249745"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761855"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
 
@@ -424,7 +424,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/SQ[L]** _package_path_: Carica un pacchetto archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database **msdb**. I pacchetti archiviati nel database **msdb** vengono distribuiti tramite il modello di distribuzione del pacchetto. Per eseguire i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite il modello di distribuzione del progetto, usare l'opzione **/ISServer** . Per ulteriori informazioni sui modelli di distribuzione del pacchetto e del progetto, vedere [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
-     Con l'argomento *package_path* viene specificato il nome del pacchetto da recuperare. Se nel percorso vengono incluse cartelle, queste sono seguite da una barra rovesciata ("\\"). Il valore *package_path* può essere racchiuso fra virgolette. Se nel percorso o nel nome file specificato nell'argomento *package_path* è contenuto uno spazio, è necessario racchiudere l'argomento *package_path* tra virgolette.  
+-   Con l'argomento *package_path* viene specificato il nome del pacchetto da recuperare. Se nel percorso vengono incluse cartelle, queste sono seguite da una barra rovesciata ("\\"). Il valore *package_path* può essere racchiuso fra virgolette. Se nel percorso o nel nome file specificato nell'argomento *package_path* è contenuto uno spazio, è necessario racchiudere l'argomento *package_path* tra virgolette.  
   
      È possibile usare le opzioni **/User**, **/Password**e **/Server** in combinazione con l'opzione **/SQL** .  
   
@@ -434,7 +434,7 @@ dtexec /option [value] [/option [value]]...
   
     > **IMPORTANTE** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     Se si omette l'opzione **/Server** , verrà usata l'istanza locale predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Se si omette l'opzione **/Server** , verrà usata l'istanza locale predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      L'opzione **/SQL** non può essere usata in combinazione con l'opzione **/DTS** o **/File** . Se si specificano più opzioni, l'esecuzione di **dtexec** avrà esito negativo.  
   

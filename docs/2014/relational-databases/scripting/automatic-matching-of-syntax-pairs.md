@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244804"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Corrispondenza automatica di coppie della sintassi
@@ -36,9 +36,9 @@ ms.locfileid: "75244804"
 |Delimitatore iniziale|Delimitatore di chiusura|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**INIZIARE**|**FINE**|  
-|**INIZIA A PROVARE**|**FINE TENTATIVO**|  
-|**AVVIA CATCH**|**FINE CATCH**|  
+|**BEGIN**|**END**|  
+|**BEGIN TRY**|**END TRY**|  
+|**BEGIN CATCH**|**END CATCH**|  
   
  La corrispondenza tra delimitatori automatica non riconosce i delimitatori per gli identificatori inseriti tra parentesi ([NomeOggetto]) o gli identificatori tra virgolette ("NomeOggetto"). La corrispondenza di coppie non abbina le virgolette singole per i valori letterali stringa ('stringa') perché la codifica dei colori indica già se la stringa è stata delimitata o meno.  
   

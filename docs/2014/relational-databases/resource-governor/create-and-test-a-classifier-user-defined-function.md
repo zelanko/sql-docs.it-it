@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212008"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Creare e testare una funzione di classificazione definita dall'utente
@@ -118,7 +118,8 @@ ms.locfileid: "68212008"
 4.  Creare la funzione di classificazione in modo che utilizzi funzioni e valori di data e ora da valutare rispetto ai valori di data e ora specificati nella tabella di ricerca. Per informazioni sull'utilizzo di tabelle di ricerca in una funzione di classificazione, vedere "Procedure consigliate per l'utilizzo di tabelle di ricerca in una funzione di classificazione" in questo argomento.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] include un set più ampio di tipi di dati e funzioni di data e ora. Per altre informazioni, vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
+    >  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] include un set più ampio di tipi di dati e funzioni di data e ora. Per altre informazioni, vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -264,14 +265,14 @@ ms.locfileid: "68212008"
   
 ## <a name="see-also"></a>Vedere anche  
  [Resource Governor](resource-governor.md)   
- [Abilitare Resource Governor](enable-resource-governor.md)   
- [Pool di risorse di Resource Governor](resource-governor-resource-pool.md)   
- [Gruppo di carico di lavoro di Resource Governor](resource-governor-workload-group.md)   
- [Configurare Resource Governor utilizzando un modello](configure-resource-governor-using-a-template.md)   
- [Visualizzare proprietà di Resource Governor](view-resource-governor-properties.md)   
+ [Abilita Resource Governor](enable-resource-governor.md)   
+ [Pool di risorse Resource Governor](resource-governor-resource-pool.md)   
+ [Gruppo del carico di lavoro Resource Governor](resource-governor-workload-group.md)   
+ [Configurare Resource Governor usando un modello](configure-resource-governor-using-a-template.md)   
+ [Visualizza proprietà Resource Governor](view-resource-governor-properties.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREARE un POOL di risorse &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREARE un gruppo di carico di lavoro &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   

@@ -16,14 +16,14 @@ ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925176"
 ---
 # <a name="handling-errors-in-jscript"></a>Gestione degli errori in JScript
-Your Microsoft® JScript® il codice deve verificare i **conteggio** proprietà delle **connessione** dell'oggetto **errori** raccolta. Se il valore è maggiore di 0, scorrere la raccolta e visualizzare i valori come si farebbe in una delle altre lingue.  
+Il codice® di Microsoft® JScript deve controllare la proprietà **count** della raccolta **Errors** dell'oggetto **Connection** . Se il valore è maggiore di 0, eseguire l'iterazione nella raccolta e stampare i valori come si farebbe in uno qualsiasi degli altri linguaggi.  
   
 ```  
 <!-- BeginErrorExampleJS -->  

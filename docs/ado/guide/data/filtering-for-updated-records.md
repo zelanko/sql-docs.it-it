@@ -1,5 +1,5 @@
 ---
-title: Il filtro per aggiornati i record | Microsoft Docs
+title: Filtro per i record aggiornati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925332"
 ---
 # <a name="filtering-for-updated-records"></a>Filtro per i record aggiornati
-Prima di chiamare UpdateBatch, è possibile usare la proprietà Recordset filtro per visualizzare solo i record che sono stati modificati dopo l'apertura del Recordset o l'ultima chiamata al metodo UpdateBatch. A tale scopo, impostare filtri su adFilterPendingRecords per determinare il numero di record verrà aggiornato, come illustrato nell'esempio di codice nella sezione successiva.  
+Prima di chiamare UpdateBatch, è possibile utilizzare la proprietà filtro Recordset per visualizzare solo i record che sono stati modificati dopo l'apertura del recordset o l'ultima chiamata a UpdateBatch. A tale scopo, impostare Filter uguale a adFilterPendingRecords per determinare il numero di record che verranno aggiornati, come illustrato nell'esempio di codice nella sezione successiva.  
   
-## <a name="remarks"></a>Note  
- In questo esempio estende l'esempio di UpdateBatch precedente filtrando il Recordset appena prima di chiamare il metodo UpdateBatch, che illustra un utente quali record verranno modificato e che consente di annullare l'aggiornamento (usando il metodo CancelBatch).  
+## <a name="remarks"></a>Osservazioni  
+ Questo esempio estende l'esempio precedente di UpdateBatch filtrando il recordset immediatamente prima di chiamare il UpdateBatch, mostrando all'utente quali record verranno modificati e consentendo di annullare l'aggiornamento (usando il metodo CancelBatch).  
   
 ```  
 'BeginFilterPend  

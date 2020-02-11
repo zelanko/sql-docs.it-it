@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244498"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Esportazione in Microsoft Word (Generatore report e SSRS)
@@ -57,7 +57,7 @@ ms.locfileid: "75244498"
 ##  <a name="DocumentProperties"></a>Proprietà del documento  
  Il renderer di Word consente di scrivere i metadati seguenti nel file DOCX.  
   
-|Proprietà degli elementi del report|Description|  
+|Proprietà degli elementi del report|Descrizione|  
 |-------------------------------|-----------------|  
 |Report Title (titolo del report)|Titolo|  
 |Report.Author|Autore|  
@@ -82,7 +82,7 @@ ms.locfileid: "75244498"
   
  Per evitare questo problema, usare più sequenze di testo invece di una sola espressione complessa quando si usano espressioni nei piè di pagina e nelle intestazioni. Le due espressioni seguenti sono equivalenti. La prima è un'espressione complessa, mentre nella seconda vengono utilizzate sequenze di testo. Il renderer di Word consente di analizzare correttamente solo la seconda espressione.  
   
-##  <a name="Interactivity"></a>Interattività  
+##  <a name="Interactivity"></a> Interattività  
  Alcuni elementi interattivi sono supportati in Word. Di seguito è riportata una descrizione di comportamenti specifici.  
   
 ### <a name="show-and-hide"></a>Elementi visualizzati e nascosti  
@@ -184,13 +184,13 @@ ms.locfileid: "75244498"
 ##  <a name="Differences"></a>Differenze tra i renderer di Word e Word 2003  
  I report, visualizzabili tramite i renderer di Word o Word 2003, tendono a essere non distinguibili da un punto di vista visivo. Tuttavia, è possibile riscontrare piccole differenze tra i due tipi di formati Word o Word 2003.  
   
-##  <a name="DeviceInfo"></a>Impostazioni relative alle informazioni sul dispositivo  
+##  <a name="DeviceInfo"></a> Impostazioni relative alle informazioni sul dispositivo  
  Modificando le impostazioni relative alle informazioni sul dispositivo, è possibile modificare alcune impostazioni predefinite per questo renderer, ad esempio omettere collegamenti ipertestuali e collegamenti drill-through o espandere tutti gli elementi la cui visibilità può essere attivata o disattivata indipendentemente dal relativo stato originale durante il rendering. Per altre informazioni, vedere [Word Device Information Settings](../word-device-information-settings.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamenti di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il rendering di report diverse &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Funzionalità interattiva per estensioni per il rendering di report differenti &#40;Generatore report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

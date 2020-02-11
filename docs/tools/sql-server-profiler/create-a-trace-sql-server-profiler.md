@@ -1,27 +1,28 @@
 ---
-title: Creare una traccia (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/01/2016
+title: Creare una traccia
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb6a3f10f93d7bba147dca0cc9f7bbb879a82d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 08/01/2016
+ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307336"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Creare una traccia (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In questo argomento viene descritto come utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per creare una traccia.  
+
+In questo argomento viene descritto come utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per creare una traccia.  
   
 ### <a name="to-create-a-trace"></a>Per creare una traccia  
   
@@ -29,7 +30,7 @@ ms.locfileid: "67930177"
   
      Verrà visualizzata la finestra di dialogo **Proprietà traccia** .  
   
-    > **NOTA:** se è selezionato **Avvia traccia non appena viene stabilita una connessione** , la finestra di dialogo **Proprietà traccia** non viene visualizzata e viene invece avviata la traccia. Per disattivare questa impostazione, scegliere *Opzioni* dal menu ***Strumenti*** e deselezionare la casella di controllo Avvia traccia non appena viene stabilita una connessione.  
+    > **NOTA** Se la casella di controllo Avvia traccia non appena viene stabilita una connessione è selezionata, la finestra di dialogo **Proprietà traccia** non verrà visualizzata e verrà invece avviata la traccia. Per disattivare questa impostazione, scegliere *Opzioni* dal menu ***Strumenti*** e deselezionare la casella di controllo Avvia traccia non appena viene stabilita una connessione.  
   
 2.  Nella casella **Nome traccia** digitare un nome per la traccia.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "67930177"
   
 5.  Facoltativamente, selezionare la casella di controllo **Data e ora di arresto della traccia** e specificare una data e un'ora di arresto della traccia.  
   
-6.  Per aggiungere o rimuovere eventi, colonne di dati o filtri, fare clic sulla scheda **Selezione eventi**  . Per altre informazioni, vedere [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+6.  Per aggiungere o rimuovere eventi, colonne di dati o filtri, fare clic sulla scheda **Selezione eventi**  . Per altre informazioni, vedere: [Specificare eventi e colonne di dati per un file di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
 7.  Fare clic su **Esegui** per avviare la traccia.  
   

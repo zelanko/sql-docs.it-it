@@ -1,5 +1,5 @@
 ---
-title: XQuery per la gestione dei dati relazionali | Microsoft Docs
+title: Gestione query XQuery dati relazionali | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946162"
 ---
 # <a name="xqueries-handling-relational-data"></a>XQuery per la gestione di dati relazionali
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Si specifica XQuery su un' **xml** colonna di tipo o una variabile utilizzando uno delle [metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md). Questi includono **query ()** , **Value ()** , **exist ()** , oppure **Modify ()** . L'espressione XQuery viene eseguita sull'istanza XML identificata nella query che genera il codice XML.  
+  È possibile specificare XQuery su una colonna o una variabile di tipo **XML** utilizzando uno dei [metodi con tipo di dati XML](../t-sql/xml/xml-data-type-methods.md). Questi includono **query ()**, **value ()**, **exist ()** o **Modify ()**. L'espressione XQuery viene eseguita sull'istanza XML identificata nella query che genera il codice XML.  
   
  Il codice XML generato dall'esecuzione di un'espressione XQuery può includere valori recuperati da altre colonne di set di righe o di variabili Transact-SQL. Per eseguire l'associazione di dati relazionali non XML al codice XML risultante, in SQL Server sono disponibili le pseudofunzioni seguenti come estensioni XQuery:  
   
--   **SQL: Column** (funzione)  
+-   funzione **SQL: Column ()**  
   
--   **SQL: variable** (funzione)  
+-   funzione **SQL: Variable ()**  
   
- È possibile usare queste estensioni XQuery quando si specifica un'espressione XQuery nel **query ()** metodo per il **xml** tipo di dati. Di conseguenza, il **query ()** metodo può generare codice XML che combina i dati da XML e non-**xml** i tipi di dati.  
+ È possibile utilizzare queste estensioni XQuery quando si specifica un'espressione XQuery nel metodo **query ()** del tipo di dati **XML** . Di conseguenza, il metodo **query ()** può produrre codice XML che combina i dati da tipi di dati XML e non**XML** .  
   
- È anche possibile usare queste funzioni quando si usa la **xml** metodi con tipo di dati **Modify ()** , **Value ()** , **query ()** , e  **EXIST ()** per esporre un valore relazionale nell'istanza XML.  
+ È inoltre possibile utilizzare queste funzioni quando si utilizzano i metodi con tipo di dati **XML** **Modify ()**, **value ()**, **query ()** e **exist ()** per esporre un valore relazionale all'interno di XML.  
   
- Per altre informazioni, vedere [funzione SQL: Column (XQuery)](../xquery/xquery-extension-functions-sql-column.md) e [funzione SQL: variable (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
+ Per ulteriori informazioni, vedere funzione [SQL: Column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md) e [funzione SQL: Variable () (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dati XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [Costruzione di strutture XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
+ [Costrutto XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

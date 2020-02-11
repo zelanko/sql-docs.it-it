@@ -15,29 +15,30 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aac0c6b837fcd25b0e1f06344a2745c68b05dea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206038"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Attività Esegui istruzione T-SQL (Piano di manutenzione)
-  Utilizzare la finestra di dialogo **Attività Esegui istruzione T-SQL** per personalizzare il piano di manutenzione con l'aggiunta delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] desiderate.  
+  Utilizzare la finestra di dialogo **attività Esegui istruzione T-SQL** per personalizzare il piano di [!INCLUDE[tsql](../../includes/tsql-md.md)] manutenzione aggiungendo istruzioni scelte a questo piano di manutenzione.  
   
 ## <a name="options"></a>Opzioni  
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Timeout esecuzione**  
  Numero di secondi di attesa del completamento dell'attività trascorsi i quali si verifica il timeout, ovvero l'attività viene terminata.  
   
  **Istruzione T-SQL**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni da eseguire.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni da eseguire.  
   
- **Visualizza codice T-SQL**  
+ **Visualizza T-SQL**  
  Consente di visualizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sul server per questa attività, in base alle opzioni selezionate.  
   
 > [!NOTE]  
@@ -47,7 +48,7 @@ ms.locfileid: "68206038"
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
- **Selezionare o immettere il nome di un server**  
+ **Selezionare o immettere un nome di server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
  **Aggiorna**  
@@ -56,8 +57,8 @@ ms.locfileid: "68206038"
  **Immettere le informazioni per l'accesso al server**  
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
- **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usando l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ **Usa la sicurezza integrata di Windows**  
+ Connettersi a un'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows.  
   
  **Usa nome utente e password specifici**  
  Consente di connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione non è disponibile.  

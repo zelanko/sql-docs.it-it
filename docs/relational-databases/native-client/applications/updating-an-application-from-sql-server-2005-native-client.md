@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2eddd2284ec77a1a4979389f964baeafb6932dc5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243805"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Aggiornamento di un'applicazione da SQL Server 2005 Native Client
@@ -32,7 +32,7 @@ ms.locfileid: "75243805"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 fornito con [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 fornito con [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] e [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
-|Differenze di comportamento in SQL Server Native Client nelle versione successive a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Description|  
+|Differenze di comportamento in SQL Server Native Client nelle versione successive a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Descrizione|  
 |------------------------------------------------------------------------------------|-----------------|  
 |In OLE DB viene applicato il riempimento solo in base alla scala definita.|Per le conversioni in cui i dati convertiti vengono inviati al [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] server, Native Client ( [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]a partire da) assorbe gli zeri finali nei dati solo fino alla lunghezza massima dei valori **DateTime** . In SQL Server Native Client 9.0 viene applicato un riempimento fino a un massimo di 9 cifre.|  
 |Convalidare DBTYPE_DBTIMESTAMP per ICommandWithParameter:: separameterinfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (a partire [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]da) implementa il requisito OLE DB per *bScale* in ICommandWithParameter:: separameterinfo da impostare sulla precisione frazionaria dei secondi per DBTYPE_DBTIMESTAMP.|  

@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ee3d5bb623de84704de97b798573b769d85ae15
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243063"
 ---
 # <a name="output-window"></a>Finestra di output
   Questa finestra visualizza i messaggi di stato per le diverse caratteristiche disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. L'output viene visualizzato in riquadri speciali della finestra **Output** dal debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] , usando caratteristiche di strumenti esterni oppure comandi eseguiti in **Finestra di comando**del debugger. È disponibile anche l'output visualizzato nella finestra del prompt dei comandi da strumenti esterni, ad esempio i file con estensione bat o com.  
   
- **Per accedere alla finestra di output**  
+ **Per accedere alla finestra Output**  
   
 -   Scegliere **Altre finestre** dal menu **Visualizza**, quindi fare clic su **Output**.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opzioni  
  **Elenco dei riquadri di output**  
  Visualizza un elenco dei riquadri di output che è possibile visualizzare. A seconda degli strumenti che usano la finestra **Output** per la visualizzazione di informazioni all'utente, possono essere disponibili diversi riquadri di informazioni.  
   

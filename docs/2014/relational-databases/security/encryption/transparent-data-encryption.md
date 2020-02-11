@@ -19,16 +19,16 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e73098a63f193ab868854674d2e77c3ba372c29c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957115"
 ---
-# <a name="transparent-data-encryption-tde"></a>Transparent data encryption (TDE)
-  *Transparent Data Encryption* (Transparent Data [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Encryption [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] ) crittografa i file di dati e, noti come crittografia dei dati inattivi. È possibile adottare diverse precauzioni per proteggere il database, ad esempio la progettazione di un sistema sicuro, la crittografia di asset riservati e la creazione di un firewall che protegga i server di database. Tuttavia, nell'ipotesi del furto dei supporti fisici, come unità o nastri di backup, un malintenzionato potrebbe semplicemente ripristinare o collegare il database e accedere ai dati in esso contenuti. Una soluzione consiste nel crittografare i dati riservati nel database e proteggere con un certificato le chiavi utilizzate per crittografarli. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
+# <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
+  *Transparent Data Encryption* (Transparent Data [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Encryption [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] ) crittografa i file di dati e, noti come crittografia dei dati inattivi. È possibile adottare diverse precauzioni per proteggere il database, ad esempio la progettazione di un sistema sicuro, la crittografia di asset riservati e la creazione di un firewall che protegga i server di database. Tuttavia, nell'ipotesi del furto dei supporti fisici, come unità o nastri di backup, un malintenzionato potrebbe semplicemente ripristinare o collegare il database e accedere ai dati in esso contenuti. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
   
- TDE esegue la crittografia e la decrittografia delle operazioni di I/O di file di dati e log in tempo reale. La crittografia usa una chiave di crittografia del database (DEK) che viene archiviata nel record di avvio del database per la disponibilità durante il ripristino. La chiave di crittografia del database è una chiave simmetrica protetta tramite un certificato archiviato nel database master del server o una chiave asimmetrica protetta da un modulo EKM. TDE protegge i dati inattivi, ovvero i file di dati e di log. Offre inoltre la possibilità di conformarsi a diverse leggi, normative e linee guida stabilite in vari settori. Gli sviluppatori software possono ora crittografare i dati usando gli algoritmi di crittografia AES e 3DES senza modificare applicazioni esistenti.  
+ TDE esegue la crittografia e la decrittografia delle operazioni di I/O di file di dati e log in tempo reale. La crittografia usa una chiave di crittografia del database (DEK) che viene archiviata nel record di avvio del database per la disponibilità durante il ripristino. La chiave di crittografia del database è una chiave simmetrica protetta tramite un certificato archiviato nel database master del server o una chiave asimmetrica protetta da un modulo EKM. TDE consente di proteggere i dati "non operativi", ovvero i file di dati e di log, e assicura la conformità a numerose leggi, normative e linee guida stabilite in vari settori. Gli sviluppatori software possono ora crittografare i dati usando gli algoritmi di crittografia AES e 3DES senza modificare applicazioni esistenti.  
   
 > [!IMPORTANT]
 >  TDE non fornisce funzionalità di crittografia tramite canali di comunicazione. Per altre informazioni su come crittografare i dati su diversi canali di comunicazione, vedere [Abilitare connessioni crittografate al Motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "74957115"
   
  L'anteprima dello stato di TDE si applica anche nel subset di aree geografiche in cui la famiglia di versioni V12 di [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] è stata annunciata in stato di disponibilità generale. TDE per [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] non potrà essere usato nei database di produzione finché [!INCLUDE[msCoName](../../../includes/msconame-md.md)] non ne annuncia il passaggio dalla versione di anteprima a quella di disponibilità generale. Per altre informazioni sul [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, vedere l'articolo relativo alle [novità del database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
- **Informazioni applicabili a[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+ **Informazioni applicabili a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
  Una volta protetto, il database può essere ripristinato usando il certificato corretto. Per altre informazioni sui certificati, vedere [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "74957115"
   
  La figura seguente illustra l'architettura della crittografia TDE: Solo gli elementi a livello di database, la chiave di crittografia del database e le parti ALTER DATABASE sono configurabili dall'utente quando si usa TDE nel [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
- ![Visualizza la gerarchia descritta nell'argomento](../../../database-engine/media/tde-architecture.gif "Visualizza la gerarchia descritta nell'argomento")  
+ ![Visualizza la gerarchia descritta nell'argomento.](../../../database-engine/media/tde-architecture.gif "Visualizza la gerarchia descritta nell'argomento")  
   
 ## <a name="using-transparent-data-encryption"></a>Uso della crittografia trasparente dei dati  
  Per usare TDE, eseguire le operazioni seguenti:  
@@ -110,7 +110,7 @@ GO
   
 |Comando o funzione|Scopo|  
 |-------------------------|-------------|  
-|[CREAZIONE della chiave di crittografia del DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Consente di creare una chiave usata per crittografare un database.|  
+|[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Consente di creare una chiave usata per crittografare un database.|  
 |[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|Consente di modificare la chiave usata per crittografare un database.|  
 |[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|Consente di rimuovere la chiave usata per crittografare un database.|  
 |[Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Viene descritta l'opzione `ALTER DATABASE`, utilizzata per abilitare Transparent Data Encryption.|  
@@ -120,9 +120,9 @@ GO
   
 |Vista del catalogo e vista a gestione dinamica|Scopo|  
 |---------------------------------------------|-------------|  
-|[sys. databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Vista del catalogo che consente di visualizzare le informazioni del database.|  
-|[sys. Certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Vista del catalogo che consente di visualizzare i certificati di un database.|  
-|[sys. dm_database_encryption_keys &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|Tramite la vista a gestione dinamica vengono fornite informazioni relative alle chiavi di crittografia usate in un database e allo stato di crittografia di un database.|  
+|[sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Vista del catalogo che consente di visualizzare le informazioni del database.|  
+|[sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Vista del catalogo che consente di visualizzare i certificati di un database.|  
+|[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|Tramite la vista a gestione dinamica vengono fornite informazioni relative alle chiavi di crittografia usate in un database e allo stato di crittografia di un database.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Ogni funzionalità e comando di TDE ha requisiti specifici relativi alle autorizzazioni, descritti nelle tabelle precedenti.  
@@ -218,7 +218,7 @@ GO
  Il database di sistema tempdb verrà crittografato se altri database nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono crittografati tramite Transparent Data Encryption. Ciò potrebbe influire sulla prestazione dei database non crittografati presenti nella stessa istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni sul database di sistema tempdb, vedere [Database tempdb](../../databases/tempdb-database.md).  
   
 ### <a name="transparent-data-encryption-and-replication"></a>Transparent Data Encryption e replica  
- La replica non consente di replicare automaticamente dati da un database abilitato per TDE in un formato crittografato. Per proteggere i database di distribuzione e del Sottoscrittore, è necessario abilitare separatamente TDE. La replica snapshot, nonché la distribuzione iniziale dei dati per la replica transazionale e di tipo merge, può archiviare dati in file intermedi non crittografati, ad esempio i file con estensione bcp.  Durante la replica transazionale o di tipo merge è possibile abilitare la crittografia per proteggere il canale di comunicazione. Per ulteriori informazioni, vedere [Abilitazione di connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+ La replica non consente di replicare automaticamente dati da un database abilitato per TDE in un formato crittografato. Per proteggere i database di distribuzione e del Sottoscrittore, è necessario abilitare separatamente TDE. La replica snapshot, nonché la distribuzione iniziale dei dati per la replica transazionale e di tipo merge, può archiviare dati in file intermedi non crittografati, ad esempio i file con estensione bcp.  Durante la replica transazionale o di tipo merge è possibile abilitare la crittografia per proteggere il canale di comunicazione. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Transparent Data Encryption e dati FILESTREAM  
  Anche se si abilita TDE, i dati FILESTREAM non vengono crittografati.  
@@ -233,8 +233,8 @@ GO
  [Spostare un database protetto con Transparent Data Encryption in un altro SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
  [Abilitare Transparent Data Encryption con EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Transparent Data Encryption con il database SQL di Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
- [Crittografia SQL Server](sql-server-encryption.md)   
- [SQL Server e chiavi di crittografia del database &#40;motore di database&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [Crittografia di SQL Server](sql-server-encryption.md)   
+ [Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Centro sicurezza per SQL Server motore di database e il database SQL di Azure](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
   

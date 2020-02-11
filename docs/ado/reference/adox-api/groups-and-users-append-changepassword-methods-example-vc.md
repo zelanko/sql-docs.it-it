@@ -1,5 +1,5 @@
 ---
-title: Aggiungere utenti e gruppi, esempio di metodi ChangePassword (VC + +) | Microsoft Docs
+title: Accodamento di gruppi e utenti, esempio di Metodi ChangePassword (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ff06ece1485ce8f140e1295e8bee3036cc1686a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a98b92b4aaad14ec507b10a345bb8200b1169f0d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966199"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918080"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Esempio dei metodi Append di Groups e Users e del metodo ChangePassword (VC++)
-Questo esempio viene illustrato il [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) metodo di [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md), così come il [Append](../../../ado/reference/adox-api/append-method-adox-users.md) metodo [utenti](../../../ado/reference/adox-api/users-collection-adox.md) aggiungendo un nuovo [Gruppo](../../../ado/reference/adox-api/group-object-adox.md) e un nuovo [utente](../../../ado/reference/adox-api/user-object-adox.md) al sistema. Il nuovo **gruppo** viene aggiunto al **gruppi** raccolta del nuovo **utente**. Di conseguenza, il nuovo **utente** viene aggiunto per il **gruppo**. Inoltre, il [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) metodo viene utilizzato per specificare le **utente** password.  
+Questo esempio illustra il metodo [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) dei [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md), nonché il metodo [Append](../../../ado/reference/adox-api/append-method-adox-users.md) degli [utenti](../../../ado/reference/adox-api/users-collection-adox.md) aggiungendo un nuovo [gruppo](../../../ado/reference/adox-api/group-object-adox.md) e un nuovo [utente](../../../ado/reference/adox-api/user-object-adox.md) al sistema. Il nuovo **gruppo** viene aggiunto alla raccolta di **gruppi** del nuovo **utente**. Di conseguenza, il nuovo **utente** viene aggiunto al **gruppo**. Inoltre, il metodo [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) viene utilizzato per specificare la password **utente** .  
   
 > [!NOTE]
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = yes** oppure **Integrated Security = SSPI** anziché un ID utente e password informazioni nella stringa di connessione.  
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.  
   
 ```  
 // BeginGroupCpp.cpp  
@@ -124,7 +124,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
   
    ::CoUninitialize();  

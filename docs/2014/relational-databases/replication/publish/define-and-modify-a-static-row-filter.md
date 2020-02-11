@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7bb7aebed25c571108e4b0d7e7366fc52c45e3c1
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882301"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definizione e modifica di un filtro di riga statico
   In questo argomento viene descritto come definire e modificare un filtro di riga statico in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73882301"
   
 ###  <a name="Recommendations"></a> Raccomandazioni  
   
--   Poiché questi filtri sono statici, tutti i sottoscrittori riceveranno lo stesso subset di dati. Se è necessario filtrare dinamicamente le righe in un articolo di tabella appartenente a una tabella di tipo merge, in modo che ogni sottoscrittore riceva una partizione diversa dei dati, vedere [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La replica di tipo merge consente inoltre di filtrare righe correlate in base a un filtro di riga esistente. Per altre informazioni, vedere [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+-   Poiché questi filtri sono statici, tutti i sottoscrittori riceveranno lo stesso subset di dati. Se è necessario filtrare dinamicamente le righe in un articolo di tabella appartenente a una tabella di tipo merge, in modo che ogni sottoscrittore riceva una partizione diversa dei dati, vedere [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La replica di tipo merge consente inoltre di filtrare righe correlate in base a un filtro di riga esistente. Per altre informazioni, vedere [Definizione e modifica di un filtro di join tra articoli di merge](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Per definire, modificare ed eliminare filtri di riga statici, usare la pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o la pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
@@ -111,7 +111,7 @@ ms.locfileid: "73882301"
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Specificare il nome dell'articolo per **\@article**, il nome della pubblicazione per **\@publication**, il nome del filtro per **\@filter_name** e la clausola di filtro per **\@filter_clause** (senza includere `WHERE`).  
   
-3.  Se non è ancora stato definito un filtro di colonna, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). In caso contrario, eseguire [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specificare il nome della pubblicazione per **\@publication**, il nome dell'articolo filtrato per **\@article** e la clausola di filtro specificata nel passaggio 2 per **\@filter_clause**. Verranno creati gli oggetti di sincronizzazione per l'articolo filtrato.  
+3.  Se non è ancora stato definito un filtro di colonna, vedere [Definizione e modifica di un filtro colonne](define-and-modify-a-column-filter.md). In caso contrario, eseguire [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specificare il nome della pubblicazione per **\@publication**, il nome dell'articolo filtrato per **\@article** e la clausola di filtro specificata nel passaggio 2 per **\@filter_clause**. Verranno creati gli oggetti di sincronizzazione per l'articolo filtrato.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Per modificare un filtro di riga statico per una pubblicazione snapshot o transazionale  
   
@@ -119,7 +119,7 @@ ms.locfileid: "73882301"
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specificare il nome della pubblicazione per **\@publication**, il nome dell'articolo filtrato per **\@article** e la clausola di filtro specificata nel passaggio 1 per **\@filter_clause**. Verrà ricreata la vista che definisce l'articolo filtrato.  
   
-3.  Rieseguire il processo dell'agente snapshot per la pubblicazione per generare uno snapshot aggiornato. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+3.  Rieseguire il processo dell'agente snapshot per la pubblicazione per generare uno snapshot aggiornato. Per altre informazioni, vedere [Creazione e applicazione dello snapshot iniziale](../create-and-apply-the-initial-snapshot.md).  
   
 4.  Reinizializzazione delle sottoscrizioni. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
   
@@ -127,7 +127,7 @@ ms.locfileid: "73882301"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Specificare il nome dell'articolo per **\@article**, il nome della pubblicazione per **\@publication**, il valore NULL per **\@filter_name** e il valore NULL per **\@filter_clause**. Poiché questa modifica invaliderà i dati nelle sottoscrizioni esistenti, specificare il valore **1** per **\@force_reinit_subscription**.  
   
-2.  Rieseguire il processo dell'agente snapshot per la pubblicazione per generare uno snapshot aggiornato. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+2.  Rieseguire il processo dell'agente snapshot per la pubblicazione per generare uno snapshot aggiornato. Per altre informazioni, vedere [Creazione e applicazione dello snapshot iniziale](../create-and-apply-the-initial-snapshot.md).  
   
 3.  Reinizializzazione delle sottoscrizioni. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
   
@@ -135,13 +135,13 @@ ms.locfileid: "73882301"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare la clausola di filtro per **\@subset_filterclause** (senza includere `WHERE`). Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
-2.  Se non è ancora stato definito un filtro di colonna, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+2.  Se non è ancora stato definito un filtro di colonna, vedere [Definizione e modifica di un filtro colonne](define-and-modify-a-column-filter.md).  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>Per modificare un filtro di riga statico per una pubblicazione di tipo merge  
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il nome della pubblicazione per **\@publication**, il nome dell'articolo filtrato per **\@article**, il valore **subset_filterclause** per **\@property** e la nuova clausola di filtro per **\@value** (senza includere `WHERE`). Poiché questa modifica invaliderà i dati nelle sottoscrizioni esistenti, specificare il valore 1 per **\@force_reinit_subscription**.  
   
-2.  Rieseguire il processo dell'agente snapshot per la pubblicazione per generare uno snapshot aggiornato. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+2.  Rieseguire il processo dell'agente snapshot per la pubblicazione per generare uno snapshot aggiornato. Per altre informazioni, vedere [Creazione e applicazione dello snapshot iniziale](../create-and-apply-the-initial-snapshot.md).  
   
 3.  Reinizializzazione delle sottoscrizioni. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
   
@@ -150,12 +150,12 @@ ms.locfileid: "73882301"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
- In questo esempio di replica di tipo merge gli articoli vengono filtrati orizzontalmente per restituire solo le righe che appartengono al venditore specificato. Viene utilizzato anche un filtro join. Per altre informazioni, vedere [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+ In questo esempio di replica di tipo merge gli articoli vengono filtrati orizzontalmente per restituire solo le righe che appartengono al venditore specificato. Viene utilizzato anche un filtro join. Per altre informazioni, vedere [Definizione e modifica di un filtro di join tra articoli di merge](define-and-modify-a-join-filter-between-merge-articles.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire e modificare un filtro di riga con parametri per un articolo di merge](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md)   
  [Filtrare i dati pubblicati](filter-published-data.md)   
  [Filtrare i dati pubblicati per la replica di tipo merge](../merge/filter-published-data-for-merge-replication.md)  

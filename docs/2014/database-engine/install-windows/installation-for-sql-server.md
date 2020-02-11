@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228406"
 ---
 # <a name="installation-for-sql-server-2014"></a>Installazione per SQL Server 2014
@@ -70,7 +70,7 @@ ms.locfileid: "75228406"
  [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
  Vengono descritte le opzioni per l'aggiornamento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Disinstalla SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)  
+ [Disinstallare SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)  
  Vengono descritte le routine per disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
  [Installazione del cluster di failover di SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  

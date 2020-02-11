@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257471"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversioni di tipi di dati e annotazione sql: DataType (SQLXML 4,0)
@@ -47,7 +47,7 @@ ms.locfileid: "75257471"
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Ora|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Tempo|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Tutti gli altri|Nessuna conversione aggiuntiva|  
   
 > [!NOTE]  
@@ -59,26 +59,26 @@ ms.locfileid: "75257471"
 |Tipo di dati di SQL Server|Tipo di dati XSD|  
 |--------------------------|-------------------|  
 |**bigint**|**lungo**|  
-|**binario**|**base64Binary**|  
-|**po'**|**Boolean**|  
+|**BINARY**|**base64Binary**|  
+|**bit**|**boolean**|  
 |**char**|**stringa**|  
-|**DateTime**|**dateTime**|  
-|**decimale**|**decimale**|  
-|**float**|**doppio**|  
+|**datetime**|**dateTime**|  
+|**decimal**|**decimal**|  
+|**float**|**double**|  
 |**immagine**|**base64Binary**|  
 |**int**|**int**|  
-|**money**|**decimale**|  
+|**money**|**decimal**|  
 |**nchar**|**stringa**|  
 |**ntext**|**stringa**|  
 |**nvarchar**|**stringa**|  
-|**numerico**|**decimale**|  
+|**numerico**|**decimal**|  
 |**reale**|**float**|  
 |**smalldatetime**|**dateTime**|  
-|**smallint**|**breve**|  
-|**smallmoney**|**decimale**|  
+|**smallint**|**short**|  
+|**SMALLMONEY**|**decimal**|  
 |**sql_variant**|**stringa**|  
 |**sysname**|**stringa**|  
-|**testo**|**stringa**|  
+|**text**|**stringa**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  

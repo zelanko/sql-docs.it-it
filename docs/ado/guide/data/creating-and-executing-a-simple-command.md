@@ -1,5 +1,5 @@
 ---
-title: Creazione ed esecuzione di un comando semplice | Microsoft Docs
+title: Creazione ed esecuzione di un semplice comando | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,25 +14,25 @@ ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925730"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Creazione ed esecuzione di un comando semplice
-Un semplice comando è uno che non è con parametri e non richiede la persistenza. Esistono tre modi per creare ed eseguire un comando semplice.  
+Un semplice comando è uno che non è parametrizzato e non richiede alcuna persistenza. Esistono tre modi per creare ed eseguire un semplice comando.  
   
--   Usando un **comando** oggetto  
+-   Uso di un oggetto **Command**  
   
--   Usando un **connessione** oggetto  
+-   Utilizzo di un oggetto **Connection**  
   
--   Usando un **Recordset** oggetto  
+-   Uso di un oggetto **Recordset**  
   
-## <a name="using-a-command-object"></a>Utilizzo di un oggetto comando  
- Per creare un semplice comando utilizzando un **comandi** dell'oggetto, è necessario assegnare le istruzioni per il **CommandText** proprietà di un **comando** dell'oggetto e impostare il valore appropriato per il **CommandType** proprietà. L'esecuzione del comando richiede che una connessione aperta viene assegnata al **ActiveConnection** proprietà delle **comando** oggetto, seguita da una chiamata ai **Execute** (metodo) nel **comando** oggetto.  
+## <a name="using-a-command-object"></a>Uso di un oggetto Command  
+ Per creare un comando semplice usando un oggetto **Command** , è necessario assegnare l'istruzione alla proprietà **CommandText** di un oggetto **Command** e impostare il valore appropriato per la proprietà **CommandType** . Per eseguire il comando è necessario assegnare una connessione aperta alla proprietà **ActiveConnection** dell'oggetto **Command** , seguita da una chiamata al metodo **Execute** sull'oggetto **Command** .  
   
- Il frammento di codice seguente viene illustrato il metodo di base dell'uso di **comando** oggetto per eseguire un comando su un'origine dati. Questo esempio Usa un comando che restituiscono righe e restituisce i risultati dell'esecuzione del comando come una **Recordset** oggetto.  
+ Il frammento di codice seguente illustra il metodo di base per usare l'oggetto **Command** per eseguire un comando su un'origine dati. In questo esempio viene utilizzato un comando di restituzione di righe e vengono restituiti i risultati dell'esecuzione del comando come oggetto **Recordset** .  
   
 ```  
     'BeginBasicCmd  
@@ -107,8 +107,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>Uso di un oggetto Recordset  
- È anche possibile creare un comando come stringa di testo e agli indirizzi PA per il **aperto** metodo su un **Recordset** dell'oggetto, insieme al tipo di comando (adCmdText), per l'esecuzione. Il seguente frammento di codice dimostrare questo concetto.  
+## <a name="using-a-recordset-object"></a>Uso di un oggetto recordset  
+ È anche possibile creare un comando come stringa di testo e visualizzarlo nel metodo **Open** su un oggetto **Recordset** , insieme al tipo di comando (adCmdText), per l'esecuzione. Il seguente frammento di codice illustra questa operazione.  
   
 ```  
   
@@ -146,8 +146,8 @@ objRs.Close
 Set objRs = Nothing  
 ```  
   
-## <a name="using-a-connection-object"></a>Uso di un oggetto di connessione  
- È anche possibile eseguire un comando su un oggetto connessione aperto. Esempio di codice precedente diventa ora questo:  
+## <a name="using-a-connection-object"></a>Utilizzo di un oggetto Connection  
+ È anche possibile eseguire un comando su un oggetto Connection aperto. L'esempio di codice precedente diventa ora il seguente:  
   
 ```  
 Const DS = "MySqlServer"  

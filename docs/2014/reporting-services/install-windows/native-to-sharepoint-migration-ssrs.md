@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: adf6b91b1c83f490ffe6c85fecd374fca7c1a085
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253177"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migrazione dalla modalità nativa alla modalità SharePoint (SSRS)
@@ -22,17 +22,17 @@ ms.locfileid: "75253177"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità SharePoint  
   
-##  <a name="bkmk_native_to_sharepoint"></a>Strumento di migrazione Reporting Services  
+##  <a name="bkmk_native_to_sharepoint"></a> Strumento di migrazione di Reporting Services  
  Lo strumento supporta la migrazione del contenuto da una distribuzione in modalità nativa a una distribuzione in modalità SharePoint. Lo strumento non supporta la migrazione dalla modalità SharePoint alla modalità SharePoint o dalla modalità SharePoint alla modalità nativa.  
   
- Per ulteriori informazioni, vedere [strumento di migrazione Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
+ Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ## <a name="use-script-to-migrate-content"></a>Utilizzare lo script per eseguire la migrazione di contenuto  
  Se lo strumento di migrazione non soddisfa le proprie esigenze, è possibile eseguire manualmente la migrazione dei dati del server di report. Di seguito è riportato un riepilogo dei passaggi necessari per eseguire la migrazione degli elementi del report da una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a un'altra. L'approccio supporta la modalità nativa o la modalità SharePoint come server di origine o di destinazione.  
   
 1.  Eseguire il backup e il ripristino delle chiavi di crittografia. Si tratta della chiave utilizzata per crittografare i dati. La chiave di crittografia viene utilizzata anche per crittografare le password, ad esempio le password archiviate per le connessioni alle origini dati. Tuttavia, non è possibile eseguire la migrazione delle password e sarà necessario immetterle nuovamente nell'ambiente di destinazione.  
   
-2.  ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Script RSS:** Scrivere uno script Visual Basic che chiama i metodi SOAP del servizio Web ReportServer per copiare i dati tra database. Utilizzare l'utilità **RS.exe** per eseguire lo script. RS.exe viene installato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Script RSS:** Scrivere uno script Visual Basic per chiamare i metodi SOAP del servizio Web ReportServer per copiare i dati tra database. Utilizzare l'utilità **RS.exe** per eseguire lo script. RS.exe viene installato con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
     -   [Esempio Reporting Services script RS. exe per eseguire la migrazione del contenuto tra server di report](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). Gli argomenti illustrano come utilizzare lo script di esempio che è possibile scaricare da CodePlex.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75253177"
 |Set di dati|Sì||  
 |Parti del report||Al termine della migrazione verificare o aggiornare il percorso alle parti del report.|  
 |Pianificazioni|Sì|Vedere il metodo ListSchedules in [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md).|  
-|Sottoscrizioni|Sì|Vedere i [metodi di recapito e sottoscrizione](../report-server-web-service/methods/subscription-and-delivery-methods.md) del metodo List Subscriptions e il Metodo ChangeSubscriptionOwner<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
+|Sottoscrizioni|sì|Vedere i [metodi di recapito e sottoscrizione](../report-server-web-service/methods/subscription-and-delivery-methods.md) del metodo List Subscriptions e il Metodo ChangeSubscriptionOwner<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |Snapshot|||  
 ||||  
   

@@ -1,6 +1,6 @@
 ---
-title: Usare la casella degli strumenti | Microsoft Docs
-ms.custom: ''
+title: Utilizzo della casella degli strumenti
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6564bd4d2c8c88c4415be8c19e8a0b791d48dea9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6a7d9029d775b2d1255d683e6b4c3b9d44ccdb31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263374"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252203"
 ---
 # <a name="use-the-toolbox"></a>Utilizzo della casella degli strumenti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ Gli elementi, il testo e i controlli presenti nella casella degli strumenti poss
   
 Gli elementi della casella degli strumenti sono raggruppati in sezioni denominate schede. Di seguito è riportato un elenco di riferimento delle attività più comuni che è possibile eseguire nella casella degli strumenti, insieme alla relativa procedura:  
   
-|Per|Procedere nel modo seguente|  
+|A|Procedere nel modo seguente|  
 |------|-----------|  
 |Aprire la casella degli strumenti|Scegliere **Casella degli strumenti** dal menu **Visualizza**.|  
 |Impostare la casella degli strumenti in modo che si chiuda automaticamente|Aprire la casella degli strumenti. Scegliere **Nascondi automaticamente** dal menu **Finestra**.|  

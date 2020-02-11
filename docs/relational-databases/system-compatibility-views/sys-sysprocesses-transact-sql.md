@@ -21,10 +21,10 @@ ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74947154"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "74947154"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ID sessione.|  
 |kpid|**smallint**|ID del thread di Windows.|  
@@ -49,8 +49,8 @@ ms.locfileid: "74947154"
 |cpu|**int**|Tempo CPU totale per il processo. La voce viene aggiornata per tutti i processi, indipendentemente dal fatto che l'opzione SET STATISTICS TIME sia impostata su ON o OFF.|  
 |physical_io|**bigint**|Numero totale di letture da disco e scritture su disco per il processo.|  
 |memusage|**int**|Numero di pagine della cache delle procedure attualmente assegnate al processo. Un numero negativo indica che il processo sta liberando la memoria allocata da un altro processo.|  
-|login_time|**DateTime**|Ora dell'accesso al server di un processo client.|  
-|last_batch|**DateTime**|Ora dell'ultima esecuzione di una chiamata a una stored procedure remota o di un'istruzione EXECUTE da parte di un processo client.|  
+|login_time|**datetime**|Ora dell'accesso al server di un processo client.|  
+|last_batch|**datetime**|Ora dell'ultima esecuzione di una chiamata a una stored procedure remota o di un'istruzione EXECUTE da parte di un processo client.|  
 |ecid|**smallint**|ID del contesto di esecuzione utilizzato per identificare in modo univoco i thread secondari utilizzati per conto di un unico processo.|  
 |open_tran|**smallint**|Numero di transazioni aperte per il processo.|  
 |status|**nchar (30)**|Stato dell'ID del processo. I valori possibili sono:<br /><br /> **inattivo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione. = <br /><br /> **Running** = la sessione sta eseguendo uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = la sessione sta eseguendo un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> **rollback** = per la sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso** = la sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **eseguibile** = l'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di ottenere un quantum temporale.<br /><br /> **Spinloop** = l'attività della sessione è in attesa che uno spinlock diventi disponibile.<br /><br /> **suspended** = la sessione è in attesa del completamento di un evento, ad esempio l'i/O.|  

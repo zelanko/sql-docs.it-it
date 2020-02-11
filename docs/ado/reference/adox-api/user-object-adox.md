@@ -16,37 +16,37 @@ ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf454e28e7a823eb643b5bbd92b0396fac15a028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964971"
 ---
 # <a name="user-object-adox"></a>Oggetto User (ADOX)
-Rappresenta un account utente che dispone delle autorizzazioni di accesso all'interno di un database protetto.  
+Rappresenta un account utente che dispone di autorizzazioni di accesso all'interno di un database protetto.  
   
-## <a name="remarks"></a>Note  
- Il [gli utenti](../../../ado/reference/adox-api/users-collection-adox.md) raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta gli utenti del catalogo. Il **gli utenti** raccolta per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti del gruppo specifico.  
+## <a name="remarks"></a>Osservazioni  
+ La raccolta [Users](../../../ado/reference/adox-api/users-collection-adox.md) di un [Catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli utenti del catalogo. La raccolta **Users** per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti del gruppo specifico.  
   
- Con la proprietà, le raccolte e i metodi di una **utente** dell'oggetto, è possibile:  
+ Con le proprietà, le raccolte e i metodi di un oggetto **utente** , è possibile:  
   
--   Identificare l'utente con il [nome](../../../ado/reference/adox-api/name-property-adox.md) proprietà.  
+-   Identificare l'utente con la proprietà [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Modificare la password per un utente con il [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) (metodo).  
+-   Modificare la password per un utente con il metodo [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) .  
   
--   Determinare se un utente dispone di lettura, scrittura o eliminazione delle autorizzazioni con il [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) metodi.  
+-   Determinare se un utente dispone di autorizzazioni di lettura, scrittura o eliminazione con i metodi [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) e [sepermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) .  
   
--   Accedere ai gruppi a cui appartiene un utente con il [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md) raccolta.  
+-   Accedere ai gruppi a cui appartiene un utente con la raccolta di [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md) .  
   
--   Accedere alle proprietà specifiche del provider con il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta.  
+-   Accedere alle proprietà specifiche del provider con la raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
 -   Determinare il [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) per un utente.  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Proprietà, metodi ed eventi dell'oggetto User](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [GetPermissions e SetPermissions metodi (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Raccolta di gruppi (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Esempio di metodi GetPermissions e sepermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Raccolta Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
+ [Raccolta Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 631b6864529e903516857f68ea421365c144afef
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243297"
 ---
 # <a name="search-and-replace"></a>Ricerca e sostituzione
@@ -42,17 +42,17 @@ ms.locfileid: "75243297"
   
 -   Le opzioni impostate nella finestra di dialogo **Trova e sostituisci** influenzano tutte le ricerche. Le opzioni disponibili sono **Maiuscole/minuscole**, **Parola intera**, **Cerca in alto**, **Cerca nel testo nascosto**, **Caratteri jolly**, **Espressioni regolari**, **Tutti i documenti aperti**e **Progetto corrente**. Le opzioni effettivamente disponibili dipendono dalla versione usata della finestra di dialogo **Trova e sostituisci** .  
   
--   **Annulla** è disponibile solo per i documenti lasciati aperti dopo un'operazione di sostituzione.  
+-   L'opzione**Annulla** è disponibile solo per i documenti lasciati aperti dopo un'operazione di sostituzione.  
   
--   L' **annullamento** di un'operazione **Replace all** che si estende su più di un file viene considerato come un'unica azione bulk su tutti i file interessati. Non è quindi possibile annullare la modifica in alcuni file e mantenerla in altri.  
+-   L'opzione**Annulla** per un'operazione **Sostituisci tutto** eseguita su più di un file è considerata un'unica azione bulk su tutti i file interessati. Non è quindi possibile annullare la modifica in alcuni file e mantenerla in altri.  
   
  Non è in genere possibile eseguire ricerche in elementi grafici.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca incrementale in un documento attivo](search-an-active-document-incrementally.md)   
- [Cerca in modo interattivo i documenti](search-documents-interactively.md)   
- [Eseguire ricerche nei documenti usando gli elenchi dei risultati](search-documents-using-results-lists.md)   
+ [Ricerca interattiva all'interno di documenti](search-documents-interactively.md)   
+ [Ricerca nei documenti utilizzando gli elenchi dei risultati](search-documents-using-results-lists.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)   
- [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
+ [Eseguire ricerche di testo con espressioni regolari](search-text-with-regular-expressions.md)  
   
   

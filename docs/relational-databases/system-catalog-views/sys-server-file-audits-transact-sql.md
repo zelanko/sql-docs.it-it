@@ -1,5 +1,5 @@
 ---
-title: Sys. server_file_audits (Transact-SQL) | Microsoft Docs
+title: sys. server_file_audits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133126"
 ---
-# <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
+# <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene informazioni estese sul tipo di controllo dei file in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit in un'istanza del server. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Contiene informazioni estese sul tipo di controllo dei file [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un controllo in un'istanza del server. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -37,15 +37,15 @@ ms.locfileid: "68133126"
 |name|**sysname**|Nome del controllo.|  
 |audit_guid|**uniqueidentifier**|GUID del controllo.|  
 |create_date|**datetime**|Data UTC di creazione del controllo dei file.|  
-|modify_date|**datatime**|Data UTC dell'ultima modifica del controllo dei file.|  
+|modify_date|**DataTime**|Data UTC dell'ultima modifica del controllo dei file.|  
 |principal_id|**int**|ID del proprietario del controllo come registrato nel server.|  
-|type|**char(2)**|Tipo di controllo:<br /><br /> 0 = Registro eventi di sicurezza NT<br /><br /> 1 = Registro eventi applicazioni NT<br /><br /> 2 = File nel file system|  
-|type_desc|**nvarchar(60)**|Descrizione del tipo di controllo.|  
+|type|**carattere (2)**|Tipo di controllo:<br /><br /> 0 = Registro eventi di sicurezza NT<br /><br /> 1 = Registro eventi applicazioni NT<br /><br /> 2 = File nel file system|  
+|type_desc|**nvarchar (60)**|Descrizione del tipo di controllo.|  
 |on_failure|**tinyint**|In condizione di errore:<br /><br /> 0 = Continua<br /><br /> 1 = Arresta l'istanza del server<br /><br /> 2= Errore operazione|  
-|on_failure_desc|**nvarchar(60)**|Voce in condizione di errore:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
+|on_failure_desc|**nvarchar (60)**|Voce in condizione di errore:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
 |is_state_enabled|**tinyint**|0 = Disabilitato<br /><br /> 1 = Attivato|  
 |queue_delay|**int**|Tempo massimo di attesa suggerito, in millisecondi, prima di scrivere su disco. Se il valore è 0, il controllo garantirà una scrittura prima che l'evento possa continuare.|  
-|predicate|**nvarchar(8000)**|Espressione del predicato applicata all'evento.|  
+|predicate|**nvarchar (8000)**|Espressione del predicato applicata all'evento.|  
 |max_file_size|**bigint**|Dimensione massima, in megabyte, del controllo:<br /><br /> 0 = Dimensione illimitata/non applicabile per il tipo di controllo selezionato.|  
 |max_rollover_files|**int**|Numero massimo di file da utilizzare con l'opzione di rollover.|  
 |max_files|**int**|Numero massimo di file da utilizzare senza l'opzione di rollover.|  
@@ -53,10 +53,10 @@ ms.locfileid: "68133126"
 |log_file_path|**nvarchar(260)**|Percorso in cui si trova il controllo. Il percorso è un percorso di file o del registro applicazioni a seconda del tipo di controllo.|  
 |log_file_name|**nvarchar(260)**|Nome di base per il file di log specificato in CREATE AUDIT DDL. Al file base_log_name viene aggiunto un numero incrementale come suffisso per creare il nome del file di log.|  
   
-## <a name="permissions"></a>Permissions  
- Le entità con la **ALTER ANY SERVER AUDIT** oppure **VIEW ANY DEFINITION** autorizzazione ha accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negata **VIEW ANY DEFINITION** l'autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le entità con l'autorizzazione **ALTER ANY Server Audit** o **View any Definition** possono accedere a questa vista del catalogo. Non è inoltre necessario negare l'autorizzazione **View any Definition** per l'entità.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
@@ -71,7 +71,7 @@ ms.locfileid: "68133126"
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)   
  [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [Sys. server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys. server_file_audits (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
  [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
  [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   

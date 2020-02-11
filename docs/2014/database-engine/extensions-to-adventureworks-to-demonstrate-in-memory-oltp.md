@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228470"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Estensioni a AdventureWorks per illustrare OLTP in memoria
@@ -41,7 +41,7 @@ ms.locfileid: "75228470"
   
 -   [Utilizzo di memoria e spazio su disco nell'esempio](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a>Prerequisiti  
+##  <a name="Prerequisites"></a> Prerequisiti  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-Evaluation, Developer o Enterprise Edition  
   
@@ -575,10 +575,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**tipo**|**nome**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|94|  
+|MEMORYCLERK_XTP|Predefinito|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
   
  I clerk di memoria predefiniti contengono strutture di memoria di sistema e sono relativamente ridotti. Il clerk di memoria per il database utente, in questo caso il database con ID 5, è pari a circa 900 MB.  
   
@@ -624,10 +624,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**tipo**|**nome**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|146|  
+|MEMORYCLERK_XTP|Predefinito|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
   
  Come si può notare, tramite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene utilizzato un bit in 8 GB per gli indici e le tabelle ottimizzate per la memoria nel database di esempio.  
   
@@ -670,10 +670,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**tipo**|**nome**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|2261|  
+|MEMORYCLERK_XTP|Predefinito|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
   
  Si prevede che la memoria verrà recuperata quando il carico di lavoro transazionale è in esecuzione.  
   
@@ -689,10 +689,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**tipo**|**nome**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|1863|  
+|MEMORYCLERK_XTP|Predefinito|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
+|MEMORYCLERK_XTP|Predefinito|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Utilizzo del disco per tabelle ottimizzate per la memoria  
  Le dimensioni complessive su disco per i file del checkpoint di un database in un determinato momento possono essere recuperate tramite la query seguente:  
@@ -881,5 +881,5 @@ ORDER BY state, file_type
  In questo caso, sono disponibili due coppie di file di checkpoint nello stato 'in costruzione', il che significa che più coppie di file sono passate allo stato 'in costruzione' probabilmente a causa dell'elevato livello di concorrenza del carico di lavoro. Più thread simultanei hanno richiesto una nuova coppia di file contemporaneamente e di conseguenza una coppia è passata dallo stato di 'precreato' a quello di 'in costruzione'.  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

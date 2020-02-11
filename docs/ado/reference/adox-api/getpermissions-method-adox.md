@@ -19,14 +19,14 @@ ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966220"
 ---
 # <a name="getpermissions-method-adox"></a>Metodo GetPermissions (ADOX)
-Restituisce le autorizzazioni per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) oppure [utente](../../../ado/reference/adox-api/user-object-adox.md) su un oggetto o un contenitore di oggetti.  
+Restituisce le autorizzazioni per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) o un [utente](../../../ado/reference/adox-api/user-object-adox.md) in un contenitore oggetto o oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -36,17 +36,17 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un **lungo** valore che specifica una maschera di bit che contiene le autorizzazioni che il gruppo o l'utente dispone sull'oggetto. Questo valore può essere uno o più i [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) costanti.  
+ Restituisce un valore **Long** che specifica una maschera di maschera contenente le autorizzazioni del gruppo o dell'utente nell'oggetto. Questo valore può essere costituito da una o più costanti [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) .  
   
 #### <a name="parameters"></a>Parametri  
- *Name*  
- Oggetto **Variant** valore che specifica il nome dell'oggetto per cui impostare le autorizzazioni. Impostare *nome* su un valore null se si desidera ottenere le autorizzazioni per il contenitore di oggetti.  
+ *Nome*  
+ Valore **Variant** che specifica il nome dell'oggetto per il quale impostare le autorizzazioni. Impostare *nome* su un valore null se si desidera ottenere le autorizzazioni per il contenitore di oggetti.  
   
  *ObjectType*  
- Oggetto **lungo** valore che può essere uno del [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) costanti, che specifica il tipo dell'oggetto per cui ottenere le autorizzazioni.  
+ Valore **Long** che può essere una delle costanti [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , che specifica il tipo dell'oggetto per il quale ottenere le autorizzazioni.  
   
  *ObjectTypeId*  
- facoltativo. Oggetto **Variant** valore che specifica il GUID per un tipo di oggetto provider non è definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostata su **impostato su adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
+ Facoltativa. Valore **Variant** che specifica il GUID per un tipo di oggetto provider non definito dalla specifica OLE DB. Questo parametro è obbligatorio se *ObjectType* è impostato su **adPermObjProviderSpecific**; in caso contrario, non viene utilizzato.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -55,6 +55,6 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 |[Oggetto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Oggetto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [GetPermissions e SetPermissions metodi (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Esempio di metodi GetPermissions e sepermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Proprietà Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Metodo SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

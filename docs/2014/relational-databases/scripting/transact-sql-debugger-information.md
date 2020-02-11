@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243065"
 ---
 # <a name="transact-sql-debugger-information"></a>Informazioni del debugger Transact-SQL
@@ -96,13 +96,13 @@ ms.locfileid: "75243065"
  In modalità di debug, le schede **Risultati** e **Messaggi** sono ancora attive nell'editor di query. La scheda **Risultati** continua a visualizzare i set dei risultati delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che vengono eseguite durante una sessione di debug. La scheda **Messaggi** continua a visualizzare messaggi di sistema, ad esempio "Righe interessate *xx* " e l'output delle istruzioni PRINT e RAISERROR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra variabili locali](transact-sql-debugger-locals-window.md)   
- [Finestra espressioni di controllo](transact-sql-debugger-watch-window.md)   
- [Finestra di dialogo controllo immediato](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Finestra punti di interruzione](transact-sql-debugger-breakpoints-window.md)   
- [Finestra stack di chiamate](transact-sql-debugger-call-stack-window.md)   
- [Finestra thread](transact-sql-debugger-threads-window.md)   
- [Finestra di output](transact-sql-debugger-output-window.md)   
+ [finestra Variabili locali](transact-sql-debugger-locals-window.md)   
+ [finestra Espressioni di controllo](transact-sql-debugger-watch-window.md)   
+ [Finestra di dialogo Controllo immediato](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Finestra Punti di interruzione](transact-sql-debugger-breakpoints-window.md)   
+ [Finestra Stack di chiamate](transact-sql-debugger-call-stack-window.md)   
+ [Finestra Thread](transact-sql-debugger-threads-window.md)   
+ [Finestra Output](transact-sql-debugger-output-window.md)   
  [Debugger Transact-SQL](transact-sql-debugger.md)  
   
   

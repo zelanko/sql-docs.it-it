@@ -1,5 +1,5 @@
 ---
-title: Wrapper di classe Java ADO | Microsoft Docs
+title: Wrapper della classe Java ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927000"
 ---
 # <a name="ado-java-class-wrappers"></a>Wrapper di classe Java ADO
-Questo codice dichiara un'istanza di ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) wrapper di classe e la inizializza, tutti sulla stessa riga del codice. Inoltre, vengono dichiarate le variabili per ognuno degli argomenti in di [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo, in particolare per [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (poiché Java non supporta enumerati tipi). Apre e chiude il **Recordset** oggetto. Impostazione Rs1 su NULL semplicemente pianifica tale variabile deve essere rilasciato quando Java viene eseguito il rilascio sistematico e intermittente di oggetti inutilizzati.  
+Questo codice dichiara un'istanza del wrapper della classe [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ADO e la inizializza, all sulla stessa riga di codice. Dichiara inoltre le variabili per ogni argomento nel metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) , specialmente per [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (perché Java non supporta i tipi enumerati). Viene aperto e chiuso l'oggetto **Recordset** . Impostando RS1 su NULL si pianifica semplicemente la variabile da rilasciare quando Java esegue la versione sistematica e intermittente degli oggetti inutilizzati.  
   
 ```java
 public static void main( String args[])  

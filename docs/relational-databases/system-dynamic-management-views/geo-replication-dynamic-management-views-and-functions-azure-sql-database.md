@@ -1,5 +1,5 @@
 ---
-title: La replica geografica DMV e funzioni (Database SQL di Azure) | Microsoft Docs
+title: Funzioni e viste a gestione dinamica per la replica geografica (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql
@@ -17,20 +17,20 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0b849b6c1edaea011311ed2faf90b5c550c26bd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130735"
 ---
-# <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>La replica geografica DMV e funzioni (Database SQL di Azure)
+# <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>Funzioni e viste a gestione dinamica per la replica geografica (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In questa sezione contiene le viste del catalogo seguenti che consentono di visualizzare informazioni sulla replica geografica.  
+  Questa sezione contiene le viste del catalogo seguenti che visualizzano informazioni sulla replica geografica.  
   
 |||  
 |-|-|  
-|[Sys. geo_replication_links &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)|[DM geo_replication_link_status &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)|  
-|[DM operation_status &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)|[continuous_copy_status &#40;Database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)|  
+|[sys. geo_replication_links &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)|[sys. dm_geo_replication_link_status &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)|  
+|[sys. dm_operation_status &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)|[sys. dm_continuous_copy_status &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)|  
   
   

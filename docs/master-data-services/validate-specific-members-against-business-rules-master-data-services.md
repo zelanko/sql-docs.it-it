@@ -14,10 +14,10 @@ ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 885d0c1018c1d30fd4ea5d10276c971dbbf0a114
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728855"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>Convalidare membri specifici rispetto a regole business (Master Data Services)
@@ -49,7 +49,7 @@ ms.locfileid: "73728855"
 5.  Fare clic su **Applica regole**. Le regole business sono applicate solo ai membri visualizzati nella griglia.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [Convalidare una versione rispetto alle regole business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

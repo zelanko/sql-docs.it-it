@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245629"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Requisiti hardware e software per Reporting Services in modalità SharePoint
@@ -27,9 +27,9 @@ ms.locfileid: "75245629"
   
 -   [Requisiti di Power View](#bkmk_powerview)  
   
--   [Ulteriori informazioni](#bkmk_more_information)  
+-   [Altre informazioni](#bkmk_more_information)  
   
-##  <a name="bkmk_prereq"></a>Prerequisiti  
+##  <a name="bkmk_prereq"></a> Prerequisiti  
   
 -   Per le installazioni locali, l'account connesso durante l'installazione di SharePoint e [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deve essere un membro del gruppo di amministratori del sistema operativo locale. L'account di configurazione non deve essere un membro del gruppo di amministratori della farm di SharePoint.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75245629"
  Esaminare la [documentazione di Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) più aggiornata su Office.Microsoft.com. 
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] è ora una funzionalità di Microsoft Excel 2013 ed è incluso nel componente aggiuntivo di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services per Microsoft SharePoint Server 2010 e 2013 Enterprise Edition.  
   
-##  <a name="bkmk_more_information"></a>Ulteriori informazioni
+##  <a name="bkmk_more_information"></a> Ulteriori informazioni
 
  Per informazioni sulle modifiche di SharePoint, vedere [modifiche da sharepoint 2010 a sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
   

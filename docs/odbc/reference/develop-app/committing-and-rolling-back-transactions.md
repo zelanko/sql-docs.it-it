@@ -1,5 +1,5 @@
 ---
-title: Eseguire il commit e rollback delle transazioni | Microsoft Docs
+title: Esecuzione del commit e rollback delle transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c7c028ca7e89378e959b11f59cad4119cef5086a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083316"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Esecuzione del commit e del rollback delle transazioni
-Per eseguire il commit o rollback della transazione in modalità di commit manuale, un'applicazione chiama **SQLEndTran**. I driver per DBMS che supportano le transazioni in genere implementano questa funzione tramite l'esecuzione di un **COMMIT** oppure **ROLLBACK** istruzione. Gestione Driver non chiama **SQLEndTran** quando la connessione è in modalità autocommit; semplicemente restituisce SQL_SUCCESS, anche se l'applicazione prova a eseguire il rollback della transazione. Poiché i driver per DBMS che non supportano le transazioni sono sempre in modalità autocommit, è possibile implementare **SQLEndTran** restituisce SQL_SUCCESS senza eseguire alcuna operazione o non implementare.  
+Per eseguire il commit o il rollback di una transazione in modalità di commit manuale, un'applicazione chiama **SQLEndTran**. I driver per DBMS che supportano le transazioni in genere implementano questa funzione eseguendo un'istruzione **commit** o **rollback** . Gestione driver non chiama **SQLEndTran** quando la connessione è in modalità autocommit; restituisce semplicemente SQL_SUCCESS, anche se l'applicazione tenta di eseguire il rollback della transazione. Poiché i driver per DBMS che non supportano le transazioni sono sempre in modalità autocommit, possono implementare **SQLEndTran** per restituire SQL_SUCCESS senza eseguire alcuna operazione o non implementarlo affatto.  
   
 > [!NOTE]  
->  Le applicazioni non devono eseguire il commit o il rollback delle transazioni eseguendo **COMMIT** oppure **ROLLBACK** istruzioni con **SQLExecute** o **SQLExecDirect**. Gli effetti di questa operazione non sono definiti. I problemi possibili includono il driver non è più sapere quando è attiva una transazione e tali istruzioni non superati rispetto a origini dati che non supportano transazioni. Queste applicazioni devono chiamare **SQLEndTran** invece.  
+>  Le applicazioni non devono eseguire il commit o il rollback delle transazioni eseguendo istruzioni **commit** o **rollback** con **SQLExecute** o **SQLExecDirect**. Gli effetti di questa operazione non sono definiti. Tra i possibili problemi, il driver non è più in grado di sapere quando una transazione è attiva e le istruzioni non vengono eseguite su origini dati che non supportano le transazioni. Queste applicazioni devono invece chiamare **SQLEndTran** .  
   
- Se un'applicazione passa l'handle di ambiente al **SQLEndTran** ma non passare un handle di connessione, gestione Driver chiama concettualmente **SQLEndTran** con l'handle di ambiente per ogni driver che dispone di uno o più connessioni attive nell'ambiente. Quindi il driver esegue il commit di transazioni in ogni connessione nell'ambiente. Tuttavia, è importante tenere presente che il driver né the Driver Manager esegue un commit in due fasi sulle connessioni dell'ambiente. si tratta semplicemente una facilitare la programmazione di chiamare simultaneamente **SQLEndTran** per tutte le connessioni nell'ambiente.  
+ Se un'applicazione passa l'handle di ambiente a **SQLEndTran** ma non passa un handle di connessione, gestione driver chiama concettualmente **SQLEndTran** con l'handle di ambiente per ogni driver con una o più connessioni attive nell'ambiente. Il driver quindi eseguirà il commit delle transazioni in ogni connessione nell'ambiente. Tuttavia, è importante tenere presente che né il driver né Gestione driver eseguono un commit a due fasi sulle connessioni nell'ambiente. si tratta semplicemente di una praticità di programmazione per chiamare simultaneamente **SQLEndTran** per tutte le connessioni nell'ambiente.  
   
- (Un *2PC* viene generalmente usato per eseguire il commit delle transazioni che vengono distribuite tra più origini dati. Nella prima fase, che indica se possono eseguire il commit di loro parte della transazione sono polling per le origini dati. Nella seconda fase, la transazione viene effettivamente eseguito il commit in tutte le origini dati. Se tutte le origini dati di risposta nella prima fase che è Impossibile eseguire il commit della transazione, la seconda fase non viene eseguito.)
+ Viene in genere utilizzato un *commit a due fasi* per eseguire il commit delle transazioni distribuite tra più origini dati. Nella prima fase, viene eseguito il polling delle origini dati per determinare se è possibile eseguire il commit della propria parte della transazione. Nella seconda fase, viene effettivamente eseguito il commit della transazione in tutte le origini dati. Se le origini dati rispondono nella prima fase in cui non è possibile eseguire il commit della transazione, la seconda fase non si verifica.

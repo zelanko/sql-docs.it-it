@@ -13,23 +13,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243215"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Impostazione di un filtro per un punto di interruzione
   Un filtro per un punto di interruzione limita il punto di interruzione in modo che agisca solo su computer o processi e thread del sistema operativo specificati. I filtri per i punti di interruzione vengono in genere utilizzati per il debug di applicazioni parallele.  
   
-##  <a name="BKMK_ActionConsiderations"></a>Considerazioni sui filtri  
+##  <a name="BKMK_ActionConsiderations"></a> Considerazioni sui filtri  
  I filtri per i punti di interruzione non vengono in genere utilizzati con il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] perché gli script e le stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] non sono applicazioni parallele.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>Per specificare un filtro per un punto di interruzione  
   
 1.  Nella finestra dell'editor fare clic con il pulsante destro del mouse sul glifo del punto di interruzione, quindi scegliere **Filtro** dal menu di scelta rapida.  
   
-     -Oppure-  
+     -oppure-  
   
      Nella finestra **Punti di interruzione** fare clic con il pulsante destro del mouse sul glifo del punto di interruzione, quindi scegliere **Filtro** dal menu di scelta rapida.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "75243215"
 3.  Fare clic su **OK** per implementare le modifiche o su **Annulla** per uscire senza applicare le modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specificare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
- [Specificare un numero di passaggi](specify-a-hit-count.md)   
+ [Impostare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)   
+ [Specifica di un numero di passaggi](specify-a-hit-count.md)   
  [Specificare un'azione del punto di interruzione](specify-a-breakpoint-action.md)  

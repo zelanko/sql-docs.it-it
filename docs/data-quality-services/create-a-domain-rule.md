@@ -13,10 +13,10 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: c6a73d3f0dca65d0feb74cf572754351ccf86c7a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245476"
 ---
 # <a name="create-a-domain-rule"></a>Creare una regola di dominio
@@ -25,14 +25,14 @@ ms.locfileid: "75245476"
 
   In questo argomento viene descritto come creare una regola di dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regola di dominio è una condizione utilizzata per convalidare, correggere e standardizzare i valori di dominio. Una regola di dominio deve rimanere valida in tutto il dominio affinché i valori di dominio vengano considerati accurati e conformi ai requisiti aziendali. Le regole di dominio possono includere le regole di convalida utilizzate per convalidare i valori di dominio, ma non per correggere i dati in un progetto Data Quality. Le regole includono anche le regole di standardizzazione applicate ai dati validi e utilizzate per la correzione dei dati.  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Per creare una regola di dominio, è necessario disporre di una Knowledge Base e di un dominio aperto nell'attività Gestione dominio.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare una regola di dominio.  
   
 ##  <a name="Build"></a>Regole di dominio di compilazione  
@@ -111,7 +111,7 @@ ms.locfileid: "75245476"
   
  Durante la creazione di una regola di dominio è possibile scegliere tra diverse alternative. Ad esempio, per verificare se i valori iniziano con la lettera A, B o C, è possibile creare una regola semplice con una condizione complessa, ad esempio un'espressione regolare con i caratteri barra verticale, oppure è possibile creare una regola complessa che contiene diverse condizioni semplici. Un esempio della prima regola è "Il valore contiene l'espressione regolare (^A|^B|^C)". Un esempio della seconda regola è "'Il valore inizia con A' OR 'Il valore inizia con B' OR 'Il valore inizia con C'".  
   
-|Condizione|Description|Esempio|  
+|Condizione|Descrizione|Esempio|  
 |---------------|-----------------|-------------|  
 |La lunghezza è uguale a|Solo i valori costituiti dal numero di caratteri definito dall'operando saranno validi.|Operando di esempio: 3<br /><br /> Valore valido: BB1<br /><br /> Valore non valido: AA|  
 |La lunghezza è maggiore o uguale a|Solo i valori costituiti dal numero di caratteri definito dall'operando o da un numero di caratteri maggiore saranno validi.|Operando di esempio: 3<br /><br /> Valori validi: BB1, BBAA<br /><br /> Valore non valido: AA|  

@@ -16,13 +16,13 @@ ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768973"
 ---
-# <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
+# <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Collega un database di sottoscrizione esistente a qualsiasi Sottoscrittore. Questa stored procedure viene eseguita nel database master del nuovo Sottoscrittore.  
@@ -30,7 +30,7 @@ ms.locfileid: "68768973"
 > [!IMPORTANT]  
 >  Questa funzionalità è deprecata e verrà rimossa a partire da una delle prossime versioni. Evitare di utilizzare questa funzionalità in un nuovo progetto di sviluppo. Nel caso di pubblicazioni di tipo merge partizionate mediante filtri con parametri, è consigliabile utilizzare la nuove funzionalità degli snapshot partizionati, che semplificano l'inizializzazione di un ampio numero di sottoscrizioni. Per altre informazioni, vedere [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Per le pubblicazioni non partizionate, è possibile inizializzare una sottoscrizione con un backup. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,12 +65,12 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 `[ @subscriber_login = ] 'subscriber_login'`Nome dell'account di accesso del Sottoscrittore da utilizzare per la connessione a un Sottoscrittore durante la sincronizzazione. *subscriber_login* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* è diverso da **1** e *subscriber_login* è specificato, viene restituito un errore.  
+>  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* non è **1** e viene specificato *subscriber_login* , viene restituito un errore.  
   
 `[ @subscriber_password = ] 'subscriber_password'`Password del Sottoscrittore. *subscriber_password* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* è diverso da **1** e *subscriber_password* è specificato, viene restituito un errore.  
+>  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* non è **1** e viene specificato *subscriber_password* , viene restituito un errore.  
   
 `[ @distributor_security_mode = ] distributor_security_mode`Modalità di sicurezza da utilizzare per la connessione a un database di distribuzione durante la sincronizzazione. *distributor_security_mode* è di **tipo int**e il valore predefinito è **0**. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. **1** specifica l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -97,20 +97,20 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'`Password di una chiave master del database definita dall'utente. *db_master_key_password* è di **tipo nvarchar (524)** e il valore predefinito è null. Se *db_master_key_password* non è specificato, una chiave master del database esistente verrà eliminata e ricreata.  
+`[ @db_master_key_password = ] 'db_master_key_password'`Password di una chiave master del database definita dall'utente. *db_master_key_password* è di **tipo nvarchar (524)** e il valore predefinito è null. Se *db_master_key_password* non viene specificato, una chiave master del database esistente verrà eliminata e ricreata.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_attachsubscription** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
  Non è possibile collegare una sottoscrizione alla pubblicazione se il periodo di memorizzazione della pubblicazione è scaduto. Se si specifica una sottoscrizione quando il periodo di memorizzazione è scaduto, viene generato un errore durante il collegamento o la prima sincronizzazione della sottoscrizione. Le pubblicazioni con un periodo di memorizzazione della pubblicazione pari a **0** (nessuna scadenza) vengono ignorate.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_attachsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  

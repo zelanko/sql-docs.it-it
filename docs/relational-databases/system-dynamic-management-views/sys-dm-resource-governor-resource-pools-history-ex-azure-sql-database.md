@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247314"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
@@ -33,17 +33,17 @@ ms.locfileid: "75247314"
 
 Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (128 RECS in totale) delle statistiche dei pool di risorse per un database SQL di Azure.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**pool_id**|int|ID del pool di risorse. Non ammette i valori Null.
+|**pool_id**|INT|ID del pool di risorse. Non ammette i valori Null.
 |**nome**|sysname|Nome del pool di risorse. Non ammette i valori Null.|
 |**snapshot_time**|datetime2|Data/ora dello snapshot delle statistiche del pool di risorse|
-|**duration_ms**|int|Durata tra lo snapshot corrente e quello precedente|
+|**duration_ms**|INT|Durata tra lo snapshot corrente e quello precedente|
 |**statistics_start_time**|datetime2|Ora di reimpostazione delle statistiche per questo pool. Non ammette i valori Null.|
-|**active_session_count**|int|Totale sessioni attive nello snapshot corrente|
-|**active_worker_count**|int|Totale processi di lavoro nello snapshot corrente|
-|**delta_cpu_usage_ms**|int|Utilizzo CPU in millisecondi dall'ultimo snapshot. Non ammette i valori Null.|
-|**delta_cpu_usage_preemptive_ms**|int|Chiamate Win32 di tipo preemptive non regolate dal RG della CPU SQL, dall'ultimo snapshot|
+|**active_session_count**|INT|Totale sessioni attive nello snapshot corrente|
+|**active_worker_count**|INT|Totale processi di lavoro nello snapshot corrente|
+|**delta_cpu_usage_ms**|INT|Utilizzo CPU in millisecondi dall'ultimo snapshot. Non ammette i valori Null.|
+|**delta_cpu_usage_preemptive_ms**|INT|Chiamate Win32 di tipo preemptive non regolate dal RG della CPU SQL, dall'ultimo snapshot|
 |**used_data_space_kb**|bigint|Spazio totale usato nei database utente associati al pool di utenti|
 |**allocated_disk_space_kb**|bigint|Dimensioni totali del file di dati dei database utente nel pool di utenti associato|
 |**target_memory_kb**|bigint|Quantità di memoria di destinazione, in kilobyte, che il pool di risorse sta cercando di ottenere. Si basa sulle impostazioni correnti e sullo stato del server. Non ammette i valori Null.|
@@ -53,37 +53,37 @@ Restituisce lo snapshot con intervallo di 20 secondi per gli ultimi 32 minuti (1
 |**active_memgrant_count**|bigint|Il conteggio corrente delle concessioni di memoria. Non ammette i valori Null.|
 |**active_memgrant_kb**|bigint|La somma, in kilobyte (KB), delle concessioni correnti di memoria. Non ammette i valori Null.|
 |**used_memgrant_kb**|bigint|Il totale corrente della memoria usata (prelevata) dalle concessioni di memoria. Non ammette i valori Null.|
-|**delta_memgrant_timeout_count**|int|numero di timeout delle concessioni di memoria nel pool di risorse in questo periodo. Non ammette i valori Null.|
-|**delta_memgrant_waiter_count**|int|Il conteggio delle query attualmente in sospeso nelle concessioni di memoria. Non ammette i valori Null.|
-|**delta_out_of_memory_count**|int|Numero di allocazioni di memoria non riuscite nel pool dall'ultimo snapshot. Non ammette i valori Null.|
-|**delta_read_io_queued**|int|Il totale di letture IOs accodate dopo l'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
-|**delta_read_io_issued**|int|Totale dei dispositivi IOs letti emessi dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
-|**delta_read_io_completed**|int|Totale IOs di lettura completati dall'ultimo snapshot. Non ammette i valori Null.|
-|**delta_read_io_throttled**|int|Il totale di letture IOs limitate da snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
+|**delta_memgrant_timeout_count**|INT|numero di timeout delle concessioni di memoria nel pool di risorse in questo periodo. Non ammette i valori Null.|
+|**delta_memgrant_waiter_count**|INT|Il conteggio delle query attualmente in sospeso nelle concessioni di memoria. Non ammette i valori Null.|
+|**delta_out_of_memory_count**|INT|Numero di allocazioni di memoria non riuscite nel pool dall'ultimo snapshot. Non ammette i valori Null.|
+|**delta_read_io_queued**|INT|Il totale di letture IOs accodate dopo l'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
+|**delta_read_io_issued**|INT|Totale dei dispositivi IOs letti emessi dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
+|**delta_read_io_completed**|INT|Totale IOs di lettura completati dall'ultimo snapshot. Non ammette i valori Null.|
+|**delta_read_io_throttled**|INT|Il totale di letture IOs limitate da snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
 |**delta_read_bytes**|bigint|Numero totale di byte letti dall'ultimo snapshot. Non ammette i valori Null.|
-|**delta_read_io_stall_ms**|int|Tempo totale (in millisecondi) tra l'arrivo e il completamento dell'i/o di lettura dall'ultimo snapshot. Non ammette i valori Null.|
-|**delta_read_io_stall_queued_ms**|int|Tempo totale (in millisecondi) tra l'arrivo di i/o di lettura e il problema dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O. Delta_read_io_stall_queued_ms diverso da zero significa che i/o sono interessati da RG.|
-|**delta_write_io_queued**|int|Totale di scritture IOs accodate dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
-|**delta_write_io_issued**|int|Il totale degli i/o di scrittura emessi dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
-|**delta_write_io_completed**|int|Totale di operazioni di scrittura IOs completate dall'ultimo snapshot. Non ammette i valori Null|
-|**delta_write_io_throttled**|int|Il totale degli i/o di scrittura limitati dall'ultimo snapshot. Non ammette i valori Null|
+|**delta_read_io_stall_ms**|INT|Tempo totale (in millisecondi) tra l'arrivo e il completamento dell'i/o di lettura dall'ultimo snapshot. Non ammette i valori Null.|
+|**delta_read_io_stall_queued_ms**|INT|Tempo totale (in millisecondi) tra l'arrivo di i/o di lettura e il problema dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O. Delta_read_io_stall_queued_ms diverso da zero significa che i/o sono interessati da RG.|
+|**delta_write_io_queued**|INT|Totale di scritture IOs accodate dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
+|**delta_write_io_issued**|INT|Il totale degli i/o di scrittura emessi dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
+|**delta_write_io_completed**|INT|Totale di operazioni di scrittura IOs completate dall'ultimo snapshot. Non ammette i valori Null|
+|**delta_write_io_throttled**|INT|Il totale degli i/o di scrittura limitati dall'ultimo snapshot. Non ammette i valori Null|
 |**delta_write_bytes**|bigint|Numero totale di byte scritti dall'ultimo snapshot. Non ammette i valori Null.|
-|**delta_write_io_stall_ms**|int|Tempo totale (in millisecondi) tra l'arrivo e il completamento i/o di scrittura dall'ultimo snapshot. Non ammette i valori Null.|
-|**delta_write_io_stall_queued_ms**|int|Tempo totale (in millisecondi) tra l'arrivo di i/o di scrittura e il problema dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
-|**delta_io_issue_delay_ms**|int|Tempo totale (in millisecondi) tra il problema pianificato e il problema effettivo dell'i/o dopo l'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
-|**max_iops_per_volume**|int|Numero massimo di i/o al secondo (IOPS) per ogni impostazione del volume del disco per questo pool. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
+|**delta_write_io_stall_ms**|INT|Tempo totale (in millisecondi) tra l'arrivo e il completamento i/o di scrittura dall'ultimo snapshot. Non ammette i valori Null.|
+|**delta_write_io_stall_queued_ms**|INT|Tempo totale (in millisecondi) tra l'arrivo di i/o di scrittura e il problema dall'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
+|**delta_io_issue_delay_ms**|INT|Tempo totale (in millisecondi) tra il problema pianificato e il problema effettivo dell'i/o dopo l'ultimo snapshot. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
+|**max_iops_per_volume**|INT|Numero massimo di i/o al secondo (IOPS) per ogni impostazione del volume del disco per questo pool. Ammette i valori Null. Null se il pool di risorse non è governato per l'I/O.|
 |**max_memory_kb**|bigint|Quantità massima di memoria, in kilobyte, disponibile per il pool di risorse. Si basa sulle impostazioni correnti e sullo stato del server. Non ammette i valori Null.
 |**max_log_rate_kb**|bigint|Frequenza massima di log (kilo-byte al sec) al livello del pool di risorse.|
 |**max_data_space_kb**|bigint|Impostazione limite massimo di archiviazione del pool elastico per questo pool elastico, espressa in kilobyte.|
-|**max_session**|int|Limite della sessione per il pool|
-|**max_worker**|int|Limite di lavoro per il pool|
-|**min_cpu_percent**|int|Configurazione corrente della larghezza di banda media garantita della CPU per tutte le richieste nel pool di risorse, in caso di contesa di CPU. Non ammette i valori Null.|
-|**max_cpu_percent**|int|Configurazione corrente per la larghezza di banda media massima della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU. Non ammette i valori Null.|
-|**cap_cpu_percent**|int|Limite di utilizzo massimo della larghezza di banda della CPU concesso per tutte le richieste nel pool di risorse. Limita il livello massimo della larghezza di banda della CPU al livello specificato. L'intervallo consentito per il valore è compreso tra 1 e 100. Non ammette i valori Null.|
+|**max_session**|INT|Limite della sessione per il pool|
+|**max_worker**|INT|Limite di lavoro per il pool|
+|**min_cpu_percent**|INT|Configurazione corrente della larghezza di banda media garantita della CPU per tutte le richieste nel pool di risorse, in caso di contesa di CPU. Non ammette i valori Null.|
+|**max_cpu_percent**|INT|Configurazione corrente per la larghezza di banda media massima della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU. Non ammette i valori Null.|
+|**cap_cpu_percent**|INT|Limite di utilizzo massimo della larghezza di banda della CPU concesso per tutte le richieste nel pool di risorse. Limita il livello massimo della larghezza di banda della CPU al livello specificato. L'intervallo consentito per il valore è compreso tra 1 e 100. Non ammette i valori Null.|
 |**min_vcores**|Decimal (5, 2)|Configurazione corrente della larghezza di banda media garantita della CPU per tutte le richieste nel pool di risorse, in caso di contesa di CPU.  In unità di vcore|
 |**max_vcores**|Decimal (5, 2)|Configurazione corrente per la larghezza di banda media massima della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU.  In unità di vcore|
 |**cap_vcores**|Decimal (5, 2)|Limite di utilizzo massimo della larghezza di banda della CPU concesso per tutte le richieste nel pool di risorse.  In unità in vcore|
-|**instance_cpu_count**|int|Numero di CPU configurate per l'istanza|
+|**instance_cpu_count**|INT|Numero di CPU configurate per l'istanza|
 |**instance_cpu_percent**|Decimal (5, 2)|Percentuale CPU configurata per l'istanza|
 |**instance_vcores**|Decimal (5, 2)|Numero di Vcore configurati per l'istanza|
 |**delta_log_bytes_used**|Decimal (5, 2)|Totale generazione log (in byte) a livello di pool dall'ultimo snapshot|

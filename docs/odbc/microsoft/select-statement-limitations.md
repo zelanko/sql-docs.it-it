@@ -14,23 +14,23 @@ ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cde0158e72d1e24c112c8e7955f0d6b317bd729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987856"
 ---
 # <a name="select-statement-limitations"></a>Limitazioni dell'istruzione SELECT
-Una colonna di funzione di aggregazione non può essere combinata con una colonna non di aggregazione in un'istruzione SELECT.  
+Impossibile combinare una colonna della funzione di aggregazione con una colonna non aggregata in un'istruzione SELECT.  
   
- Elenco di selezione di un'istruzione SELECT che include una clausola GROUP BY può avere solo le espressioni nella clausola GROUP BY o funzioni di set.  
+ L'elenco di selezione di un'istruzione SELECT con una clausola GROUP BY può includere solo espressioni della clausola GROUP BY o set Functions.  
   
- Non è supportato l'uso di un asterisco (per selezionare tutte le colonne) in un'istruzione SELECT contenente una clausola GROUP BY. Specificare i nomi delle colonne da selezionare.  
+ L'utilizzo di un asterisco (per la selezione di tutte le colonne) in un'istruzione SELECT contenente una clausola GROUP BY non è supportato. È necessario specificare i nomi delle colonne da selezionare.  
   
- L'uso di una barra verticale in un'istruzione SELECT non è supportato. Usare un parametro nell'istruzione SELECT se è necessario fare riferimento a un valore di dati che contiene una barra verticale.  
+ L'uso di una barra verticale in un'istruzione SELECT non è supportato. Se è necessario fare riferimento a un valore di dati che contiene una barra verticale, utilizzare un parametro nell'istruzione SELECT.  
   
- Quando si usa un alias di colonna in un'istruzione SELECT, la parola "as" deve precedere l'alias. Ad esempio, "SELECT col1 come un da b." Senza il "come", l'istruzione restituirà un errore.  
+ Quando si utilizza un alias di colonna in un'istruzione SELECT, la parola "As" deve precedere l'alias. Ad esempio, "SELECT col1 As a from b". Senza "As", l'istruzione restituirà un errore.  
   
- Se viene immesso un nome di colonna non corretto in un'istruzione SELECT, viene restituito un errore SQLSTATE 07001, "Numero di parametri errati," anziché un errore con SQLSTATE S0022, "colonna non trovata."  
+ Se in un'istruzione SELECT viene immesso un nome di colonna errato, viene restituito un errore SQLSTATE 07001, ovvero un numero errato di parametri, anziché un errore SQLSTATE S0022, "Column not found".  
   
- Quando viene utilizzato il driver di Microsoft Excel, se una stringa vuota viene inserita in una colonna, una stringa vuota verrà convertita in un valore NULL. un'istruzione SELECT di ricerca che viene eseguita con una stringa vuota nella clausola WHERE non riuscirà per tale colonna.
+ Quando si utilizza il driver Microsoft Excel, se in una colonna viene inserita una stringa vuota, la stringa vuota viene convertita in un valore NULL. un'istruzione SELECT con ricerca eseguita con una stringa vuota nella clausola WHERE non riuscirà in tale colonna.

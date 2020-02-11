@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff9785d18d46e9aaca26c768d1069c32d3d2e8b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242615"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Concetti relativi alla programmazione SQLXML 4.0
@@ -29,7 +29,7 @@ ms.locfileid: "75242615"
   
  In questa sezione vengono fornite informazioni su SQLXML 4.0.  
   
- [SQLXML non è installato in SQL Server](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
+ [Installazione di SQLXML non inclusa in SQL Server](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
  Viene descritta la procedura per l'installazione di SQLXML 4.0.  
   
  [Novità di SQLXML 4.0 SP1](../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "75242615"
  [Utilizzo di query XPath in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  Viene descritto come utilizzare un subset del linguaggio XPath per eseguire query sulle viste XML create da uno schema XSD con annotazioni, con l'ausilio di alcuni esempi.  
   
- [Utilizzo di updategram per modificare i dati in SQLXML 4,0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Utilizzo di updategram per modificare dati in SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Vengono fornite informazioni sugli updategram che consentono di modificare i dati in un database agendo sulle viste XML fornite dagli schemi XSD o XDR con annotazioni.  
   
  [Esecuzione del caricamento bulk di dati XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
@@ -75,6 +75,6 @@ ms.locfileid: "75242615"
  Vengono elencati i problemi da ricordare quando si utilizza SQLXML 4.0.  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#40;di dati XML SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [Dati XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

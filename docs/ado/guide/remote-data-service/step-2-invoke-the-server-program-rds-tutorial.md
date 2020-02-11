@@ -1,5 +1,5 @@
 ---
-title: 'Passaggio 2: Richiamare il programma di Server (esercitazione su RDS) | Microsoft Docs'
+title: 'Passaggio 2: richiamare il programma del server (esercitazione su RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,23 +13,23 @@ ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ca35b952cdb228e70a2e747026214dc1cf020f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922099"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Passaggio 2: Richiamare il programma del server (esercitazione su RDS)
-Quando si richiama un metodo sul client *proxy*, il programma effettivo sul server esegue il metodo. In questo passaggio, si sarà esegue una query sul server.  
+Quando si richiama un metodo sul *proxy*client, il programma effettivo sul server esegue il metodo. In questo passaggio verrà eseguita una query sul server.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- **La parte** se non è stato usato [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) in questa esercitazione, il modo più semplice per eseguire questo passaggio, è possibile usare il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto. Il **Servizi Desktop remoto. DataControl** combina il passaggio precedente per la creazione di un proxy, che in questo passaggio, eseguire la query.  
+ **Parte A** Se non si usa [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) in questa esercitazione, il modo più pratico per eseguire questo passaggio consiste nell'usare [RDS. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) . **RDS. DataControl** combina il passaggio precedente della creazione di un proxy, con questo passaggio, eseguendo la query.  
   
- Impostare il **Servizi Desktop remoto. DataControl** oggetti [Server](../../../ado/reference/rds-api/server-property-rds.md) proprietà per identificare in cui il programma del server deve essere creata un'istanza; il [Connect](../../../ado/reference/rds-api/connect-property-rds.md) proprietà per specificare la stringa di connessione per accedere all'origine dati; e il [SQL](../../../ado/reference/rds-api/sql-property.md) proprietà per specificare il testo del comando query. Quindi rilasciare il [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) metodo causano il programma di server per connettersi all'origine dati, recupero di righe specificate dalla query e restituire una **Recordset** oggetto al client.  
+ Impostare **RDS. **Proprietà del [Server](../../../ado/reference/rds-api/server-property-rds.md) oggetti DataControl per identificare la posizione in cui deve essere creata un'istanza del programma server. proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) per specificare la stringa di connessione per l'accesso all'origine dati. e la proprietà [SQL](../../../ado/reference/rds-api/sql-property.md) per specificare il testo del comando di query. Eseguire quindi il metodo [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) per fare in modo che il programma server si connetta all'origine dati, recuperi le righe specificate dalla query e restituisca un oggetto **Recordset** al client.  
   
- Questa esercitazione non usa il **Servizi Desktop remoto. DataControl**, ma ciò è come se fosse ha sempre fatto:  
+ Questa esercitazione non usa Servizi Desktop remoto **. DataControl**, ma questo è il modo in cui l'aspetto sarebbe stato:  
   
 ```vb
 Sub RDSTutorial2A()  
@@ -41,7 +41,7 @@ Sub RDSTutorial2A()
 ...  
 ```  
   
- Né esercitazione richiama Servizi Desktop remoto con gli oggetti ADO, ma è come se fosse ha sempre fatto:  
+ Né l'esercitazione richiama Servizi Desktop remoto con gli oggetti ADO, ma questo è il modo in cui verrebbe eseguita la ricerca:  
   
 ```vb
 Dim rs as New ADODB.Recordset  
@@ -49,9 +49,9 @@ rs.Open "SELECT * FROM Authors","Provider=MS Remote;Data Source=Pubs;" & _
         "Remote Server=https://yourServer;Remote Provider=SQLOLEDB;"  
 ```  
   
- **La parte B** il metodo generale di esecuzione di questo passaggio consiste nel richiamare il **RDSServer** oggetto [Query](../../../ado/reference/rds-api/query-method-rds.md) (metodo). Tale metodo accetta una stringa di connessione, che viene usato per connettersi a un'origine dati, e un testo del comando, che consente di specificare le righe da restituire dall'origine dati.  
+ **Parte B** Il metodo generale per eseguire questo passaggio consiste nel richiamare il metodo di [query](../../../ado/reference/rds-api/query-method-rds.md) dell'oggetto **RDSServer. DataFactory** . Tale metodo accetta una stringa di connessione, che viene utilizzata per connettersi a un'origine dati e un testo del comando, utilizzato per specificare le righe che devono essere restituite dall'origine dati.  
   
- Questa esercitazione Usa la **DataFactory** oggetto **Query** metodo:  
+ Questa esercitazione usa il metodo di **query** dell'oggetto **DataFactory** :  
   
 ```vb
 Sub RDSTutorial2B()  
@@ -64,5 +64,5 @@ Sub RDSTutorial2B()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Passaggio 3: Server otterrà un Recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
+ [Passaggio 3: il server ottiene un recordset (esercitazione su RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [Esercitazione su RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

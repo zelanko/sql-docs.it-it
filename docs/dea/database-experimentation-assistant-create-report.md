@@ -1,7 +1,7 @@
 ---
 title: Creazione di report di analisi
 description: Creazione di report di analisi in Database Experimentation Assistant
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d3f057ffcfb1030b473b69f96b7204b3a975613
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74307979"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831864"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Creazione di report di analisi in Database Experimentation Assistant (SQL Server)
 
@@ -25,29 +25,24 @@ Dopo aver riprodotto la traccia di origine in entrambi i server di destinazione,
 
 ## <a name="create-an-analysis-report"></a>Creazione di un report di analisi
 
-In DEA selezionare l'icona di menu. Nel menu espanso selezionare report di **analisi** accanto all'icona dell'elenco di controllo.
+1. In DEA selezionare l'icona dell'elenco, specificare il nome del server e il tipo di autenticazione, selezionare o deselezionare le caselle di controllo **Crittografa connessione** e **attendibilità del server certificato** nel modo appropriato per lo scenario, quindi selezionare **Connetti**.
 
-![Menu analisi](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)
+   ![Connetti al server con file di traccia](./media/database-experimentation-assistant-create-report/dea-connect-to-server-with-trace-files.png)
 
-In **report di analisi**selezionare **nuovo report di analisi**.
+2. Nella schermata **report di analisi** selezionare **nuovo report di analisi**.
 
-![Menu nuovo report di analisi](./media/database-experimentation-assistant-create-report/dea-create-reports-new-report.png)
+   ![Crea nuovo report di analisi](./media/database-experimentation-assistant-create-report/dea-create-an-analysis-report.png)
 
-Immettere o selezionare le seguenti informazioni:
+3. Nella schermata **nuovo report di analisi** specificare un nome per il report, il percorso di archiviazione e il percorso dei file di traccia di destinazione 1 e destinazione 2, quindi selezionare **Avvia**.
 
-- **Nome report**: immettere un nome per il report. Il nome del report viene utilizzato per i database A e B. Esempio:*identificatore univoco*del*nome* + del report *(o B)* + .
-- **Nome server**: immettere il nome del computer server che si desidera includere nei database di analisi a, B e.
-- **Nome istanza SQL Server**: immettere il nome dell'istanza di SQL Server da utilizzare per il report.
-- **Trace for Source Server**: immettere il SQL Server (2008 R2) First trace (. trc).
-- **Traccia per server di destinazione**: immettere il SQL Server di destinazione (2014) primo file con estensione trc.
+   ![Specificare i dettagli del nuovo report di analisi](./media/database-experimentation-assistant-create-report/dea-new-analysis-report-details.png)
 
-![Pagina nuovo report di analisi](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
+   Se le informazioni immesse sono valide, viene creato il report di analisi.
 
-## <a name="generate-a-report"></a>Generare un report
+   ![Report di analisi appena creato](./media/database-experimentation-assistant-create-report/dea-newly-created-analysis-report.png)
 
-Dopo aver immesso o selezionato le informazioni necessarie nella pagina **nuovo report di analisi** , selezionare **Avvia** per avviare la creazione del report. Se le informazioni immesse sono valide, viene creato il report di analisi. In caso contrario, le caselle di testo contenenti informazioni non valide vengono evidenziate con il rosso. Assicurarsi di immettere i valori corretti e quindi selezionare **Avvia**.
-
-Viene generato un nuovo report di analisi. Il database di analisi segue l' + *identificatore univoco*dell'analisi dello schema di denominazione e del *nome del report specificato dall'utente*.
+      > [!NOTE]
+      > Se una qualsiasi delle informazioni immesse non è valida, le caselle di testo contenenti le informazioni non corrette vengono evidenziate in rosso. Apportare le necessarie correzioni, quindi selezionare di nuovo **Avvia** .
 
 ## <a name="frequently-asked-questions-about-analysis-reports"></a>Domande frequenti sui report di analisi
 
@@ -58,10 +53,6 @@ DEA USA i test statistici per analizzare il carico di lavoro e determinare il mo
 **D: è possibile creare un nuovo report di analisi mentre è in corso la generazione di un altro report?**
 
 No.  Attualmente, per evitare conflitti, è possibile generare un solo report alla volta. Tuttavia, è possibile eseguire più di un'acquisizione e riprodurle nello stesso momento.
-
-**D: è stato eseguito l'aggiornamento di DEA alla versione 2,0. Posso comunque visualizzare e usare i vecchi report?**
-
-Sì. Per visualizzare i report generati in precedenza, è necessario aggiornare lo schema del report. Per altre informazioni, vedere [dea 2,0: aggiornare lo schema del database per il report di analisi in dea](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-updating-db-schema-for-analysis-report-in-the-database-experimentation-assistant/).
 
 **D: è possibile generare un report di analisi usando il prompt dei comandi?**
 
@@ -105,7 +96,7 @@ Controllare il database nel computer di analisi che esegue SQL Server per verifi
 
 Se i dati non sono presenti, è possibile che i dati non siano stati copiati correttamente o che il database sia danneggiato. Se mancano solo alcuni dati, i file di traccia creati in acquisizione o riproduzione potrebbero non avere acquisito accuratamente il carico di lavoro. Se i dati sono presenti, controllare i file di log in% temp\\% dea per verificare se sono stati registrati errori. Quindi, riprovare a generare il report di analisi.
 
-Altre domande o commenti e suggerimenti? Inviare commenti e suggerimenti tramite lo strumento DEA scegliendo l'icona smile nell'angolo in basso a sinistra. 
+Altre domande o commenti e suggerimenti? Inviare commenti e suggerimenti tramite lo strumento DEA scegliendo l'icona smile nell'angolo in basso a sinistra.
 
 ## <a name="see-also"></a>Vedere anche
 

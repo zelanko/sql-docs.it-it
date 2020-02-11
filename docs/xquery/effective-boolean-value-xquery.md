@@ -18,10 +18,10 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929952"
 ---
 # <a name="effective-boolean-value-xquery"></a>Valore booleano effettivo (XQuery)
@@ -37,15 +37,15 @@ ms.locfileid: "67929952"
   
 -   Espressioni logiche  
   
--   Il [non funzionano](../xquery/functions-on-boolean-values-not-function.md)  
+-   [Funzione not](../xquery/functions-on-boolean-values-not-function.md)  
   
 -   Clausola WHERE di un'espressione FLWOR  
   
 -   [Espressioni condizionali](../xquery/conditional-expressions-xquery.md)  
   
--   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
+-   [Espressioni quantificate](../xquery/quantified-expressions-xquery.md)  
   
- Di seguito è riportato un esempio di un valore booleano effettivo. Quando la **se** espressione viene elaborata, viene determinato il valore booleano effettivo della condizione. Poiché `/a[1]` restituisce una sequenza vuota, il valore booleano effettivo è False. Il risultato viene restituito in formato XML con un nodo di testo (false).  
+ Di seguito è riportato un esempio di un valore booleano effettivo. Quando l'espressione **if** viene elaborata, viene determinato il valore booleano effettivo della condizione. Poiché `/a[1]` restituisce una sequenza vuota, il valore booleano effettivo è False. Il risultato viene restituito in formato XML con un nodo di testo (false).  
   
 ```  
 value is false  
@@ -64,11 +64,11 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- Quando una query digitato **xml** colonne o variabili, è possibile avere nodi di tipo booleano. Il **data ()** in questo caso restituisce un valore booleano. Se l'espressione della query restituisce un valore booleano True, il valore booleano effettivo è True, come illustrato nell'esempio seguente. Nell'esempio viene inoltre illustrato quanto segue:  
+ Quando si eseguono query su colonne o variabili **XML** tipizzate, è possibile avere nodi di tipo booleano. I **dati ()** in questo caso restituiscono un valore booleano. Se l'espressione della query restituisce un valore booleano True, il valore booleano effettivo è True, come illustrato nell'esempio seguente. Nell'esempio viene inoltre illustrato quanto segue:  
   
--   Viene creata una raccolta di XML Schema. L'elemento \<b > nella raccolta è di tipo booleano.  
+-   Viene creata una raccolta di XML Schema. L'elemento \<b> nella raccolta è di tipo booleano.  
   
--   Un oggetto tipizzato **xml** variabile viene creata e sottoposti a query.  
+-   Viene creata e sottoposta a query una variabile **XML** tipizzata.  
   
 -   L'espressione `data(/b[1])` restituisce un valore booleano True e pertanto in questo caso il valore booleano effettivo è True.  
   
@@ -90,6 +90,6 @@ go
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)   
- [Istruzione e iterazione FLWOR &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [Istruzione FLWOR e iterazione &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

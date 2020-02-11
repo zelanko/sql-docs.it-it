@@ -1,5 +1,5 @@
 ---
-title: Disconnessione e riconnessione del Recordset | Microsoft Docs
+title: Disconnessione e riconnessione del recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,18 +13,18 @@ ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9829ddfd7e625941c97bd3b2027c328a1fba93d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925517"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Disconnessione e riconnessione del recordset
-Una delle funzionalità più potenti disponibili in ADO è la possibilità di aprire un set di record del lato client da un'origine dati e quindi disconnettere il Recordset dall'origine dati. Una volta il Recordset è stato disconnesso, la connessione all'origine dati è chiuso, per rilasciare le risorse del server utilizzato per la manutenzione. È possibile continuare a visualizzare e modificare i dati nel set di record, mentre è disconnessa e riconnettersi in seguito all'origine dati e inviare gli aggiornamenti in modalità batch.  
+Una delle funzionalità più potenti disponibili in ADO è la possibilità di aprire un recordset lato client da un'origine dati e quindi di disconnettere il recordset dall'origine dati. Una volta che il recordset è stato disconnesso, è possibile chiudere la connessione all'origine dati, rilasciando quindi le risorse sul server usato per gestirlo. È possibile continuare a visualizzare e modificare i dati nel recordset mentre è disconnesso e successivamente riconnettersi all'origine dati e inviare gli aggiornamenti in modalità batch.  
   
- Per disconnettere un Recordset, aprirlo con una posizione del cursore di adUseClient e quindi impostare la proprietà ActiveConnection uguale a Nothing. (Gli utenti di C++ devono impostare la proprietà ActiveConnection su NULL per disconnettersi.)  
+ Per disconnettere un recordset, aprirlo con una posizione del cursore adUseClient, quindi impostare la proprietà ActiveConnection su Nothing. (Gli utenti C++ devono impostare ActiveConnection su NULL per disconnettersi).  
   
- Si userà un Recordset disconnesso più avanti in questa sezione relativa alla persistenza dei Recordset affrontare uno scenario in cui è necessario avere i dati in un set di record disponibili per un'applicazione mentre il computer client non è connesso a una rete.  
+ Si userà un recordset disconnesso più avanti in questa sezione quando si discute la persistenza dei recordset per risolvere uno scenario in cui è necessario che i dati di un recordset siano disponibili per un'applicazione mentre il computer client non è connesso a una rete.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità batch](../../../ado/guide/data/batch-mode.md)

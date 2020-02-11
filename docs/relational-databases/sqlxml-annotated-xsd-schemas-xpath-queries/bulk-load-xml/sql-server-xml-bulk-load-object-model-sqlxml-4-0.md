@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246707"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML 4.0)
@@ -44,7 +44,7 @@ ms.locfileid: "75246707"
   Il modello [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a oggetti Microsoft XML bulk load è costituito dall'oggetto SQLXMLBulkLoad. Questo oggetto supporta i metodi e le proprietà seguenti.  
   
 ## <a name="methods"></a>Metodi  
- Esegui  
+ Execute  
  Esegue il caricamento bulk dei dati utilizzando il file dello schema e il file di dati (o flusso) forniti come parametri.  
   
 ## <a name="properties"></a>Proprietà  
@@ -59,7 +59,7 @@ ms.locfileid: "75246707"
  Quando la proprietà è impostata su TRUE, il caricamento bulk XML controlla i vincoli per ogni valore inserito. Di conseguenza, la violazione di un vincolo produce un errore.  
   
 > [!NOTE]  
->  Per lasciare questa proprietà impostata su FALSE, è necessario disporre delle autorizzazioni **ALTER TABLE** per le tabelle di destinazione. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Per lasciare questa proprietà impostata su FALSE, è necessario disporre delle autorizzazioni **ALTER TABLE** per le tabelle di destinazione. Per ulteriori informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  Il valore predefinito è FALSE. Quando la proprietà è impostata su FALSE, il caricamento bulk XML ignora i vincoli durante un'operazione di inserimento. Nell'implementazione corrente è necessario definire le tabelle nell'ordine delle relazioni di chiave primaria/chiave esterna nello schema di mapping. Di conseguenza, una tabella con una chiave primaria deve essere definita prima della tabella corrispondente contenente la chiave esterna. In caso contrario, il caricamento bulk XML restituisce un errore.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75246707"
  Quando la proprietà è impostata su TRUE, i trigger vengono attivati normalmente durante le operazioni di inserimento.  
   
 > [!NOTE]  
->  Per lasciare questa proprietà impostata su FALSE, è necessario disporre delle autorizzazioni **ALTER TABLE** per le tabelle di destinazione. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Per lasciare questa proprietà impostata su FALSE, è necessario disporre delle autorizzazioni **ALTER TABLE** per le tabelle di destinazione. Per ulteriori informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  Si noti che se viene eseguita la propagazione degli ID, questa opzione non viene applicata e i trigger restano attivati. Ciò si verifica quando `KeepIdentity=False` ed è presente una relazione definita in cui il padre è un campo di identità e il valore viene assegnato al figlio non appena generato.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "75246707"
  Il valore di questa proprietà si applica a tutte le colonne interessate dal caricamento bulk. Il valore predefinito è TRUE.  
   
 > [!NOTE]  
->  Per lasciare questa proprietà impostata su TRUE, è necessario disporre delle autorizzazioni **ALTER TABLE** per le tabelle di destinazione. In caso contrario, la proprietà deve essere impostata sul valore FALSE. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Per lasciare questa proprietà impostata su TRUE, è necessario disporre delle autorizzazioni **ALTER TABLE** per le tabelle di destinazione. In caso contrario, la proprietà deve essere impostata sul valore FALSE. Per ulteriori informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  KeepNulls  
  Specifica il valore da utilizzare per una colonna in cui manca un attributo corrispondente o un elemento figlio nel documento XML. Si tratta di una proprietà booleana. Quando la proprietà è impostata su TRUE, il caricamento bulk XML assegna un valore Null alla colonna. Non viene assegnato il valore predefinito della colonna, se presente, in base all'impostazione nel server. Il valore di questa proprietà si applica a tutte le colonne interessate dal caricamento bulk.  

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38c92e397c971f6e9976bb857c63410fa60b7e85
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232426"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>Backup e ripristino di SQL Server con il servizio Archiviazione BLOB di Azure
@@ -54,7 +54,7 @@ ms.locfileid: "75232426"
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate e risoluzione dei problemi di backup su URL SQL Server](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [Eseguire il backup e il ripristino dei database di sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
+ [Backup e ripristino di database di sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [Esercitazione: SQL Server backup e ripristino nel servizio di archiviazione BLOB di Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
- [SQL Server backup nell'URL](sql-server-backup-to-url.md)  
+ [Backup di SQL Server nell'URL](sql-server-backup-to-url.md)  
   

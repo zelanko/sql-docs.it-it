@@ -1,5 +1,5 @@
 ---
-title: Motore di database le Stored procedure (Transact-SQL) | Microsoft Docs
+title: Stored procedure di motore di database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2015
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942418"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Stored procedure del Motore di database (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "67942418"
 |[sp_certify_removable](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)|[sp_indexoption](../../relational-databases/system-stored-procedures/sp-indexoption-transact-sql.md)|  
 |[sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)|[sp_invalidate_textptr](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)|  
 |[sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)|[sp_lock](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)|  
-|[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)|[Sys.sp_merge_xtp_checkpoint_files](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)|  
+|[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)|[sys.sp_merge_xtp_checkpoint_files](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)|  
 |[sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)|[sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)|  
 |[sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)|[sp_prepare](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)|  
 |[sp_create_plan_guide_from_handle](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)|[sp_prepexec](../../relational-databases/system-stored-procedures/sp-prepexec-transact-sql.md)|  

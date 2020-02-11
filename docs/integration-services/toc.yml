@@ -14,9 +14,9 @@
       href: ../integration-services/integration-services-developer-documentation.md
     - name: Compatibilità con le versioni precedenti di Integration Services
       href: ../integration-services/integration-services-backward-compatibility.md
-- name: Guide introduttive
+- name: Avvi rapidi
   items:
-    - name: Distribuzione
+    - name: Distribuire
       items:
         - name: Eseguire la distribuzione con SSMS
           href: ../integration-services/ssis-quickstart-deploy-ssms.md
@@ -78,6 +78,8 @@
   href: ../integration-services/integration-services-ssis-development-and-management-tools.md
 - name: Progetti e soluzioni
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
+- name: DevOps SSIS
+  href: ../integration-services/devops/ssis-devops-overview.md
 - name: Interfaccia utente
   href: ../integration-services/integration-services-user-interface.md
   items:
@@ -325,7 +327,7 @@
               href: ../integration-services/control-flow/select-a-package.md
         - name: Notifica operatori - attività
           href: ../integration-services/control-flow/notify-operator-task.md
-        - name: Attività Ricompila indice
+        - name: Ricompila indice - attività
           href: ../integration-services/control-flow/rebuild-index-task.md
         - name: Attività Riorganizza indice
           href: ../integration-services/control-flow/reorganize-index-task.md
@@ -475,7 +477,7 @@
         - name: Origine OData
           href: ../integration-services/data-flow/odata-source.md
           items:
-            - name: 'Esercitazione: uso dell''origine OData'
+            - name: 'Esercitazione: utilizzo dell''origine OData'
               href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
             - name: Fornire una query di origine OData in fase di esecuzione
               href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
@@ -731,7 +733,7 @@
       href: ../integration-services/data-flow/extract-data-by-using-the-xml-source.md
     - name: Proprietà personalizzate dell'origine XML
       href: ../integration-services/data-flow/xml-source-custom-properties.md
-- name: Variabili
+- name: variables
   href: ../integration-services/integration-services-ssis-variables.md
   items:
     - name: Finestra Variabili
@@ -931,7 +933,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: Introduzione a SSIS Scale Out in un singolo computer
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 'Procedura dettagliata: Installare Integration Services Scale Out'
+    - name: 'Procedura dettagliata: Installare il servizio di scalabilità orizzontale di Integration Services'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: Eseguire pacchetti in modalità di scalabilità orizzontale
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1005,7 +1007,7 @@
       href: ../integration-services/performance/integration-services-ssis-logging.md
     - name: Contatori delle prestazioni
       href: ../integration-services/performance/performance-counters.md
-- name: Risoluzione dei problemi
+- name: Risolvere problemi
   items:
     - name: Panoramica
       href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
@@ -1089,7 +1091,7 @@
   items:
     - name: Panoramica
       href: ../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md
-    - name: Aggiungi
+    - name: Add
       items:
         - name: catalog.add_data_tap
           href: ../integration-services/system-stored-procedures/catalog-add-data-tap.md
@@ -1103,7 +1105,7 @@
       href: ../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md
     - name: catalog.configure_catalog
       href: ../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md
-    - name: Crea
+    - name: Create
       items:
         - name: catalog.create_customized_logging_level
           href: ../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md
@@ -1119,7 +1121,7 @@
           href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
         - name: catalog.create_folder
           href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
-    - name: DELETE
+    - name: Delete
       items:
         - name: catalog.delete_customized_logging_level
           href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
@@ -1135,7 +1137,7 @@
           href: ../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md
     - name: catalog.deny_permission
       href: ../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md
-    - name: Distribuzione
+    - name: Distribuire
       items:
         - name: catalog.deploy_packages
           href: ../integration-services/system-stored-procedures/catalog-deploy-packages.md
@@ -1153,7 +1155,7 @@
           href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
     - name: catalog.grant_permission
       href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
-    - name: Visualizzazione Dettagli
+    - name: Spostamento
       items:
         - name: catalog.move_environment
           href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
@@ -1161,7 +1163,7 @@
           href: ../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md
     - name: catalog.remove_data_tap
       href: ../integration-services/system-stored-procedures/catalog-remove-data-tap.md
-    - name: Rinomina
+    - name: Rinominare
       items:
         - name: catalog.rename_customized_logging_level
           href: ../integration-services/system-stored-procedures/catalog-rename-customized-logging-level.md
@@ -1173,7 +1175,7 @@
       href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
     - name: catalog.revoke_permission
       href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-    - name: Impostare
+    - name: Set
       items:
         - name: catalog.set_customized_logging_level_description
           href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
@@ -1205,7 +1207,7 @@
       href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
     - name: catalog.stop_operation
       href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
-    - name: Update
+    - name: Aggiornamento
       items:
         - name: catalog.update_logdb_info (database SSISDB)
           href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
@@ -1460,7 +1462,7 @@
   href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Supporto di Hadoop e HDFS in Integration Services (SSIS)
   href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
-- name: Microsoft Connector per Oracle
+- name: Connettore Microsoft per Oracle
   href: ../integration-services/data-flow/oracle-connector.md
   items:
     - name: Gestione connessione Oracle
@@ -1471,6 +1473,17 @@
       href: ../integration-services/data-flow/oracle-destination.md
     - name: Supporto dei tipi di dati
       href: ../integration-services/data-flow/oracle-data-type-support.md
+- name: Connettore Microsoft per Teradata
+  href: ../integration-services/data-flow/Teradata-connector.md
+  items:
+    - name: Gestione connessione Teradata
+      href: ../integration-services/data-flow/Teradata-connection-manager.md
+    - name: Origine Teradata
+      href: ../integration-services/data-flow/Teradata-source.md
+    - name: Destinazione Teradata
+      href: ../integration-services/data-flow/Teradata-destination.md
+    - name: Supporto dei tipi di dati
+      href: ../integration-services/data-flow/Teradata-data-type-support.md
 - name: Connettori Microsoft per Oracle e Teradata di Attunity
   href: ../integration-services/attunity-connectors.md
 - name: Importazione/Esportazione guidata SQL Server
@@ -1582,7 +1595,7 @@
           href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
         - name: Database Oracle CDC
           href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
-        - name: Risoluzione dei problemi
+        - name: Risolvere problemi
           href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
         - name: Riferimento alla Guida sensibile al contesto di Change Data Capture Designer for Oracle by Attunity
           href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
@@ -1612,7 +1625,7 @@
                   href: ../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md
                 - name: Generare tabelle mirror e istanze di acquisizione di CDC
                   href: ../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md
-                - name: Fine
+                - name: Finish
                   href: ../integration-services/change-data-capture/finish.md
             - name: Modificare le proprietà dell'istanza
               href: ../integration-services/change-data-capture/edit-instance-properties.md
@@ -1636,7 +1649,7 @@
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
             - name: Procedura di creazione dell'istanza del database delle modifiche di SQL Server
               href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
-            - name: Procedura di gestione di un'istanza di CDC
+            - name: How to Manage a CDC Instance
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
             - name: Procedura di modifica delle proprietà dell'istanza di CDC
               href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
@@ -1646,7 +1659,7 @@
           href: ../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md
         - name: Advanced Connection Properties
           href: ../integration-services/change-data-capture/advanced-connection-properties.md
-        - name: Credenziali Oracle per l'esecuzione di script
+        - name: Oracle Credentials for Running Script
           href: ../integration-services/change-data-capture/oracle-credentials-for-running-script.md
         - name: Script di registrazione supplementare Oracle
           href: ../integration-services/change-data-capture/oracle-supplemental-logging-script.md
@@ -1679,7 +1692,7 @@
               href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
             - name: Creare e modificare un servizio Oracle CDC
               href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
-            - name: Gestire un servizio Oracle CDC
+            - name: Manage an Oracle CDC Service
               href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
             - name: Preparare SQL Server per CDC
               href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
@@ -1782,7 +1795,7 @@
               href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
             - name: Lezione 5-4 - Test del pacchetto creato nella lezione 5 dell'esercitazione
               href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
-        - name: 'Lezione 6: Uso di parametri con il modello di distribuzione del progetto'
+        - name: 'Lezione 6: Utilizzo di parametri con il modello di distribuzione del progetto'
           href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
           items:
             - name: Lezione 6-1 - Copia del pacchetto della lezione 5
@@ -1816,7 +1829,7 @@
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: Lezione 2-2 - Verifica del pacchetto di distribuzione
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: 'Lezione 3: Installare pacchetti'
+        - name: 'Lezione 3: Installare i pacchetti'
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: Lezione 3-1 - Copia del pacchetto di distribuzione

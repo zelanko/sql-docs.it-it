@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa06adc7f81341c96b44bde6da3b32f2f6a477ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074037"
 ---
 # <a name="-equal-to-dmx"></a>= (uguale a) (DMX)
@@ -35,8 +35,8 @@ DMX_Expression = DMX_Expression
  Valore booleano che contiene TRUE se entrambi i parametri sono non Null e il valore del primo parametro è uguale a quello del secondo. Tale valore booleano contiene FALSE se entrambi i parametri sono non Null e il valore del primo parametro è diverso da quello del secondo. Il valore booleano contiene un valore Null se un parametro o entrambi restituiscono un valore Null.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli operatori di confronto &#40;DMX&#41;](../dmx/operators-comparison.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operatori di confronto &#40;DMX&#41;](../dmx/operators-comparison.md)   
+ [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

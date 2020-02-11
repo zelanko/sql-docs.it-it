@@ -21,23 +21,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242038"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gestione dell'editor e della modalità di visualizzazione
   Nell'editor sono disponibili vari modi per gestire la visualizzazione del codice.  
   
 ## <a name="changing-the-view-mode"></a>Modifica della modalità di visualizzazione  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]offre una modalità di visualizzazione denominata **documenti a schede**che consente di aprire più editor e documenti simultaneamente e di accedervi tramite le schede nella parte superiore dell'editor. In alternativa, è possibile aprire l'ambiente [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in modalità interfaccia a più documenti (MDI, Multiple Document Interface), nella quale le finestre sono visualizzate senza schede e possono essere ancorate, affiancate, ridotte a icona e così via.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre una modalità di visualizzazione denominata **Documenti a schede**che consente di aprire contemporaneamente più editor e documenti e di accedervi tramite schede visualizzate nella parte superiore dell'editor. In alternativa, è possibile aprire l'ambiente [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in modalità interfaccia a più documenti (MDI, Multiple Document Interface), nella quale le finestre sono visualizzate senza schede e possono essere ancorate, affiancate, ridotte a icona e così via.  
   
 #### <a name="to-switch-between-view-modes"></a>Per passare da una modalità di visualizzazione all'altra  
   
 1.  Scegliere **Opzioni** dal menu **Strumenti** .  
   
-2.  Fare clic su **Ambiente**. Fare clic su **General**.  
+2.  Fare clic su **Ambiente**. Fare clic su **Generale**.  
   
 3.  Selezionare **Documenti a schede** o **Ambiente MDI**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "75242038"
   
 3.  Fare clic su **Tutti i linguaggi**.  
   
-4.  Fare clic su **General**.  
+4.  Fare clic su **Generale**.  
   
 5.  Selezionare **Numeri di riga**.  
   

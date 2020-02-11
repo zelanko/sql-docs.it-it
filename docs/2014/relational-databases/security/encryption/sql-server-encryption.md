@@ -15,10 +15,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957096"
 ---
 # <a name="sql-server-encryption"></a>Crittografia di SQL Server
@@ -33,32 +33,32 @@ ms.locfileid: "74957096"
  [Gerarchia di crittografia](encryption-hierarchy.md)  
  Informazioni sulla gerarchia di crittografia in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Scegliere un algoritmo di crittografia](choose-an-encryption-algorithm.md)  
+ [Scelta di un algoritmo di crittografia](choose-an-encryption-algorithm.md)  
  Informazioni sulla selezione di un algoritmo di crittografia efficace.  
   
- [&#41;Transparent Data Encryption &#40;Transparent Data Encryption](transparent-data-encryption.md)  
+ [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)  
  Informazioni generali sulla crittografia trasparente dei dati.  
   
- [SQL Server e chiavi di crittografia del database &#40;motore di database&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
+ [Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le chiavi di crittografia sono costituite da una combinazione di chiavi pubbliche, private e simmetriche utilizzate per proteggere dati riservati. In questa sezione vengono illustrate l'implementazione e la gestione delle chiavi di crittografia.  
   
-## <a name="related-content"></a>Contenuti correlati  
- [Protezione SQL Server](../securing-sql-server.md)  
+## <a name="related-content"></a>Contenuto correlato  
+ [Sicurezza di SQL Server](../securing-sql-server.md)  
  Panoramica della sicurezza della piattaforma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e del funzionamento con gli utenti e gli oggetti a protezione diretta.  
   
- [Funzioni di crittografia &#40;&#41;Transact-SQL](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
+ [Funzioni di crittografia &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
  Informazioni sull'implementazione delle funzioni di crittografia.  
   
- [ENCRYPTBYPASSPHRASE &#40;&#41;Transact-SQL](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
+ [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
  Informazioni sull'utilizzo di una password per la crittografia dei dati.  
   
- [ENCRYPTBYKEY &#40;&#41;Transact-SQL](/sql/t-sql/functions/encryptbykey-transact-sql)  
+ [ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
  Informazioni sull'utilizzo di una chiave simmetrica per la crittografia dei dati.  
   
- [ENCRYPTBYASYMKEY &#40;&#41;Transact-SQL](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
  Informazioni sull'utilizzo di una chiave simmetrica per la crittografia dei dati.  
   
- [ENCRYPTBYCERT &#40;&#41;Transact-SQL](/sql/t-sql/functions/encryptbycert-transact-sql)  
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
  Informazioni sull'utilizzo di un certificato per la crittografia dei dati.  
   
 ## <a name="external-resources"></a>Risorse esterne  
@@ -66,8 +66,8 @@ ms.locfileid: "74957096"
  Informazioni aggiornate sulla sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. key_encryptions &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [SQL Server e chiavi di crittografia del database &#40;motore di database&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
- [Eseguire il backup e il ripristino delle chiavi di crittografia Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+ [sys.key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
+ [Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246369"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Invio di dati come parametro con valori di tabella utilizzando data-at-execution (ODBC)
@@ -186,7 +186,7 @@ from @Items
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  In questo esempio viene illustrato come utilizzare il flusso di righe, una riga per ogni chiamata a SQLPutData, con ODBC TVP, in modo analogo a come si potrebbe utilizzare BCP. exe per caricare i dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  
@@ -374,7 +374,7 @@ EXIT:
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  In questo esempio viene illustrato come utilizzare il flusso di righe, più righe per chiamata a SQLPutData, con ODBC TVP, in modo analogo a come si potrebbe utilizzare BCP. exe per caricare i dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  

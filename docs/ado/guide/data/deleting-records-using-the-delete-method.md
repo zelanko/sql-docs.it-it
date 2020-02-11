@@ -1,5 +1,5 @@
 ---
-title: L'eliminazione di record usando il metodo Delete | Microsoft Docs
+title: Eliminazione di record tramite il metodo Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925550"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Eliminazione di record con il metodo Delete
-Usando il **eliminare** metodo contrassegna il record corrente o un gruppo di record in un **Recordset** oggetto per l'eliminazione. Se il **Recordset** oggetto non consente l'eliminazione di record, si verifica un errore. Se si è in modalità di aggiornamento immediato, le eliminazioni verranno eseguite immediatamente nel database. Se non è possibile eliminare un record (a causa di violazioni di integrità del database, ad esempio), il record rimarranno nella modalità di modifica dopo la chiamata a **Update.** Ciò significa che è necessario annullare l'aggiornamento con [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) prima di uscire il record corrente (ad esempio, usando [Close](../../../ado/reference/ado-api/close-method-ado.md), [spostare](../../../ado/reference/ado-api/move-method-ado.md), o [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+L'utilizzo del metodo **Delete** contrassegna il record corrente o un gruppo di record in un oggetto **Recordset** per l'eliminazione. Se l'oggetto **Recordset** non consente l'eliminazione dei record, si verificherà un errore. Se si è in modalità di aggiornamento immediato, le eliminazioni vengono eseguite immediatamente nel database. Se un record non può essere eliminato correttamente (ad esempio, a causa di violazioni di integrità del database), il record rimarrà in modalità di modifica dopo la chiamata a **Update.** Ciò significa che è necessario annullare l'aggiornamento usando [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) prima di spostare il record corrente (ad esempio, con [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md)o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
- Se si è in modalità di aggiornamento batch, i record contrassegnati per l'eliminazione dalla cache e l'eliminazione effettiva si verifica quando si chiama il **UpdateBatch** (metodo). (Per visualizzare i record eliminati, impostare il **filtro** proprietà **adFilterAffectedRecords** dopo **Elimina** viene chiamato.)  
+ Se si è in modalità di aggiornamento batch, i record vengono contrassegnati per l'eliminazione dalla cache e l'effettiva eliminazione viene eseguita quando si chiama il metodo **UpdateBatch** . Per visualizzare i record eliminati, impostare la proprietà **Filter** su **adFilterAffectedRecords** dopo la chiamata a **Delete** .  
   
- Tentativo di recuperare i valori dei campi del record eliminato genera un errore. Dopo aver eliminato il record corrente, il record eliminato rimane invariato fino a quando non si sposta in un altro record. Una volta si allontanano del record eliminato, non è più accessibile.  
+ Il tentativo di recuperare i valori dei campi dal record eliminato genera un errore. Dopo l'eliminazione del record corrente, il record eliminato rimane aggiornato fino a quando non si passa a un record diverso. Quando ci si allontana dal record eliminato, non è più accessibile.  
   
- Se le eliminazioni in una transazione vengono nidificate, è possibile ripristinare i record eliminati con il **RollbackTrans** (metodo). Se si è in modalità di aggiornamento batch, è possibile annullare l'eliminazione in sospeso o un gruppo di eliminazioni in sospeso utilizzando il **CancelBatch** (metodo).  
+ Se le eliminazioni vengono annidate in una transazione, è possibile recuperare i record eliminati utilizzando il metodo **RollbackTrans** . Se si è in modalità di aggiornamento batch, è possibile annullare un'eliminazione in sospeso o un gruppo di eliminazioni in sospeso usando il metodo **CancelBatch** .  
   
- Se il tentativo di eliminare i record non riesce a causa di un conflitto con i dati sottostanti (ad esempio, un record è già stato eliminato da un altro utente), il provider restituisce avvisi per i **errori** raccolta ma non arrestano programma esecuzione. Errore di run-time si verifica solo se sono presenti conflitti in tutti i record richiesti.  
+ Se il tentativo di eliminare i record ha esito negativo a causa di un conflitto con i dati sottostanti (ad esempio, un record è già stato eliminato da un altro utente), il provider restituisce gli avvisi alla raccolta degli **errori** , ma non interrompe l'esecuzione del programma. Si verifica un errore di run-time solo se sono presenti conflitti in tutti i record richiesti.  
   
- Se il **tabella univoca** dinamica viene impostata e il **Recordset** è il risultato dell'esecuzione di un'operazione di JOIN in più tabelle, il **Elimina** metodo elimina solo righe dalla tabella menzionata nel **Unique Table** proprietà.  
+ Se la proprietà dinamica **tabella univoca** è impostata e il **Recordset** è il risultato dell'esecuzione di un'operazione di join su più tabelle, il metodo **Delete** eliminerà le righe solo dalla tabella denominata nella proprietà **Unique Table** .  
   
- Il **eliminare** metodo accetta un argomento facoltativo che consente di specificare quali record sono coinvolti i **eliminare** operazione. Gli unici valori validi per questo argomento sono uno dei seguente ADO **AffectEnum** costanti enumerate:  
+ Il metodo **Delete** accetta un argomento facoltativo che consente di specificare quali record sono interessati dall'operazione di **eliminazione** . Gli unici valori validi per questo argomento sono le seguenti costanti enumerate ADO **AffectEnum** :  
   
--   **adAffectCurrent** interessa solo il record corrente.  
+-   **adAffectCurrent** Influiscono solo sul record corrente.  
   
--   **adAffectGroup** interessa solo i record che soddisfano corrente **filtro** l'impostazione della proprietà. Il **filtro** proprietà deve essere impostata su un **FilterGroupEnum** valore o una matrice di **segnalibri** per usare questa opzione.  
+-   **adAffectGroup** Interessa solo i record che soddisfano l'impostazione della proprietà **filtro** corrente. Per usare questa opzione, è necessario impostare la proprietà **Filter** su un valore **FilterGroupEnum** o su una matrice di **segnalibri** .  
   
- Il codice seguente illustra un esempio di definizione **adAffectGroup** quando si chiama il **eliminare** (metodo). Questo esempio vengono aggiunti alcuni record al campione **Recordset** e aggiorna il database. Quindi Filtra i **Recordset** usando la **adFilterAffectedRecords** costante enumerata di filtro, che rende visibili in solo il record appena aggiunto il **Recordset.** Infine, chiama il **eliminare** metodo e specifica che tutti i record che soddisfano corrente **filtro** deve essere eliminata l'impostazione della proprietà (i nuovi record).  
+ Il codice seguente illustra un esempio di come specificare **adAffectGroup** quando si chiama il metodo **Delete** . In questo esempio vengono aggiunti alcuni record al **Recordset** di esempio e viene aggiornato il database. Quindi filtra il **Recordset** usando la costante enumerata del filtro **adFilterAffectedRecords** , che lascia solo i record appena aggiunti visibili nel **Recordset.** Infine, viene chiamato il metodo **Delete** e viene specificato che tutti i record che soddisfano l'impostazione della proprietà **Filter** corrente (i nuovi record) devono essere eliminati.  
   
 ```  
 'BeginDeleteGroup  

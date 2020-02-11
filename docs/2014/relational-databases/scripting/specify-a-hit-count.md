@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a049491513b826b2b050081b40cb5319ca74160f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243209"
 ---
 # <a name="specify-a-hit-count"></a>Specifica di un numero di passaggi
@@ -45,7 +45,7 @@ ms.locfileid: "75243209"
   
 1.  Nella finestra dell'editor fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e scegliere **Passaggi** dal menu di scelta rapida.  
   
-     -Oppure-  
+     -oppure-  
   
      Nella finestra **Punti di interruzione** fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e scegliere **Passaggi** dal menu di scelta rapida.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75243209"
   
 1.  Nella finestra dell'editor fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e scegliere **Passaggi** dal menu di scelta rapida.  
   
-     -Oppure-  
+     -oppure-  
   
      Nella finestra **Punti di interruzione** fare clic con il pulsante destro del mouse sul glifo del punto di interruzione e scegliere **Passaggi** dal menu di scelta rapida.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "75243209"
 4.  Fare clic su **OK** o su **Annulla** per chiudere la finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specificare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)  
+ [Impostare una condizione del punto di interruzione](specify-a-breakpoint-condition.md)  
   
   

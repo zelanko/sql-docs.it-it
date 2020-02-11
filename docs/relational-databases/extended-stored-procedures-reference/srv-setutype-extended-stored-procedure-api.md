@@ -20,10 +20,10 @@ ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fedb0808c6071ec6a6ba9bb7bd985a43890cce3d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245067"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (API Stored procedure estesa)
@@ -51,7 +51,7 @@ user_type
 );  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
@@ -61,7 +61,7 @@ user_type
  *user_type*  
  Specifica il codice del tipo di dati definito dall'utente.  
   
-## <a name="returns"></a>Restituisce  
+## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL. Restituisce FAIL se la colonna non esiste.  
   
 ## <a name="remarks"></a>Osservazioni  

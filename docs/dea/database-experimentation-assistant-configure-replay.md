@@ -2,7 +2,7 @@
 title: Configurare la riproduzione per gli aggiornamenti di SQL Server
 description: Configurare Riesecuzione distribuita per Database Experimentation Assistant
 ms.custom: seo-lt-2019
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2ef570f531bcd37a2a5f7be1f3a900c4b8a4c112
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317732"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761535"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurare Riesecuzione distribuita per Database Experimentation Assistant
 
@@ -48,10 +48,12 @@ Per configurare il servizio controller:
 3. Aprire Services. msc e passare al servizio **SQL Server riesecuzione distribuita controller** .
 4. Fare clic con il pulsante destro del mouse sul servizio, quindi scegliere **Proprietà**. Impostare l'account del servizio su un account comune per il controller e i computer client nella rete.
 5. Selezionare **OK** per chiudere la finestra delle **Proprietà** .
-6. Riavviare il servizio **SQL Server riesecuzione distribuita controller** da Services. msc. È anche possibile eseguire i comandi seguenti dalla riga di comando per riavviare il servizio:<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+6. Riavviare il servizio **SQL Server riesecuzione distribuita controller** da Services. msc. È anche possibile eseguire i comandi seguenti dalla riga di comando per riavviare il servizio:
+
+   `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
-7. Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## <a name="configure-dcom"></a>Configurare DCOM
 
@@ -68,9 +70,10 @@ Questa configurazione è necessaria solo sul computer controller.
 9. Aggiungere l'utente che avvierà la riproduzione. Concedere all'utente le autorizzazioni di accesso locale. Se l'utente prevede di accedere al servizio controller in remoto, concedere all'utente le autorizzazioni di accesso remoto.
 10. Selezionare **OK** per salvare le modifiche e tornare alla scheda **sicurezza** .
 11. Selezionare **OK** per eseguire il commit delle modifiche.
-12. Riavviare il servizio SQL Server Riesecuzione distribuita controller da Services. msc. È anche possibile eseguire i comandi seguenti dalla riga di comando per riavviare il servizio:<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
-   `NET START "SQL Server Distributed Replay Controller"`
+12. Riavviare il servizio SQL Server Riesecuzione distribuita controller da Services. msc. È anche possibile eseguire i comandi seguenti dalla riga di comando per riavviare il servizio:
+
+    `NET STOP "SQL Server Distributed Replay Controller"`</br>
+    `NET START "SQL Server Distributed Replay Controller"`
 
 ## <a name="set-up-the-client-service"></a>Configurare il servizio client
 
@@ -81,12 +84,16 @@ Prima di configurare il servizio client, utilizzare strumenti di rete come ping 
 3. Fare clic con il pulsante destro del mouse sul servizio, quindi scegliere **Proprietà**. Impostare l'account del servizio su un account comune per il controller e i computer client nella rete.
 4. Selezionare **OK** per chiudere la finestra delle **Proprietà** . Se è stato ignorato il passaggio del programma di installazione guidata di SQL Server per configurare il client di Riesecuzione distribuita, è possibile configurarlo tramite il file di configurazione. In un'installazione tipica, il file di configurazione si trova in C:\Programmi (x86) \Microsoft\<SQL Server\>versione \Tools\DReplayClient\DReplayClient.config.
 5. Verificare che il file DReplayClient. config contenga il nome del computer del controller come controller per la registrazione.
-6. Riavviare il servizio client Riesecuzione distribuita di SQL Server da Services. msc. È anche possibile eseguire i comandi seguenti dalla riga di comando per riavviare il servizio:<br/>
-    `NET STOP "SQL Server Distributed Replay Client"`<br/>
+6. Riavviare il servizio client Riesecuzione distribuita di SQL Server da Services. msc. È anche possibile eseguire i comandi seguenti dalla riga di comando per riavviare il servizio:
+
+    `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
-7. I log del controller di Riesecuzione distribuita si trovano in C:\Programmi (x86\<)\>\Microsoft SQL Server versione \Tools\DReplayClient\Log. I log indicano se il client può registrarsi con il controller.
-8. Se la configurazione ha esito positivo, nel log viene visualizzato il messaggio "registrato con controller\><nome controller".
-9. Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+    I log del controller di Riesecuzione distribuita si trovano in C:\Programmi (x86\<)\>\Microsoft SQL Server versione \Tools\DReplayClient\Log. I log indicano se il client può registrarsi con il controller.
+
+    Se la configurazione ha esito positivo, nel log viene visualizzato il messaggio **registrato con il\>controller <nome del controller**.
+
+Per altre opzioni di configurazione, vedere [Configure riesecuzione distribuita](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Configurare Riesecuzione distribuita strumenti di amministrazione
 

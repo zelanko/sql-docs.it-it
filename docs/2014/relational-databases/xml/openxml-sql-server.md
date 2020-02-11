@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195615"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -35,10 +35,10 @@ ms.locfileid: "68195615"
   
  È possibile usare OPENXML nelle istruzioni SELECT e SELECT INTO ogni volta che i provider di set di righe, una vista o OPENROWSET possono comparire come origine. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql).  
   
- Per scrivere query su un documento XML tramite OPENXML, è necessario chiamare prima `sp_xml_preparedocument`. che analizza il documento XML e restituisce un handle al documento analizzato e pronto per l'utilizzo. Il documento analizzato è una rappresentazione dell'albero del modello a oggetti documento (DOM, Document Object Model) dei vari nodi inclusi nel documento XML. L'handle del documento viene quindi passato a OPENXML, che a sua volta visualizza il documento come un set di righe in base ai parametri passati.  
+ Per scrivere query su un documento XML tramite OPENXML, è innanzitutto necessario chiamare `sp_xml_preparedocument`. che analizza il documento XML e restituisce un handle al documento analizzato e pronto per l'utilizzo. Il documento analizzato è una rappresentazione dell'albero del modello a oggetti documento (DOM, Document Object Model) dei vari nodi inclusi nel documento XML. L'handle del documento viene quindi passato a OPENXML, che a sua volta visualizza il documento come un set di righe in base ai parametri passati.  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` utilizza una versione aggiornata a SQL del parser MSXML, Msxmlsql. Questa versione è stata progettata per supportare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e garantire la compatibilità con MSXML versione 2.6.  
+>  `sp_xml_preparedocument`Usa una versione aggiornata di SQL del parser MSXML, Msxmlsql. dll. Questa versione è stata progettata per supportare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e garantire la compatibilità con MSXML versione 2.6.  
   
  La rappresentazione interna di un documento XML deve essere rimossa dalla memoria tramite una chiamata alla stored procedure di sistema **sp_xml_removedocument** , in modo tale da liberare memoria.  
   
@@ -54,7 +54,8 @@ ms.locfileid: "68195615"
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato l'utilizzo di `OPENXML` in un'istruzione `INSERT` e in un'istruzione `SELECT` . Il documento XML di esempio contiene gli elementi `<Customers>` e `<Orders>` .  
   
- La stored procedure `sp_xml_preparedocument` analizza innanzitutto il documento XML. Il documento analizzato corrisponde a una rappresentazione ad albero dei vari nodi (elementi, attributi, testo, commenti e così via) del documento XML. `OPENXML` si riferisce quindi al documento XML analizzato e fornisce una visualizzazione del set di righe di tutto o parte del documento. Un'istruzione `INSERT` che usa `OPENXML` può inserire i dati di tale set di righe in una tabella di database. È possibile usare diverse chiamate a `OPENXML` per ottenere una vista del set di righe di diverse parti del documento XML ed elaborarle, ad esempio inserendole in tabelle diverse. Tale processo è noto anche come "suddivisione del documento XML in tabelle".  
+ La stored procedure `sp_xml_preparedocument` analizza innanzitutto il documento XML. Il documento analizzato corrisponde a una rappresentazione ad albero dei vari nodi (elementi, attributi, testo, commenti e così via) del documento XML. 
+  `OPENXML` si riferisce quindi al documento XML analizzato e fornisce una visualizzazione del set di righe di tutto o parte del documento. Un'istruzione `INSERT` che usa `OPENXML` può inserire i dati di tale set di righe in una tabella di database. È possibile usare diverse chiamate a `OPENXML` per ottenere una vista del set di righe di diverse parti del documento XML ed elaborarle, ad esempio inserendole in tabelle diverse. Tale processo è noto anche come "suddivisione del documento XML in tabelle".  
   
  Nell'esempio seguente un documento XML viene suddiviso in modo che gli elementi `<Customers>` vengano archiviati nella tabella `Customers` e gli elementi `<Orders>` vengano archiviati nella tabella `Orders` usando due istruzioni `INSERT` . Nell'esempio viene inoltre illustrata un'istruzione `SELECT` con la funzione `OPENXML` che recupera `CustomerID` e `OrderDate` dal documento XML. L'ultimo passaggio del processo consiste nel chiamare `sp_xml_removedocument` in modo da rilasciare la memoria allocata per includere la rappresentazione dell'albero XML interno creata durante la fase di analisi.  
   
@@ -110,7 +111,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   Il mapping tra le colonne del set di righe e i nodi XML.  
   
 ### <a name="xml-document-handle-idoc"></a>Handle del documento XML (idoc)  
- L'handle del documento restituito dal `sp_xml_preparedocument` stored procedure.  
+ L'handle del documento viene restituito dalla `sp_xml_preparedocument` stored procedure.  
   
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>Espressione XPath che identifica i nodi da elaborare (rowpattern)  
  L'espressione XPath specificata come *rowpattern* identifica un set di nodi nel documento XML. Ogni nodo definito da *rowpattern* corrisponde a una riga specifica del set di righe generato da OPENXML.  
@@ -139,14 +140,14 @@ EXEC sp_xml_removedocument @docHandle;
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**id**|**bigint**|ID univoco del nodo del documento.<br /><br /> Il valore dell'ID dell'elemento radice è 0. I valori di ID negativi sono riservati.|  
-|**parentid**|**bigint**|Identifica il padre del nodo. Il padre identificato da questo ID non è necessariamente l'elemento padre, ma dipende dalla proprietà NodeType del nodo il cui padre è identificato da questo ID. Se ad esempio il nodo è di tipo testo, il relativo elemento padre potrebbe essere un nodo attributo.<br /><br /> Se il nodo si trova al livello principale nel documento XML, il relativo valore **ParentID** è NULL.|  
-|**node type**|**int**|Identifica il tipo di nodo ed è un intero che corrisponde alla numerazione del tipo di nodo DOM XML.<br /><br /> Di seguito sono riportati i valori che indicano il tipo di nodo visualizzabili nella colonna:<br /><br /> **1** = Nodo elemento<br /><br /> **2** = Nodo attributo<br /><br /> **3** = Nodo di testo<br /><br /> **4** = Nodo sezione CDATA<br /><br /> **5** = Nodo riferimento a entità<br /><br /> **6** = Nodo entità<br /><br /> **7** = Nodo istruzione di elaborazione<br /><br /> **8** = Nodo di commento<br /><br /> **9** = Nodo di documento<br /><br /> **10** = Nodo tipo di documento<br /><br /> **11** = Nodo frammento di documento<br /><br /> **12** = Nodo di notazione<br /><br /> Per altre informazioni, vedere l'argomento relativo alla proprietà nodeType nella documentazione di Microsoft XML (MSXML) SDK.|  
-|**localname**|**nvarchar(max)**|Nome locale dell'elemento o attributo. È NULL se l'oggetto DOM non è associato a un nome.|  
-|**prefix**|**nvarchar(max)**|Prefisso dello spazio dei nomi del nome del nodo.|  
-|**namespaceuri**|**nvarchar(max)**|URI dello spazio dei nomi del nodo. Se il valore è NULL, non sono presenti spazi dei nomi.|  
-|**datatype**|**nvarchar(max)**|Rappresenta il tipo di dati effettivo della riga dell'elemento o dell'attributo e in caso contrario è NULL. Il tipo di dati viene ricavato dalla DTD o dallo schema inline.|  
-|**prev**|**bigint**|ID XML dell'elemento di pari livello precedente. È NULL se non è presente alcun elemento diretto di pari livello precedente.|  
+|**ID**|**bigint**|ID univoco del nodo del documento.<br /><br /> Il valore dell'ID dell'elemento radice è 0. I valori di ID negativi sono riservati.|  
+|**ParentID**|**bigint**|Identifica il padre del nodo. Il padre identificato da questo ID non è necessariamente l'elemento padre, ma dipende dalla proprietà NodeType del nodo il cui padre è identificato da questo ID. Se ad esempio il nodo è di tipo testo, il relativo elemento padre potrebbe essere un nodo attributo.<br /><br /> Se il nodo si trova al livello principale nel documento XML, il relativo valore **ParentID** è NULL.|  
+|**tipo di nodo**|**int**|Identifica il tipo di nodo ed è un intero che corrisponde alla numerazione del tipo di nodo DOM XML.<br /><br /> Di seguito sono riportati i valori che indicano il tipo di nodo visualizzabili nella colonna:<br /><br /> **1** = nodo elemento<br /><br /> **2** = nodo attributo<br /><br /> **3** = nodo di testo<br /><br /> **4** = nodo sezione CDATA<br /><br /> **5** = nodo del riferimento all'entità<br /><br /> **6** = nodo entità<br /><br /> **7** = nodo istruzione di elaborazione<br /><br /> **8** = nodo di commento<br /><br /> **9** = nodo del documento<br /><br /> **10** = nodo tipo di documento<br /><br /> **11** = nodo frammento di documento<br /><br /> **12** = nodo Notation<br /><br /> Per altre informazioni, vedere l'argomento relativo alla proprietà nodeType nella documentazione di Microsoft XML (MSXML) SDK.|  
+|**localName**|**nvarchar(max)**|Nome locale dell'elemento o attributo. È NULL se l'oggetto DOM non è associato a un nome.|  
+|**prefisso**|**nvarchar(max)**|Prefisso dello spazio dei nomi del nome del nodo.|  
+|**namespaceURI**|**nvarchar(max)**|URI dello spazio dei nomi del nodo. Se il valore è NULL, non sono presenti spazi dei nomi.|  
+|**tipo**|**nvarchar(max)**|Rappresenta il tipo di dati effettivo della riga dell'elemento o dell'attributo e in caso contrario è NULL. Il tipo di dati viene ricavato dalla DTD o dallo schema inline.|  
+|**Prev**|**bigint**|ID XML dell'elemento di pari livello precedente. È NULL se non è presente alcun elemento diretto di pari livello precedente.|  
 |**text**|**ntext**|Include il valore dell'attributo o il contenuto dell'elemento in formato testo oppure è NULL se la voce della tabella edge non richiede un valore.|  
   
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Utilizzo della clausola WITH per specificare una tabella esistente  
@@ -170,11 +171,11 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Tramite il parametro *ColPattern* .  
   
-     Il parametro*ColPattern*, ovvero un'espressione XPath, viene specificato nell'ambito di *SchemaDeclaration* nella clausola WITH. Il mapping specificato dal parametro *ColPattern* sovrascrive il mapping specificato dal parametro *flags* .  
+     *ColPattern*, un'espressione XPath, viene specificato come parte di *SCHEMADECLARATION* nella clausola with. Il mapping specificato dal parametro *ColPattern* sovrascrive il mapping specificato dal parametro *flags* .  
   
-     Il parametro*ColPattern* consente di specificare il tipo di mapping, incentrato sugli attributi o sugli elementi, che sovrascrive o migliora il mapping predefinito indicato in *flags*.  
+     *ColPattern* può essere usato per specificare il tipo di mapping, ad esempio incentrato sugli attributi o sugli elementi, che sovrascrive o migliora il mapping predefinito indicato dai *flag*.  
   
-     Il parametro*ColPattern* viene specificato nei casi seguenti:  
+     *ColPattern* viene specificato nelle circostanze seguenti:  
   
     -   Se il nome di colonna nel set di righe è diverso dal nome dell'elemento o dell'attributo al quale viene eseguito il mapping. In questo caso, il parametro *ColPattern* consente di identificare il nome dell'elemento o dell'attributo XML al quale viene eseguito il mapping della colonna del set di righe.  
   
@@ -197,8 +198,8 @@ EXEC sp_xml_removedocument @docHandle;
 -   Nel caso di più sottoelementi con lo stesso nome, verrà restituito il primo nodo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [sp_xml_preparedocument &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [Dati XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   

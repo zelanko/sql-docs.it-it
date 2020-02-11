@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205957"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Attività Backup database (Piano di manutenzione)
-  Usare la finestra di dialogo **Attività Backup database** per aggiungere un'attività di backup al piano di manutenzione. L'esecuzione di backup del database è importante in caso di guasti al sistema o all'hardware, nonché di errori degli utenti, che possono danneggiare il database e rendere pertanto necessaria la disponibilità di una copia di backup per il ripristino. Questa attività consente di eseguire backup completi e differenziali, di file e filegroup, nonché del log delle transazioni.  
+  Utilizzare la finestra di dialogo **attività Backup database** per aggiungere un'attività di backup al piano di manutenzione. L'esecuzione di backup del database è importante in caso di guasti al sistema o all'hardware, nonché di errori degli utenti, che possono danneggiare il database e rendere pertanto necessaria la disponibilità di una copia di backup per il ripristino. Questa attività consente di eseguire backup completi e differenziali, di file e filegroup, nonché del log delle transazioni.  
   
  **Per creare un'attività Backup database**  
   
@@ -33,46 +33,46 @@ ms.locfileid: "68205957"
  **Connessione**  
  Consente di selezionare la connessione server da utilizzare per l'esecuzione dell'attività.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione server da utilizzare per l'esecuzione dell'attività. La finestra di dialogo **Nuova connessione** è descritta di seguito.  
   
  **Database**  
- Consente di specificare i database su cui verrà eseguita l'attività. Quando viene selezionato, l'elenco a discesa include le opzioni seguenti: **Tutti i database**, **tutti i database di sistema**, **tutti i database utente**, **database specifici**.  
+ Consente di specificare i database su cui verrà eseguita l'attività. Quando viene selezionato, l'elenco a discesa include le opzioni seguenti: **Tutti i database**, **Tutti i database di sistema**, **Tutti i database utente**, **Database specifici**.  
   
  **Tutti i database**  
  Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Tutti i database di sistema (master, model e msdb)**  
+ **Tutti i database di sistema (Master, msdb, Model)**  
  Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non vengono eseguite attività di manutenzione sui database creati dall'utente.  
   
- **Tutti i database utente (diversi da master, model, msdb e tempdb)**  
+ **Tutti i database utente (esclusi Master, Model, msdb, tempdb)**  
  Consente di generare un piano per l'esecuzione di attività di manutenzione su tutti i database creati dall'utente. Nessuna attività di manutenzione viene eseguita sui database di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **I database seguenti**  
+ **Questi database**  
  Consente di generare un piano per l'esecuzione di attività di manutenzione solo sui database selezionati. Se si sceglie questa opzione, è necessario selezionare almeno un database nell'elenco.  
   
  **Tipo di backup**  
  Consente di visualizzare il tipo di backup da eseguire.  
   
- **Componente di cui eseguire il backup**  
+ **Componente di backup**  
  Selezionare **Database** per eseguire il backup dell'intero database. Selezionare **File e filegroup** per eseguire il backup solo di una parte del database. Quando si seleziona questa opzione, è necessario specificare il nome del file o del filegroup. Se nella casella **Database** sono selezionati più database, è necessario specificare **Database** solo per **Componente di cui eseguire il backup**. Per eseguire i backup di file o filegroup, creare un'attività per ogni database.  
   
  **Scadenza set di backup**  
  Consente di specificare la data a partire dalla quale il set di backup può essere sovrascritto da un altro set di backup.  
   
- **Backup su**  
+ **Esegui backup in**  
  Consente di scegliere se eseguire il backup del database su file o su nastro. Sono disponibili solo i dispositivi nastro collegati al computer in cui è archiviato il database.  
   
- **Backup database in uno o più file**  
+ **Eseguire il backup dei database in uno o più file**  
  Fare clic su **Aggiungi** per aprire la finestra di dialogo **Selezione destinazione di backup** e specificare una o più posizioni su disco o dispositivi nastro.  
   
- **Azione per file di backup esistenti**  
+ **Se sono presenti file di backup**  
  Selezionare **Accoda** per aggiungere questo backup alla fine del file. Selezionare **Sovrascrivi**per rimuovere i backup esistenti dal file e sostituirli con il nuovo.  
   
- **Crea un file di backup per ogni database**  
+ **Creazione di un file di backup per ogni database**  
  Creare un file di backup nel percorso specificato nella casella della cartella. Viene creato un file per ogni database selezionato.  
   
- **Crea una sottodirectory per ogni database**  
+ **Creare una sottodirectory per ogni database**  
  Selezionare questa opzione per inserire ogni file di backup di database in una sottocartella.  
   
 > [!IMPORTANT]  
@@ -85,12 +85,12 @@ ms.locfileid: "68205957"
  Specificare la cartella in cui inserire i file di database creati automaticamente.  
   
  **Estensione file di backup**  
- Specificare l'estensione da utilizzare per i file di backup. L'estensione predefinita è **bak**.  
+ Specificare l'estensione da utilizzare per i file di backup. Il valore predefinito è **bak**.  
   
- **Verifica integrità backup**  
+ **Verificare l'integrità del backup**  
  Consente di verificare che il set di backup sia completo e che tutti i volumi siano leggibili.  
   
- **Esegui backup della parte finale del log e lascia il database in stato di ripristino**  
+ **Esegui il backup della parte finale del log e lascia il database nello stato RESTORING**  
  Consente di eseguire un backup del log come ultimo passaggio prima di ripristinare un database. Per altre informazioni, vedere [Backup della parte finale del log &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md).  
   
  **Imposta compressione backup**  
@@ -98,11 +98,11 @@ ms.locfileid: "68205957"
   
 |||  
 |-|-|  
-|**Utilizza l'impostazione predefinita del server**|Fare clic su questa opzione per utilizzare l'impostazione predefinita a livello di server.<br /><br /> Questa impostazione predefinita è specificata dall'opzione di configurazione del server **Valore predefinito di compressione backup** . Per informazioni su come visualizzare l'impostazione corrente di questa opzione, vedere [Visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-|**Comprimi backup**|Fare clic su questa opzione per comprimere il backup, indipendentemente dall'impostazione predefinita a livello di server.<br /><br /> **\*\* Importante \*\*** Per impostazione predefinita, la compressione aumenta significativamente l'uso della CPU e la CPU aggiuntiva usata dal processo di compressione può avere un impatto negativo sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da [Resource Governor](../resource-governor/resource-governor.md). Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+|**Usa l'impostazione predefinita del server**|Fare clic su questa opzione per utilizzare l'impostazione predefinita a livello di server.<br /><br /> Questa impostazione predefinita è specificata dall'opzione di configurazione del server **Valore predefinito di compressione backup** . Per informazioni su come visualizzare l'impostazione corrente di questa opzione, vedere [visualizzare o configurare l'opzione di configurazione del server backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
+|**Comprimi backup**|Fare clic su questa opzione per comprimere il backup, indipendentemente dall'impostazione predefinita a livello di server.<br /><br /> ** \* Importante \* \* ** Per impostazione predefinita, la compressione aumenta significativamente l'utilizzo della CPU e la CPU aggiuntiva utilizzata dal processo di compressione potrebbe influire negativamente sulle operazioni simultanee. Potrebbe pertanto essere necessario creare backup compressi con priorità bassa in una sessione in cui l'utilizzo della CPU è limitato da [Resource Governor](../resource-governor/resource-governor.md). Per ulteriori informazioni, vedere [Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Non comprimere il backup**|Fare clic su questa opzione per creare un backup non compresso, indipendentemente dall'impostazione predefinita a livello di server.|  
   
- **Visualizza codice T-SQL**  
+ **Visualizza T-SQL**  
  Consente di visualizzare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sul server per questa attività, in base alle opzioni selezionate.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ ms.locfileid: "68205957"
  **Nome connessione**  
  Consente di immettere un nome per la nuova connessione.  
   
- **Selezionare o immettere il nome di un server**  
+ **Selezionare o immettere un nome di server**  
  Consente di selezionare il server a cui connettersi per l'esecuzione dell'attività.  
   
  **Aggiorna**  
@@ -121,11 +121,11 @@ ms.locfileid: "68205957"
  **Immettere le informazioni per l'accesso al server**  
  Consente di specificare le opzioni di autenticazione per l'accesso al server.  
   
- **Usa la sicurezza integrata di Windows NT**  
- Consente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di Windows.  
+ **Usa la sicurezza integrata di Windows**  
+ Consente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando l'autenticazione di Windows.  
   
  **Usa nome utente e password specifici**  
- Consente di connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione non è disponibile.  
+ Connettersi a un'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. Questa opzione non è disponibile.  
   
  **Nome utente**  
  Consente di specificare un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare per l'autenticazione. Questa opzione non è disponibile.  

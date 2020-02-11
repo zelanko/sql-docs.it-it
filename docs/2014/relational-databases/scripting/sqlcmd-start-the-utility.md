@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243273"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Avvio dell'utilità sqlcmd
@@ -54,6 +54,6 @@ ms.locfileid: "75243273"
     >  Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] immesse vengono archiviate in un buffer. Vengono eseguite in batch quando viene rilevato il comando GO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire file script Transact-SQL tramite sqlcmd](sqlcmd-run-transact-sql-script-files.md)  
+ [Esecuzione di file script Transact-SQL mediante sqlcmd](sqlcmd-run-transact-sql-script-files.md)  
   
   

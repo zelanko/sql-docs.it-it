@@ -15,17 +15,17 @@ ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 661734c710cbc4aa8823965e22559c519e793d41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963481"
 ---
 # <a name="server-property-example-vbscript"></a>Esempio della proprietà Server (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Il codice seguente viene illustrato come impostare il [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parametro in fase di progettazione di tempo e associarlo a un controllo con supporto dati utilizzando il provider SQLOLEDB. Tagliare e incollare questo codice in un documento ASP normale e denominarla **ServerDesignVBS**. Lo script identificherà il server.  
+ Nel codice seguente viene illustrato come impostare il Servizi Desktop remoto [. Parametro DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) in fase di progettazione e associarlo a un controllo in grado di riconoscere i dati utilizzando il provider SQLOLEDB. Tagliare e incollare il codice in un documento ASP normale e denominarlo **ServerDesignVBS. asp**. Lo script ASP identificherà il server.  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -89,7 +89,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- Nell'esempio seguente viene illustrato come impostare i parametri necessari di **Servizi Desktop remoto. DataControl** in fase di esecuzione. Per testare questo esempio, tagliare e incollare questo codice in un documento ASP normale e denominarla **ServerRuntimeVBS**. Lo script identificherà il server.  
+ Nell'esempio seguente viene illustrato come impostare i parametri necessari di Servizi Desktop remoto **. DataControl** in fase di esecuzione. Per testare questo esempio, tagliare e incollare il codice in un documento ASP normale e denominarlo **ServerRuntimeVBS. asp**. Lo script ASP identificherà il server.  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  
@@ -177,7 +177,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Proprietà Server (Servizi Desktop remoto)](../../../ado/reference/rds-api/server-property-rds.md)
 
 

@@ -10,10 +10,10 @@ ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b718cd04b5c6133d931a9bea03de0a78ebc7a886
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258839"
 ---
 # <a name="building-a-knowledge-base"></a>Compilazione di una Knowledge Base
@@ -27,13 +27,13 @@ ms.locfileid: "75258839"
   
 |||  
 |-|-|  
-|Creare una nuova Knowledge Base da zero, da una Knowledge Base esistente o da un file di dati DQS.|[Creare una Knowledge base](../data-quality-services/create-a-knowledge-base.md)|  
-|Aprire una Knowledge Base esistente per eseguire l'individuazione delle informazioni e la gestione del dominio o per aggiungere i criteri di corrispondenza.|[Aprire una Knowledge base](../data-quality-services/open-a-knowledge-base.md)|  
-|Eseguire azioni di gestione su una Knowledge Base, tra cui l'apertura, lo sblocco, l'annullamento delle modifiche apportatevi, la ridenominazione, l'eliminazione o la visualizzazione delle relative proprietà.|[Gestire una Knowledge base](../data-quality-services/manage-a-knowledge-base.md)|  
-|Aggiungere informazioni a una Knowledge Base tramite l'individuazione delle informazioni, la gestione dei valori di dominio, l'aggiunta di criteri di corrispondenza, l'importazione di informazioni, di un dominio o di valori oppure l'utilizzo della Knowledge Base predefinita, Dati DQS.|[Aggiunta di informazioni a una Knowledge base](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
-|Analizzare un campione di dati per i criteri di qualità dei dati.|[Eseguire l'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md)|  
+|Creare una nuova Knowledge Base da zero, da una Knowledge Base esistente o da un file di dati DQS.|[Creare una Knowledge Base](../data-quality-services/create-a-knowledge-base.md)|  
+|Aprire una Knowledge Base esistente per eseguire l'individuazione delle informazioni e la gestione del dominio o per aggiungere i criteri di corrispondenza.|[Apertura di una Knowledge Base](../data-quality-services/open-a-knowledge-base.md)|  
+|Eseguire azioni di gestione su una Knowledge Base, tra cui l'apertura, lo sblocco, l'annullamento delle modifiche apportatevi, la ridenominazione, l'eliminazione o la visualizzazione delle relative proprietà.|[Gestire una Knowledge Base](../data-quality-services/manage-a-knowledge-base.md)|  
+|Aggiungere informazioni a una Knowledge Base tramite l'individuazione delle informazioni, la gestione dei valori di dominio, l'aggiunta di criteri di corrispondenza, l'importazione di informazioni, di un dominio o di valori oppure l'utilizzo della Knowledge Base predefinita, Dati DQS.|[Aggiunta di informazioni a una Knowledge Base](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
+|Analizzare un campione di dati per i criteri di qualità dei dati.|[Esecuzione dell'individuazione delle informazioni](../data-quality-services/perform-knowledge-discovery.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  

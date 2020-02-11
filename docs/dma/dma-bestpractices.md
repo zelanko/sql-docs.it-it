@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: ef953aa369e831e47d38db403b982919bd4bd830
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: e0f81a49af551836881ca71b49ff6a15d22a9897
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056551"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76162622"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Procedure consigliate per l'esecuzione di Data Migration Assistant
 In questo articolo vengono fornite alcune informazioni sulle procedure consigliate per l'installazione, la valutazione e la migrazione.
 
-## <a name="installation"></a>Installation
+## <a name="installation"></a>Installazione
 Non installare ed eseguire il Data Migration Assistant direttamente nel computer host SQL Server.
 
 ## <a name="assessment"></a>Valutazione
@@ -41,3 +41,5 @@ Non installare ed eseguire il Data Migration Assistant direttamente nel computer
 - Abilitare la connessione Encrypt durante la connessione ai server di origine e di destinazione. L'utilizzo della crittografia SSL aumenta la protezione dei dati trasmessi attraverso le reti tra Data Migration Assistant e l'istanza SQL Server, che risulta particolarmente utile in caso di migrazione degli account di accesso SQL. Se la crittografia SSL non viene usata e la rete viene compromessa da un utente malintenzionato, gli account di accesso SQL di cui è in corso la migrazione potrebbero essere intercettati e/o modificati immediatamente dall'autore dell'attacco.
 
     Tuttavia, se tutti accedono attraverso una configurazione di Intranet sicura, la crittografia potrebbe non essere necessaria. L'abilitazione della crittografia rallenta le prestazioni perché il sovraccarico aggiuntivo necessario per crittografare e decrittografare i pacchetti. Per ulteriori informazioni, vedere Crittografia delle [connessioni a SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    
+- Verificare la presenza di vincoli non attendibili sia nel database di origine che nel database di destinazione prima di eseguire la migrazione dei dati. Dopo la migrazione, analizzare di nuovo il database di destinazione per verificare se i vincoli sono diventati non attendibili come parte dello spostamento dei dati. Correggere i vincoli non attendibili in base alle esigenze. Lasciare i vincoli non attendibili può comportare piani di esecuzione insoddisfacenti e può influire sulle prestazioni.

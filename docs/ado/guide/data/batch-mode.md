@@ -15,22 +15,22 @@ ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925952"
 ---
 # <a name="batch-mode"></a>Modalità batch
-Attiva la modalità batch quando il **LockType** è impostata su **adLockBatchOptimistic** e l'aggiornamento in batch è supportato dal provider. Alcune impostazioni del tipo di blocco non sono disponibili in base alla posizione del cursore. Ad esempio, un tipo di blocco pessimistico non è disponibile quando il **CursorLocation** è impostata su **adUseClient**. Al contrario, un provider non può supportare un blocco ottimistico batch quando il cursore si trova nel server. È consigliabile usare l'aggiornamento in blocco con un solo cursore statico o keyset.  
+La modalità batch è attiva quando la proprietà **LockType** è impostata su **adLockBatchOptimistic** e l'aggiornamento in batch è supportato dal provider. Determinate impostazioni del tipo di blocco non sono disponibili a seconda della posizione del cursore. Un tipo di blocco pessimistico, ad esempio, non è disponibile quando **CursorLocation** è impostato su **adUseClient**. Viceversa, un provider non è in grado di supportare un blocco ottimistico batch quando la posizione del cursore si trova nel server. È consigliabile utilizzare l'aggiornamento batch solo con un keyset o un cursore statico.  
   
- Il **UpdateBatch** metodo viene usato per inviare **Recordset** modifiche memorizzate nel buffer di copia al server per aggiornare l'origine dati. Nella sezione seguente, verrà aperta una **Recordset** in modalità batch, apportare modifiche al buffer di copia e quindi inviare le modifiche all'origine dati tramite una chiamata a **UpdateBatch**.  
+ Il metodo **UpdateBatch** viene utilizzato per inviare le modifiche del **Recordset** mantenute nel buffer di copia al server per aggiornare l'origine dati. Nella sezione seguente verrà aperto un **Recordset** in modalità batch, vengono apportate modifiche al buffer di copia e quindi le modifiche vengono inviate all'origine dati mediante una chiamata a **UpdateBatch**.  
   
  Questa sezione contiene i seguenti argomenti:  
   
--   [Invio di aggiornamenti: Metodo UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [Invio di aggiornamenti: metodo UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
--   [Filtro per record aggiornati](../../../ado/guide/data/filtering-for-updated-records.md)  
+-   [Filtro per i record aggiornati](../../../ado/guide/data/filtering-for-updated-records.md)  
   
 -   [Gestione degli aggiornamenti non riusciti](../../../ado/guide/data/dealing-with-failed-updates.md)  
   
@@ -38,4 +38,4 @@ Attiva la modalità batch quando il **LockType** è impostata su **adLockBatchOp
   
 -   [Disconnessione e riconnessione del recordset](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
--   [Aggiornamento dei risultati join: Tabella univoca](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [Aggiornamento dei risultati uniti in join: tabella univoca](../../../ado/guide/data/updating-joined-results-unique-table.md)

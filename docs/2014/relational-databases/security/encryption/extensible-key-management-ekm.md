@@ -15,14 +15,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957185"
 ---
 # <a name="extensible-key-management-ekm"></a>Extensible Key Management (EKM)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]fornisce funzionalità di crittografia dei dati insieme a *Extensible Key Management* (EKM), usando il provider *Microsoft Cryptography API* (MSCAPI) per la crittografia e la generazione di chiavi. Le chiavi di crittografia per dati e la crittografia delle chiavi vengono create nei contenitori di chiave temporanei e devono essere esportate da un provider prima di essere archiviate nel database. Questo approccio consente la gestione delle chiavi che include una gerarchia delle chiavi di crittografia e un backup delle chiavi, che devono essere gestiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce funzionalità di crittografia dei dati insieme a *Extensible Key Management* (EKM), l'uso del provider di *API di crittografia Microsoft* (MSCAPI) per la crittografia e la generazione di chiavi. Le chiavi di crittografia per dati e la crittografia delle chiavi vengono create nei contenitori di chiave temporanei e devono essere esportate da un provider prima di essere archiviate nel database. Questo approccio consente la gestione delle chiavi che include una gerarchia delle chiavi di crittografia e un backup delle chiavi, che devono essere gestiti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Con la crescente richiesta di conformità con le normative e il problema della privacy dei dati, le organizzazioni sfruttano la crittografia come modalità per fornire una soluzione di "difesa approfondita". Questo approccio risulta spesso poco pratico se si utilizzano solo gli strumenti di gestione della crittografia dei database. I produttori di hardware forniscono prodotti che consentono la gestione aziendale delle chiavi usando i *Moduli di sicurezza hardware* (HSM, Hardware Security Modules). I dispositivi HSM consentono di archiviare le chiavi di crittografia su moduli hardware o software. Questa soluzione è più sicura poiché le chiavi di crittografia non risiedono insieme ai dati di crittografia.  
   
@@ -30,8 +30,7 @@ ms.locfileid: "74957185"
   
  Le implementazioni HSM variano da fornitore a fornitore e il loro uso con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede un'interfaccia comune. Anche se questa interfaccia è fornita da MSCAPI, supporta solo un subset delle funzionalità HSM. Sono presenti inoltre altre limitazioni, ad esempio l'impossibilità di mantenere a livello nativo le chiavi simmetriche e la mancanza di supporto orientato alla sessione.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management consente ai fornitori di EKM/HSM di terze parti di registrare i propri moduli in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando registrati, gli utenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono usare le chiavi di crittografia archiviate nei moduli EKM. Ciò consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di accedere alle funzionalità di crittografia avanzate supportate da tali moduli, quali la crittografia e decrittografia bulk e le funzioni di gestione delle chiavi quali il periodo di permanenza e la rotazione delle chiavi.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management consente ai fornitori di EKM/HSM di terze parti di registrare i propri moduli in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando registrati, gli utenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono usare le chiavi di crittografia archiviate nei moduli EKM. Ciò consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di accedere alle funzionalità di crittografia avanzate supportate da tali moduli, quali la crittografia e decrittografia bulk e le funzioni di gestione delle chiavi quali il periodo di permanenza e la rotazione delle chiavi.  
   
  Quando si esegue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in una macchina virtuale di Azure, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può usare le chiavi archiviate nell' [insieme di credenziali chiave di Azure](https://go.microsoft.com/fwlink/?LinkId=521401). Per altre informazioni, vedere [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md).  
   
@@ -57,8 +56,7 @@ GO
  Per disabilitare la funzionalità, impostare il valore su **0**. Per altre informazioni sull'impostazione delle opzioni del server, vedere [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 ## <a name="how-to-use-ekm"></a>Utilizzo di EKM  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management consente di abilitare le chiavi di crittografia che proteggono i file del database da archiviare in un dispositivo esterno come una smartcard, un dispositivo USB o un modulo EKM/HSM. Ciò consente anche la protezione dei dati agli amministratori del database, tranne ai membri del gruppo di amministratori di sistema. I dati possono essere crittografati usando le chiavi di crittografia a cui ha accesso solo l'utente del database nel modulo EKM/HSM esterno.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extensible Key Management consente di abilitare le chiavi di crittografia che proteggono i file del database da archiviare in un dispositivo esterno come una smartcard, un dispositivo USB o un modulo EKM/HSM. Consente anche la protezione dei dati da parte degli amministratori del database (tranne i membri del gruppo sysadmin). I dati possono essere crittografati utilizzando le chiavi di crittografia a cui hanno accesso solo gli utenti del database nel modulo esterno EKM/HSM.  
   
  Extensible Key Management fornisce anche i seguenti vantaggi:  
   
@@ -105,16 +103,15 @@ GO
   
 |Funzione o funzionalità|Riferimento|  
 |-------------------------|---------------|  
-|Crittografia con chiave simmetrica|[CREAZIONE di una chiave simmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|Crittografia con chiave asimmetrica|[CREAZIONE di una chiave asimmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY &#40;&#41;Transact-SQL](/sql/t-sql/functions/encryptbykey-transact-sql)|  
-|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;&#41;Transact-SQL](/sql/t-sql/functions/decryptbykey-transact-sql)|  
-|EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY &#40;&#41;Transact-SQL](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
-|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;&#41;Transact-SQL](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
+|Crittografia con chiave simmetrica|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Crittografia con chiave asimmetrica|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
+|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
+|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   
 #### <a name="database-keys-encryption-by-ekm-keys"></a>Crittografia di chiavi del database tramite chiavi EKM  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può usare le chiavi EKM per crittografare altre chiavi in un database. In un dispositivo EKM è possibile creare e utilizzare sia chiavi simmetriche che asimmetriche. È possibile crittografare chiavi simmetriche native (non EKM) con chiavi asimmetriche EKM.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può usare le chiavi EKM per crittografare altre chiavi in un database. In un dispositivo EKM è possibile creare e utilizzare sia chiavi simmetriche che asimmetriche. È possibile crittografare chiavi simmetriche native (non EKM) con chiavi asimmetriche EKM.  
   
  Nel seguente esempio viene creata una chiave simmetrica del database e viene crittografata utilizzando una chiave in un modulo EKM.  
   
@@ -133,43 +130,42 @@ DECRYPTION BY EKM_AKey1
 > [!NOTE]  
 >  Non è possibile crittografare una chiave EKM con un'altra chiave EKM.  
 >   
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non supporta la firma di moduli con chiavi asimmetriche generate dal provider EKM.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non supporta la firma di moduli con chiavi asimmetriche generate dal provider EKM.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
  [Opzione di configurazione del server EKM provider enabled](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [Abilitare Transparent Data Encryption con EKM](enable-tde-on-sql-server-using-ekm.md)  
   
- [Extensible Key Management con Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREAZIONE del PROVIDER di crittografia &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
- [sys. cryptographic_providers &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
- [sys. dm_cryptographic_provider_sessions &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
- [sys. dm_cryptographic_provider_properties &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
- [sys. dm_cryptographic_provider_algorithms &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
- [sys. dm_cryptographic_provider_keys &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
- [sys. Credentials &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
- [CREAZIONE di credenziali &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-credential-transact-sql)   
+ [sys.cryptographic_providers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
+ [sys.dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
+ [sys.dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
+ [sys.dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
+ [sys.dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
+ [sys.credentials &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
- [CREAZIONE di una chiave asimmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [ALTER asimmetrica KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
- [Elimina chiave asimmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
- [CREAZIONE di una chiave simmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
+ [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
- [Apri chiave simmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
- [Eseguire il backup e il ripristino delle chiavi di crittografia Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Eliminare e ricreare le chiavi di crittografia &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Configuration Manager SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
- [Eseguire il backup della chiave master del servizio](service-master-key.md)   
- [Ripristinare la chiave master del servizio](restore-the-service-master-key.md)   
- [Creare una chiave master del database](create-a-database-master-key.md)   
- [Eseguire il backup di una chiave master del database](back-up-a-database-master-key.md)   
- [Ripristinare una chiave master del database](restore-a-database-master-key.md)   
+ [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
+ [Eseguire il backup e il ripristino delle chiavi di crittografia di Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Eliminare e ricreare chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Aggiungere e rimuovere le chiavi di crittografia per una distribuzione con scalabilità orizzontale &#40;Gestione configurazione SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Backup della chiave master del servizio](service-master-key.md)   
+ [Ripristino della chiave master del servizio](restore-the-service-master-key.md)   
+ [Creazione della chiave master di un database](create-a-database-master-key.md)   
+ [Backup della chiave master di un database](back-up-a-database-master-key.md)   
+ [Ripristino di una chiave master del database](restore-a-database-master-key.md)   
  [Creare chiavi simmetriche identiche su due server](create-identical-symmetric-keys-on-two-servers.md)  
   
   

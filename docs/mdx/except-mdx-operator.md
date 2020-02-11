@@ -1,5 +1,5 @@
 ---
-title: '- (Eccezione) (MDX) | Microsoft Docs'
+title: '- Ad eccezione (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cf0121d1be3cd2943a801f3c72ca4952b70ec681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139076"
 ---
-# <a name="except-mdx-operator"></a>Ad eccezione di operatore (MDX)
+# <a name="except-mdx-operator"></a>Operatore EXCEPT (MDX)
 
 
   Esegue un'operazione sui set che restituisce la differenza tra due set, rimuovendo i membri duplicati.  
@@ -34,8 +34,8 @@ Set_Expression - Set_Expression
 ## <a name="return-value"></a>Valore restituito  
  Set che include i membri non presenti in entrambi i parametri specificati.  
   
-## <a name="remarks"></a>Note  
- Il **- (eccezione)** è funzionalmente equivalente all'operatore le [tranne](../mdx/except-mdx-function.md) (funzione).  
+## <a name="remarks"></a>Osservazioni  
+ L'operatore **-(except)** equivale dal punto di vista funzionale alla funzione [except](../mdx/except-mdx-function.md) .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di questo operatore:  
@@ -52,6 +52,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

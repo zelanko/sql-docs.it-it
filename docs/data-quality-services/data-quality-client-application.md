@@ -10,10 +10,10 @@ ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251741"
 ---
 # <a name="data-quality-client-application"></a>Applicazione client Data Quality
@@ -27,22 +27,22 @@ ms.locfileid: "75251741"
 ## <a name="installing-the-data-quality-client-application"></a>Installazione dell'applicazione client Data Quality  
  L'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] viene installata tramite il programma di installazione di SQL Server. Può essere installata nello stesso computer di [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]o su un computer remoto. Per altre informazioni sull'installazione dell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], vedere [Installare Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come utilizzare l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Eseguire l'applicazione Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md)|  
+|Viene descritto come utilizzare l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .|[Eseguire l'applicazione client Data Quality](../data-quality-services/run-the-data-quality-client-application.md)|  
   
-## <a name="related-content"></a>Contenuti correlati  
+## <a name="related-content"></a>Contenuto correlato  
   
 |Descrizione del contenuto|Argomento|  
 |-------------------------|-----------|  
-|Viene descritto come utilizzare le Knowledge Base e i domini in DQS.|[Knowledge base e domini DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Viene descritto come pulire dati in DQS.|[Pulizia dei dati](../data-quality-services/data-cleansing.md)|  
-|Viene descritto come effettuare la corrispondenza in DQS.|[Corrispondenza dei dati](../data-quality-services/data-matching.md)|  
-|Viene descritto come amministrare DQS.|[Amministrazione DQS](../data-quality-services/dqs-administration.md)|  
+|Viene descritto come utilizzare le Knowledge Base e i domini in DQS.|[Knowledge Base e domini DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
+|Viene descritto come pulire dati in DQS.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
+|Viene descritto come effettuare la corrispondenza in DQS.|[Corrispondenza di dati](../data-quality-services/data-matching.md)|  
+|Viene descritto come amministrare DQS.|[amministrazione dqs](../data-quality-services/dqs-administration.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Schermata iniziale Data Quality Client](../data-quality-services/data-quality-client-home-screen.md)  
+ [Schermata iniziale del client Data Quality](../data-quality-services/data-quality-client-home-screen.md)  
   
   

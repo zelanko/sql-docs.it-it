@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251789"
 ---
 # <a name="create-a-matching-policy"></a>Creazione di criteri di corrispondenza
@@ -28,14 +28,14 @@ ms.locfileid: "75251789"
   
  La creazione di criteri di corrispondenza viene eseguita in tre fasi: un processo di mapping nel quale si identifica l'origine dati e si esegue il mapping dei domini alle colonne; un processo per i criteri di corrispondenza nel quale si creano una o più regole di corrispondenza e si esegue separatamente il testing di ciascuna regola; un processo per i risultati di corrispondenza nel quale vengono eseguite tutte le regole insieme e, una volta confermate, si aggiungono i relativi criteri alla Knowledge Base. Ognuno di questi processi viene eseguito in una pagina separata della procedura guidata relativa all'attività dei criteri di corrispondenza, consentendo all'utente di spostarsi da una pagina a un'altra al fine di rieseguire il processo, di completare un processo specifico relativo ai criteri di corrispondenza e di tornare nuovamente alla stessa fase del processo. Dopo avere testato tutte le regole insieme, è possibile tornare alla pagina **Criteri di corrispondenza** , modificare una regola specifica, testarla di nuovo separatamente, quindi tornare alla pagina **Risultati corrispondenza** per eseguire nuovamente tutte le regole insieme. DQS fornisce statistiche relative ai dati di origine, alle regole e ai risultati di corrispondenza. Tali statistiche consentono di prendere decisioni informate sui criteri di corrispondenza, agevolandone la modifica.  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Se i dati di origine si trovano in un file di Excel, è necessario che Microsoft Excel sia installato nel computer [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . In caso contrario, non sarà possibile selezionare il file di Excel nella fase di mapping. I file creati da Microsoft Excel potranno presentare l'estensione xlsx, xls o csv. Se viene utilizzata la versione a 64 bit di Excel, sono supportati solo i file di Excel 2003 (xls), mentre non sono supportati file di Excel 2007 o 2010 (xlsx). Se si utilizza una versione a 64 bit di Excel 2007 o 2010, salvare il file come file xls o csv o installare una versione a 32 bit di Excel.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per creare i criteri di corrispondenza, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="MatchingRules"></a>Come impostare i parametri della regola di corrispondenza  

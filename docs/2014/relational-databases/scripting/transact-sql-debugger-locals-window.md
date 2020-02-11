@@ -13,29 +13,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44aedf7d53b2a9ad91b37f5023c13d8e20097da1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243047"
 ---
 # <a name="locals-window"></a>finestra Variabili locali
-  Nella finestra **variabili locali** vengono visualizzate informazioni sulle espressioni locali nell'ambito corrente del [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger. L'ambito è impostato sul frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per visualizzare espressioni locali, è necessario utilizzare la modalità di debug.  
+  Nella finestra **Variabili locali** vengono visualizzate informazioni sulle espressioni locali nell'ambito corrente del debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'ambito è impostato sul frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per visualizzare espressioni locali, è necessario utilizzare la modalità di debug.  
   
 ## <a name="task-list"></a>Elenco attività  
- **Per accedere alla finestra variabili locali**  
+ **Per accedere alla finestra Variabili locali**  
   
 -   Scegliere **Finestre** dal menu **Debug**, quindi fare clic su **Variabili locali**.  
   
  **Per modificare il valore di un'espressione**  
   
--   Fare clic con il pulsante destro del mouse sull'espressione, quindi scegliere **Modifica valore**.  
+-   Fare clic con il pulsante destro del mouse sull'espressione e scegliere **Modifica valore**.  
   
 ## <a name="columns"></a>Colonne  
  **Nome**  
  Nome dell'espressione locale. Nel debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] vengono elencati parametri, variabili e funzioni di sistema i cui nomi iniziano per @@.  
   
- **Value**  
+ **Valore**  
  Consente di visualizzare il valore è assegnato attualmente all'espressione locale. Questa colonna è vuota quando non è stato assegnato alcun valore all'espressione.  
   
  Se la lunghezza di un'espressione è maggiore della larghezza della colonna **Valore** , il valore completo verrà visualizzato in una descrizione comandi quando si sposta il puntatore sulla cella **Valore** per l'espressione.  
@@ -48,7 +48,7 @@ ms.locfileid: "75243047"
 ## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](transact-sql-debugger.md)   
  [Informazioni del debugger Transact-SQL](transact-sql-debugger-information.md)   
- [Finestra espressioni di controllo](transact-sql-debugger-watch-window.md)   
- [Finestra stack di chiamate](transact-sql-debugger-call-stack-window.md)   
- [Finestra di dialogo controllo immediato](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Espressioni &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [finestra Espressioni di controllo](transact-sql-debugger-watch-window.md)   
+ [Finestra Stack di chiamate](transact-sql-debugger-call-stack-window.md)   
+ [Finestra di dialogo Controllo immediato](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Espressioni &#40; Transact-SQL &#41;](/sql/t-sql/language-elements/expressions-transact-sql)  

@@ -10,10 +10,10 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6d3c4f15dcb62e36918c81baa5f2bd40c38b7c6a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244142"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servizi dati di riferimento in DQS
@@ -67,12 +67,12 @@ ms.locfileid: "75244142"
   
 3.  **Utilizzare i domini di cui è stato eseguito il mapping per l'attività di pulizia in un progetto Data Quality**: durante la creazione di un progetto Data Quality per l'attività di **pulizia** , selezionare la Knowledge base che contiene domini/domini compositi di cui è stato eseguito il mapping con servizi dati di riferimento nel passaggio 2 ed eseguire l'attività di pulizia.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come configurare DQS per utilizzare servizi dati di riferimento da Marketplace o da provider diretti di dati di terze parti online.|[Configurare DQS per l'utilizzo dei dati di riferimento](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
-|Viene descritto come eseguire il mapping di un dominio/dominio composito in una Knowledge Base a un servizio dati di riferimento.|[Connetti dominio o dominio composito ai dati di riferimento](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|Viene descritto come configurare DQS per utilizzare servizi dati di riferimento da Marketplace o da provider diretti di dati di terze parti online.|[Configurazione di DQS per l'utilizzo di dati di riferimento](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Viene descritto come eseguire il mapping di un dominio/dominio composito in una Knowledge Base a un servizio dati di riferimento.|[Collegare un dominio o un dominio composito ai dati di riferimento](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Viene descritto come pulire i dati utilizzando un servizio dati di riferimento.|[Pulire i dati usando dati di riferimento &#40;conoscenza&#41; esterna](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

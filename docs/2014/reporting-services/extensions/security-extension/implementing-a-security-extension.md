@@ -16,19 +16,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5cf1fa6ce0e0a02a52e6a27f693c152d1f97152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211531"
 ---
 # <a name="implementing-a-security-extension"></a>Implementazione di un'estensione di sicurezza
-  L'autenticazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows rappresenta il sistema principale per la protezione dei report in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. In alcuni casi, tuttavia, potrebbe essere necessario estendere il sistema di sicurezza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per soddisfare i requisiti di sicurezza dell'azienda. A tale scopo, è possibile utilizzare la piattaforma di sviluppo fornita dall'API di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. In questa sezione viene fornita una panoramica sulle estensioni di sicurezza in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]L'autenticazione di Windows è il sistema principale per la protezione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]dei report in. In alcuni casi, tuttavia, potrebbe essere necessario estendere il sistema di sicurezza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per soddisfare i requisiti di sicurezza dell'azienda. A tale scopo, è possibile utilizzare la piattaforma di sviluppo fornita dall'API di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. In questa sezione viene fornita una panoramica sulle estensioni di sicurezza in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Per informazioni complete sull'implementazione, la distribuzione e la rimozione di un'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vedere la pagina degli [esempi del prodotto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Panoramica delle estensioni di sicurezza](security-extensions-overview.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Panoramica sulle estensioni di sicurezza](security-extensions-overview.md)  
  Viene fornita una panoramica sulle estensioni di sicurezza di Reporting Services.  
   
  [Autenticazione in Reporting Services](authentication-in-reporting-services.md)  

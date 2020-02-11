@@ -1,5 +1,5 @@
 ---
-title: 'Creazione di istanze di eventi ADO: Visual C++ | Microsoft Docs'
+title: 'Creazione di istanze evento ADO: Visual C++ | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926051"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Creazione di istanze di eventi ADO: Visual C++
-Si tratta di una descrizione di come creare un'istanza degli eventi ADO in Microsoft® Visual C++® schematica. Visualizzare [esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) per una descrizione completa.  
+Si tratta di una descrizione schematica di come creare istanze di eventi ADO in Microsoft® Visual C++®. Per una descrizione completa, vedere [esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) .  
   
- Creare classi derivate dal **ConnectionEventsVt** e **RecordsetEventsVt** interfacce disponibili in adoint il file.  
+ Creare classi derivate dalle interfacce **ConnectionEventsVt** e **RecordsetEventsVt** individuate nel file adoint. h.  
   
 ```  
 // BeginEventExampleVC01  
@@ -49,7 +49,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- Implementare ogni metodo del gestore eventi in entrambe le classi. È sufficiente che ogni metodo restituisce semplicemente un HRESULT S_OK. Tuttavia, quando si rende noto che i gestori di eventi sono disponibili, verrà chiamati in modo continuativo per impostazione predefinita. Al contrario, si potrebbe voler non richiedere alcuna ulteriore notifica la prima volta impostando **adStatus** al **adStatusUnwantedEvent**.  
+ Implementare ognuno dei metodi del gestore eventi in entrambe le classi. È sufficiente che ogni metodo restituisca semplicemente un HRESULT di S_OK. Tuttavia, quando si rende noto che i gestori eventi sono disponibili, verranno chiamati continuamente per impostazione predefinita. Al contrario, potrebbe essere necessario richiedere altre notifiche dopo la prima volta impostando **adStatus** su **adStatusUnwantedEvent**.  
   
 ```  
 // BeginEventExampleVC02  
@@ -65,11 +65,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- Le classi di evento ereditano **IUnknown**, pertanto è necessario implementare anche il **QueryInterface**, **AddRef**, e **versione** metodi. Anche implementare costruttori di classi e i distruttori. Scegliere gli strumenti di Visual C++ con cui si ha maggiore familiarità semplificare questa parte dell'attività.  
+ Le classi di evento ereditano da **IUnknown**, quindi è necessario implementare anche i metodi **QueryInterface**, **AddRef**e **Release** . Implementare anche i costruttori e i distruttori della classe. Scegliere gli strumenti di Visual C++ con cui si è più comodi per semplificare questa parte dell'attività.  
   
- Marca si noti che i gestori eventi sono disponibili tramite l'emissione **QueryInterface** nel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e [connessione](../../../ado/reference/ado-api/connection-object-ado.md) gli oggetti per il  **IConnectionPointContainer** e **IConnectionPoint** interfacce. Quindi eseguire **IConnectionPoint::** per ciascuna classe.  
+ Si noti che i gestori eventi sono disponibili emettendo **QueryInterface** sul [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e sugli oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md) per le interfacce **IConnectionPointContainer** e **IConnectionPoint** . Quindi eseguire **IConnectionPoint:: Advise** per ogni classe.  
   
- Si supponga ad esempio si usa una funzione booleana che restituisce **True** se comunica correttamente un **Recordset** dell'oggetto che si dispone di gestori di eventi disponibili.  
+ Si supponga, ad esempio, di usare una funzione booleana che restituisce **true** se informa correttamente un oggetto **Recordset** di disponibilità di gestori eventi.  
   
 ```  
 // BeginEventExampleVC03  
@@ -98,9 +98,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- A questo punto, gli eventi per il **RecordsetEvent** famiglia sono abilitati e verranno chiamati i metodi come **Recordset** si verificano eventi.  
+ A questo punto, gli eventi per la famiglia **RecordsetEvent** sono abilitati e i metodi vengono chiamati quando si verificano gli eventi del **Recordset** .  
   
- In un secondo momento, quando si desidera rendere disponibili i gestori eventi, ottenere nuovamente il punto di connessione ed emettere il **IConnectionPoint:: Unadvise** (metodo).  
+ In seguito, quando si vuole rendere non disponibili i gestori eventi, ottenere nuovamente il punto di connessione ed emettere il metodo **IConnectionPoint:: Unadvise** .  
   
 ```  
 // BeginEventExampleVC04  
@@ -112,9 +112,9 @@ if (FAILED(hr)) return FALSE;
 // EndEventExampleVC04  
 ```  
   
- È necessario rilasciare le interfacce ed Elimina definitivamente gli oggetti di classe come appropriato.  
+ È necessario rilasciare le interfacce ed eliminare gli oggetti classe nel modo appropriato.  
   
- Il codice seguente illustra un esempio completo di un **Recordset** classe sink di evento.  
+ Nel codice seguente viene illustrato un esempio completo di classe sink di evento **Recordset** .  
   
 ```  
 // BeginEventExampleVC05.cpp  

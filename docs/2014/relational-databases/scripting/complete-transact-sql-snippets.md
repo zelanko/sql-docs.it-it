@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98c72aad94c34f40538670a7a7c8df945a9c4970
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244931"
 ---
 # <a name="complete-transact-sql-snippets"></a>Completare frammenti di Transact-SQL
@@ -38,7 +38,7 @@ ms.locfileid: "75244931"
 3.  Selezionare un elemento nell'elenco o digitare una sostituzione desiderata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Inserire frammenti Transact-SQL](insert-transact-sql-snippets.md)   
+ [Inserimento di frammenti di Transact-SQL](insert-transact-sql-snippets.md)   
  [Inserire frammenti Transact-SQL racchiusi](insert-surround-with-transact-sql-snippets.md)  
   
   

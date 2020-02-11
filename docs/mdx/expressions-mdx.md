@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893592"
 ---
 # <a name="expressions-mdx"></a>Espressioni (MDX)
@@ -31,8 +31,8 @@ ms.locfileid: "68893592"
  Funzioni scalari  
  In MDX una funzione scalare restituisce un singolo valore nel contesto di valutazione. Questa distinzione è importante per comprendere come vengono risolte le funzioni scalari in MDX, perché la maggior parte delle espressioni, delle istruzioni e degli script MDX non viene valutata su un singolo elemento di dati, ma iterativamente su un gruppo di elementi di dati quali celle o membri. Al momento della valutazione, tuttavia, la funzione scalare sta in genere esaminando un singolo elemento di dati.  
   
- Identificatori di oggetto  
- MDX è un linguaggio orientato a oggetti, a causa della natura dei dati multidimensionali. In MDX gli identificatori degli oggetti sono considerati espressioni semplici. Per ulteriori informazioni sugli identificatori, vedere [identificatori &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
+ Identificatore di oggetto  
+ MDX è un linguaggio orientato a oggetti, a causa della natura dei dati multidimensionali. In MDX gli identificatori degli oggetti sono considerati espressioni semplici. Per ulteriori informazioni sugli identificatori, vedere [identificatori &#40;&#41;MDX ](../mdx/identifiers-mdx.md).  
   
  Un'espressione complessa può essere compilata da combinazioni di queste entità unite tramite vari operatori.  
   
@@ -71,20 +71,20 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Uso di espressioni di cubo e sottocubo](../mdx/using-cube-and-subcube-expressions.md)|Definisce le espressioni di cubo e sottocubo.|  
-|[Uso delle espressioni di dimensione](../mdx/using-dimension-expressions.md)|Definisce le espressioni di dimensione.|  
-|[Uso delle espressioni di membro](../mdx/using-member-expressions.md)|Definisce le espressioni di membro.|  
-|[Uso delle espressioni di tupla](../mdx/using-tuple-expressions.md)|Definisce le espressioni di tupla.|  
-|[Uso di espressioni set](../mdx/using-set-expressions.md)|Definisce le espressioni set.|  
-|[Uso di espressioni scalari](../mdx/using-scalar-expressions.md)|Definisce le espressioni scalari.|  
-|[Uso di valori vuoti](../mdx/working-with-empty-values.md)|Illustra il concetto di valore vuoto e la modalità di gestione dei valori di questo tipo.|  
+|[Utilizzo di espressioni di cubo e sottocubo](../mdx/using-cube-and-subcube-expressions.md)|Definisce le espressioni di cubo e sottocubo.|  
+|[Utilizzo delle espressioni di dimensione](../mdx/using-dimension-expressions.md)|Definisce le espressioni di dimensione.|  
+|[Utilizzo delle espressioni di membro](../mdx/using-member-expressions.md)|Definisce le espressioni di membro.|  
+|[Utilizzo delle espressioni di tupla](../mdx/using-tuple-expressions.md)|Definisce le espressioni di tupla.|  
+|[Utilizzo di espressioni set](../mdx/using-set-expressions.md)|Definisce le espressioni set.|  
+|[Utilizzo di espressioni scalari](../mdx/using-scalar-expressions.md)|Definisce le espressioni scalari.|  
+|[Utilizzo di valori vuoti](../mdx/working-with-empty-values.md)|Illustra il concetto di valore vuoto e la modalità di gestione dei valori di questo tipo.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Guida di riferimento al linguaggio MDX &#40;&#41;MDX](../mdx/mdx-language-reference-mdx.md)   
  [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

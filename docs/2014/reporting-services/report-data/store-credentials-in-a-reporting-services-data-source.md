@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e2c29e97a360b9e595b972643645e2e8d549c67
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892021"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
@@ -27,9 +27,9 @@ ms.locfileid: "68892021"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modalità nativa di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modalità nativa &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modalità SharePoint|  
   
- **Contenuto dell'argomento:**  
+ **In questo argomento**  
   
 -   [Configurare le credenziali archiviate per un'origine dati specifica del report (modalità nativa)](#bkmk_stored_credentials_data_source_native)  
   
@@ -39,18 +39,18 @@ ms.locfileid: "68892021"
   
 -   [Configurare le credenziali archiviate per un'origine dati condivisa (modalità SharePoint)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
-##  <a name="bkmk_top"></a> Requisiti dei criteri di sicurezza per le credenziali archiviate  
- ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") È necessario che l'account usato per le credenziali archiviate sia configurato per uno dei criteri di sicurezza seguenti nel server di report. È consigliabile selezionare i criteri con il livello minimo di autorizzazioni per l'ambiente.  
+##  <a name="bkmk_top"></a>Requisiti dei criteri di sicurezza per le credenziali archiviate  
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") È necessario che l'account utilizzato per le credenziali archiviate sia configurato per uno dei criteri di sicurezza seguenti nel server di report. È consigliabile selezionare i criteri con il livello minimo di autorizzazioni per l'ambiente.  
   
 1.  **Consenti accesso locale**. Per altre informazioni, vedere [Consenti accesso locale](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
-2.  **Accesso come processo batch**. Per altre informazioni, vedere [Accesso come processo batch](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
+2.  **Accedere come processo batch**. Per altre informazioni, vedere [Accesso come processo batch](https://technet.microsoft.com/library/cc755659\(v=ws.10\).aspx).  
   
 3.  Per informazioni generali sui criteri, vedere [Modificare un'impostazione di sicurezza in un oggetto Criteri di gruppo](https://technet.microsoft.com/library/cc736516\(v=ws.10\).aspx).  
   
-##  <a name="bkmk_stored_credentials_data_source_native"></a> Configurare le credenziali archiviate per un'origine dati specifica del report (modalità nativa)  
+##  <a name="bkmk_stored_credentials_data_source_native"></a>Configurare le credenziali archiviate per un'origine dati specifica del report (modalità nativa)  
   
-1.  In Gestione report in modalità nativa passare alla cartella che contiene il report. Fare clic sul menu di scelta rapida dell'elemento ![menu di scelta rapida in Gestione report per gli elementi ssrs](../media/ssrs-report-manager-item-context-menu.png "menu di scelta rapida in Gestione report per gli elementi ssrs").  
+1.  In Gestione report in modalità nativa passare alla cartella che contiene il report. Fare clic sul menu di scelta rapida elemento del menu di scelta rapida ![in Gestione report per gli elementi SSRS](../media/ssrs-report-manager-item-context-menu.png "menu di scelta rapida in Gestione report per gli elementi ssrs").  
   
 2.  Fare clic su **Gestisci** , quindi su **Origini dati**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68892021"
   
 4.  Nell'elenco **Tipo di origine dati** selezionare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la connessione al database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
+5.  Per **stringa di connessione**specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] connessione al database:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
@@ -72,27 +72,27 @@ ms.locfileid: "68892021"
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**. Se il server di database supporta la rappresentazione o la delega, selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati**.  
   
-8.  Fare clic su **Applica**.  
+8.  Fare clic su **Apply**.  
   
-     ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
+     Icona a forma di ![freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Configurare le credenziali archiviate per un'origine dati specifica del report (modalità SharePoint)  
+##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a>Configurare le credenziali archiviate per un'origine dati specifica del report (modalità SharePoint)  
   
-1.  Passare alla raccolta documenti che contiene il report, quindi fare clic sul menu Apri ![menu di scelta rapida della raccolta documenti per gli elementi ssrs](../media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs").  
+1.  Passare alla raccolta documenti che contiene il report, quindi fare clic sul menu di ![scelta rapida Apri raccolta documenti menu per gli elementi SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs").  
   
-2.  Fare clic sul secondo menu Apri ![menu di scelta rapida della raccolta documenti per gli elementi ssrs](../media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs") e quindi su **Gestisci origini dati**.  
+2.  Fare clic su secondo menu ![di scelta rapida raccolta documenti menu per gli elementi SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs") e quindi fare clic su **Gestisci origini dati**.  
   
 3.  Fare clic sul nome dell'origine dati **personalizzata** da configurare con le credenziali archiviate.  
   
 4.  Nell'elenco **Tipo di origine dati** selezionare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
-5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la connessione al database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] :  
+5.  Per **stringa di connessione**specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] connessione al database:  
   
     ```  
     data source=<servername>;initial catalog=AdventureWorks2012  
     ```  
   
-6.  Per **Credenziali**selezionare **Credenziali archiviate**.  
+6.  Per **credenziali**selezionare **credenziali archiviate**.  
   
 7.  Digitare un **nome utente** e una **password**.  
   
@@ -100,21 +100,22 @@ ms.locfileid: "68892021"
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows**. Se il server di database supporta la rappresentazione o la delega, è possibile selezionare **Imposta contesto di esecuzione sull'account seguente**.  
   
-8.  Scegliere **OK**.  
+8.  Fare clic su **OK**.  
   
-     ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
+     Icona a forma di ![freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Configurare le credenziali archiviate per un'origine dati condivisa (modalità nativa)  
+##  <a name="bkmk_stored_credentials_shared_data_source_native"></a>Configurare le credenziali archiviate per un'origine dati condivisa (modalità nativa)  
   
-1.  In Gestione report in modalità nativa passare all'origine dati condivisa. ![Icona di origine dati condivisa](../media/hlp-16datasource.png "Icona di origine dati condivisa")  
+1.  In Gestione report in modalità nativa passare all'origine dati condivisa. ![Icona dell'origine dati condivisa](../media/hlp-16datasource.png "Icona di origine dati condivisa")  
   
-2.  Fare clic sul menu di scelta rapida ![menu di scelta rapida in Gestione report per gli elementi ssrs](../media/ssrs-report-manager-item-context-menu.png "menu di scelta rapida in Gestione report per gli elementi ssrs") e quindi su **Gestisci**.  
+2.  Fare clic sul menu di scelta rapida menu di scelta rapida ![in Gestione report per gli elementi SSRS](../media/ssrs-report-manager-item-context-menu.png "menu di scelta rapida in Gestione report per gli elementi ssrs") e quindi fare clic su **Gestisci**.  
   
-3.  Nell'elenco **Tipo di origine dati** specificare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
+3.  Nell'elenco **tipo di origine dati** specificare l'estensione per l'elaborazione dati utilizzata per elaborare i dati dall'origine dati.  
   
-4.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
+4.  Per **stringa di connessione**specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
   
-     Nell'esempio riportato di seguito viene illustrata una stringa di connessione utilizzata per connettersi al database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] locale:  
+     Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per connettersi al [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] database locale:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -126,23 +127,24 @@ ms.locfileid: "68892021"
   
     -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows per la connessione all'origine dei dati**. Se il server di database supporta la rappresentazione o la delega, selezionare **Rappresenta l'utente autenticato dopo che è stata stabilita una connessione all'origine dei dati**.  
   
-6.  Fare clic su **Applica**.  
+6.  Fare clic su **Apply**.  
   
-     ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
+     Icona a forma di ![freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
   
-##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Configurare le credenziali archiviate per un'origine dati condivisa (modalità SharePoint)  
+##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a>Configurare le credenziali archiviate per un'origine dati condivisa (modalità SharePoint)  
   
-1.  Nella raccolta documenti passare all'origine dei dati condivisa.![Icona dell'origine dei dati condivisa](../media/hlp-16datasource.png "Icona dell'origine dei dati condivisa")  
+1.  Nella raccolta documenti passare all'origine dati condivisa. ![Icona dell'origine dati condivisa](../media/hlp-16datasource.png "Icona di origine dati condivisa")  
   
-2.  Fare clic sul menu di scelta rapida ![menu di scelta rapida della raccolta documenti per gli elementi ssrs](../media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs") e quindi sul secondo menu di scelta rapida ![menu di scelta rapida della raccolta documenti per gli elementi ssrs](../media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs").  
+2.  Scegliere il menu di scelta rapida ![raccolta documenti menu di scelta rapida per gli elementi SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs") e quindi fare clic sul secondo menu di scelta rapida ![raccolta documenti menu di scelta rapida per gli elementi SSRS](../media/ssrs-sharepoint-item-context-menu.png "menu di scelta rapida della raccolta documenti per gli elementi ssrs").  
   
 3.  Fare clic su **Modifica definizione origine dati**.  
   
-4.  Nell'elenco **Tipo di origine dati** specificare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
+4.  Nell'elenco **tipo di origine dati** specificare l'estensione per l'elaborazione dati utilizzata per elaborare i dati dall'origine dati.  
   
-5.  Per **Stringa di connessione**specificare la stringa utilizzata dal server di report per la connessione all'origine dei dati. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
+5.  Per **stringa di connessione**specificare la stringa di connessione utilizzata dal server di report per la connessione all'origine dati. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] consiglia di evitare di specificare credenziali nella stringa di connessione.  
   
-     Nell'esempio riportato di seguito viene illustrata una stringa di connessione utilizzata per connettersi al database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] locale:  
+     Nell'esempio seguente viene illustrata una stringa di connessione utilizzata per connettersi al [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] database locale:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -152,17 +154,17 @@ ms.locfileid: "68892021"
   
     -   Se l'account è un account utente di dominio Windows, specificarlo nel formato \<dominio>\\<account\> e quindi selezionare **Usa come credenziali di Windows**.  
   
-    -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows**. Se il server di database supporta la rappresentazione o la delega, è possibile selezionare **Imposta contesto di esecuzione sull'account seguente**.  
+    -   Se il nome utente e la password sono credenziali del database, non selezionare **Usa come credenziali di Windows**. Se il server di database supporta la rappresentazione o la delega, è possibile selezionare **Imposta contesto di esecuzione su questo account**.  
   
 7.  Fare clic su **OK**.  
   
-     ![Icona freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [Requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
+     Icona a forma di ![freccia usata con il collegamento Torna all'inizio](../../2014-toc/media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") [requisiti dei criteri di sicurezza per le credenziali archiviate](#bkmk_top)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../integration-services/connection-manager/data-sources.md)   
+ [Specificare le credenziali e le informazioni di connessione per le origini dati del report](../../integration-services/connection-manager/data-sources.md)   
  [Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
- [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](../data-sources-properties-page-report-manager.md)   
- [Pagina Nuova origine dati &#40;Gestione report&#41;](../new-data-source-page-report-manager.md)  
+ [Creare, eliminare o modificare un'origine dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Pagina delle proprietà origini dati &#40;Gestione report&#41;](../data-sources-properties-page-report-manager.md)   
+ [Pagina nuova origine dati &#40;Gestione report&#41;](../new-data-source-page-report-manager.md)  
   
   

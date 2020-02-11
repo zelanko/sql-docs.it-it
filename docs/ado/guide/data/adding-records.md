@@ -16,22 +16,22 @@ ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926269"
 ---
-# <a name="adding-records-to-a-recordset"></a>Aggiunta di record a un set di record
-Usare la **AddNew** metodo per creare e inizializzare un nuovo record in un oggetto esistente **Recordset**. È possibile usare la **supporta** metodo con un **CursorOptionEnum** pari a **adAddNew** per verificare se è possibile aggiungere record corrente **Recordset** oggetti.
+# <a name="adding-records-to-a-recordset"></a>Aggiunta di record a un recordset
+Utilizzare il metodo **AddNew** per creare e inizializzare un nuovo record in un **Recordset**esistente. È possibile utilizzare il metodo **Supports** con un valore **CursorOptionEnum** di **adAddNew** per verificare se è possibile aggiungere record all'oggetto **Recordset** corrente.
 
- Dopo aver chiamato il **AddNew** metodo, il nuovo record del record corrente e rimane tale dopo la chiamata il **Update** (metodo). Se il **Recordset** objekt nepodporuje segnalibri, potrebbe non essere in grado di accedere al record di nuovo dopo il passaggio a un altro record. Pertanto, a seconda del tipo di cursore, potrebbe essere necessario chiamare il **Requery** metodo per rendere accessibile il nuovo record.
+ Dopo aver chiamato il metodo **AddNew** , il nuovo record diventa il record corrente e rimane aggiornato dopo la chiamata al metodo **Update** . Se l'oggetto **Recordset** non supporta i segnalibri, potrebbe non essere possibile accedere al nuovo record dopo lo spostamento in un altro record. Pertanto, a seconda del tipo di cursore, potrebbe essere necessario chiamare il metodo **Requery** per rendere accessibile il nuovo record.
 
- Se si chiama **AddNew** durante la modifica del record corrente o durante l'aggiunta di un nuovo record, chiama il metodo ADO le **Update** metodo per salvare eventuali modifiche e quindi crea il nuovo record.
+ Se si chiama **AddNew** durante la modifica del record corrente o durante l'aggiunta di un nuovo record, ADO chiama il metodo **Update** per salvare le modifiche e quindi crea il nuovo record.
 
  In questa sezione vengono trattati gli argomenti seguenti.
 
--   [Aggiunta di record mediante AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [Aggiunta di record con AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
 
 -   [Aggiunta di più campi](../../../ado/guide/data/adding-multiple-fields.md)
 

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232732"
 ---
 # <a name="xml-task"></a>Attività XML
@@ -46,19 +46,19 @@ ms.locfileid: "75232732"
   
  Se l'origine è una variabile, la variabile specificata conterrà il percorso del documento XML.  
   
- Se l'origine è una gestione connessione file, le informazioni sull'origine verranno fornite dalla gestione connessione file specificata, configurata separatamente, a cui viene fatto riferimento dall'attività XML. La stringa di connessione della gestione connessione file specifica il percorso del file XML. Per ulteriori informazioni, vedere [gestione connessione file](../connection-manager/file-connection-manager.md).  
+ Se l'origine è una gestione connessione file, le informazioni sull'origine verranno fornite dalla gestione connessione file specificata, configurata separatamente, a cui viene fatto riferimento dall'attività XML. La stringa di connessione della gestione connessione file specifica il percorso del file XML. Per altre informazioni, vedere [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
  L'attività XML può essere configurata in modo da salvare il risultato dell'operazione in una variabile o in un file. Se il risultato viene salvato in un file, l'attività XML utilizzerà una gestione connessione file per accedervi. Anche i risultati del Diffgram generato dall'operazione Diff possono essere salvati in file e variabili.  
   
 ## <a name="predefined-xml-operations"></a>Operazioni XML predefinite  
  L'attività XML include un set predefinito di operazioni applicabili ai documenti XML, descritte nella tabella seguente.  
   
-|Operazione|Description|  
+|Operazione|Descrizione|  
 |---------------|-----------------|  
 |Diff|Consente di confrontare due documenti XML. Utilizzando il documento XML di origine come documento di base, l'operazione Diff esegue un confronto con un secondo documento XML, rileva le differenze e le scrive in un documento Diffgram in formato XML. Questa operazione include proprietà per la personalizzazione del confronto.|  
 |Unione|Consente di unire due documenti XML. Utilizzando il documento XML di origine come documento di base, l'operazione Merge aggiunge il contenuto di un secondo documento al documento di base. L'operazione può specificare una posizione di unione nel documento di base.|  
 |Patch|Applica l'output dell'operazione Diff, detto documento Diffgram, a un documento XML, per creare un nuovo documento padre che include il contenuto del documento Diffgram.|  
-|Validate|Consente di convalidare il documento XML in base a una schema di definizione DTD (Document Type Definition) o XSD (XML Schema Definition).|  
+|Convalida|Consente di convalidare il documento XML in base a una schema di definizione DTD (Document Type Definition) o XSD (XML Schema Definition).|  
 |XPath|Consente di eseguire valutazioni e query XPath.|  
 |XSLT|Consente di eseguire trasformazioni XSL in documenti XML.|  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75232732"
   
  L'operazione Diff include un set di opzioni per la personalizzazione del confronto XML, Nella tabella seguente vengono descritte le opzioni disponibili.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |**IgnoreComments**|Valore che specifica se i nodi dei commenti devono essere confrontati.|  
 |**IgnoreNamespaces**|Valore che specifica se l'URI (Uniform Resource Identifier) dello spazio dei nomi di un elemento e i nomi dei suoi attributi devono essere confrontati. Se questa opzione è impostata su `true`, due elementi con lo stesso nome locale e spazio dei nomi diverso verranno considerati identici.|  
@@ -110,7 +110,7 @@ ms.locfileid: "75232732"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Messaggi di registrazione personalizzati disponibili nell'attività XML  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività XML. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |`XMLOperation`|Fornisce informazioni sull'operazione eseguita dall'attività.|  
   
@@ -121,23 +121,23 @@ ms.locfileid: "75232732"
   
 -   [Editor attività XML &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Convalidare XML con l'attività XML](xml-task.md)  
+-   [Eseguire la convalida XML con l'attività XML](xml-task.md)  
   
--   [Pagina espressioni](../expressions/expressions-page.md)  
+-   [Pagina Espressioni](../expressions/expressions-page.md)  
   
  Per ulteriori informazioni sull'impostazione delle proprietà in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   
--   [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+-   [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-xml-task"></a>Configurazione a livello di codice dell'attività XML  
  Per ulteriori informazioni sull'impostazione di queste proprietà a livello di codice, fare clic sull'argomento seguente:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
-## <a name="related-tasks"></a>Related Tasks  
- [Impostare le proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
+## <a name="related-tasks"></a>Attività correlate  
+ [Impostazione delle proprietà di un'attività o di un contenitore](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-content"></a>Contenuti correlati  
+## <a name="related-content"></a>Contenuto correlato  
   
 -   Intervento nel blog sul [componente script di destinazione XML](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)sul sito Web agilebi.com  
   

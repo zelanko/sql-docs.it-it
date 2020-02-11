@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244951"
 ---
 # <a name="color-coding-in-query-editors"></a>Codifica con colori negli editor di query
@@ -25,16 +25,16 @@ ms.locfileid: "75244951"
   
 ## <a name="default-code-colors"></a>Colori del codice predefiniti  
   
-|Colore|Categoria|  
+|Colore|Category|  
 |-----------|--------------|  
-|Rossa|Stringa SQL|  
-|Verde scuro|Commento|  
+|Rosso|Stringa SQL|  
+|Verde scuro|Comment|  
 |Nero su sfondo argento|Comando SQLCMD|  
 |Fucsia|Funzioni di sistema|  
-|Verde|Tabella di sistema o funzione con valori di tabella, nonché gli schemi di sistema sys e INFORMATION_SCHEMA.|  
+|Green|Tabella di sistema o funzione con valori di tabella, nonché gli schemi di sistema sys e INFORMATION_SCHEMA.|  
 |Blu|Parola chiave|  
 |Verde acqua|Numeri di riga o parametro modello|  
-|Bordeaux|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stored procedure|  
+|Bordeaux|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure|  
 |Grigio scuro|Operatori|  
   
 ## <a name="status-bar"></a>Barra di stato  

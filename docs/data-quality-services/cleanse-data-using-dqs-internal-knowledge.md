@@ -15,10 +15,10 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 280149ccb0e94b1ca7bcca75616ec5353f41e62b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255695"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
@@ -31,7 +31,7 @@ ms.locfileid: "75255695"
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario avere specificato valori soglia adatti per l'attività di pulizia. Per informazioni su questa operazione, vedere [Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -39,9 +39,9 @@ ms.locfileid: "75255695"
   
 -   Se i dati di origine da pulire si trovano in un file di Excel, è necessario che Microsoft Excel sia installato nel computer [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . In caso contrario, non sarà possibile selezionare il file di Excel nella fase di mapping. I file creati da Microsoft Excel potranno presentare l'estensione xlsx, xls o csv. Se viene utilizzata la versione a 64 bit di Excel, sono supportati solo i file di Excel 2003 (xls), mentre non sono supportati file di Excel 2007 o 2010 (xlsx). Se si utilizza una versione a 64 bit di Excel 2007 o 2010, salvare il file come file xls o csv o installare una versione a 32 bit di Excel.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire la pulizia dei dati è necessario disporre del ruolo dqs_kb_editor o dqs_kb_operator nel database DQS_MAIN.  
   
 ##  <a name="Create"></a>Creazione di un progetto Data Quality per la pulizia dei dati  
@@ -105,7 +105,7 @@ ms.locfileid: "75255695"
   
  In base al livello di confidenza, i valori vengono visualizzati nelle cinque schede seguenti:  
   
-|TAB|Description|  
+|Scheda|Descrizione|  
 |---------|-----------------|  
 |**Suggerito**|Mostra i valori del dominio per il quale tramite DQS sono stati trovati valori suggeriti che dispongono di un livello di confidenza più elevato del valore *soglia di suggerimento automatico* , ma inferiore al valore *soglia di correzione automatica* .<br /><br /> Nella colonna **Correggi in** vengono visualizzati i valori suggeriti rispetto al valore originale. È possibile fare clic sul pulsante di opzione nella colonna **Approva** o **Rifiuta** rispetto a un valore nella griglia superiore per accettare o rifiutare il suggerimento per tutte le istanze di tale valore. In questo caso, il valore accettato viene spostato nella scheda **Con correzione** e il valore respinto viene spostato nella scheda **Non validi** .|  
 |**Nuovo**|Consente di visualizzare il dominio valido per il quale DQS non dispone di informazioni sufficienti e pertanto non è possibile eseguirne il mapping a qualsiasi altra scheda. Inoltre, questa scheda contiene anche valori con un livello di confidenza inferiore al valore *soglia di suggerimento automatico* , ma sufficientemente elevato per essere contrassegnati come validi.<br /><br /> Se il valore è ritenuto corretto, fare clic sul pulsante di opzione nella colonna **Approva** . Altrimenti, fare clic sul pulsante di opzione nella colonna **Rifiuta** . Il valore accettato viene spostato nella scheda **corretti** e il valore rifiutato passa alla scheda **non valida** . È anche possibile digitare manualmente il valore corretto come sostituzione del valore originale nella colonna **Correggi** in rispetto al valore, quindi fare clic sul pulsante di opzione nella colonna **approva** per accettare la modifica. In questo caso, il valore viene spostato nella scheda **Con correzione** .|  

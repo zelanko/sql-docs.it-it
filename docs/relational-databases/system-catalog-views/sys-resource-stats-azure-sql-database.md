@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246906"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Database SQL di Azure)
@@ -35,12 +35,12 @@ ms.locfileid: "75246906"
   
  La tabella seguente descrive le colonne disponibili in un server v12:  
   
-|Colonne|Tipo di dati|Description|  
+|Colonne|Tipo di dati|Descrizione|  
 |----------------------------|---------------|-----------------|  
-|start_time|**DateTime**|Ora UTC che indica l'inizio dell'intervallo di Reporting di cinque minuti.|  
-|end_time|**DateTime**|Ora UTC che indica la fine dell'intervallo di Reporting di cinque minuti.|  
-|database_name|**nvarchar (128)**|Nome del database utente.|  
-|sku|**nvarchar (128)**|Livello di servizio del database. Di seguito sono indicati i valori possibili:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />Utilizzo generico<br /><br />Business Critical|  
+|start_time|**datetime**|Ora UTC che indica l'inizio dell'intervallo di Reporting di cinque minuti.|  
+|end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di Reporting di cinque minuti.|  
+|database_name|**nvarchar(128)**|Nome del database utente.|  
+|sku|**nvarchar(128)**|Livello di servizio del database. Di seguito sono indicati i valori possibili:<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />Utilizzo generico<br /><br />Business Critical|  
 |storage_in_megabytes|**float**|Dimensioni massime di archiviazione in megabyte per il periodo di tempo, inclusi dati del database, indici, stored procedure e metadati.|  
 |avg_cpu_percent|**Decimal (5, 2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
 |avg_data_io_percent|**Decimal (5, 2)**|Percentuale dell'utilizzo medio di I/O in base al limite del livello del servizio. Per i database con iperscalabilità, vedere i/o [dati nelle statistiche sull'utilizzo delle risorse](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
@@ -49,7 +49,7 @@ ms.locfileid: "75246906"
 |max_session_percent|**Decimal (5, 2)**|Numero massimo di sessioni simultanee in percentuale in base al limite del livello di servizio del database.<br /><br /> Il valore massimo è attualmente calcolato per l'intervallo di cinque minuti in base agli esempi di 15 secondi relativi ai conteggi delle sessioni simultanee.|  
 |dtu_limit|**int**|Impostazione DTU database Max corrente per questo database durante questo intervallo. |
 |xtp_storage_percent|**Decimal (5, 2)**|Utilizzo dello spazio di archiviazione per OLTP in memoria, in percentuale rispetto al limite del livello di servizio (alla fine dell'intervallo di Reporting). Ciò include la memoria usata per l'archiviazione dei seguenti oggetti di OLTP in memoria: tabelle ottimizzate per la memoria, indici e variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione delle operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP in memoria non viene utilizzato nel database.|
-|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportati. Non è garantita la compatibilità con le versioni future.|
+|avg_login_rate_percent|**Decimal (5, 2)**|Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.|
 |avg_instance_cpu_percent|**Decimal (5, 2)**|Utilizzo medio della CPU del database come percentuale del processo di database SQL.|
 |avg_instance_memory_percent|**Decimal (5, 2)**|Utilizzo medio della memoria del database come percentuale del processo di database SQL.|
 |cpu_limit|**Decimal (5, 2)**|Numero di Vcore per il database durante questo intervallo. Per i database che usano il modello basato su DTU, questa colonna è NULL.|

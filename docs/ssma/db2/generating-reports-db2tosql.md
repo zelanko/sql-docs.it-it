@@ -10,57 +10,57 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2d96b82e3ce883bcf9e704ea001024228be81761
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989655"
 ---
 # <a name="generating-reports-db2tosql"></a>Generazione di report (DB2ToSQL)
-I report di determinate attività eseguite usando i comandi vengono generati nella Console SSMA a livello di oggetto dell'albero.  
+I report di determinate attività eseguite usando i comandi vengono generati nella console di SSMA a livello di albero degli oggetti.  
   
 Utilizzare la procedura seguente per generare report:  
   
-1.  Specificare il **scrittura riepilogo-report-a-** parametro. Il report viene archiviato come il nome del file (se specificato) o nella cartella specificati. È il nome del file system predefinito come indicato nella tabella seguente, dove **&lt;n&gt;** è il numero di file univoco che viene incrementato con una cifra a ogni esecuzione del comando stesso.  
+1.  Specificare il parametro **Write-Summary-Report-to** . Il report correlato viene archiviato come nome file (se specificato) o nella cartella specificata. Il nome del file è predefinito dal sistema come indicato nella tabella seguente, ** &lt;dove n&gt; ** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
   
-    I comandi nei confronti di report sono:  
+    I report Vis-à-Vis sono i seguenti:  
   
     ||||  
     |-|-|-|  
-    |**SL. No.**|**Command**|**Titolo del report**|  
-    |1|generare report di valutazione|AssessmentReport&lt;n&gt;.XML|  
-    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
-    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|aggiornamento da database|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |**SL. No.**|**Comando**|**Titolo del report**|  
+    |1|generate-assessment-report|AssessmentReport&lt;n&gt;. XML|  
+    |2|Convert-schema|SchemaConversionReport&lt;n&gt;. XML|  
+    |3|migrate-dati|DataMigrationReport&lt;n&gt;. XML|  
+    |4|Convert-SQL-statement|ConvertSQLReport&lt;n&gt;. XML|  
+    |5|sincronizzazione-destinazione|TargetSynchronizationReport&lt;n&gt;. XML|  
+    |6|aggiornamento da database|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
-    > Un report di output è diverso dal Report di valutazione. Il primo è un report sulle prestazioni di un comando eseguito durante, quest'ultimo è un report XML per l'utilizzo a livello di codice.  
+    > Un report di output è diverso dal rapporto di valutazione. Il primo è un report sulle prestazioni di un comando eseguito mentre, quest'ultimo è un report XML per l'utilizzo a livello di codice.  
   
-    Per le opzioni di comando per i report di output (da Sl. No. 2-4 sopra), vedere la [esecuzione della Console SSMA &#40;DB2ToSQL&#41; ](../../ssma/db2/executing-the-ssma-console-db2tosql.md) sezione.  
+    Per le opzioni di comando per i report di output (da SL. No. 2-4 sopra), fare riferimento alla sezione [esecuzione della console SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md) .  
   
-2.  Indica che l'extent di dettaglio desiderato nel report di output utilizzando le impostazioni di Report livello di dettaglio:  
-  
-    ||||  
-    |-|-|-|  
-    |**SL. No.**|**Comando e parametri**|**Descrizione di output**|  
-    |1|verbose="false"|Genera un report di riepilogo dell'attività.|  
-    |2|verbose="true"|Genera un report di stato di riepilogo e dettagliate per ogni attività.|  
-  
-    > [!NOTE]  
-    > Le impostazioni del livello di dettaglio Report specificata in precedenza sono applicabili per generare report di valutazione, convert-schema, eseguire la migrazione di dati, i comandi di convert-sql-statement.  
-  
-3.  Indica che l'extent di dettaglio desiderato nei report di errore utilizzando le impostazioni di segnalazione errori:  
+2.  Indica il livello di dettaglio desiderato nel report di output usando le impostazioni di dettaglio del report:  
   
     ||||  
     |-|-|-|  
-    |**SL. No.**|**Comando e parametri**|**Descrizione di output**|  
-    |1|Segnala errori = "false"|Nessun dettaglio in caso di errore / avviso / i messaggi di informazioni.|  
-    |2|Segnala errori = "true"|Dettagli errore / avviso / i messaggi di informazioni.|  
+    |**SL. No.**|**Comando e parametro**|**Descrizione output**|  
+    |1|Verbose = "false"|Genera un report riepilogato dell'attività.|  
+    |2|Verbose = "true"|Genera un report di stato riepilogativo e dettagliato per ogni attività.|  
   
     > [!NOTE]  
-    > Le impostazioni di segnalazione di errori specificato in precedenza sono applicabili per generare report di valutazione, convert-schema, eseguire la migrazione di dati, i comandi di convert-sql-statement.  
+    > Le impostazioni di dettaglio del report specificate in precedenza sono applicabili ai comandi generate-assessment-report, Convert-schema, Migrate-data, Convert-SQL-statement.  
+  
+3.  Indica il livello di dettaglio desiderato nei report degli errori usando le impostazioni di segnalazione errori:  
+  
+    ||||  
+    |-|-|-|  
+    |**SL. No.**|**Comando e parametro**|**Descrizione output**|  
+    |1|report-errori = "false"|Nessun dettaglio sui messaggi di errore, di avviso/informazione.|  
+    |2|report-errori = "true"|Messaggi dettagliati di errore, avviso o informazioni.|  
+  
+    > [!NOTE]  
+    > Le impostazioni di segnalazione errori specificate in precedenza sono applicabili ai comandi generate-assessment-report, Convert-schema, Migrate-data, Convert-SQL-statement.  
   
 **Esempio:**  
   
@@ -82,10 +82,10 @@ Utilizzare la procedura seguente per generare report:
    assessment-report-overwrite="<true/false>"/>  
 ```  
   
-### <a name="synchronize-target"></a>synchronize-target:  
-Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che specifica il percorso del report di errore per l'operazione di sincronizzazione. Quindi, un file con nome **TargetSynchronizationReport&lt;n&gt;. XML** viene creato nella posizione specificata, in cui **&lt;n&gt;** è il numero di file univoco che viene incrementato con una cifra a ogni esecuzione del comando stesso.  
+### <a name="synchronize-target"></a>sincronizzazione-destinazione:  
+Il comando **Synchronize-target** dispone del parametro **Report-Errors-to** , che specifica il percorso del report degli errori per l'operazione di sincronizzazione. Quindi, un file in base **al&lt;nome&gt;TargetSynchronizationReport n. Il codice XML** viene creato nel percorso specificato, ** &lt;dove&gt; n** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
   
-**Nota:** Se il percorso della cartella è specificato, 'report-errori-to' parametro diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
+**Nota:** Se viene specificato il percorso della cartella, il parametro ' Report-Errors-to ' diventa un attributo facoltativo per il comando ' Synchronize-target '.  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -98,20 +98,20 @@ Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che 
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**object-name:** Specifica gli oggetti considerati per la sincronizzazione (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
+**nome oggetto:** Specifica gli oggetti considerati per la sincronizzazione. può anche avere nomi di oggetti indivdual o un nome di oggetto gruppo.  
   
-**in errore:** Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per l'errore:  
   
--   -Totale report come avviso  
+-   report-totale-come-avviso  
   
--   report-each-come-avviso  
+-   report-each-As-Warning  
   
--   Errore-script  
+-   script di errore  
   
-### <a name="refresh-from-database"></a>aggiornamento dal database:  
-Il comando **dal database di aggiornamento** ha **report errori-a-** parametro che specifica il percorso del report di errore per l'operazione di aggiornamento. Quindi, un file con nome **SourceDBRefreshReport&lt;n&gt;. XML** viene creato nella posizione specificata, in cui **&lt;n&gt;** è il numero di file univoco che viene incrementato con una cifra a ogni esecuzione del comando stesso.  
+### <a name="refresh-from-database"></a>aggiornamento da database:  
+Il comando **Refresh-from-database** presenta un parametro **Report-Errors-to** , che specifica la posizione della segnalazione errori per l'operazione di aggiornamento. Quindi, un file in base **al&lt;nome&gt;SourceDBRefreshReport n. Il codice XML** viene creato nel percorso specificato, ** &lt;dove&gt; n** è il numero di file univoco che incrementa con una cifra a ogni esecuzione dello stesso comando.  
   
-**Nota:** Se il percorso della cartella è specificato, 'report-errori-to' parametro diventa un attributo facoltativo per il comando 'sincronizzare-target'.  
+**Nota:** Se viene specificato il percorso della cartella, il parametro ' Report-Errors-to ' diventa un attributo facoltativo per il comando ' Synchronize-target '.  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -126,15 +126,15 @@ Il comando **dal database di aggiornamento** ha **report errori-a-** parametro c
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**object-name:** Specifica gli oggetti considerati per l'aggiornamento (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
+**nome oggetto:** Specifica gli oggetti considerati per l'aggiornamento. può anche avere nomi di oggetti indivdual o un nome di oggetto gruppo.  
   
-**in errore:** Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se specificare gli errori di aggiornamento come avvisi o errori. Opzioni disponibili per l'errore:  
   
--   -Totale report come avviso  
+-   report-totale-come-avviso  
   
--   report-each-come-avviso  
+-   report-each-As-Warning  
   
--   Errore-script  
+-   script di errore  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione della console SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

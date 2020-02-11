@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957171"
 ---
 # <a name="restore-the-service-master-key"></a>Ripristino della chiave master del servizio
@@ -26,7 +26,7 @@ ms.locfileid: "74957171"
 > [!WARNING]  
 >  È improbabile che sia mai necessario ripristinare la chiave master del servizio. In tal caso, tuttavia, è consigliabile procedere con estrema cautela. Per altre informazioni, vedere [Back Up the Service Master Key](service-master-key.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -36,9 +36,9 @@ ms.locfileid: "74957171"
   
 -   [Per ripristinare la chiave master del servizio tramite Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Restrictions"></a>Limitazioni e restrizioni  
+###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   Quando si ripristina la chiave master del servizio, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono decrittografati tutti i segreti e tutte le chiavi crittografate con la chiave master del servizio corrente. Tali elementi vengono poi crittografati nuovamente con la chiave master del servizio caricata dal file di backup.  
   
@@ -49,22 +49,22 @@ ms.locfileid: "74957171"
 > [!CAUTION]  
 >  La chiave master del servizio è l'elemento radice della gerarchia di crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Con la chiave master del servizio vengono protette direttamente o indirettamente tutte le altre chiavi nell'albero. Se non è possibile decrittografare una chiave dipendente durante un ripristino forzato, i dati protetti da tale chiave andranno perduti.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER per il server.  
   
-##  <a name="SSMSProcedure"></a>Utilizzo di Transact-SQL  
+##  <a name="SSMSProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-restore-the-service-master-key"></a>Per ripristinare la chiave master del servizio  
   
 1.  Recuperare una copia della chiave master del servizio da un supporto di backup fisico o da una directory nel file system locale.  
   
-2.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 3.  Sulla barra Standard fare clic su **Nuova query**.  
   
-4.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+4.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Restores the service master key from a backup file.  

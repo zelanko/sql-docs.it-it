@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244663"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>Creazione di un server di gestione centrale e di un gruppo di server (SQL Server Management Studio)
@@ -25,7 +25,7 @@ ms.locfileid: "75244663"
 > [!NOTE]  
 >  Le versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] non possono essere definite come server di gestione centrale.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -35,16 +35,16 @@ ms.locfileid: "75244663"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  Due ruoli del database nel database msdb concedono l'accesso ai server di gestione centrale. Solo i membri del ruolo ServerGroupAdministratorRole possono gestire il server di gestione centrale. Per connettersi a un server di gestione centrale, è necessario appartenere a un ruolo ServerGroupReaderRole.  
   
  Poiché le connessioni gestite da un server di gestione centrale vengono eseguite nel contesto dell'utente, l'utilizzo dell'autenticazione di Windows comporta la possibile variazione delle autorizzazioni effettive per i server registrati. L'utente, ad esempio, potrebbe essere un membro del ruolo predefinito del server sysadmin nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A, ma disporre di autorizzazioni limitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B.  
   
-##  <a name="SSMSProcedure"></a>Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
  Nelle procedure indicate di seguito viene descritto come eseguire i passaggi seguenti.  
   
 1.  Creare un server di gestione centrale.  
@@ -65,7 +65,7 @@ ms.locfileid: "75244663"
   
 6.  Fare clic su **Test**per verificare la connessione.  
   
-7.  Fare clic su **Save**. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà visualizzata nella cartella **Server di gestione centrale** .  
+7.  Fare clic su **Salva**. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà visualizzata nella cartella **Server di gestione centrale** .  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>Creare un gruppo di server e aggiungere server al gruppo  
   

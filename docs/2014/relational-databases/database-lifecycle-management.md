@@ -31,10 +31,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0d61f3262d68bcc14abc6b03f83c53ed3a8ba95
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232087"
 ---
 # <a name="database-lifecycle-management"></a>Gestione del ciclo di vita del database
@@ -45,9 +45,9 @@ ms.locfileid: "75232087"
  Per leggere l'argomento completo, vedere la pagina [Database Lifecycle Management (DLM) (Gestione del ciclo di vita del database)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Home page di Azure](https://www.windowsazure.com/)   
+ [Home Page di Azure](https://www.windowsazure.com/)   
  [Centro per sviluppatori di Azure](https://www.windowsazure.com/develop/overview/)   
  [Centro di gestione di Azure](https://www.windowsazure.com/manage/overview/)   
  [Blog del team di Azure](https://www.windowsazure.com/community/blog/)   
- [Opzioni di supporto di Azure](https://www.windowsazure.com/support/contact/)  
+ [Opzioni di supporto tecnico di Azure](https://www.windowsazure.com/support/contact/)  
   

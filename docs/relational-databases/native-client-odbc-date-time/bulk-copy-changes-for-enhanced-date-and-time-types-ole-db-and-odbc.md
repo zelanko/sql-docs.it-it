@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50d1eb4d7a6070572e674f5ee7f8794837e63aa1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225260"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifiche della copia bulk per i tipi di data e ora migliorati (OLE DB e ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "75225260"
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Data|SQLDATE|de|  
-|Ora|SQLTIME|te|  
+|Tempo|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
 ||||
@@ -74,7 +74,7 @@ ms.locfileid: "75225260"
 |-----------------------|---------------------------|  
 |Datetime|8|  
 |smalldatetime|4|  
-|date|3|  
+|Data|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -95,12 +95,12 @@ ms.locfileid: "75225260"
 ## <a name="bcp-types-in-sqlnclih"></a>Tipi BCP in sqlncli.h  
  Di seguito vengono indicati i tipi definiti in sqlncli.h per l'utilizzo con le estensioni API BCP in ODBC. Questi tipi vengono passati con il parametro *eUserDataType* di IBCPSession:: BCPColFmt in OLE DB.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Digitare sqlncli. h per l'utilizzo con IBCPSession:: BCPColFmt|Value|  
+|tipo di archiviazione di file|Tipo di dati del file host|Digitare sqlncli. h per l'utilizzo con IBCPSession:: BCPColFmt|valore|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Data|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Ora|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Tempo|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
 |||||
@@ -110,10 +110,10 @@ ms.locfileid: "75225260"
   
  **OLE DB nota** Le conversioni seguenti vengono eseguite da IBCPSession. IRowsetFastLoad utilizza le conversioni di OLE DB come definito nelle [conversioni eseguite da client a server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Si noti che i valori datetime vengono arrotondati a 1/300 di secondo, mentre per i valori smalldatetime i secondi vengono impostati su zero in seguito all'esecuzione delle conversioni client descritte di seguito. L'arrotondamento dei valori datetime viene applicato a ore e minuti, ma non alla data.  
   
-|A -><br /><br /> Da|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
+|A -><br /><br /> Da|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Data|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Ora|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Tempo|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1, 10 (ODBC) 1, 12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  

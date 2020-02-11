@@ -13,10 +13,10 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245467"
 ---
 # <a name="create-a-cross-domain-rule"></a>Creare una regola tra domini
@@ -33,14 +33,14 @@ ms.locfileid: "75245467"
   
  Le regole tra domini vengono prese in esame dopo tutte le regole semplici applicate solo a un singolo dominio. Solo se un valore supera le singole regole di dominio (se esistono) verrà applicata la regola tra domini. Il dominio composito e i singoli domini su cui viene eseguita una regola devono tutti essere definiti prima dell'esecuzione della regola.  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Per creare una regola tra domini, è necessario avere creato e aperto un dominio composito.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per creare una regola tra domini.  
   
 ##  <a name="Create"></a>Creazione di regole tra domini  

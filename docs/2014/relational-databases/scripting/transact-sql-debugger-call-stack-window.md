@@ -13,18 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6707dc2e3c317c8b573eada62b2db07adbfa9d4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243096"
 ---
 # <a name="call-stack-window"></a>Finestra Stack di chiamate
-  Nella finestra **stack di chiamate** vengono visualizzati i moduli nello stack di chiamate e i tipi di dati e i valori di tutti i parametri passati ai moduli. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] i moduli includono stored procedure, funzioni e trigger. Per visualizzare lo stack di chiamate, è necessario utilizzare la modalità di debug.  
+  Nella finestra **Stack di chiamate** vengono visualizzati i moduli nello stack di chiamate e i tipi di dati e i valori di qualsiasi parametro passati ai moduli. [!INCLUDE[tsql](../../includes/tsql-md.md)] i moduli includono stored procedure, funzioni e trigger. Per visualizzare lo stack di chiamate, è necessario utilizzare la modalità di debug.  
   
 ## <a name="task-list"></a>Elenco attività  
- **Per accedere alla finestra stack di chiamate**  
+ **Per accedere alla finestra Stack di chiamate**  
   
 -   Scegliere **Finestre** dal menu **Debug**, quindi fare clic su **Stack di chiamate**.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "75243096"
   
 -   Fare doppio clic sul frame dello stack.  
   
- **Per visualizzare l'origine di un frame diverso dal frame corrente**  
+ **Per visualizzare l'origine di un frame diversa dal frame corrente**  
   
 -   Fare clic con il pulsante destro del mouse sul frame dello stack, quindi scegliere **Vai a codice sorgente**.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "75243096"
  **Modulo**  
  Nome della stored procedure o della funzione che ha eseguito la chiamata al frame successivo.  
   
- **Istanza. database**  
+ **Instance.Database**  
  Istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e database che contiene il modulo.  
   
  **ParmList**  
@@ -63,10 +62,10 @@ ms.locfileid: "75243096"
  **LineNumber**  
  Per tutte le righe ad eccezione di quella superiore, **LineNumber** indica la riga nel modulo che ha eseguito la chiamata al frame. Per la riga superiore, **LineNumber** indica la riga in cui è attualmente attivo il debugger.  
   
- **Linguaggio**  
+ **Lingua**  
  Viene visualizzato **Transact-SQL** per [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](transact-sql-debugger.md)   
  [Informazioni del debugger Transact-SQL](transact-sql-debugger-information.md)   
- [Eseguire il codice Transact-SQL](step-through-transact-sql-code.md)  
+ [Eseguire istruzione per istruzione il codice Transact-SQL](step-through-transact-sql-code.md)  

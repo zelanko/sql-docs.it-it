@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258527"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831540"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Acquisire una traccia in Database Experimentation Assistant
 
@@ -133,7 +133,7 @@ Se viene visualizzato un errore durante l'esecuzione di un'acquisizione di tracc
 
 - Il nome del computer in cui è in esecuzione SQL Server è valido. Per confermare, provare a connettersi al computer che esegue SQL Server usando SQL Server Management Studio (SSMS).
 - La configurazione del firewall non blocca le connessioni al computer in cui è in esecuzione SQL Server.
-- L'utente dispone delle autorizzazioni elencate nel post di Blog relativo alla [riproduzione delle domande frequenti](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
+- L'utente dispone delle autorizzazioni elencate nelle [domande frequenti sulla riproduzione](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - Il nome della traccia non segue la convenzione di rollover standard\_(Capture 1). In alternativa, provare i nomi di\_traccia come Capture 1a o Capture1.
 
 Di seguito sono riportati alcuni possibili errori che possono essere visualizzati e le soluzioni per risolverli:

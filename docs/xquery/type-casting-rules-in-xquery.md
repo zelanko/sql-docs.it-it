@@ -1,5 +1,5 @@
 ---
-title: Tipo di regole del cast in XQuery | Microsoft Docs
+title: Regole di cast del tipo in XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946218"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Regole del cast dei tipi in XQuery
@@ -31,38 +31,38 @@ ms.locfileid: "67946218"
 
   Nel diagramma seguente, relativo alle specifiche W3C XQuery 1.0 e XPath 2.0 per le funzioni e gli operatori, vengono illustrati i tipi di dati predefiniti, inclusi i tipi primitivi predefiniti e i tipi derivati predefiniti.  
   
- ![Gerarchia dei tipi XQuery 1.0](../xquery/media/xquery-typing-rules.gif "gerarchia dei tipi XQuery 1.0")  
+ ![Gerarchia dei tipi XQuery 1.0](../xquery/media/xquery-typing-rules.gif "Gerarchia dei tipi XQuery 1.0")  
   
  In questo argomento vengono descritte le regole del cast dei tipi applicate per il cast da un tipo all'altro tramite i metodi seguenti:  
   
--   Cast esplicito a scopo, utilizzare **sottoposto a cast come** o le funzioni costruttore del tipo (ad esempio, `xs:integer("5")`).  
+-   Cast esplicito **eseguito tramite cast come** o le funzioni del costruttore del tipo (ad esempio, `xs:integer("5")`).  
   
 -   Cast implicito durante la promozione dei tipi  
   
 ## <a name="explicit-casting"></a>Cast esplicito  
  Nella tabella seguente viene illustrato il cast dei tipi consentito tra i tipi primitivi predefiniti.  
   
- ![Descrive le regole di cast per XQuery. ](../xquery/media/casting-builtin-types.gif "Descrive le regole di cast per XQuery.")  
+ ![Descrizione delle regole di cast per XQuery](../xquery/media/casting-builtin-types.gif "Descrizione delle regole di cast per XQuery")  
   
 -   Per un tipo primitivo predefinito è possibile eseguire il cast a un altro tipo primitivo predefinito, in base alle regole indicate nella tabella.  
   
--   Per un tipo primitivo è possibile eseguire il cast a qualsiasi tipo derivato da tale tipo primitivo. Ad esempio, è possibile eseguire il cast da **xs: decimal** al **xs: integer**, o da **xs: decimal** al **xs: long**.  
+-   Per un tipo primitivo è possibile eseguire il cast a qualsiasi tipo derivato da tale tipo primitivo. Ad esempio, è possibile eseguire il cast da **xs: Decimal** a **xs: integer**o da **xs: Decimal** a **xs: Long**.  
   
--   Per un tipo derivato è possibile eseguire il cast a qualsiasi tipo che rappresenti un predecessore corrispondente nella gerarchia di tipi, fino al relativo tipo di base primitivo predefinito. Ad esempio, è possibile eseguire il cast da **xs: token** al **xs: normalizedString** o a **xs: String**.  
+-   Per un tipo derivato è possibile eseguire il cast a qualsiasi tipo che rappresenti un predecessore corrispondente nella gerarchia di tipi, fino al relativo tipo di base primitivo predefinito. Ad esempio, è possibile eseguire il cast da **xs: token** a **xs: normalizedString** o a **xs: String**.  
   
--   Per un tipo derivato è possibile eseguire il cast a un tipo primitivo a condizione di poter eseguire il cast del relativo predecessore al tipo di destinazione. Ad esempio, è possibile eseguire il cast **xs: integer**, un derivato a tipo, un **xs: String**primitivo tipo mene **xs: decimal**, **xs: integer**del predecessore primitivo, può essere convertito in **xs: String**.  
+-   Per un tipo derivato è possibile eseguire il cast a un tipo primitivo a condizione di poter eseguire il cast del relativo predecessore al tipo di destinazione. Ad esempio, è possibile eseguire il cast di **xs: integer**, un tipo derivato, a un tipo **xs: String**, primitivo, perché è possibile eseguire il cast del predecessore XS: **Decimal**, **xs: integer**, in **xs: String**.  
   
--   Per un tipo derivato è possibile eseguire il cast a un altro tipo derivato a condizione di poter eseguire il cast del predecessore primitivo del tipo di origine al predecessore primitivo del tipo di destinazione. Ad esempio, è possibile eseguire il cast da **xs: integer** al **xs: token**, in quanto è possibile eseguire il cast da **xs: decimal** al **xs: String**.  
+-   Per un tipo derivato è possibile eseguire il cast a un altro tipo derivato a condizione di poter eseguire il cast del predecessore primitivo del tipo di origine al predecessore primitivo del tipo di destinazione. È ad esempio possibile eseguire il cast da **xs: integer** a **xs: token**, perché è possibile eseguire il cast da **xs: Decimal** a **xs: String**.  
   
--   Le regole per il cast di tipi definiti dall'utente a tipi predefiniti sono le stesse applicate per i tipi predefiniti. Ad esempio, è possibile definire un **myInteger** tipo derivato da **xs: integer** tipo. Quindi **myInteger** può essere eseguito il cast **xs: token**, in quanto **xs: decimal** può essere convertito in **xs: String**.  
+-   Le regole per il cast di tipi definiti dall'utente a tipi predefiniti sono le stesse applicate per i tipi predefiniti. È ad esempio possibile definire un tipo di **valore integer** derivato dal tipo **xs: integer** . Quindi, è possibile eseguire il cast di un **valore integer** a **xs: token**, perché è possibile eseguire il cast di **xs: Decimal** a **xs: String**.  
   
  Non sono supportati i tipi di cast seguenti:  
   
--   Cast a/da tipi elenco, Questo include, ad esempio i tipi elenco definiti dall'utente e i tipi elenco predefiniti **xs: IDREFS**, **xs: Entities**, e **xs: NMTOKENS**.  
+-   Cast a/da tipi elenco, Sono inclusi sia i tipi di elenco definiti dall'utente sia i tipi di elenco incorporati, ad esempio **xs: IDREFS**, **xs: Entities**e **xs: NMTOKENS**.  
   
--   Esegue il cast da o verso **xs: QName** non è supportato.  
+-   Il cast a o da **xs: QName** non è supportato.  
   
--   **xs: NOTATION** e i sottotipi di durata, completamente ordinati **xdt: yearmonthduration** e **xdt: daytimeduration**, non sono supportati. incluso di conseguenza il cast da/a questi tipi.  
+-   **xs: Notation** e i sottotipi completamente ordinati di Duration, **xdt: yearMonthDuration** e **xdt: dayTimeDuration**, non sono supportati. incluso di conseguenza il cast da/a questi tipi.  
   
  Negli esempi seguenti viene illustrato il cast dei tipi esplicito.  
   
@@ -95,7 +95,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- La query seguente restituisce un errore statico perché non si conosce il numero primo livello <`root`> sono elementi nell'istanza del documento.  
+ La query seguente restituisce un errore statico, perché non si conosce il numero di elementi <`root`> di primo livello presenti nell'istanza del documento.  
   
 ```  
 declare @x xml(myCollection)  
@@ -105,7 +105,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- Specificando un singleton <`root`> elemento dell'espressione, la query ha esito positivo. La query restituisce una sequenza con un valore di tipo semplice tipizzato come xs:string.  
+ Specificando un singleton <`root`> elemento nell'espressione, la query ha esito positivo. La query restituisce una sequenza con un valore di tipo semplice tipizzato come xs:string.  
   
 ```  
 declare @x xml(myCollection)  
@@ -134,23 +134,23 @@ go
 ```  
   
 ## <a name="implicit-casting"></a>Cast implicito  
- Il cast implicito è consentito solo per i tipi numeric e per i tipi atomici non tipizzati. Ad esempio, il seguente **min ()** funzione restituisce il numero minimo di due valori:  
+ Il cast implicito è consentito solo per i tipi numeric e per i tipi atomici non tipizzati. Ad esempio, la funzione **min ()** seguente restituisce il valore minimo dei due valori:  
   
 ```  
 min(xs:integer("1"), xs:double("1.1"))  
 ```  
   
- In questo esempio, i due valori passati per la query XQuery **min ()** funzione sono di tipo diverso. Pertanto, viene eseguita la conversione implicita in cui **integer** tipo viene promosso a **double** e due **double** valori vengono confrontati.  
+ In questo esempio, i due valori passati alla funzione XQuery **min ()** sono di tipo diverso. Viene pertanto eseguita la conversione implicita in cui il tipo **Integer** viene promosso a **Double** e vengono confrontati i due valori **Double** .  
   
  Per la promozione dei tipi descritta in questo esempio vengono applicate le regole seguenti:  
   
--   Un tipo numeric derivato può essere promosso al tipo di base corrispondente. Ad esempio, **integer** può essere promosso al **decimale**.  
+-   Un tipo numeric derivato può essere promosso al tipo di base corrispondente. Ad esempio, il **valore integer** può essere promosso a **decimale**.  
   
--   Oggetto **decimale** può essere promosso al **float** e un **float** può essere promosso al **doppie**.  
+-   Un **separatore decimale** può essere innalzato a virgola **mobile** e un **float** può essere innalzato a **doppio**.  
   
  Poiché il cast implicito è consentito solo per i tipi numeric, non è possibile eseguirlo nei casi seguenti:  
   
--   Non è consentito il cast implicito per i tipi string. Ad esempio, se due **stringa** tipi sono previsti e si passa un **stringa** e un **token**, il cast implicito non viene generato e viene restituito un errore.  
+-   Non è consentito il cast implicito per i tipi string. Se, ad esempio, sono previsti due tipi di **stringa** e si passa una **stringa** e un **token**, non viene eseguito alcun cast implicito e viene restituito un errore.  
   
 -   Non è consentito il cast implicito da tipi numeric a tipi string. Se ad esempio si passa un valore di tipo integer a una funzione che prevede un parametro di tipo string, il cast implicito non viene eseguito e viene restituito un errore.  
   
@@ -167,7 +167,7 @@ min(xs:integer("1"), xs:double("1.1"))
  Nel caso del cast a tipi binari quali xs:base64Binary o xs:hexBinary da un tipo string o untypedAtomic, per i valori di input deve essere utilizzato rispettivamente il formato di codifica base64 o hex.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>Cast di un valore a un tipo string o untypedAtomic  
- Il cast a un tipo string o untypedAtomic trasforma il valore nella relativa rappresentazione lessicale canonica XQuery. In particolare, è possibile che un valore conforme a un pattern specifico o a un altro vincolo durante l'input non venga rappresentato in base a tale vincolo.  Per notificare agli utenti, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contrassegna i tipi in cui il vincolo di tipo può rappresentare un problema, visualizzando un avviso quando tali tipi vengono caricati nella raccolta di schemi.  
+ Il cast a un tipo string o untypedAtomic trasforma il valore nella relativa rappresentazione lessicale canonica XQuery. In particolare, è possibile che un valore conforme a un pattern specifico o a un altro vincolo durante l'input non venga rappresentato in base a tale vincolo.  Per informare gli utenti su questo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , contrassegna i tipi in cui il vincolo di tipo può essere un problema fornendo un avviso quando tali tipi vengono caricati nella raccolta di schemi.  
   
  Nel cast di un valore di tipo xs:float o xs:double o di uno qualsiasi dei relativi sottotipi a un tipo string o untypedAtomic, il valore viene rappresentato nella notazione scientifica, ma solo se il valore assoluto del valore è minore di 1.0E-6 oppure maggiore o uguale a 1.0E6. Per tale motivo, 0 viene serializzato nella notazione scientifica come 0.0E0.  
   
@@ -197,7 +197,7 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   Non è supportato il valore a virgola mobile NaN.  
   
--   I valori di cui è possibile eseguire il cast sono limitati dalle restrizioni di implementazione dei tipi di destinazione. Ad esempio, non è possibile convertire una stringa di data con un anno negativo in **xs: date**. Tali cast genereranno la sequenza vuota se il valore è fornito in fase di esecuzione (anziché generare un errore di runtime).  
+-   I valori di cui è possibile eseguire il cast sono limitati dalle restrizioni di implementazione dei tipi di destinazione. Ad esempio, non è possibile eseguire il cast di una stringa di data con anno negativo a **xs: date**. Tali cast genereranno la sequenza vuota se il valore è fornito in fase di esecuzione (anziché generare un errore di runtime).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Definire la serializzazione di dati XML](../relational-databases/xml/define-the-serialization-of-xml-data.md)  

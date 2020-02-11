@@ -11,10 +11,10 @@ ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728296"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Operazioni del servizio Web per categoria (Master Data Services)
@@ -121,7 +121,7 @@ ms.locfileid: "73728296"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>Operazioni di importazione dei dati  
- Queste operazioni vengono utilizzate per importare i dati in un database di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Queste operazioni vengono utilizzate per importare i dati in un database di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Panoramica: importazione di dati da tabelle &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ||  
 |-|  
@@ -140,7 +140,7 @@ ms.locfileid: "73728296"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>Operazioni di esportazione dei dati  
- Queste operazioni vengono utilizzate per esportare i dati tramite l'utilizzo di viste sottoscrizioni. Per altre informazioni, vedere [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
+ Queste operazioni vengono utilizzate per esportare i dati tramite l'utilizzo di viste sottoscrizioni. Per altre informazioni, vedere [Panoramica: Esportazione di dati &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
   
 ||  
 |-|  
@@ -149,7 +149,7 @@ ms.locfileid: "73728296"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewListGet%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
-## <a name="security-operations"></a>Operazioni di sicurezza  
+## <a name="security-operations"></a>Operazioni per la sicurezza  
  Queste operazioni vengono utilizzate per modificare le impostazioni di sicurezza che controllano l'accesso al database di [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Sicurezza &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md).  
   
 ||  

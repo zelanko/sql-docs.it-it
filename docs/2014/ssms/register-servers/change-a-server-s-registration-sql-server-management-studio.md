@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 05161b2c9e3266b57841ff4268f4dc64ede90434
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244647"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>Modificare la registrazione di un server (SQL Server Management Studio)
@@ -32,6 +32,6 @@ ms.locfileid: "75244647"
 2.  Nella finestra di dialogo **Modifica proprietà registrazione server** modificare il server, le informazioni di accesso o le proprietà di connessione e quindi fare clic su **Salva**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Registra server](register-servers.md)  
+ [Registrazione di server](register-servers.md)  
   
   

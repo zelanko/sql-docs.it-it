@@ -1,5 +1,5 @@
 ---
-title: Filtro (MDX) | Microsoft Docs
+title: Filter (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132686"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
@@ -34,10 +34,10 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  Espressione logica MDX (Multidimensional Expression) valida che restituisce true o false.  
   
-## <a name="remarks"></a>Note  
- Il **filtro** funzione valuta l'espressione logica specificata rispetto a ogni tupla nel set specificato. La funzione restituisce un set costituito da ogni tupla nel set specificato in cui l'espressione logica restituisce **true**. Se nessuna tupla restituisce **true**, viene restituito un set vuoto.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Filter** valuta l'espressione logica specificata rispetto a ogni tupla nel set specificato. La funzione restituisce un set costituito da ogni tupla nel set specificato in cui l'espressione logica restituisce **true**. Se nessuna tupla restituisce **true**, viene restituito un set vuoto.  
   
- Il **filtro** funzionamento della funzione in modo analogo a quello delle [IIf](../mdx/iif-mdx.md) (funzione). Il **IIf** funzione restituisce solo una delle due opzioni in base alla valutazione di un'espressione logica MDX, mentre le **filtro** funzione restituisce un set di tuple che soddisfano la condizione di ricerca specificati. In effetti, il **filtro** funzione esegue `IIf(Logical_Expression, Set_Expression.Current, NULL)` su ogni tupla del set e restituisce il set risultante.  
+ La funzione **Filter** funziona in modo simile a quella della funzione [IIf](../mdx/iif-mdx.md) . La funzione **IIf** restituisce solo una delle due opzioni in base alla valutazione di un'espressione logica MDX, mentre la funzione **Filter** restituisce un set di tuple che soddisfano la condizione di ricerca specificata. In effetti, la funzione **Filter** viene eseguita `IIf(Logical_Expression, Set_Expression.Current, NULL)` su ogni tupla del set e restituisce il set risultante.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo della funzione Filter sull'asse Rows di una query, per restituire solo le date in cui Internet Sales Amount è maggiore di $10.000:  
@@ -56,7 +56,7 @@ Filter(Set_Expression, Logical_Expression )
   
  `[Adventure Works]`  
   
- La funzione Filter può essere utilizzata anche nelle definizioni di membri calcolati. Nell'esempio seguente restituisce la somma del `Measures.[Order Quantity]` membro, aggregato sui primi nove mesi del 2003 contenuti nella `Date` dimensione, dalle **Adventure Works** cubo. Il **PeriodsToDate** funzione definisce le tuple nel set su cui il **aggregazione** funzione viene eseguita. Il **filtro** funzione limita le tuple da restituire per gli utenti con i valori più bassi per la misura Reseller Sales Amount per il periodo di tempo precedente.  
+ La funzione Filter può essere utilizzata anche nelle definizioni di membri calcolati. Nell'esempio seguente viene restituita la somma `Measures.[Order Quantity]` del membro, aggregato sui primi nove mesi di 2003 contenuti nella `Date` dimensione, dal cubo **Adventure Works** . La funzione **PeriodsToDate** definisce le tuple nel set su cui opera la funzione di **aggregazione** . La funzione **Filter** limita le tuple restituite a quelle con valori inferiori per la misura Reseller Sales Amount per il periodo di tempo precedente.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -84,6 +84,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

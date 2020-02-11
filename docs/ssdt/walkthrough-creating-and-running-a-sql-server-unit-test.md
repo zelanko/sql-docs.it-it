@@ -1,23 +1,24 @@
 ---
-title: 'Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creazione ed esecuzione di uno unit test di SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141214"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242702"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
+
 In questa procedura dettagliata viene creato uno unit test di SQL Server tramite cui viene verificato il comportamento di diverse stored procedure. Vengono creati unit test di SQL Server per semplificare l'identificazione di eventuali difetti del codice che potrebbero causare il comportamento non corretto dell'applicazione. È possibile eseguire test dell'applicazione e unit test di SQL Server come parte di un gruppo di test automatizzato.  
   
 Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:  
@@ -720,8 +721,8 @@ Per i test, si presuppone che il database venga avviato in uno stato pulito. Ver
   
     |Test|Risultato previsto|  
     |--------|-------------------|  
-    |Sales_uspPlaceNewOrderTest|Superato|  
-    |Sales_uspShowOrderDetailsTest|Superato|  
+    |Sales_uspPlaceNewOrderTest|Pass|  
+    |Sales_uspShowOrderDetailsTest|Pass|  
     |Sales_uspFillOrderTest|Non superato con l'errore seguente: "Condizione ScalarValueCondition (scalarValueCondition2) non riuscita: ResultSet 1 Riga 1 Colonna 1: valori non corrispondenti, '-100' effettivi, '100' previsti". Questo errore si verifica perché la definizione della stored procedure contiene un errore secondario.|  
   
     Successivamente sarà possibile correggere l'errore ed eseguire nuovamente il test.  
@@ -981,7 +982,7 @@ Per creare e verificare un test negativo, è necessario effettuare le attività 
   
     Il test viene superato, pertanto l'esito della stored procedure è negativo come previsto.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 In un progetto tipico verrebbero definiti ulteriori unit test per verificare il corretto funzionamento di tutti gli oggetti di database critici. Una volta completato il set di test, questi ultimi verrebbero archiviati nel controllo delle versioni affinché possano essere condivisi con il team.  
   
 Dopo aver stabilito una linea di base, è possibile creare e modificare oggetti di database, quindi creare test associati per verificare se una modifica può compromettere il comportamento previsto.  

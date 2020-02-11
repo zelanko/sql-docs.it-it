@@ -1,5 +1,5 @@
 ---
-title: Pulizia dei dati
+title: Data Cleansing
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,13 +10,13 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251769"
 ---
-# <a name="data-cleansing"></a>Pulizia dei dati
+# <a name="data-cleansing"></a>Data Cleansing
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -96,17 +96,17 @@ ms.locfileid: "75251769"
   
  Durante l'esportazione dei dati puliti nella pagina **Esporta** della procedura guidata di pulizia del progetto Data Quality, va specificato se si desidera che i dati puliti vengano esportati nel formato standardizzato selezionando la casella di controllo **Standardizzare output** . Per impostazione predefinita, i dati puliti vengono esportati nel formato standardizzato, cioè la casella di controllo è selezionata. Per altre informazioni sull’esportazione dei dati puliti, vedere [Pulizia dei dati mediante le informazioni interne di DQS](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-##  <a name="Related"></a>Attività correlate  
+##  <a name="Related"></a> Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Viene descritto come configurare valori soglia per l'attività di pulizia.|[Configurare i valori soglia per la pulizia e la corrispondenza](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Viene descritto come configurare valori soglia per l'attività di pulizia.|[Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |Viene descritto come pulire i dati utilizzando le informazioni incorporate in DQS.|[Pulire i dati mediante DQS &#40;informazioni interne sulla&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |Viene descritto come pulire i dati utilizzando le informazioni del servizio dati di riferimento.|[Pulire i dati usando dati di riferimento &#40;conoscenza&#41; esterna](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Viene descritto come pulire un dominio composito.|[Pulire i dati in un dominio composito](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Progetti Data Quality &#40;&#41;DQS](../data-quality-services/data-quality-projects-dqs.md)   
- [Corrispondenza dei dati](../data-quality-services/data-matching.md)  
+ [Corrispondenza di dati](../data-quality-services/data-matching.md)  
   
   

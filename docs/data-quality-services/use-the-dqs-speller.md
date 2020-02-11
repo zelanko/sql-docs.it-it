@@ -10,10 +10,10 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257753"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizzare il correttore ortografico DQS
@@ -30,14 +30,14 @@ ms.locfileid: "75257753"
   
  Il correttore ortografico funziona solo sui singoli domini con tipo di dati stringa. Tutti valori in un singolo dominio con tipo di dati stringa vengono inviati al correttore ortografico per la convalida. Il correttore ortografico non funziona per un dominio composito e non funziona per i domini con tipi di dati diversi da stringa, valori misti (quali lettere e numeri senza spazio), numeri romani, singoli caratteri e valori costituiti solo da lettere maiuscole.  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Per eseguire il correttore ortografico, è necessario avere una Knowledge Base e un dominio aperti nell'attività Individuazione informazioni o Gestione dominio, è necessario che il correttore ortografico sia abilitato per il dominio e nella pagina in cui viene eseguito ed è necessario che sia specificata la proprietà Lingua per il dominio.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire il correttore ortografico, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="Enable"></a>Abilitare il correttore ortografico  

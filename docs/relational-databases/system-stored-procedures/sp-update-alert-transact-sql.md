@@ -18,10 +18,10 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69890840"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69890840"
 
   Aggiorna le impostazioni di un avviso esistente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -70,7 +70,7 @@ sp_update_alert
   
 `[ @message_id = ] message_id`Nuovo messaggio o numero di errore per la definizione di avviso. In genere, *message_id* corrisponde a un numero di errore nella tabella **sysmessages** . *message_id* è di **tipo int**e il valore predefinito è null. Un ID messaggio può essere utilizzato solo se l'impostazione del livello di gravità per l'avviso è **0**.  
   
-`[ @severity = ] severity`Un nuovo livello di gravità (da **1** a **25**) per la definizione di avviso. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Qualsiasi[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio inviato al registro applicazioni di Windows con il livello di gravità specificato attiverà l'avviso. *gravità* è di **tipo int**e il valore predefinito è null. È possibile utilizzare un livello di gravità solo se l'impostazione dell'ID messaggio per l'avviso è **0**.  
+`[ @severity = ] severity`Un nuovo livello di gravità (da **1** a **25**) per la definizione di avviso. Qualsiasi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] messaggio inviato al registro applicazioni di Windows con il livello di gravità specificato attiverà l'avviso. *gravità* è di **tipo int**e il valore predefinito è null. È possibile utilizzare un livello di gravità solo se l'impostazione dell'ID messaggio per l'avviso è **0**.  
   
 `[ @delay_between_responses = ] delay_between_responses`Nuovo periodo di attesa, in secondi, tra le risposte all'avviso. *delay_between_responses* è di **tipo int**e il valore predefinito è null.  
   
@@ -78,21 +78,21 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`Specifica se la descrizione dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore dal registro applicazioni di Windows deve essere inclusa nel messaggio di notifica. *include_event_description_in* è di **tinyint**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**0**|Nessuna|  
+|**0**|nessuno|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
-|**4**|**net send**|  
+|**4**|**NET SEND**|  
 |**7**|Tutti|  
   
 `[ @database_name = ] 'database'`Nome del database in cui deve verificarsi l'errore affinché l'avviso venga generato. il *database* è di **tipo sysname.** I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'`Sequenza di caratteri che è necessario trovare nella descrizione dell'errore nel log dei messaggi di errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* è di **tipo nvarchar (100)** e il valore predefinito è null. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table%** ).  
+`[ @event_description_keyword = ] 'event_description_keyword'`Sequenza di caratteri che è necessario trovare nella descrizione dell'errore nel log dei messaggi di errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* è di **tipo nvarchar (100)** e il valore predefinito è null. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table%**).  
   
-`[ @job_id = ] job_id`Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null. Se si specifica *job_id* , è necessario omettere *job_name* .  
+`[ @job_id = ] job_id`Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null. Se *job_id* è specificato, è necessario omettere *job_name* .  
   
-`[ @job_name = ] 'job_name'`Nome del processo eseguito in risposta a questo avviso. *job_name* è di **tipo sysname**e il valore predefinito è null. Se si specifica *job_name* , è necessario omettere *job_id* .  
+`[ @job_name = ] 'job_name'`Nome del processo eseguito in risposta a questo avviso. *job_name* è di **tipo sysname**e il valore predefinito è null. Se *job_name* è specificato, è necessario omettere *job_id* .  
   
 `[ @occurrence_count = ] occurrence_count`Reimposta il numero di volte in cui si è verificato l'avviso. *occurrence_count* è di **tipo int**e il valore predefinito è null. può essere impostato solo su **0**.  
   
@@ -110,12 +110,12 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap`Riservati.  
   
-`[ @performance_condition = ] 'performance_condition'`Valore espresso nel formato **'** _itemcomparatorvalue_ **'** . *performance_condition* è di **tipo nvarchar (512)** e il valore predefinito è null ed è costituito da questi elementi.  
+`[ @performance_condition = ] 'performance_condition'`Valore espresso nel formato **'**_itemcomparatorvalue_**'**. *performance_condition* è di **tipo nvarchar (512)** e il valore predefinito è null ed è costituito da questi elementi.  
   
 |Componente del formato|Descrizione|  
 |--------------------|-----------------|  
 |*Elemento*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
-|*Confronto*|Uno di questi operatori: **>** , **<** , **=**|  
+|*Confronto*|Uno di questi operatori: **>**, **<**,**=**|  
 |*Valore*|Valore numerico del contatore|  
   
 `[ @category_name = ] 'category'`Nome della categoria di avvisi. *Category* è di **tipo sysname** e il valore predefinito è null.  
@@ -124,15 +124,15 @@ sp_update_alert
   
 `[ @wmi_query = ] 'wmi_query'`Query che specifica l'evento WMI per l'avviso. *wmi_query* è di **tipo nvarchar (512)** e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Solo **sysmessages** scritti nel registro [!INCLUDE[msCoName](../../includes/msconame-md.md)] applicazioni di Windows possono generare un avviso.  
   
  **sp_update_alert** modifica solo le impostazioni di avviso per le quali vengono forniti i valori dei parametri. Se si omette un parametro, viene mantenuta l'impostazione corrente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa stored procedure, gli utenti devono essere membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -150,7 +150,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_help_alert &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

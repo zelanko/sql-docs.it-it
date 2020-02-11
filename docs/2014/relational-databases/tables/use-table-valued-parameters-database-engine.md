@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211767"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utilizzare parametri con valori di tabella (Motore di database)
@@ -38,7 +38,7 @@ ms.locfileid: "68211767"
   
  [Restrizioni](#Restrictions)  
   
- [Parametri con valori di tabella e operazioni BULK INSERT](#BulkInsert)  
+ [Parametri con valori di tabella  e operazioni BULK INSERT](#BulkInsert)  
   
  [Esempio](#Example)  
   
@@ -63,23 +63,24 @@ ms.locfileid: "68211767"
   
 -   Vengono memorizzati nella cache come una tabella temporanea quando vengono utilizzati in una stored procedure. A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], anche i parametri con valori di tabella sono memorizzati nella cache per le query con parametri.  
   
-##  <a name="Restrictions"></a> Restrizioni  
+##  <a name="Restrictions"></a>Restrizioni  
  Ai parametri con valori di tabella si applicano le restrizioni seguenti:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non gestisce statistiche su colonne di parametri con valori di tabella.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non gestisce statistiche su colonne di parametri con valori di tabella.  
   
 -   I parametri con valori di tabella devono essere passati come parametri READONLY di input alle routine [!INCLUDE[tsql](../../includes/tsql-md.md)] . Non è possibile eseguire operazioni DML, ad esempio UPDATE, DELETE o INSERT, su un parametro con valori di tabella nel corpo di una routine.  
   
 -   Non è possibile utilizzare un parametro con valori di tabella come destinazione di un'istruzione SELECT INTO o INSERT EXEC. Un parametro con valori di tabella può essere incluso nella clausola FROM di un'istruzione SELECT INTO o nella stringa o stored procedure INSERT EXEC.  
   
-##  <a name="BulkInsert"></a> Parametri con valori di tabella e operazioni BULK INSERT  
+##  <a name="BulkInsert"></a>Confronto tra parametri con valori di tabella e operazioni BULK INSERT  
  L'utilizzo di parametri con valori di tabella è confrontabile con altre modalità di utilizzo di variabili basate su set, ma può spesso risultare più rapido nel caso di set di dati di notevoli dimensioni. Rispetto alle operazioni bulk, che comportano costi di avvio maggiori, i parametri con valori di tabella garantiscono livelli di prestazioni ottimali per operazioni di inserimento di non oltre 1.000 righe.  
   
  I parametri con valori di tabella riutilizzati possono sfruttare il vantaggio derivante dalla memorizzazione nella cache della tabella temporanea, che consente di ottenere una migliore scalabilità rispetto alle operazioni BULK INSERT equivalenti. Se si eseguono operazioni di inserimento di righe di entità ridotta, è possibile ottenere vantaggi minimi in termini di prestazioni utilizzando elenchi di parametri o istruzioni batch anziché operazioni BULK INSERT o parametri con valori di tabella. Tali metodi, tuttavia, risultano meno efficaci da programmare e le prestazioni si riducono rapidamente con l'aumentare del numero di righe.  
   
  I parametri con valori di tabella garantiscono livelli di prestazioni analoghi o migliori rispetto all'implementazione di una matrice di parametri equivalente.  
   
-##  <a name="Example"></a> Esempio  
+##  <a name="Example"></a>Esempio  
  Nell'esempio seguente viene utilizzato [!INCLUDE[tsql](../../includes/tsql-md.md)] e viene illustrato come creare un tipo di parametro con valori di tabella, dichiarare una variabile per farvi riferimento, riempire un elenco di parametri e quindi passare i valori a una stored procedure.  
   
 ```  
@@ -120,11 +121,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [Crea tipo &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-type-transact-sql)   
+ [DICHIARARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
- [sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
- [sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
+ [sys. Parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
+ [sys. parameter_type_usages &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481149"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Backup e ripristino di database DQS
@@ -38,7 +38,7 @@ ms.locfileid: "65481149"
   
 -   È necessario disporre del ruolo dqs_administrator sul database DQS_MAIN per interrompere qualsiasi attività in esecuzione o arrestare processi in corso in DQS.  
   
-##  <a name="BackupRestore"></a> Backup e ripristino di database DQS  
+##  <a name="BackupRestore"></a>Eseguire il backup e il ripristino di database DQS  
   
 1.  Avviare Microsoft SQL Server Management Studio e connettersi all'istanza di SQL Server appropriata.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65481149"
   
 6.  Disconnettersi dall'istanza corrente di SQL Server e connettersi all'istanza di SQL Server in cui si desidera ripristinare i database.  
   
-7.  Ripristinare il database DQS_MAIN. Per istruzioni dettagliate ripristinare un database di SQL Server, vedere [Ripristina un Backup del Database &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Ripristinare il database DQS_MAIN. Per istruzioni dettagliate per il ripristino di un database di SQL Server, vedere [ripristino di un backup di database &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Ripristinare il database DQS_PROJECTS.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65481149"
   
 10. In Esplora oggetti fare clic con il pulsante destro del mouse sul server, quindi fare clic su **Nuova query**.  
   
-11. Nella finestra Editor di query copiare le istruzioni SQL seguenti sostituendo *\<PASSWORD>* con la password specificata per la chiave master del database durante l'installazione di DQS:  
+11. Nella finestra dell'editor di query copiare le istruzioni SQL seguenti e sostituire * \<>password* con la password specificata durante l'installazione di DQS per la chiave master del database:  
   
     ```  
     USE [DQS_MAIN]  
@@ -70,9 +70,9 @@ ms.locfileid: "65481149"
   
     ```  
   
-12. Premere F5 per eseguire le istruzioni. Esaminare il riquadro **Risultati** per verificare che le istruzioni siano state eseguite correttamente.  
+12. Premere F5 per eseguire le istruzioni. Controllare il riquadro **risultati** per verificare che le istruzioni siano state eseguite correttamente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestire i database DQS](../../2014/data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

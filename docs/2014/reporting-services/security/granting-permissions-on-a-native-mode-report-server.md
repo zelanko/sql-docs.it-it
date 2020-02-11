@@ -22,12 +22,12 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 310ab4f332c3262b20e73211f5ec3d4a5f19786a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101936"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76971396"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concessione di autorizzazioni in un server di report in modalità nativa
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si utilizzano l'autorizzazione basata sui ruoli e un sottosistema di autenticazione per determinare gli utenti cui è consentito eseguire operazioni e accedere agli elementi in un server di report. L'autorizzazione basata sui ruoli consente di suddividere in ruoli il set di azioni che un utente può eseguire. L'autenticazione è basata sull'autenticazione di Windows incorporata o su un modulo di autenticazione personalizzato fornito dall'utente. È possibile utilizzare ruoli predefiniti o personalizzati con entrambi i tipi di autenticazione.  
@@ -53,10 +53,8 @@ ms.locfileid: "66101936"
 >  Se il server di report è configurato per l'integrazione con SharePoint, è necessario impostare le autorizzazioni nel sito di SharePoint per concedere l'accesso agli elementi del server di report. Per altre informazioni, vedere [Concessione di autorizzazioni per elementi del server di report in un sito di SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
 ## <a name="who-sets-permissions"></a>Responsabili dell'impostazione delle autorizzazioni  
- Inizialmente, solo gli utenti che sono membri del gruppo Administrators locale possono accedere a un server di report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con due assegnazioni di ruolo predefinite che concedono l'accesso a livello di elemento e a livello di sistema ai membri del gruppo Administrators locale. Con queste assegnazioni di ruolo incorporate, gli amministratori locali possono concedere l'acceso al server di report ad altri utenti e gestire gli elementi del server di report. Le assegnazioni di ruolo incorporate non possono essere eliminate. Un amministratore locale dispone sempre delle autorizzazioni per la gestione completa di un'istanza del server di report.  
-  
- Poiché le autorizzazioni complete su un server di report includono autorizzazioni a livello di elemento e a livello di sistema, a un amministratore locale sono assegnati i ruoli seguenti:  
-  
+ Inizialmente, solo gli utenti che sono membri del gruppo Administrators locale possono accedere a un server di report. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato con due assegnazioni di ruolo predefinite che concedono l'accesso a livello di elemento e a livello di sistema ai membri del gruppo Administrators locale. Gli amministratori locali possono utilizzare queste assegnazioni di ruolo predefinite per concedere l'accesso al server di report ad altri utenti e gestire gli elementi del server di report. Le assegnazioni di ruolo incorporate non possono essere eliminate. Un amministratore locale dispone sempre delle autorizzazioni per la gestione completa di un'istanza del server di report.  
+ 
  Prima di poter amministrare un'istanza del server di report in un computer locale che esegue Windows Vista o Windows Server 2008, sarà necessario eseguire passaggi di configurazione aggiuntivi. Per altre informazioni, vedere [Configurare un server di report in modalità nativa per gli amministratori locali &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="how-permissions-are-stored"></a>Archiviazione delle autorizzazioni  

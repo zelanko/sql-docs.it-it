@@ -1,5 +1,5 @@
 ---
-title: Esempio di Data Shaping in Visual Basic | Microsoft Docs
+title: Visual Basic esempio di data shaping | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,10 +15,10 @@ ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923501"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Esempio di data shaping in Visual Basic
@@ -92,14 +92,14 @@ End Function
   
 #### <a name="try-it"></a>Provalo!  
   
-1.  Creare un progetto di applicazione Visual Basic Standard EXE  
+1.  Creare un progetto di applicazione Visual Basic standard EXE  
   
-2.  Selezionare **componenti** dalle **progetto** menu di Visual Studio  
+2.  Selezionare i **componenti** dal menu **progetto** in Visual Studio  
   
-3.  Selezionare "Microsoft gerarchici FlexGrid controllo 6.0 (OLEDB)" di **componenti** finestra popup e quindi fare clic su **salvare**.  
+3.  Selezionare "Microsoft Hierarchical FlexGrid Control 6,0 (OLEDB)" dalla finestra popup **componenti** e quindi fare clic su **Salva**.  
   
-4.  Fare doppio clic sul controllo FlexGrid dal riquadro casella degli strumenti nell'area di lavoro di Visual Basic. Modificare il nome dell'istanza in MSHFLEXGRID.  
+4.  Fare doppio clic sul controllo FlexGrid dal riquadro Casella degli strumenti nell'area di lavoro Visual Basic. Modificare il nome dell'istanza in MSHFLEXGRID.  
   
-5.  Copiare il codice precedente e incollarlo nella **codice** pagina per sostituire il codice esistente.  
+5.  Copiare il codice precedente e incollarlo nella **tabella codici** per sostituire il codice esistente.  
   
-6.  Selezionare **avviare** dalle **eseguire** menu per eseguire l'applicazione.
+6.  Selezionare **Avvia** dal menu **Esegui** per eseguire l'applicazione.

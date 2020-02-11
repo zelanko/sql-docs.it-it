@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobhistory (Transact-SQL) | Microsoft Docs
+title: dbo. sysjobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2019
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 85710deec2e7ab5e79ed7a514e3b625c6232484e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902197"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761835"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "67902197"
 Contiene informazioni sull'esecuzione di processi pianificati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
   
 > [!NOTE]
-> Nella maggior parte dei casi i dati vengono aggiornati solo dopo il passaggio del processo viene completato e la tabella in genere non contiene alcun record per i passaggi di processo che sono attualmente in corso, ma in alcuni casi, i processi sottostanti *scopo* forniscono informazioni su passaggi di processo lo stato di avanzamento.
+> Nella maggior parte dei casi i dati vengono aggiornati solo dopo il completamento del passaggio di processo e la tabella non contiene in genere record per i passaggi di processo attualmente in corso, ma in alcuni *casi i processi sottostanti forniscono informazioni* sui passaggi del processo in corso.
 
-Questa tabella è archiviata nel **msdb** database.  
+Questa tabella è archiviata nel database **msdb** .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -44,19 +44,19 @@ Questa tabella è archiviata nel **msdb** database.
 |**step_name**|**sysname**|Nome del passaggio.|  
 |**sql_message_id**|**int**|ID di un messaggio di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito se l'esecuzione del processo ha esito negativo.|  
 |**sql_severity**|**int**|Gravità di qualsiasi errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**message**|**nvarchar(4000)**|Eventuale testo di un messaggio di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**run_status**|**int**|Stato di esecuzione del processo:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br />**4** = in corso|  
+|**Messaggio**|**nvarchar(4000)**|Eventuale testo di un messaggio di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**run_status**|**int**|Stato di esecuzione del processo:<br /><br /> **0** = non riuscito<br /><br /> **1** = operazione completata<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br />**4** = in corso|  
 |**run_date**|**int**|Data di avvio dell'esecuzione del processo o del passaggio. Per una cronologia dei processi o dei passaggi in corso, rappresenta la data/ora di scrittura della cronologia.|  
-|**run_time**|**int**|Ora di inizio dell'esecuzione del processo o del passaggio.|  
-|**run_duration**|**int**|Tempo trascorso per l'esecuzione del processo o passaggio **HHMMSS** formato.|  
+|**run_time**|**int**|Ora di inizio del processo o del passaggio nel formato **HHMMSS** .|  
+|**run_duration**|**int**|Tempo trascorso per l'esecuzione del processo o del passaggio nel formato **HHMMSS** .|  
 |**operator_id_emailed**|**int**|ID dell'operatore che ha ricevuto una notifica tramite posta elettronica al termine dell'esecuzione del processo.|  
 |**operator_id_netsent**|**int**|ID dell'operatore che ha ricevuto un messaggio al termine dell'esecuzione del processo.|  
 |**operator_id_paged**|**int**|ID dell'operatore che ha ricevuto una notifica tramite cercapersone al termine dell'esecuzione del processo.|  
 |**retries_attempted**|**int**|Numero di tentativi di esecuzione del processo o del passaggio.|  
-|**server**|**sysname**|Nome del server in cui è stato eseguito il processo.|  
+|**Server**|**sysname**|Nome del server in cui è stato eseguito il processo.|  
   
   ## <a name="example"></a>Esempio
- Quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] query convertirà il **fase di esecuzione** e **Durata esecuzione** colonne in un formato più intuitivo.  Eseguire lo script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+ Nella query [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente le colonne **run_time** e **run_duration** vengono convertite in un formato più descrittivo.  Eseguire lo script in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  
  ```sql
  SET NOCOUNT ON;

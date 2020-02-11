@@ -17,21 +17,21 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924543"
 ---
 # <a name="provider-errors"></a>Errori del provider
-Quando si verifica un errore del provider, viene restituito un errore di run-time di -2147467259. Quando si riceve questo errore, verificare i **errori** raccolta dell'oggetto attivo **connessione** oggetto, che contiene uno o più errori che descrive quanto accaduto.  
+Quando si verifica un errore del provider, viene restituito un errore di run-time di-2147467259. Quando viene visualizzato questo errore, controllare la raccolta di **errori** dell'oggetto **connessione** attivo, che conterrà uno o più errori che descrivono cosa si è verificato.  
   
-## <a name="the-ado-errors-collection"></a>La raccolta di errori ADO  
- Dato che una particolare operazione ADO possa produrre più errori del provider, ADO espone una raccolta di oggetti di errore tramite il **connessione** oggetto. Questa raccolta non contiene oggetti se un'operazione si conclude correttamente e contiene uno o più **errore** oggetti se si è verificato e il provider ha generato una o più errori. Esaminare ogni oggetto error per determinare la causa esatta dell'errore.  
+## <a name="the-ado-errors-collection"></a>Raccolta di errori ADO  
+ Poiché una particolare operazione ADO può produrre più errori del provider, ADO espone una raccolta di oggetti Error tramite l'oggetto **Connection** . Questa raccolta non contiene oggetti se un'operazione termina correttamente e contiene uno o più oggetti **Error** se si è verificato un errore e il provider ha generato uno o più errori. Esaminare ogni oggetto errore per determinare la corretta origine dell'errore.  
   
- Non appena è terminata la gestione degli eventuali errori che si sono verificati, è possibile cancellare la raccolta chiamando il **cancellare** (metodo). È particolarmente importante cancellare in modo esplicito il **errori** raccolta prima di chiamare le **Risincronizza**, **UpdateBatch**, o **CancelBatch**metodo su un **Recordset** oggetto, il **Open** metodo su un **connessione** dell'oggetto, o impostare il **filtro** proprietà in un **Recordset** oggetto. Cancellando la raccolta in modo esplicito, è possibile essere certi che eventuali **errore** oggetti nella raccolta non sono rimasti da un'operazione precedente.  
+ Al termine della gestione degli errori che si sono verificati, è possibile cancellare la raccolta chiamando il metodo **Clear** . È particolarmente importante deselezionare esplicitamente la raccolta **Errors** prima di chiamare il metodo **Resync**, **UpdateBatch**o **CancelBatch** su un oggetto **Recordset** , il metodo **Open** su un oggetto **Connection** o impostare la proprietà **Filter** per un oggetto **Recordset** . Deselezionando la raccolta in modo esplicito, è possibile essere certi che gli oggetti **Error** della raccolta non vengano lasciati da un'operazione precedente.  
   
- Alcune operazioni possono generare avvisi a errori. Gli avvisi sono rappresentati anche dalle **errore** gli oggetti nel **errori** raccolta. Quando un provider aggiunge un avviso alla raccolta, non genera un errore di run-time. Controllare la **conteggio** proprietà delle **errori** insieme per determinare se un avviso è stato generato da una determinata operazione. Se il conteggio è uno o più, un **errore** oggetto è stato aggiunto alla raccolta. Non appena è stato possibile determinare che il **errori** insieme contiene errori o avvisi, è possibile scorrere la raccolta e recuperare informazioni su ognuna **errore** oggetti in esso contenuti. L'esempio breve Visual Basic seguente illustra questo processo:  
+ Alcune operazioni possono generare avvisi oltre agli errori. Gli avvisi sono rappresentati anche da oggetti **Error** nella raccolta **Errors** . Quando un provider aggiunge un avviso alla raccolta, non genera un errore di run-time. Controllare la proprietà **count** della raccolta **Errors** per determinare se un avviso è stato generato da una determinata operazione. Se il conteggio è uno o più, un oggetto **Error** è stato aggiunto alla raccolta. Non appena si è determinato che la raccolta **Errors** contiene errori o avvisi, è possibile scorrere la raccolta e recuperare le informazioni su ogni oggetto **Error** che contiene. Nell'esempio di Visual Basic breve seguente viene illustrato quanto segue:  
   
 ```  
 ' BeginErrorHandlingVB02  
@@ -59,23 +59,23 @@ End Function
 ' EndErrorHandlingVB02  
 ```  
   
- La routine di gestione degli errori include un' **per ogni** ciclo che esamina ogni oggetto nella **errori** raccolta. In questo esempio, accumula un messaggio per la visualizzazione. In un programma funzionante, è necessario scrivere codice per eseguire un'attività appropriata per ogni errore, quale la chiusura di tutto aprire i file e l'arresto del programma in modo ordinato.  
+ La routine di gestione degli errori include un ciclo **for each** che esamina ogni oggetto nella raccolta **Errors** . In questo esempio viene accumulato un messaggio per la visualizzazione. In un programma funzionante è necessario scrivere il codice per eseguire un'attività appropriata per ogni errore, ad esempio la chiusura di tutti i file aperti e l'arresto del programma in modo ordinato.  
   
-## <a name="the-error-object"></a>L'oggetto Error  
- Esaminando un **errore** dell'oggetto è possibile determinare l'errore si è verificato e più importante, individuare l'applicazione o l'oggetto che ha causato l'errore. Il **errore** oggetto presenta le proprietà seguenti:  
+## <a name="the-error-object"></a>Oggetto Error  
+ Esaminando un oggetto **Error** è possibile determinare l'errore che si è verificato e, più importante, l'applicazione o l'oggetto che ha causato l'errore. L'oggetto **Error** presenta le proprietà seguenti:  
   
 |Nome proprietà|Descrizione|  
 |-------------------|-----------------|  
-|**Descrizione**|Una descrizione di testo dell'errore che si è verificato.|  
-|**HelpContext, HelpFile**|Fa riferimento al file di argomento della Guida e supporto che contiene una descrizione dell'errore che si è verificato.|  
-|**NativeError**|Il numero di errore specifico del provider.|  
-|**Numero**|Valore Long Integer che rappresenta il numero (elencati nel **ErrorValueEnum**) dell'errore che si è verificato.|  
-|**Origine**|Indica il nome dell'oggetto o applicazione che ha generato un errore.|  
-|**SQLState**|Un codice di errore di cinque caratteri che il provider restituisce durante il processo di un'istruzione SQL.|  
+|**Descrizione**|Descrizione testuale dell'errore che si è verificato.|  
+|**HelpContext, fileguida**|Si riferisce all'argomento della guida e al file della guida che contengono una descrizione dell'errore che si è verificato.|  
+|**NativeError**|Numero di errore specifico del provider.|  
+|**Numero**|Valore long integer che rappresenta il numero (elencato in **ErrorValueEnum**) dell'errore che si è verificato.|  
+|**Origine**|Indica il nome dell'oggetto o dell'applicazione che ha generato un errore.|  
+|**SQLState**|Codice di errore di cinque caratteri restituito dal provider durante il processo di un'istruzione SQL.|  
   
- L'oggetto ADO **errore** oggetti sono molto simili al standard di Visual Basic **Err** oggetto. Le proprietà descrivono l'errore che si sono verificati. Oltre al numero dell'errore, si ricevono inoltre due tipi correlati di informazioni. Il **NativeError** proprietà contiene un numero di errore specifico del provider in uso. Nell'esempio precedente, il provider è il Provider Microsoft OLE DB per SQL Server, pertanto **NativeError** conterrà errori specifici di SQL Server. Il **SQLState** proprietà ha un codice di cinque lettere che descrive un errore in un'istruzione SQL.  
+ L'oggetto **errore** ADO è molto simile all'oggetto Visual Basic **Err** standard. Le relative proprietà descrivono l'errore che si è verificato. Oltre al numero dell'errore, si ricevono anche due informazioni correlate. La proprietà **NativeError** contiene un numero di errore specifico per il provider in uso. Nell'esempio precedente, il provider è il provider di OLE DB Microsoft per SQL Server, quindi **NativeError** conterrà errori specifici per SQL Server. La proprietà **SQLSTATE** include un codice di cinque lettere che descrive un errore in un'istruzione SQL.  
   
-## <a name="event-related-errors"></a>Errori relativi agli eventi  
- Il **errore** oggetto viene usato anche quando si verificano errori relativi agli eventi. È possibile determinare se si è verificato un errore nel processo che ha generato un evento di ADO controllando il **errore** oggetto passato come parametro di evento.  
+## <a name="event-related-errors"></a>Errori correlati agli eventi  
+ L'oggetto **Error** viene usato anche quando si verificano errori correlati agli eventi. È possibile determinare se si è verificato un errore nel processo che ha generato un evento ADO controllando l'oggetto **errore** passato come parametro di evento.  
   
- Se l'operazione che causa un evento si conclude correttamente, il *adStatus* parametro del gestore dell'evento verrà impostato su *adStatusOK*. D'altra parte, se l'operazione che ha generato l'evento ha avuto esito negativo, il *adStatus* parametro è impostato su *adStatusErrorsOccurred*. In tal caso, il *pError* parametro conterrà un' **errore** oggetto che descrive l'errore.
+ Se l'operazione che provoca un evento viene conclusa correttamente, il parametro *adStatus* del gestore eventi verrà impostato su *adStatusOK*. D'altra parte, se l'operazione che ha generato l'evento ha avuto esito negativo, il parametro *adStatus* è impostato su *adStatusErrorsOccurred*. In tal caso, il parametro *perror* conterrà un oggetto **Error** che descrive l'errore.

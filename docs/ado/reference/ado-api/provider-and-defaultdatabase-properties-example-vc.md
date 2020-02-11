@@ -1,5 +1,5 @@
 ---
-title: Esempio di proprietà DefaultDatabase (VC + +) e provider | Microsoft Docs
+title: Esempio di proprietà provider e DefaultDatabase (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20226c4c9c8d25541cee7fac786b85af5c12859f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931481"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Esempio delle proprietà Provider e DefaultDatabase (VC++)
-Questo esempio viene illustrato il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà aprendo tre [connessione](../../../ado/reference/ado-api/connection-object-ado.md) di oggetti usando diversi provider. Viene inoltre utilizzata la [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) proprietà da impostare il database predefinito per il Provider ODBC di Microsoft.  
+In questo esempio viene illustrata la proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) aprendo tre oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md) utilizzando provider diversi. USA inoltre la proprietà [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) per impostare il database predefinito per il provider Microsoft ODBC.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  

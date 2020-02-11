@@ -18,10 +18,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6d86e6d3a6e910dbd18f2038f127ba99bfd65369
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252622"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>Classi gestite SQLXML - Oggetto SqlXmlParameter
@@ -31,7 +31,7 @@ ms.locfileid: "75252622"
  Nome  
  Nome del parametro. Ai comandi possono essere passati parametri. Chiamando il metodo CreateParameter dell'oggetto SqlXmlCommand viene creato l'oggetto Parameter.  
   
- Value  
+ valore  
  Valore del parametro. Per un esempio funzionante, vedere [esecuzione di query SQL &#40;classi gestite SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
 ## <a name="see-also"></a>Vedere anche  

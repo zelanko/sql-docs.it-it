@@ -18,10 +18,10 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75546560"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "75546560"
   Restituisce informazioni sui processi utilizzati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per l'esecuzione di attività automatizzate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  
- ![Icona di collegamento all'argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,7 +51,7 @@ sp_help_job { [ @job_id = ] job_id
      [ , [ @description = ] 'description_pattern' ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
 `[ @job_id = ] job_id`Numero di identificazione del processo. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null.  
   
 `[ @job_name = ] 'job_name'`Nome del processo. *job_name* è di **tipo sysname**e il valore predefinito è null.  
@@ -61,9 +61,9 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`Attributo del processo da visualizzare. *job_aspect* è di tipo **varchar (9)** e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**TUTTI**|Informazioni sugli attributi del processo|  
+|**ALL**|Informazioni sugli attributi del processo|  
 |**PROCESSO**|Informazioni sul processo|  
 |**Orari**|Informazioni sulla pianificazione|  
 |**PASSAGGI**|Informazioni sui passaggi del processo|  
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`Stato di esecuzione dei processi. *status* è di **tipo int**e il valore predefinito è null. i possibili valori sono i seguenti.  
   
-|Value|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Restituisce solo i processi non inattivi o sospesi.|  
 |**1**|In esecuzione.|  
@@ -105,7 +105,7 @@ sp_help_job { [ @job_id = ] job_id
 ## <a name="result-sets"></a>Set di risultati  
  Se non viene specificato alcun argomento, **sp_help_job** restituisce il set di risultati.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID univoco del processo.|  
 |**originating_server**|**nvarchar (30)**|Nome del server di provenienza del processo.|  
@@ -123,8 +123,8 @@ sp_help_job { [ @job_id = ] job_id
 |**notify_netsend_operator**|**sysname**|Nome di computer o di utente specificato quando si invia un messaggio in rete.|  
 |**notify_page_operator**|**sysname**|Nome di computer o di utente specificato quando si invia un messaggio su cercapersone.|  
 |**delete_level**|**int**|**Maschera di maschera** che indica le circostanze in cui il processo deve essere eliminato al termine di un processo. I valori possibili sono identici a quelli per **notify_level_eventlog**.|  
-|**date_created**|**DateTime**|Data di creazione del processo.|  
-|**date_modified**|**DateTime**|Data dell'ultima modifica del processo.|  
+|**date_created**|**datetime**|Data di creazione del processo.|  
+|**date_modified**|**datetime**|Data dell'ultima modifica del processo.|  
 |**numero_versione**|**int**|Versione del processo (aggiornata automaticamente ogni volta che viene modificato il processo).|  
 |**last_run_date**|**int**|Data dell'ultimo avvio dell'esecuzione del processo.|  
 |**last_run_time**|**int**|Ora dell'ultimo avvio dell'esecuzione del processo.|  
@@ -144,17 +144,17 @@ sp_help_job { [ @job_id = ] job_id
   
  Il set di risultati per i passaggi del processo è il seguente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificatore univoco (a livello di processo) per il passaggio.|  
 |**step_name**|**sysname**|Nome del passaggio.|  
 |**sottosistema**|**nvarchar (40)**|Sottosistema in cui eseguire il comando del passaggio.|  
 |**comando**|**nvarchar (3200)**|Comando da eseguire.|  
-|**Bandiere**|**nvarchar (4000)**|**Maschera di maschera** dei valori che controllano il comportamento del passaggio.|  
+|**Bandiere**|**nvarchar(4000)**|**Maschera di maschera** dei valori che controllano il comportamento del passaggio.|  
 |**cmdexec_success_code**|**int**|Per un passaggio **CmdExec** , questo è il codice di uscita del processo di un comando riuscito.|  
-|**on_success_action**|**nvarchar (4000)**|Azione da eseguire se il passaggio viene eseguito correttamente:<br /><br /> **1** = Esci con esito positivo.<br /><br /> **2** = Quit con esito negativo.<br /><br /> **3** = Vai al passaggio successivo.<br /><br /> **4** = Vai al passaggio.|  
+|**on_success_action**|**nvarchar(4000)**|Azione da eseguire se il passaggio viene eseguito correttamente:<br /><br /> **1** = Esci con esito positivo.<br /><br /> **2** = Quit con esito negativo.<br /><br /> **3** = Vai al passaggio successivo.<br /><br /> **4** = Vai al passaggio.|  
 |**on_success_step_id**|**int**|Se **on_success_action** è **4**, indica il passaggio successivo da eseguire.|  
-|**on_fail_action**|**nvarchar (4000)**|Azione da eseguire se il passaggio non viene eseguito correttamente. I valori sono uguali a quelli per **on_success_action**.|  
+|**on_fail_action**|**nvarchar(4000)**|Azione da eseguire se il passaggio non viene eseguito correttamente. I valori sono uguali a quelli per **on_success_action**.|  
 |**on_fail_step_id**|**int**|Se **on_fail_action** è **4**, indica il passaggio successivo da eseguire.|  
 |**Server**|**sysname**|Riservato.|  
 |**database_name**|**sysname**|Per un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)], indica il database in cui verrà eseguito il comando.|  
@@ -172,7 +172,7 @@ sp_help_job { [ @job_id = ] job_id
   
  Il set di risultati per le pianificazioni del processo è il seguente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|ID della pianificazione, univoco per tutti i processi.|  
 |**schedule_name**|**sysname**|Nome della pianificazione, univoco soltanto per il processo specificato.|  
@@ -187,8 +187,8 @@ sp_help_job { [ @job_id = ] job_id
 |**active_end_date**|**int**|Data di fine dell'esecuzione del processo.|  
 |**active_start_time**|**int**|Tempo necessario per iniziare l'esecuzione del processo in **active_start_date.**|  
 |**active_end_time**|**int**|Tempo necessario per terminare l'esecuzione del processo in **active_end_date**.|  
-|**date_created**|**DateTime**|Data di creazione della pianificazione.|  
-|**schedule_description**|**nvarchar (4000)**|Descrizione in inglese della pianificazione, se richiesta.|  
+|**date_created**|**datetime**|Data di creazione della pianificazione.|  
+|**schedule_description**|**nvarchar(4000)**|Descrizione in inglese della pianificazione, se richiesta.|  
 |**next_run_date**|**int**|Data della successiva esecuzione del processo in base alla pianificazione.|  
 |**next_run_time**|**int**|Ora della successiva esecuzione del processo in base alla pianificazione.|  
 |**schedule_uid**|**uniqueidentifier**|Identificatore della pianificazione.|  
@@ -196,12 +196,12 @@ sp_help_job { [ @job_id = ] job_id
   
  Il set di risultati per i server di destinazione del processo è il seguente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID del server di destinazione.|  
 |**server_name**|**nvarchar (30)**|Nome di computer del server di destinazione.|  
-|**enlist_date**|**DateTime**|Data di integrazione del server di destinazione nel server master.|  
-|**last_poll_date**|**DateTime**|Data dell'ultimo polling del server master eseguito dal server di destinazione.|  
+|**enlist_date**|**datetime**|Data di integrazione del server di destinazione nel server master.|  
+|**last_poll_date**|**datetime**|Data dell'ultimo polling del server master eseguito dal server di destinazione.|  
 |**last_run_date**|**int**|Data di inizio dell'ultima esecuzione del processo nel server di destinazione.|  
 |**last_run_time**|**int**|Ora di inizio dell'ultima esecuzione del processo nel server di destinazione.|  
 |**last_run_duration**|**int**|Durata dell'ultima esecuzione del processo nel server di destinazione.|  
@@ -266,6 +266,6 @@ GO
  [sp_add_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_update_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [Stored procedure di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

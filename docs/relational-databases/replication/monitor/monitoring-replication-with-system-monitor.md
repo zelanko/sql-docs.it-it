@@ -15,10 +15,10 @@ ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082978"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Monitoraggio della replica con Monitor di sistema
@@ -27,7 +27,7 @@ ms.locfileid: "68082978"
   
  In Monitor di sistema vengono utilizzati oggetti e contatori delle prestazioni che forniscono informazioni sulle prestazioni dei vari processi. È possibile misurare le prestazioni della replica mediante contatori associati agli agenti di replica:  
   
-|Agent|Oggetto prestazione|Contatore|Descrizione|  
+|Agente|Oggetto prestazione|Contatore|Descrizione|  
 |-----------|------------------------|-------------|-----------------|  
 |Tutti gli agenti|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Agenti di replica|In esecuzione|Numero di agenti di replica correntemente in esecuzione.|  
 |agente snapshot|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Snapshot repliche|Snapshot: Comandi recapitati/sec|Numero di comandi al secondo recapitati al database di distribuzione.|  

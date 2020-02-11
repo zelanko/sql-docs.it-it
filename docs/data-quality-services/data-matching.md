@@ -1,5 +1,5 @@
 ---
-title: Data Matching
+title: Corrispondenza di dati
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,13 +10,13 @@ ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251752"
 ---
-# <a name="data-matching"></a>Data Matching
+# <a name="data-matching"></a>Corrispondenza di dati
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -75,7 +75,7 @@ ms.locfileid: "75251752"
   
 |||  
 |-|-|  
-|Creare e testare regole di corrispondenza in criteri di corrispondenza|[Creare criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)|  
+|Creare e testare regole di corrispondenza in criteri di corrispondenza|[Creazione di criteri di corrispondenza](../data-quality-services/create-a-matching-policy.md)|  
 |Eseguire l'individuazione delle corrispondenze in un progetto Data Quality|[Eseguire un progetto corrispondente](../data-quality-services/run-a-matching-project.md)|  
   
   

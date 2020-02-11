@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211398"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Integrare un server di destinazione in un server master
@@ -30,9 +30,9 @@ ms.locfileid: "68211398"
   
  Per impostazione predefinita, per le connessioni tra server master e server di destinazione sono attive la crittografia SSL (Secure Sockets Layer) completa e la convalida del certificato. Per altre informazioni, vedere [Impostazione delle opzioni di crittografia nei server di destinazione](set-encryption-options-on-target-servers.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
--   **Per integrare un server di destinazione tramite:**  
+-   **Per integrare un server di destinazione utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68211398"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>Per integrare un server di destinazione  
   
@@ -50,13 +50,13 @@ ms.locfileid: "68211398"
   
 3.  In Configurazione guidata server di destinazione, eseguire i passaggi necessari per completare la procedura.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>Per integrare un server di destinazione  
   
-1.  Utilizzare la stored procedure `sp_msx_enlist`.  Per altre informazioni, vedere [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
+1.  Utilizzare la stored procedure `sp_msx_enlist`.  Per ulteriori informazioni, vedere [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a> Usando SQL Server Management Objects (SMO)  
+##  <a name="PowerShellProcedure"></a>Utilizzo di SQL Server Management Objects (SMO)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)  

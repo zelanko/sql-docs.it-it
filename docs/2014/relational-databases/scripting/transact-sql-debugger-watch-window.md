@@ -13,23 +13,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d6f0d0335b07be83d7b34895c08e8ff01dcd67a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242990"
 ---
 # <a name="watch-window"></a>finestra Espressioni di controllo
-  Nella finestra espressioni di **controllo** vengono visualizzate informazioni sulle espressioni selezionate. Sono disponibili fino a quattro finestre di visualizzazione delle espressioni di controllo: **Espressione di controllo 1**, **Espressione di controllo 2, Espressione di controllo 3**ed **Espressione di controllo 4**. Le espressioni vengono valutate nell'ambito del frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per controllare variabili ed espressioni, è necessario utilizzare la modalità di debug.  
+  Nella finestra **Espressione di controllo** vengono visualizzate informazioni sulle espressioni selezionate. Sono disponibili fino a quattro finestre di visualizzazione delle espressioni di controllo: **Espressione di controllo 1**, **Espressione di controllo 2, Espressione di controllo 3**ed **Espressione di controllo 4**. Le espressioni vengono valutate nell'ambito del frame dello stack di chiamate corrente selezionato nella finestra **Stack di chiamate** . Per controllare variabili ed espressioni, è necessario utilizzare la modalità di debug.  
   
 ## <a name="task-list"></a>Elenco attività  
- **Per accedere alle finestre espressioni di controllo**  
+ **Per accedere alle finestre Espressione di controllo**  
   
 -   Scegliere **Finestre** dal menu **Debug**, fare clic su **Espressione di controllo**, quindi su **Espressione di controllo 1**, **Espressione di controllo 2, Espressione di controllo 3**o **Espressione di controllo 4**.  
   
  **Per modificare il valore di un'espressione**  
   
--   Fare clic con il pulsante destro del mouse sull'espressione, quindi scegliere **Modifica valore**.  
+-   Fare clic con il pulsante destro del mouse sull'espressione e scegliere **Modifica valore**.  
   
 ## <a name="columns"></a>Colonne  
  **Nome**  
@@ -45,7 +45,7 @@ ms.locfileid: "75242990"
   
 -   Istruzioni Transact-SQL tramite cui viene restituito un solo valore, ad esempio SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
- **Value**  
+ **Valore**  
  Consente di visualizzare il valore restituito dopo che il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] valuta l'espressione specificata in **Nome**.  
   
  Se la lunghezza di un'espressione è maggiore della larghezza della colonna **Valore** , il valore completo verrà visualizzato in una descrizione comandi quando si sposta il puntatore sulla cella **Valore** per l'espressione.  
@@ -58,7 +58,7 @@ ms.locfileid: "75242990"
 ## <a name="see-also"></a>Vedere anche  
  [Debugger Transact-SQL](transact-sql-debugger.md)   
  [Informazioni del debugger Transact-SQL](transact-sql-debugger-information.md)   
- [Finestra variabili locali](transact-sql-debugger-locals-window.md)   
- [Finestra stack di chiamate](transact-sql-debugger-call-stack-window.md)   
- [Finestra di dialogo controllo immediato](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Espressioni &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [finestra Variabili locali](transact-sql-debugger-locals-window.md)   
+ [Finestra Stack di chiamate](transact-sql-debugger-call-stack-window.md)   
+ [Finestra di dialogo Controllo immediato](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Espressioni &#40; Transact-SQL &#41;](/sql/t-sql/language-elements/expressions-transact-sql)  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229006"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Gruppi di disponibilità Always On (SQL Server)
@@ -131,11 +131,11 @@ ms.locfileid: "75229006"
   
 -   [FILESTREAM](../../../relational-databases/blob/filestream-sql-server.md)  
   
--   [Tabella FileTable](../../../relational-databases/blob/filetables-sql-server.md)  
+-   [FileTable](../../../relational-databases/blob/filetables-sql-server.md)  
   
 -   [Log shipping](../../log-shipping/about-log-shipping-sql-server.md)  
   
--   [Archivio BLOB remoti (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
+-   [Archivio BLOB remoto (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
 -   [Replica](../../install-windows/install-sql-server-replication.md)  
   
@@ -148,27 +148,27 @@ ms.locfileid: "75229006"
 > [!WARNING]  
 >  Per informazioni sulle restrizioni e le limitazioni per l'uso di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]altre funzionalità con, vedere [Always on gruppi di disponibilità: interoperabilità. SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a>Attività correlate  
+##  <a name="RelatedTasks"></a> Attività correlate  
   
 -   [Introduzione con Always On gruppi di disponibilità; SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Contenuto correlato  
+##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   **Blog**  
+-   **Blog:**  
   
      [Blog del team di SQL Server Always On: Blog ufficiale del team SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blog sui tecnici SQL Server CSS](https://blogs.msdn.com/b/psssql/)  
+     [Pagina relativa ai blog del Servizio Supporto Tecnico Clienti per gli ingegneri di SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Video**  
+-   **Video:**  
   
-     [Microsoft SQL Server nome in codice "Denali" Always On Series, parte 1: Introduzione alla soluzione a disponibilità elevata di nuova generazione](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Serie Always On in Microsoft SQL Server nome in codice "Denali", parte 1: Introduzione alla soluzione a disponibilità elevata di nuova generazione)  
   
      [Microsoft SQL Server nome in codice "Denali" Always On Series, parte 2: compilazione di una soluzione mission-critical a disponibilità elevata con AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **White paper**  
+-   **White paper:**  
   
-     [Guida alle soluzioni Always On Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   
@@ -178,7 +178,7 @@ ms.locfileid: "75229006"
  [Configurazione di un'istanza del server per i gruppi di disponibilità Always On; SQL Server;](always-on-availability-groups-sql-server.md)   
  [Creazione e configurazione dei gruppi di disponibilità; SQL Server;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Amministrazione di un gruppo di disponibilità; SQL Server;](administration-of-an-availability-group-sql-server.md)   
- [Monitoraggio dei gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [Monitoraggio di Gruppi di disponibilità &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Panoramica delle istruzioni Transact-SQL per i gruppi di disponibilità Always On; SQL Server;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Panoramica dei cmdlet di PowerShell per Gruppi di disponibilità AlwaysOn; SQL Server;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

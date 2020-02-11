@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231801"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lezione 6: eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lezione 6: Eseguire la migrazione di un database da un computer di origine locale a un computer di destinazione in Azure
   In questa lezione si presuppone che si disponga già di un altro SQL Server, che potrebbe trovarsi in un altro computer locale o in una macchina virtuale in Azure. Per informazioni su come creare una macchina virtuale SQL Server in Azure, vedere [provisioning di una macchina virtuale SQL Server in Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Dopo il provisioning di una macchina virtuale SQL Server in Azure, verificare che sia possibile connettersi a un'istanza di SQL Server in questa macchina virtuale tramite SQL Server Management Studio in un altro computer.  
   
  Per questa lezione si presuppone che l'utente abbia già completato i passaggi seguenti:  
@@ -146,5 +146,5 @@ ms.locfileid: "75231801"
   
  **Lezione successiva:**  
   
- [Lezione 7: spostare i file di dati in archiviazione di Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lezione 7: Spostare i file di dati in Archiviazione di Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   

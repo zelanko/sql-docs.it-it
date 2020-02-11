@@ -14,13 +14,13 @@ ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4d684fb6d9614defdca3897c53c4bae9fc231a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138077"
 ---
 # <a name="record-count"></a>Conteggio record
-Il campo dell'intestazione di un descrittore SQL_DESC_COUNT è l'indice in base 1 del record con numero più alto che contiene i dati. Questo campo non è un conteggio di tutte le colonne o parametri associati. Quando si alloca un descrittore, il valore iniziale di SQL_DESC_COUNT è 0.  
+Il SQL_DESC_COUNT campo di intestazione di un descrittore è l'indice in base uno del record con il numero più alto che contiene i dati. Questo campo non è un conteggio di tutte le colonne o i parametri associati. Quando si alloca un descrittore, il valore iniziale di SQL_DESC_COUNT è 0.  
   
- Il driver accetta qualsiasi azione necessaria per allocare e mantenere la risorsa di archiviazione necessarie per contenere le informazioni del descrittore. L'applicazione in modo non esplicito specificare le dimensioni di un descrittore né allocare nuovi record. Quando l'applicazione fornisce le informazioni per un record del descrittore il cui numero è superiore al valore di SQL_DESC_COUNT, il driver aumenta automaticamente SQL_DESC_COUNT. Quando l'applicazione viene disassociato il record del descrittore con numero più alto, il driver si ridotta automaticamente SQL_DESC_COUNT per contenere il numero del record rimanenti più alto associato.
+ Il driver esegue qualsiasi azione necessaria per allocare e gestire qualsiasi spazio di archiviazione necessario per mantenere le informazioni sul descrittore. L'applicazione non specifica in modo esplicito le dimensioni di un descrittore né alloca i nuovi record. Quando l'applicazione fornisce informazioni per un record di descrittore il cui numero è maggiore del valore di SQL_DESC_COUNT, il driver aumenta automaticamente SQL_DESC_COUNT. Quando l'applicazione annulla il binding del record del descrittore con il numero più alto, il driver diminuisce automaticamente SQL_DESC_COUNT in modo da contenere il numero del record più alto rimanente associato.

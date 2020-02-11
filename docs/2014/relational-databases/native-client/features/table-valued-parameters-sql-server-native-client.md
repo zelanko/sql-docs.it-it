@@ -1,5 +1,5 @@
 ---
-title: Parametri con valori di tabella (SQL Server Native Client) | Documenti di Microsoft
+title: Parametri con valori di tabella (SQL Server Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206617"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Parametri con valori di tabella (SQL Server Native Client)
   I parametri con valori di tabella sono stati introdotti in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e offrono una modalità efficiente per passare più righe di dati al server. Tali parametri offrono funzionalità simili a quelle delle matrici di parametri, ma garantiscono una maggiore flessibilità e integrazione con [!INCLUDE[tsql](../../../includes/tsql-md.md)] e spesso anche prestazioni migliori. Diversamente dalle matrici di parametri, i parametri con valori di tabella possono anche partecipare alle operazioni basate su set.  
   
- Per informazioni sui parametri con valori di tabella e ODBC, vedere [parametri con valori di tabella &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Per informazioni sui parametri con valori di tabella e ODBC, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
  Per informazioni sui parametri con valori di tabella e OLE DB, vedere [parametri con valori di tabella &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
