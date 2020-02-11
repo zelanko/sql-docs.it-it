@@ -1,5 +1,5 @@
 ---
-title: Metadati (scheda esplorazione, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Metadati (scheda Esplorazione, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077850"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadati (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -38,21 +38,21 @@ ms.locfileid: "66077850"
   
  Quando si utilizza un modello tabulare, l'elenco di funzioni include le funzioni MDX e le funzioni DAX. In caso contrario, l'elenco include solo funzioni MDX. In un modello multidimensionale non è possibile utilizzare funzioni DAX direttamente, anche se come parte della definizione di un oggetto potrebbe essere inclusa un'espressione DAX.  
   
- Suggerimento: Le cartelle contenenti funzioni DAX sono elencate tutte le lettere maiuscole. Tutte le altre cartelle contengono funzioni MDX. Ad esempio, sono presenti due cartelle per le funzioni statistiche: **STATISTICA** contiene le funzioni DAX correlate.  
+ Suggerimento: le cartelle contenenti funzioni DAX sono elencate tutte in lettere maiuscole. Tutte le altre cartelle contengono funzioni MDX. Ad esempio, per le funzioni statistiche sono presenti due cartelle: **STATISTICAL** contiene le funzioni DAX correlate.  
   
 ## <a name="context-menu"></a>Menu di scelta rapida  
  Le opzioni seguenti sono disponibili nel menu di scelta rapida visualizzato quando si fa clic con il pulsante destro del mouse su un elemento visualizzato nel riquadro **Metadati** :  
   
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**Aggiungere alla Query**|Fare clic per aggiungere l'oggetto selezionato al riquadro inferiore dell'area di compilazione della query.|  
-|**Aggiungi a filtro**|Fare clic per aggiungere la dimensione, l'attributo, la gerarchia o il livello selezionato all'area filtro di **Esplorazione**.<br /><br /> Nota: Questa opzione è abilitata solo se una dimensione, attributo, gerarchia o livello sia selezionato.|  
-|**Copia**|Fare clic su questo pulsante per aggiungere l'elemento selezionato agli Appunti.<br /><br /> Nota: Questa opzione consente di copiare il nome completo dell'oggetto.|  
+|**Aggiungi a query**|Fare clic per aggiungere l'oggetto selezionato al riquadro inferiore dell'area di compilazione della query.|  
+|**Aggiungi a filtro**|Fare clic per aggiungere la dimensione, l'attributo, la gerarchia o il livello selezionato all'area filtro di **Esplorazione**.<br /><br /> Nota: questa opzione è abilitata solo se è selezionato un attributo, una dimensione, una gerarchia o un livello.|  
+|**Copia**|Fare clic su questo pulsante per aggiungere l'elemento selezionato agli Appunti.<br /><br /> Nota: questa opzione consente di copiare il nome completo dell'oggetto.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sulla barra degli strumenti &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Analizza in Excel &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Progettazione query e filtro &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [Barra degli strumenti &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analizza in Excel &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Eseguire query e filtrare &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione cubi &#40;browser&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   
