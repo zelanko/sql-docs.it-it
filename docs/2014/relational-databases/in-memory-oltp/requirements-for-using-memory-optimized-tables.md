@@ -11,18 +11,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467897"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisiti per l'utilizzo di tabelle con ottimizzazione per la memoria
-  Oltre al [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), di seguito sono i requisiti per utilizzare OLTP In memoria:  
+  Oltre ai [requisiti hardware e software per l'installazione di SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), di seguito sono riportati i requisiti per l'utilizzo di OLTP in memoria:  
   
 -   Versioni Developer, Evaluation o Enterprise Edition a 64 bit di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   Memoria sufficiente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per poter usare i dati negli indici e nelle tabelle ottimizzate per la memoria. Per tenere conto delle versioni delle righe, è necessario fornire una quantità di memoria che sia il doppio delle dimensioni previste per gli indici e le tabelle ottimizzate per la memoria. La quantità di memoria effettiva necessaria dipende tuttavia dal carico di lavoro. È consigliabile monitorare l'utilizzo della memoria e apportare modifiche in base alle esigenze. Le dimensioni dei dati nelle tabelle ottimizzate per la memoria non devono superare la percentuale consentita del pool. Per conoscere le dimensioni di una tabella con ottimizzazione per la memoria, vedere [DM db_xtp_table_memory_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
+-   Memoria sufficiente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per poter usare i dati negli indici e nelle tabelle ottimizzate per la memoria. Per tenere conto delle versioni delle righe, è necessario fornire una quantità di memoria che sia il doppio delle dimensioni previste per gli indici e le tabelle ottimizzate per la memoria. La quantità di memoria effettiva necessaria dipende tuttavia dal carico di lavoro. È consigliabile monitorare l'utilizzo della memoria e apportare modifiche in base alle esigenze. Le dimensioni dei dati nelle tabelle ottimizzate per la memoria non devono superare la percentuale consentita del pool. Per individuare le dimensioni di una tabella ottimizzata per la memoria, vedere [sys. dm_db_xtp_table_memory_stats &#40;&#41;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
   
      Se nel database sono presenti tabelle basate su disco, è necessario fornire la memoria sufficiente per il pool di buffer e l'elaborazione delle query in quelle tabelle.  
   
@@ -30,21 +30,22 @@ ms.locfileid: "62467897"
   
 -   Spazio libero su disco che sia il doppio delle dimensioni delle tabelle ottimizzate per la memoria durevoli.  
   
--   Un processore deve supportare l'istruzione **cmpxchg16b** per l'utilizzo di OLTP in memoria. Tutti i moderni processori a 64 bit supportano **cmpxchg16b**.  
+-   Un processore deve supportare l'istruzione **cmpxchg16b** per l'uso di OLTP in memoria. Tutti i moderni processori a 64 bit supportano **cmpxchg16b**.  
   
-     Se si usano un'applicazione host VM e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un errore causato da un processore di generazione precedente, controllare se nell'applicazione è presente un'opzione di configurazione che consenta l'utilizzo di **cmpxchg16b**. In alternativa, è possibile usare Hyper-V, che supporta **cmpxchg16b** senza la necessità di modificare l'opzione di configurazione.  
+     Se si usano un'applicazione host VM e in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un errore causato da un processore di generazione precedente, controllare se nell'applicazione è presente un'opzione di configurazione che consenta l'utilizzo di **cmpxchg16b**. In caso contrario, è possibile usare Hyper-, che supporta **cmpxchg16b** senza dover modificare l'opzione di configurazione.  
   
 -   Per installare OLTP in memoria, selezionare **Servizi motore di database** quando si installa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-     Per installare la generazione di report ([determinare se una tabella o una Stored Procedure deve essere trasferita a OLTP In memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) e [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (per gestire OLTP In memoria tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Esplora oggetti), selezionare **Management Strumenti-Basic** oppure **strumenti di gestione-avanzati** quando si installa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+     Per installare la generazione di report (che[determina se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ) e (per gestire oltp in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] memoria tramite Esplora oggetti), selezionare **strumenti di gestione-di base** o **strumenti di gestione-avanzate** quando si installa [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Note importanti sull'uso di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>Note importanti sull'uso di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
--   Le dimensioni totali in memoria di tutte le tabelle durevoli di un database non devono superare i 250 GB. Per altre informazioni, vedere [durabilità per tabelle ottimizzate per la memoria](durability-for-memory-optimized-tables.md).  
+-   Le dimensioni totali in memoria di tutte le tabelle durevoli di un database non devono superare i 250 GB. Per altre informazioni, vedere [durabilità per le tabelle ottimizzate per la memoria](durability-for-memory-optimized-tables.md).  
   
 -   Questo rilascio di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] è mirato per essere usato in modo ottimale con 2 o 4 socket e meno di 60 core.  
   
--   I file di checkpoint non devono essere eliminati manualmente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue automaticamente il processo di Garbage Collection sui file di checkpoint non necessari. Per altre informazioni, vedere la discussione sull'unione di file di dati e differenziali in [durabilità per tabelle ottimizzate per la memoria](durability-for-memory-optimized-tables.md).  
+-   I file di checkpoint non devono essere eliminati manualmente. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue automaticamente il processo di Garbage Collection sui file di checkpoint non necessari. Per ulteriori informazioni, vedere la discussione sull'Unione di file di dati e differenziali in [durabilità per le tabelle ottimizzate per la memoria](durability-for-memory-optimized-tables.md).  
   
 -   Nella prima versione di OLTP in memoria (in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), l'unico modo per rimuovere un filegroup ottimizzato per la memoria consiste nell'eliminare il database.  
   
@@ -52,8 +53,8 @@ ms.locfileid: "62467897"
   
 -   Se si crea uno o più database con tabelle ottimizzate per la memoria, è consigliabile abilitare l'inizializzazione immediata dei file per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire tale operazione è necessario concedere all'account di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il diritto utente SE_MANAGE_VOLUME_NAME. Senza l'inizializzazione immediata dei file, i file di archiviazione ottimizzati per la memoria (file di dati e differenziali) vengono inizializzati al momento della creazione. Tale operazione può causare una riduzione delle prestazioni del carico di lavoro. Per altre informazioni sull'inizializzazione immediata dei file, vedere [Inizializzazione di file di database](../databases/database-instant-file-initialization.md). Per informazioni su come abilitare l'inizializzazione immediata dei file, vedere l'argomento relativo ai [motivi e alle modalità di abilitazione dell'inizializzazione immediata dei file](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
-## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Commenti e suggerimenti  
- Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Commenti e suggerimenti per commenti e suggerimenti per migliorare il contenuto. Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
+## <a name="did-this-article-help-you-were-listening"></a>Questo articolo è stato utile? Stiamo ascoltando  
+ Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Sono in ascolto dei commenti e suggerimenti per migliorare il contenuto. Inviare i commenti a [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
   
 ## <a name="see-also"></a>Vedere anche  
  [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)  
