@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797759"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Specifica di istanze nel provider SQL Server PowerShell
   I percorsi specificati per il provider SQL Server PowerShell devono identificare l'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)] e il computer sulla quale è in esecuzione. La sintassi per la specifica del computer e l'istanza devono conformarsi sia alle regole per gli identificatori di SQL Server che ai percorsi di Windows PowerShell.  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+1.  **Prima di iniziare:**  [limitazioni e restrizioni](#LimitationsRestrictions)  
   
-2.  **To specify an instance:**  [Examples](#Examples)  
+2.  **Per specificare un'istanza:**  [esempi](#Examples)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Il primo nodo che segue SQLSERVER:\SQL in un percorso del provider SQL Server è il nome del computer che esegue l'istanza di [!INCLUDE[ssDE](../includes/ssde-md.md)], ad esempio:  
@@ -48,7 +48,7 @@ SQLSERVER:\SQL\MyComputer\MyInstance
   
  Il provider di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] richiede di specificare sempre un nome dell'istanza. Per le istanze predefinite, è necessario specificare un nome dell'istanza DEFAULT.  
   
-##  <a name="Examples"></a> Esempi, nomi del computer e dell'istanza  
+##  <a name="Examples"></a>Esempi Nomi di computer e di istanze  
  In questo esempio viene utilizzato localhost e DEFAULT per specificare l'istanza predefinita nel computer locale.  
   
 ```powershell
@@ -77,5 +77,5 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
   
 ## <a name="see-also"></a>Vedere anche  
  [Identificatori di SQL Server in PowerShell](sql-server-identifiers-in-powershell.md)   
- [Provider PowerShell per SQL Server](sql-server-powershell-provider.md)   
+ [Provider di SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

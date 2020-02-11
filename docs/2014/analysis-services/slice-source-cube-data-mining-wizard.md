@@ -1,5 +1,5 @@
 ---
-title: Sezionare il cubo di origine (Creazione guidata di Data Mining dati) | Microsoft Docs
+title: Cubo di origine slice (creazione guidata modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068602"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Sezionamento cubo di origine (Creazione guidata modello di data mining)
@@ -26,24 +26,24 @@ ms.locfileid: "66068602"
   
  Se non si ha familiarità con le sezioni e con i cubi, è consigliabile consultare questi articoli:  
   
--   [Impostare la proprietà Slice delle partizioni &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
+-   [Impostare la proprietà Slice della partizione &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
 -   [Creare e gestire una partizione locale &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  Si noti che le funzioni MDX dinamiche, ad esempio [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) o [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function) non sono supportate nella proprietà Slice per le partizioni. È necessario definire la sezione usando tuple esplicite o riferimenti ai membri.  
 >   
->  Ad esempio, invece di usare [: &#40;intervallo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) per definire un intervallo, è necessario enumerare ogni membro in base agli anni specifici.  
+>  Ad esempio, anziché usare [: &#40;intervallo&#41; &#40;&#41;MDX](/sql/mdx/range-mdx) per definire un intervallo, è necessario enumerare ogni membro in base agli anni specifici.  
 >   
 >  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. È quindi possibile usare lo strumento da riga di comando ascmd o l'attività [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) di SSIS per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
   
- **Per altre informazioni:** [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per ulteriori informazioni:** [creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Dimension**  
  Consente di selezionare la dimensione che si desidera sezionare.  
   
- **Hierarchy**  
+ **Gerarchia**  
  Consente di selezionare la gerarchia che si desidera sezionare. È possibile scegliere qualsiasi livello di una gerarchia, ma gli attributi utilizzati nel modello saranno valido solo al livello selezionato.  
   
  Se ad esempio si sceglie la gerarchia Geography e si seleziona Country come livello, non è possibile compilare un modello che utilizza City come attributi. Viceversa, se si sceglie City come livello della gerarchia in base a cui eseguire il sezionamento, non è possibile creare un modello di data mining basato su Country.  
@@ -51,17 +51,17 @@ ms.locfileid: "66068602"
  **Operatore**  
  Selezionare l'operatore da utilizzare per la compilazione di un'espressione di sezione.  
   
- Ad esempio, se si sceglie Geography come gerarchia, è possibile selezionare l'operatore =, quindi digitare "Europe" come filtro, per ottenere solo i dati del cubo per l'Europa.  
+ Se ad esempio si sceglie geography come gerarchia, è possibile selezionare operator = e quindi digitare "Europe" come filtro per ottenere solo i dati del cubo per l'Europa.  
   
  **Espressione filtro**  
  Digitare un'espressione da utilizzare come criterio per filtrare il cubo in base alla dimensione selezionata.  
   
- **Parametri**  
+ **Parameters**  
  Questa opzione non è utilizzata per i modelli di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Completamento procedura guidata &#40;Creazione guidata di Data Mining&#41;](completing-the-wizard-data-mining-wizard.md)   
- [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Specificare l'utilizzo colonne modello di Data Mining &#40;Creazione guidata di Data Mining&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
+ [Completamento della procedura guidata &#40;creazione guidata modello di data mining&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Impostazione utilizzo colonne modello di data mining &#40;creazione guidata modello di data mining&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

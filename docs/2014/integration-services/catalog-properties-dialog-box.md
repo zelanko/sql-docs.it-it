@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo proprietà del catalogo | Microsoft Docs
+title: Finestra di dialogo Proprietà catalogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061107"
 ---
 # <a name="catalog-properties-dialog-box"></a>Finestra di dialogo Proprietà catalogo
-  Utilizzare la finestra di dialogo Proprietà catalogo per configurare il catalogo di SSISDB. Le proprietà del catalogo consentono di definire come vengono crittografati i dati sensibili, come vengono mantenuti i dati del controllo delle versioni dei progetti e quando si verifica il timeout delle operazioni di convalida. Il catalogo di SSISDB rappresenta un punto centrale di archiviazione e amministrazione di progetti, pacchetti, parametri e ambienti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  Utilizzare la finestra di dialogo Proprietà catalogo per configurare il catalogo di SSISDB. Le proprietà del catalogo definiscono il modo in cui vengono crittografati i dati sensibili, il modo in cui vengono conservati i dati delle versioni di progetto e di operazioni e quando si verifica il timeout Il catalogo SSISDB è un punto centrale di archiviazione e amministrazione [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] di progetti, pacchetti, parametri e ambienti.  
   
  Inoltre, è possibile visualizzare le proprietà del catalogo nella vista catalog.catalog_property e impostare le proprietà tramite la stored procedure catalog.configure_catalog. Per altre informazioni, vedere [catalog.catalog_properties &#40;database SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) e [catalog.configure_catalog &#40;database SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66061107"
   
 -   [Configurare le opzioni](#options)  
   
-##  <a name="open_dialog"></a> Aprire la finestra di dialogo Proprietà catalogo  
+##  <a name="open_dialog"></a>Aprire la finestra di dialogo Proprietà catalogo  
   
 1.  Aprire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   

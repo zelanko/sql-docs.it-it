@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062033"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Aggiunta di un gestore eventi a un pacchetto
@@ -38,7 +38,7 @@ ms.locfileid: "66062033"
   
 3.  Fare clic sulla scheda **Gestori eventi** .  
   
-     ![Screenshot dell'area di progettazione con gestore eventi](media/eventhandlers.gif "Screenshot dell'area di progettazione con gestore eventi")  
+     ![Schermata dell'area di progettazione con gestore eventi](media/eventhandlers.gif "Schermata dell'area di progettazione con gestore eventi")  
   
      La creazione del flusso di controllo e dei flussi di dati di un gestore dell'evento è analoga alla creazione del flusso di controllo e dei flussi di dati di un pacchetto. Per altre informazioni, vedere [Flusso di controllo](control-flow/control-flow.md) e [Flusso di dati](data-flow/data-flow.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Usare set di righe (ODBC) di associazione | Documenti di Microsoft
+title: Usare l'associazione di set di righe (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b416d9f7fdd07613f684fb2b27ac058b60d5b3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200436"
 ---
 # <a name="use-rowset-binding-odbc"></a>Utilizzare l'associazione di set di righe (ODBC)
@@ -29,7 +29,7 @@ ms.locfileid: "63200436"
   
     -   Facoltativamente, allocare una matrice di R (o più) buffer di colonna per archiviare le lunghezze dei dati.  
   
-    -   Chiamare [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) per associare la colonna valore dei dati e le matrici di lunghezza dati alla colonna del set di righe.  
+    -   Chiamare [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) per associare il valore dei dati e le matrici di lunghezza dei dati della colonna alla colonna del set di righe.  
   
 2.  Chiamare [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) per impostare gli attributi seguenti:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63200436"
   
 3.  Eseguire l'istruzione.  
   
-4.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera R righe e trasferisce i dati nelle colonne associate.  
+4.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) o [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera le righe R e trasferisce i dati nelle colonne delimitate.  
   
 ### <a name="to-use-row-wise-binding"></a>Per utilizzare l'associazione per riga  
   
@@ -63,15 +63,15 @@ ms.locfileid: "63200436"
   
     -   Impostare SQL_ATTR_PARAMS_STATUS_PTR affinché punti a una matrice [R] di variabili SQLUSSMALLINT per mantenere gli indicatori di stato della riga.  
   
-3.  Per ogni colonna nel set di risultati, chiamare [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) in modo da puntare il valore dei dati e il puntatore di lunghezza dati della colonna alle relative variabili nel primo elemento della matrice di strutture allocate nel passaggio 1.  
+3.  Per ogni colonna nel set di risultati, chiamare [SQLBindCol](../../native-client-odbc-api/sqlbindcol.md) per puntare il valore dei dati e il puntatore della lunghezza dei dati della colonna alle relative variabili nel primo elemento della matrice di strutture allocate nel passaggio 1.  
   
 4.  Eseguire l'istruzione.  
   
-5.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oppure [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera R righe e trasferisce i dati nelle colonne associate.  
+5.  Ogni chiamata a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) o [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera le righe R e trasferisce i dati nelle colonne delimitate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usando procedure per cursori &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   
- [La modalità di implementazione dei cursori](../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [Utilizzare i cursori &#40;ODBC&#41;](use-cursors-odbc.md)  
+ [Procedure per l'utilizzo di cursori &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   
+ [Modalità di implementazione di cursori](../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
+ [Utilizzare cursori &#40;&#41;ODBC](use-cursors-odbc.md)  
   
   

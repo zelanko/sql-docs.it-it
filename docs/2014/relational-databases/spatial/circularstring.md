@@ -11,17 +11,18 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b3eacaba2ad0ddc2c0475d29b151d0a50be98fc0
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688710"
 ---
 # <a name="circularstring"></a>CircularString
+  
   `CircularString` è una raccolta di zero o più segmenti di arco circolare continui. Un segmento di arco circolare è un segmento curvo definito da tre punti su un piano bidimensionale. Il primo punto non può corrispondere al terzo punto. Se tutti e tre i punti di un segmento di arco circolare sono collineari, il segmento di arco verrà gestito come un segmento di linea.  
   
 > [!IMPORTANT]  
->  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluso il sottotipo `CircularString`, scaricare la white paper, [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Per una descrizione dettagliata ed esempi delle nuove funzionalità spaziali introdotte in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluso il `CircularString` sottotipo, scaricare il white paper, [nuove funzionalità spaziali in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Istanze CircularString  
  Nel disegno seguente vengono illustrate le istanze `CircularString` valide:  
@@ -29,7 +30,7 @@ ms.locfileid: "72688710"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Istanze accettate  
- Un'istanza di `CircularString` viene accettata se è vuota o contiene un numero dispari di punti, n, dove n > 1. Le istanze `CircularString` seguenti vengono accettate.  
+ Un' `CircularString` istanza viene accettata se è vuota o contiene un numero dispari di punti, n, dove n > 1. Le istanze `CircularString` seguenti vengono accettate.  
   
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -95,7 +96,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>b. Creazione di un'istanza Geometry utilizzando un'istanza CircularString con un segmento di arco circolare  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>B. Creazione di un'istanza Geometry utilizzando un'istanza CircularString con un segmento di arco circolare  
  Nell'esempio seguente viene illustrato come creare un'istanza `CircularString` con un solo segmento di arco circolare (mezzo cerchio):  
   
 ```sql  
@@ -133,7 +134,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Si noti che il valore per l'esempio `CircularString` è prossimo a&#x03c0; 2 (2 * pi), che corrisponde alla circonferenza effettiva del cerchio.  
+ Si noti che il valore per `CircularString` l'esempio è vicino a 2&#x03c0; (2 * pi), che corrisponde alla circonferenza effettiva del cerchio.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Dichiarazione e creazione di un'istanza Geometry utilizzando un'istanza CircularString nella stessa istruzione  
  In questo frammento viene illustrato come dichiarare e creare un'istanza `geometry` con un'istanza `CircularString` nella stessa istruzione:  
@@ -171,7 +172,7 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
  [STNumPoints &#40;geometry Data Type&#41; (STNumPoints &#40;tipo di dati geometry&#41;)](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)   
  [STIsRing &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)   
  [STIsClosed &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
- [STPointOnSurface &#40;tipodi dati geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
+ [STPointOnSurface &#40;tipo di dati geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
  [LineString](linestring.md)  
   
   

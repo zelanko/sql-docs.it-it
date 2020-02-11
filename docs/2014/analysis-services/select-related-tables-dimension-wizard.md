@@ -1,5 +1,5 @@
 ---
-title: Selezione tabelle correlate (Creazione guidata dimensione) | Microsoft Docs
+title: Selezione tabelle correlate (creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a135df3d3850aebdb9ac6dda08561a7fae21793f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069285"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>Selezione tabelle correlate (Creazione guidata dimensione)
   Usare la pagina **Selezione tabelle correlate** per includere tabelle correlate, ovvero tabelle a cui sono correlate le tabelle principali delle dimensioni nella vista origine dati, nella dimensione.  
   
- **Per aprire la creazione guidata dimensione**  
+ **Per aprire la Creazione guidata dimensione.**  
   
 -   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **Dimensioni**in **Esplora soluzioni** per scegliere un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi fare clic su **Nuova dimensione**.  
   
@@ -31,8 +31,8 @@ ms.locfileid: "66069285"
  Consente di selezionare una tabella per includere la tabella correlata nella dimensione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

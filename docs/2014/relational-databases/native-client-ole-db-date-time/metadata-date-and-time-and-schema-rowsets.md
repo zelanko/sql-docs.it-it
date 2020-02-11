@@ -1,5 +1,5 @@
 ---
-title: Data e ora e i set di righe dello Schema | Microsoft Docs
+title: Data e ora e set di righe dello schema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238019"
 ---
-# <a name="date-and-time-and-schema-rowsets"></a>Data e ora e i set di righe dello Schema
+# <a name="date-and-time-and-schema-rowsets"></a>Data e ora e set di righe dello schema
   In questo argomento vengono fornite informazioni sui set di righe COLUMNS e PROCEDURE_PARAMETERS. Tali informazioni fanno riferimento ai miglioramenti apportati alla data e all'ora di OLE DB per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="columns-rowset"></a>Set di righe COLUMNS  
@@ -27,12 +27,12 @@ ms.locfileid: "63238019"
   
 |Tipo di colonna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|Data|DBTYPE_DBDATE|Clear|0|  
-|time|DBTYPE_DBTIME2|Impostare|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Impostare|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Impostare|0..7|  
+|Data|DBTYPE_DBDATE|Cancella|0|  
+|time|DBTYPE_DBTIME2|Set|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Cancella|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|Cancella|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
  In COLUMN_FLAGS il valore di DBCOLUMNFLAGS_ISFIXEDLENGTH è sempre true per i tipi date/time e il valore dei flag seguenti è sempre false:  
   
@@ -56,17 +56,17 @@ ms.locfileid: "63238019"
   
  DBCOLUMNFLAGS_SS_ISVARIABLESCALE è valido solo quando si è connessi a un server [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o versioni successive). DBCOLUMNFLAGS_SS_ISFIXEDSCALE non è definito quando si è connessi a server legacy.  
   
-## <a name="procedureparameters-rowset"></a>Set di righe PROCEDURE_PARAMETERS  
+## <a name="procedure_parameters-rowset"></a>Set di righe PROCEDURE_PARAMETERS  
  DATA_TYPE contiene gli stessi valori del set di righe dello schema COLUMNS e TYPE_NAME contiene il tipo di server.  
   
  Una nuova colonna, SS_DATETIME_PRECISION, è stata aggiunta per restituire la precisione del tipo come nella colonna DATETIME_PRECISION, in modo analogo al set di righe COLUMNS.  
   
-## <a name="providertypes-rowset"></a>Set di righe PROVIDER_TYPES  
+## <a name="provider_types-rowset"></a>Set di righe PROVIDER_TYPES  
  Per i tipi di data/ora vengono restituite le righe seguenti:  
   
-|Tipo -><br /><br /> colonna|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> Colonna|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -78,14 +78,14 @@ ms.locfileid: "63238019"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|Data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|Data|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
 |TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
 |VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE a meno che non si verifichi una delle condizioni seguenti:<br /><br /> -È client connessi a un server di livello inferiore.<br />-La proprietà di connessione compatibilità di tipo di dati specifica un livello di compatibilità pari a 80.|VARIANT_TRUE a meno che non si verifichi una delle condizioni seguenti:<br /><br /> -È client connessi a un server di livello inferiore.<br />-La proprietà di connessione compatibilità di tipo di dati specifica un livello di compatibilità pari a 80.|VARIANT_TRUE|  
+|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE a meno che non si verifichi una delle condizioni seguenti:<br /><br /> -Il client è connesso a un server di livello inferiore.<br />-La proprietà di connessione per la compatibilità del tipo di dati specifica un livello di compatibilità pari a 80.|VARIANT_TRUE a meno che non si verifichi una delle condizioni seguenti:<br /><br /> -Il client è connesso a un server di livello inferiore.<br />-La proprietà di connessione per la compatibilità del tipo di dati specifica un livello di compatibilità pari a 80.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  Poiché OLE DB definisce solo MINIMUM_SCALE e MAXIMUM_SCALE per i tipi numerici e decimali, l'utilizzo da parte di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client di queste colonne per time, datetime2 e datetimeoffset è di tipo non standard.  

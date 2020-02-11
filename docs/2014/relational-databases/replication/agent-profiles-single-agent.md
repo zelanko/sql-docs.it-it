@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c6d6c421e976290f17a3e49848a1600445a7da1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186974"
 ---
 # <a name="agent-profiles-single-agent"></a>Profili agenti (agente singolo)
@@ -28,16 +28,16 @@ ms.locfileid: "63186974"
  **Predefinito per i nuovi agenti**  
  Consente di selezionare il profilo che verrà utilizzato durante la creazione dei processi per un dato tipo di agente. Se ad esempio si creano varie sottoscrizioni a una pubblicazione di tipo merge, il processo dell'agente di merge per ogni sottoscrizione utilizzerà il profilo selezionato. Per modificare il profilo di processi esistenti, selezionare un profilo e quindi fare clic su **Modifica agenti esistenti**.  
   
- **Name**  
+ **Nome**  
  Nome del profilo.  
   
  **Tipo**  
- Tipo di profilo: **Utente** (definita dall'utente) o **sistema** (predefinito).  
+ Tipo di profilo: **Utente** (definito dall'utente) o **Sistema** (predefinito).  
   
  **Proprietà (...)**  
  Fare clic su questo pulsante per visualizzare i valori utilizzati per ogni parametro nel profilo agente.  
   
- **Nuova**  
+ **Nuovo**  
  Fare clic su questo pulsante per creare un nuovo profilo.  
   
  **Elimina**  

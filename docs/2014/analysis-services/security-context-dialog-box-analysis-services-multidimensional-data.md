@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo contesto di sicurezza (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo contesto di sicurezza (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069852"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Contesto di sicurezza (Analysis Services - Dati multidimensionali)
@@ -31,14 +31,14 @@ ms.locfileid: "66069852"
   
  Il dominio e il nome dell'utente o del gruppo utilizzano il formato seguente:  
   
- *\<Nome di dominio >* **\\**  *\<nome dell'account utente >*  
+ Nome di **\\** dominio>* \<nome account utente>* * \<*  
   
- **Roles**  
+ **Ruoli**  
  Selezionare questa casella di controllo per utilizzare uno o più ruoli specificati durante la visualizzazione dei dati e dei metadati dell'oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Se nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono definiti più ruoli è possibile selezionare i ruoli da utilizzare.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione cubi &#40;browser&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

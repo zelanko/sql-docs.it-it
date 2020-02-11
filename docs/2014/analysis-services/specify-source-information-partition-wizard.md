@@ -1,5 +1,5 @@
 ---
-title: Impostazione informazioni origine (Creazione guidata partizione) | Microsoft Docs
+title: Impostazione informazioni origine (creazione guidata partizione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068164"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Impostazione informazioni origine (Creazione guidata partizione)
   Utilizzare la pagina **Impostazione informazioni origine** per selezionare il gruppo di misure in cui creare la partizione, nonché la vista origine dati e le tabelle di filtro per la partizione.  
   
 > [!CAUTION]  
->  Se in **Tabelle disponibili** si seleziona una tabella usata da un'altra partizione, sarà necessario specificare una query nella pagina **Limitazione righe** per evitare il rischio di duplicazioni di dati nel cubo.  
+>  Se si specifica una tabella in **tabelle disponibili** utilizzate da un'altra partizione, sarà necessario specificare una query nella pagina **Limitazione righe** o rischiare la duplicazione dei dati nel cubo.  
   
 ## <a name="options"></a>Opzioni  
  **Gruppo di misure**  
@@ -32,7 +32,7 @@ ms.locfileid: "66068164"
  **Look in**  
  Consente di selezionare l'origine dei dati o la vista origine dati contenente le tabelle di origine per la partizione. Per impostazione predefinita, è selezionata la vista origine dati utilizzata dal gruppo di misure.  
   
- **Tabelle dei filtri**  
+ **Filtro tabelle**  
  Digitare la stringa usata per limitare le tabelle visualizzate in **Tabelle disponibili**per nome tabella.  
   
  **Trovare le tabelle**  
@@ -49,6 +49,6 @@ ms.locfileid: "66068164"
 >  Se sono selezionate più tabelle, non sarà possibile visualizzare la pagina **Limitazione righe** , né ridurre le righe per le partizioni create dalle tabelle specificate. Per limitare le righe per ogni partizione, eseguire la Creazione guidata partizione una volta per ogni tabella da cui deve essere creata la partizione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

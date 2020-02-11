@@ -1,5 +1,5 @@
 ---
-title: Multidimensionali (SSAS) di modellazione | Microsoft Docs
+title: Modellazione multidimensionale (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2839ecff951a9f1547a05b60f6957ed5976bee9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073484"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modellazione multidimensionale (SSAS)
@@ -25,12 +25,12 @@ ms.locfileid: "66073484"
   
  Un altro importante vantaggio all'utilizzo di database multidimensionali di Analysis Services è l'integrazione con gli strumenti di generazione report di BI di uso comune quali Excel, Reporting Services e PerformancePoint, nonché di applicazioni personalizzate e soluzioni di terze parti.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Soluzioni di modelli multidimensionali &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [Database modelli multidimensionali &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Database modello multidimensionale &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
- [Elaborazione degli oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)  
+ [Elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md)  
   
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
   

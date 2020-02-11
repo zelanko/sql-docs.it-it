@@ -1,5 +1,5 @@
 ---
-title: Gli errori e riferimento degli eventi (PowerPivot per SharePoint) | Microsoft Docs
+title: Guida di riferimento a errori ed eventi (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35f851770c78a5079ab5381ad66a13776d90023d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071409"
 ---
 # <a name="errors-and-events-reference-powerpivot-for-sharepoint"></a>Riferimenti a errori ed eventi (PowerPivot per SharePoint)
@@ -23,7 +23,7 @@ ms.locfileid: "66071409"
  Per visualizzare l'elenco dei messaggi di errore documentati in questa sezione, utilizzare il sommario della documentazione online.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare la raccolta di dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [Configurare e visualizzare i file di Log di SharePoint e la registrazione diagnostica &#40;PowerPivot per SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)  
+ [Configurare la raccolta dati di utilizzo per &#40;PowerPivot per SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
+ [Configurare e visualizzare i file di log di SharePoint e la registrazione diagnostica &#40;PowerPivot per SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)  
   
   

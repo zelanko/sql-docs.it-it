@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fef8ca20bd3e137d21b5121f42a0d7fee82ae4a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065387"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Scenario di Analisi di simulazione (Strumenti di analisi tabelle per Excel)
-  ![Il pulsante di Scenario in strumenti di analisi tabelle](media/tat-whatif.gif "pulsante lo Scenario di simulazione in strumenti di analisi tabelle")  
+  ![Pulsante di scenario di simulazione in Strumenti di analisi tabelle](media/tat-whatif.gif "Pulsante di scenario di simulazione in Strumenti di analisi tabelle")  
   
- Il **simulazione** lo strumento analizza modelli nei dati esistenti e consente quindi di valutare l'effetto che avranno le modifiche in una colonna del valore di una colonna diversa.  
+ Lo **strumento scenario di simulazione analizza i modelli** nei dati esistenti e quindi consente di valutare l'effetto delle modifiche apportate a una colonna sul valore di una colonna diversa.  
   
  È ad esempio possibile esaminare l'effetto prodotto sulle vendite totali dall'aumento del prezzo di un articolo.  
   
@@ -34,19 +34,19 @@ ms.locfileid: "66065387"
   
 1.  Aprire una tabella di dati di Excel.  
   
-2.  Fare clic su **scenari**, quindi selezionare **simulazione**.  
+2.  Fare clic su **scenari**, quindi **selezionare simulazione**.  
   
-3.  Nel **Scenario** , selezionare la colonna che contiene il valore verrà modificare e specificare la modifica come un valore specifico o come percentuale delle modifiche (sia aumenta o diminuisce) in base ai valori correnti.  
+3.  Nella casella **scenario** selezionare la colonna che contiene il valore che si vuole modificare e specificare la modifica come valore specifico o come percentuale di modifica (aumentata o ridotta) sui valori correnti.  
   
-4.  Nel **cosa accade ai** , specificare la colonna per cui si desidera valutare l'effetto.  
+4.  Nella casella **cosa accade a** specificare la colonna per la quale si desidera valutare l'effetto.  
   
-5.  Facoltativamente, fare clic su **scegliere le colonne da utilizzare per l'analisi** per selezionare le colonne che possono risultare utili per la stima. È inoltre possibile deselezionare le colonne poco utili per l'individuazione di modelli, ad esempio nomi o ID riga.  
+5.  Facoltativamente, fare clic su **Scegli le colonne da utilizzare per l'analisi** per selezionare le colonne che potrebbero essere utili per eseguire la stima. È inoltre possibile deselezionare le colonne poco utili per l'individuazione di modelli, ad esempio nomi o ID riga.  
   
-6.  Nel **riga o tabella** scegliere se si desidera che l'impatto venga valutato per riga attualmente selezionata o per l'intero set di dati nella tabella.  
+6.  Nella casella **specificare la riga o la tabella** scegliere se si desidera che l'effetto venga valutato solo per la riga attualmente selezionata o per il set completo di dati nella tabella.  
   
-7.  Se si seleziona **in questa riga**, lo strumento consente di visualizzare il risultato nella finestra di dialogo. Fino a quando la finestra di dialogo rimane aperta, è possibile modificare le opzioni selezionate o testare altri scenari.  
+7.  Se si seleziona **questa riga**, lo strumento visualizzerà il risultato nella finestra di dialogo. Fino a quando la finestra di dialogo rimane aperta, è possibile modificare le opzioni selezionate o testare altri scenari.  
   
-8.  Se si seleziona **intera tabella**, lo strumento consente di visualizzare un messaggio di stato nella finestra di dialogo e aggiunge due nuove colonne alla tabella dati originale. Fare clic su **Chiudi** per visualizzare i risultati completi nel foglio di lavoro.  
+8.  Se si seleziona **intera tabella**, lo strumento Visualizza un messaggio di stato nella finestra di dialogo e aggiunge due nuove colonne alla tabella dati originale. Fare clic su **Chiudi** per visualizzare i risultati completi nel foglio di esecuzione.  
   
 ### <a name="requirements"></a>Requisiti  
  Questo strumento utilizza l'algoritmo Microsoft Logistic Regression, che supporta la stima di valori numerici o discreti. Per ottenere risultati migliori, è tuttavia consigliabile attenersi alle procedure consigliate seguenti:  
@@ -55,15 +55,15 @@ ms.locfileid: "66065387"
   
 -   Se si include un numero troppo limitato di colonne, potrebbe essere difficile ottenere un risultato.  
   
--   Se si usa la **al valore** opzione, è necessario digitare un valore nella casella o selezionare un valore dall'elenco.  
+-   Se si usa l'opzione **per il valore** , è necessario digitare un valore nella casella o selezionare un valore dall'elenco.  
   
--   Se si usa la **percentuale** , impostare la modifica come una percentuale di aumento o diminuzione. Il valore predefinito è 120%, ovvero un aumento del 20% rispetto al valore corrente.  
+-   Se si usa l'opzione **percentuale** , impostare la modifica come aumento o riduzione percentuale. Il valore predefinito è 120%, ovvero un aumento del 20% rispetto al valore corrente.  
   
 > [!NOTE]  
 >  Se non si imposta alcun valore, è possibile che venga visualizzato un errore.  
   
 ## <a name="understanding-the-results-of-what-if-analysis"></a>Informazioni sui risultati dell'analisi di simulazione  
- Quando si crea una **simulazione** scenario, lo strumento esegue tre operazioni:  
+ Quando si crea uno **scenario di** simulazione, lo strumento esegue tre operazioni:  
   
 -   Creazione di una struttura di data mining per l'archiviazione dei fatti principali relativi ai dati della tabella.  
   
@@ -71,28 +71,28 @@ ms.locfileid: "66065387"
   
 -   Creazione di una query di stima per ogni valore specificato.  
   
- È possibile restituire tutte le stime contemporaneamente specificando **intera tabella**. Verranno quindi create automaticamente due nuove colonne nella tabella dati originale.  
+ È possibile restituire tutte le stime contemporaneamente specificando un' **intera tabella**. Verranno quindi create automaticamente due nuove colonne nella tabella dati originale.  
   
  Nelle colonne che vengono aggiunte alla tabella sono contenuti due tipi di informazioni: il valore stimato prodotto dalla modifica e il relativo livello di confidenza. Per confidenza si intende il grado di probabilità che la stima sia corretta.  
   
- È inoltre possibile immettere i valori di modifica uno alla volta nella finestra di dialogo e visualizzare le stime in modo interattivo. Questo è quello utilizzato per la creazione di un *query di stima singleton*. I risultati della query di stima vengono restituiti come output con le informazioni seguenti: avvenuta o mancata esecuzione della stima, valore stimato e livello di confidenza. Quest'ultimo viene indicato come una barra contenente una linea punteggiata. Più è lunga la linea punteggiata, maggiore è il livello di confidenza del risultato.  
+ È inoltre possibile immettere i valori di modifica uno alla volta nella finestra di dialogo e visualizzare le stime in modo interattivo. Corrisponde alla creazione di una query di *stima singleton*. I risultati della query di stima vengono restituiti come output con le informazioni seguenti: avvenuta o mancata esecuzione della stima, valore stimato e livello di confidenza. Quest'ultimo viene indicato come una barra contenente una linea punteggiata. Più è lunga la linea punteggiata, maggiore è il livello di confidenza del risultato.  
   
- Ad esempio, se si tenta di determinare l'effetto di aumentare l'età del cliente nella volontà del cliente di acquistare e si aumenta l'età del cliente a 25, il **simulazione** strumento esegue una query il modello di data mining e viene restituito il risultato seguente:  
+ Se, ad esempio, si sta tentando di determinare l'effetto di un aumento della validità del cliente sulla volontà del cliente di acquistare e di aumentare l'età del cliente a 25, **lo strumento di analisi di simulazione** esegue una query sul modello di data mining e restituisce il risultato seguente:  
   
  **Soluzione trovata dall'analisi di simulazione per Purchases Bicycle.**  
   
- **'Gli acquisti Bicycle' = Sì**  
+ **'Purchases Bicycle' = yes**  
   
- **Confidenza: Equa**  
+ **Confidence: Fair**  
   
  Poiché questo risultato è basato su una riga esistente della tabella dati, indica che, se tutti i dati relativi a un determinato cliente rimangono invariati eccetto l'età, che è stata aumentata a 25 anni, è probabile che il cliente acquisterà una bicicletta.  
   
  La restituzione delle stime come output nella tabella dati originale consente di determinare con maggiore facilità se le stime sono utili.  
   
 ## <a name="related-tools"></a>Strumenti correlati  
- Il Client di data mining per Excel, un componente aggiuntivo separato che offre funzionalità di data mining più avanzate, include procedure guidate per la creazione di modelli di data mining in grado di stimare il comportamento. Per altre informazioni, vedere [creazione di un modello di Data Mining](creating-a-data-mining-model.md).  
+ Il Client di data mining per Excel, un componente aggiuntivo separato che offre funzionalità di data mining più avanzate, include procedure guidate per la creazione di modelli di data mining in grado di stimare il comportamento. Per ulteriori informazioni, vedere [creazione di un modello di data mining](creating-a-data-mining-model.md).  
   
- Per altre informazioni sull'algoritmo utilizzato per il **simulazione** scenario dello strumento, vedere l'argomento "Algoritmo Microsoft Logistic Regression" nella documentazione Online di SQL Server.  
+ Per ulteriori informazioni sull'algoritmo **utilizzato dallo strumento scenario di** simulazione, vedere l'argomento "algoritmo di regressione logistica Microsoft" in documentazione online di SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di analisi tabelle per Excel](table-analysis-tools-for-excel.md)  

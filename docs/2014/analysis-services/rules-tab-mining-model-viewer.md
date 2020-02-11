@@ -1,5 +1,5 @@
 ---
-title: Scheda (Visualizzatore modello di Data Mining) regole | Microsoft Docs
+title: Scheda regole (Visualizzatore modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070095"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Scheda Regole (Visualizzatore modello di data mining)
@@ -27,7 +27,7 @@ ms.locfileid: "66070095"
 > [!WARNING]  
 >  Per impostazione predefinita, nel visualizzatore vengono mostrate solo le regole che superano la soglia di probabilità definita in **Probabilità minima** . Non è possibile rendere più piccolo questo valore tramite il visualizzatore, poiché la soglia di probabilità per l'output della regola viene determinata durante la creazione del modello. Per altre informazioni, vedere [Riferimento tecnico per l'algoritmo Microsoft Association Rules](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Per altre informazioni:** [Algoritmo Microsoft Association Rules](data-mining/microsoft-association-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Association Rules](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Per altre informazioni:** [algoritmo Microsoft Association](data-mining/microsoft-association-algorithm.md), [visualizzare un modello usando il Visualizzatore Microsoft Association Rules](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -45,7 +45,7 @@ ms.locfileid: "66070095"
  **Priorità minima**  
  Modificare questo valore per impostare la priorità minima richiesta per una regola da visualizzare nel visualizzatore. Aumentando il valore della priorità verrà ridotto il numero di regole visualizzate.  
   
- **Regola di filtro**  
+ **Filtro regola**  
  Consente di digitare un valore stringa per filtrare il numero di regole da mostrare nel visualizzatore.  
   
  È anche possibile digitare espressioni regolari .NET come criteri di filtro. Ad esempio, tramite l'espressione seguente vengono restituite tutte le regole contenenti 'Road Bottle Cage' sul lato sinistro della regola:  
@@ -68,7 +68,7 @@ ms.locfileid: "66070095"
  **Mostra nomi lunghi**  
  Consente di visualizzare il nome della regola nel modo in cui viene visualizzato nel contenuto del modello di data mining.  
   
- **Numero massimo di righe**  
+ **Righe massime**  
  Consente di impostare il limite del numero di regole che è possibile visualizzare nel visualizzatore.  
   
  **Probabilità**  
@@ -76,18 +76,18 @@ ms.locfileid: "66070095"
   
  È possibile fare clic sull'intestazione di colonna per ordinare in base alla probabilità.  
   
- **Priorità**  
+ **Importanza**  
  In questa colonna del grafico viene visualizzata la priorità per ogni regola.  
   
  È possibile fare clic sull'intestazione di colonna per ordinare in base alla priorità.  
   
- **Rule**  
+ **Regola**  
  In questa colonna del grafico viene visualizzata la descrizione per ogni regola, in base al formato specificato tramite le opzioni **Mostra** e **Mostra nomi lunghi**.  
   
  È possibile fare clic sull'intestazione di colonna per ordinare in base al testo della regola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Ripristina da PowerPivot | Microsoft Docs
+title: Ripristinare da PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066640"
 ---
 # <a name="restore-from-powerpivot"></a>Ripristina da PowerPivot
   È possibile utilizzare la funzionalità Ripristina da PowerPivot in SQL Server Management Studio per creare un nuovo database modello tabulare in un'istanza di Analysis Services (in esecuzione in modalità tabulare) o eseguire il ripristino in un database esistente da una cartella di lavoro di PowerPivot (con estensione xlsx).  
   
 > [!NOTE]  
->  Il modello di progetto Importa da PowerPivot in SQL Server Data Tools offre funzionalità simili. Per altre informazioni, vedere [importare da PowerPivot &#40;modello tabulare di SSAS&#41;](import-from-power-pivot-ssas-tabular.md).  
+>  Il modello di progetto Importa da PowerPivot in SQL Server Data Tools offre funzionalità simili. Per ulteriori informazioni, vedere [importazione da PowerPivot &#40;SSAS tabulare&#41;](import-from-power-pivot-ssas-tabular.md).  
   
  Quando si utilizza Ripristina da PowerPivot, si tenga in considerazione quanto riportato di seguito:  
   
@@ -37,9 +37,9 @@ ms.locfileid: "66066640"
   
 ### <a name="to-restore-from-powerpivot"></a>Per ripristinare da PowerPivot  
   
-1.  In SQL Server Management Studio, nell'istanza di Active Directory da ripristinare, fare clic destro **database**, quindi fare clic su **Ripristina da PowerPivot**.  
+1.  In SSMS, nell'istanza Active Directory che si desidera ripristinare, fare clic con il pulsante destro del mouse su **database**, quindi scegliere **Ripristina da PowerPivot**.  
   
-2.  Nel **Ripristina da PowerPivot** nella finestra di dialogo **origine ripristino**, in **file di Backup**, fare clic su **Sfoglia**e quindi selezionare un con estensione ABF o con estensione xslx file per il ripristino.  
+2.  Nella finestra di dialogo **Ripristina da PowerPivot** , in **origine ripristino**, in **file di backup**fare clic su **Sfoglia**, quindi selezionare un file con estensione abf o xslx da cui eseguire il ripristino.  
   
 3.  In **Destinazione ripristino**in **Ripristina database**digitare un nome per un nuovo database o per uno esistente. Se non si specifica un nome, viene utilizzato quello della cartella di lavoro.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "66066640"
   
 ## <a name="see-also"></a>Vedere anche  
  [Database modello tabulare &#40;SSAS tabulare&#41;](tabular-model-databases-ssas-tabular.md)   
- [Importare da PowerPivot &#40;tabulare di SSAS&#41;](import-from-power-pivot-ssas-tabular.md)  
+ [Importazione da PowerPivot &#40;SSAS tabulare&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

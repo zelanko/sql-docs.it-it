@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075360"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Distribuire soluzioni di modelli con l'utilità di distribuzione
@@ -60,15 +60,15 @@ ms.locfileid: "66075360"
 > [!NOTE]  
 >  L'argomento **/d** viene usato solo nella modalità di output. Questo argomento viene ignorato se specificato in modalità di risposta o automatica. Per altre informazioni sulle modalità, vedere la sezione [Modalità](#Modes)di seguito in questo argomento.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'utilità **Microsoft.AnalysisServices.Deployment** usa un set di file che includono le definizioni degli oggetti, le destinazioni di distribuzione, le opzioni di distribuzione e le impostazioni di configurazione e cerca di distribuire le definizioni degli oggetti alle destinazioni di distribuzione specificate usando le opzioni di distribuzione e le impostazioni di configurazione impostate. Questa utilità può implementare un'interfaccia utente se richiamata in modalità file di risposte o output. Per altre informazioni sull'uso dell'interfaccia utente implementata da questa utilità per creare i file di risposte, vedere [Distribuire soluzioni di modelli tramite la Distribuzione guidata](deploy-model-solutions-using-the-deployment-wizard.md).  
   
  L'utilità di trova nella cartella \Programmi (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
   
-##  <a name="Modes"></a> Modalità  
+##  <a name="Modes"></a>Modalità  
  L'utilità può essere eseguita nelle modalità riportate nella tabella seguente.  
   
-|Modalità|Descrizione|  
+|Mode|Descrizione|  
 |----------|-----------------|  
 |Modalità automatica|Non viene visualizzata alcuna interfaccia utente e tutte le informazioni necessarie per la distribuzione vengono recuperate dai file di input. In questa modalità lo stato di avanzamento non viene visualizzato. È invece possibile utilizzare un file di log facoltativo per acquisire le informazioni sullo stato e sugli errori per una verifica successiva.|  
 |Modalità di risposta|Viene visualizzata l'interfaccia utente Distribuzione guidata e le risposte dell'utente vengono memorizzate nei file di input specificati per la distribuzione successiva. In questa modalità la distribuzione non viene eseguita. Questa modalità ha lo scopo di acquisire le risposte dell'utente.|  
@@ -86,6 +86,6 @@ ms.locfileid: "66075360"
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle utilità del prompt dei comandi &#40;motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Riferimento all'utilità del prompt dei comandi &#40;motore di database&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

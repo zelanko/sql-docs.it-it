@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ef120e0142b3ccabb03fe8750b02713601d7fd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224472"
 ---
 # <a name="copy-queries-visual-database-tools"></a>Copia di query (Visual Database Tools)
@@ -38,9 +38,9 @@ ms.locfileid: "63224472"
 6.  Fare clic con il pulsante destro del mouse e scegliere **Incolla**dal menu di scelta rapida.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rinominare le query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Cancellare i risultati della Query &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
- [Salvare le query &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
+ [Rinominare query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Cancellare i risultati di una query &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
+ [Salvataggio di query &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

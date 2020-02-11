@@ -1,5 +1,5 @@
 ---
-title: Specificare i tipi di tabella (Creazione guidata di Data Mining dati) | Microsoft Docs
+title: Impostazione tipi di tabella (creazione guidata modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068143"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Impostazione tipi di tabelle (Creazione guidata modello di data mining)
@@ -25,7 +25,7 @@ ms.locfileid: "66068143"
 > [!NOTE]  
 >  È possibile aggiungere tabelle successivamente mediante la scheda **Struttura di data mining** in **Progettazione modelli di data mining**.  
   
- **Per altre informazioni:** [Tabelle nidificate &#40;Analysis Services - Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Creazione guidata di Data Mining di dati &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per ulteriori informazioni:** [tabelle nidificate &#40;Analysis Services-&#41;di data mining ](data-mining/nested-tables-analysis-services-data-mining.md), creazione guidata modello di data [mining &#40;Analysis Services-Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Tabelle**  
@@ -41,8 +41,8 @@ ms.locfileid: "66068143"
 >  A queste tabelle deve essere associata una relazione molti-a-uno e non uno-a-molti con la tabella del case. Per poter selezionare la tabella nidificata, è necessario impostare tale relazione nella vista origine dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Selezione vista origine dati &#40;Creazione guidata di Data Mining&#41;](select-data-source-view-data-mining-wizard.md)   
- [Specificare i dati di Training &#40;Creazione guidata di Data Mining&#41;](specify-the-training-data-data-mining-wizard.md)  
+ [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Selezione vista origine dati &#40;creazione guidata modello di data mining&#41;](select-data-source-view-data-mining-wizard.md)   
+ [Specificare i dati di training &#40;creazione guidata modello di data mining&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

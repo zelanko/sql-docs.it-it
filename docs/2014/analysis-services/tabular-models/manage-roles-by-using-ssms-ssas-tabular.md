@@ -1,5 +1,5 @@
 ---
-title: Gestire ruoli tramite (SSAS TABULARE) | Microsoft Docs
+title: Gestire i ruoli tramite SSMS (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067041"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Gestire ruoli tramite (SSAS tabulare)
   È possibile creare, modificare e gestire ruoli per un modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Attività dell'argomento:  
+ Attività contenute in questo argomento:  
   
 -   [Per creare un nuovo ruolo](#bkmk_new_role)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66067041"
 > [!CAUTION]  
 >  L'utilizzo di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per gestire un database dell'area di lavoro del modello tabulare mentre il progetto di modello è aperto in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] può causare il danneggiamento del file Model.bim. Quando si creano e gestiscono ruoli per un database dell'area di lavoro del modello tabulare, utilizzare Gestione ruoli di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-###  <a name="bkmk_new_role"></a> Per creare un nuovo ruolo  
+###  <a name="bkmk_new_role"></a>Per creare un nuovo ruolo  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare per cui si vuole creare un nuovo ruolo, fare clic con il pulsante destro del mouse su **Ruoli**e quindi fare clic su **Nuovo ruolo**.  
   
@@ -51,33 +51,33 @@ ms.locfileid: "66067041"
     |Autorizzazione|Descrizione|  
     |----------------|-----------------|  
     |**Controllo completo (amministratore)**|I membri possono apportare modifiche allo schema del modello e visualizzare tutti i dati.|  
-    |**Elaborazione database**|I membri possono effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono modificare lo schema del modello, né visualizzare dati.|  
+    |**Elabora database**|I membri possono eseguire operazioni Elabora ed Elabora tutto. ma non possono modificare lo schema del modello, né visualizzare dati.|  
     |**Lettura**|I membri possono visualizzare i dati in base ai filtri di riga, ma non possono apportare alcuna modifica allo schema del modello.|  
   
 5.  Nella finestra Selezione pagina della finestra di dialogo **Crea ruolo** fare clic su **Appartenenze**.  
   
 6.  Nella finestra delle impostazioni di appartenenza fare clic su **Aggiungi**e quindi, nella finestra di dialogo **Seleziona utenti o gruppi** , aggiungere gli utenti o i gruppi di Windows che si vuole aggiungere come membri.  
   
-7.  Se il ruolo in fase di creazione dispone dell'autorizzazione Lettura, è possibile aggiungere filtri di riga per qualsiasi tabella utilizzando una formula DAX. Per aggiungere filtri di riga, il **proprietà ruolo - \<rolename >** nella finestra di dialogo **seleziona una pagina**, fare clic su **filtri di riga**.  
+7.  Se il ruolo in fase di creazione dispone dell'autorizzazione Lettura, è possibile aggiungere filtri di riga per qualsiasi tabella utilizzando una formula DAX. Per aggiungere filtri di riga, nella finestra di dialogo **Proprietà ruolo- \<ruoloname>** , in **Selezione pagina**fare clic su **filtri di riga**.  
   
-8.  Nella finestra filtri di riga, selezionare una tabella, quindi fare clic sul **filtro DAX** campo, quindi nel **filtro DAX - \<NomeTabella >** digitare una formula DAX.  
+8.  Nella finestra filtri di riga selezionare una tabella, fare clic sul campo **Filtro DAX** e quindi nel campo **filtro dax \<-TableName>** digitare una formula DAX.  
   
     > [!NOTE]  
-    >  Filtro DAX - \<NomeTabella > campo non contiene un editor di query di completamento automatico o funzione caratteristica di inserimento. Per usare il completamento automatico quando si scrive una formula DAX, è necessario usare un editor di formule DAX in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+    >  Il campo Filter- \<TableName> di DAX non contiene un editor di query di completamento automatico o una funzionalità di inserimento di funzioni. Per usare il completamento automatico quando si scrive una formula DAX, è necessario usare un editor di formule DAX in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 9. Fare clic su **OK** per salvare il ruolo.  
   
-###  <a name="bkmk_copy_role"></a> Per copiare un ruolo  
+###  <a name="bkmk_copy_role"></a>Per copiare un ruolo  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare che contiene il ruolo da copiare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Duplica**.  
   
-###  <a name="bkmk_edit_role"></a> Per modificare un ruolo  
+###  <a name="bkmk_edit_role"></a>Per modificare un ruolo  
   
 -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare che contiene il ruolo da modificare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Proprietà**.  
   
-     Nel **le proprietà del ruolo** \<rolename > finestra di dialogo, è possibile modificare le autorizzazioni, aggiungere o rimuovere membri e i filtri di riga aggiunta/modifica.  
+     Nella finestra di dialogo **Proprietà** \<ruolo> ruolo, è possibile modificare le autorizzazioni, aggiungere o rimuovere membri e aggiungere o modificare i filtri di riga.  
   
-###  <a name="bkmk_deletet_role"></a> Per eliminare un ruolo  
+###  <a name="bkmk_deletet_role"></a>Per eliminare un ruolo  
   
 -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere il database del modello tabulare che contiene il ruolo da eliminare, espandere **Ruoli**, quindi fare clic con il pulsante destro del mouse sul ruolo e fare clic su **Elimina**.  
   

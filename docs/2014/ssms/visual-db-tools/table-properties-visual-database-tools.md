@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204695"
 ---
 # <a name="table-properties-visual-database-tools"></a>Proprietà delle tabelle (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63204695"
  **Categoria Identità**  
  Viene espansa per visualizzare le proprietà **Nome**, **Descrizione**e **Schema**.  
   
- **Name**  
+ **Nome**  
  Visualizza il nome della tabella. Per modificare il nome, digitarlo nella casella di testo.  
   
 > [!CAUTION]  
@@ -58,19 +58,19 @@ ms.locfileid: "63204695"
  **Colonna Identity**  
  Visualizza la colonna utilizzata come colonna Identity della tabella. Per cambiare la colonna di identità, selezionare nell'elenco a discesa la colonna desiderata. Nell'elenco saranno visualizzate solo le colonne con tipo di dati numerico.  
   
- **Is Indexable**  
+ **Indicizzabile**  
  Indica se la tabella può essere indicizzata. Se la tabella non è indicizzabile, è possibile che non appartenga all'utente o che contenga colonne con tipi di dati text, ntext o image.  
   
- **Is Replicated**  
+ **Replicato**  
  Indica se la tabella è replicata in un'altra posizione  
   
- **Categoria Specifica spazio dei dati regolare**  
- Viene espansa per visualizzare le proprietà **(Tipo spazio dei dati)** , **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
+ **Categoria specifica spazio dei dati regolare**  
+ Viene espansa per visualizzare le proprietà **(Tipo spazio dei dati)**, **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
   
- **(Tipo spazio dei dati)**  
+ **(Tipo spazio dati)**  
  Indica se la tabella viene archiviata utilizzando un filegroup o uno schema di partizione.  
   
- **Nome gruppo di file o schema di partizione**  
+ **Nome del filegroup o dello schema di partizione**  
  Visualizza il nome del filegroup o dello schema di partizione.  
   
  **Elenco colonne di partizione**  
@@ -79,7 +79,7 @@ ms.locfileid: "63204695"
  **Colonna GUID riga**  
  Visualizza la colonna utilizzata da Microsoft SQL Server come colonna ROWGUID della tabella. Per cambiare la colonna ROWGUID, selezionare nell'elenco a discesa la colonna desiderata (si applica solo a SQL Server 7.0 o versione successiva).  
   
- **Gruppo di file Text/Image**  
+ **Filegroup text/image**  
  Consente di selezionare nell'elenco a discesa il filegroup per le colonne con tipi di dati text o image. Se la tabella viene archiviata utilizzando uno schema di partizione, lasciare vuoto il campo.  
   
 ## <a name="see-also"></a>Vedere anche  

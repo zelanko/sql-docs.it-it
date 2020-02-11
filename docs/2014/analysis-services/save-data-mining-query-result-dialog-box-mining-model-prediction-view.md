@@ -1,5 +1,5 @@
 ---
-title: Salvare i dati di Data Mining finestra di dialogo risultati di Query (visualizzazione stima modello di Data Mining) | Microsoft Docs
+title: Finestra di dialogo Salva risultati query di data mining (visualizzazione Stima modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070017"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Finestra di dialogo Salva risultati query di data mining (visualizzazione Stima modello di data mining)
@@ -27,10 +27,10 @@ ms.locfileid: "66070017"
  La nuova tabella verrà creata nel database definito dall'origine dati.  
   
 ## <a name="options"></a>Opzioni  
- **Data Source**  
+ **Origine dati**  
  Consente di selezionare un'origine dati nel progetto corrente. Se l'origine dati corretta non esiste, fare clic su **Nuova** per creare una nuova origine dati.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di avviare la **Creazione guidata origine dati**.  
   
  **Nome tabella**  
@@ -52,11 +52,11 @@ ms.locfileid: "66070017"
  **Aggiungi a vista origine dati**  
  (Facoltativo) Selezionare una vista origine dati inclusa nel progetto per aggiungere la tabella a un'origine dati esistente.  
   
- Questa opzione è utile se si desidera mantenere tutte le tabelle correlate per un modello, ad esempio dati di training, dati di origine di stima e query risultati aggiuntivo alla stessa origine dati.  
+ Questa opzione è utile se si desidera utilizzare tutte le tabelle correlate per un modello, ad esempio i dati di training, i dati di origine della stima e i risultati delle query, nella stessa origine dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Generatore delle query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   
- [Data Mining nuove interfacce Query](data-mining/data-mining-query-tools.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)   
+ [Interfacce di query di data mining](data-mining/data-mining-query-tools.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

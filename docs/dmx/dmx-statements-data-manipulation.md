@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 14464ec054826cd9072d059a8ad308da51e50b03
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72890495"
 ---
 # <a name="dmx-statements---data-manipulation"></a>Istruzioni DMX - Manipolazione dei dati
@@ -22,14 +22,14 @@ ms.locfileid: "72890495"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Elimina &#40;DMX&#41;](../dmx/delete-dmx.md)|Cancella da un modello di data mining il contenuto sottoposto a training.|  
-|[Inserisci in &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Esegue il training di un modello di data mining.|  
-|[Seleziona &#40;DMX&#41;](../dmx/select-dmx.md)|Visualizza un modello di data mining.|  
+|[ELIMINA &#40;DMX&#41;](../dmx/delete-dmx.md)|Cancella da un modello di data mining il contenuto sottoposto a training.|  
+|[INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Esegue il training di un modello di data mining.|  
+|[SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)|Visualizza un modello di data mining.|  
 |[&#60;query sui dati di origine&#62;](../dmx/source-data-query.md)|Esegue una query sulle origini dati per le istruzioni **Insert into** e **SELECT** .|  
-|[Aggiorna &#40;DMX&#41;](../dmx/update-dmx.md)|Modifica il contenuto nel modello di data mining.|  
+|[AGGIORNARE &#40;DMX&#41;](../dmx/update-dmx.md)|Modifica il contenuto nel modello di data mining.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni DMX per &#40;la&#41; definizione dei dati DMX di Data Mining Extensions](../dmx/dmx-statements-data-definition.md)   
- [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Le estensioni di data mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

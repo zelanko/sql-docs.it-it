@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9d967d1275c7b682c79313b95af06f3088e7acf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075975"
 ---
 # <a name="create-a-currency-type-dimension"></a>Creare una dimensione di tipo Valuta
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una dimensione di tipo Valuta è una dimensione i cui attributi rappresentano un elenco di valute per la generazione di report finanziari.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]una dimensione di tipo valuta è una dimensione i cui attributi rappresentano un elenco di valute per la creazione di report finanziari.  
   
  Una dimensione di tipo Valuta consente di aggiungere funzionalità di conversione di valuta a un cubo in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per aggiungere funzionalità di conversione di valuta a un cubo, è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per definire un comando script MDX (Multidimensional Expressions) che consenta di convertire le misure di valuta in valori appropriati per le impostazioni locali dell'applicazione client. Per creare tale script MDX, nella Configurazione guidata funzionalità di Business Intelligence sono necessarie le informazioni seguenti:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66075975"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](../business-intelligence-wizard-f1-help.md)   
+ [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](../business-intelligence-wizard-f1-help.md)   
  [Tipi di dimensioni](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

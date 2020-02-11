@@ -1,5 +1,5 @@
 ---
-title: Advanced finestra di dialogo Opzioni visualizzazione origine dati (Creazione guidata vista origine di dati) (Analysis Services) | Microsoft Docs
+title: Finestra di dialogo Opzioni avanzate vista origine dati (creazione guidata vista origine dati) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062849"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Finestra di dialogo Opzioni avanzate vista origine dati (Creazione guidata vista origine dati) (Analysis Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66062849"
  Per aprire la finestra di dialogo **Opzioni avanzate vista origine dati** , scegliere **Avanzate** nella pagina **Selezionare un'origine dati**di Creazione guidata vista origine dati.  
   
 ## <a name="options"></a>Opzioni  
- **Recupera relazioni**  
+ **Recuperare relazioni**  
  Consente di specificare se le informazioni sulle relazioni vanno recuperate dall'origine dati e applicate alla vista dell'origine dati. Se l'impostazione di questa opzione viene modificata dopo la creazione della relazione, dalla vista origine dati non viene eliminata alcuna relazione.  
   
  **Limita agli schemi seguenti**  
@@ -33,6 +33,6 @@ ms.locfileid: "66062849"
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati nei modelli multidimensionali](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Origini dati supportate &#40;multidimensionale di SSAS&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Origini dati supportate &#40;SSAS multidimensionale&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

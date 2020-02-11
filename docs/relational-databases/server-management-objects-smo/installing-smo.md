@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cabd2d1ebbe726971e7837ff3e268ad3c2cee89f
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72041262"
 ---
 # <a name="installing-smo"></a>Installazione di SMO (SQL Server Management Objects)
@@ -30,12 +30,12 @@ In questa pagina vengono fornite informazioni su come installare SMO per l'utili
 
 ## <a name="smo-nuget-package"></a>Pacchetto NuGet SMO
 
-A partire da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 SMO viene distribuito come pacchetto NuGet [Microsoft. SqlServer. SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) per consentire agli utenti di sviluppare applicazioni con Smo.
+A partire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da 2017 SMO viene distribuito come pacchetto NuGet [Microsoft. SqlServer. SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) per consentire agli utenti di sviluppare applicazioni con Smo.
 
 Si tratta di una sostituzione di SharedManagementObjects. msi, che è stata precedentemente rilasciata come parte del Feature Pack di SQL per ogni versione di SQL Server. Le applicazioni che usano SMO devono essere aggiornate in modo da usare il pacchetto NuGet e saranno responsabili della verifica dell'installazione dei file binari con l'applicazione in fase di sviluppo.
 
 >>[!Important]
->>Come indicato nella pagina [file e numeri di versione](files-and-version-numbers.md) , è consigliabile non installare gli assembly SMO nella global assembly cache (GAC). Questa operazione potrebbe causare problemi con altre applicazioni che utilizzano anche le versioni di SMO (ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
+>>Come indicato nella pagina [file e numeri di versione](files-and-version-numbers.md) , è consigliabile non installare gli assembly SMO nella global assembly cache (GAC). Questa operazione potrebbe causare problemi con altre applicazioni che utilizzano anche le versioni di SMO, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio.
 
 ## <a name="installing-the-package"></a>Installazione del pacchetto
 
@@ -43,5 +43,5 @@ Vedere [NuGet avvio rapido: usare un pacchetto](https://docs.microsoft.com/nuget
   
 ## <a name="system-requirements"></a>Requisiti di sistema
   
- SMO richiede l'esecuzione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,0 o .NET Core 2,0, quindi tutte le applicazioni che lo utilizzano devono garantire che i computer client dispongano di tale versione o di una versione successiva. Alcuni file binari nativi installati con le librerie SMO NetFx richiedono anche l'installazione del runtime VC 2013; il runtime non è incluso nel pacchetto. È possibile scaricare il redist appropriato per l'architettura di destinazione da https://www.microsoft.com/download/details.aspx?id=40784
+ SMO richiede [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] l'esecuzione di 4,0 o .net core 2,0, pertanto tutte le applicazioni che lo utilizzano devono assicurarsi che i computer client dispongano di tale versione o versione successiva. Alcuni file binari nativi installati con le librerie SMO NetFx richiedono anche l'installazione del runtime VC 2013; il runtime non è incluso nel pacchetto. È possibile scaricare il redist appropriato per l'architettura di destinazione dahttps://www.microsoft.com/download/details.aspx?id=40784
   

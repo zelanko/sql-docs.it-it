@@ -1,5 +1,5 @@
 ---
-title: Creazione con ambito Query calcolati membri (MDX) | Microsoft Docs
+title: Creazione di membri calcolati con ambito query (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074532"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Creazione di membri calcolati con ambito query (MDX)
@@ -91,7 +91,7 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)   
  [Istruzione SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
  [Creazione di membri calcolati con ambito sessione &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   

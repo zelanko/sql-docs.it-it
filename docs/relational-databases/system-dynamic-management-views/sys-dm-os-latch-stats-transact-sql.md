@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72289408"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -31,19 +31,19 @@ ms.locfileid: "72289408"
 Restituisce informazioni relative a tutte le attese di latch organizzate per classe. 
   
 > [!NOTE]  
-> Per chiamare questo oggetto da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys. dm_pdw_nodes_os_latch_stats**.  
+> Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_os_latch_stats**.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|Nome della classe di latch.|  
+|latch_class|**nvarchar (120)**|Nome della classe di latch.|  
 |waiting_requests_count|**bigint**|Numero di attese di latch nella classe specifica. Questo contatore viene incrementato all'inizio di un'attesa di latch.|  
 |wait_time_ms|**bigint**|Tempo totale di attesa dei latch, espresso in millisecondi, nella classe specifica.<br /><br /> **Nota:** Questa colonna viene aggiornata ogni cinque minuti durante un'attesa di latch e al termine di un'attesa del latch.|  
 |max_wait_time_ms|**bigint**|Tempo massimo che un oggetto memoria ha atteso il latch specifico. Un valore insolitamente elevato può indicare un deadlock interno.|  
-|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
+|pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificatore del nodo su cui si trova questa distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]richiede `VIEW SERVER STATE` autorizzazione.   
-Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium richiede l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
   
 ## <a name="remarks"></a>Osservazioni  
  È possibile utilizzare la vista sys.dm_os_latch_stats per identificare l'origine della contesa di latch mediante l'analisi dei numeri di attesa relativi e dei tempi di attesa per le varie classi di latch. In alcune situazioni è possibile risolvere o ridurre la contesa di latch. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
@@ -61,14 +61,14 @@ GO
 >  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato, le statistiche non sono persistenti. Tutti i dati sono cumulativi a partire dall'ultima reimpostazione delle statistiche oppure dall'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="latches"></a>Fermi  
- Un latch è un oggetto di sincronizzazione Lightweight interno simile a un blocco utilizzato da vari componenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un latch viene utilizzato principalmente per sincronizzare le pagine del database durante operazioni quali il buffer o l'accesso ai file. Ogni latch è associato a un'unica unità di allocazione. 
+ Un latch è un oggetto di sincronizzazione Lightweight interno simile a un blocco utilizzato da vari [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componenti. Un latch viene utilizzato principalmente per sincronizzare le pagine del database durante operazioni quali il buffer o l'accesso ai file. Ogni latch è associato a un'unica unità di allocazione. 
   
  Un'attesa di latch si verifica quando non è possibile concedere immediatamente una richiesta di latch perché il latch è mantenuto attivo da un altro thread con una modalità in conflitto. A differenza dei blocchi, i latch vengono rilasciati subito dopo l'operazione, anche nel caso di operazioni di scrittura.  
   
  I latch sono raggruppati in classi in base ai componenti e all'utilizzo. In un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere presenti zero o più latch di una classe specifica in un momento qualsiasi.  
   
 > [!NOTE]  
-> `sys.dm_os_latch_stats` non tiene traccia delle richieste di latch concesse immediatamente oppure che hanno avuto esito negativo senza attendere.  
+> `sys.dm_os_latch_stats` non tiene traccia delle richieste di latch concesse immediatamente oppure che hanno avuto esito negativo senza alcuna attesa.  
   
  Nella tabella seguente è riportata una breve descrizione delle varie classi di latch.  
   
@@ -171,7 +171,7 @@ GO
 |SERVICE_BROKER_MIRROR_ROUTE|Solo per uso interno.|  
 |TRACE_ID|Solo per uso interno.|  
 |TRACE_AUDIT_ID|Solo per uso interno.|  
-|traccia|Solo per uso interno.|  
+|TRACE|Solo per uso interno.|  
 |TRACE_CONTROLLER|Solo per uso interno.|  
 |TRACE_EVENT_QUEUE|Solo per uso interno.|  
 |TRANSACTION_DISTRIBUTED_MARK|Solo per uso interno.|  
@@ -195,5 +195,5 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server Transact-SQL &#40;&#41; delle viste a gestione dinamica relative al sistema operativo](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[Oggetto Latches di SQL Server](../../relational-databases/performance-monitor/sql-server-latches-object.md)      
+[SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[Oggetto Latch di SQL Server](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

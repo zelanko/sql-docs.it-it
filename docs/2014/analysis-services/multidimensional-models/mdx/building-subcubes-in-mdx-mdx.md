@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074723"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Compilazione di sottocubi in MDX (MDX)
@@ -53,7 +53,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  I valori di aggregazione inclusi nel sottocubo verranno inoltre totalizzati visivamente. Si consideri ad esempio un sottocubo contenente `USA`, `WA`e `OR`. Il valore di aggregazione di `USA` sarà costituito dalla somma di `{WA,OR}` , perché `WA` e `OR` sono gli unici stati definiti dal sottocubo. Tutti gli altri stati verranno ignorati.  
   
- I riferimenti espliciti alle celle esterne al sottocubo restituiscono inoltre valori di cella che vengono valutati nel contesto dell'intero cubo. Si immagini ad esempio di creare un sottocubo limitato all'anno corrente. Si usa quindi la funzione [ParallelPeriod](/sql/mdx/parallelperiod-mdx) per confrontare l'anno corrente con quello precedente. La differenza nei valori verrà restituita anche se il valore dell'anno precedente si trova all'esterno del sottocubo.  
+ I riferimenti espliciti alle celle esterne al sottocubo restituiscono inoltre valori di cella che vengono valutati nel contesto dell'intero cubo. Si immagini ad esempio di creare un sottocubo limitato all'anno corrente. Si usa quindi la funzione [ParallelPeriod](/sql/mdx/parallelperiod-mdx) per confrontare l'anno corrente con quello precedente. La differenza nei valori verrà restituita anche se il valore dell'anno precedente è esterno al sottocubo.  
   
  Infine, se il contesto originale non viene sovrascritto, le funzioni sui set valutate in una sub-SELECT verranno valutate nel contesto della sub-SELECT. Se il contesto viene sovrascritto, le funzioni sui set verranno valutate nel contesto dell'intero cubo.  
   

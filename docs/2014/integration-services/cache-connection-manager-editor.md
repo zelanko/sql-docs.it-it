@@ -1,5 +1,5 @@
 ---
-title: Editor gestione connessione cache | Microsoft Docs
+title: Editor gestione connessione della cache | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061080"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor gestione connessione cache
@@ -29,13 +29,13 @@ ms.locfileid: "66061080"
   
  La finestra di dialogo **Editor gestione connessione della cache** include le schede seguenti:  
   
--   [Scheda Generale](#generaltab)  
+-   [Generale](#generaltab)  
   
 -   [Scheda colonne](#columnstab)  
   
- Per ulteriori informazioni sulla gestione connessione cache, vedere [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
+ Per ulteriori informazioni sulla gestione connessione cache, vedere [cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-##  <a name="generaltab"></a> Scheda Generale  
+##  <a name="generaltab"></a>Scheda generale  
  Usare la scheda **Generale** della finestra di dialogo **Editor gestione connessione della cache** per indicare se leggere la cache da un file o salvare la cache in un file.  
   
 ### <a name="options"></a>Opzioni  
@@ -49,7 +49,7 @@ ms.locfileid: "66061080"
  Indicare se utilizzare un file di cache.  
   
 > [!NOTE]  
->  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per altre informazioni, vedere [Accesso ai file utilizzati dai pacchetti](../../2014/integration-services/access-to-files-used-by-packages.md).  
+>  Il livello di protezione del pacchetto non si applica al file di cache. Se il file di cache contiene informazioni riservate, utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso al percorso o alla cartella nella quale verrà archiviato il file. È consigliabile consentire l'accesso solo a determinati account. Per ulteriori informazioni, vedere [accesso ai file utilizzati dai pacchetti](../../2014/integration-services/access-to-files-used-by-packages.md).  
   
  Se la gestione connessione della cache viene configurata in modo da utilizzare un file di cache, la gestione connessione eseguirà una delle seguenti azioni:  
   
@@ -66,14 +66,14 @@ ms.locfileid: "66061080"
  **Aggiorna metadati**  
  Eliminare i metadati della colonna nella Gestione connessione cache e ripopolare la Gestione connessione cache con i metadati della colonna da un file di cache selezionato.  
   
-##  <a name="columnstab"></a> Scheda Colonne  
+##  <a name="columnstab"></a>Scheda colonne  
  Utilizzare la scheda **Colonne** della finestra di dialogo **Editor gestione connessione cache** per configurare le proprietà di ciascuna colonna nella cache.  
   
 ### <a name="options"></a>Opzioni  
  **Colonna**  
  Consente di specificare il nome della colonna.  
   
- **Posizione dell'indice**  
+ **Posizione di indice**  
  Consente di specificare quali colonne sono colonne dell'indice specificando la relativa posizione di ogni colonna. L'indice è un insieme di una o più colonne.  
   
  Per le colonne non dell'indice, la posizione è 0.  

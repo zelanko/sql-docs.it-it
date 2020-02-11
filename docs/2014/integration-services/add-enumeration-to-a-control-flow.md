@@ -1,5 +1,5 @@
 ---
-title: Aggiungere l'enumerazione a un flusso di controllo | Microsoft Docs
+title: Aggiungere un'enumerazione a un flusso di controllo | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061906"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Aggiunta di un'enumerazione a un flusso di controllo
+  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include il contenitore Ciclo Foreach, un elemento del flusso di controllo che semplifica l'integrazione di un costrutto di ciclo per l'enumerazione di file e oggetti nel flusso di controllo di un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo Foreach](control-flow/foreach-loop-container.md).  
   
  Il contenitore Ciclo Foreach non offre funzionalità, ma solo una struttura in cui è possibile compilare un flusso di controllo ripetibile, nonché specificare e configurare un tipo di enumeratore. Per aggiungere funzionalità al contenitore Ciclo Foreach è necessario includervi almeno un'attività. Per altre informazioni, vedere [Attività di Integration Services](control-flow/integration-services-tasks.md).  
@@ -32,10 +33,10 @@ ms.locfileid: "66061906"
   
 ### <a name="to-implement-a-foreach-loop-container-in-a-control-flow"></a>Per implementare un contenitore Ciclo Foreach in un flusso di controllo  
   
-1.  Aggiungere il contenitore Ciclo Foreach al pacchetto. Per altre informazioni, vedere [aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+1.  Aggiungere il contenitore Ciclo Foreach al pacchetto. Per altre informazioni, vedere [aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
-2.  Aggiungere attività e contenitori al contenitore Ciclo Foreach. Per altre informazioni, vedere [aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+2.  Aggiungere attività e contenitori al contenitore Ciclo Foreach. Per altre informazioni, vedere [aggiungere o eliminare un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   .  
   
 3.  Connettere le attività e i contenitori inclusi nel contenitore Ciclo Foreach tramite vincoli di precedenza. Per altre informazioni, vedere [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
@@ -44,7 +45,7 @@ ms.locfileid: "66061906"
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Raggruppare o separare componenti](group-or-ungroup-components.md)   
+ [Raggruppare o disraggruppare componenti](group-or-ungroup-components.md)   
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
  [Aggiungere un'iterazione a un flusso di controllo](add-iteration-to-a-control-flow.md)   
  [Flusso di controllo](control-flow/control-flow.md)  

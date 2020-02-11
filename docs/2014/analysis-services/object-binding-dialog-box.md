@@ -1,5 +1,5 @@
 ---
-title: Oggetto di associazione nella finestra di dialogo | Microsoft Docs
+title: Finestra di dialogo Associazione oggetti | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072193"
 ---
 # <a name="object-binding-dialog-box"></a>Finestra di dialogo Associazione oggetto
@@ -35,7 +35,7 @@ ms.locfileid: "66072193"
 -   UnaryOperatorColumn  
   
 ## <a name="options"></a>Opzioni  
- **Tipo di associazione**  
+ **Tipo di binding**  
  Consente di selezionare l'associazione da utilizzare per l'oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile utilizzare i tipi di associazione seguenti:  
   
  Associazione colonna  
@@ -45,7 +45,7 @@ ms.locfileid: "66072193"
  Consente di indicare che è necessario definire una nuova colonna nella vista origine dati. Su tale colonna verrà quindi eseguita un'associazione colonna.  
   
 > [!NOTE]  
->  Se questa opzione è selezionata è necessario eseguire la **Generazione guidata schema** prima di distribuire l'oggetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+>  Se questa opzione è selezionata, è necessario eseguire la **generazione guidata schema** prima di distribuire [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] l'oggetto.  
   
  Associazione righe  
  Consente di associare l'oggetto a una riga in una tabella dei fatti, in modo da semplificare le misure Distinct Count in base al numero di righe elaborate nella tabella dei fatti.  
@@ -57,6 +57,6 @@ ms.locfileid: "66072193"
  Consente di visualizzare un elenco di colonne nella tabella selezionata in **Tabella di origine**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

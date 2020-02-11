@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228561"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Esecuzione di comandi contenenti parametri con valori di tabella
@@ -29,7 +29,7 @@ ms.locfileid: "63228561"
 ## <a name="table-valued-parameter-specification"></a>Specifica del parametro con valori di tabella  
  Il tipo del parametro con valori di tabella può essere specificato dal consumer. Le informazioni relative al tipo includono il nome del tipo e il nome dello schema, se il tipo di tabella definito dall'utente per il parametro con valori di tabella non è presente nello schema predefinito corrente per la connessione. In base al supporto server, il consumer può specificare anche informazioni facoltative sui metadati, ad esempio l'ordine delle colonne, e specificare che tutte le righe di determinate colonne includano i valori predefiniti.  
   
- Per specificare un parametro con valori di tabella, il consumer chiama ISSCommandWithParameter::SetParameterInfo e, facoltativamente, chiama isscommandwithparameters:: Setparameterproperties. Per un parametro con valori di tabella, il campo *pwszDataSourceType* nella struttura DBPARAMBINDINFO presenta un valore pari a DBTYPE_TABLE. Il campo *ulParamSize* è impostato su ~0 per indicare che la lunghezza non è nota. Proprietà specifica per i parametri con valori di tabella, ad esempio nome dello schema, nome del tipo, ordine delle colonne e colonne predefinite, possono essere impostate tramite isscommandwithparameters:: Setparameterproperties.  
+ Per specificare un parametro con valori di tabella, il consumer chiama ISSCommandWithParameter:: separameterinfo e, facoltativamente, chiama ISSCommandWithParameters:: SetParameterProperties. Per un parametro con valori di tabella, il campo *pwszDataSourceType* nella struttura DBPARAMBINDINFO presenta un valore pari a DBTYPE_TABLE. Il campo *ulParamSize* è impostato su ~0 per indicare che la lunghezza non è nota. Le proprietà specifiche per i parametri con valori di tabella, ad esempio il nome dello schema, il nome del tipo, l'ordine delle colonne e le colonne predefinite, possono essere impostate tramite ISSCommandWithParameters:: SetParameterProperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Associazione del parametro con valori di tabella  
  Un parametro con valori di tabella può essere qualsiasi oggetto set di righe. Il provider legge da questo oggetto mentre invia parametri con valori di tabella al server durante l'esecuzione.  

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100635"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore (sottoscrizione guidata dai dati)
@@ -60,7 +60,7 @@ ms.locfileid: "66100635"
 -   Tramite il server di report viene creato un recapito di report per ogni riga del set di risultati. Se il set di risultati è costituito da trecento righe, tramite il server di report verrà eseguito un tentativo di recapitare trecento report.  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>Impostazione di opzioni di recapito tramite dati di un database del Sottoscrittore  
- È possibile utilizzare i dati del database del Sottoscrittore per personalizzare le opzioni di recapito per ogni destinatario. Le opzioni disponibili sono determinate dal tipo di estensione per il recapito in uso. Se si utilizza l'estensione per il recapito tramite posta elettronica del server di report, la query dovrebbe contenere un alias di posta elettronica per ogni sottoscrittore. Se si utilizza un recapito alla condivisione file, i dati del Sottoscrittore devono includere valori che possano essere utilizzati per creare file di report specifici del Sottoscrittore o per offrire una destinazione per il recapito. Per altre informazioni, vedere [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) e [recapito tramite posta elettronica in Reporting Services](e-mail-delivery-in-reporting-services.md).  
+ È possibile utilizzare i dati del database del Sottoscrittore per personalizzare le opzioni di recapito per ogni destinatario. Le opzioni disponibili sono determinate dal tipo di estensione per il recapito in uso. Se si utilizza l'estensione per il recapito tramite posta elettronica del server di report, la query dovrebbe contenere un alias di posta elettronica per ogni sottoscrittore. Se si utilizza un recapito alla condivisione file, i dati del Sottoscrittore devono includere valori che possano essere utilizzati per creare file di report specifici del Sottoscrittore o per offrire una destinazione per il recapito. Per ulteriori informazioni, vedere [recapito tramite condivisione file in Reporting Services](file-share-delivery-in-reporting-services.md) e [recapito tramite posta elettronica in Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Passaggio di valori dei parametri dal database del Sottoscrittore al report  
  Se si sta creando una sottoscrizione guidata dai dati per un report con parametri, è possibile fornire valori dei parametri variabili per personalizzare l'output di ogni report. Ad esempio, un database del Sottoscrittore potrebbe contenere numeri di identificazione, date di assunzione, titoli professionali e ubicazioni degli uffici dei dipendenti, tutte informazioni utilizzabili per filtrare i dati dei report. Se il report accetta parametri basati su queste o altre colonne di dati disponibili, è possibile eseguire il mapping di ogni parametro alla colonna appropriata.  
@@ -79,7 +79,7 @@ ms.locfileid: "66100635"
  Se si apporta una qualsiasi di queste modifiche, sarà necessario aggiornare la sottoscrizione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, modificare ed eliminare una sottoscrizione guidata dai dati](data-driven-subscriptions.md)   
+ [Creazione, modifica ed eliminazione di una sottoscrizione guidata dai dati](data-driven-subscriptions.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Scenario dell'esercitazione di Analysis Services | Microsoft Docs
+title: Scenario di Analysis Services Tutorial | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062436"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Scenario di Analysis Services Tutorial
-  Questa esercitazione si riferisce alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una multinazionale che produce e commercializza biciclette in acciaio e in materiali compositi sui mercati dell'America del Nord, dell'Europa e dell'Asia. La sede centrale di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] si trova a Bothell, nello stato di Washington, e vi lavorano 500 dipendenti. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] dispone inoltre di numerosi team di vendita dislocati nelle diverse aree di mercato.  
+  Questa esercitazione si riferisce alla società fittizia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] è una multinazionale che produce e commercializza biciclette in acciaio e in materiali compositi sui mercati dell'America del Nord, dell'Europa e dell'Asia. La sede centrale di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] si trova a Bothell, nello stato di Washington, e vi lavorano 500 dipendenti. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] dispone inoltre di numerosi team di vendita dislocati nelle diverse aree di mercato.  
   
  Negli ultimi anni [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha acquistato un piccolo impianto di produzione in Messico, Importadores Neptuno, presso il quale vengono realizzati diversi componenti di assemblaggio essenziali per la gamma di prodotti di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Tali componenti vengono quindi consegnati alla sede di Bothell per l'assemblaggio finale dei prodotti. Nel 2005, tutte le attività di produzione e distribuzione relative al gruppo di prodotti delle biciclette da turismo sono state concentrate nell'impianto Importadores Neptuno.  
   
@@ -46,7 +48,7 @@ ms.locfileid: "66062436"
 -   È difficile controllare le informazioni. L'ufficio finanziario attualmente usa il database **AdventureWorksDW2012** solo come origine dati per l'esecuzione bulk delle query. I dati vengono quindi scaricati in fogli di calcolo separati e viene impiegata una notevole quantità di tempo per preparare i dati ed elaborare i fogli di calcolo. I report finanziari della società sono pertanto difficili da preparare, controllare e gestire.  
   
 ## <a name="the-solution"></a>Soluzione  
- Il team del data warehouse ha eseguito recentemente una verifica della progettazione del sistema di analisi corrente. La verifica include un'analisi della relazione tra le problematiche correnti e le necessità future. Il team del data warehouse ha concluso che il database **AdventureWorksDW2012** rappresenta un database dimensionale progettato correttamente con dimensioni conformi e chiavi sostitutive. Le dimensioni conformi consento di utilizzare la dimensione in più data mart, ad esempio una dimensione temporale o del prodotto. Le chiavi surrogate sono chiavi artificiali che consentono il collegamento delle tabelle dei fatti e delle dimensioni e che vengono utilizzate per assicurare univocità e il miglioramento delle prestazioni. Il team del data warehouse ha anche determinato che non esistono attualmente problemi significativi relativi al carico e alla gestione delle tabelle di base nel database **AdventureWorksDW2012** . Il team ha pertanto deciso di usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per ottenere quanto segue:  
+ Il team del data warehouse ha eseguito recentemente una verifica della progettazione del sistema di analisi corrente. La verifica include un'analisi della relazione tra le problematiche correnti e le necessità future. Il team del data warehouse ha concluso che il database **AdventureWorksDW2012** rappresenta un database dimensionale progettato correttamente con dimensioni conformi e chiavi sostitutive. Le dimensioni conformi consento di utilizzare la dimensione in più data mart, ad esempio una dimensione temporale o del prodotto. Le chiavi surrogate sono chiavi artificiali che consentono il collegamento delle tabelle dei fatti e delle dimensioni e che vengono utilizzate per assicurare univocità e il miglioramento delle prestazioni. Il team del data warehouse ha anche determinato che non esistono attualmente problemi significativi relativi al carico e alla gestione delle tabelle di base nel database **AdventureWorksDW2012** . Il team ha pertanto deciso di usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per eseguire le operazioni seguenti:  
   
 -   Rendere disponibile un accesso ai dati unificato tramite un livello di metadati comune per l'esecuzione di analisi e la creazione di report.  
   
@@ -60,9 +62,9 @@ ms.locfileid: "66062436"
   
 -   Rendere disponibile una versione localizzata per gli utenti aziendali che si trovano al di fuori degli Stati Uniti.  
   
- Nelle lezioni dell'esercitazione su Analysis Services vengono fornite istruzioni sulla compilazione di un database del cubo che soddisfa tutti questi obiettivi. Per iniziare, passare alla prima lezione: [Lezione 1: Creare un nuovo progetto di modello tabulare](lesson-1-create-a-new-tabular-model-project.md).  
+ Nelle lezioni dell'esercitazione su Analysis Services vengono fornite istruzioni sulla compilazione di un database del cubo che soddisfa tutti questi obiettivi. Per iniziare, passare alla prima lezione: [Lezione 1: Creare un nuovo modello di progetto tabulare](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Esercitazione di modellazione multidimensionale &#40;Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

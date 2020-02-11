@@ -1,5 +1,5 @@
 ---
-title: Copia bulk di un Set di risultati SELECT (ODBC) | Microsoft Docs
+title: Eseguire la copia bulk di un set di risultati SELECT (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225519"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Eseguire una copia bulk di un set di risultati SELECT (ODBC)
   Nell'esempio viene illustrato come utilizzare le funzioni di copia bulk per eseguire la copia bulk del set di risultati di un'istruzione SELECT. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>Per eseguire la copia bulk per l'esportazione del set di risultati di un'istruzione SELECT.  
   
@@ -37,22 +37,22 @@ ms.locfileid: "63225519"
   
 4.  Chiamare [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) per impostare le informazioni seguenti:  
   
-    -   Specificare NULL per il *szTable* parametro.  
+    -   Specificare NULL per il parametro *szTable* .  
   
     -   Nome del file di dati mediante il quale si ricevono i dati del set di risultati.  
   
     -   Nome di un file di dati per la ricezione di eventuali messaggi di errore della copia bulk (specificare NULL se non si desidera che venga creato un file dei messaggi).  
   
-    -   La direzione della copia: DB_OUT.  
+    -   Direzione della copia: DB_OUT.  
   
-5.  Chiamare [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), impostare eOption su BCPHINTS e inserire in iValue un puntatore a una matrice SQLTCHAR contenente l'istruzione SELECT.  
+5.  Chiamare [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), impostare EOPTION su BCPHINTS e inserire in iValue un puntatore a una matrice SQLTCHAR che contiene l'istruzione SELECT.  
   
 6.  Chiamare [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) per eseguire l'operazione di copia bulk.  
   
- Quando vengono seguiti questi passaggi, il file viene creato in formato nativo. È possibile convertire i valori dei dati per altri tipi di dati mediante [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Per altre informazioni, vedere [creare un File di formato di copia Bulk &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md).  
+ Quando vengono seguiti questi passaggi, il file viene creato in formato nativo. È possibile convertire i valori dei dati in altri tipi di dati utilizzando [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Per ulteriori informazioni, vedere [creare un file di formato per la copia Bulk &#40;&#41;ODBC ](create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Esempio  
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
@@ -163,6 +163,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Copia di massa dei con le procedure SQL Server ODBC Driver &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [Procedure per la copia bulk con il driver ODBC di SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

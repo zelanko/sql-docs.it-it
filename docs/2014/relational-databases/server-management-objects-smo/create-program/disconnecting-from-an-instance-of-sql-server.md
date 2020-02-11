@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7783fa93912c305403cc34ad6e52668123d164ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192070"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>Disconnessione da un'istanza di SQL Server
@@ -31,7 +31,7 @@ ms.locfileid: "63192070"
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>Disconnessione da un'istanza di SQL Server per RMO  
  La chiusura delle connessioni al server quando si programma con RMO funziona in modo leggermente diverso da SMO.  
   
- Perché la connessione al server per un oggetto RMO viene mantenuta per la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> dell'oggetto, questo oggetto viene anche usato durante la disconnessione da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si programma tramite RMO. Per chiudere una connessione tramite l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, chiamare il metodo <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> dell'oggetto RMO. Dopo che è stata chiusa la connessione, gli oggetti RMO non possono essere utilizzati.  
+ Poiché la connessione al server per un oggetto RMO viene gestita dall' <xref:Microsoft.SqlServer.Management.Common.ServerConnection> oggetto, questo oggetto viene utilizzato anche per la disconnessione da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si programma utilizzando RMO. Per chiudere una connessione tramite l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, chiamare il metodo <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> dell'oggetto RMO. Dopo che è stata chiusa la connessione, gli oggetti RMO non possono essere utilizzati.  
   
 ## <a name="example"></a>Esempio  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

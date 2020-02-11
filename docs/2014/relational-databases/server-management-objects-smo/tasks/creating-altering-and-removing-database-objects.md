@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di oggetti di Database | Documenti di Microsoft
+title: Utilizzo di oggetti di database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5bf11ece3797f9bbc580339846efb685876b2d0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188631"
 ---
 # <a name="working-with-database-objects"></a>Utilizzo degli oggetti di database

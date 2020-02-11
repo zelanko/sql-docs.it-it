@@ -1,5 +1,5 @@
 ---
-title: Esplorare i dati in Progettazione dimensioni | Microsoft Docs
+title: Esplorare i dati della dimensione in Progettazione dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075985"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>Esplorare i dati di una dimensione in Progettazione dimensioni
   È possibile esplorare i dati di una dimensione mediante la visualizzazione **Esplorazione** di Progettazione dimensioni, accessibile da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Affinché i dati di dimensione vengano visualizzati nella visualizzazione **Esplorazione** , la dimensione deve trovarsi in uno stato elaborato. Per altre informazioni, vedere [elaborazione di oggetti modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
+ Affinché i dati di dimensione vengano visualizzati nella visualizzazione **Esplorazione** , la dimensione deve trovarsi in uno stato elaborato. Per ulteriori informazioni, vedere [elaborazione di oggetti del modello multidimensionale](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-browse-a-dimension-in-sql-server-data-tools"></a>Per esplorare una dimensione in SQL Server Data Tools  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66075985"
     >  È necessario che nella dimensione sia disponibile una traduzione definita per la lingua selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione alle dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Introduzione alle dimensioni &#40;Analysis Services Dati multidimensionali&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](dimensions-in-multidimensional-models.md)  
   
   

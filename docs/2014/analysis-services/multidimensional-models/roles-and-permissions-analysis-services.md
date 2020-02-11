@@ -14,13 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f536ae91cde1301b9499b2d36957d25c877be9c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073055"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>Ruoli e autorizzazioni (Analysis Services)
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce il modello di autorizzazione basata sui ruoli che concede l'accesso a operazioni, oggetti e dati. È necessario che tutti gli utenti che accedono a un database o un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si attengano a questa procedura all'interno del contesto di un ruolo.  
   
  L'amministratore di sistema di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può concedere l'appartenenza al **ruolo di amministratore del server** che fornisce l'accesso illimitato alle operazioni sul server. Le autorizzazioni di questo ruolo sono fisse e non possono essere personalizzate. Per impostazione predefinita, i membri del gruppo Administrators locale sono automaticamente amministratori di sistema di Analysis Services.  
@@ -29,7 +30,8 @@ ms.locfileid: "66073055"
   
  È pratica comune creare i ruoli e assegnare l'appartenenza con operazioni separate. Spesso, Progettazione modelli aggiunge i ruoli durante la fase di progettazione. In questo modo, tutte le definizioni di ruolo vengono riflesse nei file di progetto che definiscono il modello. L'appartenenza al ruolo viene in genere implementata in un secondo momento quando il database passa in produzione, generalmente dagli amministratori del database che creano script che possono essere sviluppati, testati ed eseguiti come un'operazione indipendente.  
   
- Ogni autorizzazione viene concessa su un'identità utente di Windows valida. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa l'autenticazione di Windows esclusivamente per autenticare le identità utente. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non fornisce alcun metodo di autenticazione proprietario. Vedere [Metodologie di autenticazione supportate da Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md).  
+ Ogni autorizzazione viene concessa su un'identità utente di Windows valida. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa l'autenticazione di Windows esclusivamente per autenticare le identità utente. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]non fornisce alcun metodo di autenticazione proprietario. Vedere le [metodologie di autenticazione supportate da Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md).  
   
 > [!IMPORTANT]  
 >  Le autorizzazioni si sommano tra loro per ogni utente o gruppo di Windows in tutti i ruoli del database. Se un ruolo nega a un utente o a un gruppo le autorizzazioni per eseguire determinate attività o per visualizzare determinati dati, mentre un altro ruolo concede a tale utente o gruppo queste autorizzazioni, l'utente o il gruppo disporrà delle autorizzazioni per eseguire l'attività o visualizzare i dati.  
@@ -38,9 +40,9 @@ ms.locfileid: "66073055"
   
 -   [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
--   [Concedere le autorizzazioni per il database &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
+-   [Concedere autorizzazioni per il database &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
   
--   [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+-   [Concedere le autorizzazioni per il cubo o il modello &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
 -   [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
@@ -48,13 +50,13 @@ ms.locfileid: "66073055"
   
 -   [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
 -   [Concedere le autorizzazioni per una dimensione &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
   
--   [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)  
+-   [Concessione dell'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+-   [Concessione dell'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire ruoli &#40;SSAS tabulare&#41;](../tabular-models/roles-ssas-tabular.md)  

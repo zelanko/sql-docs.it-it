@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63226217"
 ---
-# <a name="about-dialog-box"></a>Finestra di dialogo Informazioni su
-  La finestra di dialogo **Informazioni su** visualizza informazioni sul prodotto e consente di visualizzare informazioni sul computer in cui il prodotto è in esecuzione. Per le copie di valutazione, in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è riportato il numero di giorni che rimangono fino alla scadenza dell'installazione. Questa finestra di dialogo è accessibile dal menu **?** .  
+# <a name="about-dialog-box"></a>Informazioni su - finestra di dialogo
+  La finestra di dialogo informazioni **su** fornisce informazioni sul prodotto e consente di accedere alle informazioni sul computer in cui è in esecuzione il prodotto. Per le copie di valutazione [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , la voce elenca il numero di giorni rimanenti fino alla scadenza dell'installazione. Questa finestra di dialogo è accessibile dal menu **?** .   
   
 ## <a name="options"></a>Opzioni  
  **Nome componente**  

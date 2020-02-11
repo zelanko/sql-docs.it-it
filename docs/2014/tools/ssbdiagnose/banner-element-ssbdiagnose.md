@@ -1,5 +1,5 @@
 ---
-title: Banner (ssbdiagnose) elemento | Microsoft Docs
+title: Elemento banner (ssbdiagnose) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186875"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
@@ -36,7 +36,7 @@ ms.locfileid: "63186875"
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
 |`title`|Identifica l'utilità che ha generato il file di output XML di **ssbdiagnose** .|  
 |`product`|Identifica il prodotto che ha generato il file di output XML di **ssbdiagnose** .|  
@@ -46,8 +46,8 @@ ms.locfileid: "63186875"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|Nessuna.|  
-|**Valore predefinito**|Nessuna.|  
+|**Tipo di dati e lunghezza**|No.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Una volta per ogni file di output XML di **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -55,7 +55,7 @@ ms.locfileid: "63186875"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Di seguito viene riportato un esempio di un elemento Banner.  

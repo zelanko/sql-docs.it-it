@@ -1,5 +1,5 @@
 ---
-title: Sfoglia finestra di dialogo Vista origine dati (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo per l'esplorazione della vista origine dati (Analysis Services Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064456"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo per la visualizzazione della vista origine dati (Analysis Services - Dati multidimensionali)
@@ -31,7 +31,7 @@ ms.locfileid: "66064456"
  **Zoom**  
  Consente di selezionare il fattore di zoom per ridimensionare gli oggetti visualizzati sulla superficie del diagramma.  
   
- **Chiudi**  
+ **Close**  
  Fare clic su per chiudere la finestra di dialogo .  
   
   

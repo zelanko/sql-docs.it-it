@@ -1,5 +1,5 @@
 ---
-title: Selezionare il Data Mining (visualizzazione Grafico accuratezza di Data Mining) finestra di dialogo di struttura | Microsoft Docs
+title: Finestra di dialogo Seleziona struttura di data mining (visualizzazione Grafico accuratezza modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069484"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>Finestra di dialogo Seleziona struttura di data mining (visualizzazione Grafico accuratezza modello di data mining)
@@ -30,8 +30,8 @@ ms.locfileid: "66069484"
  Nella finestra di dialogo è contenuto un elenco di visualizzazioni albero per ogni struttura di data mining presente nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È possibile espandere ogni struttura di data mining per esaminare i modelli di data mining che contiene, ma la finestra di dialogo può essere utilizzata solo per selezionare una struttura di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
+ [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Test e convalida &#40;&#41;di data mining](data-mining/testing-and-validation-data-mining.md)  
   
   

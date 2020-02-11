@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf44b6af30d5db32c006c5a7d9b59d1810840d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103184"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Abilitare o disabilitare le funzionalità di Reporting Services
@@ -25,7 +25,7 @@ ms.locfileid: "66103184"
   
  Nelle procedure presenti in questo argomento viene illustrato come disabilitare le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità nativa. Le funzionalità possono essere configurate in modi diversi, ad esempio modificando direttamente il file `RsReportServer.config` o usando il facet **Configurazione superficie di attacco per Reporting Services** della gestione basata su criteri in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilizzare i collegamenti per trovare la procedura o le procedure che illustrano come abilitare o disabilitare una funzionalità:  
   
--   [servizio Web ReportServer](#RSWebSvc)  
+-   [Servizio Web ReportServer](#RSWebSvc)  
   
 -   [Elaborazione ed eventi pianificati](#Sched)  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66103184"
   
 -   [Generatore report](#ReportBuilder)  
   
--   [Sicurezza integrata di Windows per le origini dei dati dei report](#WinIntSec)  
+-   [Sicurezza integrata di Windows per le origini dati dei report](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> Report Server Web Service  
+##  <a name="RSWebSvc"></a>Servizio Web ReportServer  
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Per abilitare o disabilitare il servizio Web ReportServer mediante la modifica della configurazione  
   
@@ -65,13 +65,13 @@ ms.locfileid: "66103184"
   
 4.  In **Proprietà facet**:  
   
-    -   Per abilitare il servizio Web ReportServer, impostare **WebServiceAndHTTPAccessEnabled** a `True`.  
+    -   Per attivare il servizio Web ReportServer, impostare **WebServiceAndHTTPAccessEnabled** su `True`.  
   
-    -   Per disattivare il servizio Web ReportServer, impostare **WebServiceAndHTTPAccessEnabled** a `False`.  
+    -   Per disabilitare il servizio Web ReportServer, impostare **WebServiceAndHTTPAccessEnabled** su `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> Recapito ed eventi pianificati  
+##  <a name="Sched"></a>Eventi pianificati e recapito  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Per abilitare o disabilitare il recapito e gli eventi pianificati mediante la modifica della configurazione  
   
@@ -108,16 +108,16 @@ ms.locfileid: "66103184"
   
 4.  In **Proprietà facet**:  
   
-    -   Per abilitare il recapito e gli eventi pianificati, impostare **ScheduleEventsAndReportDeliveryEnabled** a `True`.  
+    -   Per attivare il recapito e gli eventi pianificati, `True`impostare **ScheduleEventsAndReportDeliveryEnabled** su.  
   
-    -   Per disabilitare il recapito e gli eventi pianificati, impostare **ScheduleEventsAndReportDeliveryEnabled** a `False`.  
+    -   Per disabilitare il recapito e gli eventi pianificati, `False`impostare **ScheduleEventsAndReportDeliveryEnabled** su.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  Non è possibile disabilitare completamente l'elaborazione in background, in quanto fornisce funzionalità di manutenzione dei database necessarie per le operazioni del server.  
   
-##  <a name="ReportManager"></a> Gestione report  
+##  <a name="ReportManager"></a>Gestione report  
   
 #### <a name="to-turn-on-or-off-report-manager-by-editing-configuration"></a>Per abilitare o disabilitare Gestione report mediante la modifica della configurazione  
   
@@ -141,19 +141,19 @@ ms.locfileid: "66103184"
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi all'istanza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che si desidera configurare.  
   
-2.  In **Esplora oggetti**fare clic con il pulsante destro del mouse sul nodo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , scegliere **Criteri**, quindi fare clic su **Facet**.  
+2.  In **Esplora oggetti**fare clic con il pulsante [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] destro del mouse sul nodo, scegliere **criteri**e fare clic su **facet**.  
   
 3.  Nell'elenco **Facet** selezionare **Configurazione superficie di attacco per Reporting Services**.  
   
 4.  In **Proprietà facet**:  
   
-    -   Per abilitare gestione Report, impostare **ReportManagerEnabled** a `True`.  
+    -   Per attivare Gestione report, impostare **ReportManagerEnabled** su `True`.  
   
-    -   Per disabilitare Gestione Report, impostare **ReportManagerEnabled** a `False`.  
+    -   Per disattivare Gestione report, impostare **ReportManagerEnabled** su `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ReportBuilder"></a> Generatore report  
+##  <a name="ReportBuilder"></a>Generatore report  
   
 #### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>Per abilitare o disabilitare Generatore report mediante l'utilizzo di SQL Server Management Studio  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66103184"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="WinIntSec"></a> Sicurezza integrata di Windows  
+##  <a name="WinIntSec"></a>Sicurezza integrata di Windows  
   
 #### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Per abilitare o disabilitare la sicurezza integrata di Windows mediante l'utilizzo di SQL Server Management Studio  
   
@@ -179,9 +179,9 @@ ms.locfileid: "66103184"
   
 3.  In **Selezione pagina** nella finestra di dialogo **Proprietà server**fare clic su **Sicurezza**.  
   
-    -   Per abilitare la sicurezza integrata di Windows, selezionare l'opzione **Abilita la sicurezza integrata di Windows per le origini dati dei report** .  
+    -   Per attivare la sicurezza integrata di Windows, selezionare l'opzione **Abilita la sicurezza integrata di Windows per le origini dati dei report** .  
   
-    -   Per disabilitare la sicurezza integrata di Windows, deselezionare l'opzione **Abilita la sicurezza integrata di Windows per le origini dati dei report** .  
+    -   Per disattivare la sicurezza integrata di Windows, deselezionare l'opzione **Abilita la sicurezza integrata di Windows per le origini dati dei report** .  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

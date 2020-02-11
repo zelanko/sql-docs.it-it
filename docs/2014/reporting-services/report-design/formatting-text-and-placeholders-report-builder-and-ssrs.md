@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc3cd0e7213426568a415e8b5f1b28475f0177e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105755"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formattazione di testo e segnaposto (Generatore report e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105755"
   
  In questa illustrazione la casella di testo dispone di un bordo e tutto il testo è presente nella stessa casella, sebbene con formattazioni diverse.  
   
- Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
+ Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -75,7 +75,7 @@ ms.locfileid: "66105755"
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione di scale su un misuratore &#40;Generatore report e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà segnaposto, Generale &#40;Generatore report e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà segnaposto, generale &#40;Generatore report e SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [Caselle di testo &#40;Generatore report e SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   

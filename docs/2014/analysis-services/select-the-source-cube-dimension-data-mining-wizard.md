@@ -1,5 +1,5 @@
 ---
-title: Selezione dimensione cubo di origine (Creazione guidata di Data Mining dati) | Microsoft Docs
+title: Selezione dimensione cubo di origine (creazione guidata modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069224"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Selezione dimensione cubo di origine (Creazione guidata modello di data mining)
   Usare la pagina **Selezione dimensione cubo di origine** per selezionare la dimensione del cubo contenente i case da analizzare. Se, ad esempio, si compila un modello che analizza il comportamento di acquisto dei clienti in base ai dati demografici, è necessario selezionare la dimensione Customer che in genere contiene un record univoco per ogni cliente e vari attributi che rappresentano i dati demografici, ad esempio sesso, ubicazione o reddito. Più avanti nella procedura guidata si potrà aggiungere una tabella correlata a questa tabella del case, ad esempio una tabella nidificata in cui sono elencati i prodotti acquistati dal cliente.  
   
 > [!NOTE]  
->  Questa pagina viene visualizzata solo se è stata selezionata l'opzione **Da cubo esistente** nella pagina **Selezione metodo di definizione** della procedura guidata.  
+>  Questa pagina viene visualizzata solo se è stata selezionata l'opzione **da cubo esistente** nella pagina **Selezione metodo di definizione** della procedura guidata.  
   
 ## <a name="options"></a>Opzioni  
- **Selezionare una dimensione cubo di origine**  
+ **Selezionare una dimensione del cubo di origine**  
  Consente di selezionare la dimensione del cubo da cui verranno recuperati i dati dell'origine per la struttura di data mining.  
   
 ## <a name="choosing-a-dimension"></a>Scelta di una dimensione  
@@ -39,8 +39,8 @@ ms.locfileid: "66069224"
  Se la dimensione scelta non contiene tutti gli attributi correlati richiesti per la compilazione del modello di data mining, potrebbe essere necessario modificarla. Per altre informazioni, vedere [Definire le dimensioni del database](multidimensional-models/define-database-dimensions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Creare la struttura di Data Mining &#40;Creazione guidata di Data Mining&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [Selezione chiave del Case &#40;Creazione guidata di Data Mining&#41;](select-the-case-key-data-mining-wizard.md)  
+ [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Creazione della struttura di data mining &#40;creazione guidata modello di data mining&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [Selezionare la chiave del case &#40;creazione guidata modello di data mining&#41;](select-the-case-key-data-mining-wizard.md)  
   
   

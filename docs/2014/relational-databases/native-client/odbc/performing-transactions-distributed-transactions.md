@@ -1,5 +1,5 @@
 ---
-title: Esecuzione delle transazioni distribuite | Documenti di Microsoft
+title: Esecuzione di transazioni distribuite | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5c6b607fa7523380950ecd89f9cae20ffc6f21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228956"
 ---
 # <a name="performing-distributed-transactions"></a>Esecuzione delle transazioni distribuite
   Microsoft Distributed Transaction Coordinator (MS DTC) consente alle applicazioni di estendere le transazioni su due o più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], nonché di partecipare a transazioni gestite da gestori transazioni conformi allo standard DTP XA dell'Open Group.  
   
- In genere tutti i comandi di gestione delle transazioni vengono inviati al server tramite il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. L'applicazione avvia una transazione chiamando [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) con la modalità autocommit disabilitata. Esegue quindi gli aggiornamenti che comprendono la transazione e chiama [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) con l'opzione SQL_COMMIT o SQL_ROLLBACK.  
+ In genere tutti i comandi di gestione delle transazioni vengono inviati al server tramite il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. L'applicazione avvia una transazione chiamando [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) con la modalità autocommit disattivata. L'applicazione esegue quindi gli aggiornamenti che compongono la transazione e chiama [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) con l'opzione SQL_COMMIT o SQL_ROLLBACK.  
   
- Quando si utilizza MS DTC, tuttavia, MS DTC diventa il gestore delle transazioni e l'applicazione non vengono più utilizzati **SQLEndTran**.  
+ Quando si utilizza MS DTC, tuttavia, MS DTC diventa la gestione transazioni e l'applicazione non utilizza più **SQLEndTran**.  
   
- Dopo aver eseguito l'integrazione in una transazione distribuita e, successivamente, aver effettuato la stessa operazione in una seconda transazione distribuita, il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client viene escluso dalla transazione distribuita originale e ne viene eseguita l'integrazione nella nuova transazione. Per altre informazioni, vedere [di riferimento per programmatori di DTC](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
+ Dopo aver eseguito l'integrazione in una transazione distribuita e, successivamente, aver effettuato la stessa operazione in una seconda transazione distribuita, il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client viene escluso dalla transazione distribuita originale e ne viene eseguita l'integrazione nella nuova transazione. Per ulteriori informazioni, vedere [DTC Programmer ' s Reference](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di transazioni di &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
+ [Esecuzione di transazioni &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

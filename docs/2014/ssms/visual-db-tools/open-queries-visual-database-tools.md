@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195034"
 ---
 # <a name="open-queries-visual-database-tools"></a>Apertura di query (Visual Database Tools)
@@ -35,8 +35,8 @@ ms.locfileid: "63195034"
 >  Per impostazione predefinita, vengono aperti tutti i riquadri di Progettazione query e Progettazione viste, ovvero SQL, Criteri, Diagramma e Risultati. Tale impostazione predefinita può tuttavia essere modificata nella finestra di dialogo **Opzioni** . Per aprire questi riquadri qualora siano chiusi, scegliere **Pannello** dal menu **Progettazione query**e fare clic sul riquadro che si vuole aprire.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Salvare le query &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
+ [Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Salvataggio di query &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Usare i dati nel riquadro Risultati &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   
   

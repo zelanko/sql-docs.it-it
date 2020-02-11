@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione mappa caratteri | Microsoft Docs
+title: Editor trasformazione Mappa caratteri | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060978"
 ---
 # <a name="character-map-transformation-editor"></a>Editor trasformazione Mappa caratteri
@@ -36,17 +36,17 @@ ms.locfileid: "66060978"
  **Destinazione**  
  Consente di specificare se salvare i risultati delle operazioni di stringa sul posto, utilizzando la colonna esistente, o se salvare i dati modificati come nuova colonna.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Nuova colonna|Consente di salvare i dati in una nuova colonna. Assegnare il nome alla colonna in **Alias di output**.|  
 |Modifica sul posto|Consente di salvare i dati modificati nella colonna esistente.|  
   
- **Operazione**  
+ **operazione**  
  Consente di selezionare nell'elenco le funzioni per i valori stringa da applicare ai dati della colonna.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|Minuscolo|Consente di convertire la stringa in caratteri minuscoli.|  
+|Lettere minuscole|Consente di convertire la stringa in caratteri minuscoli.|  
 |Maiuscolo|Consente di convertire la stringa in caratteri maiuscoli.|  
 |Inversione byte|Consente di eseguire la conversione invertendo l'ordine dei byte.|  
 |Hiragana|Consente di convertire i caratteri giapponesi katakana in caratteri hiragana.|  

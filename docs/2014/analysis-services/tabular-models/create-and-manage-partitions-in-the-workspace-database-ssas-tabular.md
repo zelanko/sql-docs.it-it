@@ -1,5 +1,5 @@
 ---
-title: Creare e gestire partizioni nel Database dell'area di lavoro (SSAS tabulare) | Microsoft Docs
+title: Creare e gestire partizioni nel database dell'area di lavoro (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067455"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Creare e gestire partizioni nel database dell'area di lavoro (SSAS tabulare)
@@ -38,7 +38,7 @@ ms.locfileid: "66067455"
 ## <a name="tasks"></a>Attività  
  Per creare e gestire partizioni, usare la finestra di dialogo **Gestione partizioni** . Per visualizzare la finestra di dialogo **Gestione partizioni** , in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]fare clic sul menu **Tabella** e quindi scegliere **Partizioni**.  
   
-###  <a name="bkmk_create_new"></a> Per creare una nuova partizione  
+###  <a name="bkmk_create_new"></a>Per creare una nuova partizione  
   
 1.  In Progettazione modelli selezionare la tabella per cui si desidera definire una partizione.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66067455"
   
      Per usare un'istruzione SQL, fare clic sul pulsante **Editor query** in prossimità dell'angolo superiore destro della finestra di anteprima e quindi digitare o incollare un'istruzione della query SQL nella finestra Query. Per convalidare l'istruzione, fare clic su **Convalida**. Per usare Progettazione query, fare clic su **Progettazione**.  
   
-###  <a name="bkmk_copy"></a> Per copiare una partizione  
+###  <a name="bkmk_copy"></a>Per copiare una partizione  
   
 1.  Nella casella di riepilogo **Tabella**di **Gestione partizioni** verificare o selezionare la tabella contenente la partizione che si vuole copiare.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067455"
   
 3.  In **Nome partizione**digitare un nuovo nome per la partizione.  
   
-###  <a name="bkmk_delete"></a> Per eliminare una partizione  
+###  <a name="bkmk_delete"></a>Per eliminare una partizione  
   
 1.  Nella casella di riepilogo **Tabella**di **Gestione partizioni** verificare o selezionare la tabella contenente la partizione che si vuole eliminare.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "66067455"
   
 ## <a name="see-also"></a>Vedere anche  
  [Partizioni &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md)   
- [Elaborare partizioni nel Database dell'area di lavoro &#40;tabulare di SSAS&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
+ [Elaborare partizioni nel database dell'area di lavoro &#40;SSAS tabulare&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

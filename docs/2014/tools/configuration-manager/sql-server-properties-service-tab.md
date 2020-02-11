@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63237984"
 ---
 # <a name="sql-server-properties-service-tab"></a>Proprietà - SQL Server (scheda Servizio)
@@ -30,28 +30,28 @@ ms.locfileid: "63237984"
  **Codice di uscita**  
  Quando si verifica un errore, il numero dell'errore viene visualizzato in questa casella. Questo numero può risultare utile per la risoluzione dei problemi. È possibile cercarlo nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base oppure comunicarlo al personale del supporto tecnico.  
   
- **Host Name**  
- Visualizza il nome del computer o del cluster che esegue il servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Nome host**  
+ Consente di visualizzare il nome del computer o del cluster [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che esegue il servizio.  
   
- **Name**  
+ **Nome**  
  Indica il nome visualizzato del servizio.  
   
- **ID processo**  
+ **ID di processo**  
  Visualizza l'ID di processo di Windows.  
   
  **Tipo di servizio**  
- Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati diversi servizi.  
+ Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installa diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  
   
--   Manuale: Questo servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
+-   Manuale: il servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
   
--   Automatico: Il servizio tenta di avviare all'avvio del computer.  
+-   Automatico: viene eseguito un tentativo automatico di avvio del servizio all'avvio del computer.  
   
--   Disabilitato: Il servizio non può essere avviato.  
+-   Disabilitato: il servizio non può essere avviato.  
   
  **Stato**  
- Indica se il servizio è in esecuzione, arrestato o disabilitato. " **...** " indica una modifica di stato in sospeso.  
+ Indica se il servizio è in esecuzione, arrestato o disabilitato. "**...**" indica una modifica di stato in sospeso.  
   
   

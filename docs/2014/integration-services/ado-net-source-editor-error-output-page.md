@@ -1,5 +1,5 @@
 ---
-title: Editor origine ADO NET (pagina Output degli errori) | Microsoft Docs
+title: Editor origine ADO NET (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061641"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>Editor origine ADO NET (pagina Output errori)
@@ -39,7 +39,7 @@ ms.locfileid: "66061641"
  **Colonna**  
  Consente di visualizzare le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine ADO NET** .  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  
@@ -58,7 +58,7 @@ ms.locfileid: "66061641"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Editor origine ADO NET &#40;pagina Colonne&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor origine ADO NET &#40;pagina colonne&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

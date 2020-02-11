@@ -1,5 +1,5 @@
 ---
-title: Editor origine CDC (pagina Output degli errori) | Microsoft Docs
+title: Editor origine CDC (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061036"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Editor origine CDC (pagina Output degli errori)
@@ -25,7 +25,7 @@ ms.locfileid: "66061036"
  Per ulteriori informazioni sull'origine CDC, vedere [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Elenco attività  
- **Per aprire CDC Source Editor (pagina Output degli errori)**  
+ **Per aprire CDC Source Editor (pagina output degli errori)**  
   
 1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], aprire il pacchetto [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] che contiene l'origine CDC.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66061036"
  **Colonna**  
  Consente di visualizzare le colonne esterne (di origine) selezionate nella pagina **Gestione connessione** della finestra di dialogo **Editor origine CDC** .  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di selezionare il modo in cui l'origine CDC deve gestire gli errori in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Troncamento**  

@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63244980"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Impostazione delle opzioni di crittografia nei server di destinazione
   Se non è possibile utilizzare un certificato per le comunicazioni crittografate SSL (Secure Sockets Layer) tra server master e alcuni o tutti i server di destinazione e si desidera crittografare il canale di comunicazione, configurare i server di destinazione per l'utilizzo del livello di sicurezza necessario.  
   
- Per configurare il livello di sicurezza appropriato necessario per uno specifico canale di comunicazione tra server master e server di destinazione, impostare la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sottochiave del Registro di sistema di Agent **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*nome_istanza*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** nel server di destinazione su uno dei valori seguenti. Il valore di \<*nome_istanza*> è **MSSQL.** _n_. Ad esempio, **MSSQL.1** o **MSSQL.3**.  
+ Per configurare il livello di sicurezza appropriato necessario per uno specifico canale di comunicazione tra server master e server di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , impostare la sottochiave del registro di sistema dell'agente **\\\HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server****>**** \<instance_name \SQLServerAgent\MsxEncryptChannelOptions (REG_DWORD) nel server di destinazione su uno dei valori seguenti. Il valore di \< *instance_name*> è **MSSQL.** _n_. Ad esempio, **MSSQL.1** o **MSSQL.3**.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|Disabilita la crittografia tra il server di destinazione e il server master. Selezionare questa opzione solo quando il canale tra il server di destinazione e il server master è protetto in altro modo.|  
 |**1**|Attiva solo la crittografia tra il server di destinazione e il server master senza la convalida del certificato.|  

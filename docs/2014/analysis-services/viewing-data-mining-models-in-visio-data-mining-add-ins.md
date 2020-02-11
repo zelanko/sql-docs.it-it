@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione di modelli di Data Mining in Visio (componenti aggiuntivi Data Mining dei dati) | Microsoft Docs
+title: Visualizzazione di modelli di data mining in Visio (componenti aggiuntivi Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065516"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visualizzazione di modelli di data mining in Visio (componenti aggiuntivi Data mining)
   Le forme di Visio per il data mining consentono di connettersi a un server e creare un diagramma che rappresenta un modello di data mining esistente. I diagrammi possono quindi essere personalizzati utilizzando i controlli di Visio, ma è anche possibile eseguire il drill-down nei dati, esporre alcune delle statistiche sottostanti e utilizzare il modello sottostante.  
   
 ## <a name="building-a-model-diagram"></a>Compilazione di un diagramma del modello  
- Quando si apre il file contenente le forme di Visio per il data mining, il **forme** riquadro sono elencate le forme seguenti.  
+ Quando si apre il file contenente le forme di Visio per data mining, nel riquadro **forme** vengono visualizzate le forme seguenti.  
   
  Se all'apertura di Visio le forme di data mining non sono visibili, aprire il file modello dalla cartella di installazione.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66065516"
 |Forma di Visio|Modelli supportati|  
 |-----------------|----------------------|  
 |Albero delle decisioni|Utilizzare questa forma per modelli basati sugli algoritmi di regressione lineare o dell'albero delle decisioni.|  
-|Rete di dipendenze|Utilizzare questa forma per modelli basati su uno qualsiasi degli algoritmi seguenti: Naive Bayes, Decision Trees o Association Rules.|  
+|Rete di dipendenze|Utilizzare questa forma per modelli basati su uno dei seguenti algoritmi: Naïve Bayes, Decision Trees o Association Rules.|  
 |Cluster|Utilizzare questa forma per modelli basati su algoritmi di clustering.|  
   
  Le opzioni disponibili nella procedura guidata variano a seconda del tipo di dati del modello di data mining. Ad esempio, le colonne contenenti numeri continui vengono visualizzate in modo diverso rispetto alle variabili di categoria.  
@@ -72,11 +72,11 @@ ms.locfileid: "66065516"
   
  [Descrizione dettagliata del diagramma dei cluster](cluster-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Descrizione dettagliata di diagramma della rete di dipendenze](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Descrizione dettagliata del diagramma della rete di dipendenze](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
  [Descrizione dettagliata del diagramma dell'albero delle decisioni](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esplorazione di modelli in Excel &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+ [Esplorazione di modelli in Excel &#40;SQL Server componenti aggiuntivi Data mining&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

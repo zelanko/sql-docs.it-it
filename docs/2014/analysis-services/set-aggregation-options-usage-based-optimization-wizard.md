@@ -1,5 +1,5 @@
 ---
-title: Impostare le opzioni di aggregazione (basata sull'utilizzo di ottimizzazione guidata) | Microsoft Docs
+title: Impostazione opzioni di aggregazione (Ottimizzazione guidata basata sulle informazioni di utilizzo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068755"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Impostazione opzioni di aggregazione (Ottimizzazione guidata basata sulle statistiche di utilizzo)
@@ -29,20 +29,20 @@ ms.locfileid: "66068755"
  **Miglioramento delle prestazioni**  
  Consente di limitare la progettazione delle aggregazioni indicando la percentuale massima di miglioramento delle prestazioni che la progettazione delle aggregazioni è in grado di offrire. Per ottenere i migliori risultati, utilizzare l'impostazione predefinita 100% come valore del miglioramento delle prestazioni, a meno che l'operazione non venga resa impossibile da vincoli di spazio su disco o del tempo di elaborazione.  
   
- **Pulsante Arresta**  
+ **Arresto manuale (pulsante arresta)**  
  Consente di limitare la progettazione delle aggregazioni facendo clic sul pulsante **Arresta** durante il processo di progettazione.  
   
- **Start**  
+ **Inizia**  
  Consente di avviare il processo di progettazione.  
   
- **Arresta**  
+ **Stop**  
  Consente di terminare il processo di progettazione.  
   
- **Reimposta**  
+ **Reimpostazione**  
  Consente di ripristinare i valori predefiniti per tutte le opzioni di aggregazioni incluse in questa pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di ottimizzazione basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
+ [Guida sensibile al contesto dell'ottimizzazione guidata basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

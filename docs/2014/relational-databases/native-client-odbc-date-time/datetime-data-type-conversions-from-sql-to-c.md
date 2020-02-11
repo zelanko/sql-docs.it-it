@@ -1,5 +1,5 @@
 ---
-title: Le conversioni da SQL a C | Microsoft Docs
+title: Conversioni da SQL a C | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207040"
 ---
 # <a name="conversions-from-sql-to-c"></a>Conversioni dai tipi di dati SQL ai tipi di dati C
@@ -27,12 +27,12 @@ ms.locfileid: "63207040"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|OK|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|OK|21|16|16|  
+|SQL_CHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+|SQL_WCHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+|SQL_TYPE_DATE|OK|12|13|12|13, 23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|OK|10, 23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7, 8|OK|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|OK|21|16|16|  
   
 ## <a name="key-to-symbols"></a>Descrizione dei simboli  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63207040"
 |OK|Nessun problema di conversione.|  
 |1|Si applicano le regole precedenti a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Gli spazi iniziali e finali vengono ignorati.|  
-|3|Il valore stringa viene analizzato in un tipo date, time, timezone o timezoneoffset e consente un massimo di 9 cifre per i secondi frazionari. Se viene analizzato un tipo di dati timezoneoffset, il tipo time viene convertito al tipo timezone del client. Se si verifica un errore durante questa conversione, viene generato un record di diagnostica con SQLSTATE 22018 e il messaggio "Overflow del campo Datetime".|  
+|3|Il valore stringa viene analizzato in un tipo date, time, timezone o timezoneoffset e consente un massimo di 9 cifre per i secondi frazionari. Se viene analizzato un tipo di dati timezoneoffset, il tipo time viene convertito al tipo timezone del client. Se si verifica un errore durante la conversione, viene generato un record di diagnostica con SQLSTATE 22018 e il messaggio "overflow del campo DateTime".|  
 |4|Se il valore non è di un tipo date, timestamp o timestampoffset valido, viene generato un record di diagnostica con l'identificativo di errore SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast".|  
 |5|Se il valore time è diverso da zero, viene generato un record di diagnostica con l'identificativo di errore SQLSTATE 01S07 e il messaggio "Troncamento frazionario".|  
 |6|Se il valore non è un tipo time, timestamp o timestampoffset valido, viene generato un record di diagnostica con l'identificativo di errore SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast".|  
@@ -62,9 +62,9 @@ ms.locfileid: "63207040"
 |21|Se il buffer è grande abbastanza da contenere un valore SQL_SS_TIMESTAMPOFFSET_STRUCT, il valore viene restituito come tale. In caso contrario, viene generato un record di diagnostica con l'identificativo di errore SQLSTATE 22003 e il messaggio "Valore numerico non compreso nell'intervallo".|  
 |22|Il valore viene convertito al tipo timezone del client prima che il tipo date venga estratto. Ciò garantisce coerenza con le altre conversioni con tipi di dati timestampoffset. Se si verifica un errore durante questa conversione, viene generato un record di diagnostica con l'identificativo SQLSTATE 22008 e il messaggio "Overflow del campo Datetime". Ciò potrebbe avere come conseguenza un valore date diverso da quello ottenuto dal semplice troncamento.|  
   
- Nella tabella riportata in questo argomento sono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se il tipo di server specificato in SQLBindParameter non corrisponde al tipo effettivo nel server, verrà eseguita una conversione implicita dal server e il tipo restituito al client corrisponderà al tipo specificato tramite la funzione SQLBindParameter. Questo può causare risultati di conversione imprevisti quando le regole di conversione del server sono diverse da quelli elencati nella tabella precedente. Quando è ad esempio necessario specificare un valore date predefinito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza 1900-1-1, anziché il valore date corrente.  
+ Nella tabella riportata in questo argomento sono descritte le conversioni tra il tipo restituito al client e il tipo presente nell'associazione. Per i parametri di output, se il tipo di server specificato in SQLBindParameter non corrisponde al tipo effettivo sul server, viene eseguita una conversione implicita da parte del server e il tipo restituito al client corrisponderà al tipo specificato tramite SQLBindParameter. Questo può causare risultati di conversione imprevisti quando le regole di conversione del server sono diverse da quelle elencate nella tabella precedente. Quando è ad esempio necessario specificare un valore date predefinito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza 1900-1-1, anziché il valore date corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e miglioramenti per la fase &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [Miglioramenti di data e ora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Visualizzare attributi in una struttura ad albero, un elenco o una griglia in Progettazione dimensioni | Microsoft Docs
+title: Visualizzazione degli attributi in un albero, un elenco o una griglia in Progettazione dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 860025d25b106964add87b77e95e1e4107af2ef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072496"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>Visualizzare attributi in un albero, un elenco o una griglia in Progettazione dimensioni
@@ -29,7 +29,7 @@ ms.locfileid: "66072496"
   
 1.  In Progettazione dimensioni aprire la dimensione contenente gli attributi che si desidera utilizzare e quindi fare clic sulla scheda Struttura dimensione.  
   
-2.  Fare clic su un punto qualsiasi del riquadro **Attributi** per attivarlo riquadro **Attributi**.  
+2.  Fare clic su un punto qualsiasi del riquadro **Attributi** per attivarlo ****.  
   
 3.  Scegliere il menu **Dimensione**o fare clic con il pulsante destro del mouse sul riquadro **Attributi** .  
   

@@ -1,5 +1,5 @@
 ---
-title: Creare un cubo tramite una vista origine dati | Microsoft Docs
+title: Creazione di un cubo tramite una vista origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076563"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Creare un cubo tramite una vista origine dati
@@ -25,7 +25,7 @@ ms.locfileid: "66076563"
 ## <a name="selecting-the-build-method"></a>Selezione del metodo di compilazione  
  Nella pagina **Selezione metodo di creazione** della procedura guidata fare clic su **Crea il cubo utilizzando un'origine dei dati**.  
   
- Se si seleziona la casella di controllo **Compilazione automatica** , tramite la procedura guidata vengono analizzate la vista origine dati per configurare il cubo e le relative dimensioni. La procedura guidata consente di identificare le tabelle dei fatti e delle dimensioni, di selezionare le misure da includere nel cubo, nonché di compilare le gerarchie. In ogni pagina della procedura guidata è possibile esaminare e modificare le scelte effettuate tramite tale procedura se è selezionata l'opzione **Compilazione automatica** . **In caso contrario**, tutte queste scelte devono essere effettuate manualmente.  
+ Se si seleziona la casella di controllo **Compilazione automatica** , tramite la procedura guidata vengono analizzate la vista origine dati per configurare il cubo e le relative dimensioni. La procedura guidata consente di identificare le tabelle dei fatti e delle dimensioni, di selezionare le misure da includere nel cubo, nonché di compilare le gerarchie. In ogni pagina della procedura guidata è possibile esaminare e modificare le scelte effettuate tramite tale procedura se è selezionata l'opzione **Compilazione automatica** . In caso contrario, **** tutte queste scelte devono essere effettuate manualmente.  
   
  Se si seleziona **Compilazione automatica**, è possibile fare clic su **Fine** in qualsiasi pagina della procedura guidata per passare all'ultima pagina e accettare le configurazioni predefinite per tutte le pagine restanti. Nell'ultima pagina della procedura guidata è possibile controllare la struttura del cubo prima di terminare tale procedura.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66076563"
 > [!NOTE]  
 >  Nella scheda **Diagramma** è possibile allargare o ingrandire al massimo la finestra della procedura guidata per visualizzare lo schema.  
   
- Se nella vista origine dati è presente una tabella delle dimensioni temporali, selezionarla nell'elenco **Tabella dimensioni temporali** . Se non vi sono, lasciare  **\<None >** selezionato. Si tratta dell'elemento predefinito dell'elenco. Se si seleziona una tabella come tabella delle dimensioni temporali, tale tabella viene selezionata anche come tabella delle dimensioni nelle schede **Tabelle** e **Diagramma** .  
+ Se nella vista origine dati è presente una tabella delle dimensioni temporali, selezionarla nell'elenco **Tabella dimensioni temporali** . Se non è presente alcun valore ** \<** , lasciare selezionata l'opzione Nessuno>. Si tratta dell'elemento predefinito dell'elenco. Se si seleziona una tabella come tabella delle dimensioni temporali, tale tabella viene selezionata anche come tabella delle dimensioni nelle schede **Tabelle** e **Diagramma** .  
   
 ## <a name="defining-time-periods"></a>Definizione dei periodi di tempo  
  Se durante la selezione dei tipi di tabella è stata specificata una tabella delle dimensioni temporali, utilizzare la pagina **Definizione periodi di tempo** della procedura guidata per specificare le colonne della tabella che corrispondono ai periodi di tempo standard. Cercare i periodi standard in **Nome proprietà tempo**. Per ogni riga per cui esiste una colonna corrispondente nella tabella delle dimensioni temporali, scegliere la colonna corretta in **Colonne tabella tempi**. Nella procedura guidata vengono utilizzate le associazioni specificate per creare attributi e suggerire gerarchie temporali utili per i dati. Queste associazioni consentono inoltre di impostare la proprietà **Tipo** per gli attributi corrispondenti nella nuova dimensione temporale. La procedura guidata consente di creare quindi una dimensione temporale basata su una tabella delle dimensioni temporali.  
@@ -59,9 +59,9 @@ ms.locfileid: "66076563"
  Dopo aver creato il cubo, è possibile utilizzare la Configurazione guidata funzionalità di Business Intelligence per aggiungere funzionalità avanzate di Business Intelligence per le gerarchie temporali al cubo. In tali funzionalità sono incluse viste per il calcolo dei dati di un periodo rispetto alla data corrente, di un periodo specifico o della media mobile dei dati in un periodo.  
   
 ## <a name="selecting-dimensions"></a>Selezione delle dimensioni  
- Utilizzare la pagina per **selezionare le dimensioni** della procedura guidata per aggiungere dimensioni esistenti al cubo. Questa pagina verrà visualizzata solo se sono già presenti dimensioni condivise che corrispondono alle tabelle delle dimensioni nel nuovo cubo.  
+ Utilizzare la pagina per selezionare le dimensioni della procedura guidata per aggiungere dimensioni esistenti al cubo. **** Questa pagina verrà visualizzata solo se sono già presenti dimensioni condivise che corrispondono alle tabelle delle dimensioni nel nuovo cubo.  
   
- Per aggiungere dimensioni esistenti, selezionare una o più dimensioni nell'elenco **Dimensioni condivise** e fare clic sul pulsante con la freccia a destra ( **>** ) per spostarle nell'elenco **Dimensioni cubo** . Fare clic sul pulsante con la doppia freccia ( **>>** ) per spostare tutte le dimensioni nell'elenco.  
+ Per aggiungere dimensioni esistenti, selezionare una o più dimensioni nell'elenco **Dimensioni condivise** e fare clic sul pulsante con la freccia a destra (**>**) per spostarle nell'elenco **Dimensioni cubo** . Fare clic sul pulsante con la**>>** doppia freccia () per spostare tutte le dimensioni nell'elenco.  
   
  Se una dimensione esistente non viene visualizzata nell'elenco come previsto, è possibile fare clic su **Indietro** e modificare le impostazioni del tipo di tabella per una o più tabelle. Una dimensione esistente deve essere anche correlata ad almeno una delle tabelle dei fatti del cubo per poter essere visualizzata nell'elenco **Dimensioni condivise** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66076563"
   
  Per rimuovere un qualsiasi oggetto nell'albero dal cubo, deselezionare la casella di controllo accanto a tale oggetto. La deselezione rimuove anche tutti gli oggetti sotto l'oggetto. Le dipendenze tra oggetti sono imposte, pertanto se si rimuove un attributo, vengono rimossi anche i livelli di gerarchia che dipendono dall'attributo. Ad esempio, deselezionando una casella di controllo accanto a una gerarchia vengono deselezionate le caselle di controllo accanto a tutti i livelli nella gerarchia e vengono rimossi sia i livelli sia le gerarchie. Non è possibile rimuovere l'attributo chiave per una dimensione.  
   
- È possibile rinominare qualsiasi dimensione, attributo, gerarchia o livello facendo clic il nome oppure facendo clic con il nome e quindi sul menu di scelta rapida facendo clic **rinominare \<oggetto >** , dove  **\< Oggetto >** viene **dimensione**, **attributo**, oppure **livello**.  
+ È possibile rinominare qualsiasi dimensione, attributo, gerarchia o livello facendo clic sul nome oppure facendo clic con il pulsante destro del mouse sul nome e scegliendo **Rinomina \<oggetto>** dal menu di scelta rapida, dove ** \<oggetto>** è **dimensione**, **attributo**o **livello**.  
   
  Non esiste necessariamente una relazione uno-a-uno tra il numero di tabelle delle dimensioni definito nella pagina **Selezione tabelle dei fatti e delle dimensioni** della procedura guidata e il numero di dimensioni elencate in questa pagina. A seconda delle relazioni tra tabelle nella vista origine dati, nella procedura guidata possono essere utilizzate due o più tabelle per compilare una dimensione, ad esempio come richiesto da uno schema snowflake.  
   

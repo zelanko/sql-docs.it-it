@@ -1,5 +1,5 @@
 ---
-title: Verifica delle query che verranno ottimizzate (basata sull'utilizzo di ottimizzazione guidata) | Microsoft Docs
+title: Esaminare le query che verranno ottimizzate (Ottimizzazione guidata basata sull'utilizzo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e11d8cddaa780e6572bdb9e8116fa970fc9ef95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070123"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>Verifica delle query che verranno ottimizzate (Ottimizzazione guidata basata sulle statistiche di utilizzo)
   Usare la pagina **Verifica delle query che verranno ottimizzate** per visualizzare e selezionare le query recuperate dal log di query che verranno usate dall'Ottimizzazione guidata basata sulle statistiche di utilizzo per progettare le aggregazioni relative alle partizioni selezionate.  
   
 ## <a name="options"></a>Opzioni  
- **(Selezionare)**  
+ **Selezionare**  
  Selezionare la casella di controllo relativa alla query di cui si desidera progettare le aggregazioni.  
   
- **Richiesta del client**  
+ **Richiesta client**  
  Consente di visualizzare i membri a cui fa riferimento la query visualizzata.  
   
  **Occorrenze**  
@@ -36,7 +36,7 @@ ms.locfileid: "66070123"
  Consente di visualizzare la durata media di tutte le occorrenze della query visualizzata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di ottimizzazione basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
+ [Guida sensibile al contesto dell'ottimizzazione guidata basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

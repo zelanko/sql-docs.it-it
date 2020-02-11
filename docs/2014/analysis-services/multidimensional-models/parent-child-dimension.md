@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073389"
 ---
 # <a name="parent-child-hierarchy"></a>Gerarchia padre-figlio
@@ -35,7 +35,7 @@ ms.locfileid: "66073389"
 ## <a name="dimension-schema"></a>Schema della dimensione  
  Lo schema della dimensione di una gerarchia padre-figlio dipende da una relazione autoreferenziale presente nella tabella della dimensione principale. Nella figura seguente, ad esempio, viene illustrata la tabella principale della dimensione **DimOrganization** nel database di esempio [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] .  
   
- ![Join autoreferenziale nella tabella DimOrganization](../dev-guide/media/dimorganization.gif "join autoreferenziale nella tabella DimOrganization")  
+ ![Join autoreferenziale nella tabella DimOrganization](../dev-guide/media/dimorganization.gif "Join autoreferenziale nella tabella DimOrganization")  
   
  In questa tabella della dimensione, nella colonna **dbo.xdbcdc_databases** è inclusa una relazione di chiave esterna con la colonna chiave primaria **OrganizationKey** . In altri termini, ogni record di questa tabella può essere messo in relazione a un altro record della tabella tramite una relazione padre-figlio. Questo tipo di self join viene in genere utilizzato per rappresentare dati entità dell'organizzazione, ad esempio la struttura di gestione dei dipendenti in un reparto.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66073389"
   
  Nelle dimensioni padre-figlio, tuttavia, le gerarchie vengono create analizzando i dati contenuti nella tabella della dimensione principale e quindi valutando le relazioni padre-figlio tra i record della tabella. Per altre informazioni sulle gerarchie padre-figlio, vedere [Gerarchie definite dall'utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md).  
   
- Le gerarchie padre-figlio non derivano i nomi dei livelli in una gerarchia padre-figlio dagli attributi utilizzati per creare la gerarchia. Invece di creare nomi di livello tali dimensioni automaticamente usando un'espressione di modello, ovvero una stringa dei nomi è possibile specificare a livello di attributo padre che controlla di controllare l'attributo la gerarchia dell'attributo. Per altre informazioni sull'impostazione del modello di denominazione per un attributo padre, vedere [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+ Le gerarchie padre-figlio non derivano i nomi dei livelli in una gerarchia padre-figlio dagli attributi utilizzati per creare la gerarchia. Queste dimensioni creano invece automaticamente nomi di livello usando un modello di denominazione, un'espressione stringa che è possibile specificare al livello dell'attributo padre che controlla il modo in cui l'attributo genera la gerarchia dell'attributo. Per altre informazioni sull'impostazione del modello di denominazione per un attributo padre, vedere [Attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
 ## <a name="data-members"></a>Membri dei dati  
  In genere, i membri foglia di una dimensione contengono dati derivati direttamente dalle origini dei dati sottostanti, mentre i membri non foglia contengono dati derivati dalle aggregazioni eseguite sui membri figlio.  

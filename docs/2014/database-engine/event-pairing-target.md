@@ -1,5 +1,5 @@
 ---
-title: Destinazione abbinamento dell'evento | Microsoft Docs
+title: Destinazione di abbinamento degli eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064853"
 ---
 # <a name="event-pairing-target"></a>Destinazione di abbinamento degli eventi
@@ -38,12 +38,12 @@ ms.locfileid: "66064853"
 |end_matching_columns|Elenco ordinato di nomi di colonne separati da virgole.|Colonne su cui eseguire la corrispondenza.|  
 |begin_matching_actions|Elenco ordinato di azioni separate da virgole.|Azioni su cui eseguire la corrispondenza.|  
 |end_matching_actions|Elenco ordinato di azioni separate da virgole.|Azioni su cui eseguire la corrispondenza.|  
-|respond_to_memory_pressure|I valori validi sono:<br /><br /> 0 = non rispondere.<br /><br /> 1 = arrestare l'aggiunta di nuovi orfani all'elenco quando sono presenti richieste di memoria.|Risposta della destinazione agli eventi della memoria. Se il valore è impostato su 1 e la memoria del server è insufficiente, le informazioni non abbinate mantenute vengono rimosse.|  
+|respond_to_memory_pressure|Uno dei valori seguenti:<br /><br /> 0 = non rispondere.<br /><br /> 1 = arrestare l'aggiunta di nuovi orfani all'elenco quando sono presenti richieste di memoria.|Risposta della destinazione agli eventi della memoria. Se il valore è impostato su 1 e la memoria del server è insufficiente, le informazioni non abbinate mantenute vengono rimosse.|  
 |max_orphans||Specifica il numero totale di eventi non abbinati che saranno raccolti nella destinazione. Una volta raggiunto il limite, gli eventi non abbinati vengono rimossi secondo la modalità FIFO. Valore predefinito = 10,000.|  
   
  Tutti i dati associati a un evento sono acquisiti e archiviati per un abbinamento futuro. Vengono raccolti anche i dati aggiunti dalle azioni. I dati degli eventi raccolti vengono archiviati in memoria e, come tali, hanno un limite finito. Questo limite è basato sulla capacità e sull'attività del sistema. Anziché utilizzare il valore massimo di memoria come parametro, la quantità di memoria utilizzata sarà basata sulle risorse di sistema disponibili. Quando queste non sono disponibili, gli eventi non abbinati che sono stati mantenuti saranno eliminati. Se un evento non è stato abbinato ed è stato eliminato, l'evento corrispondente comparirà come un evento non abbinato.  
   
- La destinazione abbinamento serializza gli eventi non abbinati a un formato XML. Questo formato non è conforme ad alcuno schema. Il formato contiene solo due tipi di elementi. Il  **\<unpaired >** è l'elemento radice, seguita da uno. **\<evento di >** (elemento) per ogni evento non abbinato che viene attualmente controllato. Il  **\<evento >** elemento contiene un attributo che contiene il nome dell'evento non abbinato.  
+ La destinazione abbinamento serializza gli eventi non abbinati a un formato XML. Questo formato non è conforme ad alcuno schema. Il formato contiene solo due tipi di elementi. L' ** \<elemento>non abbinato** è la radice, seguita da uno. evento>elemento per ogni evento non abbinato attualmente rilevato. ** \<** L' ** \<elemento>dell'evento** contiene un attributo che contiene il nome dell'evento non abbinato.  
   
 ## <a name="adding-the-target-to-a-session"></a>Aggiunta della destinazione a una sessione  
  Per aggiungere la destinazione di corrispondenza delle coppie a una sessione di eventi estesi, è necessario includere l'istruzione seguente quando si crea o modifica una sessione eventi:  

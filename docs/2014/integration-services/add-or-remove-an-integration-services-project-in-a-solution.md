@@ -1,5 +1,5 @@
 ---
-title: Aggiungere o rimuovere un progetto di Integration Services in una soluzione | Microsoft Docs
+title: Aggiungere o rimuovere un progetto Integration Services in una soluzione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061835"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Aggiunta o rimozione di un progetto di Integration Services da una soluzione
   Nelle procedure seguenti viene descritto come aggiungere o rimuovere un progetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] da una soluzione.  
   
- È possibile aggiungere o rimuovere un progetto da una soluzione solo se la soluzione è visibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Se è stata selezionata l'opzione **Mostra sempre soluzione** di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] visualizzerà una soluzione anche se questa contiene un unico progetto. In caso contrario, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] visualizzerà una soluzione solo se questa contiene più di un progetto. I progetti aggiuntivi possono essere progetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o di altri tipi.  
+ È possibile aggiungere o rimuovere un progetto da una soluzione solo se la soluzione è visibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Se è stata selezionata l'opzione **Mostra sempre soluzione** in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] in viene visualizzata una soluzione anche se tale soluzione contiene un solo progetto. In caso contrario, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] visualizzerà una soluzione solo se questa contiene più di un progetto. I progetti aggiuntivi possono essere progetti di [!INCLUDE[ssIS](../includes/ssis-md.md)] o di altri tipi.  
   
 ## <a name="adding-an-integration-services-project"></a>Aggiunta di un progetto di Integration Services  
  È possibile aggiungere un nuovo progetto vuoto tramite [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oppure aggiungere un progetto già creato per una soluzione diversa. È possibile aggiungere un progetto in una soluzione esistente solo se la soluzione è visibile in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "66061835"
 3.  Fare clic su **OK** per confermare la rimozione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integration Services &#40;SSIS&#41; i progetti](integration-services-ssis-projects-and-solutions.md)   
+ [Integration Services &#40;progetti SSIS&#41;](integration-services-ssis-projects-and-solutions.md)   
  [Creazione di un nuovo progetto di Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
   

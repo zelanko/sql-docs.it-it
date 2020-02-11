@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224497"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Combinare condizioni quando OR ha la precedenza (Visual Database Tools)
@@ -71,7 +71,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 >  Se le condizioni di ricerca vengono immesse nel formato indicato sopra nel [riquadro SQL](sql-pane-visual-database-tools.md)e la query viene poi modificata nel riquadro Diagramma o Criteri, in Progettazione query e Progettazione viste l'istruzione SQL verrà ricreata per assicurare la corrispondenza tra il formato in uso e la condizione AND distribuita esplicitamente a entrambe le condizioni OR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convenzioni per combinare le condizioni di ricerca nel riquadro Criteri &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Convenzioni per la combinazione di condizioni di ricerca nel riquadro Criteri &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

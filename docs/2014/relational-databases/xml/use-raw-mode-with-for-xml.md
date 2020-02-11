@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193243"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Utilizzo della modalità RAW con FOR XML
@@ -32,28 +32,28 @@ ms.locfileid: "63193243"
   
  Per restituire i dati binari nel formato con codifica Base64, è necessario specificare l'opzione BINARY BASE64 nella clausola FOR XML. Se si recuperano dati binari nella modalità RAW senza specificare l'opzione BINARY BASE64, verrà generato un errore.  
   
-## <a name="in-this-section"></a>In questa sezione  
- In questa sezione sono disponibili gli esempi seguenti:  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ Questa sezione contiene gli esempi seguenti:  
   
--   [Esempio: Recupero delle informazioni relative al modello del prodotto in formato XML](example-retrieving-product-model-information-as-xml.md)  
+-   [Esempio: recupero delle informazioni relative al modello del prodotto in formato XML](example-retrieving-product-model-information-as-xml.md)  
   
--   [Esempio: Specifica di XSINIL con la direttiva ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Esempio: specifica di XSINIL con la direttiva ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Esempio: Richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [Esempio: Recupero di dati binari](example-retrieving-binary-data.md)  
+-   [Esempio: recupero di dati binari](example-retrieving-binary-data.md)  
   
--   [Esempio: Ridenominazione dell'elemento &#60;row&#62;](example-renaming-the-row-element.md)  
+-   [Esempio: ridenominazione dell'elemento &#60;row&#62;](example-renaming-the-row-element.md)  
   
--   [Esempio: Specifica di un elemento radice per codice XML generato da FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Esempio: specifica di un elemento radice per codice XML generato da FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Esempio: Esecuzione di query sulle colonne di tipo XML](example-querying-xmltype-columns.md)  
+-   [Esempio: esecuzione di query sulle colonne di tipo XML](example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiungere spazi dei nomi alle query con WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Utilizzo della modalità AUTO con FOR XML](use-auto-mode-with-for-xml.md)   
  [Utilizzo della modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)   
- [Usare la modalità PATH con FOR XML](use-path-mode-with-for-xml.md)   
+ [Utilizzare la modalità PATH con FOR XML](use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   

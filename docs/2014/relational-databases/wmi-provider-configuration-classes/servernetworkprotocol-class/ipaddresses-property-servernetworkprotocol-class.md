@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e7b2adf53bc6ebca14e2d3b4dc2cee248a4b6720
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190296"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>Proprietà IpAddresses (classe ServerNetworkProtocol)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
- Oggetto `ServerNetworkProtocol` oggetto che rappresenta il protocollo di rete utilizzato dall'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *oggetto*  
+ `ServerNetworkProtocol` Oggetto che rappresenta il protocollo di rete utilizzato dall'istanza di. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Matrice di [classe ServerNetworkProtocolIPAdress](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) gli oggetti che rappresentano gli indirizzi IP supportati dal protocollo di rete del server.  
+ Matrice di oggetti della [classe ServerNetworkProtocolIPAdress](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) che rappresentano gli indirizzi IP supportati dal protocollo di rete del server.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione di protocolli di rete Server e le librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configurazione di protocolli di rete server e di librerie di rete](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

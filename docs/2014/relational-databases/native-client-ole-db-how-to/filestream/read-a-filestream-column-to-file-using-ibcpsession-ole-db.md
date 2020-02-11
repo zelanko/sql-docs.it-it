@@ -11,25 +11,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233142"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Leggere una colonna FILESTREAM in un file utilizzando IBCPSession (OLE DB)
   In questo esempio viene letta una colonna FILESTREAM in un file utilizzando l'interfaccia IBCPSession e viene scritto un file di formato.  
   
- Per altre informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Per ulteriori informazioni sulla funzionalità FILESTREAM, vedere [supporto filestream &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Esempio  
  Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
  Per creare la tabella letta in questo esempio, utilizzare uno degli esempi seguenti:  
   
--   [Inviare dati a una colonna FILESTREAM usando ISequentialStream associato al parametro ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Inviare dati a una colonna FILESTREAM utilizzando ISequentialStream associato al parametro ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Inviare dati a una colonna FILESTREAM usando IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  Copiare il primo listato di codice e incollarlo in un file denominato ISSHelper.h.  
   

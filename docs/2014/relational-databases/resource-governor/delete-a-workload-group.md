@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63215793"
 ---
 # <a name="delete-a-workload-group"></a>Eliminare un gruppo di carico di lavoro
@@ -79,7 +79,7 @@ ms.locfileid: "63215793"
   
     -   In uno scenario in cui viene eseguita l'istruzione `DROP WORKLOAD GROUP` ma si decide di non arrestare in modo esplicito le sessioni per applicare la modifica, è possibile ricreare il gruppo utilizzando lo stesso nome presente prima dell'esecuzione dell'istruzione DROP, quindi spostare il gruppo nel pool di risorse originale.  
   
-3.  Eseguire il `ALTER RESOURCE GOVERNOR RECONFIGURE` istruzione.  
+3.  Eseguire l' `ALTER RESOURCE GOVERNOR RECONFIGURE` istruzione.  
   
 ### <a name="example-transact-sql"></a>Esempio (Transact-SQL)  
  Nell'esempio seguente viene eliminato un gruppo di carico di lavoro denominato `groupAdhoc`.  

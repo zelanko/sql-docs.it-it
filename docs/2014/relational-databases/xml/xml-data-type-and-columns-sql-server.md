@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193069"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
-  In questo argomento illustra i vantaggi e le limitazioni dei `xml` tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e spiega come scegliere la modalità di archiviazione dei dati XML.  
+  Questo argomento illustra i vantaggi e le limitazioni del tipo `xml` di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e consente di scegliere come archiviare i dati XML.  
   
 ## <a name="relational-or-xml-data-model"></a>Modello di dati relazionale o XML  
  Se i dati utilizzati sono altamente strutturati in base a uno schema noto, il modello relazionale costituisce senz'altro il metodo di archiviazione ottimale. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili tutte le funzionalità e gli strumenti necessari. Se invece i dati sono semistrutturati, non strutturati o dotati di una struttura sconosciuta, sarà necessario prestare particolare attenzione alla modellazione.  
@@ -61,7 +61,7 @@ ms.locfileid: "63193069"
   
      I dati vengono archiviati in una rappresentazione interna che mantiene il contenuto XML e che contiene informazioni sulla gerarchia di contenimento, l'ordine dei documenti e i valori dell'elemento e dell'attributo. In particolare, viene mantenuto il contenuto InfoSet dei dati XML. Per altre informazioni su InfoSet, vedere [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). Il contenuto InfoSet potrebbe non essere una copia identica del testo XML, perché non vengono mantenute le informazioni seguenti: spazi vuoti non significativi, ordine degli attributi, prefissi degli spazi dei nomi e dichiarazione XML.  
   
-     Per tipizzati `xml` tipo di dati, un `xml` tipo di dati associati a XML schema, il post-schema validation InfoSet (PSVI) consente di aggiungere all'InfoSet informazioni sul tipo e viene codificato nella rappresentazione interna. Questo consente di migliorare in modo significativo la velocità di analisi. Per altre informazioni, vedere le specifiche relative allo schema XML W3C su [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
+     Per il `xml` tipo di dati tipizzato, un `xml` tipo di dati associato a XML Schema, PSVI (Post-Schema Validation InfoSet) aggiunge all'InfoSet le informazioni sul tipo e viene codificato nella rappresentazione interna. Questo consente di migliorare in modo significativo la velocità di analisi. Per altre informazioni, vedere le specifiche relative allo schema XML W3C su [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) e [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mapping tra archiviazione XML e relazionale  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63193069"
   
      Viene archiviata una copia identica dei dati. Questo è utile per le applicazioni specializzate per scopi particolari, ad esempio quelle per i documenti legali. Per la maggior parte delle applicazioni non è invece necessaria una copia esatta, ma è sufficiente il contenuto XML (conformità all'InfoSet).  
   
- È in genere necessario utilizzare una combinazione di questi approcci, ad esempio se si desidera archiviare i dati XML in una colonna con tipo di dati `xml` e promuovere le relative proprietà al livello di colonne relazionali, Oppure, è possibile usare la tecnologia di mapping per archiviare le parti non ricorsive in colonne non XML e solo le parti ricorsive in `xml` colonne con tipo di dati.  
+ È in genere necessario utilizzare una combinazione di questi approcci, ad esempio se si desidera archiviare i dati XML in una colonna con tipo di dati `xml` e promuovere le relative proprietà al livello di colonne relazionali, In alternativa, è possibile utilizzare la tecnologia di mapping per archiviare parti non ricorsive in colonne non XML e solo le parti ricorsive nelle colonne `xml` con tipo di dati.  
   
 ### <a name="choice-of-xml-technology"></a>Scelta della tecnologia XML  
  La scelta della tecnologia XML, ovvero tra XML nativo e visualizzazione XML, dipende in genere dai fattori seguenti:  
@@ -113,7 +113,7 @@ ms.locfileid: "63193069"
   
  L'archiviazione XML nativa è utile quando si utilizzano documenti XML con strutture diverse oppure conformi a schemi diversi o complessi, di cui è difficile eseguire il mapping a strutture relazionali.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Esempio: modellazione di dati XML tramite il tipo di dati XML  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Esempio: modellazione di dati XML tramite il tipo di dati xml  
  Si consideri un manuale di prodotto in formato XML, composto da un capitolo per ogni argomento e con più sezioni in ogni capitolo. Una sezione può contenere sottosezioni e, di conseguenza, l'elemento \<sezione> è ricorsivo. I manuali dei prodotti includono elevati volumi di contenuto eterogeneo, ad esempio diagrammi e materiale tecnico, e i dati sono semistrutturati. Gli utenti possono avere l'esigenza di ricercare gli argomenti di interesse in un contesto specifico, ad esempio la sezione dedicata agli indici cluster nel capitolo dedicato all'indicizzazione, e di eseguire query su quantità tecniche.  
   
  Una colonna con tipo di dati `xml` costituisce un modello di archiviazione particolarmente appropriato per i documenti XML, perché mantiene il contenuto InfoSet dei dati XML. È possibile indicizzare la colonna XML per migliorare le prestazioni delle query.  
@@ -123,7 +123,7 @@ ms.locfileid: "63193069"
   
  Per le query, in fase di esecuzione è necessario convertire i dati nel tipo di dati `xml` ed eseguire query XQuery su di essi. La conversione in fase di esecuzione può essere tuttavia molto costosa, soprattutto se il documento è di grandi dimensioni. Se è necessario eseguire query di frequente, è possibile archiviare una seconda copia dei documenti in una colonna con tipo di dati `xml` e indicizzarla, mentre per restituire le copie esatte dei documenti si utilizza la colonna con tipo di dati `[n]varchar(max)`.  
   
- La colonna XML può essere una colonna calcolata, basata sulla colonna `[n]varchar(max)`. Tuttavia, non è possibile creare un indice XML su una colonna XML calcolata, né può essere compilato un indice XML nel `[n]varchar(max)` o `varbinary(max)` colonne.  
+ La colonna XML può essere una colonna calcolata, basata sulla colonna `[n]varchar(max)`. Tuttavia, non è possibile creare un indice XML in una colonna calcolata, XML, né un indice XML per `[n]varchar(max)` le colonne o `varbinary(max)` .  
   
 ### <a name="xml-view-technology"></a>Tecnologia di visualizzazione XML  
  Definendo un mapping tra elementi XML Schema e le tabelle in un database, si crea una visualizzazione XML dei dati persistenti. Tramite la visualizzazione XML, è possibile utilizzare il caricamento bulk XML per popolare le tabelle sottostanti. È possibile eseguire query sulla visualizzazione XML utilizzando XPath versione 1.0. Le query vengono convertite in query SQL sulle tabelle. Analogamente, anche gli aggiornamenti vengono propagati a tali tabelle.  
@@ -146,7 +146,7 @@ ms.locfileid: "63193069"
  Si supponga ad esempio di avere a disposizione dati relazionali relativi a clienti, ordini e voci, che si desidera gestire come XML. Definire una visualizzazione XML applicando uno schema AXSD ai dati relazionali. La visualizzazione XML consente di eseguire il caricamento bulk dei dati XML nelle tabelle, nonché di aggiornare ed eseguire query sui dati relazionali. Questo modello è utile quando è necessario scambiare dati contenenti markup XML con altre applicazioni, senza interrompere le applicazioni SQL.  
   
 ### <a name="hybrid-model"></a>Modello ibrido  
- Spesso una combinazione di relazionale e `xml` colonne di tipo di dati è appropriata per la modellazione dei dati. È possibile archiviare parte dei dati XML in colonne relazionali e il resto, o l'intero valore XML, in una colonna XML. Questa soluzione può migliorare le prestazioni, perché offre un maggiore controllo sugli indici creati sulle colonne relazionali e sulle caratteristiche di blocco.  
+ Spesso, una combinazione di colonne relazionali `xml` e di tipo di dati è appropriata per la modellazione dei dati. È possibile archiviare parte dei dati XML in colonne relazionali e il resto, o l'intero valore XML, in una colonna XML. Questa soluzione può migliorare le prestazioni, perché offre un maggiore controllo sugli indici creati sulle colonne relazionali e sulle caratteristiche di blocco.  
   
  I valori da archiviare nelle colonne relazionali dipendono dal carico di lavoro. Se ad esempio per il recupero di tutti i valori XML si usa l'espressione del percorso, /Customer/@CustId, promuovendo il valore dell'attributo **CustId** in modo da ottenere una colonna relazionale e indicizzando tale colonna sarà possibile eseguire le query molto più rapidamente. Se tuttavia i dati XML sono estensivamente scomposti in colonne relazionali in modo non ridondante, il riassemblaggio potrebbe avere un costo significativo.  
   

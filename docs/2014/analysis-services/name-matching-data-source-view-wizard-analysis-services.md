@@ -1,5 +1,5 @@
 ---
-title: Assegnare un nome corrispondente (guidata vista origine dati) (Analysis Services) | Microsoft Docs
+title: Corrispondenza nomi (creazione guidata vista origine dati) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072400"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Corrispondenza nomi (Configurazione guidata vista origine dati) (Analysis Services)
@@ -26,7 +26,7 @@ ms.locfileid: "66072400"
 >  Questa pagina viene visualizzata solo se si seleziona un'origine dei dati che dispone di più tabelle ma non di relazioni di chiave esterna tra una delle tabelle.  
   
 ## <a name="options"></a>Opzioni  
- **Creare relazioni logiche facendo corrispondere le colonne**  
+ **Crea relazioni logiche individuando le corrispondenze tra le colonne**  
  Selezionare questa opzione per utilizzare un criterio di corrispondenza dei nomi che consenta di rilevare le possibili dipendenze e relazioni logiche esistenti tra le tabelle che si desidera includere nella vista origine dati e le altre tabelle dello schema. Se questa casella di controllo viene deselezionata, non viene utilizzato alcun criterio di corrispondenza dei nomi per identificare le relazioni logiche esistenti tra le tabelle dell'origine dei dati.  
   
  **Corrispondenze chiavi esterne**  

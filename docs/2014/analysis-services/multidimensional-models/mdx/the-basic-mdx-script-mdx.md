@@ -1,5 +1,5 @@
 ---
-title: Lo Script MDX di base (MDX) | Microsoft Docs
+title: Script MDX di base (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073805"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Script MDX di base (MDX)
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]il processo di calcolo per un cubo è definito da uno script MDX (Multidimensional Expressions). Esistono due tipi di script MDX:  
+  Uno script MDX (Multidimensional Expressions) definisce il processo di calcolo per un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]cubo in. Esistono due tipi di script MDX:  
   
  **Script MDX predefinito**  
  Quando si crea un cubo, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea uno script MDX predefinito per tale cubo. Lo script definisce una sessione di calcolo per l'intero cubo.  
@@ -36,7 +36,8 @@ ms.locfileid: "66073805"
   
  Lo script MDX predefinito contiene anche i comandi script che creano i set denominati, le assegnazioni e i membri calcolati creati in Progettazione cubi:  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggiunge direttamente i comandi script allo script MDX predefinito.  
+-   
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggiunge direttamente i comandi script allo script MDX predefinito.  
   
 -   Per ogni set denominato presente nel cubo, esiste un'istruzione CREATE SET corrispondente nello script MDX predefinito.  
   
@@ -52,18 +53,18 @@ ms.locfileid: "66073805"
  Tutte le istruzioni di scripting MDX  
  Negli script MDX le istruzioni di scripting MDX controllano il contesto e l'ambito dei calcoli e gestiscono il comportamento delle altre istruzioni contenute nello script MDX. Questa categoria include le istruzioni seguenti:  
   
--   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCOLARE](/sql/mdx/mdx-scripting-calculate)  
   
--   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
+-   [CONGELARE](/sql/mdx/mdx-scripting-freeze)  
   
--   [SCOPE](/sql/mdx/mdx-scripting-scope)  
+-   [AMBITO](/sql/mdx/mdx-scripting-scope)  
   
  Per altre informazioni sulle istruzioni di scripting MDX, vedere [Istruzioni di scripting MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
+ [CREA MEMBRO](/sql/mdx/mdx-data-definition-create-member)  
  L'istruzione CREATE MEMBER crea membri calcolati. Per altre informazioni sulla creazione di membri calcolati, vedere [Compilazione di membri calcolati in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
- [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
+ [CREA SET](/sql/mdx/mdx-data-definition-create-set)  
  L'istruzione CREATE SET crea set denominati. Per altre informazioni sulla procedura per creare set denominati, vedere [Compilazione di set denominati in MDX &#40;MDX&#41;](mdx-named-sets-building-named-sets.md).  
   
  Istruzioni condizionali  
@@ -90,7 +91,7 @@ ms.locfileid: "66073805"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Guida di riferimento al linguaggio MDX &#40;&#41;MDX](/sql/mdx/mdx-language-reference-mdx)   
  [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

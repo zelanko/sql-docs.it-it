@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191706"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizzo di Esplora utilità per gestire Utilità SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "63191706"
 ### <a name="sql-server-utility-navigation-pane"></a>Riquadro di navigazione di Utilità SQL Server  
  Il riquadro di navigazione di Esplora utilità fornisce una visualizzazione albero degli oggetti di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , raggruppati per punto di controllo dell'utilità. Per espandere le cartelle, fare clic sul segno più (+) o fare doppio clic sul nome del punto di controllo dell'utilità nel riquadro di navigazione di Esplora utilità. Fare clic con il pulsante destro del mouse su cartelle o oggetti per eseguire attività comuni. I nodi nella visualizzazione albero sono i seguenti:  
   
--   Il nodo principale della visualizzazione albero è il punto di controllo dell'utilità. Il nome del nodo viene costruito come: "Nome_utilità" (Nomecomputer\nome_istanza_puntocontrollo). Se non è presente un punto di controllo dell'utilità, è necessario crearlo. Se non si è connessi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario connettersi. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md). Fare clic sul nome del punto di controllo dell'utilità nella visualizzazione albero per popolare il riquadro del contenuto di Esplora utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con i dati della visualizzazione dashboard. Per altre informazioni, vedere [Dashboard Utilità &#40;Utilità SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
+-   Il nodo principale della visualizzazione albero è il punto di controllo dell'utilità. Il nome del nodo viene costruito come: "Nome_Utilità (NomeComputer\Nome_Istanza_PuntoControllo)." Se non è presente un punto di controllo dell'utilità, è necessario crearlo. Se non si è connessi a Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario connettersi. Per altre informazioni, vedere [Attività e funzionalità di Utilità SQL Server](sql-server-utility-features-and-tasks.md). Fare clic sul nome del punto di controllo dell'utilità nella visualizzazione albero per popolare il riquadro del contenuto di Esplora utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con i dati della visualizzazione dashboard. Per altre informazioni, vedere [Dashboard Utilità &#40;Utilità SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
   
      Fare clic con il pulsante destro del mouse sul nodo del punto di controllo dell'utilità per aggiornare i dati nel dashboard.  
   

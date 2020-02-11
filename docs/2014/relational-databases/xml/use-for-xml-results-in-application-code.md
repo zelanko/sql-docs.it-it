@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193335"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utilizzare i risultati di query FOR XML nel codice di un'applicazione
@@ -201,9 +201,11 @@ ms.locfileid: "63193335"
   
  Nell'esempio, per la restituzione e il rendering dei risultati della query FOR XML vengono utilizzate le API gestite di Microsoft .NET Framework seguenti:  
   
-1.  `SqlConnection` consente di stabilire una connessione a SQL Server, basata sul contenuto di una variabile stringa di connessione specificata, strConn.  
+1.  
+  `SqlConnection` consente di stabilire una connessione a SQL Server, basata sul contenuto di una variabile stringa di connessione specificata, strConn.  
   
-2.  `SqlDataAdapter` funge quindi da adattatore dati e consente di eseguire la query FOR XML utilizzando la connessione SQL e una stringa di query SQL specificata.  
+2.  
+  `SqlDataAdapter` funge quindi da adattatore dati e consente di eseguire la query FOR XML utilizzando la connessione SQL e una stringa di query SQL specificata.  
   
 3.  Dopo avere eseguito la query, viene chiamato il metodo `SqlDataAdapter.Fill`, che viene quindi passato a un'istanza di un `DataSet,` MyDataSet, per riempire il set di dati con l'output della query FOR XML.  
   
@@ -290,7 +292,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` consente di supporto per richiedere che il risultato di una query FOR XML venga restituito come tipo di dati `xml` tipo di dati, anziché come stringa o immagine tipizzati, specificando la [direttiva TYPE](type-directive-in-for-xml-queries.md). L'uso della direttiva TYPE nelle query FOR XML consente di ottenere l'accesso a livello di programmazione ai risultati FOR XML, in modo analogo a quanto illustrato in [Utilizzo di dati XML nelle applicazioni](use-xml-data-in-applications.md).  
+>  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` supporto del tipo di dati consente di richiedere che il risultato di una query for XML venga `xml` restituito come tipo di dati, anziché come dati tipizzati stringa o immagine, specificando la [direttiva Type](type-directive-in-for-xml-queries.md). L'uso della direttiva TYPE nelle query FOR XML consente di ottenere l'accesso a livello di programmazione ai risultati FOR XML, in modo analogo a quanto illustrato in [Utilizzo di dati XML nelle applicazioni](use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

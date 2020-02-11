@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207052"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
@@ -94,7 +94,7 @@ ms.locfileid: "63207052"
  Queste informazioni sono disponibili tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]e diverse stored procedure di replica. Per altre informazioni, vedere [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>La replica crittografa i dati?  
- No. La replica non crittografa i dati archiviati nel database o trasferiti nella rete. Per altre informazioni, vedere la sezione "Crittografia" dell'argomento [la sicurezza della replica di SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ No. La replica non crittografa i dati archiviati nel database o trasferiti nella rete. Per ulteriori informazioni, vedere la sezione "crittografia" dell'argomento [replica di SQL Server sicurezza](../security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Come si replicano i dati su Internet?  
  È possibile replicare i dati su Internet utilizzando:  
@@ -103,7 +103,7 @@ ms.locfileid: "63207052"
   
 -   L'opzione di sincronizzazione Web per la replica di tipo merge. Per altre informazioni, vedere [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
- Tutti i tipi di replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono replicare i dati in una VPN, ma è consigliabile considerare la sincronizzazione Web se si utilizza la replica di tipo merge.  
+ Tutti i tipi di replica di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono replicare i dati in una VPN, ma è consigliabile considerare la sincronizzazione Web se si usa la replica di tipo merge.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>La replica viene ripresa in caso di interruzione della connessione?  
  Sì. L'elaborazione della replica viene ripresa dal punto in cui si era arrestata per interruzione della connessione. Se si utilizza la replica di tipo merge in una rete inaffidabile, è consigliabile considerare l'utilizzo dei record logici, che garantisce che le modifiche correlate vengano elaborate come una unità. Per altre informazioni, vedere [Raggruppare modifiche alle righe correlate con record logici](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "63207052"
  No. Per trasferire account di accesso e password da un server di pubblicazione a uno o più Sottoscrittori, si potrebbe creare un pacchetto DTS.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>Cosa sono gli schemi e in che modo vengono replicati?  
- A partire da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schema* ha due significati:  
+ A partire da [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *schema* ha due significati:  
   
 -   La definizione di un oggetto, come un'istruzione CREATE TABLE. Per impostazione predefinita, la replica copia le definizioni di tutti gli oggetti replicati nel Sottoscrittore.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "63207052"
   
 -   Specificare che gli oggetti non devono essere eliminati alla reinizializzazione della sottoscrizione. Prima della reinizializzazione, eseguire una delle seguenti operazioni:  
   
-    -   Eseguire [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) o [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore 'pre_creation_cmd' (**sp_changearticle**) o 'pre_creation_command' (**sp_changemergearticle**) per il parametro **@property** e il valore 'none', 'delete' o 'truncate' per il parametro **@value** .  
+    -   Eseguire [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) o [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore ' pre_creation_cmd ' (**sp_changearticle**) o ' pre_creation_command ' (**sp_changemergearticle**) per il parametro **@property** e il valore ' none ',' Delete ' o ' truncate ' per il parametro. **@value**  
   
     -   Nella sezione **Oggetto di destinazione\< della finestra di dialogo** Proprietà articolo - **Articolo>** selezionare il valore **Non modificare l'oggetto esistente**, **Elimina i dati. Se all'articolo è associato un filtro di riga, elimina solo i dati che soddisfano i criteri del filtro.** oppure **Tronca tutti i dati nell'oggetto esistente** per l'opzione **Azione se il nome è in uso**. Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "63207052"
  Sì. I database interessati alla replica richiedono alcune considerazioni speciali per i database. Per altre informazioni, vedere [Eseguire il backup e ripristino di database replicati](back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>La replica influisce sulla dimensione del log delle transazioni?  
- A differenza della replica di tipo merge e della replica snapshot, la replica transazionale può influire sulla dimensione del log delle transazioni. Se un database include una o più pubblicazioni transazionali, il log non viene troncato finché tutte le transazioni significative per le pubblicazioni non sono state recapitate al database di distribuzione. Se la dimensione del log delle transazioni aumenta in modo eccessivo e l'agente di lettura log viene eseguito in base a una pianificazione, è consigliabile ridurre l'intervallo tra le esecuzioni oppure impostare l'esecuzione in modalità continua. Se l'agente viene impostato per l'esecuzione in modalità continua (impostazione predefinita) verificare che venga eseguito. Per altre informazioni sulla verifica dello stato dell'agente di lettura Log, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ A differenza della replica di tipo merge e della replica snapshot, la replica transazionale può influire sulla dimensione del log delle transazioni. Se un database include una o più pubblicazioni transazionali, il log non viene troncato finché tutte le transazioni significative per le pubblicazioni non sono state recapitate al database di distribuzione. Se la dimensione del log delle transazioni aumenta in modo eccessivo e l'agente di lettura log viene eseguito in base a una pianificazione, è consigliabile ridurre l'intervallo tra le esecuzioni oppure impostare l'esecuzione in modalità continua. Se l'agente viene impostato per l'esecuzione in modalità continua (impostazione predefinita) verificare che venga eseguito. Per ulteriori informazioni su come controllare lo stato di agente di lettura log, vedere [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Inoltre, se nel database di pubblicazione o in quello di distribuzione è stata impostata l'opzione 'sync with backup', il troncamento del log delle transazioni avviene solo dopo il backup di tutte le transazioni. Se la dimensione del log delle transazioni sta aumentando in modo eccessivo e questa azione è stata impostata, è consigliabile accorciare l'intervallo tra l'esecuzione di operazioni di backup di tale log. Per altre informazioni sul backup e il ripristino dei database coinvolti nella replica transazionale, vedere [Strategie di backup e ripristino della replica snapshot e della replica transazionale](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63207052"
  Eliminare in primo luogo l'articolo dalla pubblicazione usando [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** , quindi eliminarlo dal database usando `DROP <Object>`. Dopo l'aggiunta di sottoscrizioni non è possibile eliminare articoli dalle pubblicazioni snapshot o transazionali: è necessario eliminare prima le sottoscrizioni. Per altre informazioni, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Come si aggiungono o si eliminano colonne in una tabella pubblicata?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta una vasta gamma di modifiche dello schema sugli oggetti pubblicati, inclusa l'aggiunta e l'eliminazione di colonne. Ad esempio, se si esegue ALTER TABLE ... DROP COLUMN nel server di pubblicazione, l'istruzione viene replicata ai Sottoscrittori e poi eseguita per eliminare la colonna. I Sottoscrittori che eseguono versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] supportano l'aggiunta e l'eliminazione di colonne tramite le stored procedure [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) e [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta una vasta gamma di modifiche dello schema sugli oggetti pubblicati, inclusa l'aggiunta e l'eliminazione di colonne. Ad esempio, eseguire ALTER TABLE... RILASCIARE la colonna nel server di pubblicazione e l'istruzione viene replicata nei Sottoscrittori e quindi eseguita per eliminare la colonna. I Sottoscrittori che eseguono versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] supportano l'aggiunta e l'eliminazione di colonne tramite le stored procedure [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) e [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Manutenzione della replica  
   
@@ -207,7 +207,7 @@ ms.locfileid: "63207052"
  Le azioni necessarie per rimuovere la replica da un database dipendono dalla funzione del database come database di pubblicazione, di sottoscrizione o entrambi.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>In che modo è possibile determinare se vi sono transazioni o righe da replicare?  
- Per la replica transazionale, utilizzare le stored procedure o la scheda **Comandi non distribuiti** di Monitoraggio replica. Per altre informazioni, vedere [visualizzare comandi replicati e altre informazioni nel Database di distribuzione &#40;programmazione Transact-SQL della replica&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Per la replica transazionale, utilizzare le stored procedure o la scheda **Comandi non distribuiti** di Monitoraggio replica. Per altre informazioni, vedere [visualizzare comandi replicati e altre informazioni nel database di distribuzione &#40;la programmazione Transact-SQL della replica&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) e [visualizzare le informazioni ed eseguire attività con monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Per la replica di tipo merge, utilizzare la stored procedure **sp_showpendingchanges**. Per altre informazioni, vedere [sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql).  
   
@@ -218,7 +218,7 @@ ms.locfileid: "63207052"
   
 -   Tempo stimato per il recapito dei comandi al Sottoscrittore. Se questo valore è maggiore del tempo necessario per generare uno snapshot e applicarlo al Sottoscrittore, potrebbe risultare conveniente reinizializzare il Sottoscrittore. Per altre informazioni, vedere [Reinizializzare le sottoscrizioni](../reinitialize-subscriptions.md).  
   
- Per altre informazioni, vedere [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) e [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Per ulteriori informazioni, vedere [sp_replmonitorsubscriptionpendingcmds &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) e [visualizzare le informazioni ed eseguire attività tramite Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="replication-and-other-database-features"></a>Replica e altre funzionalità del database  
   

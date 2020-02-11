@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075556"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definire query denominate in una vista origine dati (Analysis Services)
@@ -35,13 +35,13 @@ ms.locfileid: "66075556"
   
  È necessario che le tabelle e le colonne a cui fa riferimento la query SQL non siano qualificate oppure siano qualificate solo in base al nome della tabella. Per fare riferimento alla colonna SaleAmount di una tabella, ad esempio, è possibile utilizzare `SaleAmount` o `Sales.SaleAmount` , mentre `dbo.Sales.SaleAmount` genera un errore.  
   
- **Nota** In caso di definizione di una query denominata su un'origine dati [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, una query denominata contenente una sottoquery e una clausola GROUP BY correlate avrà esito negativo. Per altre informazioni, vedere l'articolo [Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY](https://support.microsoft.com/kb/274729) (Errore interno con l'istruzione SELECT contenente la sottoquery e GROUP BY correlati) della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ **Nota** Quando si definisce una query denominata che esegue [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query su un'origine dati o 7,0, una query denominata contenente una sottoquery correlata e una clausola Group by avrà esito negativo. Per altre informazioni, vedere l'articolo [Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY](https://support.microsoft.com/kb/274729) (Errore interno con l'istruzione SELECT contenente la sottoquery e GROUP BY correlati) della [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
 ## <a name="add-or-edit-a-named-query"></a>Aggiungere o modificare una query denominata  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto o connettersi al database contenente la vista origine dati in cui si desidera aggiungere una query denominata.  
   
-2.  In Esplora soluzioni espandere la cartella **Viste origine dati** , quindi fare doppio clic sulla vista origine dati.  
+2.  In Esplora soluzioni espandere la cartella **Viste origine dati** e quindi fare doppio clic sulla vista origine dati.  
   
 3.  Nel riquadro **Tabelle** o **Diagramma** fare clic con il pulsante destro del mouse su un'area vuota e quindi scegliere **Nuova query denominata**.  
   

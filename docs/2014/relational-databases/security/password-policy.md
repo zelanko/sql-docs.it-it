@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187964"
 ---
 # <a name="password-policy"></a>Criteri password
@@ -75,7 +75,7 @@ ms.locfileid: "63187964"
   
     -   La cronologia delle password viene inizializzata con il valore dell'hash della password corrente.  
   
-    -   Vengono inoltre abilitate le opzioni**Durata blocco account**, **Soglia di blocchi dell'account**e **Reimposta blocco account dopo** .  
+    -   La **durata del blocco**dell'account, la soglia di **blocco**dell'account e la **reimpostazione del contatore** del blocco dell'account dopo sono abilitati  
   
 -   Quando l'opzione CHECK_POLICY viene impostata su OFF, si ottiene il comportamento seguente:  
   
@@ -110,7 +110,7 @@ ms.locfileid: "63187964"
   
  [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
   
- [Creazione di un account di accesso](authentication-access/create-a-login.md)  
+ [Creare un account di accesso](authentication-access/create-a-login.md)  
   
  [Creazione di un utente di database](authentication-access/create-a-database-user.md)  
   

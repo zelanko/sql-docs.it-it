@@ -1,5 +1,5 @@
 ---
-title: Aggiornare diagrammi di Database delle precedenti edizioni (Visual Database Tools) | Microsoft Docs
+title: Aggiornare i diagrammi di database delle precedenti edizioni (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205711"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Aggiornamento di diagrammi di database delle precedenti edizioni (Visual Database Tools)
-  I diagrammi database creati nelle edizioni precedenti dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono aggiornati automaticamente quando il diagramma di database viene impostato su [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per altre informazioni sull'impostazione dei diagrammi, vedere [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  I diagrammi database creati nelle edizioni precedenti dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono aggiornati automaticamente quando il diagramma di database viene impostato su [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Per ulteriori passaggi per la configurazione dei diagrammi, vedere [configurare Progettazione diagrammi di database &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Per aggiornare i diagrammi di database preesistenti  
   
@@ -34,12 +34,12 @@ ms.locfileid: "63205711"
   
 2.  Espandere il nodo dei diagrammi del database.  
   
-3.  Quando viene chiesto se si desidera configurare i diagrammi di database, scegliere **Sì** .  
+3.  Quando viene chiesto se si intende configurare i diagrammi di database, scegliere **Sì** .  
   
      I diagrammi archiviati nel database verranno così aggiornati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulla proprietà diagramma di Database &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
- [Impostazione di Progettazione diagrammi di database &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Informazioni sulla proprietà del diagramma di database &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
+ [Configurare Progettazione diagrammi di database &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

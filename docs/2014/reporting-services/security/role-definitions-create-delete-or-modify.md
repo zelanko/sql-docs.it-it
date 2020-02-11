@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101813"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Creare, eliminare o modificare un ruolo (Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "66101813"
   
  Per creare, modificare o eliminare ruoli, usare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. È possibile eliminare solo ruoli che non sono utilizzati.  
   
- Per assegnare utenti e gruppi ai ruoli creati, utilizzare Gestione report. Per altre informazioni, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md)dovrebbe essere assegnato a pochissimi utenti.  
+ Per assegnare utenti e gruppi ai ruoli creati, utilizzare Gestione report. Per ulteriori informazioni, vedere [concedere l'accesso utente a un server di Report &#40;Gestione report&#41;](grant-user-access-to-a-report-server.md).  
   
 > [!NOTE]  
 >  Se il server di report è configurato per la modalità integrata SharePoint e si è connessi al sito di SharePoint con cui il server di report è integrato, è possibile visualizzare e modificare i livelli di autorizzazione che controllano l'accesso al contenuto e alle operazioni del server di report.  
@@ -45,7 +45,7 @@ ms.locfileid: "66101813"
   
      Se invece si vuole creare una definizione di ruolo a livello di sistema, fare clic con il pulsante destro del mouse su **Ruoli a livello di sistema**e scegliere **Nuovo ruolo a livello di sistema**.  
   
-4.  Digitare un nome univoco per il ruolo. Il nome deve includere almeno un carattere. È inoltre possibile utilizzare spazi e alcuni simboli, con l'esclusione dei caratteri ; ? : \@ & = +, $ / * \< > | "o /.  
+4.  Digitare un nome univoco per il ruolo. Il nome deve includere almeno un carattere. È inoltre possibile utilizzare spazi e alcuni simboli, con l'esclusione dei caratteri ; ? : \@ & = +, $/* \< > | "o/.  
   
 5.  Se lo si desidera, digitare una descrizione. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] questa descrizione verrà visualizzata solo in questa pagina. Gli utenti che visualizzeranno l'elemento in Gestione report potranno leggere la descrizione.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66101813"
   
 2.  Espandere la cartella sicurezza.  
   
-3.  Per eliminare o modificare una definizione di ruolo a livello di elemento, espandere la cartella Ruoli. Eseguire una delle operazioni seguenti:  
+3.  Per eliminare o modificare una definizione di ruolo a livello di elemento, espandere la cartella Ruoli. selezionare uno degli elementi seguenti:  
   
     1.  Per eliminare una definizione di ruolo, fare clic con il pulsante destro del mouse sull'elemento e scegliere **Elimina**. Verrà visualizzata la finestra di dialogo **Elimina oggetto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66101813"
   
          Selezionare le attività che i membri del ruolo potranno eseguire e fare clic su **OK**.  
   
-4.  Per eliminare o modificare una definizione di ruolo a livello di sistema, espandere la cartella **Ruoli a livello di sistema** . Eseguire una delle operazioni seguenti:  
+4.  Per eliminare o modificare una definizione di ruolo a livello di sistema, espandere la cartella **Ruoli a livello di sistema** . selezionare uno degli elementi seguenti:  
   
     1.  Per eliminare una definizione di ruolo di sistema, fare clic con il pulsante destro del mouse sull'elemento e scegliere **Elimina**. Verrà visualizzata la finestra di dialogo **Elimina oggetto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd9f92b0128bd6280654885f79f8231570f721de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105626"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Inserire o eliminare una riga (Generatore report e SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66105626"
   
 -   In visualizzazione Progettazione fare clic sull'angolo superiore sinistro dell'area dati Tablix in modo da visualizzare gli handle di colonna e di riga sopra e accanto all'area.  
   
-     Per altre informazioni sulle aree dati, vedere [sono elencati &#40;Generatore Report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+     Per ulteriori informazioni sulle aree dell'area dati, vedere la pagina relativa agli [elenchi &#40;Generatore report e SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="to-insert-a-row-in-a-selected-data-region"></a>Per inserire una riga in un'area dati selezionata  
   

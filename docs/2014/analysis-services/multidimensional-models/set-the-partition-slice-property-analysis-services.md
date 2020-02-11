@@ -1,5 +1,5 @@
 ---
-title: Impostare la proprietà Slice delle partizioni (Analysis Services) | Microsoft Docs
+title: Impostazione della proprietà Slice della partizione (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072934"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Impostare la proprietà Slice delle partizioni (Analysis Services)
@@ -41,7 +41,7 @@ ms.locfileid: "66072934"
 > [!NOTE]  
 >  Si noti che le funzioni MDX dinamiche, ad esempio [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) o [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function) non sono supportate nella proprietà Slice per le partizioni. È necessario definire la sezione usando tuple esplicite o riferimenti ai membri.  
 >   
->  Ad esempio, invece di usare la [: &#40;intervallo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) function per definire un intervallo, è necessario enumerare ogni membro in base agli anni specifici.  
+>  Ad esempio, anziché utilizzare l' [intervallo &#40;&#41; &#40;funzione MDX&#41;](/sql/mdx/range-mdx) per definire un intervallo, è necessario enumerare ogni membro in base agli anni specifici.  
 >   
 >  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. È quindi possibile usare lo strumento da riga di comando ascmd o l'attività [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) di SSIS per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
   

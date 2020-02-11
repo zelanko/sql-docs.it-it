@@ -1,5 +1,5 @@
 ---
-title: Market Basket Analysis (strumenti di analisi tabelle per Excel) | Microsoft Docs
+title: Shopping Basket Analysis (tabella AnalysisTools per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,41 +17,41 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068682"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Market basket analysis (Strumenti di analisi tabelle per Excel)
-  ![Strumento per gli acquisti](media/tat-shopbskt.gif "strumento per gli acquisti")  
+  ![Strumento per gli acquisti](media/tat-shopbskt.gif "Strumento per gli acquisti")  
   
- Il **market Basket Analysis** lo strumento consente di trovare `associations` nei dati. Un'associazione può indicare quali elementi vengono frequentemente acquistati insieme. Nel data mining questa tecnica è un noto metodo noto come *market basket analysis*, utilizzato per analizzare il comportamento di acquisto dei clienti in set di dati molto grandi. Gli esperti di marketing possono utilizzare le informazioni per consigliare prodotti correlati ai clienti e promuovere i prodotti correlati posizionandoli in prossimità nelle pagine Web, nei cataloghi o sugli scaffali.  
+ Lo strumento Market **Basket Analysis** consente di trovare `associations` i dati. Un'associazione può indicare quali elementi vengono frequentemente acquistati insieme. In data mining, questa tecnica è un metodo noto noto come *Market Basket Analysis*, usato per analizzare il comportamento di acquisto dei clienti in set di dati di grandi dimensioni. Gli esperti di marketing possono utilizzare le informazioni per consigliare prodotti correlati ai clienti e promuovere i prodotti correlati posizionandoli in prossimità nelle pagine Web, nei cataloghi o sugli scaffali.  
   
  Per utilizzare l'analisi di tipo Market basket analysis, gli elementi che si desidera analizzare devono essere correlati da un ID di transazione. Se, ad esempio, si analizzano tutti gli ordini ricevuti tramite un sito Web, ogni ordine dispone di un ID di ordine o di un ID di transazione associato a uno o più elementi acquistati.  
   
- Quando la procedura guidata viene completata l'analisi dei dati, vengono creati due nuovi fogli di lavoro, **elemento acquisti** e **indicazioni sugli acquisti**.  
+ Al termine dell'analisi dei dati da parte della procedura guidata, vengono creati due nuovi fogli di dati, **gruppi di elementi** del carrello acquisti e regole del carrello **acquisti**.  
   
- Il **gruppi di elementi del carrello della spesa** foglio di lavoro contiene un elenco degli elementi che spesso abbinati nelle transazioni. Questi raggruppamenti comuni vengono chiamati *set di elementi*. Il foglio di lavoro contiene anche le statistiche, ad esempio *supportano* e *lift*, che consentono di comprendere l'importanza del set di elementi. Se sono disponibili informazioni sui prezzi, nel foglio di lavoro viene inoltre calcolata la somma del valore di tutti gli elementi correlati, per fornire un'indicazione del valore totale delle transazioni.  
+ Il foglio di file dei **gruppi di elementi del carrello acquisti** contiene un elenco degli elementi che compaiono spesso insieme nelle transazioni. Questi raggruppamenti comuni sono denominati *set*di elementi. Il foglio di file contiene anche le statistiche, ad esempio il *supporto* e l' *accuratezza*, per facilitare la comprensione dell'importanza del set di elementi. Se sono disponibili informazioni sui prezzi, nel foglio di lavoro viene inoltre calcolata la somma del valore di tutti gli elementi correlati, per fornire un'indicazione del valore totale delle transazioni.  
   
- È possibile filtrare e ordinare le colonne nel report. Ad esempio, voler visualizzare solo i set di elementi con 2 o più prodotti o i set di elementi da ordinare **valore medio acquisti**.  
+ È possibile filtrare e ordinare le colonne nel report. Ad esempio, è possibile visualizzare solo i set di elementi con due o più prodotti oppure ordinare i set di elementi in base al **valore medio del cestino**.  
   
- Il **indicazioni sugli acquisti** foglio di lavoro Usa le statistiche derivate dall'analisi per creare le regole relative alla correlazione delle voci. Ad esempio, una regola potrebbe essere che se i clienti acquistano il prodotto A, sono estremamente probabile che acquistino prodotto B. Le regole sono utilizzabile per creare indicazioni. Per ogni regola sono presenti statistiche di supporto che consentono di valutare la forza potenziale della regola, in modo da poter creare un'indicazione solo se la regola supera una determinata soglia di probabilità.  
+ Il foglio di riferimento Market **basket Rules** usa le statistiche derivate dall'analisi per creare regole sulle modalità di correlazione degli elementi. Ad esempio, una regola potrebbe essere che se i clienti acquistano il prodotto A, è molto probabile che acquistino il prodotto B. Le regole possono essere utilizzate per creare indicazioni. Per ogni regola sono presenti statistiche di supporto che consentono di valutare la forza potenziale della regola, in modo da poter creare un'indicazione solo se la regola supera una determinata soglia di probabilità.  
   
 ## <a name="using-the-shopping-basket-analysis-tool"></a>Utilizzo dello strumento Market basket analysis  
   
 1.  Aprire una tabella di Excel contenente i dati appropriati. Nella cartella di lavoro di esempio fare clic sul foglio di lavoro Associazione.  
   
-2.  Fare clic su **market Basket Analysis**.  
+2.  Fare clic su **Shopping Basket Analysis**.  
   
-3.  Nel **market Basket Analysis** nella finestra di dialogo scegliere la colonna che contiene l'ID della transazione e quindi scegliere la colonna che contiene gli elementi o i prodotti che si desidera analizzare.  
+3.  Nella finestra di dialogo Market **Basket Analysis** selezionare la colonna contenente l'ID della transazione, quindi scegliere la colonna che contiene gli elementi o i prodotti che si desidera analizzare.  
   
 4.  È possibile aggiungere una colonna contenente i valori dei prodotti.  
   
-5.  Fare clic su**avanzate**per aprire il **impostazioni parametri avanzate** nella finestra di dialogo. Aumentare il valore per **supporto minimo** per ridurre il numero di prodotti raggruppati come set di elementi. Aumentare la **probabilità minima regola** per filtrare i set di elementi molto comuni.  
+5.  Fare clic su**Avanzate**per aprire la finestra di dialogo **impostazione parametri avanzati** . Aumentare il valore di **supporto minimo** per ridurre il numero di prodotti raggruppati come set di elementi. Aumentare la **probabilità minima della regola** per filtrare i set di elementi molto comuni.  
   
 ### <a name="requirements"></a>Requisiti  
- Usare la **market Basket Analysis** strumento, i dati devono essere archiviati in una tabella di Excel e deve contenere le colonne seguenti:  
+ Per utilizzare lo strumento Market **Basket Analysis** , i dati devono essere archiviati in una tabella di Excel e devono contenere le colonne seguenti:  
   
 -   Colonna contenente un ID univoco che rappresenta la transazione. L'ID può essere numerico o di testo, con una lunghezza tale da garantire che il valore in ogni riga sia univoco.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "66068682"
  Il supporto per ogni set di elementi viene calcolato come numero di clienti che acquistano un set di elementi. Nell'esempio precedente se vi è un solo cliente che ha acquistato tre elementi, con sette possibili set di elementi, ognuno dei sette set di elementi ha un valore del supporto di 1. Come l'aumentare del numero di clienti e man mano che il numero di possibili combinazioni aumenta, potrebbe essere necessario molto più tempo per elaborare il report. Alcuni set di elementi potrebbero tuttavia disporre di supporto molto piccolo. Si potrebbe pertanto decidere di ridurre il tempo necessario per generare il report limitando il numero di elementi in ogni set a tre o meno elementi. In genere, i set di elementi più grandi hanno un supporto notevolmente inferiore, pertanto il compromesso è accettabile.  
   
 ## <a name="specifying-minimum-support-and-rule-probability"></a>Impostazione del supporto minimo e della probabilità delle regole  
- Con l'aumentare delle dimensioni del set di dati, il numero di possibili raggruppamenti di elementi e regole può diventare eccessivo. È tuttavia possibile controllare il numero di risultati restituiti dallo strumento, per concentrarsi solo sulle regole e sui set di elementi più importanti. Si impostano queste opzioni **market Basket Advanced finestra di dialogo parametri**.  
+ Con l'aumentare delle dimensioni del set di dati, il numero di possibili raggruppamenti di elementi e regole può diventare eccessivo. È tuttavia possibile controllare il numero di risultati restituiti dallo strumento, per concentrarsi solo sulle regole e sui set di elementi più importanti. È possibile impostare queste opzioni nella finestra di **dialogo parametri avanzati del carrello acquisti**.  
   
 ### <a name="minimum-support"></a>Supporto minimo  
- *Supporto minimo* indica il numero di transazioni che devono contenere un determinato set di elementi per il set di elementi essere considerata significativa. Si potrebbe ad esempio essere interessati solo ai set di elementi acquistati in almeno dieci transazioni diverse. Esistono due modi per controllare la soglia per il significato di set di elementi e utilizzano entrambi la **supporto minimo** parametro.  
+ Il *supporto minimo* indica il numero di transazioni che devono contenere un particolare set di elementi affinché il set di elementi venga considerato significativo. Si potrebbe ad esempio essere interessati solo ai set di elementi acquistati in almeno dieci transazioni diverse. Esistono due modi per controllare la soglia per il significato del set di elementi ed entrambi utilizzano il parametro di **supporto minimo** .  
   
  **Come valore assoluto:** Immettere un numero che rappresenta il numero di transazioni contenenti gli elementi di destinazione. Se, ad esempio, si immette 10, nei risultati vengono inclusi tutti i set di elementi presenti in almeno dieci carrelli acquisti.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "66068682"
  Provare a utilizzare diverse impostazioni per vedere i diversi risultati e determinare quale impostazione consente di ottenere le regole più interessanti.  
   
 ## <a name="understanding-the-reports"></a>Informazioni sui report  
- Il **market Basket Analysis** strumento crea due report complementari. Il primo report, denominato **significativa i gruppi di elementi identificati durante l'analisi**, fornisce un elenco di tutti i set di elementi che sono stati trovati. È possibile utilizzare i nuovi strumenti per le tabelle in Microsoft Excel per ordinare, filtrare ed esplorare i dati.  
+ Lo strumento Market **Basket Analysis** crea due report complementari. Il primo report, denominato **gruppi significativi di elementi identificati durante l'analisi**, fornisce un elenco di tutti i set di elementi trovati. È possibile utilizzare i nuovi strumenti per le tabelle in Microsoft Excel per ordinare, filtrare ed esplorare i dati.  
   
- Il secondo report, denominato **indicazioni sugli acquisti**, indica il tipo di inferenze può essere definito in base a set di elementi elencati nel primo report. Mentre l'elenco di set di elementi è più utile per l'esplorazione e la comprensione dei dati, l'elenco di regole è più utile per l'esecuzione di stime e la creazione di indicazioni.  
+ Il secondo report, denominato Market **basket Rules**, indica il tipo di inferenza che può essere eseguito in base ai set di elementi elencati nel primo report. Mentre l'elenco di set di elementi è più utile per l'esplorazione e la comprensione dei dati, l'elenco di regole è più utile per l'esecuzione di stime e la creazione di indicazioni.  
   
 ### <a name="shopping-basket-item-groups-report"></a>Report Elementi nel pacchetto acquisti  
- Questo report contiene un elenco di tutte le combinazioni possibili di elementi individuate nel set di dati. Ad esempio, se i dati della transazione contengono ordini, per ogni ordine il **market Basket Analysis** strumento consente di calcolare quante volte il singolo elemento è stato ordinato e quindi calcola tutte le combinazioni di tale elemento con gli altri elementi.  
+ Questo report contiene un elenco di tutte le combinazioni possibili di elementi individuate nel set di dati. Se, ad esempio, i dati della transazione contengono ordini, per ogni ordine lo strumento Market **Basket Analysis** calcola quante volte il singolo elemento è stato ordinato, quindi calcola tutte le combinazioni di tale elemento con altri elementi.  
   
  Nel report sono elencati i set di elementi individuati in ordine di accuratezza. L'accuratezza è un punteggio che indica l'importanza del set di elementi.  
   
@@ -117,15 +117,15 @@ ms.locfileid: "66068682"
   
 |Colonna nel report|Informazioni contenute|  
 |----------------------|-----------------------|  
-|Elemento selezionato|Sono elencati gli elementi necessari per creare un'indicazione.<br /><br /> Nel data mining, questi elementi vengono detti essere nella *lato sinistro* della regola di associazione.|  
-|Indicazione|È indicato l'elemento consigliato.<br /><br /> Nel data mining, questi elementi vengono detti essere nella *destra* della regola di associazione.|  
+|Elemento selezionato|Sono elencati gli elementi necessari per creare un'indicazione.<br /><br /> In data mining, questi elementi si dicono che si trovano sul *lato sinistro* della regola di associazione.|  
+|Indicazione|È indicato l'elemento consigliato.<br /><br /> In data mining, questi elementi sono detti sul *lato destro* della regola di associazione.|  
 |Probabilità|È indicata la probabilità di correttezza della regola.|  
 |Supporto|È indicato il numero di case nei dati esistenti a sostegno della regola.|  
 |Valore medio indicazione|Se si fornisce un valore per gli elementi nel carrello acquisti, in questa colonna viene calcolato il valore della stima, in base al costo degli elementi.|  
-|Accuratezza|È indicata la forza della correlazione tra gli elementi nella prima colonna e quelli nella seconda colonna. Detta anche *importanza*.<br /><br /> Un'accuratezza pari a 0 indica l'assenza di correlazione. Un valore positivo indica che gli elementi nella prima colonna consentono di stimare l'elemento nella seconda colonna. Più elevato è il numero, più forte è la correlazione.|  
+|Accuratezza|È indicata la forza della correlazione tra gli elementi nella prima colonna e quelli nella seconda colonna. Noto anche come *importanza*.<br /><br /> Un'accuratezza pari a 0 indica l'assenza di correlazione. Un valore positivo indica che gli elementi nella prima colonna consentono di stimare l'elemento nella seconda colonna. Più elevato è il numero, più forte è la correlazione.|  
   
 ## <a name="related-tools"></a>Strumenti correlati  
- Client di data mining per Excel è un componente aggiuntivo separato che fornisce funzionalità di data mining più avanzate e una procedura guidata per l'analisi delle associazioni. Per altre informazioni, vedere [associare guidata &#40;Client di Data Mining per Excel&#41;](associate-wizard-data-mining-client-for-excel.md).  
+ Client di data mining per Excel è un componente aggiuntivo separato che fornisce funzionalità di data mining più avanzate e una procedura guidata per l'analisi delle associazioni. Per ulteriori informazioni, vedere [associazione guidata &#40;client di data mining per&#41;Excel ](associate-wizard-data-mining-client-for-excel.md).  
   
  Per ulteriori informazioni sull'algoritmo utilizzato per eseguire questa analisi, vedere l'argomento "Algoritmo Microsoft Association Rules" nella documentazione online di SQL Server.  
   

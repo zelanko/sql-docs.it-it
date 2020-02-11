@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067500"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Creare e gestire gerarchie (SSAS tabulare)
@@ -28,7 +28,7 @@ ms.locfileid: "66067500"
   
 -   [Eliminare una gerarchia](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a> Creare una gerarchia  
+##  <a name="bkmk_create"></a>Creare una gerarchia  
  È possibile creare una gerarchia utilizzando le colonne e il menu di scelta rapida della tabella. Quando si crea una gerarchia, un nuovo livello padre viene visualizzato con le colonne selezionate come livelli figlio.  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>Per creare una gerarchia dal menu di scelta rapida  
@@ -46,7 +46,7 @@ ms.locfileid: "66067500"
 > [!NOTE]  
 >  Il comando Crea gerarchia sarà disabilitato nel menu di scelta rapida se si effettua una selezione multipla di una misura con una o più colonne oppure se si selezionano colonne da più tabelle.  
   
-##  <a name="bkmk_edit"></a> Modificare una gerarchia  
+##  <a name="bkmk_edit"></a>Modificare una gerarchia  
  È possibile rinominare una gerarchia o un livello figlio, modificare l'ordine dei livelli figlio, aggiungere altre colonne come livelli figlio, rimuovere un livello figlio da una gerarchia, mostrare il nome di origine di un livello figlio (il nome della colonna) e nascondere un livello figlio se il suo nome coincide con quello del livello padre della gerarchia.  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>Per modificare il nome di una gerarchia o di un livello figlio  
@@ -85,7 +85,7 @@ ms.locfileid: "66067500"
   
 -   Fare clic con il pulsante destro del mouse su un livello figlio della gerarchia, quindi scegliere **Show Source Name**(Mostra nome di origine). Viene visualizzato il nome della colonna da cui è stato copiato.  
   
-##  <a name="bkmk_delete"></a> Eliminare una gerarchia  
+##  <a name="bkmk_delete"></a>Eliminare una gerarchia  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>Per eliminare una gerarchia e rimuovere i relativi livelli figlio  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66067500"
 -   In alternativa, fare clic sul livello padre della gerarchia e premere CANC. Verranno rimossi anche tutti i livelli figlio.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Progettazione di modelli tabulari &#40;tabulare di SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
+ [Progettazione di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-designer-ssas-tabular.md)   
  [Gerarchie &#40;SSAS tabulare&#41;](hierarchies-ssas-tabular.md)   
  [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)  
   

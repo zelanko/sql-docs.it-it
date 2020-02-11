@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105664"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importazione di codice HTML a un report (Generatore report e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105664"
 > [!NOTE]  
 >  Quando si importa testo che contiene markup HTML, i dati devono sempre essere analizzati prima dalla casella di testo. Poiché è supportato solo un subset di tag HTML, il testo HTML mostrato nel report visualizzabile potrebbe differire dal testo HTML originale.  
   
- Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
+ Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "66105664"
 ## <a name="supported-html-tags"></a>Tag HTML supportati  
  Di seguito viene mostrato un elenco completo dei tag che vengono visualizzati come testo HTML se definiti come testo segnaposto:  
   
--   Elementi di intestazione, stile e blocco: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<LI>  
+-   Elementi di intestazione, stile e blocco \<: H {n} > \<, DIV> \<, span>\<, P> \<, li>  
   
  Qualsiasi altro tag del markup HTML verrà ignorato durante l'elaborazione del report. Se il codice HTML rappresentato dall'espressione nel testo segnaposto non è formattato in maniera corretta, il segnaposto viene visualizzato come testo normale. Per tutti i tag HTML non viene rilevata la distinzione tra maiuscole e minuscole.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "66105664"
   
 -   Come accade per il codice HTML non formattato correttamente, i valori CSS in formato non valido vengono ignorati.  
   
--   Quando nello stesso tag sono presenti sia l'attributo sia gli attributi dello stile CSS, la proprietà CSS ha la precedenza. Se ad esempio il testo è **\<p style="text-align: right" align="left">** , verrà applicato solo l'attributo text-align e il testo verrà allineato a destra.  
+-   Quando nello stesso tag sono presenti sia l'attributo sia gli attributi dello stile CSS, la proprietà CSS ha la precedenza. Se ad esempio il testo è ** \<p style = "text-align: Right" align = "left" >**, verrà applicato solo l'attributo text-align e il testo sarà allineato a destra.  
   
--   Per gli attributi e gli stili CSS, se una proprietà viene specificata più di una volta, viene applicata solo l'ultima istanza della proprietà. Se ad esempio il testo è **\<p align="left" align="right">** , il testo verrà allineato a destra.  
+-   Per gli attributi e gli stili CSS, se una proprietà viene specificata più di una volta, viene applicata solo l'ultima istanza della proprietà. Se ad esempio il testo è ** \<p align = "left" align = "Right" >**, il testo verrà allineato a destra.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Rendering in formato HTML &#40;Generatore report e SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  

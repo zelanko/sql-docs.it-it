@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184286"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>Filtrare eventi in base all'ora di fine (SQL Server Profiler)
@@ -42,7 +42,7 @@ ms.locfileid: "63184286"
   
 5.  Nella scheda **Selezione eventi**fare clic sulla colonna di dati **EndTime** per aprire la finestra di dialogo **Modifica filtro** . È anche possibile fare clic con il pulsante destro del mouse sull'intestazione di colonna e scegliere **Modifica filtro colonne**.  
   
-6.  Espandere **maggiore** oppure **minore**e immettere un `datetime`valore nel campo visualizzato sotto l'operatore di confronto.  
+6.  Espandere **maggiore di** o **minore di**e immettere un `datetime`valore nel campo visualizzato sotto l'operatore di confronto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](sql-server-profiler.md)   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156837"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Chiamata di stored procedure compilate in modo nativo da applicazioni di accesso ai dati
@@ -36,7 +36,7 @@ ms.locfileid: "63156837"
   
  I suggerimenti seguenti si applicano alle chiamate di stored procedure compilate in modo nativo tramite il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Il metodo più efficace per chiamare una stored procedure una volta consiste nell'inviare una chiamata RPC diretta utilizzando `SQLExecDirect` e clausole ODBC CALL. Non usare la [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` istruzione. Se una stored procedure viene chiamata più volte, l'esecuzione preparata è più efficiente.  
+ Il metodo più efficace per chiamare una stored procedure una volta consiste nell'inviare una chiamata RPC diretta utilizzando `SQLExecDirect` e clausole ODBC CALL. Non utilizzare l' [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` istruzione. Se una stored procedure viene chiamata più volte, l'esecuzione preparata è più efficiente.  
   
  Il metodo più efficace per chiamare una stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] più di una volta consiste nell'utilizzare chiamate di procedure RPC preparate. Le chiamate RPC preparate vengono eseguite come indicato di seguito utilizzando il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
@@ -48,7 +48,8 @@ ms.locfileid: "63156837"
   
 -   Eseguire più volte la stored procedure utilizzando `SQLExecute`.  
   
- Nel frammento di codice seguente viene illustrata l'esecuzione preparata di una stored procedure per aggiungere voci a un ordine. `SQLPrepare` viene chiamato una sola volta e `SQLExecute` viene chiamato più volte, una volta per ogni esecuzione della stored procedure.  
+ Nel frammento di codice seguente viene illustrata l'esecuzione preparata di una stored procedure per aggiungere voci a un ordine. 
+  `SQLPrepare` viene chiamato una sola volta e `SQLExecute` viene chiamato più volte, una volta per ogni esecuzione della stored procedure.  
   
 ```  
 // Bind parameters  

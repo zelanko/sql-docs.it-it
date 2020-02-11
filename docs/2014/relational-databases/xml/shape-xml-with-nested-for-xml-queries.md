@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a5fded413944c304dfe02675b3577b699adfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231229"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>Determinare la struttura dei valori XML tramite query nidificate FOR XML
@@ -88,7 +88,7 @@ FOR XML AUTO, TYPE
   
  Nell'esempio precedente viene utilizzato il metodo `query()` con tipo di dati `xml` per eseguire una query sul valore XML restituito dalla query FOR XML interna e costruire il risultato previsto.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <Production.Product ProductID="520">  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228370"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici XML (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63228370"
  **Indice XML selezionato**  
  Elenca gli indici XML esistenti. Selezionarne uno per visualizzarne le proprietà nella griglia di destra. Se l'elenco è vuoto, per la tabella non sono stati definiti indici.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di creare un nuovo indice XML.  
   
  **Elimina**  
@@ -53,8 +53,8 @@ ms.locfileid: "63228370"
  **Categoria Identità**  
  Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione** .  
   
- **Name**  
- Visualizza il nome dell'indice XML. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
+ **Nome**  
+ Visualizza il nome dell'indice XML. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. È possibile modificare il nome in qualsiasi momento.  
   
  **Descrizione**  
  Consente di descrivere l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione ( **...** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  

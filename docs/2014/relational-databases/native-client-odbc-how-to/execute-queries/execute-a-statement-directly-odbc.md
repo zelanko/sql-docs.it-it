@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0597054914dcbce7e7b1fb1475beb29bab7b8a57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200410"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Eseguire un'istruzione direttamente (ODBC)
     
 ### <a name="to-execute-a-statement-directly-and-one-time-only"></a>Per eseguire un'istruzione direttamente e solo una volta  
   
-1.  Se l'istruzione include marcatori di parametro, utilizzare [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) per associare ogni parametro a una variabile di programma. Inserire nelle variabili di programma i valori dei dati e quindi configurare tutti i parametri data-at-execution.  
+1.  Se l'istruzione include marcatori di parametro, usare [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) per associare ogni parametro a una variabile di programma. Inserire nelle variabili di programma i valori dei dati e quindi configurare tutti i parametri data-at-execution.  
   
 2.  Chiamare [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) per eseguire l'istruzione.  
   
-3.  Se si utilizzano parametri di input data-at-execution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+3.  Se vengono utilizzati parametri di input data-at-execution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) restituisce SQL_NEED_DATA. Inviare i dati in blocchi usando [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>Per eseguire un'istruzione più volte utilizzando l'associazione di parametri per colonna  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63200410"
   
      Allocare una matrice di buffer di S parametri per archiviare le lunghezze dei dati.  
   
-     Chiamare [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) per associare i dati valore e i dati lunghezza le matrici di parametri per il parametro dell'istruzione.  
+     Chiamare [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) per associare il valore dei dati del parametro e le matrici di lunghezza dei dati al parametro dell'istruzione.  
   
      Configurare tutti i parametri data-at-execution di tipo text o image.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63200410"
   
 3.  Chiamare [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) per eseguire l'istruzione. Il driver esegue in modo efficace l'istruzione S volte, una volta per ogni set di parametri.  
   
-4.  Se si utilizzano parametri di input data-at-execution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+4.  Se vengono utilizzati parametri di input data-at-execution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) restituisce SQL_NEED_DATA. Inviare i dati in blocchi usando [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>Per eseguire un'istruzione più volte utilizzando l'associazione di parametri per riga  
   
@@ -75,17 +75,17 @@ ms.locfileid: "63200410"
   
      Impostare SQL_ATTR_PARAMS_STATUS_PTR in modo che punti a una matrice [S] di variabili SQLUSSMALLINT contenente gli indicatori di stato dei parametri.  
   
-3.  Per ogni marcatore di parametro, chiamare [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) in modo da puntare alle relative variabili nel primo elemento della matrice di strutture allocate nel passaggio 1 valore dei dati del parametro e il puntatore di lunghezza dei dati. Se il parametro è di tipo data-at-execution, configurarlo.  
+3.  Per ogni marcatore di parametro, chiamare [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) per puntare il valore dei dati del parametro e il puntatore alla lunghezza dei dati alle variabili nel primo elemento della matrice di strutture allocate nel passaggio 1. Se il parametro è di tipo data-at-execution, configurarlo.  
   
 4.  Inserire i valori dei dati nella matrice di buffer dei parametri associati.  
   
 5.  Chiamare [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) per eseguire l'istruzione. Il driver esegue in modo efficace l'istruzione S volte, una volta per ogni set di parametri.  
   
-6.  Se si utilizzano parametri di input data-at-execution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
+6.  Se vengono utilizzati parametri di input data-at-execution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) restituisce SQL_NEED_DATA. Inviare i dati in blocchi usando [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) e [SQLPutData](../../native-client-odbc-api/sqlputdata.md).  
   
- **Nota** associazione per colonna e per riga sono in genere utilizzato in combinazione con [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) e [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) rispetto con [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
+ **Nota** Le associazioni a livello di colonna e di riga vengono in genere utilizzate in combinazione con la [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) e [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) anziché con [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di query procedure relative al &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [Procedure relative all'esecuzione di query &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

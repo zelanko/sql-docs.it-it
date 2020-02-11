@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238209"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilizzo del controllo Web Form ReportViewer
@@ -24,25 +24,25 @@ ms.locfileid: "63238209"
   
 ###### <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Per utilizzare il controllo ReportViewer in un'applicazione Web  
   
-1.  Creare un nuovo sito Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Creare un nuovo [!INCLUDE[msCoName](../../includes/msconame-md.md)] sito [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] Web ASP.NET usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \- oppure -  
+     \-O  
   
      Aprire un sito Web ASP.NET esistente e aggiungere un nuovo Web Form.  
   
 2.  Individuare il controllo **ScriptManager** nel gruppo**AJAX Extensions** nella finestra **Casella degli strumenti** e trascinarlo nell'area di progettazione del Web Form.  
   
-     **Casella degli strumenti** non è visibile, è possibile accedervi scegliendo **Casella degli strumenti** dal menu **Visualizza**.  
+     Se la **casella degli strumenti** non è visibile, è possibile accedervi scegliendo **Casella degli strumenti** dal menu **View**.  
   
 3.  Individuare il controllo **ReportViewer** nella **Casella degli strumenti** e trascinarlo nell'area di progettazione sotto il controllo **ScriptManager**.  
   
      Il controllo **ReportViewer** denominato reportViewer1 verrà aggiunto al form.  
   
- Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **ReportViewer Tasks** in cui viene richiesto di selezionare un report. Se il report da visualizzare è stato distribuito in un server di report, scegliere **\<<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere selezionato l'opzione **\<Server Report>** , verranno visualizzate due proprietà aggiuntive, ovvero **URL server di report** e **Percorso report**. L'**URL server di report** indica l'indirizzo del server di report, mentre **Percorso report** indica il percorso completo del report di cui si vuole eseguire il rendering.  
+ Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **ReportViewer Tasks** in cui viene richiesto di selezionare un report. Se il report da visualizzare è stato distribuito in un server di report, selezionare l'opzione ** \<>report del server** nell'elenco a discesa **Scegli report** . Una volta selezionata l'opzione ** \<>report del server** , verranno visualizzate due proprietà aggiuntive, l' **URL del server di report** e il percorso del **report**. L'**URL server di report** indica l'indirizzo del server di report, mentre **Percorso report** indica il percorso completo del report di cui si vuole eseguire il rendering.  
   
  Per visualizzare un report in modalità locale, selezionare l'opzione **Progetta nuovo report** per avviare la progettazione del report oppure selezionare un report che fa già parte del progetto esistente. Dopo aver selezionato un report, assicurarsi di immettere il nome del file RDLC del report nella proprietà **ReportPath** del controllo ReportViewer. Questa proprietà viene visualizzata sotto il nodo **LocalReport** nel riquadro **Properties**.  
   
- È possibile nascondere uno o più elementi sulla barra degli strumenti di ReportViewer quando viene eseguito il rendering del report. Ad esempio, è possibile nascondere il pulsante di stampa. Per nascondere elementi della barra degli strumenti, impostare le proprietà seguenti di ReportViewer `False` nella **proprietà** riquadro.  
+ È possibile nascondere uno o più elementi sulla barra degli strumenti di ReportViewer quando viene eseguito il rendering del report. Ad esempio, è possibile nascondere il pulsante di stampa. Per nascondere gli elementi della barra degli strumenti, impostare le `False` proprietà di ReportViewer seguenti su nel riquadro **Proprietà** .  
   
 -   `ShowBackButton`  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63238209"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Visualizzazione di report in modalità di elaborazione remota  
  Nell'esempio seguente viene illustrato come eseguire il rendering di un report distribuito in un server di report. In questo esempio viene usato il report Sales Order Detail incluso nel progetto di report di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- Nell'esempio viene utilizzata l'autenticazione integrata di Windows, pertanto è innanzitutto necessario abilitare la rappresentazione. A scopo, inserire la riga seguente nel `web.config` file:  
+ Nell'esempio viene utilizzata l'autenticazione integrata di Windows, pertanto è innanzitutto necessario abilitare la rappresentazione. A tale scopo, inserire la riga seguente nel `web.config` file:  
   
 ```  
 <!-- Web.config file. -->  
@@ -155,9 +155,9 @@ End Class
   
      Il file Sales Order Detail.rdl dovrebbe ora far parte del progetto.  
   
-5.  Fare clic con il pulsante destro del mouse sul file Sales Order Detail.rdl in Esplora soluzioni e selezionare **Rinomina**. Rinominare il report in**Sales Order Detail.rdlc** e premere INVIO.  
+5.  Fare clic con il pulsante destro del mouse sul file Sales Order Detail.rdl in Esplora soluzioni e selezionare **Rinomina**. Rinominare il report in **Sales Order Detail.rdlc** e premere INVIO.  
   
-     Se Esplora soluzioni non è visibile, è possibile aprirlo scegliendo Esplora soluzioni dal menu **Visualizza**.  
+     Se Esplora soluzioni non è visibile, è possibile aprirlo dal menu **Visualizza** selezionando Esplora soluzioni.  
   
  Nell'esempio di codice seguente viene creato un set di dati per i dati dell'ordine di vendita, quindi viene eseguito il rendering del report Sales Order Detail in modalità locale.  
   

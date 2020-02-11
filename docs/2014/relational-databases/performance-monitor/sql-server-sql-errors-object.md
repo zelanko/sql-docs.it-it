@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f36cd694756544a44df657d97fd84e1967167b55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183013"
 ---
 # <a name="sql-server-sql-errors-object"></a>Oggetto Errori SQL di SQL Server
-  L'oggetto **SQLServer:Errori SQL** di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] include contatori che consentono di monitorare **Errori SQL**.  
+  L'oggetto **SqlServer: errori SQL** di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce contatori per il monitoraggio degli **errori SQL**.  
   
  Nella tabella seguente sono illustrati i contatori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Errori SQL** .  
   
@@ -34,10 +34,10 @@ ms.locfileid: "63183013"
 |Elemento|Definizione|  
 |----------|----------------|  
 |**_Total**|Informazioni relative a tutti gli errori.|  
-|**DB Offline Errors**|Tiene traccia degli errori gravi che obbligano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a impostare il database corrente come offline.|  
-|**Info Errors**|Informazioni relative a messaggi di errore di tipo informativo che non provocano errori.|  
-|**Kill Connection Errors**|Tiene traccia degli errori gravi che obbligano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a terminare la connessione corrente.|  
-|**User Errors**|Informazioni sugli errori dell'utente.|  
+|**Errori offline del database**|Tiene traccia degli errori gravi che obbligano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a impostare il database corrente come offline.|  
+|**Informazioni sugli errori**|Informazioni relative a messaggi di errore di tipo informativo che non provocano errori.|  
+|**Elimina errori di connessione**|Tiene traccia degli errori gravi che obbligano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a terminare la connessione corrente.|  
+|**Errori utente**|Informazioni sugli errori dell'utente.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare l'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)  

@@ -1,5 +1,5 @@
 ---
-title: Configurare l'accesso DirectQuery per un Database modello tabulare o In memoria | Microsoft Docs
+title: Configurare l'accesso in memoria o DirectQuery per un database modello tabulare | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067188"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>Configurare l'accesso in memoria o DirectQuery per un database di modello tabulare
   In questo argomento viene illustrato come modificare le proprietà di connessione di un modello tabulare che è già stato distribuito, per consentire l'utilizzo del modello in modalità DirectQuery.  
   
- Per altre informazioni su queste proprietà e configurazione per gli scenari più comuni, vedere [scenari di distribuzione DirectQuery &#40;modello tabulare di SSAS&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
+ Per altre informazioni su queste proprietà e sulla configurazione per gli scenari più comuni, vedere [scenari di distribuzione DirectQuery &#40;SSAS tabulare&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
   
 ## <a name="requirements"></a>Requisiti  
  L'abilitazione dell'utilizzo della modalità DirectQuery su un modello tabulare è un processo a più passaggi. È necessario:  
@@ -35,13 +35,13 @@ ms.locfileid: "66067188"
   
  In questo argomento si presuppone che sia stato creato e convalidato il modello e che occorra soltanto abilitare l'accesso DirectQuery da un client quale [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   
-## <a name="procedure"></a>Routine  
+## <a name="procedure"></a>Procedura  
   
 #### <a name="change-the-connection-string-properties-of-the-model"></a>Modificare le proprietà della stringa di connessione del modello  
   
 1.  In SQL Server Management Studio aprire l'istanza in cui distribuire il modello.  
   
-2.  In Esplora oggetti fare doppio clic il nome del database modello e selezionare **proprietà**.  
+2.  In Esplora oggetti fare clic con il pulsante destro del mouse sul nome del database modello e scegliere **Proprietà**.  
   
 3.  Individuare la proprietà **DirectQueryMode**. Per abilitare l'utilizzo dell'origine dati relazionale, è necessario impostare questa proprietà su uno dei valori seguenti:  
   

@@ -1,5 +1,5 @@
 ---
-title: Ottenere un cursore FAST_FORWARD | Microsoft Docs
+title: Ottenere un FAST_FORWARD cursore | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225554"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Ottenere un cursore FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Ottenere un cursore FAST_FORWARD
   Per ottenere un cursore forward-only di sola lettura, impostare le proprietà del set di righe DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT e DBPROP_OWNUPDATEDELETE su VARIANT_TRUE.  
   
- In un esempio completo viene illustrato come impostare le proprietà del set di righe per ottenere un cursore FAST_FORWARD. Dopo che le proprietà sono state impostate, viene eseguita un'istruzione SELECT per recuperare e visualizzare la colonna **Name** della tabella **Purchasing.Vendor** del database **AdventureWorks**.  
+ In un esempio completo viene illustrato come impostare le proprietà del set di righe per ottenere un cursore FAST_FORWARD. Una volta impostate le proprietà, viene eseguita un'istruzione SELECT per recuperare e visualizzare la colonna **Name** della tabella **Purchasing. Vendor** del database **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Per ottenere un cursore FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Per ottenere un cursore FAST_FORWARD  
   
 1.  Stabilire una connessione all'origine dati.  
   

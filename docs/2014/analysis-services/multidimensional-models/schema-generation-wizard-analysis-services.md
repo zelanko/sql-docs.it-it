@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f8757044ba15f7b8c2567dd88e1ef3637d2e3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073065"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Generazione guidata schema (Analysis Services)
+  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] supporta due metodi di utilizzo degli schemi relazionali quando si definiscono oggetti OLAP in un progetto o un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Gli oggetti OLAP vengono in genere definiti in base a un modello di dati logico costruito in una vista origine dati all'interno di un progetto o un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tale vista origine dati viene definita in base a elementi dello schema di una o più origini dati relazionali, come personalizzate nella vista origine dati.  
   
  In alternativa, è possibile definire prima gli oggetti OLAP e successivamente generare una vista origine dati, un'origine dati e lo schema del database relazionale sottostante che supporta questi oggetti OLAP. Tale database relazionale viene denominato "database dell'area di interesse".  
@@ -39,13 +40,13 @@ ms.locfileid: "66073065"
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Usare la Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Viene descritto come generare lo schema per i database dell'area di interesse e dell'area di gestione temporanea.|  
+|[Utilizzare la generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Viene descritto come generare lo schema per i database dell'area di interesse e dell'area di gestione temporanea.|  
 |[Informazioni sugli schemi di database](understanding-the-database-schemas.md)|Descrive lo schema generato per i database dell'area di interesse e dell'area di gestione temporanea.|  
 |[Informazioni sulla generazione incrementale](understanding-incremental-generation.md)|Descrive le funzionalità di generazione incrementale della Generazione guidata schema.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   
  [Origini dati nei modelli multidimensionali](data-sources-in-multidimensional-models.md)   
- [Origini dati supportate &#40;multidimensionale di SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [Origini dati supportate &#40;SSAS multidimensionale&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Eseguire una query riquadro (visualizzazione stima modello di Data Mining) | Microsoft Docs
+title: Riquadro query (visualizzazione Stima modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070520"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Riquadro Query (visualizzazione Stima modello di data mining)
   Nel riquadro **Query** vengono visualizzate le istruzioni DMX (Data Mining Extensions) create dal generatore delle query di stima. È possibile modificare le istruzioni e quindi fare clic sul pulsante **Passa alla visualizzazione dei risultati della query** per visualizzare i risultati restituiti. Se si torna alla visualizzazione **Progettazione**, tutte le modifiche apportate all'istruzione andranno perdute.  
   
- **Per altre informazioni:** [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni Data Manipulation](/sql/dmx/dmx-statements-data-manipulation), [creare una Query DMX in SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **Per ulteriori informazioni:** [data Mining Extensions &#40;DMX&#41; istruzioni di manipolazione dei dati](/sql/dmx/dmx-statements-data-manipulation), [creare una query DMX in SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Opzioni  
- **Passare alla visualizzazione dei risultati della query**  
+ **Passa alla visualizzazione dei risultati della query**  
  Fare clic su questo pulsante per spostarsi tra i riquadri **Progettazione**, **Query**e **Risultato** . Se si passa al riquadro **Risultato** , verrà eseguita la query.  
   
  **Salva risultati query**  
@@ -38,8 +38,8 @@ ms.locfileid: "66070520"
  Consente di rielaborare la query di stima. Questa opzione è attivata solo nel riquadro **Risultato** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining nuove interfacce Query](data-mining/data-mining-query-tools.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](/sql/dmx/data-mining-extensions-dmx-statements)   
- [Generatore di Query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
+ [Interfacce di query di data mining](data-mining/data-mining-query-tools.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](/sql/dmx/data-mining-extensions-dmx-statements)   
+ [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Recuperare righe mediante segnalibri (OLE DB) | Microsoft Docs
+title: Recuperare le righe usando i segnalibri (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0bfc6d28eb318bf36217a53873a48ab854d5f12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218210"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Recuperare righe utilizzando i segnalibri (OLE DB)
   Il consumer imposta il valore del campo `dwFlag` della struttura di associazione su DBCOLUMNSINFO_ISBOOKMARK per indicare che la colonna viene utilizzata come segnalibro. Imposta inoltre la proprietà del set di righe DBPROP_BOOKMARKS su VARIANT_TRUE, consentendo alla colonna 0 di essere presente nel set di righe. L'oggetto `IRowsetLocate::GetRowsAt` viene quindi utilizzato per recuperare righe a partire da quella specificata in corrispondenza di un offset da un segnalibro.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>Per recuperare righe utilizzando i segnalibri  
   

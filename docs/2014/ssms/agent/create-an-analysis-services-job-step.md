@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 193805128ec3e557d219561bc29a93e9540fd5b1
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798247"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
@@ -26,9 +26,9 @@ ms.locfileid: "72798247"
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
--   **Per creare i passaggi di un processo di SQL Server utilizzando i comandi e/o le query di Analysis Services con:**  
+-   **Per creare un SQL Server passaggi di processo utilizzando Analysis Services comandi e/o le query con:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -42,23 +42,23 @@ ms.locfileid: "72798247"
   
 -   Se il passaggio del processo utilizza un comando di Analysis Services, l'istruzione del comando deve essere un metodo **Execute** di Servizi di XML for Analysis Services. L'istruzione non può includere un elemento Envelope SOAP (Simple Object Access Protocol) completo o un metodo **Discover** di XML for Analysis. A differenza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , i passaggi di processo di **Agent non supportano le buste SOAP complete e il metodo** Discover [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni su XML for Analysis Services, vedere [Panoramica di XML for Analysis (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
--   Se il passaggio del processo utilizza una query di Analysis Services, l'istruzione della query deve essere una query di espressioni MDX. Per ulteriori informazioni su MDX, vedere [nozioni fondamentali sulle &#40;query&#41;MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
+-   Se il passaggio del processo utilizza una query di Analysis Services, l'istruzione della query deve essere una query di espressioni MDX. Per ulteriori informazioni su MDX, vedere [nozioni fondamentali sulle query mdx &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
   
 -   Per eseguire un passaggio di processo in cui viene utilizzato il sottosistema Analysis Services, è necessario che l'utente sia membro del ruolo predefinito del server **sysadmin** o che sia autorizzato ad accedere a un account proxy valido definito per l'utilizzo di questo sottosistema. L'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o l'account proxy deve inoltre essere amministratore di Analysis Services, nonché un account di dominio Windows valido.  
   
--   Solo i membri del ruolo predefinito del server **sysadmin** sono autorizzati a scrivere l'output di un passaggio del processo in un file. Se il passaggio del processo viene eseguito da utenti appartenenti al ruolo di database **SQLAgentUserRole** nel database **msdb** , sarà possibile scrivere l'output solo in una tabella. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene scritto l'output del passaggio di processo nella tabella **sysjobstepslog** del database **msdb** .  
+-   Solo i membri del ruolo predefinito del server **sysadmin** sono autorizzati a scrivere l'output di un passaggio del processo in un file. Se il passaggio del processo viene eseguito da utenti appartenenti al ruolo di database **SQLAgentUserRole** nel database **msdb** , sarà possibile scrivere l'output solo in una tabella. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent scrive l'output del passaggio di processo nella tabella **sysjobstepslog** del database **msdb** .  
   
 -   Per informazioni dettagliate, vedere [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMS"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Per creare un passaggio di processo di un comando di Analysis Services  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere tale istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
   
 2.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per altre informazioni sulla creazione di un processo, vedere [Creazione di processi](create-jobs.md).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "72798247"
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Per creare un passaggio del processo di una query di Analysis Services  
   
-1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ed espandere tale istanza.  
+1.  In **Esplora oggetti** connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], quindi espanderla.  
   
 2.  Espandere **SQL Server Agent**, creare un nuovo processo oppure fare clic con il pulsante destro del mouse su un processo esistente e quindi scegliere **Proprietà**. Per altre informazioni sulla creazione di un processo, vedere [Creazione di processi](create-jobs.md).  
   
@@ -96,7 +96,7 @@ ms.locfileid: "72798247"
   
 9. Fare clic sulla pagina **Avanzate** per definire le opzioni relative al passaggio del processo, ad esempio l'azione che dovrà essere eseguita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in caso di esito positivo o negativo del passaggio del processo, il numero di tentativi di esecuzione del passaggio del processo e il percorso in cui scrivere l'output del passaggio del processo.  
   
-##  <a name="TSQL"></a> Utilizzo di Transact-SQL  
+##  <a name="TSQL"></a> Con Transact-SQL  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Per creare un passaggio di processo di un comando di Analysis Services  
   
@@ -134,7 +134,7 @@ ms.locfileid: "72798247"
     GO  
     ```  
   
- Per ulteriori informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_jobstep &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Per creare un passaggio del processo di una query di Analysis Services  
   
@@ -161,7 +161,7 @@ ms.locfileid: "72798247"
     GO  
     ```  
   
- Per ulteriori informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_jobstep &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 ##  <a name="SMO"></a>Utilizzo di SQL Server Management Objects  
  **Per creare un passaggio di processo di uno script di PowerShell**  

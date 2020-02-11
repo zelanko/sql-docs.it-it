@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 82b89246d6289d0b19ee97e68e94f77d7cb30a77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63244992"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>Metodo SetStringValue (classe ClientNetworkProtocolProperty)
@@ -40,7 +40,7 @@ StrValue
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  A [classe ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) che rappresenta un attributo del protocollo di rete utilizzato dal client di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parametri  
@@ -52,7 +52,7 @@ StrValue
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore `uint32` che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli client](../../../database-engine/configure-windows/configure-client-protocols.md)  

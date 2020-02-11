@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240515"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler
@@ -32,7 +32,8 @@ ms.locfileid: "63240515"
 ## <a name="permissions-used-to-replay-traces"></a>Autorizzazioni per la riproduzione di tracce  
  Per riprodurre le tracce, è necessario che l'utente che desidera eseguire questa operazione disponga dell'autorizzazione ALTER TRACE.  
   
- Durante la riproduzione, in [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] viene tuttavia utilizzato il comando EXECUTE AS, se nella traccia riprodotta viene rilevato un evento Audit Login. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usa il comando EXECUTE AS per rappresentare l'utente associato all'evento di accesso.  
+ Durante la riproduzione, in [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] viene tuttavia utilizzato il comando EXECUTE AS, se nella traccia riprodotta viene rilevato un evento Audit Login. 
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usa il comando EXECUTE AS per rappresentare l'utente associato all'evento di accesso.  
   
  Se [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] rileva un evento di accesso in una traccia che si desidera riprodurre, verranno eseguite le verifiche delle autorizzazioni seguenti:  
   
@@ -40,9 +41,11 @@ ms.locfileid: "63240515"
   
 2.  Nella traccia riprodotta viene rilevato un evento di accesso per Utente2.  
   
-3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usa il comando EXECUTE AS per rappresentare Utente2.  
+3.  
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] usa il comando EXECUTE AS per rappresentare Utente2.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prova a eseguire l'autenticazione di Utente2 e, in base ai risultati, si verifica una delle situazioni seguenti:  
+4.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prova a eseguire l'autenticazione di Utente2 e, in base ai risultati, si verifica una delle situazioni seguenti:  
   
     1.  Se non è possibile eseguire l'autenticazione di Utente2, [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] restituisce un errore e continua la riproduzione della traccia come Utente1.  
   
@@ -62,7 +65,7 @@ ms.locfileid: "63240515"
   
  Nella figura seguente viene illustrato il processo di verifica delle autorizzazioni per la riproduzione delle tracce:  
   
- ![Autorizzazioni trace replay di SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "autorizzazioni trace replay di SQL Server Profiler")  
+ ![Autorizzazioni per la riproduzione di tracce di SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "Autorizzazioni per la riproduzione di tracce di SQL Server Profiler")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di SQL Server Profiler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   

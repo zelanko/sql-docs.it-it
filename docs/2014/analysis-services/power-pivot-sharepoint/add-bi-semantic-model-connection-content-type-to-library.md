@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un tipo di contenuto connessione Bism BI a una raccolta (PowerPivot per SharePoint) | Microsoft Docs
+title: Aggiungere un tipo di contenuto connessione BI Semantic Model a una raccolta (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071973"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>Aggiungere un tipo di contenuto connessione BISM (BI Semantic Model) a una raccolta (PowerPivot per SharePoint)
@@ -23,10 +23,10 @@ ms.locfileid: "66071973"
 > [!NOTE]  
 >  Se si utilizzano già raccolte connessioni dati SharePoint, il tipo di contenuto della connessione BISM viene aggiunto automaticamente a tale modello di raccolta. È possibile ignorare i passaggi descritti in questa sezione se si utilizza una raccolta connessioni dati che consente già di creare nuovi documenti di connessione BISM.  
   
-##  <a name="bkmk_addtype"></a> Aggiungere il tipo di contenuto a una raccolta documenti  
+##  <a name="bkmk_addtype"></a>Aggiungere il tipo di contenuto a una raccolta documenti  
  È necessario disporre almeno dell'autorizzazione Gestione elenchi per aggiungere e configurare un tipo di contenuto. Questa autorizzazione viene compilata nel livello di autorizzazione Progettazione e superiore.  
   
- Nel sito che contiene la raccolta documenti deve essere configurata l'attivazione della funzionalità per PowerPivot per SharePoint. Per altre informazioni, vedere [attivare integrazione della caratteristica PowerPivot per le raccolte siti in Amministrazione centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ Nel sito che contiene la raccolta documenti deve essere configurata l'attivazione della funzionalità per PowerPivot per SharePoint. Per ulteriori informazioni, vedere [attivazione dell'integrazione delle funzionalità di PowerPivot per le raccolte siti in Amministrazione centrale](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Aprire la raccolta documenti per cui si desidera abilitare il tipo di contenuto della connessione BISM.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66071973"
   
 12. Per verificare l'aggiunta del tipo di contenuto, tornare alla raccolta e fare clic su **Nuovo documento** nell'area Documenti della barra multifunzione della raccolta. Nell'elenco Nuovi documenti dovrebbe essere presente **File di connessione BISM** .  
   
-     ![Sottomenu nuovo documento in una raccolta di SharePoint](../media/ssas-bismconnection-new.gif "sottomenu nuovo documento in una raccolta di SharePoint")  
+     ![Sottomenu Nuovo documento in una raccolta di SharePoint](../media/ssas-bismconnection-new.gif "Sottomenu Nuovo documento in una raccolta di SharePoint")  
   
  Dopo avere abilitato il tipo di contenuto della connessione BISM per una raccolta, è possibile creare una connessione che fornisce il reindirizzamento ai dati BISM che possono essere utilizzati da report di Excel o [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Per ulteriori informazioni su questa operazione, utilizzare i collegamenti seguenti:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66071973"
  [Creare una connessione BISM a un database modello tabulare](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Connessione BI Semantic Model di PowerPivot &#40;con estensione bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Usare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+ [Connessione BI Semantic Model di PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+ [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

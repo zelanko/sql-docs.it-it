@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223350"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>Proprietà AcceptStop (classe SqlService)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
- Oggetto [classe SqlService](sqlservice-class.md) oggetto che rappresenta il servizio  
+ *oggetto*  
+ Oggetto della [classe SqlService](sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore booleano che specifica se il servizio può essere arrestato. `true` se il servizio può essere arrestato; `false` se il servizio non può essere arrestato.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

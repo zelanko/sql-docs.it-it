@@ -16,20 +16,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073704"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>Utilizzo di variabili e parametri (MDX)
-  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]è possibile creare istruzioni MDX (Multidimensional Expressions) parametrizzate. Un'istruzione parametrizzata consente di creare istruzioni generiche che possono essere personalizzate in fase di esecuzione.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]è possibile parametrizzare un'istruzione MDX (Multidimensional Expressions). Un'istruzione parametrizzata consente di creare istruzioni generiche che possono essere personalizzate in fase di esecuzione.  
   
  Durante la creazione di un'istruzione parametrizzata, il nome del parametro viene identificato aggiungendovi come prefisso il simbolo chiocciola (@). Ad esempio, @Year sarebbe un nome di parametro valido  
   
  MDX supporta i parametri solo per valori letterali o scalari. Per creare un parametro che faccia riferimento a un membro, a un set o a una tupla, è possibile usare una funzione quale [StrToMember](/sql/mdx/strtomember-mdx) o [StrToSet](/sql/mdx/strtoset-mdx).  
   
- Il codice XML seguente, ad esempio Analysis (XMLA), il @CountryName parametro conterrà il paese per cui i clienti vengono recuperati i dati:  
+ Nell'esempio seguente XML for Analysis (XMLA) il @CountryName parametro conterrà il paese per il quale vengono recuperati i dati del cliente:  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  

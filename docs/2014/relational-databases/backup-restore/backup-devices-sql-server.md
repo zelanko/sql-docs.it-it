@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155051"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivi di backup (SQL Server)
@@ -43,15 +43,15 @@ ms.locfileid: "70155051"
   
 -   [Uso di dispositivi nastro](#TapeDevices)  
   
--   [Uso di un dispositivo di backup logico](#LogicalBackupDevice)  
+-   [Utilizzo di un dispositivo di backup logico](#LogicalBackupDevice)  
   
 -   [Set di supporti di backup con mirroring](#MirroredMediaSets)  
   
--   [Archiviazione SQL Server backup](#Archiving)  
+-   [Archiviazione di backup di SQL Server](#Archiving)  
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
+##  <a name="TermsAndDefinitions"></a>Termini e definizioni  
  disco di backup  
  Disco rigido o altro supporto di archiviazione su disco in cui sono contenuti uno o più file di backup. Un file di backup è un file normale del sistema operativo.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "70155051"
   
 -   [Specifica di un file di backup utilizzando il nome fisico (Transact-SQL)](#BackupFileUsingPhysicalName)  
   
--   [Specifica del percorso di un file di backup su disco](#BackupFileDiskPath)  
+-   [Impostazione del percorso di un file di backup su disco](#BackupFileDiskPath)  
   
 -   [Esecuzione del backup in un file in una condivisione di rete](#NetworkShare)  
   
@@ -76,7 +76,8 @@ ms.locfileid: "70155051"
   
  Un dispositivo di backup su disco può essere un semplice dispositivo disco, come un'unità ATA. In alternativa, è possibile utilizzare un'unità disco collegabile a caldo che consenta di sostituire in modo trasparente un disco vuoto a un disco pieno presente nell'unità. Un disco di backup può essere un disco locale nel server o un disco remoto, ovvero una risorsa di rete condivisa. Per informazioni sull'utilizzo di un disco remoto, vedere [Esecuzione del backup in un file in una condivisione di rete](#NetworkShare)di seguito in questo argomento.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli strumenti di gestione consentono grande flessibilità nella gestione dei dispositivi di backup su disco, in quanto permettono di generare automaticamente un nome timestamp nel file su disco.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli strumenti di gestione consentono grande flessibilità nella gestione dei dispositivi di backup su disco, in quanto permettono di generare automaticamente un nome timestamp nel file su disco.  
   
 > [!IMPORTANT]  
 >  È consigliabile utilizzare come disco di backup un disco diverso da quelli in cui sono archiviati i dati di database e i log. Questa condizione è necessaria per garantire l'accesso ai backup in caso di errore del disco contenente il log o i dati.  
@@ -86,7 +87,7 @@ ms.locfileid: "70155051"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ Al disco **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  Ad esempio:  
   
@@ -100,7 +101,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ Dal disco **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  Ad esempio,  
   
@@ -136,7 +137,7 @@ GO
     >  Il backup dei dati in una rete può essere soggetto agli errori della rete stessa. Quando si utilizza un disco remoto, è pertanto consigliabile verificare l'operazione di backup dopo il suo completamento. Per altre informazioni, vedere [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Specifica di un nome UNC (Universal Naming Convention)  
- Per specificare una condivisione di rete in un comando di backup o ripristino, è necessario utilizzare il nome UNC (Universal Naming Convention) completo del file per il dispositivo di backup. Il formato di un nome UNC è **\\\\** _NomeSistema_ **\\** _NomeCondivisione_ **\\** _Percorso_ **\\** _NomeFile_.  
+ Per specificare una condivisione di rete in un comando di backup o ripristino, è necessario utilizzare il nome UNC (Universal Naming Convention) completo del file per il dispositivo di backup. Il formato ** \\ **di un nome UNC è _SystemName_**\\**_ShareName_**\\**_path_**\\**_filename_.  
   
  Ad esempio:  
   
@@ -174,7 +175,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ Su nastro **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  Ad esempio:  
   
@@ -188,7 +189,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
+ Dal nastro **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a>Opzioni di BACKUP e ripristino specifiche del nastro (Transact-SQL)  
  Per facilitare la gestione dei nastri, per l'istruzione BACKUP sono disponibili le opzioni seguenti specifiche dei nastri:  
@@ -207,7 +208,7 @@ GO
 ###  <a name="OpenTapes"></a>Gestione dei nastri aperti  
  Per visualizzare un elenco dei dispositivi nastro aperti e lo stato delle richieste di montaggio, eseguire una query nella DMV [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Questa vista contiene tutti i nastri aperti, inclusi i nastri in uso che risultano temporaneamente inattivi in quanto in attesa dell'operazione BACKUP o RESTORE successiva.  
   
- Se un nastro viene inavvertitamente lasciato aperto, il modo più rapido per rilasciarlo consiste nell'utilizzo del comando RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Per altre informazioni, vedere [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
+ Se un nastro viene accidentalmente lasciato aperto, il modo più rapido per rilasciare il nastro consiste nell'usare il comando seguente: RESTORE REWINDONLY from **=** Tape _backup_device_name_. Per altre informazioni, vedere [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Uso del servizio di archiviazione BLOB di Azure  
  I backup di SQL Server possono essere scritti nel servizio Archiviazione BLOB di Azure.  Per altre informazioni su come usare il servizio di archiviazione BLOB di Azure per i backup, vedere [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -239,7 +240,7 @@ GO
 2.  Definizione di un nuovo dispositivo di backup logico che utilizzi il nome del dispositivo logico originale ma esegua il mapping a un dispositivo di backup fisico diverso. I dispositivi di backup logici sono particolarmente utili per identificare i dispositivi di backup su nastro.  
   
 ##  <a name="MirroredMediaSets"></a>Set di supporti di backup con mirroring  
- Il mirroring dei set di supporti di backup riduce l'effetto di eventuali funzionamenti non corretti dei dispositivi di backup. Tali problemi possono risultare estremamente gravi, poiché i backup rappresentano l'ultima difesa contro la perdita dei dati. Con l'aumento delle dimensioni dei database, cresce il rischio che un errore di un dispositivo o di un supporto di backup impedisca il ripristino di un backup. I supporti di backup con mirroring aumentano l'affidabilità dei backup garantendo la ridondanza per il dispositivo di backup fisico. Per altre informazioni, vedere [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
+ Il mirroring dei set di supporti di backup riduce l'effetto di eventuali funzionamenti non corretti dei dispositivi di backup. Tali problemi possono risultare estremamente gravi, poiché i backup rappresentano l'ultima difesa contro la perdita dei dati. Con l'aumento delle dimensioni dei database, cresce il rischio che un errore di un dispositivo o di un supporto di backup impedisca il ripristino di un backup. I supporti di backup con mirroring aumentano l'affidabilità dei backup garantendo la ridondanza per il dispositivo di backup fisico. Per altre informazioni, vedere [Set di supporti di backup con mirroring &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
 > [!NOTE]  
 >  I set di supporti di backup con mirroring sono supportati solo in [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] e versioni successive.  
@@ -262,9 +263,9 @@ GO
   
 -   [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)  
   
--   [Definizione di un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
+-   [Definire un dispositivo di backup logico per un file su disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [Definire un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [Definizione di un dispositivo di backup logico per un'unità nastro &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.BackupDevice> (SMO)  
   
@@ -293,14 +294,14 @@ GO
 -   [Eliminare un dispositivo di backup &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto Backup Device di SQL Server](../performance-monitor/sql-server-backup-device-object.md)   
+ [SQL Server, oggetto dispositivo di backup](../performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Piani di manutenzione](../maintenance-plans/maintenance-plans.md)   
  [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
  [sys.backup_devices &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
- [sys.dm_io_backup_tapes &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
+ [sys. dm_io_backup_tapes &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
  [Set di supporti di backup con mirroring &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
   
   

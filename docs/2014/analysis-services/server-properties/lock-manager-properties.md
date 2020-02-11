@@ -1,5 +1,5 @@
 ---
-title: Proprietà di Gestione blocchi | Microsoft Docs
+title: Proprietà di gestione blocchi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 607654924a9f7e2d071bbce1ee4797792cb760c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068934"
 ---
 # <a name="lock-manager-properties"></a>Proprietà di Gestione blocchi
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server di Gestione blocchi elencate nella tabella seguente. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **Si applica a:** Modalità server multidimensionale e tabulare  
@@ -40,7 +41,7 @@ ms.locfileid: "66068934"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le proprietà del Server in Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

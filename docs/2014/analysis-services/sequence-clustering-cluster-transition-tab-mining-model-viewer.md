@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering (Visualizzatore modello di Data Mining) scheda transizioni di stato | Microsoft Docs
+title: Scheda transizione del cluster Sequence Clustering (Visualizzatore modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069074"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Scheda Transizioni di stato in Sequence Clustering (Visualizzatore modello di data mining)
@@ -24,7 +24,7 @@ ms.locfileid: "66069074"
   
  Utilizzare questa vista di un modello Sequence Clustering per visualizzare i modelli. Un collegamento e un nodo del diagramma rappresentano rispettivamente la probabilità di una transizione e uno stato di sequenza.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Per ulteriori informazioni:** [algoritmo Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Sequence Clustering](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -36,10 +36,10 @@ ms.locfileid: "66069074"
  **Visualizzatore**  
  Consente di scegliere un visualizzatore da utilizzare per l'esplorazione del modello di data mining selezionato. È possibile utilizzare il visualizzatore personalizzato o **Microsoft Generic Content Tree Viewer**. Se disponibili, è anche possibile utilizzare i visualizzatori plug-in.  
   
- **Eseguire lo zoom avanti**  
+ **Zoom avanti**  
  Consente di eseguire lo zoom avanti del diagramma per vedere meglio gli stati.  
   
- **Eseguire lo zoom indietro**  
+ **Zoom indietro**  
  Consente di eseguire lo zoom indietro del diagramma per ottenere una vista complessiva degli stati nel cluster.  
   
  **Copia parte visibile del grafico**  
@@ -51,16 +51,16 @@ ms.locfileid: "66069074"
  **Cluster**  
  Consente di scegliere un cluster da visualizzare nel visualizzatore. Per impostazione predefinita è selezionata l'opzione **Popolazione (Tutto)** , ovvero nel grafico vengono inclusi gli stati e le transizioni dell'intero modello. Se si sceglie un cluster particolare, vengono visualizzati solo gli stati e le transizioni presenti in tale cluster.  
   
- **Suggerimento:** È possibile rinominare i cluster tramite il **diagramma dei Cluster** scheda. È sufficiente selezionare un cluster, fare clic con il pulsante destro del mouse su di esso e selezionare **Rinomina**. La ridenominazione dei cluster con un'etichetta più descrittiva rende più semplice il confronto tra cluster nella scheda **Transizioni di stato** .  
+ **Suggerimento:** È possibile rinominare i cluster tramite la scheda **diagramma dei cluster** . È sufficiente selezionare un cluster, fare clic con il pulsante destro del mouse e scegliere **Rinomina**. La ridenominazione dei cluster con un'etichetta più descrittiva rende più semplice il confronto tra cluster nella scheda **Transizioni di stato** .  
   
  **Mostra etichette sui bordi**  
  Selezionare questa opzione per visualizzare i numeri su ogni bordo del grafico tramite i quali viene indicata la probabilità della transizione.  
   
- **Links**  
+ **Collegamenti**  
  Utilizzare il dispositivo di scorrimento per controllare il numero di stati e transizioni visualizzati nel grafico. Abbassando il dispositivo di scorrimento vengono mostrati solo gli stati e le transizioni con la probabilità più elevata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   

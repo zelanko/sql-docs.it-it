@@ -1,5 +1,5 @@
 ---
-title: Proprietà dei membri (MDX) definito dall'utente | Microsoft Docs
+title: Proprietà membro definite dall'utente (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074257"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Proprietà dei membri definite dall'utente (MDX)
@@ -30,7 +30,7 @@ ms.locfileid: "66074257"
 -   Per aggiungere proprietà dei membri definite dall'utente a livello di programmazione, è possibile utilizzare AMO (Analysis Manager Objects) o una combinazione di XMLA (XML for Analysis) e ASSL (Analysis Services Scripting Language). Per altre informazioni, vedere [Relazioni tra attributi](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
 ## <a name="retrieving-user-defined-member-properties"></a>Recupero delle proprietà dei membri definite dall'utente  
- È possibile recuperare le proprietà membro definite dall'utente usando il `PROPERTIES` parola chiave o il [proprietà](/sql/mdx/properties-mdx) (funzione).  
+ È possibile recuperare le proprietà dei membri definite dall'utente usando `PROPERTIES` la parola chiave o la funzione [Properties](/sql/mdx/properties-mdx) .  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>Utilizzo della parola chiave PROPERTIES per il recupero delle proprietà dei membri definite dall'utente  
  La sintassi da utilizzare per il recupero delle proprietà dei membri definite dall'utente è simile a quella utilizzata per il recupero delle proprietà intrinseche dei membri dei livelli, come illustrato di seguito:  
@@ -67,7 +67,7 @@ FROM [Adventure Works]
  Per altre informazioni sulla compilazione di membri calcolati, vedere [Compilazione di membri calcolati in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo delle proprietà dei membri &#40;MDX&#41;](mdx-member-properties.md)   
- [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [Utilizzo delle proprietà del membro &#40;&#41;MDX](mdx-member-properties.md)   
+ [Proprietà &#40;&#41;MDX](/sql/mdx/properties-mdx)  
   
   

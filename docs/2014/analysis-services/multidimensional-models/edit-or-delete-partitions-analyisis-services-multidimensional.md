@@ -1,5 +1,5 @@
 ---
-title: Modificare o eliminare partizioni (Analyisis Services - multidimensionale) | Microsoft Docs
+title: Modificare o eliminare partizioni (Analyisis Services-Multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d7f51b24c487175d13153b9e5627e101175740b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075144"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Modificare o eliminare partizioni (Analyisis Services - Multidimensionale)
   Le partizioni dei cubi vengono modificate tramite la scheda **Partizioni** di Progettazione cubi in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. Nella scheda **Partizioni** sono elencate le partizioni di tutti i gruppi di misure di un cubo. Sono inoltre elencate le partizioni writeback per le quali è abilitata la funzionalità di writeback.  
   
- Per modificare le partizioni per qualsiasi gruppo di misure, espandere il gruppo di misure nella scheda **Partizioni** . Le partizioni per un gruppo di misure sono elencate con numeri ordinali in formato di tabella con le colonne elencate nella tabella seguente.  
+ Per modificare le partizioni per qualsiasi gruppo di misure, espandere il gruppo di misure nella scheda **partizioni** . le partizioni per un gruppo di misure sono elencate in base al numero ordinale in un formato di tabella con le colonne elencate nella tabella seguente.  
   
  Le impostazioni per un gruppo di misure collegato devono essere modificate nel cubo di origine.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "66075144"
 >  In alternativa, è possibile utilizzare script XMLA per automatizzare le attività per la compilazione, l'unione e l'eliminazione di partizioni. Uno script XMLA può essere creato ed eseguito in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]o in pacchetti SSIS personalizzati eseguibili come attività pianificate. Per altre informazioni, vedere [Automatizzare le attività amministrative di Analysis Services con SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## <a name="partition-source"></a>Origine partizione  
- Specifica la query denominata o la tabella di origine per la partizione. Per modificare la tabella di origine, fare clic sulla cella e quindi sul pulsante Sfoglia ( **...** ).  
+ Specifica la query denominata o la tabella di origine per la partizione. Per modificare la tabella di origine, fare clic sulla cella e quindi sul pulsante Sfoglia (**...**).  
   
- ![Colonna di origine nel riquadro partizione](../media/ssas-partitionsource.png "colonna di origine nel riquadro partizione")  
+ ![Colonna di origine nel riquadro Partizione](../media/ssas-partitionsource.png "Colonna di origine nel riquadro Partizione")  
   
- Se la partizione è basata su una query, fare clic sul pulsante Sfoglia ( **...** ) per modificare la query. In questo modo, verrà modificata la proprietà **Source** della partizione. Per altre informazioni, vedere [Modificare l'origine di una partizione in modo da usare una tabella dei fatti diversa](change-a-partition-source-to-use-a-different-fact-table.md).  
+ Se la partizione è basata su una query, fare clic sul pulsante Sfoglia (**...**) per modificare la query. In questo modo, verrà modificata la proprietà **Source** della partizione. Per altre informazioni, vedere [Modificare l'origine di una partizione in modo da usare una tabella dei fatti diversa](change-a-partition-source-to-use-a-different-fact-table.md).  
   
  È possibile specificare una tabella nella vista origine dati con la stessa struttura della tabella di origine originale (nell'origine dati esterna da cui vengono recuperati i dati). L'origine può trovarsi in qualsiasi origine dati o vista origine dati del database del cubo.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66075144"
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire una partizione locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Progettazione di aggregazioni &#40;Analysis Services - Multidimensionale&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Unire partizioni in Analysis Services &#40;SSAS - Multidimensionale&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Progettazione di aggregazioni &#40;Analysis Services-&#41;multidimensionali](designing-aggregations-analysis-services-multidimensional.md)   
+ [Unire partizioni in Analysis Services &#40;SSAS-&#41;multidimensionali](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

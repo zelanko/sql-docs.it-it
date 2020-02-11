@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f7c2e734fdb332199595a0236d7d86666f4429fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191337"
 ---
 # <a name="clientnetlibinfo-class"></a>Classe ClientNetLibInfo
   La [classe ClientNetLibInfo](clientnetlibinfo-class.md) rappresenta le informazioni sulla libreria di rete del client.  
   
- Il file della libreria di rete del client consente all'istanza del client di comunicare in una rete con un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando un protocollo di rete specifico.  
+ Il file della libreria di rete del client consente all'istanza del client di comunicare in una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rete con un'istanza di utilizzando un protocollo di rete specifico.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurazione di protocolli client](https://technet.microsoft.com/library/ms181035.aspx)  

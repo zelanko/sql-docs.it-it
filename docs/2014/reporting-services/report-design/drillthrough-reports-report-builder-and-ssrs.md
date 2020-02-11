@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63119bf6d8ba4e9d907b9c6cdfb6bfe0b7765941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105939"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Report drill-through (Generatore report e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105939"
 > [!NOTE]  
 >  Quando si utilizza Generatore report, per visualizzare il report drill-through che viene aperto quando si fa clic sul collegamento drill-through nel report principale, è necessario essere connessi a un server di report.  
   
- Per una rapida introduzione ai report drill-through, vedere [Esercitazione: Creazione di report drill-through e report principali &#40;Generatore report&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Report drill-through è disponibile anche in due soluzioni di business intelligence, [BI Reporting: Scenari di report e sottoscrizioni](https://technet.microsoft.com/bi/ff769487.aspx) e [nei dashboard aziendali: Soluzione di vendita](https://technet.microsoft.com/bi/ff643005.aspx)  
+ Per iniziare rapidamente a usare report drill-through, vedere [Esercitazione: Creazione di report drill-through e report principali &#40;Generatore report&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Il report drill-through è disponibile anche in due soluzioni di Business Intelligence, una relativa a [scenari di report e sottoscrizioni in Business Intelligence](https://technet.microsoft.com/bi/ff769487.aspx) e una relativa a [soluzioni pertinenti le vendite nei dashboard aziendali](https://technet.microsoft.com/bi/ff643005.aspx).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -1,5 +1,5 @@
 ---
-title: Correlare una traccia con i dati di Log delle prestazioni di Windows (SQL Server Profiler) | Microsoft Docs
+title: Correlare una traccia con i dati del log delle prestazioni di Windows (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065045"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Correlare una traccia e i dati dei registri di prestazioni di Windows (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] è in grado di correlare i contatori di monitoraggio di sistema di Microsoft Windows a eventi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Con monitoraggio di sistema di Windows viene registrata l'attività del sistema per i contatori specificati nei registri di prestazioni.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]consente di correlare i contatori di monitoraggio di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di Microsoft Windows con gli eventi o. Con monitoraggio di sistema di Windows viene registrata l'attività del sistema per i contatori specificati nei registri di prestazioni.  
   
 > [!NOTE]  
 >  Per informazioni sulla condivisione di log tra versioni di Windows diverse, vedere la procedura descritta alla fine di questo argomento.  
@@ -29,7 +29,7 @@ ms.locfileid: "66065045"
   
 1.  In [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]aprire un file o una tabella di traccia salvata. Non è possibile correlare una traccia in esecuzione che sta ancora raccogliendo dati degli eventi. Per assicurare che la correlazione ai dati di monitoraggio di sistema sia corretta, è necessario che la traccia includa le due colonne di dati **StartTime** ed **EndTime** .  
   
-2.  Nel menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **di** fare clic su **Importa dati prestazioni**.  
+2.  Nel menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, click **Import Performance Data**.  
   
 3.  Nella finestra di dialogo **Apri** selezionare un file contenente un registro di prestazioni. I dati del registro di prestazioni devono essere acquisiti quando è in corso l'acquisizione dei dati della traccia.  
   

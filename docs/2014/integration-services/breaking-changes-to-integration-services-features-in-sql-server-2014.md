@@ -1,5 +1,5 @@
 ---
-title: Modifiche di rilievo per Integration Services Features in SQL Server 2014 | Microsoft Docs
+title: Modifiche di rilievo alle funzionalità di Integration Services in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b59a9846f856871baa96822f6fffea3b69be7a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061250"
 ---
 # <a name="breaking-changes-to-integration-services-features-in-sql-server-2014"></a>Modifiche che possono causare problemi di funzionamento apportate alle funzionalità di Integration Services in SQL Server 2014

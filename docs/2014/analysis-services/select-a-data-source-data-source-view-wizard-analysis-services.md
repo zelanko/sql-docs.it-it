@@ -1,5 +1,5 @@
 ---
-title: Selezionare un'origine dati (Creazione guidata vista origine di dati) (Analysis Services) | Microsoft Docs
+title: Selezionare un'origine dati (creazione guidata vista origine dati) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069854"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>Selezionare un'origine dati (Configurazione guidata vista origine dati) (Analysis Services)
@@ -31,15 +31,15 @@ ms.locfileid: "66069854"
 > [!NOTE]  
 >  Benché un progetto possa includere origini dei dati dell'elaborazione analitica in linea (OLAP), è possibile aggiungere viste origine dati solo per origini dei dati relazionali.  
   
- **Proprietà dell'origine dati**  
+ **Proprietà origine dati**  
  Consente di visualizzare informazioni sul provider tratte dalla stringa di connessione per l'origine dei dati attualmente selezionata.  
   
  **Nuova origine dati**  
  Apre la Creazione guidata origine dati, che consente di creare una nuova origine dei dati che verrà aggiunta al progetto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 del guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
+ [Guida sensibile al contesto della creazione guidata vista origine dati &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [La Guida F1 di creazione guidata dell'origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
+ [Guida sensibile al contesto della creazione guidata origine dati &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  
   
   

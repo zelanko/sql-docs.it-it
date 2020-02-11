@@ -1,5 +1,5 @@
 ---
-title: Registrare query con esecuzione prolungata (ODBC) | Documenti di Microsoft
+title: Registrare query con esecuzione prolungata (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,50 +13,50 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200356"
 ---
 # <a name="log-long-running-queries-odbc"></a>Registrare query a esecuzione prolungata (ODBC)
   In questo esempio vengono illustrate le opzioni specifiche del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la registrazione di query con esecuzione prolungata. Durante l'esecuzione dell'esempio, viene creato Odbcqry.log, contenente un elenco di query la cui esecuzione supera un intervallo impostato dall'applicazione. Questo esempio non è supportato in IA64. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario salvare in modo permanente le credenziali, è necessario crittografarle con l' [API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Per registrare query con esecuzione prolungata tramite Amministratore ODBC  
   
-1.  Nelle **Pannello di controllo**, fare doppio clic su **strumenti di amministrazione** e quindi fare doppio clic su **origine dati (ODBC)** . In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
+1.  Nel **Pannello di controllo**fare doppio clic su **strumenti di amministrazione** , quindi fare doppio clic su **origini dati (ODBC)**. In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
   
-2.  Scegliere il **DSN utente**, **DSN di sistema**, o **DSN su File** scheda.  
+2.  Fare clic sulla scheda DSN **utente**, **DSN di sistema**o **DSN su file** .  
   
 3.  Fare clic sull'origine dati per cui si desidera registrare le query con esecuzione prolungata.  
   
-4.  Fare clic su **configurare**.  
+4.  Fare clic su **Configura**.  
   
-5.  In Microsoft SQL Server di configurazione DSN guidata passare alla pagina contenente **Salva query con esecuzione prolungata nel file di log**.  
+5.  Nella procedura guidata Microsoft SQL Server configurazione DSN, passare alla pagina con **Salva query con esecuzione prolungata nel file di log**.  
   
-6.  Selezionare **Salva query con esecuzione prolungata nel file di log**. Nella casella immettere il nome del file in cui si desidera registrare le query con esecuzione prolungata. Facoltativamente, fare clic su **esplorare** sfogliare il file system per il log di query.  
+6.  Selezionare **Salva query con esecuzione prolungata nel file di log**. Nella casella immettere il nome del file in cui si desidera registrare le query con esecuzione prolungata. Facoltativamente, fare clic su **Sfoglia** per visualizzare i file System del log di query.  
   
-7.  Impostare in un intervallo di timeout di query, in millisecondi, il **durata query lunghe (millisecondi)** casella.  
+7.  Impostare un intervallo di timeout della query, in millisecondi, nella casella **tempo di query lungo (millisecondi)** .  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Per registrare dati di query con esecuzione prolungata a livello di programmazione  
   
-1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG e il nome di file e percorso completo del file di log di query con esecuzione prolungata. Ad esempio:  
+1.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG e il percorso completo e il nome file del file di log di query con esecuzione prolungata. Ad esempio:  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_INTERVAL impostato sull'intervallo di timeout, espresso in millisecondi.  
+2.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_INTERVAL e impostare sull'intervallo di timeout, in millisecondi.  
   
 3.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY e SQL_PERF_START per avviare la registrazione di query con esecuzione prolungata.  
   
 4.  Chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY e SQL_PERF_STOP per arrestare la registrazione di query con esecuzione prolungata.  
   
 ## <a name="example"></a>Esempio  
- È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384). Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
+ È necessaria un'origine dati ODBC denominata AdventureWorks, il cui database predefinito è il database di esempio AdventureWorks. È possibile scaricare il database di esempio AdventureWorks dal [Microsoft SQL Server esempi e progetti della Community](https://go.microsoft.com/fwlink/?LinkID=85384) Home page. Questa origine dati deve essere basata sul driver ODBC fornito dal sistema operativo (il nome del driver è "SQL Server"). Se questo esempio viene compilato ed eseguito come applicazione a 32 bit in un sistema operativo a 64 bit, è necessario creare l'origine dati ODBC con Amministratore ODBC in %windir%\SysWOW64\odbcad32.exe.  
   
  In questo esempio viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. Per connettersi a un'istanza denominata, modificare la definizione dell'origine dati ODBC per specificare l'istanza in base al formato: server\istanzadenominata. Per impostazione predefinita, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] viene installato in un'istanza denominata.  
   
@@ -216,6 +216,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure relative alle prestazioni del Driver ODBC di profilatura &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+ [Procedure per la profilatura delle prestazioni del driver ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
   

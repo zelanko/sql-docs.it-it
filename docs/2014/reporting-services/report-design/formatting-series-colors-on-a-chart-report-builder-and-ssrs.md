@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 445e6d2ccaba0d03de9f25d770ac22f35b628778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105772"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Formattazione dei colori delle serie in un grafico (Generatore report e SSRS)
-  In Reporting Services sono disponibili diverse tavolozze incorporate per i grafici o è possibile definirne di personalizzate. Per impostazione predefinita, i grafici usano l'oggetto incorporato **BrightPastel** tavolozza dei colori per riempire ogni serie. Tali colori vengono visualizzati anche nella legenda. Quando al grafico vengono aggiunte più serie, a queste vengono assegnati i colori in base all'ordine dei colori definito nella tavolozza.  
+  In Reporting Services sono disponibili diverse tavolozze incorporate per i grafici o è possibile definirne di personalizzate. Per impostazione predefinita, i grafici usano la tavolozza dei colori **BrightPastel** incorporata per riempire ciascuna serie. Tali colori vengono visualizzati anche nella legenda. Quando al grafico vengono aggiunte più serie, a queste vengono assegnati i colori in base all'ordine dei colori definito nella tavolozza.  
   
  Se il numero di serie è maggiore di quello dei colori disponibili nella tavolozza, i colori verranno riutilizzati. In questo modo è possibile che due serie presentino lo stesso colore. Ciò si verifica di frequente nei casi in cui si utilizza un grafico con forme, in cui a ogni punto dati viene assegnato un colore della tavolozza. Per evitare confusione, definire una tavolozza personalizzata con almeno un numero di colori pari a quello delle serie presenti nel grafico.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66105772"
   
  Questo approccio è adatto a situazioni in cui si desidera impostare in modo condizionale il colore della serie in base a un'espressione.  Per altre informazioni, vedere [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Specificare i colori coerenti in più grafici con forme &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  

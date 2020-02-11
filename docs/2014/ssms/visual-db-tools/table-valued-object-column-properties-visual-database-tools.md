@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204538"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Proprietà colonna dell'oggetto valutato a livello di tabella (Visual Database Tools)
@@ -31,13 +31,13 @@ ms.locfileid: "63204538"
  **Categoria Identità**  
  Espandere questa categoria per visualizzare la proprietà **Nome** .  
   
- **Name**  
+ **Nome**  
  Indica il nome della colonna selezionata.  
   
  **Categoria Progettazione query**  
  Espandere questa categoria per visualizzare le proprietà per **Consenti valori Null**, **Regole di confronto**, **Tipo di dati**, **Lunghezza**, **Precisione**, **Scala**e **Dimensione**.  
   
- **Consenti valori Null**  
+ **Consenti valori NULL**  
  Indica se il tipo di dati della colonna accetta valori Null.  
   
  **Regole di confronto**  
@@ -55,7 +55,7 @@ ms.locfileid: "63204538"
  **Precisione**  
  Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
- **Scala**  
+ **Ridimensionare**  
  Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di dati numerici. Questo valore deve essere inferiore o uguale al valore di precisione. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
  **Dimensione**  

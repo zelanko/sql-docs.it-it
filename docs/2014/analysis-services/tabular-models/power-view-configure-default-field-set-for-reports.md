@@ -1,5 +1,5 @@
 ---
-title: Configurare il Set di campi predefiniti per i report di Power View (SSAS tabulare) | Microsoft Docs
+title: Configurare il set di campi predefiniti per i report Power View (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37571e141395afe255329edc10edeaeaed121710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066885"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>Configurare il set di campi predefiniti per i report Power View (SSAS tabulare)
@@ -42,7 +42,7 @@ ms.locfileid: "66066885"
   
 6.  Ripetere questi passaggi per le altre tabelle della cartella di lavoro.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Dopo aver creato un set di campi predefinito, è possibile influire ulteriormente sulla progettazione dei report specificando etichette e immagini predefinite, un comportamento del gruppo predefinito o indicando se le righe contenenti lo stesso valore vengono raggruppate in una riga o elencate individualmente. Per altre informazioni, vedere [Configurare le proprietà Comportamento tabella per i report Power View &#40;SSAS tabulare&#41;](power-view-configure-table-behavior-properties-for-reports.md).  
   
   

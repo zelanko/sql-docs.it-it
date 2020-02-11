@@ -14,14 +14,14 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061287"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
-L' **attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di caricare i dati locali in una tabella in Azure SQL Data Warehouse (DW). Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8. Il processo di caricamento segue l'efficiente approccio della tecnologia PolyBase. In particolare, i dati vengono prima caricati in Archiviazione BLOB di Azure e poi in Azure SQL DW. Per usare questa attività, è quindi necessario un account di Archiviazione BLOB di Azure.
+L' **attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di caricare i dati locali in una tabella in Azure SQL Data Warehouse (DW). Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8. Il processo di caricamento segue l'approccio di polibase efficiente. In particolare, i dati vengono prima caricati in Archiviazione BLOB di Azure e poi in Azure SQL DW. Per usare questa attività, è quindi necessario un account di Archiviazione BLOB di Azure.
 
 Per aggiungere un' **attività di caricamento di Azure SQL DW**, trascinare l'attività da Casella degli strumenti SSIS nei canvas di progettazione, fare doppio clic o fare clic con il pulsante destro del mouse e selezionare **Modifica** per visualizzare la finestra di dialogo dell'editor dell'attività.
 
@@ -31,9 +31,9 @@ Campo|Descrizione
 -----|-----------
 LocalDirectory|Specifica la directory locale che contiene i file di dati da caricare.
 Recursively (Ricorsivo)|Specifica se eseguire una ricerca ricorsiva delle sottodirectory.
-FileName|Specifica un filtro per nome per selezionare i file con un determinato modello di nome. Ad esempio, Foglio\*.xsl\* includerà file come Foglio001.xls e FoglioABC.xlsx.
+FileName|Specifica un filtro per nome per selezionare i file con un determinato modello di nome. ad esempio Foglio*.xsl\* includerà file come Foglio001.xls e FoglioABC.xlsx.
 RowDelimiter|Specifica il carattere che contrassegna la fine di ogni riga.
-ColumnDelimiter|Specifica uno o più caratteri che contrassegnano la fine di ogni colonna. Ad esempio, &#124; (barra verticale), \t (TAB), ' (virgoletta singola), " (virgoletta doppia) e 0x5c (barra rovesciata).
+ColumnDelimiter|Specifica uno o più caratteri che contrassegnano la fine di ogni colonna. ad esempio &#124; (barra verticale), \t (TAB), ' (virgoletta singola), " (virgoletta doppia) e 0x5c (barra rovesciata).
 IsFirstRowHeader|Specifica se la prima riga in ogni file di dati contiene nomi di colonna anziché dati effettivi.
 AzureStorageConnection|Specifica una gestione connessione di Archiviazione di Azure.
 BlobContainer|Specifica il nome di un contenitore BLOB in cui i dati locali verranno caricati e inoltrati ad Azure DW tramite PolyBase. Se il contenitore non esiste, ne verrà creato uno nuovo.

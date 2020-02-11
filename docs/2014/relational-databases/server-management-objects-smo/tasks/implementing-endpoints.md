@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796843"
 ---
 # <a name="implementing-endpoints"></a>Implementazione di endpoint
@@ -30,7 +30,7 @@ ms.locfileid: "72796843"
   
 -   SOAP (il supporto per gli endpoint SOAP è presente in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] e nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )  
   
--   Service Broker  
+-   Broker di servizio  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
   

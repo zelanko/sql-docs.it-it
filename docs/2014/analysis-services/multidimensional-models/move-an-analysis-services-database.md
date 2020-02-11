@@ -1,5 +1,5 @@
 ---
-title: Spostare una di Analysis Services Database | Microsoft Docs
+title: Spostare un database di Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073596"
 ---
 # <a name="move-an-analysis-services-database"></a>Spostare un database di Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "66073596"
   
 1.  Individuare il database da spostare nel riquadro sinistro o destro di SSMS.  
   
-2.  Fare clic sul database e scegliere **Scollega...**  
+2.  Fare clic con il pulsante destro del mouse sul database e selezionare **Disconnetti...**  
   
 3.  Assegnare una password al database da scollegare, quindi fare clic su **OK** per eseguire il comando.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66073596"
   
 5.  Individuare la cartella **Database** nel riquadro sinistro o destro di SSMS.  
   
-6.  Fare clic sui **database** cartella e selezionare **Connetti...**  
+6.  Fare clic con il pulsante destro del mouse sulla cartella **database** e scegliere **Connetti...**  
   
-7.  Nella casella di testo **cartella** digitare il nuovo percorso della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia ( **...** ) per individuare la cartella di database.  
+7.  Nella casella di testo **cartella** digitare il nuovo percorso della cartella del database. In alternativa, è possibile utilizzare il pulsante Sfoglia (**...**) per individuare la cartella del database.  
   
-8.  Selezionare il `ReadWrite` modalità per il database.  
+8.  Consente di `ReadWrite` selezionare la modalità del database.  
   
 9. Digitare la password usata nel passaggio 3, quindi fare clic su **OK** per eseguire il comando di collegamento.  
   
@@ -142,11 +142,11 @@ ms.locfileid: "66073596"
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Collegamento e scollegamento di database di Analysis Services](attach-and-detach-analysis-services-databases.md)   
- [Percorso di archiviazione dei database](database-storage-location.md)   
+ [Collegamento e scollegamento di Analysis Services database](attach-and-detach-analysis-services-databases.md)   
+ [Percorso di archiviazione del database](database-storage-location.md)   
  [Proprietà ReadWriteMode del database](database-readwritemodes.md)   
- [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
- [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Connetti elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Scollega elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
  [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   

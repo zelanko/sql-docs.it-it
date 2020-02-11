@@ -96,16 +96,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068865"
 ---
 # <a name="olap-properties"></a>Proprietà OLAP
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server OLAP elencate nelle tabelle seguenti. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Si applica a:** Solo in modalità server multidimensionale  
+ **Si applica a:** Solo modalità server multidimensionale  
   
 ## <a name="memory"></a>Memoria  
  `DefaultPageSizeForData`  
@@ -196,7 +197,7 @@ ms.locfileid: "66068865"
  `PartitionLatencyAccuracy`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="process"></a>Process  
+## <a name="process"></a>Processo  
  `AggregationMemoryLimitMax`  
  Proprietà con numero a virgola mobile e precisione doppia a 64 bit con segno che definisce la quantità massima di memoria dedicata all'elaborazione di aggregazioni, espressa come percentuale della memoria fisica.  
   
@@ -431,7 +432,7 @@ ms.locfileid: "66068865"
  `DataCache\ MemoryModel\ Tax`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="jobs"></a>processi  
+## <a name="jobs"></a>Processi  
  `ProcessAggregation\ MemoryModel\ Income`  
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -478,7 +479,7 @@ ms.locfileid: "66068865"
  Proprietà avanzata che deve essere modificata solo sotto la supervisione del servizio di supporto tecnico [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le proprietà del Server in Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurare le proprietà del server in Analysis Services](server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

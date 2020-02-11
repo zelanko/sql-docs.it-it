@@ -1,5 +1,5 @@
 ---
-title: Condividere feed di dati usando una libreria di Feed di dati (PowerPivot per SharePoint) | Microsoft Docs
+title: Condividere feed di dati usando una libreria di feed di dati (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071147"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Condividere feed di dati utilizzando una libreria di feed di dati (PowerPivot per SharePoint)
-  Un feed di dati è un flusso di dati XML generato da un servizio o da un'applicazione che espone i dati nel formato wire Atom. Viene utilizzato sempre più frequentemente per trasferire dati tra applicazioni e visualizzatori lato client. In una distribuzione PowerPivot per SharePoint, i feed di dati vengono usati per popolare un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] origine dati con dati provenienti da un'applicazione compatibile con Atom o un servizio.  
+  Un feed di dati è un flusso di dati XML generato da un servizio o da un'applicazione che espone i dati nel formato wire Atom. Viene utilizzato sempre più frequentemente per trasferire dati tra applicazioni e visualizzatori lato client. In una distribuzione PowerPivot per SharePoint, i feed di dati vengono utilizzati per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] popolare un'origine dati con dati provenienti da un'applicazione o un servizio in grado di riconoscere Atom.  
   
  In presenza di una combinazione di applicazioni specifiche di Atom, potrebbe non essere mai necessario sapere come i feed vengono generati e utilizzati perché il trasferimento dei dati avviene in modo continuo tra le applicazioni. Tuttavia, le organizzazioni che utilizzano soluzioni personalizzate per pubblicare feed Atom richiedono spesso la possibilità di rendere disponibili i feed agli Information Worker. A tal fine è possibile, ad esempio, creare e condividere file di documenti di servizio dati (con estensione atomsvc) tramite cui vengono fornite le connessioni alle origini online che consentono di produrre i feed. Una libreria specifica, chiamata libreria di feed di dati, supporta la creazione e la condivisione dei documenti di servizio dati in un'applicazione Web di SharePoint.  
   
@@ -34,21 +34,21 @@ ms.locfileid: "66071147"
   
  [Modificare un documento di servizio dati](#modifydsdoc)  
   
- [Passaggio successivo: Usare un documento di servizio dati](#usedsdoc)  
+ [Passaggio successivo: usare un documento di servizio dati](#usedsdoc)  
   
 > [!NOTE]  
 >  Anche se i feed di dati vengono usati per aggiungere dati Web a un'origine dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] creata in [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], un documento di servizio dati può essere elaborato da qualsiasi applicazione client in grado di leggere un feed Atom.  
   
 ##  <a name="prereq"></a> Prerequisiti  
- È necessario disporre di una distribuzione di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot per SharePoint che aggiunga [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] query di elaborazione per una farm di SharePoint. Il supporto Feed di dati viene distribuito tramite il pacchetto della soluzione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+ È necessario disporre di una distribuzione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] di PowerPivot per SharePoint che [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aggiunga l'elaborazione di query a una farm di SharePoint. Il supporto Feed di dati viene distribuito tramite il pacchetto della soluzione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- È necessario disporre di una raccolta di SharePoint che supporti il tipo di contenuto del documento di servizio dati. A tal scopo si consiglia una libreria di feed di dati predefinita, tuttavia è possibile aggiungere manualmente il tipo di contenuto a qualsiasi libreria. Per altre informazioni, vedere [creare o personalizzare una libreria di Feed di dati &#40;PowerPivot per SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
+ È necessario disporre di una raccolta di SharePoint che supporti il tipo di contenuto del documento di servizio dati. A tal scopo si consiglia una libreria di feed di dati predefinita, tuttavia è possibile aggiungere manualmente il tipo di contenuto a qualsiasi libreria. Per ulteriori informazioni, vedere [creare o personalizzare una libreria di feed di dati &#40;PowerPivot per SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
   
  È necessario disporre di un servizio dati o di un'origine dati online che consenta di fornire dati tabulari XML in formato Atom 1.0.  
   
  È necessario disporre di autorizzazioni di collaborazione in un sito di SharePoint per creare o gestire un documento di servizio dati in una raccolta di SharePoint.  
   
-##  <a name="createdsdoc"></a> Creare un documento di servizio dati  
+##  <a name="createdsdoc"></a>Creare un documento di servizio dati  
  Un documento di servizio dati è una richiesta permanente di trasmissione dei dati in base alle richieste di un'origine dati online o di un'applicazione tramite cui vengono forniti dati in un formato di feed. Quando si crea un documento di servizio dati, si specifica un indicatore di misura a uno o più servizi dati indirizzabili tramite URL che forniscono dati tabulari XML in formato diffuso Atom.  
   
  In un documento singolo possono essere specificati più feed di dati. Ciò si rivela utile quando si desidera recuperare un set di payload dei dati dallo stesso servizio, o anche da servizi diversi, con un'unica operazione di importazione.  
@@ -83,7 +83,7 @@ ms.locfileid: "66071147"
   
  Per utilizzare il documento di servizio dati, è possibile aprire la cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] e scegliere l'opzione **Da feed di dati** nell'importazione guidata dei dati. Quando richiesto, l'utente specificherà l'URL SharePoint del documento di servizio dati per avviare un'operazione di importazione dei dati. Per altre informazioni, vedere [usare feed di dati &#40;PowerPivot per SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
-##  <a name="securedsdoc"></a> Proteggere un documento di servizio dati  
+##  <a name="securedsdoc"></a>Proteggere un documento di servizio dati  
  Un documento di servizio dati eredita le autorizzazioni della libreria che lo contiene. Le autorizzazioni impostate sull'elemento determineranno l'eventuale possibilità di aprire, modificare o eliminare il documento di servizio dati.  
   
  Per utilizzare un documento di servizio dati per l'importazione del feed di dati nell'applicazione client di PowerPivot, sono necessarie solo autorizzazioni di visualizzazione nel documento. Le autorizzazioni di visualizzazione sono sufficienti per risolvere l'URL nell'importazione guidata.  
@@ -99,18 +99,19 @@ ms.locfileid: "66071147"
 |In una farm di SharePoint, l'aggiornamento dei dati viene eseguito come attività programmata e l'input dell'utente non è richiesto.|Non applicabile. Nel servizio PowerPivot vengono utilizzate informazioni di connessione HTTP incorporate per connettersi direttamente ai servizi dati e alle applicazioni tramite cui viene fornito il feed. Nel servizio PowerPivot non viene utilizzato il documento di servizio dati.|  
 |Eliminare un documento di servizio dati in una libreria|Autorizzazioni di collaborazione nella libreria.|  
   
-##  <a name="modifydsdoc"></a> Modificare un documento di servizio dati  
+##  <a name="modifydsdoc"></a>Modificare un documento di servizio dati  
  È possibile aggiungere, modificare o rimuovere singole voci URL-tabella in un documento di servizio dati. Dopo il salvataggio delle modifiche, gli utenti che selezionano il documento di servizio in una nuova operazione di importazione otterranno i feed di dati specificati.  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nelle quali era utilizzata una versione precedente del documento. Ciò è dovuto al fatto che un documento di servizio dati viene letto solo una volta durante l'operazione di importazione iniziale. Durante l'importazione, l'URL del servizio e i nomi di tabella vengono copiati e archiviati internamente nella cartella di lavoro. Questi valori interni vengono quindi utilizzati in operazioni di aggiornamento successive per ottenere dati aggiornati.  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nelle quali era utilizzata una versione precedente del documento. Ciò è dovuto al fatto che un documento di servizio dati viene letto solo una volta durante l'operazione di importazione iniziale. Durante l'importazione, l'URL del servizio e i nomi di tabella vengono copiati e archiviati internamente nella cartella di lavoro. Questi valori interni vengono quindi utilizzati in operazioni di aggiornamento successive per ottenere dati aggiornati.  
   
  Poiché non è disponibile un collegamento persistente tra un documento di servizio dati in un sito di SharePoint e la cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in cui è contenuto il feed importato, la modifica di qualsiasi parte di un documento di servizio dati non ha effetto nelle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] esistenti.  
   
 > [!IMPORTANT]  
->  Anche se il documento di servizio dati viene letto una sola volta, l'accesso ai servizi dati tramite cui vengono forniti i dati effettivi può essere eseguito a intervalli regolari per ottenere feed più recenti. Per altre informazioni su come aggiornare i dati, vedere [aggiornamento dati PowerPivot](power-pivot-data-refresh.md).  
+>  Anche se il documento di servizio dati viene letto una sola volta, l'accesso ai servizi dati tramite cui vengono forniti i dati effettivi può essere eseguito a intervalli regolari per ottenere feed più recenti. Per ulteriori informazioni sull'aggiornamento dei dati, vedere [aggiornamento dati PowerPivot](power-pivot-data-refresh.md).  
   
-##  <a name="usedsdoc"></a> Passaggio successivo: Usare un documento di servizio dati  
- Per usare un documento di servizio dati che è stato creato in una raccolta di SharePoint, Usa la **da feed di dati** opzione in un'origine dati PowerPivot di importazione. Per istruzioni, vedere [usare feed di dati &#40;PowerPivot per SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+##  <a name="usedsdoc"></a>Passaggio successivo: usare un documento di servizio dati  
+ Per utilizzare un documento di servizio dati creato in una raccolta di SharePoint, è possibile utilizzare l'opzione **di importazione da feed di dati** in un'origine dati PowerPivot. Per istruzioni, vedere [usare feed di dati &#40;PowerPivot per SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Feed di dati PowerPivot](power-pivot-data-feeds.md)  

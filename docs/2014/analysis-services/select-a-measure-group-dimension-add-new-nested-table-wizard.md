@@ -1,5 +1,5 @@
 ---
-title: Selezionare una dimensione del gruppo di misure (Aggiungi nuova tabella nidificata) | Microsoft Docs
+title: Selezionare una dimensione del gruppo di misure (procedura guidata Aggiungi nuova tabella nidificata) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e249e2e8a9bccdeddb32bf0f8302d478d08adf1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069785"
 ---
 # <a name="select-a-measure-group-dimension-add-new-nested-table-wizard"></a>Selezione dimensione gruppo di misure (procedura guidata Aggiungi nuova tabella nidificata)
   Usare la pagina **Selezione dimensione gruppo di misure** per selezionare una dimensione nel gruppo di misure da usare come tabella annidata.  
   
- **Per altre informazioni:** [Procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per ulteriori informazioni:** [creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Gruppi di misure**  
  Consente di selezionare una tabella nidificata da una dimensione del gruppo di misure.  
   
 ## <a name="see-also"></a>Vedere anche  
- [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Specificare l'utilizzo colonne modello di Data Mining &#40;Creazione guidata di Data Mining&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
- [Selezione chiave tabella nidificata &#40;Aggiunta guidata nuova tabella nidificata&#41;](select-nested-table-key-add-new-nested-table-wizard.md)  
+ [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Impostazione utilizzo colonne modello di data mining &#40;creazione guidata modello di data mining&#41;](specify-mining-model-column-usage-data-mining-wizard.md)   
+ [Selezionare la chiave della tabella nidificata &#40;procedura guidata Aggiungi nuova tabella nidificata&#41;](select-nested-table-key-add-new-nested-table-wizard.md)  
   
   

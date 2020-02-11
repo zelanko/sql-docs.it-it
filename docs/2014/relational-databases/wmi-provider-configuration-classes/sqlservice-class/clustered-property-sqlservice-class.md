@@ -1,5 +1,5 @@
 ---
-title: Proprietà (classe SqlService) in cluster | Microsoft Docs
+title: Proprietà Clustered (classe SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 065440d834033d1c1c999ea9d38d321be9a6278c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223327"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Proprietà Clustered (classe SqlService)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SqlService](sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore booleano che specifica se il servizio fa parte di un'istanza cluster: `true` se il servizio fa parte di un'istanza cluster; `false` se il servizio non fa parte di un'istanza cluster.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

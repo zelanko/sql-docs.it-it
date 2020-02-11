@@ -1,5 +1,5 @@
 ---
-title: Aggiungere una destinazione utilizzando Assistente destinazione | Microsoft Docs
+title: Aggiungere una destinazione tramite Assistente destinazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66e48903776824b0e540b854a5704ceef3a9782e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062065"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>Aggiunta di una destinazione tramite Assistente destinazione
@@ -24,7 +24,7 @@ ms.locfileid: "66062065"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]aprire il pacchetto di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a cui si desidera aggiungere un componente di destinazione.  
   
-2.  Trascinare il componente **Assistente destinazione** dalla casella degli strumenti di SSIS alla scheda **Flusso di dati** . Verrà visualizzata la finestra di dialogo **Aggiungi nuova destinazione** . Nella sezione successiva vengono forniti i dettagli relativi alle opzioni disponibili nella finestra di dialogo.  
+2.  Trascinare il componente **Assistente destinazione** dalla casella degli strumenti SSIS alla scheda **flusso di dati** . Verrà visualizzata la finestra di dialogo **Aggiungi nuova destinazione** . Nella sezione successiva vengono forniti i dettagli relativi alle opzioni disponibili nella finestra di dialogo.  
   
 3.  Selezionare il tipo della destinazione nell'elenco **Tipi**.  
   
@@ -32,6 +32,6 @@ ms.locfileid: "66062065"
   
 5.  Se si seleziona una gestione connessione esistente, fare clic su **OK** per chiudere la finestra di dialogo **Aggiungi nuova destinazione**. La destinazione e le gestioni connessioni verranno aggiunte al flusso di dati.  
   
-6.  Se si fa clic su **\<Nuova>** per creare una nuova gestione connessione, viene visualizzata la finestra di dialogo **Gestione connessione** in cui è possibile specificare i parametri per la connessione. Dopo avere completato la creazione della nuova gestione connessione, la destinazione e la gestione connessione saranno visibili in Progettazione SSIS.  
+6.  Se si fa clic su ** \<nuovo>** per creare una nuova gestione connessione, verrà visualizzata la finestra di dialogo **gestione connessione** , che consente di specificare i parametri per la connessione. Dopo avere completato la creazione della nuova gestione connessione, la destinazione e la gestione connessione saranno visibili in Progettazione SSIS.  
   
   

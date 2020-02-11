@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158168"
 ---
 # <a name="implementing-an-outer-join"></a>Implementazione di un outer join
@@ -22,7 +22,7 @@ ms.locfileid: "63158168"
   
  Negli esempi vengono utilizzate una variabile di tabella per simulare un cursore sul lato sinistro del join e una variabile di tabella per costruire un unico set di risultati, vale a dire l'unico appropriato per l'elaborazione di un numero limitato di righe in quanto comporta la creazione di una copia aggiuntiva delle righe di dati.  
   
- Una variabile (@outer) di tipo t1_type viene utilizzata per scorrere le righe da t1, mediante un po' di tempo ciclo per simulare un cursore. La variabile @result di tipo t1t2_join_type viene quindi usato per costruire il set di risultati.  
+ Una variabile (@outer) di tipo t1_type viene utilizzata per scorrere le righe da T1, utilizzando un ciclo while per simulare un cursore. La variabile @result di tipo t1t2_join_type viene quindi utilizzata per costruire il set di risultati.  
   
  È necessario eseguire il test delle prestazioni di questa soluzione alternativa, per assicurarsi che venga eseguita come previsto nell'applicazione.  
   

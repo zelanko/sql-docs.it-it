@@ -1,5 +1,5 @@
 ---
-title: Selezionare il tipo di conversione (configurazione guidata Business Intelligence) | Microsoft Docs
+title: Selezione tipo di conversione (configurazione guidata funzionalità di Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069623"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Selezione tipo di conversione (Configurazione guidata funzionalità di Business Intelligence)
@@ -26,7 +26,7 @@ ms.locfileid: "66069623"
 >  Questa pagina non viene visualizzata se la Configurazione guidata funzionalità di Business Intelligence viene avviata da Progettazione dimensioni oppure facendo clic con il pulsante destro del mouse su una dimensione in Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="options"></a>Opzioni  
- **Molti-a-molti**  
+ **Molti a molti**  
  Consente di archiviare le transazioni utilizzando le valute locali. La funzionalità di conversione di valuta converte le transazioni nella valuta pivot specificata nella pagina **Impostazione opzioni di conversione valuta** e quindi in una o più valute report diverse.  
   
  Se, ad esempio, si imposta la valuta pivot sul dollaro statunitense (USD), le transazioni possono venire archiviate nella tabella dei fatti in euro (EUR), dollari australiani (AUD) e peso messicani (MXN). Selezionando questa opzione le transazioni vengono prima convertite dalle valute locali specificate alla valuta pivot e quindi riconvertite dalla valuta pivot alle valute report specificate. Di conseguenza le transazioni possono essere archiviate nelle valute locali specificate e visualizzate sia nella valuta pivot specificata che in una delle valute report specificate nella pagina **Impostazione valute report** .  
@@ -35,7 +35,7 @@ ms.locfileid: "66069623"
  Consente di archiviare le transazioni utilizzando le valute locali. La funzionalità di conversione di valuta converte le transazioni nella valuta pivot specificata nella pagina **Impostazione opzioni di conversione valuta** . La valuta pivot viene utilizzata come unica valuta report specificata.  
   
 > [!NOTE]  
->  Se si seleziona questa opzione la pagina **Impostazione valute report** non viene visualizzata.  
+>  Se questa opzione è selezionata, la pagina **impostazione valute report** non viene visualizzata.  
   
  Se, ad esempio, si imposta la valuta pivot sul dollaro statunitense (USD), le transazioni possono venire archiviate nella tabella dei fatti in euro (EUR), dollari australiani (AUD) e peso messicani (MXN). Selezionando questa opzione le transazioni vengono convertite dalle valute locali specificate alla valuta pivot. Di conseguenza le transazioni possono essere archiviate nelle valute locali specificate e visualizzate nella valuta pivot specificata.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "66069623"
  Consente di archiviare le transazioni usando la valuta pivot specificata nella pagina **Impostazione opzioni di conversione valuta** , quindi in una o più valute report diverse.  
   
 > [!NOTE]  
->  Se si seleziona questa opzione la pagina **Definizione associazioni valute locali** non viene visualizzata.  
+>  Se questa opzione è selezionata, la pagina **Definisci valuta locale** non viene visualizzata.  
   
  Se, ad esempio, si imposta la valuta pivot sul dollaro statunitense (USD), le transazioni vengono archiviate nella tabella dei fatti in questa valuta. Selezionando questa opzione le transazioni vengono convertite dalla valuta pivot alle valute report specificate. Di conseguenza le transazioni possono essere archiviate nella valuta pivot specificata e visualizzate sia nella valuta pivot specificata che in una delle valute report specificate nella pagina **Impostazione valute report** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Impostare le opzioni del cursore (ODBC) | Documenti di Microsoft
+title: Impostare le opzioni del cursore (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48389a3b537461a89bcf5c8bcbc646d3417939c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200350"
 ---
 # <a name="set-cursor-options-odbc"></a>Impostare le opzioni del cursore (ODBC)
-  Per impostare le opzioni del cursore, chiamare [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) per impostare o [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) per ottenere le opzioni dell'istruzione che controllano il comportamento del cursore.  
+  Per impostare le opzioni del cursore, chiamare [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) per impostare o [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) per ottenere le opzioni di istruzione che controllano il comportamento del cursore.  
   
-|*Attribute*|Specifica|  
+|*Attributo*|Specifica|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|Tipo di cursore: forward only, statico, dinamico o gestito da keyset|  
 |SQL_ATTR_CONCURRENCY|Opzione di controllo della concorrenza: di sola lettura, di blocco, ottimistica che utilizza timestamp o ottimistica che utilizza valori|  
@@ -30,7 +30,7 @@ ms.locfileid: "63200350"
 |SQL_ATTR_CURSOR_SENSITIVITY|Cursore che mostra o non mostra aggiornamenti a righe di cursore create da altre connessioni|  
 |SQL_ATTR_CURSOR_SCROLLABLE|Cursore che è possibile scorrere in avanti e indietro|  
   
- I valori predefiniti per questi attributi (forward only, di sola lettura, dimensione 1 del set di righe) non determinano l'utilizzo dei cursori server. Per utilizzare i cursori server, è necessario che almeno uno di questi attributi sia impostato su un valore diverso dall'impostazione predefinita e che l'istruzione eseguita sia un'istruzione SELECT singola o una stored procedure che contiene un'istruzione SELECT singola. Quando si utilizzano cursori del server, le istruzioni SELECT non è possibile usare le clausole non supportate dai cursori server: COMPUTE, COMPUTE BY, FOR BROWSE e INTO.  
+ I valori predefiniti per questi attributi (forward only, di sola lettura, dimensione 1 del set di righe) non determinano l'utilizzo dei cursori server. Per utilizzare i cursori server, è necessario che almeno uno di questi attributi sia impostato su un valore diverso dall'impostazione predefinita e che l'istruzione eseguita sia un'istruzione SELECT singola o una stored procedure che contiene un'istruzione SELECT singola. In caso di utilizzo di cursori server, le istruzioni SELECT non possono utilizzare le clausole non supportate dai cursori server: COMPUTE, COMPUTE BY, FOR BROWSE e INTO.  
   
  È possibile controllare il tipo di cursore utilizzato impostando SQL_ATTR_CURSOR_TYPE e SQL_ATTR_CONCURRENCY oppure impostando SQL_ATTR_CURSOR_SENSITIVITY e SQL_ATTR_CURSOR_SCROLLABLE. È consigliabile non combinare i due metodi di definizione del comportamento del cursore.  
   
@@ -57,6 +57,6 @@ retcode = SQLExecDirect(hstmt1, select au_lname from authors", SQL_NTS);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di query procedure relative al &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [Procedure relative all'esecuzione di query &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

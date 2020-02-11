@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193269"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utilizzo della modalità AUTO con FOR XML
@@ -129,14 +129,14 @@ FOR XML AUTO, ELEMENTS
   
  Se nella clausola SELECT è specificato il carattere jolly asterisco (*), il livello di nidificazione verrà determinato come descritto in precedenza, ovvero in base all'ordine in cui le righe vengono restituite dal motore query.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Per ulteriori informazioni sulla modalità AUTO, vedere gli argomenti seguenti:  
   
--   [Utilizzo dell'opzione BINARY BASE64](use-the-binary-base64-option.md)  
+-   [Usare l'opzione BINARY BASE64](use-the-binary-base64-option.md)  
   
 -   [Approccio euristico della modalità AUTO per la determinazione della struttura dei valori XML restituiti](auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Esempi: Utilizzo della modalità AUTO](examples-using-auto-mode.md)  
+-   [Esempi d'uso della modalità AUTO](examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

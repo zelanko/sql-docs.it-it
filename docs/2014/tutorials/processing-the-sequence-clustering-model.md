@@ -1,5 +1,5 @@
 ---
-title: L'elaborazione del modello Sequence Clustering | Microsoft Docs
+title: Elaborazione del modello Sequence Clustering | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188134"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Elaborazione del modello Sequence Clustering
@@ -24,24 +24,24 @@ ms.locfileid: "63188134"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>Per elaborare la struttura e il modello di data mining  
   
-1.  Nel **modello di Data Mining** dal menu del [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], selezionare **Elabora struttura di Data Mining e tutti i modelli**.  
+1.  Scegliere **Elabora struttura di data mining e tutti i modelli**dal menu modello di [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **data mining** .  
   
-2.  Nella finestra di avviso che chiede se si desidera compilare e distribuire il progetto, fare clic su **Sì**.  
+2.  Quando si chiede se si desidera compilare e distribuire il progetto, fare clic su **Sì**.  
   
-3.  Nel **struttura di Data Mining processo - Sequence Clustering with Region** finestra di dialogo, fare clic su **eseguire**.  
+3.  Nella finestra di dialogo **Elabora struttura di data mining-sequenza clustering con area** fare clic su **Esegui**.  
   
-     Il **stato elaborazione** verrà visualizzata la finestra di dialogo per visualizzare le informazioni sull'elaborazione di modelli. L'elaborazione della nuova struttura e del nuovo modello potrebbe richiedere tempo.  
+     Verrà visualizzata la finestra di dialogo **stato** elaborazione per visualizzare le informazioni sull'elaborazione del modello. L'elaborazione della nuova struttura e del nuovo modello potrebbe richiedere tempo.  
   
-4.  Al termine dell'elaborazione, fare clic su **Close** per chiudere il **stato elaborazione** nella finestra di dialogo.  
+4.  Al termine dell'elaborazione, fare clic su **Chiudi** per uscire dalla finestra di dialogo **stato** elaborazione.  
   
-5.  Fare clic su **Close** per uscire dalle **Elabora struttura Data Mining - Sequence Clustering with Region** nella finestra di dialogo.  
+5.  Fare di nuovo clic su **Chiudi per chiudere** la finestra di dialogo **Elabora struttura di data mining-Sequence Clustering con area** .  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Esplorazione del modello Sequence Clustering &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
+ [Esplorazione del modello Sequence Clustering &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione modelli di data mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Algoritmo Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Requisiti e considerazioni sull'elaborazione &#40;&#41;di data mining](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

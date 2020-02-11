@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188204"
 ---
 # <a name="manage-events"></a>Gestione di eventi
@@ -46,7 +46,7 @@ ms.locfileid: "63188204"
   
 -   **Singolo punto di errore**. Se il server di gestione degli avvisi viene portato offline, non verrà generato nessun avviso per qualsiasi evento del gruppo di server gestito.  
   
--   **Carico server**. La gestione degli avvisi per gli eventi inoltrati determina un aumento del carico di elaborazione nel server di gestione degli avvisi.  
+-   **Carico del server**. La gestione degli avvisi per gli eventi inoltrati determina un aumento del carico di elaborazione nel server di gestione degli avvisi.  
   
 ## <a name="guidelines-for-using-an-alerts-management-server"></a>Linee guida per l'utilizzo di un server di gestione degli avvisi  
  Per la configurazione di un server di gestione degli avvisi attenersi alle linee guida riportate di seguito.  
@@ -71,7 +71,7 @@ ms.locfileid: "63188204"
   
  Di seguito sono riportate le attività comuni per la gestione degli eventi in un ambiente multiserver:  
   
- **Per impostare un server di gestione degli avvisi**  
+ **Per designare un server di gestione degli avvisi**  
   
 -   [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
@@ -88,6 +88,6 @@ ms.locfileid: "63188204"
 >  Poiché un processo può generare un evento, assicurarsi che non venga creato un ciclo ricorsivo avviso-processo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+ [sys. sysmessages &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

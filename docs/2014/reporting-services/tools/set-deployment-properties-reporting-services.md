@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099544"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
@@ -42,17 +42,17 @@ ms.locfileid: "66099544"
     > [!NOTE]  
     >  È possibile utilizzare più configurazioni per passare velocemente da un server di report a un altro oppure da un'impostazione a un'altra.  
   
-3.  Nel **OutputPath** casella di testo digitare o incollare il percorso nel file system locale per archiviare la definizione del report utilizzata nella verifica della compilazione, distribuzione e anteprima dei report. Il percorso deve essere diverso dal percorso utilizzato per il progetto e da un percorso relativo che rappresenta una sottocartella nel percorso del progetto.  
+3.  Nella casella di testo **OutputPath** Digitare o incollare il percorso nel file system locale per archiviare la definizione del report utilizzata nella verifica della compilazione, nella distribuzione e nell'anteprima dei report. Il percorso deve essere diverso dal percorso utilizzato per il progetto e da un percorso relativo che rappresenta una sottocartella nel percorso del progetto.  
   
-4.  Nel **ErrorLevel** casella di testo, digitare la gravità della compilazione problemi vengono segnalati come errori. I livelli di problemi che si verificano durante la creazione di report, origini dati o altre risorse del progetto con gravità minore o uguale al valore di **ErrorLevel** vengono segnalati come errori; in caso contrario, i problemi vengono segnalati come avvisi. Qualsiasi errore comporterà l'interruzione dell'attività di compilazione. I livelli di gravità validi sono compresi tra 0 e 4. Il valore predefinito è 2.  
+4.  Nella casella di testo **errorlevel** Digitare la gravità dei problemi di compilazione segnalati come errori. I problemi che si verificano durante la compilazione di report, origini dati o altre risorse di progetto con livelli di gravità minori o uguali al valore di **errorlevel** vengono segnalati come errori. in caso contrario, i problemi vengono segnalati come avvisi. Qualsiasi errore comporterà l'interruzione dell'attività di compilazione. I livelli di gravità validi sono compresi tra 0 e 4. Il valore predefinito è 2.  
   
      È possibile usare**ErrorLevel** per aumentare o ridurre la sensibilità della compilazione. Ad esempio, quando viene compilato un report con una mappa durante la distribuzione in un server di report di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , per impostazione predefinita viene visualizzato un errore e la compilazione del report non viene completata. Se si riduce il valore di **ErrorLevel** , la mappa viene rimossa dal report, viene visualizzato un avviso e la compilazione del report prosegue.  
   
-5.  Nel **StartItem** elencare, selezionare un report da visualizzare nella finestra di anteprima o in una finestra del browser quando si esegue il progetto report.  
+5.  Nell'elenco **StartItem** selezionare un report da visualizzare nella finestra di anteprima o in una finestra del browser durante l'esecuzione del progetto report.  
   
 6.  Nell'elenco **OverwriteDataSources** selezionare **True** per sovrascrivere l'origine dati condivisa nel server ogni volta che vengono pubblicate origini dati condivise oppure selezionare **False** per mantenere l'origine dati nel server.  
   
-7.  Nel **TargetServerVersion** elencare, selezionare la [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure selezionare **rileva versione** per determinare automaticamente la versione installata nel il server identificato dal **TargetServer URL** proprietà. Il valore predefinito è **SQL Server 2008 R2**.  
+7.  Nell'elenco **TargetServerVersion** selezionare la [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] versione o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oppure selezionare **Rileva versione** per determinare automaticamente la versione installata nel server identificato dalla proprietà **URL TargetServer** . Il valore predefinito è **SQL Server 2008 R2**.  
   
      Usare **TargetServerVersion** per personalizzare i report compilati, posizionati nel percorso specificato in OutputPath, per la versione del server di report specificata in **TargetServer URL**.  
   
@@ -82,8 +82,8 @@ ms.locfileid: "66099544"
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicazione di origini dati e report](../reports/publishing-data-sources-and-reports.md)   
- [Anteprima dei report](../reports/previewing-reports.md)   
- [Guida sensibile al contesto di Progettazione report](report-designer-f1-help.md)   
+ [Visualizzazione in anteprima di report](../reports/previewing-reports.md)   
+ [Guida sensibile al contesto Progettazione report](report-designer-f1-help.md)   
  [Esempi di URL per elementi di report pubblicati in un server di report in modalità SharePoint &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Finestra di dialogo Pagine delle proprietà del progetto](project-property-pages-dialog-box.md)   
  [Pubblicazione dei report in un server di report](../reports/publishing-reports-to-a-report-server.md)  

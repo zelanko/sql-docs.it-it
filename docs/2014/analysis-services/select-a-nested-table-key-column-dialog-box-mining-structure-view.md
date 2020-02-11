@@ -1,5 +1,5 @@
 ---
-title: Selezionare una finestra di dialogo di colonna chiave tabella nidificata (visualizzazione struttura di Data Mining) | Microsoft Docs
+title: Finestra di dialogo Seleziona colonna chiave tabella nidificata (visualizzazione struttura di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069766"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Finestra di dialogo Seleziona colonna chiave tabella nidificata (visualizzazione Struttura di data mining)
@@ -40,12 +40,12 @@ ms.locfileid: "66069766"
   
  Questa opzione può essere utilizzata solo per i modelli di dati mining relazionali.  
   
- **Attributi**  
+ **Attributes**  
  Elenco di attributi utilizzabili come chiave della tabella nidificata.  
   
  Questa opzione può essere utilizzata solo per i modelli di dati mining OLAP.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione struttura di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-structure-view-data-mining-model-designer.md)  
+ [Visualizzazione struttura di data mining &#40;Progettazione modelli di data mining&#41;](mining-structure-view-data-mining-model-designer.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864a310044d2bf6b903b69b1b53bd6cd5bd3b38d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240724"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revoca delle autorizzazioni per una raccolta di XML Schema
@@ -44,7 +44,7 @@ ms.locfileid: "63240724"
 ## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di pulizia necessario.  
   
-### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. Revoca delle autorizzazioni per creare una raccolta XML Schema  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>R. Revoca delle autorizzazioni per creare una raccolta XML Schema  
  In questo esempio vengono creati un account di accesso e un database di esempio e nel database viene inoltre aggiunto uno schema relazionale. Innanzitutto, all'account di accesso vengono concesse l'autorizzazione ALTER per entrambi gli schemi relazionali e le altre autorizzazioni necessarie per creare raccolte XML Schema. Viene quindi revocata l'autorizzazione ALTER per uno degli schemi relazionali del database, in modo tale da impedire all'account di accesso di creare una raccolta XML Schema.  
   
 ```  
@@ -145,6 +145,6 @@ Go
  [Dati XML &#40;SQL Server&#41;](xml-data-sql-server.md)   
  [Confronto dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md)   
  [Raccolte di XML Schema &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   
- [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per le raccolte di XML Schema nel server](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066390"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Partizioni di modelli tabulari (SSAS tabulare)
@@ -28,14 +28,14 @@ ms.locfileid: "66066390"
   
 -   [Autorizzazioni](#bkmk_permissions)  
   
--   [Elaborare le partizioni](#bkmk_process_partitions)  
+-   [Elabora partizioni](#bkmk_process_partitions)  
   
 -   [Attività correlate](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Vantaggi  
+##  <a name="bkmk_benefits"></a>Vantaggi  
  Un modello di progetto efficace consente di utilizzare le partizioni per eliminare elaborazioni e successivi carichi del processore non necessari nei server Analysis Services assicurando, nel contempo, che i dati vengano elaborati e aggiornati con una frequenza tale da riflettere i dati più recenti dalle origini dati.  
   
- Ad esempio, in un modello tabulare può essere disponibile una tabella Sales in cui sono inclusi i dati di vendita per l'anno fiscale 2011 e tutti gli anni fiscali precedenti. Nella tabella Sales del modello contiene le tre partizioni seguenti:  
+ Ad esempio, in un modello tabulare può essere disponibile una tabella Sales in cui sono inclusi i dati di vendita per l'anno fiscale 2011 e tutti gli anni fiscali precedenti. Nella tabella Sales del modello sono presenti le tre partizioni seguenti:  
   
 |Partition|Periodo dei dati|  
 |---------------|---------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "66066390"
   
  Non è necessario elaborare i dati della partizione Sales2010-2001 ogni notte; tuttavia, poiché i dati di vendita per i dieci anni fiscali precedenti possono ancora cambiare occasionalmente a causa di restituzioni o modifiche di prodotti, devono comunque essere elaborati regolarmente, ad esempio, in questo caso, ogni mese. I dati della partizione SalesOld non cambiano mai, pertanto vengono elaborati solo annualmente.  
   
- Quando si immette l'anno fiscale 2012, viene aggiunto una nuova partizione Sales2012 alla tabella Sales della modalità. La partizione Sales2011 può essere quindi unita alla partizione Sales2010-2001 e rinominata Sales2011-2002. I dati dell'anno fiscale 2001 vengono eliminati dalla nuova partizione Sales2011-2002 e spostati nella partizione SalesOld. Tutte le partizioni vengono quindi elaborate per riflettere le modifiche.  
+ Quando si immette l'anno fiscale 2012, viene aggiunta una nuova partizione Sales2012 alla alla tabella Sales della modalità. La partizione Sales2011 può essere quindi unita alla partizione Sales2010-2001 e rinominata Sales2011-2002. I dati dell'anno fiscale 2001 vengono eliminati dalla nuova partizione Sales2011-2002 e spostati nella partizione SalesOld. Tutte le partizioni vengono quindi elaborate per riflettere le modifiche.  
   
- Modalità di implementazione di una strategia di partizione per i modelli tabulari dell'organizzazione in gran parte dipenderanno le necessità di elaborazione dei dati di modello specifico e le risorse disponibili.  
+ La modalità di implementazione di una strategia di partizione per i modelli tabulari dell'organizzazione dipende in gran parte dalle specifiche esigenze di elaborazione dei dati del modello e dalle risorse disponibili.  
   
 ##  <a name="bkmk_permissions"></a> Autorizzazioni  
  Per creare, gestire ed elaborare partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è necessario disporre delle autorizzazioni appropriate di Analysis Services definite in un ruolo di sicurezza. In ogni ruolo di sicurezza è disponibile una delle autorizzazioni seguenti:  
@@ -57,15 +57,15 @@ ms.locfileid: "66066390"
 |Autorizzazione|Azioni|  
 |----------------|-------------|  
 |Amministratore|Lettura, elaborazione, creazione, copia, unione, eliminazione|  
-|Process|Lettura, elaborazione|  
-|Read Only|lettura|  
+|Processo|Lettura, elaborazione|  
+|Sola lettura|Lettura|  
   
  Per altre informazioni sulla creazione di ruoli durante la generazione di modelli tramite [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md). Per altre informazioni sulla gestione dei membri dei ruoli del modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Ruoli nei modelli tabulari &#40;SSAS tabulare&#41;](tabular-model-roles-ssas-tabular.md).  
   
-##  <a name="bkmk_process_partitions"></a> Elaborare le partizioni  
+##  <a name="bkmk_process_partitions"></a>Elabora partizioni  
  Le partizioni possono essere elaborate (aggiornate) indipendentemente dalle altre partizioni usando la finestra di dialogo **Partizioni** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o tramite uno script. L'elaborazione prevede le opzioni seguenti:  
   
-|Modalità|Descrizione|  
+|Mode|Descrizione|  
 |----------|-----------------|  
 |Elaborazione predefinita|Rileva lo stato di elaborazione di un oggetto partizione ed esegue l'elaborazione necessaria per recapitare oggetti partizione non elaborati o elaborati parzialmente in uno stato di elaborazione completa. Vengono caricati i dati per le tabelle vuote e le partizioni; vengono compilate o ricompilate le gerarchie, le colonne calcolate e le relazioni.|  
 |Elaborazione completa|Elabora un oggetto partizione e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa per un oggetto che è stato già elaborato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono eliminati tutti i dati dell'oggetto, quindi quest'ultimo viene elaborato. Questo tipo di elaborazione è necessario quando è stata apportata una modifica strutturale a un oggetto.|  

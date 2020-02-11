@@ -1,5 +1,5 @@
 ---
-title: Dimensioni del set di righe del cursore | Documenti di Microsoft
+title: Dimensioni set di righe cursore | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207161"
 ---
 # <a name="cursor-rowset-size"></a>Dimensione del set di righe del cursore
-  I cursori ODBC non si limitano a recuperare una sola riga alla volta. Possono infatti recuperare più righe in ogni chiamata a **SQLFetch** oppure [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). Quando si utilizza un database client/server come Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è consigliabile recuperare diverse righe contemporaneamente. Il numero di righe restituite durante un'operazione di recupero viene chiamato la dimensione del set di righe e viene specificato utilizzando l'oggetto SQL_ATTR_ROW_ARRAY_SIZE di [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md).  
+  I cursori ODBC non si limitano a recuperare una sola riga alla volta. Possono recuperare più righe in ogni chiamata a **SQLFetch** o [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). Quando si utilizza un database client/server come Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è consigliabile recuperare diverse righe contemporaneamente. Il numero di righe restituite in un recupero è denominato dimensione del set di righe e viene specificato tramite il SQL_ATTR_ROW_ARRAY_SIZE di [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md).  
   
 ```  
 SQLUINTEGER uwRowsize;  
@@ -41,11 +41,11 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
      Una matrice viene compilata utilizzando strutture che contengono i dati e gli indicatori per tutte le colonne di una riga. La matrice include lo stesso numero di strutture come dimensione del set di righe.  
   
- Quando viene utilizzata l'associazione di colonna o riga per riga, ogni chiamata a **SQLFetch** oppure **SQLFetchScroll** riempie le matrici associate con i dati dal set di righe recuperate.  
+ Quando si utilizza l'associazione per colonna o per riga, ogni chiamata a **SQLFetch** o **SQLFetchScroll** riempie le matrici associate con i dati del set di righe recuperato.  
   
- [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) può anche essere utilizzato per recuperare i dati della colonna da un cursore a blocchi. In quanto **SQLGetData** agisce su una riga alla volta **SQLSetPos** deve essere chiamato per impostare una riga specifica nel set di righe come riga corrente prima di chiamare **SQLGetData**.  
+ [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) può essere utilizzato anche per recuperare i dati delle colonne da un cursore a blocchi. Poiché **SQLGetData** funziona una riga alla volta, è necessario chiamare **SQLSetPos** per impostare una riga specifica nel set di righe come riga corrente prima di chiamare **SQLGetData**.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client offre un'ottimizzazione con i set di righe per recuperare un risultato intero impostato rapidamente. Per usare questa ottimizzazione, impostare gli attributi del cursore sui valori predefiniti (dimensioni del set di righe forward-only di sola lettura, = 1) al momento **SQLExecDirect** oppure **SQLExecute** viene chiamato. Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client imposta un set di risultati predefinito. Questa soluzione risulta più efficiente dei cursori del server quando si trasferiscono risultati al client senza scorrimento. Al termine dell'esecuzione dell'istruzione, aumentare la dimensione del set di righe e utilizzare l'associazione per colonna o per riga. In questo modo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzare un risultato predefinito impostato per l'invio in modo efficiente le righe di risultati al client, mentre il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client effettua continuamente il pull righe dai buffer di rete sul client.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client offre un'ottimizzazione utilizzando i set di righe per recuperare rapidamente un intero set di risultati. Per utilizzare questa ottimizzazione, impostare gli attributi del cursore sulle impostazioni predefinite (di sola lettura, di sola lettura, dimensioni del set di righe = 1) al momento della chiamata a **SQLExecDirect** o **SQLExecute** . Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client configura un set di risultati predefinito. Questa soluzione risulta più efficiente dei cursori del server quando si trasferiscono risultati al client senza scorrimento. Al termine dell'esecuzione dell'istruzione, aumentare la dimensione del set di righe e utilizzare l'associazione per colonna o per riga. Questo consente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di utilizzare un set di risultati predefinito per inviare le righe di risultati in modo efficiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al client, mentre il driver ODBC di Native client estrae continuamente le righe dai buffer di rete nel client.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà del cursore](cursor-properties.md)  

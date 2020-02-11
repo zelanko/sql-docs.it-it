@@ -1,5 +1,5 @@
 ---
-title: Denominata Set Form Editor (scheda calcoli, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Editor form set denominato (scheda calcoli, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072346"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor form set denominato (scheda Calcoli, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -26,7 +26,7 @@ ms.locfileid: "66072346"
 >  Questo riquadro viene visualizzato solo in visualizzazione Form.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare il nome del set denominato.  
   
  **Espressione**  
@@ -39,13 +39,13 @@ ms.locfileid: "66072346"
   
 ## <a name="see-also"></a>Vedere anche  
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Creare set denominati](multidimensional-models/create-named-sets.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Calcoli &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Sulla barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Libreria script &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Strumenti di calcolo &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor Form membro calcolato &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor di script &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Creazione di set denominati](multidimensional-models/create-named-sets.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Calcoli &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra degli strumenti &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Libreria script &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Strumenti di calcolo &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor form membro calcolato &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor di script &#40;scheda calcoli, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

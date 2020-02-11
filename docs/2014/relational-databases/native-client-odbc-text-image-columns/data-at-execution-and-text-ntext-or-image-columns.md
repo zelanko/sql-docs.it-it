@@ -1,5 +1,5 @@
 ---
-title: Data-at-Execution e Text, ntext o Image colonne | Microsoft Docs
+title: Colonne data-at-execution e di tipo text, ntext o image | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,14 +23,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7c57cf6444e5833b6deee0dcae36d71b7a6430
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195133"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>Colonne data-at-execution di tipo text, ntext o image
-  ODBC data-at-execution è una caratteristica che consente alle applicazioni di utilizzare quantità estremamente elevate di dati su colonne o parametri associati. Quando si recuperano grandi **testo**, **ntext**, o **immagine** colonne, un'applicazione potrebbe non essere in grado di allocare un buffer molto grande, associare la colonna nel buffer e recuperare semplicemente la riga. Durante l'aggiornamento di dimensioni molto grandi **testo**, **ntext**, o **immagine** colonne, l'applicazione potrebbe non essere in grado di allocare un buffer molto grande, associarlo a un marcatore di parametro in un SQL semplicemente istruzione e quindi eseguire l'istruzione. In questi casi, l'applicazione deve utilizzare [SQLGetData](../native-client-odbc-api/sqlgetdata.md) oppure [SQLPutData](../native-client-odbc-api/sqlputdata.md) con le relative opzioni data-at-execution.  
+  ODBC data-at-execution è una caratteristica che consente alle applicazioni di utilizzare quantità estremamente elevate di dati su colonne o parametri associati. Quando si recuperano colonne di tipo **Text**, **ntext**o **Image** di dimensioni molto grandi, un'applicazione potrebbe non essere in grado di allocare semplicemente un buffer enorme, associare la colonna al buffer e recuperare la riga. Quando si aggiornano colonne di tipo **Text**, **ntext**o **Image** di dimensioni molto grandi, l'applicazione potrebbe non essere in grado di allocare semplicemente un buffer enorme, associarlo a un marcatore di parametro in un'istruzione SQL ed eseguire l'istruzione. In questi casi, l'applicazione deve utilizzare [SQLGetData](../native-client-odbc-api/sqlgetdata.md) o [SQLPutData](../native-client-odbc-api/sqlputdata.md) con le opzioni data-at-execution.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di colonne di tipo text e image](managing-text-and-image-columns.md)  

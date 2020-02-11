@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067624"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Creare un nuovo progetto di modello tabulare (SSAS tabulare)
@@ -28,10 +28,10 @@ ms.locfileid: "66067624"
   
 3.  In **Nome**digitare un nome per il progetto, quindi specificare un percorso e un nome per la soluzione e scegliere **OK**.  
   
- Una volta creato il nuovo progetto, è importante impostare le proprietà del progetto e del modello. Per altre informazioni, vedere [Project Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md) e [Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md).  
+ Una volta creato il nuovo progetto, è importante impostare le proprietà del progetto e del modello. Per altre informazioni, vedere [Proprietà del progetto &#40;SSAS tabulare&#41;](properties-ssas-tabular.md) e [Proprietà modello &#40;SSAS tabulare&#41;](model-properties-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà del progetto &#40;SSAS tabulare&#41;](properties-ssas-tabular.md)   
- [Proprietà modello &#40;SSAS tabulare&#41;](model-properties-ssas-tabular.md)  
+ [Proprietà del modello &#40;SSAS tabulare&#41;](model-properties-ssas-tabular.md)  
   
   

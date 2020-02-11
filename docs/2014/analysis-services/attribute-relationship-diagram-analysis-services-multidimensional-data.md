@@ -1,5 +1,5 @@
 ---
-title: Diagramma di relazioni (scheda relazione tra attributi, progettazione dimensioni) dell'attributo (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Diagramma delle relazioni tra attributi (scheda relazione tra attributi, Progettazione dimensioni) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063095"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Diagramma delle relazioni tra attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
@@ -24,7 +24,7 @@ ms.locfileid: "66063095"
   
  **Per visualizzare il riquadro che contiene il diagramma delle relazioni tra attributi**  
   
--   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni, quindi fare clic sulla scheda **Relazione tra attributi** .  
+-   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni e quindi fare clic sulla scheda **Relazione tra attributi** .  
   
 ## <a name="using-the-attribute-relationship-diagram"></a>Utilizzo del diagramma delle relazioni tra attributi  
  Utilizzare il diagramma delle relazioni tra attributi per creare, modificare o eliminare relazioni tra attributi. Il diagramma delle relazioni tra attributi evidenzierà anche relazioni tra attributi problematiche e visualizzerà una descrizione del problema in una descrizione comandi.  
@@ -92,9 +92,9 @@ ms.locfileid: "66063095"
  Visualizza le proprietà della relazione nella finestra **Proprietà** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Relazioni tra attributi &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Sulla barra degli strumenti &#40;scheda relazione tra attributi, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [Gli attributi &#40;scheda relazione tra attributi, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Relazioni tra attributi &#40;scheda relazione tra attributi, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Relazioni tra attributi &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra degli strumenti &#40;scheda Progettazione relazione tra attributi, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Attributi &#40;scheda Progettazione relazione tra attributi, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Relazioni tra attributi &#40;scheda Progettazione relazione tra attributi, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

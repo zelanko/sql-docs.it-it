@@ -1,5 +1,5 @@
 ---
-title: Impostazione delle proprietà (SSAS) avanzate | Microsoft Docs
+title: Impostare proprietà avanzate (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068830"
 ---
 # <a name="set-advanced-properties-ssas"></a>Impostazione delle proprietà avanzate (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di specificare ulteriori impostazioni delle proprietà per una connessione all'origine dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Providers**  
+ **Provider**  
  Selezionare il provider da utilizzare per la connessione all'origine dati. Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
   
  **Stringa di connessione**  

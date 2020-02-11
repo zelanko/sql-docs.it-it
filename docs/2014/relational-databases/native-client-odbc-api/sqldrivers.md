@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192339"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
-  Gestione Driver ODBC restituisce tutte le **SQLDrivers** stringhe di specifica dell'attributo. Per altre informazioni sulla definizione di stringa e il valore di attributo, vedere la [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=4173), oppure è possibile visualizzare i [riferimento per programmatori ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
+  Gestione driver ODBC restituisce tutte le stringhe di specifica dell'attributo **SQLDrivers** . Per ulteriori informazioni sulla definizione di stringa e valore dell'attributo, vedere [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=4173)oppure è possibile visualizzare la documentazione online [di ODBC Programmer ' s Reference](https://go.microsoft.com/fwlink/?LinkId=45250) .  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
- [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

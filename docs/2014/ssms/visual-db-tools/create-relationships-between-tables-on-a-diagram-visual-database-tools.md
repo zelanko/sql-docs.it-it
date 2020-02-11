@@ -1,5 +1,5 @@
 ---
-title: Creare relazioni tra tabelle in un diagramma (Visual Database Tools) | Microsoft Docs
+title: Creazione di relazioni tra tabelle in un diagramma (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184274"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Creazione di relazioni tra tabelle in un diagramma (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63184274"
   
 3.  Verranno visualizzate due finestre di dialogo: **Relazione chiavi esterne** e **Tabelle e colonne**, quest'ultima visualizzata in primo piano.  
   
-4.  Il**Nome relazione** è assegnato dal sistema nel formato FK_*localtable*_*foreigntable*. È possibile modificare questo valore.  
+4.  Il nome della **relazione** ha un nome fornito dal sistema nel formato FK_*assegnato*_*foreignTable*. È possibile modificare questo valore.  
   
 5.  Verificare che in **Tabella di chiave primaria** sia specificata la tabella corretta.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63184274"
   
 7.  Scegliere **OK**.  
   
-     Verrà visualizzata la finestra di dialogo **Relazione chiavi esterne** . **Relazione selezionata** visualizza la relazione creata.  
+     Verrà visualizzata la finestra di dialogo **Relazione chiavi esterne** . **Relazione selezionata** Mostra la relazione creata.  
   
 8.  Modificare le proprietà della relazione nella griglia.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "63184274"
      Progettazione database mostra una relazione tra le colonne selezionate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le tabelle e colonne, finestra di dialogo &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [I vincoli UNIQUE e Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Finestra di dialogo tabelle e colonne &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Vincoli UNIQUE e check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Utilizzo di tabelle in diagrammi di database &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

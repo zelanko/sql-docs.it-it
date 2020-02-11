@@ -13,23 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072721"
 ---
 # <a name="use-aggregate-functions"></a>Utilizzare le funzioni di aggregazione
   Quando una dimensione viene usata per sezionare una misura, la misura viene riepilogata in base alle gerarchie contenute in tale dimensione. Il comportamento della somma dipende dalla funzione di aggregazione specificata per la misura. Per la maggior parte delle misure contenenti dati numerici, la funzione di aggregazione è `Sum`. Il valore della misura sarà la somma di quantità diverse a seconda di quale sarà il livello della gerarchia attivo.  
   
- In Analysis Services, ogni misura creata è supportata da una funzione di aggregazione che determina l'operazione della misura. I tipi di aggregazione predefiniti includono `Sum`, `Min`, `Max`, `Count`, **Distinct Count**e diverse altre funzioni più specialistiche. In alternativa, se sono necessarie aggregazioni basate su formule complesse o personalizzate, è possibile creare un calcolo MDX anziché una funzione di aggregazione predefinita. Se ad esempio si vuole definire una misura per un valore percentuale, si procede in MDX, usando una misura calcolata. Vedere [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ In Analysis Services, ogni misura creata è supportata da una funzione di aggregazione che determina l'operazione della misura. I tipi di aggregazione `Sum`predefiniti `Min`includono `Max`, `Count`,,, **Distinct Count**e molte altre funzioni più specializzate. In alternativa, se sono necessarie aggregazioni basate su formule complesse o personalizzate, è possibile creare un calcolo MDX anziché una funzione di aggregazione predefinita. Se ad esempio si vuole definire una misura per un valore percentuale, si procede in MDX, usando una misura calcolata. Vedere [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
- Le misure create tramite la Creazione guidata cubo vengono assegnate a un tipo di aggregazione come parte della definizione della misura. Il tipo di aggregazione è sempre `Sum`, supponendo che la colonna di origine contenga dati numerici. `Sum`viene assegnato a prescindere dal tipo di dati della colonna di origine. Se ad esempio si usa la Creazione guidata cubo per creare misure, e si inseriscono tutte le colonne di una tabella dei fatti, si noterà che tutte le misure risultanti presentano un'aggregazione di `Sum`, anche se l'origine è una colonna data e ora. Controllare sempre i metodi di aggregazione pre-assegnati per le misure create tramite la procedura guidata, per assicurarsi che la funzione di aggregazione sia adatta.  
+ Le misure create tramite la Creazione guidata cubo vengono assegnate a un tipo di aggregazione come parte della definizione della misura. Il tipo di aggregazione è sempre `Sum`, supponendo che la colonna di origine contenga dati numerici. 
+  `Sum`viene assegnato a prescindere dal tipo di dati della colonna di origine. Se ad esempio si usa la Creazione guidata cubo per creare misure, e si inseriscono tutte le colonne di una tabella dei fatti, si noterà che tutte le misure risultanti presentano un'aggregazione di `Sum`, anche se l'origine è una colonna data e ora. Controllare sempre i metodi di aggregazione pre-assegnati per le misure create tramite la procedura guidata, per assicurarsi che la funzione di aggregazione sia adatta.  
   
  È possibile assegnare o modificare il metodo di aggregazione sia nella definizione del cubo, tramite [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], sia tramite MDX. Per altre istruzioni, vedere [Creare misure e gruppi di misure nei modelli multidimensionali](create-measures-and-measure-groups-in-multidimensional-models.md) o [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx).  
   
-##  <a name="AggFunction"></a> Funzioni di aggregazione  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornisce funzioni per aggregare misure insieme alle dimensioni contenute in gruppi di misure. L' *additività* di una funzione di aggregazione determina la modalità di aggregazione della misura in tutte le dimensioni del cubo. Le funzioni di aggregazione presentano tre livelli di additività:  
+##  <a name="AggFunction"></a>Funzioni di aggregazione  
+ 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fornisce funzioni per aggregare misure insieme alle dimensioni contenute in gruppi di misure. L' *additività* di una funzione di aggregazione determina la modalità di aggregazione della misura in tutte le dimensioni del cubo. Le funzioni di aggregazione presentano tre livelli di additività:  
   
  Additive  
  Una misura additiva, definita anche misura completamente additiva, può essere aggregata in tutte le dimensioni incluse nel gruppo di misure contenente la misura, senza restrizioni.  
@@ -57,7 +59,7 @@ ms.locfileid: "66072721"
 |`FirstNonEmpty`|Semiadditive|Recupera il valore del primo membro figlio non vuoto.|  
 |`LastNonEmpty`|Semiadditive|Recupera il valore dell'ultimo membro figlio non vuoto.|  
   
-##  <a name="bkmk_distinct"></a> Informazioni sulle misure Distinct Count  
+##  <a name="bkmk_distinct"></a>Informazioni sulle misure Distinct Count  
  Una misura con il valore della proprietà **Funzione di aggregazione** impostato su **Distinct Count** viene denominata misura Distinct Count. Una misura Distinct Count può essere usata per conteggiare le occorrenze dei membri di livello più basso di una dimensione nella tabella dei fatti. Poiché si tratta di un conteggio di valori distinti, un membro con più occorrenze viene conteggiato una sola volta. Una misura Distinct Count viene sempre inserita in un gruppo di misure dedicato. L'inserimento di una misura Distinct Count nel proprio gruppo di misure è una procedura consigliata che è stata creata nella finestra di progettazione come tecnica di ottimizzazione delle prestazioni.  
   
  Le misure Distinct Count vengono in genere usate per determinare per ogni membro di una dimensione il numero dei membri distinti di livello più basso di un'altra dimensione che condividono righe nella tabella dei fatti. In un cubo Sales, ad esempio, è possibile determinare il numero di prodotti distinti acquistati per ogni cliente e gruppo di clienti, individuando per ogni membro della dimensione Customers il numero di membri distinti di livello più basso della dimensione Products che condividono righe nella tabella dei fatti. In un cubo Internet Site Visits, invece, è ad esempio possibile determinare il numero di pagine distinte visitate nel sito Internet, individuando per ogni membro della dimensione Site Visitors il numero di membri distinti di livello più basso della dimensione Pages che condividono righe nella tabella dei fatti. In ognuno di questi esempi, i membri di livello più basso della seconda dimensione vengono conteggiati mediante una misura Distinct Count.  
@@ -68,7 +70,7 @@ ms.locfileid: "66072721"
   
 ## <a name="see-also"></a>Vedere anche  
  [Misure e gruppi di misure](measures-and-measure-groups.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)   
  [Definire una funzione semiadditiva](define-semiadditive-behavior.md)  
   
   

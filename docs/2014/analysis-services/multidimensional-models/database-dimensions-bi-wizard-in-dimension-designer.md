@@ -1,5 +1,5 @@
 ---
-title: Avviare la procedura guidata di Business Intelligence in Progettazione dimensioni | Microsoft Docs
+title: Avviare la configurazione guidata funzionalità di business intelligence in Progettazione dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f09e8b4e31d9826d0988b293e2236676125fc7d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076053"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>Avviare la Configurazione guidata funzionalità di Business Intelligence in Progettazione dimensioni
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile creare operatori personalizzati di rollup e formule personalizzate membro, nonché configurare dimensioni per writeback tramite la Configurazione guidata funzionalità di Business Intelligence o Progettazione dimensioni. La configurazione guidata può essere avviata da Esplora soluzioni o Progettazione cubi di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È possibile accedere a Progettazione dimensioni da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile creare operatori personalizzati di rollup e formule personalizzate membro e configurare le dimensioni per il writeback utilizzando la configurazione guidata funzionalità di Business Intelligence o Progettazione dimensioni. La configurazione guidata può essere avviata da Esplora soluzioni o Progettazione cubi di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È possibile accedere a Progettazione dimensioni da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>Per avviare la Configurazione guidata funzionalità di Business Intelligence  
   

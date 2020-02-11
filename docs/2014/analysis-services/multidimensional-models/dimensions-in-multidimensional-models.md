@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075182"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensioni nei modelli multidimensionali
@@ -35,24 +35,24 @@ ms.locfileid: "66075182"
  Quando si crea un cubo, è inoltre possibile aggiungere al nuovo cubo qualsiasi dimensione già esistente nel database. Tali dimensioni possono essere state definite in precedenza per un altro cubo oppure tramite la Creazione guidata dimensione. Dopo aver definito una dimensione del database, è possibile modificare e configurare la dimensione del database in Progettazione dimensioni. È inoltre possibile personalizzare la dimensione del cubo, entro certi limiti, in Progettazione cubi.  
   
 > [!NOTE]  
->  È inoltre possibile progettare e configurare dimensioni, attributi e gerarchie a livello di programmazione utilizzando XMLA o AMO (Analysis Management Objects). Per altre informazioni, vedere [Analysis Services Scripting Language &#40;ASSL&#41; riferimento](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) e [allo sviluppo con Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
+>  È inoltre possibile progettare e configurare dimensioni, attributi e gerarchie a livello di programmazione utilizzando XMLA o AMO (Analysis Management Objects). Per ulteriori informazioni, vedere [Analysis Services linguaggio di scripting &#40;riferimento&#41; ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) e [sviluppo con Analysis Management Objects &#40;amo ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)&#41;.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   
  [Definire le dimensioni del database](define-database-dimensions.md)  
  Descrive come modificare e configurare una dimensione di database tramite Progettazione dimensioni.  
   
- [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)  
+ [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)  
  Descrive come definire, modificare e configurare un attributo di una dimensione di database tramite Progettazione dimensioni.  
   
  [Definire relazioni tra attributi](attribute-relationships-define.md)  
  Descrive come definire, modificare e configurare una relazione tra attributi tramite Progettazione dimensioni.  
   
- [Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)  
+ [Creazione di gerarchie definite dall'utente](user-defined-hierarchies-create.md)  
  Descrive come definire, modificare e configurare un gerarchia definita dall'utente degli attributi di una dimensione tramite Progettazione dimensioni.  
   
- [Usare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
+ [Utilizzare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Descrive come ottimizzare una dimensione di database mediante la Configurazione guidata funzionalità di Business Intelligence.  
   
 ## <a name="see-also"></a>Vedere anche  

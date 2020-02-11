@@ -16,19 +16,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cae33496e4dddcaf2d14ba2d87f0d4013795e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63165138"
 ---
 # <a name="implementing-a-delivery-extension"></a>Implementazione di un'estensione per il recapito
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente agli utenti di creare e pubblicare report che dopo la creazione e la pubblicazione possono essere recapitati in diverse posizioni. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include inoltre diverse estensioni per il recapito e un'API di recapito tramite cui gli sviluppatori possono creare estensioni per il recapito aggiuntive per estendere ulteriormente le funzionalità di recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente agli utenti di creare e pubblicare report che, una volta creati e pubblicati, possono essere recapitati a diverse posizioni. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include inoltre diverse estensioni per il recapito e un'API di recapito tramite cui gli sviluppatori possono creare estensioni per il recapito aggiuntive per estendere ulteriormente le funzionalità di recapito in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Per un'implementazione di esempio di un'estensione per il recapito, vedere la pagina degli [esempi del prodotto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Panoramica delle estensioni per il recapito] recapito-extensions-MD)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Panoramica sulle estensioni per il recapito] recapito-estensioni-overview.md)  
  Vengono fornite informazioni introduttive per la scrittura di un'estensione per il recapito personalizzata per [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  [Preparazione all'implementazione di un'estensione per il recapito](preparing-to-implement-a-delivery-extension.md)  
@@ -40,19 +41,19 @@ ms.locfileid: "63165138"
  [Implementazione dell'interfaccia IDeliveryExtension per un'estensione per il recapito](implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
  Vengono descritti gli attributi di un'estensione per il recapito e come implementare una classe personalizzata dell'estensione per il recapito.  
   
- [Uso della classe Notification per un'estensione per il recapito](using-a-notification-class-for-a-delivery-extension.md)  
+ [Utilizzo della classe Notification per un'estensione per il recapito](using-a-notification-class-for-a-delivery-extension.md)  
  Vengono descritti gli attributi di una classe **Notification** e come usarla nell'implementazione dell'estensione per il recapito.  
   
- [Uso della classe Setting per un'estensione per il recapito](using-the-setting-class-for-a-delivery-extension.md)  
+ [Utilizzo della classe Setting per un'estensione per il recapito](using-the-setting-class-for-a-delivery-extension.md)  
  Vengono descritti gli attributi di una classe **Setting** e come usarla nell'implementazione dell'estensione per il recapito.  
   
- [Uso dell'interfaccia IDeliveryReportServerInformation per un'estensione per il recapito](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
+ [Utilizzo dell'interfaccia IDeliveryReportServerInformation per un'estensione per il recapito](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
  Vengono descritti gli attributi di una classe **IDeliveryReportServerInformation** e come usarla nell'implementazione dell'estensione per il recapito.  
   
- [Uso della classe Report per un'estensione per il recapito](using-the-report-class-for-a-delivery-extension.md)  
+ [Utilizzo della classe Report per un'estensione per il recapito](using-the-report-class-for-a-delivery-extension.md)  
  Vengono descritti gli attributi di una classe **Report** e come usarla nell'implementazione dell'estensione per il recapito.  
   
- [Uso della classe RenderedOutputFile per un'estensione per il recapito](using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
+ [Utilizzo della classe RenderedOutputFile per un'estensione per il recapito](using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
  Vengono descritti gli attributi di una classe **RenderedOutputFile** e come usarla nell'implementazione dell'estensione per il recapito.  
   
  [Implementazione dell'interfaccia ISubscriptionBaseUIUserControl per un'estensione per il recapito](implementing-the-isubscriptionbaseuiusercontrol-interface.md)  

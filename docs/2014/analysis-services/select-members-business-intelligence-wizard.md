@@ -1,5 +1,5 @@
 ---
-title: Selezionare i membri (configurazione guidata Business Intelligence) | Microsoft Docs
+title: Selezione membri (configurazione guidata funzionalità di Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cc66896eb1735d09991644dd49c03b5a94c208d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069425"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Selezione membri (Configurazione guidata funzionalità di Business Intelligence)
@@ -26,7 +26,7 @@ ms.locfileid: "66069425"
 >  Questa pagina non viene visualizzata se la Configurazione guidata funzionalità di Business Intelligence viene avviata da Progettazione dimensioni oppure facendo clic con il pulsante destro del mouse su una dimensione in Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="options"></a>Opzioni  
- **Dimensione Measures**  
+ **Dimensione di tipo misure**  
  Consente di applicare la funzionalità di conversione valuta a una o più misure nel cubo.  
   
  Se selezionata, nella griglia vengono visualizzate le opzioni elencate nella tabella seguente.  
@@ -37,7 +37,7 @@ ms.locfileid: "66069425"
 |**Misure**|Consente di selezionare la misura nel gruppo di misure di tipo Tasso che contiene il tasso di cambio da usare quando la misura selezionata in **Tipi di misure predefiniti** viene convertita.|  
   
  **Gerarchia conto**  
- Consente di applicare la funzionalità di conversione valuta a uno o più membri nella gerarchia conto della dimensione di tipo Conti inclusa nel cubo. La gerarchia conto corrisponde alla gerarchia all'interno dell'account della dimensione la cui proprietà `Type` è impostata su *Account*.  
+ Consente di applicare la funzionalità di conversione valuta a uno o più membri nella gerarchia conto della dimensione di tipo Conti inclusa nel cubo. La gerarchia di account è la gerarchia all'interno della dimensione `Type` di tipo conto la cui proprietà è impostata su *account*.  
   
  Se selezionata, nella griglia vengono visualizzate le opzioni elencate nella tabella seguente.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "66069425"
 |**Misure**|Consente di selezionare la misura nel gruppo di misure di tipo Tasso che contiene il tasso di cambio da utilizzare quando le misure per i membri degli attributi che utilizzano il tipo di conto selezionato in **Tipo conto** vengono convertite.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

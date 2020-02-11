@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: abe9d977dfcde5523e875881b1a5b80be7b1b887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223227"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>Proprietà AdvancedProperties (classe SqlService)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SqlService](sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
- Matrice di [classe SqlServiceAdvancedProperty](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) oggetti che contengono le proprietà avanzate per il `SqlService` oggetto.  
+ Matrice di oggetti della [classe SqlServiceAdvancedProperty](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) che contengono le proprietà avanzate per l' `SqlService` oggetto.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvio e arresto di servizi](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

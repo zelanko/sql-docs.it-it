@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061696"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor origine ADO NET (pagina Colonne)
@@ -44,7 +44,7 @@ ms.locfileid: "66061696"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor origine ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Editor origine ADO NET &#40;pagina Output errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor origine ADO NET &#40;pagina output degli errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

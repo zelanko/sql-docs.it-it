@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245604"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "63245604"
   
  Nel Visualizzatore file di log sono visualizzate informazioni sui log relativi a molti componenti diversi. Quando il Visualizzatore file di log è aperto, selezionare i log che si desidera visualizzare nel riquadro **Seleziona log** . In ogni log vengono visualizzate le colonne appropriate per il tipo di log specifico. I log disponibili dipendono dalla modalità di apertura del Visualizzatore file di log.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63245604"
   
      [Sicurezza](#Security)  
   
--   [Per visualizzare il log degli errori di SQL Server Agent utilizzando SQL Server Management Studio](#SSMSProcedure)  
+-   [Per visualizzare il log degli errori di SQL Server Agent, utilizzando SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -56,9 +56,9 @@ ms.locfileid: "63245604"
   
 -   Regolazione quote di memoria per un processo (SeIncreaseQuotaPrivilege)  
   
- Per altre informazioni sulle autorizzazioni di Windows necessarie per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio dell'agente, vedere [selezionare un Account per il servizio SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [configurare gli account del servizio Windows e Le autorizzazioni](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Per ulteriori informazioni sulle autorizzazioni di Windows necessarie per l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio Agent, vedere [selezionare un account per il servizio SQL Server Agent](select-an-account-for-the-sql-server-agent-service.md) e [configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>Per visualizzare il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63245604"
   
 4.  Fare clic con il pulsante destro del mouse sul log degli errori da visualizzare e selezionare **Visualizza log agente**.  
   
-     Nella finestra di dialogo **Visualizzatore file di log -** _nome_server_ sono disponibili le opzioni seguenti:  
+     Nella finestra di dialogo **Visualizzatore file di log -**_nome_server_ sono disponibili le opzioni seguenti:  
   
      **Carica log**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  
@@ -81,13 +81,13 @@ ms.locfileid: "63245604"
      **Aggiorna**  
      Consente di aggiornare la visualizzazione dei log selezionati. Il pulsante **Aggiorna** consente di leggere nuovamente i log selezionati dal server di destinazione applicando qualsiasi impostazione di filtro.  
   
-     **Filtra**  
+     **Filter**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare le impostazioni usate per filtrare il file di log, ad esempio **Connessione**, **Data**o altri criteri di filtro **generali** .  
   
-     **Cerca**  
+     **Ricerca**  
      Consente di cercare testo specifico nel file di log. La ricerca con caratteri jolly non è supportata.  
   
-     **Arresta**  
+     **Stop**  
      Consente di arrestare il caricamento delle voci del file di log. È ad esempio possibile utilizzare questa opzione se il caricamento di un file di log remoto o offline richiede parecchio tempo e si desidera visualizzare solo le voci più recenti.  
   
      **Riepilogo file di log**  
@@ -97,7 +97,7 @@ ms.locfileid: "63245604"
      Consente di selezionare una riga di evento nella parte inferiore della pagina per visualizzare dettagli aggiuntivi sulla riga. È possibile riordinare le colonne trascinandole su nuove posizioni all'interno della griglia. Le colonne possono inoltre essere ridimensionate trascinando verso destra o verso sinistra le corrispondenti barre di separazione nell'intestazione della griglia. Per adattare automaticamente le dimensioni della colonna al contenuto, fare doppio clic sulle barre di separazione nell'intestazione della griglia.  
   
      **Istanza**  
-     Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come *nome computer*\\*nome istanza*.  
+     Nome dell'istanza in cui si è verificato l'evento. Viene visualizzato come nome *computer*\\*nome istanza*.  
   
      **Data**  
      Visualizza la data dell'evento.  
@@ -105,10 +105,10 @@ ms.locfileid: "63245604"
      **Origine**  
      Consente di visualizzare la funzionalità di origine da cui è stato creato l'evento, ad esempio il nome del servizio, come MSSQLSERVER. Questa opzione non viene visualizzata per tutti i tipi di log.  
   
-     **Message**  
+     **Messaggio**  
      Consente di visualizzare i messaggi associati all'evento.  
   
-     **Tipo log**  
+     **Tipo di log**  
      Consente di visualizzare il tipo di log cui appartiene l'evento. Tutti i log selezionati vengono visualizzati nella finestra di riepilogo dei log.  
   
      **Origine log**  

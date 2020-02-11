@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151146"
 ---
 # <a name="considerations-for-using-test-servers"></a>Considerazioni relative all'utilizzo di server di prova
@@ -48,7 +48,7 @@ ms.locfileid: "63151146"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata può imporre un carico aggiuntivo al server di produzione per la raccolta dei metadati e per la creazione delle statistiche necessarie per eseguire l'ottimizzazione.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata non copia i dati effettivi dal server di produzione al server di prova. Vengono copiati unicamente i metadati dei database e le necessarie statistiche.  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata non copia i dati effettivi dal server di produzione sul server di prova, Vengono copiati unicamente i metadati dei database e le necessarie statistiche.  
   
 -   Tutte le informazioni sulla sessione vengono archiviate in **msdb** sul server di produzione. In questo modo, per eseguire l'ottimizzazione è possibile utilizzare qualsiasi server di prova disponibile, mentre le informazioni relative a tutte le sessioni si trovano in un'unica posizione, ovvero sul server di produzione.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63151146"
   
 -   Dopo aver eseguito l'ottimizzazione, Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] rimuove tutti i metadati creati sul server di prova durante il processo di ottimizzazione. Viene rimosso anche lo scheletro di database. Se si stanno eseguendo più sessioni di ottimizzazione utilizzando gli stessi server di produzione e di prova, è possibile conservare lo scheletro di database per risparmiare tempo. Nel file di input XML specificare il sottoelemento **RetainShellDB** insieme agli altri sottoelementi all'interno dell'elemento padre **TuningOptions** . L'utilizzo di queste opzioni specifica a Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] di conservare lo scheletro di database. Per altre informazioni, vedere [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](database-engine-tuning-advisor.md).  
   
--   Dopo una sessione di ottimizzazione riuscita che prevede l'utilizzo combinato di un server di prova e un server di produzione, è possibile che gli scheletri di database rimangano nel server di prova, anche se non è stato usato il sottoelemento **RetainShellDB**. Tali scheletri di database indesiderati possono interferire con le sessioni di ottimizzazione successive e devono essere eliminati prima di eseguire una nuova sessione di ottimizzazione che prevede l'utilizzo combinato di un server di prova e un server di produzione. Inoltre, se una sessione di ottimizzazione si interrompe in modo imprevisto, è possibile che gli scheletri di database nei server di prova e gli oggetti presenti in tali database rimangano nei server di prova. Prima di avviare una nuova sessione di ottimizzazione che prevede l'utilizzo combinato di un server di prova e un server di produzione è necessario eliminare anche tali database e oggetti.  
+-   Dopo una sessione di ottimizzazione riuscita che prevede l'utilizzo combinato di un server di prova e un server di produzione, è possibile che gli scheletri di database rimangano nel server di prova, anche se non è stato usato il sottoelemento **RetainShellDB** . Tali scheletri di database indesiderati possono interferire con le sessioni di ottimizzazione successive e devono essere eliminati prima di eseguire una nuova sessione di ottimizzazione che prevede l'utilizzo combinato di un server di prova e un server di produzione. Inoltre, se una sessione di ottimizzazione si interrompe in modo imprevisto, è possibile che gli scheletri di database nei server di prova e gli oggetti presenti in tali database rimangano nei server di prova. Prima di avviare una nuova sessione di ottimizzazione che prevede l'utilizzo combinato di un server di prova e un server di produzione è necessario eliminare anche tali database e oggetti.  
   
 ## <a name="issues-related-to-the-tuning-process"></a>Problemi relativi al processo di ottimizzazione  
   

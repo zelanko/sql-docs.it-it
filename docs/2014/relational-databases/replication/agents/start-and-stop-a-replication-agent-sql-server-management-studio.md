@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192460"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Avviare e arrestare un agente di replica (SQL Server Management Studio)
-  Avviare e arrestare gli agenti dalla cartella **Processi** e dalla cartella **Replica** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from Replica Monitor. Avviare e arrestare gli agenti e i processi seguenti:  
+  Avviare e arrestare gli agenti dalla cartella **Processi** e dalla cartella **Replica** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e da Monitoraggio replica. Avviare e arrestare gli agenti e i processi seguenti:  
   
 -   Agente snapshot, utilizzato da tutte le pubblicazioni.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63192460"
   
 ### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>Per avviare e arrestare un agente di lettura coda da Management Studio  
   
-1.  Connettersi al server di distribuzione in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]e quindi espandere il nodo del server.  
+1.  Connettersi al database di distribuzione in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], quindi espandere il nodo del server.  
   
 2.  Espandere la cartella **SQL Server Agent** e quindi la cartella **Processi** .  
   
@@ -68,6 +68,6 @@ ms.locfileid: "63192460"
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio della replica](../monitoring-replication.md)   
  [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](replication-agents-overview.md)  
+ [Panoramica degli agenti di replica](replication-agents-overview.md)  
   
   

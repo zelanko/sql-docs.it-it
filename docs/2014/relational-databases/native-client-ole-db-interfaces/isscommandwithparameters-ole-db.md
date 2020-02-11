@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters (OLE DB) | Documenti di Microsoft
+title: ISSCommandWithParameters (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,26 +17,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4de7c6a99afcbd7db7c6e233fb737f129b536b8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209762"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
-  **ISSCommandWithParameters** espone il supporto per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML e tipi definiti dall'utente (UDT). Si tratta di un'interfaccia facoltativa che eredita dall'interfaccia OLE DB core **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, e **la funzione SetParameterInfo**; **ISSCommandWithParameters** fornisce due nuovi metodi che vengono utilizzati per gestire server specifici tipi di dati.  
+  **ISSCommandWithParameters** espone il supporto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per XML e i tipi definiti dall'utente (UDT). Si tratta di un'interfaccia facoltativa che eredita dall'interfaccia di base OLE DB **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**e **separameterinfo**; In **ISSCommandWithParameters** sono disponibili due nuovi metodi utilizzati per gestire i tipi di dati specifici del server.  
   
 > [!NOTE]  
->  Il **ISSCommandWithParameters** interfaccia può essere utilizzata quando vengono utilizzati i componenti del servizio, ma i componenti dei servizi stessi non utilizzerà questa interfaccia.  
+>  L'interfaccia **ISSCommandWithParameters** può essere utilizzata quando si utilizzano i componenti del servizio, ma i componenti del servizio non utilizzeranno questa interfaccia.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[ISSCommandWithParameters::GetParameterProperties &#40;OLE DB&#41;](isscommandwithparameters-getparameterproperties-ole-db.md)|Restituisce una struttura del set di proprietà **SSPARAMPROPS** della matrice per ogni parametro XML o tipo definito dall'utente passato al comando. Per gli altri tipi di parametro non ne restituisce nessuna.|  
-|[ISSCommandWithParameters::SetParameterProperties &#40;OLE DB&#41;](isscommandwithparameters-setparameterproperties-ole-db.md)|Imposta le proprietà per i singoli parametri in base al numero ordinale oppure imposta proprietà dei parametri bulk specificando una matrice di strutture **SSPARAMPROPS**.|  
+|[ISSCommandWithParameters:: GetParameterProperties &#40;OLE DB&#41;](isscommandwithparameters-getparameterproperties-ole-db.md)|Restituisce una struttura del set di proprietà **SSPARAMPROPS** della matrice per ogni parametro XML o tipo definito dall'utente passato al comando. Per gli altri tipi di parametro non ne restituisce nessuna.|  
+|[ISSCommandWithParameters:: SetParameterProperties &#40;OLE DB&#41;](isscommandwithparameters-setparameterproperties-ole-db.md)|Imposta le proprietà dei parametri per ogni parametro in base al numero ordinale oppure imposta le proprietà dei parametri bulk specificando una matrice di strutture **SSPARAMPROPS** .|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le interfacce &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   
- [Uso di tipi di dati XML](../native-client/features/using-xml-data-types.md)   
- [Uso dei tipi definiti dall'utente](../native-client/features/using-user-defined-types.md)  
+ [Interfacce &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   
+ [Utilizzo di tipi di dati XML](../native-client/features/using-xml-data-types.md)   
+ [Utilizzo dei tipi definiti dall'utente (UDT)](../native-client/features/using-user-defined-types.md)  
   
   

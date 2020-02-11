@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0a9b52652ec3e684c75a790f41899db2c117b62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63243160"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>Classe ClientSettingsGeneralFlag
-  Il [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) rappresenta le impostazioni del flag generale in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client.  
+  La [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) rappresenta le impostazioni del flag generale in un'istanza [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del client.  
   
- Il [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) può essere utilizzato per eseguire le operazioni seguenti:  
+ La [classe ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) può essere utilizzata per eseguire le operazioni seguenti:  
   
 -   Visualizzare il nome del flag.  
   

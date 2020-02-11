@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062099"
 ---
 # <a name="add-an-annotation-to-a-package"></a>Aggiunta di un'annotazione a un pacchetto
@@ -48,6 +48,6 @@ ms.locfileid: "66062099"
 8.  Per salvare il pacchetto aggiornato, scegliere **Salva tutto** dal menu **File**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Usare le annotazioni nei pacchetti](use-annotations-in-packages.md)  
+ [Utilizzo di annotazioni nei pacchetti](use-annotations-in-packages.md)  
   
   

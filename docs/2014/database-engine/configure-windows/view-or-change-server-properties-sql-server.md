@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783130"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Visualizzare o modificare le proprietà del server (SQL Server)
   In questo argomento viene illustrato come visualizzare o modificare le proprietà di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Gestione configurazione SQL Server.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -57,19 +57,19 @@ ms.locfileid: "72783130"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Per altre informazioni, vedere [Ruoli a livello di Server](../../relational-databases/security/authentication-access/server-level-roles.md).  
+ Per altre informazioni, vedere [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Per impostazione predefinita, le autorizzazioni di esecuzione per `sp_configure` senza parametri o solo con il primo parametro vengono concesse a tutti gli utenti. Per eseguire `sp_configure` con entrambi i parametri per modificare un'opzione di configurazione o per eseguire l'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER SETTINGS. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
+ Per impostazione predefinita `sp_configure` , le autorizzazioni Execute su senza parametri o solo con il primo parametro vengono concesse a tutti gli utenti. Per eseguire `sp_configure` con entrambi i parametri per modificare un'opzione di configurazione o per eseguire l'istruzione RECONFIGURE, a un utente deve essere concessa l'autorizzazione a livello di server ALTER Settings. L'autorizzazione ALTER SETTINGS è assegnata implicitamente ai ruoli predefiniti del server **sysadmin** e **serveradmin** .  
   
-##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>Per visualizzare o modificare le proprietà del server  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server e scegliere **Proprietà**.  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server, quindi scegliere **Proprietà**.  
   
 2.  Nella finestra di dialogo **Proprietà server** fare clic su una pagina per visualizzare o modificare le relative informazioni del server. Alcune proprietà sono di sola lettura.  
   
-##  <a name="TsqlProcedure"></a> Con Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Per visualizzare le proprietà del server tramite la funzione predefinita SERVERPROPERTY  
   
@@ -137,20 +137,20 @@ RECONFIGURE;
 GO  
 ```  
   
- Per altre informazioni, vedere [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
+ Per altre informazioni, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](server-configuration-options-sql-server.md)sia installato il servizio WMI.  
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di Gestione configurazione SQL Server  
  È possibile visualizzare o modificare alcune proprietà del server tramite Gestione configurazione SQL Server. Ad esempio, è possibile visualizzare la versione e l'edizione dell'istanza di SQL Server o modificare il percorso in cui sono archiviati i file di log degli errori. È inoltre possibile visualizzare queste proprietà eseguendo query nelle [Funzioni a gestione dinamica e DMV correlate al server](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql).  
   
 #### <a name="to-view-or-change-server-properties"></a>Per visualizzare o modificare le proprietà del server  
   
-1.  Fare clic sul pulsante **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
+1.  Fare clic sul menu **Start** , scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**e quindi **Gestione configurazione SQL Server**.  
   
 2.  In **Gestione configurazione SQL Server**fare clic su **Servizi di SQL Server**.  
   
-3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (\<***nomeistanza***>)** e scegliere **Proprietà**.  
+3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (\<***NomeIstanza***>)**, quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server (\<***nomeistanza***>) Proprietà** modificare le proprietà del server nella scheda **Servizio** o **Avanzate** e fare clic su **OK**.  
+4.  Nella finestra di dialogo **SQL Server (\<***nomeistanza***>) Proprietà** modificare le proprietà del server nella scheda **Servizio** o **Avanzate** e quindi fare clic su **OK**.  
   
 ##  <a name="FollowUp"></a> Completamento: Dopo la modifica delle proprietà del server  
  Per alcune proprietà, potrebbe essere necessario riavviare il server per rendere effettiva la modifica.  
@@ -162,7 +162,7 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [Configurazione di WMI per mostrare lo stato del server in Strumenti SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
+ [Configurare WMI per mostrare lo stato del server in Strumenti SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)   
  [Gestione configurazione SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Funzioni di configurazione &#40;Transact-SQL&#41;](/sql/t-sql/functions/configuration-functions-transact-sql)   
  [Funzioni a gestione dinamica e DMV correlate al server &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)  

@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione ADO NET (pagina Output degli errori) | Microsoft Docs
+title: Editor destinazione ADO NET (pagina output degli errori) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061773"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Editor destinazione ADO NET (pagina Output errori)
@@ -39,7 +39,7 @@ ms.locfileid: "66061773"
  **Colonna**  
  Non usato.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Consente di specificare l'azione da eseguire in caso di errori, ovvero ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Argomenti correlati:** [Gestione degli errori nei dati](data-flow/error-handling-in-data.md)  
@@ -58,6 +58,6 @@ ms.locfileid: "66061773"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Editor destinazione ADO NET &#40;pagina Mapping&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [Editor destinazione ADO NET &#40;pagina mapping&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

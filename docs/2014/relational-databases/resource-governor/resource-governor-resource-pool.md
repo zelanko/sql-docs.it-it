@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209872"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool di risorse di Resource Governor
@@ -63,19 +63,19 @@ ms.locfileid: "63209872"
   
 -   Percentuale condivisa = Valore effettivo MAX% - MIN%.  
   
-|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Commento|  
+|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Comment|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|interno|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
-|predefiniti|0|100|30|30|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50)) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
+|Interne|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
+|default|0|100|30|30|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50)) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
 |Pool 1|20|100|50|30|Il valore MAX effettivo viene calcolato come: min(100,100-50) = 50. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 30.|  
 |Pool 2|50|70|70|20|Il valore MAX effettivo viene calcolato come: min(70,100-20) = 70. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 20.|  
   
  Utilizzando la tabella precedente come esempio, è possibile descrivere ulteriormente le regolazioni che si verificano quando viene creato un altro pool. Il pool descritto è il pool 3 e ha una impostazione MIN% di 5.  
   
-|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Commento|  
+|Nome pool|Impostazione MIN%|Impostazione MAX%|Valore MAX% effettivo calcolato|Percentuale condivisa calcolata|Comment|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interno|0|100|100|0|I valori MAX% effettivo e % condivisa non sono applicabili al pool interno.|  
-|predefiniti|0|100|25|25|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50+5) = 25. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
+|default|0|100|25|25|Il valore MAX effettivo viene calcolato come: min(100,100-(20+50+5) = 25. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
 |Pool 1|20|100|45|25|Il valore MAX effettivo viene calcolato come: min(100,100-55) = 45. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
 |Pool 2|50|70|70|20|Il valore MAX effettivo viene calcolato come: min(70,100-25) = 70. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 20.|  
 |Pool 3|5|100|30|25|Il valore MAX effettivo viene calcolato come: min(100,100-70) = 30. La percentuale condivisa calcolata è il valore effettivo MAX - MIN = 25.|  
@@ -118,9 +118,9 @@ ms.locfileid: "63209872"
   
 ## <a name="see-also"></a>Vedere anche  
  [Resource Governor](resource-governor.md)   
- [Gruppo di carico di lavoro di Resource Governor](resource-governor-workload-group.md)   
- [Funzione di classificazione di Resource Governor](resource-governor-classifier-function.md)   
- [Configurare Resource Governor utilizzando un modello](configure-resource-governor-using-a-template.md)   
- [Visualizzare proprietà di Resource Governor](view-resource-governor-properties.md)  
+ [Gruppo del carico di lavoro Resource Governor](resource-governor-workload-group.md)   
+ [Funzione di classificazione Resource Governor](resource-governor-classifier-function.md)   
+ [Configurare Resource Governor usando un modello](configure-resource-governor-using-a-template.md)   
+ [View Resource Governor Properties](view-resource-governor-properties.md)  
   
   

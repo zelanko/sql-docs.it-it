@@ -1,5 +1,5 @@
 ---
-title: Concedere le autorizzazioni del cubo o modello (Analysis Services) | Microsoft Docs
+title: Concedere le autorizzazioni per un cubo o un modello (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075030"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Concedere le autorizzazioni per un cubo o un modello (Analysis Services)
@@ -34,7 +34,7 @@ ms.locfileid: "66075030"
  Per conservare le definizioni dei ruoli nelle distribuzioni successive della soluzione, è consigliabile definire i ruoli in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] come parte integrante del modello e quindi procedere all'assegnazione delle appartenenze ai ruoli in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] da parte di un amministratore del database dopo la pubblicazione del database. È tuttavia possibile usare uno dei due strumenti per entrambe le attività. Per semplificare l'esercizio, verrà usato [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sia per la definizione dei ruoli che per l'assegnazione delle appartenenze.  
   
 > [!NOTE]  
->  Solo gli amministratori del server o gli amministratori del database con autorizzazioni di controllo completo possono distribuire un cubo dai file di origine in un server o creare ruoli e assegnare membri. Visualizzare [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [concedere le autorizzazioni di database &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) per informazioni dettagliate su queste autorizzazioni livelli.  
+>  Solo gli amministratori del server o gli amministratori del database con autorizzazioni di controllo completo possono distribuire un cubo dai file di origine in un server o creare ruoli e assegnare membri. Per informazioni dettagliate su questi livelli di autorizzazione, vedere concedere le autorizzazioni di [amministratore del Server &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) e [concedere autorizzazioni per il database &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md) .  
   
 #### <a name="step-1-create-the-role"></a>Passaggio 1: Creare il ruolo  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66075030"
   
      Si noti che il riquadro Origine dati verrà ignorato. La maggior parte degli utenti normali dei dati di Analysis Services non necessita di autorizzazioni per l'oggetto origine dati. Per informazioni dettagliate sui livelli di autorizzazione, vedere [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) .  
   
-#### <a name="step-3-set-cube-permissions"></a>Passaggio 3: Impostare le autorizzazioni del cubo  
+#### <a name="step-3-set-cube-permissions"></a>Passaggio 3: Impostare le autorizzazioni per il cubo  
   
-1.  Nel **cubi** riquadro, selezionare un cubo e quindi fare clic su `Read` oppure **lettura/scrittura** accesso.  
+1.  Nel riquadro **cubi** selezionare un cubo e quindi fare clic su `Read` accesso in **lettura/scrittura** .  
   
-     `Read` l'accesso è sufficiente per la maggior parte delle operazioni. **Lettura/Scrittura** viene usato solo per il writeback e non per l'elaborazione. Per altre informazioni su questa funzionalità, vedere [Set Partition Writeback](set-partition-writeback.md) .  
+     `Read`l'accesso è sufficiente per la maggior parte delle operazioni. **Lettura/scrittura** viene usato solo per il writeback e non per l'elaborazione. Per altre informazioni su questa funzionalità, vedere [Set Partition Writeback](set-partition-writeback.md) .  
   
      Si noti che è possibile selezionare più cubi nonché altri oggetti disponibili nella finestra di dialogo Crea ruolo. Quando si concedono le autorizzazioni a un cubo, si autorizza l'accesso alle dimensioni e alle prospettive associate al cubo. Non è necessario aggiungere manualmente gli oggetti già rappresentati nel cubo.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "66075030"
   
 3.  In Excel usare la scheda Dati per connettersi ad Analysis Services. Poiché Excel viene eseguito come altro utente di Windows, per il test dei ruoli usare l'opzione **Usa autenticazione di Windows** come tipo di credenziali corretto. Se è necessaria assistenza per questo passaggio, vedere [Connettersi dalle applicazioni client &#40;Analysis Services&#41;](../instances/connect-from-client-applications-analysis-services.md).  
   
-     Se alla connessione si verifica un errore, controllare la configurazione della porta per Analysis Services e verificare che il server accetti le connessioni remote. Per la configurazione della porta, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
+     Se alla connessione si verifica un errore, controllare la configurazione della porta per Analysis Services e verificare che il server accetti le connessioni remote. Vedere [configurare il Windows Firewall per consentire l'accesso Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) per la configurazione della porta.  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>Passaggio 5: Le assegnazioni e crea script per definizione ruolo  
+#### <a name="step-5-script-role-definition-and-assignments"></a>Passaggio 5: Generare uno script per la definizione e le assegnazioni di ruolo  
   
 1.  Come passaggio finale, generare uno script per acquisire la definizione del ruolo appena creata.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66075030"
   
 2.  In SSMS passare alla cartella **Ruoli** e fare clic con il pulsante destro del mouse su un ruolo esistente.  
   
-3.  Selezionare **Crea script per ruolo** | **CREATE TO** | **file**.  
+3.  Selezionare **script Role come** | **Crea nel** | **file**.  
   
 4.  Salvare il file con estensione xmla. Per testare lo script, eliminare il ruolo corrente, aprire il file in SSMS e premere F5 per eseguire lo script.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66075030"
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodologie di autenticazione supportate da Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

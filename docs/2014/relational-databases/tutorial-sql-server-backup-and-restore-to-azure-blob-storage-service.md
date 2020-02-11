@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Backup e ripristino di SQL Server nel servizio Archiviazione BLOB di Azure| Microsoft Docs'
+title: 'Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Azure| Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176121"
 ---
-# <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure
+# <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Azure
   Introduzione all'Introduzione con SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure. Questa esercitazione contiene nozioni utili sulla scrittura di backup nel servizio di archiviazione Blob di Azure e sul ripristino dallo stesso.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  In questa esercitazione viene illustrato come creare un account di archiviazione di Windows, un contenitore BLOB, la creazione di credenziali per l'accesso all'account di archiviazione, la scrittura di un backup nel servizio BLOB e l'esecuzione di un ripristino semplice. Questa esercitazione è suddivisa in quattro lezioni:  
   
- [Lezione 1: Creare oggetti di archiviazione di Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [Lezione 1: Creare gli oggetti di Archiviazione di Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  In questa lezione verranno creati un account di archiviazione e un contenitore BLOB di Azure.  
   
- [Lezione 2: Creazione di una credenziale SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
+ [Lezione 2: Creare le credenziali di SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  In questa lezione verranno create le credenziali per archiviare le informazioni di sicurezza usate per accedere all'account di archiviazione di Azure.  
   
  [Lezione 3: Scrivere un backup completo del database nel servizio di archiviazione BLOB di Azure](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
@@ -46,10 +46,10 @@ ms.locfileid: "70176121"
   
 -   All'account utente usato per eseguire i comandi BACKUP o RESTORE deve essere associato il ruolo del database **db_backup operator** con autorizzazioni **Modifica qualsiasi credenziale** .  
   
-### <a name="additional-reading"></a>Ulteriori informazioni  
+### <a name="additional-reading"></a>Altre letture  
  Di seguito sono indicati alcuni argomenti consigliati per comprendere i concetti e le procedure consigliate quando si utilizza il servizio di archiviazione BLOB di Azure per i backup di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-1.  [SQL Server backup e ripristino con il servizio di archiviazione BLOB di Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+1.  [Backup e ripristino di SQL Server con il servizio Archiviazione BLOB di Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 2.  [Procedure consigliate e risoluzione dei problemi per il backup di SQL Server nell'URL](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   

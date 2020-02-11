@@ -18,19 +18,19 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044524"
 ---
-# <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce un elenco di informazioni sulle associazioni tra i profili di Posta elettronica database e le entità di database.  
   
  
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,16 +41,16 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @principal_id = ] principal_id` È l'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_id* viene **int**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* può essere specificato.  
+`[ @principal_id = ] principal_id`ID dell'utente del database o del ruolo nel database **msdb** per l'associazione all'elenco. *principal_id* è di **tipo int**e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` È il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione all'elenco. *principal_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* oppure *principal_name* può essere specificato.  
+`[ @principal_name = ] 'principal_name'`Nome dell'utente del database o del ruolo nel database **msdb** per l'associazione all'elenco. *principal_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *principal_id* o *principal_name* .  
   
-`[ @profile_id = ] profile_id` È l'ID del profilo per l'associazione all'elenco. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* può essere specificato.  
+`[ @profile_id = ] profile_id`ID del profilo per l'associazione da elencare. *profile_id* è di **tipo int**e il valore predefinito è null. È possibile specificare *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` È il nome del profilo per l'associazione all'elenco. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* oppure *profile_name* può essere specificato.  
+`[ @profile_name = ] 'profile_name'`Nome del profilo per l'associazione da elencare. *profile_name* è di **tipo sysname**e il valore predefinito è null. È possibile specificare *profile_id* o *profile_name* .  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce un set di risultati contenente le colonne elencate nella tabella seguente.  
@@ -64,12 +64,12 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**profile_name**|**sysname**|Nome del profilo di Posta elettronica database.|  
 |**is_default**|**bit**|Flag che indica se il profilo è il profilo predefinito per l'utente.|  
   
-## <a name="remarks"></a>Note  
- Se **sysmail_help_principalprofile_sp** viene richiamata senza parametri, il set di risultati restituito sono elencate tutte le associazioni nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Negli altri casi il set di risultati conterrà le informazioni relative alle associazioni che corrispondono ai parametri specificati. Se ad esempio si specifica il nome di un profilo, la procedura elenca tutte le associazioni per tale profilo.  
+## <a name="remarks"></a>Osservazioni  
+ Se **sysmail_help_principalprofile_sp** viene richiamato senza parametri, il set di risultati restituito elenca tutte le associazioni nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Negli altri casi il set di risultati conterrà le informazioni relative alle associazioni che corrispondono ai parametri specificati. Se ad esempio si specifica il nome di un profilo, la procedura elenca tutte le associazioni per tale profilo.  
   
- **sysmail_help_principalprofile_sp** è nel **msdb** del database ed è di proprietà il **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
+ **sysmail_help_principalprofile_sp** si trova nel database **msdb** ed è di proprietà dello schema **dbo** . La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -109,6 +109,6 @@ principal_id principal_name     profile_id  profile_name                   is_de
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di Posta elettronica database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

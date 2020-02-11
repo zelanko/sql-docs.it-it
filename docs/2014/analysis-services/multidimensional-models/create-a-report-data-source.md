@@ -1,5 +1,5 @@
 ---
-title: Creare un'origine dati Report | Microsoft Docs
+title: Creare un'origine dati del report | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076343"
 ---
 # <a name="create-a-report-data-source"></a>Creare un'origine dati per il report
@@ -39,10 +39,10 @@ ms.locfileid: "66076343"
   
 1.  Nella barra multifunzione della libreria fare clic sulla scheda **Documenti** .  
   
-2.  Fare clic su **Nuovo documento** > **Origine dati report**.  
+2.  Fare clic su **nuova** > **origine dati del report**del documento.  
   
     > [!NOTE]  
-    >  Se la voce **Origine dati report** non compare nel menu, il tipo di contenuto dell'origine dati del report non è stato abilitato per questa libreria. Per altre informazioni, vedere [aggiungere tipi di contenuto in una raccolta di &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+    >  Se la voce **Origine dati report** non compare nel menu, il tipo di contenuto dell'origine dati del report non è stato abilitato per questa libreria. Per ulteriori informazioni, vedere [aggiungere tipi di contenuto del server di report a una raccolta &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 3.  Nella pagina **Proprietà origine dati** , in **Nome**, digitare un nome per il file di connessione con estensione rsds.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66076343"
   
      (Facoltativo) I cubi possono avere prospettive che forniscono agli utenti una vista di selezione in cui sono visibili solo determinate dimensioni e/o gruppi di misure nel client. Per specificare una prospettiva, immettere il nome di prospettiva come valore per la proprietà Cube: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Facoltativo) I cubi possono presentare metadati e traduzioni di dati specificati per varie lingue all'interno del modello. Per visualizzare le traduzioni (dati e metadati) è necessario aggiungere la proprietà "Locale Identifier" alla stringa di connessione: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
+     (Facoltativo) I cubi possono presentare metadati e traduzioni di dati specificati per varie lingue all'interno del modello. Per visualizzare le traduzioni (dati e metadati), è necessario aggiungere la proprietà "identificatore delle impostazioni locali" alla stringa di connessione:`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  In **Credenziali**specificare la modalità con cui il server di report ottiene le credenziali per l'accesso all'origine dati esterna.  
   
