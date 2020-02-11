@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245132"
 ---
 # <a name="find-results-windows"></a>Finestre Risultati ricerca
-  Nelle due finestre Risultati ricerca vengono visualizzate le corrispondenze trovate utilizzando la scheda **Cerca nei file** o **Sostituisci nei file** della finestra di dialogo **trova e Sostituisci** . Il comando **Opzioni risultati** disponibile nelle schede **Cerca nei file** e **Sostituisci nei file** consente di scegliere la finestra Risultati ricerca in cui verranno visualizzate le corrispondenze trovate.  
+  Nelle due finestre Risultati ricerca vengono visualizzate le corrispondenze trovate utilizzando la scheda **Cerca nei file** o **Sostituisci nei file** della finestra di dialogo **Trova e sostituisci** . Il comando **Opzioni risultati** disponibile nelle schede **Cerca nei file** e **Sostituisci nei file** consente di scegliere la finestra Risultati ricerca in cui verranno visualizzate le corrispondenze trovate.  
   
  Ogni volta che vengono trovate corrispondenze, la finestra Risultati ricerca selezionata verrà visualizzata automaticamente. Per visualizzare manualmente una finestra Risultati ricerca scegliere **Altre finestre** dal menu **Visualizza** e quindi fare clic su **Risultati ricerca 1** o **Risultati ricerca 2**.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75245132"
 ## <a name="toolbar-buttons"></a>Pulsanti della barra degli strumenti  
  Sulla barra degli strumenti sono disponibili i pulsanti seguenti che consentono di analizzare l'elenco dei risultati e di passare alle righe del codice in cui sono state trovate corrispondenze.  
   
- **flag di pagina + freccia su**  
+ **flag di pagina + freccia in su**  
  Consente di spostarsi alla riga in cui è stata trovata la corrispondenza selezionata.  
   
  **pagina + freccia sinistra**  

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706850"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200394"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemi noti in Machine Learning Services di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -211,7 +211,7 @@ Se si verificano limitazioni delle risorse, controllare l'impostazione predefini
 
 In un computer Linux pulito in cui non è installato `libc++.so`, l'esecuzione di una query `sp_execute_external_script` (SPEES) con Java o un linguaggio esterno ha esito negativo perché `commonlauncher.so` non è in grado di caricare `libc++.so`.
 
-Esempio:
+Ad esempio:
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'Java'
@@ -259,7 +259,7 @@ Per informazioni su altri problemi noti che potrebbero influire sulle soluzioni 
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1. Avviso di accesso negato durante l'esecuzione di script R in SQL Server in un percorso non predefinito
 
-Se l'istanza di SQL Server è stata installata in un percorso non predefinito, ad esempio all'esterno della cartella `Program Files`, viene generato l'avviso ACCESS_DENIED quando si tenta di eseguire script che installano un pacchetto. Esempio:
+Se l'istanza di SQL Server è stata installata in un percorso non predefinito, ad esempio all'esterno della cartella `Program Files`, viene generato l'avviso ACCESS_DENIED quando si tenta di eseguire script che installano un pacchetto. Ad esempio:
 
 > *In `normalizePath(path.expand(path), winslash, mustWork)`: path[2]="~ExternalLibraries/R/8/1": Accesso negato*
 
@@ -403,7 +403,7 @@ Ad esempio, si supponga di aver definito le due funzioni `f` e `g` nell'ambiente
 
 Se si verifica questo problema, è possibile risolverlo incorporando la definizione di `f` all'interno della definizione di `g`, in qualsiasi punto prima che `g` chiamerebbe normalmente `f`.
 
-Esempio:
+Ad esempio:
 
 ```R
 f <- function(x) { 2*x * 3 }
@@ -590,7 +590,7 @@ Questo problema è stato risolto in SQL Server 2017 aggiornamento cumulativo 14 
 
 ### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6. Errore di interprete non valido durante l'installazione di pacchetti Python con pip in Linux 
 
-In SQL Server 2019, se si tenta di usare **pip**. Esempio:
+In SQL Server 2019, se si tenta di usare **pip**. Ad esempio:
 
 ```bash
 /opt/mssql/mlservices/runtime/python/bin/pip -h
@@ -617,7 +617,7 @@ Vedere [Installare pacchetti Python con sqlmlutils](package-management/install-a
 
 ### <a name="7-unable-to-install-python-packages-using-pip-after-installing-sql-server-2019-on-windows"></a>7. Non è possibile installare pacchetti Python con pip dopo l'installazione di SQL Server 2019 in Windows
 
-Dopo l'installazione di SQL Server 2019 in Windows, il tentativo di installare un pacchetto Python tramite **pip** da una riga di comando DOS avrà esito negativo. Esempio:
+Dopo l'installazione di SQL Server 2019 in Windows, il tentativo di installare un pacchetto Python tramite **pip** da una riga di comando DOS avrà esito negativo. Ad esempio:
 
 ```bash
 pip install quantfolio
@@ -650,7 +650,7 @@ Aprire quindi un nuovo prompt della shell dei comandi DOS.
 
 In un computer Linux pulito in cui non è installato `libc++abi.so`, l'esecuzione di una query (SPEES) `sp_execute_external_script` ha esito negativo con un errore "Impossibile trovare il file o la directory".
 
-Esempio:
+Ad esempio:
 
 ```text
 EXEC sp_execute_external_script
@@ -703,7 +703,7 @@ Se si ha una licenza esistente per Revolution R Enterprise, è necessario inseri
 
 Alcune versioni non definitive di [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] includono un ambiente di sviluppo R per Windows creato da Revolution Analytics. Questo strumento non è più disponibile e non è supportato.
 
-Per compatibilità con [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], è consigliabile installare invece Microsoft R Client. Anche [R Tools per Visual Studio](https://www.visualstudio.com/vs/rtvs/) e [Visual Studio Code](https://code.visualstudio.com/) supportano le soluzioni Microsoft R.
+Per compatibilità con [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], è consigliabile installare invece Microsoft R Client. Anche [R Tools per Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) e [Visual Studio Code](https://code.visualstudio.com/) supportano le soluzioni Microsoft R.
 
 ### <a name="2-compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>2. Problemi di compatibilità con il driver ODBC di SQLite e RevoScaleR
 

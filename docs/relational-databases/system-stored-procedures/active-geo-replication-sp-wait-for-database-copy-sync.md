@@ -18,10 +18,10 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
 ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844399"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Replica geografica attiva-sp_wait_for_database_copy_sync
@@ -41,13 +41,13 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [@target_server =] ' server_name '  
+ [ @target_server = ] 'server_name'  
  Nome del server di database SQL che ospita il database secondario attivo. server_name è di tipo sysname e non prevede alcun valore predefinito.  
   
- [@target_database =] ' database_name '  
+ [ @target_database = ] 'database_name'  
  Nome del database secondario attivo. database_name è di tipo sysname e non prevede alcun valore predefinito.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  Restituisce 0 per l'esito positivo o un numero di errore per l'esito negativo.  
   
  Le condizioni di errore più probabili sono:  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. dm_continuous_copy_status &#40;database&#41; SQL di Azure](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Viste a gestione dinamica e funzioni &#40;per la replica geografica database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+ [sys. dm_continuous_copy_status &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Funzioni e viste a gestione dinamica con replica geografica &#40;database SQL di Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

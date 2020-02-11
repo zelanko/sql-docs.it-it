@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056406"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -48,8 +48,8 @@ PER PATH deve essere usato con qualsiasi nome di tabella Node o Edge nella claus
 ## <a name="arbitrary-length-pattern"></a>Modello di lunghezza arbitraria
 Questo modello include i nodi e i bordi che devono essere attraversati ripetutamente fino a raggiungere il nodo desiderato o fino a quando non viene soddisfatto il numero massimo di iterazioni specificato nel criterio. Ogni volta che viene eseguita la query, il risultato dell'esecuzione di questo modello sarà una raccolta ordinata dei nodi e dei bordi attraversati lungo il percorso dal nodo iniziale al nodo finale. Si tratta di un modello di sintassi di tipo espressione regolare e sono supportati i due quantificatori di criteri seguenti:
 
-* **' +'** : Ripetere il modello 1 o più volte. Terminare non appena viene trovato un percorso più breve.
-* **{1, n}** : ripetere il modello da 1 a' n'volte. Termina non appena viene rilevata una più breve.
+* **' +'**: Ripetere il modello 1 o più volte. Terminare non appena viene trovato un percorso più breve.
+* **{1, n}**: ripetere il modello da 1 a' n'volte. Termina non appena viene rilevata una più breve.
 
 ## <a name="last_node"></a>LAST_NODE
 La funzione LAST_NODE () consente il concatenamento di due modelli di attraversamento di lunghezza arbitraria. Può essere usato in scenari in cui:    
@@ -85,20 +85,20 @@ La funzione STRING_AGG accetta un'espressione e un separatore come input e resti
 ### <a name="last_value"></a>LAST_VALUE
 Per proiettare gli attributi dall'ultimo nodo attraversato, è possibile usare LAST_VALUE funzione di aggregazione. Non è possibile specificare alias della tabella Edge come input per questa funzione. è possibile usare solo nomi o alias di tabella del nodo.
 
-**Ultimo nodo**: l'ultimo nodo fa riferimento al nodo che viene visualizzato per ultimo nel percorso attraversato, indipendentemente dalla direzione della freccia nel predicato di corrispondenza. Esempio: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Qui l'ultimo nodo del percorso sarà l'ultimo nodo P visitato. 
+**Ultimo nodo**: l'ultimo nodo fa riferimento al nodo che viene visualizzato per ultimo nel percorso attraversato, indipendentemente dalla direzione della freccia nel predicato di corrispondenza. Ad esempio: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Qui l'ultimo nodo del percorso sarà l'ultimo nodo P visitato. 
 
-Mentre l'ultimo nodo è l'ultimo ennesimo nodo nel percorso del grafico di output per questo modello: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Mentre l'ultimo nodo è l'ultimo ennesimo nodo nel percorso del grafico di output per questo modello:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Questa funzione restituisce la somma dei valori dell'attributo node/Edge forniti o dell'espressione che è stata visualizzata nel percorso attraversato.
 
 ### <a name="count"></a>COUNT
-Questa funzione restituisce il numero di valori non null dell'attributo node/Edge desiderato nel percorso. La funzione COUNT supporta l'operatore '\*' con un alias di tabella Node o Edge. Senza l'alias della tabella Node o Edge, l'utilizzo di \* è ambiguo e genera un errore.
+Questa funzione restituisce il numero di valori non null dell'attributo node/Edge desiderato nel percorso. La funzione COUNT supporta l'operatore\*'' con un alias di tabella Node o Edge. Senza l'alias della tabella Node o Edge, l'utilizzo \* di è ambiguo e verrà generato un errore.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
 
-### <a name="avg"></a>MEDIO
+### <a name="avg"></a>MEDIA
 Restituisce la media dei valori dell'attributo node/Edge forniti o dell'espressione che è stata visualizzata nel percorso attraversato.
 
 ### <a name="min"></a>MIN
@@ -137,7 +137,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>b.  Trova il percorso più breve da un nodo specificato a tutti gli altri nodi del grafico. 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  Trova il percorso più breve da un nodo specificato a tutti gli altri nodi del grafico. 
  Nell'esempio seguente vengono individuate tutte le persone a cui Giacobbe è connesso nel grafico e il percorso più breve che inizia da Jacob a tutti gli utenti. 
 
  ```
@@ -209,8 +209,8 @@ WHERE Q.levels = 2
 ```
 
 ## <a name="see-also"></a>Vedere anche  
- [Corrispondenza (grafo SQL)](../../t-sql/queries/match-sql-graph.md)    
+ [MATCH (grafo SQL)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (grafo SQL)](../../t-sql/statements/insert-sql-graph.md)  
+ [Insert (grafo SQL)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Elaborazione di grafi con SQL Server 2017)     
  

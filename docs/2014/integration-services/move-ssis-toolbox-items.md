@@ -1,5 +1,5 @@
 ---
-title: Spostare gli elementi della casella degli strumenti SSIS | Microsoft Docs
+title: Spostare elementi della casella degli strumenti SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057555"
 ---
 # <a name="move-ssis-toolbox-items"></a>Spostamento degli elementi della casella degli strumenti SSIS
@@ -24,17 +24,17 @@ ms.locfileid: "66057555"
   
 1.  Fare clic con il pulsante destro del mouse su un elemento della casella degli strumenti di SSIS, quindi fare clic su:  
   
-    -   **Sposta a Preferiti**  
+    -   **Passa a Preferiti**  
   
-    -   **Sposta a Comune**  
+    -   **Sposta in comune**  
   
-    -   **Sposta ad altre origini**  
+    -   **Passa ad altre origini**  
   
-    -   **Sposta ad altre destinazioni**  
+    -   **Passa ad altre destinazioni**  
   
     -   **Sposta ad altre trasformazioni**  
   
-    -   **Sposta ad altre attività**  
+    -   **Passa ad altre attività**  
   
 ### <a name="to-refresh-the-ssis-toolbox"></a>Per aggiornare la casella degli strumenti di SSIS  
   

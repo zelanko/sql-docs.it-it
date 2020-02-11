@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632856"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Panoramica di Data Migration Assistant
@@ -34,13 +34,13 @@ Per installare DMA, scaricare la versione più recente dello strumento dall' [ar
 
 ## <a name="capabilities"></a>Capabilities
 
-- Valutare le istanze di SQL Server locali che eseguono la migrazione a database SQL di Azure. Il flusso di lavoro di valutazione consente di rilevare i seguenti problemi che possono influire sulla migrazione del database SQL di Azure e fornisce indicazioni dettagliate su come risolverli.
+- Valutare le istanze di SQL Server locali che eseguono la migrazione a database SQL di Azure.Il flusso di lavoro di valutazione consente di rilevare i seguenti problemi che possono influire sulla migrazione del database SQL di Azure e fornisce indicazioni dettagliate su come risolverli.
 
-  - Problemi di blocco della migrazione: individua i problemi di compatibilità che bloccano la migrazione dei database di SQL Server locali ai database SQL di Azure. DMA fornisce consigli per risolvere tali problemi.
+  - Problemi di blocco della migrazione: individua i problemi di compatibilità che bloccano la migrazione dei database di SQL Server locali ai database SQL di Azure.DMA fornisce consigli per risolvere tali problemi.
 
-  - Funzionalità parzialmente supportate o non supportate: rileva le funzionalità parzialmente supportate o non supportate attualmente in uso nell'istanza di SQL Server di origine. DMA fornisce un set completo di indicazioni, approcci alternativi disponibili in Azure e procedure di mitigazione per poterli incorporare nei progetti di migrazione.
+  - Funzionalità parzialmente supportate o non supportate: rileva le funzionalità parzialmente supportate o non supportate attualmente in uso nell'istanza di SQL Server di origine.DMA fornisce un set completo di indicazioni, approcci alternativi disponibili in Azure e procedure di mitigazione per poterli incorporare nei progetti di migrazione.
 
-- Individuare i problemi che possono influire sull'aggiornamento a un SQL Server locale. Questi sono descritti come problemi di compatibilità e sono organizzati nelle categorie seguenti:
+- Individuare i problemi che possono influire sull'aggiornamento a un SQL Server locale.Questi sono descritti come problemi di compatibilità e sono organizzati nelle categorie seguenti:
 
   - Modifiche di rilievo
   - Modifiche del comportamento
@@ -49,7 +49,7 @@ Per installare DMA, scaricare la versione più recente dello strumento dall' [ar
 - Individuare nuove funzionalità nella piattaforma di SQL Server di destinazione che il database può trarre vantaggio da dopo un aggiornamento. Questi sono descritti come raccomandazioni sulle funzionalità e sono organizzati nelle categorie seguenti:
 
   - Prestazioni
-  - Sicurezza
+  - Security
   - Archiviazione
 
 - Eseguire la migrazione di un'istanza di SQL Server locale a un'istanza di SQL Server moderna ospitata in locale o in una macchina virtuale (VM) di Azure accessibile dalla rete locale. È possibile accedere alla macchina virtuale di Azure tramite VPN o altre tecnologie. Il flusso di lavoro di migrazione consente di eseguire la migrazione dei componenti seguenti:
@@ -67,7 +67,7 @@ Per installare DMA, scaricare la versione più recente dello strumento dall' [ar
 
   - Problemi di informazioni: rileva le funzionalità parzialmente supportate o deprecate utilizzate nei pacchetti di origine.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per eseguire una valutazione, è necessario essere un membro del ruolo **sysadmin** SQL Server.
 
@@ -83,9 +83,9 @@ DMA sostituisce tutte le versioni precedenti di SQL Server preparazione aggiorna
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- SQL Server 2017 in Windows
+-  SQL Server 2017 su Windows
 
-**Obiettivi**
+**Server di destinazione**
 
 - SQL Server 2012
 - SQL Server 2014
@@ -93,7 +93,7 @@ DMA sostituisce tutte le versioni precedenti di SQL Server preparazione aggiorna
 - SQL Server 2017 in Windows e Linux
 - SQL Server 2019
 - Database singolo di database SQL di Azure
-- Istanza gestita di database SQL di Azure
+- Istanza gestita di Database SQL di Azure
 - SQL Server in esecuzione in una macchina virtuale di Azure
 
 ## <a name="see-also"></a>Vedere anche

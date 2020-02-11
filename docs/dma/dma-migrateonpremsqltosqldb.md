@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056607"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Eseguire la migrazione di SQL Server o SQL Server locali in macchine virtuali di Azure al database SQL di Azure usando il Data Migration Assistant
@@ -33,7 +33,7 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 
 2. Impostare il tipo di origine su **SQL Server** e il tipo di server di destinazione sul **database SQL di Azure**.
 
-3. Selezionare **Crea**.
+3. Selezionare **Create** (Crea).
 
    ![Crea progetto di migrazione](../dma/media/NewCreate1.png)
 
@@ -57,7 +57,7 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 
     ![Seleziona database di origine](../dma/media/select-source-database.png)
 
-5. Fare clic su **Avanti**.
+5. Selezionare **Avanti**.
 
 ## <a name="specify-the-target-server-and-database"></a>Specificare il server e il database di destinazione
 
@@ -79,7 +79,7 @@ Questo articolo fornisce istruzioni dettagliate per la migrazione di SQL Server 
 
     ![Selezione database di destinazione](../dma/media/select-target-database.png)
 
-5. Fare clic su **Avanti**.
+5. Selezionare **Avanti**.
 
 ## <a name="select-schema-objects"></a>Selezione oggetti dello schema
 

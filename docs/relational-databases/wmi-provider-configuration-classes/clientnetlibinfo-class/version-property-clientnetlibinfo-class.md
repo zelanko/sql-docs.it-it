@@ -18,10 +18,10 @@ ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d795f4f76f58829c9c52a6ba3e28f3afa7103080
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659159"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Proprietà Version (classe ClientNetLibInfo)
@@ -36,7 +36,7 @@ object.Version [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe ClientNetLibInfo](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) che rappresenta le informazioni sulla libreria di rete del client.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  

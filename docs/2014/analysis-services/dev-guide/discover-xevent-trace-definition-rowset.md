@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62731913"
 ---
-# <a name="discoverxeventtracedefinition-rowset"></a>Set di righe DISCOVER_XEVENT_TRACE_DEFINITION
+# <a name="discover_xevent_trace_definition-rowset"></a>Set di righe DISCOVER_XEVENT_TRACE_DEFINITION
   Vengono fornite informazioni sulle tracce XEvent attualmente attive nel server.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
@@ -36,14 +36,14 @@ ms.locfileid: "62731913"
   
  Nella tabella seguente vengono forniti i GUID e i valori stringa che identificano questo set di righe.  
   
-|Argomento|Value|  
+|Argomento|valore|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
-|String|DISCOVER_XEVENT_TRACE_DEFINITION|  
+|string|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML for Analysis i set di righe dello Schema](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
- [Utilizzare eventi estesi di SQL Server &#40;XEvents&#41; per monitorare Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [Utilizzare DMV per monitorare Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Set di righe dello schema XML for Analysis](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
+ [Usare SQL Server eventi estesi &#40;&#41; XEvent per monitorare Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [Utilizzare le viste a gestione dinamica &#40;&#41; DMV per monitorare Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

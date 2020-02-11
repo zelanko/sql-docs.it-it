@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Preparazione della cartella Snapshot | Microsoft Docs'
+title: 'Lezione 2: Preparazione della cartella snapshot | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721018"
 ---
-# <a name="lesson-2-preparing-the-snapshot-folder"></a>Lezione 2: Preparazione della cartella Snapshot
+# <a name="lesson-2-preparing-the-snapshot-folder"></a>Lezione 2: Preparazione della cartella snapshot
   In questa lezione verrà configurata la cartella snapshot utilizzata per la creazione e l'archiviazione dello snapshot di pubblicazione.  
   
 ### <a name="to-create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>Per creare una condivisione per la cartella snapshot e assegnare le autorizzazioni  
@@ -36,9 +36,9 @@ ms.locfileid: "62721018"
   
 6.  Nella scheda **Sicurezza** fare clic su **Modifica**.  
   
-7.  Nella finestra di dialogo **Autorizzazioni** fare clic su **Aggiungi**. Nella casella di testo **Seleziona utenti, computer, account del servizio o gruppi** digitare il nome dell'account dell'agente snapshot creato nella lezione 1 nel formato \<_Nome_computer>_ **\repl_snapshot**, dove \<*Nome_computer>* è il nome del server di pubblicazione. Fare clic su **Controlla nomi**e quindi su **OK**.  
+7.  Nella finestra di dialogo **Autorizzazioni** fare clic su **Aggiungi**. Nella casella di testo **Seleziona utente, computer, account servizio o gruppi** Digitare il nome dell'account agente di snapshot creato nella lezione 1, come \< _Machine_Name>_ **\ repl_snapshot**, dove \< *Machine_Name>* è il nome del server di pubblicazione. Fare clic su **Controlla nomi** e quindi su **OK**.  
   
-8.  Ripetere il passaggio precedente per aggiungere le autorizzazioni per l'agente di distribuzione nel formato \<_Nome_computer>_ **\repl_distribution** e per l'agente di merge nel formato \<_Nome_computer>_ **\repl_merge**.  
+8.  Ripetere il passaggio precedente per aggiungere le autorizzazioni per il agente di distribuzione, come \< _Machine_Name>_ **\ repl_distribution**e per il \<agente di merge Machine_Name _>_ **\ repl_merge**.  
   
 9. Verificare che siano state concesse le autorizzazioni seguenti:  
   

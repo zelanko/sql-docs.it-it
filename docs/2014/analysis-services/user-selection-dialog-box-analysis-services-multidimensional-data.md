@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Selezione utenti (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo Selezione utenti (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065487"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Selezione utenti (Analysis Services - Dati multidimensionali)
@@ -25,11 +25,11 @@ ms.locfileid: "66065487"
  Per aprire la finestra di dialogo **Selezione utenti** , nella pagina **Impostazione criteri di query** dell'Ottimizzazione guidata basata sulle statistiche di utilizzo fare clic sui puntini di sospensione (...) per l'opzione **Utenti** .  
   
 ## <a name="options"></a>Opzioni  
- **Selezionare gli utenti**  
+ **Seleziona utenti**  
  Consente di selezionare gli utenti in base a cui filtrare le query del log di query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Specificare i criteri di Query &#40;procedura guidata basata sulle statistiche&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Specificare i criteri di query &#40;Ottimizzazione guidata basata sulle informazioni di utilizzo&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

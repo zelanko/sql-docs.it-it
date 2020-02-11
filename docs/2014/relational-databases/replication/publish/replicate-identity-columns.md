@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479251"
 ---
 # <a name="replicate-identity-columns"></a>Replica di colonne Identity
@@ -44,7 +44,7 @@ ms.locfileid: "74479251"
   
 -   manuale. Questa opzione viene utilizzata per la replica snapshot e transazionale con aggiornamenti nel Sottoscrittore, per la replica transazionale peer-to-peer oppure se l'applicazione richiede il controllo degli intervalli di valori Identity a livello di programmazione. Se si sceglie la gestione manuale, è necessario verificare che gli intervalli vengano assegnati al server di pubblicazione e a tutti i Sottoscrittori e che vengano assegnati nuovi intervalli se quelli iniziali sono già in uso. Nella replica l'opzione NOT FOR REPLICATION viene impostata nella colonna Identity del Sottoscrittore.  
   
--   Nessuna. Questa opzione è consigliata solo per la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è disponibile solo dall'interfaccia delle stored procedure delle pubblicazioni transazionali.  
+-   No. Questa opzione è consigliata solo per la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ed è disponibile solo dall'interfaccia delle stored procedure delle pubblicazioni transazionali.  
   
  Per specificare un'opzione di gestione degli intervalli di valori Identity, vedere [Gestire le colonne Identity](manage-identity-columns.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74479251"
 |`smallint`|da -2^15 (-32.768) a 2^15-1 (32.767)|  
 |`int`|da -2^31 (-2.147.483.648) a 2^31-1 (2.147.483.647)|  
 |`bigint`|da -2^63 (-9.223.372.036.854.775.808) a 2^63-1 (9.223.372.036.854.775.807)|  
-|`decimal`e`numeric`|da -10^38+1 a 10^38-1|  
+|`decimal` e `numeric`|da -10^38+1 a 10^38-1|  
   
 > [!NOTE]  
 >  Per creare un numero a incremento automatico da usare in più tabelle o da chiamare dalle applicazioni senza fare riferimento ad alcuna tabella, vedere [Numeri di sequenza](../../sequence-numbers/sequence-numbers.md).  
@@ -125,7 +125,7 @@ ms.locfileid: "74479251"
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC CHECKIDENT &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
- [IDENT_CURRENT &#40;&#41;Transact-SQL](/sql/t-sql/functions/ident-current-transact-sql)   
+ [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
  [Proprietà IDENTITY &#40;&#41; &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
  [sp_adjustpublisheridentityrange &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   

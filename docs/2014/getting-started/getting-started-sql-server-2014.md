@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683494"
 ---
 # <a name="getting-started-sql-server-2014"></a>Introduzione (SQL Server 2014)
@@ -34,8 +34,8 @@ ms.locfileid: "74683494"
   
  [Compatibilità con le versioni precedenti](backward-compatibility.md)  
   
- [Informazioni sulle condizioni di licenza SQL Server](about-the-sql-server-license-terms.md)  
+ [Informazioni sulle condizioni di licenza di SQL Server](about-the-sql-server-license-terms.md)  
   
- [Microsoft SQL Server informativa sulla privacy](microsoft-sql-server-privacy-statement.md)  
+ [Informativa sulla privacy di Microsoft SQL Server](microsoft-sql-server-privacy-statement.md)  
   
   

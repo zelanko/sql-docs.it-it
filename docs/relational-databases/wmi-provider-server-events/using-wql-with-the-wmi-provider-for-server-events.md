@@ -17,10 +17,10 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57f7e07de49b2591e9ab0ef74603d674543282e9
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660483"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilizzo di WQL con il provider WMI per eventi del server
@@ -66,7 +66,7 @@ WHERE where_condition
  *event_property*  
  Proprietà di un evento. Gli esempi includono **posttime**, **SPID**e **LoginName**. Cercare ogni evento elencato in [classi e proprietà del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md) per determinare le proprietà che possiede. Ad esempio, l'evento DDL_DATABASE_LEVEL_EVENTS include le proprietà **DatabaseName** e **username** . Eredita inoltre le proprietà **SQLInstance**, **LoginName**, **posttime**, **SPID**e **ComputerName** dagli eventi padre.  
   
- **,** *...n*  
+ **,** *... n*  
  Indica che *event_property* possibile eseguire query più volte, separate da virgole.  
   
  \*  
@@ -81,7 +81,7 @@ WHERE where_condition
  *where_condition*  
  Predicato di query clausola WHERE costituito da nomi *event_property* e operatori logici e di confronto. Il *where_condition* determina l'ambito in cui la notifica degli eventi corrispondente è registrata nel database di destinazione. Può anche fungere da filtro per indirizzare un particolare schema o oggetto da cui eseguire una query *event_type.* Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- È possibile utilizzare solo l'operando `=` insieme a **DatabaseName**, **SchemaName**e **ObjectName**. Con queste proprietà di evento non è possibile utilizzare altre espressioni.  
+ È possibile `=` utilizzare solo l'operando insieme a **DatabaseName**, **SchemaName**e **ObjectName**. Con queste proprietà di evento non è possibile utilizzare altre espressioni.  
   
 ## <a name="remarks"></a>Osservazioni  
  Il *where_condition* della sintassi del provider WMI per gli eventi del server determina quanto segue:  
@@ -92,7 +92,7 @@ WHERE where_condition
   
  Il provider WMI per eventi del server utilizza un algoritmo bottom-up, first-fit per produrre l'ambito più ristretto possibile per l'oggetto EVENT NOTIFICATION sottostante. L'algoritmo tenta di ridurre l'attività interna sul server e il traffico di rete tra l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il processo host WMI. Il provider esamina la *event_type* specificata nella clausola from e le condizioni nella clausola WHERE e tenta di registrare la notifica degli eventi sottostante con l'ambito più piccolo possibile. Se tale registrazione non riesce, prova a eseguirla nei successivi ambiti di livello più alto finché l'operazione non riesce. Se l'esito dell'operazione è ancora negativo dopo aver raggiunto l'ambito di livello più alto, ovvero il livello del server, restituisce un errore al consumer.  
   
- Se, ad esempio, si specifica DatabaseName = **'** AdventureWorks **'** nella clausola WHERE, il provider prova a registrare una notifica degli eventi nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Se il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esiste e il client chiamante dispone delle autorizzazioni necessarie per creare una notifica degli eventi in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la registrazione riesce. In caso contrario, viene eseguito un tentativo di registrazione della notifica degli eventi a livello di server. La registrazione riesce se il client WMI dispone delle autorizzazioni necessarie. In questo scenario, tuttavia, gli eventi non vengono restituiti al client finché il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] non sarà stato creato.  
+ Se, ad esempio, si specifica DatabaseName =**'** AdventureWorks **'** nella clausola WHERE, il provider prova a registrare una notifica degli [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] eventi nel database. Se il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esiste e il client chiamante dispone delle autorizzazioni necessarie per creare una notifica degli eventi in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la registrazione riesce. In caso contrario, viene eseguito un tentativo di registrazione della notifica degli eventi a livello di server. La registrazione riesce se il client WMI dispone delle autorizzazioni necessarie. In questo scenario, tuttavia, gli eventi non vengono restituiti al client finché il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] non sarà stato creato.  
   
  Il *where_condition* può fungere anche da filtro per limitare ulteriormente la query a un database, uno schema o un oggetto specifico. Si consideri, ad esempio, la query WQL seguente:  
   
@@ -106,7 +106,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Se si specifica un'espressione composta, ad esempio `DatabaseName='AW1'` OR `DatabaseName='AW2'`, viene effettuato il tentativo di registrare una singola notifica degli eventi nell'ambito server anziché due notifiche degli eventi separate. La registrazione riesce se il client chiamante dispone di autorizzazioni.  
   
- Se `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` vengono tutti specificati nella clausola `WHERE`, viene effettuato un tentativo di registrare la notifica degli eventi direttamente sull'oggetto `Z` nel `X`dello schema. La registrazione riesce se il client dispone di autorizzazioni. Si noti che attualmente gli eventi a livello di oggetto sono supportati solo nelle code e solo per il *event_type*QUEUE_ACTIVATION.  
+ Se `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` tutti gli oggetti sono specificati `WHERE` nella clausola, viene effettuato un tentativo di registrare la notifica degli eventi direttamente `Z` sull'oggetto `X`nello schema. La registrazione riesce se il client dispone di autorizzazioni. Si noti che attualmente gli eventi a livello di oggetto sono supportati solo nelle code e solo per il *event_type*QUEUE_ACTIVATION.  
   
  Notare che non tutti gli eventi possono essere sottoposti a query in qualsiasi ambito specifico. Una query WQL su un evento di traccia quale Lock_Deadlock o un gruppo di eventi di traccia quale TRC_LOCKS può essere, ad esempio, registrata solo a livello di server. Analogamente, anche l'evento CREATE_ENDPOINT e il gruppo di eventi DDL_ENDPOINT_EVENTS possono essere registrati solo a livello di server. Per ulteriori informazioni sull'ambito appropriato per la registrazione degli eventi, vedere [progettazione di notifiche degli eventi](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Il tentativo di registrare una query WQL il cui *event_type* può essere registrato solo a livello di server viene sempre eseguito a livello di server. La registrazione riesce se il client WMI dispone di autorizzazioni. In caso contrario, al client viene restituito un errore. In alcuni casi, tuttavia, è ancora possibile utilizzare la clausola WHERE come filtro per gli eventi a livello di server in base alle proprietà che corrispondono all'evento. Molti eventi di traccia, ad esempio, dispongono di una proprietà **DatabaseName** che può essere utilizzata nella clausola WHERE come filtro.  
   
@@ -123,7 +123,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>b. Query su eventi nell'ambito database  
+### <a name="b-querying-for-events-at-the-database-scope"></a>B. Query su eventi nell'ambito database  
  Nella query WQL seguente vengono recuperate proprietà di evento specifiche per qualsiasi evento che si verifica nel database `AdventureWorks` ed è incluso nel gruppo di eventi `DDL_DATABASE_LEVEL_EVENTS`.  
   
 ```  
@@ -141,7 +141,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti relativi al provider WMI per eventi del Server](https://technet.microsoft.com/library/ms180560.aspx)   
- [Notifiche degli eventi (motore di database)](https://technet.microsoft.com/library/ms182602.aspx)  
+ [Concetti relativi al provider WMI per eventi del server](https://technet.microsoft.com/library/ms180560.aspx)   
+ [Notifiche degli eventi (Motore di database)](https://technet.microsoft.com/library/ms182602.aspx)  
   
   

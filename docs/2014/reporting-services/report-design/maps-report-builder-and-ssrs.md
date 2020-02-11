@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86932da9ccec6e973a2a35fc0ccbb5f54af63f05
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67826544"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "67826544"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Process"></a> Aggiunta di una mappa al report  
+##  <a name="Process"></a>Aggiunta di una mappa al report  
  Per aggiungere una mappa al report, attenersi al seguente elenco di passaggi generali:  
   
 -   Determinare i dati analitici che si desidera visualizzare e i tipi di dati spaziali necessari. Ad esempio per visualizzare le vendite annuali relative di un negozio su una mappa a bolle, è necessario disporre del nome e delle vendite del negozio per i dati analitici, nonché del nome e della posizione del negozio, ad esempio latitudine e longitudine, per i dati spaziali.  
@@ -56,7 +56,7 @@ ms.locfileid: "67826544"
   
 
   
-##  <a name="AddingData"></a> Aggiunta di dati a una mappa  
+##  <a name="AddingData"></a>Aggiunta di dati a una mappa  
  Una mappa usa due tipi di dati: spaziali e analitici. I dati spaziali definiscono l'aspetto della mappa mentre i dati analitici forniscono i valori associati alla mappa. Ad esempio i dati spaziali definiscono le posizioni delle città in un'area, mentre i dati analitici forniscono le informazioni sulla popolazione di ogni città.  
   
  Una mappa deve necessariamente disporre di dati spaziali, mentre quelli analitici sono facoltativi. Ad esempio è possibile aggiungere una mappa che visualizza solo le posizioni dei negozi in una città.  
@@ -68,36 +68,36 @@ ms.locfileid: "67826544"
   
  I dati spaziali sono basati su uno dei seguenti sistemi di coordinate:  
   
--   **Geografico** Specifica le coordinate geodetiche su una superficie sferica tramite la longitudine e la latitudine. Se i dati spaziali sono geografici, è necessario specificare una proiezione, ovvero un set di regole che specifica come disegnare oggetti che dispongono di coordinate sferiche su una superficie planare. È possibile confrontare o combinare solo i dati geografici con la stessa proiezione.  
+-   Area **geografica** Specifica le coordinate geodetiche su una superficie sferica usando la longitudine e la latitudine. Se i dati spaziali sono geografici, è necessario specificare una proiezione, ovvero un set di regole che specifica come disegnare oggetti che dispongono di coordinate sferiche su una superficie planare. È possibile confrontare o combinare solo i dati geografici con la stessa proiezione.  
   
--   **Planare** Specifica le coordinate geometriche su una superficie planare tramite le coordinate X e Y.  
+-   **Planar** Specifica le coordinate geometriche su una superficie planare usando X e Y.  
   
  Ogni livello mappa visualizza un tipo di dati spaziali: poligoni, linee o punti. Per visualizzare più tipi di dati spaziali, aggiungere più livelli alla mappa. È possibile aggiungere anche un livello di tessere mappa di Microsoft Bing. Il livello sezione non dipende dai dati spaziali; esso consente di visualizzare le sezioni dell'immagine che corrispondono alle coordinate del viewport mappa.  
   
 #### <a name="sources-of-spatial-data"></a>Origini dei dati spaziali  
  Sono supportate le seguenti origini dei dati spaziali:  
   
--   **Report di Raccolta mappe.** I dati spaziali sono incorporati nei report posizionati nella raccolta mappe. Per impostazione predefinita, la raccolta mappe è installata in *\<unità>* :\Programmi\Microsoft SQL Server\Generatore report\RaccoltaMappe.  
+-   **Report della raccolta mappe.** I dati spaziali sono incorporati nei report posizionati nella raccolta mappe. Per impostazione predefinita, la raccolta mappe è installata in * \<unità>*: \Programmi\Microsoft SQL Server\Generatore Builder report\RaccoltaMappe.  
   
     > [!NOTE]  
-    >  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dallo United States Census Bureau. Per altre informazioni sui file di forma TIGER/Line, vedere [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentazione tecnica dei file di forma TIGER/Line e dei file TIGER/Line). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati dello United States Bureau of the Census.  
+    >  Questa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] funzionalità di mapping usa i dati di forma Tiger/Line forniti gentilmente da U.S. Census Bureau[http://www.census.gov/](http://www.census.gov/)(). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dal Census Bureau degli Stati Uniti. Per altre informazioni sui file di forma TIGER/Line, vedere [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentazione tecnica dei file di forma TIGER/Line e dei file TIGER/Line). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati di U.S. Bureau of the Census.  
   
--   **File di forma ESRI.** I file di forma ESRI contengono dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI) Formato di file di forma dei dati spaziali. Essi fanno riferimento a un set di file. I dati nel file con estensione shp specificano le forme geografiche o geometriche. I dati nel file con estensione dbf forniscono gli attributi per le forme. Per visualizzare una mappa in visualizzazione della struttura o eseguirla dal server di report, entrambi i file devono trovarsi nella stessa cartella. Quando si aggiungono dati spaziali da un file con estensione shp sul file system locale, i dati spaziali sono incorporati nel report. Per recuperare i dati spaziali dinamicamente in fase di esecuzione, caricare i file di forma nel server di report e specificarli come origine dei dati spaziali. Per altre informazioni, vedere la pagina relativa alla [ricerca di file di forma ESRI per una mappa](https://go.microsoft.com/fwlink/?linkid=178814).  
+-   **Forma ESRI.** I file di forma ESRI contengono dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI). Essi fanno riferimento a un set di file. I dati nel file con estensione shp specificano le forme geografiche o geometriche. I dati nel file con estensione dbf forniscono gli attributi per le forme. Per visualizzare una mappa in visualizzazione della struttura o eseguirla dal server di report, entrambi i file devono trovarsi nella stessa cartella. Quando si aggiungono dati spaziali da un file con estensione shp sul file system locale, i dati spaziali sono incorporati nel report. Per recuperare i dati spaziali dinamicamente in fase di esecuzione, caricare i file di forma nel server di report e specificarli come origine dei dati spaziali. Per altre informazioni, vedere la pagina relativa alla [ricerca di file di forma ESRI per una mappa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **Dati spaziali di SQL Server archiviati in un database.** È possibile utilizzare una query che specifichi i tipi di dati `SQLGeometry` o `SQLGeography` da un database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md) in [Documentazione in linea di SQL Server 2008](https://go.microsoft.com/fwlink/?linkid=98335).  
+-   **SQL Server dati spaziali archiviati in un database.** È possibile utilizzare una query che specifichi i tipi di dati `SQLGeometry` o `SQLGeography` da un database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md) in [Documentazione in linea di SQL Server 2008](https://go.microsoft.com/fwlink/?linkid=98335).  
   
      Nel set di risultati visualizzato in Progettazione query ogni riga di dati spaziali viene trattata come un'unità e archiviata in un solo elemento della mappa. Ad esempio se ci sono più punti definiti in una riga nel set di risultati, le proprietà di visualizzazione si applicano a tutti i punti di quell'elemento della mappa.  
   
--   **Posizioni personalizzate create.** È possibile aggiungere manualmente posizioni, ad esempio punti incorporati, a un livello punto incorporato. Per altre informazioni, vedere [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Percorsi personalizzati creati dall'utente.** È possibile aggiungere manualmente posizioni, ad esempio punti incorporati, a un livello punto incorporato. Per altre informazioni, vedere [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Dati spaziali in visualizzazione della struttura  
  In visualizzazione della struttura, l'elaboratore di report visualizza dati spaziali di esempio per consentire la progettazione del livello mappa. I dati visualizzati dipendono dalla disponibilità dei dati spaziali:  
   
 -   **Dati incorporati.** I dati di esempio vengono recuperati dagli elementi della mappa incorporati nei livelli mappa del report.  
   
--   **Collegamento al file di forma ESRI.** Se sono disponibili il file di forma ESRI (estensione shp) e il file di supporto (estensione dbf), i dati di esempio vengono caricati dal file di forma. In caso contrario, l'elaboratore di report genera i dati di esempio e visualizza il messaggio **Nessun dato spaziale disponibile**.  
+-   **Collegamento a file di forma ESRI.** Se sono disponibili il file di forma ESRI (estensione shp) e il file di supporto (estensione dbf), i dati di esempio vengono caricati dal file di forma. In caso contrario, l'elaboratore di report genera i dati di esempio e visualizza il messaggio **Nessun dato spaziale disponibile**.  
   
--   **Dati spaziali di SQL Server.** Se l'origine dati è disponibile e le credenziali sono valide, i dati di esempio vengono caricati dai dati spaziali del database. In caso contrario, l'elaboratore di report genera i dati di esempio e visualizza il messaggio **Nessun dato spaziale disponibile**.  
+-   **SQL Server dati spaziali.** Se l'origine dati è disponibile e le credenziali sono valide, i dati di esempio vengono caricati dai dati spaziali del database. In caso contrario, l'elaboratore di report genera i dati di esempio e visualizza il messaggio **Nessun dato spaziale disponibile**.  
   
 #### <a name="embedding-spatial-data-in-the-report-definition"></a>Incorporamento dei dati spaziali nella definizione del report  
  A differenza dei dati analitici, è possibile incorporare i dati spaziali per un livello mappa nella definizione del report. Quando si incorporano i dati spaziali, si incorporano gli elementi della mappa usati nel relativo livello.  
@@ -116,7 +116,7 @@ ms.locfileid: "67826544"
   
 -   **Campo del set di dati.** Campo del set di dati del riquadro dei dati del report.  
   
--   **Campo dell'origine dati spaziali.** Campo dell'origine dati spaziali incluso nei dati spaziali. Ad esempio un file di forma ESRI include frequentemente sia i dati spaziali sia quelli analitici. I nomi dei campi dell'origine dati spaziali iniziano con # e vengono visualizzati nell'elenco a discesa dei campi quando si specifica il campo di dati per le regole di un livello.  
+-   **Campo origine dati spaziali.** Campo dell'origine dati spaziali incluso nei dati spaziali. Ad esempio un file di forma ESRI include frequentemente sia i dati spaziali sia quelli analitici. I nomi dei campi dell'origine dati spaziali iniziano con # e vengono visualizzati nell'elenco a discesa dei campi quando si specifica il campo di dati per le regole di un livello.  
   
 -   **Dati incorporati per un elemento della mappa.** Dopo avere incorporato poligoni, linee o punti in un report, è possibile eseguire l'override dei campi di dati dei singoli elementi della mappa e impostare valori personalizzati.  
   
@@ -131,15 +131,15 @@ ms.locfileid: "67826544"
   
     -   **SpatialData.** Campo che dispone di dati spaziali che specificano la latitudine e la longitudine della città.  
   
-    -   **Name.** Campo che contiene il nome della città.  
+    -   **Nome.** Campo che contiene il nome della città.  
   
     -   **Area.** Campo che contiene il nome della regione.  
   
 -   Dall'origine dati analitici:  
   
-    -   **Population.** Campo che contiene la popolazione della città.  
+    -   **Popolazione.** Campo che contiene la popolazione della città.  
   
-    -   **City.** Campo che contiene il nome della città.  
+    -   **Città.** Campo che contiene il nome della città.  
   
     -   **Area.** Campo che contiene il nome del territorio, dello stato o della regione.  
   
@@ -147,25 +147,25 @@ ms.locfileid: "67826544"
   
 
   
-##  <a name="Viewport"></a> Informazioni sul viewport mappa  
+##  <a name="Viewport"></a>Informazioni sul viewport mappa  
  Dopo aver specificato i dati della mappa per un report, è possibile limitare l'area di visualizzazione della mappa specificando un *viewport*mappa. Per impostazione predefinita, il viewport è la stessa area della mappa intera. Per ritagliare la mappa, è possibile specificare il centro, il livello di zoom e le coordinate massime e minime che definiscono l'area che si desidera includere nel report. Per migliorare la visualizzazione della mappa nel report, è possibile spostare le legende, la scala distanza e la scala dei colori all'esterno del viewport. Nella figura seguente viene illustrato un viewport:  
   
  ![rs_MapViewport](../media/rs-mapviewport.gif "rs_MapViewport")  
   
   
   
-##  <a name="TileLayer"></a> Aggiunta di un livello tessere mappe di Bing  
+##  <a name="TileLayer"></a>Aggiunta di un livello tessere mappa di Bing  
  È possibile aggiungere un livello per le tessere mappa di Bing che fornisce uno sfondo geografico per la vista mappa corrente come definito dal viewport. Per aggiungere un livello sezione, è necessario specificare il sistema di coordinate **geografico** e il tipo di proiezione **Mercator**. Le sezioni che corrispondono al centro del viewport e al livello di zoom selezionato vengono recuperate automaticamente dai servizi Web di Bing Maps.  
   
  È possibile personalizzare il livello specificando le opzioni seguenti:  
   
 -   Tipo sezione. Sono supportati gli stili seguenti:  
   
-    -   **Strada.** Visualizza uno stile per la mappa stradale caratterizzato da sfondo bianco, strade e testo etichetta.  
+    -   **Road.** Visualizza uno stile per la mappa stradale caratterizzato da sfondo bianco, strade e testo etichetta.  
   
-    -   **Aereo.** Visualizza uno stile di immagine aereo senza testo.  
+    -   **Aerea.** Visualizza uno stile di immagine aereo senza testo.  
   
-    -   **Ibrido.** Visualizza una combinazione degli stili **Strada** e **Aereo** .  
+    -   **Ibrida.** Visualizza una combinazione degli stili **Strada** e **Aereo** .  
   
 -   La lingua per il testo visualizzato nelle sezioni.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "67826544"
   
  
   
-##  <a name="MapLayers"></a> Informazioni sugli elementi e sui livelli mappa  
+##  <a name="MapLayers"></a>Informazioni sui livelli mappa e sugli elementi della mappa  
  Una mappa può disporre di più livelli, tre sono quelli disponibili. Ogni livello visualizza un tipo di dati spaziali:  
   
 -   **Livello poligono.** Visualizza le strutture delle aree o i marcatori per il punto centrale del poligono che viene calcolato automaticamente per ogni poligono.  
@@ -203,13 +203,13 @@ ms.locfileid: "67826544"
   
  Quando si visualizza un report, i valori di visualizzazione mostrati vengono controllati da questa gerarchia e sono elencati in ordine crescente. I numeri maggiori hanno la precedenza:  
   
-1.  **Proprietà livello.** Proprietà che si applicano a tutto il livello. Ad esempio usare le proprietà livello per impostare l'origine dei dati analitici o la visibilità per tutto il livello.  
+1.  **Proprietà del livello.** Proprietà che si applicano a tutto il livello. Ad esempio usare le proprietà livello per impostare l'origine dei dati analitici o la visibilità per tutto il livello.  
   
-2.  **Proprietà poligono, linea, punto e proprietà poligono, linea, punto incorporati.** Proprietà che si applicano a tutti gli elementi della mappa di un livello, se gli elementi derivano da dati spaziali dinamici o incorporati. Ad esempio usare le proprietà del punto centrale del poligono per impostare il colore di riempimento per le bolle su una sfumatura che riempie le aree delle bolle dal blu scuro al celeste e dalla parte superiore a quella inferiore.  
+2.  **Proprietà poligono, linea, punto e Proprietà poligono, linea, punto incorporati.** Proprietà che si applicano a tutti gli elementi della mappa di un livello, se gli elementi derivano da dati spaziali dinamici o incorporati. Ad esempio usare le proprietà del punto centrale del poligono per impostare il colore di riempimento per le bolle su una sfumatura che riempie le aree delle bolle dal blu scuro al celeste e dalla parte superiore a quella inferiore.  
   
-3.  **Regole relative a colore, dimensioni, altezza e al tipo marcatore.** Le regole applicano le proprietà a un livello quando quest'ultimo dispone di elementi della mappa in relazione con i dati analitici. Il tipo di regole varia in base al livello. Ad esempio usare le regole dimensioni dei punti per variare le dimensioni delle bolle in base alla popolazione.  
+3.  **Regole colore, regole di ridimensionamento, regole larghezza, regole di tipo marcatore.** Le regole applicano le proprietà a un livello quando quest'ultimo dispone di elementi della mappa in relazione con i dati analitici. Il tipo di regole varia in base al livello. Ad esempio usare le regole dimensioni dei punti per variare le dimensioni delle bolle in base alla popolazione.  
   
-4.  **Override per le proprietà poligono, linea o punto incorporati**. Per gli elementi incorporati della mappa, è possibile selezionare l'opzione di override e modificare qualsiasi proprietà o valore dei dati. Qualsiasi modifica apportata per eseguire l'override delle regole per i singoli elementi è irreversibile. Ad esempio è possibile evidenziare un negozio specifico tramite un marcatore a puntina da disegno.  
+4.  **Override per le proprietà poligono, linea o punto incorporato**. Per gli elementi incorporati della mappa, è possibile selezionare l'opzione di override e modificare qualsiasi proprietà o valore dei dati. Qualsiasi modifica apportata per eseguire l'override delle regole per i singoli elementi è irreversibile. Ad esempio è possibile evidenziare un negozio specifico tramite un marcatore a puntina da disegno.  
   
  Per altre informazioni, vedere [Variare la visualizzazione di poligoni, linee e punti in base a regole e dati analitici &#40;Generatore report e SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
@@ -225,12 +225,12 @@ ms.locfileid: "67826544"
   
 
   
-##  <a name="Legends"></a> Informazioni sulle legende della mappa, sulla scala dei colori e sulla scala distanza  
+##  <a name="Legends"></a>Informazioni sulle legende della mappa, sulla scala di colori e sulla scala distanza  
  È possibile aggiungere diverse legende al report per facilitare l'interpretazione di una mappa da parte degli utenti. Nelle mappe possono essere inclusi i seguenti elementi:  
   
--   **Legende.** È possibile creare più legende. Gli elementi elencati in una legenda vengono generati automaticamente in base alle regole specificate per gli elementi della mappa in ogni livello. Per ogni regola, si specifica la legenda da usare per visualizzare gli elementi correlati. In questo modo, è possibile assegnare elementi da più livelli alla stessa legenda o a legende diverse.  
+-   **Leggende.** È possibile creare più legende. Gli elementi elencati in una legenda vengono generati automaticamente in base alle regole specificate per gli elementi della mappa in ogni livello. Per ogni regola, si specifica la legenda da usare per visualizzare gli elementi correlati. In questo modo, è possibile assegnare elementi da più livelli alla stessa legenda o a legende diverse.  
   
--   **Scala dei colori.** È possibile creare una scala dei colori. Invece di fornire una legenda per una regola colore, è possibile visualizzare gli elementi per tale regola nella scala dei colori. Alla scala dei colori possono essere applicate più regole colore.  
+-   **Scala colori.** È possibile creare una scala dei colori. Invece di fornire una legenda per una regola colore, è possibile visualizzare gli elementi per tale regola nella scala dei colori. Alla scala dei colori possono essere applicate più regole colore.  
   
 -   **Scala distanza.** È possibile visualizzare una scala distanza che consente di visualizzare una scala per la vista mappa corrente sia in chilometri sia in miglia.  
   
@@ -238,12 +238,12 @@ ms.locfileid: "67826544"
   
   
   
-##  <a name="Troubleshooting"></a> Risoluzione dei problemi relativi alle mappe  
+##  <a name="Troubleshooting"></a>Risoluzione dei problemi relativi alle mappe  
  I report con mappe usano dati spaziali e analitici di diverse origini dati. Ogni livello mappa può usare origini dati differenti. Le proprietà di visualizzazione per ogni livello seguono una priorità specifica basata sulle proprietà dei livelli, sulle regole e sulle proprietà degli elementi della mappa.  
   
  Le cause radici del mancato ottenimento del risultato desiderato quando si visualizza un report con mappe possono essere molteplici. Per isolare e analizzare ogni problema, può essere utile usare un livello alla volta. Usare il riquadro Mappa per selezionare un livello e attivare o disattivare facilmente la visibilità.  
   
- Per altre informazioni sui report con mappe, vedere [Risoluzione dei problemi relativi alle parti del report: Report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Per altre informazioni sui report con mappe, vedere [Risoluzione dei problemi relativi alle parti del report: report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
@@ -258,7 +258,7 @@ ms.locfileid: "67826544"
   
  
   
-##  <a name="Section"></a> Contenuto della sezione  
+##  <a name="Section"></a>Contenuto della sezione  
  [Pianificare un report mappa &#40;Generatore report e SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
@@ -273,6 +273,6 @@ ms.locfileid: "67826544"
   
  [Aggiungere percorsi personalizzati a una mappa &#40;Generatore report e SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risoluzione dei problemi relativi ai report: report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

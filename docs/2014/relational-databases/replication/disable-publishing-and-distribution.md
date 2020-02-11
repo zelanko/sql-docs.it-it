@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882379"
 ---
 # <a name="disable-publishing-and-distribution"></a>Disabilitazione della pubblicazione e della distribuzione
@@ -36,7 +36,7 @@ ms.locfileid: "73882379"
   
 -   Eliminare tutte le sottoscrizioni delle pubblicazioni. I dati dei database di pubblicazione e sottoscrizione non vengono eliminati, ma la relazione di sincronizzazione con i database di pubblicazione andrà perduta. L'eliminazione dei dati nel Sottoscrittore deve essere eseguita in modo manuale.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73882379"
   
 #### <a name="to-disable-publishing-and-distribution"></a>Per disabilitare la pubblicazione e la distribuzione  
   
-1.  Connettersi al server di pubblicazione o al server di distribuzione da disabilitare in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
+1.  Connettersi al server di pubblicazione o al server di distribuzione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]cui si desidera disabilitare, quindi espandere il nodo del server.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Replica** e quindi scegliere **Disabilita pubblicazione e distribuzione**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "73882379"
 7.  Nel server di distribuzione eseguire [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) per rimuovere la designazione di server di distribuzione dal server.  
   
     > [!NOTE]  
-    >  Se prima dell'esecuzione di [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) e [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)non vengono eliminati tutti gli oggetti di pubblicazione e distribuzione della replica, queste procedure restituiranno un errore. Per eliminare tutti gli oggetti correlati alla replica quando un server di pubblicazione o un server di distribuzione viene eliminato, è necessario impostare il parametro **\@no_checks** su **1**. Se un server di pubblicazione o un server di distribuzione è offline o non raggiungibile, è possibile impostare il parametro **\@ignore_distributor** su **1** in modo che sia possibile eliminarlo. Tuttavia, gli oggetti di pubblicazione e distribuzione rimanenti devono essere rimossi manualmente.  
+    >  Se prima dell'esecuzione di [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) e [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)non vengono eliminati tutti gli oggetti di pubblicazione e distribuzione della replica, queste procedure restituiranno un errore. Per eliminare tutti gli oggetti correlati alla replica quando un server di pubblicazione o un server ** \@** di distribuzione viene eliminato, è necessario impostare il parametro no_checks su **1**. Se un server di pubblicazione o un server di distribuzione è offline o ** \@** non raggiungibile, è possibile impostare il parametro ignore_distributor su **1** in modo che sia possibile eliminarlo. Tuttavia, gli oggetti di pubblicazione e distribuzione rimanenti devono essere rimossi manualmente.  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  In questo esempio di script vengono rimossi oggetti della replica dal database di sottoscrizione.  
@@ -108,13 +108,13 @@ ms.locfileid: "73882379"
   
 3.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Specificare la proprietà <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 3.  
+4.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Specificare la proprietà <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> ottenuto al passaggio 3.  
   
 5.  (Facoltativo) Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per ottenere le proprietà dell'oggetto e verificare che il server di pubblicazione esista. Se il metodo restituisce `false`, il nome del server di pubblicazione impostato al passaggio 4 non è corretto oppure il server di pubblicazione non è utilizzato da questo server di distribuzione.  
   
-6.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Passare il valore `true` per *Force* se il server di pubblicazione e il server di distribuzione si trovano in server diversi e quando il server di pubblicazione deve essere disinstallato dal server di distribuzione senza prima verificare che le pubblicazioni non esistano più nel server di pubblicazione.  
+6.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Passare un valore di `true` per *Force* se il server di pubblicazione e il server di distribuzione si trovano in server diversi e quando il server di pubblicazione deve essere disinstallato dal server di distribuzione senza prima verificare che le pubblicazioni non esistano più nel server di pubblicazione.  
   
-7.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 3.  
+7.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 3.  
   
 8.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Passare il valore `true` per *Force* per rimuovere tutti gli oggetti di replica nel server di distribuzione senza prima verificare che tutti i database di pubblicazione locali siano stati disabilitati e che i database di distribuzione siano stati disinstallati.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "73882379"
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti di base relativi a RMO (Replication Management Objects)](concepts/replication-management-objects-concepts.md)   
- [Concetti di base relativi alle stored procedure del sistema di replica](concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   

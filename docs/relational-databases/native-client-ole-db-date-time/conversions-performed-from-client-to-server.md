@@ -14,10 +14,10 @@ ms.author: genemi
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f6195bc8bbe5dc36cf70337adec8f03eab67ca09
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74096006"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversioni eseguite da client a server
@@ -30,10 +30,10 @@ ms.locfileid: "74096006"
   
  Se ICommandWithParameters:: separameterinfo non viene chiamato, le associazioni DBTYPE_DBTIMESTAMP vengono convertite come se fossero **datetime2**.  
   
-|A -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|A -><br /><br /> Da|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1,2|1,3,4|4,12|1,12|1,12|1,12|1,5, 12|1,12|1,12|1,12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> data|  
+|DBDATE|1|-|-|1,6|1,6|1,6|1,5, 6|1,10|1,10|1<br /><br /> Data|  
 |DBTIME|-|1|1|1,7|1,7|1,7|1,5, 7|1,10|1,10|1<br /><br /> Time(0)|  
 |DBTIME2|-|1,3|1|1,7,10,14|1,7,10,15|1,7,10|1,5,7,10|1,10,11|1,10,11|1<br /><br /> Time(7)|  
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
@@ -61,7 +61,7 @@ ms.locfileid: "74096006"
 |7|La data viene impostata sulla data corrente.|  
 |8|L'ora viene convertita in formato UTC. Se si verifica un errore durante questa conversione, viene impostato DBSTATUS_E_CANTCONVERTVALUE.|  
 |9|La stringa viene analizzata come valore letterale ISO e convertita nel tipo di destinazione. Se l'operazione non riesce, la stringa viene analizzata come valore letterale data OLE (che presenta anche componenti di ora) e convertita da data OLE (DBTYPE_DATE) nel tipo di destinazione.<br /><br /> Se il tipo di destinazione è DBTIMESTAMP, **smalldatetime**, **DateTime**o **datetime2**, la stringa deve essere conforme alla sintassi per i valori letterali data, ora o **datetime2** oppure la sintassi riconosciuta da OLE. Se la stringa è un valore letterale data, tutti i componenti di ora vengono impostati su zero. Se la stringa è un valore letterale ora, la data viene impostata sul valore corrente.<br /><br /> Per tutti gli altri tipi di destinazione, la stringa deve essere conforme alla sintassi per i valori letterali del tipo di destinazione.|  
-|10|In caso di troncamento dei secondi frazionari con perdita di dati, viene impostato DBSTATUS_E_DATAOVERFLOW. Per le conversioni di stringhe, il controllo dell'overflow è possibile solo quando la stringa è conforme alla sintassi ISO. Se la stringa è un valore letterale data OLE, i secondi frazionari vengono arrotondati.<br /><br /> Per la conversione da DBTIMESTAMP (DateTime) a smalldatetime [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client effettuerà automaticamente il troncamento del valore dei secondi anziché generare l'errore DBSTATUS_E_DATAOVERFLOW.|  
+|10|In caso di troncamento dei secondi frazionari con perdita di dati, viene impostato DBSTATUS_E_DATAOVERFLOW. Per le conversioni di stringhe, il controllo dell'overflow è possibile solo quando la stringa è conforme alla sintassi ISO. Se la stringa è un valore letterale data OLE, i secondi frazionari vengono arrotondati.<br /><br /> Per la conversione da DBTIMESTAMP (DateTime) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] smalldatetime native client, il valore dei secondi verrà troncato automaticamente anziché generare l'errore DBSTATUS_E_DATAOVERFLOW.|  
 |11|Il numero di cifre per i secondi frazionari (scala) è determinato dalla dimensione della colonna di destinazione in base alla tabella riportata di seguito. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> Se tuttavia il tipo di origine è DBTIMESTAMP e i secondi frazionari corrispondono a zero, non vengono generati alcuna cifra per i secondi frazionari né il separatore decimale. Questo comportamento assicura la compatibilità con le versioni precedenti per le applicazioni sviluppate utilizzando provider OLE DB meno recenti.<br /><br /> Una dimensione di colonna pari a ~ 0 implica una dimensione illimitata in OLE DB (9 cifre, a meno che non si applichi la regola delle 3 cifre per DBTIMESTAMP).|  
 |12|Viene mantenuta la semantica di conversione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per DBTYPE_DATE. I secondi frazionari vengono troncati in corrispondenza di zero.|  
 |13|Viene mantenuta la semantica di conversione precedente a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] per DBTYPE_FILETIME. Se si usa l'API FileTimeToSystemTime di Windows, la precisione frazionaria dei secondi è limitata a 1 millisecondo.|  
@@ -71,7 +71,7 @@ ms.locfileid: "74096006"
   
 ||||  
 |-|-|-|  
-|Type|Lunghezza (in caratteri)|Scala|  
+|Type|Lunghezza (in caratteri)|Scalabilità|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

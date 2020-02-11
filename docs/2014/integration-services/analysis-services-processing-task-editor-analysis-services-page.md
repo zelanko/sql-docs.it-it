@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890364"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor attività Elaborazione Analysis Services (pagina Analysis Services)
@@ -37,32 +37,32 @@ ms.locfileid: "68890364"
  Per altre informazioni su questa attività, vedere [Attività Elaborazione Analysis Services](control-flow/analysis-services-processing-task.md).  
   
 ## <a name="options"></a>Opzioni  
- **Analysis Services - gestione connessione**  
+ **Gestione connessione Analysis Services**  
  Consente di selezionare una gestione connessione Analysis Services esistente nell'elenco o di crearne una nuova usando il pulsante **Nuova** .  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione Analysis Services.  
   
- **Argomenti correlati:** [Gestione connessione Analysis Services](connection-manager/analysis-services-connection-manager.md), [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Argomenti correlati: riferimento all'** interfaccia utente della finestra di dialogo [Analysis Services gestione](connection-manager/analysis-services-connection-manager.md)connessione, [Aggiungi Analysis Services gestione connessione](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Elenco oggetti**  
  |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|**Nome oggetto**|Consente di visualizzare i nomi degli oggetti specificati.|  
+|**nome oggetto**|Consente di visualizzare i nomi degli oggetti specificati.|  
 |**Tipo**|Consente di visualizzare i tipi degli oggetti specificati.|  
-|**Opzioni elaborazione**|Consente di selezionare un'opzione di elaborazione nell'elenco.<br /><br /> **Argomenti correlati**: [Elaborazione di oggetti del modello multidimensionale](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**Opzioni di elaborazione**|Consente di selezionare un'opzione di elaborazione nell'elenco.<br /><br /> **Argomenti correlati**: [elaborazione di oggetti del modello multidimensionale](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Impostazioni**|Consente di visualizzare le impostazioni di elaborazione per gli oggetti specificati.|  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un oggetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] all'elenco.  
   
  **Rimuovi**  
  Selezionare un oggetto, quindi fare clic su **Elimina**.  
   
- **Analisi di impatto**  
+ **Analisi di effetto**  
  Consente di eseguire un'analisi di impatto sull'oggetto selezionato.  
   
- **Argomenti correlati:** [Finestra di dialogo Analisi di impatto &#40;Analysis Services - Dati multidimensionali&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Argomenti correlati:** finestra [di dialogo analisi di effetto &#40;Analysis Services-Dati multidimensionali&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **Riepilogo impostazioni batch**  
  |Proprietà|Descrizione|  
@@ -73,14 +73,14 @@ ms.locfileid: "68890364"
 |**Percorso log degli errori di chiave della dimensione**|Consente di specificare il percorso del file nel quale vengono registrati gli errori.|  
 |**Elabora oggetti interessati**|Indica se vengono elaborati anche gli oggetti dipendenti o interessati.|  
   
- **Cambia impostazioni**  
+ **Modifica impostazioni**  
  Consente di modificare le opzioni di elaborazione e la gestione degli errori nelle chiavi della dimensione.  
   
- **Argomenti correlati:** [Finestra di dialogo Cambia impostazioni &#40;Analysis Services - Dati multidimensionali&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Argomenti correlati:** finestra [di dialogo modifica impostazioni &#40;Analysis Services-Dati multidimensionali&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Elaborazione Analysis Services &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor attività Elaborazione Analysis Services &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Attività Esegui DDL Analysis Services](control-flow/analysis-services-execute-ddl-task.md)  
   
   

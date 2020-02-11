@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771654"
 ---
 # <a name="project-properties-dialog-box"></a>Finestra di dialogo Proprietà progetto
@@ -50,7 +50,7 @@ ms.locfileid: "62771654"
 ##  <a name="general"></a> Impostare le opzioni nella pagina Generale  
  Utilizzare la pagina Generale per visualizzare le proprietà del progetto.  
   
- **Name**  
+ **Nome**  
  Viene elencato il nome del progetto.  
   
  **Identificatore**  
@@ -71,7 +71,7 @@ ms.locfileid: "62771654"
  Sfoglia  
  Fare clic su **Sfoglia** per selezionare gli utenti e i ruoli per cui si vuole impostare le autorizzazioni, usando la finestra di dialogo **Sfoglia tutte le entità** .  
   
- **Name**  
+ **Nome**  
  Viene elencato il nome dell'utente o del ruolo.  
   
  **Tipo**  

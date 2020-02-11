@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637808"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto
@@ -38,7 +38,7 @@ ms.locfileid: "73637808"
   
 -   **Verifica dell'integrità dei dati tramite transazioni**. Per altre informazioni, vedere [Transazioni di Integration Services](../integration-services-transactions.md).  
   
--   **Riavvio dei pacchetti dal punto di errore tramite checkpoint**. Per altre informazioni, vedere [Riavvio dei pacchetti tramite checkpoint](../packages/restart-packages-by-using-checkpoints.md).  
+-   **Riavvio dei pacchetti dal punto di errore tramite checkpoint**. Per ulteriori informazioni, vedere [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Intercettazione e gestione degli errori dei pacchetti tramite gestori di eventi  
  I gestori degli eventi consentono di rispondere ai molti eventi generati dal pacchetto e dai relativi oggetti.  
@@ -61,7 +61,7 @@ ms.locfileid: "73637808"
     2.  **Aggiungere il nome della colonna all'output**. Aggiungere all'output degli errori una trasformazione Ricerca che consenta di eseguire una ricerca del nome della colonna nella tabella di ricerca creata al passaggio precedente. Per la ricerca è possibile utilizzare l'ID di colonna nell'output degli errori, l'ID di pacchetto, disponibile nella variabile di sistema System::PackageID, e l'ID dell'attività Flusso di dati, disponibile nella variabile di sistema System::TaskID.  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite i report delle operazioni  
- In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono disponibili report delle operazioni standard per facilitare il monitoraggio dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che sono stati distribuiti nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Con i report relativi ai pacchetti è possibile visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
+ In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono disponibili report delle operazioni standard per facilitare il monitoraggio dei pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che sono stati distribuiti nel catalogo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con i report relativi ai pacchetti è possibile visualizzare lo stato e la cronologia dei pacchetti e, se necessario, identificare la causa di eventuali errori.  
   
  Per altre informazioni, vedere [Risoluzione dei problemi relativi ai report per l'esecuzione del pacchetto](troubleshooting-reports-for-package-execution.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73637808"
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite la registrazione  
  Abilitando la registrazione è possibile tenere traccia di ciò che avviene durante l'esecuzione dei pacchetti. I provider di log consentono di acquisire informazioni sugli eventi specificati da utilizzare per un'analisi successiva e di salvare tali informazioni in una tabella di database, in un file flat, in un file XML o in un altro formato di output supportato.  
   
--   **Abilitazione della registrazione**. È possibile ottimizzare l'output di registrazione selezionando solo gli eventi e le informazioni che si desidera acquisire. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md).  
+-   **Abilitazione della registrazione**. È possibile ottimizzare l'output di registrazione selezionando solo gli eventi e le informazioni che si desidera acquisire. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md)[](../performance/integration-services-ssis-logging.md).  
   
 -   **Selezionare l'evento Diagnostic del pacchetto per risolvere i problemi relativi al provider.** Sono presenti messaggi di registrazione per il supporto della risoluzione dei problemi relativi all'interazione di un pacchetto con origini dati esterne. Per altre informazioni, vedere [Risoluzione dei problemi relativi alla connettività dei pacchetti degli strumenti](troubleshooting-tools-for-package-connectivity.md).  
   
@@ -79,16 +79,16 @@ ms.locfileid: "73637808"
   
      L'approccio seguente consente di migliorare l'output di registrazione predefinito e semplificare la generazione di report:  
   
-    1.  **Creare una tabella padre per la registrazione di ogni esecuzione di un pacchetto**. In questa tabella padre è inclusa una singola riga per ogni esecuzione di un pacchetto e viene utilizzato l'identificatore ExecutionID per il collegamento ai record figlio nella tabella di registrazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. È possibile utilizzare un'attività Esegui SQL all'inizio di ogni pacchetto per creare questa nuova riga e registrare l'ora di inizio. È quindi possibile utilizzare un'altra attività Esegui SQL alla fine del pacchetto per aggiornare la riga con ora di fine, durata e stato.  
+    1.  **Creare una tabella padre per la registrazione di ogni esecuzione di un pacchetto**. In questa tabella padre è inclusa una singola riga per ogni esecuzione di un pacchetto e viene utilizzato l'identificatore ExecutionID per il collegamento ai record figlio nella tabella di registrazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile utilizzare un'attività Esegui SQL all'inizio di ogni pacchetto per creare questa nuova riga e registrare l'ora di inizio. È quindi possibile utilizzare un'altra attività Esegui SQL alla fine del pacchetto per aggiornare la riga con ora di fine, durata e stato.  
   
     2.  **Aggiungere informazioni di controllo al flusso di dati**. È possibile utilizzare la trasformazione Controllo per aggiungere alle righe del flusso di dati informazioni sull'esecuzione del pacchetto che ha creato o modificato ogni riga. La trasformazione Controllo rende disponibili nove informazioni, incluse quelle relative a PackageName ed ExecutionInstanceGUID. Per altre informazioni, vedere [Trasformazione Controllo](../data-flow/transformations/audit-transformation.md). Se si desidera includere in ogni riga informazioni personalizzate a scopo di controllo, è possibile aggiungere le informazioni desiderate alle righe del flusso di dati utilizzando una trasformazione Colonna derivata. Per altre informazioni, vedere [Trasformazione Colonna derivata](../data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Valutare l'opportunità di acquisire i dati sul conteggio delle righe**. Prendere in considerazione la creazione di una tabella separata per le informazioni sul conteggio delle righe, in cui ogni istanza di esecuzione di un pacchetto è identificata tramite il relativo ExecutionID. Utilizzare la trasformazione Conteggio righe per salvare il conteggio delle righe in una serie di variabili in punti critici del flusso di dati. Al termine del flusso di dati, utilizzare un'attività Esegui SQL per inserire le serie di valori in una riga della tabella, per operazioni successive di analisi e creazione di report.  
   
-     Per altre informazioni su questo approccio, vedere la sezione relativa a registrazione e controllo ETL nel white paper [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Progetto REAL: progettazione ETL di Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
+     Per altre informazioni su questo approccio, vedere la sezione relativa a registrazione e controllo ETL nel white paper [!INCLUDE[msCoName](../../includes/msconame-md.md)][Progetto REAL: progettazione ETL di Business Intelligence](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Risoluzione dei problemi relativi all'esecuzione di pacchetti tramite i file di dump del debug  
- In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Per altre informazioni, vedere [Generazione di file di dump per l'esecuzione del pacchetto](generating-dump-files-for-package-execution.md).  
+ In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Per altre informazioni, vedere [Generazione di file di dump per l'esecuzione del pacchetto](generating-dump-files-for-package-execution.md).  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>Risoluzione dei problemi relativi alla convalida in fase di esecuzione  
  A volte potrebbe non essere possibile connettersi alle origini dati o convalidare parte dei pacchetti prima di aver eseguito alcune attività nei pacchetti. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include le funzionalità seguenti per permettere di evitare gli errori di convalida che altrimenti si verificherebbero da queste condizioni:  
@@ -113,6 +113,6 @@ ms.locfileid: "73637808"
  [Configurazione di un output degli errori in un componente del flusso di dati](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog relativo all'[aggiunta del nome della colonna di errore a un output degli errori](https://go.microsoft.com/fwlink/?LinkId=261546) nel sito dougbert.com.  
+ Intervento nel blog relativo all' [aggiunta del nome della colonna di errore a un output degli errori](https://go.microsoft.com/fwlink/?LinkId=261546)nel sito dougbert.com.  
   
   

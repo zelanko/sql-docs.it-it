@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071469"
 ---
 # <a name="migrating-triggers"></a>Migrazione di trigger
@@ -34,7 +34,7 @@ ms.locfileid: "63071469"
   
  A seconda dell'evento trigger (FOR/AFTER o INSTEAD OF), è possibile includere il contenuto del trigger nella stored procedure appropriata che esegue un'istruzione INSERT, UPDATE o DELETE su quella tabella. Ad esempio quando si esegue la migrazione di un trigger AFTER INSERT, è possibile modificare la stored procedure che esegue l'operazione di inserimento includendo il contenuto del trigger dopo l'istruzione INSERT appropriata.  
   
- È possibile utilizzare una stored procedure interpretata o una stored procedure compilata in modo nativo. La maggior parte dei costrutti di [!INCLUDE[tsql](../../includes/tsql-md.md)] in una stored procedure interpretata può essere eseguita in una tabella ottimizzata per la memoria. Tuttavia, solo un subset di costrutti di [!INCLUDE[tsql](../../includes/tsql-md.md)] è supportato nelle stored procedure compilate in modo nativo. Per informazioni sul [!INCLUDE[tsql](../../includes/tsql-md.md)] supportano nelle tabelle ottimizzate per la memoria, vedere [accesso tabelle utilizzando Transact-SQL interpretato](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Per informazioni sul [!INCLUDE[tsql](../../includes/tsql-md.md)] supportare nelle stored procedure compilate in modo nativo, vedere [costrutti Transact-SQL non supportati da OLTP In memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ È possibile utilizzare una stored procedure interpretata o una stored procedure compilata in modo nativo. La maggior parte dei costrutti di [!INCLUDE[tsql](../../includes/tsql-md.md)] in una stored procedure interpretata può essere eseguita in una tabella ottimizzata per la memoria. Tuttavia, solo un subset di costrutti di [!INCLUDE[tsql](../../includes/tsql-md.md)] è supportato nelle stored procedure compilate in modo nativo. Per informazioni sul [!INCLUDE[tsql](../../includes/tsql-md.md)] supporto per le tabelle ottimizzate per la memoria, vedere [accesso alle tabelle ottimizzate per la memoria usando Transact-SQL interpretato](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Per informazioni sul [!INCLUDE[tsql](../../includes/tsql-md.md)] supporto di stored procedure compilate in modo nativo, vedere [costrutti Transact-SQL non supportati da OLTP in memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
  Di seguito è riportato un semplice esempio di simulazione del comportamento del trigger DML in una tabella ottimizzata per la memoria.  
   

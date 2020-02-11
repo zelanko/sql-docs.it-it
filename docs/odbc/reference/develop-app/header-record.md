@@ -15,11 +15,11 @@ ms.assetid: d0fff1ed-5616-422a-a394-7ea1d2486f89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7f5fe5cf6aae0d5953cc82b845396dd4164c7fa3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139019"
 ---
 # <a name="header-record"></a>Record di intestazione
-I campi del record di intestazione contengono informazioni generali sull'esecuzione di una funzione, inclusi il codice restituito, conteggio delle righe, numero di record di stato e tipo di istruzione eseguita. Il record di intestazione viene sempre creato, a meno che la funzione non restituisca SQL_INVALID_HANDLE. Per un elenco completo dei campi del record di intestazione, vedere la [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrizione della funzione.
+I campi del record di intestazione contengono informazioni generali sull'esecuzione di una funzione, tra cui il codice restituito, il conteggio delle righe, il numero di record di stato e il tipo di istruzione eseguita. Il record di intestazione viene sempre creato a meno che la funzione non restituisca SQL_INVALID_HANDLE. Per un elenco completo dei campi nel record di intestazione, vedere la descrizione della funzione [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) .

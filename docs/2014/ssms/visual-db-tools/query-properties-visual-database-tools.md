@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011481"
 ---
 # <a name="query-properties-visual-database-tools"></a>Proprietà delle query (Visual Database Tools)
@@ -30,10 +30,10 @@ ms.locfileid: "63011481"
  **Categoria Identità**  
  Viene espansa per visualizzare la proprietà **Nome** .  
   
- **Name**  
+ **Nome**  
  Visualizza il nome della query corrente. Non è possibile modificarlo in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **Database Name**  
+ **Nome database**  
  Visualizza il nome dell'origine dati della tabella selezionata  
   
  **Nome server**  
@@ -76,14 +76,14 @@ ms.locfileid: "63011481"
  **Espressione**  
  Specifica il numero o la percentuale delle righe che verranno restituite dalla query. Se si imposta **Percentuale** su Sì, il numero indicherà la percentuale delle righe che verranno restituite dalla query, mentre se si imposta **Percentuale** su No, il valore rappresenterà il numero di righe da restituire (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
- **Percentualeuale**  
+ **Percentuale**  
  Specifica che la query restituirà soltanto il primo *n* percento delle righe del set di risultati (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
  **Con valori equivalenti**  
  Specifica che la vista includerà una clausola WITH TIES. WITH TIES è utile se nella vista sono incluse anche una clausola ORDER BY e una clausola TOP basata sulla percentuale. Se questa opzione è impostata e la percentuale limite specificata cade all'interno di un set di righe con valori identici nella clausola ORDER BY, la vista verrà estesa oltre tale percentuale fino a includere tutte queste righe (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o versione successiva).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query con parametri &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Esecuzione di query con parametri &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

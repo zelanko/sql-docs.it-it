@@ -14,15 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc65a8a9c17c7e6a7c37e6f08675f89d1b113c8d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028649"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP in memoria (ottimizzazione per la memoria)
 
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], una novità di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] , può migliorare significativamente le prestazioni delle applicazioni di database OLTP. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] è un motore di database ottimizzato per la memoria integrato nel motore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ottimizzato per OLTP.  
+  
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], una novità di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] , può migliorare significativamente le prestazioni delle applicazioni di database OLTP. 
+  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] è un motore di database ottimizzato per la memoria integrato nel motore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ottimizzato per OLTP.  
   
 |||  
 |-|-|  
@@ -42,7 +44,8 @@ ms.locfileid: "69028649"
   
  Per ulteriori informazioni sugli scenari in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] cui si otterranno i maggiori vantaggi in termini di prestazioni, vedere [OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni](https://msdn.microsoft.com/library/dn673538.aspx).  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] migliora le prestazioni in modo ottimale in OLTP con transazioni con esecuzione rapida.  
+ 
+  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] migliora le prestazioni in modo ottimale in OLTP con transazioni con esecuzione rapida.  
   
  I modelli di programmazione migliorati da [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] includono gli scenari di concorrenza, le ricerche di punti, i carichi di lavoro con molti inserimenti e aggiornamenti e la logica di business nelle stored procedure.  
   
@@ -50,7 +53,8 @@ ms.locfileid: "69028649"
   
  In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] sono presenti limitazioni nella superficie di attacco di [!INCLUDE[tsql](../../../includes/tsql-md.md)] supportata per [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] consente di ottenere miglioramenti significativi di scalabilità e delle prestazioni usando gli elementi seguenti:  
+ 
+  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] consente di ottenere miglioramenti significativi di scalabilità e delle prestazioni usando gli elementi seguenti:  
   
 -   Algoritmi ottimizzati per accedere ai dati residenti in memoria.  
   
@@ -71,12 +75,12 @@ ms.locfileid: "69028649"
 |[Requisiti per l'utilizzo di tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)|Vengono descritti i requisiti hardware e software e le linee guida per l'utilizzo di tabelle ottimizzate per la memoria.|  
 |[Uso di OLTP in memoria in un ambiente di VM](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Illustra l'uso di [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in un ambiente virtualizzato.|  
 |[Esempi di codice di OLTP in memoria](in-memory-oltp-code-samples.md)|Sono contenuti esempi di codice che illustrano come creare e usare una tabella ottimizzata per la memoria.|  
-|[Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)|Vengono introdotte le tabelle ottimizzate per la memoria.|  
+|[Tabelle ottimizzate per la memoria](memory-optimized-tables.md)|Vengono introdotte le tabelle ottimizzate per la memoria.|  
 |[Variabili di tabella con ottimizzazione per la memoria](../../database-engine/memory-optimized-table-variables.md)|Esempio di codice in cui viene mostrato come usare una variabile di tabella ottimizzata per la memoria anziché una variabile di tabella tradizionale per ridurre l'utilizzo di tempdb.|  
 |[Indici in tabelle con ottimizzazione per la memoria](../../database-engine/indexes-on-memory-optimized-tables.md)|Vengono introdotti indici ottimizzati per la memoria.|  
 |[Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)|Vengono illustrate le stored procedure compilate in modo nativo.|  
 |[Gestione della memoria per OLTP in memoria](../../database-engine/managing-memory-for-in-memory-oltp.md)|Informazioni e gestione dell'utilizzo della memoria nel sistema.|  
-|[Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)|Vengono illustrati i file di dati e differenziali in cui vengono archiviate le informazioni sulle transazioni nelle tabelle ottimizzate per la memoria.|  
+|[Creazione e gestione dell'archiviazione per gli oggetti ottimizzati per la memoria](creating-and-managing-storage-for-memory-optimized-objects.md)|Vengono illustrati i file di dati e differenziali in cui vengono archiviate le informazioni sulle transazioni nelle tabelle ottimizzate per la memoria.|  
 |[Eseguire il backup, ripristinare e recuperare tabelle con ottimizzazione per la memoria](restore-and-recovery-of-memory-optimized-tables.md)|Descrive le operazioni di backup, ripristino e recupero delle tabelle ottimizzate per la memoria.|  
 |[Supporto di Transact-SQL per OLTP in memoria](transact-sql-support-for-in-memory-oltp.md)|Descrive il supporto di [!INCLUDE[tsql](../../../includes/tsql-md.md)] per [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|  
 |[Supporto della disponibilità elevata per i database OLTP in memoria](high-availability-support-for-in-memory-oltp-databases.md)|Descrive i gruppi di disponibilità e il clustering di failover in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|  
@@ -85,13 +89,13 @@ ms.locfileid: "69028649"
   
  Altre informazioni su [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] sono disponibili in:  
   
--   [Microsoft? SQL Server? Guida del prodotto 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
+-   [Microsoft? SQL Server?? Guida del prodotto 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)  
   
 -   [Blog di OLTP in memoria](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 -   [OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Panoramica delle funzionalità interne di OLTP in memoria SQL Server](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
+-   [Panoramica dei meccanismi interni OLTP in memoria di SQL Server](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
     <!--
          (https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
          (/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016?view=sql-server-2016)

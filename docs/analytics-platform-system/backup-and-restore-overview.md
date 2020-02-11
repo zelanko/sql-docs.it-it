@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401354"
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
@@ -128,9 +128,9 @@ Ad esempio, quando si ripristina un database di 60 GB da un'appliance a 2 nodi (
   
 Dopo la ridistribuzione, ogni nodo di calcolo conterrà dati meno effettivi e più spazio libero rispetto a ogni nodo di calcolo dell'appliance di origine più piccola. Usare lo spazio aggiuntivo per l'aggiunta di altri dati al database. Se le dimensioni del database ripristinato sono maggiori del necessario, è possibile utilizzare [ALTER database](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) per compattare le dimensioni dei file di database.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
-|Attività di backup e ripristino|Description|  
+|Attività di backup e ripristino|Descrizione|  
 |---------------------------|---------------|  
 |Preparare un server come server di backup.|[Acquisire e configurare un server di backup](acquire-and-configure-backup-server.md)|  
 |Eseguire il backup di un database.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  

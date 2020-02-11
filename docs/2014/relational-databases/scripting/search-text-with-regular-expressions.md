@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243316"
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
@@ -37,7 +37,7 @@ ms.locfileid: "75243316"
   
  Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'**elenco dei riferimenti**.  
   
-|Espressione|Sintassi|Description|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Qualsiasi carattere|.|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
 |Zero o più|*|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il maggior numero di caratteri corrispondenti possibile.|  
@@ -59,7 +59,7 @@ ms.locfileid: "75243316"
   
  Nell'**elenco dei riferimenti** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di **ricerca e sostituzione**. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
   
-|Espressione|Sintassi|Description|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Minimo tra zero o più occorrenze|@|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
 |Minimo tra una o più occorrenze|#|Consente di ricercare una o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
@@ -79,12 +79,12 @@ ms.locfileid: "75243316"
 |Carattere speciale di escape|\e|Carattere Unicode U+001B.|  
 |Campanello|\g|Carattere Unicode U+0007.|  
 |Backspace|\h|Carattere Unicode U+0008.|  
-|TAB|\t|Consente di ricercare un carattere di tabulazione, Unicode U+0009.|  
+|Scheda|\t|Consente di ricercare un carattere di tabulazione, Unicode U+0009.|  
 |carattere Unicode|\x#### oppure \u####|Consente di ricercare un carattere corrispondente a un valore Unicode, dove #### è una cifra esadecimale. È possibile specificare un carattere non incluso nel Basic Multilingual Plane, ovvero un surrogato, tramite il punto di codice ISO 10646 o due punti di codice Unicode che forniscono i valori della coppia surrogato.|  
   
  Nella tabella seguente viene descritta la sintassi per stabilire una corrispondenza attraverso le proprietà dei caratteri Unicode standard. Le abbreviazioni di due lettere corrispondono a quelle indicate nel database delle proprietà dei caratteri Unicode e possono essere specificate come parte di un set di caratteri. Ad esempio, l'espressione [:Nd:Nl:No] corrisponde a qualsiasi tipo di cifra.  
   
-|Espressione|Sintassi|Description|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Lettera maiuscola|:Lu|Consente di ricercare una qualsiasi lettera maiuscola. Ad esempio, :Luli corrisponde a "Gli" ma non a "gli".|  
 |Lettera minuscola|:Ll|Consente di ricercare una qualsiasi lettera minuscola. Ad esempio, :Llli corrisponde a "gli" ma non a "Gli".|  
@@ -119,7 +119,7 @@ ms.locfileid: "75243316"
   
  Oltre alle proprietà dei caratteri Unicode standard, è possibile specificare come parte di un set di caratteri le proprietà aggiuntive elencate di seguito.  
   
-|Espressione|Sintassi|Description|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Alfa|:Al|Consente di ricercare qualsiasi carattere. Ad esempio, :Alli consente di trovare parole come "Gli", "giglio" e "foglio".|  
 |Numeric|:Nu|Consente di ricercare un numero o una cifra.|  
@@ -132,5 +132,5 @@ ms.locfileid: "75243316"
 |Ideogramma/Han/Kanji|:Id|Consente di ricercare caratteri ideografici, come i caratteri Han e Kanji.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cerca e Sostituisci](search-and-replace.md)   
+ [Ricerca e sostituzione](search-and-replace.md)   
  [Testo di ricerca con caratteri jolly](search-text-with-wildcards.md)  

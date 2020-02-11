@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028824"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Proprietà - SQL Server (scheda Avanzate)
@@ -34,7 +34,7 @@ ms.locfileid: "63028824"
  Indica la posizione in cui vengono memorizzati i dump di memoria in caso di errore.  
   
  **Segnalazione errori**  
- Se l'opzione è impostata su **Sì**, il programma Dr. Watson inoltra le informazioni a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o al server interno per la segnalazione degli errori se si verifica un errore grave. Per ulteriori informazioni sulla funzionalità di segnalazione degli errori, cercare l'argomento "Impostazioni segnalazione errori e utilizzo funzionalità" nella documentazione online. Per modificare questo valore, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sul server, scegliere **Proprietà** e quindi fare clic sulla pagina **Impostazioni varie server**. Le opzioni verranno visualizzate nell'area **Segnalazione informazioni** .  
+ Se l'opzione è impostata su **Sì**, il programma Dr. Watson inoltra le informazioni a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o al server interno per la segnalazione degli errori se si verifica un errore grave. Per ulteriori informazioni sulla funzionalità di segnalazione degli errori, cercare l'argomento "Impostazioni segnalazione errori e utilizzo funzionalità" nella documentazione online. Per modificare questo valore, in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic con il pulsante destro del mouse sul server, scegliere **Proprietà**e quindi fare clic sulla pagina **Impostazioni varie server** . Le opzioni verranno visualizzate nell'area **Segnalazione informazioni** .  
   
  **Versione file**  
  Visualizza la versione dell'eseguibile di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

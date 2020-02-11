@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685342"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configurazione e amministrazione di un server di report (modalità SharePoint di Reporting Services)
@@ -25,13 +25,13 @@ ms.locfileid: "74685342"
   
 -   Opzioni di menu in una raccolta documenti di SharePoint  
   
-    -   [Gestione avvisi dati per gli utenti di SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
+    -   [Gestione avvisi dati per utenti di SharePoint](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
     -   [Creare e gestire sottoscrizioni per server di report in modalità SharePoint](subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
     -   [Aggiornare le credenziali nelle origini dati dei report da un sito di SharePoint](report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
-    -   [Gestisci DataSet condivisi](report-data/manage-shared-datasets.md)  
+    -   [Gestire set di dati condivisi](report-data/manage-shared-datasets.md)  
   
     -   [Impostare i parametri in un report pubblicato &#40;Reporting Services in modalità integrata SharePoint&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
@@ -39,9 +39,9 @@ ms.locfileid: "74685342"
   
     -   [Opzioni di aggiornamento della cache &#40;Gestione report&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
   
--   [Funzionalità della raccolta siti Reporting Services](../../2014/reporting-services/reporting-services-site-collection-features.md)  
+-   [Funzionalità della raccolta siti di Reporting Services](../../2014/reporting-services/reporting-services-site-collection-features.md)  
   
--   [Attivare il server di report e Power View le funzionalità di integrazione in SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
+-   [Attivare le funzionalità di integrazione per Power View e server di report in SharePoint](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   
 -   [Reporting Services le impostazioni del sito e le funzionalità del sito&#40;modalità SharePoint&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
   

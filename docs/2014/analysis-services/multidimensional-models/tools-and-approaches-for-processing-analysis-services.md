@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530937"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Strumenti e approcci per l'elaborazione (Analysis Services)
@@ -46,7 +46,7 @@ ms.locfileid: "69530937"
  L'elaborazione è un'operazione estremamente configurabile, controllata da un set di opzioni che determinano se si verifica un'elaborazione completa o incrementale a livello di oggetto. Per altre informazioni sulle opzioni di elaborazione e gli oggetti, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) ed [Elaborazione di oggetti di Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per ulteriori informazioni sull'elaborazione di modelli tabulari, vedere elaborazione di [database, tabelle o partizioni](../tabular-models/process-database-table-or-partition-analysis-services.md) e dati [ &#40;di&#41;elaborazione SSAS tabulare](../process-data-ssas-tabular.md).  
+>  In questo argomento vengono descritti gli strumenti e gli approcci per l'elaborazione di modelli multidimensionali. Per ulteriori informazioni sull'elaborazione di modelli tabulari, vedere elaborare i dati del [database, della tabella o della partizione](../tabular-models/process-database-table-or-partition-analysis-services.md) ed [elaborare i dati &#40;SSAS tabulare&#41;](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Gestione di oggetti in SQL Server Management Studio  
   
@@ -68,7 +68,7 @@ ms.locfileid: "69530937"
   
      Gli oggetti di Analysis Services sono gerarchici. Se si sceglie database, l'elaborazione può essere effettuata per tutti gli oggetti contenuti nel database. L'effettiva esecuzione dell'elaborazione dipende dall'opzione di elaborazione selezionata e dallo stato dell'oggetto. In particolare, se un oggetto non è elaborato, l'elaborazione del relativo oggetto padre comporterà l'elaborazione di tale oggetto. Per altre informazioni sulle dipendenze tra oggetti, vedere [Elaborazione di oggetti di Analysis Services](processing-analysis-services-objects.md).  
   
-3.  Nella finestra di dialogo **Elabora**, in **Opzioni elaborazione** usare il valore predefinito fornito o selezionare un'opzione diversa dall'elenco. Per altre informazioni su ogni opzione, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
+3.  Nella finestra di dialogo **Elabora** , in **Opzioni elaborazione**usare il valore predefinito fornito o selezionare un'opzione diversa dall'elenco. Per altre informazioni su ogni opzione, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
 4.  Fare clic su **Analisi di impatto** per identificare ed eventualmente elaborare gli oggetti dipendenti sui quali influisce l'elaborazione degli oggetti elencati nella finestra di dialogo Elabora.  
   
@@ -86,19 +86,20 @@ ms.locfileid: "69530937"
   
 3.  Fare clic con il pulsante destro del mouse su una dimensione, quindi scegliere **Elabora**. È possibile fare clic con il pulsante destro del mouse su più dimensioni per elaborare più oggetti contemporaneamente. Per altre informazioni, vedere [Elaborazione batch &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
-4.  Nella finestra di dialogo **Elaborazione dimensione** , nella colonna **Opzioni elaborazione** di **Elenco oggetti**, verificare che l'opzione per la colonna sia **Elaborazione completa**. In caso contrario, in **Opzioni elaborazione**fare clic sull’opzione e selezionare **Elaborazione completa** nell'elenco a discesa.  
+4.  Nella finestra di dialogo **** di elaborazione, in **Elenco oggetti** verificare che l’opzione per la colonna **Opzioni elaborazione**sia **Elaborazione completa**. In caso contrario, in **Opzioni elaborazione**fare clic sull’opzione e selezionare **Elaborazione completa** nell'elenco a discesa.  
   
-5.  Fai clic su **Esegui**.  
+5.  Fare clic su **Esegui**.  
   
 6.  Al termine dell'elaborazione, fare clic su **Chiudi**.  
   
-##  <a name="bkmk_impactanalysis"></a> Eseguire l'analisi di impatto per individuare le dipendenze tra oggetti e l'ambito delle operazioni  
+##  <a name="bkmk_impactanalysis"></a>Eseguire l'analisi di effetto per identificare le dipendenze tra oggetti e l'ambito delle operazioni  
   
 1.  Prima di elaborare un oggetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], è possibile analizzare l'effetto sugli oggetti correlati facendo clic su **Analisi di impatto** in una delle finestre di dialogo **Elabora oggetti** .  
   
 2.  Fare clic con il pulsante destro del mouse su una dimensione, un cubo, un gruppo di misure o una partizione per aprire una finestra di dialogo **Elabora oggetti** .  
   
-3.  Fare clic su **Analisi di impatto**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue l’analisi del modello e indica i requisiti di rielaborazione per gli oggetti correlati a quello che è stato selezionato per l’elaborazione.  
+3.  Fare clic su **Analisi di impatto**. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esegue l’analisi del modello e indica i requisiti di rielaborazione per gli oggetti correlati a quello che è stato selezionato per l’elaborazione.  
   
 ### <a name="processing-objects-using-xmla"></a>Elaborazione di oggetti tramite XMLA  
   
@@ -128,7 +129,7 @@ ms.locfileid: "69530937"
   
     -   [Cmdlet Invoke-ProcessPartition](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [cmdlet Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd)che può essere usato per eseguire script XMLA, MDX o DMX che includono comandi di elaborazione.  
+    -   [Cmdlet Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), che può essere utilizzato per eseguire script XMLA, MDX o DMX che includono comandi di elaborazione.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Monitoraggio dell'elaborazione degli oggetti utilizzando SQL Server Profiler  
   
@@ -138,13 +139,13 @@ ms.locfileid: "69530937"
   
 3.  Scegliere gli eventi seguenti:  
   
-    -   **Inizio del comando** e **Fine del comando** per mostrare l'inizio e la fine dell'elaborazione  
+    -   **Inizio del comando** e **fine del comando** da visualizzare quando l'elaborazione viene avviata e interrotta  
   
-    -   **Errore** per acquisire eventuali errori  
+    -   **Errore** di acquisizione degli errori  
   
-    -   **Inizio del report di stato**, **Stato corrente del report di stato**e **Fine del report di stato** per creare un report sullo stato dell'elaborazione e mostrare le query SQL utilizzate per recuperare i dati  
+    -   **Inizio del report**di stato, stato **corrente**del report di stato e **fine del report** di stato per creare un report sullo stato del processo e visualizzare le query SQL utilizzate per recuperare i dati  
   
-    -   **Inizio dell'esecuzione di script MDX** e **Fine dell'esecuzione di script MDX** per mostrare i calcoli del cubo  
+    -   **Esecuzione di script MDX Begin** ed **Execute MDX end** per mostrare i calcoli del cubo  
   
     -   Facoltativamente, aggiungere eventi di blocco in caso di diagnosi di problemi di prestazioni correlati all'elaborazione  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401171"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Caricatore da riga di comando dwloader per data warehouse paralleli
@@ -116,7 +116,7 @@ dwloader.exe
 }  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
 **-h**  
 Visualizza semplici informazioni della guida sull'utilizzo del caricatore. La guida viene visualizzata solo se non vengono specificati altri parametri della riga di comando.  
   
@@ -138,7 +138,7 @@ Usare un file di parametri, *parameter_file_name*al posto dei parametri della ri
   
 Il file di parametri contiene un parametro, senza **-** prefisso, per riga.  
   
-Di seguito sono riportati alcuni esempi.  
+Esempi:  
   
 `rt=percentage`  
   
@@ -193,7 +193,7 @@ Per caricare più file con un solo comando:
   
 -   Tutti i file verranno concatenati e caricati come se fossero un file e le righe rifiutate verranno indirizzate a un singolo file di rifiuto.  
   
-Di seguito sono riportati alcuni esempi.  
+Esempi:  
   
 -   -i \\\loadserver\loads\daily\\*. gz  
   
@@ -224,7 +224,7 @@ Delimitatore per ogni campo (colonna) nella riga. Il delimitatore di campo è co
   
 |Nome|Escape Character|Carattere esadecimale|  
 |--------|--------------------|-----------------|  
-|TAB|\t|0x09|  
+|Scheda|\t|0x09|  
 |Ritorno a capo (CR)|\r|0x0D|  
 |Avanzamento riga (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
@@ -234,7 +234,7 @@ Delimitatore per ogni campo (colonna) nella riga. Il delimitatore di campo è co
   
 Per specificare il carattere barra verticale nella riga di comando, racchiuderlo tra virgolette doppie, "|". In questo modo si eviterà un'interpretazione errata da parte del parser della riga di comando. Gli altri caratteri sono racchiusi tra virgolette singole.  
   
-Di seguito sono riportati alcuni esempi.  
+Esempi:  
   
 -t "|"  
   
@@ -274,7 +274,7 @@ Per UNIX è necessario un LF. Per Windows è necessario un CR.
 **-s** *string_delimiter*  
 Delimitatore per il campo con tipo di dati stringa di un file di input delimitato da testo. Il delimitatore di stringa è uno o più valori ASCII.  Può essere specificato come carattere (ad esempio,-s *) o come valore esadecimale, ad esempio-s 0x22 per le virgolette doppie.  
   
-Di seguito sono riportati alcuni esempi.  
+Esempi:  
   
 s  
   
@@ -380,7 +380,7 @@ Ogni formato DateTime viene specificato in un file denominato *datetime_format_f
   
 Ogni riga contiene il nome di una colonna nella tabella di destinazione e il relativo formato DateTime.  
   
-Di seguito sono riportati alcuni esempi.  
+Esempi:  
   
 `LastReceiptDate=ymd`  
   
@@ -448,7 +448,7 @@ Utilizzato con l' `-rt percentage` opzione per specificare i controlli della per
 **-c**  
 Rimuove gli spazi vuoti dal lato sinistro e destro dei campi char, nchar, varchar e nvarchar. Converte in una stringa vuota ogni campo che contiene solo spazi vuoti.  
   
-Di seguito sono riportati alcuni esempi.  
+Esempi:  
   
 '' viene troncato in ''  
   
@@ -559,9 +559,9 @@ La modalità di accodamento consente di caricare i dati in due fasi. La fase 1 c
 |Heap|No|Sì|No|Minime|  
 |Heap|No|No|No|Minime|  
 |CL|Sì|Sì|No|Minime|  
-|CL|Sì|No|Sì|Completa|  
+|CL|Sì|No|Sì|Full|  
 |CL|No|Sì|No|Minime|  
-|CL|No|No|Sì|Completa|  
+|CL|No|No|Sì|Full|  
   
 La tabella precedente Mostra **dwloader** usando il caricamento in modalità Accodamento in un heap o una tabella dell'indice cluster (ci), con o senza il flag transazionale, e il caricamento in una tabella vuota o in una tabella non vuota. Nella tabella viene visualizzato il comportamento di blocco e di registrazione di ogni combinazione di carico. Ad esempio, la fase di caricamento (2a) con la modalità di Accodamento in un indice cluster senza modalità transazionale e in una tabella vuota creerà un blocco esclusivo sulla tabella e la registrazione sarà minima. Questo significa che un cliente non sarà in grado di caricare (2a) fase e query simultaneamente in una tabella vuota. Tuttavia, quando si carica con la stessa configurazione in una tabella non vuota, PDW non emette un blocco esclusivo sulla tabella e la concorrenza è possibile. Sfortunatamente, la registrazione completa si verifica, rallentando il processo.  
   

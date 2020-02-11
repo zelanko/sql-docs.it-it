@@ -1,5 +1,5 @@
 ---
-title: Rappresentazione dell'indicatore di prestazioni (tabulare) della chiave | Microsoft Docs
+title: Rappresentazione dell'indicatore di prestazioni chiave (tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62795441"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Rappresentazione dell'indicatore di prestazioni chiave (tabulare)
   Un indicatore KPI viene utilizzato per misurare le prestazioni di un valore, definito mediante una misura di base, rispetto a un valore di destinazione.  
   
 ## <a name="key-performance-indicator-representation"></a>Rappresentazione dell'indicatore di prestazioni chiave  
- Nell'oggetto tabulare Modella un indicatore di prestazioni chiave - kpi: è una misura con informazioni aggiuntive relative all'applicazione client di visualizzarli graficamente. Un indicatore KPI dispone in genere di informazioni su un obiettivo da raggiungere e sullo stato della misura confrontato con l'obiettivo nonché di informazioni per lo strumento client sulla visualizzazione grafica dello stato.  
+ Nei modelli a oggetti tabulari un indicatore di prestazioni chiave-KPI è una misura con informazioni aggiuntive che l'applicazione client deve visualizzare graficamente. Un indicatore KPI dispone in genere di informazioni su un obiettivo da raggiungere e sullo stato della misura confrontato con l'obiettivo nonché di informazioni per lo strumento client sulla visualizzazione grafica dello stato.  
   
 ### <a name="key-performance-indicator-in-amo"></a>Indicatore di prestazioni chiave in AMO  
  Se si utilizza AMO per gestire un indicatore di prestazioni chiave (KPI) in un modello tabulare, non vi è corrispondenza di oggetti uno-a-uno per un indicatore KPI in AMO, l'oggetto <xref:Microsoft.AnalysisServices.Kpi> AMO non viene utilizzato per questo scopo; in AMO, per i modelli tabulari, un indicatore KPI è rappresentato il da una serie di oggetti creata in uno degli elementi nella raccolta <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> e nell'oggetto <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>.  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Esempio AMO2Tabular  
- Su come usare AMO per creare e modificare l'indicatore di prestazioni chiave per comprendere le rappresentazioni, vedere il codice sorgente di esempio AMO to Tabular; in particolare controllare nel seguente file di origine: AddKPIs.cs. L'esempio è disponibile in Codeplex. Nota importante sul codice: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione né deve essere utilizzato per altro scopo se non quello formativo.  
+ Per comprendere la modalità di utilizzo di AMO per la creazione e la gestione delle rappresentazioni dell'indicatore di prestazioni di chiave, vedere il codice sorgente dell'esempio Da AMO a tabulare. In particolare effettuare un controllo nel seguente file di origine: AddKPIs.cs. L'esempio è disponibile in Codeplex. Nota importante sul codice: il codice viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione né deve essere utilizzato per altro scopo se non quello formativo.  
   
   

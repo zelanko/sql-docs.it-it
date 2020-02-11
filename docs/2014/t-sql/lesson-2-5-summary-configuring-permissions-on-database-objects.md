@@ -1,5 +1,5 @@
 ---
-title: 'Riepilogo: Configurazione delle autorizzazioni per oggetti di Database | Microsoft Docs'
+title: 'Riepilogo: Configurazione delle autorizzazioni per gli oggetti di database | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642709"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>Riepilogo: Configurazione delle autorizzazioni per gli oggetti di database
@@ -25,6 +25,6 @@ ms.locfileid: "62642709"
  Una vista rappresenta un'unica istruzione SELECT e viene visualizzata agli utenti sotto forma di tabella. Una stored procedure è costituita da una o più istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] eseguite in un batch.  
   
 ## <a name="next-lesson-in-tutorial"></a>Lezione successiva dell'esercitazione  
- [Lezione 3: L'eliminazione degli oggetti di Database](lesson-3-1-deleting-database-objects.md)  
+ [Lezione 3: Eliminazione di oggetti di database](lesson-3-1-deleting-database-objects.md)  
   
   

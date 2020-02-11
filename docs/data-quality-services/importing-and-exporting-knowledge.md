@@ -10,10 +10,10 @@ ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254815"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importazione ed esportazione delle informazioni
@@ -30,19 +30,19 @@ ms.locfileid: "75254815"
   
 |||  
 |-|-|  
-|Esportare un dominio di una Knowledge Base in un file di dati DQS|[Esportare un dominio in un file DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|Importare un dominio da un file di dati DQS in una Knowledge Base esistente|[Importare un dominio da un file DQS](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|Esportare un'intera Knowledge Base in un file di dati DQS|[Esportare una Knowledge base in un file DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|Importare un'intera Knowledge Base in un file di dati DQS|[Importare una Knowledge base da un file DQS](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|Esportare un dominio di una Knowledge Base in un file di dati DQS|[Esportazione di un dominio in un file DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
+|Importare un dominio da un file di dati DQS in una Knowledge Base esistente|[Importazione di un dominio da un file DQS](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|Esportare un'intera Knowledge Base in un file di dati DQS|[Esportazione di una Knowledge Base in un file DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|Importare un'intera Knowledge Base in un file di dati DQS|[Importazione di una Knowledge Base da un file DQS](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Importare i valori da un file di Excel in un dominio|[Importare i valori da un file di Excel in un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
-|Importare i domini da un file di Excel in una Knowledge Base|[Importare domini da un file di Excel in individuazione informazioni](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
+|Importare i domini da un file di Excel in una Knowledge Base|[Importare i domini da un file di Excel in Individuazione informazioni](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |Importare le informazioni raccolte durante la pulizia in una Knowledge Base|[Importare i valori di un progetto di pulizia in un dominio](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Compilazione di una Knowledge Base eseguendo l'individuazione delle informazioni e gestendo queste ultime in modo interattivo|[Compilazione di una Knowledge base](../data-quality-services/building-a-knowledge-base.md)|  
+|Compilazione di una Knowledge Base eseguendo l'individuazione delle informazioni e gestendo queste ultime in modo interattivo|[Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md)|  
 |Creazione di un singolo dominio e aggiunta di informazioni al dominio.|[Gestione di un dominio](../data-quality-services/managing-a-domain.md)|  
 |Creazione di un dominio composito e aggiunta di informazioni al dominio.|[Gestione di un dominio composito](../data-quality-services/managing-a-composite-domain.md)|  
   

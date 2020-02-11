@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892941"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
@@ -38,12 +38,12 @@ Set_Expression1 * Set_Expression2 [* ...n]
  *Set_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La funzione **Crossjoin** restituisce il prodotto incrociato di due o più set specificati. L'ordine delle tuple nel set di risultati dipende dall'ordine dei set da unire e dall'ordine dei membri corrispondenti. Ad esempio, quando il primo set è costituito da {x1, X2,..., x*n*} e il secondo set è costituito da {Y1, Y2,..., y*n*}, il prodotto incrociato di questi set è:  
   
- {(x1, y1), (x1, y2),...,(x1, y*n*), (x2, y1), (x2, y2),...,  
+ {(x1, Y1), (x1, Y2),..., (x1, y*n*), (X2, Y1), (X2, y2),...,  
   
- (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
+ (X2, y*n*),..., (x*n*, Y1), (x*n*, Y2),..., (Xn, y*n*)}  
   
 > [!IMPORTANT]  
 >  Se i set nel cross join sono costituiti da tuple di gerarchie dell'attributo diverse contenute nella stessa dimensione, questa funzione restituirà solo le tuple effettivamente esistenti. Per ulteriori informazioni, vedere [concetti chiave in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
@@ -128,6 +128,6 @@ WHERE (Measures.[Internet Sales Amount],
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

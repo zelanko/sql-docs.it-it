@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73770758"
 ---
 # <a name="data-types-ole-db"></a>Tipi di dati (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Per eseguire [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni ed elaborare i risultati utilizzando il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Native client, è necessario essere in grado di eseguire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il mapping dei tipi di dati OLE DB ai tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante l'associazione di parametri o colonne in una set di righe e quando utilizza l'interfaccia **ITableDefinition** per creare una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Per eseguire istruzioni ed [!INCLUDE[tsql](../../includes/tsql-md.md)] elaborare i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultati utilizzando il provider di OLE DB di Native client, è necessario essere in grado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire il mapping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra i tipi di dati del provider di OLE DB di Native client e i tipi di dati OLE DB quando si associano parametri o colonne di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]set di righe e quando si utilizza l'interfaccia **ITableDefinition** per creare una tabella in.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

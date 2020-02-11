@@ -13,10 +13,10 @@ ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b70622ea038b61883ce7a5307a558a5667139fb1
-ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74491970"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF. EXE
@@ -31,7 +31,7 @@ ODBCCONF. exe è uno strumento da riga di comando che consente di configurare i 
 ODBCCONF [switches] action  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argomenti  
  *interruttori*  
  Zero o più opzioni switch. Per l'elenco delle opzioni disponibili, vedere la sezione Osservazioni più avanti in questo argomento.  
   
@@ -41,7 +41,7 @@ ODBCCONF [switches] action
 ## <a name="remarks"></a>Osservazioni  
  Sono disponibili le opzioni seguenti:  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |/A {*Action*}|Specificare un'azione.<br /><br /> /A è facoltativo se è specificata una sola azione.|  
 |/?|Visualizza l'utilizzo per ODBCCONF. EXE.|  
@@ -55,7 +55,7 @@ ODBCCONF [switches] action
   
  Sono disponibili le azioni seguenti:  
   
-|Azione|Description|  
+|Azione|Descrizione|  
 |------------|-----------------|  
 |CONFIGDRIVER *driver_name * * parametri di configurazione specifici del driver*|Carica la DLL di installazione del driver appropriata e chiama la funzione **ConfigDriver** .<br /><br /> Equivale alla [funzione SQLConfigDriver](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Ad esempio:<br /><br /> /A {CONFIGDRIVER "nome driver" "CPTimeout = 60"}<br /><br /> /A {CONFIGDRIVER "nome driver" "DriverODBCVer = 03.80"}|  
 |CONFIGDSN *driver_name* DSN =*nome* &#124; *attributi*|Aggiunge o modifica un'origine dati di sistema.<br /><br /> Equivale alla [funzione SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Ad esempio:<br /><br /> /A {CONFIGDSN "SQL Server" "DSN = nome &#124; Server = srv"}|  

@@ -1,5 +1,5 @@
 ---
-title: Creare un modello
+title: Creare il modello
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728488"
 ---
 # <a name="create-a-model-master-data-services"></a>Creare un modello (Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73728488"
 ## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model"></a>Per creare un modello  
   
@@ -55,23 +55,23 @@ ms.locfileid: "73728488"
   
  Per ogni modello creato, viene aggiunta una riga con otto colonne alla griglia. Le otto colonne sono:  
   
--   **Stato**: stato del modello. Quando si fa clic sul pulsante **Salva modello** , viene visualizzata l'immagine di ![aggiornamento](../master-data-services/media/mds-model-status-updating.png "Aggiornamento") , che indica che il modello è in fase di aggiornamento. Se si verificano errori durante la creazione o la modifica di un modello, viene visualizzata l'immagine dell' ![errore](../master-data-services/media/mds-model-status-error.png "Errore") . In caso contrario, lo stato è OK e viene visualizzata l'immagine ![OK](../master-data-services/media/mds-model-status-ok.png "OK") .  
+-   **Stato**: stato del modello. Quando si fa clic sul pulsante **Salva modello** , viene visualizzata l'immagine di ![aggiornamento](../master-data-services/media/mds-model-status-updating.png "Updating") , che indica che il modello è in fase di aggiornamento. Se si verificano errori durante la creazione o la modifica di un modello, viene visualizzata l'immagine dell' ![errore](../master-data-services/media/mds-model-status-error.png "Errore") . In caso contrario, lo stato è OK e viene visualizzata l'immagine ![OK](../master-data-services/media/mds-model-status-ok.png "OK") .  
   
 -   **Nome**: nome del modello.  
   
--   **Descrizione**: descrizione del modello.  
+-   **Descrizione**: Descrizione del modello.  
   
--   **Giorni di conservazione log**: numero di giorni per i quali il log per il modello viene conservato.  
+-   **Giorni di conservazione log**: numero di giorni per cui il log viene conservato per il modello.  
   
 -   **Creato da**: nome utente dell'utente che ha creato il modello.  
   
 -   **Data e ora di creazione**: data e ora di creazione del modello.  
   
--   **Aggiornato da**: nome utente dell'ultimo utente che ha aggiornato l'attributo.  
+-   **Aggiornato da**: nome utente dell'ultimo aggiornamento del modello.  
   
--   **Data e ora di aggiornamento**: data e ora dell'ultimo aggiornamento del modello.  
+-   **Data e ora aggiornate**: data e ora dell'ultimo aggiornamento del modello.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73728488"
  [Modelli &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Eliminare un modello &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Modifica modello &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Modifica Master Data Services &#40;del modello&#41;](../master-data-services/edit-model-master-data-services.md)   
  [Transazioni &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

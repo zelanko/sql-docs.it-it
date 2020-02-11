@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243282"
 ---
 # <a name="search-text-with-wildcards"></a>Testo di ricerca con caratteri jolly
@@ -34,7 +34,7 @@ ms.locfileid: "75243282"
   
  Nella tabella seguente sono descritti i caratteri jolly disponibili nell' **Elenco riferimenti**.  
   
-|Espressione|Sintassi|Description|  
+|Expression|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Un solo carattere|?|Individua un qualsiasi singolo carattere.|  
 |Una sola cifra|#|Individua una qualsiasi singola cifra. Ad esempio, 7# individua i numeri che comprendono 7 seguito da un altro numero. In questo caso potrebbe essere 71 ma non 17.|  
@@ -43,5 +43,5 @@ ms.locfileid: "75243282"
 |Qualsiasi carattere del set|[ ]|Individua qualsiasi carattere specificato nel set.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cerca e Sostituisci](search-and-replace.md)   
- [Testo di ricerca con espressioni regolari](search-text-with-regular-expressions.md)  
+ [Ricerca e sostituzione](search-and-replace.md)   
+ [Eseguire ricerche di testo con espressioni regolari](search-text-with-regular-expressions.md)  

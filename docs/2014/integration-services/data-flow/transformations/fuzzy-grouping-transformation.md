@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900560"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Raggruppamento fuzzy - trasformazione
@@ -69,7 +69,7 @@ ms.locfileid: "62900560"
  Questa trasformazione include un input e un output. Non supporta un output degli errori.  
   
 ## <a name="row-comparison"></a>Confronto tra righe  
- Quando si configura la trasformazione Raggruppamento fuzzy, è possibile specificare l'algoritmo di confronto utilizzato per confrontare le righe dell'input della trasformazione. Se si imposta la proprietà Exhaustive su `true`, la trasformazione confronta ogni riga dell'input da tutte le altre righe nell'input. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che l'input non includa un numero di righe ridotto. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà Exhaustive su `true` solo durante lo sviluppo dei pacchetti.  
+ Quando si configura la trasformazione Raggruppamento fuzzy, è possibile specificare l'algoritmo di confronto utilizzato per confrontare le righe dell'input della trasformazione. Se si imposta la proprietà complete su `true`, la trasformazione confronta ogni riga nell'input con ogni altra riga nell'input. Questo algoritmo di confronto restituisce in genere risultati più precisi, ma la trasformazione viene eseguita più lentamente, a meno che l'input non includa un numero di righe ridotto. Per evitare problemi di prestazioni, è consigliabile impostare la proprietà complete su solo durante `true` lo sviluppo di pacchetti.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tabelle e indici temporanei  
  In fase di esecuzione, la trasformazione Raggruppamento fuzzy crea oggetti temporanei, quali tabelle e indici, potenzialmente di grandi dimensioni, nel database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui la trasformazione si connette. Le dimensioni delle tabelle e degli indici sono proporzionali al numero di righe dell'input della trasformazione Raggruppamento fuzzy e al numero di token creati dalla trasformazione.  
@@ -85,7 +85,7 @@ ms.locfileid: "62900560"
   
 -   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Gestione connessione&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Colonne&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Editor trasformazione Raggruppamento fuzzy &#40;scheda colonne&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
 -   [Editor trasformazione Raggruppamento fuzzy &#40;scheda Avanzate&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   

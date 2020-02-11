@@ -19,17 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917468"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] è possibile creare un nuovo database ripristinando un backup di un database utente creato tramite [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versione successiva. Tuttavia, i backup di **master**, **model** e **msdb** creati con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Inoltre, i backup di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] non possono essere ripristinati da una qualsiasi versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene utilizzato un percorso predefinito diverso rispetto alle versioni precedenti. Pertanto, per ripristinare i backup di un database creato nel percorso predefinito di versioni precedenti, è necessario utilizzare l'opzione MOVE. Per informazioni sul nuovo percorso predefinito, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Per altre informazioni sullo spostamento dei file di database, vedere "Spostamento dei file di database" di seguito in questo argomento.  
+>  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] viene utilizzato un percorso predefinito diverso rispetto alle versioni precedenti. Pertanto, per ripristinare i backup di un database creato nel percorso predefinito di versioni precedenti, è necessario utilizzare l'opzione MOVE. Per informazioni sul nuovo percorso predefinito, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Per altre informazioni sullo spostamento dei file di database, vedere "Spostamento dei file di database" di seguito in questo argomento.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Procedura generale per l'utilizzo di operazioni di backup e ripristino per copiare un database  
  Quando si utilizza un'operazione di backup e ripristino per copiare un database in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i computer di origine e di destinazione possono utilizzare qualsiasi piattaforma sulla quale viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -38,7 +39,7 @@ ms.locfileid: "62917468"
   
 1.  Effettuare il backup del database di origine che può risiedere in un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versioni successive. Il computer in cui è in esecuzione questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è il *computer di origine*.  
   
-2.  Nel computer in cui si desidera copiare il database (il *computer di destinazione*), connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su cui si prevede di ripristinare il database. Se necessario, sull'istanza del server di destinazione, creare gli stessi dispositivi di backup utilizzati dal backup dei database di origine.  
+2.  Nel computer in cui si desidera copiare il database (il computer di *destinazione*), connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si intende ripristinare il database. Se necessario, sull'istanza del server di destinazione, creare gli stessi dispositivi di backup utilizzati dal backup dei database di origine.  
   
 3.  Ripristinare il backup del database di origine sul computer di destinazione. Il ripristino del database determina la creazione automatica di tutti i file del database.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "62917468"
   
     -   Se non è possibile sovrascrivere il file esistente, si verifica un errore di ripristino.  
   
- Per evitare errori e conseguenze impreviste, prima dell'operazione di ripristino, è possibile usare la [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) tabella di cronologia per trovare i file di database e log nel backup si intende ripristinare.  
+ Per evitare errori e conseguenze impreviste, prima dell'operazione di ripristino, è possibile usare la tabella di cronologia [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) per individuare i file di database e di log nel backup che si intende ripristinare.  
   
 ## <a name="moving-the-database-files"></a>Spostamento dei file di database  
  Se per i motivi elencati in precedenza non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostare i file in un nuovo percorso mano a mano che vengono ripristinati, Ad esempio:  
@@ -78,7 +79,7 @@ ms.locfileid: "62917468"
  Il nome del database specificato esplicitamente al momento del ripristino viene utilizzato automaticamente come nuovo nome del database. Poiché il nome del database non esiste, viene creato un database con il nuovo nome tramite i file presenti nel backup.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Aggiornamento di un database utilizzando il ripristino  
- Nel ripristino dei backup da una versione precedente può essere utile sapere in anticipo se il percorso (unità e directory) di ogni catalogo full-text di un backup sia esistente sul computer di destinazione. Per un elenco dei nomi logici e fisici (percorso e nome file) di ogni file in un backup, inclusi i file di catalogo, usare un'istruzione RESTORE FILELISTONLY FROM *<dispositivo_backup>* . Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
+ Nel ripristino dei backup da una versione precedente può essere utile sapere in anticipo se il percorso (unità e directory) di ogni catalogo full-text di un backup sia esistente sul computer di destinazione. Per un elenco dei nomi logici e fisici (percorso e nome file) di ogni file in un backup, inclusi i file di catalogo, usare un'istruzione RESTORE FILELISTONLY FROM *<dispositivo_backup>*. Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
  Se lo stesso percorso non esiste sul computer di destinazione, sono disponibili due alternative:  
   
@@ -98,11 +99,11 @@ ms.locfileid: "62917468"
   
 -   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **Per ripristinare file e filegroup in un nuovo percorso**  
+ **Per ripristinare file e filegroup in una nuova posizione**  
   
--   [Ripristinare file in un percorso nuovo &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
+-   [Ripristino dei file in una nuova posizione &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [Ripristinare un Backup del Database &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Ripristinare un backup del database &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **Per ripristinare file e filegroup sovrascrivendo file esistenti**  
   
@@ -110,7 +111,7 @@ ms.locfileid: "62917468"
   
  **Per ripristinare un database con un nuovo nome**  
   
--   [Ripristinare un Backup del Database &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Ripristinare un backup del database &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **Per riavviare un'operazione di ripristino interrotta**  
   
@@ -118,9 +119,9 @@ ms.locfileid: "62917468"
   
  **Per modificare il proprietario di un database**  
   
--   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
+-   [sp_changedbowner &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Copiare un database usando SQL Server Management Objects (SMO)**  
+ **Per copiare un database utilizzando SMO (SQL Server Management Objects)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   
@@ -131,7 +132,7 @@ ms.locfileid: "62917468"
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
 ## <a name="see-also"></a>Vedere anche  
- [Copia di database in altri server](copy-databases-to-other-servers.md)   
+ [Copiare database in altri server](copy-databases-to-other-servers.md)   
  [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  

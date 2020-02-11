@@ -18,10 +18,10 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982113"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982113"
 
 Acquisisce dati diagnostici e informazioni di integrità su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rilevare potenziali errori. La procedura viene eseguita in modalità di ripetizione e i risultati vengono inviati periodicamente. Può essere richiamata da una connessione normale o di applicazione livello dati.  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive).  
+**Si applica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (e versioni successive).  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` indica l'intervallo di tempo in cui il stored procedure viene eseguito ripetutamente per inviare informazioni sull'integrità.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'`Indica l'intervallo di tempo in cui il stored procedure viene eseguito ripetutamente per inviare informazioni sull'integrità.  
   
  *repeat_interval_in_seconds* è di **tipo int** e il valore predefinito è 0. I valori di parametro validi sono 0 oppure qualsiasi valore uguale o maggiore di 5. È necessario eseguire la stored procedure per almeno 5 secondi per restituire i dati completi. Il valore minimo per l'esecuzione della stored procedure in modalità di ripetizione è 5 secondi.  
   
@@ -50,8 +50,8 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
  Se il valore specificato è uguale o maggiore di 5, la stored procedure viene eseguita ripetutamente per restituire lo stato di integrità finché non verrà annullato manualmente.  
   
-## <a name="return-code-values"></a>Valori restituiti  
-0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
 **sp_server_diagnostics** restituisce le informazioni seguenti  
@@ -59,8 +59,8 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
-|**component_type**|**sysname**|Indica se la riga contiene informazioni per il componente a livello di istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o per un gruppo di disponibilità Always On:<br /><br /> istanza<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *nome \<del gruppo di disponibilità >*|  
+|**component_type**|**sysname**|Indica se la riga contiene informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente a livello di istanza o per un gruppo di disponibilità always on:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
+|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<nome del gruppo di disponibilità>*|  
 |**state**|**int**|Indica lo stato di integrità del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: sconosciuto<br /><br /> 1: Pulisci<br /><br /> 2: avviso<br /><br /> 3: errore|  
 |**data**|**varchar (max)**|Indica dati specifici del componente.|  
@@ -77,14 +77,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **eventi**: raccoglie dati e superfici attraverso la stored procedure sugli errori e gli eventi di interesse registrati dal server, inclusi i dettagli sulle eccezioni del buffer circolare, gli eventi del buffer circolare sul broker di memoria, la memoria insufficiente, il monitoraggio dell'utilità di pianificazione, il pool di buffer, gli spinlock, la sicurezza e la connettività. Gli eventi avranno sempre 0 come stato.  
   
--   **\<nome del gruppo di disponibilità >** : raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "always on: AvailabilityGroup").  
+-   **nome del gruppo di disponibilità>: raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "always on: AvailabilityGroup"). \< **  
   
 ## <a name="remarks"></a>Osservazioni  
 Da una prospettiva di errore, i componenti di elaborazione di query, risorsa e sistema verranno utilizzati per il rilevamento dell'errore mentre i componenti di eventi e io_subsystem verranno utilizzati solo per gli scopi diagnostici.  
   
 Nella tabella seguente viene eseguito il mapping dei componenti agli stati di integrità associati.  
   
-|Components|Pulito (1)|Avviso (2)|Errore (3)|Sconosciuto (0)|  
+|Componenti|Pulito (1)|Avviso (2)|Errore (3)|Sconosciuto (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |sistema|x|x|x||  
 |resource|x|x|x||  
@@ -241,6 +241,6 @@ go
 ``` 
   
 ## <a name="see-also"></a>Vedere anche  
- [Criteri di failover per istanze del cluster di failover](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Criteri di failover per le istanze del cluster di failover](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

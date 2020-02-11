@@ -1,5 +1,5 @@
 ---
-title: L'esecuzione di procedure | Microsoft Docs
+title: Esecuzione di routine | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98c36f02bde63862748eef14a8cbae063ca4e472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069948"
 ---
 # <a name="executing-procedures"></a>Esecuzione di procedure
-ODBC definisce una sequenza di escape standard per l'esecuzione di procedure. Per la sintassi di questa sequenza e un esempio di codice che lo utilizza, vedere [le chiamate di procedura](../../../odbc/reference/develop-app/procedure-calls.md).  
+ODBC definisce una sequenza di escape standard per l'esecuzione di routine. Per la sintassi di questa sequenza e un esempio di codice che lo usa, vedere [procedure calls](../../../odbc/reference/develop-app/procedure-calls.md).  
   
- Per eseguire una routine, un'applicazione esegue le azioni seguenti:  
+ Per eseguire una procedura, un'applicazione esegue le azioni seguenti:  
   
-1.  Imposta i valori dei parametri. Per altre informazioni, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
+1.  Imposta i valori di tutti i parametri. Per ulteriori informazioni, vedere [parametri di istruzione](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
   
-2.  Le chiamate **SQLExecDirect** e lo passa a una stringa contenente l'istruzione SQL che esegue la procedura. Questa istruzione consente di usare la sequenza di escape definita dalla sintassi ODBC o specifici del DBMS; le istruzioni che utilizzano la sintassi specifici del DBMS non sono interoperative.  
+2.  Chiama **SQLExecDirect** e la passa a una stringa contenente l'istruzione SQL che esegue la procedura. Questa istruzione può utilizzare la sequenza di escape definita da ODBC o dalla sintassi specifica di DBMS. le istruzioni che utilizzano la sintassi specifica di DBMS non sono interoperative.  
   
-3.  Quando **SQLExecDirect** viene chiamato, il driver:  
+3.  Quando viene chiamato **SQLExecDirect** , il driver:  
   
-    -   Recupera i valori di parametro corrente e li converte in base alle esigenze. Per altre informazioni, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
+    -   Recupera i valori di parametro correnti e li converte secondo necessità. Per ulteriori informazioni, vedere [parametri di istruzione](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
   
-    -   La routine viene chiamata nell'origine dati e lo invia i valori di parametro convertito. Come il driver chiama la routine è specifico del driver. Ad esempio, potrebbe modificare l'istruzione SQL per usare la grammatica SQL dell'origine dati e inviare questa istruzione per l'esecuzione, o può chiamare la procedure direttamente tramite un meccanismo di chiamata RPC (Remote Procedure) che viene definito nel protocollo di flusso di dati del sistema DBMS.  
+    -   Chiama la stored procedure nell'origine dati e li invia ai valori dei parametri convertiti. Il modo in cui il driver chiama la procedura è specifico del driver. È possibile, ad esempio, modificare l'istruzione SQL in modo che utilizzi la grammatica SQL dell'origine dati e inviare questa istruzione per l'esecuzione. in alternativa, è possibile che venga chiamata direttamente la procedura utilizzando un meccanismo RPC (Remote Procedure Call) definito nel protocollo del flusso di dati del sistema DBMS.  
   
-    -   Restituisce i valori dei parametri di output o input/output o il valore restituito di routine, presupponendo che la procedura ha esito positivo. Questi valori potrebbero non essere disponibili solo dopo l'elaborazione di tutti gli altri risultati (conteggio delle righe e set di risultati) generati dalla procedura. Se la procedura ha esito negativo, il driver restituisce eventuali errori.
+    -   Restituisce i valori di qualsiasi parametro di input/output o di output o il valore restituito della procedura, supponendo che la procedura abbia esito positivo. Questi valori potrebbero non essere disponibili finché non vengono elaborati tutti gli altri risultati (conteggi di righe e set di risultati) generati dalla procedura. Se la procedura non riesce, il driver restituisce eventuali errori.

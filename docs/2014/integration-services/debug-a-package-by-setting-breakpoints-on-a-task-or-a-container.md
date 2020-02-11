@@ -1,5 +1,5 @@
 ---
-title: Debug di un pacchetto impostando punti di interruzione in un'attività o un contenitore | Microsoft Docs
+title: Eseguire il debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059663"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Debug di un pacchetto impostando punti di interruzione in un'attività o in un contenitore
@@ -46,8 +46,8 @@ ms.locfileid: "66059663"
   
 ## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Eseguire il debug di uno script impostando punti di interruzione in un'attività e in un componente Script](data-flow/transformations/script-component.md)   
- [Scrittura di codice e debug dell'attività Script](control-flow/script-task.md)   
+ [Eseguire il debug di uno script impostando punti di interruzione in un'attività script e in un componente script](data-flow/transformations/script-component.md)   
+ [Codifica e debug dell'attività script](control-flow/script-task.md)   
  [Codifica e debug del componente script](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

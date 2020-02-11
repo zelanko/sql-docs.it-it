@@ -18,10 +18,10 @@ ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52f7a58c854d7081c13cfad606f71044361a02ab
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962456"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
@@ -32,11 +32,11 @@ ms.locfileid: "73962456"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID della tabella delle modifiche. Valore univoco all'interno di un database.|  
-|**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], questa colonna restituisce sempre un valore 0.|  
+|**Versione**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], questa colonna restituisce sempre un valore 0.|  
 |**source_object_id**|**int**|ID della tabella di origine abilitata per l'acquisizione dei dati delle modifiche.|  
 |**capture_instance**|**sysname**|Nome dell'istanza di acquisizione utilizzata per denominare gli oggetti per il rilevamento specifici dell'istanza. Per impostazione predefinita, il nome deriva dal nome dello schema di origine più il nome della tabella di origine nel formato *schemaname_sourcename*.|  
-|**start_lsn**|**binary(10)**|Numero di sequenza del file di log (LSN) che rappresenta l'endpoint inferiore quando si esegue una query sui dati delle modifiche nella tabelle delle modifiche.<br /><br /> NULL = l'endpoint inferiore non è stato stabilito.|  
-|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] questa colonna restituisce sempre un valore NULL.|  
+|**start_lsn**|**binario (10)**|Numero di sequenza del file di log (LSN) che rappresenta l'endpoint inferiore quando si esegue una query sui dati delle modifiche nella tabelle delle modifiche.<br /><br /> NULL = l'endpoint inferiore non è stato stabilito.|  
+|**end_lsn**|**binario (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] questa colonna restituisce sempre un valore NULL.|  
 |**supports_net_changes**|**bit**|Il supporto per l'esecuzione di una query sulle modifiche totali è abilitato per la tabella delle modifiche.|  
 |**has_drop_pending**|**bit**|Il processo di acquisizione ha ricevuto la notifica che la tabella di origine è stata eliminata.|  
 |**role_name**|**sysname**|Nome del ruolo del database utilizzato per controllare l'accesso ai dati delle modifiche.<br /><br /> NULL = non è utilizzato un ruolo.|  
@@ -46,6 +46,6 @@ ms.locfileid: "73962456"
 |**partition_switch**|**bit**|Indica se il comando **Switch Partition** di **ALTER TABLE** può essere eseguito su una tabella abilitata per Change Data Capture. 0 indica che il cambio della partizione viene bloccato. Tramite le tabelle non partizionate viene restituito sempre 1.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys. sp_cdc_help_change_data_capture &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

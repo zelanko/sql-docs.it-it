@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74542057"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "74542057"
 
 Restituisce una riga per ogni elemento classificato nel database.
 
-|Nome colonna|Tipo di dati|Description|
+|Nome colonna|Tipo di dati|Descrizione|
 |-----------------|---------------|-----------------|  
 |**classe**|**int**|Identifica la classe dell'elemento in cui esiste la classificazione. Avrà sempre il valore 1 (che rappresenta una colonna)|  
 |**class_desc**|**varchar (16)**|Descrizione della classe dell'elemento in cui esiste la classificazione. il valore sarà sempre *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Rappresenta l'ID della tabella contenente la colonna classificata, corrispondente a sys. all_objects. object_id|  
 |**minor_id**|**int**|Rappresenta l'ID della colonna in cui esiste la classificazione, corrispondente a sys. all_columns. column_id|   
-|**etichetta**|**sysname**|Etichetta (leggibile) assegnata per la classificazione di riservatezza|  
+|**label**|**sysname**|Etichetta (leggibile) assegnata per la classificazione di riservatezza|  
 |**label_id**|**sysname**|ID associato all'etichetta, che può essere usato da un sistema di protezione delle informazioni, ad esempio Azure Information Protection (AIP)|  
 |**information_type**|**sysname**|Tipo di informazioni (leggibile) assegnato per la classificazione di riservatezza|  
 |**information_type_id**|**sysname**|ID associato al tipo di informazioni, che può essere usato da un sistema di protezione delle informazioni, ad esempio Azure Information Protection (AIP)|  
@@ -82,8 +82,8 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 ## <a name="see-also"></a>Vedere anche  
 
-[Aggiunta classificazione di RISERVAtezza (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[CLASSIFICAZIONE DROP SENSITIVity (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [Introduzione a SQL Information Protection](https://aka.ms/sqlip)

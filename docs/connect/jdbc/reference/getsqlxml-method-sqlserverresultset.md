@@ -11,10 +11,10 @@ ms.assetid: a07e0f30-cbc6-4ad7-b931-c30cad382e64
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 07755cbeabd80ea6e894e02e2f1a36091edcad99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979596"
 ---
 # <a name="getsqlxml-method-sqlserverresultset"></a>Metodo getSQLXML (SQLServerResultSet)
@@ -24,9 +24,9 @@ ms.locfileid: "67979596"
   
 ## <a name="overload-list"></a>Elenco degli overload  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
-|[metodo &#40;GetSqlXml int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-int-sqlserverresultset.md)|Recupera il valore di una colonna designata nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto SQLXML.|  
+|[getSQLXML Method &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-int-sqlserverresultset.md)|Recupera il valore di una colonna designata nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto SQLXML.|  
 |[Metodo getSQLXML &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|Recupera il valore di una colonna designata nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto SQLXML.|  
   
 ## <a name="see-also"></a>Vedere anche  

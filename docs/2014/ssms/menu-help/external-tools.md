@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62649695"
 ---
 # <a name="external-tools"></a>Strumenti esterni
@@ -32,16 +32,16 @@ ms.locfileid: "62649695"
  **Sposta giù**  
  Sposta lo strumento selezionato più in basso nell'elenco degli strumenti visualizzati nel menu **Strumenti** .  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di cancellare il contenuto delle caselle di testo e quindi di specificare un nuovo strumento.  
   
  **Elimina**  
  Rimuove lo strumento o il comando dall'elenco **Contenuto menu** e dal menu **Strumenti** .  
   
- **Title**  
+ **Titolo**  
  Nome dello strumento o del comando che verrà visualizzato nel sottomenu **Strumenti esterni** del menu **Strumenti** . Nel nome dello strumento inserire una "e" commerciale prima della lettera che si desidera utilizzare come tasto di scelta rapida per lo strumento. Ad esempio, specificando `&Spy++` , nel menu **Strumenti** verrà visualizzato **Spy++** .  
   
- **Command**  
+ **Comando**  
  Consente di specificare il percorso del file con estensione exe, com, pif, bat, cmd o di altro tipo che si desidera avviare. L'output generato da file `.bat`, `.com`e file con altre estensioni potrà essere visualizzato nella finestra di output se si seleziona la casella di controllo **Usa finestra di output** .  
   
  **Argomenti**  
@@ -70,9 +70,9 @@ ms.locfileid: "62649695"
   
 2.  Nella casella **Titolo** digitare **Gestione configurazione SQL Server**.  
   
-3.  Nel **comandi** , digitare il percorso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Console di gestione eseguibili, ad esempio `C:\WINNT\system32\mmc.exe`  
+3.  Nella casella **comando** Digitare il percorso del file eseguibile [!INCLUDE[msCoName](../../includes/msconame-md.md)] di Management Console, ad esempio`C:\WINNT\system32\mmc.exe`  
   
-4.  Nel **argomenti** , digitare il percorso del file con estensione msc, ad esempio `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  Nella casella **argomenti** Digitare il percorso del file con estensione msc, ad esempio`"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  Visualizzare le proprietà del collegamento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nel menu **Avvio** per verificare il percorso dei file nel computer.  

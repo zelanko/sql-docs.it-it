@@ -1,5 +1,5 @@
 ---
-title: Gestione del carico di lavoro
+title: Gestione dei carichi di lavoro
 description: Gestione del carico di lavoro nel sistema della piattaforma Analytics.
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399439"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestione del carico di lavoro nel sistema della piattaforma Analytics
@@ -58,7 +58,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>Descrizioni delle classi di risorse  
 Nella tabella seguente vengono descritte le classi di risorse e le relative allocazioni di risorse di sistema.  
   
-|Classe di risorse|Importanza della richiesta|Utilizzo massimo della memoria *|Slot di concorrenza (massimo = 32)|Description|  
+|Classe di risorse|Importanza della richiesta|Utilizzo massimo della memoria *|Slot di concorrenza (massimo = 32)|Descrizione|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |default|Media|400 MB|1|Per impostazione predefinita, a ogni account di accesso è consentita una piccola quantità di memoria e risorse di concorrenza per le relative richieste.<br /><br />Quando un account di accesso viene aggiunto a una classe di risorse, la nuova classe ha la precedenza. Quando un account di accesso viene eliminato da tutte le classi di risorse, viene ripristinata l'allocazione di risorse predefinita.|  
 |MediumRC|Media|1200 MB|3|Esempi di richieste che potrebbero richiedere la classe di risorse media:<br /><br />Operazioni CTAS con hash join di grandi dimensioni.<br /><br />Selezionare le operazioni che richiedono una maggiore quantità di memoria per evitare la memorizzazione nella cache su disco.<br /><br />Caricamento dei dati negli indici columnstore cluster.<br /><br />Compilazione, ricompilazione e riorganizzazione di indici columnstore cluster per tabelle di dimensioni ridotte con 10-15 colonne.|  
@@ -129,9 +129,9 @@ Istruzioni e operazioni SQL regolate dalle classi di risorse:
   
 -   INSERT SELECT  
   
--   AGGIORNAMENTO  
+-   UPDATE  
   
--   DELETE  
+-   Elimina  
   
 -   RIPRISTINARE il DATABASE durante il ripristino in un'appliance con più nodi di calcolo.  
   
@@ -149,9 +149,9 @@ DMV che contengono informazioni sulle classi di risorse e i membri della classe 
   
 DMV che contengono informazioni sullo stato delle richieste e sulle risorse necessarie:  
   
--   [sys. dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys. dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
 Viste di sistema correlate esposte dal SQL Server DMV nei nodi di calcolo. Vedere [SQL Server](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) DMV per i collegamenti a questi DMV su MSDN.  
   

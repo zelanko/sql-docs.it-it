@@ -17,10 +17,10 @@ ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1acbe114258b0a7a5bee71656a0b6878f09fefc3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657329"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Concetti relativi al provider WMI per eventi del server
@@ -31,7 +31,7 @@ ms.locfileid: "73657329"
  [Informazioni sul provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  
  Viene fornita una panoramica dell'architettura del provider e viene illustrato come programmare SQL Server Agent per l'utilizzo in questa architettura.  
   
- [Uso del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md)  
+ [Utilizzo del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md)  
  Vengono illustrati i fattori che è necessario considerare prima di programmare con il provider.  
   
  [Utilizzo di WQL con il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
@@ -40,7 +40,7 @@ ms.locfileid: "73657329"
  [Esempio: Creazione di un avviso di SQL Server Agent tramite il provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Viene fornito un esempio dell'utilizzo del provider WMI per restituire informazioni sull'evento di traccia su cui creare un avviso di SQL Server Agent.  
   
- [Esempio: utilizzo del provider di eventi WMI con la .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [Esempio: Utilizzo del provider di eventi WMI con .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  Viene fornito un esempio dell'utilizzo del provider WMI per restituire dati degli eventi in un'applicazione C#.  
   
  [Classi e proprietà del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)  

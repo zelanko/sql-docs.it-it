@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831746"
 ---
 # <a name="file-system-task"></a>Attività File system
@@ -35,14 +35,14 @@ ms.locfileid: "62831746"
 |---------------|-----------------|  
 |Copia directory|Copia una cartella da un percorso a un altro.|  
 |Copia file|Copia un file da un percorso a un altro.|  
-|Crea directory|Crea una cartella in un percorso specificato.|  
+|Creare la directory|Crea una cartella in un percorso specificato.|  
 |Elimina directory|Elimina una cartella in un percorso specificato.|  
 |Elimina contenuto directory|Elimina tutti i file e le cartelle contenute in una cartella.|  
 |Elimina file|Elimina un file in un percorso specificato.|  
 |Sposta directory|Sposta una cartella da un percorso a un altro.|  
 |Sposta file|Sposta un file da un percorso a un altro.|  
 |Rinomina file|Rinomina un file in un percorso specificato.|  
-|Imposta attributi|Imposta attributi su file e cartelle. Tali attributi includono Archive, Hidden, Normal, ReadOnly e System. Normal indica la mancanza di attributi e non può essere combinato con altri attributi. Tutti gli altri attributi possono essere utilizzati in combinazione.|  
+|Impostare gli attributi|Imposta attributi su file e cartelle. Tali attributi includono Archive, Hidden, Normal, ReadOnly e System. Normal indica la mancanza di attributi e non può essere combinato con altri attributi. Tutti gli altri attributi possono essere utilizzati in combinazione.|  
   
  L'attività File system opera su un singolo file o directory. Pertanto, questa attività non supporta l'utilizzo di caratteri jolly per eseguire la stessa operazione su più file. Affinché l'attività File system ripeta un'operazione su più file o directory, inserire l'attività File system in un contenitore Ciclo Foreach, come descritto nella procedura seguente:  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62831746"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere gli argomenti seguenti:  
   
--   [Editor attività File system &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività file System &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Pagina Espressioni](../expressions/expressions-page.md)  
   
@@ -75,7 +75,8 @@ ms.locfileid: "62831746"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Attività correlate  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un'attività che consente di eseguire il download e il caricamento di file di dati, nonché di gestire directory sui server. Per altre informazioni, vedere [Attività FTP](ftp-task.md).  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include un'attività che consente di eseguire il download e il caricamento di file di dati, nonché di gestire directory sui server. Per altre informazioni, vedere [Attività FTP](ftp-task.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività di Integration Services](integration-services-tasks.md)   

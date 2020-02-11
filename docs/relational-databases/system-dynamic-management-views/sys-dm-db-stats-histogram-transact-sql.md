@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096248"
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
+# <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Restituisce l'istogramma delle statistiche per l'oggetto database specificato (tabella o vista indicizzata) nell'attuale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Simile a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
+Restituisce l'istogramma delle statistiche per l'oggetto di database specificato (tabella o vista indicizzata) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database corrente. Simile a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
-> È disponibile a partire da questa DMF [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
+> Questa DMF è disponibile a partire [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] da SP1 CU2
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,10 +43,10 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>Argomenti  
  *object_id*  
- ID dell'oggetto nel database corrente per il quale sono richieste le proprietà di una delle relative statistiche. *object_id* è di tipo **int**.  
+ ID dell'oggetto nel database corrente per il quale sono richieste le proprietà di una delle relative statistiche. *object_id* è di **tipo int**.  
   
  *stats_id*  
- ID delle statistiche per l'oggetto *object_id*specificato. L'ID delle statistiche può essere ottenuto dalla DMV [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* è di tipo **int**.  
+ ID delle statistiche per l'oggetto *object_id*specificato. L'ID delle statistiche può essere ottenuto dalla DMV [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* è di **tipo int**.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -54,18 +54,18 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id |**int**|ID dell'oggetto (tabella o vista indicizzata) per cui restituire le proprietà dell'oggetto statistiche.|  
 |stats_id |**int**|ID dell'oggetto statistiche. Univoco all'interno della tabella o della vista indicizzata. Per altre informazioni, vedere [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|step_number |**int** |Il numero di passaggio nell'istogramma. |
+|step_number |**int** |Numero di passaggi nell'istogramma. |
 |range_high_key |**sql_variant** |Valore di colonna pari al limite superiore per un intervallo dell'istogramma. Il valore di colonna viene denominato anche valore chiave.|
-|RANGE_ROWS |**real** |Numero stimato di righe il cui valore di colonna è compreso in un intervallo dell'istogramma, escluso il limite superiore. |
-|equal_rows |**real** |Numero stimato di righe il cui valore di colonna è uguale al limite superiore dell'intervallo dell'istogramma. |
+|range_rows |**reale** |Numero stimato di righe il cui valore di colonna è compreso in un intervallo dell'istogramma, escluso il limite superiore. |
+|equal_rows |**reale** |Numero stimato di righe il cui valore di colonna è uguale al limite superiore dell'intervallo dell'istogramma. |
 |distinct_range_rows |**bigint** |Numero stimato di righe con un valore distinct di colonna compreso in un intervallo dell'istogramma, escluso il limite superiore. |
-|average_range_rows |**real** |Numero medio di righe con valori di colonna duplicati in un istogramma, escluso il limite massimo (`RANGE_ROWS / DISTINCT_RANGE_ROWS` per `DISTINCT_RANGE_ROWS > 0`). |
+|average_range_rows |**reale** |Numero medio di righe con valori di colonna duplicati in un intervallo dell'istogramma, escluso il limite superiore (`RANGE_ROWS / DISTINCT_RANGE_ROWS` per `DISTINCT_RANGE_ROWS > 0`). |
   
- ## <a name="remarks"></a>Note  
+ ## <a name="remarks"></a>Osservazioni  
  
- Il set di risultati per `sys.dm_db_stats_histogram` restituisce informazioni simili alle `DBCC SHOW_STATISTICS WITH HISTOGRAM` e include inoltre `object_id`, `stats_id`, e `step_number`.
+ Il ResultSet per `sys.dm_db_stats_histogram` restituisce informazioni simili a `DBCC SHOW_STATISTICS WITH HISTOGRAM` e include `object_id`anche, `stats_id`e `step_number`.
 
- Perché la colonna `range_high_key` è una dati sql_variant tipo, potrebbe essere necessario usare `CAST` o `CONVERT` se un predicato di confronto con una costante non di tipo stringa.
+ Poiché la colonna `range_high_key` è un tipo di dati sql_variant, potrebbe essere necessario utilizzare `CAST` o `CONVERT` se un predicato esegue il confronto con una costante non stringa.
 
 ### <a name="histogram"></a>Istogramma
   
@@ -75,7 +75,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  Nel diagramma seguente viene illustrato un istogramma con sei intervalli. L'area a sinistra del primo valore limite superiore è il primo intervallo.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Istogramma")  
+ ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
   
  Per ogni intervallo dell'istogramma:  
   
@@ -83,18 +83,18 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   L'area a tinta unita a sinistra di *range_high_key* rappresenta l'intervallo dei valori di colonna e il numero medio di occorrenze di ogni valore (*average_range_rows*) di colonna. Il valore *average_range_rows* per il primo passaggio dell'istogramma è sempre 0.  
   
--   Le linee punteggiate rappresentano i valori campionati usati per stimare il numero complessivo dei valori distinti nell'intervallo (*distinct_range_rows*) e il numero complessivo dei valori nell'intervallo (*range_rows*). Query Optimizer usa *range_rows* e *distinct_range_rows* per calcolare *average_range_rows* e non archivia i valori campionati.  
+-   Le linee punteggiate rappresentano i valori campionati usati per stimare il numero totale di valori distinti nell'intervallo (*DISTINCT_RANGE_ROWS*) e il numero totale di valori nell'intervallo (*RANGE_ROWS*). Query Optimizer usa *range_rows* e *distinct_range_rows* per calcolare *average_range_rows* e non archivia i valori campionati.  
   
  Query Optimizer definisce gli intervalli dell'istogramma in base al relativo significato statistico e utilizza un algoritmo per il calcolo della differenza massima per ridurre al minimo il numero di intervalli nell'istogramma, aumentando contemporaneamente la differenza tra i valori limite. Il numero massimo di intervalli è 200. Il numero di intervalli dell'istogramma può essere minore del numero di valori distinct, anche per le colonne con un numero di punti limite inferiore a 200. A una colonna con 100 valori distinct, ad esempio, può essere associato un istogramma con un numero di punti limite inferiore a 100.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 
 L'utente deve avere autorizzazioni di selezione per le colonne delle statistiche o essere proprietario della tabella o membro del ruolo predefinito del server `sysadmin`, del ruolo predefinito del database `db_owner` o del ruolo predefinito del database `db_ddladmin`.
 
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-simple-example"></a>A. Esempio semplice    
-Nell'esempio seguente crea e popola una tabella semplice. Quindi crea le statistiche di `Country_Name` colonna.
+### <a name="a-simple-example"></a>R. Esempio semplice    
+Nell'esempio seguente viene creata e popolata una tabella semplice. Quindi crea le `Country_Name` statistiche sulla colonna.
 
 ```sql
 CREATE TABLE Country
@@ -105,12 +105,12 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-La chiave primaria occupa `stat_id` numero 1, quindi chiamare `sys.dm_db_stats_histogram` per `stat_id` numero 2, per restituire l'istogramma delle statistiche per il `Country` tabella.    
+La chiave primaria occupa `stat_id` il numero 1, quindi `sys.dm_db_stats_histogram` chiamare `stat_id` per il numero 2, per restituire l'istogramma `Country` delle statistiche per la tabella.    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>B. Query utili:   
+### <a name="b-useful-query"></a>B. Query utile:   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -119,15 +119,15 @@ CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
 
-### <a name="c-useful-query"></a>C. Query utili:
-L'esempio seguente seleziona dalla tabella `Country` con un predicato nella colonna `Country_Name`.
+### <a name="c-useful-query"></a>C. Query utile:
+Nell'esempio seguente viene selezionata la `Country` tabella con un predicato sulla colonna `Country_Name`.
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-L'esempio seguente esamina la statistica creata in precedenza nella tabella `Country` e alla colonna `Country_Name` per l'intervallo dell'istogramma che corrispondono al predicato nella query precedente.
+Nell'esempio seguente vengono esaminate le statistiche create in precedenza `Country` sulla tabella `Country_Name` e la colonna per il passaggio dell'istogramma corrispondente al predicato nella query precedente.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
@@ -146,5 +146,5 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
-[Funzioni (Transact-SQL) e viste a gestione dinamica relative agli oggetti](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
+[Funzioni e viste a gestione dinamica relative agli oggetti (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

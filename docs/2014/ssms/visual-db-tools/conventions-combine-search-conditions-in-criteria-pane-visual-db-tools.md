@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140369"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenzioni per la combinazione delle condizioni di ricerca nel riquadro Criteri (Visual Database Tools)
@@ -162,7 +162,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  In Progettazione query e Progettazione viste questa clausola WHERE viene rappresentata nel riquadro Criteri come indicato di seguito:  
   
- ![Clausole OR collegate definite nel riquadro Criteri](../../database-engine/media//vs-criteriapane3.gif "Clausole OR collegate definite nel riquadro Criteri")  
+ ![Clausole OR collegate definite nel riquadro dei criteri](../../database-engine/media//vs-criteriapane3.gif "Clausole OR collegate definite nel riquadro dei criteri")  
   
  Se si apporta una modifica alla query, ad esempio modificando uno dei valori nel riquadro Criteri, in Progettazione query e Progettazione viste l'istruzione SQL verrà ricreata nel riquadro SQL. L'istruzione SQL ricreata sarà analoga alla visualizzazione del riquadro Criteri invece che all'istruzione originaria. Se ad esempio il riquadro Criteri contiene clausole AND distribuite, l'istruzione risultante nel riquadro SQL verrà ricreata con clausole AND distribuite esplicitamente. Per ulteriori informazioni, tornare a "Funzionamento di AND con più clausole OR" in questo argomento.  
   

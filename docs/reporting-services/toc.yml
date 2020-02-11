@@ -15,13 +15,19 @@
     - name: Backward Compatibility
       href: ../reporting-services/reporting-services-backward-compatibility.md
       items:
-        - name: Funzionalità deprecate
+        - name: Funzionalità deprecate nel 2019
+          href: ../reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md
+        - name: Funzionalità deprecate nel 2017
+          href: ../reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md
+        - name: Funzionalità deprecate nel 2016
           href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
-        - name: Funzionalità sospese di SSRS in SQL Server 2016
+        - name: Funzionalità non più supportate nel 2019
+          href: ../reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md
+        - name: Funzionalità non più supportate nel 2016
           href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-        - name: Modifiche di rilievo di SSRS in SQL Server 2016
+        - name: Modifiche che causano interruzioni nel 2016
           href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
-        - name: Modifiche del comportamento di SQL Server Reporting Services in SQL Server 2016
+        - name: Modifiche del comportamento nel 2016
           href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Esercitazioni
   items:
@@ -32,7 +38,7 @@
         - name: Creare un report tabella semplice (esercitazione su SSRS)
           href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
           items:
-            - name: 'Lezione 1: Creazione di un progetto server di report'
+            - name: 'Lezione 1: Creazione di un progetto server report'
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
             - name: 'Lezione 2: Specifica delle informazioni di connessione'
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
@@ -40,18 +46,18 @@
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
             - name: 'Lezione 4: Aggiunta di una tabella al report'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: 'Lezione 5: Formattazione di un report'
+            - name: 'Lesson 5: Formatting a Report'
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: 'Lezione 6: Aggiunta di raggruppamenti e totali'
+            - name: 'Lesson 6: Adding Grouping and Totals'
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
             - name: 'Lezione 1: Creazione di un database di esempio del Sottoscrittore'
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-            - name: 'Lezione 2: Modifica delle proprietà dell''origine dati del report'
+            - name: 'Lesson 2: Modifying the Report Data Source Properties'
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'Lezione 3: Definizione di una sottoscrizione guidata dai dati'
+            - name: 'Lesson 3: Defining a Data-Driven Subscription'
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: Creare un report drill-through (RDLC) con parametri utilizzando ReportViewer (esercitazione su SSRS)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
@@ -72,7 +78,7 @@
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
             - name: 'Lezione 8: Creare un filtro di dati'
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: 'Lezione 9: Compilare ed eseguire l''applicazione'
+            - name: 'Lesson 9: Build and Run the Application'
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: Esercitazioni di Generatore report
       href: ../reporting-services/report-builder-tutorials.md
@@ -83,13 +89,13 @@
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: Modalità alternative di acquisizione di una connessione dati (Generatore report)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'Esercitazione: Creazione di un report tabella di base'
+        - name: 'Esercitazione: Creazione di un report tabella semplice'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
         - name: 'Esercitazione: Creazione di un report matrice'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
         - name: 'Esercitazione: Creazione di un report in formato libero'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'Esercitazione: Formattazione del testo (Generatore report)'
+        - name: 'Esercitazione: Formattazione di testo (Generatore report)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
         - name: 'Esercitazione: Aggiungere un istogramma al report (Generatore report)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
@@ -99,7 +105,7 @@
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
         - name: 'Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'Esercitazione: Aggiunta di un indicatore KPI al report'
+        - name: 'Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
         - name: 'Esercitazione: Report mappa'
           href: ../reporting-services/tutorial-map-report-report-builder.md
@@ -698,7 +704,7 @@
           href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
         - name: Aggiungere percorsi personalizzati a una mappa
           href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
-        - name: 'Risoluzione dei problemi dei report: Report mappa'
+        - name: 'Risoluzione dei problemi dei report: report mappa'
           href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
     - name: 'Immagini, caselle di testo, rettangoli e linee'
       href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
@@ -1014,15 +1020,19 @@
       href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
 - name: Dati di report in SSRS
   items:
-    - name: Panoramica dei dati di report in SSRS
+    - name: Introduzione ai dati dei report
       href: ../reporting-services/report-data/report-data-ssrs.md
-    - name: Origini dei dati supportate da Reporting Services
+    - name: Origini dati supportate
       href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
-    - name: 'Connessioni dati, origini dati e stringhe di connessione in Generatore report e SSRS'
+    - name: Creare stringhe di connessione
       href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
     - name: Aggiungere e verificare una connessione dati
       href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
-    - name: 'Creare, modificare ed eliminare origini dati condivise'
+    - name: Specificare le credenziali e le informazioni di connessione
+      href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
+    - name: Confronto tra origini dati condivise e incorporate
+      href: ../reporting-services/report-data/compare-shared-embedded-data-sources-report-builder-ssrs.md
+    - name: Creare e modificare origini dati condivise
       href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
     - name: Creare e modificare origini dati incorporate
       href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
@@ -1232,13 +1242,13 @@
               href: ../reporting-services/security/secure-my-reports.md
             - name: Creare RSExecRole
               href: ../reporting-services/security/create-the-rsexecrole.md
-            - name: Definizioni di ruolo
+            - name: Definizioni dei ruoli
               href: ../reporting-services/security/role-definitions.md
             - name: 'Definizioni di ruolo - Creare, eliminare o modificare'
               href: ../reporting-services/security/role-definitions-create-delete-or-modify.md
             - name: Definizioni di ruolo - Ruoli predefiniti
               href: ../reporting-services/security/role-definitions-predefined-roles.md
-            - name: Assegnazioni di ruolo
+            - name: Assegnazioni di ruoli
               href: ../reporting-services/security/role-assignments.md
             - name: Assegnazioni di ruolo - Modificare o eliminare
               href: ../reporting-services/security/role-assignments-modify-or-delete.md
@@ -1326,7 +1336,7 @@
           items:
             - name: Struttura documento.
               href: ../reporting-services/tools/document-outline.md
-            - name: Visualizzazione Progettazione
+            - name: Visualizzazione progettazione
               href: ../reporting-services/tools/design-view.md
             - name: Visualizzazione Anteprima
               href: ../reporting-services/tools/preview-view.md
@@ -1894,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: Elementi dei report personalizzati
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: 'Procedura: Distribuire un elemento del report personalizzato'
+    - name: 'Procedura: Distribuzione di un elemento del report personalizzato'
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: Accesso agli assembly personalizzati tramite espressioni
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1902,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: Distribuzione di un assembly personalizzato
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: 'Procedura: Eseguire il debug di assembly personalizzati'
+    - name: 'Procedura: Debug di assembly personalizzati'
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: Inizializzazione di oggetti assembly personalizzati
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

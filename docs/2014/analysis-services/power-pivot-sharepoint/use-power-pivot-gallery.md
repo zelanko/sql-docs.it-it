@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229233"
 ---
 # <a name="use-powerpivot-gallery"></a>Usare la raccolta PowerPivot
@@ -43,7 +43,7 @@ ms.locfileid: "75229233"
   
  [Prerequisiti](#prereq)  
   
-##  <a name="prereq"></a>Prerequisiti  
+##  <a name="prereq"></a> Prerequisiti  
   
 > [!NOTE]  
 >  Con la raccolta di Power Pivot è richiesto Microsoft Silverlight.  Il browser Microsoft Edge non supporta Silverlight.   
@@ -56,7 +56,7 @@ ms.locfileid: "75229233"
 ##  <a name="icons"></a>Icone nella raccolta PowerPivot  
  Le icone forniscono un indicatore visivo della disponibilità del contenuto e dello stato.  
   
-|Icona|Description|  
+|Icona|Descrizione|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|L'icona clessidra viene visualizzata quando viene generata un'immagine di anteprima di ogni pagina del documento. Aggiornare la pagina per visualizzare l'aggiornamento dell'immagine.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|L'icona pagine viene visualizzata quando una cartella di lavoro o un report contiene più pagine di quante non possano essere visualizzate nella raccolta PowerPivot. Per visualizzare tutte le pagine, è necessario usare un'applicazione client.|  
@@ -149,7 +149,7 @@ ms.locfileid: "75229233"
   
 3.  Fare clic sulla freccia in giù visualizzata a destra, quindi selezionare **Modifica proprietà**.  
   
-4.  Fare clic su **Save**. Il salvataggio del documento forza il servizio snapshot a rigenerare l'immagine di anteprima.  
+4.  Fare clic su **Salva**. Il salvataggio del documento forza il servizio snapshot a rigenerare l'immagine di anteprima.  
   
 ##  <a name="bkmk_known_issues"></a>Problemi noti  
   

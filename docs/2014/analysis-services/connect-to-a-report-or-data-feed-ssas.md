@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70151834"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connettersi a un report o a un feed di dati (SSAS)
@@ -31,10 +31,10 @@ ms.locfileid: "70151834"
   
  Fare clic su **Visualizza report** per visualizzare il report.  
   
- **Browse**  
+ **Sfoglia**  
  Passare al percorso in cui è disponibile un report.  
   
- **Advanced**  
+ **Funzionalità avanzate**  
  Impostare altre proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** .  
   
  **Test connessione**  
@@ -47,7 +47,7 @@ ms.locfileid: "70151834"
  **URL feed di dati**  
  Digitare il percorso completo di un documento di servizio Atom (estensione atomsvc o atom) o l'URL per un solo feed di dati oppure fare clic su **Sfoglia** per selezionare un documento di servizio Atom.  
   
- **Browse**  
+ **Sfoglia**  
  Passare al percorso in cui è disponibile un report.  
   
  Fare clic su **Visualizza set di dati disponibili di DataMarket Azure** per visualizzare i set di dati disponibili.  
@@ -58,10 +58,10 @@ ms.locfileid: "70151834"
  **Trovare**  
  Individuare una chiave di account associata a un account di Windows Live.  
   
- **Salva la chiave dell'account**  
+ **Salva chiave account**  
  Salvare la chiave di account (crittografata) con la connessione dati.  
   
- **Advanced**  
+ **Funzionalità avanzate**  
  Impostare altre proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** .  
   
  **Test connessione**  
@@ -76,11 +76,11 @@ ms.locfileid: "70151834"
   
  Fare clic su **Includi sempre +++tutte le colonne di feed** per specificare se importare tutte le colonne di feed di dati.  
   
- **Browse**  
+ **Sfoglia**  
  Passare al percorso in cui è disponibile un feed di dati.  
   
- **Advanced**  
- Impostare ulteriori proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** .  
+ **Funzionalità avanzate**  
+ Per impostare ulteriori proprietà della connessione, utilizzare la finestra di dialogo **Imposta proprietà avanzate** .  
   
  **Test connessione**  
  Provare a stabilire una connessione all'origine dati utilizzando le impostazioni correnti. Viene visualizzato un messaggio che indica se la connessione è stata stabilita.  

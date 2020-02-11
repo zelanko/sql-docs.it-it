@@ -19,18 +19,18 @@ ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130545"
 ---
-# <a name="suspectpages-transact-sql"></a>suspect_pages (Transact-SQL)
+# <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni pagina che non è riuscita con un errore 823 secondario o un errore 824. Le pagine sono elencate in questa tabella perché è possibile che siano errate. Quando una pagina sospetta viene ripristinata, il relativo stato viene aggiornato nel **event_type** colonna.  
+  Contiene una riga per pagina in cui si è verificato un errore 823 secondario o un errore 824. Le pagine sono elencate in questa tabella perché è possibile che siano errate. Quando viene ripristinata una pagina sospetta, il relativo stato viene aggiornato nella colonna **event_type** .  
   
- La tabella seguente, che ha un limite di 1.000 righe, viene archiviata nel **msdb** database.  
+ La tabella seguente, che ha un limite di 1.000 righe, viene archiviata nel database **msdb** .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -41,13 +41,13 @@ ms.locfileid: "68130545"
 |**error_count**|**int**|Numero di volte che si è verificato l'errore.|  
 |**last_update_date**|**datetime**|Timestamp relativo all'ultimo aggiornamento.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Chiunque abbia accesso a **msdb** può leggere i dati nella tabella **suspect_pages** . Chiunque disponga dell'autorizzazione UPDATE nella tabella suspect_pages può aggiornare i relativi record. I membri del ruolo predefinito del database **db_owner** in **msdb** o del ruolo predefinito del server **sysadmin** possono inserire, aggiornare ed eliminare i record.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ripristino di pagine &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
- [Classe di evento della pagina di database Suspect Data](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
- [Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
+ [Classe di evento database sospetto data page](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
+ [Tabelle di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-tables/system-tables-transact-sql.md)   
  [Gestione della tabella suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   
   

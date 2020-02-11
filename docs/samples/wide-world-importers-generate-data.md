@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056277"
 ---
 # <a name="wideworldimporters-data-generation"></a>Generazione di dati WideWorldImporters
@@ -40,7 +40,7 @@ Per generare dati di esempio fino alla data corrente:
 
     Questa istruzione consente di aggiungere al database i dati di esempio relativi a vendite e acquisti, fino alla data corrente. Visualizza lo stato di avanzamento della generazione dei dati in base al giorno. La generazione dei dati può richiedere circa 10 minuti per ogni anno che necessita di dati. A causa di un fattore casuale nella generazione dei dati, esistono alcune differenze nei dati generati tra le esecuzioni.
 
-    Per aumentare o ridurre la quantità di dati generati per gli ordini al giorno, modificare il valore per il parametro `@AverageNumberOfCustomerOrdersPerDay`. Usare i parametri `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` per determinare il volume dell'ordine per i giorni del fine settimana.
+    Per aumentare o ridurre la quantità di dati generati per gli ordini al giorno, modificare il valore per il `@AverageNumberOfCustomerOrdersPerDay`parametro. Usare i parametri `@SaturdayPercentageOfNormalWorkDay` e `@SundayPercentageOfNormalWorkDay` per determinare il volume dell'ordine per i giorni del fine settimana.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importare i dati generati in WideWorldImportersDW
 
@@ -62,20 +62,20 @@ WideWorldImportersDW può aumentare arbitrariamente le dimensioni dei dati per i
 
 Una delle difficoltà consiste nel ridurre le dimensioni del download abbastanza piccolo da scaricare facilmente, ma sufficientemente grande da dimostrare SQL Server funzionalità di prestazioni. Ad esempio, i vantaggi significativi per gli indici columnstore vengono realizzati solo quando si lavora con un numero maggiore di righe. 
 
-È possibile utilizzare la procedura `Application.Configuration_PopulateLargeSaleTable` per aumentare il numero di righe nella tabella `Fact.Sale`. Le righe vengono inserite nell'anno di calendario 2012 per evitare la collisione con i dati esistenti dell'importatore mondiale che iniziano il 1 ° gennaio 2013.
+È possibile utilizzare la `Application.Configuration_PopulateLargeSaleTable` procedura per aumentare il numero di righe nella `Fact.Sale` tabella. Le righe vengono inserite nell'anno di calendario 2012 per evitare la collisione con i dati esistenti dell'importatore mondiale che iniziano il 1 ° gennaio 2013.
 
 ### <a name="procedure-details"></a>Dettagli procedura
 
-#### <a name="name"></a>Name
+#### <a name="name"></a>Nome
 
     Application.Configuration_PopulateLargeSaleTable
 
 #### <a name="parameters"></a>Parametri
 
-  `@EstimatedRowsFor2012` **bigint** (il cui valore predefinito è 12 milioni)
+  `@EstimatedRowsFor2012`**bigint** (il cui valore predefinito è 12 milioni)
 
 #### <a name="result"></a>Risultato
 
-Approssimativamente il numero di righe richiesto viene inserito nella tabella `Fact.Sale` dell'anno 2012. La procedura limita artificialmente il numero di righe a 50.000 al giorno. È possibile modificare questa limitazione, ma la limitazione consente di evitare Sovrainflazione accidentali della tabella.
+Approssimativamente il numero di righe richiesto viene inserito nella `Fact.Sale` tabella nell'anno 2012. La procedura limita artificialmente il numero di righe a 50.000 al giorno. È possibile modificare questa limitazione, ma la limitazione consente di evitare Sovrainflazione accidentali della tabella.
 
 La procedura applica anche l'indicizzazione columnstore cluster se non è già stata applicata.

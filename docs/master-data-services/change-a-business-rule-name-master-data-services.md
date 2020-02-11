@@ -13,10 +13,10 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728668"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Modificare il nome di una regola business (Master Data Services)
@@ -25,10 +25,10 @@ ms.locfileid: "73728668"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]modificare il nome di una regola di business quando il nome assegnato non soddisfa le esigenze aziendali.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
 -   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73728668"
   
 4.  Nell'elenco a discesa **Entità** selezionare un'entità.  
   
-5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro.  
+5.  Nell'elenco a discesa **Tipo di membro** selezionare un tipo di membro.  
   
 6.  Nella griglia selezionare la riga per la regola di business di cui si vuole modificare il nome e quindi fare clic su **Modifica**.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "73728668"
 10. Nella finestra di dialogo di conferma fare clic su **OK**. Il valore nella colonna **Stato della regola di business**è **Attiva**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

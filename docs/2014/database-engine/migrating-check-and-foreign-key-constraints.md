@@ -1,5 +1,5 @@
 ---
-title: Verificare la migrazione e vincoli di chiave esterna | Microsoft Docs
+title: Migrazione dei vincoli check e Foreign Key | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,34 +11,34 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774932"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migrazione di vincoli CHECK e di chiave esterna
-  Controllo e vincoli di chiave esterna non sono supportati [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Questi costrutti in genere utilizzati per applicare l'integrità dei dati logico nello schema e possono essere importanti per il mantenimento della correttezza funzionale delle applicazioni.  
+  I vincoli check e Foreign Key non sono supportati [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]in. Questi costrutti vengono in genere utilizzati per applicare l'integrità dei dati logici nello schema e possono essere importanti per mantenere la correttezza funzionale delle applicazioni.  
   
- Controlli di integrità delle logiche in una tabella, ad esempio controllo e vincoli di chiave esterna necessaria elaborazione aggiuntiva sulle transazioni e in genere sconsigliati per le applicazioni sensibili alle prestazioni. Tuttavia, se tali controlli sono fondamentali per l'applicazione, sono disponibili due soluzioni alternative.  
+ I controlli di integrità logica in una tabella, ad esempio i vincoli check e Foreign Key, richiedono un'elaborazione aggiuntiva sulle transazioni e in genere devono essere evitati per le applicazioni sensibili alle prestazioni. Tuttavia, se tali controlli sono cruciali per l'applicazione, esistono due soluzioni alternative.  
   
-## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Verifica dei vincoli dopo un'operazione di inserimento, Update o Delete  
- Soluzione alternativa ottimistico, basa sul presupposto che la maggior parte delle modifiche non violino i vincoli. In questa soluzione alternativa, i dati viene modificati prima di tutto, prima che i vincoli vengono valutati. Se un vincolo è violato, verrà rilevato, ma la modifica verrà non rollback.  
+## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Verifica dei vincoli dopo un'operazione di inserimento, aggiornamento o eliminazione  
+ Questa soluzione è ottimistica, a seconda del presupposto che la maggior parte delle modifiche non violi i vincoli. In questa soluzione, i dati vengono modificati prima prima della valutazione dei vincoli. Se un vincolo viene violato, verrebbe rilevato, ma non verrà eseguito il rollback della modifica.  
   
- Questa soluzione ha il vantaggio di avere un impatto minimo sulle prestazioni perché la modifica dei dati non sia bloccata da controlli dei vincoli. Tuttavia, se si verifica una modifica che viola uno o più vincoli, il processo per eseguire il rollback di tale modifica potrebbe richiedere molto tempo.  
+ Questa soluzione offre il vantaggio di avere un effetto minimo sulle prestazioni perché la modifica dei dati non è bloccata dai controlli dei vincoli. Tuttavia, se si verifica una modifica che viola uno o più vincoli, il processo di rollback di tale modifica potrebbe richiedere molto tempo.  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Applicare vincoli prima un'operazione di inserimento, Update o Delete  
- Questa soluzione alternativa emula il comportamento di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vincoli. I vincoli vengono controllati prima della modifica dei dati si verifica e terminerà la transazione se un controllo ha esito negativo. Questo metodo comporta una riduzione delle prestazioni su modifiche dei dati, ma garantisce che i dati all'interno di una tabella always soddisfano i vincoli.  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Applicazione di vincoli prima di un'operazione di inserimento, aggiornamento o eliminazione  
+ Questa soluzione emula il comportamento dei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vincoli. I vincoli vengono controllati prima che si verifichi la modifica dei dati e la transazione verrà terminata in caso di esito negativo della verifica. Questo metodo comporta una riduzione delle prestazioni delle modifiche dei dati, ma garantisce che i dati all'interno di una tabella soddisfino sempre i vincoli.  
   
- Usare questa soluzione alternativa quando l'integrità dei dati logiche sono fondamentali per la correttezza e potranno che le modifiche che violano un vincolo. Tuttavia, per garantire l'integrità, tutte le modifiche ai dati devono essere effettuate tramite le stored procedure contenenti queste imposizioni. Modifica dei dati mediante query ad hoc e altre stored procedure non applicherà questi vincoli e pertanto potrebbe violare i loro senza alcun avviso.  
+ Usare questa soluzione alternativa quando l'integrità dei dati logici è cruciale per la correttezza e le modifiche che violano un vincolo. Tuttavia, per garantire l'integrità, tutte le modifiche ai dati devono essere eseguite tramite stored procedure che includono tali imposte. Le modifiche apportate tramite query ad hoc e altre stored procedure non imporrà questi vincoli e pertanto potrebbero violarli senza alcun avviso.  
   
 ## <a name="sample-code"></a>Codice di esempio  
- Gli esempi seguenti si basano sul database AdventureWorks2012. In particolare, questi esempi si basano su [Sales]. Tabella [SalesOrderDetail] controllo associato e i relativi vincoli di chiave esterna, oltre all'indice univoco.  
+ Gli esempi seguenti sono basati sul database AdventureWorks2012. In particolare, questi esempi sono basati su [Sales]. [SalesOrderDetail] tabella e i vincoli check e FOREIGN KEY associati oltre all'indice univoco.  
   
- Le stored procedure specificate di seguito sono per solo operazioni di inserimento. Le stored procedure per aggiornare ed eliminare operazioni deve hanno strutture simili.  
+ Le stored procedure specificate di seguito sono solo per le operazioni INSERT. Le stored procedure per le operazioni di aggiornamento ed eliminazione devono avere strutture simili.  
   
 ## <a name="table-definition-for-the-workarounds"></a>Definizione della tabella per le soluzioni alternative  
- Prima della conversione in una tabella con ottimizzazione per la memoria, la definizione per [Sales]. [SalesOrderDetail] è il seguente:  
+ Prima di eseguire la conversione in una tabella ottimizzata per la memoria, la definizione di [Sales]. [SalesOrderDetail] è il seguente:  
   
 ```sql  
 USE [AdventureWorks2012]  
@@ -97,9 +97,9 @@ ALTER TABLE [Sales].[SalesOrderDetail] CHECK CONSTRAINT [CK_SalesOrderDetail_Uni
 GO  
 ```  
   
- Dopo la conversione in una tabella con ottimizzazione per la memoria, la definizione per [Sales]. [SalesOrderDetail] è il seguente:  
+ Dopo la conversione in una tabella ottimizzata per la memoria, la definizione di [Sales]. [SalesOrderDetail] è il seguente:  
   
- Si noti che rowguid non è più un ROWGUIDCOL poiché non è supportata [!INCLUDE[hek_2](../includes/hek-2-md.md)]. La colonna è stata rimossa. Inoltre, LineTotal è una colonna calcolata ed esulano dall'ambito di questo articolo, pertanto anche è stata rimossa.  
+ Si noti che ROWGUID non è più un ROWGUIDCOL perché non è supportato in [!INCLUDE[hek_2](../includes/hek-2-md.md)]. La colonna è stata rimossa. Inoltre, LineTotal è una colonna calcolata e non rientra nell'ambito di questo articolo, quindi è stata anche rimossa.  
   
 ```sql  
 USE [AdventureWorks2012]  
@@ -125,7 +125,7 @@ CREATE TABLE [Sales].[SalesOrderDetail]([SalesOrderID] [int] NOT NULL,
 GO  
 ```  
   
-## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Verifica dei vincoli dopo un'operazione di inserimento, Update o Delete  
+## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Verifica dei vincoli dopo un'operazione di inserimento, aggiornamento o eliminazione  
   
 ```sql  
 USE AdventureWorks2012  
@@ -183,7 +183,7 @@ BEGIN TRANSACTION
 END  
 ```  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>L'applicazione di vincoli prima di un'istruzione Insert, Update o Delete operazione  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Applicazione di vincoli prima di un'operazione di inserimento, aggiornamento o eliminazione  
   
 ```sql  
 USE AdventureWorks2012  

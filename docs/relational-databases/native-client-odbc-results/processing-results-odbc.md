@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7949d646ac8890a9f4a5631de991168f9a0997e4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73778976"
 ---
 # <a name="processing-results-odbc"></a>Risultati dell'elaborazione (ODBC)
@@ -37,9 +37,9 @@ ms.locfileid: "73778976"
   
  Ogni istruzione INSERT, UPDATE e DELETE restituisce un set di risultati contenente solo il numero di righe modificate. Questo conteggio viene reso disponibile quando l'applicazione chiama [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md). ODBC 3. le applicazioni *x* devono chiamare **SQLRowCount** per recuperare il set di risultati o [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) per annullarlo. Quando un'applicazione esegue un batch o stored procedure contenente più istruzioni INSERT, UPDATE o DELETE, il set di risultati di ogni istruzione di modifica deve essere elaborato utilizzando **SQLRowCount** o annullato utilizzando **SQLMoreResults**. Questi conteggi possono essere annullati includendo un'istruzione SET NOCOUNT ON nel batch o nella stored procedure.  
   
- Transact-SQL include l'istruzione SET NOCOUNT. Se l'opzione NOCOUNT è impostata su on, SQL Server non restituisce i conteggi delle righe interessate da un'istruzione e **SQLRowCount** restituisce 0. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione del driver ODBC di Native Client introduce un'opzione [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) specifica del driver, SQL_SOPT_SS_NOCOUNT_STATUS, per segnalare se l'opzione NOCOUNT è attiva o disattivata. Quando **SQLRowCount** restituisce 0, l'applicazione deve testare SQL_SOPT_SS_NOCOUNT_STATUS. Se viene restituito SQL_NC_ON, il valore 0 di **SQLRowCount** indica solo che SQL Server non ha restituito un conteggio di righe. Se viene restituito SQL_NC_OFF, significa che NOCOUNT è disattivato e il valore 0 di **SQLRowCount** indica che l'istruzione non ha influire sulle righe. Quando SQL_SOPT_SS_NOCOUNT_STATUS viene SQL_NC_OFF, le applicazioni non dovrebbero visualizzare il valore di **SQLRowCount** . Le stored procedure o i batch di grandi dimensioni possono contenere più istruzioni SET NOCOUNT, pertanto i programmatori non possono presupporre che SQL_SOPT_SS_NOCOUNT_STATUS rimanga costante. L'opzione deve essere testata ogni volta che **SQLRowCount** restituisce 0.  
+ Transact-SQL include l'istruzione SET NOCOUNT. Se l'opzione NOCOUNT è impostata su on, SQL Server non restituisce i conteggi delle righe interessate da un'istruzione e **SQLRowCount** restituisce 0. La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione del driver ODBC di Native Client introduce un'opzione [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) specifica del driver, SQL_SOPT_SS_NOCOUNT_STATUS, per segnalare se l'opzione NOCOUNT è impostata su on o off. Quando **SQLRowCount** restituisce 0, l'applicazione deve testare SQL_SOPT_SS_NOCOUNT_STATUS. Se viene restituito SQL_NC_ON, il valore 0 di **SQLRowCount** indica solo che SQL Server non ha restituito un conteggio di righe. Se viene restituito SQL_NC_OFF, significa che NOCOUNT è disattivato e il valore 0 di **SQLRowCount** indica che l'istruzione non ha influire sulle righe. Quando SQL_SOPT_SS_NOCOUNT_STATUS viene SQL_NC_OFF, le applicazioni non dovrebbero visualizzare il valore di **SQLRowCount** . Le stored procedure o i batch di grandi dimensioni possono contenere più istruzioni SET NOCOUNT, pertanto i programmatori non possono presupporre che SQL_SOPT_SS_NOCOUNT_STATUS rimanga costante. L'opzione deve essere testata ogni volta che **SQLRowCount** restituisce 0.  
   
- Diverse altre istruzioni Transact-SQL restituiscono nei messaggi dati anziché set di risultati. Quando il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client riceve questi messaggi, restituisce SQL_SUCCESS_WITH_INFO per consentire all'applicazione di tenere presente che i messaggi informativi sono disponibili. L'applicazione può quindi chiamare **SQLGetDiagRec** per recuperare questi messaggi. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che funzionano in questo modo sono:  
+ Diverse altre istruzioni Transact-SQL restituiscono nei messaggi dati anziché set di risultati. Quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client riceve questi messaggi, restituisce SQL_SUCCESS_WITH_INFO per informare l'applicazione che i messaggi informativi sono disponibili. L'applicazione può quindi chiamare **SQLGetDiagRec** per recuperare questi messaggi. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che funzionano in questo modo sono:  
   
 -   DBCC  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73778976"
   
 -   RAISERROR  
   
- Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client restituisce SQL_ERROR su RAISERROR con gravità 11 o superiore. Se la gravità di RAISERROR è 19 o superiore, viene anche interrotta la connessione.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client restituisce SQL_ERROR in un RAISERROR con gravità 11 o superiore. Se la gravità di RAISERROR è 19 o superiore, viene anche interrotta la connessione.  
   
  Per elaborare i set di risultati da un'istruzione SQL, l'applicazione:  
   
@@ -65,22 +65,22 @@ ms.locfileid: "73778976"
   
  Il processo che consente di recuperare le righe dall'origine dati e di restituirle alle applicazioni viene denominato recupero.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Determinazione delle caratteristiche di un set &#40;di risultati ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+-   [Determinazione delle caratteristiche di un set di risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
--   [Assegnazione di una risorsa di archiviazione](../../relational-databases/native-client-odbc-results/assigning-storage.md)  
+-   [Assegnazione di archiviazione](../../relational-databases/native-client-odbc-results/assigning-storage.md)  
   
 -   [Recupero di dati dei risultati](../../relational-databases/native-client-odbc-results/fetching-result-data.md)  
   
--   [Mapping di tipi &#40;di dati ODBC&#41;](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
+-   [Mapping dei tipi di dati &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
   
 -   [Utilizzo del tipo di dati](../../relational-databases/native-client-odbc-results/data-type-usage.md)  
   
 -   [Conversione automatica dei dati di tipo carattere](../../relational-databases/native-client-odbc-results/autotranslation-of-character-data.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [Procedure relative all'elaborazione dei risultati &#40;ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Procedure per l'elaborazione dei risultati &#40;ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
   

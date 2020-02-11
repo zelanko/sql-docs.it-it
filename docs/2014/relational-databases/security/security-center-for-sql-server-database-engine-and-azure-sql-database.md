@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244528"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure
@@ -94,7 +94,7 @@ ms.locfileid: "75244528"
   
 -   [Autorizzazioni](permissions-database-engine.md)  
   
--   [Oggetti proteggibili](securables.md)  
+-   [Entità a protezione diretta](securables.md)  
   
  **Sicurezza in base ai ruoli**  
   
@@ -108,14 +108,14 @@ ms.locfileid: "75244528"
   
 -   [Sicurezza a livello di riga](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
--   [Dynamic Data Masking](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+-   [Maschera dati dinamica](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
 -   [Oggetti firmati](/sql/t-sql/statements/add-signature-transact-sql)  
   
  ![Icona della cartella file piccola](../../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **sicurezza della connessione: limitazione e protezione**  
  **Protezione del firewall**  
   
--   [Configurare un Windows Firewall per l'accesso motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [Configurare Windows Firewall per l'accesso al motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Impostazioni del firewall del database SQL di Azure](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "75244528"
  ![Icona della cartella file piccola](../../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") **controllo: registrazione dell'accesso**  
  **Controllo automatizzato**  
   
--   [Motore di database di controllo SQL Server &#40;&#41;](auditing/sql-server-audit-database-engine.md)  
+-   [SQL Server Audit &#40;Database Engine&#41;](auditing/sql-server-audit-database-engine.md)  
   
 -   [Controllo del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   
@@ -151,10 +151,10 @@ ms.locfileid: "75244528"
  [Protezione SQL Server](securing-sql-server.md)   
  [Entità &#40;motore di database&#41;](authentication-access/principals-database-engine.md)   
  [SQL Server certificati e chiavi asimmetriche](sql-server-certificates-and-asymmetric-keys.md)   
- [Crittografia SQL Server](encryption/sql-server-encryption.md)   
+ [Crittografia di SQL Server](encryption/sql-server-encryption.md)   
  [Configurazione superficie di attacco](surface-area-configuration.md)   
  [Password complesse](strong-passwords.md)   
  [Proprietà di database TRUSTWORTHY](trustworthy-database-property.md)   
- [Funzionalità e attività di motore di database](../../database-engine/database-engine-features-and-tasks.md)  
+ [Caratteristiche e attività del motore di database](../../database-engine/database-engine-features-and-tasks.md)  
   
   

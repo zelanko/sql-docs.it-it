@@ -15,15 +15,15 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056623"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Esegui Data Migration Assistant dalla riga di comando
 
-Con la versione 2,1 e successive, quando si installa Data Migration Assistant, viene installato anche dmacmd. exe in *% ProgramFiles%\\Microsoft Data Migration Assistant\\* . Usare dmacmd. exe per valutare i database in modalità automatica e restituire il risultato in un file JSON o CSV. Questo metodo è particolarmente utile per la valutazione di più database o database di grandi dimensioni. 
+Con la versione 2,1 e successive, quando si installa Data Migration Assistant, viene installato anche dmacmd. exe in *% ProgramFiles%\\Microsoft Data Migration Assistant\\*. Usare dmacmd. exe per valutare i database in modalità automatica e restituire il risultato in un file JSON o CSV. Questo metodo è particolarmente utile per la valutazione di più database o database di grandi dimensioni. 
 
 > [!NOTE]
 > Dmacmd. exe supporta solo le valutazioni in esecuzione. In questo momento le migrazioni non sono supportate.
@@ -61,7 +61,7 @@ DmaCmd.exe /AssessmentName="string"
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Esempi di valutazioni usando l'interfaccia della riga di comando
 
-**Dmacmd.exe**
+**Dmacmd. exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -259,7 +259,7 @@ Questi comandi supportano i consigli per le opzioni di distribuzione di database
 |`/SkuRecommendationCurrencyCode` | La valuta in cui visualizzare i prezzi (ad esempio "USD") | S <br> (Per i prezzi più recenti)
 |`/SkuRecommendationOfferName` | Nome dell'offerta (ad esempio, "MS-AZR-0003P"). Per ulteriori informazioni, vedere la pagina dei [Dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | S <br> (Per i prezzi più recenti)
 |`/SkuRecommendationRegionName` | Nome dell'area (ad esempio "Westus") | S <br> (Per i prezzi più recenti)
-|`/SkuRecommendationSubscriptionId` | ID della sottoscrizione. | S <br> (Per i prezzi più recenti)
+|`/SkuRecommendationSubscriptionId` | ID sottoscrizione. | S <br> (Per i prezzi più recenti)
 |`/SkuRecommendationDatabasesToRecommend` | Elenco di database separati da spazi da consigliare (ad esempio "Database1" "Database2" "Database3"). I nomi fanno distinzione tra maiuscole e minuscole e devono essere racchiusi tra virgolette doppie. Se omesso, vengono fornite indicazioni per tutti i database. | N
 |`/AzureAuthenticationTenantId` | Tenant di autenticazione. | S <br> (Per i prezzi più recenti)
 |`/AzureAuthenticationClientId` | ID client dell'app AAD usata per l'autenticazione. | S <br> (Per i prezzi più recenti)
@@ -270,7 +270,7 @@ Questi comandi supportano i consigli per le opzioni di distribuzione di database
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Esempi di valutazioni dello SKU con l'interfaccia della riga di comando
 
-**Dmacmd.exe**
+**Dmacmd. exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48e5aeab043fcfd0e65150ea3a1008d726cb0ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869260"
 ---
-# <a name="mssqlserver2574"></a>MSSQLSERVER_2574
+# <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62869260"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Testo del messaggio|Errore di tabella: Page P_ID è vuota nell'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE). Tale condizione non è consentita al livello LEVEL dell'albero B.|  
+|Testo del messaggio|Errore di tabella: pagina ID_P vuota nell'oggetto con ID O_ID, ID di indice I_ID, ID di partizione PN_ID e ID di unità di allocazione A_ID (tipo TYPE). Tale condizione non è consentita al livello LEVEL dell'albero B.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Una pagina dell'albero B superiore al livello foglia dell'indice specificato è vuota, ovvero non contiene righe. Questo comportamento è possibile per le pagine del livello foglia in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], ma non è mai consentito nei livelli albero.  

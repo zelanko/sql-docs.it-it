@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244505"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
@@ -45,10 +45,10 @@ ms.locfileid: "75244505"
 ### <a name="using-a-certificate-in-sql-server"></a>Utilizzo di un certificato in SQL Server  
  È possibile utilizzare i certificati per proteggere connessioni, eseguire il mirroring del database, firmare pacchetti e altri oggetti o crittografare dati o connessioni. Nella tabella seguente sono elencate risorse aggiuntive per i certificati presenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[CREAZIONE di un certificato &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-certificate-transact-sql)|Viene descritto il comando per la creazione di certificati.|  
-|[Identificare l'origine dei pacchetti con firme digitali](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Vengono fornite informazioni sull'utilizzo di certificati per la firma di pacchetti software.|  
+|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|Viene descritto il comando per la creazione di certificati.|  
+|[Identificazione dell'origine dei pacchetti con firme digitali](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Vengono fornite informazioni sull'utilizzo di certificati per la firma di pacchetti software.|  
 |[Utilizzare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Vengono fornite informazioni sull'utilizzo dei certificati con il mirroring del database.|  
   
 ## <a name="asymmetric-keys"></a>Chiavi asimmetriche  
@@ -59,10 +59,10 @@ ms.locfileid: "75244505"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>Utilizzo di una chiave asimmetrica in SQL Server  
  È possibile utilizzare chiavi asimmetriche per proteggere dati o firmare testo non crittografato. Nella tabella seguente sono elencate risorse aggiuntive per chiavi asimmetriche presenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[CREAZIONE di una chiave asimmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|Viene descritto il comando per la creazione di chiavi asimmetriche.|  
-|[SIGNBYASYMKEY &#40;&#41;Transact-SQL](/sql/t-sql/functions/signbyasymkey-transact-sql)|Vengono visualizzate le opzioni per la firma di oggetti.|  
+|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|Viene descritto il comando per la creazione di chiavi asimmetriche.|  
+|[SIGNBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|Vengono visualizzate le opzioni per la firma di oggetti.|  
   
 ## <a name="tools"></a>Strumenti  
  
@@ -74,14 +74,14 @@ ms.locfileid: "75244505"
 |[Makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Vengono creati certificati.|  
 |[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Vengono creati nomi sicuri per le chiavi simmetriche.|  
   
-## <a name="related-tasks"></a>Related Tasks  
- [Scegliere un algoritmo di crittografia](encryption/choose-an-encryption-algorithm.md)  
+## <a name="related-tasks"></a>Attività correlate  
+ [Scelta di un algoritmo di crittografia](encryption/choose-an-encryption-algorithm.md)  
   
- [CREAZIONE di una chiave simmetrica &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
- [CREAZIONE di un certificato &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-certificate-transact-sql)  
+ [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>Vedere anche  
  [sys. Certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
- [&#41;Transparent Data Encryption &#40;Transparent Data Encryption](encryption/transparent-data-encryption.md)  
+ [Transparent Data Encryption &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

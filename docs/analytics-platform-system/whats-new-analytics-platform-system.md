@@ -11,10 +11,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399427"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novità del sistema di piattaforma di analisi, un MPP con scalabilità orizzontale data warehouse
@@ -129,7 +129,7 @@ L'utilizzo di oggetti del catalogo per le chiamate ai metadati anziché l'utiliz
 ### <a name="bug-fixes"></a>Correzioni di bug
 È stato eseguito l'aggiornamento a SQL Server 2016 SP2 CU2 con APS CU 7.1. L'aggiornamento corregge alcuni problemi descritti di seguito.
 
-| Titolo | Description |
+| Titolo | Descrizione |
 |:---|:---|
 | **Potenziale deadlock del motore di Tuple** |L'aggiornamento corregge una possibilità di deadlock a lungo termine in una transazione distribuita e in un thread in background del motore di Tuple. Dopo aver installato CU 7.1, i clienti che hanno usato TF634 per arrestare il motore di tupla come SQL Server parametro di avvio o un flag di traccia globale possono rimuoverlo in modo sicuro. | 
 | **Una determinata query di ritardo/lead ha esito negativo** |Alcune query sulle tabelle CCI con funzioni lag/lead annidate che potrebbero avere un errore sono ora corrette con questo aggiornamento. | 

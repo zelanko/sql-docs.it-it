@@ -21,18 +21,18 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122629"
 ---
-# <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
+# <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un elenco delle autorizzazioni valide concesse all'entità per un'entità a protezione diretta. È una funzione correlata [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
+  Restituisce un elenco delle autorizzazioni valide concesse all'entità per un'entità a protezione diretta. Una funzione correlata è [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,22 +42,22 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *securable*  
- Nome dell'entità a protezione diretta. Se l'entità a sicurezza diretta è il server o un database, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. *entità a protezione diretta* può essere un nome in più parti.  
+ *a protezione diretta*  
+ Nome dell'entità a protezione diretta. Se l'entità a sicurezza diretta è il server o un database, questo valore deve essere impostato su NULL. l' *entità a protezione diretta* è un'espressione scalare di tipo **sysname**. l' *entità a protezione diretta* può essere un nome in più parti.  
   
- «*securable Class*»  
- Nome della classe dell'entità a sicurezza diretta per cui vengono elencate le autorizzazioni. *securable_class* è un **sysname**. *securable_class* deve essere uno dei seguenti: RUOLO APPLICAZIONE, ASSEMBLY, CHIAVE ASIMMETRICA, CERTIFICATO, CONTRATTO, DATABASE, ENDPOINT, FULLTEXT CATALOG, ACCOUNT DI ACCESSO, IL TIPO DI MESSAGGIO, OGGETTO, ASSOCIAZIONE AL SERVIZIO REMOTO, RUOLO, ROUTE, SCHEMA, SERVER, SERVIZIO, CHIAVE SIMMETRICA, TIPO, UTENTE, RACCOLTA DI XML SCHEMA.  
+ '*securable_class*'  
+ Nome della classe dell'entità a sicurezza diretta per cui vengono elencate le autorizzazioni. *securable_class* è di **tipo sysname**. *securable_class* deve essere uno dei seguenti: Role, assembly, Key asimmetrica, certificate, Contract, database, endpoint, FULLTEXT CATALOG, login, Message Type, Object, Remote Service binding, Role, Route, schema, server, Service, Symmetric Key, Type, User, XML Schema Collection.  
   
 ## <a name="columns-returned"></a>Colonne restituite  
- Nella tabella seguente vengono elencate le colonne che **fn_my_permissions** restituisce. Ogni riga restituita descrive un'autorizzazione assegnata al contesto di sicurezza corrente per l'entità a protezione diretta. Restituisce NULL se la query non viene eseguita correttamente.  
+ Nella tabella seguente sono elencate le colonne restituite da **fn_my_permissions** . Ogni riga restituita descrive un'autorizzazione assegnata al contesto di sicurezza corrente per l'entità a protezione diretta. Restituisce NULL se la query non viene eseguita correttamente.  
   
-|Nome colonna|type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |nome_entità|**sysname**|Nome dell'entità a sicurezza diretta per la quale sono state concesse le autorizzazioni valide elencate.|  
 |subentity_name|**sysname**|Nome della colonna nel caso in cui l'entità a sicurezza diretta contenga colonne. In caso contrario, NULL.|  
 |permission_name|**nvarchar**|Nome dell'autorizzazione.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione con valori di tabella restituisce un elenco delle autorizzazioni valide assegnate all'entità di protezione chiamante per un'entità a sicurezza diretta specificata. Per autorizzazione valida si intende una qualsiasi delle autorizzazioni seguenti:  
   
 -   Autorizzazione concessa direttamente all'entità di protezione e non negata.  
@@ -70,7 +70,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  La valutazione dell'autorizzazione viene sempre eseguita nel contesto di sicurezza del chiamante. Per determinare se è stata assegnata un'autorizzazione valida a un'altra entità di protezione, il chiamante deve disporre dell'autorizzazione IMPERSONATE per tale entità.  
   
- Per le entità a livello di schema, sono accettati i nomi non Null composti da una, due o tre parti. Per le entità a livello di database, viene accettato un nome di una sola parte, con valore null indica "*database corrente*". Per il server stesso, è richiesto un valore Null, ad indicare il server corrente. **fn_my_permissions** non controlla le autorizzazioni in un server collegato.  
+ Per le entità a livello di schema, sono accettati i nomi non Null composti da una, due o tre parti. Per le entità a livello di database, viene accettato un nome in una parte, con un valore null che significa "*database corrente*". Per il server stesso, è richiesto un valore Null, ad indicare il server corrente. **fn_my_permissions** non è in grado di controllare le autorizzazioni per un server collegato.  
   
  La query seguente restituirà un elenco di classi di entità a protezione diretta predefinite:  
   
@@ -80,7 +80,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- Se l'impostazione predefinita viene fornito come valore di *entità a protezione diretta* oppure *securable_class*, il valore verrà interpretato come NULL.  
+ Se viene fornito DEFAULT come valore di *entità a protezione diretta* o *securable_class*, il valore verrà interpretato come null.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Elenco delle autorizzazioni valide per una raccolta di XML Schema  
- L'esempio seguente restituisce un elenco delle autorizzazioni valide di cui il chiamante dispone per una raccolta di XML Schema denominato `ProductDescriptionSchemaCollection` nella [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+ Nell'esempio seguente viene restituito un elenco delle autorizzazioni valide del chiamante in una raccolta di XML Schema denominata `ProductDescriptionSchemaCollection` nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```  
 USE AdventureWorks2012;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="h-listing-effective-permissions-of-another-login"></a>H. Elenco delle autorizzazioni valide di un altro account di accesso  
- Nell'esempio seguente viene restituito un elenco delle autorizzazioni valide di cui l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` dispone per la tabella `Employee` nello schema `HumanResources` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Il chiamante deve disporre dell'autorizzazione IMPERSONATE per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof`.  
+ Nell'esempio seguente viene restituito un elenco delle autorizzazioni valide di cui l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` dispone per la tabella `Employee` nello schema `HumanResources` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Il chiamante deve disporre dell'autorizzazione IMPERSONATE per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof`.  
   
 ```  
 EXECUTE AS LOGIN = 'WanidaBenshoof';  
@@ -160,12 +160,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
+ [Funzioni di sicurezza &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Securables](../../relational-databases/security/securables.md)   
+ [Oggetti proteggibili](../../relational-databases/security/securables.md)   
  [Gerarchia delle autorizzazioni &#40;Motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Viste del catalogo di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

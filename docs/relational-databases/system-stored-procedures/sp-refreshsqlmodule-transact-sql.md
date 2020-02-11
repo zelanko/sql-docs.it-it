@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982766"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
@@ -56,16 +56,16 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'module\_name'` è il nome del stored procedure, della funzione definita dall'utente, della vista, del trigger DML, del trigger DDL a livello di database o del trigger DDL a livello di server. *module_name* non può essere un stored procedure di Common Language Runtime (CLR) o una funzione CLR. *module_name* non possono essere associati a schema. *module_name* è di **tipo nvarchar**e non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.  
+`[ @name = ] 'module\_name'`Nome del stored procedure, funzione definita dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un stored procedure di Common Language Runtime (CLR) o una funzione CLR. *module_name* non possono essere associati a schema. *module_name* è di **tipo nvarchar**e non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.  
   
-`[ , @namespace = ] ' \<class> '` è la classe del modulo specificato. Quando *module_name* è un trigger DDL, è necessario \<> della classe. *\<classe >* è di **tipo nvarchar**(20). Gli input validi sono:  
+`[ , @namespace = ] ' \<class> '`È la classe del modulo specificato. Quando *module_name* è un trigger DDL, \<la classe> è obbligatoria. >di classe è di **tipo nvarchar**(20). * \<* Gli input validi sono:  
   
 |||  
 |-|-|  
 |DATABASE_DDL_TRIGGER||  
 |SERVER_DDL_TRIGGER|**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -143,7 +143,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>b. Aggiornamento di un trigger DDL a livello di database  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>B. Aggiornamento di un trigger DDL a livello di database  
  Nell'esempio seguente viene aggiornato un trigger DDL a livello di database.  
   
 ```  
@@ -169,7 +169,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Stored procedure &#40;di motore di database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [sp_refreshview &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

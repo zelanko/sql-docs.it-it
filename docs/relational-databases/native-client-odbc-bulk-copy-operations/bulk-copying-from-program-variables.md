@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f88a966e2095f527f36c84498e026c1e23aaa2ab
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785221"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia bulk da variabili di programma
@@ -51,20 +51,20 @@ ms.locfileid: "73785221"
   
  Il parametro di_tipo_ **bcp_bind**utilizza gli identificatori dei tipi di dati DB-Library, non gli identificatori dei tipi di dati ODBC. Gli identificatori dei tipi di dati DB-Library sono definiti in sqlncli. h per l'utilizzo con la funzione ODBC **bcp_bind** .  
   
- Le funzioni di copia bulk non supportano tutti i tipi di dati C ODBC. Le funzioni di copia bulk, ad esempio, non supportano la struttura ODBC SQL_C_TYPE_TIMESTAMP, pertanto utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) per convertire i dati SQL_TYPE_TIMESTAMP odbc in una variabile SQL_C_CHAR. Se quindi si usa **bcp_bind** con un parametro di tipo SQLCHARACTER per associare la variabile a una colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** , le funzioni di copia bulk convertono la clausola di escape timestamp nella variabile di *tipo* carattere nel formato DateTime appropriato.  
+ Le funzioni di copia bulk non supportano tutti i tipi di dati C ODBC. Le funzioni di copia bulk, ad esempio, non supportano la struttura ODBC SQL_C_TYPE_TIMESTAMP, pertanto utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) per convertire i dati SQL_TYPE_TIMESTAMP odbc in una variabile SQL_C_CHAR. Se quindi si usa **bcp_bind** con un parametro di *tipo* SQLCHARACTER per associare la variabile a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonna **DateTime** , le funzioni di copia bulk convertono la clausola di escape timestamp nella variabile di tipo carattere nel formato DateTime appropriato.  
   
  Nella tabella seguente vengono elencati i tipi di dati consigliati da utilizzare nel mapping da un tipo di dati SQL ODBC a un tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Tipo di dati SQL ODBC|Tipo di dati C ODBC|parametro di *tipo* bcp_bind|Tipo di dati di SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **carattere variabile**<br /><br /> **char varying**<br /><br /> **sysname**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **carattere variabile**<br /><br /> **carattere variabile**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
-|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **Dec**<br /><br /> **money**<br /><br /> **smallmoney**|  
-|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
+|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **Dec**<br /><br /> **money**<br /><br /> **SMALLMONEY**|  
+|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numerico**|  
 |SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
 |SQL_TINYINT (con segno)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (senza segno)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
@@ -73,19 +73,19 @@ ms.locfileid: "73785221"
 |SQL_INTEGER (con segno)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
 |SQL_INTEGER (senza segno)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **Dec**|  
 |SQL_BIGINT (con segno e senza segno)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
-|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  
+|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**reale**|  
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
-|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
+|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**BINARY**<br /><br /> **timestamp**|  
 |SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **variabili binarie**|  
-|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
+|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**immagine**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di tipi di dati con segno **tinyint**, senza segno **smallint**o unsigned **int** . Per evitare la perdita di valori dei dati quando si esegue la migrazione di questi tipi di dati, creare la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il tipo di dati integer successivo più grande. Per impedire agli utenti di aggiungere in un secondo momento valori non compresi nell'intervallo consentito dal tipo di dati originale, applicare una regola alla colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per limitare i valori consentiti all'intervallo supportato dal tipo di dati originale:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]non dispone di tipi di dati con segno **tinyint**, unsigned **smallint**o unsigned **int** . Per evitare la perdita di valori dei dati quando si esegue la migrazione di questi tipi di dati, creare la tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il tipo di dati integer successivo più grande. Per impedire agli utenti di aggiungere in un secondo momento valori non compresi nell'intervallo consentito dal tipo di dati originale, applicare una regola alla colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per limitare i valori consentiti all'intervallo supportato dal tipo di dati originale:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -105,15 +105,16 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta direttamente i tipi di dati intervallo. Tuttavia, un'applicazione può archiviare le sequenze di escape dell'intervallo come stringhe di caratteri in una colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tipo carattere. Tali valori potranno essere letti dall'applicazione per un utilizzo futuro ma non potranno essere utilizzati nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta direttamente i tipi di dati intervallo. Tuttavia, un'applicazione può archiviare le sequenze di escape dell'intervallo come stringhe di caratteri in una colonna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di tipo carattere. Tali valori potranno essere letti dall'applicazione per un utilizzo futuro ma non potranno essere utilizzati nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- Le funzioni di copia bulk possono essere utilizzate per caricare rapidamente i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letti da un'origine dati ODBC. Utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) per associare le colonne di un set di risultati alle variabili di programma, quindi utilizzare **bcp_bind** per associare le stesse variabili di programma a un'operazione di copia bulk. La chiamata a [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) o **SQLFetch** recupera quindi una riga di dati dall'origine dati ODBC nelle variabili di programma e chiamando [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) esegue la copia bulk dei dati dalle variabili di programma a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Le funzioni di copia bulk possono essere utilizzate per caricare rapidamente i dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letti da un'origine dati ODBC. Utilizzare [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) per associare le colonne di un set di risultati alle variabili di programma, quindi utilizzare **bcp_bind** per associare le stesse variabili di programma a un'operazione di copia bulk. Se si chiama [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) o **SQLFetch** , viene recuperata una riga di dati dall'origine dati ODBC nelle variabili di programma e viene chiamato [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) esegue la copia bulk dei dati dalle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] variabili di programma a.  
   
  Un'applicazione può utilizzare la funzione [bcp_colptr](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) ogni volta che è necessario modificare l'indirizzo della variabile di dati originariamente specificata nel parametro **bcp_bind** _pData_ . Un'applicazione può utilizzare la funzione [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) ogni volta che è necessario modificare la lunghezza dei dati specificata originariamente nel parametro **bcp_bind**_cbData_ .  
   
  Non è possibile leggere i dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle variabili di programma utilizzando la copia bulk. Non esiste una funzione simile a "bcp_readrow". È possibile solo inviare i dati dall'applicazione al server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni &#40;di copia bulk ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [Esecuzione di operazioni di copia bulk &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811234"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
@@ -50,7 +50,7 @@ ms.locfileid: "68811234"
     GO  
     ```  
   
- **Generare uno snapshot e modificare lo schema**  
+ **Generare uno snapshot e adattare lo schema**  
   
 1.  Creare un processo di snapshot e generare uno snapshot.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68811234"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Passare alla cartella dello snapshot. Il percorso predefinito è "C:\Programmi\Microsoft SQL Server\MSSQL12. Istanza > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\". \<  
+2.  Passare alla cartella dello snapshot. Il percorso predefinito è "C:\Programmi\Microsoft SQL Server\MSSQL12. \<Istanza> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\".  
   
 3.  Individuare il **. File SCH** per la tabella e aprirlo in Management Studio. Modificare lo schema della tabella e aggiornare la stored procedure, come descritto di seguito.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "68811234"
     GO  
     ```  
   
- **Non aggiungere alcuna sottoscrizione di sincronizzazione**  
+ **Aggiungere una sottoscrizione no sync**  
   
  Aggiungere una sottoscrizione no sync.  
   
@@ -301,7 +301,7 @@ GO
   
 -   Vengono applicate restrizioni all'aggiornamento della chiave primaria delle tabelle replicate in una tabella ottimizzata per la memoria in un sottoscrittore. Per ulteriori informazioni, vedere [replica delle modifiche in una chiave primaria](#PrimaryKey).  
   
--   Chiave esterna, vincolo univoco, trigger, modifiche dello schema, ROWGUIDCOL, colonne calcolate, compressione dei dati, tipi di dati alias, controllo delle versioni e blocchi non sono supportati nelle tabelle ottimizzate per la memoria. Per informazioni, vedere [Costrutti T-SQL non supportati da OLTP in memoria](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
+-   Chiave esterna, vincolo univoco, trigger, modifiche dello schema, ROWGUIDCOL, colonne calcolate, compressione dei dati, tipi di dati alias, controllo delle versioni e blocchi non sono supportati nelle tabelle ottimizzate per la memoria. Per informazioni, vedere [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
 ##  <a name="Schema"></a> Modifica di un file dello schema  
   

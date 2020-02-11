@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401644"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -24,15 +24,15 @@ ms.locfileid: "74401644"
 
   Restituisce informazioni sullo stato di crittografia di un database e sulle chiavi di crittografia a esso associate. **sys. dm_pdw_nodes_database_encryption_keys** fornisce queste informazioni per ogni nodo. Per ulteriori informazioni sulla crittografia del database, vedere [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID del database fisico in ogni nodo.|  
 |encryption_state|**int**|Indica se il database in questo nodo è crittografato o non crittografato.<br /><br /> 0 = Nessuna chiave di crittografia del database presente, nessuna crittografia<br /><br /> 1 = Non crittografato<br /><br /> 2 = Crittografia in corso<br /><br /> 3 = Crittografato<br /><br /> 4 = Modifica chiave in corso<br /><br /> 5 = Decrittografia in corso<br /><br /> 6 = modifica della protezione in corso (il certificato che sta crittografando la chiave di crittografia del database è in corso di modifica).|  
-|create_date|**DateTime**|Visualizza la data di creazione della chiave di crittografia.|  
-|regenerate_date|**DateTime**|Visualizza la data di rigenerazione della chiave di crittografia.|  
-|modify_date|**DateTime**|Visualizza la data di modifica della chiave di crittografia.|  
-|set_date|**DateTime**|Visualizza la data di applicazione al database della chiave di crittografia.|  
-|opened_date|**DateTime**|Mostra l'ultima apertura della chiave del database.|  
+|create_date|**datetime**|Visualizza la data di creazione della chiave di crittografia.|  
+|regenerate_date|**datetime**|Visualizza la data di rigenerazione della chiave di crittografia.|  
+|modify_date|**datetime**|Visualizza la data di modifica della chiave di crittografia.|  
+|set_date|**datetime**|Visualizza la data di applicazione al database della chiave di crittografia.|  
+|opened_date|**datetime**|Mostra l'ultima apertura della chiave del database.|  
 |key_algorithm|**varchar (?)**|Visualizza l'algoritmo usato per la chiave.|  
 |key_length|**int**|Visualizza la lunghezza della chiave.|  
 |encryptor_thumbprint|**varbin**|Mostra l'identificazione digitale della crittografia.|  

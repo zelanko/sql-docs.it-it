@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067125"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrare i dati di una tabella (SSAS tabulare)
@@ -33,17 +33,17 @@ ms.locfileid: "66067125"
   
 2.  Nel menu Filtro automatico effettuare uno dei passaggi seguenti:  
   
-    -   Nell'elenco di valori delle colonne selezionare o deselezionare uno o più valori da utilizzare come filtri, quindi fare clic su **OK**.  
+    -   Nell'elenco dei valori delle colonne selezionare o deselezionare uno o più valori in base ai quali filtrare e quindi fare clic su **OK**.  
   
          Se il numero di valori è estremamente elevato, singoli elementi potrebbero non essere visualizzati nell'elenco. Verrà invece visualizzato il messaggio, "Troppi elementi da visualizzare".  
   
-    -   Fare clic su **Filtri per numeri** o su **Filtri per testo** (a seconda del tipo di colonna) e quindi fare clic su uno dei comandi di operatore di confronto (ad esempio **Uguale a**) o su **Filtro personalizzato**. Nella finestra di dialogo **Filtro personalizzato** creare il filtro, quindi fare clic su **OK**.  
+    -   Fare clic su **filtri per numeri** o **filtri per testo** (a seconda del tipo di colonna), quindi fare clic sui comandi dell'operatore di confronto (ad esempio **uguale**a) o su **filtro personalizzato**. Nella finestra di dialogo **Filtro personalizzato** creare il filtro, quindi fare clic su **OK**.  
   
 ### <a name="to-clear-a-filter-for-a-column"></a>Per cancellare un filtro per una colonna  
   
 1.  Fare clic sulla freccia nell'intestazione della colonna per la quale si desidera cancellare un filtro.  
   
-2.  Fare clic su **Cancella filtro da \<nome colonna >** .  
+2.  Fare clic su **Cancella \<filtro da nome colonna>**.  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Per cancellare tutti i filtri per una tabella  
   

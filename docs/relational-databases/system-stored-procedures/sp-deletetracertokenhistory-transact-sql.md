@@ -16,19 +16,19 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771136"
 ---
-# <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
+# <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Rimuove i record dei token di traccia dalle tabelle di sistema [Transact &#40;&#41; ](../../relational-databases/system-tables/mstracer-history-transact-sql.md) -SQL e MStracer_history di Transact-SQL [MStracer_tokens &#40;&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) . Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione o nel database di distribuzione del server di distribuzione.
+Rimuove i record dei token di traccia dalla [MStracer_tokens &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) e MStracer_history &#40;le tabelle di sistema [transact-SQL&#41;](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione o nel database di distribuzione del server di distribuzione.
 
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,7 +55,7 @@ Token di traccia inseriti nella pubblicazione prima dell'eliminazione di questa 
 Nome del server di pubblicazione. Il tipo di dati è **sysname**. Il valore predefinito è *null*.
 
 > [!NOTE]
-> Questo parametro deve essere specificato solo per i server [!INCLUDE[msCoName](../../includes/msconame-md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione non o quando viene eseguito il stored procedure dal database di distribuzione.
+> Questo parametro deve essere specificato solo per i server [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di pubblicazione non o quando viene eseguito il stored procedure dal database di distribuzione.
 
 `[ @publisher_db= ] 'publisher_db'`  
 Nome del database di pubblicazione. Il tipo di dati è **sysname**. Il valore predefinito è NULL. Questo parametro viene ignorato se la stored procedure viene eseguita nel server di pubblicazione.
@@ -63,21 +63,21 @@ Nome del database di pubblicazione. Il tipo di dati è **sysname**. Il valore pr
 > [!NOTE]
 > Questo parametro deve essere specificato quando si esegue il stored procedure dal database di distribuzione.
 
-## <a name="return-code-values"></a>Valori restituiti
+## <a name="return-code-values"></a>Valori del codice restituito
 
 **0** (esito positivo) o **1** (esito negativo)
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-**sp_deletetracertokenhistory** viene utilizzato nella replica transazionale.  
+**sp_deletetracertokenhistory** viene utilizzata nella replica transazionale.  
 
 Si verifica un errore se si specificano entrambi i parametri *tracer_id* e *cutoff_date*.
 
 Se non si esegue **sp_deletetracertokenhistory** per eliminare i metadati del token di traccia, le informazioni verranno eliminate quando si verifica la pulizia periodica della cronologia pianificata.
 
-È possibile determinare gli ID del token di traccia [eseguendo &#40;sp_helptracertokens Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) o eseguendo una query sulla tabella di sistema [Transact- &#40;SQL&#41; MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
+È possibile determinare gli ID del token di traccia eseguendo [sp_helptracertokens &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) o eseguendo una query sulla tabella di sistema [MStracer_tokens &#40;transact-SQL&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Solo il personale seguente ha l'autorità per eseguire **sp_deletetracertokenhistory**:
 
@@ -88,6 +88,6 @@ Solo il personale seguente ha l'autorità per eseguire **sp_deletetracertokenhis
 
 ## <a name="see-also"></a>Vedere anche
 
-[Misurazione della latenza e convalida delle connessioni per la replica transazionale](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
+[Misurare la latenza e convalidare le connessioni per la replica transazionale](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
-[sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)
+[sp_helptracertokenhistory &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)

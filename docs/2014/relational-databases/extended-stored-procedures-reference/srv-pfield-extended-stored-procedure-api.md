@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127117"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API della stored procedure estesa)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API della stored procedure estesa)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce informazioni su una connessione a un database.  
   
@@ -55,10 +56,10 @@ len
  *srvproc*  
  Puntatore che identifica una connessione al database.  
   
- *field*  
+ *campo*  
  Specifica i dati nella connessione da restituire.  
   
-|Value|Valori di codice restituiti|  
+|valore|Valori di codice restituiti|  
 |-----------|-------------|  
 |SRV_APPLNAME|Nome dell'applicazione fornito dal client quando ha stabilito la connessione.|  
 |SRV_BCPFLAG|Flag impostato su TRUE se il client si prepara per un'operazione di copia bulk; in caso contrario, è impostato su FALSE.|  
@@ -80,13 +81,13 @@ len
 |SRV_USER|Nome utente della connessione.|  
 |||  
   
- *len*  
+ *Len*  
  Puntatore a una variabile **int** che contiene la lunghezza del valore *field* restituito. Se *len* è NULL, la lunghezza della stringa non viene restituita.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  Un puntatore a una stringa con terminazione Null che contiene il valore corrente per il campo specificato nella struttura SRV_PROC. Se il campo è vuoto, viene restituito un puntatore valido a una stringa vuota e *len* contiene 0. Se il campo non è noto, viene restituito NULL e *len* contiene il valore -1.  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e l'analisi della sicurezza, visitare il sito Web [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e l'analisi della sicurezza, visitare il sito Web [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

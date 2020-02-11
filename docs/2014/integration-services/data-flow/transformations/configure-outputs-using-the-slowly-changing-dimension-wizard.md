@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770612"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta
@@ -48,11 +48,11 @@ ms.locfileid: "62770612"
   
 4.  Scegliere il tipo di modifica per ogni colonna.  
   
-    -   **Attributo modificabile** sovrascrive i valori esistenti nei record.  
+    -   L' **attributo modificabile** sovrascrive i valori esistenti nei record.  
   
-    -   **Attributo cronologico** crea nuovi record invece di aggiornare quelli esistenti.  
+    -   L' **attributo Historical** crea nuovi record anziché aggiornare quelli esistenti.  
   
-    -   **Attributo fisso** indica che il valore della colonna non deve essere modificato.  
+    -   L' **attributo fixed** indica che il valore della colonna non deve essere modificato.  
   
 5.  Impostare le opzioni relative agli attributi fissi e modificabili.  
   

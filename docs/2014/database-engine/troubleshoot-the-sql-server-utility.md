@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797782"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Risoluzione dei problemi relativi a Utilità SQL Server
-  La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per ulteriori informazioni sull'attenuazione dei problemi di integrità delle risorse identificati da un punto di controllo dell'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Troubleshoot SQL Server Integrità risorse &#40;&#41;utilità SQL Server](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  La risoluzione dei problemi relativi a Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe includere la risoluzione di un'operazione non riuscita di registrazione di un'istanza di SQL Server con un punto di controllo dell'utilità, la risoluzione dei problemi relativi a raccolte dati con errori che generano icone grigie nella visualizzazione elenco dell'istanza gestita in un punto di controllo dell'utilità, la riduzione dei colli di bottiglia delle prestazioni o la risoluzione dei problemi di integrità delle risorse. Per ulteriori informazioni sulla riduzione dei problemi di integrità delle risorse identificati da un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] punto di controllo dell'utilità, vedere [Troubleshoot SQL Server Integrità risorse &#40;utilità SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Operazione di registrazione di un'istanza di SQL Server in Utilità SQL Server non riuscita  
  Se ci si connette all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione utilizzando l'Autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e si specifica un account proxy che appartiene a un dominio Active Directory diverso dal dominio in cui si trova il punto di controllo dell'utilità, la convalida dell'istanza riesce, ma l'operazione di registrazione non riesce con il messaggio di errore seguente:  
@@ -39,7 +39,7 @@ ms.locfileid: "72797782"
   
 5.  La convalida riesce, ma la registrazione no.  
   
- La soluzione alternativa per questo problema, utilizzando l'esempio precedente, consiste nel connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione all'utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizzando "sa" e fornire un account proxy da "Domain_1".  
+ La soluzione alternativa per questo problema, utilizzando l'esempio precedente, consiste nel connettersi all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per eseguire la registrazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] all'utilità utilizzando "sa" e fornire un account proxy da "Domain_1".  
   
 ## <a name="failed-wmi-validation"></a>Convalida WMI non riuscita  
  Se WMI non è configurato correttamente in un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le operazioni di creazione del punto di controllo dell'utilità e di registrazione dell'istanza gestita visualizzano un avviso, ma l'operazione non viene bloccata. Inoltre, se si modifica la configurazione dell'account di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent in modo che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent non disponga delle autorizzazioni per le classi WMI obbligatorie, la raccolta dati nell'istanza gestita interessata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non viene caricata nel punto di controllo dell'utilità. Ciò comporta la visualizzazione di icone grigie nel punto di controllo dell'utilità.  
@@ -50,7 +50,7 @@ ms.locfileid: "72797782"
   
  L'esecuzione del comando è stata arrestata perché la variabile della shell "ErrorActionPreference" è impostata sull'arresto: accesso negato.  
   
- ERRORE: \<data-ora (MM/GG/AAAA HH: MM: SS) >: è stata rilevata un'eccezione durante la raccolta delle proprietà della CPU.  È probabile che una query WMI non sia riuscita.  AVVISO.  
+ ERRORE: \<data-ora (mm/gg/aaaa hh: mm: SS) >: è stata rilevata un'eccezione durante la raccolta delle proprietà della CPU.  È probabile che una query WMI non sia riuscita.  AVVISO.  
   
  Per risolvere questo problema, verificare le impostazioni di configurazione seguenti:  
   
@@ -114,17 +114,17 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  In **Esplora oggetti**di SSMS espandere il nodo **Sicurezza** , quindi espandere il nodo **Credenziali** .  
   
-    2.  Fare clic con il pulsante destro del mouse su **UtilityAgentProxyCredential_\<GUID >** e selezionare **Proprietà**.  
+    2.  Fare clic con il pulsante destro del mouse su **UtilityAgentProxyCredential_\<GUID>** e selezionare **proprietà**.  
   
-    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali necessarie per il **UtilityAgentProxyCredential_\<GUID >** Credential.  
+    3.  Nella finestra di dialogo Proprietà credenziali aggiornare le credenziali necessarie per il **GUID\<UtilityAgentProxyCredential_>** Credential.  
   
-    4.  Scegliere **OK** per confermare la modifica.  
+    4.  Fare clic su **OK** per confermare la modifica.  
   
 -   TCP/IP deve essere abilitato nel punto di controllo dell'utilità e nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Abilitare TCP/IP tramite Gestione configurazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   È necessario avviare e configurare per l'avvio automatico il servizio SQL Server Browser nel punto di controllo dell'utilità. Se l'organizzazione non consente l'utilizzo del servizio SQL Server Browser, utilizzare i passaggi seguenti per consentire a un'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di connettersi al punto di controllo dell'utilità:  
   
-    1.  Sulla barra delle applicazioni di Windows nell'istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fare clic sul pulsante **Start**, quindi scegliere **Esegui.**  
+    1.  Sulla barra delle applicazioni di Windows nell'istanza gestita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]di, fare clic su **Start**, quindi su **Esegui...**.  
   
     2.  Digitare "cliconfg.exe" nella casella, quindi fare clic su **OK**.  
   
@@ -144,7 +144,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     10. Specificare il numero della porta su cui il punto di controllo dell'utilità è in attesa nella casella di testo **Numero porta** .  
   
-    11. Scegliere **OK** per salvare le modifiche.  
+    11. Fare clic su **OK** per salvare le modifiche.  
   
     12. Ripetere questi passaggi per ogni istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che si connette a un punto di controllo dell'utilità in cui il servizio SQL Server Browser non è abilitato.  
   
@@ -158,7 +158,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  Fare clic con il pulsante destro del mouse su **Performance Monitor Users** e scegliere **Aggiungi a gruppo**.  
   
-    3.  Scegliere **Aggiungi**.  
+    3.  Fare clic su **Aggiungi**.  
   
     4.  Immettere l'account che il servizio SQL Server Agent sta utilizzando, quindi fare clic su **OK**.  
   

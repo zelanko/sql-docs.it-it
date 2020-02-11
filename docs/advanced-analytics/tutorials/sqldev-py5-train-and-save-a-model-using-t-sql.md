@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8bec553502b2e5c8d69436e539437be9a5989aa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 87194c1a77964f0e5aef3d0fae008d14cbfb8eb2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73724881"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901801"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Eseguire il training e il salvataggio di un modello Python usando T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ Per semplificare la ripetizione del training del modello sui nuovi dati, è poss
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    L'elaborazione dei dati e l'adattamento del modello possono richiedere alcuni minuti. I messaggi che verrebbero inoltrati al flusso **stdout** di Python sono visualizzati nella finestra **Messaggi** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Esempio:
+    L'elaborazione dei dati e l'adattamento del modello possono richiedere alcuni minuti. I messaggi che verrebbero inoltrati al flusso **stdout** di Python sono visualizzati nella finestra **Messaggi** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ad esempio:
 
     *STDOUT message(s) from external script:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
@@ -179,7 +179,7 @@ Usando **revoscalepy**, è possibile creare contesti di calcolo remoti, spostare
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    L'elaborazione dei dati e l'adattamento del modello possono richiedere un po' di tempo. I messaggi che verrebbero inoltrati al flusso **stdout** di Python sono visualizzati nella finestra **Messaggi** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Esempio:
+    L'elaborazione dei dati e l'adattamento del modello possono richiedere un po' di tempo. I messaggi che verrebbero inoltrati al flusso **stdout** di Python sono visualizzati nella finestra **Messaggi** di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ad esempio:
 
     *STDOUT message(s) from external script:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*

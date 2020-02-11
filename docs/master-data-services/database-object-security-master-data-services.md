@@ -14,10 +14,10 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cd3ce4034a1e64c7c8ca6b1e54d989b129f177f4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728432"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
@@ -32,17 +32,17 @@ ms.locfileid: "73728432"
   
  Per le attività seguenti viene richiesto l'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   
--   [Dati di gestione temporanea](#Staging)  
+-   [Gestione temporanea dei dati](#Staging)  
   
 -   [Convalida dei dati rispetto a regole business](#rules)  
   
 -   [Eliminazione di versioni](#Versions)  
   
--   [Applicazione immediata di autorizzazioni per membri della gerarchia](#Hierarchy)  
+-   [Applicazione immediata di autorizzazioni membri gerarchia](#Hierarchy)  
   
--   [Configurazione di impostazioni di sistema](#SysSettings)  
+-   [Configurazione delle impostazioni di sistema](#SysSettings)  
   
-##  <a name="Staging"></a> Dati di gestione temporanea  
+##  <a name="Staging"></a>Gestione temporanea dei dati  
  Nella tabella seguente, in ogni entità a protezione diretta la parola "name" fa parte del nome. Viene indicato il nome della tabella di staging specificato quando viene creata un'entità. Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
@@ -55,9 +55,9 @@ ms.locfileid: "73728432"
 |Caricare i dati dalla tabella di staging Relazione nelle tabelle di database MDS appropriate.|stg.udp_name_Relationship|EXECUTE|  
 |Visualizzare gli errori che si verificati quando i dati delle tabelle di staging sono stati inseriti nelle tabelle di database MDS.|stg.udp_name_Relationship|SELECT|  
   
- Per altre informazioni, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Per altre informazioni, vedere [Panoramica: importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="rules"></a> Convalida dei dati rispetto a regole business  
+##  <a name="rules"></a>Convalida dei dati rispetto a regole business  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|---------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "73728432"
   
  Per altre informazioni, vedere [Stored procedure di convalida &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="Versions"></a> Eliminazione di versioni  
+##  <a name="Versions"></a>Eliminazione di versioni  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "73728432"
   
  Per altre informazioni, vedere [Eliminare una versione &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="Hierarchy"></a> Applicazione immediata di autorizzazioni per membri della gerarchia  
+##  <a name="Hierarchy"></a>Applicazione immediata di autorizzazioni membri gerarchia  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  
@@ -82,10 +82,10 @@ ms.locfileid: "73728432"
   
  Per altre informazioni, vedere [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysSettings"></a> Configurazione di impostazioni di sistema  
+##  <a name="SysSettings"></a>Configurazione delle impostazioni di sistema  
  È possibile configurare alcune impostazioni di sistema per controllare il comportamento in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Queste impostazioni possono essere modificate in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oppure, se si dispone dell'autorizzazione di accesso UPDATE, direttamente nella tabella di database mdm.tblSystemSetting. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+ [&#40;di sicurezza Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

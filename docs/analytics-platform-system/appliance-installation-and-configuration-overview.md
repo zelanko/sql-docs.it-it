@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401441"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Installazione e configurazione di appliance per il sistema della piattaforma Analytics
@@ -37,7 +37,7 @@ Se il IHV non esegue l'installazione dell'hardware, attenersi alla procedura seg
   
 |||  
 |-|-|  
-|**Attività**|**Description**|  
+|**Attività**|**Descrizione**|  
 |Conferma documentazione|Verificare di aver ricevuto tutte le informazioni e i documenti necessari dal fornitore dell'hardware indipendente (IHV). Vedere [le informazioni da ottenere dalla piattaforma IHV &#40;Analytics System&#41;](information-to-obtain-from-your-ihv.md).|  
 |Installare l'hardware|Verificare che l'data center possa contenere l'appliance. Spostare i componenti dell'appliance nel data center. Rack i commutatori di rete, PDU e cablaggio. Vedere [Installazione Hardware &#40;&#41;di sistema della piattaforma di analisi ](hardware-installation.md).|  
   
@@ -45,14 +45,14 @@ Se il IHV non esegue l'installazione dell'hardware, attenersi alla procedura seg
   
 |||  
 |-|-|  
-|**Attività**|**Description**|  
+|**Attività**|**Descrizione**|  
 |Accendere l'appliance|Accendere ogni nodo del componente Appliance nell'ordine necessario, in attesa di verificare che non vengano rilevati errori.|  
   
 ## <a name="ConfigureAppliance"></a>3. configurare l'appliance  
   
 |||  
 |-|-|  
-|**Attività**|**Description**|  
+|**Attività**|**Descrizione**|  
 |||  
 |Configurare l'appliance usando il SQL Server PDW**Configuration Manager**|Usare il Configuration Manager per impostare le password dell'appliance, i fusi orari, le impostazioni di rete e del firewall, i certificati di sicurezza e le prestazioni e altre impostazioni nel dispositivo. Vedere [configurazione del dispositivo &#40;&#41;di sistema della piattaforma di analisi ](appliance-configuration.md).|  
   
@@ -63,7 +63,7 @@ Se il IHV non esegue l'installazione dell'hardware, attenersi alla procedura seg
   
 |||  
 |-|-|  
-|**Attività**|**Description**|  
+|**Attività**|**Descrizione**|  
 |Applicare gli aggiornamenti di SQL Server PDW|Opzionale Potrebbe essere necessario applicare uno o più aggiornamenti SQL Server PDW per aggiornare il software SQL Server PDW alla versione più recente. Vedere applicare gli hotfix del sistema della piattaforma di [analisi &#40;&#41;del sistema della piattaforma di analisi ](apply-analytics-platform-system-hotfixes.md).|  
 |Configurare Windows Server Update Services|Configurare l'appliance per la ricezione di aggiornamenti da Windows Server Update Services per il software di supporto. Vedere [scaricare e applicare gli aggiornamenti Microsoft &#40;&#41;di sistema della piattaforma di analisi ](download-and-apply-microsoft-updates.md).|  
   
@@ -72,7 +72,7 @@ Dopo aver completato tutti i passaggi precedenti, l'appliance è pronta per l'us
   
 |||  
 |-|-|  
-|**Attività**|**Description**|  
+|**Attività**|**Descrizione**|  
 |Installare i driver SQL Server PDW e configurare la connettività|Configurare i computer locali per la connessione a SQL Server PDW tramite SQL Server Data Tools, sqlcmd, business intelligence software o altri strumenti. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |Creare accessi e ruoli del server e assegnare autorizzazioni|Pianificare e creare accessi e ruoli del server che consentiranno agli utenti di accedere a SQL Server PDW con le autorizzazioni appropriate. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Configurare il gateway di Azure Gestione dati|Il gateway consente agli utenti di Azure di accedere ai dati APS locali esponendo i dati APS come feed OData protetti. Il gateway è già installato nel nodo di controllo. Chiedere assistenza a Microsoft per la configurazione.|  

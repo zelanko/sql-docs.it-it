@@ -1,5 +1,5 @@
 ---
-title: Proprietà (Recordset ADO) dell'origine | Microsoft Docs
+title: Proprietà Source (recordset ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -22,26 +22,26 @@ ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f6ac84445272ae3657d4e25691dbbf150f32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930924"
 ---
 # <a name="source-property-ado-recordset"></a>Proprietà Source (Recordset - ADO)
-Indica l'origine dati per un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
+Indica l'origine dati per un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Set di un **stringa** valore oppure [comando](../../../ado/reference/ado-api/command-object-ado.md) riferimento; oggetto restituisce solo un **stringa** valore che indica l'origine del **Recordset**.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta un valore **stringa** o un riferimento all'oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) ; restituisce solo un valore **stringa** che indica l'origine del **Recordset**.  
   
-## <a name="remarks"></a>Note  
- Usare la **origine** proprietà per specificare un'origine dati per un **Recordset** dell'oggetto usando uno dei seguenti: una **comando** dell'oggetto variabile, un'istruzione SQL, una stored procedure, o un nome di tabella.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la proprietà **source** per specificare un'origine dati per un oggetto **Recordset** utilizzando uno dei seguenti elementi: una variabile oggetto **comando** , un'istruzione SQL, un stored procedure o un nome di tabella.  
   
- Se si imposta la **origine** proprietà a un **comando** oggetto, il [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà del **Recordset** oggetto erediterà il valore di **ActiveConnection** proprietà per l'oggetto specificato **comando** oggetto. Tuttavia, la lettura il **origine** proprietà non restituisce un **comando** dell'oggetto; al contrario, restituisce il [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà del **comando** dell'oggetto per cui impostare il **origine** proprietà.  
+ Se si imposta la **proprietà Source** su un oggetto **Command** , la proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) dell'oggetto **Recordset** erediterà il valore della proprietà **ActiveConnection** per l'oggetto **comando** specificato. Tuttavia, la lettura della proprietà **source** non restituisce un oggetto **Command** ; Restituisce invece la proprietà [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) dell'oggetto **Command** a cui si imposta la proprietà **source** .  
   
- Se il **origine** è un'istruzione SQL, una stored procedure o un nome di tabella, è possibile ottimizzare le prestazioni passando appropriato *opzioni* argomento con il [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)chiamata al metodo.  
+ Se la proprietà **source** è un'istruzione SQL, un stored procedure o un nome di tabella, è possibile ottimizzare le prestazioni passando l'argomento *options* appropriato con la chiamata al metodo [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) .  
   
- Il **origine** proprietà è di lettura/scrittura per chiuso **Recordset** oggetti e read-only per aprire **Recordset** oggetti.  
+ La proprietà di **origine** è in lettura/scrittura per gli oggetti **Recordset** chiusi e in sola lettura per gli oggetti **Recordset** aperti.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
@@ -49,4 +49,4 @@ Indica l'origine dati per un [Recordset](../../../ado/reference/ado-api/recordse
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di proprietà Source (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Proprietà Source (errore ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Proprietà Source (Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)
+ [Proprietà Source (Record - ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

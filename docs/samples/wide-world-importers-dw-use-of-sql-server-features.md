@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: dfce2ce4a6f13a25687d668268f532893c1404e0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056294"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Uso di WideWorldImportersDW delle funzionalità e delle funzionalità di SQL Server
@@ -31,11 +31,11 @@ Per abilitare l'utilizzo di polibase nel database di esempio, assicurarsi che si
 
     EXEC [Application].[Configuration_ApplyPolyBase]
 
-Verrà creata una tabella esterna `dbo.CityPopulationStatistics` che fa riferimento a un set di dati pubblico che contiene i dati relativi alla popolazione per le città nell'Stati Uniti, ospitati nell'archiviazione BLOB di Azure. Si consiglia di esaminare il codice nel stored procedure per comprendere il processo di configurazione. Se si vuole ospitare i propri dati nell'archivio BLOB di Azure e mantenerli protetti dall'accesso pubblico generale, è necessario eseguire passaggi di configurazione aggiuntivi. La query seguente restituisce i dati dal set di dati esterno:
+Verrà creata una tabella `dbo.CityPopulationStatistics` esterna che fa riferimento a un set di dati pubblico che contiene i dati della popolazione per le città nell'Stati Uniti, ospitati nell'archiviazione BLOB di Azure. Si consiglia di esaminare il codice nel stored procedure per comprendere il processo di configurazione. Se si vuole ospitare i propri dati nell'archivio BLOB di Azure e mantenerli protetti dall'accesso pubblico generale, è necessario eseguire passaggi di configurazione aggiuntivi. La query seguente restituisce i dati dal set di dati esterno:
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-Per comprendere quali città possono essere di interesse per un'ulteriore espansione, la query seguente esamina il tasso di crescita delle città e restituisce le prime 100 città più grandi con una crescita significativa e in cui Wide World Importers non dispone di una presenza di vendite. La query include un join tra la tabella remota `dbo.CityPopulationStatistics` e la tabella locale `Dimension.City`e un filtro che interessa la tabella locale `Fact.Sales`.
+Per comprendere quali città possono essere di interesse per un'ulteriore espansione, la query seguente esamina il tasso di crescita delle città e restituisce le prime 100 città più grandi con una crescita significativa e in cui Wide World Importers non dispone di una presenza di vendite. La query include un join tra la tabella remota `dbo.CityPopulationStatistics` e la tabella `Dimension.City`locale e un filtro che interessa la tabella `Fact.Sales`locale.
 
     WITH PotentialCities
     AS
@@ -79,7 +79,7 @@ Gli indici non cluster vengono usati sopra l'indice columnstore cluster per semp
 
 Le dimensioni dei dati del database di esempio sono limitate, per facilitare il download e l'installazione dell'esempio. Tuttavia, per vedere i vantaggi effettivi delle prestazioni degli indici columnstore, è consigliabile usare un set di dati di dimensioni maggiori.
 
-È possibile eseguire l'istruzione seguente per aumentare le dimensioni della tabella `Fact.Sales` inserendo altre 12 milioni righe di dati di esempio. Queste righe vengono inserite per l'anno 2012, in modo che non esistano interferenze con il processo ETL.
+È possibile eseguire l'istruzione seguente per aumentare le dimensioni della `Fact.Sales` tabella inserendo altre 12 milioni righe di dati di esempio. Queste righe vengono inserite per l'anno 2012, in modo che non esistano interferenze con il processo ETL.
 
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
 
@@ -101,14 +101,14 @@ Per ricreare:
 
 Le dimensioni dei dati in un data warehouse possono aumentare notevolmente. È pertanto consigliabile utilizzare il partizionamento per gestire l'archiviazione delle tabelle di grandi dimensioni nel database.
 
-Tutte le tabelle dei fatti più grandi vengono partizionate in base all'anno. L'unica eccezione è `Fact.Stock Holdings`, che non è basata sulla data e ha dimensioni di dati limitate rispetto alle altre tabelle dei fatti.
+Tutte le tabelle dei fatti più grandi vengono partizionate in base all'anno. L'unica eccezione è `Fact.Stock Holdings`, che non è basata sulla data e ha una dimensione dei dati limitata rispetto alle altre tabelle dei fatti.
 
-La funzione di partizione utilizzata per tutte le tabelle partizionate è `PF_Date`e lo schema di partizione utilizzato è `PS_Date`.
+La funzione di partizione utilizzata per tutte le tabelle partizionate è `PF_Date`e lo schema di partizione utilizzato `PS_Date`è.
 
 ## <a name="in-memory-oltp"></a>OLTP in memoria
 
 (Versione completa dell'esempio)
 
-WideWorldImportersDW utilizza SCHEMA_ONLY tabelle ottimizzate per la memoria per le tabelle di staging. Tutte le tabelle `Integration.`*`_Staging` sono SCHEMA_ONLY tabelle ottimizzate per la memoria.
+WideWorldImportersDW utilizza SCHEMA_ONLY tabelle ottimizzate per la memoria per le tabelle di staging. Tutte `Integration.` * `_Staging` le tabelle sono SCHEMA_ONLY tabelle ottimizzate per la memoria.
 
 Il vantaggio di SCHEMA_ONLY tabelle è che non vengono registrate e non richiedono l'accesso al disco. Ciò migliora le prestazioni del processo ETL. Poiché queste tabelle non vengono registrate, il relativo contenuto viene perso se si verifica un errore. Tuttavia, l'origine dati è ancora disponibile, pertanto il processo ETL può essere semplicemente riavviato se si verifica un errore.

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c2aa59b0806cc0ede01fa728636ab9d90479f14b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898849"
 ---
 # <a name="expression-builder"></a>Generatore di espressioni
@@ -38,7 +38,7 @@ ms.locfileid: "62898849"
   
 ## <a name="options"></a>Opzioni  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |**Variabili**|Espandere la cartella **Variabili** e trascinare le variabili nella casella **Espressione** .|  
 |**Funzioni matematiche**<br /><br /> **Funzioni per i valori stringa**<br /><br /> **Funzioni di data/ora**<br /><br /> **Funzioni NULL**<br /><br /> **Cast di tipo**<br /><br /> **Operatori**|Espandere le cartelle e trascinare le funzioni, i cast di tipo e gli operatori nella casella **Espressione** .|  

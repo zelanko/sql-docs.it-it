@@ -1,5 +1,5 @@
 ---
-title: Compatibilità con le versioni precedenti
+title: Backward Compatibility
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7c6236da4a424a3f328671e7a2a3556b47321748
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728708"
 ---
 # <a name="backward-compatibility-master-data-services"></a>Compatibilità con le versioni precedenti (Master Data Services)
@@ -25,8 +25,8 @@ ms.locfileid: "73728708"
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Funzionalità deprecate di Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
+-   [Funzionalità di Master Data Services deprecate](../master-data-services/deprecated-master-data-services-features.md)  
   
--   [Funzionalità di Master Data Services non più supportate](../master-data-services/discontinued-master-data-services-features.md)  
+-   [Funzionalità di Master Data Services sospese](../master-data-services/discontinued-master-data-services-features.md)  
   
   

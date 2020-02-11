@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401369"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Applicare gli aggiornamenti rapidi della piattaforma di strumenti analitici
@@ -27,7 +27,7 @@ Questo articolo illustra come applicare aggiornamenti rapidi al software del sis
 > [!WARNING]  
 > Non applicare un hotfix del sistema della piattaforma Analytics mentre l'appliance è in uso. L'applicazione di un hotfix può causare il riavvio del nodo del dispositivo. L'hotfix deve essere applicato durante una finestra di manutenzione quando l'appliance non è in uso.  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
 Per eseguire questi passaggi, sarà necessario:  
   
 -   Un account di accesso del sistema della piattaforma Analytics con le autorizzazioni per accedere alla console di amministrazione per monitorare lo stato dell'appliance. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
