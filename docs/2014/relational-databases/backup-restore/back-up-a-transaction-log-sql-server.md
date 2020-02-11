@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783114"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Backup di un log delle transazioni (SQL Server)
   In questo argomento viene descritto come eseguire il backup di un log delle transazioni in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72783114"
      [PowerShell](#PowerShellProcedure)  
   
     > [!NOTE]  
-    >  In alternativa, è possibile creare i backup tramite la[Creazione guidata piano di manutenzione](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
+    >  In alternativa, è possibile utilizzare la[creazione guidata piano di manutenzione](../maintenance-plans/use-the-maintenance-plan-wizard.md)per creare i backup.  
   
 -   [Attività correlate](#RelatedTasks)  
   
@@ -70,11 +70,11 @@ ms.locfileid: "72783114"
   
 #### <a name="to-back-up-a-transaction-log"></a>Per eseguire il backup di un log delle transazioni  
   
-1.  Dopo aver stabilito la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
+1.  Dopo aver effettuato la connessione all'istanza appropriata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Esplora oggetti fare clic sul nome del server per espanderne l'albero.  
   
 2.  Espandere **Database**e, a seconda del database, selezionare un database utente o espandere **Database di sistema** e selezionare un database di sistema.  
   
-3.  Fare clic con il pulsante destro del mouse sul database, scegliere **Attività**e quindi fare clic su **Back Up**. Verrà visualizzata la finestra di dialogo **Backup database** .  
+3.  Fare clic con il pulsante destro del mouse sul database, selezionare **Attività**, quindi fare clic su **Esegui backup**. Verrà visualizzata la finestra di dialogo **Backup database** .  
   
 4.  Verificare il nome del database nella casella di riepilogo **Database** . È possibile selezionare facoltativamente un database diverso nell'elenco.  
   
@@ -82,30 +82,30 @@ ms.locfileid: "72783114"
   
 6.  Nella casella di riepilogo **Tipo backup** selezionare **Log delle transazioni**.  
   
-7.  Facoltativamente, è possibile selezionare **Copia solo backup** per creare un backup di sola copia. Un *backup di sola copia* è un backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indipendente dalla sequenza di backup convenzionali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+7.  Facoltativamente, è possibile selezionare **Backup di sola copia** per creare un backup di sola copia. Un *backup di sola copia* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup indipendente dalla sequenza di backup convenzionali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Backup di sola copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
-    >  Quando si seleziona l'opzione **Differenziale**, non è possibile creare un backup di sola copia.  
+    >  Quando si seleziona l'opzione **Differenziale** , non è possibile creare un backup di sola copia.  
   
-8.  Accettare il nome predefinito del set di backup indicato nella casella di testo **Nome** oppure immettere un nome diverso per il set di backup.  
+8.  Accettare il nome del set di backup predefinito suggerito nella casella di testo **Nome** o immettere un nome diverso.  
   
-9. Facoltativamente, immettere una descrizione del set di backup nella casella di testo **Descrizione** .  
+9. Facoltativamente, immettere una descrizione del set di backup nella casella di testo **Descrizione**.  
   
 10. Specificare la scadenza del set di backup:  
   
-    -   Per impostare la scadenza del set di backup dopo un numero di giorni specifico, fare clic su **Dopo** (opzione predefinita) e immettere il numero di giorni dopo la creazione del set trascorsi i quali il set scadrà. È possibile impostare un valore compreso nell'intervallo da 0 a 99999 giorni. L'impostazione del valore 0 giorni indica che il set di backup non ha scadenza.  
+    -   Per impostare il set di backup in modo che scada dopo un numero specifico di giorni, fare clic su **Dopo** (opzione predefinita) e immettere il numero di giorni dalla creazione del set trascorsi i quali il set scadrà. È possibile impostare un valore compreso nell'intervallo da 0 a 99999 giorni. L'impostazione del valore 0 giorni indica che il set di backup non ha scadenza.  
   
-         Il valore predefinito viene impostato nell'opzione **Periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà server** (pagina**Impostazioni database** ). Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti, scegliere Proprietà e quindi selezionare la pagina **Impostazioni database** .  
+         Il valore predefinito viene impostato nell'opzione **periodo di memorizzazione predefinito supporti di backup (giorni)** della finestra di dialogo **Proprietà Server** (pagina**Impostazioni database** ). Per accedere a questa finestra di dialogo, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti, scegliere Proprietà e quindi selezionare la pagina **Impostazioni database** .  
   
-    -   Per impostare una data di scadenza specifica per il set di backup, fare clic su **Il**e immettere la data di scadenza del set.  
+    -   Per impostare il set di backup in modo che scada in una data specifica, fare clic su **Il** e immettere la data di scadenza del set.  
   
 11. Per selezionare il tipo di destinazione del backup fare clic su **Disco**, **URL** o **Nastro**. Per selezionare i percorsi per un massimo di 64 unità disco o nastro contenenti un singolo set di supporti, fare clic su **Aggiungi**. I percorsi selezionati vengono visualizzati nella casella di riepilogo **Backup su** .  
   
      Per rimuovere una destinazione di backup, selezionarla e fare clic su **Rimuovi**. Per visualizzare il contenuto di una destinazione di backup, selezionarla e fare clic su **Contenuto**.  
   
-12. Per visualizzare o selezionare le opzioni avanzate, fare clic su **Opzioni** nel riquadro **Selezione pagina** .  
+12. Per visualizzare o selezionare le opzioni avanzate, fare clic su **Opzioni** nel riquadro **Selezione pagina**.  
   
-13. Selezionare un'opzione **Sovrascrivi supporti** facendo clic su una delle opzioni seguenti:  
+13. Selezionare un'opzione **Sovrascrivi supporti** facendo clic su uno degli elementi seguenti:  
   
     -   **Esegui backup nel set di supporti esistente**  
   
@@ -119,13 +119,13 @@ ms.locfileid: "72783114"
   
     -   **Esegui backup in un nuovo set di supporti e cancella tutti i set di backup esistenti**  
   
-         Per questa opzione, immettere un nome nella casella di testo **Nome nuovo set di supporti** e, facoltativamente, aggiungere una descrizione per il set di supporti nella casella di testo **Descrizione nuovo set di supporti** . Per altre informazioni, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+         Per questa opzione, immettere un nome nella casella di testo **Nome nuovo set di supporti** e, se lo si desidera, descrivere il set di supporti nella casella di testo **Descrizione nuovo set di supporti**. Per altre informazioni, vedere [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
-14. Nella sezione **Affidabilità** selezionare facoltativamente una delle opzioni seguenti:  
+14. Nella sezione **affidabilità** selezionare facoltativamente:  
   
-    -   **Verifica backup al termine**.  
+    -   **Verificare il backup al termine**dell'operazione.  
   
-    -   **Esegui checksum prima della scrittura nei supporti**e, facoltativamente, **Continua in caso di errori checksum**. Per informazioni sui checksum, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Eseguire checksum prima della scrittura nei supporti**e, facoltativamente, **continuare in un errore di checksum**. Per informazioni sui checksum, vedere [Possibili errori relativi ai supporti durante il backup e il ripristino &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
 15. Nella sezione **Log delle transazioni** eseguire le operazioni seguenti:  
   
@@ -135,9 +135,9 @@ ms.locfileid: "72783114"
   
          Un backup della parte finale del log viene eseguito dopo un errore per evitare la perdita di dati salvando la parte finale del log. Eseguire il backup del log attivo, ovvero il backup della parte finale del log, sia dopo un errore, prima di iniziare a ripristinare il database, sia quando si esegue il failover a un database secondario. Selezionare questa opzione corrisponde a specificare l'opzione NORECOVERY nell'istruzione BACKUP LOG di Transact-SQL. Per altre informazioni sui backup della parte finale del log, vedere [Backup della parte finale del log &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
   
-16. Se si esegue il backup su un'unità nastro (come specificato nella sezione **Destinazione** della pagina **Generale**) l'opzione **Scarica nastro al termine del backup** sarà attiva. Se si seleziona questa opzione, verrà inoltre attivata l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
+16. Se si esegue il backup su un'unità nastro, come specificato nella sezione **Destinazione** della pagina **Generale** , l'opzione **Scarica nastro al termine del backup** sarà attiva. Se si seleziona questa opzione, verrà inoltre attivata l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] e versioni successive supporta la [compressione dei backup](backup-compression-sql-server.md). Per impostazione predefinita, la compressione di un backup dipende dal valore dell'opzione di configurazione del server **Valore predefinito di compressione backup** . Tuttavia, indipendentemente dall'impostazione predefinita a livello di server corrente, è possibile comprimere un backup selezionando **Comprimi backup**ed è possibile impedire la compressione selezionando **Non comprimere il backup**.  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]e versioni successive supporta la [compressione dei backup](backup-compression-sql-server.md). Per impostazione predefinita, il fatto che un backup venga o meno compresso dipende dal valore dell'opzione di configurazione del server **Compressione backup predefinita**. Tuttavia, indipendentemente dall'impostazione predefinita a livello del server corrente, è possibile comprimere un backup selezionando la casella **Comprimi backup** e impedirne la compressione selezionando la casella **Non comprimere il backup**.  
   
      **Per visualizzare l'impostazione predefinita corrente della compressione dei backup**  
   
@@ -194,12 +194,12 @@ Per configurare e usare il provider di SQL Server PowerShell, vedere [provider d
   
 -   [Ripristinare un backup del log delle transazioni &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
--   [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [Risolvere i problemi relativi a un log delle transazioni completo &#40;errore di SQL Server 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Applicare backup di log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Applicare backup del log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Piani di manutenzione](../maintenance-plans/maintenance-plans.md)   
- [Backup completi del file &#40;SQL Server&#41;](full-file-backups-sql-server.md)  
+ [Backup completi dei file &#40;SQL Server&#41;](full-file-backups-sql-server.md)  

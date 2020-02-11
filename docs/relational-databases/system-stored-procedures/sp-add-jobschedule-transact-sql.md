@@ -18,10 +18,10 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70810501"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
@@ -29,10 +29,10 @@ ms.locfileid: "70810501"
 
   Crea una pianificazione per un processo di SQL Agent.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+  > In [istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la maggior parte delle funzionalità di SQL Server Agent sono attualmente supportate. Per informazioni dettagliate, vedere [istanza gestita di database SQL di Azure differenze di T-SQL da SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,92 +54,92 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
+`[ @job_id = ] job_id`Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
   
-`[ @job_name = ] 'job_name'` nome del processo a cui viene aggiunta la pianificazione. *job_name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
+`[ @job_name = ] 'job_name'`Nome del processo a cui viene aggiunta la pianificazione. *job_name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
-Nome `[ @name = ] 'name'` della pianificazione. *Name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
+`[ @name = ] 'name'`Nome della pianificazione. *Name* è di **tipo nvarchar (128)** e non prevede alcun valore predefinito.  
   
-`[ @enabled = ] enabled_flag` indica lo stato corrente della pianificazione. *enabled_flag* è di **tinyint**e il valore predefinito è **1** (abilitato). Se è **0**, la pianificazione non è abilitata. Quando la pianificazione è disabilitata, il processo non viene eseguito.  
+`[ @enabled = ] enabled_flag`Indica lo stato corrente della pianificazione. *enabled_flag* è di **tinyint**e il valore predefinito è **1** (abilitato). Se è **0**, la pianificazione non è abilitata. Quando la pianificazione è disabilitata, il processo non viene eseguito.  
   
-`[ @freq_type = ] frequency_type` valore che indica quando deve essere eseguito il processo. *frequency_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti:  
+`[ @freq_type = ] frequency_type`Valore che indica quando deve essere eseguito il processo. *frequency_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti:  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
+|**1**|Una sola volta|  
 |**4**|Ogni giorno|  
-|**8**|Settimanale|  
+|**8**|Ogni settimana|  
 |**16**|Mensile|  
 |**32**|Mensile rispetto a *frequency_interval.*|  
 |**64**|All'avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
 |**128**|Quando il computer è inattivo|  
   
-`[ @freq_interval = ] frequency_interval` giorno in cui viene eseguito il processo. *frequency_interval* è di **tipo int**e il valore predefinito è 0 e dipende dal valore di *frequency_type* , come indicato nella tabella seguente:  
+`[ @freq_interval = ] frequency_interval`Giorno in cui viene eseguito il processo. *frequency_interval* è di **tipo int**e il valore predefinito è 0 e dipende dal valore di *frequency_type* , come indicato nella tabella seguente:  
   
 |valore|Effetto|  
 |-----------|------------|  
-|**1** (once)|*frequency_interval* non è utilizzato.|  
+|**1** (una volta)|*frequency_interval* non è utilizzato.|  
 |**4** (giornaliera)|Ogni *frequency_interval* giorni.|  
 |**8** (settimanale)|*frequency_interval* è uno o più degli elementi seguenti (combinati con un operatore logico OR):<br /><br /> 1 = domenica<br /><br /> 2 = lunedì<br /><br /> 4 = martedì<br /><br /> 8 = mercoledì<br /><br /> 16 = giovedì<br /><br /> 32 = venerdì<br /><br /> 64 = sabato|  
 |**16** (ogni mese)|Il *frequency_interval* giorno del mese.|  
 |**32** (mensile relativo)|*frequency_interval* è uno dei seguenti:<br /><br /> 1 = domenica<br /><br /> 2 = lunedì<br /><br /> 3 = martedì<br /><br /> 4 = mercoledì<br /><br /> 5 = giovedì<br /><br /> 6 = venerdì<br /><br /> 7 = sabato<br /><br /> 8 = giorno<br /><br /> 9 = giorno feriale<br /><br /> 10 = giorno festivo|  
-|**64** (all'avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent)|*frequency_interval* non è utilizzato.|  
+|**64** (all'avvio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servizio Agent)|*frequency_interval* non è utilizzato.|  
 |**128**|*frequency_interval* non è utilizzato.|  
   
-`[ @freq_subday_type = ] frequency_subday_type` specifica le unità per *frequency_subday_interval*. *frequency_subday_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
+`[ @freq_subday_type = ] frequency_subday_type`Specifica le unità per *frequency_subday_interval*. *frequency_subday_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
 |valore|Descrizione (unità)|  
 |-----------|--------------------------|  
 |**0x1**|All'ora specificata|  
-|**0x4**|Minutes|  
+|**0x4**|Minuti|  
 |**0x8**|Ore|  
   
-`[ @freq_subday_interval = ] frequency_subday_interval` numero di *frequency_subday_type* periodi tra ogni esecuzione del processo. *frequency_subday_interval* è di **tipo int**e il valore predefinito è 0.  
+`[ @freq_subday_interval = ] frequency_subday_interval`Numero di periodi di *frequency_subday_type* tra le esecuzioni del processo. *frequency_subday_interval* è di **tipo int**e il valore predefinito è 0.  
   
-`[ @freq_relative_interval = ] frequency_relative_interval` definisce ulteriormente il *frequency_interval* quando *frequency_type* è impostato su **32** (mensile relativo).  
+`[ @freq_relative_interval = ] frequency_relative_interval`Definisce ulteriormente il *frequency_interval* quando *frequency_type* è impostato su **32** (mensile relativo).  
   
  *frequency_relative_interval* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti:  
   
 |valore|Descrizione (unità)|  
 |-----------|--------------------------|  
-|**1**|Primo|  
-|**2**|Secondo|  
+|**1**|First (Primo)|  
+|**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  
-|**16**|Ultimo|  
+|**16**|Last (Ultimo)|  
   
  *frequency_relative_interval* indica l'occorrenza dell'intervallo. Se ad esempio *frequency_relative_interval* è impostato su **2**, *frequency_type* è impostato su **32**e *frequency_interval* è impostato su **3**, il processo pianificato verrà eseguito il secondo martedì di ogni mese.  
   
-`[ @freq_recurrence_factor = ] frequency_recurrence_factor` numero di settimane o mesi tra l'esecuzione pianificata del processo. *frequency_recurrence_factor* viene utilizzato solo se *frequency_type* è impostato su **8**, **16**o **32**. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è 0.  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor`Numero di settimane o mesi che intercorre tra l'esecuzione pianificata del processo. *frequency_recurrence_factor* viene utilizzato solo se *frequency_type* è impostato su **8**, **16**o **32**. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è 0.  
   
-`[ @active_start_date = ] active_start_date` data in cui può iniziare l'esecuzione del processo. *active_start_date* è di **tipo int**e non prevede alcun valore predefinito. La data è nel formato AAAAMMGG. Se *active_start_date* è impostato, la data deve essere maggiore o uguale a 19900101.  
+`[ @active_start_date = ] active_start_date`Data in cui può iniziare l'esecuzione del processo. *active_start_date* è di **tipo int**e non prevede alcun valore predefinito. La data è nel formato AAAAMMGG. Se *active_start_date* è impostato, la data deve essere maggiore o uguale a 19900101.  
   
  Al termine della creazione della pianificazione, esaminare la data di inizio per verificare che corrisponda alla data corretta. Per ulteriori informazioni, vedere la sezione "pianificazione della data di inizio" in [creare e alleghi pianificazioni ai processi](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
-`[ @active_end_date = ] active_end_date` data in cui l'esecuzione del processo può essere arrestata. *active_end_date* è di **tipo int**e non prevede alcun valore predefinito. La data è nel formato AAAAMMGG.  
+`[ @active_end_date = ] active_end_date`Data in cui l'esecuzione del processo può essere arrestata. *active_end_date* è di **tipo int**e non prevede alcun valore predefinito. La data è nel formato AAAAMMGG.  
   
-`[ @active_start_time = ] active_start_time` tempo in qualsiasi giorno tra *active_start_date* e *active_end_date* per avviare l'esecuzione del processo. *active_start_time* è di **tipo int**e non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
+`[ @active_start_time = ] active_start_time`Ora di ogni giorno tra *active_start_date* e *active_end_date* per iniziare l'esecuzione del processo. *active_start_time* è di **tipo int**e non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
   
-`[ @active_end_time = active_end_time_` tempo in qualsiasi giorno tra *active_start_date* e *active_end_date* per terminare l'esecuzione del processo. *active_end_time* è di **tipo int**e non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
+`[ @active_end_time = active_end_time_`Ora di ogni giorno tra *active_start_date* e *active_end_date* per terminare l'esecuzione del processo. *active_end_time* è di **tipo int**e non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
   
-`[ @schedule_id = schedule_idOUTPUT` numero di identificazione della pianificazione assegnato alla pianificazione, se è stato creato correttamente. *schedule_id* è una variabile di output di tipo **int**e non prevede alcun valore predefinito.  
+`[ @schedule_id = schedule_idOUTPUT`Pianificare il numero di identificazione assegnato alla pianificazione, se è stato creato correttamente. *schedule_id* è una variabile di output di tipo **int**e non prevede alcun valore predefinito.  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT` un identificatore univoco per la pianificazione. *schedule_uid* è una variabile di tipo **uniqueidentifier**.  
+`[ @schedule_uid = ] _schedule_uidOUTPUT`Identificatore univoco per la pianificazione. *schedule_uid* è una variabile di tipo **uniqueidentifier**.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
  È possibile gestire le pianificazioni dei processi in modo indipendente dai processi. Per aggiungere una pianificazione a un processo, usare **sp_add_schedule** per creare la pianificazione e **sp_attach_schedule** per alleghiare la pianificazione a un processo.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -150,7 +150,7 @@ Nome `[ @name = ] 'name'` della pianificazione. *Name* è di **tipo nvarchar (12
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
  
  ## <a name="example"></a>Esempio
- Nell'esempio seguente viene assegnata una pianificazione di processo a `SaturdayReports` che verrà eseguita ogni sabato alle 2:00 AM.
+ Nell'esempio seguente viene assegnata una pianificazione del `SaturdayReports` processo a che verrà eseguita ogni sabato alle 2:00 AM.
 ```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
@@ -165,11 +165,11 @@ EXEC msdb.dbo.sp_add_jobschedule
  [Creazione e alconnessione di pianificazioni ai processi](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Pianificare un processo](../../ssms/agent/schedule-a-job.md)   
  [Creare una pianificazione](../../ssms/agent/create-a-schedule.md)   
- [Stored procedure &#40;SQL Server Agent Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [Stored procedure di SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

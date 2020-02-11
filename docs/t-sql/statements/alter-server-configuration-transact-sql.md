@@ -21,10 +21,10 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006073"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72006073"
 
 Vengono modificate le impostazioni di configurazione globali per il server corrente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
 
@@ -146,7 +146,7 @@ Elenco di uno o più nodi NUMA. Gli ID del nodo NUMA iniziano da 0 e sono valori
 DIAGNOSTICS LOG  
 Avvia o arresta la registrazione dei dati di diagnostica acquisiti dalla stored procedure sp_server_diagnostics. Questo argomento consente anche di impostare i parametri di configurazione del log SQLDIAG, ad esempio il conteggio del rollover dei file, le dimensioni del file di log e il percorso del file. Per altre informazioni, vedere [Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
   
-ON  
+ATTIVA  
 Consente di avviare la registrazione dei dati di diagnostica di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] nel percorso specificato dall'opzione file PATH. Questo argomento è l'impostazione predefinita.  
   
 OFF  
@@ -220,7 +220,7 @@ Per altre informazioni, vedere [Modificare il contesto del cluster HADR dell'ist
   
 **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
-ON  
+ATTIVA  
 Abilita l'opzione di estensione del pool di buffer. Questa opzione estende le dimensioni del pool di buffer tramite memoria non volatile. Con la memoria non volatile, come le unità SSD, vengono salvate in modo permanente pagine di dati pulite nel pool. Per altre informazioni su questa funzionalità, vedere [Estensione pool di buffer](../../database-engine/configure-windows/buffer-pool-extension.md). L'estensione del pool di buffer non è disponibile in tutte le edizioni di SQL Server. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
@@ -241,7 +241,7 @@ Disabilita l'opzione di estensione del pool di buffer. Disabilitare l'opzione di
 
 **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
-ON  
+ATTIVA  
 Consente il partizionamento automatico in modo da dividere i nodi hardware NUMA di grandi dimensioni in nodi NUMA di dimensioni ridotte. Per modificare il valore corrente è necessario riavviare il motore di database.  
   
 OFF  
@@ -260,7 +260,7 @@ Disabilita il partizionamento automatico dei nodi hardware NUMA di grandi dimens
 
 **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-ON <br>
+ATTIVA <br>
 Abilita tutte le funzionalità a livello di istanza che fanno parte della famiglia di funzionalità del [database in memoria](../../relational-databases/in-memory-database.md). Attualmente include i [metadati tempdb ottimizzati per la memoria](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) e il [pool di buffer ibrido](../../database-engine/configure-windows/hybrid-buffer-pool.md). È necessario un riavvio per rendere effettiva l'impostazione.
 
 OFF <br>
@@ -312,7 +312,7 @@ Negli esempi inclusi in questa sezione viene illustrato come impostare l'affinit
 -   Gruppo 2: nodi NUMA da 8 a 12, CPU da 128 a 191  
 -   Gruppo 3: nodi NUMA da 13 a 16, CPU da 192 a 255  
   
-#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Impostazione dell'affinità su tutte le CPU nei gruppi 0 e 2  
+#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>R. Impostazione dell'affinità su tutte le CPU nei gruppi 0 e 2  
 Nell'esempio seguente viene impostata l'affinità su tutte le CPU nei gruppi 0 e 2.  
   
 ```sql  
@@ -357,7 +357,7 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 Negli esempi inclusi in questa sezione viene illustrato come impostare i valori per l'opzione del log di diagnostica.  
   
-#### <a name="a-starting-diagnostic-logging"></a>A. Avvio della registrazione dei dati di diagnostica  
+#### <a name="a-starting-diagnostic-logging"></a>R. Avvio della registrazione dei dati di diagnostica  
 Nell'esempio seguente viene avviata la registrazione dei dati di diagnostica.  
   
 ```sql  
@@ -393,7 +393,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 Nell'esempio seguente viene illustrata l'impostazione dei valori delle proprietà della risorsa cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>A. Impostazione del valore per la proprietà HealthCheckTimeout  
+#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>R. Impostazione del valore per la proprietà HealthCheckTimeout  
 Nell'esempio seguente viene impostata l'opzione `HealthCheckTimeout` su 15.000 millisecondi (15 secondi).  
   
 ```sql  
@@ -443,7 +443,7 @@ GO
 
 **Si applica a** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Abilitare tutte le funzionalità del database in memoria con le opzioni predefinite
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>R. Abilitare tutte le funzionalità del database in memoria con le opzioni predefinite
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;

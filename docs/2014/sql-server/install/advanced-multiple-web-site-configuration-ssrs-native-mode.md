@@ -13,34 +13,34 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952673"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configurazione avanzata più siti Web (modalità nativa SSRS)
   Questa finestra di dialogo consente di creare e gestire gli URL utilizzati per accedere a un server di report o a Gestione report. La finestra di dialogo **Configurazione avanzata più siti Web** viene utilizzata per creare URL aggiuntivi, URL personalizzati che includono un nome di intestazione host o per specificare un indirizzo IP in formato IPv4 o IPv6.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
   
  La creazione di più URL è utile se si desidera configurare modalità di accesso diverse a un server di report. L'accesso al server di report tramite connessioni Intranet ed Extranet, ad esempio, richiede in genere che siano presenti più URL per ogni tipo di connessione.  
   
  Per aprire la finestra di dialogo **Configurazione avanzata più siti Web** fare clic su **Avanzate** nella pagina **URL servizio Web** o **URL Gestione report** di Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Quando la finestra di dialogo **Configurazione avanzata più siti Web** viene visualizzata, è possibile fare clic su **Aggiungi** o **Modifica** per definire nuovi URL o modificare o eliminare URL esistenti.  
   
- Scegliere **OK** per salvare le modifiche. Se dopo avere aggiunto o rimosso URL si chiude la finestra di dialogo senza prima avere scelto **OK**, le modifiche andranno perdute.  
+ Fare clic su **OK** per salvare le modifiche. Se dopo avere aggiunto o rimosso URL si chiude la finestra di dialogo senza prima avere scelto **OK**, le modifiche andranno perdute.  
   
 ## <a name="options"></a>Opzioni  
  **Indirizzo IP**  
  Identifica il computer server di report in una rete TCP/IP. I valori validi includono:  
   
--   **Tutti assegnati** : specifica che qualunque indirizzo IP assegnato al computer può essere utilizzato in un URL che punta a un'applicazione del server di report. Questo valore include anche i nomi host descrittivi, ad esempio i nomi computer, che possono essere risolti da un DNS in un indirizzo IP assegnato al computer. Si tratta del valore predefinito per un URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Tutti assegnati** specifica che uno degli indirizzi IP assegnati al computer può essere utilizzato in un URL che punta a un'applicazione del server di report. Questo valore include anche i nomi host descrittivi, ad esempio i nomi computer, che possono essere risolti da un DNS in un indirizzo IP assegnato al computer. Si tratta del valore predefinito per un URL di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   **Non assegnati** : specifica che il server di report accetterà qualsiasi richiesta per cui non esiste una corrispondenza esatta per l'indirizzo IP o il nome host. Non utilizzare questo valore se è già in uso in un'altra applicazione Web. In caso contrario, verrà interrotta l'esecuzione del servizio per l'altra applicazione.  
+-   **Tutti non assegnati** : specifica che il server di report accetterà qualsiasi richiesta che non abbia una corrispondenza esatta per l'indirizzo IP o il nome host. Non utilizzare questo valore se è già in uso in un'altra applicazione Web. In caso contrario, verrà interrotta l'esecuzione del servizio per l'altra applicazione.  
   
--   **127.0.0.1** : utilizzato per accedere a localhost. Tale indirizzo supporta l'amministrazione locale nel computer server di report. Se si seleziona solo questo valore, potranno accedere all'applicazione solo gli utenti connessi localmente al computer server di report.  
+-   **127.0.0.1** viene usato per accedere a localhost. Tale indirizzo supporta l'amministrazione locale nel computer server di report. Se si seleziona solo questo valore, potranno accedere all'applicazione solo gli utenti connessi localmente al computer server di report.  
   
--   *Nnn.nnn.nnn.nnn* : indirizzo IPv4 di una scheda di rete nel computer. Se la rete utilizza l'indirizzamento IPv6, l'indirizzo IP sarà un valore a 128 bit di campi da 8 4 byte simile al formato seguente: \<intestazione >:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn. nnn. nnn. nnn* è l'indirizzo IPv4 di una scheda di rete nel computer. Se la rete utilizza l'indirizzamento IPv6, l'indirizzo IP sarà un valore a 128 bit di campi da 8 4 byte simile al formato seguente: \<header>:*nnnn: nnnn: nnnn: nnnn*.  
   
      Se si dispone di più schede, verrà visualizzato un indirizzo IP per ognuna. Se si seleziona solo questo valore, l'accesso all'applicazione sarà limitato all'indirizzo IP specificato e a qualsiasi nome host di cui il DNS esegue il mapping all'indirizzo. Non è possibile utilizzare localhost per accedere a un server di report, né utilizzare gli indirizzi IP di altre schede di rete installate nel computer server di report.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71952673"
  **Rilasciato a**  
  Indica il nome del computer per cui è stato creato il certificato.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di definire un URL aggiuntivo.  
   
  **Modifica**  

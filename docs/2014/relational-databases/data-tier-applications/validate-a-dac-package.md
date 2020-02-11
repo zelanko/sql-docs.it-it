@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782666"
 ---
 # <a name="validate-a-dac-package"></a>Convalida di un pacchetto di applicazioni livello dati
   È consigliabile esaminare il contenuto di un pacchetto di un'applicazione livello dati prima di distribuirlo nella produzione nonché convalidare le azioni di aggiornamento prima di aggiornare un'applicazione livello dati esistente, in particolare nel caso in cui si distribuiscano pacchetti non sviluppati dalla propria organizzazione.  
   
-1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
+1.  **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
-2.  **Per aggiornare un'applicazione livello dati, utilizzare:**  [Visualizza il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizza modifiche al database](#ViewDBChanges), [Visualizza azioni di aggiornamento](#ViewUpgradeActions), [Confronta applicazioni livello dati](#CompareDACs)  
+2.  **Per aggiornare un'applicazione livello dati tramite la:**  [Visualizzare il contenuto di un'applicazione livello dati](#ViewDACContents), [Visualizzare modifiche al database](#ViewDBChanges), [Visualizzare azioni di aggiornamento](#ViewUpgradeActions), [Confrontare le applicazioni livello dati](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Prerequisiti  
  È consigliabile evitare di distribuire un pacchetto di applicazione livello dati proveniente da origini sconosciute o non attendibili. Tali pacchetti DAC possono contenere codice dannoso che potrebbe eseguire codice [!INCLUDE[tsql](../../includes/tsql-md.md)] indesiderato o causare errori modificando lo schema. Prima di usare un'applicazione livello dati proveniente da un'origine sconosciuta o non attendibile, distribuirla in un'istanza di test isolata del [!INCLUDE[ssDE](../../includes/ssde-md.md)], eseguire [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sul database ed esaminare anche il codice nel database, ad esempio stored procedure o altro codice definito dall'utente.  
@@ -105,7 +105,7 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a> Visualizza azioni di aggiornamento  
+##  <a name="ViewUpgradeActions"></a>Visualizzare le azioni di aggiornamento  
  Prima di utilizzare una nuova versione di un pacchetto di applicazione livello dati per aggiornare un'applicazione livello dati distribuita da un pacchetto di applicazione livello dati precedente, è possibile generare un report in cui sono contenute le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che verranno eseguite durante l'aggiornamento, quindi controllare le istruzioni.  
   
  **Segnalare azioni di aggiornamento tramite una procedura guidata**  
@@ -161,7 +161,7 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> Compare DACs  
+##  <a name="CompareDACs"></a>Confrontare DAC  
  Prima di aggiornare un'applicazione del livello dati, è consigliabile controllare le differenze nel database e negli oggetti a livello di istanza tra il pacchetto di applicazioni livello dati corrente e quello nuovo. Se non si dispone di una copia del pacchetto di applicazione livello dati corrente, è possibile estrarre un pacchetto dal database corrente.  
   
  Se si importano entrambi i pacchetti di applicazione livello dati nei progetti di applicazione livello dati in SQL Server Developer Tools, è possibile utilizzare lo strumento di Confronto schema per analizzare le differenze tra i due pacchetti di applicazioni livello dati.  

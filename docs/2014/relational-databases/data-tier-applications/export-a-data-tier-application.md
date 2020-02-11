@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175981"
 ---
 # <a name="export-a-data-tier-application"></a>Esportazione di un'applicazione livello dati
@@ -52,7 +52,7 @@ ms.locfileid: "70175981"
 ###  <a name="Permissions"></a> Autorizzazioni  
  L'esportazione di un'applicazione livello dati richiede almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, oltre alle autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
-##  <a name="UsingDeployDACWizard"></a> Utilizzo della procedura guidata Esporta l'applicazione livello dati  
+##  <a name="UsingDeployDACWizard"></a>Utilizzo della procedura guidata Esporta applicazione livello dati  
  **Per esportare un'applicazione livello dati tramite una procedura guidata**  
   
 1.  Connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], locale o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "70175981"
   
     -   [Pagina Introduzione](#Introduction)  
   
-    -   [Pagina Impostazioni di esportazione](#Export_settings)  
+    -   [Pagina impostazioni di esportazione](#Export_settings)  
   
     -   [Pagina Convalida](#Validation)  
   
@@ -82,22 +82,22 @@ ms.locfileid: "70175981"
   
  **Opzioni**  
   
- **Non visualizzare più questa pagina.** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
+ **Non visualizzare più questa pagina** Selezionare la casella di controllo per evitare che la pagina Introduzione venga visualizzata nuovamente in futuro.  
   
- **Avanti** : consente di passare alla pagina **Selezione pacchetto di applicazione livello dati** .  
+ **Avanti** : consente di passare alla pagina **Seleziona pacchetto di applicazione livello dati** .  
   
- **Annulla**: annulla l'operazione e chiude la procedura guidata.  
+ **Annulla** : Annulla l'operazione e chiude la procedura guidata.  
   
-##  <a name="Export_settings"></a> Pagina Impostazioni di esportazione  
+##  <a name="Export_settings"></a>Pagina impostazioni di esportazione  
  Utilizzare questa pagina per specificare il percorso in cui creare il file BACPAC.  
   
 -   **Salva su disco locale** : crea un file BACPAC in una directory nel computer locale. Fare clic su **Sfoglia** per selezionare un percorso nel computer locale oppure specificare il percorso nell'apposito campo. Il nome del percorso deve includere un nome file e l'estensione .bacpac.  
   
--   **Salva in Azure** : crea un file BACPAC in un contenitore Azure. È necessario connettersi a un contenitore Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove vi rimarrà una volta completata l'operazione.  
+-   **Salva in Azure** : crea un file BACPAC in un contenitore di Azure. È necessario connettersi a un contenitore Azure per convalidare questa opzione. Questa opzione richiede inoltre che si specifichi una directory locale per il file temporaneo. Il file temporaneo verrà creato nel percorso specificato, dove vi rimarrà una volta completata l'operazione.  
   
  Per specificare un subset di tabelle da esportare, usare l'opzione **Avanzate** .  
   
-##  <a name="Validation"></a> Pagina Convalida  
+##  <a name="Validation"></a>Pagina convalida  
  Utilizzare la pagina di convalida per esaminare gli eventuali problemi che bloccano l'operazione. Per continuare, risolvere i problemi che causano il blocco, quindi fare clic su **Ripeti convalida** per assicurarsi che la convalida venga completata correttamente.  
   
  Scegliere **Avanti**per continuare.  
@@ -111,10 +111,10 @@ ms.locfileid: "70175981"
 ##  <a name="Results"></a> Pagina Risultati  
  In questa pagina viene riportato l'esito positivo o negativo dell'operazione di esportazione, indicante i risultati di ogni azione. Ogni azione che ha rilevato un errore avrà un collegamento nella colonna **Risultato** . Fare clic sul collegamento per visualizzare un report dell'errore relativo all'azione.  
   
- Fare clic su **Fine** per chiudere la procedura guidata.  
+ Fare clic su **fine** per chiudere la procedura guidata.  
   
-##  <a name="NetApp"></a> Utilizzo di un'applicazione .NET Framework  
- **Per esportare un'applicazione livello dati con il metodo Export() in un'applicazione .NET Framework.**  
+##  <a name="NetApp"></a>Uso di un'applicazione .NET Framework  
+ **Per esportare un'applicazione livello dati utilizzando il metodo Export () in un'applicazione .NET Framework.**  
   
  Per visualizzare un esempio di codice, scaricare l'applicazione di esempio dell'applicazione livello dati da [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575).  
   

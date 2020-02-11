@@ -13,24 +13,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952040"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Argomenti della Guida F1 di Gestione configurazione Reporting Services (modalità nativa SSRS)
   In questa sezione sono inclusi gli argomenti della Guida sensibile al contesto relativi a Gestione configurazione Reporting Services.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Connessione a un server di report](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
   
--   [Stato del server di report](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
+-   [Stato server di report](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   
--   [Account servizio](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
+-   [Account del servizio](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
 -   [URL servizio Web](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71952040"
   
 -   [Chiavi di crittografia](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
--   [Chiave di crittografia del backup](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
+-   [Backup della chiave di crittografia](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
   
 -   [Ripristina chiave di crittografia](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   

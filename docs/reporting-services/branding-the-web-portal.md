@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251916"
 ---
 # <a name="branding-the-web-portal"></a>Personalizzazione del portale Web
@@ -93,13 +93,13 @@ La sezione dell'interfaccia è suddivisa nei raggruppamenti seguenti.
   
 |Sezione|Descrizione|  
 |---|---|  
-|primary|Colori dei pulsanti e colori mostrati al passaggio del mouse.|  
-|Secondaria|Colore della barra del titolo, della barra di ricerca, del menu del lato sinistro (se mostrato) e del testo per questi elementi|  
+|Primaria|Colori dei pulsanti e colori mostrati al passaggio del mouse.|  
+|Secondari|Colore della barra del titolo, della barra di ricerca, del menu del lato sinistro (se mostrato) e del testo per questi elementi|  
 |Neutro primario|Sfondi dell'area home e report.|  
 |Neutro secondario|Sfondi delle caselle di testo e delle opzioni di cartella, menu delle impostazioni.|  
 |Neutro terziario|Sfondi delle impostazioni del sito.|  
 |Messaggi di pericolo/avviso/operazione riuscita|Colori per questi messaggi.|  
-|Indicatore KPI|Controlla i colori che rappresentano un valore positivo (1), neutro (0), negativo (-1) e nessuno.|  
+|KPI|Controlla i colori che rappresentano un valore positivo (1), neutro (0), negativo (-1) e nessuno.|  
   
 La prima volta che ci si connette a un server con Mobile Report Publisher dove è distribuito un pacchetto del marchio, il tema verrà aggiunto a quelli disponibili e utilizzabili, nel menu in alto a destra dell'applicazione.  
   

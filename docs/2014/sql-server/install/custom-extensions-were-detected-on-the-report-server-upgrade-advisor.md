@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952590"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Estensioni personalizzate rilevate nel server di report (Upgrade Advisor)
@@ -28,13 +28,13 @@ ms.locfileid: "71952590"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modalità nativa &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint di.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce un'architettura estendibile che consente agli sviluppatori di creare estensioni personalizzate per l'elaborazione dei dati, il recapito, il rendering, la sicurezza e l'autenticazione.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornisce un'architettura estensibile che consente agli sviluppatori di creare estensioni personalizzate per l'elaborazione dei dati, il recapito, il rendering, la sicurezza e l'autenticazione.  
   
  Se nell'installazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono presenti estensioni o assembly personalizzati, è possibile utilizzare il programma di installazione per eseguire un aggiornamento, ma potrebbe essere necessario spostare le estensioni nel nuovo percorso di installazione dopo il completamento dell'aggiornamento oppure eseguire altri passaggi prima dell'aggiornamento.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "71952590"
 ## <a name="corrective-action"></a>Azione correttiva  
  Utilizzare le sezioni seguenti per determinare i passaggi da eseguire in aggiunta o prima dell'esecuzione di un aggiornamento di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
- [Estensioni per il recapito o l'elaborazione dati personalizzate](#dataprocdeliver)  
+ [Estensioni per l'elaborazione dati o per il recapito personalizzate](#dataprocdeliver)  
   
  [Estensioni per il rendering personalizzate](#render)  
   
  [Estensioni di sicurezza o di autenticazione personalizzate in un server di report SQL Server 2000](#secauth2000)  
   
- [Estensioni di sicurezza o di autenticazione personalizzate in un server di report SQL Server 2005](#secauth2005)  
+ [Estensioni di sicurezza o di autenticazione personalizzate in un server di report di SQL Server 2005](#secauth2005)  
   
  Dopo che l'aggiornamento è stato completato, spostare gli assembly delle estensioni nella nuova cartella di installazione, quindi verificare che le estensioni personalizzate funzionino nel modo previsto. Se l'estensione non funziona, può essere necessario ricompilarla.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952590"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Passaggi successivi all'aggiornamento per le estensioni per l'elaborazione dati o per il recapito personalizzate  
   
-1.  Spostare il file o i file di estensione nella nuova cartella di programma per il server di report. Per impostazione predefinita, la cartella del programma del server di report è \Programmi\microsoft SQL Server\MSRS10_50. \<*instance_name*> \Report server.  
+1.  Spostare il file o i file di estensione nella nuova cartella di programma per il server di report. Per impostazione predefinita, la cartella del programma del server di report è \Programmi\microsoft SQL Server \ MSRS10_50. \< *instance_name*> server \Report.  
   
  Per ulteriori informazioni, vedere le sezioni relative alla distribuzione di estensioni per l'elaborazione dati e il recapito nella documentazione online di SQL Server.  
   
@@ -142,6 +142,6 @@ ms.locfileid: "71952590"
 3.  Configurare le estensioni nella nuova istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Preparazione aggiornamento Reporting Services &#40;problemi di aggiornamento&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Problemi di aggiornamento Reporting Services &#40;preparazione aggiornamento&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

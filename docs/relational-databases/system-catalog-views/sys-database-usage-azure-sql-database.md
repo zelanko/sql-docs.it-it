@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155539"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Database di SQL Azure)
@@ -32,7 +32,7 @@ ms.locfileid: "70155539"
 
   **Nota: questa opzione si applica solo al database SQL di Azure V11.**  
   
- Elenca il numero, il tipo e la durata dei database nel server [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ Elenca il numero, il tipo e la durata dei database nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
   
  La vista **sys. database_usage** contiene le colonne seguenti.  
   

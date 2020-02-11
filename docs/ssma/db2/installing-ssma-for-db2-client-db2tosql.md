@@ -10,17 +10,17 @@ ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1623430eed752db7fa387caf33124082eb318490
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70774190"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Installazione di SSMA per il client DB2 (DB2ToSQL)
 
 Il client SSMA è costituito dai file di programma che eseguono le attività seguenti:  
   
-- Connettersi a un database DB2.  
+- Connettersi a un database di DB2.  
   
 - Connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -32,7 +32,7 @@ Il client SSMA è costituito dai file di programma che eseguono le attività seg
   
 In questo argomento vengono forniti i prerequisiti e le istruzioni per l'installazione di SSMA.  
   
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 SSMA è progettato per funzionare con DB2 in z/OS versione 9,0 e 10,0 o DB2 in LUW versione 9,8 e 10,1 o versioni successive e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o versioni successive.  
   
@@ -42,7 +42,7 @@ Prima di installare SSMA, verificare che il computer soddisfi i requisiti seguen
   
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o versioni successive.  
   
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Versione[!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4,0 o successiva. La [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versione 4,0 è disponibile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul supporto del prodotto. È anche possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).  
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] successiva. La [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versione 4,0 è disponibile sul supporto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del prodotto. È anche possibile ottenerlo dal [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 - Provider Microsoft OLEDB per DB2 versione 5 o successiva e connettività ai database DB2 di cui si vuole eseguire la migrazione.  
   
@@ -62,7 +62,7 @@ Per installare il client di SSMA:
   
 1. Fare doppio clic su SSMA per DB2 *n*. Installare. exe, dove *n* è il numero di Build.  
   
-2. Nella pagina di **benvenuto** fare clic su **Avanti**.  
+2. Nella pagina di **benvenuto** selezionare **Avanti**.  
   
    Se i prerequisiti non sono installati, verrà visualizzato un messaggio che indica che è necessario prima installare i componenti necessari. Assicurarsi di aver installato tutti i prerequisiti, quindi eseguire di nuovo il programma di installazione.  
   
@@ -79,5 +79,5 @@ Il percorso di installazione predefinito è C:\Programmi\Microsoft SQL Server Mi
   
 ## <a name="see-also"></a>Vedere anche
 
-[Installazione dei componenti di SSMA &#40;in SQL Server DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
-[Migrazione di database DB2 a &#40;SQL Server DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Installazione dei componenti di SSMA in SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+[Migrazione di database DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

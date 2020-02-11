@@ -14,22 +14,22 @@ ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e46b5b081529d57456d1f6e8a96b057a8fc9c774
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921116"
 ---
 # <a name="ado-code-examples"></a>Esempi di codice ADO
-Usare gli esempi di codice seguente per informazioni su come usare gli oggetti, metodi, proprietà ed eventi ADO.  
+Usare gli esempi di codice seguenti per informazioni su come usare gli oggetti, i metodi, le proprietà e gli eventi ADO.  
   
 > [!NOTE]
->  Incollare l'intero esempio di codice nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono usati esempi parziali o se la formattazione di paragrafo.  
+>  Incollare l'intero esempio di codice nell'editor di codice. L'esempio potrebbe non essere eseguito correttamente se vengono usati esempi parziali o se la formattazione del paragrafo va persa.  
   
 -   [Esempi di codice ADO in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)  
   
--   [Esempi di codice ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)  
+-   [Esempi di codice ADO in VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)  
   
 -   [Esempi di codice ADO in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)  
   
--   [Esempi di codice ADO JScript](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)
+-   [Esempi di codice ADO in JScript](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)

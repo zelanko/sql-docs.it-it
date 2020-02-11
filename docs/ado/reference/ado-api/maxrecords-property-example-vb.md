@@ -15,14 +15,14 @@ ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3caa09a03a7aabd87eddedff335abc3bddd1b318
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918182"
 ---
 # <a name="maxrecords-property-example-vb"></a>Esempio della proprietà MaxRecords (VB)
-Questo esempio Usa la [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) per aprire una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente le 10 libri più costosi indicati nel ***titoli*** tabella.  
+In questo esempio viene usata la proprietà [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) per aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente i 10 titoli più costosi nella tabella ***titles*** .  
   
 ```  
 'BeginMaxRecordsVB  

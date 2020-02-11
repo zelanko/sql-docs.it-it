@@ -16,10 +16,10 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68894047"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68894047"
 > [!IMPORTANT]  
 >  Quando si configura un server di pubblicazione con un server di distribuzione remoto, i valori specificati per tutti i parametri, inclusi *job_login* e *job_password*, vengono inviati al server di distribuzione come testo normale. È consigliabile crittografare la connessione tra il server di pubblicazione e il server di distribuzione remoto prima di eseguire questa stored procedure. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -98,44 +98,44 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Frequenza con cui pianificare la agente di distribuzione. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Su richiesta|  
+|**1**|Singola occorrenza|  
+|**2**|On demand|  
 |**4**|Ogni giorno|  
-|**8**|Settimanale|  
+|**8**|Ogni settimana|  
 |**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64** (impostazione predefinita)|Avvio automatico|  
-|**128**|Periodica|  
+|**128**|Ricorrente|  
   
 > [!NOTE]  
 >  Se si specifica un valore **64** , il agente di distribuzione viene eseguito in modalità continua. Corrisponde all'impostazione del parametro **-Continuous** per l'agente. Per altre informazioni, vedere [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 `[ @frequency_interval = ] frequency_interval`Valore da applicare alla frequenza impostata da *frequency_type*. *frequency_interval* è di **tipo int**e il valore predefinito è 1.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Data del agente di distribuzione. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Data del agente di distribuzione. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1** (impostazione predefinita)|Primo|  
-|**2**|Secondo|  
+|**1** (impostazione predefinita)|First (Primo)|  
+|**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  
-|**16**|Ultimo|  
+|**16**|Last (Ultimo)|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è 0.  
   
 `[ @frequency_subday = ] frequency_subday`Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Secondo|  
+|**1**|Una sola volta|  
+|**2**|Second|  
 |**4** (impostazione predefinita)|Minuto|  
 |**8**|Ora|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo di *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è 5.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è 5.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`Ora del giorno in cui il agente di distribuzione viene pianificato per la prima volta, formattato come HHMMSS. *active_start_time_of_day* è di **tipo int**e il valore predefinito è 0.  
   
@@ -150,7 +150,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 `[ @dts_package_password = ] 'dts_package_password'`Specifica la password necessaria per eseguire il pacchetto. *dts_package_password* è di **tipo sysname** e il valore predefinito è null.  
   
 > [!NOTE]  
->  Se è specificato *dts_package_name* , è necessario specificare una password.  
+>  Se *dts_package_name* è specificato, è necessario specificare una password.  
   
 `[ @dts_package_location = ] 'dts_package_location'`Specifica la posizione del pacchetto. *dts_package_location* è di **tipo nvarchar (12)** e il valore predefinito è Distributor. Il percorso del pacchetto può essere **Distributor** o **Subscriber**.  
   
@@ -160,7 +160,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`Identificatore a livello di codice (ProgID) univoco con il quale viene registrato il provider di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB per l'origine dati non. *subscriber_provider* è di **tipo sysname**e il valore predefinito è null. *subscriber_provider* deve essere univoco per il provider di OLE DB installato nel server di distribuzione. *subscriber_provider* è supportato solo per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.  
+`[ @subscriber_provider = ] 'subscriber_provider'`Identificatore a livello di codice (PROGID) univoco con il quale viene registrato il provider di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB per l'origine dati non. *subscriber_provider* è di **tipo sysname**e il valore predefinito è null. *subscriber_provider* deve essere univoco per il provider di OLE DB installato nel server di distribuzione. *subscriber_provider* è supportato solo per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.  
   
 `[ @subscriber_datasrc = ] 'subscriber_datasrc'`Nome dell'origine dati come riconosciuto dal provider OLE DB. *subscriber_datasrc* è di **tipo nvarchar (4000)** e il valore predefinito è null. *subscriber_datasrc* viene passato come proprietà DBPROP_INIT_DATASOURCE per inizializzare il provider di OLE DB. *subscriber_datasrc* è supportato solo per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.  
   
@@ -170,16 +170,16 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @subscriber_catalog = ] 'subscriber_catalog'`Catalogo da utilizzare quando si effettua una connessione al provider OLE DB. *subscriber_catalog* è di **tipo sysname**e il valore predefinito è null. *subscriber_catalog* viene passato come proprietà DBPROP_INIT_CATALOG per inizializzare il provider di OLE DB. *subscriber_catalog* è supportato solo per i [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_addpushsubscription_agent** viene utilizzato nella replica snapshot e nella replica transazionale.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_addpushsubscription_agent** viene utilizzata nella replica snapshot e nella replica transazionale.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addpushsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addpushsubscription_agent**.  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -187,9 +187,9 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  [Creare una sottoscrizione per un Sottoscrittore non SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Sottoscrivere le pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [Transact &#40;-SQL sp_changesubscription&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

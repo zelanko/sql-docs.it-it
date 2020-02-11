@@ -16,10 +16,10 @@ ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92a9ead66736ff2b72813d6d4cbec5acfcda4fe
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73032968"
 ---
 # <a name="transfer-octet-length"></a>Lunghezza dell'ottetto di trasferimento
@@ -27,7 +27,7 @@ La lunghezza di un ottetto di trasferimento di una colonna è il numero massimo 
   
  La lunghezza dell'ottetto di trasferimento definita per ogni tipo di dati SQL ODBC è illustrata nella tabella seguente.  
   
-|Identificatore del tipo SQL|Lunghezza|  
+|Identificatore del tipo SQL|Length|  
 |-------------------------|------------|  
 |Tutti i tipi di carattere [a]|Lunghezza definita o massima (per il tipo di variabile) della colonna in byte. Si tratta dello stesso valore del campo del descrittore SQL_DESC_OCTET_LENGTH.|  
 |SQL_DECIMAL<br />SQL_NUMERIC|Numero di byte necessari per conservare la rappresentazione dei caratteri di questi dati se il set di caratteri è ANSI e due volte questo numero se il set di caratteri è UNICODE. Questo è il numero massimo di cifre più due, perché i dati vengono restituiti come stringa di caratteri e sono necessari caratteri per le cifre, un segno e un separatore decimale. La lunghezza di trasferimento di una colonna definita come NUMERIC (10, 3), ad esempio, è 12.|  
@@ -40,10 +40,10 @@ La lunghezza di un ottetto di trasferimento di una colonna è il numero massimo 
 |SQL_DOUBLE|8|  
 |SQL_BIT|1|  
 |Tutti i tipi binari [a]|Numero di byte necessari per conservare il numero di caratteri definito (per i tipi fissi) o massimo (per i tipi di variabile).|  
-|SQL_TYPE_DATE<br />SQL_TYPE_TIME|6 (la dimensione della struttura SQL_DATE_STRUCT o SQL_TIME_STRUCT).|  
-|SQL_TYPE_TIMESTAMP|16 (la dimensione della struttura SQL_TIMESTAMP_STRUCT).|  
+|SQL_TYPE_DATE<br />SQL_TYPE_TIME|6 (dimensione della struttura SQL_DATE_STRUCT o SQL_TIME_STRUCT).|  
+|SQL_TYPE_TIMESTAMP|16 (dimensione della struttura di SQL_TIMESTAMP_STRUCT).|  
 |Tutti i tipi di dati intervallo|34 (dimensione della struttura intervallo).|  
 |SQL_GUID|16 (dimensione della struttura GUID).|  
 | &nbsp; | &nbsp; |
 
- [a] se il driver non è in grado di determinare la lunghezza della colonna o del parametro per i tipi di variabile, viene restituito SQL_NO_TOTAL.
+ [a] se il driver non è in grado di determinare la lunghezza della colonna o del parametro per i tipi di variabile, restituisce SQL_NO_TOTAL.

@@ -1,5 +1,5 @@
 ---
-title: Provider Microsoft OLE DB per ODBC | Microsoft Docs
+title: Provider OLE DB Microsoft per ODBC | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,165 +14,165 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926630"
 ---
-# <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provider Microsoft OLE DB per ODBC Panoramica
-Per un programmatore di ADO o servizi desktop remoto, un mondo ideale sarebbe uno dei dati di ogni origine espone un'interfaccia OLE DB, in modo da ADO è stato possibile chiamare direttamente nell'origine dati. Anche se un numero sempre maggiore di fornitori di database implementa le interfacce OLE DB, alcune origini dati non sono ancora esposti in questo modo. Tuttavia, la maggior parte dei sistemi DBMS in uso oggi accessibili tramite ODBC.
+# <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Panoramica di Microsoft OLE DB provider per ODBC
+A un programmatore ADO o RDS, un mondo ideale è quello in cui ogni origine dati espone un'interfaccia di OLE DB, in modo che ADO possa chiamare direttamente nell'origine dati. Sebbene sempre più fornitori di database implementino OLE DB interfacce, alcune origini dati non sono ancora esposte in questo modo. È tuttavia possibile accedere alla maggior parte dei sistemi DBMS attualmente in uso tramite ODBC.
 
- Driver ODBC sono disponibili per i principali DBMS in uso oggi stesso, tra cui Microsoft SQL Server, Microsoft Access (motore di database Microsoft Jet) e Microsoft FoxPro, oltre ai prodotti del database non Microsoft, ad esempio Oracle.
+ I driver ODBC sono disponibili per tutti i principali sistemi DBMS attualmente in uso, tra cui Microsoft SQL Server, Microsoft Access (motore di database Microsoft Jet) e Microsoft FoxPro, oltre ai prodotti di database non Microsoft, ad esempio Oracle.
 
- Il Provider ODBC di Microsoft, tuttavia, consente di ADO per connettersi a qualsiasi origine dati ODBC. Il provider è a thread libero e abilitata per Unicode.
+ Il provider ODBC Microsoft, tuttavia, consente a ADO di connettersi a qualsiasi origine dati ODBC. Il provider è a thread libero e il formato Unicode è abilitato.
 
- Il provider supporta le transazioni, anche se diversi motori di DBMS offrono diversi tipi di supporto delle transazioni. Microsoft Access, ad esempio, supporta le transazioni nidificate fino a cinque livelli.
+ Il provider supporta le transazioni, sebbene diversi motori DBMS offrano tipi diversi di supporto delle transazioni. Ad esempio, Microsoft Access supporta le transazioni nidificate fino a cinque livelli di profondità.
 
- Questo è il provider predefinito per ADO e sono supportati tutti i metodi e proprietà ADO dipende dal provider.
+ Si tratta del provider predefinito per ADO e tutte le proprietà e i metodi ADO dipendenti dal provider sono supportati.
 
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
- Per connettersi a questo provider, impostare il **Provider =** argomento delle [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà:
+ Per connettersi a questo provider, impostare l'argomento **provider =** della proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) su:
 
 ```
 MSDASQL
 ```
 
- Leggere il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà restituirà anche questa stringa.
+ La lettura della proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) restituirà anche questa stringa.
 
 ## <a name="typical-connection-string"></a>Stringa di connessione tipica
- Una stringa di connessione tipica per questo provider è:
+ Una stringa di connessione tipica per questo provider è la seguente:
 
 ```
 "Provider=MSDASQL;DSN=dsnName;UID=MyUserID;PWD=MyPassword;"
 ```
 
- La stringa è costituita da queste parole chiave:
+ La stringa è costituita dalle parole chiave seguenti:
 
 |Parola chiave|Descrizione|
 |-------------|-----------------|
-|**Provider**|Specifica il provider OLE DB per ODBC.|
+|**Provider**|Specifica il provider di OLE DB per ODBC.|
 |**DSN**|Specifica il nome dell'origine dati.|
 |**UID**|Specifica il nome utente.|
 |**PWD**|Specifica la password dell'utente.|
-|**URL**|Specifica l'URL di un file o directory pubblicata in una cartella Web.|
+|**URL**|Specifica l'URL di un file o di una directory pubblicata in una cartella Web.|
 
- Poiché si tratta di provider predefinito per ADO, se si omette il **Provider =** parametro della stringa di connessione ADO tenterà di stabilire una connessione al provider.
+ Poiché si tratta del provider predefinito per ADO, se si omette il parametro **provider =** dalla stringa di connessione, ADO tenterà di stabilire una connessione a questo provider.
 
 > [!NOTE]
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = yes** oppure **Integrated Security = SSPI** anziché un ID utente e password informazioni nella stringa di connessione.
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.
 
- Il provider non supporta parametri di connessione specifico oltre a quelli definiti da ADO. Tuttavia, il provider passerà a eventuali parametri di connessione non ADO da Gestione driver ODBC.
+ Il provider non supporta i parametri di connessione specifici, oltre a quelli definiti da ADO. Tuttavia, il provider passerà tutti i parametri di connessione non ADO a gestione driver ODBC.
 
- Poiché è possibile omettere il **Provider** parametro, pertanto è possibile comporre una stringa di connessione ADO è identica alla stringa di connessione ODBC per la stessa origine dati. Usare gli stessi nomi di parametro (**DRIVER =** , **DATABASE =** , **DSN =** e così via), i valori e la sintassi come si sarebbe durante la composizione di una stringa di connessione ODBC. È possibile connettersi con o senza un nome di origine di dati predefiniti (DSN) o FileDSN.
+ Poiché è possibile omettere il parametro **provider** , è quindi possibile comporre una stringa di connessione ADO identica a una stringa di connessione ODBC per la stessa origine dati. Utilizzare gli stessi nomi di parametro (**driver =**, **database =**, **DSN =** e così via), i valori e la sintassi come si farebbe quando si compone una stringa di connessione ODBC. È possibile connettersi con o senza un nome origine dati (DSN) o FileDSN predefinito.
 
-## <a name="syntax-with-a-dsn-or-filedsn"></a>Sintassi con un DSN o FileDSN:
+## <a name="syntax-with-a-dsn-or-filedsn"></a>Sintassi con DSN o FileDSN:
 
 ```
 "[Provider=MSDASQL;] { DSN=name | FileDSN=filename } ;
 [DATABASE=database;] UID=user; PWD=password"
 ```
 
-## <a name="syntax-without-a-dsn-dsn-less-connection"></a>Sintassi senza un DSN (DSN senza connessione):
+## <a name="syntax-without-a-dsn-dsn-less-connection"></a>Sintassi senza DSN (connessione senza DSN):
 
 ```
 "[Provider=MSDASQL;] DRIVER=driver; SERVER=server;
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Note
- Se si usa un' **DSN** oppure **FileDSN**, deve essere definito tramite Amministrazione origine dati ODBC nel Pannello di controllo di Windows. In Microsoft Windows 2000, l'amministratore ODBC si trova in strumenti di amministrazione. Nelle versioni precedenti di Windows, è denominata l'icona del ruolo Amministratore ODBC **ODBC a 32 bit** o semplicemente **ODBC**.
+## <a name="remarks"></a>Osservazioni
+ Se si utilizza un **DSN** o **FileDSN**, è necessario che venga definito tramite Amministrazione origine dati ODBC nel pannello di controllo di Windows. In Microsoft Windows 2000, l'amministratore ODBC si trova in strumenti di amministrazione. Nelle versioni precedenti di Windows, l'icona dell'amministratore ODBC è denominata **ODBC a 32 bit** o solo **ODBC**.
 
- Come alternativa all'impostazione di un **DSN**, è possibile specificare il driver ODBC (**DRIVER =** ), ad esempio "SQL Server"; il nome del server (**SERVER =** ); e il nome del database (**DATABASE =** ).
+ In alternativa all'impostazione di un **DSN**, è possibile specificare il driver ODBC (**driver =**), ad esempio "SQL Server;" il nome del server (**server =**); e il nome del database (**database =**).
 
- È anche possibile specificare un nome di account utente (**UID =** ) e la password per l'account utente (**PWD =** ) nei parametri ODBC specifiche o nello standard definiti da ADO *utente* e *password* parametri.
+ È inoltre possibile specificare un nome di account utente (**UID =**) e la password per l'account utente (**pwd =**) nei parametri specifici di ODBC o nei parametri di *utente* e *password* standard definiti da ADO.
 
- Anche se un **DSN** già una definizione specifica un database, è possibile specificare *una* *database* parametro oltre a un **DSN** per la connessione per un database diverso. È consigliabile includere sempre *il* *database* parametro quando si usa un **DSN**. Ciò garantisce che la connessione al database corretto se un altro utente modificato il parametro predefinito del database dall'ultima ricerca i **DSN** definizione.
+ Sebbene una definizione **DSN** specifichi già un database, è possibile specificare *un* parametro di *database* oltre a un **DSN** per connettersi a un database diverso. Quando si utilizza un **DSN**, è consigliabile includere sempre *il parametro del* *database* . In questo modo sarà possibile connettersi al database corretto se un altro utente ha modificato il parametro di database predefinito dall'ultima volta che è stata controllata la definizione **DSN** .
 
 ## <a name="provider-specific-connection-properties"></a>Proprietà di connessione specifiche del provider
- Il provider OLE DB per ODBC aggiunte diverse proprietà per il [delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme delle **connessione** oggetto. Nella tabella seguente sono elencate queste proprietà con il nome della proprietà OLE DB corrispondente racchiuso tra parentesi.
+ Il provider OLE DB per ODBC aggiunge diverse proprietà alla raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto **Connection** . Nella tabella seguente sono elencate le proprietà con il nome della proprietà OLE DB corrispondente tra parentesi.
 
 |Nome proprietà|Descrizione|
 |-------------------|-----------------|
-|Procedure accessibile (KAGPROP_ACCESSIBLEPROCEDURES)|Indica se l'utente ha accesso alle stored procedure.|
-|Tabella accessibile (KAGPROP_ACCESSIBLETABLES)|Indica se l'utente dispone dell'autorizzazione per eseguire le istruzioni SELECT sulle tabelle del database.|
-|Istruzioni attive (KAGPROP_ACTIVESTATEMENTS)|Indica il numero di handle che può supportare un driver ODBC in una connessione.|
-|Nome driver (KAGPROP_DRIVERNAME)|Indica il nome del file del driver ODBC.|
-|Versione del driver ODBC (KAGPROP_DRIVERODBCVER)|Indica la versione di ODBC che supporta questo driver.|
-|Utilizzo di file (KAGPROP_FILEUSAGE)|Indica il modo in cui il driver considera un file in un'origine dati. come una tabella o come un catalogo.|
-|Ad esempio la clausola di Escape (KAGPROP_LIKEESCAPECLAUSE)|Indica se il driver supporta la definizione e l'uso di un carattere di escape per il carattere di percentuale (%) e sottolineare il carattere (_) nel predicato LIKE di una clausola WHERE.|
-|Numero massimo di colonne in Group By (KAGPROP_MAXCOLUMNSINGROUPBY)|Indica il numero massimo di colonne che possono essere incluse nella clausola GROUP BY di un'istruzione SELECT.|
-|Numero massimo di colonne nell'indice (KAGPROP_MAXCOLUMNSININDEX)|Indica il numero massimo di colonne che possono essere inclusi in un indice.|
-|Numero massimo di colonne nella clausola Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Indica il numero massimo di colonne che possono essere incluse nella clausola ORDER BY di un'istruzione SELECT.|
-|Numero massimo di colonne nell'istruzione Select (KAGPROP_MAXCOLUMNSINSELECT)|Indica il numero massimo di colonne che possono essere elencati nella parte SELECT di un'istruzione SELECT.|
+|Procedure accessibili (KAGPROP_ACCESSIBLEPROCEDURES)|Indica se l'utente ha accesso alle stored procedure.|
+|Tabelle accessibili (KAGPROP_ACCESSIBLETABLES)|Indica se l'utente dispone delle autorizzazioni per eseguire le istruzioni SELECT sulle tabelle del database.|
+|Istruzioni attive (KAGPROP_ACTIVESTATEMENTS)|Indica il numero di handle che un driver ODBC può supportare in una connessione.|
+|Nome driver (KAGPROP_DRIVERNAME)|Indica il nome file del driver ODBC.|
+|Versione ODBC del driver (KAGPROP_DRIVERODBCVER)|Indica la versione di ODBC supportata dal driver.|
+|Utilizzo file (KAGPROP_FILEUSAGE)|Indica il modo in cui il driver considera un file in un'origine dati. come tabella o come catalogo.|
+|Clausola like Escape (KAGPROP_LIKEESCAPECLAUSE)|Indica se il driver supporta la definizione e l'utilizzo di un carattere di escape per il carattere di percentuale (%) e carattere di sottolineatura (_) nel predicato LIKE di una clausola WHERE.|
+|Numero massimo di colonne in Group by (KAGPROP_MAXCOLUMNSINGROUPBY)|Indica il numero massimo di colonne che possono essere elencate nella clausola GROUP BY di un'istruzione SELECT.|
+|Numero massimo di colonne nell'indice (KAGPROP_MAXCOLUMNSININDEX)|Indica il numero massimo di colonne che possono essere incluse in un indice.|
+|Numero massimo di colonne in order by (KAGPROP_MAXCOLUMNSINORDERBY)|Indica il numero massimo di colonne che possono essere elencate nella clausola ORDER BY di un'istruzione SELECT.|
+|Numero massimo di colonne in Select (KAGPROP_MAXCOLUMNSINSELECT)|Indica il numero massimo di colonne che è possibile elencare nella parte SELECT di un'istruzione SELECT.|
 |Numero massimo di colonne nella tabella (KAGPROP_MAXCOLUMNSINTABLE)|Indica il numero massimo di colonne consentite in una tabella.|
-|Funzioni numeriche (KAGPROP_NUMERICFUNCTIONS)|Indica le funzioni numeriche sono supportate dal driver ODBC. Per un elenco di nomi di funzione e i valori associati usati in questa maschera di bit, vedere [appendice e: Funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), nella documentazione relativa a ODBC.|
-|Funzionalità di outer Join (KAGPROP_OJCAPABILITY)|Indica i tipi di OUTER join è supportata dal provider.|
-|Outer join (KAGPROP_OUTERJOINS)|Indica se il provider supporta gli OUTER join.|
+|Funzioni numeriche (KAGPROP_NUMERICFUNCTIONS)|Indica quali funzioni numeriche sono supportate dal driver ODBC. Per un elenco di nomi di funzione e i valori associati utilizzati in questa maschera di maschera, vedere [Appendice E: funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), nella documentazione di ODBC.|
+|Funzionalità outer join (KAGPROP_OJCAPABILITY)|Indica i tipi di OUTER JOIN supportati dal provider.|
+|Outer join (KAGPROP_OUTERJOINS)|Indica se il provider supporta OUTER JOIN.|
 |Caratteri speciali (KAGPROP_SPECIALCHARACTERS)|Indica quali caratteri hanno un significato speciale per il driver ODBC.|
-|Stored procedure (KAGPROP_PROCEDURES)|Indica se le stored procedure sono disponibili per l'uso con il driver ODBC.|
-|Funzioni stringa (KAGPROP_STRINGFUNCTIONS)|Indica le funzioni di stringa supportate dal driver ODBC. Per un elenco di nomi di funzione e i valori associati usati in questa maschera di bit, vedere [appendice e: Funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), nella documentazione relativa a ODBC.|
-|Funzioni di sistema (KAGPROP_SYSTEMFUNCTIONS)|Indica le funzioni di sistema supportate dal driver ODBC. Per un elenco di nomi di funzione e i valori associati usati in questa maschera di bit, vedere [appendice e: Funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), nella documentazione relativa a ODBC.|
-|Funzioni di data e ora (KAGPROP_TIMEDATEFUNCTIONS)|Indica quali funzioni di data e ora sono supportate dal driver ODBC. Per un elenco di nomi di funzione e i valori associati usati in questa maschera di bit, vedere [appendice e: Funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), nella documentazione relativa a ODBC.|
-|Supporto della grammatica SQL (KAGPROP_ODBCSQLCONFORMANCE)|Indica la grammatica SQL che supporti il driver ODBC.|
+|Stored procedure (KAGPROP_PROCEDURES)|Indica se le stored procedure sono disponibili per l'utilizzo con questo driver ODBC.|
+|Funzioni stringa (KAGPROP_STRINGFUNCTIONS)|Indica quali funzioni stringa sono supportate dal driver ODBC. Per un elenco di nomi di funzione e i valori associati utilizzati in questa maschera di maschera, vedere [Appendice E: funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), nella documentazione di ODBC.|
+|Funzioni di sistema (KAGPROP_SYSTEMFUNCTIONS)|Indica quali funzioni di sistema sono supportate dal driver ODBC. Per un elenco di nomi di funzione e i valori associati utilizzati in questa maschera di maschera, vedere [Appendice E: funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), nella documentazione di ODBC.|
+|Funzioni di data/ora (KAGPROP_TIMEDATEFUNCTIONS)|Indica quali funzioni di data e ora sono supportate dal driver ODBC. Per un elenco di nomi di funzione e i valori associati utilizzati in questa maschera di maschera, vedere [Appendice E: funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), nella documentazione di ODBC.|
+|Supporto della grammatica SQL (KAGPROP_ODBCSQLCONFORMANCE)|Indica la grammatica SQL supportata dal driver ODBC.|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>Recordset specifici del provider e le proprietà dei comandi
- Il provider OLE DB per ODBC aggiunte diverse proprietà per il **delle proprietà** insieme delle **Recordset** e **comando** oggetti. Nella tabella seguente sono elencate queste proprietà con il nome della proprietà OLE DB corrispondente racchiuso tra parentesi.
+## <a name="provider-specific-recordset-and-command-properties"></a>Proprietà del comando e del recordset specifici del provider
+ Il provider OLE DB per ODBC aggiunge diverse proprietà alla raccolta **Properties** degli oggetti **Recordset** e **Command** . Nella tabella seguente sono elencate le proprietà con il nome della proprietà OLE DB corrispondente tra parentesi.
 
 |Nome proprietà|Descrizione|
 |-------------------|-----------------|
-|Aggiornamenti/eliminazioni o inserimenti (KAGPROP_QUERYBASEDUPDATES) basati su query|Indica se gli aggiornamenti, eliminazioni e inserimenti possono essere eseguiti tramite query SQL.|
-|Tipo di concorrenza ODBC (KAGPROP_CONCURRENCY)|Indica il metodo utilizzato per ridurre i potenziali problemi causati da due utenti che cercano di accedere contemporaneamente gli stessi dati dall'origine dati.|
-|Accessibilità BLOB sul cursore Forward-Only (KAGPROP_BLOBSONFOCURSOR)|Indica se BLOB **campi** sono accessibili quando si usa un cursore forward-only.|
-|Includere SQL_FLOAT e SQL_DOUBLE SQL_REAL nelle clausole WHERE QBU (KAGPROP_INCLUDENONEXACT)|Indica se i valori SQL_FLOAT e SQL_DOUBLE SQL_REAL possono essere incluso in una clausola WHERE QBU.|
-|Posizione nell'ultima riga dopo l'inserimento (KAGPROP_POSITIONONNEWROW)|Indica che dopo l'inserimento di un nuovo record in una tabella, l'ultima riga della tabella saranno forniti alla riga corrente.|
-|IRowsetChangeExtInfo (KAGPROP_IROWSETCHANGEEXTINFO)|Indica se il **IRowsetChange** interfaccia fornisce il supporto di informazioni estese.|
-|Tipo di cursore ODBC (KAGPROP_CURSOR)|Indica il tipo di cursore utilizzato per il **Recordset**.|
-|Generare un set di righe che può essere sottoposta a marshalling (KAGPROP_MARSHALLABLE)|Indica che il driver ODBC genera un oggetto recordset che può essere sottoposta a marshalling|
+|Aggiornamenti/eliminazioni/inserimenti basati su query (KAGPROP_QUERYBASEDUPDATES)|Indica se è possibile eseguire aggiornamenti, eliminazioni e inserimenti tramite query SQL.|
+|Tipo di concorrenza ODBC (KAGPROP_CONCURRENCY)|Indica il metodo utilizzato per ridurre i potenziali problemi causati da due utenti che tentano di accedere contemporaneamente agli stessi dati dall'origine dati.|
+|Accessibilità BLOB nel cursore di sola trasmissione (KAGPROP_BLOBSONFOCURSOR)|Indica se è possibile accedere ai **campi** BLOB quando si utilizza un cursore di sola trasmissione.|
+|Includi SQL_FLOAT, SQL_DOUBLE e SQL_REAL nelle clausole WHERE di QBU (KAGPROP_INCLUDENONEXACT)|Indica se i valori SQL_FLOAT, SQL_DOUBLE e SQL_REAL possono essere inclusi in una clausola WHERE QBU.|
+|Posizione sull'ultima riga dopo l'inserimento (KAGPROP_POSITIONONNEWROW)|Indica che dopo l'inserimento di un nuovo record in una tabella, l'ultima riga nella tabella sarà la riga corrente.|
+|IRowsetChangeExtInfo (KAGPROP_IROWSETCHANGEEXTINFO)|Indica se l'interfaccia **IRowsetChange** fornisce supporto per le informazioni estese.|
+|Tipo di cursore ODBC (KAGPROP_CURSOR)|Indica il tipo di cursore utilizzato dal **Recordset**.|
+|Genera un set di righe di cui è possibile effettuare il marshalling (KAGPROP_MARSHALLABLE)|Indica che il driver ODBC genera un recordset di cui è possibile effettuare il marshalling|
 
 ## <a name="command-text"></a>Testo comando
- Modalità di utilizzo di [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto dipende in gran parte dall'origine dati e il tipo di istruzione di query o un comando verranno accettati.
+ Il modo in cui si usa l'oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) in gran parte dipende dall'origine dati e dal tipo di query o dell'istruzione di comando che accetterà.
 
- ODBC fornisce una sintassi specifica per la chiamata di stored procedure. Per il [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà di un **comando** oggetto, il *CommandText* argomento per il **Execute** metodo su un [ Connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto, o il *origine* argomento per il **Open** metodo su un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, passa una stringa con questa sintassi:
+ ODBC fornisce una sintassi specifica per la chiamata di stored procedure. Per la [proprietà CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) di un oggetto **Command** , l'argomento *CommandText* per il **metodo Execute** su un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) o l'argomento di *origine* al metodo **Open** su un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , passa una stringa con questa sintassi:
 
 ```
 "{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
- Ogni **?** fa riferimento a un oggetto di [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta. Il primo **?** i riferimenti **parametri**(0), alla successiva **?** i riferimenti **parametri**(1), e così via.
+ Ogni **?** fa riferimento a un oggetto nella raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Il primo **?** fa riferimento ai **parametri**(0), a quello successivo **?** fa riferimento ai **parametri**(1) e così via.
 
- I parametri di riferimento sono facoltativi e dipendono dalla struttura della stored procedure. Se si desidera chiamare una stored procedure che non definisce alcun parametro, la stringa di sarebbe simile al seguente:
+ I riferimenti ai parametri sono facoltativi e dipendono dalla struttura del stored procedure. Se si vuole chiamare un stored procedure che non definisce parametri, la stringa avrà un aspetto simile al seguente:
 
 ```
 "{ call procedure }"
 ```
 
- Se si dispongono di due parametri di query, la stringa sarà simile alla seguente:
+ Se si dispone di due parametri di query, la stringa sarà simile alla seguente:
 
 ```
 "{ call procedure ( ?, ? ) }"
 ```
 
- Se la stored procedure restituirà un valore, il valore restituito viene considerato come un altro parametro. Se non si dispone di alcun parametro di query, ma è un valore restituito, la stringa sarà simile alla seguente:
+ Se il stored procedure restituirà un valore, il valore restituito viene considerato come un altro parametro. Se non si dispone di parametri di query ma si ha un valore restituito, la stringa sarà simile alla seguente:
 
 ```
 "{ ? = call procedure }"
 ```
 
- Infine, se si ha un valore restituito e due parametri di query, la stringa sarà simile alla seguente:
+ Infine, se si dispone di un valore restituito e di due parametri di query, la stringa sarà simile alla seguente:
 
 ```
 "{ ? = call procedure ( ?, ? ) }"
 ```
 
-## <a name="recordset-behavior"></a>Comportamento dell'oggetto Recordset
- Le tabelle seguenti elencano i metodi ADO standard e le proprietà disponibili in un **Recordset** aprire l'oggetto con questo provider.
+## <a name="recordset-behavior"></a>Comportamento del recordset
+ Nelle tabelle seguenti sono elencati i metodi e le proprietà ADO standard disponibili in un oggetto **Recordset** aperto con questo provider.
 
- Per informazioni più dettagliate sui **Recordset** comportamento per la configurazione del provider, eseguire il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo ed enumerare il **proprietà** raccolta del **Recordset** per determinare se sono presenti proprietà dinamiche specifiche del provider.
+ Per informazioni più dettagliate sul comportamento del **Recordset** per la configurazione del provider, eseguire il metodo [Supports](../../../ado/reference/ado-api/supports-method.md) ed enumerare la raccolta **Properties** del **Recordset** per determinare se sono presenti proprietà dinamiche specifiche del provider.
 
- Disponibilità di standard ADO **Recordset** proprietà:
+ Disponibilità delle proprietà del **Recordset** ADO standard:
 
-|Proprietà|ForwardOnly|Dynamic|Keyset|Static|
+|Proprietà|ForwardOnly|Dinamico|Keyset|Statico|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|non disponibile|non disponibile|lettura/scrittura|lettura/scrittura|
@@ -185,7 +185,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
@@ -194,130 +194,130 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Stato](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
 
- Il [esempio di AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) proprietà sono di sola scrittura se ADO viene usato con la versione 1.0 di Provider Microsoft OLE DB per ODBC.
+ Le proprietà [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) sono di sola scrittura quando ADO viene utilizzato con la versione 1,0 del provider Microsoft OLE DB per ODBC.
 
- Disponibilità di standard ADO **Recordset** metodi:
+ Disponibilità dei metodi **Recordset** ADO standard:
 
-|Metodo|ForwardOnly|Dynamic|Keyset|Static|
+|Metodo|ForwardOnly|Dinamico|Keyset|Statico|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Yes|Yes|Yes|Yes|
-|[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Yes|Yes|Yes|Yes|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Yes|Yes|Yes|Yes|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Yes|Yes|Yes|Yes|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Yes|Yes|
-|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Yes|Yes|Yes|Yes|
-|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Yes|Yes|Yes|Yes|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|Yes|Yes|Yes|
-|[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Yes|Yes|Yes|Yes|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|Yes|Yes|Yes|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Yes|Yes|Yes|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|Yes|Yes|Yes|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Yes|Yes|Yes|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Yes|Yes|Yes|Yes|
-|[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|Yes|Yes|Yes|
-|[Rieseguire una query](../../../ado/reference/ado-api/requery-method.md)|Yes|Yes|Yes|Yes|
-|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|No|No|Yes|Yes|
-|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|Yes|Yes|Yes|
-|[Update](../../../ado/reference/ado-api/update-method.md)|Yes|Yes|Yes|Yes|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Yes|Yes|Yes|Yes|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Sì|Sì|Sì|Sì|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sì|Sì|Sì|Sì|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Sì|Sì|
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|Sì|Sì|Sì|
+|[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|Sì|Sì|Sì|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sì|Sì|Sì|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sì|Sì|Sì|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sì|Sì|Sì|Sì|
+|[Apri](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|Sì|Sì|Sì|
+|[Risincronizza](../../../ado/reference/ado-api/resync-method.md)|No|No|Sì|Sì|
+|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
+|[Aggiornamento](../../../ado/reference/ado-api/update-method.md)|Sì|Sì|Sì|Sì|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sì|Sì|Sì|Sì|
 
- \* Non supportato per i database Microsoft Access.
+ * Non supportato per i database di Microsoft Access.
 
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
- Il Provider Microsoft OLE DB per ODBC inserisce diverse proprietà dinamiche nel **delle proprietà** raccolta di oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [Comando](../../../ado/reference/ado-api/command-object-ado.md) oggetti.
+ Il provider di OLE DB Microsoft per ODBC inserisce diverse proprietà dinamiche nella raccolta **Properties** degli oggetti [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e [Command](../../../ado/reference/ado-api/command-object-ado.md) non aperti.
 
- Le tabelle seguenti sono un incrociato dei nomi per ogni proprietà dinamica ADO e OLE DB. Riferimento dei programmatori OLE DB è relativo a un nome della proprietà ADO il termine, "Description". È possibile trovare altre informazioni su queste proprietà in riferimento OLE DB Programmer. Cercare il nome della proprietà OLE DB nell'indice o vedere [appendice c: Proprietà OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Le tabelle seguenti sono un indice incrociato dei nomi ADO e OLE DB per ogni proprietà dinamica. Il riferimento del programmatore OLE DB fa riferimento a un nome di proprietà ADO in base al termine "Description". Per ulteriori informazioni su queste proprietà, vedere OLE DB Programmer ' s Reference. Cercare il nome della proprietà OLE DB nell'indice o vedere [Appendice C: OLE DB proprietà](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
-## <a name="connection-dynamic-properties"></a>Proprietà dinamiche di connessione
- Le proprietà seguenti vengono aggiunti per il **connessione** dell'oggetto **proprietà** raccolta.
+## <a name="connection-dynamic-properties"></a>Proprietà dinamiche della connessione
+ Le proprietà seguenti vengono aggiunte alla raccolta **Properties** dell'oggetto **Connection** .
 
 |Nome della proprietà ADO|Nome della proprietà OLE DB|
 |-----------------------|--------------------------|
 |Sessioni attive|DBPROP_ACTIVESESSIONS|
 |Interruzione asincrona|DBPROP_ASYNCTXNABORT|
-|Commit asincrono|DBPROP_ASYNCTNXCOMMIT|
+|Commit asincrona|DBPROP_ASYNCTNXCOMMIT|
 |Livelli di isolamento autocommit|DBPROP_SESS_AUTOCOMMITISOLEVELS|
-|Posizione catalogo|DBPROP_CATALOGLOCATION|
-|Termine catalogo|DBPROP_CATALOGTERM|
+|Percorso catalogo|DBPROP_CATALOGLOCATION|
+|Termine Catalogo|DBPROP_CATALOGTERM|
 |Definizione di colonna|DBPROP_COLUMNDEFINITION|
 |Timeout di connessione|DBPROP_INIT_TIMEOUT|
 |Catalogo corrente|DBPROP_CURRENTCATALOG|
 |origine dati|DBPROP_INIT_DATASOURCE|
-|Nome origine dati|DBPROP_DATASOURCENAME|
-|Oggetto di origine dati modello di Threading|DBPROP_DSOTHREADMODEL|
+|Data Source Name|DBPROP_DATASOURCENAME|
+|Modello di threading dell'oggetto origine dati|DBPROP_DSOTHREADMODEL|
 |Nome DBMS|DBPROP_DBMSNAME|
 |Versione DBMS|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
-|Supporto GROUP BY|DBPROP_GROUPBY|
+|Supporto per GROUP BY|DBPROP_GROUPBY|
 |Supporto tabelle eterogenee|DBPROP_HETEROGENEOUSTABLES|
 |Distinzione maiuscole/minuscole identificatore|DBPROP_IDENTIFIERCASE|
 |Catalogo iniziale|DBPROP_INIT_CATALOG|
 |Livelli di isolamento|DBPROP_SUPPORTEDTXNISOLEVELS|
-|Mantenimento isolamento|DBPROP_SUPPORTEDTXNISORETAIN|
+|Conservazione isolamento|DBPROP_SUPPORTEDTXNISORETAIN|
 |Locale Identifier|DBPROP_INIT_LCID|
 |Location|DBPROP_INIT_LOCATION|
-|Dimensione massima dell'indice|DBPROP_MAXINDEXSIZE|
-|Dimensioni massime delle righe|DBPROP_MAXROWSIZE|
-|Dimensioni massime riga con BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
+|Dimensioni massime indice|DBPROP_MAXINDEXSIZE|
+|Dimensioni massime riga|DBPROP_MAXROWSIZE|
+|Dimensioni massime righe includono BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Numero massimo di tabelle in SELECT|DBPROP_MAXTABLESINSELECT|
-|Modalità|DBPROP_INIT_MODE|
-|Più set di parametri|DBPROP_MULTIPLEPARAMSETS|
+|Mode|DBPROP_INIT_MODE|
+|Set di parametri multipli|DBPROP_MULTIPLEPARAMSETS|
 |Risultati multipli|DBPROP_MULTIPLERESULTS|
 |Più oggetti di archiviazione|DBPROP_MULTIPLESTORAGEOBJECTS|
-|Aggiornamento tabelle multiple|DBPROP_MULTITABLEUPDATE|
-|Ordine delle regole di confronto NULL|DBPROP_NULLCOLLATION|
+|Aggiornamento di più tabelle|DBPROP_MULTITABLEUPDATE|
+|Ordinamento regole di confronto NULL|DBPROP_NULLCOLLATION|
 |Comportamento concatenazione NULL|DBPROP_CONCATNULLBEHAVIOR|
-|Servizi OLE DB|DBPROP_INIT_OLEDBSERVICES|
+|Servizi di OLE DB|DBPROP_INIT_OLEDBSERVICES|
 |Versione OLE DB|DBPROP_PROVIDEROLEDBVER|
-|Supporto oggetti OLE|DBPROP_OLEOBJECTS|
-|Supporto per Rowset aperto|DBPROP_OPENROWSETSUPPORT|
+|Supporto per oggetti OLE|DBPROP_OLEOBJECTS|
+|Supporto per set di righe aperto|DBPROP_OPENROWSETSUPPORT|
 |Colonne ORDER BY nell'elenco di selezione|DBPROP_ORDERBYCOLUMNSINSELECT|
 |Disponibilità parametro di output|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Password|DBPROP_AUTH_PASSWORD|
-|Passa per le funzioni di accesso di riferimento|DBPROP_BYREFACCESSORS|
+|Passa per funzioni di accesso Ref|DBPROP_BYREFACCESSORS|
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |Tipo ID persistente|DBPROP_PERSISTENTIDTYPE|
 |Comportamento preparazione interruzione|DBPROP_PREPAREABORTBEHAVIOR|
-|Comportamento preparazione Commit|DBPROP_PREPARECOMMITBEHAVIOR|
-|Termine routine|DBPROP_PROCEDURETERM|
-|Messaggio di richiesta|DBPROP_INIT_PROMPT|
-|Nome descrittivo del provider|DBPROP_PROVIDERFRIENDLYNAME|
+|Comportamento preparazione commit|DBPROP_PREPARECOMMITBEHAVIOR|
+|Termine procedura|DBPROP_PROCEDURETERM|
+|Prompt|DBPROP_INIT_PROMPT|
+|Nome descrittivo provider|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |Versione del provider|DBPROP_PROVIDERVER|
 |Origine dati di sola lettura|DBPROP_DATASOURCEREADONLY|
-|Conversioni di set di righe di comando|DBPROP_ROWSETCONVERSIONSONCOMMAND|
+|Conversioni di set di righe nel comando|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Termine schema|DBPROP_SCHEMATERM|
 |Utilizzo dello schema|DBPROP_SCHEMAUSAGE|
-|Supporto di SQL|DBPROP_SQLSUPPORT|
+|Supporto SQL|DBPROP_SQLSUPPORT|
 |Archiviazione strutturata|DBPROP_STRUCTUREDSTORAGE|
-|Supporto delle sottoquery|DBPROP_SUBQUERIES|
+|Supporto sottoquery|DBPROP_SUBQUERIES|
 |Termine tabella|DBPROP_TABLETERM|
-|Transazione DDL|DBPROP_SUPPORTEDTXNDDL|
+|DDL transazione|DBPROP_SUPPORTEDTXNDDL|
 |ID utente|DBPROP_AUTH_USERID|
-|Nome utente|DBPROP_USERNAME|
-|Handle di finestra|DBPROP_INIT_HWND|
+|User Name|DBPROP_USERNAME|
+|Handle finestra|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Proprietà dinamiche del recordset
- Le proprietà seguenti vengono aggiunti per il **Recordset** dell'oggetto **proprietà** raccolta.
+ Le proprietà seguenti vengono aggiunte alla raccolta **Properties** dell'oggetto **Recordset** .
 
 |Nome della proprietà ADO|Nome della proprietà OLE DB|
 |-----------------------|--------------------------|
 |Ordine di accesso|DBPROP_ACCESSORDER|
-|Blocca gli oggetti di archiviazione|DBPROP_BLOCKINGSTORAGEOBJECTS|
+|Blocco di oggetti di archiviazione|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo di segnalibro|DBPROP_BOOKMARKTYPE|
-|Supporta|DBPROP_IROWSETLOCATE|
-|Modificare le righe inserite|DBPROP_CHANGEINSERTEDROWS|
-|Privilegi colonna|DBPROP_COLUMNRESTRICT|
-|Notifica impostazione colonna|DBPROP_NOTIFYCOLUMNSET|
-|Aggiornamenti degli oggetti di archiviazione di ritardo|DBPROP_DELAYSTORAGEOBJECTS|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
+|Modifica righe inserite|DBPROP_CHANGEINSERTEDROWS|
+|Privilegi di colonna|DBPROP_COLUMNRESTRICT|
+|Notifica set di colonne|DBPROP_NOTIFYCOLUMNSET|
+|Ritardare gli aggiornamenti degli oggetti di archiviazione|DBPROP_DELAYSTORAGEOBJECTS|
 |Recupera all'indietro|DBPROP_CANFETCHBACKWARDS|
-|Contenere righe|DBPROP_CANHOLDROWS|
+|Mantieni righe|DBPROP_CANHOLDROWS|
 |IAccessor|DBPROP_IAccessor|
 |IColumnsInfo|DBPROP_IColumnsInfo|
 |IColumnsRowset|DBPROP_IColumnsRowset|
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
-|Righe immobili|DBPROP_IMMOBILEROWS|
+|Righe non mobili|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
@@ -329,61 +329,61 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |ISupportErrorInfo|DBPROP_ISupportErrorInfo|
 |Segnalibri letterali|DBPROP_LITERALBOOKMARKS|
 |Identità di riga letterale|DBPROP_LITERALIDENTITY|
-|Numero massimo righe aperte|DBPROP_MAXOPENROWS|
-|Numero massimo righe in sospeso|DBPROP_MAXPENDINGROWS|
+|Numero massimo di righe aperte|DBPROP_MAXOPENROWS|
+|Numero massimo di righe in sospeso|DBPROP_MAXPENDINGROWS|
 |Numero massimo di righe|DBPROP_MAXROWS|
-|Granularità notifiche|DBPROP_NOTIFICATIONGRANULARITY|
+|Granularità delle notifiche|DBPROP_NOTIFICATIONGRANULARITY|
 |Fasi di notifica|DBPROP_NOTIFICATIONPHASES|
-|Oggetti transazione|DBPROP_TRANSACTEDOBJECT|
-|Proprie modifiche visibili|DBPROP_OWNUPDATEDELETE|
-|Inserimenti locali visibili|DBPROP_OWNINSERT|
-|Mantieni in caso di interruzione|DBPROP_ABORTPRESERVE|
-|Mantieni in caso di Commit|DBPROP_COMMITPRESERVE|
+|Oggetti sottoposti a transazione|DBPROP_TRANSACTEDOBJECT|
+|Modifiche personalizzate visibili|DBPROP_OWNUPDATEDELETE|
+|Inserimenti personali visibili|DBPROP_OWNINSERT|
+|Mantieni in interruzione|DBPROP_ABORTPRESERVE|
+|Mantieni al commit|DBPROP_COMMITPRESERVE|
 |Riavvio rapido|DBPROP_QUICKRESTART|
 |Eventi rientranti|DBPROP_REENTRANTEVENTS|
-|Rimuovere le righe eliminate|DBPROP_REMOVEDELETED|
-|Riporta modifiche Multiple|DBPROP_REPORTMULTIPLECHANGES|
+|Rimuovi righe eliminate|DBPROP_REMOVEDELETED|
+|Segnala più modifiche|DBPROP_REPORTMULTIPLECHANGES|
 |Restituisci inserimenti in sospeso|DBPROP_RETURNPENDINGINSERTS|
 |Notifica eliminazione riga|DBPROP_NOTIFYROWDELETE|
-|Notifica prima modifica riga|DBPROP_NOTIFYROWFIRSTCHANGE|
+|Notifica di modifica prima riga|DBPROP_NOTIFYROWFIRSTCHANGE|
 |Notifica inserimento riga|DBPROP_NOTIFYROWINSERT|
-|Privilegi riga|DBPROP_ROWRESTRICT|
-|Notifica risincronizzazione riga|DBPROP_NOTIFYROWRESYNCH|
-|Modello di Threading riga|DBPROP_ROWTHREADMODEL|
-|Notifica annullamento Modifica riga|DBPROP_NOTIFYROWUNDOCHANGE|
+|Privilegi di riga|DBPROP_ROWRESTRICT|
+|Notifica della risincronizzazione delle righe|DBPROP_NOTIFYROWRESYNCH|
+|Modello di threading delle righe|DBPROP_ROWTHREADMODEL|
+|Notifica modifiche annullamento riga|DBPROP_NOTIFYROWUNDOCHANGE|
 |Notifica annullamento eliminazione riga|DBPROP_NOTIFYROWUNDODELETE|
 |Notifica annullamento inserimento riga|DBPROP_NOTIFYROWUNDOINSERT|
 |Notifica aggiornamento riga|DBPROP_NOTIFYROWUPDATE|
-|Notifica modifica posizione recupero gruppo di righe|DBPROP_NOTIFYROWSETFETCHPOSISIONCHANGE|
-|Notifica rilascio gruppo di righe|DBPROP_NOTIFYROWSETRELEASE|
+|Notifica di modifica posizione recupero set di righe|DBPROP_NOTIFYROWSETFETCHPOSISIONCHANGE|
+|Notifica di rilascio del set di righe|DBPROP_NOTIFYROWSETRELEASE|
 |Scorri indietro|DBPROP_CANSCROLLBACKWARDS|
 |Ignora segnalibri eliminati|DBPROP_BOOKMARKSKIPPED|
 |Identità riga forte|DBPROP_STRONGITDENTITY|
 |Righe univoche|DBPROP_UNIQUEROWS|
-|Aggiornabile|DBPROP_UPDATABILITY|
+|Aggiornabilità|DBPROP_UPDATABILITY|
 |Usare i segnalibri|DBPROP_BOOKMARKS|
 
-## <a name="command-dynamic-properties"></a>Proprietà dinamiche di comando
- Le proprietà seguenti vengono aggiunti per il **comandi** dell'oggetto **proprietà** raccolta.
+## <a name="command-dynamic-properties"></a>Proprietà dinamiche del comando
+ Le proprietà seguenti vengono aggiunte alla raccolta **Properties** dell'oggetto **Command** .
 
 |Nome della proprietà ADO|Nome della proprietà OLE DB|
 |-----------------------|--------------------------|
 |Ordine di accesso|DBPROP_ACCESSORDER|
-|Blocca gli oggetti di archiviazione|DBPROP_BLOCKINGSTORAGEOBJECTS|
+|Blocco di oggetti di archiviazione|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Tipo di segnalibro|DBPROP_BOOKMARKTYPE|
-|Supporta|DBPROP_IROWSETLOCATE|
-|Modificare le righe inserite|DBPROP_CHANGEINSERTEDROWS|
-|Privilegi colonna|DBPROP_COLUMNRESTRICT|
-|Notifica impostazione colonna|DBPROP_NOTIFYCOLUMNSET|
-|Aggiornamenti degli oggetti di archiviazione di ritardo|DBPROP_DELAYSTORAGEOBJECTS|
+|Bookmarkable|DBPROP_IROWSETLOCATE|
+|Modifica righe inserite|DBPROP_CHANGEINSERTEDROWS|
+|Privilegi di colonna|DBPROP_COLUMNRESTRICT|
+|Notifica set di colonne|DBPROP_NOTIFYCOLUMNSET|
+|Ritardare gli aggiornamenti degli oggetti di archiviazione|DBPROP_DELAYSTORAGEOBJECTS|
 |Recupera all'indietro|DBPROP_CANFETCHBACKWARDS|
-|Contenere righe|DBPROP_CANHOLDROWS|
+|Mantieni righe|DBPROP_CANHOLDROWS|
 |IAccessor|DBPROP_IAccessor|
 |IColumnsInfo|DBPROP_IColumnsInfo|
 |IColumnsRowset|DBPROP_IColumnsRowset|
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
-|Righe immobili|DBPROP_IMMOBILEROWS|
+|Righe non mobili|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
@@ -395,40 +395,40 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |ISupportErrorInfo|DBPROP_ISupportErrorInfo|
 |Segnalibri letterali|DBPROP_LITERALBOOKMARKS|
 |Identità di riga letterale|DBPROP_LITERALIDENTITY|
-|Numero massimo righe aperte|DBPROP_MAXOPENROWS|
-|Numero massimo righe in sospeso|DBPROP_MAXPENDINGROWS|
+|Numero massimo di righe aperte|DBPROP_MAXOPENROWS|
+|Numero massimo di righe in sospeso|DBPROP_MAXPENDINGROWS|
 |Numero massimo di righe|DBPROP_MAXROWS|
-|Granularità notifiche|DBPROP_NOTIFICATIONGRANULARITY|
+|Granularità delle notifiche|DBPROP_NOTIFICATIONGRANULARITY|
 |Fasi di notifica|DBPROP_NOTIFICATIONPHASES|
-|Oggetti transazione|DBPROP_TRANSACTEDOBJECT|
-|Proprie modifiche visibili|DBPROP_OWNUPDATEDELETE|
-|Inserimenti locali visibili|DBPROP_OWNINSERT|
-|Mantieni in caso di interruzione|DBPROP_ABORTPRESERVE|
-|Mantieni in caso di Commit|DBPROP_COMMITPRESERVE|
+|Oggetti sottoposti a transazione|DBPROP_TRANSACTEDOBJECT|
+|Modifiche personalizzate visibili|DBPROP_OWNUPDATEDELETE|
+|Inserimenti personali visibili|DBPROP_OWNINSERT|
+|Mantieni in interruzione|DBPROP_ABORTPRESERVE|
+|Mantieni al commit|DBPROP_COMMITPRESERVE|
 |Riavvio rapido|DBPROP_QUICKRESTART|
 |Eventi rientranti|DBPROP_REENTRANTEVENTS|
-|Rimuovere le righe eliminate|DBPROP_REMOVEDELETED|
-|Riporta modifiche Multiple|DBPROP_REPORTMULTIPLECHANGES|
+|Rimuovi righe eliminate|DBPROP_REMOVEDELETED|
+|Segnala più modifiche|DBPROP_REPORTMULTIPLECHANGES|
 |Restituisci inserimenti in sospeso|DBPROP_RETURNPENDINGINSERTS|
 |Notifica eliminazione riga|DBPROP_NOTIFYROWDELETE|
-|Notifica prima modifica riga|DBPROP_NOTIFYROWFIRSTCHANGE|
+|Notifica di modifica prima riga|DBPROP_NOTIFYROWFIRSTCHANGE|
 |Notifica inserimento riga|DBPROP_NOTIFYROWINSERT|
-|Privilegi riga|DBPROP_ROWRESTRICT|
-|Notifica risincronizzazione riga|DBPROP_NOTIFYROWRESYNCH|
-|Modello di Threading riga|DBPROP_ROWTHREADMODEL|
-|Notifica annullamento Modifica riga|DBPROP_NOTIFYROWUNDOCHANGE|
+|Privilegi di riga|DBPROP_ROWRESTRICT|
+|Notifica della risincronizzazione delle righe|DBPROP_NOTIFYROWRESYNCH|
+|Modello di threading delle righe|DBPROP_ROWTHREADMODEL|
+|Notifica modifiche annullamento riga|DBPROP_NOTIFYROWUNDOCHANGE|
 |Notifica annullamento eliminazione riga|DBPROP_NOTIFYROWUNDODELETE|
 |Notifica annullamento inserimento riga|DBPROP_NOTIFYROWUNDOINSERT|
 |Notifica aggiornamento riga|DBPROP_NOTIFYROWUPDATE|
-|Notifica modifica posizione recupero gruppo di righe|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|
-|Notifica rilascio gruppo di righe|DBPROP_NOTIFYROWSETRELEASE|
+|Notifica di modifica posizione recupero set di righe|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|
+|Notifica di rilascio del set di righe|DBPROP_NOTIFYROWSETRELEASE|
 |Scorri indietro|DBPROP_CANSCROLLBACKWARDS|
 |Ignora segnalibri eliminati|DBPROP_BOOKMARKSKIP|
 |Identità riga forte|DBPROP_STRONGIDENTITY|
-|Aggiornabile|DBPROP_UPDATABILITY|
+|Aggiornabilità|DBPROP_UPDATABILITY|
 |Usare i segnalibri|DBPROP_BOOKMARKS|
 
- Per informazioni dettagliate e sull'implementazione funzionale informazioni sui Provider Microsoft OLE DB per ODBC, vedere la [riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) o visitare il sito di accesso ai dati e Web Storage Developer Center su MSDN.
+ Per informazioni dettagliate sull'implementazione specifica e sulle informazioni funzionali sul provider Microsoft OLE DB per ODBC, vedere la Guida [di riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) oppure visitare il sito Web di Data Access and Storage Developer Center su MSDN.
 
 ## <a name="see-also"></a>Vedere anche
- [Oggetto (ADO) Command](../../../ado/reference/ado-api/command-object-ado.md) [proprietà CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [proprietà ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [eseguire Metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [metodo (Recordset ADO) Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) [insieme di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Proprietà del provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [supporta (metodo)](../../../ado/reference/ado-api/supports-method.md)
+ [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [COMMANDTEXT Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [Connection Object (](../../../ado/reference/ado-api/connection-object-ado.md) ADO) [ConnectionString Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Execute Method (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters Collection (](../../../ado/reference/ado-api/parameters-collection-ado.md) ADO) [Proprietà Collection (](../../../ado/reference/ado-api/properties-collection-ado.md) ADO) [provider Property](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO) [supporta il metodo](../../../ado/reference/ado-api/supports-method.md)

@@ -1,5 +1,5 @@
 ---
-title: Esempio di DeleteRecord e MoveRecord (esempio di metodi (VB) | Microsoft Docs
+title: Esempio di metodi DeleteRecord e MoveRecord (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c449e2a7c52b069478a07e4e2fa902c3b0527e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919107"
 ---
-# <a name="deleterecord-and-moverecord-methods-example-vb"></a>Esempio di DeleteRecord e MoveRecord (esempio di metodi (VB)
-In questo esempio viene illustrato come copiare, spostare, modificare ed eliminare il contenuto di un file di testo pubblicati in una cartella Web. Includono altre proprietà e metodi usati [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [origine](../../../ado/reference/ado-api/source-property-ado-record.md), e [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  
+# <a name="deleterecord-and-moverecord-methods-example-vb"></a>Esempio di metodi DeleteRecord e MoveRecord (VB)
+Questo esempio illustra come copiare, spostare, modificare ed eliminare il contenuto di un file di testo pubblicato in una cartella Web. Altre proprietà e metodi usati includono [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [source](../../../ado/reference/ado-api/source-property-ado-record.md)e [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  
   
 ```  
 'BeginDeleteRecordVB  
@@ -154,4 +154,4 @@ End Sub
  [Metodo GetChildren (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [Metodo MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [Proprietà ParentURL (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
- [Proprietà Source (Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)
+ [Proprietà Source (Record - ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688668"
 ---
 # <a name="call-stored-procedures-odbc"></a>Chiamare stored procedure (ODBC)
   Quando un'istruzione SQL chiama un stored procedure utilizzando la clausola di escape ODBC CALL, il driver Microsoft SQL Server invia la procedura a SQL Server utilizzando il meccanismo RPC (Remote stored procedure call). Le richieste RPC ignorano la maggior parte dell'analisi delle istruzioni e dell'elaborazione dei parametri in SQL Server e sono più veloci rispetto a un'istruzione Transact-SQL EXECUTE.  
   
- Per un'applicazione di esempio in cui viene illustrata questa funzionalità, vedere [elaborare i &#40;codici&#41;restituiti e i parametri di output ODBC](running-stored-procedures-process-return-codes-and-output-parameters.md).  
+ Per un'applicazione di esempio in cui viene illustrata questa funzionalità, vedere [elaborare i codici restituiti e i parametri di Output &#40;&#41;ODBC ](running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>Per eseguire una procedura come RPC  
   
@@ -40,10 +40,10 @@ ms.locfileid: "72688668"
 >  Se un'applicazione invia una procedura utilizzando la sintassi Transact-SQL EXECUTE, invece della sequenza di escape ODBC CALL, il driver ODBC di SQL Server passa la chiamata di procedura a SQL Server come istruzione SQL anziché come chiamata RPC. Se viene utilizzata l'istruzione Transact-SQL EXECUTE, inoltre, i parametri di output non vengono restituiti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Argomenti &#40;sulle procedure per l'esecuzione di stored&#41; procedure ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
- Invio in [batch di chiamate a stored Procedure](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [Procedure per l'esecuzione di stored procedure &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [Invio in batch di chiamate a stored procedure](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Esecuzione di stored procedure](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Chiamata di una stored Procedure](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
+ [Chiamata di una stored procedure](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Procedure](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

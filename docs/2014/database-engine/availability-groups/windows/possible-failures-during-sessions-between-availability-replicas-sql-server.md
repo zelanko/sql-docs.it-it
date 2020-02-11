@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874475"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Possibili errori durante le sessioni tra repliche di disponibilità (SQL Server)
@@ -59,7 +59,8 @@ ms.locfileid: "70874475"
   
 -   I cavi sono scollegati.  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows blocca una porta specifica.  
+-   
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows blocca una porta specifica.  
   
 -   Si è verificato un errore nell'applicazione che esegue il monitoraggio di una porta.  
   
@@ -68,14 +69,15 @@ ms.locfileid: "70874475"
 -   Un server Windows è stato riavviato.  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] non fornisce protezione da problemi specifici dei client che accedono ai server. Si consideri, ad esempio, un caso in cui una scheda di rete pubblica gestisce le connessioni client alla replica primaria, mentre una scheda di interfaccia di rete privata gestisce il traffico tra le istanze del server che ospitano le repliche di un gruppo di disponibilità. In questo caso, l'errore della scheda di rete pubblica impedirebbe l'accesso dei client al database.  
+>  
+  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] non fornisce protezione da problemi specifici dei client che accedono ai server. Si consideri, ad esempio, un caso in cui una scheda di rete pubblica gestisce le connessioni client alla replica primaria, mentre una scheda di interfaccia di rete privata gestisce il traffico tra le istanze del server che ospitano le repliche di un gruppo di disponibilità. In questo caso, l'errore della scheda di rete pubblica impedirebbe l'accesso dei client al database.  
   
 ## <a name="failures-due-to-soft-errors"></a>Errori provocati da errori software  
  Di seguito vengono riportate alcune possibili cause dei timeout della sessione:  
   
 -   Errori di rete, ad esempio timeout di collegamenti TCP, pacchetti ignorati, danneggiati o in ordine errato.  
   
--   Un sistema operativo, un server o un database che non risponde.  
+-   Sistema operativo, server o database che non risponde.  
   
 -   Timeout di un server Windows.  
   
@@ -86,7 +88,7 @@ ms.locfileid: "70874475"
   
  Le repliche primarie e secondarie effettuano vicendevolmente il ping per segnalare che sono ancora attive e un limite di timeout della sessione impedisce che la replica attenda indefinitamente la ricezione di un ping dall'altra replica. Il limite di timeout della sessione è una proprietà della replica configurabile dall'utente con un valore predefinito di 10 secondi. La ricezione di un ping durante il periodo di timeout indica che la connessione è ancora aperta e che le istanze del server comunicano attraverso tale connessione. Alla ricezione di un ping, la replica di disponibilità reimposta il contatore del timeout per quella connessione.  
   
- Se non viene ricevuto alcun ping dall'altra replica entro il periodo di timeout della sessione, si verifica il timeout della connessione. La connessione viene chiusa e per la replica scaduta viene impostato lo stato DISCONNECTED. Anche se la replica disconnessa è configurata per la modalità con commit sincrono, le transazioni non attenderanno che quella replica venga riconnessa e risincronizzata.  
+ Se non viene ricevuto alcun ping dall'altra replica entro il periodo di timeout della sessione, si verifica il timeout della connessione. La connessione viene chiusa e la replica scaduta entra nello stato disconnesso. Anche se la replica disconnessa è configurata per la modalità con commit sincrono, le transazioni non attenderanno che quella replica venga riconnessa e risincronizzata.  
   
 ## <a name="responding-to-an-error"></a>Risposta a un errore  
  Indipendentemente dal tipo di errore, un'istanza del server che rileva un errore esegue l'azione appropriata in base al proprio ruolo, alla modalità di disponibilità della sessione e allo stato delle altre connessioni della sessione. Per informazioni su ciò che si verifica in caso di perdita di un partner, vedere [modalità di disponibilità (gruppi di disponibilità AlwaysOn)](availability-modes-always-on-availability-groups.md).  

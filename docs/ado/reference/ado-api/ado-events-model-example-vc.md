@@ -1,5 +1,5 @@
 ---
-title: Eventi ADO modello di esempio (VC + +) | Microsoft Docs
+title: Esempio di modello di eventi ADO (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,38 +15,38 @@ ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921011"
 ---
 # <a name="ado-events-model-example-vc"></a>Esempio del modello di eventi ADO (VC++)
-La sezione di Visual C++ di [creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md) viene fornita una descrizione generale di come creare un'istanza del modello di eventi ADO. Di seguito è riportato un esempio specifico su un'istanza del modello di evento all'interno dell'ambiente creato dal **#import** direttiva.  
+La sezione Visual C++ della [creazione di un'istanza dell'evento ADO per lingua](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornisce una descrizione generale di come creare un'istanza del modello di eventi ADO. Di seguito è riportato un esempio specifico di creazione di un'istanza del modello di eventi all'interno dell'ambiente creato dalla direttiva **#import** .  
   
- Descrizione generale viene utilizzata **adoint** come riferimento per le firme del metodo. Tuttavia, alcuni dettagli della descrizione generale variano leggermente in seguito all'utilizzo di **#import** direttiva:  
+ La descrizione generale USA **adoint. h** come riferimento per le firme del metodo. Tuttavia, alcuni dettagli della descrizione generale cambiano leggermente in seguito all'utilizzo della direttiva **#import** :  
   
--   Il **#import** direttiva risolve **typedef**del, tipi di dati della firma di metodo e i modificatori di propri moduli fondamentali.  
+-   La direttiva **#import** risolve i tipi di **dati della firma del metodo**, i tipi di dati della firma del metodo e i modificatori nelle forme fondamentali.  
   
--   I metodi virtuali puri che devono essere sovrascritti sono precedute tutte dal prefisso da "**raw _** ".  
+-   I metodi virtuali puri che devono essere sovrascritti sono tutti preceduti da "**raw_**".  
   
- Parte del codice semplicemente riflette stile di codifica.  
+ Parte del codice riflette semplicemente lo stile di codifica.  
   
--   Il puntatore alla **IUnknown** usata dal **Advise** metodo si ottiene in modo esplicito con una chiamata a **QueryInterface**.  
+-   Il puntatore a **IUnknown** utilizzato dal metodo **Advise** viene ottenuto in modo esplicito con una chiamata a **QueryInterface**.  
   
 -   Non è necessario codificare in modo esplicito un distruttore nelle definizioni di classe.  
   
--   È possibile codificare più solide implementazioni di QueryInterface, AddRef e Release.  
+-   Potrebbe essere necessario codificare implementazioni più solide di QueryInterface, AddRef e release.  
   
--   Il **__uuidof()** direttiva è ampiamente utilizzata per ottenere gli ID di interfaccia.  
+-   La direttiva **__uuidof ()** viene utilizzata ampiamente per ottenere gli ID di interfaccia.  
   
  Infine, l'esempio contiene codice funzionante.  
   
--   Nell'esempio viene scritto come un'applicazione console.  
+-   L'esempio è scritto come applicazione console.  
   
--   È necessario inserire il proprio codice sotto il commento "`// Do some work`".  
+-   Inserire il proprio codice nel commento "`// Do some work`".  
   
--   Tutti i evento gestori predefinito viene eseguita alcuna operazione e annullare ulteriormente le notifiche. È consigliabile inserire il codice appropriato per l'applicazione e consentire le notifiche, se necessario.  
+-   Per impostazione predefinita, tutti i gestori eventi non effettuano alcuna operazione e annullano altre notifiche. È necessario inserire il codice appropriato per l'applicazione e consentire le notifiche, se necessario.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

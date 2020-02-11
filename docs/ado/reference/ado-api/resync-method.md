@@ -1,5 +1,5 @@
 ---
-title: Metodo Resync | Microsoft Docs
+title: Metodo di risincronizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917164"
 ---
 # <a name="resync-method"></a>Metodo Resync
-Aggiorna i dati nell'attuale [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto, dal database sottostante.  
+Aggiorna i dati nell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) corrente o nella raccolta di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) di un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) dal database sottostante.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,32 +37,32 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- facoltativo. Un' [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che determina il numero di record la **Risincronizza** saranno influenzati dal metodo. Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con la **Risincronizza** metodo per il **campi** raccolta di un **Record** oggetto.  
+ Facoltativa. Valore [AffectEnum](../../../ado/reference/ado-api/affectenum.md) che determina il numero di record su cui influirà il metodo di **Risincronizzazione** . Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con il metodo **Resync** della raccolta **Fields** di un oggetto **record** .  
   
  *ResyncValues*  
- facoltativo. Oggetto [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valore che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
+ Facoltativa. Valore [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="recordset"></a>recordset  
- Usare la **Risincronizza** metodo risincronizzare i record nell'attuale **Recordset** con il database sottostante. Ciò è utile se si usa un cursore statico o di tipo forward-only, ma si desidera visualizzare tutte le modifiche nel database sottostante.  
+ Utilizzare il metodo **Resync** per risincronizzare i record del **Recordset** corrente con il database sottostante. Questa operazione è utile se si utilizza un cursore statico o di tipo "solo di tipo", ma si desidera visualizzare eventuali modifiche nel database sottostante.  
   
- Se si imposta la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà **adUseClient**, **Risincronizza** è disponibile solo per non di sola lettura **Recordset** oggetti.  
+ Se si imposta la proprietà [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) su **adUseClient**, la **Risincronizzazione** è disponibile solo per gli oggetti **Recordset** non di sola lettura.  
   
- A differenza del [rieseguire una query](../../../ado/reference/ado-api/requery-method.md) metodo, il **Risincronizza** metodo non viene nuovamente eseguito il **Recordset** sottostante del comando. Nuovi record nel database sottostante non saranno visibili.  
+ A differenza del metodo [Requery](../../../ado/reference/ado-api/requery-method.md) , il metodo **Resync** non esegue di nuovo il comando sottostante dell'oggetto **Recordset** . I nuovi record nel database sottostante non saranno visibili.  
   
- Se il tentativo di risincronizzare ha esito negativo a causa di un conflitto con i dati sottostanti (ad esempio, un record è stato eliminato da un altro utente), il provider restituisce avvisi per i [errori](../../../ado/reference/ado-api/errors-collection-ado.md) si verifica un errore di run-time e raccolta. Usare la [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà (**adFilterConflictingRecords**) e il [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà per individuare i record con conflitti.  
+ Se il tentativo di risincronizzazione non riesce a causa di un conflitto con i dati sottostanti (ad esempio, un record è stato eliminato da un altro utente), il provider restituisce avvisi alla raccolta [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) e si verifica un errore di run-time. Utilizzare la proprietà [Filter](../../../ado/reference/ado-api/filter-property.md) (**adFilterConflictingRecords**) e la proprietà [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) per individuare i record con conflitti.  
   
- Se il [tabelle univoche](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) e [Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) le proprietà dinamiche sono impostate e il **Recordset** è il risultato dell'esecuzione di un'operazione di JOIN in più tabelle, allora il  **Risincronizza** metodo eseguirà il comando specificato nella **Resync Command** proprietà solo per la tabella denominata nel **tabella univoca** proprietà.  
+ Se vengono impostate le proprietà dinamiche della tabella e della [Risincronizzazione](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) [univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) e il **Recordset** è il risultato dell'esecuzione di un'operazione di join su più tabelle, il metodo **Resync** eseguirà il comando specificato nella proprietà di **comando resync** solo nella tabella denominata nella proprietà **Unique Table** .  
   
 ## <a name="fields"></a>Campi  
- Usare la **Risincronizza** metodo risincronizzare i valori del **campi** raccolta di un **Record** oggetto con l'origine dati sottostante. Il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà non è interessata da questo metodo.  
+ Utilizzare il metodo **Resync** per risincronizzare i valori della raccolta **Fields** di un oggetto **record** con l'origine dati sottostante. Questo metodo non ha effetto sulla proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
- Se *ResyncValues* è impostata su **adResyncAllValues** (valore predefinito), il [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md), [valore](../../../ado/reference/ado-api/value-property-ado.md), e [ Esempio di OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) delle proprietà di [campo](../../../ado/reference/ado-api/field-object.md) sincronizzazione degli oggetti nella raccolta. Se *ResyncValues* è impostata su **adResyncUnderlyingValues**, solo il **UnderlyingValue** proprietà è sincronizzata.  
+ Se *ResyncValues* è impostato su **adResyncAllValues** (valore predefinito), le proprietà [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md), [value](../../../ado/reference/ado-api/value-property-ado.md)e [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) degli oggetti [Field](../../../ado/reference/ado-api/field-object.md) della raccolta sono sincronizzate. Se *ResyncValues* è impostato su **adResyncUnderlyingValues**, viene sincronizzata solo la proprietà **UnderlyingValue** .  
   
- Il valore della **lo stato** proprietà per ogni **campo** oggetto al momento della chiamata influisce anche sul comportamento di **Risincronizza**. Per **campo** gli oggetti che hanno **stato** valori di **su adFieldPendingUnknown** oppure **adFieldPendingInsert**, **Resync**  non ha alcun effetto. Per **lo stato** i valori di **uguali a adFieldPendingChange** oppure **adFieldPendingDelete**, **Risincronizza** Sincronizza i valori dei dati per i campi che esiste ancora nell'origine dati.  
+ Il valore della proprietà **status** per ogni oggetto **Field** al momento della chiamata influiscono anche sul comportamento della **Risincronizzazione**. Per gli oggetti **campo** con **** valori di stato **adFieldPendingUnknown** o **adFieldPendingInsert**, la **Risincronizzazione** non ha alcun effetto. Per i valori di **stato** di **adFieldPendingChange** o **adFieldPendingDelete**, la **Risincronizzazione** sincronizza i valori dei dati per i campi che esistono ancora nell'origine dati.  
   
- **Risincronizza** non modificherà **stato** valori di **campo** oggetti a meno che non si verifica un errore quando **Risincronizza** viene chiamato. Ad esempio, se il campo non esiste più, il provider restituisce un'apposita **lo stato** valore per il **campo** dell'oggetto, ad esempio **adFieldDoesNotExist**. Restituiti **lo stato** valori possono essere combinati in modo logico all'interno del valore della **stato** proprietà.  
+ La **Risincronizzazione** non modifica i valori di **stato** degli oggetti **campo** a meno che non si verifichi un errore quando viene chiamata la **Risincronizzazione** . Se, ad esempio, il campo non esiste più, il provider restituirà un valore di **stato** appropriato per l'oggetto **campo** , ad esempio **adFieldDoesNotExist**. I valori di **stato** restituiti possono essere combinati in modo logico all'interno del valore della proprietà **status** .  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -71,7 +71,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
 |[Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risincronizzare l'esempio di metodo (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
- [Risincronizzare l'esempio di metodo (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
+ [Esempio di metodo Resync (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
+ [Esempio di metodo Resync (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Metodo Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

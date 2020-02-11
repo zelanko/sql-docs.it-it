@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632711"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lezione 1: Creazione di oggetti di database
@@ -34,17 +34,17 @@ ms.locfileid: "73632711"
   
  In questa lezione sono inclusi gli argomenti seguenti:  
   
--   [Creazione di un database &#40;esercitazione&#41;](lesson-1-1-creating-a-database.md)  
+-   [Esercitazione sulla creazione di un database &#40;&#41;](lesson-1-1-creating-a-database.md)  
   
 -   [Creazione di una tabella &#40;esercitazione&#41;](lesson-1-2-creating-a-table.md)  
   
--   [Inserimento e aggiornamento di dati in una tabella &#40;Esercitazione&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [Inserimento e aggiornamento di dati in una tabella &#40;esercitazione&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [Lettura dei dati di una tabella &#40;esercitazione&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [Lettura dei dati in una tabella &#40;esercitazione&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [Riepilogo: Creazione di oggetti di database](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di un database &#40;esercitazione&#41;](lesson-1-1-creating-a-database.md)  
+ [Esercitazione sulla creazione di un database &#40;&#41;](lesson-1-1-creating-a-database.md)  
   
   

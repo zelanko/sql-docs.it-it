@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103757"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -25,7 +25,7 @@ ms.locfileid: "66103757"
 > [!IMPORTANT]  
 >  Prestare attenzione in caso di modifiche al file di configurazione. Se si modifica un'impostazione riservata per l'uso interno, l'installazione potrebbe essere disabilitata. Non è in genere consigliabile modificare le impostazioni di configurazione, a meno che non sia necessario risolvere un problema specifico. Per ulteriori informazioni sulle impostazioni sicure da modificare, vedere [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) o [RSReportDesigner Configuration File](rsreportdesigner-configuration-file.md). Per altre informazioni sui file di configurazione, vedere la documentazione del prodotto [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
- Contenuto dell'argomento:  
+ In questo argomento  
   
 -   [Lettura e utilizzo di valori di configurazione](#bkmk_read_values)  
   
@@ -93,11 +93,11 @@ ms.locfileid: "66103757"
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione RSReportServer](rsreportserver-config-configuration-file.md)   
  [File di configurazione ReportingServicesService](reportingservicesservice-configuration-file.md)   
- [File di configurazione RSReportDesigner](rsreportdesigner-configuration-file.md)   
+ [RSReportDesigner - file di configurazione](rsreportdesigner-configuration-file.md)   
  [Distribuzione di un'estensione per l'elaborazione dati](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Distribuzione di un'estensione per il recapito](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Distribuzione di un'estensione per il rendering](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Procedura: Distribuire un elemento del Report personalizzato](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [Procedura: distribuire un elemento del report personalizzato](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [File di configurazione di Reporting Services](reporting-services-configuration-files.md)  
   
   

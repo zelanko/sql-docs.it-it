@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313755"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Rimuove i record della cronologia relativi a un processo.  
+  Rimuove i record della cronologia per un processo.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,20 +43,20 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_name = ] 'job_name'` il nome del processo per il quale eliminare i record della cronologia. *job_name*è di **tipo sysname**e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
+`[ @job_name = ] 'job_name'`Nome del processo per il quale eliminare i record della cronologia. *job_name*è di **tipo sysname**e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi.  
   
 > [!NOTE]  
 >  I membri del ruolo predefinito del server **sysadmin** o i membri del ruolo predefinito del database **SQLAgentOperatorRole** possono eseguire **sp_purge_jobhistory** senza specificare un *job_name* o *job_id*. Quando gli utenti **sysadmin** non specificano questi argomenti, la cronologia processo per tutti i processi locali e multiserver viene eliminata entro il tempo specificato da *oldest_date*. Quando gli utenti di **SQLAgentOperatorRole** non specificano questi argomenti, la cronologia processo per tutti i processi locali viene eliminata entro il tempo specificato da *oldest_date*.  
   
-`[ @job_id = ] job_id` il numero di identificazione del processo per i record da eliminare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. Vedere la nota nella descrizione di **\@job_name** per informazioni sul modo in cui gli utenti **sysadmin** o **SQLAgentOperatorRole** possono usare questo argomento.  
+`[ @job_id = ] job_id`Numero di identificazione del processo dei record da eliminare. *job_id* è di tipo **uniqueidentifier**e il valore predefinito è null. È necessario specificare *job_id* o *job_name* , ma non è possibile specificarli entrambi. Vedere la nota nella descrizione di ** \@job_name** per informazioni sul modo in cui gli utenti **sysadmin** o **SQLAgentOperatorRole** possono usare questo argomento.  
   
-`[ @oldest_date = ] oldest_date` il record meno recente da conservare nella cronologia. *oldest_date* è di tipo **DateTime**e il valore predefinito è null. Quando si specifica *oldest_date* , **sp_purge_jobhistory** rimuove solo i record precedenti al valore specificato.  
+`[ @oldest_date = ] oldest_date`Il record meno recente da conservare nella cronologia. *oldest_date* è di tipo **DateTime**e il valore predefinito è null. Quando si specifica *oldest_date* , **sp_purge_jobhistory** rimuove solo i record precedenti al valore specificato.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
  Quando **sp_purge_jobhistory** viene completata correttamente, viene restituito un messaggio.  
@@ -82,7 +82,7 @@ EXEC dbo.sp_purge_jobhistory
 GO  
 ```  
   
-### <a name="b-remove-history-for-all-jobs"></a>b. Rimozione della cronologia di tutti i processi  
+### <a name="b-remove-history-for-all-jobs"></a>B. Rimozione della cronologia di tutti i processi  
   
 > [!NOTE]  
 >  Solo i membri del ruolo predefinito del server **sysadmin** e i membri di **SQLAgentOperatorRole** possono rimuovere la cronologia per tutti i processi. Quando gli utenti **sysadmin** eseguono questa stored procedure senza parametri, la cronologia processo per tutti i processi locali e multiserver viene eliminata. Quando gli utenti di **SQLAgentOperatorRole** eseguono questa stored procedure senza parametri, viene eliminata solo la cronologia processo per tutti i processi locali.  
@@ -98,9 +98,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
+ [sp_help_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobhistory &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [GRANT - Autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+ [GRANT - autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
   

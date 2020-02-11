@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: 6012f4ca7b287d0098a867233d6b511ac5278457
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72811595"
 ---
 # <a name="user-hierarchies"></a>Gerarchie definite dall'utente
@@ -37,18 +37,18 @@ ms.locfileid: "72811595"
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
-|1999|Trimestre 1|Gen|  
-|1999|Trimestre 1|Feb|  
-|1999|Trimestre 1|Mar|  
-|1999|Trimestre 2|Apr|  
-|1999|Trimestre 2|Mag|  
-|1999|Trimestre 2|Giu|  
-|1999|Trimestre 3|Lug|  
-|1999|Trimestre 3|Ago|  
+|1999|Trimestre 1|gen|  
+|1999|Trimestre 1|feb|  
+|1999|Trimestre 1|mar|  
+|1999|Trimestre 2|apr|  
+|1999|Trimestre 2|mag|  
+|1999|Trimestre 2|Jun|  
+|1999|Trimestre 3|lug|  
+|1999|Trimestre 3|ago|  
 |1999|Trimestre 3|Set|  
-|1999|Trimestre 4|Oct|  
-|1999|Trimestre 4|Nov|  
-|1999|Trimestre 4|Dec|  
+|1999|Trimestre 4|ott|  
+|1999|Trimestre 4|nov|  
+|1999|Trimestre 4|dic|  
   
  Gli attributi Year, Quarter e Month vengono utilizzati per creare nella dimensione temporale una gerarchia definita dall'utente denominata Calendar. Nella figura riportata di seguito è illustrata la relazione esistente tra i livelli e i membri della dimensione Calendar, che è una dimensione regolare.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "72811595"
  Il livello Province viene popolato con i membri associati ad altri membri nel livello CountryRegion e i membri nel livello City vengono associati ai membri corrispondenti nel livello Province. Tuttavia, dato che il membro Vatican City nel livello CountryRegion non ha membri associati nel livello Province, i membri devono essere associati dal livello City direttamente al membro Vatican City nel livello CountryRegion. A causa delle modifiche, la gerarchia della dimensione ora risulta incompleta. Il membro padre della città Vatican City è il paese/regione Vatican City che non si trova nel livello immediatamente superiore al membro Vatican City nel livello City. Per altre informazioni, vedere [Gerarchie incomplete](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Gerarchie padre-figlio  
- Le gerarchie padre-figlio delle dimensioni vengono definite utilizzando un attributo speciale, denominato attributo padre, per determinare il tipo di relazione esistente tra i membri. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. Lo schema della dimensione di una gerarchia padre-figlio dipende da una relazione autoreferenziale presente nella tabella della dimensione principale. Nel diagramma seguente, ad esempio, viene illustrata la tabella principale della dimensione di **dimorgan** nella [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database di esempio.  
+ Le gerarchie padre-figlio delle dimensioni vengono definite utilizzando un attributo speciale, denominato attributo padre, per determinare il tipo di relazione esistente tra i membri. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. Lo schema della dimensione di una gerarchia padre-figlio dipende da una relazione autoreferenziale presente nella tabella della dimensione principale. Nel diagramma seguente, ad esempio, viene illustrata la tabella principale della dimensione di **dimorgan** nel database di [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esempio.  
   
- ![Join autoreferenziale nella tabella di dimorgan](../dev-guide/media/dimorganization.gif "Join autoreferenziale nella tabella di dimorgan")  
+ ![Join autoreferenziale nella tabella DimOrganization](../dev-guide/media/dimorganization.gif "Join autoreferenziale nella tabella DimOrganization")  
   
  In questa tabella della dimensione, nella colonna **dbo.xdbcdc_databases** è inclusa una relazione di chiave esterna con la colonna chiave primaria **OrganizationKey** . In altri termini, ogni record di questa tabella può essere messo in relazione a un altro record della tabella tramite una relazione padre-figlio. Questo tipo di self join viene in genere utilizzato per rappresentare dati entità dell'organizzazione, ad esempio la struttura di gestione dei dipendenti in un reparto.  
   
@@ -93,8 +93,8 @@ ms.locfileid: "72811595"
  A differenza delle gerarchie definite dall'utente, in cui il numero dei livelli presenti nella gerarchia determina il numero dei livelli visualizzabili dagli utenti finali, le gerarchie padre-figlio vengono definite dall'unico livello della gerarchia dell'attributo e i diversi livelli visualizzati dagli utenti sono prodotti dai valori di questo singolo livello. Il numero di livelli visualizzati dipende dal contenuto delle colonne della tabella della dimensione in cui vengono archiviate le chiavi dei membri e le chiavi dei membri padre. Il numero di livelli può cambiare se vengono modificati i dati nelle tabelle della dimensione. Per ulteriori informazioni, vedere [gerarchia padre-figlio](../multidimensional-models/parent-child-dimension.md)e [attributi nelle gerarchie padre-figlio](../multidimensional-models/parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare gerarchie definite dall'utente](../multidimensional-models/user-defined-hierarchies-create.md)   
- [Proprietà delle gerarchie definite dall'utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
- [Riferimento alle proprietà degli attributi delle dimensioni](../multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Creazione di gerarchie definite dall'utente](../multidimensional-models/user-defined-hierarchies-create.md)   
+ [Proprietà gerarchia utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
+ [Riferimento alle proprietà degli attributo delle dimensioni](../multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

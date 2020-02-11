@@ -13,10 +13,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7acd40dde7275eb813c5f48a2b6ea97e284cb2c0
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493809"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>Guida di riferimento per gli sviluppatori per SQL Server 2014
@@ -25,41 +25,41 @@ ms.locfileid: "69493809"
   
 ## <a name="programming-reference-sections"></a>Sezioni di riferimento alla programmazione  
 
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Concetti relativi alla &#40;programmazione&#41; dell'integrazione CLR di Common Language Runtime](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ ![Icona della cartella file piccola icona](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") di [common language runtime &#40;concetti di programmazione dell'integrazione con CLR&#41;](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [XML nativo](https://technet.microsoft.com/library/ms191274.aspx)  
+ ![Icona cartella file di piccole dimensioni](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [XML nativo](https://technet.microsoft.com/library/ms191274.aspx)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Programmazione SQL Server Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [programmazione SQL Server Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Concetti sulla programmazione di SQLXML 4,0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
+ ![Icona cartella file di piccole dimensioni](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [concetti di programmazione SQLXML 4,0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Concetti relativi al provider WMI per la gestione della configurazione](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
+ ![Icona della cartella file di piccole dimensioni](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [concetti relativi al provider WMI per la gestione della configurazione](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Concetti relativi al provider WMI per eventi del server](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [concetti relativi al provider WMI per eventi del server](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Eventi ed errori del provider WMI](../relational-databases/native-client-ole-db-errors/errors.md)  
+ ![Icona cartella file di piccole dimensioni](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [eventi ed errori del provider WMI](../relational-databases/native-client-ole-db-errors/errors.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Guida &#40;alla&#41; programmazione di SQL Server Management Objects Smo](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [SQL Server Management Objects &#40;Smo&#41; Programming Guide](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Motore di database la programmazione di stored procedure estese](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
+ ![Icona cartella file di piccole dimensioni](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [motore di database programmazione di stored procedure estese](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Programmazione dell'agente di raccolta dati](../database-engine/dev-guide/data-collector-programming.md)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [programmazione dell'agente di raccolta dati](../database-engine/dev-guide/data-collector-programming.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Programmazione della finestra di messaggio eccezione](../database-engine/dev-guide/exception-message-box-programming.md)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [programmazione della finestra di messaggio eccezione](../database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Sviluppo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [sviluppo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Sviluppo con Analysis Management Objects &#40;amo&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [sviluppo con Analysis Management Objects &#40;amo&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Sviluppo con Analysis Services linguaggio &#40;di scripting&#41; ASSL](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [sviluppo con Analysis Services linguaggio di scripting &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   
  ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [OLE DB per il data mining](https://docs.microsoft.com/sql/analysis-services/dev-guide/ole-db-for-data-mining?view=sql-server-2014)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Guida per gli sviluppatori di Integration Services](../integration-services/integration-services-developer-documentation.md)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Integration Services guida per gli sviluppatori](../integration-services/integration-services-developer-documentation.md)  
   
  ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Guida per gli sviluppatori di replica](../relational-databases/replication/concepts/replication-developer-documentation.md)  
   
- ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Guida per gli sviluppatori di Reporting Services](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
+ ![Icona della cartella file piccola](../integration-services/media/filefolder-small.gif "Icona della cartella file piccola") [Reporting Services guida per gli sviluppatori](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## <a name="other-programming-resources"></a>Ulteriori risorse di programmazione  
 

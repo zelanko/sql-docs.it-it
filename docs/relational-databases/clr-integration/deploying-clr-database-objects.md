@@ -15,15 +15,16 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e82705236ec04c5618a4b43526078a6c218ceef9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72908679"
 ---
 # <a name="deploying-clr-database-objects"></a>Distribuzione di oggetti di database CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La distribuzione rappresenta il processo tramite il quale si mette a disposizione un'applicazione o un modulo pronto per l'utilizzo perché venga installato ed eseguito in altri computer. L'uso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio consente di sviluppare oggetti di database CLR (Common Language Runtime) e di distribuirli a un server di prova. In alternativa, è possibile compilare gli oggetti di database gestiti con i file di ridistribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Una volta compilati, gli assembly contenenti gli oggetti di database CLR possono essere distribuiti a un server di prova utilizzando Visual Studio o le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o la distribuzione dell'integrazione CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
+  La distribuzione rappresenta il processo tramite il quale si mette a disposizione un'applicazione o un modulo pronto per l'utilizzo perché venga installato ed eseguito in altri computer. L'uso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio consente di sviluppare oggetti di database CLR (Common Language Runtime) e di distribuirli a un server di prova. In alternativa, è possibile compilare gli oggetti di database gestiti con i file di ridistribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Una volta compilati, gli assembly contenenti gli oggetti di database CLR possono essere distribuiti a un server di prova utilizzando Visual Studio o le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Notare che Visual Studio .NET 2003 non può essere utilizzato per la programmazione o la distribuzione dell'integrazione CLR. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene fornito con .NET Framework preinstallato e non è possibile utilizzare assembly di .NET Framework 2.0 in Visual Studio .NET 2003.  
   
  Dopo aver testato e verificato i metodi CLR sul server di prova, sarà possibile distribuirli a server di produzione utilizzando uno script di distribuzione che può essere generato manualmente o tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (vedere la procedura riportata più avanti in questo argomento).  
   
@@ -39,7 +40,7 @@ ms.locfileid: "72908679"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Per distribuire l'assembly utilizzando Visual Studio  
   
-1.  Compilare il progetto selezionando **compila** \<nome progetto > dal menu **Compila** .  
+1.  Compilare il progetto selezionando **Compila** \<nome progetto> dal menu **Compila** .  
   
 2.  Risolvere tutti gli avvisi e gli errori di compilazione prima di distribuire l'assembly al server di prova.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "72908679"
   
  `vbc /target:library C:\helloworld.vb`  
   
- Questi comandi avviano il C# compilatore Visual o Visual Basic usando l'opzione **/target** per specificare la compilazione di una dll della libreria.  
+ Questi comandi avviano il compilatore Visual C# o Visual Basic usando l'opzione **/target** per specificare la compilazione di una dll della libreria.  
   
 1.  Risolvere tutti gli avvisi e gli errori di compilazione prima di distribuire l'assembly al server di prova.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "72908679"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  La procedura, la funzione, l'aggregazione, il tipo definito dall'utente o il trigger deve essere quindi creato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'assembly **HelloWorld** contiene un metodo denominato **HelloWorld** nella classe **Procedures** , è possibile aggiungere la [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente alla query per creare una routine denominata **Hello** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  La procedura, la funzione, l'aggregazione, il tipo definito dall'utente o il trigger deve essere quindi creato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'assembly **HelloWorld** contiene un metodo denominato **HelloWorld** nella classe **Procedures** , è possibile aggiungere [!INCLUDE[tsql](../../includes/tsql-md.md)] alla query quanto segue per creare una routine denominata **Hello** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  `CREATE PROCEDURE hello`  
   
@@ -75,7 +76,7 @@ ms.locfileid: "72908679"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Per ulteriori informazioni sulla creazione di diversi tipi di oggetti di database gestiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzioni CLR definite](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)dall'utente, [aggregazioni CLR definite](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)dall'utente, [tipi CLR definiti dall'](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)utente, [stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)e [CLR Trigger](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Per ulteriori informazioni sulla creazione di diversi tipi di oggetti di database gestiti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in, [vedere funzioni CLR definite](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)dall'utente, [aggregazioni CLR definite](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)dall'utente, [tipi CLR definiti dall'](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)utente, [stored procedure CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)e [trigger CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Distribuzione dell'assembly a server di produzione  
  Dopo aver testato e verificato gli oggetti di database CLR sul server di prova, sarà possibile distribuirli a server di produzione. Per ulteriori informazioni sul debug di oggetti di database gestiti, vedere [debug di oggetti di database CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -86,17 +87,17 @@ ms.locfileid: "72908679"
   
 1.  Aprire [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è stato registrato l'oggetto di database o l'assembly gestito da distribuire.  
   
-2.  Nella **Esplora oggetti**espandere il nome del **Server\<** e gli alberi dei **database** . Fare clic con il pulsante destro del mouse sul database in cui è registrato l'oggetto di database gestito, selezionare **attività**, quindi selezionare **Genera script**. Verrà avviata la Generazione guidata script.  
+2.  Nella **Esplora oggetti**espandere il nome del ** \<server>** e gli alberi dei **database** . Fare clic con il pulsante destro del mouse sul database in cui è registrato l'oggetto di database gestito, selezionare **attività**, quindi selezionare **Genera script**. Verrà avviata la Generazione guidata script.  
   
 3.  Selezionare il database nella casella di riepilogo e fare clic su **Avanti**.  
   
 4.  Nel riquadro **Scegli opzioni script** fare clic su **Avanti**oppure modificare le opzioni e quindi fare clic su **Avanti**.  
   
-5.  Nel riquadro **Selezione tipi di oggetti** scegliere il tipo di oggetto di database da distribuire. Scegliere **Avanti**.  
+5.  Nel riquadro **Selezione tipi di oggetti** scegliere il tipo di oggetto di database da distribuire. Fare clic su **Avanti**.  
   
-6.  Per ogni tipo di oggetto selezionato nel riquadro **Selezione tipi di oggetti** , viene visualizzato un riquadro **Scegli \<tipo di >** . In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti, quindi fare clic su **Avanti**.  
+6.  Per ogni tipo di oggetto selezionato nel riquadro **Selezione tipi di oggetti** , viene visualizzato un riquadro ** \<Scegli tipo>** . In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti, quindi fare clic su **Avanti**.  
   
-7.  Il riquadro **Opzioni di output** viene visualizzato quando tutti i tipi di oggetto di database desiderati sono stati selezionati. Selezionare **script nel file** e specificare un percorso di file per lo script. Fare clic su **Avanti**. Verificare le selezioni e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
+7.  Il riquadro **Opzioni di output** viene visualizzato quando tutti i tipi di oggetto di database desiderati sono stati selezionati. Selezionare **script nel file** e specificare un percorso di file per lo script. Selezionare **Avanti**. Verificare le selezioni e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
   
 ## <a name="post-deployment-scripts"></a>Script post-distribuzione  
  È possibile eseguire uno script post-distribuzione.  

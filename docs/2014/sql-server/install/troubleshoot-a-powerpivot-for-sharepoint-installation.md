@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71951997"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Risoluzione dei problemi di un'installazione di PowerPivot per SharePoint
@@ -29,16 +29,16 @@ ms.locfileid: "71951997"
 ## <a name="issues"></a>Problemi  
   
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Le immagini di anteprima per Raccolta PowerPivot sono visualizzate come una X rossa.  
- Una delle cause possibile potrebbe essere che **Integrazione della funzionalità di PowerPivot per le raccolte siti** non è attiva. Completare la procedura seguente:  
+ Una delle cause possibile potrebbe essere che **Integrazione della funzionalità di PowerPivot per le raccolte siti** non è attiva. Completare le operazioni seguenti:  
   
-1.  Nella libreria della raccolta PowerPivot fare clic su **Impostazioni sito** dall'icona a forma di ingranaggio ![SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni di SharePoint") o l'elenco **Home** .  
+1.  Nella libreria della raccolta PowerPivot fare clic su **Impostazioni sito** dall'icona dell'ingranaggio ![impostazioni di SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni di SharePoint") o dall'elenco **Home** .  
   
 2.  Nella sezione **Amministrazione raccolta siti** fare clic su **Funzionalità raccolta siti**.  
   
-3.  Fare clic su **Funzionalità raccolta siti**.  
+3.  Fare clic su **funzionalità raccolta siti**.  
   
 4.  Verificare che **Integrazione delle funzionalità di PowerPivot per le raccolte siti** sia **Attiva**.  
   
- Per ulteriori cause di questo problema, vedere la pagina [relativa alle icone rosse per le icone](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
+ Per ulteriori cause di questo problema, vedere la pagina [relativa alle icone rosse per le icone della raccolta PowerPivot](https://support.microsoft.com/kb/2361559) https://support.microsoft.com/kb/2361559).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,20 +19,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199339"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Questa funzione a gestione dinamica accetta un @object_id come parametro e descrive i metadati del primo risultato per il modulo con tale ID. Il @object_id specificato può essere l'ID di un stored procedure di [!INCLUDE[tsql](../../includes/tsql-md.md)] o un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se è l'ID di qualsiasi altro oggetto, ad esempio una vista, una tabella, una funzione o una procedura CLR, viene specificato un errore nelle colonne degli errori del risultato.  
+  Questa funzione a gestione dinamica accetta @object_id come parametro e descrive i metadati del primo risultato per il modulo con tale ID. Il @object_id valore specificato può essere l'ID di [!INCLUDE[tsql](../../includes/tsql-md.md)] un stored procedure o [!INCLUDE[tsql](../../includes/tsql-md.md)] di un trigger. Se è l'ID di qualsiasi altro oggetto, ad esempio una vista, una tabella, una funzione o una procedura CLR, viene specificato un errore nelle colonne degli errori del risultato.  
   
- **sys. dm_exec_describe_first_result_set_for_object** ha la stessa definizione del set di risultati di [sys &#40;. dm_exec_describe_first_result_set Transact&#41; -SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ed è simile a [sp_describe_first_result_set &#40;Transact&#41;-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys. dm_exec_describe_first_result_set_for_object** ha la stessa definizione del set di risultati [sys. dm_exec_describe_first_result_set &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ed è simile a SP_DESCRIBE_FIRST_RESULT_SET &#40;[Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)&#41;.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,10 +44,10 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argomenti  
  *\@object_id*  
- @object_id di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)]. @object_id è di tipo **int**.  
+ Oggetto @object_id di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure o di [!INCLUDE[tsql](../../includes/tsql-md.md)] un trigger. @object_idè di tipo **int**.  
   
  *\@include_browse_information*  
- @include_browse_information è di tipo **bit**. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Restituisce informazioni sulla tabella di origine e colonne chiave aggiuntive.  
+ @include_browse_informationè di tipo **bit**. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Restituisce informazioni sulla tabella di origine e colonne chiave aggiuntive.  
   
 ## <a name="table-returned"></a>Tabella restituita  
  Questi metadati comuni vengono restituiti come set di risultati con una riga per ogni colonna nei metadati dei risultati. Ogni riga descrive il tipo e l'ammissione di valori Null della colonna nel formato descritto nella sezione seguente. Se la prima istruzione non esiste per ogni percorso di controllo, viene restituito un set di risultati con zero righe.  
@@ -56,14 +56,14 @@ sys.dm_exec_describe_first_result_set_for_object
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Specifica se la colonna è una colonna aggiuntiva inserita per informazioni di esplorazione che non compare effettivamente nel set di risultati.|  
 |**column_ordinal**|**int**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
-|**name**|**sysname**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, è NULL.|  
+|**nome**|**sysname**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, è NULL.|  
 |**is_nullable**|**bit**|Contiene il valore 1 se la colonna ammette valori Null, 0 se la colonna non ammette valori Null e 1 se non è possibile determinare se la colonna ammette valori Null.|  
 |**system_type_id**|**int**|Contiene la system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene il nome del tipo di dati. Include gli argomenti (quali lunghezza, precisione, scala) specificati per il tipo di dati della colonna. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
-|**max_length**|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna è **varchar (max)** , **nvarchar (max)** , **varbinary (max)** o **XML**.<br /><br /> Per le colonne di **testo** , il valore **max_length** sarà 16 o il valore impostato da **sp_tableoption ' text in row '** .|  
+|**max_length**|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna è **varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**.<br /><br /> Per le colonne di **testo** , il valore **max_length** sarà 16 o il valore impostato da **sp_tableoption ' text in row '**.|  
 |**precisione**|**tinyint**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
 |**scala**|**tinyint**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
-|**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
+|**collation_name**|**sysname**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
 |**user_type_id**|**int**|Per i tipi di alias e CLR, contiene il valore user_type_id del tipo di dati della colonna come specificato in sys.types. In caso contrario, è NULL.|  
 |**user_type_database**|**sysname**|Per i tipi di alias e CLR, contiene il nome del database in cui è definito il tipo. In caso contrario, è NULL.|  
 |**user_type_schema**|**sysname**|Per i tipi di alias e CLR, contiene il nome dello schema in cui è definito il tipo. In caso contrario, è NULL.|  
@@ -88,23 +88,23 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_sparse_column_set**|**bit**|Restituisce 1 se la colonna è una colonna di tipo sparse e 0 in caso contrario. Restituisce NULL se non è possibile determinare se la colonna fa parte di un set di colonne di tipo sparse.|  
 |**ordinal_in_order_by_list**|**smallint**|Posizione di questa colonna nell'elenco ORDER BY. Restituisce NULL se la colonna non compare nell'elenco ORDER BY o se l'elenco ORDER BY non può essere determinato in modo univoco.|  
 |**order_by_list_length**|**smallint**|Lunghezza dell'elenco ORDER BY. Restituisce NULL se non è presente alcun elenco ORDER BY o se l'elenco ORDER BY non può essere determinato in modo univoco. Si noti che questo valore sarà lo stesso per tutte le righe restituite da sp_describe_first_result_set.|  
-|**order_by_is_descending**|**smallint NULL**|Se il ordinal_in_order_by_list non è NULL, nella colonna **order_by_is_descending** viene segnalata la direzione della clausola ORDER BY per la colonna. In caso contrario, viene restituito NULL.|  
+|**order_by_is_descending**|**smallint NULL**|Se ordinal_in_order_by_list non è NULL, la colonna **order_by_is_descending** indica la direzione della clausola ORDER BY per questa colonna. In caso contrario, viene restituito NULL.|  
 |**error_number**|**int**|Contiene il numero dell'errore restituito dalla funzione. Contiene NULL se non si è verificato alcun errore nella colonna.|  
 |**error_severity**|**int**|Contiene la gravità restituita dalla funzione. Contiene NULL se non si è verificato alcun errore nella colonna.|  
 |**error_state**|**int**|Contiene il messaggio sullo stato attuale restituito dalla funzione. Se non si sono verificati errori. la colonna conterrà NULL.|  
-|**error_message**|**nvarchar(4096)**|Contiene il messaggio restituito dalla funzione. La colonna contiene NULL se non si è verificato alcun errore.|  
+|**error_message**|**nvarchar (4096)**|Contiene il messaggio restituito dalla funzione. La colonna contiene NULL se non si è verificato alcun errore.|  
 |**error_type**|**int**|Contiene un numero intero che rappresenta l'errore restituito. Viene eseguito il mapping a error_type_desc. Vedere l'elenco nelle osservazioni.|  
-|**error_type_desc**|**nvarchar(60)**|Contiene una breve stringa in caratteri maiuscoli che rappresenta l'errore restituito. Viene eseguito il mapping a error_type. Vedere l'elenco nelle osservazioni.|  
+|**error_type_desc**|**nvarchar (60)**|Contiene una breve stringa in caratteri maiuscoli che rappresenta l'errore restituito. Viene eseguito il mapping a error_type. Vedere l'elenco nelle osservazioni.|  
   
 ## <a name="remarks"></a>Osservazioni  
- Questa funzione utilizza lo stesso algoritmo **sp_describe_first_result_set**. Per ulteriori informazioni, vedere [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ Questa funzione utilizza lo stesso algoritmo di **sp_describe_first_result_set**. Per ulteriori informazioni, vedere [sp_describe_first_result_set &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  Nella tabella seguente vengono elencati i tipi di errore con le relative descrizioni  
   
 |error_type|error_type|Descrizione|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Tutti gli errori che non sono stati descritti.|  
-|2|SYNTAX|Errore di sintassi nel batch.|  
+|2|SINTASSI|Errore di sintassi nel batch.|  
 |3|CONFLICTING_RESULTS|Impossibile determinare il risultato a causa di un conflitto tra due possibili prime istruzioni.|  
 |4|DYNAMIC_SQL|Impossibile determinare il risultato perché codice SQL dinamico potrebbe potenzialmente restituire il primo risultato.|  
 |5|CLR_PROCEDURE|Impossibile determinare il risultato perché una stored procedure CLR potrebbe potenzialmente restituire il primo risultato.|  
@@ -112,18 +112,18 @@ sys.dm_exec_describe_first_result_set_for_object
 |7|EXTENDED_PROCEDURE|Impossibile determinare il risultato perché una stored procedure estesa potrebbe potenzialmente restituire il primo risultato.|  
 |8|UNDECLARED_PARAMETER|Impossibile determinare il risultato perché il tipo di dati di una o più colonne del set di risultati dipende potenzialmente da un parametro non dichiarato.|  
 |9|RECURSION|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione ricorsiva.|  
-|10|TEMPORARY_TABLE|Impossibile determinare il risultato perché il batch contiene una tabella temporanea e non è supportato da **sp_describe_first_result_set** .|  
-|11|UNSUPPORTED_STATEMENT|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione che non è supportata da **sp_describe_first_result_set** , ad esempio FETCH, REVERT e così via.|  
+|10|TEMPORARY_TABLE|Non è stato possibile determinare il risultato perché il batch contiene una tabella temporanea e non è supportato da **sp_describe_first_result_set**.|  
+|11|UNSUPPORTED_STATEMENT|Non è stato possibile determinare il risultato perché il batch contiene un'istruzione che non è supportata da **sp_describe_first_result_set**, ad esempio FETCH, REVERT e così via.|  
 |12|OBJECT_ID_NOT_SUPPORTED|Il @object_id passato alla funzione non è supportato (ovvero non è un stored procedure)|  
-|13|OBJECT_ID_DOES_NOT_EXIST|Impossibile trovare il @object_id passato alla funzione nel catalogo di sistema.|  
+|13|OBJECT_ID_DOES_NOT_EXIST|Il @object_id passato alla funzione non è stato trovato nel catalogo di sistema.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione per eseguire l'argomento @tsql.  
+ È richiesta l'autorizzazione per @tsql eseguire l'argomento.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-returning-metadata-with-and-without-browse-information"></a>R. Restituzione di metadati con e senza informazioni di esplorazione  
- Nell'esempio seguente viene creato un stored procedure denominato TestProc2 che restituisce due set di risultati. Nell'esempio viene dimostrato che **sys. dm_exec_describe_first_result_set** restituisce informazioni sul primo set di risultati nella procedura, con e senza le informazioni di visualizzazione.  
+ Nell'esempio seguente viene creato un stored procedure denominato TestProc2 che restituisce due set di risultati. Nell'esempio viene dimostrato che **sys.dm_exec_describe_first_result_set** restituisce informazioni sul primo set di risultati nella procedura, con e senza le informazioni di esplorazione.  
   
 ```  
 CREATE PROC TestProc2  
@@ -137,8 +137,8 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>b. Combinazione della funzione sys.dm_exec_describe_first_result_set_for_object e di una tabella o vista  
- Nell'esempio seguente vengono utilizzate la vista del catalogo di sistema sys. Procedures e la funzione **sys. dm_exec_describe_first_result_set_for_object** per visualizzare i metadati per i set di risultati di tutte le stored procedure nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. Combinazione della funzione sys.dm_exec_describe_first_result_set_for_object e di una tabella o vista  
+ Nell'esempio seguente vengono utilizzate la vista del catalogo di sistema sys. Procedures e la funzione **sys. dm_exec_describe_first_result_set_for_object** per visualizzare i metadati per i set di risultati di tutte [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] le stored procedure nel database.  
   
 ```  
 USE AdventureWorks2012;  
@@ -152,8 +152,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sp_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys. dm_exec_describe_first_result_set &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

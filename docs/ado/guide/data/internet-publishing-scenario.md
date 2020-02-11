@@ -1,5 +1,5 @@
 ---
-title: Scenario di Internet Publishing | Microsoft Docs
+title: Scenario di pubblicazione Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,24 +15,24 @@ ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00f470bef5026a6f91c43478b3d745446130d081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924960"
 ---
 # <a name="internet-publishing-scenario"></a>Scenario di Internet Publishing
-Questo esempio di codice viene illustrato come utilizzare ADO con il Provider Microsoft OLE DB per Internet Publishing. In questo scenario si creerà un'applicazione Visual Basic che utilizza **Recordset**, **Record**, e **Stream** pubblicati con gli oggetti per visualizzare il contenuto delle risorse Internet del Provider di pubblicazione.  
+Questo esempio di codice illustra come usare ADO con il provider di Microsoft OLE DB per la pubblicazione Internet. In questo scenario si creerà un'applicazione Visual Basic che utilizza oggetti **Recordset**, **record**e **Stream** per visualizzare il contenuto delle risorse pubblicate con il provider di pubblicazione Internet.  
   
- I passaggi seguenti sono necessari per creare questo scenario:  
+ Per creare questo scenario, sono necessari i passaggi seguenti:  
   
 -   [Passaggio 1: Configurare il progetto di Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
   
--   [Passaggio 2: Inizializzare la casella di riepilogo principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
+-   [Passaggio 2: Inizializzare la casella di riepilogo Main](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
   
--   [Passaggio 3: Popolare la casella di riepilogo di campi](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
+-   [Passaggio 3: Popolare la casella di riepilogo Fields](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
   
--   [Passaggio 4: Popolare la casella di testo dei dettagli](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
+-   [Passaggio 4: Popolare la casella di riepilogo Details](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   

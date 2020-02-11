@@ -1,5 +1,5 @@
 ---
-title: Uso di ADO per Internet Publishing | Microsoft Docs
+title: Utilizzo di ADO per la pubblicazione Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,31 +16,31 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923610"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Uso di ADO per Internet Publishing
-[Il Provider OLE DB per Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) Mostra un esempio specifico dell'accesso ai dati eterogenei con ADO. Anche se gli esempi in questa sezione saranno specifici per l'uso di Provider di pubblicazione, i principi illustrati dovrebbero essere simili quando si utilizza ADO con altri provider di dati eterogenei, ad esempio un provider in un archivio di posta elettronica.  
+[Il Provider OLE DB per Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) Mostra un esempio specifico di accesso ai dati eterogenei con ADO. Sebbene gli esempi in questa sezione siano specifici dell'utilizzo del provider di pubblicazione Internet, i principi illustrati dovrebbero essere simili quando si utilizza ADO con altri provider per dati eterogenei, ad esempio un provider per un archivio di posta elettronica.  
   
 ## <a name="urls"></a>URL  
- Uniform Resource Locator (URL) è utilizzabile come alternativa per le stringhe di connessione e il testo del comando per specificare le origini dati e il percorso del file e directory. È possibile usare gli URL con l'oggetto esistente [Connection](../../../ado/reference/ado-api/connection-object-ado.md) e **Recordset** oggetti e con il **Record** e **Stream** oggetti.  
+ I localizzatori di risorse (URL) uniformi possono essere usati come alternativa alle stringhe di connessione e al testo del comando per specificare le origini dati e il percorso di file e directory. È possibile utilizzare gli URL con la [connessione](../../../ado/reference/ado-api/connection-object-ado.md) esistente e gli oggetti **Recordset** e con gli oggetti **record** e **flusso** .  
   
- Per altre informazioni su come usare gli URL, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ Per ulteriori informazioni sull'utilizzo degli URL, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="record-fields"></a>Campi di record  
- La differenza tra dati eterogenei e dati omogenei essenziale è che nel primo caso, ogni riga di dati, oppure **Record**, può avere un set diverso di colonne, o **campi**. Per i dati omogenei, ogni riga ha lo stesso set di colonne. Per altre informazioni sui campi specifici del Provider di pubblicazione Internet, vedere [record e campi specificati dal provider](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+ La differenza tra dati eterogenei e dati omogenei consiste nel fatto che per il primo, ogni riga di dati, o **record**, può avere un set di colonne o **campi**diverso. Per i dati omogenei, ogni riga ha lo stesso set di colonne. Per ulteriori informazioni sui campi specifici del provider di pubblicazione Internet, vedere [record e campi aggiuntivi forniti dal provider](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
 ### <a name="appending-new-fields"></a>Aggiunta di nuovi campi  
- Numerosi oggetti ADO sono stati migliorati per l'uso in combinazione con **Record** e **Stream** oggetti.  
+ Diversi oggetti ADO sono stati migliorati per interagire con gli oggetti **record** e **flusso** .  
   
--   Il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) collection [Append](../../../ado/reference/ado-api/append-method-ado.md) metodo, che crea e aggiunge un [campo](../../../ado/reference/ado-api/field-object.md) alla raccolta di oggetti, possono anche specificare il valore del **campo**.  
+-   Il metodo [Append](../../../ado/reference/ado-api/append-method-ado.md) della raccolta [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) , che crea e aggiunge un oggetto [campo](../../../ado/reference/ado-api/field-object.md) alla raccolta, può specificare anche il valore del **campo**.  
   
--   Il [Update](../../../ado/reference/ado-api/update-method.md) metodo consente di finalizzare l'aggiunta o eliminazione di campi nella raccolta.  
+-   Il metodo [Update](../../../ado/reference/ado-api/update-method.md) finalizza l'aggiunta o l'eliminazione di campi nella raccolta.  
   
--   Come una scelta rapida e alternativi per il **Append** metodo, è possibile creare campi assegnando un valore a un campo non definito o eliminato in precedenza.  
+-   Come collegamento alternativo al metodo **Append** , è possibile creare campi assegnando un valore a un campo non definito o eliminato in precedenza.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

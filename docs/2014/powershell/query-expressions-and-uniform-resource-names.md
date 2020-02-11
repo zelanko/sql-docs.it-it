@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782757"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Espressioni di query e Uniform Resource Name
@@ -41,7 +41,7 @@ ms.locfileid: "72782757"
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Oggetto*  
+ *Object*  
  Specifica il tipo di oggetto che è rappresentato in corrispondenza del nodo della stringa di espressione. Ciascun oggetto rappresenta una classe di raccolte dai seguenti spazi dei nomi del modello a oggetti SMO:  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -83,7 +83,7 @@ ms.locfileid: "72782757"
 |||  
 |-|-|  
 |aaaa|Anno espresso a quattro cifre.|  
-|mm|Mese a due cifre (da 01 a 12)|  
+|MM|Mese a due cifre (da 01 a 12)|  
 |gg|Data a due cifre (da 01 a 31)|  
 |hh|Ora a 2 cifre nel formato a 24 ore (da 01 a 23)|  
 |mi|Minuti a due cifre (da 01 a 59)|  
@@ -121,7 +121,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>b. Enumerazione di oggetti utilizzando contains  
+### <a name="b-enumerating-objects-using-contains"></a>B. Enumerazione di oggetti utilizzando contains  
  Questa espressione di query enumera tutti i database per quali non viene fatta distinzione tra maiuscole e minuscole e i cui nomi contengono il carattere "m".  
   
 ```  
@@ -158,4 +158,4 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## <a name="see-also"></a>Vedere anche  
  [cmdlet Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit &#40;Motore di database&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40;Database Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

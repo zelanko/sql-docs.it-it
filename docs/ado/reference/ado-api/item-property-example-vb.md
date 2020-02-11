@@ -1,5 +1,5 @@
 ---
-title: Elemento di esempio di proprietà (Visual Basic) | Microsoft Docs
+title: Esempio di proprietà Item (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918347"
 ---
 # <a name="item-property-example-vb"></a>Esempio della proprietà Item (VB)
-Questo esempio viene illustrato come la [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà accede ai membri di una raccolta. Nell'esempio viene aperto il ***autori*** tabella del ***Pubs*** database con un comando con parametri.  
+In questo esempio viene illustrato il modo in cui la proprietà [Item](../../../ado/reference/ado-api/item-property-ado.md) accede ai membri di una raccolta. Nell'esempio viene aperta la tabella ***authors*** del database ***pubs*** con un comando con parametri.  
   
- Il parametro nel comando emesso per il database è accessibile dal [comandi](../../../ado/reference/ado-api/command-object-ado.md) dell'oggetto [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta in base al nome e l'indice. I campi dell'oggetto restituito [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) quindi si accede da tale oggetto [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta in base al nome e l'indice.  
+ È possibile accedere al parametro nel comando emesso sul database dalla raccolta [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) dell'oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) in base all'indice e al nome. Ai campi del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) restituito viene quindi eseguito l'accesso dalla raccolta di [campi](../../../ado/reference/ado-api/fields-collection-ado.md) di tale oggetto in base all'indice e al nome.  
   
 ```  
 'BeginItemVB  
@@ -138,5 +138,5 @@ End Sub
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Raccolta Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -15,44 +15,44 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fc15968501fed6b94a7ccddb984cbdf76bcbcb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915799"
 ---
 # <a name="odbc-driver-for-oracle"></a>Driver ODBC per Oracle
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- Microsoft® ODBC Driver per Oracle consente di connettere l'applicazione compatibile con ODBC a un database Oracle. Il Driver ODBC per Oracle è conforme alla specifica Open Database Connectivity (ODBC) descritto nel *riferimento per programmatori ODBC*. Consente di accedere al package PL/SQL, l'integrazione di XA/DTC e l'accesso di Oracle all'interno di Internet Information Services (IIS).  
+ Il driver ODBC di Microsoft® per Oracle consente di connettere l'applicazione conforme a ODBC a un database Oracle. Il driver ODBC per Oracle è conforme alla specifica Open Database Connectivity (ODBC) descritta in *ODBC Programmer ' s Reference*. Consente l'accesso ai pacchetti PL/SQL, all'integrazione XA/DTC e all'accesso Oracle dall'interno di Internet Information Services (IIS).  
   
- Oracle RDBMS è un sistema di gestione di database relazionale multiutente che viene eseguito con diversi sistemi operativi minicomputer e workstation. I computer compatibili con IBM che eseguono Microsoft Windows possono comunicare con i server di database Oracle in una rete. Le reti supportate includono Microsoft LAN Manager, NetWare, VINES, DECnet e qualsiasi rete che supporta TCP/IP.  
+ Oracle RDBMS è un sistema di gestione di database relazionali multiutente eseguito con vari sistemi operativi workstation e minicomputer. I computer compatibili con IBM che eseguono Microsoft Windows possono comunicare con i server di database Oracle in una rete. Le reti supportate includono Microsoft LAN Manager, NetWare, Vines, DECnet e qualsiasi rete che supporta TCP/IP.  
   
- Il Driver ODBC per Oracle consente a un'applicazione accedere ai dati in un database Oracle tramite l'interfaccia ODBC. Il driver può accedere a database Oracle locali o che possa comunicare con la rete tramite SQL * Net. Il diagramma seguente illustra in dettaglio questa architettura di applicazioni e driver.  
+ Il driver ODBC per Oracle consente a un'applicazione di accedere ai dati in un database Oracle tramite l'interfaccia ODBC. Il driver può accedere ai database Oracle locali oppure può comunicare con la rete tramite SQL * NET. Il diagramma seguente illustra l'architettura dell'applicazione e del driver.  
   
- ![Driver ODBC per Oracle app&#47;architettura del driver](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![Architettura del driver ODBC per&#47;app Oracle](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Il Driver ODBC per Oracle è conforme con API conformità al livello 1 e SQL di base di livello la conformità. Supporta inoltre alcune funzioni nell'API conformità al livello 2 e la maggior parte della grammatica nei livelli di conformità di Core e SQL estesa. Il driver è compatibile con ODBC 2.5 e supporta sistemi a 32 bit. Oracle 7.3 x è supportata completamente; Include supporto limitato per Oracle8. Il Driver ODBC per Oracle non supporta uno qualsiasi dei nuovi tipi di dati Oracle8 - Unicode i tipi di dati, i BLOB, CLOB e così via, e non supporta nuovo modello del Oracle a oggetti relazionali. Per altre informazioni sui tipi di dati supportati, vedere [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in questa Guida.  
+ Il driver ODBC per Oracle è conforme al livello di conformità API 1 e al livello di conformità SQL di base. Supporta anche alcune funzioni nel livello di conformità dell'API 2 e la maggior parte della grammatica nei livelli di conformità di base e SQL esteso. Il driver è conforme a ODBC 2,5 e supporta i sistemi a 32 bit. Oracle 7.3 x è supportato completamente; Oracle8 ha un supporto limitato. Il driver ODBC per Oracle non supporta alcuno dei nuovi tipi di dati Oracle8, ovvero tipi di dati Unicode, BLOB, CLOB e così via, né supporta il nuovo modello a oggetti relazionale di Oracle. Per ulteriori informazioni sui tipi di dati supportati, vedere [tipi di dati supportati](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in questa guida.  
   
- Per accedere ai dati di Oracle, sono necessari i componenti seguenti:  
+ Per accedere ai dati Oracle, sono necessari i componenti seguenti:  
   
--   Il Driver ODBC per Oracle  
+-   Driver ODBC per Oracle  
   
 -   Un database Oracle RDBMS  
   
--   Software Client Oracle  
+-   Software client Oracle  
   
  Inoltre, per le connessioni remote:  
   
--   Una rete che connette i computer che eseguono il driver e il database. La rete deve supportare SQL * Net connessioni.  
+-   Rete che connette i computer che eseguono il driver e il database. La rete deve supportare le connessioni SQL * NET.  
   
-## <a name="component-documentation"></a>Documentazione relativa al componente  
- Questa guida contiene informazioni dettagliate sull'impostazione e configurazione del Driver ODBC di Microsoft per Oracle e aggiunta di funzionalità a livello di codice. Contiene inoltre materiale di riferimento tecnico.  
+## <a name="component-documentation"></a>Documentazione del componente  
+ In questa guida vengono fornite informazioni dettagliate sulla configurazione e sulla configurazione del driver ODBC Microsoft per Oracle e sull'aggiunta della funzionalità a livello di codice. Contiene inoltre materiale di riferimento tecnico.  
   
- Per informazioni sui comportamenti del prodotto Oracle specifici, consultare la documentazione che accompagna il prodotto Oracle.  
+ Per informazioni relative al comportamento specifico del prodotto Oracle, consultare la documentazione che accompagna il prodotto Oracle.  
   
- Per informazioni sull'installazione o configurazione del Driver ODBC di Microsoft per Oracle con l'amministratore dell'origine dati ODBC, vedere la [Amministrazione origine dati ODBC](../../odbc/admin/odbc-data-source-administrator.md) documentazione.  
+ Per informazioni sull'impostazione o sulla configurazione del driver ODBC Microsoft per Oracle tramite Amministrazione origine dati ODBC, vedere la documentazione relativa all' [amministratore dell'origine dati](../../odbc/admin/odbc-data-source-administrator.md) ODBC.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

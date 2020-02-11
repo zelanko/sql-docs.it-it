@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797957"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Sospendere un database di disponibilità (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "72797957"
   
 |Database sospeso|Effetto del comando di sospensione|  
 |------------------------|-------------------------------|  
-|Database secondario|Viene sospeso solo il database secondario locale e il relativo stato di sincronizzazione diventa NOT SYNCHRONIZED. Gli altri database secondari non sono influenzati. Nel database sospeso non vengono più eseguite la ricezione e l'applicazione di dati (record di log) e viene persa la sincronizzazione con il database primario. Le connessioni esistenti nel database secondario leggibile rimangono utilizzabili. Non sono consentite nuove connessioni al database sospeso nel database secondario leggibile finché non viene ripreso lo spostamento di dati.<br /><br /> Il database primario rimane disponibile. Se si sospende ogni database secondario corrispondente, il database primario viene eseguito senza mirroring.<br /><br /> **\*\* Importante \*\*** Durante la fase di sospensione di un database secondario, nella coda di invio del database primario corrispondente verranno accumulati record del log delle transazioni non inviati. Tramite le connessioni alla replica secondaria vengono restituiti i dati disponibili quando lo spostamento di dati è stato sospeso.|  
+|Database secondario|Viene sospeso solo il database secondario locale e il relativo stato di sincronizzazione diventa NOT SYNCHRONIZED. Gli altri database secondari non sono influenzati. Nel database sospeso non vengono più eseguite la ricezione e l'applicazione di dati (record di log) e viene persa la sincronizzazione con il database primario. Le connessioni esistenti nel database secondario leggibile rimangono utilizzabili. Non sono consentite nuove connessioni al database sospeso nel database secondario leggibile finché non viene ripreso lo spostamento di dati.<br /><br /> Il database primario rimane disponibile. Se si sospende ogni database secondario corrispondente, il database primario viene eseguito senza mirroring.<br /><br /> ** \* Importante \* \* ** Quando un database secondario viene sospeso, la coda di invio del database primario corrispondente accumulerà i record del log delle transazioni non inviati. Tramite le connessioni alla replica secondaria vengono restituiti i dati disponibili quando lo spostamento di dati è stato sospeso.|  
 |Database primario|Nel database primario viene arrestato lo spostamento di dati a ogni database secondario connesso. Il database primario rimane in esecuzione, in modalità senza mirroring. Il database primario rimane disponibile ai client e le connessioni esistenti in un database secondario leggibile rimangono utilizzabili ed è possibile effettuare nuove connessioni.|  
   
 > [!NOTE]  
@@ -55,7 +55,7 @@ ms.locfileid: "72797957"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Completamento:** [Come evitare il riempimento del log delle transazioni](#FollowUp)  
+-   **Completamento:** [evitare un log delle transazioni completo](#FollowUp)  
   
 -   [Attività correlate](#RelatedTasks)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72797957"
   
 2.  Sospendere il database usando l'istruzione [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)seguente:  
   
-     ALTER DATABASE *nome_database* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* SET HADR Suspend  
   
 ##  <a name="PowerShellProcedure"></a> Con PowerShell  
  **Per sospendere un database**  
@@ -124,25 +124,25 @@ ms.locfileid: "72797957"
   
 -   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>Completamento: evitare un log delle transazioni completo  
  In genere, quando su un database viene eseguito un checkpoint automatico, il relativo log delle transazioni viene troncato in corrispondenza di tale checkpoint dopo il successivo backup del log. Tuttavia, quando un database secondario viene sospeso, tutti i record del log correnti rimangono attivi sul database primario. Se il log delle transazioni si riempie, perché raggiunge le dimensioni massime o l'istanza del server esaurisce lo spazio, il database non può eseguire ulteriori aggiornamenti.  
   
  Per evitare il problema, effettuare una delle azioni seguenti:  
   
 -   Aggiungere ulteriore spazio di log per il database primario.  
   
--   Riprendere il database secondario prima che il log si riempia. Per ulteriori informazioni, vedere [Resume an Availability Database &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
+-   Riprendere il database secondario prima che il log si riempia. Per ulteriori informazioni, vedere [Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md).  
   
 -   Rimuovere il database secondario. Per altre informazioni, vedere [Rimuovere un database secondario da un gruppo di disponibilità &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md).  
   
- **Per risolvere i problemi di un log delle transazioni pieno**  
+ **Per risolvere i problemi relativi a un log delle transazioni completo**  
   
--   [Risolvere i problemi relativi a un log delle transazioni completo &#40;errore di SQL Server 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [Risolvere i problemi relativi a un log delle transazioni completo &#40;Errore di SQL Server 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
 -   [Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Riprendere un database di disponibilità &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
