@@ -1,5 +1,5 @@
 ---
-title: Mapping predefinito degli attributi ed elementi XSD a tabelle e colonne (SQLXML 4.0) | Microsoft Docs
+title: Mapping predefinito di elementi e attributi XSD a tabelle e colonne (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,20 +27,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013876"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mapping predefinito di elementi e attributi XSD a tabelle e colonne (SQLXML 4.0)
   Per impostazione predefinita, viene eseguito il mapping di un elemento di tipo complesso in uno schema XSD con annotazioni alla tabella (vista) con lo stesso nome nel database specificato e di un elemento o un attributo di tipo semplice alla colonna con lo stesso nome nella tabella.  
   
 ## <a name="examples"></a>Esempi  
- Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per ulteriori informazioni, vedere [requisiti per l'esecuzione di esempi SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-default-mapping"></a>A. Definizione del mapping predefinito  
- In questo esempio non viene specificata alcuna annotazione nello schema XSD. Il  **\<Person. Contact >** elemento è di tipo complesso e, pertanto, esegue il mapping per impostazione predefinita per la tabella Person. Contact nel database AdventureWorks. Tutti gli attributi (ContactID, FirstName, LastName) del  **\<Person. Contact >** elemento di tipo semplice e mappati per default in colonne con lo stesso nome della tabella Person. Contact.  
+### <a name="a-specifying-default-mapping"></a>R. Definizione del mapping predefinito  
+ In questo esempio non viene specificata alcuna annotazione nello schema XSD. L' ** \<elemento Person. Contact>** è di tipo complesso e, pertanto, esegue il mapping per impostazione predefinita alla tabella Person. Contact del database AdventureWorks. Tutti gli attributi (ContactID, FirstName, LastName) dell'elemento ** \<person. Contact>** sono di tipo semplice ed eseguono il mapping per impostazione predefinita alle colonne con gli stessi nomi nella tabella Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -77,7 +77,7 @@ ms.locfileid: "66013876"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati parziale:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66013876"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Mapping di un elemento XML a una colonna del database  
- Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. Il  **\<Person. Contact >** elemento è di tipo complesso ed è associato alla tabella con lo stesso nome del database. Gli elementi  **\<FirstName >** e  **\<LastName >** e **EmployeeID** attributo sono di tipo semplice e, pertanto, associare il colonne con lo stesso nome. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
+ Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L' ** \<elemento Person. Contact>** è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. Gli elementi ** \<FirstName>** e ** \<LastName>** e l'attributo **EmployeeID** sono di tipo semplice e, pertanto, eseguono il mapping alle colonne con gli stessi nomi. L'unica differenza tra questo e l'esempio precedente consiste nel fatto che gli elementi vengono utilizzati per eseguire il mapping dei campi FirstName e LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -130,7 +130,7 @@ ms.locfileid: "66013876"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati parziale:  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66013876"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Mapping di un elemento XML a una colonna con tipo di dati XML  
- Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. Il  **\<Production.ProductModel >** elemento è di tipo complesso ed è associato alla tabella con lo stesso nome del database. Il **ProductModelID** attributo è di tipo semplice e, pertanto, eseguire il mapping alle colonne con lo stesso nome. L'unica differenza tra questo e negli esempi precedenti è che il  **\<istruzioni >** elemento sta eseguendo il mapping a una colonna che utilizza il `xml` tipo di dati usando il `xsd:anyType` tipo.  
+ Anche in questo esempio viene eseguito un mapping predefinito, in quanto non viene utilizzata alcuna annotazione. L' ** \<elemento>di Production. ProductModel** è di tipo complesso e viene mappato alla tabella con lo stesso nome nel database. L'attributo **ProductModelID** è di tipo semplice e, pertanto, viene mappato alle colonne con gli stessi nomi. L'unica differenza tra questo e gli esempi precedenti consiste nel fatto che l' `xml` `xsd:anyType` ** \<elemento instructions>** viene mappato a una colonna che utilizza il tipo di dati tramite il tipo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -185,7 +185,7 @@ ms.locfileid: "66013876"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Di seguito è riportato il set di risultati parziale:  
   
@@ -204,7 +204,7 @@ ctions">
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza di Schema annotato &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [Considerazioni sulla sicurezza dello schema con annotazioni &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
  [Dati XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)   
  [Supporto del tipo di dati xml in SQLXML 4.0](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   

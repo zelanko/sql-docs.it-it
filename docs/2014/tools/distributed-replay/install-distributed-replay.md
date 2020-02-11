@@ -1,5 +1,5 @@
 ---
-title: Installare riesecuzione distribuita dal Prompt dei comandi | Microsoft Docs
+title: Installare Riesecuzione distribuita dal prompt dei comandi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149746"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>Installare Riesecuzione distribuita dal prompt dei comandi
@@ -39,25 +39,25 @@ ms.locfileid: "63149746"
   
 |Parametro|Descrizione|Valori supportati|  
 |---------------|-----------------|----------------------|  
-|/CTLRSVCACCOUNT<br /><br /> **Facoltativo**|Account del servizio per controller di Riesecuzione distribuita.|Vengono controllati l'account e la password|  
-|/CTLRSVCPASSWORD<br /><br /> **Facoltativo**|Password per l'account del servizio controller di Riesecuzione distribuita.|Vengono controllati l'account e la password|  
-|/CTLRSTARTUPTYPE<br /><br /> **Facoltativo**|Tipo di avvio per il servizio controller di Riesecuzione distribuita.|Automatico<br /><br /> Disabilitata<br /><br /> Manual|  
-|/CTLRUSERS<br /><br /> **Facoltativo**|Specifica gli utenti che dispongono di autorizzazioni per il servizio controller di Riesecuzione distribuita.|Set di stringhe di account utente in cui vengono usati i caratteri " " (spazio) come delimitatore<br /><br /> **Importante**: Quando si configura il servizio Distributed Replay controller, è possibile specificare uno o più account utente che verrà utilizzato per eseguire i servizi client riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:<br /><br /> Account utente di dominio<br /><br /> Account utente locale creato dall'utente<br /><br /> Amministratore<br /><br /> Account virtuale e account del servizio gestito<br /><br /> Servizi di rete, Servizi locali e Sistema<br /><br /> <br /><br /> Gli account di gruppo (locale o dominio) e gli altri account predefiniti (come Everyone) non sono accettati.|  
-|/CLTSVCACCOUNT<br /><br /> **Facoltativo**|Account del servizio per client Riesecuzione distribuita.|Vengono controllati l'account e la password|  
-|/CLTSVCPASSWORD<br /><br /> **Facoltativo**|Password per l'account del servizio client Riesecuzione distribuita.|Vengono controllati l'account e la password|  
-|/CLTSTARTUPTYPE<br /><br /> **Facoltativo**|Tipo di avvio per il servizio client Riesecuzione distribuita.|Automatico<br /><br /> Disabilitata<br /><br /> Manual|  
-|/CLTCTLRNAME<br /><br /> **Facoltativo**|Nome del computer con cui il client comunica per il servizio controller di Riesecuzione distribuita.||  
-|/CLTWORKINGDIR<br /><br /> **Facoltativo**|Directory di lavoro per il servizio client Riesecuzione distribuita.|Percorso valido|  
-|/CLTRESULTDIR<br /><br /> **Facoltativo**|Directory dei risultati per il servizio client Riesecuzione distribuita.|Percorso valido|  
+|/CTLRSVCACCOUNT<br /><br /> **Opzionale**|Account del servizio per controller di Riesecuzione distribuita.|Vengono controllati l'account e la password|  
+|/CTLRSVCPASSWORD<br /><br /> **Opzionale**|Password per l'account del servizio controller di Riesecuzione distribuita.|Vengono controllati l'account e la password|  
+|/CTLRSTARTUPTYPE<br /><br /> **Opzionale**|Tipo di avvio per il servizio controller di Riesecuzione distribuita.|Automatico<br /><br /> Disabled<br /><br /> Manuale|  
+|/CTLRUSERS<br /><br /> **Opzionale**|Specifica gli utenti che dispongono di autorizzazioni per il servizio controller di Riesecuzione distribuita.|Set di stringhe di account utente in cui vengono usati i caratteri " " (spazio) come delimitatore<br /><br /> **Importante**: quando si configura il servizio controller di riesecuzione distribuita, è possibile specificare uno o più account utente che verranno usati per eseguire i servizi client riesecuzione distribuita. Di seguito viene fornito l'elenco degli account supportati:<br /><br /> Account utente di dominio<br /><br /> Account utente locale creato dall'utente<br /><br /> Amministratore<br /><br /> Account virtuale e account del servizio gestito<br /><br /> Servizi di rete, Servizi locali e Sistema<br /><br /> <br /><br /> Gli account di gruppo (locale o dominio) e gli altri account predefiniti (come Everyone) non sono accettati.|  
+|/CLTSVCACCOUNT<br /><br /> **Opzionale**|Account del servizio per client Riesecuzione distribuita.|Vengono controllati l'account e la password|  
+|/CLTSVCPASSWORD<br /><br /> **Opzionale**|Password per l'account del servizio client Riesecuzione distribuita.|Vengono controllati l'account e la password|  
+|/CLTSTARTUPTYPE<br /><br /> **Opzionale**|Tipo di avvio per il servizio client Riesecuzione distribuita.|Automatico<br /><br /> Disabled<br /><br /> Manuale|  
+|/CLTCTLRNAME<br /><br /> **Opzionale**|Nome del computer con cui il client comunica per il servizio controller di Riesecuzione distribuita.||  
+|/CLTWORKINGDIR<br /><br /> **Opzionale**|Directory di lavoro per il servizio client Riesecuzione distribuita.|Percorso valido|  
+|/CLTRESULTDIR<br /><br /> **Opzionale**|Directory dei risultati per il servizio client Riesecuzione distribuita.|Percorso valido|  
   
 ### <a name="sample-syntax"></a>Sintassi di esempio:  
- **Per installare il componente Controller di Riesecuzione distribuita**  
+ **Per installare il componente controller di Riesecuzione distribuita**  
   
 ```  
 setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /CTLRUSERS="domain\user1" "domain\user2" /CTLRSVCACCOUNT="domain\svcuser" /CTLRSVCPASSWORD="password" /CTLRSTARTUPTYPE=Automatic  
 ```  
   
- **Per installare il componente Client Riesecuzione distribuita**  
+ **Per installare il componente client di Riesecuzione distribuita**  
   
 ```  
 setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CLTSVCACCOUNT="domain\svcuser" /CLTSVCPASSWORD="password" /CLTSTARTUPTYPE=Automatic /CLTCTLRNAME=ControllerMachineName /CLTWORKINGDIR="C:\WorkingDir" /CLTRESULTDIR="C:\ResultDir  

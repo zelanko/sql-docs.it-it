@@ -1,5 +1,5 @@
 ---
-title: Specifica di operatori aritmetici nelle query XPath (SQLXML 4.0) | Microsoft Docs
+title: Specifica di operatori aritmetici nelle query XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,32 +16,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012472"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori aritmetici nelle query XPath (SQLXML 4.0)
-  Negli esempi seguenti viene illustrato come specificare operatori aritmetici in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Negli esempi seguenti viene illustrato come specificare operatori aritmetici in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-specify-the--arithmetic-operator"></a>A. Specificare l'operatore aritmetico *  
- Questa query XPath restituisce  **\<OrderDetail >** gli elementi che soddisfanno il predicato specificato:  
+### <a name="a-specify-the--arithmetic-operator"></a>R. Specificare l'operatore aritmetico *  
+ Questa query XPath restituisce ** \<OrderDetail>** gli elementi che soddisfano il predicato specificato:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Nella query `child` è l'asse e `OrderDetail` è il test di nodo (TRUE se **OrderDetail** è un  **\<nodo elemento >** , in quanto la  **\< elemento >** nodo è il nodo primario per il `child` asse). Per tutti i  **\<OrderDetail >** nodi elemento, viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfanno la condizione.  
+ Nella `child` query è l'asse e `OrderDetail` è il test di nodo (true se **OrderDetail** è un ** \<nodo elemento>**, perché l' ** \<elemento>** nodo è il nodo primario per l' `child` asse). Per tutti i nodi dell' ** \<elemento>OrderDetail** , viene applicato il test nel predicato e vengono restituiti solo i nodi che soddisfano la condizione.  
   
 > [!NOTE]  
 >  I numeri in XPath sono numeri a virgola mobile a precisione doppia e il confronto di numeri a virgola mobile come nell'esempio causa un arrotondamento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Per testare la query Xpath sullo schema di mapping  
   
-1.  Copia il [esempi di codice schema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copiare il [codice dello schema di esempio](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello ArithmeticOperatorA.xml seguente e salvarlo nella directory in cui viene salvato il file SampleSchema1.xml.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66012472"
   
 3.  Creare e utilizzare lo script di test SQLXML 4.0 (Sqlxml4test.vbs) per eseguire il modello.  
   
-     Per altre informazioni, vedere [utilizzo di ADO per eseguire query di SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Per ulteriori informazioni, vedere [utilizzo di ADO per eseguire query SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ```  
 Here is the partial result set of the template execution:    

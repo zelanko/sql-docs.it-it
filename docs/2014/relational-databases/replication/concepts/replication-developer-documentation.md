@@ -1,5 +1,5 @@
 ---
-title: Per gli sviluppatori&#39;Guida (replica) | Microsoft Docs
+title: Guida a Developer&#39;s (replica) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721933"
 ---
-# <a name="developer39s-guide-replication"></a>Per gli sviluppatori&#39;Guida (replica)
+# <a name="developer39s-guide-replication"></a>Guida a Developer&#39;s (replica)
   La possibilità da configurare, gestire e monitorare a livello di codice una topologia di replica consente di semplificare le attività di replica ripetute e di migliorare l'esperienza utente per le applicazioni basate sulla replica. Mediante la programmazione della replica, è possibile offrire funzionalità di replica personalizzate agli utenti finali, senza che sia necessario conoscere le stored procedure di replica e i file eseguibili degli agenti di replica o utilizzare l'interfaccia di replica implementata da [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  Di seguito vengono descritti gli scenari in cui le applicazioni possono trarre vantaggio dall'accesso a livello di codice ai servizi di replica:  
@@ -36,7 +36,7 @@ ms.locfileid: "62721933"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente di controllare a livello di codice gli agenti di replica e di amministrare e monitorare a livello di codice una topologia di replica. Per altre informazioni sulla programmazione della replica, vedere [Concetti di base relativi alla programmazione della replica](replication-programming-concepts.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Concetti di base relativi alla programmazione della replica](replication-programming-concepts.md)  
  Descrive i passaggi di pianificazione per lo sviluppo di un'applicazione che utilizza la replica.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62721933"
  [Concetti di base relativi a RMO (Replication Management Objects)](replication-management-objects-concepts.md)  
  Illustra i concetti di base per l'utilizzo di RMO (Replication Management Objects), ovvero un assembly di codice gestito che incapsula le funzionalità di replica per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Concetti di base relativi ai file eseguibili dell'agente di replica](replication-agent-executables-concepts.md)  
+ [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)  
  Descrive l'utilizzo di file eseguibili dell'agente di replica.  
 
   

@@ -1,5 +1,5 @@
 ---
-title: Amministrazione utilità (utilità SQL Server) | Microsoft Docs
+title: Amministrazione utilità (Utilità SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773753"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Amministrazione utilità (Utilità SQL Server)
@@ -83,17 +83,17 @@ ms.locfileid: "62773753"
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  Scheda Data warehouse - Consente di visualizzare i dettagli relativi alla configurazione per il data warehouse di gestione dell'utilità.  
   
- Mantenimento dei dati  
+ Conservazione dei dati  
  Specifica il periodo di mantenimento dei dati per informazioni sull'utilizzo raccolte per istanze gestite di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il periodo di mantenimento predefinito è di 1 anno. Il valore minimo è di 1 mese. Il valore massimo supportato è 2 anni.  
   
  Informazioni di configurazione data warehouse dell'utilità  
  Le impostazioni di configurazione seguenti non sono configurabili in questa versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Nome dell'utilità: Sysutility_mdw_\<GUID>_DATA.  
+-   Nome del data warehouse di gestione dell'utilità (UMDW): Sysutility_mdw_\<GUID>_DATA.  
   
--   Frequenza di caricamento di set di raccolta: Ogni 15 minuti.  
+-   Frequenza di caricamento del set di raccolta: ogni 15 minuti.  
   
- La directory dell'utilità UMDW è configurabile: \<Unità di sistema >: \Programmi\Microsoft SQL Server\MSSQL10_50. < nome_puntodicontrolloutilità > \MSSQL\Data\\, dove \<unità sistema > è in genere C:\ Guida. Il file di log UMDW_\<GUID>_LOG si trova nella stessa directory.  
+ La directory dell'utilità UMDW è configurabile: \<Unità di sistema>:\Programmi\Microsoft SQL Server\MSSQL10_50.<Nome_UCP>\MSSQL\Data\\, dove \<Unità di sistema> è in genere l'unità C:\. Il file di log UMDW_\<GUID>_LOG si trova nella stessa directory.  
   
 > [!NOTE]  
 >  È possibile modificare la posizione del file data warehouse di gestione dell'utilità (UMDW) sysutility_mdw utilizzando i comandi collega/scollega o l'istruzione ALTER DATABASE. È consigliabile utilizzare l'istruzione ALTER DATABASE. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -102,7 +102,7 @@ ms.locfileid: "62773753"
  Per ripristinare i valori predefiniti delle impostazioni in questa scheda, fare clic sul pulsante **Ripristina impostazioni predefinite** , quindi fare clic su **Applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dashboard utilità &#40;utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [Dashboard utilità &#40;Utilità SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Dettagli di applicazioni livello dati distribuite &#40;Utilità SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Monitoraggio di istanze di SQL Server in Utilità SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  

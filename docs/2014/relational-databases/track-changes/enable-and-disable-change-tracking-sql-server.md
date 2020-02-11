@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db1a34a93c740aac5e24734f0a5f07c2d6719b73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670600"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Abilitare e disabilitare il rilevamento delle modifiche (SQL Server)
@@ -84,10 +84,10 @@ DISABLE CHANGE_TRACKING;
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà database &#40;pagina Rilevamento delle modifiche&#41;](../databases/database-properties-changetracking-page.md)   
- [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables)   
- [Rilevare le modifiche ai dati &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
+ [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
  [Usare Change Data &#40;SQL Server&#41;](work-with-change-data-sql-server.md)   
  [Gestire il rilevamento delle modifiche &#40;SQL Server&#41;](manage-change-tracking-sql-server.md)  

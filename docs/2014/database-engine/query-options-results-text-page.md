@@ -1,5 +1,5 @@
 ---
-title: Opzioni query-risultati (pagina testo) | Microsoft Docs
+title: Risultati opzioni query (pagina testo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088981"
 ---
 # <a name="query-options-results-text-page"></a>Opzioni query - Risultati (pagina Testo)
@@ -31,25 +31,25 @@ ms.locfileid: "66088981"
  **Includi intestazioni di colonna nel set di risultati**  
  Deselezionare questa casella di controllo se non si desidera applicare un titolo alle colonne.  
   
- **Scorri i risultati ricevuti**  
+ **Scorri come risultati ricevuti**  
  Selezionare questa casella di controllo per mantenere visualizzati gli ultimi record restituiti nella parte inferiore. Deselezionare la casella per mantenere visualizzata la prima riga restituita.  
   
  **Allinea a destra i valori numerici**  
  Selezionare questa casella di controllo per allineare i valori numeri a destra nella colonna in modo da semplificare l'esame delle cifre con un numero di posizioni decimali predefinito.  
   
- **Elimina risultati dopo l'esecuzione della query**  
+ **Elimina risultato dopo l'esecuzione della query**  
  Libera la memoria eliminando i risultati della query dopo che sono stati visualizzati.  
   
  **Visualizza risultati in una scheda separata**  
  Selezionare questa casella di controllo per visualizzare il set di risultati in una nuova finestra del documento invece che nella parte inferiore della finestra della query.  
   
- **Passa alla scheda dei risultati al termine della query**  
+ **Passa alla scheda risultati dopo l'esecuzione della query**  
  Selezionare questa casella per impostare lo stato attivo dello schermo sul set di risultati.  
   
  **Numero massimo di caratteri visualizzati in ogni colonna**  
  Questo valore viene impostato in modo predefinito su 256. È possibile scegliere un valore superiore per visualizzare set di risultati di dimensioni maggiori senza troncamenti.  
   
- **Ripristina predefiniti**  
+ **Ripristina impostazioni predefinite**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>Salvataggio di un set di risultati in formato testo con le intestazioni  

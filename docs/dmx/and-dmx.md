@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913740"
 ---
 # <a name="and-dmx"></a>AND (DMX)
@@ -37,7 +37,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano che restituisce TRUE se entrambi i parametri restituiscono TRUE, FALSE in caso contrario.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per consentire all'operatore di eseguire la congiunzione logica, entrambi i parametri vengono gestiti come valori booleani, per cui 0 equivale a FALSE e tutti gli altri valori a TRUE. Nella tabella seguente sono elencati i valori restituiti per le varie combinazioni dei valori dei parametri.  
   
 |Valore di Expression1|Valore di Expression2|Valore restituito|  
@@ -48,8 +48,8 @@ Expression1 AND Expression2
 |FALSE|FALSE|FALSE|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Gli operatori logici &#40;DMX&#41;](../dmx/operators-logical.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operatori logici &#40;&#41;DMX](../dmx/operators-logical.md)   
+ [Operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

@@ -16,18 +16,18 @@ ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6938a94b2cfe322abf55cbf663f91b4328c2120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054296"
 ---
-# <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
+# <a name="sp_dropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rimuove un server di pubblicazione alternativo da una pubblicazione di tipo merge. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,28 +37,28 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione corrente. *server di pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione corrente. *Publisher*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione corrente. *publisher_db*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'`Nome del database di pubblicazione corrente. *publisher_db*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'` È il nome della pubblicazione corrente. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione corrente. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_publisher = ] 'alternate_publisher'` È il nome del server di pubblicazione alternativo da eliminare come partner di sincronizzazione alternativo. *alternate_publisher*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @alternate_publisher = ] 'alternate_publisher'`Nome del server di pubblicazione alternativo da eliminare come partner di sincronizzazione alternativo. *alternate_publisher*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'` È il nome del database di pubblicazione da eliminare come database di pubblicazione del partner alternativo per la sincronizzazione. *alternate_publisher_db*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'`Nome del database di pubblicazione da eliminare come database di pubblicazione partner alternativo per la sincronizzazione. *alternate_publisher_db*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @alternate_publication = ] 'alternate_publication'` È il nome della pubblicazione da eliminare come pubblicazione partner alternativo per la sincronizzazione. *alternate_publication*viene **sysname**, non prevede alcun valore predefinito.  
+`[ @alternate_publication = ] 'alternate_publication'`Nome della pubblicazione da eliminare come pubblicazione del partner di sincronizzazione alternativo. *alternate_publication*è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_dropmergealternatepublisher** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_dropmergealternatepublisher**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_dropmergelternatepublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
+ [sp_addmergealternatepublisher &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
   
   

@@ -17,18 +17,18 @@ ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68216370"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implementazione di SQLGetDiagRec e SQLGetDiagField
-**SQLGetDiagRec** e **SQLGetDiagField** implementate da Gestione Driver e ogni driver. Gestione Driver ogni driver di gestire i record di diagnostica per ogni ambiente, connessione, istruzione e descrittore handle e liberare i record solo quando un'altra funzione viene chiamata con che handle o l'handle viene liberata.  
+**SQLGetDiagRec** e **SQLGetDiagField** vengono implementati da Gestione driver e da ogni driver. Gestione driver e ogni driver conservano i record di diagnostica per ogni handle di ambiente, connessione, istruzione e descrittore e li liberano solo quando un'altra funzione viene chiamata con tale handle oppure l'handle viene liberato.  
   
- Sebbene sia gestione Driver e tutti i driver devono determinare il primo record di stato in base ai calcoli di pertinenza nelle [sequenza di record di stato](../../../odbc/reference/develop-app/sequence-of-status-records.md), gestione Driver determina la sequenza finale di record.  
+ Anche se Gestione driver e ogni driver devono determinare il primo record di stato in base alle classificazioni in [sequenza dei record di stato](../../../odbc/reference/develop-app/sequence-of-status-records.md), gestione driver determina la sequenza finale di record.  
   
- **SQLGetDiagRec** e **SQLGetDiagField** non registra record di diagnostica su se stesse.  
+ **SQLGetDiagRec** e **SQLGetDiagField** non pubblicano i record di diagnostica.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

@@ -1,5 +1,5 @@
 ---
-title: Uso delle funzioni catalogo | Documenti di Microsoft
+title: Utilizzo delle funzioni di catalogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667379"
 ---
 # <a name="using-catalog-functions"></a>Utilizzo delle funzioni di catalogo
   Tutti i database presentano una struttura che contiene i dati archiviati nel database. Una definizione di tale struttura, insieme ad altre informazioni quali le autorizzazioni, è archiviata in un catalogo (implementato come un set di tabelle di sistema), noto anche come dizionario dei dati.  
   
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client consente a un'applicazione determinare la struttura del database tramite chiamate alle funzioni di catalogo ODBC. Le funzioni di catalogo restituiscono informazioni nei set di risultati e vengono implementate utilizzando stored procedure di catalogo per eseguire query sulle tabelle di sistema nel catalogo. Un'applicazione potrebbe ad esempio richiedere un set di risultati contenente informazioni su tutte le tabelle del sistema o tutte le colonne di una particolare tabella. Le funzioni di catalogo ODBC standard vengono utilizzate per ottenere informazioni di catalogo dal computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al quale è connessa l'applicazione.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC di Native Client consente a un'applicazione di determinare la struttura del database tramite chiamate alle funzioni di catalogo ODBC. Le funzioni di catalogo restituiscono informazioni nei set di risultati e vengono implementate utilizzando stored procedure di catalogo per eseguire query sulle tabelle di sistema nel catalogo. Un'applicazione potrebbe ad esempio richiedere un set di risultati contenente informazioni su tutte le tabelle del sistema o tutte le colonne di una particolare tabella. Le funzioni di catalogo ODBC standard vengono utilizzate per ottenere informazioni di catalogo dal computer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al quale è connessa l'applicazione.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta query distribuite grazie alle quali è possibile accedere con un'unica query ai dati provenienti da più origini dati OLE DB eterogenee. Uno dei metodi di accesso a un'origine dati OLE DB remota consiste nel definire l'origine dati come server collegato. Questa operazione può essere eseguita tramite [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql). Dopo che è stato definito il server collegato, è possibile fare riferimento agli a oggetti del server nelle istruzioni Transact-SQL utilizzando un nome costituito da quattro parti:  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta query distribuite grazie alle quali è possibile accedere con un'unica query ai dati provenienti da più origini dati OLE DB eterogenee. Uno dei metodi di accesso a un'origine dati OLE DB remota consiste nel definire l'origine dati come server collegato. A tale scopo, è possibile utilizzare [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql). Dopo che è stato definito il server collegato, è possibile fare riferimento agli a oggetti del server nelle istruzioni Transact-SQL utilizzando un nome costituito da quattro parti:  
   
- *linked_server_name.catalog.schema.object_name*.  
+ *linked_server_name. Catalog. Schema. object_name*.  
   
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta due funzioni specifiche del driver per il recupero delle informazioni di catalogo dai server collegati:  
   
@@ -43,7 +44,7 @@ ms.locfileid: "62667379"
   
      Restituisce un elenco dei cataloghi presenti in un server collegato.  
   
- Dopo aver ottenuto un nome del server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta recupero delle informazioni dal catalogo usando un nome composto due parti _linked_server_name_ **.** _catalog_ per *CatalogName* funzioni di catalogo in ODBC seguenti:  
+ Quando si dispone di un nome di server collegato e di un nome [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di catalogo, il driver ODBC di Native Client supporta il recupero di informazioni dal catalogo utilizzando un nome in due parti _linked_server_name_**.** _Catalog_ per *CatalogName* nelle funzioni del catalogo ODBC seguenti:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62667379"
   
 -   **SQLTables**  
   
- Le due parti _linked_server_name_ **.** _catalog_ è supportato anche per *FKCatalogName* e *PKCatalogName* sul [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ Linked_server_name in due parti __**.** il _Catalogo_ è supportato anche per *FKCatalogName* e *PKCatalogName* in [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  L'utilizzo di SQLLinkedServers e SQLLinkedCatalogs richiede i file seguenti:  
   

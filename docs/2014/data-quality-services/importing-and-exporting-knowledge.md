@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2cc9c9576a6ae2f70f2d54d48471339ec07d0e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480529"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importazione ed esportazione delle informazioni
@@ -23,15 +23,15 @@ ms.locfileid: "65480529"
 > [!IMPORTANT]  
 >  È possibile esportare contemporaneamente *tutte* le Knowledge Base del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] in un file di backup DQS con estensione DQSB eseguendo il file DQSInstaller.exe dal prompt dei comandi. Analogamente, è possibile importare contemporaneamente *tutte* le Knowledge Base da un file di backup DQS con estensione DQSB nel [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] eseguendo il file DQSInstaller.exe dal prompt dei comandi. Per informazioni su questa operazione, vedere [Esportare e importare le Knowledge Base di DQS utilizzando DQSInstaller.exe](install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) nella Guida all'installazione di DQS.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  È possibile eseguire le operazioni di importazione ed esportazione seguenti:  
   
 |||  
 |-|-|  
-|Esportare un dominio di una Knowledge Base in un file di dati DQS|[Esportare un dominio in un file DQS](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|Importare un dominio da un file di dati DQS in una Knowledge Base esistente|[Importare un dominio da un file DQS](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|Esportare un'intera Knowledge Base in un file di dati DQS|[Esportare una Knowledge Base in un file DQS](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|Importare un'intera Knowledge Base in un file di dati DQS|[Importare una Knowledge Base da un file DQS](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|Esportare un dominio di una Knowledge Base in un file di dati DQS|[Esportazione di un dominio in un file DQS](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md)|  
+|Importare un dominio da un file di dati DQS in una Knowledge Base esistente|[Importazione di un dominio da un file DQS](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|Esportare un'intera Knowledge Base in un file di dati DQS|[Esportazione di una Knowledge Base in un file DQS](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|Importare un'intera Knowledge Base in un file di dati DQS|[Importazione di una Knowledge Base da un file DQS](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Importare i valori da un file di Excel in un dominio|[Importare i valori da un file di Excel in un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |Importare i domini da un file di Excel in una Knowledge Base|[Importare i domini da un file di Excel in Individuazione informazioni](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |Importare le informazioni raccolte durante la pulizia in una Knowledge Base|[Importare i valori di un progetto di pulizia in un dominio](../../2014/data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
