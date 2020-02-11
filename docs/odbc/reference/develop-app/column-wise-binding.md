@@ -1,5 +1,5 @@
 ---
-title: L'associazione per colonna | Microsoft Docs
+title: Associazione per colonna | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083380"
 ---
 # <a name="column-wise-binding"></a>Associazione per colonna
-Quando si usa l'associazione per colonna, un'applicazione associa una o due o in alcuni casi tre, matrici e ogni colonna per cui sono necessario restituire i dati. La prima matrice contiene i valori dei dati e la seconda matrice contiene i buffer di lunghezza/indicatore. I valori di lunghezza e gli indicatori possono essere archiviati nei buffer separato impostando i campi di descrizione SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR su valori diversi; Se questa operazione viene eseguita, viene associata una terza matrice. Ogni matrice contiene tutti gli elementi poiché sono presenti righe nel set di righe.  
+Quando si utilizza l'associazione per colonna, un'applicazione associa una o due matrici a ogni colonna per cui devono essere restituiti i dati. La prima matrice include i valori dei dati e la seconda matrice include i buffer di lunghezza/indicatore. Gli indicatori e i valori di lunghezza possono essere archiviati in buffer distinti impostando i campi SQL_DESC_INDICATOR_PTR e descrittore SQL_DESC_OCTET_LENGTH_PTR su valori diversi. Se questa operazione viene eseguita, viene associata una terza matrice. Ogni matrice contiene tutti gli elementi presenti nel set di righe.  
   
- L'applicazione dichiara che associazione per colonna viene usato con l'attributo di istruzione SQL_ATTR_ROW_BIND_TYPE, che determina il tipo di binding per i buffer del set di righe anziché parametro impostato i buffer. Il driver restituisce i dati per ogni riga in elementi successivi di ogni matrice. La figura seguente mostra funzionamento dell'associazione per colonna.  
+ L'applicazione dichiara di usare un'associazione per colonna con l'attributo dell'istruzione SQL_ATTR_ROW_BIND_TYPE, che determina il tipo di binding per i buffer del set di righe anziché i buffer dei set di parametri. Il driver restituisce i dati per ogni riga negli elementi successivi di ogni matrice. Nella figura seguente viene illustrato il funzionamento dell'associazione per colonna.  
   
- ![Colonna&#45;associazione a livello di tre colonne](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Colonna&#45;associazione saggia di tre colonne](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- Ad esempio, il codice seguente associa le matrici di 10 elementi per le colonne OrderID, venditore e lo stato:  
+ Il codice seguente, ad esempio, associa le matrici di 10 elementi alle colonne OrderID, SalesPerson e status:  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

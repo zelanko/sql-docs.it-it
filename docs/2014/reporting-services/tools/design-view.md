@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100303"
 ---
-# <a name="design-view"></a>Visualizzazione Progettazione
+# <a name="design-view"></a>Visualizzazione progettazione
   Utilizzare Visualizzazione progettazione per disporre gli elementi nel report. Tale visualizzazione viene talvolta denominata superficie di progettazione o visualizzazione Layout.  
   
 ## <a name="report-design-surface"></a>Area di progettazione del report  

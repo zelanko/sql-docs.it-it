@@ -17,14 +17,14 @@ ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933411"
 ---
 # <a name="copyrecord-method-ado"></a>Metodo CopyRecord (ADO)
-Copia di un'entità rappresentata da un [record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
+Copia un'entità rappresentata da un [record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,38 +35,38 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativo. Oggetto **stringa** valore contenente un URL che specifica l'entità deve essere copiato (ad esempio, un file o directory). Se *origine* viene omesso oppure specifica una stringa vuota, il file o directory rappresentata dall'oggetto corrente [Record](../../../ado/reference/ado-api/record-object-ado.md) verranno copiati.  
+ Facoltativa. Valore **stringa** che contiene un URL che specifica l'entità da copiare, ad esempio un file o una directory. Se l' *origine* viene omessa o specifica una stringa vuota, il file o la directory rappresentata dal [record](../../../ado/reference/ado-api/record-object-ado.md) corrente verrà copiato.  
   
  *Destinazione*  
- facoltativo. Oggetto **stringa** contenente un URL che specifica la posizione in cui *origine* verranno copiati.  
+ Facoltativa. Valore **stringa** che contiene un URL che specifica il percorso in cui verrà copiato il *codice sorgente* .  
   
- *UserName*  
- facoltativo. Oggetto **stringa** valore contenente l'ID utente, se necessario, autorizza l'accesso al *destinazione*.  
+ *Nome utente*  
+ Facoltativa. Valore **stringa** che contiene l'ID utente che, se necessario, autorizza l'accesso alla *destinazione*.  
   
  *Password*  
- facoltativo. Oggetto **stringa** valore contenente la password, se necessario, verifica *UserName*.  
+ Facoltativa. Valore **stringa** che contiene la password che, se necessario, verifica il *nome utente*.  
   
  *Opzioni*  
- facoltativo. Oggetto [CopyRecordOptionsEnum uguale al](../../../ado/reference/ado-api/copyrecordoptionsenum.md) valore con valore predefinito è **adCopyUnspecified**. Specifica il comportamento di questo metodo.  
+ Facoltativa. Valore [CopyRecordOptionsEnum uguale al](../../../ado/reference/ado-api/copyrecordoptionsenum.md) il cui valore predefinito è **adCopyUnspecified**. Specifica il comportamento di questo metodo.  
   
  *Async*  
- facoltativo. Oggetto **booleana** valore che, quando **True**, specifica che questa operazione deve essere asincrona.  
+ Facoltativa. Valore **booleano** che, se impostato su **true**, specifica che questa operazione deve essere asincrona.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** valore che restituisce in genere il valore di *destinazione*. Tuttavia, il valore esatto restituito è dipendente dal provider.  
+ Valore **stringa** che restituisce in genere il valore di *Destination*. Tuttavia, il valore esatto restituito è dipendente dal provider.  
   
-## <a name="remarks"></a>Note  
- I valori della *origine* e *destinazione* non deve essere identica; in caso contrario, si verifica un errore di run-time. Almeno uno dei nomi di server, percorso o risorsa deve essere diverso.  
+## <a name="remarks"></a>Osservazioni  
+ I valori di *source* e *Destination* non devono essere identici. in caso contrario, si verificherà un errore di run-time. Almeno uno dei nomi di server, percorsi o risorse deve essere diverso.  
   
- Tutti gli elementi figlio (ad esempio, le sottodirectory) del *origine* vengono copiati in modo ricorsivo, a meno che non **adCopyNonRecursive** è specificato. In un'operazione ricorsiva *destinazione* non deve essere una sottodirectory della *origine*; in caso contrario, l'operazione non verrà completata.  
+ Tutti gli elementi figlio, ad esempio le sottodirectory, dell' *origine* vengono copiati in modo ricorsivo, a meno che non sia specificato **adCopyNonRecursive** . In un'operazione ricorsiva, la *destinazione* non deve essere una sottodirectory dell' *origine*; in caso contrario, l'operazione non viene completata.  
   
- Questo metodo ha esito negativo se *destinazione* identifica un'entità esistente (ad esempio, un file o una directory), a meno che non **adCopyOverWrite** è specificato.  
+ Questo metodo ha esito negativo se la *destinazione* identifica un'entità esistente (ad esempio, un file o una directory), a meno che non sia specificato **adCopyOverwrite** .  
   
 > [!IMPORTANT]
->  Usare la **adCopyOverWrite** opzione con cautela. Ad esempio, se si specifica questa opzione quando si copia un file in una directory verrà *eliminare* la directory e sostituirlo con il file.  
+>  Usare l'opzione **adCopyOverwrite** in giudizio. Se ad esempio si specifica questa opzione quando si copia un file in una directory, la directory verrà *eliminata* e sostituita con il file.  
   
 > [!NOTE]
->  Gli URL che utilizzano lo schema http chiama automaticamente il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per altre informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054129"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Stima delle dimensioni di un indice cluster
@@ -174,21 +174,21 @@ ms.locfileid: "66054129"
   
 7.  Calcolare il numero di livelli nell'indice:  
   
-     ***Non-leaf Levels*** = 1 + log Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Non-leaf_Levels*** = 1 + Index_Rows_Per_Page di log (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Arrotondare questo valore per eccesso al numero intero più vicino. Nel valore non è incluso il livello foglia dell'indice cluster.  
   
 8.  Calcolare il numero di pagine non foglia dell'indice:  
   
-     ***Num_Index_Pages =*** ∑ Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***<sup>livello</sup>***))***  
+     ***Num_Index_Pages =*** livello ∑ ***(Num_Leaf_Pages/(***<sup>livello</sup>Index_Rows_Per_Page ***))***  
   
      dove 1 <= Level <= ***Non-leaf_Levels***  
   
      Arrotondare ogni addendo al numero intero più vicino. Per un esempio semplice, considerare un indice in cui ***Num_Leaf_Pages*** = 1000 e ***Index_Rows_Per_Page*** = 25. Nel primo livello dell'indice sopra il livello foglia vengono archiviate 1000 righe di indice, ovvero una riga di indice per pagina foglia, ed è possibile inserire 25 righe di indice per pagina. Per archiviare le 1000 righe di indice, sono quindi necessarie 40 pagine. Nel livello successivo dell'indice devono invece essere archiviate 40 righe, pertanto sono necessarie 2 pagine. Nel livello finale dell'indice devono essere archiviate 2 righe, pertanto è necessaria una sola pagina. Si ottengono quindi 43 pagine di indice non foglia. Se nella formula precedente si utilizzano questi numeri, il risultato sarà il seguente:  
   
-     ***Non leaf Levels*** = 1 + log25 (1000 / 25) = 3  
+     ***Non-leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, ovvero il numero di pagine descritto nell'esempio.  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43, ovvero il numero di pagine descritte nell'esempio.  
   
 9. Calcolare le dimensioni dell'indice (8192 byte totali per pagina):  
   
@@ -219,7 +219,7 @@ ms.locfileid: "66054129"
   
 -   Colonne di tipo sparse  
   
-     Per informazioni sui requisiti di spazio delle colonne di tipo sparse, vedere [Usare le colonne di tipo sparse](../tables/use-sparse-columns.md).  
+     Per informazioni sui requisiti di spazio delle colonne di tipo sparse, vedere [Utilizzo di colonne di tipo sparse](../tables/use-sparse-columns.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Descrizione di indici cluster e non cluster.](../indexes/clustered-and-nonclustered-indexes-described.md)   

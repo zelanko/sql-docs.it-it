@@ -1,5 +1,5 @@
 ---
-title: Invio di dati come un parametro con valori di tabella con tutti i valori in memoria (ODBC) | Documenti di Microsoft
+title: Invio di dati come parametro con valori di tabella con tutti i valori in memoria (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205455"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Invio di dati come parametro con valori di tabella con tutti i valori in memoria (ODBC)
-  In questo argomento viene illustrato come inviare dati a una stored procedure come parametro con valori di tabella quando tutti i valori sono in memoria. Per un altro esempio che illustra i parametri con valori di tabella, vedere [usare parametri &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
+  In questo argomento viene illustrato come inviare dati a una stored procedure come parametro con valori di tabella quando tutti i valori sono in memoria. Per un altro esempio che illustra i parametri con valori di tabella, vedere [usare parametri con valori di tabella &#40;&#41;ODBC ](table-valued-parameters-odbc.md).  
   
-## <a name="prerequisite"></a>Prerequisiti  
+## <a name="prerequisite"></a>Prerequisito  
  Questa procedura presuppone che sia stata eseguita l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente nel server:  
   
 ```  
@@ -86,7 +86,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi le colonne del valore di tabella vengono associate tramite SQLBindParameter esattamente come verrebbero usati se i parametri della stored procedure, ma con gli ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
+3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi, le colonne del valore della tabella vengono associate usando SQLBindParameter nello stesso modo in cui si trovano se fossero parametri del stored procedure, ma con gli ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -102,7 +102,8 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  Popolare i buffer del parametro. `cbTVP` è impostato sul numero di righe da inviare al server.  
+4.  Popolare i buffer del parametro. 
+  `cbTVP` è impostato sul numero di righe da inviare al server.  
   
     ```  
     // Populate parameters.  

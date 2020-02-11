@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Creazione e la gestione dei dati in una tabella gerarchica | Microsoft Docs'
+title: 'Lezione 2: Creazione e gestione di dati in una tabella gerarchica | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659933"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lezione 2: Creazione e gestione di dati in una tabella gerarchica
@@ -32,7 +32,7 @@ ms.locfileid: "62659933"
   
 -   [Riordinamento di dati in una tabella gerarchica utilizzando metodi gerarchici](lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md)  
   
--   [Riepilogo: La gestione dei dati in una tabella gerarchica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+-   [Riepilogo: Gestione di dati in una tabella gerarchica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Creazione di una tabella utilizzando il tipo di dati hierarchyid](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  

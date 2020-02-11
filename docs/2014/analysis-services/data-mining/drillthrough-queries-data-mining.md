@@ -1,5 +1,5 @@
 ---
-title: Query drill-through (Data Mining) | Microsoft Docs
+title: Query drill-through (data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084545"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Query drill-through (Data mining)
   Una *query drill-through* consente di recuperare i dettagli dei case o dei dati della struttura sottostanti mediante l'invio di una query al modello di data mining. Il drill-through è utile se si desidera confrontare i case utilizzati per il training del modello con quelli utilizzati per il test del modello oppure se si desidera visualizzare ulteriori dettagli dei dati dei case.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Nel data mining sono disponibili due opzioni diverse per il drill-through:  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Nel data mining sono disponibili due opzioni diverse per il drill-through:  
   
 -   Drill-through nei **case del modello**  
   
-     Drill-through nei case del modello viene usato quando si vuole passare da un modello specifico di modello, quali come un cluster o un ramo dell'albero delle decisioni e visualizzare i dettagli sui singoli case.  
+     Il drill-through nei case del modello viene utilizzato quando si desidera passare da uno schema specifico del modello, ad esempio un cluster o un ramo di un albero delle decisioni, e visualizzare i dettagli sui singoli case.  
   
 -   Drill-through nei **case della struttura**  
   
@@ -42,23 +43,23 @@ ms.locfileid: "66084545"
   
  [Considerazioni sull'utilizzo del drill-through](#bkmk_Considerations)  
   
--   [Problemi relativi alla sicurezza](#bkmk_Security)  
+-   [Problemi di sicurezza](#bkmk_Security)  
   
 -   [Limitazioni](#bkmk_Limits)  
   
-##  <a name="bkmk_Designer"></a> Utilizzo del drill-through in Progettazione modelli di data mining  
+##  <a name="bkmk_Designer"></a>Utilizzo del drill-through in Progettazione modelli di data mining  
  Se un modello di data mining è stato configurato per consentire il drill-through e se si dispone delle autorizzazioni appropriate, quando si esplora il modello è possibile fare clic su un nodo nel visualizzatore adatto e recuperare informazioni dettagliate sui case in quel determinato nodo.  
   
- [Eseguire il drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md).  
+ [Drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md).  
   
  Se i case di training sono stati memorizzati nella cache durante l'elaborazione della struttura di data mining e si dispone delle autorizzazioni necessarie, è possibile restituire le informazioni dai case del modello e dalla struttura di data mining, comprese le colonne che non erano state incluse nel modello di data mining.  
   
-##  <a name="bkmk_DMX"></a> Creazione di query drill-through tramite DMX  
+##  <a name="bkmk_DMX"></a>Creazione di query drill-through tramite DMX  
  È possibile eseguire il drill-through nei dati del case creando una query DMX se si dispone delle autorizzazioni necessarie per il modello o la struttura. Per esempi relativi alla sintassi per la creazione di query drill-through in DMX, vedere l'argomento seguente:  
   
  [Creare query drill-through tramite DMX](create-drillthrough-queries-using-dmx.md)  
   
-##  <a name="bkmk_Considerations"></a> Considerazioni sull'utilizzo del drill-through  
+##  <a name="bkmk_Considerations"></a>Considerazioni sull'utilizzo del drill-through  
   
 -   Se si utilizza Creazione guidata modello di data mining, l'opzione per abilitare il drill-through nei case del modello si trova nell'ultima pagina della procedura guidata. Per impostazione predefinita, il drill-through è disabilitato. Per altre informazioni, vedere [Completamento procedura guidata &#40;Creazione guidata modello di data mining&#41;](../completing-the-wizard-data-mining-wizard.md).  
   
@@ -68,15 +69,15 @@ ms.locfileid: "66084545"
   
 -   Se la struttura di data mining non consente il drill-through, mentre il modello di data mining lo consente, è possibile visualizzare solo le informazioni dai case del modello e non dalla struttura di data mining.  
   
-###  <a name="bkmk_Security"></a> Problemi di sicurezza correlati al drill-through  
- Se si desidera il drill-through nei case della struttura dal modello, è necessario verificare che la struttura di data mining sia nel modello di data mining di [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) impostata su `True`. È inoltre necessario essere membro di un ruolo che disponga delle autorizzazioni di drill-through sia per la struttura sia per il modello. Per altre informazioni sulla creazione di ruoli, vedere [Progettazione ruoli &#40;Analysis Services - Dati multidimensionali&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). .  
+###  <a name="bkmk_Security"></a>Problemi di sicurezza per il drill-through  
+ Se si desidera eseguire il drill-through nei case della struttura dal modello, è necessario verificare che la proprietà [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) sia la struttura di data mining sia il modello `True`di data mining. È inoltre necessario essere membro di un ruolo che disponga delle autorizzazioni di drill-through sia per la struttura sia per il modello. Per altre informazioni sulla creazione di ruoli, vedere [Progettazione ruoli &#40;Analysis Services - Dati multidimensionali&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). .  
   
  Le autorizzazioni di drill-through vengono impostate separatamente per la struttura e per il modello. L'autorizzazione del modello consente di eseguire il drill-through dal modello, anche se non si dispone di autorizzazioni sulla struttura. Le autorizzazioni di drill-through per la struttura consentono di includere colonne della struttura nelle query di drill-through dal modello usando la funzione [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
   
 > [!NOTE]  
 >  Se si abilita il drill-through per la struttura e per il modello di data mining, qualsiasi utente che sia un membro di un ruolo che dispone delle autorizzazioni di drill-through per il modello di data mining può anche visualizzare le colonne della struttura di data mining, anche se tali colonne non sono incluse nel modello di data mining. Pertanto, per proteggere i dati sensibili, è necessario configurare la vista origine dati per mascherare le informazioni personali e consentire l'accesso drill-through alla struttura di data mining solo quando necessario.  
   
-###  <a name="bkmk_Limits"></a> Limitazioni relative al drill-through  
+###  <a name="bkmk_Limits"></a>Limitazioni relative al drill-through  
   
 -   Le limitazioni seguenti vengono applicate alle operazioni di drill-through su un modello, a seconda dell'algoritmo utilizzato per creare il modello:  
   
@@ -95,8 +96,8 @@ ms.locfileid: "66084545"
 |----------|----------|  
 |Procedura in cui viene descritto l'utilizzo del drill-through in Progettazione modelli di data mining|[Eseguire il drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md)|  
 |Per modificare un modello di data mining esistente al fine di consentire il drill-through|[Abilitare il drill-through per un modello di data mining](enable-drillthrough-for-a-mining-model.md)|  
-|Abilitazione del drill-through in una struttura di data mining utilizzando la clausola WITH DRILLTHROUGH di DMX|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Per informazioni sull'assegnazione di autorizzazioni applicabili al drill-through in strutture e modelli di data mining|[Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Abilitazione del drill-through in una struttura di data mining utilizzando la clausola WITH DRILLTHROUGH di DMX|[CREA STRUTTURA DI DATA MINING &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
+|Per informazioni sull'assegnazione di autorizzazioni applicabili al drill-through in strutture e modelli di data mining|[Concedere le autorizzazioni per data mining strutture e modelli &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzatori modello di data mining](data-mining-model-viewers.md)   

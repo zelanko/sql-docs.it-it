@@ -1,5 +1,5 @@
 ---
-title: Nuovo o Modifica registrazione Server (scheda Generale) (Reporting Services) | Microsoft Docs
+title: Nuova registrazione o modifica registrazione server (scheda generale) (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62844274"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Creazione o modifica della registrazione del server (scheda Generale) (Reporting Services)
@@ -25,13 +25,13 @@ ms.locfileid: "62844274"
  Per accedere a questa pagina, in Server registrati fare clic su **Reporting Services** sulla barra degli strumenti **Server registrati** , fare clic con il pulsante destro del mouse su qualsiasi gruppo di server registrati, ad esempio **Reporting Services**, scegliere **Nuovo**e quindi fare clic su **Nuova registrazione server**.  
   
 ## <a name="options"></a>Opzioni  
- **Tipo server**  
- Quando si esegue la registrazione di un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato nel riquadro **Server registrati** . Per registrare un tipo diverso di server, selezionare il server desiderato dalla barra degli strumenti **Server registrati** prima di iniziare la registrazione del nuovo server.  
+ **Tipo di server**  
+ Quando un server viene registrato da server registrati, la casella **tipo server** è di sola lettura e corrisponde al tipo di server visualizzato nel riquadro **Server registrati** . Per registrare un tipo diverso di server, selezionare il server desiderato dalla barra degli strumenti **Server registrati** prima di iniziare la registrazione del nuovo server.  
   
  **Nome server**  
  Consente di selezionare l'istanza del server di report a cui connettersi. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]è possibile accedere a un server di report tramite il nome della relativa istanza. È possibile disporre di un'istanza del server di report per ogni istanza di SQL Server installata Se si utilizza l'istanza predefinita, digitare il nome dell'istanza di SQL Server. Se si utilizza un'istanza denominata, indicarla nel formato MSSQL$instancename per la connessione al server di report.  
   
- **Autenticazione**  
+ **autenticazione**  
  Il processo di autenticazione a un server di report viene eseguito tramite Internet Information Services (IIS). Selezionare una delle modalità di autenticazione disponibili seguenti per la connessione a Reporting Services:  
   
  **Modalità di autenticazione di Windows (Autenticazione di Windows)**  
@@ -47,13 +47,13 @@ ms.locfileid: "62844274"
  Immettere il nome account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
  **Password**  
- Immettere la password associata al nome utente. Questa opzione può essere modificata solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
+ Immettere il nome utente e la password Questa opzione può essere modificata solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
  **Memorizza password**  
  Consente di archiviare la password immessa. Questa opzione è disponibile solo se si è scelto di utilizzare **l'autenticazione di base** o **basata su form**.  
   
 > [!NOTE]  
->  Se la password è stata memorizzata e si vuole evitarne la memorizzazione in futuro, deselezionare questa casella di controllo e quindi fare clic su **Salva**.  
+>  Se la password è stata archiviata e si desidera arrestarne la memorizzazione, deselezionare questa casella di controllo e quindi fare clic su **Salva**.  
   
  **Nome server registrato**  
  Nome che si desidera venga visualizzato nel componente Server registrati. Non è necessario che questo nome corrisponda a quello indicato nella casella **Nome server** .  
@@ -64,7 +64,7 @@ ms.locfileid: "62844274"
  **Test**  
  Consente di testare la connessione al server selezionato in **Nome server**.  
   
- **Salva**  
+ **Salvare**  
  Fare clic su questo pulsante per salvare le impostazioni del server registrato.  
   
   

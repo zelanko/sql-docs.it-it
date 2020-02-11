@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fb9eaf62514b76e35b73ea87b7820751f670a90f
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175580"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Lezione 5. (facoltativo) crittografare il database tramite TDE
-  Come passaggio facoltativo, è possibile crittografare il database appena creato. Transparent Data Encryption (TDE) esegue la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per questo tipo di crittografia viene utilizzata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. Per ulteriori informazioni, vedere [Transparent Data Encryption &#40;&#41; ](security/encryption/transparent-data-encryption.md) Transparent Data Encryption e [spostare un database protetto con crittografia transparent in un altro SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
+  Come passaggio facoltativo, è possibile crittografare il database appena creato. Transparent Data Encryption (TDE) esegue la crittografia e la decrittografia I/O in tempo reale dei file di dati e di log. Per questo tipo di crittografia viene utilizzata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. Per ulteriori informazioni, vedere [Transparent Data Encryption &#40;&#41;](security/encryption/transparent-data-encryption.md) Transparent Data Encryption e [spostare un database protetto con crittografia transparent in un altro SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
  Per questa lezione si presuppone che l'utente abbia già completato i passaggi seguenti:  
   
@@ -87,7 +87,7 @@ GO
   
 ```  
   
- Per informazioni dettagliate sulle istruzioni Transact-SQL utilizzate in questa lezione, vedere [Create &#40;database SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql), [Create master key &#40; Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [Create Certificate &#40;Transact-&#41;SQL](/sql/t-sql/statements/create-certificate-transact-sql)e [sys. dm _database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
+ Per informazioni dettagliate sulle istruzioni Transact-SQL utilizzate in questa lezione, vedere [create database &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER database &#40;transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql), [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [Create Certificate &#40;transact-SQL ](/sql/t-sql/statements/create-certificate-transact-sql)&#41;e [sys. dm_database_encryption_keys &#40;Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)&#41;.  
   
  **Lezione successiva:**  
   

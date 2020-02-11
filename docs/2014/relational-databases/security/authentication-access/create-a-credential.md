@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012003"
 ---
 # <a name="create-a-credential"></a>Create a Credential
@@ -28,7 +28,7 @@ ms.locfileid: "63012003"
   
  È possibile eseguire il mapping delle credenziali a diversi account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contemporaneamente. Su un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile eseguire il mapping a un solo set di credenziali alla volta. Dopo aver creato le credenziali, usare **Proprietà account di accesso (pagina Generale)** per eseguire il mapping di un account di accesso alle credenziali.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63012003"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Richiede autorizzazione ALTER ANY CREDENTIAL di creare o modificare credenziali e un autorizzazione ALTER ANY LOGIN per eseguire il mapping di un accesso a credenziali.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-a-credential"></a>Per creare una credenziale  
   
@@ -75,9 +75,9 @@ ms.locfileid: "63012003"
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
-###  <a name="Credential"></a> Per creare una credenziale  
+###  <a name="Credential"></a>Per creare una credenziale  
   
 1.  In **Esplora oggetti**connettersi a un'istanza del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

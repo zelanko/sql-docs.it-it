@@ -16,18 +16,18 @@ ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085287"
 ---
-# <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
+# <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulle impostazioni di rilevamento dei conflitti per una pubblicazione coinvolta in una topologia di replica transazionale peer-to-peer.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,11 +38,11 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @publication=] '*publication*'  
- Nome della pubblicazione per cui si desidera restituire le informazioni. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+ [ @publication= ] '*Publication*'  
+ Nome della pubblicazione per cui si desidera restituire le informazioni. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @timeout=] *timeout*  
- Specifica l'intervallo di tempo, espresso in secondi, dopo il quale si verifica il timeout della procedura durante l'attesa di una risposta da ogni nodo nella topologia. Se nella topologia è presente un Sottoscrittore di sola lettura, non sarà possibile specificare un valore di timeout. I Sottoscrittori di sola lettura non rispondono mai a una chiamata da questa procedura. *timeout* viene **int**, con un valore predefinito di 60.  
+ [ @timeout= ] *timeout*  
+ Specifica l'intervallo di tempo, espresso in secondi, dopo il quale si verifica il timeout della procedura durante l'attesa di una risposta da ogni nodo nella topologia. Se nella topologia è presente un Sottoscrittore di sola lettura, non sarà possibile specificare un valore di timeout. I Sottoscrittori di sola lettura non rispondono mai a una chiamata da questa procedura. *timeout* è di **tipo int**e il valore predefinito è 60.  
   
 ## <a name="result-sets"></a>Set di risultati  
  sp_help_peerconflictdetection restituisce tre set di risultati. Questi risultati sono documentati negli argomenti seguenti:  
@@ -53,13 +53,13 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 -   [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md)  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  sp_help_peerconflictdetection è utilizzato nella replica transazionale peer-to-peer.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner.  
   
 ## <a name="see-also"></a>Vedere anche  

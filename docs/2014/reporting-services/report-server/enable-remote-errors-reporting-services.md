@@ -14,26 +14,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2d239dfc3d094f72d40ce6d020610fe1c0eabbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103811"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Abilita errori remoti (Reporting Services)
   È possibile impostare le proprietà di un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modo che vengano restituite ulteriori informazioni sulle condizioni di errore che si verificano nei server remoti. Se in un messaggio di errore è incluso il testo "Per ulteriori informazioni su questo errore, passare al server di report nel server locale oppure abilitare gli errori remoti", sarà possibile impostare la proprietà `EnableRemoteErrors` per accedere a informazioni aggiuntive che consentono di risolvere il problema. Per altre informazioni, vedere [Proprietà di sistema del server di report](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Contenuto dell'argomento:**  
+ **In questo argomento**  
   
--   [Abilitare errori remoti per la modalità SharePoint](#bkmk_sharepoint)  
+-   [Abilita errori remoti per la modalità SharePoint](#bkmk_sharepoint)  
   
 -   [Abilitare errori remoti tramite SQL Server Management Studio (modalità nativa)](#bkmk_mgtStudio)  
   
 -   [Abilitare errori remoti tramite script (modalità nativa)](#bkmk_script)  
   
--   [Modifica della tabella ConfigurationInfo (modalità nativa)](#bkmk_ConfigurationInfo)  
+-   [Modifica della tabella della ConfigurationInfo (modalità nativa)](#bkmk_ConfigurationInfo)  
   
-##  <a name="bkmk_sharepoint"></a> Abilitare errori remoti per la modalità SharePoint  
+##  <a name="bkmk_sharepoint"></a>Abilita errori remoti per la modalità SharePoint  
  Sono disponibili due procedure diverse per l'abilitazione di errori remoti per la modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La procedura è diversa per le due differenti architetture del server di report. Nell'architettura più recente basata sul servizio SharePoint introdotta nella versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] viene utilizzata un'impostazione che può essere configurata per ogni applicazione di servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Nell'architettura precedente viene utilizzata una sola impostazione del livello di sito.  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Abilitare errori remoti per un'applicazione di servizio Reporting Services  
@@ -62,7 +62,7 @@ ms.locfileid: "66103811"
   
 5.  Fare clic su **OK**.  
   
-##  <a name="bkmk_mgtStudio"></a> Abilitare errori remoti tramite SQL Server Management Studio (modalità nativa)  
+##  <a name="bkmk_mgtStudio"></a>Abilitare errori remoti tramite SQL Server Management Studio (modalità nativa)  
   
 1.  Avviare Management Studio e connettersi a un'istanza del server di report. Per altre informazioni, vedere [Eseguire la connessione a un server di report in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66103811"
   
 3.  Fare clic su **Avanzate** per aprire la pagina delle proprietà. Per altre informazioni, vedere [Proprietà server &#40;pagina Avanzate&#41; - Reporting Services](../tools/server-properties-advanced-page-reporting-services.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-4.  Nelle `EnableRemoteErrors`, selezionare `True`.  
+4.  In `EnableRemoteErrors`selezionare `True`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_script"></a> Abilitare errori remoti tramite script (modalità nativa)  
+##  <a name="bkmk_script"></a>Abilitare errori remoti tramite script (modalità nativa)  
   
 1.  Creare un file di testo e copiare lo script seguente nel file.  
   
@@ -106,11 +106,11 @@ ms.locfileid: "66103811"
     rs -i EnableRemoteErrors.rss -s http://servername/ReportServer  
     ```  
   
-6.  Per altre informazioni, vedere [Utilità RS.exe &#40;SSRS&#41;](../tools/rs-exe-utility-ssrs.md).  
+6.  Per ulteriori informazioni, vedere [Utilità rs. exe &#40;SSRS&#41;](../tools/rs-exe-utility-ssrs.md)  
   
-##  <a name="bkmk_ConfigurationInfo"></a> Modifica della tabella ConfigurationInfo (modalità nativa)  
+##  <a name="bkmk_ConfigurationInfo"></a>Modifica della tabella della ConfigurationInfo (modalità nativa)  
   
 1.  > [!NOTE]  
-    >  È possibile modificare il **ConfigurationInfo** tabella nel database del server di report per impostare `EnableRemoteErrors` a `True`, ma se viene usato attivamente il server di report, è necessario usare SQL Server Management Studio o uno script per modificare le impostazioni. Se si modifica l'impostazione nel database, è necessario riavviare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prima dell'applicazione delle modifiche.  
+    >  È possibile modificare la tabella **della ConfigurationInfo** nel database del server di report per `EnableRemoteErrors` impostare `True`su, ma se il server di report viene usato attivamente, è necessario usare SQL Server Management Studio o script per modificare le impostazioni. Se si modifica l'impostazione nel database, è necessario riavviare il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prima dell'applicazione delle modifiche.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Attività 15: Compilazione e l'esecuzione del progetto SSIS | Microsoft Docs"
+title: 'Attività 15: compilazione ed esecuzione del progetto SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,39 +10,39 @@ ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66822989"
 ---
 # <a name="task-15-building-and-running-the-ssis-project"></a>Attività 15: Compilazione ed esecuzione del progetto SSIS
 
-  In questa attività viene compilato ed eseguito il progetto SSIS. Se si dispone della versione a 64 bit di Excel 2010 installato nel computer, è necessario impostare il valore di **Run64BitRuntime** al **False** per l'origine Excel da utilizzare.  
+  In questa attività viene compilato ed eseguito il progetto SSIS. Se nel computer è installata la versione a 64 bit di Excel 2010, è necessario impostare il valore di **Run64BitRuntime** su **false** per il funzionamento dell'origine Excel.  
   
-1.  Nel **Esplora soluzioni** finestra, fare clic su **Project** dal menu, fare clic su **proprietà CleanseAndCurateSuppliers**.  
+1.  Nella finestra di **Esplora soluzioni** fare clic su **progetto** nel menu e quindi su **Proprietà CleanseAndCurateSuppliers**.  
   
-2.  Nel **delle proprietà** finestra di dialogo espandere **le proprietà di configurazione** a sinistra e fare clic su **debug**.  
+2.  Nella finestra di dialogo **Proprietà** espandere **proprietà di configurazione** a sinistra e fare clic su **debug**.  
   
-3.  Impostare **Run64BitRuntime** al **False**.  
+3.  Impostare **Run64BitRuntime** su **false**.  
   
-     ![Proprietà progetto CleanseAndCurateSuppliers](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "proprietà progetto CleanseAndCurateSuppliers")  
+     ![Proprietà progetto CleanseAndCurateSuppliers](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "Proprietà progetto CleanseAndCurateSuppliers")  
   
-4.  Fare clic su **OK** per chiudere la **proprietà** nella finestra di dialogo.  
+4.  Scegliere **OK** per chiudere la finestra di dialogo **Proprietà**.  
   
-5.  Fare clic su **compilare** sulla barra dei menu e quindi su **compila CleanseAndCurateSuppliers**. Assicurarsi che non siano presenti errori di compilazione.  
+5.  Fare clic su **Compila** sulla barra dei menu e quindi su **Compila CleanseAndCurateSuppliers**. Assicurarsi che non siano presenti errori di compilazione.  
   
-6.  Fare clic su **Debug** nella barra dei menu e fare clic su **Avvia debug**.  
+6.  Fare clic su **debug** nella barra dei menu e fare clic su **Avvia debug**.  
   
-7.  Esaminare i messaggi nella **lo stato di avanzamento** finestra e verificare che il pacchetto eseguito e completato correttamente.  
+7.  Esaminare i messaggi nella finestra di stato e verificare che il pacchetto sia **stato** eseguito e terminato correttamente.  
   
-     ![Finestra di stato è dovuta](../../2014/tutorials/media/et-buildingandrunningthessisproject-02.jpg "risultante dalla finestra di stato")  
+     ![Risultati dalla finestra di stato](../../2014/tutorials/media/et-buildingandrunningthessisproject-02.jpg "Risultati dalla finestra di stato")  
   
-     ![Lo stato finale dalla finestra di stato](../../2014/tutorials/media/et-buildingandrunningthessisproject-03.jpg "lo stato finale dalla finestra di stato")  
+     ![Stato finale dalla finestra di stato](../../2014/tutorials/media/et-buildingandrunningthessisproject-03.jpg "Stato finale dalla finestra di stato")  
   
-8.  Fare clic su **Debug** sulla barra dei menu e quindi su **arresta debug** per arrestare la sessione di debug. Se il pacchetto ha esito negativo, è necessario abilitare i visualizzatori dati e verificare il flusso dei dati tra i componenti.  
+8.  Fare clic su **debug** nella barra dei menu e fare clic su **Interrompi debug** per arrestare la sessione di debug. Se il pacchetto ha esito negativo, è necessario abilitare i visualizzatori dati e verificare il flusso dei dati tra i componenti.  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 16: Verifica con gestione dati Master](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
+## <a name="next-step"></a>passaggio successivo  
+ [Attività 16: Verifica con Gestione dati master](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
   
   

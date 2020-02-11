@@ -1,5 +1,5 @@
 ---
-title: Tempo di stime basate su serie utilizzando dati aggiornati (esercitazione intermedia sul Data Mining) | Microsoft Docs
+title: Stime basate su serie temporali con dati aggiornati (Esercitazione intermedia sul data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067557"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Stime basate su serie temporali utilizzando dati aggiornati (Esercitazione intermedia sul data mining)
@@ -22,56 +22,56 @@ ms.locfileid: "63067557"
 ## <a name="creating-predictions-using-the-extended-sales-data"></a>Creazione di stime tramite dati di vendita estesi  
  In questa lezione verrà creata una query di stima che aggiunge i nuovi dati di vendita al modello. Estendendo il modello con nuovi dati, è possibile ottenere stime aggiornate che includono i punti dati più recenti.  
   
- La creazione di stime basate su serie temporali che utilizzano nuovi dati è semplice: sufficiente aggiungere il parametro EXTEND_MODEL_CASES per il [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) funzione, specificare l'origine dei nuovi dati e specificare quante si desidera ottenere stime.  
+ La creazione di stime basate su serie temporali che utilizzano nuovi dati è semplice: è sufficiente aggiungere il parametro EXTEND_MODEL_CASES alla funzione [&#41;DMX PredictTimeSeries &#40;](/sql/dmx/predicttimeseries-dmx) , specificare l'origine dei nuovi dati e specificare il numero di stime che si desidera ottenere.  
   
 > [!WARNING]  
 >  Il parametro EXTEND_MODEL_CASES è facoltativo. Per impostazione predefinita, il modello viene esteso ogni volta che si crea una query di stima basata su serie temporali mediante l'unione in join di nuovi dati come input.  
   
 #### <a name="to-build-the-prediction-query-and-add-new-data"></a>Per compilare la query di stima ed aggiungere nuovi dati  
   
-1.  Se il modello non è già aperto, fare doppio clic sulla struttura di previsione e Progettazione modelli di Data Mining, scegliere il **stima modello di Data Mining** scheda.  
+1.  Se il modello non è già aperto, fare doppio clic sulla struttura di previsione e in Progettazione modelli di data mining fare clic sulla scheda **Stima modello di data mining** .  
   
-2.  Nel **modello di Data Mining** riquadro, il modello Forecasting dovrebbe essere già selezionato. Se non è selezionato, fare clic su **Seleziona modello**e quindi selezionare il modello di previsione.  
+2.  Nel riquadro **modello di data mining** è necessario che la previsione del modello sia già selezionata. Se non è selezionata, fare clic su **Seleziona modello**, quindi selezionare il modello, previsione.  
   
-3.  Nel **Seleziona tabelle di Input** riquadro, fare clic su **Seleziona tabella del Case**.  
+3.  Nel riquadro **Seleziona tabella/** e di input fare clic su **Seleziona tabella del case**.  
   
-4.  Nel **Seleziona tabella del** finestra di dialogo, selezionare l'origine dati, [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)].  
+4.  Nella finestra di dialogo **Seleziona tabella** selezionare l'origine dati, [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)].  
   
-     Nell'elenco di viste origine dati, selezionare NewSalesData e quindi fare clic su **OK**.  
+     Dall'elenco di viste origine dati selezionare NewSalesData e quindi fare clic su **OK**.  
   
-5.  Il pulsante destro dell'area di progettazione e selezionare **Modifica connessioni**.  
+5.  Fare clic con il pulsante destro del mouse sulla superficie dell'area di progettazione e scegliere **modifica connessioni**.  
   
-6.  Usando il **modifica Mapping** dialogo casella, eseguire il mapping di colonne del modello alle colonne nei dati esterni come indicato di seguito:  
+6.  Utilizzando la finestra di dialogo **Modifica mapping** , eseguire il mapping delle colonne del modello alle colonne nei dati esterni come indicato di seguito:  
   
-    -   Eseguire il mapping alla colonna NewDate nei dati di input la colonna ReportingDate nel modello di data mining.  
+    -   Eseguire il mapping della colonna ReportingDate nel modello di data mining alla colonna NewDate nei dati di input.  
   
-    -   Eseguire il mapping alla colonna NewAmount nei dati di input la colonna Amount nel modello di data mining.  
+    -   Eseguire il mapping della colonna Amount nel modello di data mining alla colonna NewAmount nei dati di input.  
   
-    -   Mapping della colonna Quantity nel modello di data mining alla colonna NewQty nei dati di input.  
+    -   Eseguire il mapping della colonna Quantity nel modello di data mining alla colonna NewQty nei dati di input.  
   
-    -   Eseguire il mapping alla colonna della serie nei dati di input la colonna ModelRegion nel modello di data mining.  
+    -   Eseguire il mapping della colonna ModelRegion nel modello di data mining alla colonna serie nei dati di input.  
   
 7.  A questo punto si compilerà la query di stima.  
   
      Aggiungere innanzitutto una colonna alla query di stima per restituire la serie a cui si applica la stima.  
   
-    1.  Nella griglia, fare clic sulla prima riga vuota, sotto **origine**e quindi selezionare Forecasting.  
+    1.  Nella griglia fare clic sulla prima riga vuota, in **origine**, quindi selezionare previsioni.  
   
-    2.  Nel **campo** colonna, selezionare Model Region e per **Alias**, tipo `Model Region`.  
+    2.  Nella colonna **campo** selezionare area del modello e per **alias**digitare `Model Region`.  
   
 8.  Aggiungere, quindi, e modificare la funzione di stima.  
   
-    1.  Fare clic su una riga vuota, quindi in **origine**, selezionare **funzione di stima**.  
+    1.  Fare clic su una riga vuota, quindi in **origine**selezionare **funzione di stima**.  
   
-    2.  Per la **campo**, selezionare **PredictTimeSeries**.  
+    2.  In **campo**selezionare **PredictTimeSeries**.  
   
-    3.  Per la **Alias**, digitare **Predicted Values**.  
+    3.  Per **alias**digitare **valori stimati**.  
   
-    4.  Trascinare il campo Quantity dal **modello di Data Mining** riquadro le **criteri/argomento** colonna.  
+    4.  Trascinare la quantità di campo dal riquadro **modello di data mining** nella colonna **criteri/argomento** .  
   
-    5.  Nel **criteri/argomento** colonna, dopo il nome del campo, digitare il testo seguente:  **5,EXTEND_MODEL_CASES**  
+    5.  Nella colonna **criteri/argomento** , dopo il nome del campo, digitare il testo seguente: **5 EXTEND_MODEL_CASES**  
   
-         Il testo completo della **criteri/argomento** casella di testo deve essere il seguente: `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
+         Il testo completo della casella di testo **criteri/argomento** dovrebbe essere il seguente:`[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
 9. Fare clic su **risultati** ed esaminare i risultati.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63067557"
   
 ### <a name="change-the-start-and-end-points-of-the-predictions"></a>Modificare i punti iniziale e finale delle stime  
   
-1.  Nel generatore delle Query di stima fare clic su **Query** per passare alla vista DMX.  
+1.  In Generatore di query di stima fare clic su **query** per passare alla visualizzazione DMX.  
   
 2.  Individuare l'istruzione DMX che contiene la funzione PredictTimeSeries e modificarla come segue:  
   
@@ -98,10 +98,10 @@ ms.locfileid: "63067557"
      Ora le stime iniziano a ottobre (il quarto intervallo di tempo, contando dalla fine dei dati originali) e terminano a dicembre (il sesto intervallo di tempo, contando dalla fine dei dati originali).  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Tempo di stime basate su serie utilizzando dati di sostituzione &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+ [Stime basate su serie temporali che utilizzano dati sostitutivi &#40;esercitazione intermedia sul data mining&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento tecnico per l'algoritmo Microsoft Time Series](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Contenuto dei modelli di data mining per i modelli Time Series &#40;Analysis Services - Data mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli Time Series &#40;Analysis Services-Data mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

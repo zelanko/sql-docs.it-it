@@ -1,5 +1,5 @@
 ---
-title: 'Proprietà processo: Nuovo processo (pagina avvisi) | Microsoft Docs'
+title: 'Proprietà processo: nuovo processo (pagina avvisi) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189274"
 ---
-# <a name="job-properties-new-job-alerts-page"></a>Proprietà processo: Nuovo processo (pagina Avvisi)
-  Utilizzare questa pagina per visualizzare e organizzare gli avvisi per un processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="job-properties-new-job-alerts-page"></a>Proprietà processo - Nuovo processo (pagina Avvisi)
+  Utilizzare questa pagina per visualizzare e organizzare gli avvisi per un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Elenco avvisi**  
  Consente di elencare gli avvisi del processo.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di creare un nuovo avviso per il processo.  
   
  **Modifica**  

@@ -14,15 +14,15 @@ ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d478c9da4455b4c343a323ffa33eb742f50be7bb
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212424"
 ---
 # <a name="clr-integration-architecture----performance"></a>Architettura di integrazione CLR - Prestazioni
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  In questo argomento vengono illustrate alcune delle scelte di progettazione che migliorano le prestazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] dell' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione con il .NET Framework Common Language Runtime (CLR).  
+  In questo argomento vengono illustrate alcune delle scelte di progettazione che migliorano le prestazioni dell' [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR).  
   
 ## <a name="the-compilation-process"></a>Processo di compilazione  
  Durante la compilazione di espressioni SQL, quando viene rilevato un riferimento a una routine gestita, viene generato uno stub di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language (MSIL). Questo stub include il codice che consente di effettuare il marshalling dei parametri di routine da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a CLR, richiamare la funzione e restituire il risultato. Questo codice di "unione" si basa sul tipo di parametro e sulla direzione del parametro (interna, esterna o di riferimento).  
@@ -48,14 +48,14 @@ ms.locfileid: "70212424"
   
  Funzioni accedono sono funzioni gestite che restituiscono un'interfaccia **IEnumerable** . **IEnumerable** dispone di metodi per esplorare il set di risultati restituito da STVF. Quando viene richiamato STVF, l'oggetto **IEnumerable** restituito è direttamente connesso al piano di query. Il piano di query chiama i metodi **IEnumerable** quando è necessario recuperare le righe. Questo modello di iterazione consente di utilizzare immediatamente i risultati subito dopo la produzione della prima riga, anziché dover attendere che venga popolata l'intera tabella. Riduce inoltre significativamente la quantità di memoria utilizzata quando si richiama la funzione.  
   
-### <a name="arrays-vs-cursors"></a>Confronto tra matrici e Cursori  
+### <a name="arrays-vs-cursors"></a>Confronto tra matrici e cursori  
  Quando i cursori [!INCLUDE[tsql](../../includes/tsql-md.md)] devono attraversare i dati che sono espressi più facilmente come una matrice, è possibile utilizzare il codice gestito per ottenere prestazioni di gran lunga superiori.  
   
 ### <a name="string-data"></a>Dati di tipo stringa  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i dati di tipo carattere, ad esempio **varchar**, possono essere di tipo SqlString o SqlChars nelle funzioni gestite. Le variabili SqlString creano un'istanza dell'intero valore in memoria. Le variabili SqlChars forniscono un'interfaccia di flusso che può essere utilizzata per ottenere prestazioni migliori e una maggiore scalabilità creando un'istanza dell'intero valore in memoria. Questo diventa particolarmente importante per i dati di tipo LOB. Inoltre, è possibile accedere ai dati XML del server tramite un'interfaccia di flusso restituita da **SQLXML. CreateReader ()** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i dati di tipo carattere, ad esempio **varchar**, possono essere di tipo SqlString o SqlChars nelle funzioni gestite. Le variabili SqlString creano un'istanza dell'intero valore in memoria. Le variabili SqlChars forniscono un'interfaccia di flusso che può essere utilizzata per ottenere prestazioni migliori e una maggiore scalabilità creando un'istanza dell'intero valore in memoria. Questo diventa particolarmente importante per i dati di tipo LOB. Inoltre, è possibile accedere ai dati XML del server tramite un'interfaccia di flusso restituita da **SQLXML. CreateReader ()**.  
   
-### <a name="clr-vs-extended-stored-procedures"></a>Confronto tra CLR e Stored procedure estese  
- Le API Microsoft.SqlServer.Server che consentono alle procedure gestite di inviare di nuovo i set di risultati al client offrono prestazioni migliori rispetto alle API ODS (Open Data Services) utilizzate dalle stored procedure estese. Inoltre, le API System. Data. SqlServer supportano tipi di dati quali **XML**, **varchar (max)** , **nvarchar (max)** e **varbinary (max)** , introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], mentre le API ODS non sono state estese per supportare il nuovo tipi di dati.  
+### <a name="clr-vs-extended-stored-procedures"></a>Confronto tra CLR e stored procedure estese  
+ Le API Microsoft.SqlServer.Server che consentono alle procedure gestite di inviare di nuovo i set di risultati al client offrono prestazioni migliori rispetto alle API ODS (Open Data Services) utilizzate dalle stored procedure estese. Inoltre, le API System. Data. SqlServer supportano tipi di dati quali **XML**, **varchar (max)**, **nvarchar (max)** e **varbinary (max)**, introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], mentre le API ODS non sono state estese per supportare i nuovi tipi di dati.  
   
  Con il codice gestito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce l'utilizzo di risorse come la memoria, i thread e la sincronizzazione. Questo accade in quanto le API gestite che espongono queste risorse vengono implementate nello strumento di gestione delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viceversa, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di una vista o di un controllo sull'utilizzo delle risorse della stored procedure estesa. Se, ad esempio, un stored procedure esteso utilizza una quantità eccessiva di risorse di CPU o di memoria, non è possibile rilevare o controllare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]questa operazione con. Il codice gestito consente tuttavia a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di rilevare che un determinato thread non è stato prodotto per un lungo periodo di tempo e quindi imporre l'esecuzione dell'attività in modo da poter pianificare altro lavoro. Di conseguenza, l'utilizzo di codice gestito offre una maggiore scalabilità e un miglior utilizzo delle risorse di sistema.  
   
@@ -78,6 +78,6 @@ ms.locfileid: "70212424"
  Per ottenere prestazioni e scalabilità soddisfacenti del processo di Garbage Collection gestito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], evitare una singola allocazione di grandi dimensioni. Le allocazioni di dimensioni maggiori di 88 kilobyte (KB) vengono inserite nell'heap oggetti grandi che determina prestazioni e scalabilità nettamente inferiori rispetto ad allocazioni più piccole. Se ad esempio è necessario allocare una matrice multidimensionale di dimensioni elevate, è preferibile allocare una matrice di matrici (a dispersione).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi definiti dall'utente per CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

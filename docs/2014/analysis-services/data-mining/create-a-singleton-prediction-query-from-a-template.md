@@ -1,5 +1,5 @@
 ---
-title: Creare una Query di stima Singleton da un modello | Microsoft Docs
+title: Creare una query di stima singleton da un modello | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085486"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Creare una query di stima singleton da un modello
-  Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non vuole eseguirne il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  
+  Una query singleton è utile quando si dispone di un modello che si desidera utilizzare per la stima, ma non si desidera eseguirne il mapping a un set di dati di input esterno oppure eseguire stime bulk. Con una query singleton, è possibile fornire uno o più valori al modello e ottenere all'istante il valore stimato.  
   
  Ad esempio, la query DMX seguente rappresenta una query singleton sul modello di mailing diretto, TM_Decision_Tree.  
   
@@ -69,20 +69,20 @@ AS [t]
   
 5.  Nella riga del **modello di data mining** digitare il nome del modello di data mining tra quelli presenti nell'elenco dei modelli di data mining visualizzati in **Esplora oggetti**.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, il **modello di data mining** riga è stata impostata sul nome, `TM_Decision_Tree`.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la riga del **modello di data mining** è stata impostata `TM_Decision_Tree`sul nome,.  
   
 6.  Nella riga del **valore** digitare il nuovo valore dei dati per il quale si desidera effettuare una stima.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, il **valore** riga è stata impostata su `2` per stimare il comportamento in base al numero di figli a carico relativo all'acquisto di biciclette.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la riga del **valore** è stata `2` impostata su per stimare il comportamento di acquisto della bicicletta in base al numero di figli a casa.  
   
 7.  Nella riga della **colonna** digitare il nome della colonna nel modello di data mining su cui deve essere eseguito il mapping dei nuovi dati.  
   
-     Per il codice di esempio mostrato all'inizio di questo argomento, il **colonna** riga è stata impostata su `Number Children at Home`.  
+     Per il codice di esempio mostrato all'inizio di questo argomento, la riga della **colonna** è stata `Number Children at Home`impostata su.  
   
     > [!NOTE]  
     >  Quando si usa la finestra di dialogo **Specifica valori per parametri modello** , non è necessario racchiudere il nome della colonna tra parentesi quadre. Le parentesi verranno aggiunte automaticamente.  
   
-8.  Lasciare il **alias di input** come `t`.  
+8.  Lasciare l' **alias** di input `t`come.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -90,9 +90,9 @@ AS [t]
   
      Per il codice di esempio mostrato all'inizio di questo argomento, la condizione di query aggiuntiva è stata impostata su `'45' as [Age]`.  
   
-11. Fare clic su **Esegui**.  
+11. Fare clic su **Execute**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di stime &#40;Esercitazione di base sul data mining&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Creazione di stime &#40;esercitazione di base sul data mining&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

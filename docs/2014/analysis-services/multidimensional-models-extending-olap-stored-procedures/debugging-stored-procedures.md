@@ -1,5 +1,5 @@
 ---
-title: Debug di Stored procedure | Microsoft Docs
+title: Debug di stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727747"
 ---
 # <a name="debugging-stored-procedures"></a>Debug di stored procedure
@@ -31,21 +31,21 @@ ms.locfileid: "62727747"
   
 3.  Utilizzare Visual Studio per creare una build di debug di una DLL di stored procedure.  
   
-4.  Distribuire la DLL nel server. Per altre informazioni sulla distribuzione della DLL per il server, vedere [creazione di Stored procedure](creating-stored-procedures.md).  
+4.  Distribuire la DLL nel server. Per ulteriori informazioni sulla distribuzione della DLL nel server, vedere [creazione di stored procedure](creating-stored-procedures.md).  
   
 5.  La stored procedure di cui si desidera eseguire il debug deve essere chiamata da un'applicazione. Se non esiste un'applicazione utilizzabile a tale scopo, è possibile utilizzare l'Editor di query MDX in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare una query MDX che chiami la stored procedure desiderata.  
   
 6.  In Visual Studio connettersi al processo di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (Msmdsrv.exe).  
   
-    1.  Dal **Debug** menu, scegliere **toProcess Connetti**.  
+    1.  Scegliere **Connetti toProcess**dal menu **debug** .  
   
-    2.  Nel **Connetti toProcess** finestra di dialogo **Mostra i processi di tutti gli utenti**.  
+    2.  Nella finestra di dialogo **Connetti toProcess** selezionare **Mostra i processi di tutti gli utenti**.  
   
-    3.  Nel **processi disponibili** elenco le **processo** colonna, fare clic su **Msmdsrv.exe**. Se le istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione nel server sono più di una, è necessario identificare il processo specificando l'ID dell'istanza che si desidera utilizzare.  
+    3.  Nell'elenco **processi disponibili** , nella colonna **processo** , fare clic su **msmdsrv. exe**. Se le istanze di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione nel server sono più di una, è necessario identificare il processo specificando l'ID dell'istanza che si desidera utilizzare.  
   
-    4.  Nel **Collega a** testo, assicurarsi che sia selezionato il tipo di programma appropriato. Per una DLL CLR, fare clic su **selezionate**, quindi fare clic su **eseguire il Debug di questi tipi di codice**, quindi fare clic su **gestito**, quindi fare clic su **OK**. Per una DLL COM, fare clic su **selezionate**, quindi fare clic su **eseguire il Debug di questi tipi di codice**, quindi fare clic su **Native**, quindi fare clic su **OK**.  
+    4.  Nella casella **di testo Connetti a** verificare che sia selezionato il tipo di programma appropriato. Per una DLL CLR, fare clic su **Seleziona**, quindi su **Esegui il debug di questi tipi di codice**, quindi su **gestito**e infine su **OK**. Per una DLL COM, fare clic su **Seleziona**, quindi su **Esegui il debug di questi tipi di codice**, quindi su **nativo**e infine su **OK**.  
   
-    5.  Fare clic su **collegare**.  
+    5.  Fare clic su **Connetti**.  
   
 7.  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] richiamare il programma o lo script MDX che chiama la stored procedure. Il debugger interrompe l'esecuzione quando raggiunge una riga contenente un punto di interruzione. È possibile valutare variabili nella finestra Espressione di controllo, visualizzare variabili locali ed eseguire il codice un'istruzione alla volta.  
   

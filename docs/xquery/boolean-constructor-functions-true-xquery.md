@@ -1,5 +1,5 @@
 ---
-title: true (funzione) (XQuery) | Microsoft Docs
+title: Funzione true (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039039"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Funzioni costruttore booleane - true (XQuery)
@@ -34,10 +34,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>R. Utilizzo della funzione booleana true() di XQuery  
- Nell'esempio seguente esegue una query non tipizzato **xml** variabile. L'espressione nel **Value ()** metodo viene restituito booleano **true ()** se "aaa" è il valore dell'attributo. Il **Value ()** metodo per il **xml** tipo di dati converte il valore booleano in un bit e lo restituisce.  
+ Nell'esempio seguente viene eseguita una query su una variabile **XML** non tipizzata. L'espressione nel metodo **value ()** restituisce un valore booleano **true ()** se "AAA" è il valore dell'attributo. Il metodo **value ()** del tipo di dati **XML** converte il valore booleano in un bit e lo restituisce.  
   
 ```  
 DECLARE @x XML  
@@ -47,11 +47,11 @@ go
 -- result = 1  
 ```  
   
- Nell'esempio seguente, la query viene eseguita su un oggetto tipizzato **xml** colonna. Il `if` espressione controlla il valore booleano tipizzato del <`ROOT`> elemento e restituisce il codice XML costruito, di conseguenza. Nell'esempio vengono eseguite le operazioni seguenti:  
+ Nell'esempio seguente la query viene specificata in base a una colonna **XML** tipizzata. L' `if` espressione verifica il valore booleano tipizzato dell' `ROOT` elemento <> e restituisce il codice XML costruito, di conseguenza. Nell'esempio vengono eseguite le operazioni seguenti:  
   
--   Crea una raccolta di XML schema che definisce il <`ROOT`> elemento del tipo xs: Boolean.  
+-   Crea una raccolta di XML Schema che definisce l' `ROOT` elemento di> <del tipo xs: Boolean.  
   
--   Crea una tabella con un oggetto tipizzato **xml** colonna usando la raccolta di XML schema.  
+-   Crea una tabella con una colonna **XML** tipizzata utilizzando la raccolta di XML Schema.  
   
 -   Viene salvata un'istanza XML della colonna, sulla quale viene eseguita una query.  
   

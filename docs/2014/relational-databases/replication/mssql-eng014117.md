@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a249f5536846507996da4a7478a32dbe68e4dcd
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811248"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
@@ -52,7 +52,7 @@ ms.locfileid: "68811248"
   
      10.193.17.129 inst1  
   
--   Disabilitare la distribuzione, registrare l'istanza e quindi riattivare la distribuzione. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, attenersi alla procedura seguente:  
+-   Disabilitare la distribuzione, registrare l'istanza e quindi riattivare la distribuzione. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, eseguire questa procedura:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

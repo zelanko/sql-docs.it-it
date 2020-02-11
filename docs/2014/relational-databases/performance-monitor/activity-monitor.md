@@ -13,19 +13,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249337"
 ---
 # <a name="activity-monitor"></a>Monitoraggio attività
   Monitoraggio attività consente di visualizzare informazioni sui processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul modo in cui questi processi influiscono sull'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-activity-monitor"></a>Vantaggi di Monitoraggio attività  
- Monitoraggio attività è una finestra del documento a schede che include i riquadri espandibili e comprimibili seguenti: **Panoramica**, **Attività utente attive**, **Attese risorse**, **I/O file di dati**, e **Query recenti con costo elevato**. Quando un riquadro è espanso, Monitoraggio attività esegue una query sull'istanza per ottenere informazioni. Quando un riquadro è compresso, significa che tutte le relative attività di query sono arrestate. È anche possibile espandere uno o più riquadri contemporaneamente per visualizzare diversi tipi di attività sull'istanza.  
+ Monitoraggio attività è una finestra di documento a schede con i riquadri espandibili e comprimibili seguenti: **Panoramica**, **attività utente attive**, **attese risorse**, **i/O file di dati**e **query recenti con costo elevato**. Quando un riquadro è espanso, Monitoraggio attività esegue una query sull'istanza per ottenere informazioni. Quando un riquadro è compresso, significa che tutte le relative attività di query sono arrestate. È anche possibile espandere uno o più riquadri contemporaneamente per visualizzare diversi tipi di attività sull'istanza.  
   
- Per le colonne incluse nel **attività utente attive**, **attese risorse**, **i/o File di dati**, e **query recenti con costo elevato** i riquadri, è possibile personalizzare la visualizzazione nei modi seguenti:  
+ Per le colonne incluse nei riquadri **attività utente attive**, **attese risorse**, **i/O file di dati**e **query recenti con costo elevato** , è possibile personalizzare la visualizzazione nei modi seguenti:  
   
 1.  Per ridisporre l'ordine delle colonne, fare clic sull'intestazione di colonna e trascinarla in un altro punto della barra multifunzione.  
   

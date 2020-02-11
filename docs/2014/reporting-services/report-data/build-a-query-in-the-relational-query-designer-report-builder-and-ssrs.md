@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107441"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Compilare una query in Progettazione query relazionale (Generatore report e SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107441"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Un set di dati è basato su un'origine dati. Il tipo di origine dati e l'ambiente di creazione determinano la finestra Progettazione query da visualizzare quando si definisce la query del set di dati. Le funzionalità di Progettazione query variano in base all'origine dati sottostante. Per altre informazioni sui livelli di dati, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore Report](../data-connections-data-sources-and-connection-strings-in-report-builder.md) oppure [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
+ Un set di dati è basato su un'origine dati. Il tipo di origine dati e l'ambiente di creazione determinano la finestra Progettazione query da visualizzare quando si definisce la query del set di dati. Le funzionalità di Progettazione query variano in base all'origine dati sottostante. Per ulteriori informazioni sui livelli di dati, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md) o [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  È possibile utilizzare una finestra Progettazione query per le attività seguenti:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107441"
   
 ### <a name="to-view-a-query-result-set"></a>Per visualizzare un set di risultati della query  
   
-1.  Sulla barra degli strumenti di Progettazione query fare clic su **Esegui query (!)** .  
+1.  Sulla barra degli strumenti di Progettazione query fare clic su **Esegui query (!)**.  
   
     > [!NOTE]  
     >  Nella finestra Progettazione query vengono utilizzate le credenziali della fase di progettazione per eseguire la query e recuperare il set di risultati. Per altre informazioni, vedere [Specifica di credenziali in Generatore report](../specify-credentials-in-report-builder.md).  
@@ -91,12 +91,12 @@ ms.locfileid: "66107441"
  La query viene eseguita sull'origine dati e i dati di esempio vengono restituiti nel riquadro Risultati query.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)   
  [Aggiungere dati da origini dati esterne &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
- [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)   
+ [Progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../report-builder/report-design-view-report-builder.md)   
- [Visualizzazione di progettazione set di dati condivisi &#40;Generatore report&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
+ [Visualizzazione di progettazione del set di dati condiviso &#40;Generatore report&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Strumenti di progettazione query in Reporting Services](../reporting-services-query-designers.md)  
   
   

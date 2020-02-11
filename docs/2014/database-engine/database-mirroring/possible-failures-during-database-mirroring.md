@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874507"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possibili errori durante il mirroring del database
@@ -90,7 +90,7 @@ ms.locfileid: "70874507"
   
  Per mantenere aperta una connessione, è necessario che un'istanza del server riceva un ping su tale connessione entro il periodo definito dalla somma del valore del timeout e del tempo necessario per l'invio del ping successivo. La ricezione di un ping durante il periodo di timeout indica che la connessione è ancora aperta e che le istanze del server comunicano attraverso tale connessione. Quando riceve un ping, un'istanza del server reimposta il contatore del timeout su tale connessione.  
   
- Se durante il periodo di timeout non vengono ricevuti ping in una connessione, un'istanza del server considera scaduta la connessione. L'istanza del server chiude la connessione scaduta e gestisce l'evento di timeout a seconda dello stato e della modalità operativa della sessione.  
+ Se durante il periodo di timeout non vengono ricevuti ping in una connessione, l'istanza del server considera scaduta la connessione. L'istanza del server chiude la connessione scaduta e gestisce l'evento di timeout a seconda dello stato e della modalità operativa della sessione.  
   
  Anche se l'altro server funziona correttamente, un timeout viene considerato un errore. Se il valore di timeout per una sessione è troppo breve rispetto alla normale velocità di risposta di uno dei due partner, possono verificarsi falsi errori. Questo tipo di errore si verifica quando un'istanza del server riesce a contattarne un'altra il cui tempo di risposta è troppo breve per consentire la ricezione dei ping prima della scadenza del periodo di timeout.  
   

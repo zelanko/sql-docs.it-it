@@ -20,14 +20,14 @@ ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bbbc299f13c0d876807476136cede76894bbb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916691"
 ---
 # <a name="stream-property"></a>Proprietà Stream
-Ottiene o imposta un DB OLE **Stream** oggetto da/in un **ADOStreamConstruction** oggetto.  
+Ottiene o imposta un oggetto OLE DB **flusso** da/in un oggetto **ADOStreamConstruction** .  
   
  Proprietà di lettura/scrittura.  
   
@@ -40,13 +40,13 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>Parametri  
  *ppStream*  
- Puntatore a OLE DB **Stream** oggetto.  
+ Puntatore a un oggetto **flusso** OLE DB.  
   
  *pStream*  
- OLE DB **Stream** oggetto.  
+ Oggetto di **flusso** OLE DB.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Metodo di questa proprietà restituisce i valori HRESULT standard. Ciò include S_OK ed E_FAIL.  
+ Questo metodo di proprietà restituisce i valori HRESULT standard. Sono inclusi S_OK e E_FAIL.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Interfaccia ADOStreamConstruction](../../../ado/reference/ado-api/adostreamconstruction-interface.md)

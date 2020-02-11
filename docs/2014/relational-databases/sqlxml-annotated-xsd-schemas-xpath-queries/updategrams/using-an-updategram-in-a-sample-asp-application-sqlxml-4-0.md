@@ -1,5 +1,5 @@
 ---
-title: Utilizzando un Updategram in un'applicazione ASP di esempio (SQLXML 4.0) | Microsoft Docs
+title: Uso di un updategram in un'applicazione ASP di esempio (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e209a4f6118ae9581889299c09653ebaf1cfe2cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014624"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizzo di un updategram in un'applicazione ASP di esempio (SQLXML 4.0)
@@ -76,7 +76,7 @@ ms.locfileid: "66014624"
 </ROOT>  
 ```  
   
- Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. (Questa radice virtuale non viene creata tramite la gestione di Directory virtuali di IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilità perché Gestione Directory virtuali IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non può accedere o identificare le applicazioni ASP.).  
+ Il codice seguente è l'applicazione ASP (SampleASP.asp). Salvarlo nella directory associata a una radice virtuale che è possibile creare mediante l'utilità Gestione Internet Services. Questa radice virtuale non viene creata utilizzando la gestione delle directory virtuali IIS per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'utilità perché la gestione delle directory virtuali [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IIS per non può accedere o identificare le applicazioni ASP.  
   
 > [!NOTE]  
 >  Nel codice è necessario sostituire "ServerName" con il nome del server che esegue Microsoft Internet Information Services (IIS).  
@@ -159,6 +159,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Considerazioni sulla sicurezza degli updategram &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

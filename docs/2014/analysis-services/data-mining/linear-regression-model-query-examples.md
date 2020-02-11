@@ -1,5 +1,5 @@
 ---
-title: Linear Regression Model Query Examples | Microsoft Docs
+title: Esempi di query sul modello di regressione lineare | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084302"
 ---
 # <a name="linear-regression-model-query-examples"></a>Esempi di query sul modello di regressione lineare
@@ -41,14 +41,14 @@ ms.locfileid: "66084302"
   
  [Stima del reddito mediante una query singleton](#bkmk_Query4)  
   
- [Utilizzo delle funzioni di stima con un modello di regressione](#bkmk_Query5)  
+ [Utilizzo di funzioni di stima con un modello di regressione](#bkmk_Query5)  
   
-##  <a name="bkmk_top"></a> Ricerca di informazioni sul modello di regressione lineare  
+##  <a name="bkmk_top"></a>Ricerca di informazioni sul modello di regressione lineare  
  La struttura di un modello di regressione lineare è estremamente semplice: il modello di data mining rappresenta i dati come nodo singolo che definisce la formula di regressione. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
  [Torna all'inizio](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> Esempio di Query 1: Usare i dati del set di righe dello Schema di Data Mining per determinare i parametri utilizzati per un modello  
+###  <a name="bkmk_Query1"></a>Esempio di query 1: utilizzo del set di righe dello schema di data mining per determinare i parametri utilizzati per un modello  
  Eseguendo una query sul set di righe dello schema di data mining, è possibile trovare i metadati relativi al modello. Tali dati potrebbero includere la data di creazione, la data dell'ultima elaborazione del modello, il nome della struttura di data mining sulla quale si basa il modello e il nome della colonna designata come attributo stimabile. È inoltre possibile restituire i parametri utilizzati durante la creazione del modello.  
   
 ```  
@@ -68,7 +68,7 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
   
  [Torna all'inizio](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a> Esempio di Query 2: Recupero della Formula di regressione per il modello  
+###  <a name="bkmk_Query2"></a>Esempio di query 2: recupero della formula di regressione per il modello  
  Nella query seguente viene restituito il contenuto del modello di data mining per un modello di regressione lineare compilato utilizzando la stessa origine dati Targeted Mailing utilizzata in [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md). Questo modello esegue la stima del reddito del cliente in base all'età.  
   
  La query restituisce il contenuto del nodo che contiene la formula di regressione. Ogni variabile e ogni coefficiente vengono archiviati in una riga separata della tabella NODE_DISTRIBUTION nidificata. Se si vuole visualizzare la formula di regressione completa, usare il [Visualizzatore Microsoft Decision Trees](browse-a-model-using-the-microsoft-tree-viewer.md), fare clic sul nodo **(Tutti)** e aprire **Legenda data mining**.  
@@ -83,7 +83,7 @@ FROM LR_PredictIncome.CONTENT
   
  Risultati previsti:  
   
-|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Missing|0|0,000457142857142857|0|1|  
 |Yearly Income|57220,8876687257|17484|0,999542857142857|1041275619,52776|3|  
@@ -96,7 +96,7 @@ FROM LR_PredictIncome.CONTENT
   
  Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)  
   
- È possibile notare che alcuni numeri di **Legenda data mining** sono arrotondati. In **Legenda data mining** sono tuttavia contenuti sostanzialmente gli stessi valori della tabella NODE_DISTRIBUTION.  
+ È possibile notare che alcuni numeri di **Legenda data mining**sono arrotondati. In **Legenda data mining** sono tuttavia contenuti sostanzialmente gli stessi valori della tabella NODE_DISTRIBUTION.  
   
  I valori della colonna VALUETYPE indicano il tipo di informazioni contenuto in ogni riga. Questa indicazione risulta utile se i risultati vengono elaborati a livello di programmazione. Nella tabella seguente sono mostrati i tipi di valore che vengono restituiti per una formula di regressione lineare.  
   
@@ -116,7 +116,7 @@ FROM LR_PredictIncome.CONTENT
   
  [Torna all'inizio](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a> Esempio di Query 3: Restituzione solo del coefficiente per il modello  
+###  <a name="bkmk_Query3"></a>Esempio di query 3: restituzione solo del coefficiente per il modello  
  Utilizzando l'enumerazione VALUETYPE, è possibile restituire solo il coefficiente per l'equazione di regressione, come mostrato nella query seguente:  
   
 ```  
@@ -145,8 +145,8 @@ FROM LR_PredictIncome.CONTENT
   
  [Torna all'inizio](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> Esempio di Query 4: Stima del reddito mediante una Query Singleton  
- Il modo più semplice per creare una query singleton su un modello di regressione consiste nell'usare la finestra di dialogo **Input query singleton** . Ad esempio, è possibile compilare la query DMX seguente selezionando il modello di regressione adatto, scegliendo **Query Singleton**e quindi digitando `20` come valore per **Age**.  
+###  <a name="bkmk_Query4"></a>Esempio di query 4: stima del reddito mediante una query singleton  
+ Il modo più semplice per creare una query singleton su un modello di regressione consiste nell'usare la finestra di dialogo **Input query singleton** . È ad esempio possibile compilare la query DMX seguente selezionando il modello di regressione appropriato, scegliendo **query singleton**, quindi `20` digitando come valore per **Age**.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -163,7 +163,7 @@ NATURAL PREDICTION JOIN
   
  [Torna all'inizio](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a> Esempio di Query 5: Uso di funzioni di stima con un modello di regressione  
+###  <a name="bkmk_Query5"></a>Esempio di query 5: utilizzo delle funzioni di stima con un modello di regressione  
  È possibile utilizzare molte delle funzioni di stima standard con i modelli di regressione lineare. Nell'esempio seguente viene illustrato come aggiungere alcune statistiche descrittive ai risultati della query di stima. Da questi risultati è possibile notare che esiste una deviazione significativa dalla media per questo modello.  
   
 ```  
@@ -190,7 +190,7 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Funzione di stima|Uso|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
+|[&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indica se il nodo specificato contiene o meno il case corrente.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Viene restituito un valore, o un set di valori, stimato per una colonna specificata.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Viene restituito l'oggetto Node_ID per ogni case.|  
@@ -201,9 +201,9 @@ NATURAL PREDICTION JOIN
  Per un elenco delle funzioni comuni a tutti gli algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining-algorithms-analysis-services-data-mining.md). Per altre informazioni su come usare queste funzioni, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm.md)   
+ [Algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm.md)   
  [Query di data mining](data-mining-queries.md)   
- [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Riferimento tecnico per l'algoritmo Microsoft Linear regressione](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Contenuto del modello di data mining per i modelli di regressione lineare &#40;Analysis Services-Data mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

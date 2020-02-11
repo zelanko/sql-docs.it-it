@@ -14,30 +14,30 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096651"
 ---
-# <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>Modifiche al comportamento in syslockinfo e sp_lock
-  **syslockinfo** e **sp_lock** possono restituire valori imprevisti. Possono inoltre restituire righe aggiuntive, mentre precedenti versioni di **syslockinfo** e **sp_lock** ha restituito un massimo di due righe per ogni risorsa di blocco.  
+# <a name="changes-to-behavior-in-syslockinfo-and-sp_lock"></a>Modifiche al comportamento in syslockinfo e sp_lock
+  **syslockinfo** e **sp_lock** possono restituire valori imprevisti. Possono inoltre restituire righe aggiuntive, mentre le versioni precedenti di **syslockinfo** e **sp_lock** hanno restituito un massimo di due righe per ogni risorsa di blocco.  
   
- Per accedere alle informazioni da **syslockinfo** o eseguire **sp_lock** è richiesta l'autorizzazione VIEW SERVER STATE nel server.  
+ Per accedere alle informazioni da **syslockinfo** o Execute **sp_lock** è necessaria l'autorizzazione View Server state per il server.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descrizione  
- Nella [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], il **rsc_objid** e **rsc_indid** colonne **syslockinfo** e il **objid** e **indid**  colonne **sp_lock** restituire l'ID di oggetto in modo coerente e l'ID indice In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è possibile che venga restituito il valore 0.  
+ In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]le colonne **rsc_objid** e **rsc_indid** in **syslockinfo** e **objid** e le colonne **indid** in **sp_lock** restituiscono in modo coerente l'ID oggetto e l'ID dell'indice. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è possibile che venga restituito il valore 0.  
   
- Nelle [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], **syslockinfo** e **sp_lock** restituire un massimo di due righe per qualsiasi risorsa di blocco specificata in una singola transazione. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], quando il partizionamento dei blocchi è abilitato, è possibile che vengano restituite più righe per la stessa risorsa eseguita in una transazione. Si possono essere fino a N + 1 righe restituito, dove N è il numero di CPU. È inoltre possibile che vengano visualizzate richieste GRANTED e WAITING per la stessa risorsa, il che non è possibile in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
+ In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], **syslockinfo** e **sp_lock** restituiscono un massimo di due righe per ogni risorsa di blocco specificata in una singola transazione. A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], quando il partizionamento dei blocchi è abilitato, è possibile che vengano restituite più righe per la stessa risorsa eseguita in una transazione. È possibile che vengano restituite fino a N + 1 righe, dove N è il numero di CPU. È inoltre possibile che vengano visualizzate richieste GRANTED e WAITING per la stessa risorsa, il che non è possibile in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -14,10 +14,10 @@ ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401674"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "74401674"
 
 Contiene una riga per ogni colonna in un indice columnstore.
 
-| Nome colonna                 | Tipo di dati  | Description                                                  |
+| Nome colonna                 | Tipo di dati  | Descrizione                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | Indica l'ID della partizione. Valore univoco all'interno di un database.     |
 | **hobt_id**                 | **bigint** | ID dell'heap o dell'indice ad albero B (HoBT) per la tabella a cui appartiene l'indice columnstore. |

@@ -1,5 +1,5 @@
 ---
-title: "Esercitazione: Uso dell'origine OData [SSIS] | Microsoft Docs"
+title: "Esercitazione: uso dell'origine OData [SSIS] | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770217"
 ---
-# <a name="tutorial-using-the-odata-source-ssis"></a>Esercitazione: Uso dell'origine OData [SSIS]
+# <a name="tutorial-using-the-odata-source-ssis"></a>Esercitazione: utilizzo dell'origine OData [SSIS]
   In questa esercitazione viene eseguito il processo per estrarre la raccolta **Dipendenti** del servizio **Northwind** OData di esempio (http://services.odata.org/V3/Northwind/Northwind.svc/) e caricarla in un file flat.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Creare un progetto di Integration Services  
   
 1.  Avviare **SQL Server Data Tools** o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-2.  Fare clic su **Nuovo**dal menu **File**, quindi scegliere **Progetto**.  
+2.  Fare clic su **File**, scegliere **Nuovo** e quindi fare clic su **Progetto**.  
   
 3.  Nella finestra di dialogo **Nuovo progetto** espandere **Installato**, **Modelli**, **Business Intelligence**, quindi scegliere **Integration Services**.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62770217"
   
 ## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2. Aggiungere e configurare l'origine OData per il pacchetto SSIS  
   
-1.  Trascinare un'**Attività Flusso di dati** da **Casella degli strumenti SSIS** all'area di progettazione del flusso di controllo del pacchetto SSIS.  
+1.  Trascinare un' **Attività Flusso di dati** da **Casella degli strumenti SSIS** all'area di progettazione del flusso di controllo del pacchetto SSIS.  
   
 2.  Fare clic sulla scheda **Flusso di dati** oppure fare doppio clic sull' **attività Flusso di dati** appena aggiunta per avviare l' **area di progettazione Flusso di dati**.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "62770217"
   
 5.  Fare clic su **Nuovo** per aggiungere una nuova gestione connessione OData.  
   
-6.  Immettere l'URL del servizio OData in **percorso documento di servizio**. Può essere l'URL del documento di servizio o l'URL di un'entità o di un feed specifico. Ai fini di questa esercitazione, digitare [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Immettere l'URL del servizio OData in **percorso documento di servizio**. Può essere l'URL del documento di servizio o l'URL di un'entità o di un feed specifico. Ai fini di questa esercitazione, digitare [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
-7.  Verificare che sia selezionato **Autenticazione di Windows** come **autenticazione** da utilizzare per accedere al servizio OData. **Autenticazione di Windows** è selezionato per impostazione predefinita. Per utilizzare l'autenticazione di base, selezionare **Usa il nome utente e la password seguenti**.  
+7.  Verificare che sia selezionato **Autenticazione di Windows** come **autenticazione** da utilizzare per accedere al servizio OData. Per impostazione predefinita, è selezionata **l'autenticazione di Windows** . Per utilizzare l'autenticazione di base, selezionare **Usa il nome utente e la password seguenti**.  
   
 8.  Fare clic su **Test connessione** per la connessione e fare clic su **OK** per creare un'istanza della gestione connessione OData.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62770217"
   
 10. Selezionare **Dipendenti** nell'elenco a discesa **Raccolta**.  
   
-11. Immettere tutti i filtri o le opzioni query OData aggiuntive per **Opzioni query**. Ex. $orderby=CompanyName&$top=100. Ai fini di questa esercitazione immettere **$top=5**.  
+11. Immettere tutti i filtri o le opzioni query OData aggiuntive per **Opzioni query**. Esempio: $orderby=CompanyName&$top=100. Ai fini di questa esercitazione immettere **$top=5**.  
   
 12. Fare clic su **Anteprima** per visualizzare un'anteprima dei dati.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62770217"
   
 ## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. Aggiungere la destinazione del file flat e testare la soluzione  
   
-1.  Trascinare una **Destinazione file flat** dalla **casella degli strumenti SSIS** all'area di progettazione del flusso di dati sotto il componente **Origine Odata**.  
+1.  Trascinare una **Destinazione file flat** dalla **casella degli strumenti SSIS** all'area di progettazione del flusso di dati sotto il componente **Origine Odata** .  
   
 2.  Connettere il componente **Origine Odata** al componente **Destinazione file flat** utilizzando la freccia blu.  
   

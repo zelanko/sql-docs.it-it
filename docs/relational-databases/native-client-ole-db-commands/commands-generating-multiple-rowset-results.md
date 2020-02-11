@@ -19,23 +19,23 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19a6dafd921edf924a35e30c7770155986203f5f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758283"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandi che generano risultati con più set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Il provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client può restituire più set di righe dalle istruzioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client può restituire più set [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di righe dalle istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
   
 -   Le istruzioni SQL in batch vengono inviate come singolo comando.  
   
 -   Le stored procedure consentono di implementare un batch di istruzioni SQL.  
   
 ## <a name="batches"></a>Batch  
- Il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client riconosce il carattere punto e virgola come delimitatore di batch per le istruzioni SQL:  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client riconosce il carattere punto e virgola come delimitatore di batch per le istruzioni SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -49,7 +49,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Uso di IMultipleResults per elaborare più set di risultati](../../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
+-   [Utilizzo dell'interfaccia IMultipleResults per elaborare più set di risultati](../../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Comandi](../../relational-databases/native-client-ole-db-commands/commands.md)  

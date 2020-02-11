@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un'azione Standard | Microsoft Docs
+title: Aggiungere un'azione standard | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077457"
 ---
 # <a name="add-a-standard-action"></a>Aggiungere un'azione standard
@@ -41,9 +41,9 @@ ms.locfileid: "66077457"
         |Level|Selezionare un unico livello. L'azione sarà associata solo all'oggetto livello.|  
         |Membri del livello|Selezionare un unico livello. L'azione sarà associata a tutti i membri del livello selezionato.|  
   
-    -   In **Oggetto di destinazione** fare clic sulla freccia a destra della casella di testo e nella visualizzazione albero che viene aperta fare clic sull'oggetto al quale si desidera collegare l'azione, quindi selezionare **OK**.  
+    -   In **Oggetto di destinazione**fare clic sulla freccia a destra della casella di testo e nella visualizzazione albero che viene aperta fare clic sull'oggetto al quale si desidera collegare l'azione, quindi selezionare **OK**.  
   
-    -   Facoltativo. In **Condizione** creare un'espressione MDX per limitare la destinazione dell'azione. È possibile digitare manualmente l'espressione oppure trascinare gli elementi dalle schede **Metadati** e **Funzioni**.  
+    -   Facoltativo. In **Condizione**creare un'espressione MDX per limitare la destinazione dell'azione. È possibile digitare manualmente l'espressione oppure trascinare gli elementi dalle schede **Metadati** e **Funzioni** .  
   
     -   Nell'elenco a discesa **Tipo** selezionare il tipo di azione che si desidera creare. Nella tabella seguente sono elencati i tipi di azioni disponibili.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66077457"
         |Set di dati|Consente di recuperare un set di dati.|  
         |Proprietario|Consente di eseguire un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
         |Set di righe|Consente di recuperare un set di righe.|  
-        |Istruzione|Esegue un comando OLE DB.|  
+        |.|Esegue un comando OLE DB.|  
         |URL|Consente di visualizzare una pagina Web in un browser Internet.|  
   
     -   In **Espressione azione**creare un'espressione che definisca l'azione. L'espressione deve restituire una stringa. È possibile digitare manualmente l'espressione oppure trascinare gli elementi dalle schede **Metadati** e **Funzioni** .  
@@ -63,7 +63,7 @@ ms.locfileid: "66077457"
   
         |Opzione|Descrizione|  
         |------------|-----------------|  
-        |Interattiva|L'azione viene attivata dall'interazione dell'utente.|  
+        |Interattività|L'azione viene attivata dall'interazione dell'utente.|  
         |Batch|L'azione viene eseguita come operazione batch.|  
         |Su apertura|L'azione viene eseguita in seguito all'apertura del cubo da parte dell'utente.|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66077457"
         > [!NOTE]  
         >  Le azioni proprietarie non vengono restituite al server a meno che l'applicazione client non consenta di limitare in modo esplicito il set di righe dello schema in modo da restituire solo le azioni che corrispondono al nome specificato in **Applicazione**.  
   
-    -   Nelle **contenuto azione**, se si usa il tipo URL, racchiudere l'indirizzo Internet tra virgolette, ad esempio, "http://www.adventure-works.com".  
+    -   Nel **contenuto dell'azione**, se si usa il tipo di URL, racchiudere l'indirizzo Internet tra virgolette, ad esempiohttp://www.adventure-works.com"".  
   
     -   In **Descrizione**digitare una descrizione per l'azione.  
   

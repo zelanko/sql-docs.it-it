@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055715"
 ---
 # <a name="or-mdx"></a>OR (MDX)
@@ -35,10 +35,10 @@ Expression1 OR Expression2
  Espressione MDX valida che restituisce un valore numerico.  
   
 ## <a name="return-value"></a>Valore restituito  
- Valore booleano che restituisce **true** se uno o entrambi gli argomenti vengono valutati **true**; in caso contrario, **false**.  
+ Valore booleano che restituisce **true** se uno o entrambi gli argomenti restituiscono **true**; in caso contrario, **false**.  
   
-## <a name="remarks"></a>Note  
- Il **oppure** gestisce entrambi gli argomenti come valori booleani (zero, 0, come **false**; in caso contrario, **true**) prima che l'operatore esegue la disgiunzione logica. La tabella seguente illustra come la **o** operatore esegue la disgiunzione logica.  
+## <a name="remarks"></a>Osservazioni  
+ L'operatore **or** considera entrambi gli argomenti come valori booleani (zero, 0, come **false**; in caso contrario, **true**) prima che l'operatore esegua la disgiunzione logica. Nella tabella seguente viene illustrato il modo in cui l'operatore **or** esegue la disgiunzione logica.  
   
 |*Expression1*|*Expression2*|Valore restituito|  
 |-------------------|-------------------|------------------|  
@@ -48,7 +48,7 @@ Expression1 OR Expression2
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>Esempio  
- La query seguente contiene una misura calcolata che restituisce la stringa "MARRIED OR MALE" se il membro corrente della gerarchia Gender della dimensione Customer è maschio o il membro corrente della gerarchia Marital Status della dimensione Customer è sposato; in caso contrario, viene restituita la stringa "UNMARRIED o FEMALE".  
+ La query seguente contiene una misura calcolata che restituisce la stringa "MARRIED OR MALE" Se il membro corrente nella gerarchia Gender della dimensione Customer è un maschio oppure il membro corrente della gerarchia di stato civile della dimensione Customer è sposato; in caso contrario, restituisce la stringa "Unmarried o FEMALe".  
   
 ```  
 WITH  
@@ -66,6 +66,6 @@ WHERE(MEASURES.ORDEMO)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

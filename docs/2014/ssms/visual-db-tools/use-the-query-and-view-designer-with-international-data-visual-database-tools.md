@@ -1,5 +1,5 @@
 ---
-title: Usare la Query e Progettazione viste con dati internazionali (Visual Database Tools) | Microsoft Docs
+title: Utilizzo di progettazione query e Progettazione viste con dati internazionali (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204624"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Utilizzazione di Progettazione query e Progettazione viste con dati internazionali (Visual Database Tools)
-  È possibile usare [Progettazione query e Progettazione viste](visual-database-tools.md) con dati in qualsiasi lingua e con qualsiasi versione del sistema operativo Windows. Le seguenti indicazioni evidenziano le differenze esistenti e forniscono informazioni sulla gestione di dati in applicazioni internazionali.  
+  È possibile utilizzare [Progettazione query e Progettazione viste](visual-database-tools.md) con dati in qualsiasi lingua e in qualsiasi versione del sistema operativo Windows. Le seguenti indicazioni evidenziano le differenze esistenti e forniscono informazioni sulla gestione di dati in applicazioni internazionali.  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>Informazioni localizzate nei riquadri Criteri e SQL  
  Se si utilizza il riquadro Criteri per creare una query, è possibile immettere le informazioni nel formato corrispondente alle impostazioni internazionali di Windows configurate nel computer. Se ad esempio si stanno cercando dei dati, è possibile immettere i dati nelle colonne dei criteri utilizzando il formato desiderato, con le seguenti eccezioni:  

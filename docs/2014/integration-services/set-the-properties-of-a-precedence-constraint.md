@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055735"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Impostazione delle proprietà di un vincolo di precedenza
@@ -43,14 +43,14 @@ ms.locfileid: "66055735"
   
 5.  Nell'elenco a discesa **Operazione valutazione** selezionare un'operazione di valutazione.  
   
-6.  Nel `Value` elenco a discesa selezionare il risultato dell'esecuzione dell'eseguibile con precedenza.  
+6.  Nell'elenco `Value` a discesa selezionare il risultato dell'esecuzione dell'eseguibile con precedenza.  
   
-7.  Se l'operazione di valutazione viene utilizzata un'espressione, nelle `Expression` casella, digitare un'espressione e fare clic su **Test** per valutare l'espressione.  
+7.  Se l'operazione di valutazione utilizza un'espressione, digitare `Expression` un'espressione nella casella e fare clic su **test** per valutare l'espressione.  
   
     > [!NOTE]  
     >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
-8.  Se per l'eseguibile soggetto al vincolo sono connessi più contenitori o attività, selezionare **AND logico** per specificare che devono restituire i risultati dell'esecuzione di tutti gli eseguibili con precedenza `true`. Selezionare **Logical OR** per specificare che deve restituire solo un risultato di esecuzione `true`.  
+8.  Se all'eseguibile soggetto al vincolo sono connessi più contenitori o attività, selezionare **and logico** per specificare che i risultati dell'esecuzione di tutti i file eseguibili precedenti `true`devono restituire. Selezionare **OR logico** per specificare che un solo risultato di `true`esecuzione deve restituire.  
   
 9. Scegliere **OK** per chiudere la finestra **Editor vincoli di precedenza**.  
   
@@ -62,19 +62,19 @@ ms.locfileid: "66055735"
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
-3.  Fare clic sulla scheda **Flusso di controllo** . Nell'area di progettazione della scheda **Flusso di controllo** fare clic sul vincolo di precedenza con il pulsante destro del mouse e quindi scegliere **Proprietà**. Nella finestra Proprietà modificare i valori delle proprietà.  
+3.  Fare clic sulla scheda **flusso di controllo** . Nell'area di progettazione della scheda **flusso di controllo** fare clic con il pulsante destro del mouse sul vincolo di precedenza, quindi scegliere **Proprietà**. Nella finestra Proprietà modificare i valori delle proprietà.  
   
 4.  Nella finestra **Proprietà** impostare le proprietà di lettura/scrittura seguenti dei vincoli di precedenza:  
   
     |Proprietà di lettura/scrittura|Azione di configurazione|  
     |--------------------------|--------------------------|  
     |Descrizione|Specificare una descrizione.|  
-    |EvalOp|Selezionare un'operazione di valutazione. Se il `Expression`, **ExpressionAndConstant**, o **ExpressionOrConstant** operazione è selezionata, è possibile specificare un'espressione.|  
-    |Espressione|Se l'operazione di valutazione include un'espressione, specificare l'espressione. L'espressione deve restituire un valore booleano. Per altre informazioni sul linguaggio delle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
-    |LogicalAnd|Impostare `LogicalAnd` per specificare se il vincolo di precedenza viene valutato insieme ad altri vincoli di precedenza, quando più eseguibili precedono e sono collegati all'eseguibile soggetto al|  
+    |EvalOp|Selezionare un'operazione di valutazione. Se è `Expression`selezionata l'operazione, **ExpressionAndConstant**o **ExpressionOrConstant** , è possibile specificare un'espressione.|  
+    |Expression|Se l'operazione di valutazione include un'espressione, specificare l'espressione. L'espressione deve restituire un valore booleano. Per altre informazioni sul linguaggio delle espressioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
+    |LogicalAnd|Impostare `LogicalAnd` per specificare se il vincolo di precedenza viene valutato insieme ad altri vincoli di precedenza, quando più eseguibili precedono e sono collegati all'eseguibile soggetto al vincolo|  
     |Nome|Aggiornare il nome del vincolo di precedenza.|  
     |ShowAnnotation|Specificare il tipo di annotazione da utilizzare. Selezionare **Never** per disabilitare le annotazioni, **AsNeeded** per attivare le annotazioni su richiesta, **ConstraintName** per aggiungere automaticamente annotazioni usando il valore della proprietà Name, **ConstraintDescription** per aggiungere automaticamente annotazioni usando il valore della proprietà Description e **ConstraintOptions** per aggiungere automaticamente annotazioni usando i valori delle proprietà Value ed Expression.|  
-    |Value|Se l'operazione di valutazione specificata nella proprietà EvalOP include un vincolo, selezionare il risultato dell'esecuzione dell'eseguibile vincolante.|  
+    |valore|Se l'operazione di valutazione specificata nella proprietà EvalOP include un vincolo, selezionare il risultato dell'esecuzione dell'eseguibile vincolante.|  
   
 5.  Chiudere la finestra Proprietà.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66055735"
 ## <a name="see-also"></a>Vedere anche  
  [Vincoli di precedenza](control-flow/precedence-constraints.md)   
  [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [Impostare il valore di un vincolo di precedenza tramite il Menu di scelta rapida](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
- [Uso di un'espressione in un vincolo di precedenza](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+ [Impostare il valore di un vincolo di precedenza tramite il menu di scelta rapida](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [Utilizzo di un'espressione in un vincolo di precedenza](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
   

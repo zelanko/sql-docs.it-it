@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287355"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generare elementi di pari livello tramite query nidificate in modalità AUTO
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   Esegue una query sul set di righe `SalesOrder`, specificato nella clausola `FROM`. Viene restituito un valore XML con uno o più elementi <`SalesOrder`>.  
   
--   Specifica la modalità `AUTO` e la direttiva `TYPE` . `AUTO` Trasforma il risultato della query in XML e il `TYPE` direttiva restituisce il risultato come `xml` tipo.  
+-   Specifica la modalità `AUTO` e la direttiva `TYPE` . `AUTO`la modalità trasforma il risultato della query in XML e la `TYPE` direttiva restituisce il risultato come `xml` tipo.  
   
 -   Include due istruzioni `SELECT` nidificate, separate da una virgola (,). La prima istruzione nidificata `SELECT` recupera le informazioni relative all'ordine di vendita, l'intestazione ed i dettagli, mentre la seconda istruzione `SELECT` recupera le informazioni relative al venditore.  
   
@@ -124,7 +124,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  

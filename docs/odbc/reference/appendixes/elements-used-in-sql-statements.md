@@ -1,5 +1,5 @@
 ---
-title: Elementi usati nelle istruzioni SQL | Microsoft Docs
+title: Elementi utilizzati nelle istruzioni SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,92 +15,92 @@ ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129962"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementi usati nelle istruzioni SQL
-Gli elementi seguenti vengono utilizzati nelle istruzioni SQL elencate in precedenza.  
+Gli elementi seguenti vengono usati nelle istruzioni SQL elencate in precedenza.  
   
 ## <a name="element"></a>Elemento  
- *Identificatore di tabella di base* :: = *nome definito dall'utente*  
+ *base-table-identifier* :: = *nome-definito dall'utente*  
   
- *Nome-tabella di base* :: = *identificatore-tabella di base*  
+ *base-table-name* :: = *base-table-identifier*  
   
- *valore booleano-fattore* :: = [NOT] *boolean primario*  
+ *booleano-Factor* :: = [not] *booleano-primario*  
   
- *boolean-primary* ::= comparison *-predicate* &#124; ( *search-condition* )  
+ *booleano-Primary* :: =*predicato* di confronto &#124; ( *condizione di ricerca* )  
   
- *valore booleano-termini* :: = *fattore booleano* [AND *boolean-termine*]  
+ *booleano-term* :: = *Boolean-Factor* [and *Boolean-term*]  
   
- *valore letterale stringa di caratteri* :: = ' {*carattere*}... " (*carattere* è qualsiasi carattere nel set di caratteri dell'origine dati/driver. Per includere un carattere letterale virgolette (") in una stringa letterale carattere, usare due virgolette letterali [' '].)  
+ *carattere-stringa-valore letterale* :: ='' {*character*}.. .'' (*character* è qualsiasi carattere nel set di caratteri dell'origine dati/driver. Per includere un carattere virgoletta singola ('') in un valore letterale stringa di caratteri, usare due virgolette letterali [''''].  
   
- *Identificatore di colonna* :: = *nome definito dall'utente*  
+ *column-identifier* :: = *nome-definito dall'utente*  
   
- *nome della colonna* :: = [*nome-tabella*.] *identificatore di colonna*  
+ *Column-Name* :: = [*nome-tabella*] *identificatore di colonna*  
   
- *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
+ *operatore di confronto* :: = < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
- *predicato di confronto* :: = *espressione* espressione di operatore di confronto  
+ *confronto-predicato* :: = *espressione* operatore-operatore  
   
- *tipo di dati* :: = *tipo di stringa di caratteri* (*stringa-tipo di carattere* è qualsiasi tipo di dati per cui la colonna "" DATA_TYPE"" nel set di risultati restituiti da SQLGetTypeInfo è entrambi SQL_CHAR o SQL_VARCHAR.)  
+ *Data-Type* :: = *character-string-type* (*character-string-type* è qualsiasi tipo di dati per cui la colonna "" data_type "" nel set di risultati restituito da SQLGetTypeInfo è SQL_CHAR o SQL_VARCHAR).  
   
- *digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
+ *digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *il parametro dinamico* :: =?  
+ *parametro dinamico* :: =?  
   
- *espressione* :: = termine &#124; espressione {+&#124;-} termine  
+ *espressione* :: = termine &#124; espressione {+&#124;-}  
   
- *factor* ::= [ *+* &#124; *-* ]*primary*  
+ *Factor* :: = [*+*&#124;*-*]*primario*  
   
- *valore di inserimento* :: =  
+ *Insert-value* :: =  
   
- *dynamic-parameter*  
+ *parametro dinamico*  
   
- &#124; *literal*  
+ *Valore letterale* &#124;  
   
- &#124;NULL  
+ &#124; NULL  
   
- &#124; USER  
+ UTENTE &#124;  
   
- *letter* ::= *lower-case-letter &#124; upper-case-letter*  
+ *Letter* :: = *lettere* minuscole &#124; lettere maiuscole  
   
- *literal* ::= *character-string-literal*  
+ *valore letterale* :: = *carattere-stringa-valore letterale*  
   
- *Lower-case-letter* :: = un &#124; b &#124; c &#124; 1!d &#124; e &#124; f &#124; g &#124; h &#124; è &#124; j &#124; k &#124; g &#124; m &#124; n &#124; o &#124; p &#124; domande e &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
+ *lower-case-Letter* :: = a &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; i &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
   
- *clausola Order by* :: = ORDER BY *specifica di ordinamento* [, *preferenze di ordinamento*]...  
+ *ORDER-BY-clause* :: = order by *Sort-Specification* [, *Sort-Specification*]...  
   
- *primario* :: = *nome-colonna*  
+ *Primary* :: = *Column-Name*  
   
- &#124; *dynamic-parameter*  
+ &#124; *parametro dinamico*  
   
- &#124; *literal*  
+ *Valore letterale* &#124;  
   
- &#124;( *espressione* )  
+ &#124; ( *espressione* )  
   
- *condizione di ricerca* :: = *boolean-termine* [oppure *condizione di ricerca*]  
+ *Search-Condition* :: = *Boolean-term* [o *condizione di ricerca*]  
   
- *elenco SELECT* :: = \* &#124; *select-sottoelenco* [, *selezionare sottoelenco*]...  (*elenco select* non può contenere parametri.)  
+ *select-list* :: = \* &#124; *Select-sottolist* [, *Select-sublist*]...  *select-list* non può contenere parametri.  
   
- *Selezionare sottoelenco* :: = *espressione*  
+ *Select-sublist* :: = *Expression*  
   
- *sort-specification* ::= {*unsigned-integer &#124; column-name*} [*ASC &#124; DESC*]  
+ *Sort-Specification* :: = {*unsigned-integer &#124; nome-colonna*} [*ASC &#124; desc*]  
   
- *Identificatore di tabella* :: = *nome definito dall'utente*  
+ *table-identifier* :: = *nome-definito dall'utente*  
   
- *nome della tabella* :: = *identificatore di tabella*  
+ *nome tabella* :: = *ID tabella*  
   
- *riferimento alla tabella* :: = *-nome della tabella*  
+ *Table-Reference* :: = *nome-tabella*  
   
- *elenco di riferimento nella tabella* :: = *riferimento alla tabella* [,*riferimento alla tabella*]...  
+ *table-reference-list* :: = *Table-Reference* [,*Table-Reference*]...  
   
- *term* ::= *factor* &#124; *term* {\*&#124; */* } *factor*  
+ *fattore* di *termine::* = *Factor* &#124;\* */* *termine* {&#124;}  
   
- *intero senza segno* :: = {*cifra*}  
+ *unsigned-integer* :: = {*digit*}  
   
- *upper-case-letter* :: = *A &#124; B &#124; C &#124; 1!d &#124; E &#124; F &#124; G &#124; H &#124; è &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
+ *lettere* maiuscole:: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; I &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124; Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
- *nome definito dall'utente* :: = *lettera*[*cifra* &#124; *lettera* &#124; *_* ]...
+ *nome-definito dall'utente* :: = *letter*[*digit* &#124; *Letter* &#124; *_*]...

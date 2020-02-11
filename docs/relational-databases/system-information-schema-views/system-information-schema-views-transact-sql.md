@@ -19,10 +19,10 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670567"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Viste degli schemi delle informazioni di sistema (Transact-SQL)
@@ -39,9 +39,9 @@ Per i riferimenti al server corrente, [!INCLUDE[ssNoVersion](../../includes/ssno
 |Nome di SQL Server|Nome SQL standard equivalente|
 |---------------------|-----------------------------------------------|
 |Database|Catalogo|
-|schema|schema|
-|Object|Object|
-|Tipo di dati definito dall'utente|Domain|
+|SCHEMA|SCHEMA|
+|Oggetto|Oggetto|
+|Tipo di dati definito dall'utente|Dominio|
 
 Questa convenzione di mapping dei nomi è valida per le viste di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibili con lo standard ISO riportate di seguito.
 
@@ -70,6 +70,6 @@ WHERE TABLE_NAME = N'Product';
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Viste &#40;di sistema Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [Viste di sistema &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
 - [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

@@ -1,5 +1,5 @@
 ---
-title: Le transazioni XTP | Microsoft Docs
+title: Transazioni XTP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96d60ae8fc176fc1fc108d907f33f01877795955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151119"
 ---
 # <a name="xtp-transactions"></a>XTP Transactions
   L'oggetto prestazione XTP Transactions contiene contatori correlati alle transazioni del motore XTP in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- La tabella seguente descrive la **XTP Transactions** contatori.  
+ In questa tabella vengono descritti i contatori delle **transazioni di XTP** .  
   
 |Contatore|Descrizione|  
 |-------------|-----------------|  
@@ -36,6 +36,6 @@ ms.locfileid: "63151119"
 |**Transazioni create/sec**|Numero medio di transazioni create nel sistema, al secondo.<br /><br /> Le transazioni XTP sono calcolate in modo diverso rispetto alle transazioni basate su disco (come indicato in Database:Transazioni/sec). Ad esempio, Transazioni create/sec conteggia le transazioni di sola lettura, a differenza di Database:Transazioni/sec.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XTP &#40;OLTP In memoria&#41; i contatori delle prestazioni](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;i contatori delle prestazioni di OLTP in memoria&#41;](../../integration-services/performance/performance-counters.md)  
   
   

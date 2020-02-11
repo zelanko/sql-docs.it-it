@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400144"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>database tempdb in parallelo data warehouse
@@ -84,7 +84,7 @@ Qualsiasi utente può creare oggetti temporanei in tempdb. Gli utenti possono ac
   
 ## <a name="RelatedTasks"></a>Attività correlate  
   
-|Attività|Description|  
+|Attività|Descrizione|  
 |---------|---------------|  
 |Creare una tabella in **tempdb**.|È possibile creare una tabella temporanea dell'utente con il CREATE TABLE e CREATE TABLE come istruzioni SELECT. Per ulteriori informazioni, vedere [Create Table](../t-sql/statements/create-table-azure-sql-data-warehouse.md) e [create table come SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Visualizzazione di un elenco di tabelle esistenti in **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

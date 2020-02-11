@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212136"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database
   In questo argomento verrà descritto come sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68212136"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>Per sottoscrivere una categoria di criteri o annullarne la sottoscrizione per un database  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68212136"
      Colonna Espandi  
      Fare clic su questa opzione per espandere una categoria di criteri. Verranno elencati tutti i criteri inclusi nella categoria.  
   
-     **Name**  
+     **Nome**  
      Nome della categoria di criteri.  
   
      **Sottoscritto**  
@@ -65,20 +65,20 @@ ms.locfileid: "68212136"
      **Criteri**  
      Quando i gruppi di criteri sono espansi, vengono visualizzati i criteri inclusi nella categoria di criteri.  
   
-     **Abilitata**  
+     **Enabled**  
      Indica se i criteri sono abilitati o disabilitati.  
   
      **Modalità di esecuzione**  
      Visualizza la modalità di esecuzione dei criteri.  
   
-     **Cronologia**  
+     **History**  
      Fare clic sul collegamento ipertestuale Visualizza cronologia per aprire il Visualizzatore file di log ed esaminare la cronologia dei criteri.  
   
 4.  Per sottoscrivere una categoria Gestione basata su criteri, selezionare la casella di controllo della categoria nella colonna **Sottoscritto** . Per annullare la sottoscrizione da una categoria, deselezionare la casella di controllo.  
   
 5.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>Per sottoscrivere una categoria di criteri per un database  
   

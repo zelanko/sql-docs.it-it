@@ -1,5 +1,5 @@
 ---
-title: Creazione di un'applicazione del Provider SQL Server Native Client OLE DB | Documenti di Microsoft
+title: Creazione di un'applicazione provider OLE DB SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209755"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Creazione di un'applicazione del provider OLE DB di SQL Server Native Client
-  Creazione di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applicazione del provider OLE DB Native Client implica questi passaggi:  
+  La creazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un'applicazione del provider OLE DB di Native Client prevede i passaggi seguenti:  
   
 1.  Avvio di una connessione a un'origine dati.  
   
@@ -33,17 +33,17 @@ ms.locfileid: "63209755"
 > [!NOTE]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando [CryptoAPI Win32](https://go.microsoft.com/fwlink/?LinkId=9504).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Avvio di una connessione a un'origine dati](establishing-a-connection-to-a-data-source.md)  
   
 -   [Esecuzione di un comando](executing-a-command.md)  
   
--   [Elaborazione dei risultati](processing-results.md)  
+-   [Risultati dell'elaborazione](processing-results.md)  
   
 -   [Informazioni sulle proprietà OLE DB](about-ole-db-properties.md)  
   
--   [Uso della clausola OUTPUT con OLE DB in SQL Server Native Client](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
+-   [Utilizzo della clausola OUTPUT con OLE DB in SQL Server Native Client](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  

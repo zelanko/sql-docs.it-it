@@ -14,22 +14,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055643"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Impostare le proprietà del servizio Integration Services
     
 > [!IMPORTANT]  
->  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] supporta il servizio per la compatibilità con le versioni precedenti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
+>  In questo argomento viene illustrato il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servizio Windows per la gestione dei pacchetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]supporta il servizio per la compatibilità con le versioni precedenti [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]di. A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], è possibile gestire oggetti come i pacchetti del server Integration Services.  
   
- Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consente di gestire e monitorare i pacchetti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Alla prima installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene avviato e impostato per l'avvio automatico.  
+ Il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consente di gestire e monitorare i pacchetti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Quando si installa [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]per la prima [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] volta, il servizio viene avviato e il tipo di avvio del servizio è impostato su automatico.  
   
  Dopo l'installazione del servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , è possibile impostare le proprietà del servizio usando Gestione configurazione SQL Server o lo snap-in MMC Servizi.  
   
- Per configurare le altre importanti funzionalità del servizio, inclusi i percorsi in cui vengono memorizzati e gestiti i pacchetti, è necessario modificare il file di configurazione del servizio. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;SSIS&#41;](service/integration-services-service-ssis-service.md).  
+ Per configurare le altre importanti funzionalità del servizio, inclusi i percorsi in cui vengono memorizzati e gestiti i pacchetti, è necessario modificare il file di configurazione del servizio. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-sql-server-configuration-manager"></a>Per impostare le proprietà del servizio Integration Services tramite Gestione configurazione SQL Server  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66055643"
   
 3.  Nello snap-in **Servizi** individuare **SQL Server Integration Services** nell'elenco dei servizi, fare clic con il pulsante destro del mouse su **SQL Server Integration Services**e quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **Proprietà di SQL Server Integration Services** è possibile eseguire una delle operazioni seguenti:  
+4.  Nella finestra di dialogo **proprietà SQL Server Integration Services** è possibile eseguire le operazioni seguenti:  
   
-    -   Fare clic sulla scheda **Generale** . Per abilitare il servizio, selezionare il tipo di avvio manuale o automatico. Per disabilitarlo, nella casella **Tipo di avvio** selezionare Disabilita. Quando si seleziona Disabilita, il servizio non viene arrestato se è in esecuzione.  
+    -   Fare clic sulla scheda **generale** . Per abilitare il servizio, selezionare il tipo di avvio manuale o automatico. Per disabilitarlo, nella casella **Tipo di avvio** selezionare Disabilita. Quando si seleziona Disabilita, il servizio non viene arrestato se è in esecuzione.  
   
          Se il servizio è già abilitato, è possibile fare clic su **Arresta** per arrestarlo oppure su **Avvia** per avviarlo.  
   

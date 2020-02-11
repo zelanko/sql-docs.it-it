@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 196d7f2bb3a227bd29ccc6fd5d427a59070d525a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770917"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>Editor destinazione SAP BW (pagina Output degli errori)
-  Usare la pagina **Output degli errori** dell'**Editor destinazione SAP BW** per specificare le opzioni di gestione degli errori.  
+  Usare la pagina **Output degli errori** dell' **Editor destinazione SAP BW** per specificare le opzioni di gestione degli errori.  
   
  Per altre informazioni sulla destinazione SAP BW di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vedere [Destinazione SAP BW](sap-bw-destination.md).  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62770917"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene la destinazione SAP BW.  
   
-2.  Nella scheda **Flusso dati** fare doppio clic sulla destinazione SAP BW.  
+2.  Nella scheda **Flusso di dati** fare doppio clic sulla destinazione SAP BW.  
   
 3.  Nell' **Editor destinazione SAP BW**fare clic su **Output degli errori** per aprire la pagina **Output degli errori** dell'editor.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62770917"
  **Colonna**  
  Questa opzione non viene utilizzata.  
   
- **Errore**  
+ **Error (Errore) (Error (Errore)e)**  
  Specificare quale azione dovrà essere eseguita dalla destinazione in caso di errore: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
  **Troncamento**  

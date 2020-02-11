@@ -18,19 +18,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245735"
 ---
 # <a name="connect-to-server-database-engine"></a>Connetti al server (Motore di database)
-  Usare questa finestra di dialogo per visualizzare o specificare le opzioni per la connessione a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Nella maggior parte dei casi è possibile connettersi specificando il nome del computer del server di database nella casella **Nome server** e facendo clic su **Connetti**. Se ci si connette a [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], usare il nome del computer seguito da **\sqlexpress**.  
+  Usare questa finestra di dialogo per visualizzare o specificare le opzioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]per la connessione a. Nella maggior parte dei casi è possibile connettersi specificando il nome del computer del server di database nella casella **Nome server** e facendo clic su **Connetti**. Se ci si connette a [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], usare il nome del computer seguito da **\sqlexpress**.  
   
  Molti fattori possono incidere sulla possibilità di connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opzioni  
- **Tipo server**  
+ **Tipo di server**  
  Per la registrazione di un server da Esplora oggetti, selezionare il tipo di server a cui connettersi, ovvero [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Nelle altre parti della finestra di dialogo vengono visualizzate solo le opzioni applicabili al tipo di server selezionato. Durante la registrazione di un server da Server registrati, la casella **Tipo server** è di sola lettura e corrisponde al tipo di server visualizzato nel componente Server registrati. Per registrare un tipo diverso di server, selezionare [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssEW](../../includes/ssew-md.md)]o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sulla barra degli strumenti Server registrati prima di iniziare a registrare un nuovo server.  
   
  **Nome server**  
@@ -39,13 +39,13 @@ ms.locfileid: "63245735"
 > [!NOTE]  
 >  Per connettersi a un'istanza utente attiva di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , eseguire la connessione tramite il protocollo Named Pipes specificando il nome della pipe, ad esempio np:\\\\.\\.\pipe\3C3DF6B1-2262-47\tsql\query. Per altre informazioni, vedere la documentazione di [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   
- **Autenticazione**  
+ **autenticazione**  
  Sono disponibili due modalità di autenticazione per la connessione a un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  **Modalità di autenticazione di Windows (Autenticazione di Windows)**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tale modalità consente di connettersi tramite un account utente di Windows.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]La modalità di autenticazione di Windows consente a un utente di connettersi tramite un account utente di Windows.  
   
- **autenticazione di SQL Server**  
+ **Autenticazione di SQL Server**  
  Quando un utente si connette con un nome account di accesso e una password specifici da una connessione non affidabile, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue l'autenticazione verificando che sia impostato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e che la password specificata corrisponda a quella registrata in precedenza. Se non è stato impostato alcun account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l'autenticazione non viene completata e viene segnalato un errore all'utente.  
   
 > [!IMPORTANT]  
@@ -54,13 +54,13 @@ ms.locfileid: "63245735"
  **Nome utente**  
  Immettere il nome utente da utilizzare per la connessione. Questa opzione è disponibile solo si è scelto di utilizzare l'autenticazione di Windows per la connessione.  
   
- **Account di accesso**  
+ **Accesso**  
  Immettere l'account di accesso da utilizzare per la connessione. Questa opzione è disponibile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
  **Password**  
  Immettere la password per l'account di accesso. Questa opzione è modificabile solo se si è scelto di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione.  
   
- **Connect**  
+ **Connettere**  
  Fare clic su questo pulsante per connettersi al server selezionato.  
   
  **Opzioni**  

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637780"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Livelli di isolamento delle transazioni nelle tabelle con ottimizzazione per la memoria
@@ -39,7 +39,7 @@ ms.locfileid: "73637780"
   
 -   Utilizzare in modo esplicito un hint superiore del livello di isolamento per accedere alla tabella ottimizzata per la memoria, ad esempio WITH (SNAPSHOT).  
   
--   Specificare l'opzione del set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, tramite cui verrà impostato il livello di isolamento per le tabelle ottimizzate per la memoria su SNAPSHOT (come se si includessero hint WITH(SNAPSHOT) in ogni tabella ottimizzata per la memoria). Per ulteriori informazioni su `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, vedere [Opzioni &#40;alter database set Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Specificare l'opzione del set `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, tramite cui verrà impostato il livello di isolamento per le tabelle ottimizzate per la memoria su SNAPSHOT (come se si includessero hint WITH(SNAPSHOT) in ogni tabella ottimizzata per la memoria). Per ulteriori informazioni su `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, vedere [Opzioni ALTER DATABASE set &#40;&#41;Transact-SQL ](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  In alternativa, se il livello di isolamento della sessione è READ COMMITTED, è possibile utilizzare le transazioni in modalità autocommit.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73637780"
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Linee guida per i livelli di isolamento delle transazioni con tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Linee guida per la logica di riesecuzione per le transazioni in tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

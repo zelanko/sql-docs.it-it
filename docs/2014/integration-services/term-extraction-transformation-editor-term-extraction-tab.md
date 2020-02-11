@@ -1,5 +1,5 @@
 ---
-title: Editor trasformazione estrazione termini (scheda estrazione termini) | Microsoft Docs
+title: Editor trasformazione Estrazione termini (scheda Estrazione termini) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055142"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor trasformazione Estrazione termini (scheda Estrazione termini)
@@ -30,7 +30,7 @@ ms.locfileid: "66055142"
  **Colonne di input disponibili**  
  Utilizzando le caselle di controllo, selezionare un'unica colonna di testo da utilizzare per l'estrazione dei termini.  
   
- **Nome**  
+ **Termine**  
  Consente di digitare un nome per la colonna di output che conterrà i termini estratti.  
   
  **Punteggio**  
@@ -41,8 +41,8 @@ ms.locfileid: "66055142"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Estrazione termini &#40;scheda Esclusione&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Editor trasformazione Estrazione termini &#40;scheda esclusione&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [Editor trasformazione Estrazione termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
- [Trasformazione Ricerca termini](data-flow/transformations/lookup-transformation.md)  
+ [Ricerca termini - trasformazione](data-flow/transformations/lookup-transformation.md)  
   
   

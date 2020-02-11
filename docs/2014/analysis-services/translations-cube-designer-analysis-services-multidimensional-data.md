@@ -1,5 +1,5 @@
 ---
-title: Traduzioni (Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Traduzioni (Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065791"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>Traduzioni (Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -26,14 +26,14 @@ ms.locfileid: "66065791"
   
 ## <a name="panes"></a>Riquadri  
  **Barra degli strumenti**  
- Utilizzare la barra degli strumenti per eseguire le operazioni più frequenti nella scheda. Per altre informazioni su questo riquadro, vedere [Barra degli strumenti &#40;scheda Traduzioni, Progettazione cubo&#41; &#40;Analysis Services - Dati multidimensionali&#41;](toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ Utilizzare la barra degli strumenti per eseguire azioni comuni nella scheda. Per ulteriori informazioni su questo riquadro, vedere [barra degli strumenti &#40;scheda Traduzioni, Progettazione cubi&#41; &#40;Analysis Services-&#41;dati multidimensionali ](toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Dettagli di traduzione**  
+ **Dettagli della traduzione**  
  Usare il riquadro relativo ai **dettagli di traduzione** per creare e modificare le traduzioni per il cubo selezionato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Traduzioni di cubi](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Scenari di globalizzazione per Analysis Services multidimensionale](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

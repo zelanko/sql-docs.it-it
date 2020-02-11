@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637829"
 ---
 # <a name="data-flow-performance-features"></a>Funzionalità delle prestazioni del flusso di dati
@@ -110,7 +110,7 @@ ms.locfileid: "73637829"
   
 -   Specificare le colonne chiave di ordinamento in cui i dati sono ordinati.  
   
- Per altre informazioni, vedere [Ordinare i dati per le trasformazioni Unione e Merge join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+ Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
  Se è necessario ordinare i dati del flusso di dati, è possibile migliorare le prestazioni progettando il flusso di dati in modo che venga eseguito il minor numero possibile di operazioni di ordinamento. Il flusso di dati, ad esempio, usa una trasformazione Multicast per copiare il set di dati. Ordinare il set di dati una volta prima dell'esecuzione della trasformazione Multicast anziché ordinare più output in seguito alla trasformazione.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "73637829"
  Usare i suggerimenti inclusi in questa sezione per migliorare la prestazione delle trasformazioni Aggregazione, Ricerca fuzzy, Raggruppamento fuzzy, Ricerca, Merge Join e Dimensione a modifica lenta.  
   
 #### <a name="aggregate-transformation"></a>Trasformazione Aggregazione  
- La trasformazione Aggregazione include le proprietà `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Queste proprietà migliorano le prestazioni in quanto consentono alla trasformazione di preallocare la quantità di memoria necessaria per i dati memorizzati nella cache. Se si conosce il numero esatto o approssimativo di gruppi che dovrebbero risultare da un'operazione **Group by** , impostare rispettivamente le proprietà `Keys` e `KeysScale`. Se si conosce il numero esatto o approssimativo di valori distinct che dovrebbero risultare da un'operazione **Distinct Count** , impostare rispettivamente le proprietà `CountDistinctKeys` e `CountDistinctScale`.  
+ La trasformazione Aggregazione include le proprietà `Keys`, `KeysScale`, `CountDistinctKeys` e `CountDistinctScale`. Queste proprietà migliorano le prestazioni in quanto consentono alla trasformazione di preallocare la quantità di memoria necessaria per i dati memorizzati nella cache. Se si conosce il numero esatto o approssimativo di gruppi che dovrebbero risultare da un'operazione **Group by** , impostare rispettivamente le `Keys` proprietà `KeysScale` e. Se si conosce il numero esatto o approssimativo di valori distinct che dovrebbero risultare da un'operazione **Distinct Count** , impostare rispettivamente le `CountDistinctKeys` proprietà `CountDistinctScale` e.  
   
  Se in un flusso di dati è necessario creare più aggregazioni, valutare l'opportunità di creare più aggregazioni che usano una singola trasformazione Aggregazione anziché creare più trasformazioni. Questo approccio consente prestazioni migliori quando un'aggregazione è un subset di un'altra aggregazione, in quanto la trasformazione può ottimizzare l'archiviazione interna ed eseguire l'analisi dei dati in ingresso una sola volta. Nel caso, ad esempio, di un'aggregazione che usa la clausola GROUP BY e l'aggregazione AVG, è possibile migliorare le prestazioni combinando clausola e aggregazione in una sola trasformazione. L'esecuzione di più aggregazioni all'interno di una trasformazione Aggregazione, tuttavia, comporta la serializzazione delle operazioni di aggregazione e può pertanto influire sulle prestazioni quando è necessario calcolare più aggregazioni indipendentemente.  
   
@@ -135,33 +135,34 @@ ms.locfileid: "73637829"
 #### <a name="lookup-transformation"></a>Trasformazione Ricerca  
  È possibile ridurre al minimo le dimensioni dei dati di riferimento nella memoria immettendo un'istruzione SELECT per la ricerca delle sole colonne necessarie. Questa opzione garantisce prestazioni migliori rispetto alla selezione di un'intera tabella o vista, che restituisce invece una quantità elevata di dati non necessari.  
   
-#### <a name="merge-join-transformation"></a>Trasformazione Merge join  
+#### <a name="merge-join-transformation"></a>Merge join - trasformazione  
  Non è più necessario configurare il valore della proprietà `MaxBuffersPerInput`, in quanto Microsoft ha apportato modifiche che riducono il rischio di uso di una quantità eccessiva di memoria da parte della trasformazione Merge join. Questo problema si verificava in genere quando tramite i diversi input della trasformazione Merge Join venivano prodotti dati con frequenze irregolari.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
+#### <a name="slowly-changing-dimension-transformation"></a>Dimensione a modifica lenta - trasformazione  
  La Configurazione guidata dimensioni a modifica lenta e la trasformazione Dimensione a modifica lenta sono strumenti di uso generale in grado di rispondere alle esigenze della maggior parte degli utenti. Il flusso di dati generato dalla procedura guidata, tuttavia, non è ottimizzato per le prestazioni.  
   
  I componenti più lenti nella trasformazione Dimensione a modifica lenta sono in genere le trasformazioni Comando OLE DB che eseguono istruzioni UPDATE su una singola riga per volta. Il modo più efficace per migliorare le prestazioni della trasformazione Dimensione a modifica lenta consiste pertanto nel sostituire le trasformazioni Comando OLE DB. È possibile sostituire tali trasformazioni con componenti di destinazione che salvano tutte le righe da aggiornare in una tabella di staging. È quindi possibile aggiungere un'attività Esegui SQL per l'esecuzione di un singola istruzione UPDATE di Transact-SQL basata su set su tutte le righe contemporaneamente.  
   
  Gli utenti avanzati possono progettare un flusso di dati personalizzato per l'elaborazione delle dimensioni a modifica lenta ottimizzata per dimensioni estese. Per una descrizione e un esempio di questo approccio, vedere la sezione relativa allo scenario con dimensione univoca nel white paper [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
-### <a name="destinations"></a>Destinazioni  
+### <a name="destinations"></a>Destinations  
  Per ottenere prestazioni migliori con le destinazioni, valutare l'opportunità di usare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di testarne le prestazioni.  
   
-#### <a name="sql-server-destination"></a>Destinazione SQL Server  
+#### <a name="sql-server-destination"></a>SQL Server - destinazione  
  Quando un pacchetto carica dati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nello stesso computer, usare una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Tale destinazione è ottimizzata per caricamenti bulk ad alta velocità.  
   
 #### <a name="testing-the-performance-of-destinations"></a>Test delle prestazioni delle destinazioni  
  In alcuni casi il salvataggio di dati nelle destinazioni potrebbe richiedere tempi più lunghi di quelli previsti. Per stabilire se ciò è dovuto a un'elaborazione lenta dei dati nella destinazione, è possibile sostituire temporaneamente la destinazione con una trasformazione Conteggio righe. Se la velocità effettiva risulta notevolmente migliorata, è probabile che la causa delle prestazioni lente sia la destinazione in cui vengono caricati i dati.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Analisi delle informazioni nella scheda Stato  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] , in Progettazione [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Nella scheda **Stato** sono elencati i contenitori e le attività in ordine di esecuzione, nonché l'ora di inizio e di fine, gli avvisi e i messaggi di errore per ogni contenitore e attività, inclusi quelli relativi al pacchetto stesso. Sono inoltre elencati i componenti del flusso di dati in ordine di esecuzione, nonché informazioni sullo stato, visualizzato in forma di percentuale di completamento, e il numero di righe elaborate.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] , in Progettazione [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Nella scheda **Stato** sono elencati i contenitori e le attività in ordine di esecuzione, nonché l'ora di inizio e di fine, gli avvisi e i messaggi di errore per ogni contenitore e attività, inclusi quelli relativi al pacchetto stesso. Sono inoltre elencati i componenti del flusso di dati in ordine di esecuzione, nonché informazioni sullo stato, visualizzato in forma di percentuale di completamento, e il numero di righe elaborate.  
   
  Per abilitare o disabilitare la visualizzazione di messaggi nella scheda **Stato** , attivare o disattivare l'opzione **Debug report di stato** del menu **SSIS** . La disabilitazione del report di stato consente di migliorare le prestazioni durante l'esecuzione di un pacchetto complesso in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Ordinamento dei dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordinare i dati per le trasformazioni Unione e Merge Join](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  **Articoli e post di Blog**  
@@ -198,6 +199,6 @@ ms.locfileid: "73637829"
   
 ## <a name="see-also"></a>Vedere anche  
  [Risoluzione dei problemi relativi agli strumenti per lo sviluppo dei pacchetti](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Risoluzione dei problemi relativi agli strumenti per l'esecuzione del pacchetto](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Strumenti per la risoluzione dei problemi relativi all'esecuzione dei pacchetti](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

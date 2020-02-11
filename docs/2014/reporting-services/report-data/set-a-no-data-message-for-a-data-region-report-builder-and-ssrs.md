@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107092"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Impostare una proprietà NoDataMessage per un'area dati (Generatore report e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107092"
   
 1.  Nella visualizzazione Progettazione fare clic sull'area dati tabella, matrice o elenco o sul sottoreport nell'area di progettazione per selezionare l'elemento desiderato. Nel riquadro Proprietà vengono visualizzate le proprietà relative all'elemento selezionato.  
   
-2.  Nel riquadro proprietà, digitare il testo che si desidera visualizzare come messaggio in `NoRowsMessage` campo della proprietà.  
+2.  Nel riquadro Proprietà digitare il testo che si desidera visualizzare come messaggio nel `NoRowsMessage` campo della proprietà.  
   
      In alternativa, nell'elenco a discesa fare clic su **Espressione** per aprire la finestra di dialogo **Espressione** e creare un'espressione.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66107092"
   
 2.  Nel riquadro Proprietà espandere il nodo per `NoDataMessage`.  
   
-3.  Nelle **didascalia**, digitare il testo che si desidera visualizzare come messaggio in `NoDataMessage` campo della proprietà.  
+3.  In **didascalia**Digitare il testo che si desidera visualizzare come messaggio nel `NoDataMessage` campo della proprietà.  
   
      In alternativa, nell'elenco a discesa fare clic su **Espressione** per aprire la finestra di dialogo **Espressione** e creare un'espressione.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107092"
   
 1.  Nella visualizzazione Progettazione fare clic sul sottoreport nell'area di progettazione per selezionarlo. Nel riquadro Proprietà vengono visualizzate le proprietà relative all'elemento selezionato.  
   
-2.  Nel riquadro proprietà, digitare il testo che si desidera visualizzare come messaggio in `NoRowsMessage` campo della proprietà.  
+2.  Nel riquadro Proprietà digitare il testo che si desidera visualizzare come messaggio nel `NoRowsMessage` campo della proprietà.  
   
      In alternativa, nell'elenco a discesa fare clic su **Espressione** per aprire la finestra di dialogo **Espressione** e creare un'espressione.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66107092"
   
 1.  Nella visualizzazione Progettazione fare clic sulla scala dei colori nella mappa per selezionarla. Nel riquadro Proprietà vengono visualizzate le proprietà relative all'elemento selezionato.  
   
-2.  Nel riquadro proprietà, in `NoDataText`, digitare il testo che si desidera visualizzare come un'etichetta per i colori senza valore di dati.  
+2.  Nel riquadro `NoDataText`proprietà digitare il testo che si desidera visualizzare come etichetta per i colori senza valore di dati.  
   
      In alternativa, nell'elenco a discesa fare clic su **Espressione** per aprire la finestra di dialogo **Espressione** e creare un'espressione.  
   

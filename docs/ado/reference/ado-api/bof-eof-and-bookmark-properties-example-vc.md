@@ -1,5 +1,5 @@
 ---
-title: Proprietà BOF, EOF e segnalibro esempio di proprietà (VC + +) | Microsoft Docs
+title: Esempio di proprietà BOF, EOF e Bookmark (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920368"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>Proprietà BOF, EOF e segnalibro esempio di proprietà (VC + +)
-La prima funzione in questo esempio Usa la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) delle proprietà per visualizzare un messaggio se un utente tenta di spostarsi oltre il primo o ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà per consentire all'utente di contrassegnare un record in un **Recordset** e tornarvi in un secondo momento.  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>Esempio di proprietà BOF, EOF e segnalibro (VC + +)
+La prima funzione di questo esempio usa le proprietà [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) per visualizzare un messaggio se un utente tenta di spostarsi oltre il primo o l'ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa la proprietà [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) per consentire all'utente di contrassegnare un record in un **Recordset** e tornare in un secondo momento.  
   
- La seconda funzione viene utilizzata la proprietà Bookmark per posizionare il **segnalibro** di ogni altri record da un **Recordset** nella matrice e quindi i filtri del Recordset usando la matrice.  
+ La seconda funzione usa la proprietà Bookmark per inserire il **segnalibro** di tutti gli altri record da un **Recordset** in una matrice e quindi filtra il recordset usando la matrice.  
   
 ## <a name="example"></a>Esempio  
   
@@ -197,7 +197,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>Esempio di output  
+## <a name="sample-output"></a>Output di esempio  
   
 ```  
 Authors with 25 percent royalty  
@@ -206,6 +206,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà BOF, EOF proprietà (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [Proprietà BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Proprietà Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

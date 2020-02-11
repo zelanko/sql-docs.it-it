@@ -1,5 +1,5 @@
 ---
-title: Linee guida per la logica di ripetizione dei tentativi per le transazioni nelle tabelle ottimizzate per la memoria | Microsoft Docs
+title: Linee guida per la logica di ripetizione tentativi per le transazioni nelle tabelle ottimizzate per la memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779215"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Linee guida per la logica di riesecuzione per le transazioni in tabelle con ottimizzazione per la memoria
@@ -30,7 +30,7 @@ ms.locfileid: "62779215"
   
  Una causa comune di questi errori è con una transazione eseguita simultaneamente. L'azione correttiva normale consiste nel ripetere la transazione.  
   
- Per altre informazioni su queste condizioni di errore, vedere la sezione sul rilevamento dei conflitti, convalida e controlli di dipendenza di Commit in [transazioni in tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Per ulteriori informazioni su queste condizioni di errore, vedere la sezione relativa ai controlli di rilevamento dei conflitti, convalida e dipendenza di commit nelle [transazioni nelle tabelle ottimizzate](../relational-databases/in-memory-oltp/memory-optimized-tables.md)per la memoria.  
   
  I deadlock (codice di errore 1205) non possono verificarsi per le tabelle ottimizzate per la memoria. I blocchi non vengono utilizzati per le tabelle ottimizzate per la memoria. Se tuttavia nell'applicazione è già presente la logica di riesecuzione per i deadlock, la logica esistente può essere estesa in modo da includere i nuovi codici di errore.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62779215"
 ### <a name="considerations-for-read-only-transactions-and-cross-container-transactions"></a>Considerazioni sulle transazioni di sola lettura e sulle transazioni tra contenitori  
  Per le transazioni di sola lettura tra contenitori, ovvero transazioni che vengono avviate al di fuori del contesto di una stored procedure compilata in modo nativo, non viene eseguita la convalida se l'accesso alle tabelle ottimizzate per la memoria avviene nel livello di isolamento SNAPSHOT. Quando tuttavia si accede alle tabelle ottimizzate per la memoria nell'isolamento REPEATABLE READ o SERIALIZABLE, la convalida viene eseguita in fase di commit. In questo caso, potrebbe essere richiesta la logica di riesecuzione.  
   
- Per altre informazioni, vedere la sezione sulle transazioni tra contenitori in [livelli di isolamento delle transazioni](../../2014/database-engine/transaction-isolation-levels.md).  
+ Per ulteriori informazioni, vedere la sezione relativa alle transazioni tra contenitori nei [livelli di isolamento delle transazioni](../../2014/database-engine/transaction-isolation-levels.md).  
   
 ## <a name="implementing-retry-logic"></a>Implementare della logica di riesecuzione  
  Come per tutte le transazioni che accedono a tabelle ottimizzate per la memoria, è necessario considerare la logica di riesecuzione per gestire possibili errori, ad esempio conflitti di scrittura (codice di errore 41302) o errori di dipendenza (codice di errore 41301). Nella maggior parte delle applicazioni il tasso di errori sarà basso, ma è comunque necessario gestire gli errori rieseguendo la transazione. È consigliabile implementare la logica di riesecuzione nei due modi seguenti:  
@@ -71,7 +71,7 @@ ms.locfileid: "62779215"
   
 -   L'applicazione client dispone di logica di riesecuzione per altri codici di errore, ad esempio 1205, che è possibile estendere.  
   
--   I conflitti sono rari ed è importante ridurre la latenza end-to-end mediante un'esecuzione preparata. Per altre informazioni sull'esecuzione in modo nativo stored procedure compilate direttamente, vedere [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+-   I conflitti sono rari ed è importante ridurre la latenza end-to-end mediante un'esecuzione preparata. Per ulteriori informazioni sull'esecuzione diretta di stored procedure compilate in modo nativo, vedere [stored procedure compilate](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)in modo nativo.  
   
  Nell'esempio seguente viene illustrata la logica di riesecuzione in una stored procedure [!INCLUDE[tsql](../includes/tsql-md.md)] interpretata che contiene una chiamata a una stored procedure compilata in modo nativo o a una transazione tra contenitori.  
   
@@ -127,7 +127,7 @@ END
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulle transazioni nelle tabelle ottimizzate per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Transazioni nelle tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Transazioni nelle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

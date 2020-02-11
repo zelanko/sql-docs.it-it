@@ -1,5 +1,5 @@
 ---
-title: Sulla barra degli strumenti (scheda relazione tra attributi, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Barra degli strumenti (scheda relazione tra attributi, Progettazione dimensioni) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066231"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services –Dati multidimensionali)
@@ -30,15 +30,15 @@ ms.locfileid: "66066231"
   
 -   Modificare la modalità con cui viene visualizzato il diagramma delle relazioni tra attributi.  
   
- **Per visualizzare la barra degli strumenti nella scheda relazione tra attributi**  
+ **Per visualizzare la barra degli strumenti sulla scheda Relazione tra attributi**  
   
--   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni, quindi fare clic sulla scheda **Relazione tra attributi** .  
+-   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare doppio clic su una dimensione in Esplora soluzioni per aprire Progettazione dimensioni e quindi fare clic sulla scheda **Relazione tra attributi** .  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungere funzionalità di Business Intelligence**  
+ **Aggiungi funzionalità di Business Intelligence**  
  Apre la **Configurazione guidata di Business Intelligence** e consente di aggiungere caratteristiche di Business Intelligence. Per altre informazioni, vedere [Usare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](use-the-business-intelligence-wizard-to-enhance-dimensions.md).  
   
- **Process**  
+ **Processo**  
  Elabora l'oggetto.  
   
  **Nuova relazione tra attributi**  

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520474"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Istanze del cluster di failover Always On (SQL Server)
@@ -45,11 +45,11 @@ ms.locfileid: "62520474"
   
 -   [Elementi di un'istanza del cluster di failover](#FCIelements)  
   
--   [Concetti e attività di failover di SQL Server](#ConceptsAndTasks)  
+-   [Concetti e attività del failover di SQL Server](#ConceptsAndTasks)  
   
 -   [Argomenti correlati](#RelatedTopics)  
   
-##  <a name="Benefits"></a> Vantaggi di un'istanza del cluster di failover  
+##  <a name="Benefits"></a>Vantaggi di un'istanza del cluster di failover  
  Quando si verifica un errore dell'hardware o del software di un server, le applicazioni o i client che si connettono al server subiranno tempi di inattività. Quando un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è configurata per essere un'istanza del cluster di failover (anziché un'istanza autonoma), la disponibilità elevata di quell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è protetta dalla presenza di nodi ridondanti nell'istanza del cluster di failover. Solo un nodo per volta nell'istanza del cluster di failover possiede il gruppo di risorse WSFC. Nel caso di errore (hardware, del sistema operativo, di applicazione o del servizio) o di aggiornamento pianificato, la proprietà del gruppo di risorse viene spostata a un altro nodo WSFC. Questo processo non è visibile al client o all'applicazione che si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , riducendo di conseguenza i tempi d'inattività dell'applicazione o dei client durante un errore. Di seguito vengono elencati i vantaggi principali offerti dalle istanze del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   Protezione a livello di istanza tramite ridondanza  
@@ -73,10 +73,10 @@ ms.locfileid: "62520474"
   
 -   Utilizzo rallentato delle risorse durante i failover  
   
-##  <a name="Recommendations"></a> Indicazioni  
+##  <a name="Recommendations"></a> Raccomandazioni  
  In un ambiente di produzione è consigliabile usare indirizzi IP statici in combinazione con l'indirizzo IP virtuale di un'istanza del cluster di failover.  È consigliabile evitare l'utilizzo di DHCP in un ambiente di produzione. In caso di inattività, se il lease IP DHCP scade, per la registrazione del nuovo indirizzo IP DHCP associato al nome DNS viene richiesto tempo aggiuntivo.  
   
-##  <a name="Overview"></a> Panoramica dell'istanza del cluster di failover  
+##  <a name="Overview"></a>Panoramica dell'istanza del cluster di failover  
  Un'istanza del cluster di failover viene eseguita in un gruppo di risorse WSFC con uno o più nodi WSFC. Quando l'istanza del cluster di failover viene avviata, uno dei nodi presume la proprietà del gruppo di risorse e attiva la modalità online dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le risorse di proprietà di questo nodo includono:  
   
 -   Nome della rete  
@@ -85,11 +85,13 @@ ms.locfileid: "62520474"
   
 -   Dischi condivisi  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio del motore di database  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servizio del motore di database  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Servizio Agent  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Services, se installato  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Services, se installato  
   
 -   Una risorsa di condivisione file, se la funzionalità FILESTREAM è installata  
   
@@ -105,7 +107,7 @@ ms.locfileid: "62520474"
   
 5.  Le richieste di connessione dell'applicazione client vengono dirette automaticamente al nuovo nodo attivo utilizzando lo stesso nome della rete virtuale (VNN, Virtual Network Name).  
   
- L'istanza del cluster di failover è online finché l'integrità del quorum del cluster WSFC sottostante è buona (la maggioranza dei nodi WSFC del quorum è disponibile come destinazione del failover automatico). Quando il cluster WSFC perde il quorum per un errore hardware, software, di rete o per la configurazione impropria del quorum, l'intero cluster WSFC, insieme all'istanza del cluster di failover viene portato offline. Quindi, in questo scenario di failover non pianificato è richiesto l'intervento manuale per ristabilire il quorum nei nodi disponibili restanti in modo da riportare il cluster WSFC e l'istanza del cluster di failover online. Per altre informazioni, vedere [Modalità quorum WSFC e configurazione del voto (SQL Server)](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+ L'istanza del cluster di failover è online finché l'integrità del quorum del cluster WSFC sottostante è buona (la maggioranza dei nodi WSFC del quorum è disponibile come destinazione del failover automatico). Quando il cluster WSFC perde il quorum per un errore hardware, software, di rete o per la configurazione impropria del quorum, l'intero cluster WSFC, insieme all'istanza del cluster di failover viene portato offline. Quindi, in questo scenario di failover non pianificato è richiesto l'intervento manuale per ristabilire il quorum nei nodi disponibili restanti in modo da riportare il cluster WSFC e l'istanza del cluster di failover online. Per ulteriori informazioni, vedere [modalità quorum WSFC e configurazione del voto (; SQL Server);](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ### <a name="predictable-failover-time"></a>Tempo stimabile di failover  
  A seconda di quando l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ha eseguito l'ultima operazione di checkpoint, è possibile che vi sia una quantità sostanziale di pagine dirty nella cache del buffer. Di conseguenza, i failover durano per tutto il tempo che occorre per scrivere le pagine dirty restanti sul disco che può comportare un tempo di failover lungo e imprevedibile. A partire da [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]l'istanza del cluster di failover può usare checkpoint indiretti per limitare la quantità di pagine dirty mantenute nella cache del buffer. Sebbene vengano utilizzate risorse aggiuntive sotto un carico di lavoro normale, la durata del failover è più stimabile e configurabile. Questa operazione si rivela utile quando il contratto di servizio dell'organizzazione specifica l'obiettivo del tempo di recupero (RTO, Recovery Time Objective) per la soluzione di disponibilità elevata. Per ulteriori informazioni sui checkpoint indiretti, vedere [Indirect Checkpoints](../../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt).  
@@ -119,9 +121,9 @@ ms.locfileid: "62520474"
   
 -   La diagnostica dettagliata dei componenti abilita anche una migliore risoluzione dei problemi dei failover automatici in modo retroattivo. Le informazioni di diagnostica vengono archiviate in file di log che vengono collocati insieme ai log degli errori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . È possibile caricare i file nel visualizzatore file di log per controllare gli stati dei componenti precedenti all'occorrenza del failover per determinare la causa del failover.  
   
- Per altre informazioni, vedere [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
+ Per ulteriori informazioni, vedere [criteri di failover per le istanze del cluster di failover](failover-policy-for-failover-cluster-instances.md)  
   
-##  <a name="FCIelements"></a> Elementi di un'istanza del cluster di failover  
+##  <a name="FCIelements"></a>Elementi di un'istanza del cluster di failover  
  Un'istanza del cluster di failover è costituita da un set di server fisici (nodi) con configurazioni hardware simili e configurazioni software identiche, tra cui la versione del sistema operativo e il livello della patch e la versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , il livello della patch, i componenti e il nome dell'istanza. La configurazione del software identica è necessaria assicurarsi che l'istanza del cluster di failover possa essere totalmente funzionale quando si verifica un errore tra i nodi.  
   
  Gruppo di risorse WSFC  
@@ -133,27 +135,27 @@ ms.locfileid: "62520474"
  Archiviazione  
  Diversamente dal gruppo di disponibilità Always On, un'istanza del cluster di failover deve usare l'archiviazione condivisa tra tutti i nodi dell'istanza del cluster di failover per l'archiviazione di log e database. L'archiviazione condivisa può avvenire in dischi di cluster WSFC, dischi su una rete SAN o condivisioni di file con un protocollo SMB. In tal modo, tutti i nodi nell'istanza del cluster di failover dispongono della stessa vista di dati dell'istanza quando si verifica un failover. Tuttavia, questo vuole dire che l'archiviazione condivisa potenzialmente potrebbe essere l'unico punto di errore e l'istanza del cluster di failover dipende dalla soluzione di archiviazione sottostante per assicurare la protezione dei dati.  
   
- Nome della rete  
+ Nome rete  
  Il nome della rete virtuale (VNN, Virtual Network Name) fornisce un punto di connessione unificato per l'istanza del cluster di failover. In tal modo le applicazioni possono connettersi al nome VNN senza il bisogno di conoscere il nodo al momento attivo. Quando si verifica un failover, il VNN viene registrato nel nuovo nodo attivo dopo l'avvio. Questo processo non è visibile al client o all'applicazione che si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , riducendo di conseguenza i tempi d'inattività dell'applicazione o dei client durante un errore.  
   
  IP virtuali  
  Nel caso di un'istanza del cluster di failover su più subnet, un indirizzo IP virtuale viene assegnato a ogni subnet nell'istanza del cluster di failover. Durante un failover, il VNN sul server DNS viene aggiornato per puntare all'indirizzo IP virtuale per la rispettiva subnet. Le applicazioni e i client si possono connettere quindi all'istanza del cluster di failover utilizzando lo stesso VNN dopo un failover su più subnet.  
   
-##  <a name="ConceptsAndTasks"></a> Concetti e attività di failover di SQL Server  
+##  <a name="ConceptsAndTasks"></a>Concetti e attività del failover di SQL Server  
   
 |Concetti e attività|Argomento|  
 |------------------------|-----------|  
-|Descrive il meccanismo di rilevamento dell'errore e i criteri di failover flessibili.|[Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)|  
-|Descrive i concetti dell'amministrazione e della manutenzione dell'istanza del cluster di failover.|[Gestione e manutenzione dell'istanza del cluster di failover](failover-cluster-instance-administration-and-maintenance.md)|  
-|Descrive la configurazione di più subnet e concetti|[Clustering su più Subnet SQL Server (; SQL Server).](sql-server-multi-subnet-clustering-sql-server.md)|  
+|Descrive il meccanismo di rilevamento dell'errore e i criteri di failover flessibili.|[Criteri di failover per le istanze del cluster di failover](failover-policy-for-failover-cluster-instances.md)|  
+|Descrive i concetti dell'amministrazione e della manutenzione dell'istanza del cluster di failover.|[Amministrazione e manutenzione dell'istanza del cluster di failover](failover-cluster-instance-administration-and-maintenance.md)|  
+|Descrive la configurazione di più subnet e concetti|[SQL Server il clustering su più subnet (; SQL Server);](sql-server-multi-subnet-clustering-sql-server.md)|  
   
-##  <a name="RelatedTopics"></a> Argomenti correlati  
+##  <a name="RelatedTopics"></a>Argomenti correlati  
   
-|**Descrizioni argomento**|**Argomento**|  
+|**Descrizioni degli argomenti**|**Argomento**|  
 |----------------------------|---------------|  
-|Descrive come installare e configurare una nuova istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Creare un nuovo Cluster di Failover SQL Server (; Programma di installazione);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|Descrive come installare e configurare una nuova istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Creazione di un nuovo cluster di failover di SQL Server (; Configurazione);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Descrive la modalità di aggiornamento a un cluster di failover di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Aggiornare un cluster di failover di SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Descrive i concetti relativi al clustering di failover di Windows e fornisce collegamenti ad attività correlate al clustering di failover di Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Panoramica dei cluster di Failover](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Panoramica dei cluster di Failover](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Descrive i concetti relativi al clustering di failover di Windows e fornisce collegamenti ad attività correlate al clustering di failover di Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Panoramica dei cluster di failover](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]R2: [Panoramica dei cluster di failover](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Descrive le diversità tra il concetto di nodo in un'istanza del cluster di failover e di replica in un gruppo di disponibilità e le considerazioni per l'utilizzo di un'istanza del cluster di failover per ospitare una replica per un gruppo di disponibilità.|[Clustering di failover e gruppi di disponibilità Always On (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

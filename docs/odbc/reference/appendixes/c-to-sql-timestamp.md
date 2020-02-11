@@ -1,5 +1,5 @@
 ---
-title: 'Da C a SQL: Timestamp | Microsoft Docs'
+title: 'Da C a SQL: timestamp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aa75299f4d8e8f15293064d0bf3fb3979fe382d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037699"
 ---
-# <a name="c-to-sql-timestamp"></a>Da C a SQL: Timestamp
-L'identificatore per il tipo di dati C ODBC timestamp è:  
+# <a name="c-to-sql-timestamp"></a>Da C a SQL: timestamp
+Identificatore per il tipo di dati timestamp ODBC C:  
   
  SQL_C_TYPE_TIMESTAMP  
   
- La tabella seguente illustra il codice SQL ODBC i tipi di dati a cui possono essere convertiti i dati C di timestamp. Per una spiegazione delle colonne e le condizioni nella tabella, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ Nella tabella seguente sono illustrati i tipi di dati ODBC SQL in cui è possibile convertire i dati timestamp C. Per una spiegazione delle colonne e dei termini della tabella, vedere [conversione di dati da C a tipi di dati SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificatore di tipo SQL|Test|SQLSTATE|  
+|Identificatore del tipo SQL|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Lunghezza in byte di colonna > = lunghezza in byte di caratteri<br /><br /> 19 < = lunghezza in byte colonna < lunghezza in byte di caratteri<br /><br /> Colonna di lunghezza < 19 byte<br /><br /> Valore di dati non è un timestamp valido|n/d<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Lunghezza in caratteri colonna > = lunghezza in caratteri di dati<br /><br /> 19 < = lunghezza in caratteri colonna < lunghezza dei dati in caratteri<br /><br /> Colonna carattere a lunghezza < 19<br /><br /> Valore di dati non è un timestamp valido|n/d<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|I campi dell'ora sono pari a zero<br /><br /> I campi dell'ora sono diversi da zero<br /><br /> Valore di dati non contiene una data valida|n/d<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIME|I campi i secondi frazionari sono pari a zero [a]<br /><br /> I campi i secondi frazionari sono diversi da zero [a]<br /><br /> Valore di dati non contiene un'ora valida|n/d<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|I campi i secondi frazionari non vengono troncati<br /><br /> I campi i secondi frazionari vengono troncati<br /><br /> Valore di dati non è un timestamp valido|n/d<br /><br /> 22008<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Lunghezza byte colonna >= lunghezza byte carattere<br /><br /> 19 <= lunghezza in byte colonna < lunghezza in byte carattere<br /><br /> Lunghezza in byte colonna < 19<br /><br /> Il valore dei dati non è un timestamp valido|n/d<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Lunghezza carattere colonna >= Lunghezza caratteri dei dati<br /><br /> 19 <= Lunghezza carattere colonna < Lunghezza caratteri dei dati<br /><br /> Lunghezza carattere colonna < 19<br /><br /> Il valore dei dati non è un timestamp valido|n/d<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|I campi di tempo sono pari a zero<br /><br /> I campi di tempo sono diversi da zero<br /><br /> Il valore dei dati non contiene una data valida|n/d<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIME|I campi di secondi frazionari sono pari a zero [a]<br /><br /> I campi di secondi frazionari sono diversi da zero [a]<br /><br /> Il valore dei dati non contiene un tempo valido|n/d<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|I campi di secondi frazionari non sono troncati<br /><br /> I campi di secondi frazionari vengono troncati<br /><br /> Il valore dei dati non è un timestamp valido|n/d<br /><br /> 22008<br /><br /> 22007|  
   
- [a] data i campi della struttura di timestamp vengono ignorati.  
+ [a] i campi relativi alla data della struttura del timestamp vengono ignorati.  
   
- Per informazioni su quali valori sono validi in una struttura SQL_C_TIMESTAMP, vedere [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md), più indietro in questa appendice.  
+ Per informazioni sui valori validi in una struttura SQL_C_TIMESTAMP, vedere tipi di [dati C](../../../odbc/reference/appendixes/c-data-types.md), più indietro in questa appendice.  
   
- Quando i dati di timestamp C viene convertiti in dati SQL di tipo carattere, i dati di tipo carattere risultante sono nel "*yyyy*-*mm*-*gg* *hh*:*mm*:*ss*[.*f...* ] "formato.  
+ Quando i dati timestamp C vengono convertiti in dati di tipo carattere SQL, i dati di tipo carattere risultanti sono in "*aaaa*-*mm*-*GG* *HH*:*mm*:*SS*[.* f...*] " formato.  
   
- Il driver ignora il valore di lunghezza/indicatore quando si convertono i dati dal tipo di dati timestamp C e si presuppone che la dimensione del buffer di dati è la dimensione del tipo di dati timestamp C. Viene passato il valore di lunghezza/indicatore il *StrLen_or_Ind* nell'argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento in **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* nell'argomento **SQLPutData** e il *ParameterValuePtr* argomento in **SQLBindParameter**.
+ Il driver ignora il valore di lunghezza/indicatore durante la conversione dei dati dal tipo di dati timestamp C e presuppone che le dimensioni del buffer dei dati siano le dimensioni del tipo di dati timestamp C. Il valore di lunghezza/indicatore viene passato nell'argomento *StrLen_Or_Ind* in **SQLPutData** e nel buffer specificato con l'argomento *StrLen_or_IndPtr* in **SQLBindParameter**. Il buffer di dati viene specificato con l'argomento *DataPtr* in **SQLPutData** e l'argomento *ParameterValuePtr* in **SQLBindParameter**.

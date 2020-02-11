@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306221"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Finestra di dialogo Percorso (Visual Database Tools)
@@ -24,7 +24,7 @@ ms.locfileid: "63306221"
   
 -   Scegliere **Nuovo** dal menu **File** , quindi selezionare **Progetto**. Quando viene visualizzata la finestra di dialogo **Nuovo progetto** , scegliere **Sfoglia**. Viene visualizzata la finestra di dialogo **Percorso** con il titolo **Percorso progetto**.  
   
- **Cerca in**  
+ **Look in**  
  Utilizzare questo elenco per individuare la cartella desiderata. Vengono visualizzate le sottocartelle della cartella selezionata.  
   
 ## <a name="my-places-bar"></a>Barra Risorse personali  
@@ -41,7 +41,7 @@ ms.locfileid: "63306221"
  **Nome cartella**  
  Consente di visualizzare il percorso della cartella selezionata.  
   
- **Aprire**  
+ **Apri**  
  Restituisce alla finestra di dialogo chiamante il percorso della cartella selezionata nel campo **Nome cartella** .  
   
 ## <a name="toolbar"></a>Barra degli strumenti  

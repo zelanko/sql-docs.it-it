@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783214"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Escludere un server di destinazione da un server master
   In questo argomento viene descritto come escludere un server di destinazione da un server master in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o SQL Server Management Objects (SMO). Eseguire questa procedura dal server di destinazione.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72783214"
 sp_msx_defect ;  
 ```  
   
- Per ulteriori informazioni, vedere [sp_msx_defect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_msx_defect &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a>Utilizzo di SQL Server Management Objects (SMO)  
  Utilizzare la `MsxDefect Method`.  
@@ -79,4 +79,4 @@ sp_msx_defect ;
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di un ambiente multiserver](create-a-multiserver-environment.md)   
  [Amministrazione automatizzata in un'organizzazione](automated-administration-across-an-enterprise.md)   
- [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  
+ [Escludere più server di destinazione da un server master](defect-multiple-target-servers-from-a-master-server.md)  

@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097304"
 ---
-# <a name="union--mdx"></a>Union (MDX)
+# <a name="union--mdx"></a>Unione (MDX)
 
 
   Restituisce un set generato dall'unione di due set, mantenendo facoltativamente i membri duplicati.  
@@ -35,17 +35,17 @@ Alternate syntax 2
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *Espressione set 1*  
+ *Imposta espressione 1*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Espressione set 2*  
+ *Imposta espressione 2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- Questa funzione restituisce l'unione di due o più set specificati. Con la sintassi standard e con la sintassi alternativa 1, i duplicati vengono eliminati per impostazione predefinita. Con la sintassi standard, usando il **tutti** flag consente di mantenere duplicati nel set unito. I duplicati vengono eliminati dalla parte finale del set. Con la sintassi alternativa 2, i duplicati vengono sempre mantenuti.  
+## <a name="remarks"></a>Osservazioni  
+ Questa funzione restituisce l'Unione di due o più set specificati. Con la sintassi standard e con la sintassi alternativa 1, i duplicati vengono eliminati per impostazione predefinita. Con la sintassi standard, l'utilizzo del flag **All** mantiene i duplicati nel set Unito in join. I duplicati vengono eliminati dalla parte finale del set. Con la sintassi alternativa 2, i duplicati vengono sempre mantenuti.  
   
 ## <a name="examples"></a>Esempi  
- Gli esempi seguenti illustrano il comportamento dei **Union** funzionare con ogni sintassi.  
+ Negli esempi seguenti viene illustrato il comportamento della funzione **Union** utilizzando ogni sintassi.  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>Sintassi standard, con eliminazione dei duplicati  
   
@@ -96,6 +96,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

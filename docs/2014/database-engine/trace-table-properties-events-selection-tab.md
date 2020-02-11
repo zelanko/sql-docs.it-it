@@ -1,5 +1,5 @@
 ---
-title: Proprietà tabella (scheda Selezione eventi) di traccia | Microsoft Docs
+title: Proprietà tabella di traccia (scheda Selezione eventi) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089536"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Proprietà tabella di traccia (scheda Selezione eventi)
@@ -27,7 +27,7 @@ ms.locfileid: "66089536"
  Per visualizzare questa finestra, aprire una tabella di traccia mediante [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , scegliere **Proprietà** dal menu **File**e quindi fare clic sulla scheda **Selezione eventi** .  
   
 ## <a name="options"></a>Opzioni  
- Colonna**Eventi**  
+ Colonna **eventi**  
  Consente di visualizzare gli eventi inseriti nella traccia organizzati per categoria. È possibile selezionare gli eventi selezionando le rispettive caselle o colonne di dati. Se si seleziona la casella corrispondente all'evento, verranno selezionate tutte le colonne di dati disponibili per tale evento. Se si seleziona la colonna di dati corrispondente all'evento, quest'ultimo viene selezionato insieme a tutte le altre colonne necessarie. Se si sta visualizzando un file o una tabella di traccia, è possibile deselezionare le caselle di controllo relative agli eventi o alle colonne di dati per ridurre la quantità di dati visibili nella finestra di traccia, facilitandone in tal modo l'analisi. È inoltre possibile modificare i filtri colonna per ridurre la quantità di dati visibili nella finestra di traccia. Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Altre colonne di dati  

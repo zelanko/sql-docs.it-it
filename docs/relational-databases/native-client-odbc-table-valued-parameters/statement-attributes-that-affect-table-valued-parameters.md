@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 56c8edb4aca4cad37c74e074bf9a1bd1dd8d36ce
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246375"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Attributi dell'istruzione che influiscono sui parametri con valori di tabella
@@ -26,7 +26,7 @@ ms.locfileid: "75246375"
 
   Nella tabella seguente vengono illustrati gli attributi di un campo di descrizione.  
   
-|Nome attributo|Tipo|Description|  
+|Nome attributo|Type|Descrizione|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|Per ulteriori informazioni su SQL_SS_PARAM_FOCUS, vedere [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Per ulteriori informazioni su SQL_SS_NAME_SCOPE, vedere [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).|  

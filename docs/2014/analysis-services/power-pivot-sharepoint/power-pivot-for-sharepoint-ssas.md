@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683582"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot per SharePoint (SSAS)
@@ -58,7 +58,7 @@ ms.locfileid: "74683582"
   
  [Configurazione di PowerPivot tramite Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
- [Strumenti di configurazione PowerPivot](power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
  [Autenticazione e autorizzazione di PowerPivot](power-pivot-authentication-and-authorization.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "74683582"
   
  [Accesso ai dati PowerPivot](power-pivot-data-access.md)  
   
- [Aggiornamento dati PowerPivot](power-pivot-data-refresh.md)  
+ [Aggiornamento dei dati PowerPivot](power-pivot-data-refresh.md)  
   
  [Feed di dati PowerPivot](power-pivot-data-feeds.md)  
   
@@ -79,9 +79,9 @@ ms.locfileid: "74683582"
  **In altre sezioni**  
   
 ## <a name="additional-topics"></a>Argomenti aggiuntivi  
- [PowerPivot per SharePoint di aggiornamento](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
+ [Aggiornare PowerPivot per SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
- [Installazione di PowerPivot per SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [Riferimento a PowerShell per PowerPivot per SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   

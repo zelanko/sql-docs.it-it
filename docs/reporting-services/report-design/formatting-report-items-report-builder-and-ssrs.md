@@ -11,10 +11,10 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580313"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formattazione degli elementi del report (Generatore report e SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65580313"
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
- A. Casella di testo con un bordo a doppia linea e una varietà di stili di formattazione, incluso un collegamento.  
+ R. Casella di testo con un bordo a doppia linea e una varietà di stili di formattazione, incluso un collegamento.  
   
  B. Casella di testo con un bordo tratteggiato e dati HTML non elaborati e dati HTML di cui è stato eseguito il rendering.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "65580313"
   
  È possibile modificare le opzioni di formattazione selezionando l'elemento che si desidera formattare e quindi aprire la finestra di dialogo Proprietà dell'elemento. Ad esempio, se si desidera formattare il contenuto di un'intera casella di testo oppure una parola selezionata al suo interno, fare clic con il pulsante destro del mouse sull'elemento e scegliere **Proprietà casella di testo**. Sarà quindi possibile applicare gli stili di formattazione desiderati.  
   
- Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

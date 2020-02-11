@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313651"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Attività 4: Gestione e visualizzazione dei risultati
@@ -22,17 +22,17 @@ ms.locfileid: "72313651"
   
 1.  Selezionare **Contact email** Domain dall'elenco di domini.  
   
-2.  Passare alla scheda **non valida** nel riquadro di destra. Si noti che alla fine sono presenti due indirizzi di posta elettronica mancanti. Questi due messaggi di posta elettronica che non sono stati trovati come validi dalla regola di dominio che richiede che tutti gli indirizzi di posta elettronica terminino con **\@Adventure-Works.com** (con ' s'). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
+2.  Passare alla scheda **non valida** nel riquadro di destra. Si noti che alla fine sono presenti due indirizzi di posta elettronica mancanti. Questi due messaggi di posta elettronica che non sono stati trovati come validi dalla regola di dominio che richiede che tutti gli indirizzi di posta elettronica terminino con ** \@Adventure-Works.com** (con ' s'). In DQS viene applicata la regola di dominio durante la pulizia per stabilire la validità di un indirizzo di posta elettronica. In questa scheda vengono visualizzati i valori del dominio contrassegnati come non validi nella Knowledge Base o che non hanno superato una regola di dominio. In questo caso, i valori in questione non hanno superato la regola di dominio (Email Validation).  
   
-3.  Nella colonna **Correggi** in digitare l'indirizzo di posta elettronica corretto che termina con **\@Adventure-Works.com** (con ' s').  
+3.  Nella colonna **Correggi** in digitare l'indirizzo di posta elettronica corretto che termina con ** \@Adventure-Works.com** (con ' s').  
   
-     ![Correzioni dalle]correzioni della regola di convalida della posta elettronica(../../2014/tutorials/media/et-managingandviewingresults-01.jpg "dalla regola di convalida della posta elettronica")  
+     ![Correzioni della regola di convalida posta elettronica](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Correzioni della regola di convalida posta elettronica")  
   
 4.  Fare clic su **approva** per entrambi i record per approvare entrambe le modifiche. Quando si approva, i record vengono spostati nella scheda con **correzione** . Anziché approvare separatamente ogni elemento, è possibile approvare tutte le modifiche contemporaneamente usando il pulsante della barra degli strumenti **approva tutti i termini** .  
   
 5.  Passare alla scheda **nuovo** nel riquadro destro. I valori in questa scheda sono quelli per i quali DQS non dispone ancora di informazioni sufficienti nella Knowledge Base per stabilire se sono corretti. Pertanto, non è possibile apportare o suggerire modifiche ai valori di dominio.  
   
-6.  Esaminare i valori per confermare che tutti i messaggi di posta elettronica terminano con **\@Adventure-Works.com** e fare clic su **approva tutti i termini** sulla barra degli strumenti. I valori approvati da questa scheda passano alla scheda **corretta** .  
+6.  Esaminare i valori per confermare che tutti i messaggi di posta elettronica terminano con ** \@Adventure-Works.com** e fare clic su **approva tutti i termini** sulla barra degli strumenti. I valori approvati da questa scheda passano alla scheda **corretta** .  
   
 7.  Selezionare il dominio **Country** dall'elenco dei domini.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72313651"
   
 9. Si noti che **USA** viene corretto **Stati Uniti** perché si tratta di sinonimi e **Stati Uniti** è il valore principale (preferito).  
   
-     ![Correzioni basate sulle correzioni di sinonimi](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "in base ai sinonimi")  
+     ![Correzioni basate su sinonimi](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "Correzioni basate su sinonimi")  
   
 10. Si noti che il pulsante **approva** è già selezionato per questi valori corretti. Si tratta del comportamento predefinito per i valori con correzione. È possibile rifiutare una modifica e, quando si esegue questa operazione, il valore viene spostato nella scheda **non valido** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72313651"
   
 12. Passare alla scheda con **correzione** nel riquadro destro.  
   
-     ![Correzione dei nomi dei fornitori](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "corretti i nomi dei fornitori")  
+     ![Nomi fornitori con correzione](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "Nomi fornitori con correzione")  
   
     1.  Si noti che a **. Datum Corp.** è stato corretto in a **. Datum Corporation** e il **motivo** è impostato **sulla relazione basata su termini. A. Datum Corporation** è un valore di dominio noto di DQS perché è stato individuato durante il processo di individuazione delle informazioni. Pertanto, DQS è **sicuro del 100%** sulla correzione.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "72313651"
   
 20. Passare alla scheda con **correzione** .  
   
-21. Si noti che lo **stato** del record con **City** As **Los Angeles** è impostato su **CA** Now. Si noti che il campo **reason** è **corretto dalla regola ' City-State Rule '** .  
+21. Si noti che lo **stato** del record con **City** As **Los Angeles** è impostato su **CA** Now. Si noti che il campo **reason** è **corretto dalla regola ' City-State Rule '**.  
   
-     Correzione della regola di ![stato della città]per la correzione(../../2014/tutorials/media/et-managingandviewingresults-04.jpg "della regola di stato")  
+     ![Correzione regola Città-Provincia](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "Correzione regola Città-Provincia")  
   
 22. Si noti che il pulsante di opzione **approva** è già selezionato per questo elemento nell'elenco. Questo è il comportamento predefinito per gli elementi nella scheda con **correzione** .  
   
@@ -82,11 +82,11 @@ ms.locfileid: "72313651"
   
 24. **Fare clic su approva tutti i termini** sul pulsante della barra degli strumenti e fare clic su **OK** nella finestra di messaggio di **conferma** .  
   
-     Pulsante della barra ![degli strumenti approva tutti i termini pulsante]della(../../2014/tutorials/media/et-managingandviewingresults-05.jpg "barra degli strumenti approva tutto")  
+     ![Pulsante della barra degli strumenti Approva tutti i termini](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "Pulsante della barra degli strumenti Approva tutti i termini")  
   
 25. Fare clic su **Avanti** per passare alla pagina **Esporta** .  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Attività 5: Esportazione dei risultati della pulizia in un file di Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

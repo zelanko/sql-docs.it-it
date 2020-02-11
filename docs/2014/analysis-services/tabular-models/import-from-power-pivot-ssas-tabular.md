@@ -1,5 +1,5 @@
 ---
-title: Importare da PowerPivot (SSAS tabulare) | Microsoft Docs
+title: Importazione da PowerPivot (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067023"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importare da PowerPivot (SSAS tabulare)
@@ -28,11 +28,11 @@ ms.locfileid: "66067023"
 > [!NOTE]  
 >  I modelli tabulari non supportano le tabelle collegate. Quando si esegue un'importazione da una cartella di lavoro di PowerPivot contenente una tabella collegata, i dati di tale tabella vengono considerati come dati copiati o incollati e vengono archiviati nel file Model.bim. Quando si visualizzano le proprietà per una tabella copiata o incollata, la proprietà **Origine dati** e la finestra di dialogo **Proprietà tabella** nel menu **Tabella** sono disabilitate.  
 >   
->  Esiste un limite di 10.000 righe che è possibile aggiungere ai dati incorporati nel modello. Se si importa un modello da PowerPivot e viene visualizzato l'errore "dati troncati. Tabelle incollate non possono contenere più di 10000 righe"è necessario esaminare il modello PowerPivot spostando i dati incorporati in un'altra origine dati, ad esempio una tabella in SQL Server e quindi ripetere l'importazione.  
+>  Esiste un limite di 10.000 righe che è possibile aggiungere ai dati incorporati nel modello. Se si importa un modello da PowerPivot e viene visualizzato l'errore "i dati sono stati troncati. Le tabelle incollate non possono contenere più di 10000 righe "è necessario modificare il modello PowerPivot spostando i dati incorporati in un'altra origine dati, ad esempio una tabella in SQL Server, quindi reimportare.  
   
  Vi sono considerazioni speciali a seconda se il database dell'area di lavoro si trovi o meno in un'istanza di Analysis Services sullo stesso computer (locale) di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o in un'istanza di Analysis Services remota.  
   
- Se il database dell'area di lavoro è in un'istanza locale di Analysis Services, è possibile importare sia i metadati sia i dati dalla cartella di lavoro di PowerPivot. I metadati vengono copiati dalla cartella di lavoro e utilizzati per creare il progetto di modello tabulare. I dati vengono quindi copiati dalla cartella di lavoro e archiviati nel database dell'area di lavoro del progetto (tranne i dati copiati o incollati, che viene archiviati nel file Model. bim).  
+ Se il database dell'area di lavoro è in un'istanza locale di Analysis Services, è possibile importare sia i metadati sia i dati dalla cartella di lavoro di PowerPivot. I metadati vengono copiati dalla cartella di lavoro e utilizzati per creare il progetto di modello tabulare. I dati vengono quindi copiati dalla cartella di lavoro e archiviati nel database dell'area di lavoro del progetto (ad eccezione dei dati copiati o incollati, archiviati nel file Model. BIM).  
   
  Se il database dell'area di lavoro si trova in un'istanza remota di Analysis Services, non è possibile importare dati da una cartella di lavoro di PowerPivot per Excel. È comunque possibile importare i metadati della cartella di lavoro; tuttavia, questa operazione causerà l'esecuzione di uno script nell'istanza remota di Analysis Services. È consigliabile importare solo i metadati da una cartella di lavoro di PowerPivot attendibile. I dati devono essere importati nuovamente da origini definite nelle connessioni all'origine dati. I dati della tabella collegata copiati o incollati nella cartella di lavoro di PowerPivot devono essere copiati e incollati nel progetto di modello tabulare.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66067023"
   
 1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-2.  Nel **nuovo progetto** nella finestra di dialogo **modelli installati**, fare clic su **Business Intelligence**, quindi fare clic su **Importa da PowerPivot**.  
+2.  Nella finestra di dialogo **nuovo progetto** , in **modelli installati**, fare clic su **Business Intelligence**, quindi fare clic su **Importa da PowerPivot**.  
   
-3.  In  **Nome**digitare un nome per il progetto, quindi specificare un percorso e un nome per la soluzione e scegliere **OK**.  
+3.  In **nome**Digitare un nome per il progetto, quindi specificare un percorso e un nome della soluzione, quindi fare clic su **OK**.  
   
 4.  Nella finestra di dialogo **Apri** selezionare il file di [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] in cui sono contenuti i metadati e i dati del modello da importare, quindi fare clic su **Apri**.  
   

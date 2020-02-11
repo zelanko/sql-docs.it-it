@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfe3796a862b300ae8d2778b5b55437ab9426cc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097773"
 ---
-# <a name="instancename-property-wmi-msreportserverconfigurationsetting"></a>Proprietà InstanceName (MSReportServer_ConfigurationSetting WMI)
+# <a name="instancename-property-wmi-msreportserver_configurationsetting"></a>Proprietà InstanceName (MSReportServer_ConfigurationSetting WMI)
   Specifica il nome di un'istanza del server di report in un determinato computer. Di sola lettura.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -45,7 +45,7 @@ public string InstanceName;
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisiti  
- **Spazio dei nomi:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Spazio dei nomi:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

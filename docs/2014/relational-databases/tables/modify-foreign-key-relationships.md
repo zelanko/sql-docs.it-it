@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196836"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifica di relazioni di chiave esterna
   È possibile modificare il lato chiave esterna di una relazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cambiando la chiave esterna di una tabella vengono modificate le colonne correlate alle colonne della tabella della chiave primaria.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68196836"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>Per modificare una chiave esterna  
   
@@ -69,10 +69,10 @@ ms.locfileid: "68196836"
      **Relazione selezionata**  
      Vengono elencate le relazioni esistenti. Selezionarne una per visualizzarne le proprietà nella griglia a destra. Se l'elenco è vuoto, significa che per la tabella non sono state definite relazioni.  
   
-     **Aggiungi**  
+     **Aggiungere**  
      Crea una nuova relazione. È necessario impostare l'opzione **Specifiche di tabelle e colonne** per rendere valida la relazione.  
   
-     **Delete**  
+     **Elimina**  
      Elimina la relazione selezionata dall'elenco **Relazione selezionata** . Per annullare l'aggiunta di una relazione, utilizzare questo pulsante per rimuovere la relazione.  
   
      **Categoria Generale**  
@@ -99,8 +99,8 @@ ms.locfileid: "68196836"
      **Categoria Identità**  
      Viene espansa per visualizzare i campi delle proprietà **Nome** e **Descrizione**.  
   
-     **Name**  
-     Visualizza il nome della relazione. Quando viene creata una nuova relazione, le viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di **Progettazione tabelle**. Il nome può essere modificato in qualunque momento.  
+     **Nome**  
+     Visualizza il nome della relazione. Quando viene creata una nuova relazione, le viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di **Progettazione tabelle**. È possibile modificare il nome in qualsiasi momento.  
   
      **Descrizione**  
      Descrive la relazione. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** , quindi sui puntini di sospensione ( **…** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
@@ -108,7 +108,7 @@ ms.locfileid: "68196836"
      **Categoria Progettazione tabelle**  
      Viene espansa per visualizzare le informazioni relative a **Verifica dati esistenti durante la creazione o la riabilitazione** e **Attiva per replica**.  
   
-     **Enforce For Replication**  
+     **Applicare per replica**  
      Viene indicato se applicare il vincolo quando un agente di replica esegue un'inserimento, un aggiornamento o un'eliminazione in questa tabella.  
   
      **Attiva vincolo della chiave esterna**  
@@ -139,9 +139,9 @@ ms.locfileid: "68196836"
   
     -   **Imposta predefinito** Viene impostato il valore predefinito stabilito per la colonna se per tutte le colonne chiave esterna della tabella sono stati impostati valori predefiniti.  
   
-4.  Nel menu **File** scegliere **Salva**_table name_.  
+4.  Scegliere **Salva** **nome tabella** dal menu _File_.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
  **Per modificare una chiave esterna**  
   
  Per modificare un vincolo FOREIGN KEY utilizzando Transact-SQL, è innanzitutto necessario eliminare il vincolo FOREIGN KEY esistente, quindi ricrearlo con la nuova definizione. Per ulteriori informazioni, vedere [Delete Foreign Key Relationships](delete-foreign-key-relationships.md) e [Create Foreign Key Relationships](create-foreign-key-relationships.md).  

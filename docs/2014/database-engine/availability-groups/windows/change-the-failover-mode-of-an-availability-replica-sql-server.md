@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6750456d708d68e57aadd4b1139f6e108a93b9ba
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783022"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Modificare la modalità di failover di una replica di disponibilità (SQL Server)
@@ -72,19 +72,19 @@ ms.locfileid: "72783022"
   
      dove  
   
-    -   *group_name* è il nome del gruppo di disponibilità.  
+    -   *nome_gruppo* è il nome del gruppo di disponibilità.  
   
-    -   { ' *_sistema*[\\*nome_istanza*]' | '*nome_rete_FCI*[\\*nome_istanza*]' }  
+    -   {'*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]'}  
   
          Specifica l'indirizzo dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica di disponibilità da modificare. I componenti di questo indirizzo sono i seguenti:  
   
-         *_sistema*  
+         *system_name*  
          Nome NetBIOS del computer in cui risiede un'istanza autonoma del server.  
   
-         *nome_rete_FCI*  
+         *FCI_network_name*  
          Nome di rete utilizzato per accedere a un cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui un'istanza del server di destinazione è un partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-         *nome_istanza*  
+         *instance_name*  
          Nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che ospita la replica di disponibilità di destinazione. Per un'istanza del server predefinita, *nome_istanza* è facoltativo.  
   
      Per altre informazioni su questi parametri, vedere [ALTER AVAILABILITY GROUP &#40; Transact-SQL &#41;](/sql/t-sql/statements/alter-availability-group-transact-sql).  
@@ -118,5 +118,5 @@ Per configurare e usare il provider di SQL Server PowerShell, vedere [provider d
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
- [ &#40;Modalità di disponibilità&#41; gruppi di disponibilità AlwaysOn](availability-modes-always-on-availability-groups.md)   
- [Failover e modalità &#40;di failover gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 
+ [Modalità di disponibilità &#40;Gruppi di disponibilità AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
+ [Failover e modalità di failover &#40;Gruppi di disponibilità AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 

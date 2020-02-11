@@ -1,5 +1,5 @@
 ---
-title: Uso di ADO con Microsoft Visual C++ | Microsoft Docs
+title: Utilizzo di ADO con Microsoft Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65a015888223fc94f5bf427b1d0b560d5e888ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926536"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Uso di ADO con Microsoft Visual C++
-Per informazioni sull'uso di ADO con Visual C++, vedere le sezioni seguenti:  
+Per informazioni sull'utilizzo di ADO con Visual C++, vedere le sezioni seguenti:  
   
 -   [Programmazione ADO in Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md)  
   
@@ -36,8 +36,8 @@ Per informazioni sull'uso di ADO con Visual C++, vedere le sezioni seguenti:
   
 ## <a name="see-also"></a>Vedere anche  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Indice sintassi di Visual C++ per COM ADO per](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
- [ADO per indice sintassi di Visual C++ con #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Uso di ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Uso di ADO con linguaggi di Scripting](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
+ [Indice della sintassi ADO for Visual C++ per COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
+ [ADO per Visual C++ indice della sintassi con #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Utilizzo di ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [Utilizzo di ADO con i linguaggi di scripting](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
  [Estensioni di Visual C++ per ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241211"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
@@ -40,7 +40,7 @@ FROM T1
   
  Il risultato è `<doc/>`.  
   
- La dichiarazione XML, ad esempio `<?xml version='1.0'?>`, non è mantenuta quando si archiviano i dati XML in un'istanza del tipo di dati `xml`. Questo si verifica per motivi strutturali. La dichiarazione XML () e relativi attributi (versione/encoding/stand-alone) vengono persi dopo che i dati viene convertito nel tipo `xml`. La dichiarazione XML viene considerata come una direttiva per il parser XML. I dati XML vengono archiviati internamente come ucs-2. Tutte le altre PI nell'istanza XML vengono mantenute.  
+ La dichiarazione XML, ad esempio `<?xml version='1.0'?>`, non è mantenuta quando si archiviano i dati XML in un'istanza del tipo di dati `xml`. Questo si verifica per motivi strutturali. La dichiarazione XML () e i relativi attributi (version/encoding/stand-alone) vengono persi dopo la conversione dei dati `xml`nel tipo. La dichiarazione XML viene considerata come una direttiva per il parser XML. I dati XML vengono archiviati internamente come ucs-2. Tutte le altre PI nell'istanza XML vengono mantenute.  
   
   
 ### <a name="order-of-attributes"></a>Ordine degli attributi  
@@ -87,19 +87,19 @@ GO
   
   
 ##  <a name="query"></a> Impostazione di opzioni query obbligatorie  
- Quando si eseguono query `xml` usando le variabili o colonne di tipo `xml` metodi con tipo di dati, le opzioni seguenti devono essere impostati come illustrato.  
+ Quando si eseguono `xml` query su colonne o variabili `xml` di tipo utilizzando metodi con tipo di dati, è necessario impostare le opzioni seguenti come illustrato.  
   
 |Opzioni SET|Valori richiesti|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|ANSI_NULLS|ATTIVA|  
+|ANSI_PADDING|ATTIVA|  
+|ANSI_WARNINGS|ATTIVA|  
+|ARITHABORT|ATTIVA|  
+|CONCAT_NULL_YIELDS_NULL|ATTIVA|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|ATTIVA|  
   
- Se le opzioni non sono impostate come indicato, le query e modifiche su `xml` metodi con tipo di dati avrà esito negativo.  
+ Se le opzioni non vengono impostate come indicato, le query e le `xml` modifiche sui metodi con tipo di dati avranno esito negativo.  
   
   
 ## <a name="see-also"></a>Vedere anche  

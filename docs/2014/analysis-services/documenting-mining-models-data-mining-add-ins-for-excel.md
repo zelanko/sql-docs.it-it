@@ -1,5 +1,5 @@
 ---
-title: Documentazione di modelli di Data Mining (componenti aggiuntivi Data Mining per Excel i dati) | Microsoft Docs
+title: Documentazione di modelli di data mining (componenti aggiuntivi Data mining per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,30 +16,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081585"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentazione di modelli di data mining (componenti aggiuntivi Data mining per Excel)
-  ![Pulsante modello di documento, barra multifunzione Data Mining](media/dmc-docmodel.gif "pulsante modello di documento, barra multifunzione Data Mining")  
+  ![Pulsante Modello di documento, barra multifunzione Data mining](media/dmc-docmodel.gif "Pulsante Modello di documento, barra multifunzione Data mining")  
   
- Il **modello di documento** procedura guidata crea un report che fornisce informazioni utili sui modelli di data mining creati. Documentando i modelli creati, è possibile tenere traccia dell'origine dei dati utilizzati per generare un modello, ottenere ulteriori informazioni relative al momento dell'elaborazione del modello e tenere traccia delle modifiche ai parametri che influiscono sui risultati del modello.  
+ La procedura guidata **modello di documento** consente di creare un report che fornisce informazioni utili sui modelli di data mining creati. Documentando i modelli creati, è possibile tenere traccia dell'origine dei dati utilizzati per generare un modello, ottenere ulteriori informazioni relative al momento dell'elaborazione del modello e tenere traccia delle modifiche ai parametri che influiscono sui risultati del modello.  
   
 ## <a name="using-the-document-model-wizard"></a>Utilizzo della procedura guidata Modello di documento  
   
-1.  Scegliere il **Data Mining** scheda.  
+1.  Fare clic sulla scheda **data mining** .  
   
-2.  Nel **modello di utilizzo** gruppo, fare clic su **modello di documento**.  
+2.  Nel gruppo **utilizzo modelli** fare clic su **modello di documento**.  
   
-3.  Nel **Seleziona modello** finestra di dialogo, selezionare il modello su cui basare i report e quindi fare clic su **successivo**. È necessario eseguire la **modello di documento** guidata separatamente per ogni modello che si desidera documentare.  
+3.  Nella finestra di dialogo **Seleziona modello** selezionare il modello in cui eseguire il report, quindi fare clic su **Avanti**. È necessario eseguire la procedura guidata **modello di documento** separatamente per ogni modello che si desidera documentare.  
   
-4.  Nel **selezione dettagli della documentazione** finestra di dialogo scegliere una delle due opzioni: **Informazioni complete** oppure **informazioni di riepilogo**.  
+4.  Nella finestra di dialogo **Selezione dettagli della documentazione** scegliere una delle due opzioni seguenti: **informazioni complete** o **informazioni di riepilogo**.  
   
-5.  Scegliere **Fine**.  
+5.  Fare clic su **Fine**.  
   
-6.  La procedura guidata crea automaticamente un nuovo foglio di lavoro che contiene il report specificato, denominato **documentazione sul modello**,  
+6.  La procedura guidata crea automaticamente un nuovo foglio di foglio contenente il report specificato, denominato **documentazione del modello**,  
   
 ## <a name="understanding-the-report"></a>Informazioni sul report  
  Quando si crea un report che documenta un modello di data mining, è possibile creare un riepilogo, contenente informazioni di base come il nome e la descrizione del modello, oppure un report completo, contenente i dettagli relativi alla struttura sottostante e informazioni avanzate sul modello di data mining.  
@@ -59,7 +59,7 @@ ms.locfileid: "66081585"
 |**Risultati modello**|Association Rules|Numero di set di elementi<br /><br /> Numero di regole|  
 ||Clustering|Numero di cluster<br /><br /> Supporto per ogni cluster|  
 ||Albero delle decisioni|Numero di alberi<br /><br /> Numero di nodi in ogni albero|  
-||Linear Regression|Numero di alberi (sempre 1)<br /><br /> Numero di nodi (sempre 1)|  
+||Linear regression|Numero di alberi (sempre 1)<br /><br /> Numero di nodi (sempre 1)|  
 ||Naive Bayes|Attributi importanti|  
 ||Neural Network|Numero di nodi di input<br /><br /> Numero di nodi di output<br /><br /> Numero di nodi nascosti|  
 ||Sequence Clustering|Numero di cluster|  
@@ -71,13 +71,13 @@ ms.locfileid: "66081585"
 |-|-|-|  
 |**Metadati**|Metadati modello|Valori e parametri dell'algoritmo|  
 ||Metadati colonna|Nome colonna<br /><br /> Uso<br /><br /> Tipo di dati<br /><br /> Tipo di contenuto<br /><br /> Valori (elenco di valori discreti o intervallo di valori)|  
-|**Statistiche del modello**|Colonne continue|Valore medio<br /><br /> Valore minimo<br /><br /> Valore massimo<br /><br /> Radice errore quadratico medio<br /><br /> Errore assoluto medio<br /><br /> Punteggio in forma logaritmica<br /><br /> Formula di regressione (solo per i modelli per la regressione lineare)|  
+|**Statistiche modello**|Colonne continue|Valore medio<br /><br /> Valore minimo<br /><br /> Valore massimo<br /><br /> Radice errore quadratico medio<br /><br /> Errore assoluto medio<br /><br /> Punteggio in forma logaritmica<br /><br /> Formula di regressione (solo per i modelli per la regressione lineare)|  
 ||Colonne discrete|Numero di test superati<br /><br /> Numero di test non superati<br /><br /> Punteggio in forma logaritmica<br /><br /> Accuratezza|  
   
 > [!NOTE]  
->  È possibile documentare qualsiasi tipo di modello supportato da SQL Server Analysis Services. Nella tabella sono pertanto inclusi alcuni tipi di modelli che non è possibile creare tramite Strumenti di analisi tabelle o utilizzando le procedure guidate in Client di data mining. Tuttavia, è possibile creare tutti i tipi di modello utilizzando il **Editor avanzato Query Data Mining**. Per altre informazioni, vedere [Query &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
+>  È possibile documentare qualsiasi tipo di modello supportato da SQL Server Analysis Services. Nella tabella sono pertanto inclusi alcuni tipi di modelli che non è possibile creare tramite Strumenti di analisi tabelle o utilizzando le procedure guidate in Client di data mining. Tuttavia, è possibile creare tutti i tipi di modello utilizzando l' **Editor avanzato query di data mining**. Per ulteriori informazioni, vedere [Query &#40;SQL Server componenti aggiuntivi Data Mining&#41;](query-sql-server-data-mining-add-ins.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuzione e scalabilità di modelli di Data Mining &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [Distribuzione e scalabilità di modelli di data mining &#40;componenti aggiuntivi Data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

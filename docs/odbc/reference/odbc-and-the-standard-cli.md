@@ -1,5 +1,5 @@
 ---
-title: ODBC e l'interfaccia della riga di comando Standard | Microsoft Docs
+title: ODBC e l'interfaccia della riga di comando standard | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,65 +17,65 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5222282bce2acf49cc6a144667ddd691528b3693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944840"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e l'interfaccia della riga di comando standard
-Consente di allineare ODBC con le seguenti specifiche degli standard in grado di gestire con l'interfaccia a livello di chiamata (CLI). (Le funzioni ODBC sono un superset della ognuno di questi standard).  
+ODBC è allineato alle specifiche e agli standard seguenti che gestiscono l'interfaccia della riga di comando (CLI). Le funzionalità ODBC sono un superset di ognuno di questi standard.  
   
--   La specifica di CAE Open Group "gestione dei dati: SQL a livello di chiamata Interface (CLI)"  
+-   La specifica CAE del gruppo Open "Gestione dati: interfaccia della riga di comando di SQL (CLI)"  
   
--   ISO/IEC 9075-3:1995 (E) a livello di chiamata interfaccia (SQL/CLI)  
+-   Interfaccia a livello di chiamata ISO/IEC 9075-3:1995 (E) (SQL/CLI)  
   
- In seguito a questa allineamento, si verifica quanto segue:  
+ In seguito a questo allineamento, si verifica quanto segue:  
   
--   Un'applicazione scritta in base alle specifiche Open Group e ISO CLI funzionerà con un database ODBC *3.x* driver o un driver conforme agli standard quando viene compilato con ODBC *3.x* intestazione file, con collegamenti e ODBC *3.x* librerie, e quando riesce ad accedere al driver tramite ODBC *3.x* gestione Driver.  
+-   Un'applicazione scritta nelle specifiche dell'interfaccia della riga di comando ISO e del gruppo aperto funzionerà con un driver ODBC *3. x* o un driver conforme agli standard quando viene compilato con i file di intestazione ODBC *3. x* e collegato alle librerie ODBC 3 *.* x e quando ottiene l'accesso al driver tramite Gestione driver ODBC *3. x* .  
   
--   È possibile utilizzare un driver scritti in base alle specifiche Open Group e ISO CLI con un database ODBC *3.x* applicazione o un'applicazione conforme agli standard quando viene compilato con ODBC *3.x* i file di intestazione e collegato con ODBC *3.x* librerie, e quando l'applicazione può accedere al driver tramite ODBC *3.x* gestione Driver. (Per altre informazioni, vedere [applicazioni conformi agli standard e i driver](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Un driver scritto nelle specifiche dell'interfaccia della riga di comando ISO e del gruppo aperto funzionerà con un'applicazione ODBC *3. x* o un'applicazione conforme agli standard quando viene compilata con i file di intestazione ODBC *3. x* e collegata alle librerie ODBC *3.* x e quando l'applicazione ottiene l'accesso al driver tramite Gestione driver ODBC *3. x* . Per ulteriori informazioni, vedere [applicazioni e driver conformi agli standard](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- Il livello di conformità di interfaccia Core comprende tutte le funzionalità di ISO CLI e tutte le funzionalità necessari della riga di comando gruppo aperto. Funzionalità opzionali della riga di comando di gruppo aprire vengono visualizzati nei livelli superiori della conformità di interfaccia. Poiché tutti ODBC *3.x* i driver devono supportare le funzionalità di livello la conformità di interfaccia di Core, vengono soddisfatte le seguenti:  
+ Il livello di conformità dell'interfaccia di base comprende tutte le funzionalità nell'interfaccia della riga di comando ISO e tutte le funzionalità non facoltative nell'interfaccia della riga di comando del gruppo aperto. Le funzionalità facoltative dell'interfaccia della riga di comando di gruppo aperto vengono visualizzate nei livelli di conformità dell'interfaccia più elevati. Poiché tutti i driver ODBC *3. x* sono necessari per supportare le funzionalità del livello di conformità dell'interfaccia principale, sono soddisfatte le condizioni seguenti:  
   
--   Un database ODBC *3.x* driver supporterà tutte le funzionalità usate da un'applicazione conforme agli standard.  
+-   Un driver ODBC *3. x* supporterà tutte le funzionalità usate da un'applicazione conforme agli standard.  
   
--   Un database ODBC *3.x* applicazione usando solo le funzionalità di ISO CLI e le funzionalità necessari della riga di comando di gruppo aprire funzionerà con qualsiasi driver conforme agli standard.  
+-   Un'applicazione ODBC *3. x* che usa solo le funzionalità dell'interfaccia della riga di comando ISO e le funzionalità non facoltative dell'interfaccia della riga di comando di gruppo aperto funzioneranno con qualsiasi driver conforme agli standard.  
   
- Oltre alle specifiche di interfaccia a livello di chiamata contenute negli standard ISO/IEC e CLI di gruppo aprire ODBC implementa le funzionalità seguenti. (Alcune di queste funzionalità disponibili nelle versioni di ODBC prima ODBC *3.x*.)  
+ Oltre alle specifiche dell'interfaccia a livello di chiamata contenute negli standard dell'interfaccia della riga di comando ISO/IEC e Open Group, ODBC implementa le funzionalità seguenti. (Alcune di queste funzionalità erano disponibili nelle versioni di ODBC precedenti a ODBC *3. x*).  
   
--   Operazioni di recupero con più righe da una singola chiamata di funzione  
+-   Più righe recupera da una singola chiamata di funzione  
   
 -   Associazione a una matrice di parametri  
   
--   Supporto per segnalibro inclusi recupero tramite segnalibro, a lunghezza variabile segnalibri e blocco di aggiornamento ed eliminazione dalle operazioni di segnalibro su righe non contigue  
+-   Supporto dei segnalibri, incluso il recupero da segnalibro, segnalibri a lunghezza variabile e l'aggiornamento e l'eliminazione bulk tramite operazioni segnalibro su righe non contigue  
   
 -   Associazione per riga  
   
--   Offset di associazione  
+-   Offset di binding  
   
--   Supporto per i batch di istruzioni SQL, in una stored procedure o come una sequenza di istruzioni SQL eseguite attraverso **SQLExecute** o **SQLExecDirect**  
+-   Supporto per batch di istruzioni SQL, in una stored procedure o come sequenza di istruzioni SQL eseguite tramite **SQLExecute** o **SQLExecDirect**  
   
--   Conteggio delle righe del cursore esatto o approssimativo  
+-   Conteggio delle righe di cursore esatte o approssimative  
   
--   Eliminazioni e operazioni di eliminazione e gli aggiornamenti in batch e aggiornamento posizionato dalla chiamata di funzione (**SQLSetPos**)  
+-   Operazioni di aggiornamento ed eliminazione posizionate e aggiornamenti in batch ed eliminazioni per chiamata di funzione (**SQLSetPos**)  
   
--   Funzioni di catalogo che consentono di estrarre informazioni dallo schema di informazioni senza la necessità di viste degli schemi delle informazioni di supporto  
+-   Funzioni di catalogo che estraggono informazioni dallo schema informativo senza la necessità di supportare le viste degli schemi delle informazioni  
   
--   Sequenze di escape per gli outer join, funzioni scalari, valori letterali di data/ora, valori letterali intervallo e le stored procedure  
+-   Sequenze di escape per outer join, funzioni scalari, valori letterali datetime, valori letterali intervallo e stored procedure  
   
--   Librerie di codici traduzione  
+-   Librerie di conversione di pagine di codice  
   
--   La segnalazione di un driver a livello di conformità ANSI e supporto di SQL  
+-   Segnalazione del livello di conformità ANSI di un driver e del supporto SQL  
   
--   On demand il popolamento automatico del descrittore di parametri di implementazione  
+-   Popolamento automatico su richiesta del descrittore del parametro di implementazione  
   
--   Diagnostica avanzata e le matrici di stato di riga e di parametro  
+-   Diagnostica avanzata e matrici di stato di righe e parametri  
   
--   Data/ora, intervallo, numerici o decimali e tipi di buffer dell'applicazione a 64 bit  
+-   Tipi di buffer di applicazione DateTime, Interval, numeric/Decimal e a 64 bit  
   
 -   Esecuzione asincrona  
   
--   Supporto delle stored procedure, comprese le sequenze di escape, meccanismi di associazione di parametro di output e funzioni di catalogo  
+-   Supporto delle stored procedure, incluse sequenze di escape, meccanismi di associazione di parametri di output e funzioni di catalogo  
   
--   Miglioramenti alle connessioni, incluso il supporto per gli attributi di connessione e l'esplorazione di attributo
+-   Miglioramenti della connessione, incluso il supporto per gli attributi di connessione e l'esplorazione degli attributi

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,38 +23,38 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265693"
 ---
-# <a name="sysdmosspinlockstats-transact-sql"></a>Sys.dm_os_spinlock_stats (Transact-SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce informazioni su tutte le attese di spinlock organizzati per tipo.  
+Restituisce informazioni su tutte le attese di SpinLock organizzate in base al tipo.  
   
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(256)**|Nome del tipo di spinlock.|  
-|conflitti|**bigint**|Il numero di volte in cui un thread tenta di acquisire lo spinlock e viene bloccato perché un altro thread attualmente contiene lo spinlock.|  
-|Attiva|**bigint**|Il numero di volte in cui un thread esegue un ciclo durante il tentativo di acquisire lo spinlock.|  
-|spins_per_collision|**real**|Rapporto tra rotazioni per ogni conflitto.|  
-|sleep_time|**bigint**|La quantità di tempo in millisecondi impiegato dal thread per sospesi in caso di un backoff.|  
-|Nota|**int**|Il numero di volte in cui un thread che "rotazione" non riesce ad acquisire lo spinlock e produce l'utilità di pianificazione.|  
+|name|**nvarchar(256)**|Nome del tipo SpinLock.|  
+|conflitti|**bigint**|Numero di volte in cui un thread tenta di acquisire lo spinlock ed è bloccato perché un altro thread attualmente possiede SpinLock.|  
+|giri|**bigint**|Numero di volte in cui un thread esegue un ciclo durante il tentativo di acquisizione di SpinLock.|  
+|spins_per_collision|**reale**|Rapporto di spine per collisione.|  
+|sleep_time|**bigint**|Quantità di tempo in millisecondi impiegato dai thread per la sospensione in caso di backoff.|  
+|backoff|**int**|Il numero di volte in cui un thread che è "Spinning" non riesce ad acquisire il spinlock e restituisce l'utilità di pianificazione.|  
 
 
-## <a name="permissions"></a>Permissions  
-Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione nel database. Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard e i livelli Basic, è necessario il **amministratore del Server** o un' **amministratore di Azure Active Directory** account.    
+## <a name="permissions"></a>Autorizzazioni  
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .    
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  
- Sys.dm_os_spinlock_stats può essere utilizzato per identificare l'origine della contesa di spinlock. In alcuni casi, potrebbe essere in grado di risolvere o ridurre la contesa di spinlock. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ sys. dm_os_spinlock_stats può essere utilizzato per identificare l'origine della contesa di SpinLock. In alcune situazioni, potrebbe essere possibile risolvere o ridurre la contesa di SpinLock. Si possono tuttavia presentare situazioni in cui è necessario contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- È possibile ripristinare il contenuto di sys.dm_os_spinlock_stats usando `DBCC SQLPERF` come indicato di seguito:  
+ È possibile reimpostare il contenuto di sys. dm_os_spinlock_stats usando `DBCC SQLPERF` come indicato di seguito:  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -67,11 +67,11 @@ GO
 >  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato, le statistiche non sono persistenti. Tutti i dati sono cumulativi a partire dall'ultima reimpostazione delle statistiche oppure dall'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="spinlocks"></a>SpinLock  
- Venga liberato uno spinlock è un oggetto di sincronizzazione leggero utilizzato per serializzare l'accesso alle strutture di dati che vengono in genere mantenute per un breve periodo di tempo. Quando un thread tenta di accedere a una risorsa protetta da venga liberato uno spinlock che viene viene assegnato da un altro thread, il thread sarà eseguire un ciclo, o "attivare" e ripetere l'accesso anche in questo caso, la risorsa anziché immediatamente restituendo l'utilità di pianificazione come impostare un latch o un'altra risorsa Attendere. Il thread continua rotante fino a quando la risorsa è disponibile, o il ciclo viene completato, a quel punto il thread producono l'utilità di pianificazione e tornare indietro nella coda eseguibile. Questa procedura consente di ridurre il cambio di contesto eccessivo thread, ma quando la contesa venga liberato uno spinlock è elevata, è possibile osservare l'utilizzo della CPU significativo.
+ SpinLock è un oggetto di sincronizzazione leggero usato per serializzare l'accesso alle strutture di dati che in genere vengono mantenute per un breve periodo di tempo. Quando un thread tenta di accedere a una risorsa protetta da uno spinlock che viene mantenuto da un altro thread, il thread eseguirà un ciclo o "Spin" e riproverà ad accedere alla risorsa, invece di restituire immediatamente l'utilità di pianificazione come con un latch o un'altra risorsa attendere. Il thread continuerà a ruotare fino a quando la risorsa non è disponibile o il ciclo viene completato, a quel punto il thread produrrà l'utilità di pianificazione e tornerà nella coda eseguibile. Questa procedura consente di ridurre il cambio del contesto di thread eccessivo, ma quando la contesa per uno spinlock è elevata, è possibile osservare un utilizzo significativo della CPU.
    
- Nella tabella seguente contiene una breve descrizione di alcuni dei tipi più comuni di spinlock.  
+ La tabella seguente contiene brevi descrizioni di alcuni dei tipi più comuni di SpinLock.  
   
-|Tipo di SpinLock|Descrizione|  
+|Tipo SpinLock|Descrizione|  
 |-----------------|-----------------|  
 |ABR|Solo per uso interno.|
 |ADB_CACHE|Solo per uso interno.|
@@ -105,10 +105,10 @@ GO
 |COLUMNSTORE_HASHTABLE|Solo per uso interno.|
 |COLUMNSTOREBUILDSTATE_LIST|Solo per uso interno.|
 |COM_INIT|Solo per uso interno.|
-|ESEGUIRE IL COMMIT|Solo per uso interno.|
+|COMMIT|Solo per uso interno.|
 |COMPPLAN_SKELETON|Solo per uso interno.|
 |CONNECTION_MANAGER|Solo per uso interno.|
-|SI CONNETTE|Solo per uso interno.|
+|COLLEGA|Solo per uso interno.|
 |CSIBUILDMEM|Solo per uso interno.|
 |CURSOR|Solo per uso interno.|
 |CURSQL|Solo per uso interno.|
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|Solo per uso interno.|
 |DBT_HASH|Solo per uso interno.|
 |DBT_IO_LIST|Solo per uso interno.|
-|DBTABLE|Controlla l'accesso a una struttura di dati in memoria per ogni database in un Server SQL che contiene le proprietà di tale database. Visualizzare [questo articolo](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789) per altre informazioni. |
+|DBTABLE|Controlla l'accesso a una struttura di dati in memoria per ogni database in un SQL Server che contiene le proprietà di tale database. Per altre informazioni, vedere [questo articolo](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
 |DEFERRED_WF_EXT_DROP|Solo per uso interno.|
 |DEK_INSTANCE|Solo per uso interno.|
 |DELAYED_PARTITIONED_STACK|Solo per uso interno.|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|Solo per uso interno.|
 |DINPBUF|Solo per uso interno.|
 |DIRECTLOGCONSUMER|Solo per uso interno.|
-|DP_LIST|Controlla l'accesso all'elenco di pagine dirty per un database con checkpoint indiretto attivato. Visualizzare [questo articolo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510) per altre informazioni.|
+|DP_LIST|Controlla l'accesso all'elenco di pagine dirty per un database in cui è attivato il Checkpoint indiretto. Per altre informazioni, vedere [questo articolo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
 |DROP|Solo per uso interno.|
 |DROP_TEMPO|Solo per uso interno.|
 |DROPPED_ALLOC_UNIT|Solo per uso interno.|
@@ -177,7 +177,7 @@ GO
 |HTTP|Solo per uso interno.|
 |HTTP_CONNCACHE|Solo per uso interno.|
 |HTTP_ENDPOINT|Solo per uso interno.|
-|IDENTITY|Solo per uso interno.|
+|IDENTITÀ|Solo per uso interno.|
 |INDEX_CREATE|Solo per uso interno.|
 |IO_DISPENSER_PAUSE|Solo per uso interno.|
 |IO_RG_VOLUME_HASHTABLE|Solo per uso interno.|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|Solo per uso interno.|
 |LIVE_TARGET_TVF|Solo per uso interno.|
 |LOCK_FREE_LIST|Solo per uso interno.|
-|LOCK_HASH|Consente di proteggere l'accesso alla tabella hash di blocco manager che contiene informazioni sui blocchi mantenuti in un database. Visualizzare [questo articolo](https://support.microsoft.com/kb/2926217) per altre informazioni.|
+|LOCK_HASH|Consente di proteggere l'accesso alla tabella hash di gestione blocchi in cui sono archiviate le informazioni sui blocchi mantenuti in un database. Per altre informazioni, vedere [questo articolo](https://support.microsoft.com/kb/2926217).|
 |LOCK_NOTIFICATION|Solo per uso interno.|
 |LOCK_RESOURCE_ID|Solo per uso interno.|
 |LOCK_RW_ABTX_HASH_SET|Solo per uso interno.|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|Solo per uso interno.|
 |SOS_BLOCKALLOCPARTIALLIST|Solo per uso interno.|
 |SOS_BLOCKDESCRIPTORBUCKET|Solo per uso interno.|
-|SOS_CACHESTORE|Sincronizza l'accesso alle diverse cache in memoria in SQL Server, ad esempio la cache dei piani o cache tabelle temporanee. Un'intensa contesa per questo tipo di spinlock può avere molti diversi significati a seconda della cache specifica che è in conflitto. Contatto [!INCLUDE[msCoName](../../includes/msconame-md.md)] servizio supporto tecnico clienti per indicazioni sulla risoluzione di questo tipo di spinlock. |
+|SOS_CACHESTORE|Sincronizza l'accesso a diverse cache in memoria in SQL Server come la cache dei piani o la cache della tabella temporanea. Una contesa forte su questo tipo di SpinLock può indicare molti aspetti diversi a seconda della cache specifica in conflitto. Contattare [!INCLUDE[msCoName](../../includes/msconame-md.md)] il servizio supporto tecnico clienti per informazioni sulla risoluzione di questo tipo di SpinLock. |
 |SOS_CACHESTORE_CLOCK|Solo per uso interno.|
 |SOS_CLOCKALG_INTERNODE_SYNC|Solo per uso interno.|
 |SOS_DEBUG_HOOK|Solo per uso interno.|
@@ -355,7 +355,7 @@ GO
 |SQLTRACE_FILE_BUFFER|Solo per uso interno.|
 |SRVPROC|Solo per uso interno.|
 |STACK_HASHER|Solo per uso interno.|
-|SUBLATCH|Solo per uso interno.|
+|Sottolatch|Solo per uso interno.|
 |SUBPDESC|Solo per uso interno.|
 |SUBPDESC_LIST|Solo per uso interno.|
 |SVC_BROKER_CTRL|Solo per uso interno.|
@@ -408,11 +408,11 @@ GO
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [Viste a gestione dinamica relative al sistema di operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server viste a gestione dinamica relative al sistema operativo &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 
- [Quando è Spinlock un utilizzo significativo del Driver di CPU in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
+ [Quando SpinLock rappresenta un driver significativo di utilizzo della CPU in SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [Diagnosticare e risolvere la contesa di Spinlock di SQL Server](https://www.microsoft.com/download/details.aspx?id=26666)
+ [Diagnosi e risoluzione della contesa di SpinLock nei SQL Server](https://www.microsoft.com/download/details.aspx?id=26666)
   
   
 

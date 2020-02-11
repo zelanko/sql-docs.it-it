@@ -1,5 +1,5 @@
 ---
-title: Dialogo Aggiungi tabella (Query e Progettazione viste) (Visual Database Tools) | Microsoft Docs
+title: Finestra di dialogo Aggiungi tabella (Progettazione query e Progettazione viste) (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374014ee4ccdd783cee3eeb7bad5c5e728906299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460171"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Finestra di dialogo Aggiungi tabella (Progettazione query e Progettazione viste) (Visual Database Tools)
@@ -28,13 +28,13 @@ ms.locfileid: "63460171"
   
 ## <a name="options"></a>Opzioni  
  **Tabelle**  
- Elenca le tabelle che è possibile aggiungere al riquadro **Diagramma** . Per aggiungere una tabella, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più tabelle, selezionarle e fare clic su **Aggiungi**.  
+ Elenca le tabelle che è possibile aggiungere al riquadro **diagramma** . Per aggiungere una tabella, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più tabelle, selezionarle e fare clic su **Aggiungi**.  
   
- **Viste**  
- Elenca le viste che è possibile aggiungere al riquadro **Diagramma** . Per aggiungere una vista, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più viste, selezionarle e fare clic su **Aggiungi**.  
+ **Visualizzazioni**  
+ Elenca le visualizzazioni che è possibile aggiungere al riquadro **diagramma** . Per aggiungere una vista, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più viste, selezionarle e fare clic su **Aggiungi**.  
   
  **Funzioni**  
- Elenca le funzioni definite dall'utente che è possibile aggiungere al riquadro **Diagramma** . Per aggiungere una funzione, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più funzioni, selezionarle e fare clic su **Aggiungi**.  
+ Elenca le funzioni definite dall'utente che è possibile aggiungere al riquadro **diagramma** . Per aggiungere una funzione, selezionarla e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più funzioni, selezionarle e fare clic su **Aggiungi**.  
   
  **Sinonimi**  
  Elenca i sinonimi che è possibile aggiungere al riquadro **Diagramma** . Per aggiungere un sinonimo, selezionarlo e fare clic su **Aggiungi**. Per aggiungere contemporaneamente più sinonimi, selezionarli e fare clic su **Aggiungi**.  
@@ -42,7 +42,7 @@ ms.locfileid: "63460171"
  **Aggiorna**  
  Aggiorna l'elenco includendo tutte le modifiche apportate al database da quando l'elenco è stato recuperato l'ultima volta.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Aggiunge l'elemento o gli elementi selezionati.  
   
 ## <a name="see-also"></a>Vedere anche  

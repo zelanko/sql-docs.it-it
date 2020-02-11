@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460016"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Eliminare le righe nel riquadro Risultati (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "63460016"
 >  Se una delle righe selezionate non può essere eliminata dal database, non ne verrà eliminata alcuna e verrà visualizzato un messaggio che indicherà quali righe non possono essere eliminate.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare query di eliminazione &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Creazione di query DELETE &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

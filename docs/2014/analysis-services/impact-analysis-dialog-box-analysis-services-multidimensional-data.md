@@ -1,5 +1,5 @@
 ---
-title: Influisce sulla finestra di dialogo di analisi (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo analisi di incidenza (dati multidimensionali Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080745"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Analisi di impatto (Analysis Services - Dati multidimensionali)
@@ -38,7 +38,7 @@ ms.locfileid: "66080745"
  **Tipo impatto**  
  Indica l'effetto che l'elaborazione degli oggetti elencati nella finestra di dialogo **Elabora** avrà sull'oggetto dipendente. Nella tabella seguente vengono elencati i possibili effetti dell'elaborazione, ognuno dei quali viene individuato come la causa di un avviso o di un errore.  
   
-|Impatto|`Message`|  
+|Impatto|Message|  
 |------------|-------------|  
 |L'oggetto verrà cancellato (non elaborato)|Avviso|  
 |L'oggetto risulterà non valido|Errore|  
@@ -47,11 +47,11 @@ ms.locfileid: "66080745"
 |Gli indici verranno rimossi|Avviso|  
 |Gli oggetti che non sono figli verranno elaborati|Avviso|  
   
- **Oggetto del processo**  
+ **Elabora oggetto**  
  Consente di selezionare gli oggetti dipendenti che si desidera includere nell'operazione di elaborazione. Sarà necessario elaborare gli oggetti dipendenti non selezionati al termine dell'operazione di elaborazione. In caso contrario, non sarà possibile utilizzarli.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Elaborare la finestra di dialogo &#40;Analysis Services - dati multidimensionali&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Finestra di dialogo elabora &#40;Analysis Services-Dati multidimensionali&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

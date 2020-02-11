@@ -1,5 +1,5 @@
 ---
-title: Modificare le etichette (componenti aggiuntivi Data Mining SQL Server dati) | Microsoft Docs
+title: Modifica etichette (SQL Server componenti aggiuntivi Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5471720cbd3084c661dec93d9c7f4f680e066b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070397"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>Modifica etichette (componenti aggiuntivi Data mining di SQL Server)
-  ![Icona di Office 13 per lo strumento Modifica etichette](media/dm13-relabel.gif "sull'icona di Office 13 per lo strumento Modifica etichette dati")  
+  ![Icona di Office 13 per lo strumento Modifica etichette](media/dm13-relabel.gif "Icona di Office 13 per lo strumento Modifica etichette")  
   
  Il client di data mining per Excel consente di creare nuove etichette per i dati per semplificare la comprensione dei risultati dell'analisi.  
   
@@ -36,33 +36,33 @@ ms.locfileid: "66070397"
   
 ## <a name="using-the-relabel-wizard"></a>Utilizzo della procedura guidata Modifica etichette  
   
-1.  Nel **Data Mining** sulla barra multifunzione, fare clic su **Pulisci** e quindi selezionare **Rietichettare**.  
+1.  Sulla barra multifunzione **data mining** fare clic su **Pulisci** e quindi selezionare **nuova etichetta**.  
   
 2.  Selezionare la tabella o l'intervallo di dati contenente i dati che si desidera correggere.  
   
-3.  Nel **rietichettare** pagina della procedura guidata, selezionare una singola colonna scegliendo la colonna nell'elenco a discesa o facendo clic nella colonna il **esempi di dati** riquadro.  
+3.  Nella pagina modifica **etichette** della procedura guidata selezionare una singola colonna scegliendo la colonna nell'elenco a discesa oppure facendo clic sulla colonna nel riquadro **esempi di dati** .  
   
-     Il **esempi di dati** riquadro Mostra solo circa 50 righe di dati, ma vengono campionate per garantire di vedere un'ampia gamma di valori.  
+     Il riquadro **esempi di dati** Mostra solo circa 50 righe di dati, ma sono campionate per assicurarsi che venga visualizzata una corretta distribuzione dei valori.  
   
-     Fare clic sull'intestazione di colonna per **conteggio** per ordinare per il conteggio di ogni valore.  
+     Fare clic sull'intestazione di colonna per **conteggio** per eseguire l'ordinamento in base al conteggio di ogni valore.  
   
-     È possibile anche ordinare **etichette originali**, che è utile se si desidera modificare prima le etichette tutti i valori massimi o minimi.  
+     È anche possibile eseguire l'ordinamento in base alle **etichette originali**, che risulta utile se si desidera rietichettare prima tutti i valori più alti o più bassi.  
   
-4.  Nel **rietichettare** pagina di dati della procedura guidata, rivedere i valori nel **etichette originali** colonna e decidere come si desidera raggrupparli o modificarli.  
+4.  Nella pagina **nuova etichetta** dati della procedura guidata, esaminare i valori nella colonna **etichette originali** e decidere come si desidera raggrupparli o modificarli.  
   
-5.  Digitare un nuovo valore nella riga in **nuove etichette**. È inoltre possibile scegliere un valore nell'elenco dei valori esistenti. Mentre si digitano, i nuovi valori diventano disponibili per essere subito riutilizzati.  
+5.  Digitare un nuovo valore nella riga sotto **nuove etichette**. È inoltre possibile scegliere un valore nell'elenco dei valori esistenti. Mentre si digitano, i nuovi valori diventano disponibili per essere subito riutilizzati.  
   
-6.  Dopo l'immissione di numero di righe sufficiente, fare clic su **successivo**e il **Seleziona destinazione** pagina, scegliere in cui si salveranno i dati stati.  
+6.  Dopo aver immesso un numero sufficiente di righe, fare clic su **Avanti**. nella pagina **Seleziona destinazione** scegliere il percorso in cui verranno salvati i dati rietichettati.  
   
     -   **Aggiungi come nuova colonna al foglio di lavoro corrente**  
   
          Fare clic per aggiungere una nuova colonna alla tabella contenente i nuovi valori.  
   
-    -   **Copiare i dati del foglio modificati in un nuovo foglio di lavoro**  
+    -   **Copia i dati del foglio modificati in un nuovo foglio di lavoro**  
   
          Fare clic per creare un nuovo foglio di lavoro contenente i dati aggiornati.  
   
-    -   **Modificare i dati sul posto**  
+    -   **Modifica dati nella posizione originale**  
   
          Fare clic per sostituire i dati originali con i nuovi valori.  
   

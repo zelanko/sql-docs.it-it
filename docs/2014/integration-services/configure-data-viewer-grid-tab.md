@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060659"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configura visualizzatore dati (scheda Griglia)
@@ -32,10 +32,10 @@ ms.locfileid: "66060659"
  Selezionare il nome di una colonna e quindi fare clic sulla freccia singola per spostare la colonna nell'elenco **Colonne inutilizzate** . Per spostare tutti i nomi delle colonne nell'elenco **Colonne inutilizzate** , fare clic sulla freccia doppia.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configura visualizzatore dati &#40;scheda Generale&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
- [Configura visualizzatore dati &#40;scheda grafico a colonne&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [Configura visualizzatore dati &#40;scheda istogramma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
- [Configura visualizzatore dati &#40;scheda grafico a dispersione&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+ [Configurare il Visualizzatore dati &#40;scheda generale&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+ [Configurare Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
+ [Configurare il Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
+ [Configurare il Visualizzatore dati &#40;scheda grafico a dispersione&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Flusso di dati](data-flow/data-flow.md)   
  [Debug di un flusso di dati](troubleshooting/debugging-data-flow.md)  
   

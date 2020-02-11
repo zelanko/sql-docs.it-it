@@ -1,5 +1,5 @@
 ---
-title: Creare membri calcolati | Microsoft Docs
+title: Creazione di membri calcolati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076281"
 ---
 # <a name="create-calculated-members"></a>Creare membri calcolati
@@ -29,7 +29,7 @@ ms.locfileid: "66076281"
   
  I membri calcolati vengono creati nei cubi. Per creare un membro calcolato, nella scheda **Calcoli** di Progettazione cubi fare clic sull'icona **Nuovo membro calcolato** sulla barra degli strumenti. Verrà visualizzato un form in cui è possibile specificare le opzioni seguenti per il membro calcolato.  
   
- **Name**  
+ **Nome**  
  Selezionare il nome del membro calcolato. Questo nome viene visualizzato nell'intestazione della colonna o della riga contenente i valori del membro calcolato quando gli utenti finali esplorano il cubo.  
   
  **Gerarchia padre**  
@@ -61,7 +61,7 @@ ms.locfileid: "66076281"
  Stringa formato  
  Consente di specificare il formato dei valori di cella basati sul membro calcolato. Questa proprietà supporta gli stessi valori della proprietà `Display Format` delle misure. Per altre informazioni sui formati di visualizzazione, vedere [Configurare le proprietà delle misure](configure-measure-properties.md).  
   
- Visibile  
+ Visible  
  Determina se il membro calcolato è visibile o nascosto quando vengono recuperati i metadati del cubo. Se il membro calcolato è nascosto, può comunque essere utilizzato in espressioni MDX, istruzioni e script, ma non viene visualizzato come oggetto selezionabile nelle interfacce utente client.  
   
  Gestione NON EMPTY  

@@ -1,5 +1,5 @@
 ---
-title: Eseguire un aggiornamento fittizio per un articolo di Merge (programmazione Transact-SQL della replica) | Microsoft Docs
+title: Esecuzione di un aggiornamento fittizio per un articolo di merge (programmazione Transact-SQL della replica) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 691988cd229f9b0c9ab81f31713a2b2e46806bdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162002"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>Esecuzione di un aggiornamento fittizio per un articolo di merge (programmazione Transact-SQL della replica)
@@ -29,7 +29,7 @@ ms.locfileid: "63162002"
   
 1.  Eseguire l'operazione, ad esempio UPDATETEXT, su una riga in una tabella pubblicata di merge che richiede un aggiornamento fittizio.  
   
-2.  Nel database del server di pubblicazione o del Sottoscrittore nel quale è stata apportata la modifica, eseguire [sp_mergedummyupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql). Specificare la tabella nella quale è stata apportata la modifica per **@source_object** e l'identificatore univoco della riga modificata per **@rowguid** .  
+2.  Nel database del server di pubblicazione o del Sottoscrittore nel quale è stata apportata la modifica, eseguire [sp_mergedummyupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql). Specificare la tabella per la quale è stata apportata **@source_object**la modifica e l'identificatore univoco della riga modificata **@rowguid**per.  
   
 3.  Sincronizzare la sottoscrizione per replicare la riga modificata.  
   

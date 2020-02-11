@@ -16,18 +16,18 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769185"
 ---
-# <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
+# <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Aggiunge un nuovo filtro di merge per la creazione di una partizione in base a un join con un'altra tabella. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,14 +53,14 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'`Articolo padre al quale l'articolo figlio, specificato da *article*, deve essere unito utilizzando la clausola join specificata da *join_filterclause*per determinare le righe dell'articolo figlio che soddisfano il criterio di filtro del filtro di merge. *join_articlename* è di **tipo sysname**e non prevede alcun valore predefinito. È necessario che l'articolo sia presente nella pubblicazione fornita dalla *pubblicazione*.  
   
-`[ @join_filterclause = ] join_filterclause`Clausola join che deve essere utilizzata per unire in join l'articolo figlio specificato dall'articolo e l'articolo padre specificato da *join_article*per determinare le righe che qualificano il filtro di merge. *join_filterclause* è di **tipo nvarchar (1000)** .  
+`[ @join_filterclause = ] join_filterclause`Clausola join che deve essere utilizzata per unire in join l'articolo figlio specificato dall' *articolo e l'* articolo padre specificato da *join_article*per determinare le righe che qualificano il filtro di merge. *join_filterclause* è di **tipo nvarchar (1000)**.  
   
-`[ @join_unique_key = ] join_unique_key`Specifica se il join tra l'articolodell'articolo figlio e l'articolo padre *join_article*è uno-a-molti, uno-a-uno, molti-a-uno o molti-a-molti. *join_unique_key* è di **tipo int**e il valore predefinito è 0. **0** indica un join molti-a-uno o molti-a-molti. **1** indica un join uno-a-uno o uno-a-molti. Questo valore è **1** quando le colonne di join formano una chiave univoca in *join_article*o se *join_filterclause* è compreso tra una chiave esterna in un *articolo* e una chiave primaria in *join_article*.  
+`[ @join_unique_key = ] join_unique_key`Specifica se il join tra l'articolo *dell'articolo figlio e l'* articolo padre *join_article*è uno-a-molti, uno-a-uno, molti-a-uno o molti-a-molti. *join_unique_key* è di **tipo int**e il valore predefinito è 0. **0** indica un join molti-a-uno o molti-a-molti. **1** indica un join uno-a-uno o uno-a-molti. Questo valore è **1** quando le colonne di join formano una chiave univoca in *join_article*o se *join_filterclause* tra una chiave esterna in un *articolo* e una chiave primaria in *join_article*.  
   
 > [!CAUTION]  
 >  Impostare questo parametro su **1** solo se si dispone di un vincolo nella colonna di join nella tabella sottostante per l'articolo padre che garantisce l'univocità. Se *join_unique_key* è impostato su **1** in modo errato, è possibile che si verifichi la non convergenza dei dati.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo di merge non saranno valide per lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
@@ -74,7 +74,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Specifica il tipo di filtro da aggiungere. *filter_type* è di **tinyint**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1**|Solo filtro di join. Necessario per supportare [!INCLUDE[ssEW](../../includes/ssew-md.md)] i sottoscrittori.|  
 |**2**|Solo relazione tra record logici.|  
@@ -82,11 +82,11 @@ sp_addmergefilter [ @publication = ] 'publication'
   
  Per altre informazioni, vedere [Raggruppare modifiche alle righe correlate con record logici](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_addmergefilter** viene utilizzata per la replica di tipo merge.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_addmergefilter** viene utilizzata nella replica di tipo merge.  
   
  **sp_addmergefilter** può essere utilizzato solo con gli articoli di tabella. Gli articoli di vista e di vista indicizzata non sono supportati.  
   
@@ -103,16 +103,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addmergefilter](../../relational-databases/replication/codesnippet/tsql/sp-addmergefilter-transa_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addmergefilter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Definizione e modifica di un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
- [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

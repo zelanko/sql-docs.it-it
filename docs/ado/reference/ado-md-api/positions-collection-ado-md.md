@@ -1,5 +1,5 @@
 ---
-title: Posiziona raccolta (ADO MD) | Microsoft Docs
+title: Raccolta Positions (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,30 +18,30 @@ ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc293c966b044c7d580907d55c7b94f96e077dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949215"
 ---
 # <a name="positions-collection-ado-md"></a>Raccolta Positions (ADO MD)
-Contiene il [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) oggetti che definiscono un punto su un asse.  
+Contiene gli oggetti [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) che definiscono un punto su un asse.  
   
-## <a name="remarks"></a>Note  
- **Le posizioni** è un insieme standard di ADO. Con le proprietà e metodi di una raccolta, è possibile eseguire le operazioni seguenti:  
+## <a name="remarks"></a>Osservazioni  
+ **Positions** è una raccolta ADO standard. Con le proprietà e i metodi di una raccolta, è possibile eseguire le operazioni seguenti:  
   
--   Ottenere il numero di oggetti nella raccolta con il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà.  
+-   Ottenere il numero di oggetti nella raccolta con la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Restituisce un oggetto dalla raccolta con il valore predefinito [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
+-   Restituisce un oggetto dalla raccolta con la proprietà dell' [elemento](../../../ado/reference/ado-api/item-property-ado.md) predefinito.  
   
--   Aggiornare gli oggetti nella raccolta dal provider con il [Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md) (metodo).  
+-   Aggiornare gli oggetti della raccolta dal provider con il metodo [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
- In questa sezione contiene gli argomenti seguenti.  
+ Questa sezione contiene l'argomento seguente.  
   
 -   [Proprietà, metodi ed eventi](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Esempio di celle (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Oggetto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Oggetto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Oggetto Position (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)

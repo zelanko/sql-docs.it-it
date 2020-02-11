@@ -1,5 +1,5 @@
 ---
-title: Aggiungere funzionalità di Business Intelligence a una dimensione | Microsoft Docs
+title: Aggiungere funzionalità di Business Intelligence per le dimensioni a una dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd5d6917544cca3506d37ec13e058f4bce9fe77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076916"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Aggiungere funzionalità di Business Intelligence per le dimensioni a una dimensione
@@ -34,7 +34,7 @@ ms.locfileid: "66076916"
 >  Se come dimensione si seleziona **Conto** , verrà specificata la funzionalità di Business Intelligence per la contabilità per la dimensione. Per altre informazioni, vedere [Aggiungere funzionalità di Business Intelligence per la contabilità a una dimensione](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="specifying-dimension-attributes"></a>Definizione degli attributi dimensione  
- Nel **definiscono funzionalità di Business Intelligence** nella pagina **tipo di dimensione** dall'elenco di selezione effettuata imposta la dimensione `Type` proprietà. L'impostazione della proprietà `Type` fornisce informazioni sul contenuto di una dimensione a server e applicazioni client. Alcune impostazioni forniscono solo indicazioni per le applicazioni client e pertanto queste impostazioni sono facoltative. Altre impostazioni, ad esempio Conti o Ora, determinano funzionalità specifiche e possono essere obbligatorie per l'implementazione di particolari funzionalità avanzate di Business Intelligence. Ad esempio, SQL Server Management Studio utilizza il tipo di dimensione per identificare una dimensione di tipo Valuta e impostare le regole di conversione appropriate per la valuta. L'impostazione predefinita per **Tipo dimensione** è **Regolare**, ovvero non viene usato alcun contenuto specifico della dimensione.  
+ Nella pagina **Definizione funzionalità di business intelligence** per le dimensioni, in elenco **tipo di dimensione** , la selezione effettuata imposta `Type` la proprietà della dimensione. L'impostazione della proprietà `Type` fornisce informazioni sul contenuto di una dimensione a server e applicazioni client. Alcune impostazioni forniscono solo indicazioni per le applicazioni client e pertanto queste impostazioni sono facoltative. Altre impostazioni, ad esempio Conti o Ora, determinano funzionalità specifiche e possono essere obbligatorie per l'implementazione di particolari funzionalità avanzate di Business Intelligence. Ad esempio, SQL Server Management Studio utilizza il tipo di dimensione per identificare una dimensione di tipo Valuta e impostare le regole di conversione appropriate per la valuta. L'impostazione predefinita per **Tipo dimensione** è **Regolare**, ovvero non viene usato alcun contenuto specifico della dimensione.  
   
  Dopo aver selezionato il tipo di dimensione, in **Attributi dimensione**nella colonna **Includi** selezionare la casella di controllo accanto a ogni tipo di attributo standard per il quale esiste un attributo corrispondente nella dimensione. Nella colonna **Attributo dimensione** espandere l'elenco a discesa e selezionare l'attributo nella dimensione corrispondente al tipo di attributo selezionato. La selezione dell'attributo dall'elenco comporta l'impostazione della proprietà `Type` degli attributi.  
   

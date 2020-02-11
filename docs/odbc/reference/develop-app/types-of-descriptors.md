@@ -1,5 +1,5 @@
 ---
-title: Tipi di descrittori di | Microsoft Docs
+title: Tipi di descrittori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,40 +13,40 @@ ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d9d4a7572131afeeb0017d3773b72d899052b32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087787"
 ---
 # <a name="types-of-descriptors"></a>Tipi di descrittori
-Un descrittore viene usato per descrivere uno dei seguenti:  
+Un descrittore viene usato per descrivere uno dei seguenti elementi:  
   
--   Un set di zero o più parametri. Un descrittore del parametro può essere utilizzato per descrivere:  
+-   Set di zero o più parametri. Un descrittore di parametro può essere usato per descrivere:  
   
-    -   Il *buffer del parametro dell'applicazione,* che contiene degli argomenti dinamici inpui come impostato dall'applicazione o degli argomenti dinamici output dopo l'esecuzione di un **CHIAMARE** istruzione SQL.  
+    -   Il *buffer del parametro dell'applicazione,* che contiene gli argomenti dinamici di input impostati dall'applicazione o gli argomenti dinamici di output dopo l'esecuzione di un'istruzione **Call** di SQL.  
   
-    -   Il *buffer dei parametri di implementazione*. Per argomenti di input dinamici, contiene gli stessi argomenti come il buffer del parametro dell'applicazione, dopo l'applicazione può specificare qualsiasi conversione di dati. Per argomenti dinamici di output, contiene gli argomenti restituiti, prima di qualsiasi conversione di dati che può specificare l'applicazione.  
+    -   *Buffer del parametro di implementazione*. Per gli argomenti dinamici di input, contiene gli stessi argomenti del buffer del parametro dell'applicazione, dopo la conversione dei dati che l'applicazione può specificare. Per gli argomenti dinamici di output, contiene gli argomenti restituiti, prima di qualsiasi conversione dei dati che l'applicazione può specificare.  
   
-     Per argomenti di input dinamici, l'applicazione deve funzionare su un descrittore di parametri dell'applicazione prima di eseguire qualsiasi istruzione SQL contenente i marcatori di parametro dinamico. Per argomenti dinamici di input e di output, l'applicazione può specificare tipi di dati diversi da quelli nel descrittore di parametri di implementazione per ottenere la conversione dei dati.  
+     Per gli argomenti dinamici di input, l'applicazione deve agire su un descrittore di parametri dell'applicazione prima di eseguire qualsiasi istruzione SQL contenente marcatori di parametro dinamici. Per gli argomenti dinamici di input e di output, l'applicazione può specificare tipi di dati diversi da quelli nel descrittore del parametro di implementazione per ottenere la conversione dei dati.  
   
--   Una singola riga di dati del database. Un descrittore riga può essere utilizzato per descrivere:  
+-   Una singola riga di dati del database. Un descrittore di riga può essere utilizzato per descrivere:  
   
-    -   Il *buffer di riga di implementazione,* che contiene la riga dal database. (Questi buffer concettualmente contengono dati così come scritta o letta dal database. Tuttavia, i moduli archiviati dei dati del database non sono specificato. Un database è stato possibile eseguire la conversione aggiuntiva sui dati dal formato nel buffer di implementazione.)  
+    -   *Buffer della riga di implementazione,* che contiene la riga del database. Questi buffer contengono concettualmente i dati scritti o letti dal database. Tuttavia, il formato archiviato dei dati del database non è specificato. Un database può eseguire una conversione aggiuntiva sui dati dal relativo form nel buffer di implementazione.  
   
-    -   Il *buffer di riga dell'applicazione,* che contiene la riga di dati presentato all'applicazione, qualsiasi conversione di dati che l'applicazione può specificare di seguito.  
+    -   Il *buffer della riga dell'applicazione,* che contiene la riga di dati presentata all'applicazione, in seguito a qualsiasi conversione dei dati che l'applicazione può specificare.  
   
-     L'applicazione opera nel descrittore della riga di applicazione in tutti i casi in cui i dati della colonna dal database devono comparire in variabili di applicazione. Per ottenere la conversione dei dati di dati della colonna, l'applicazione può specificare tipi di dati diversi da quelli nel descrittore della riga di implementazione.  
+     L'applicazione opera sul descrittore di riga dell'applicazione in ogni caso in cui i dati delle colonne del database devono essere visualizzati nelle variabili dell'applicazione. Per ottenere la conversione dei dati della colonna, l'applicazione può specificare tipi di dati diversi da quelli nel descrittore della riga di implementazione.  
   
- Nella tabella seguente sono riepilogati i tipi di descrittore.  
+ I tipi di descrittore sono riepilogati nella tabella seguente.  
   
 |Tipo di buffer|Righe|Parametri dinamici|  
 |-----------------|----------|------------------------|  
-|**Buffer dell'applicazione**|descrittore della riga di applicazione (ARD)|descrittore del parametro dell'applicazione (APD)|  
-|**Buffer di implementazione**|descrittore della riga di implementazione (IRD)|Descrizione del parametro di implementazione (IPD)|  
+|**Buffer applicazione**|Descrittore di riga dell'applicazione (ARD)|Descrittore del parametro dell'applicazione (APD)|  
+|**Buffer di implementazione**|Descrittore della riga di implementazione (IRD)|Descrittore parametri di implementazione (dpi)|  
   
- Per il parametro o il buffer di riga, se l'applicazione specifica tipi di dati diversi in record corrispondente dei descrittori di implementazione e dell'applicazione, il driver esegue la conversione dei dati quando si usa i descrittori. Ad esempio, può convertire valori numerici e data/ora in formato stringa di caratteri. (Per le conversioni valide, vedere [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ Per il parametro o i buffer di riga, se l'applicazione specifica tipi di dati diversi nei record corrispondenti dei descrittori di implementazione e dell'applicazione, il driver esegue la conversione dei dati quando usa i descrittori. È ad esempio possibile convertire i valori numerici e DateTime in formato stringa di caratteri. Per le conversioni valide, vedere [Appendice D: tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
- Un descrittore di è possibile eseguire diversi ruoli. Istruzioni diversi possono condividere qualsiasi descrittore allocate in modo esplicito dall'applicazione. Un descrittore delle righe in un'unica istruzione può essere utilizzato come un descrittore del parametro in un'altra istruzione.  
+ Un descrittore può eseguire ruoli diversi. Diverse istruzioni possono condividere qualsiasi descrittore allocato in modo esplicito dall'applicazione. Un descrittore di riga in un'istruzione può fungere da descrittore di parametro in un'altra istruzione.  
   
- È sempre possibile sapere se un determinato descrittore è un descrittore applicazione o un descrittore di implementazione, anche se il descrittore non è ancora stato utilizzato in un'operazione di database. Per i descrittori allocati in modo implicito l'implementazione, l'implementazione registra la riga predefinita rispetto all'handle di istruzione. Qualsiasi descrittore che consente di allocare l'applicazione chiamando **SQLAllocHandle** è un descrittore applicazione.
+ È sempre noto se un determinato descrittore è un descrittore dell'applicazione o un descrittore di implementazione, anche se il descrittore non è ancora stato utilizzato in un'operazione di database. Per i descrittori allocati dall'implementazione in modo implicito, l'implementazione registra la riga predefinita relativa all'handle di istruzione. Qualsiasi descrittore allocato dall'applicazione chiamando **SQLAllocHandle** è un descrittore dell'applicazione.

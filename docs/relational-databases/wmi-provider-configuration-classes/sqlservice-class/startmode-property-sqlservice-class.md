@@ -18,10 +18,10 @@ ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660864"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Proprietà StartMode (classe SqlService)
@@ -36,7 +36,7 @@ object.StartMode [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  Oggetto della [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) che rappresenta il servizio.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
@@ -50,13 +50,13 @@ object.StartMode [= value]
  Sistema  
  Valore = 1. Servizio avviato dal metodo **IoInitSystem** . Questa opzione è valida solo per i servizi del driver.  
   
- Automatic  
+ Automatico  
  Valore = 2. Servizio da avviare automaticamente da Gestione controllo servizi durante l'avvio del sistema.  
   
- Manual  
+ Manuale  
  Valore = 3. Servizio da avviare da Gestione computer quando un processo chiama il metodo **StartService** .  
   
- Disabilitata  
+ Disabled  
  Valore = 4. Impossibile avviare il servizio.  
   
 ## <a name="remarks"></a>Osservazioni  

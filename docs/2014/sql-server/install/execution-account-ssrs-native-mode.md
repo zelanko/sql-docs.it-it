@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952542"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Account di esecuzione (modalità nativa SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "71952542"
   
 -   Quando il server di report si connette a un altro server per recuperare file di immagine esterni o altre risorse a cui si fa riferimento in un report.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modalità nativa.  
   
  L'impostazione di questo account è facoltativa, tuttavia se non viene eseguita viene limitato l'utilizzo di immagini e connessioni esterne ad alcune origini dati. Quando si recuperano immagini di file esterni, il server di report verifica se è possibile eseguire una connessione anonima. Se la connessione è protetta da password, il server di report utilizza l'account per l'esecuzione automatica dei report per connettersi al server remoto. Durante il recupero di dati per un report, il server di report rappresenta l'utente corrente, richiede all'utente di specificare le credenziali, utilizza le credenziali archiviate oppure utilizza l'account per l'esecuzione automatica se la connessione all'origine dati non specifica **alcun** tipo di credenziale. Il server di report non consente la delega o la rappresentazione delle credenziali dell'account di servizio quando ci si connette ad altri computer, pertanto è necessario utilizzare l'account per l'esecuzione automatica se non sono disponibili altre credenziali.  
   
@@ -37,24 +37,24 @@ ms.locfileid: "71952542"
 > [!NOTE]  
 >  Se si utilizza [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] with Advanced Services, è necessario configurare questo account solo se si fa riferimento a immagini esterne in un report ed è necessaria l'autorizzazione per accedere al file di immagine. In SQL Server Express la connessione all'origine dati in un server remoto non è supportata. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
- Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Account di esecuzione** nel riquadro di navigazione. Per altre informazioni, vedere [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Per aprire questa pagina, avviare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e selezionare **Account di esecuzione** nel riquadro di navigazione. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opzioni  
- **Specifica account di esecuzione**  
+ **Specificare un account di esecuzione**  
  Selezionare questa opzione per specificare un account.  
   
  **Account**  
- Immettere un account utente di dominio di Windows. Usare questo formato: *\<domini>\\<account utente\>* .  
+ Immettere un account utente di dominio di Windows. Usare questo formato: * \<dominio>\\<account\>utente*.  
   
  **Password**  
  Digitare la password.  
   
  **Conferma password**  
- Immettere nuovamente la password.  
+ digitare nuovamente la password.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reporting Services Configuration Manager &#40;argomenti della Guida sensibile al contesto&#41;  modalità nativa SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Reporting Services Configuration Manager argomenti della Guida F1 &#40;modalità nativa di SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Archiviare dati crittografati del server di report &#40;Configuration Manager SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

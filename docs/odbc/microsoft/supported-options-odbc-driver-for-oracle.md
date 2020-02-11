@@ -1,5 +1,5 @@
 ---
-title: Opzioni (Driver ODBC per Oracle) supportate | Microsoft Docs
+title: Opzioni supportate (driver ODBC per Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f3a08b400c24308c7466f379ecd4dd6eb6c2b8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939894"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>Opzioni supportate (driver ODBC per Oracle)
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- Il Driver ODBC per Oracle supporta le opzioni seguenti per le funzioni di livello 1 () SQLSetConnectOption SQLGetConnectOption ():  
+ Il driver ODBC per Oracle supporta le seguenti opzioni per le funzioni SQLGetConnectOption () e SQLSetConnectOption () di livello 1:  
   
--   SQL_ACCESS_MODE ([SQLGetConnectOption](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)solo ())  
+-   SQL_ACCESS_MODE (solo[SQLGetConnectOption](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)())  
   
 -   [SQL_AUTOCOMMIT](../../odbc/microsoft/connect-options.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67939894"
   
 -   [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)  
   
- Il Driver ODBC per Oracle supporta le opzioni seguenti per le funzioni di livello 1 () SQLSetStmtOption SQLGetStmtOption ():  
+ Il driver ODBC per Oracle supporta le seguenti opzioni per le funzioni SQLGetStmtOption () e SQLSetStmtOption () di livello 1:  
   
 -   [SQL_BIND_TYPE](../../odbc/microsoft/statement-options.md)  
   
