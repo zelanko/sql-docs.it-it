@@ -1,5 +1,5 @@
 ---
-title: Collegare un Report a un modello come Report click-through | Microsoft Docs
+title: Collegare un report a un modello come report click-through | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108364"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Collegare un report a un modello come report click-through
@@ -31,7 +31,7 @@ ms.locfileid: "66108364"
   
 1.  Aprire [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 o versione successiva.  
   
-2.  Nella barra degli indirizzi del browser digitare l'URL di Gestione report. Per impostazione predefinita, l'URL è http://\<*ComputerName*> / reports.  
+2.  Nella barra degli indirizzi del browser digitare l'URL di Gestione report. Per impostazione predefinita, l'URL è\<http://*nomecomputer*>/Reports.  
   
 ### <a name="to-create-a-customized-clickthrough-report"></a>Per creare un report click-through personalizzato  
   
@@ -48,15 +48,15 @@ ms.locfileid: "66108364"
   
 5.  Per visualizzare il report personalizzato quando viene selezionata una singola istanza dell'entità scelta, fare clic sul pulsante **Sfoglia** del report a istanza singola.  
   
-     oppure  
+     -oppure-  
   
      Per visualizzare il report personalizzato quando vengono selezionate più istanze dell'entità scelta, fare clic sul pulsante **Sfoglia** del report a più istanze.  
   
 6.  Selezionare il report, quindi fare clic su **OK**.  
   
-7.  Fare clic su **Applica**.  
+7.  Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Report click-through &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
+ [Report click-through &#40;&#41;SSRS](reports/clickthrough-reports-ssrs.md)  
   
   

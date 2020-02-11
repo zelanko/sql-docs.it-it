@@ -1,5 +1,5 @@
 ---
-title: Editor dei Form delle azioni (scheda azioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Editor dei form delle azioni (scheda azioni, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062963"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare il riquadro dell'editor dei form delle azioni della scheda **Azioni** in Progettazione cubi per creare e modificare azioni standard.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di digitare il nome dell'azione.  
   
  **Destinazione azione**  
@@ -32,11 +32,11 @@ ms.locfileid: "66062963"
  **Tipo di destinazione**  
  Consente di selezionare il tipo di oggetto a cui associare l'azione. Il server restituisce al client solo le azioni del tipo specificato relative all'oggetto. L'azione è disponibile per il client se il valore di **Condizione** viene soddisfatto e se sono selezionati gli oggetti specificati nella tabella seguente.  
   
-|Value|Oggetto selezionato|  
+|valore|Oggetto selezionato|  
 |-----------|---------------------|  
-|Membri dell'attributo|Un membro è selezionato da un livello basato sull'attributo in **Oggetto di destinazione**.|  
+|Membri dell'attributo|In **Oggetto di destinazione**è selezionato un membro dell'attributo da un livello basato sull'attributo.|  
 |Celle|In **Oggetto di destinazione** è selezionato il set denominato. Selezionare **Tutte le celle** per selezionare tutte le celle del cubo.|  
-|Cube|In **Oggetto di destinazione** è selezionato il cubo. Selezionare CURRENTCUBE per utilizzare il cubo corrente.<br /><br /> Nota: Uso di CURRENTCUBE garantisce maggiore portabilità nel caso in cui il cubo venga rinominato o l'azione copiata in altri cubi. È consigliabile utilizzare CURRENTCUBE per rappresentare il cubo corrente.|  
+|Cube|In **Oggetto di destinazione** è selezionato il cubo. Selezionare CURRENTCUBE per utilizzare il cubo corrente.<br /><br /> Nota: l'uso di CURRENTCUBE garantisce maggiore portabilità nel caso in cui il cubo venga rinominato o l'azione venga copiata in altri cubi. È consigliabile utilizzare CURRENTCUBE per rappresentare il cubo corrente.|  
 |Membri della dimensione|In **Oggetto di destinazione** è selezionato un membro della dimensione.|  
 |Gerarchia|In **Oggetto di destinazione** è selezionata la gerarchia.|  
 |Membri della gerarchia|In **Oggetto di destinazione** è selezionato un membro della gerarchia.|  
@@ -57,7 +57,7 @@ ms.locfileid: "66062963"
  **Tipo**  
  Consente di selezionare il tipo di azione da intraprendere quando l'azione viene eseguita. Sono disponibili i tipi di azione seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Set di dati|Restituisce un'istruzione MDX che rappresenta un set di dati multidimensionale e deve essere eseguita e visualizzata dall'applicazione client.|  
 |Proprietario|Restituisce una stringa sul proprietario che può essere interpretata dalle applicazioni client associate all'impostazione **Applicazione** relativa a questa azione.|  
@@ -81,10 +81,10 @@ ms.locfileid: "66062963"
   
  Nella tabella seguente vengono descritte le impostazioni disponibili.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Batch|L'azione deve essere eseguita come parte di un'operazione batch o di un'attività di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interattiva|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
+|Interattività|L'azione viene eseguita in seguito alla chiamata dell'utente.|  
 |Su apertura|L'azione viene eseguita quando il cubo viene aperto per la prima volta.|  
   
  **Applicazione**  
@@ -98,7 +98,7 @@ ms.locfileid: "66062963"
  **Descrizione**  
  Consente di digitare la descrizione facoltativa dell'azione.  
   
- **Caption**  
+ **Sottotitolo**  
  Consente di digitare la didascalia da visualizzare per l'azione nell'applicazione client se l'opzione **Didascalia MDX** è impostata su **False**.  
   
  Consente di digitare l'espressione MDX che restituisce una stringa per la didascalia se l'opzione **Didascalia MDX** è impostata su **True**.  
@@ -109,11 +109,11 @@ ms.locfileid: "66062963"
  Selezionare **True** per indicare che **Didascalia** contiene un'espressione MDX che restituisce una stringa che rappresenta una didascalia da visualizzare per l'azione nell'applicazione client. L'espressione MDX deve essere risolta prima che l'azione venga restituita all'applicazione client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Sulla barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Strumenti di calcolo &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor dei Form delle azioni drill-through &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor dei Form delle azioni report &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+ [Azioni &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra degli strumenti &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Libreria azioni &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Strumenti di calcolo &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor dei form delle azioni drill-through &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor dei form delle azioni report &#40;scheda azioni, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

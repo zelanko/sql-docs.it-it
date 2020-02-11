@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110137"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Esame della struttura corrente della tabella Employee
-  Il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contiene una tabella **Employee** nello schema **HumanResources**. Per evitare di modificare la tabella originale, in questo passaggio viene creata una copia della tabella **Employee** denominata **EmployeeDemo**. Per semplificare l'esempio, copiare solo cinque colonne della tabella originale. Quindi, si esegue una query di **HumanResources. Employeedemo** tabella per verificare la modalità con cui i dati sono strutturati in una tabella senza utilizzare il `hierarchyid` tipo di dati.  
+  Il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] di esempio contiene una tabella **Employee** nello schema **HumanResources** . Per evitare di modificare la tabella originale, in questo passaggio viene creata una copia della tabella **Employee** denominata **EmployeeDemo**. Per semplificare l'esempio, copiare solo cinque colonne della tabella originale. Viene quindi eseguita una query sulla tabella **HumanResources. EmployeeDemo** per esaminare il modo in cui i dati vengono strutturati in `hierarchyid` una tabella senza utilizzare il tipo di dati.  
   
 ### <a name="to-copy-the-employee-table"></a>Per copiare la tabella Employee  
   

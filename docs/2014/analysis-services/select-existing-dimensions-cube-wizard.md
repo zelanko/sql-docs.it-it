@@ -1,5 +1,5 @@
 ---
-title: Selezionare dimensioni esistenti (Creazione guidata cubo) | Microsoft Docs
+title: Selezione dimensioni esistenti (creazione guidata cubo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e02b4da19c3fe8cef9d31b304b1aeecdaa906bdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069520"
 ---
 # <a name="select-existing-dimensions-cube-wizard"></a>Seleziona dimensioni esistenti (Creazione guidata cubo)
   Utilizzare la pagina **Seleziona dimensioni esistenti** per selezionare le dimensioni esistenti da includere nel cubo.  
   
 ## <a name="options"></a>Opzioni  
- **Dimensions**  
+ **Dimensioni**  
  Selezionare le dimensioni da includere nel cubo.  
   
  Nell'elenco verranno visualizzate solo le dimensioni raggiungibili dai gruppi di misure selezionate nella pagina **Seleziona tabelle del gruppo di misure** di questa procedura guidata.  

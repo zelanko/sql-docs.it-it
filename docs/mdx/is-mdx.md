@@ -1,5 +1,5 @@
 ---
-title: (MDX) | Microsoft Docs
+title: IS (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aaf4151d8291ccd4249892c6ef8fce8a3d280f6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905986"
 ---
 # <a name="is-mdx"></a>IS (MDX)
@@ -35,13 +35,13 @@ Expression1 IS ( Expression2 | NULL )
  Espressione MDX valida che restituisce un riferimento a un oggetto MDX.  
   
 ## <a name="return-value"></a>Valore restituito  
- Valore booleano che restituisce **true** se entrambi gli argomenti fanno riferimento allo stesso oggetto; in caso contrario, **false**. Se il **NULL** parola chiave viene specificato, restituisce l'operatore **true** se *Expression1* è **null**; in caso contrario, **false** .  
+ Valore booleano che restituisce **true** se entrambi gli argomenti fanno riferimento allo stesso oggetto. in caso contrario, **false**. Se viene specificata la parola chiave **null** , l'operatore restituisce **true** se *expression1* è **null**. in caso contrario, **false**.  
   
-## <a name="remarks"></a>Note  
- Il **IS** operatore viene spesso usato per determinare se tuple e membri sono idempotenti, vale a dire che sono esattamente equivalenti.  
+## <a name="remarks"></a>Osservazioni  
+ L'operatore **is** viene spesso usato per determinare se le tuple e i membri sono idempotente, vale a dire che sono esattamente equivalenti.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come utilizzare il **IS** operatore per verificare se il membro corrente su un asse è un membro specifico:  
+ Nell'esempio seguente viene illustrato come utilizzare l'operatore **is** per verificare se il membro corrente su un asse è un membro specifico:  
   
  `With`  
   
@@ -62,6 +62,6 @@ Expression1 IS ( Expression2 | NULL )
  `[Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

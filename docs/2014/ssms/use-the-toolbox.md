@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280664"
 ---
 # <a name="use-the-toolbox"></a>Utilizzo della casella degli strumenti
@@ -27,7 +27,7 @@ ms.locfileid: "63280664"
   
  Gli elementi della casella degli strumenti sono raggruppati in sezioni denominate schede. Di seguito è riportato un elenco di riferimento delle attività più comuni che è possibile eseguire nella casella degli strumenti, insieme alla relativa procedura:  
   
-|Per|Procedere nel modo seguente|  
+|A|Procedere nel modo seguente|  
 |--------|-------------|  
 |Aprire la casella degli strumenti|Scegliere **Casella degli strumenti** dal menu **Visualizza**.|  
 |Impostare la casella degli strumenti in modo che si chiuda automaticamente|Aprire la casella degli strumenti. Scegliere **Nascondi automaticamente** dal menu **Finestra**.|  

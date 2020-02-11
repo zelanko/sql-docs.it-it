@@ -1,5 +1,5 @@
 ---
-title: Pagina nuova cartella (gestione Report) | Microsoft Docs
+title: Pagina nuova cartella (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108198"
 ---
 # <a name="new-folder-page-report-manager"></a>Pagina Nuova cartella (Gestione report)
@@ -34,18 +34,18 @@ ms.locfileid: "66108198"
 2.  Nella barra degli strumenti fare clic su **Nuova cartella**.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
- Consente di specificare il nome della cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ / * \< > | "oppure / per specificare un nome.  
+ **Nome**  
+ Consente di specificare il nome della cartella. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $/* \< > | "o/quando si specifica un nome.  
   
  **Descrizione**  
  Consente di digitare una descrizione del contenuto della cartella. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere alla cartella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, eliminare o modificare una cartella &#40;gestione Report&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
- [Pagina delle proprietà generale, cartelle di &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+ [Creare, eliminare o modificare una cartella &#40;Gestione report&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
+ [Pagina delle proprietà generale, cartelle &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
- [Pagina delle proprietà generale, cartelle di &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
+ [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Pagina delle proprietà generale, cartelle &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
   

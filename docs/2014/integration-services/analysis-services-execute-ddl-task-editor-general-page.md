@@ -1,5 +1,5 @@
 ---
-title: Analysis Services Execute DDL Task Editor (pagina generale) | Microsoft Docs
+title: Editor attività Esegui DDL Analysis Services (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,19 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061549"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor attività Esegui DDL Analysis Services (pagina Generale)
-  Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui DDL Analysis Services** per assegnare un nome e una descrizione all'attività Esegui DDL [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Usare la pagina **Generale** della finestra di dialogo **Editor attività Esegui DDL Analysis Services** per assegnare un nome e una descrizione all'attività Esegui DDL [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Per altre informazioni su questa attività, vedere [Attività Esegui DDL Analysis Services](control-flow/analysis-services-execute-ddl-task.md).  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di specificare un nome univoco per l'attività Esegui DDL [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Tale nome viene utilizzato come etichetta nell'icona dell'attività.  
   
 > [!NOTE]  
@@ -41,7 +41,7 @@ ms.locfileid: "66061549"
  [Editor attività Esegui DDL Analysis Services &#40;pagina DDL&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)   
  [Flusso di controllo](control-flow/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; riferimento](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Guida di riferimento a XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Analysis Services linguaggio di scripting &#40;riferimento&#41; ASSL](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [XML for Analysis &#40;riferimento&#41; XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

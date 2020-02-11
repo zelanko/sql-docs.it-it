@@ -14,13 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92aa4343d2c9ec6b0b69275be71923595e2dc76e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109530"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Gestione avvisi dati per gli amministratori di avvisi
+  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] include Gestione avvisi dati per consentire agli amministratori di avvisi di SharePoint di gestire gli avvisi dati. Gli amministratori di avvisi possono visualizzare le informazioni relative a tutti gli avvisi salvati nel sito, nonché eliminare avvisi. Nella figura seguente sono illustrate le funzionalità disponibili per i responsabili di avvisi di SharePoint tramite Gestione avvisi dati.  
   
  ![Gestione avvisi per gli amministratori del sito di SharePoint](media/rs-alertmanagersite.gif "Gestione avvisi per gli amministratori del sito di SharePoint")  
@@ -34,7 +35,7 @@ ms.locfileid: "66109530"
 > [!NOTE]  
 >  Un amministratore di avvisi può concedere agli Information Worker l'autorizzazione per accedere alle funzionalità di avviso dati di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Per informazioni sulle autorizzazioni richieste, vedere [Avvisi dati di Reporting Services](../ssms/agent/alerts.md).  
   
-##  <a name="ViewingAlerts"></a> Visualizzazione delle informazioni sugli avvisi dati  
+##  <a name="ViewingAlerts"></a>Visualizzazione delle informazioni sugli avvisi dati  
  Se Reporting Services viene installato e configurato in SharePoint, nella pagina Impostazioni sito di SharePoint sono incluse le opzioni di **Reporting Services** . Per aprire Gestione avvisi dati, gli amministratori di avvisi possono fare clic sull'opzione **Gestisci avvisi dati** disponibile in Reporting Services. Nella figura seguente viene illustrata la posizione nella pagina Impostazioni sito da cui è possibile aprire Gestione avvisi dati.  
   
  ![Sezione Reporting Services della pagina Impostazioni sito](media/rs-sitesettings.gif "Sezione Reporting Services della pagina Impostazioni sito")  
@@ -43,22 +44,23 @@ ms.locfileid: "66109530"
   
  Nella tabella seguente sono illustrati i dati di esempio di una tabella di Gestione avvisi dati. Quando si verifica un errore, il messaggio di errore e l'identificatore della voce nel log (un GUID) vengono inclusi nel campo **Stato** nella tabella.  
   
-|Nome dell'avviso|Nome del report|Creato da|Avvisi inviati|Ultima esecuzione|Data ultima modifica|Stato|  
+|Nome avviso|Nome report|Created By (Creato da)|Avvisi inviati|Ultima esecuzione|Data ultima modifica|Stato|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|L'ultimo avviso è stato eseguito correttamente e l'avviso è stato inviato.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|L'ultimo avviso è stato eseguito correttamente, tuttavia i dati non sono stati modificati e non è stato inviato alcun avviso.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<messaggio di errore>Il file di log contiene informazioni dettagliate sull'errore. Fare riferimento alla voce di log con l'identificatore: \<GUID>.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|
+  \<messaggio di errore>Il file di log contiene informazioni dettagliate sull'errore. Fare riferimento alla voce del log con l'identificatore: \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Avviso creato.|  
   
- Per altre informazioni, vedere [Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ Per ulteriori informazioni, vedere [gestire tutti gli avvisi dati in un sito di SharePoint in Gestione avvisi dati](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
  È possibile visualizzare tutti gli avvisi creati dagli utenti del sito. È necessario scegliere un utente, quindi scegliere se visualizzare tutti i relativi avvisi o solo quelli per un report specifico.  
   
   
-##  <a name="DeleteAlerts"></a> Eliminare avvisi dati  
+##  <a name="DeleteAlerts"></a>Elimina avvisi dati  
  Le definizioni di avviso dati vengono eliminate da Gestione avvisi dati. Ogni definizione di avviso dati dispone di un proprietario, ovvero l'utente di SharePoint da cui è stata creata. I proprietari possono eliminare solo le definizioni di avviso che hanno creato. Per altre informazioni, vedere [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
   
- Gli amministratori di avvisi di SharePoint possono elencare e quindi eliminare le definizioni di avviso create da tutti gli utenti del sito. Per altre informazioni, vedere [Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
+ Gli amministratori di avvisi di SharePoint possono elencare e quindi eliminare le definizioni di avviso create da tutti gli utenti del sito. Per ulteriori informazioni, vedere [gestire tutti gli avvisi dati in un sito di SharePoint in Gestione avvisi dati](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
  Dopo aver eliminato la definizione di avviso, non verranno inviati ulteriori avvisi. Se tuttavia si esegue una query sul database di avvisi, è possibile trovare ancora la definizione di avviso. Il servizio avvisi consente di eseguire la pulizia in base a una pianificazione e la definizione di avviso verrà eliminata definitivamente alla successiva operazione di pulizia. L'intervallo di pulizia predefinito è impostato su 20 minuti. Questo e altri intervalli di pulizia sono configurabili. Per altre informazioni, vedere [Avvisi dati di Reporting Services](../ssms/agent/alerts.md).  
   
@@ -66,7 +68,7 @@ ms.locfileid: "66109530"
 ##  <a name="HowTo"></a> Attività correlate  
  In questa sezione è elencata una procedura tramite cui viene illustrata la modalità di gestione degli avvisi.  
   
--   [Gestire tutti gli avvisi dati in un sito di SharePoint con Gestione avvisi dati](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
+-   [Gestire tutti gli avvisi dati in un sito di SharePoint](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
   
 ## <a name="see-also"></a>Vedere anche  

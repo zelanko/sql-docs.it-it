@@ -13,20 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63259155"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Sicurezza agente (Creazione guidata nuova pubblicazione)
-  La pagina **Sicurezza agente** consente di specificare gli account nell'ambito dei quali gli agenti seguenti vengono eseguiti e si connettono ai computer in una topologia di replica.  
+  La pagina **sicurezza agente** consente di specificare gli account utilizzati per l'esecuzione degli agenti seguenti e per stabilire connessioni ai computer in una topologia di replica:  
   
 -   Agente snapshot per tutte le pubblicazioni.  
   
 -   Agente di lettura log per tutte le pubblicazioni transazionali.  
   
--   Agente di lettura coda per le pubblicazioni transazionali con sottoscrizioni aggiornabili. Il processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per questo agente viene creato se si seleziona l'opzione **Pubblicazione transazionale con sottoscrizioni aggiornabili** nella pagina **Tipo di pubblicazione** , indipendentemente dal tipo di sottoscrizioni aggiornabili utilizzate. Per altre informazioni sulle sottoscrizioni aggiornabili, vedere [Sottoscrizioni aggiornabili - Per la replica transazionale](transactional/updatable-subscriptions-for-transactional-replication.md).  
+-   Agente di lettura coda per le pubblicazioni transazionali con sottoscrizioni aggiornabili. Il processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per questo agente viene creato se si seleziona l'opzione **Pubblicazione transazionale con sottoscrizioni aggiornabili** nella pagina **Tipo di pubblicazione** , indipendentemente dal tipo di sottoscrizioni aggiornabili utilizzate. Per altre informazioni sulle sottoscrizioni aggiornabili, vedere [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  Per informazioni sulle autorizzazioni necessarie per gli agenti e le procedure migliori per la sicurezza della replica, vedere [Replication Agent Security Model](security/replication-agent-security-model.md) e [Replication Security Best Practices](security/replication-security-best-practices.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63259155"
   
  Fare clic su **?** nella finestra di dialogo **Sicurezza agente snapshot** per ulteriori informazioni sulle autorizzazioni necessarie per gli account utilizzati dall'agente snapshot.  
   
- **Agente di lettura log**  
+ **agente di lettura log**  
  Visualizzato per tutte le pubblicazioni transazionali. Fare clic su **Impostazioni di sicurezza** per specificare le impostazioni di sicurezza nella finestra **Sicurezza agente di lettura log** .  
   
  Fare clic su **?** nella finestra di dialogo **Sicurezza agente di lettura log** per ulteriori informazioni sulle autorizzazioni necessarie per gli account utilizzati dall'agente di lettura log.  
@@ -44,8 +44,8 @@ ms.locfileid: "63259155"
 > [!NOTE]  
 >  esiste un agente di lettura log per ogni database pubblicato tramite la replica transazionale. Se esiste già una replica transazionale nel database, le impostazioni di sicurezza sono di sola lettura. È possibile modificare le impostazioni nella finestra di dialogo **Proprietà pubblicazione** , tuttavia le modifiche avranno effetto su tutte le pubblicazioni transazionali nel database.  
   
- **Agente di lettura coda**  
- Visualizzato per le pubblicazioni transazionali con sottoscrizioni aggiornabili. Fare clic su **Impostazioni di sicurezza** per specificare le impostazioni di sicurezza nella finestra di dialogo **Sicurezza agente di lettura coda** . Un processo di agente di lettura coda viene creato al termine della procedura guidata indipendentemente dalla creazione di sottoscrizioni ad aggiornamento in coda. Se non si prevede di creare sottoscrizioni ad aggiornamento in coda, è possibile disabilitare il processo. Fare clic con il pulsante destro del mouse sul processo, con nome nel formato *[\<ServerPubblicazione>].\<intero>*., nella cartella **Processi** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi scegliere **Disabilita**.  
+ **agente di lettura coda**  
+ Visualizzato per le pubblicazioni transazionali con sottoscrizioni aggiornabili. Fare clic su **Impostazioni di sicurezza** per specificare le impostazioni di sicurezza nella finestra di dialogo **Sicurezza agente di lettura coda** . Un processo di agente di lettura coda viene creato al termine della procedura guidata indipendentemente dalla creazione di sottoscrizioni ad aggiornamento in coda. Se non si prevede di creare sottoscrizioni ad aggiornamento in coda, è possibile disabilitare il processo. Fare clic con il pulsante destro del mouse sul processo, denominato nel formato *[\<Publisher\<>].>Integer *). nella cartella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **processi** di Agent, quindi fare clic su **Disabilita**.  
   
  Fare clic su **?** nella finestra di dialogo **Sicurezza agente di lettura coda** per ulteriori informazioni sulle autorizzazioni necessarie per gli account utilizzati dall'agente di lettura coda.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63259155"
   
 ## <a name="see-also"></a>Vedere anche  
  [Create a Publication](publish/create-a-publication.md)   
- [Creare una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md)   
  [Visualizzare e modificare le proprietà della pubblicazione](publish/view-and-modify-publication-properties.md)   
  [Gestire gli account di accesso e le password nella replica](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   

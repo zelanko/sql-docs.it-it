@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d7afa88f9d6239c8da7cb9c406ef11f0764f8dcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905916"
 ---
 # <a name="item-member-mdx"></a>Item (Member) (MDX)
@@ -31,11 +31,11 @@ Tuple_Expression.Item( Index )
  *Tuple_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una tupla.  
   
- *Index*  
+ *Indice*  
  Espressione numerica valida che specifica il membro specifico in base alla posizione nella tupla da restituire.  
   
-## <a name="remarks"></a>Note  
- Il **elemento** funzione restituisce un membro della tupla specificata. La funzione restituisce il membro trovato in corrispondenza della posizione in base zero specificata da *indice*.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Item** restituisce un membro dalla tupla specificata. La funzione restituisce il membro trovato nella posizione in base zero specificata da *index*.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito il membro `[2003]`, ovvero il primo elemento nella tupla `[Date].[Calendar Year].&[2003], [Measures].[Internet Sales Amount] ).`, nelle colonne:  
@@ -49,6 +49,6 @@ Tuple_Expression.Item( Index )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

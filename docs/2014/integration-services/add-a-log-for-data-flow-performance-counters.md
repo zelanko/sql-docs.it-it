@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un Log per i contatori delle prestazioni del flusso di dati | Microsoft Docs
+title: Aggiungere un log per i contatori delle prestazioni del flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062063"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Aggiunta di un registro per i contatori delle prestazioni del flusso di dati
   In questo argomento viene descritta la procedura per l'aggiunta di un registro per i contatori delle prestazioni forniti dal motore del flusso di dati.  
   
 > [!NOTE]  
->  Se [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene installato in un computer che esegue [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)]e tale computer viene aggiornato a [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)], il processo di aggiornamento rimuove i contatori delle prestazioni [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dal computer. Per ripristinare i contatori delle prestazioni [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nel computer, eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modalità di ripristino.  
+>  se [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] viene installato in un computer che esegue [!INCLUDE[winxpsvr](../includes/winxpsvr-md.md)]e il computer viene aggiornato a [!INCLUDE[firstref_longhorn](../includes/firstref-longhorn-md.md)], il processo di aggiornamento rimuove i contatori delle prestazioni [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dal computer. Per ripristinare i contatori delle prestazioni [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nel computer, eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modalità di ripristino.  
   
 ### <a name="to-add-logging-of-performance-counters"></a>Per attivare la creazione di registri dei contatori delle prestazioni  
   
@@ -49,9 +49,9 @@ ms.locfileid: "66062063"
   
     -   Selezionare **Select counters in list** (Seleziona i contatori dall'elenco) e selezionare i contatori delle prestazioni da usare.  
   
-9. Scegliere **Aggiungi**.  
+9. Fare clic su **Aggiungi**.  
   
-10. Scegliere **Chiudi**.  
+10. Fare clic su **Close**.  
   
 11. Nella finestra di dialogo **MioRegistro** esaminare l'elenco della registrazione dei contatori delle prestazioni nell'elenco **Contatori** .  
   
@@ -64,6 +64,6 @@ ms.locfileid: "66062063"
   
 ## <a name="see-also"></a>Vedere anche  
  [Contatori delle prestazioni](performance/performance-counters.md)   
- [Visualizzazione delle voci di log nella finestra Registra eventi](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
+ [Visualizzare le voci di log nella finestra Registra eventi](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   
   

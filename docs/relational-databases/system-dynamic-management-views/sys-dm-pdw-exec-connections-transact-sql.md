@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,35 +13,35 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899421"
 ---
-# <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
+# <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Restituisce informazioni sulle connessioni stabilite per questa istanza di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e i dettagli di ogni connessione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|Identifica la sessione associata alla connessione Uso `SESSION_ID()` per restituire il `session_id` della connessione corrente.|  
+|session_id|**int**|Identifica la sessione associata alla connessione Utilizzare `SESSION_ID()` per restituire l' `session_id` oggetto della connessione corrente.|  
 |connect_time|**datetime**|Timestamp relativo al momento in cui è stata stabilita la connessione. Non ammette i valori Null.|  
-|encrypt_option|**nvarchar(40)**|Indica TRUE (connessione è crittografata) o FALSE (connessione non è enctypred).|  
-|auth_scheme|**nvarchar(40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
-|client_id|**varchar(48)**|Indirizzo IP del client di connettersi a questo server. Ammette i valori Null.|  
-|sql_spid|**int**|ID del processo server della connessione. Uso `@@SPID` per restituire il `sql_spid` della connessione corrente. Per più illustrativi, usare il `session_id` invece.|  
+|encrypt_option|**nvarchar (40)**|Indica TRUE (connessione crittografata) o FALSE (la connessione non è enctypred).|  
+|auth_scheme|**nvarchar (40)**|Specifica lo schema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Autenticazione di Windows utilizzato con questa connessione. Non ammette i valori Null.|  
+|client_id|**varchar (48)**|Indirizzo IP del client che si connette a questo server. Ammette i valori Null.|  
+|sql_spid|**int**|ID del processo server della connessione. Utilizzare `@@SPID` per restituire l' `sql_spid` oggetto della connessione corrente. Per la maggior parte degli scopi, `session_id` usare invece.|  
   
-## <a name="permissions"></a>Permissions  
- È necessario **VIEW SERVER STATE** autorizzazione nel server.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione **View Server state** per il server.  
   
 ## <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
 ||||  
 |-|-|-|  
-|dm_pdw_exec_sessions.session_id|dm_pdw_exec_connections.session_id|Uno-a-uno|  
-|dm_pdw_exec_requests.connection_id|dm_pdw_exec_connections.connection_id|Molti-a-uno|  
+|dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|Uno-a-uno|  
+|dm_pdw_exec_requests. connection_id|dm_pdw_exec_connections. connection_id|Molti-a-uno|  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Query tipica per raccogliere informazioni su una connessione query personalizzata.  
@@ -58,7 +58,7 @@ WHERE c.session_id = SESSION_ID();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse e Parallel data warehouse viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
 

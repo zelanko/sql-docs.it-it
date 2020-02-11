@@ -1,5 +1,5 @@
 ---
-title: Elaborare partizioni nel Database dell'area di lavoro (SSAS tabulare) | Microsoft Docs
+title: Elaborare partizioni nel database dell'area di lavoro (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15b9f9203075734dd84d7b601574f66bc401e700
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066803"
 ---
-# <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>Elaborare partizioni nel Database dell'area di lavoro (SSAS tabulare)
+# <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>Elaborare partizioni nel database dell'area di lavoro (SSAS tabulare)
   Le partizioni consentono di dividere una tabella in parti logiche. Ogni partizione può quindi essere elaborata (aggiornata) indipendentemente dalle altre. Nelle attività di questo argomento viene descritto come elaborare le partizioni nel database dell'area lavoro modello tramite la finestra di dialogo **Elabora partizioni** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Dopo aver distribuito un modello in un'altra istanza di Analysis Services, gli amministratori di database possono creare e gestire partizioni nel modello (distribuito) tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], script o utilizzando un pacchetto di IS. Per altre informazioni, vedere [Creare e gestire partizioni di modelli tabulari &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md).  
   
-###  <a name="bkmk_create_new"></a> Per elaborare una partizione  
+###  <a name="bkmk_create_new"></a>Per elaborare una partizione  
   
 1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]fare clic sul menu **Modello** , scegliere **Elabora** (Aggiorna) e quindi fare clic su **Elabora partizioni**.  
   
 2.  Nella casella di riepilogo **Modalità** selezionare una delle modalità di elaborazione seguenti:  
   
-    |Modalità|Descrizione|  
+    |Mode|Descrizione|  
     |----------|-----------------|  
     |**Elaborazione predefinita**|Rileva lo stato di elaborazione di un oggetto partizione ed esegue l'elaborazione necessaria per recapitare oggetti partizione non elaborati o elaborati parzialmente in uno stato di elaborazione completa. Vengono caricati i dati per le tabelle vuote e le partizioni; vengono compilate o ricompilate le gerarchie, le colonne calcolate e le relazioni.|  
     |**Elaborazione completa**|Elabora un oggetto partizione e tutti gli oggetti in esso contenuti. Quando viene eseguita l'elaborazione completa per un oggetto che è stato già elaborato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono eliminati tutti i dati dell'oggetto, quindi quest'ultimo viene elaborato. Questo tipo di elaborazione è necessario quando è stata apportata una modifica strutturale a un oggetto.|  
     |**Elaborare dati**|Carica i dati in una partizione o in una tabella senza ricompilare le gerarchie o le relazioni oppure ricalcolare le colonne calcolate e le misure.|  
-    |**Elaborazione pulizia**|Rimuove tutti i dati da una partizione.|  
+    |**Cancellazione processo**|Rimuove tutti i dati da una partizione.|  
     |**Elaborazione aggiunta**|Aggiornare in modo incrementale la partizione con i nuovi dati.|  
   
 3.  Nella colonna della casella di controllo **Elabora** selezionare le partizioni che si desidera elaborare con la modalità scelta, quindi fare clic su **OK**.  

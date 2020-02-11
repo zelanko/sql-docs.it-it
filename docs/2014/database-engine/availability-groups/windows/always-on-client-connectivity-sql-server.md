@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793427"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Connettività client Always On (SQL Server)
@@ -33,17 +33,17 @@ ms.locfileid: "67793427"
   
  Nella tabella seguente viene riepilogato il supporto di driver per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|Driver|Failover su più subnet|Finalità dell'applicazione|Routing di sola lettura|Failover su più subnet: Failover dell'endpoint su una sola subnet più rapido|Failover su più subnet: Risoluzione dell'istanza denominata per le istanze cluster SQL|  
+|Driver|Failover su più subnet|Finalità dell'applicazione|Routing di sola lettura|Failover su più subnet: failover dell'endpoint su una sola subnet più rapido|Failover su più subnet: risoluzione dell'istanza denominata per le istanze cluster di SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|Yes|Yes|Yes|Yes|Yes|  
-|SQL Native Client 11.0 OLEDB|No|Yes|Sì|No|No|  
-|ADO.NET con .NET Framework 4.0 con patch di connettività **<sup>*</sup>** |Yes|Yes|Yes|Yes|Yes|  
-|ADO.NET con.NET Framework 3.5 SP1 con patch di connettività **<sup>** </sup>** |Yes|Yes|Yes|Yes|Yes|  
-|Microsoft JDBC Driver 4.0 per SQL Server|Yes|Yes|Yes|Yes|Yes|  
+|SQL Native Client 11.0 ODBC|Sì|Sì|Sì|Sì|Sì|  
+|SQL Native Client 11.0 OLEDB|No|Sì|Sì|No|No|  
+|ADO.NET con .NET Framework 4,0 con patch di connettività**<sup>*</sup>** |Sì|Sì|Sì|Sì|Sì|  
+|ADO.NET con .NET Framework 3,5 SP1 con patch di connettività**<sup>**</sup>** |Sì|Sì|Sì|Sì|Sì|  
+|Microsoft JDBC Driver 4.0 per SQL Server|Sì|Sì|Sì|Sì|Sì|  
   
- **<sup>*</sup>**  Scaricare la patch di connettività per ADO .NET con .NET Framework 4.0: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  
+ **<sup>*</sup>** Scaricare la patch di connettività per ADO .NET con .NET Framework 4,0 [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211):.  
   
- **<sup>** </sup>* * Scaricare la patch di connettività per ADO.NET con .NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
+ **<sup>**</sup>* * Scaricare la patch di connettività per ADO.NET con .NET Framework 3,5 SP1 [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347):.  
   
 > [!IMPORTANT]  
 >  Per connettersi a un listener del gruppo di disponibilità, un client deve utilizzare una stringa di connessione TCP.  
@@ -57,13 +57,13 @@ ms.locfileid: "67793427"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Panoramica di Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Clustering di failover e Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
+ [Prerequisiti, restrizioni e consigli per Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)   
- [SQL Server AlwaysOn Team Blog: Il Team Blog ufficiale di SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)   
+ [Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza](https://go.microsoft.com/fwlink/?LinkId=227600)   
+ [Blog del team di SQL Server AlwaysOn: Blog ufficiale del team SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)   
  [Si verifica un ritardo prolungato quando si riconnette una connessione IPsec da un computer in cui è in esecuzione Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 o Windows Server 2008 R2](https://support.microsoft.com/kb/980915)   
  [Il servizio cluster impiega circa 30 secondi per il failover su indirizzi IP IPv6 in Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)   
  [Failover lento se non esiste alcun router tra il cluster e un server applicazioni](https://support.microsoft.com/kb/2582281)  

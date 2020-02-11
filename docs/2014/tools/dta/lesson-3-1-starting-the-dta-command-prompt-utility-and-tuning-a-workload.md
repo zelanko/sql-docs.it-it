@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110161"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Avvio dell'utilità del prompt dei comandi dta e ottimizzazione di un carico di lavoro
-  In questa attività vengono illustrate le procedure per avviare l'utilità **dta**, visualizzarne la Guida e quindi usare l'utilità dal prompt dei comandi per ottimizzare un carico di lavoro. Viene usato il carico di lavoro MyScript.sql creato per l'esercitazione sull'interfaccia utente grafica di Ottimizzazione guidata motore di database [Ottimizzazione di un carico di lavoro](lesson-1-1-tuning-a-workload.md).  
+  Questa attività consente di avviare l'utilità **DTA** , visualizzarne la guida e quindi utilizzarla per ottimizzare un carico di lavoro dal prompt dei comandi. Usa il carico di lavoro, script. SQL, che è stato creato per la procedura Ottimizzazione guidata motore di database interfaccia utente grafica (GUI) che consente di [ottimizzare un carico di lavoro](lesson-1-1-tuning-a-workload.md).  
   
- In questa esercitazione viene utilizzato il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per motivi di sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio, vedere [Installazione degli esempi e dei database di esempio di SQL Server](http://sqlserversamples.codeplex.com).  
+ In questa esercitazione viene utilizzato il database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Per motivi di sicurezza, i database di esempio non vengono installati per impostazione predefinita. Per installare i database di esempio, vedere la pagina [Installazione degli esempi e dei database di esempio di SQL Server](http://sqlserversamples.codeplex.com).  
   
  Le attività seguenti consentono di aprire un prompt dei comandi, avviare l'utilità della riga di comando **dta** , visualizzare la Guida relativa alla sintassi e ottimizzare un carico di lavoro semplice, ovvero MyScript.sql, creato in [Ottimizzazione di un carico di lavoro](lesson-1-1-tuning-a-workload.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66110161"
   
 3.  Al termine dell'ottimizzazione del carico di lavoro, in Ottimizzazione guidata motore di database viene visualizzato un messaggio che indica che la sessione di ottimizzazione è stata completata correttamente. È possibile visualizzare i risultati dell'ottimizzazione utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per aprire i file MySession2OutputScript.sql e MySession2Output.xml. In alternativa è possibile aprire la sessione di ottimizzazione MySession2 nell'interfaccia utente grafica di Ottimizzazione guidata motore di database e visualizzare le indicazioni e i report come descritto in [Visualizzazione delle indicazioni di ottimizzazione](lesson-1-2-viewing-tuning-recommendations.md) e [Visualizzazione dei report di ottimizzazione](lesson-1-3-viewing-tuning-reports.md).  
   
-## <a name="summary"></a>Riepilogo  
+## <a name="summary"></a>Summary  
  In questo modo è stata completata l'ottimizzazione di un carico di lavoro semplice dal prompt dei comandi tramite l'utilità **dta** . Questo strumento offre numerose altre opzioni di ottimizzazione. Per altre informazioni, consultare la Guida (**dta -?**) e l'argomento [Utilità dta](dta-utility.md) .  
   
 ## <a name="after-you-finish-this-tutorial"></a>Al termine di questa esercitazione  
@@ -62,7 +62,7 @@ ms.locfileid: "66110161"
   
 -   [Utilità dta](dta-utility.md) per materiale di riferimento sull'utilità del prompt dei comandi e sul file XML facoltativo disponibile per usare l'utilità.  
   
- Per tornare all'inizio dell'esercitazione, vedere [esercitazione: Ottimizzazione guidata motore di database](tutorial-database-engine-tuning-advisor.md).  
+ Per tornare all'inizio dell'esercitazione, vedere [Esercitazione: Strumento Ottimizzazione guidata motore di database](tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazioni del motore di database](../../relational-databases/database-engine-tutorials.md)  

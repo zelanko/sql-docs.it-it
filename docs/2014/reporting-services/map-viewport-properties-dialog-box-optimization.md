@@ -1,5 +1,5 @@
 ---
-title: Eseguire il mapping di finestra di dialogo proprietà Viewport, ottimizzazione | Microsoft Docs
+title: Finestra di dialogo Proprietà viewport mappa, ottimizzazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108282"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Finestra di dialogo Proprietà viewport mappa, Ottimizzazione
@@ -31,7 +31,7 @@ ms.locfileid: "66108282"
  **Prestazioni**  
  Scorrere il puntatore più vicino a **Prestazioni** per semplificare la mappa e visualizzare un minor numero di dettagli.  
   
- **Quality**  
+ **Qualità**  
  Scorrere il puntatore più vicino a **Qualità** per tracciare la mappa con un maggior numero di dettagli.  
   
  **Risoluzione mappa**  
@@ -39,6 +39,6 @@ ms.locfileid: "66108282"
   
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risoluzione dei problemi relativi ai report: report mappa &#40;Generatore report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

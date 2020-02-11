@@ -17,35 +17,35 @@ ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9dc741321894ae69a9ffb59738576a01d47628f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901663"
 ---
 # <a name="managing-data-sources"></a>Gestione delle origini dati
-Dopo aver installato un driver ODBC dal programma di installazione del driver, è possibile definire uno o più origini dati per tale. Il nome di origine dati (DSN) deve fornire una descrizione univoca dei dati. ad esempio, *Payroll* oppure *contabilità fornitori*. Sono elencate le origini dati utente e di sistema definiti per tutti attualmente installati i driver nel **DSN utente** o **DSN di sistema** schede della finestra di **Amministrazione origine dati ODBC**finestra di dialogo. Vengono elencate le origini di dati file in una determinata directory nel **DSN su File** scheda; la directory da visualizzare viene immesso nel **Cerca in** nella casella il **DSN su File** scheda.  
+Dopo aver installato un driver ODBC dal programma di installazione del driver, è possibile definire una o più origini dati. Il nome dell'origine dati (DSN) deve fornire una descrizione univoca dei dati; ad esempio, le *retribuzioni* o gli *account pagabili*. Le origini dati utente e di sistema definite per tutti i driver attualmente installati sono elencate nelle schede **DSN utente** o **DSN di sistema** della finestra di dialogo **Amministrazione origine dati ODBC** . Le origini dati dei file in una determinata directory sono elencate nella scheda **DSN del file** . la directory da visualizzare viene immessa nella casella **Cerca in** nella scheda **DSN del file** .  
   
 > [!NOTE]  
->  Per gestire un'origine dati che si connette a un driver a 32 bit in piattaforme a 64 bit, utilizzare c:\windows\sysWOW64\odbcad32.exe. Per gestire un'origine dati che si connette a un driver a 64 bit, utilizzare c:\windows\system32\odbcad32.exe. Nelle **strumenti di amministrazione** in un sistema operativo Windows 8 a 64 bit, sono presenti icone per 32 bit e 64 bit **Amministrazione origine dati ODBC** nella finestra di dialogo.  
+>  Per gestire un'origine dati che si connette a un driver a 32 bit nella piattaforma a 64 bit, usare c:\windows\sysWOW64\odbcad32.exe. Per gestire un'origine dati che si connette a un driver a 64 bit, utilizzare c:\windows\system32\odbcad32.exe. In **strumenti di amministrazione** in un sistema operativo Windows 8 a 64 bit sono disponibili icone per la finestra di dialogo **Amministrazione origine dati ODBC** a 32 bit e 64 bit.  
   
- Se si usa il odbcad32.exe a 64 bit per configurare o rimuovere un DSN che si connette a un driver a 32 bit, ad esempio, **Driver è Microsoft Access (\*mdb)** , si riceverà il messaggio di errore seguente:  
+ Se si usa odbcad32. exe a 64 bit per configurare o rimuovere un DSN che si connette a un driver a 32 bit, ad esempio, il **driver esegue Microsoft Access\*(MDB)**, verrà visualizzato il messaggio di errore seguente:  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  
 ```  
   
- Per risolvere questo errore, usare il odbcad32.exe 32 bit per configurare o rimuovere il DSN.  
+ Per correggere l'errore, utilizzare odbcad32. exe a 32 bit per configurare o rimuovere il DSN.  
   
- Un'origine dati consente di associare un driver ODBC specifico con i dati che si desidera accedere tramite tale driver. Ad esempio, è possibile creare un'origine dati per utilizzare il driver dBASE ODBC per accedere a uno o più file dBASE trovati in una directory specifica sul disco rigido o un'unità di rete. Tramite Amministrazione origine dati ODBC, è possibile aggiungere, modificare ed eliminare origini dati, come descritto nella tabella seguente.  
+ Un'origine dati associa un determinato driver ODBC ai dati a cui si desidera accedere tramite tale driver. Ad esempio, è possibile creare un'origine dati per utilizzare il driver dBASE ODBC per accedere a uno o più file dBASE trovati in una directory specifica del disco rigido o di un'unità di rete. Utilizzando Amministrazione origine dati ODBC, è possibile aggiungere, modificare ed eliminare origini dati, come descritto nella tabella seguente.  
   
-|Action|Descrizione|  
+|Azione|Descrizione|  
 |------------|-----------------|  
-|Aggiunta di origini dati|È possibile aggiungere più origini dati, ognuno di essi l'associazione di un driver con alcuni dati che si desidera accedere utilizzando tale driver. Assegnare un nome che identifica in modo univoco tale origine dati di ogni origine dati. Ad esempio, se si crea un'origine dati per un set di file dBASE che contengono informazioni sul cliente, è possibile denominare l'origine dati "Customers". Le applicazioni in genere visualizzare nomi di origine dati per gli utenti scelgano da.<br /><br /> Aggiunta di un'origine dati file è leggermente diversa dall'aggiunta di origini dati di sistema o utente. Per altre informazioni, vedere l'amministratore dell'origine dati ODBC file della Guida.|  
-|Modifica delle origini dati|A seconda dei requisiti, si potrebbe essere necessario riconfigurare le origini dati. È possibile reimpostare le opzioni facendo **configura** in qualsiasi finestra di dialogo programma di installazione di driver.|  
-|Eliminazione di origini dati|Fare clic su **rimuovere** dopo aver selezionato un'origine dati.|  
+|Aggiunta di origini dati|È possibile aggiungere più origini dati, ognuna delle quali associa un driver ad alcuni dati a cui si desidera accedere usando tale driver. Assegnare a ogni origine dati un nome che identifichi in modo univoco l'origine dati. Se, ad esempio, si crea un'origine dati per un set di file dBASE contenenti informazioni sul cliente, è possibile denominare l'origine dati "Customers". Le applicazioni in genere visualizzano i nomi delle origini dati da cui gli utenti possono scegliere.<br /><br /> L'aggiunta di un'origine dati di file è leggermente diversa dall'aggiunta di origini dati utente o di sistema. Per ulteriori informazioni, vedere il file della Guida dell'amministratore dell'origine dati ODBC.|  
+|Modifica di origini dati|A seconda dei requisiti, potrebbe essere necessario riconfigurare le origini dati. È possibile reimpostare le opzioni facendo clic su **Configura** nella finestra di dialogo configurazione driver.|  
+|Eliminazione di origini dati|Fare clic su **Rimuovi** dopo aver selezionato un'origine dati.|  
   
- Per altre informazioni sulle origini dati dei file, vedere [ci si connette tramite File Zdroje dat](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) o nella [funzione SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Per ulteriori informazioni sulle origini dati dei file, vedere [connessione tramite origini dati file](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) o la [funzione SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministratore origine dati ODBC](../../odbc/admin/odbc-data-source-administrator.md)

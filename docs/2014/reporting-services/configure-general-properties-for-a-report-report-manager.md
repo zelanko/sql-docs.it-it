@@ -1,5 +1,5 @@
 ---
-title: Configurare le proprietà generali per un Report (gestione Report) | Microsoft Docs
+title: Configurare le proprietà generali per un report (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cd0371497067f754166c33fb18022fe058cb88e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109745"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>Configurare le proprietà generali per un report (Gestione report)
@@ -28,35 +28,35 @@ ms.locfileid: "66109745"
   
 2.  In Gestione report passare alla pagina **Contenuto** . quindi passare al report per il quale si desidera configurare le proprietà generali e aprirlo.  
   
-3.  Fare clic sulla scheda **Proprietà** .  
+3.  Fare clic sulla scheda **Proprietà**.  
   
-     In alternativa, se il **contenuto** pagina nella visualizzazione dei dettagli, fare clic sull'icona della pagina di proprietà:  
+     In alternativa, se la pagina **contenuto** è in visualizzazione dettagli, fare clic sull'icona della pagina delle proprietà:  
   
-     ![Icona della pagina proprietà](media/prop.gif "icona della pagina proprietà")  
+     ![Icona della pagina delle proprietà](media/prop.gif "Icona della pagina delle proprietà")  
   
-4.  Il **generale** viene visualizzata la pagina delle proprietà, ed è possibile configurare le proprietà come indicato di seguito:  
+4.  Viene visualizzata la pagina delle proprietà **generale** ed è possibile configurare le proprietà come indicato di seguito:  
   
-    -   Nel **proprietà** sezione, è possibile modificare il nome del report e la descrizione.  
+    -   Nella sezione **Proprietà** è possibile modificare il nome e la descrizione del report.  
   
-    -   È possibile selezionare i **Nascondi in visualizzazione elenco** casella di controllo per nascondere l'elemento quando viene aperta la pagina nel layout di pagina predefinito (visualizzazione elenco) che dispone gli elementi in orizzontale e verticale della pagina.  
+    -   È possibile selezionare la casella di controllo **Nascondi in visualizzazione elenco** per nascondere l'elemento quando la pagina viene aperta nel layout di pagina predefinito (visualizzazione elenco), che consente di disporre gli elementi in orizzontale e in basso nella pagina.  
   
-    -   Nel **definizione del Report** fare clic su **modificare** per estrarre una copia della definizione del report. Le modifiche apportate localmente alla definizione del report non vengono salvate nel server di report.  
+    -   Nella sezione **definizione del report** fare clic su **modifica** per estrarre una copia della definizione del report. Le modifiche apportate localmente alla definizione del report non vengono salvate nel server di report.  
   
-         Oppure, per aggiornare la definizione del report da un file con estensione RDL, fare clic su **aggiornare**.  
+         In alternativa, per aggiornare la definizione del report da un file con estensione rdl, fare clic su **Aggiorna**.  
   
         > [!NOTE]  
         >  Se si aggiorna la definizione di un report è necessario reimpostare le impostazioni dell'origine dei dati dopo l'aggiornamento.  
   
-    -   Usare la **eliminare** oppure **spostare** pulsanti per eliminare o spostare il report.  
+    -   Utilizzare i pulsanti **Elimina** o **Sposta** per eliminare o spostare il report.  
   
     -   È inoltre possibile creare un report collegato.  
   
-5.  Dopo aver completato la configurazione delle proprietà generale per il report, fare clic su **applica**.  
+5.  Al termine della configurazione delle proprietà generali per il report, fare clic su **applica**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Spostare o eliminare un elemento &#40;gestione Report&#41;](report-server/move-or-delete-an-item-report-manager.md)   
- [Pagina Contenuto &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Spostare o eliminare un elemento &#40;Gestione report&#41;](report-server/move-or-delete-an-item-report-manager.md)   
+ [Pagina contenuti &#40;Gestione report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Pagina delle proprietà generale, report &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
+ [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   
   

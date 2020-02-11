@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Specifica della direttiva XMLTEXT | Microsoft Docs'
+title: 'Esempio: specifica della direttiva XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67597549"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Esempio: Specifica della direttiva XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Esempio: specifica della direttiva XMLTEXT
   Nell'esempio seguente viene illustrata la gestione dei dati nella colonna di overflow utilizzando la direttiva `XMLTEXT` in un'istruzione `SELECT` in modalità EXPLICIT.  
   
  Si consideri la tabella `Person` . La tabella contiene una colonna `Overflow` in cui viene archiviata la parte non utilizzata del documento XML.  
@@ -52,7 +52,7 @@ FOR XML EXPLICIT;
   
 -   Poiché l'attributo `PersonID` nell'elemento <`xmltext`> è in conflitto con l'attributo `PersonID` recuperato allo stesso livello dell'elemento, l'attributo dell'elemento <`xmltext`> viene ignorato, anche se `PersonID` è NULL. In linea generale, nell'overflow un attributo prevarrà sull'attributo con lo stesso nome.  
   
- Questo è il risultato:  
+ Risultato:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +86,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -98,9 +98,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- Se si specifica*AttributeName* con la direttiva `xmltext`, gli attributi dell'elemento <`overflow`> vengono aggiunti come attributi dei sottoelementi dell'elemento <`Parent`> che li racchiude. Il nome specificato per *AttributeName* diventa il nome del sottoelemento.  
+ Se si specifica*AttributeName* con la direttiva `xmltext`, gli attributi dell'elemento <`overflow`> vengono aggiunti come attributi dei sottoelementi dell'elemento <`Parent`> che li racchiude. Il nome specificato per *attributeName* diventa il nome del sottoelemento.  
   
- In questa query *AttributeName*, <`overflow`>, viene specificato assieme i `xmltext` direttiva:  
+ In questa query, *attributeName*, <`overflow`>, viene specificato insieme alla `xmltext` direttiva:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -112,7 +112,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -136,7 +136,7 @@ FOR XML EXPLICIT
   
  `</Parent>`  
   
- In questo elemento di query la *direttiva* viene specificata per l'attributo `PersonName`. `PersonName` verrà pertanto aggiunto come sottoelemento dell'elemento <`Parent`> che lo racchiude. Gli attributi dell'elemento <`xmltext`> vengono aggiunti all'elemento <`Parent`> che li racchiude. Il contenuto dell'elemento <`overflow`> e i sottoelementi vengono anteposti agli altri sottoelementi degli elementi <`Parent`> che li racchiudono.  
+ In questo elemento di query la *direttiva* viene specificata per l'attributo `PersonName` . `PersonName` verrà pertanto aggiunto come sottoelemento dell'elemento <`Parent`> che lo racchiude. Gli attributi dell'elemento <`xmltext`> vengono aggiunti all'elemento <`Parent`> che li racchiude. Il contenuto dell'elemento <`overflow`> e i sottoelementi vengono anteposti agli altri sottoelementi degli elementi <`Parent`> che li racchiudono.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  
@@ -147,7 +147,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   
@@ -195,6 +195,6 @@ FOR XML EXPLICIT, xmldata;
  `</overflow>`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

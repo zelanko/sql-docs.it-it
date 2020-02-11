@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267435"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Impostare i valori predefiniti per una definizione di traccia (SQL Server Profiler)

@@ -1,5 +1,5 @@
 ---
-title: Creazione di stime (esercitazione di base di Data Mining) | Microsoft Docs
+title: Creazione di stime (esercitazione di base sul data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,35 +11,35 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67597519"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Creazione di stime (Esercitazione di base sul data mining)
-  Dopo aver testato l'accuratezza dei modelli di data mining e ha deciso che si è soddisfatti dei risultati, è quindi possibile generare stime tramite il generatore di Query di stima nel **stima modello di Data Mining** scheda modelli di Data Mining Finestra di progettazione.  
+  Una volta verificata l'accuratezza dei modelli di data mining e si è deciso di ottenere risultati soddisfacenti, è possibile generare stime utilizzando la Generatore di query di stima nella scheda **Stima modello** di data mining di progettazione modelli di data mining.  
   
- Nel generatore delle query di stima sono disponibili tre viste. Con il **Design** e **Query** visualizzazioni, è possibile compilare ed esaminare la query. È quindi possibile eseguire la query e visualizzare i risultati nel **risultato** visualizzazione.  
+ Nel generatore delle query di stima sono disponibili tre viste. Con le visualizzazioni **progettazione** e **query** , è possibile compilare ed esaminare la query. È quindi possibile eseguire la query e **visualizzare i risultati nella visualizzazione risultati** .  
   
- Tutte le query di stima utilizzano DMX, ovvero la forma abbreviata per il linguaggio Data Mining Extensions (DMX). La sintassi di DMX è simile a quella di T-SQL e viene utilizzata specificamente per le query sugli oggetti di data mining. Sebbene la sintassi DMX non sia complicata, usando un generatore di query come questo o in quello di [SQL Server Data Mining componente aggiuntivo per Office](../../2014/analysis-services/data-mining/sql-server-data-mining-add-ins-for-office.md), rende molto più semplice selezionare gli input e la compilazione di espressioni, pertanto è consigliabile che descrive le nozioni di base.  
+ Tutte le query di stima utilizzano DMX, ovvero la forma abbreviata per il linguaggio Data Mining Extensions (DMX). La sintassi di DMX è simile a quella di T-SQL e viene utilizzata specificamente per le query sugli oggetti di data mining. Sebbene la sintassi DMX non sia complicata, l'utilizzo di un generatore di query come questo o quello nel [SQL Server componenti aggiuntivi Data mining per Office](../../2014/analysis-services/data-mining/sql-server-data-mining-add-ins-for-office.md), rende molto più semplice selezionare gli input e le espressioni di compilazione, pertanto è consigliabile apprendere le nozioni di base.  
   
 ## <a name="creating-the-query"></a>Creazione della query  
  Il primo passaggio per creare una query di stima consiste nel selezionare un modello di data mining e una tabella di input.  
   
 #### <a name="to-select-a-model-and-input-table"></a>Per selezionare un modello e una tabella di input  
   
-1.  Nel **stima modello di Data Mining** scheda della finestra di progettazione modelli di Data Mining, nelle **modello di Data Mining** fare clic su **Seleziona modello**.  
+1.  Nella scheda **Stima modello** di data mining di progettazione modelli di data mining fare clic su **Seleziona modello**nella casella **modello di data mining** .  
   
-2.  Nel **Seleziona modello di Data Mining** finestra di dialogo passare attraverso l'albero per il **Targeted Mailing** strutturare, espandere la struttura, selezionare `TM_Decision_Tree`e quindi fare clic su **OK**.  
+2.  Nella finestra di dialogo **Seleziona modello di data mining** spostarsi nell'albero fino alla struttura **Targeted Mailing** , espandere la struttura `TM_Decision_Tree`, selezionare, quindi fare clic su **OK**.  
   
-3.  Nel **Seleziona tabelle di Input** fare clic su **Seleziona tabella del Case**.  
+3.  Nella casella **Seleziona tabella/** e di input fare clic su **Seleziona tabella del case**.  
   
-4.  Nel **Seleziona tabella del** nella finestra di dialogo il **Zdroj dat** selezionare la vista origine dati [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)].  
+4.  Nella finestra di dialogo **Seleziona tabella** selezionare la vista [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]origine dati nell'elenco **origine dati** .  
   
-5.  Nelle **nome tabella/vista**, selezionare la **ProspectiveBuyer (dbo)** tabella e quindi fare clic su **OK**.  
+5.  In **nome tabella/vista**selezionare la tabella **ProspectiveBuyer (dbo)** , quindi fare clic su **OK**.  
   
-     Il `ProspectiveBuyer` tabella rispecchia maggiormente le **vTargetMail** tabella del case.  
+     La `ProspectiveBuyer` tabella è molto simile alla tabella del case **vTargetMail** .  
   
 ## <a name="mapping-the-columns"></a>Mapping delle colonne  
  Dopo aver selezionato la tabella di input, il generatore delle query di stima crea un mapping predefinito tra il modello di data mining e la tabella di input in base ai nomi delle colonne. Almeno una colonna della struttura deve corrispondere a una colonna dei dati esterni.  
@@ -49,66 +49,66 @@ ms.locfileid: "67597519"
   
 #### <a name="to-map-the-inputs-to-the-model"></a>Per eseguire il mapping degli input al modello  
   
-1.  Fare doppio clic su linee che connettono il **modello di Data Mining** finestra per il **Seleziona tabella di Input** finestra e selezionare **Modifica connessioni**.  
+1.  Fare clic con il pulsante destro del mouse sulle linee che connettono la finestra **modello di data mining** alla finestra **Seleziona tabella di input** e scegliere **modifica connessioni**.  
   
-     Si noti che non su tutte le colonne viene eseguito il mapping. Si aggiungeranno i mapping per diverse **le colonne della tabella**. Verrà inoltre generata una nuova colonna per la data di nascita in base alla colonna della data corrente in modo da ottenere una maggiore corrispondenza tra le colonne.  
+     Si noti che non su tutte le colonne viene eseguito il mapping. Si aggiungeranno i mapping per diverse **colonne della tabella**. Verrà inoltre generata una nuova colonna per la data di nascita in base alla colonna della data corrente in modo da ottenere una maggiore corrispondenza tra le colonne.  
   
-2.  Sotto **colonna della tabella**, fare clic su di `Bike Buyer` cella e selezionare Prospectivebuyer dall'elenco a discesa.  
+2.  In **colonna tabella**fare clic sulla `Bike Buyer` cella e selezionare ProspectiveBuyer. Unknown nell'elenco a discesa.  
   
      Verrà eseguito il mapping della colonna stimabile [Bike Buyer] a una colonna della tabella di input.  
   
 3.  Fare clic su **OK**.  
   
-4.  Nelle **Esplora soluzioni**, fare doppio clic il **Targeted Mailing** vista origine dati e selezionare **Visualizza finestra di progettazione**.  
+4.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla vista origine dati **mailing** diretto e scegliere **Visualizza finestra di progettazione**.  
   
-5.  La tabella ProspectiveBuyer, mouse e scegliere **nuovo calcolo denominato**.  
+5.  Fare clic con il pulsante destro del mouse sulla tabella ProspectiveBuyer e scegliere **nuovo calcolo denominato**.  
   
-6.  Nel **Crea calcolo denominato** della finestra di dialogo per **nome di colonna**, tipo `calcAge`.  
+6.  Nella finestra di dialogo **Crea calcolo denominato** Digitare `calcAge`per **nome colonna**.  
   
-7.  Per la **Description**, digitare **calcolare l'età in base alla data di nascita**.  
+7.  Per **Descrizione**digitare **Calculate Age in base alla data di nascita**.  
   
-8.  Nel **espressione** , digitare `DATEDIFF(YYYY,[BirthDate],getdate())` e quindi fare clic su **OK**.  
+8.  Nella casella **espressione** Digitare `DATEDIFF(YYYY,[BirthDate],getdate())` , quindi fare clic su **OK**.  
   
-     Poiché la tabella di input non contiene **età** colonna che corrisponde a quella nel modello, è possibile usare questa espressione per calcolare l'età del cliente dalla colonna BirthDate della tabella di input. Poiché **età** è stato identificato come più influenti colonna per la stima dell'acquisto di biciclette, deve esistere sia nel modello e della tabella di input.  
+     Poiché la tabella di input non dispone di una colonna **Age** corrispondente a quella del modello, è possibile utilizzare questa espressione per calcolare l'età del cliente dalla colonna Data di nascita nella tabella di input. Poiché **Age** è stato identificato come la colonna più influente per la stima dell'acquisto di biciclette, deve esistere sia nel modello che nella tabella di input.  
   
-9. Progettazione modelli di Data Mining, selezionare la **stima modello di Data Mining** scheda e riaprire il **Modifica connessioni** finestra.  
+9. In Progettazione modelli di data mining selezionare la scheda **Stima modello di data mining** e riaprire la finestra **modifica connessioni** .  
   
-10. Sotto **colonna della tabella**, fare clic sui **Age** cella e selezionare CalcAge dall'elenco a discesa.  
+10. In **colonna tabella**fare clic sulla cella **età** e selezionare ProspectiveBuyer. calci nell'elenco a discesa.  
   
     > [!WARNING]  
-    >  Se la colonna non viene visualizzata nell'elenco, potrebbe essere necessario aggiornare la definizione della vista origine dati caricata nella finestra di progettazione. A tale scopo, dal **File** dal menu **Salva tutto**, quindi chiudere e riaprire il progetto nella finestra di progettazione.  
+    >  Se la colonna non viene visualizzata nell'elenco, potrebbe essere necessario aggiornare la definizione della vista origine dati caricata nella finestra di progettazione. A tale scopo, scegliere **Salva tutto**dal menu **file** , quindi chiudere e riaprire il progetto nella finestra di progettazione.  
   
 11. Fare clic su **OK**.  
   
 ## <a name="designing-the-prediction-query"></a>Progettazione della query di stima  
   
-1.  Il primo pulsante nella barra degli strumenti del **stima modello di Data Mining** scheda è la **passare alla progettazione consente di visualizzare / passa alla visualizzazione dei risultati / passa alla visualizzazione query** pulsante. Fare clic sulla freccia verso il basso su questo pulsante e selezionare **progettazione**.  
+1.  Il primo pulsante della barra degli strumenti della scheda **Stima modello di data mining** è **passa alla visualizzazione progettazione/passa a visualizzazione risultati/passa al pulsante visualizzazione query** . Fare clic sulla freccia verso il basso in questo pulsante e selezionare **progetta**.  
   
-2.  Nella griglia al **stima modello di Data Mining** scheda, fare clic sulla cella nella prima riga vuota nel **origine** colonna e quindi selezionare **funzione di stima**.  
+2.  Nella griglia della scheda **Stima modello di data mining** fare clic sulla cella nella prima riga vuota della colonna **origine** , quindi selezionare **funzione di stima**.  
   
-3.  Nel **funzione di stima** riga il **campo** colonna, selezionare `PredictProbability`.  
+3.  Nella riga **funzione di stima** fare clic `PredictProbability`su nella colonna **campo** .  
   
-     Nel **Alias** colonna della stessa riga, digitare **probabilità del risultato**.  
+     Nella colonna **alias** della stessa riga digitare **probabilità di risultato**.  
   
-4.  Dal **modello di Data Mining** finestra precedente, selezionare e trascinare [Bike Buyer] nella **criteri/argomento** cella.  
+4.  Dalla finestra **modello di data mining** precedente, selezionare e trascinare [Bike Buyer] nella cella **criteri/argomento** .  
   
-     Quando si let passa, [TM_Decision_Tree]. [Bike Buyer] viene visualizzato nei **criteri/argomento** cella.  
+     Quando si lascia andare, [TM_Decision_Tree]. [Bike Buyer] viene visualizzato nella cella **criteri/argomento** .  
   
-     In questo modo viene specificata la colonna di destinazione per la funzione `PredictProbability`. Per altre informazioni sulle funzioni, vedere [Data Mining Extensions &#40;DMX&#41; Function Reference](/sql/dmx/data-mining-extensions-dmx-function-reference).  
+     In questo modo viene specificata la colonna di destinazione per la funzione `PredictProbability`. Per ulteriori informazioni sulle funzioni, vedere [Data Mining Extensions &#40;DMX&#41; Function Reference](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-5.  Fare clic sulla riga vuota successiva nella **origine** colonna e quindi selezionare **TM_Decision_Tree** modello di data mining.  
+5.  Fare clic sulla riga vuota successiva nella colonna **origine** , quindi selezionare **TM_Decision_Tree** modello di data mining.  
   
-6.  Nel `TM_Decision_Tree` riga di **campo** colonna, selezionare `Bike Buyer`.  
+6.  Nella `TM_Decision_Tree` riga della colonna **campo** Selezionare `Bike Buyer`.  
   
-7.  Nel `TM_Decision_Tree` riga di **criteri/argomento** colonna, tipo `=1`.  
+7.  Nella `TM_Decision_Tree` riga, nella colonna **criteri/argomento** , digitare `=1`.  
   
-8.  Fare clic sulla riga vuota successiva nella **origine** colonna e quindi selezionare **tabella ProspectiveBuyer**.  
+8.  Fare clic sulla riga vuota successiva nella colonna **origine** , quindi selezionare la **tabella ProspectiveBuyer**.  
   
-9. Nel `ProspectiveBuyer` riga di **campo** colonna, selezionare **ProspectiveBuyerKey**.  
+9. Nella `ProspectiveBuyer` riga della colonna **campo** Selezionare **ProspectiveBuyerKey**.  
   
      Verrà aggiunto un identificatore univoco alla query di stima che consente di identificare la probabilità di acquisto di una bicicletta da parte dei singoli clienti.  
   
-10. Aggiungere altre cinque righe alla griglia. Per ogni riga, selezionare **tabella ProspectiveBuyer** come la **origine** e quindi aggiungere le colonne seguenti nel **campo** celle:  
+10. Aggiungere altre cinque righe alla griglia. Per ogni riga selezionare **ProspectiveBuyer Table** come **origine** , quindi aggiungere le colonne seguenti nelle celle del **campo** :  
   
     -   calcAge  
   
@@ -122,9 +122,9 @@ ms.locfileid: "67597519"
   
  Eseguire infine la query e visualizzare i risultati.  
   
- Il **generatore Query di stima** include anche questi controlli:  
+ Il **Generatore di query di stima** include anche i controlli seguenti:  
   
--   **Mostra** casella di controllo  
+-   Casella di controllo **Mostra**  
   
      Consente di rimuovere le clausole dalla query senza doverle eliminare dalla finestra di progettazione. Questa operazione può risultare utile quando si utilizzano query complesse e si desidera mantenere la sintassi senza dover copiare e incollare il codice DMX nella finestra.  
   
@@ -132,44 +132,44 @@ ms.locfileid: "67597519"
   
      Inserisce una parentesi (sinistra) di apertura all'inizio della riga selezionata o inserisce una parentesi (destra) di chiusura alla fine della riga corrente.  
   
--   **AND/OR**  
+-   **E/O**  
   
      Inserisce l'operatore `AND` o l'operatore `OR` immediatamente dopo la funzione o la colonna corrente.  
   
 #### <a name="to-run-the-query-and-view-results"></a>Per eseguire la query e visualizzare i risultati  
   
-1.  Nel **stima modello di Data Mining** scheda, seleziona la **risultato** pulsante.  
+1.  Nella scheda **Stima modello di data mining** selezionare il pulsante **risultato** .  
   
 2.  Dopo l'esecuzione della query e la visualizzazione dei risultati, è possibile rivedere i risultati.  
   
-     Il **stima modello di Data Mining** scheda vengono visualizzate le informazioni di contatto dei potenziali clienti che saranno probabilmente acquirenti di biciclette. Il **probabilità del risultato** colonna indica la probabilità che la stima sia corretta. È possibile utilizzare questi risultati per determinare quali tra i clienti potenziali sono da considerare come potenziali destinatari di messaggi promozionali.  
+     Nella scheda **Stima modello di data mining** vengono visualizzate le informazioni di contatto per i potenziali clienti che probabilmente sono acquirenti di biciclette. La colonna **probabilità della colonna risultati** indica la probabilità che la stima sia corretta. È possibile utilizzare questi risultati per determinare quali tra i clienti potenziali sono da considerare come potenziali destinatari di messaggi promozionali.  
   
 3.  A questo punto, è possibile salvare i risultati. Sono disponibili tre opzioni:  
   
-    -   Fare doppio clic su una riga di dati nei risultati e selezionare **copia** per salvare solo il valore (e sull'intestazione di colonna) negli Appunti.  
+    -   Fare clic con il pulsante destro del mouse su una riga di dati nei risultati e selezionare **copia** per salvare solo quel valore (e l'intestazione di colonna) negli Appunti.  
   
-    -   Fare doppio clic su qualsiasi riga nei risultati e selezionare **copia tutto** per copiare l'intero set di risultati, incluse le intestazioni di colonna, negli Appunti.  
+    -   Fare clic con il pulsante destro del mouse su una riga nei risultati e selezionare **copia tutto** per copiare negli Appunti l'intero set di risultati, incluse le intestazioni di colonna.  
   
-    -   Fare clic su **Salva risultati query** per salvare i risultati direttamente a un database, come indicato di seguito:  
+    -   Fare clic su **Salva risultati query** per salvare i risultati direttamente in un database, come indicato di seguito:  
   
-        1.  Nel **Salva risultati Data Mining Query** nella finestra di dialogo selezionare un'origine dati oppure definire una nuova origine dati.  
+        1.  Nella finestra di dialogo **Salva risultati query di data mining** selezionare un'origine dati o definire una nuova origine dati.  
   
         2.  Digitare un nome per la tabella in cui saranno contenuti i risultati della query.  
   
-        3.  Usare l'opzione **Aggiungi a vista origine dati**, per creare la tabella e aggiungerla a una vista origine dati esistente. Ciò è utile se si desidera mantenere tutte le tabelle correlate per un modello, ad esempio dati di training, dati di origine di stima e query risultati aggiuntivo la stessa vista origine dati.  
+        3.  Utilizzare l'opzione **Aggiungi a DSV**per creare la tabella e aggiungerla a una vista origine dati esistente. Questa opzione è utile se si desidera utilizzare tutte le tabelle correlate per un modello, ad esempio i dati di training, i dati di origine della stima e i risultati della query, nella stessa vista origine dati.  
   
-        4.  Usare l'opzione **Sovrascrivi se esistente**, per aggiornare una tabella esistente con i risultati più recenti.  
+        4.  Utilizzare l'opzione, **Sovrascrivi se esistente**, per aggiornare una tabella esistente con i risultati più recenti.  
   
              È necessario utilizzare l'opzione per sovrascrivere la tabella se sono state aggiunte tutte le colonne alla query di stima, modificati i nomi o i tipi di dati di tutte le colonne nella query di stima o se sono state eseguite tutte le istruzioni ALTER sulla tabella di destinazione.  
   
-             Inoltre, se più colonne con lo stesso nome (ad esempio, il nome di colonna predefinito **espressione**) è necessario creare un alias per le colonne con nomi duplicati o verrà generato un errore durante il tentativo di salvare i risultati in SQL con la finestra di progettazione Server. Il motivo è che SQL Server non consente più colonne con lo stesso nome.  
+             Inoltre, se più colonne hanno lo stesso nome (ad esempio, l' **espressione**del nome di colonna predefinito), è necessario creare un alias per le colonne con nomi duplicati. in caso di errore, verrà generato un errore quando la finestra di progettazione tenterà di salvare i risultati in SQL Server. Il motivo è che SQL Server non consente più colonne con lo stesso nome.  
   
-             Per altre informazioni, vedere [salvare finestra di dialogo di Data Mining Query risultato &#40;visualizzazione stima modello di Data Mining&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md).  
+             Per ulteriori informazioni, vedere la [finestra di dialogo Salva risultati query di Data Mining &#40;visualizzazione Stima modello di data mining&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md).  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Usando il drill-through sui dati della struttura &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
+ [Utilizzo del drill-through sui dati della struttura &#40;esercitazione di base sul data mining&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una query di stima usando Generatore di query di stima](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
+ [Creare una query di stima utilizzando Generatore query di stima](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

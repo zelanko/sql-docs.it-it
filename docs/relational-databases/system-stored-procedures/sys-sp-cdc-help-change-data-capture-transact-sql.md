@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
+title: sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905169"
 ---
-# <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
+# <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce la configurazione dell'acquisizione dei dati delle modifiche per ogni tabella abilitata per la modifica dell'acquisizione di dati nel database corrente. Possono essere restituite fino a due righe per ogni tabella di origine, una riga per ogni istanza di acquisizione. Change Data Capture non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,22 +45,22 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @source_schema =] '*source_schema*'  
- Nome dello schema a cui appartiene la tabella di origine. *source_schema* viene **sysname**, con un valore predefinito è NULL. Quando *source_schema* omette *source_name* deve anche essere specificato.  
+ [ @source_schema = ] '*source_schema*'  
+ Nome dello schema a cui appartiene la tabella di origine. *source_schema* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *source_schema* , è necessario specificare anche *source_name* .  
   
- Se diverso da NULL, *source_schema* deve esistere nel database corrente.  
+ Se è diverso da NULL, *source_schema* deve esistere nel database corrente.  
   
- Se *source_schema* è diverso da NULL, *source_name* deve anche essere non NULL.  
+ Se *source_schema* è diverso da null, anche *source_name* deve essere non null.  
   
- [ @source_name =] '*source_name*'  
- Nome della tabella di origine. *source_name* viene **sysname**, con un valore predefinito è NULL. Quando *source_name* omette *source_schema* deve anche essere specificato.  
+ [ @source_name = ] '*source_name*'  
+ Nome della tabella di origine. *source_name* è di **tipo sysname**e il valore predefinito è null. Quando si specifica *source_name* , è necessario specificare anche *source_schema* .  
   
- Se diverso da NULL, *source_name* deve esistere nel database corrente.  
+ Se è diverso da NULL, *source_name* deve esistere nel database corrente.  
   
- Se *source_name* è diverso da NULL, *source_schema* deve anche essere non NULL.  
+ Se *source_name* è diverso da null, anche *source_schema* deve essere non null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -71,8 +71,8 @@ sys.sp_cdc_help_change_data_capture
 |capture_instance|**sysname**|Nome dell'istanza di acquisizione.|  
 |object_id|**int**|ID della tabella delle modifiche associata alla tabella di origine.|  
 |source_object_id|**int**|ID della tabella di origine.|  
-|start_lsn|**binary(10)**|Numero di sequenza del file di log (LSN) che rappresenta l'endpoint inferiore per l'esecuzione di query sulla tabella delle modifiche.<br /><br /> NULL = l'endpoint inferiore non è stato stabilito.|  
-|end_lsn|**binary(10)**|Il numero LSN rappresenta l'endpoint superiore per l'esecuzione di query sulla tabella delle modifiche. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questa colonna è sempre a NULL.|  
+|start_lsn|**binario (10)**|Numero di sequenza del file di log (LSN) che rappresenta l'endpoint inferiore per l'esecuzione di query sulla tabella delle modifiche.<br /><br /> NULL = l'endpoint inferiore non è stato stabilito.|  
+|end_lsn|**binario (10)**|Il numero LSN rappresenta l'endpoint superiore per l'esecuzione di query sulla tabella delle modifiche. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questa colonna è sempre a NULL.|  
 |supports_net_changes|**bit**|Il supporto delle modifiche totali è abilitato.|  
 |has_drop_pending|**bit**|Non utilizzato in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |role_name|**sysname**|Nome del ruolo del database utilizzato per controllare l'accesso ai dati delle modifiche.<br /><br /> NULL = non è utilizzato un ruolo.|  
@@ -82,11 +82,11 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Elenco delle colonne dell'indice utilizzato per identificare in modo univoco le righe nella tabella di origine.|  
 |captured_column_list|**nvarchar(max)**|Elenco delle colonne di origine acquisite.|  
   
-## <a name="remarks"></a>Note  
- Quando entrambe *source_schema* e *source_name* NULL per impostazione predefinita, oppure vengono impostate in modo esplicito il carattere NULL, questa stored procedure restituisce informazioni per tutti i database di istanze di acquisizione che il chiamante ha selezionare l'accesso a. Quando *source_schema* e *source_name* sono non NULL, viene restituite solo le informazioni sulla tabella abilitata denominata specifica.  
+## <a name="remarks"></a>Osservazioni  
+ Quando sia *source_schema* che *source_name* il valore predefinito è null o viene impostato in modo esplicito su null, questo stored procedure restituisce informazioni per tutte le istanze di acquisizione del database a cui il chiamante ha accesso SELECT. Quando *source_schema* e *SOURCE_NAME* sono non null, vengono restituite solo le informazioni sulla tabella abilitata specificata specifica.  
   
-## <a name="permissions"></a>Permissions  
- Quando *source_schema* e *source_name* sono NULL, l'autorizzazione del chiamante determina le tabelle abilitate che sono inclusi nel set di risultati. I chiamanti devono disporre dell'autorizzazione SELECT in tutte le colonne acquisite dell'istanza di acquisizione nonché dell'appartenenza a qualsiasi ruolo di controllo definito per le informazioni di tabella da includere. I membri del ruolo del database db_owner possono visualizzare le informazioni su tutte le istanze di acquisizione definite. Se vengono richieste informazioni per una tabella abilitata specifica, alla tabella denominata vengono applicati gli stessi criteri SELECT e di appartenenza.  
+## <a name="permissions"></a>Autorizzazioni  
+ Quando *source_schema* e *source_name* sono null, l'autorizzazione del chiamante determina quali tabelle abilitate sono incluse nel set di risultati. I chiamanti devono disporre dell'autorizzazione SELECT in tutte le colonne acquisite dell'istanza di acquisizione nonché dell'appartenenza a qualsiasi ruolo di controllo definito per le informazioni di tabella da includere. I membri del ruolo del database db_owner possono visualizzare le informazioni su tutte le istanze di acquisizione definite. Se vengono richieste informazioni per una tabella abilitata specifica, alla tabella denominata vengono applicati gli stessi criteri SELECT e di appartenenza.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -1,5 +1,5 @@
 ---
-title: Report click-through pagina (gestione Report) | Microsoft Docs
+title: Pagina report click-through (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109803"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Pagina Report click-through (Gestione report)
@@ -42,7 +42,7 @@ ms.locfileid: "66109803"
   
 2.  Passare con il puntatore del mouse sul modello, quindi fare clic sulla freccia a discesa.  
   
-3.  Nel menu a discesa fare clic su **Gestisci**. Verrà visualizzata la pagina delle proprietà **Generale** per il modello.  
+3.  Scegliere **Gestisci**dal menu a discesa. Verrà visualizzata la pagina delle proprietà **generale** per il modello.  
   
 4.  Selezionare la scheda **Click-through** .  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66109803"
  **Report a istanza singola**  
  Consente di specificare il report personalizzato da utilizzare quando per la navigazione dell'utente è necessaria una visualizzazione di dati a istanza singola. Fare clic sul pulsante Sfoglia per selezionare il report che si desidera utilizzare.  
   
- **Report a più istanze**  
+ **Report a istanze multiple**  
  Consente di specificare il report personalizzato da utilizzare quando per la navigazione dell'utente è necessaria una visualizzazione di dati a istanza multipla. Fare clic sul pulsante Sfoglia per selezionare il report che si desidera utilizzare.  
   
 ## <a name="see-also"></a>Vedere anche  

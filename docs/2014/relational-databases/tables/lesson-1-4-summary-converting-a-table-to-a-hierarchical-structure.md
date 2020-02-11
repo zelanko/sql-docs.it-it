@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110124"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>Riepilogo: Conversione di una tabella in una struttura gerarchica
@@ -25,7 +25,7 @@ ms.locfileid: "66110124"
  In questa lezione, sono stati utilizzati due dei metodi gerarchici. Nella prossima lezione verrà illustrato come utilizzare altri metodi di questo tipo per eseguire una query e modificare i dati gerarchici.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Creazione e la gestione dei dati in una tabella gerarchica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [Lezione 2: Creazione e gestione di dati in una tabella gerarchica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dati gerarchici &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)  

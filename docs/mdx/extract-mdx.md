@@ -1,5 +1,5 @@
 ---
-title: Estrarre (MDX) | Microsoft Docs
+title: Estrai (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906044"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
@@ -37,13 +37,13 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  *Hierarchy_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una gerarchia.  
   
-## <a name="remarks"></a>Note  
- Il **estrarre** funzione restituisce un set costituito da tuple dagli elementi della gerarchia estratti. Per ogni tupla nel set specificato, i membri delle gerarchie specificate vengono estratti in nuove tuple nel set dei risultati. Questa funzione rimuove sempre le tuple duplicate.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Extract** restituisce un set costituito da tuple dagli elementi della gerarchia estratti. Per ogni tupla nel set specificato, i membri delle gerarchie specificate vengono estratti in nuove tuple nel set dei risultati. Questa funzione rimuove sempre le tuple duplicate.  
   
- Il **estrarre** funzione esegue l'operazione opposta rispetto il [Crossjoin](../mdx/crossjoin-mdx.md) (funzione).  
+ La funzione **Extract** esegue l'azione opposta della funzione [Crossjoin](../mdx/crossjoin-mdx.md) .  
   
 ## <a name="examples"></a>Esempi  
- La query seguente viene illustrato come utilizzare il **estrarre** in un set di tuple restituito dalla funzione il **NonEmpty** funzione:  
+ Nella query seguente viene illustrato come utilizzare la funzione **Extract** su un set di Tuple restituito dalla funzione **NonEmpty** :  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -78,6 +78,6 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

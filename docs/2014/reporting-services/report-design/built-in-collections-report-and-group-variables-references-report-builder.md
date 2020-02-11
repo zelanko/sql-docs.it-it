@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106401"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Riferimenti a raccolte di variabili di report e di gruppo (Generatore report e SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106401"
   
 -   **Uso in lettura/scrittura** Impostare un valore una sola volta e serializzarlo all'interno di una sessione di report. L'opzione di lettura/scrittura per le variabili rappresenta un'alternativa migliore rispetto all'utilizzo di una variabile statica nel blocco di codice nella definizione del report.  
   
-     Quando si deseleziona il **Read-Only** opzione per una variabile, la proprietà Writable per la variabile è impostata su `true`. Per aggiornare il valore generato da un'espressione, usare il metodo SetValue, ad esempio `=Variables!MyVariable.SetValue("123")`.  
+     Quando si deseleziona l'opzione sola **lettura** per una variabile, la proprietà scrivibile per la variabile viene impostata su `true`. Per aggiornare il valore generato da un'espressione, usare il metodo SetValue, ad esempio `=Variables!MyVariable.SetValue("123")`.  
   
     > [!NOTE]  
     >  Non è possibile controllare quando l'elaboratore di report inizializza una variabile o valuta un'espressione che aggiorna una variabile. L'ordine di esecuzione per l'inizializzazione delle variabili non è definito.  
@@ -57,7 +57,7 @@ ms.locfileid: "66106401"
 ## <a name="group-variables"></a>Variabili di gruppo  
  Utilizzare una variabile di gruppo per calcolare un'espressione complessa nell'ambito di un gruppo. Una variabile di gruppo è valida solo nell'ambito del gruppo e dei relativi gruppi figlio.  
   
- Si supponga, ad esempio, che in un'area dati vengano visualizzati dati di inventario per elementi che rientrano in diverse categorie di imposta e che si desideri applicare aliquote d'imposta diverse per ogni categoria. I dati verranno raggruppati in base alla categoria e verrà definita una variabile *Tax* nel gruppo padre. Verrà quindi definita una variabile di gruppo per *ItemTax* per ogni categoria di imposta e ogni sottogruppo di categorie diverso verrà assegnato alla variabile di gruppo corretta. Ad esempio:   
+ Si supponga, ad esempio, che in un'area dati vengano visualizzati dati di inventario per elementi che rientrano in diverse categorie di imposta e che si desideri applicare aliquote d'imposta diverse per ogni categoria. I dati verranno raggruppati in base alla categoria e verrà definita una variabile *Tax* nel gruppo padre. Verrà quindi definita una variabile di gruppo per *ItemTax* per ogni categoria di imposta e ogni sottogruppo di categorie diverso verrà assegnato alla variabile di gruppo corretta. Ad esempio:  
   
 -   Per il gruppo padre basato su `[Category]`, definire la variabile *Tax* con un valore `[Tax]`. Si supponga che i valori di categoria siano Food e Clothing.  
   

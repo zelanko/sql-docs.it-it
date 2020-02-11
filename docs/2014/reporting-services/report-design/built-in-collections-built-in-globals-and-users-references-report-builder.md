@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106434"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Riferimenti alle raccolte predefinite Globals e Users (Generatore report e SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66106434"
 |**Membro**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|Data e ora di inizio dell'esecuzione del report.|  
-|PageNumber|`Integer`|Numero di pagina corrente relativo a interruzioni di pagina che ne determinano la reimpostazione. All'inizio dell'elaborazione del report, il valore è impostato su 1. Il numero di pagina aumenta per ogni pagina di cui è stato eseguito il rendering.<br /><br /> Per numerare le pagine all'interno di interruzioni di pagina per un rettangolo, un'area dati, un gruppo di aree dati o una mappa, nella proprietà PageBreak, impostare la proprietà ResetPageNumber su `True`. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
+|PageNumber|`Integer`|Numero di pagina corrente relativo a interruzioni di pagina che ne determinano la reimpostazione. All'inizio dell'elaborazione del report, il valore è impostato su 1. Il numero di pagina aumenta per ogni pagina di cui è stato eseguito il rendering.<br /><br /> Per numerare le pagine all'interno di interruzioni di pagina per un rettangolo, un'area dati, un gruppo di aree dati o una mappa, nella proprietà PageBreak impostare `True`la proprietà ResetPageNumber su. Non supportato dai gruppi di gerarchie di colonna Tablix.<br /><br /> La proprietà PageNumber può essere usata solo in espressioni presenti in un'intestazione o un piè di pagina.|  
 |ReportFolder|`String`|Percorso completo della cartella contenente il report. Non include l'URL del server di report.|  
 |ReportName|`String`|Nome del report archiviato nel database del server di report.|  
 |ReportServerUrl|`String`|URL del server di report in cui il report è in esecuzione.|  
@@ -46,7 +46,7 @@ ms.locfileid: "66106434"
   
 |Membro|Type|Descrizione|  
 |------------|----------|-----------------|  
-|nome|`String`|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
+|Nome|`String`|Nome del renderer come registrato nel file di configurazione RSReportServer.<br /><br /> Disponibile durante determinate parti del ciclo di elaborazione/rendering del report.|  
 |IsInteractive|`Boolean`|Specifica se nella richiesta di rendering corrente è usato un formato di rendering interattivo.|  
 |DeviceInfo|Raccolta nome/valore di sola lettura|Coppie chiave/valore per i parametri deviceinfo per la richiesta di rendering corrente.<br /><br /> È possibile specificare i valori stringa usando la chiave o un indice nella raccolta.|  
   
@@ -57,13 +57,15 @@ ms.locfileid: "66106434"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   Questa espressione restituisce il nome e l'ora di esecuzione del report. Per la formattazione dell'ora viene usata la stringa di formattazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per la data breve:  
+-   Questa espressione restituisce il nome e l'ora di esecuzione del report. Per la formattazione dell'ora viene utilizzata la stringa di formattazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per la data breve:  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
 -   Con questa espressione, inserita nella finestra di dialogo **Visibilità colonne** per una colonna selezionata, viene visualizzata la colonna solo quando il report viene esportato in Excel. In caso contrario, è nascosta.  
   
-     `EXCELOPENXML` si riferisce al formato di Excel incluso in Office 2007. `EXCEL` si fa riferimento al formato di Excel incluso in Office 2003.  
+     
+  `EXCELOPENXML` si riferisce al formato di Excel incluso in Office 2007. 
+  `EXCEL` si fa riferimento al formato di Excel incluso in Office 2003.  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
@@ -74,7 +76,7 @@ ms.locfileid: "66106434"
   
 |**Membro**|**Tipo**|**Descrizione**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|Lingua dell'utente che esegue il report. Ad esempio `en-US`.|  
+|`Language`|`String`|Lingua dell'utente che esegue il report. Ad esempio: `en-US`.|  
 |`UserID`|`String`|ID dell'utente che esegue il report. Se si usa l'autenticazione di Windows, questo valore corrisponde all'account di dominio dell'utente corrente. Il valore è determinato dall'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , che può usare l'autenticazione di Windows o quella personalizzata.|  
   
  Per altre informazioni sul supporto di più lingue in un report, vedere "Considerazioni sulla progettazione di soluzioni per distribuzioni multilingue o globali" nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?LinkId=120955).  
@@ -90,7 +92,7 @@ ms.locfileid: "66106434"
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Finestra di dialogo Espressione &#40;Generatore report&#41;](../expression-dialog-box-report-builder.md)   
+ [Finestra di dialogo espressione &#40;Generatore report&#41;](../expression-dialog-box-report-builder.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Formattazione di numeri e date &#40;Generatore report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  

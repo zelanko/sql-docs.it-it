@@ -1,5 +1,5 @@
 ---
-title: "Lezione 9: Compilare ed eseguire l'applicazione | Microsoft Docs"
+title: "Lesson 9: Build and Run the Application (Lezione 9: Compilare ed eseguire l'applicazione) | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108378"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lezione 9: Compilare ed eseguire l'applicazione
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   Dopo aver creato un filtro di dati per la tabella di dati, il passaggio successivo consiste nel compilare ed eseguire l'applicazione del sito Web.  
   
 ### <a name="to-build-and-run-the-application"></a>Per compilare ed eseguire l'applicazione  
@@ -34,7 +34,7 @@ ms.locfileid: "66108378"
   
 4.  Nella barra degli strumenti **ReportViewer**fare clic sull'icona **Torna al report padre** per passare al report **Padre** .  
   
-     ![SSRS drill-through utilizzando ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs drill-through usando ReportViewer")  
+     ![drill-through di SSRS con ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "drill-through di SSRS con ReportViewer")  
   
 5.  Chiudere il browser per uscire.  
   

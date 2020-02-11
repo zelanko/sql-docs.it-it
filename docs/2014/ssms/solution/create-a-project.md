@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
-ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67197589"
 ---
 # <a name="create-a-project"></a>Creazione di un progetto
@@ -33,7 +33,7 @@ ms.locfileid: "67197589"
      **Modelli**  
      Nella casella **Modelli** selezionare un modello. Sotto la casella **Modelli** viene visualizzata una breve descrizione del modello di progetto selezionato.  
   
-     **Name**  
+     **Nome**  
      Immettere il nome del progetto script che si desidera creare. Nel percorso visualizzato nel campo **Percorso** viene inoltre creata una cartella con lo stesso nome del progetto. Per alcuni progetti, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crea file di origine e altri file di supporto e li aggiunge alla nuova cartella di progetto.  
   
     > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "67197589"
   
     -   Nomi riservati di Microsoft Windows o MS-DOS, ad esempio "nul", "aux", "con", "com1", "lpt1" e così via  
   
-     **Percorso**  
+     **Posizione**  
      Immettere il percorso in cui si desidera creare il progetto oppure sceglierne uno dall'elenco.  
   
      **Sfoglia**  
@@ -91,7 +91,7 @@ ms.locfileid: "67197589"
   
 4.  Fare clic su **OK**.  
   
- È possibile stabilire un nome per il progetto script. I nomi delle cartelle vengono invece stabiliti da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e non possono essere modificati. È possibile configurare il percorso e l'unità per il set di cartelle comune mediante la finestra di dialogo **Aggiungi nuovo progetto** . Fare clic con il pulsante destro del mouse sull'icona della soluzione in **Esplora soluzioni**e scegliere **Aggiungi**. Il percorso predefinito per le cartelle dei progetti di script è: C:\Documents and Settings\\*nomeutente*\Documenti\SQL Server Management Studio\Projects\\.  
+ È possibile stabilire un nome per il progetto script. I nomi delle cartelle vengono invece stabiliti da [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e non possono essere modificati. È possibile configurare il percorso e l'unità per il set di cartelle comune mediante la finestra di dialogo **Aggiungi nuovo progetto** . Fare clic con il pulsante destro del mouse sull'icona della soluzione in **Esplora soluzioni**e scegliere **Aggiungi**. Il percorso predefinito per le cartelle dei progetti script è C:\Documents and Settings\\*nomeutente*\Documenti\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora soluzioni](solution-explorer.md)   
@@ -99,7 +99,7 @@ ms.locfileid: "67197589"
  [Aggiungere nuovi elementi a un progetto](add-new-items-to-a-project.md)   
  [Aggiungere elementi esistenti a un progetto](add-existing-items-to-a-project.md)   
  [Modificare il percorso predefinito per i progetti](change-the-default-location-for-projects.md)   
- [Rimuovere o eliminare un elemento o progetto](remove-or-delete-an-item-or-project.md)   
+ [Rimuovere o eliminare un elemento o un progetto](remove-or-delete-an-item-or-project.md)   
  [Eliminazione di una soluzione](delete-a-solution.md)  
   
   

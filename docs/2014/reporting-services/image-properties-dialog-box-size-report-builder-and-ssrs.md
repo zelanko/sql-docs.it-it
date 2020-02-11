@@ -1,5 +1,5 @@
 ---
-title: Immagine di finestra di dialogo proprietà dimensione (Generatore Report e SSRS) | Microsoft Docs
+title: Finestra di dialogo Proprietà immagine, dimensioni (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108986"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà immagine, Dimensioni (Generatore report e SSRS)
@@ -36,22 +36,22 @@ ms.locfileid: "66108986"
  **Clip**  
  Scegliere questa opzione per visualizzare un'immagine dall'angolo superiore sinistro all'altezza e alla larghezza della cella o della casella di testo. I bordi dell'immagine possono essere ridotti o ingranditi in base all'immagine. Se l'immagine è più grande rispetto alla cella o alla casella di testo, ne verrà visualizzata solo una parte.  
   
- **A sinistra**  
+ **Sinistra**  
  Specificare la spaziatura o la quantità di spazio tra il bordo sinistro di una cella o di una casella di testo e il valore che questa contiene.  
   
- **Right**  
+ **Ok**  
  Specificare la spaziatura o la quantità di spazio tra il bordo destro di una cella o di una casella di testo e il valore che questa contiene.  
   
- **Top**  
+ **In alto**  
  Specificare la spaziatura o la quantità di spazio tra il bordo destro di una cella o di una casella di testo e il valore che questa contiene.  
   
- **nella parte inferiore**  
+ **In basso**  
  Specificare la spaziatura o la quantità di spazio tra il bordo destro di una cella o di una casella di testo e il valore che questa contiene.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà generali di immagine &#40;Report e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Finestra di dialogo Proprietà immagine, generale &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -16,24 +16,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85b9387b5e60cdcdfd7af17bc3268f5ee475b739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109323"
 ---
 # <a name="delete-group-dialog-box"></a>Finestra di dialogo Elimina gruppo
   Utilizzare la finestra di dialogo **Elimina gruppo** per eliminare un gruppo da un'area dati tabella, matrice o elenco. Se al gruppo sono associate righe o colonne, è anche possibile eliminare queste strutture.  
   
 ## <a name="options"></a>Opzioni  
- **Elimina gruppo e righe e colonne correlate**  
+ **Elimina il gruppo e le relative righe e colonne**  
  Scegliere questa opzione per eliminare una definizione del gruppo e tutte le righe e le colonne a esso associate.  
   
- **Elimina solo gruppo**  
+ **Elimina solo il gruppo**  
  Scegliere questa opzione per eliminare solo la definizione del gruppo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto di Progettazione report](tools/report-designer-f1-help.md)   
+ [Guida sensibile al contesto Progettazione report](tools/report-designer-f1-help.md)   
  [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

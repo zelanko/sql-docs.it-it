@@ -1,5 +1,5 @@
 ---
-title: Impostazione opzioni di traccia | Microsoft Docs
+title: Impostazione delle opzioni di traccia | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,52 +15,52 @@ ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e8caf9f3a9643f8063d6227258245a603f1665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901627"
 ---
 # <a name="setting-tracing-options"></a>Impostazione delle opzioni di traccia
-Il **Tracing** scheda della finestra di **Amministrazione origine dati ODBC** nella finestra di dialogo consente di configurare la modalità di chiamate di funzione ODBC vengono tracciate.  
+La scheda **traccia** della finestra di dialogo **Amministrazione origine dati ODBC** consente di configurare il modo in cui vengono tracciate le chiamate alle funzioni ODBC.  
   
-## <a name="how-tracing-works"></a>Funzionamento di traccia  
- Quando si avvia la traccia dal **traccia** scheda, gestione Driver registreranno tutte le chiamate di funzione ODBC per tutto successivamente eseguire le applicazioni. Chiamate di funzione ODBC da applicazioni in esecuzione prima che venga avviata la traccia non vengono registrate. Chiamate di funzione ODBC vengono registrate in un file di log specificato.  
+## <a name="how-tracing-works"></a>Funzionamento della traccia  
+ Quando si avvia la traccia dalla scheda **traccia** , gestione driver registrerà tutte le chiamate di funzione ODBC per tutte le applicazioni eseguite successivamente. Le chiamate di funzione ODBC da applicazioni che vengono eseguite prima dell'avvio della traccia non vengono registrate. Le chiamate di funzione ODBC vengono registrate in un file di log specificato dall'utente.  
   
- Traccia viene arrestata solo dopo aver fatto clic **Interrompi analisi**. Tenere presente che mentre traccia è attiva, il file di log continua ad aumentare e che questo influisce sulle prestazioni di tutte le applicazioni ODBC.  
+ La traccia viene arrestata solo dopo aver fatto clic su **Interrompi traccia ora**. Tenere presente che, mentre la traccia è attiva, il file di registro continua ad aumentare e ciò influiscono sulle prestazioni di tutte le applicazioni ODBC.  
   
- Per ulteriori informazioni sulla traccia, vedere [traccia](../../odbc/reference/develop-app/tracing.md).  
+ Per ulteriori informazioni sulla traccia, vedere la pagina relativa alla [traccia](../../odbc/reference/develop-app/tracing.md).  
   
-### <a name="changes-in-odbc-tracing"></a>Modifiche in una traccia ODBC  
- Prima di MDAC 2.7 SP2, traccia ODBC è stata consentita solo in base a livello di computer, in cui traccia acquisisce esposte informazioni dettagliate su tutte le applicazioni ODBC in esecuzione con identità. Questo incluso traccia per attività correlate a ODBC che potrebbero verificarsi per i processi creati o eseguiti per conto di altri account utente locali e l'entità di sicurezza predefinite, ad esempio il servizio locale e il servizio di rete.  
+### <a name="changes-in-odbc-tracing"></a>Modifiche alla traccia ODBC  
+ Prima di MDAC 2,7 SP2, la traccia ODBC era consentita solo a livello di computer, in cui la traccia acquisisce informazioni dettagliate su tutte le applicazioni ODBC eseguite in qualsiasi identità. Inclusa la traccia per le attività correlate a ODBC che possono verificarsi per i processi creati o eseguiti per conto di altri account utente locali e per entità di sicurezza predefinite, ad esempio servizio locale e servizio di rete.  
   
- Per impostazione predefinita, ODBC traccia ora Usa la modalità per utente. Se sei un amministratore locale, tuttavia, è ancora possibile abilitare la traccia a livello di computer con l'amministratore dell'origine dati ODBC.  
+ Per impostazione predefinita, la traccia ODBC ora usa la modalità per utente. Tuttavia, se si è un amministratore locale, è comunque possibile abilitare la traccia a livello di computer tramite Amministrazione origine dati ODBC.  
   
- Per configurare la modalità di analisi ODBC:  
+ Per configurare la modalità di traccia ODBC:  
   
-1.  Se necessario, accedere usando un account con appartenenza al gruppo degli amministratori locali.  
+1.  Se necessario, accedere utilizzando un account che dispone dell'appartenenza al gruppo Administrators locale.  
   
-2.  Strumenti di amministrazione aprire Amministrazione origine dati ODBC.  
+2.  In strumenti di amministrazione aprire Amministrazione origine dati ODBC.  
   
-3.  Scegliere il **traccia** scheda.  
+3.  Fare clic sulla scheda **traccia** .  
   
-4.  Configurare la modalità di analisi tramite il **traccia a livello di computer per tutte le identità utente** casella di controllo:  
+4.  Configurare la modalità di traccia tramite la casella **di controllo traccia a livello di computer per tutte le identità utente** :  
   
 5.  Per abilitare la traccia a livello di computer, selezionare la casella di controllo.  
   
-6.  Per tornare alla traccia di ogni utente, deselezionare la casella di controllo.  
+6.  Per tornare alla traccia per utente, deselezionare la casella di controllo.  
   
-7.  Fare clic su **Applica**.  
+7.  Fare clic su **Apply**.  
   
 > [!NOTE]  
->  Se è stata ancora avviata la traccia in una modalità, è necessario arrestare la traccia e passare in altra modalità per la modalità di modifica completata.  
+>  Se la traccia è già stata avviata in una modalità, è necessario arrestare la traccia e passare all'altra modalità per la modifica corretta della modalità.  
   
 > [!IMPORTANT]  
->  Traccia a livello di computer deve essere abilitata solo quando necessario; in caso contrario, è opportuno lasciare disattivato.  
+>  La traccia a livello di computer deve essere abilitata solo quando è necessario; in caso contrario, deve essere lasciato disattivato.  
   
-## <a name="visual-studio-analyzer-tracing"></a>Visual Studio Analyzer traccia  
+## <a name="visual-studio-analyzer-tracing"></a>Traccia Visual Studio Analyzer  
   
 > [!IMPORTANT]  
->  Supporto per Visual Studio Analyzer è stata rimossa a partire da Windows 8 (Visual Studio Analyzer è stato incluso solo nelle versioni precedenti di Visual Studio). Per una meccanismo di risoluzione dei problemi in alternativa, usare l'analisi BID.  
+>  Il supporto per Visual Studio Analyzer è stato rimosso a partire da Windows 8 (Visual Studio Analyzer era incluso solo nelle versioni precedenti di Visual Studio). Per un meccanismo alternativo di risoluzione dei problemi, usare la traccia delle offerte.  
   
- Visual Studio® analizzatore traccia offre prestazioni e le informazioni di debug sul livello di ODBC. Tutti gli eventi in uscita verranno generati l'interfaccia di livello superiore di presentare accurata un'immagine minor relativa a tempo impiegato per i componenti ODBC. Visual Studio Analyzer traccia richiede qualsiasi origine evento per registrare quando viene configurato l'origine. Per altre informazioni su questo tipo di traccia, vedere la documentazione di Visual Studio.
+ La traccia di Visual Studio® Analyzer fornisce informazioni sulle prestazioni e sul debug del livello ODBC. Tutti gli eventi in uscita verranno attivati nell'interfaccia di livello superiore per presentare un'immagine più accurata possibile riguardo al tempo impiegato nei componenti ODBC. Per eseguire la traccia Visual Studio Analyzer è necessario che tutte le origini eventi siano registrate quando l'origine è configurata. Per ulteriori informazioni su questo tipo di traccia, vedere la documentazione di Visual Studio.

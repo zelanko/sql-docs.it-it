@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,37 +13,37 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899493"
 ---
-# <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
+# <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys. dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] vista di sistema che contiene informazioni su tutti i passaggi di Data Movement Service (DMS) per operazioni esterne.  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]vista di sistema che include informazioni su tutti i passaggi del servizio di spostamento dei dati (DMS) per le operazioni esterne.  
   
-|Nome colonna|Tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|Query che utilizza questo ruolo di lavoro del servizio migrazione del database.<br /><br /> request_id step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a request_id nel [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|step_index|**int**|Passaggio della query che richiama questo ruolo di lavoro del servizio migrazione del database.<br /><br /> request_id step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a step_index nel [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
-|dms_step_index|**int**|Passaggio nel piano di servizio migrazione del database corrente.<br /><br /> request_id step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a dms___step_index nel [DM pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
-|pdw_node_id|**int**|Nodo che esegue il ruolo di lavoro del servizio migrazione del database.|Uguale allo node_id nelle [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|type|**nvarchar(60)**|Tipo di operazione esterna che questo nodo è in esecuzione.<br /><br /> FILE SPLIT è un'operazione su un file Hadoop esterno che è stata suddivisa in più si trova più piccoli.|'SPLIT FILE'|  
-|work_id|**int**|Il file split ID.|Maggiore o uguale a 0.<br /><br /> Deve essere univoco per ogni nodo di calcolo.|  
-|input_name|**nvarchar(60)**|Stringa del nome per l'input da leggere.|Per un file di Hadoop, si tratta del nome di file Hadoop.|  
+|request_id|**nvarchar (32)**|Query che sta utilizzando il thread di lavoro DMS.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a request_id in [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|step_index|**int**|Passaggio della query che richiama questo thread di lavoro DMS.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a step_index in [sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|dms_step_index|**int**|Passaggio corrente del piano DMS.<br /><br /> request_id, step_index e dms_step_index formano la chiave per questa visualizzazione.|Uguale a dms___step_index in [sys. dm_pdw_dms_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
+|pdw_node_id|**int**|Nodo che esegue il ruolo di lavoro DMS.|Uguale a node_id in [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|type|**nvarchar (60)**|Tipo di operazione esterna eseguita dal nodo.<br /><br /> Il FILE SPLIT è un'operazione eseguita su un file Hadoop esterno che è stato suddiviso in più piccole cadute.|' FILE SPLIT '|  
+|work_id|**int**|ID divisione del file.|Maggiore o uguale a 0.<br /><br /> Univoco per ogni nodo di calcolo.|  
+|input_name|**nvarchar (60)**|Nome della stringa per l'input da leggere.|Per un file Hadoop, si tratta del nome del file Hadoop.|  
 |read_location|**bigint**|Offset della posizione di lettura.||  
 |estimated_bytes_processed|**bigint**|Numero di byte elaborati dal thread di lavoro.|Maggiore o uguale a 0.|  
-|length|**bigint**|Numero di byte nel file di divisione.<br /><br /> Per Hadoop, questa è la dimensione del blocco di HDFS.|Definito dall'utente. Il valore predefinito è 64 MB.|  
-|status|**nvarchar(32)**|Stato del ruolo di lavoro.|In sospeso, l'elaborazione, operazione eseguita, non è riuscita, interrotto|  
-|start_time|**datetime**|Ora di inizio esecuzione del thread di lavoro.|Maggiore o uguale all'ora di inizio di questo ruolo di lavoro a cui appartiene il passaggio della query. Visualizzare [DM pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
-|end_time|**datetime**|Ora in cui l'esecuzione è terminata, non è riuscita o è stata annullata.|NULL per i ruoli di lavoro in corso o in coda. In caso contrario, maggiore start_time.|  
-|total_elapsed_time|**int**|Tempo totale impiegato per l'esecuzione, in millisecondi.|Maggiore o uguale a 0.<br /><br /> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione verrà generato l'avviso "il valore massimo è stato superato."<br /><br /> Il valore massimo in millisecondi è equivalente a 24,8 giorni.|  
+|length|**bigint**|Numero di byte nella suddivisione del file.<br /><br /> Per Hadoop, si tratta della dimensione del blocco HDFS.|Definito dall'utente. Il valore predefinito è 64 MB.|  
+|status|**nvarchar (32)**|Stato del ruolo di lavoro.|In sospeso, elaborazione, completato, non riuscito, interrotto|  
+|start_time|**datetime**|Ora di inizio dell'esecuzione del thread di lavoro.|Maggiore o uguale all'ora di inizio del passaggio della query a cui appartiene il ruolo di lavoro. Vedere [sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
+|end_time|**datetime**|Ora in cui l'esecuzione è terminata, non riuscita o è stata annullata.|NULL per i ruoli di lavoro in corso o in coda. In caso contrario, maggiore di start_time.|  
+|total_elapsed_time|**int**|Tempo totale impiegato per l'esecuzione, in millisecondi.|Maggiore o uguale a 0.<br /><br /> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione genererà l'avviso "è stato superato il valore massimo".<br /><br /> Il valore massimo in millisecondi equivale a 24,8 giorni.|  
   
- Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione di metadati nel [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) argomento.
+ Per informazioni sul numero massimo di righe mantenute da questa visualizzazione, vedere la sezione metadati nell'argomento [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Contenuto della pagina (gestione Report) | Microsoft Docs
+title: Pagina contenuto (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109730"
 ---
 # <a name="contents-page-report-manager"></a>Pagina Contenuto (Gestione report)
@@ -35,10 +35,10 @@ ms.locfileid: "66109730"
  **Impostazioni cartella**  
  Fare clic per aprire e gestire le proprietà della cartella corrente.  
   
- **Caricare File**  
+ **Carica file**  
  Fare clic per aprire la pagina Carica file, nella quale è possibile copiare un file dal file system a un server di report. È possibile caricare file per aggiungere report e risorse, ad esempio grafici, documenti o qualsiasi altro contenuto accessorio che si desidera utilizzare in un report. I file caricati vengono archiviati e gestiti in un database del server di report. Per caricare un report, selezionare un file con estensione rdl.  
   
- **Visualizzazione dettagli**  
+ **Elimina**  
  Fare clic per visualizzare la pagina Contenuto in un elenco che contiene informazioni aggiuntive sugli elementi. In **Visualizzazione Dettagli**, è possibile utilizzare i pulsanti **Elimina** e **Sposta** per rimuovere e spostare gli elementi nella cartella.  
   
  Passare con il puntatore del mouse su un elemento e fare clic sulla freccia a discesa per aprire il menu a discesa dal quale è possibile accedere alle proprietà dell'elemento selezionato ed eseguirne la configurazione.  
@@ -51,7 +51,7 @@ ms.locfileid: "66109730"
  **Elimina**  
  Fare clic per rimuovere una cartella o un altro elemento. Prima di fare clic su **Elimina**, selezionare la casella di controllo accanto a ogni elemento che si desidera eliminare.  
   
- **Sposta**  
+ **Spostamento**  
  Fare clic per spostare un elemento nella gerarchia di cartelle. Prima di fare clic su **Sposta**selezionare la casella di controllo accanto a ogni elemento che si desidera spostare. Verrà visualizzata la pagina di spostamento degli elementi, nella quale è possibile esplorare le cartelle per selezionare un nuovo percorso.  
   
 ## <a name="see-also"></a>Vedere anche  

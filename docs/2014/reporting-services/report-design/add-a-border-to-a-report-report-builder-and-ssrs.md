@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1cf33c00dc9bf0b2fbf588fea9793e0deabfc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106875"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Aggiungere un bordo a un report (Generatore report e SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106875"
 1.  Fare clic con il pulsante destro del mouse nell'intestazione su uno spazio non occupato da elementi, quindi scegliere **Proprietà intestazione**. Nella scheda **Bordo** aggiungere un bordo sinistro, superiore e destro con lo stile desiderato.  
   
     > [!NOTE]  
-    >  Se non si usa le intestazioni del report, è possibile definire i bordi intorno solo il corpo del report oppure è possibile aggiungere intestazioni dal **Inserisci** scheda.  
+    >  Se non si utilizzano le intestazioni nel report, è possibile posizionare i bordi solo intorno al corpo del report oppure è possibile aggiungere intestazioni dalla scheda **Inserisci** .  
   
 2.  Fare clic con il pulsante destro del mouse nel corpo su uno spazio dell'area di progettazione non occupato da elementi e scegliere **Proprietà corpo**. Nella scheda **Bordo** aggiungere un bordo sinistro e destro con lo stile desiderato.  
   

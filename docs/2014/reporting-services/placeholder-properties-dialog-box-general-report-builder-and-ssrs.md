@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà segnaposto, generale (Generatore Report e SSRS) | Microsoft Docs
+title: Finestra di dialogo Proprietà segnaposto, generale (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108101"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà segnaposto, Generale (Generatore report e SSRS)
@@ -28,25 +28,25 @@ ms.locfileid: "66108101"
  Digitare un'etichetta per il segnaposto. Tale etichetta verrà visualizzata solo nell'area di progettazione.  
   
  **Valore**  
- Digitare il valore per la casella di testo. Tale valore può essere un'espressione di campo o di altro tipo o un'etichetta. Fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione.  
+ Digitare il valore per la casella di testo. Tale valore può essere un'espressione di campo o di altro tipo o un'etichetta. Fare clic sul pulsante **espressione** (*FX*) per modificare l'espressione.  
   
  **Descrizione comando**  
- Digitare un testo o un'espressione che restituisca una descrizione comando. Fare clic sul pulsante **Espressione** (*fx*) per modificare l'espressione. La descrizione comando viene visualizzata quando l'utente posiziona il puntatore del mouse sull'elemento nel report di cui è stato eseguito il rendering.  
+ Digitare un testo o un'espressione che restituisca una descrizione comando. Fare clic sul pulsante **espressione** (*FX*) per modificare l'espressione. La descrizione comando viene visualizzata quando l'utente posiziona il puntatore del mouse sull'elemento nel report di cui è stato eseguito il rendering.  
   
  **Tipo di markup**  
  Selezionare un'opzione per indicare come verrà visualizzato il segnaposto.  
   
--   **Testo normale** Il segnaposto viene visualizzato come testo normale. Il testo in formato HTML verrà gestito come testo letterale.  
+-   **Testo normale** Visualizza il segnaposto come testo semplice. Il testo in formato HTML verrà gestito come testo letterale.  
   
--   **HTML**  Il segnaposto viene visualizzato in formato HTML. Se il valore dell'espressione del segnaposto contiene tag HTML validi, questi verranno visualizzati in formato HTML.  
+-   **HTML**  Visualizzare il segnaposto come HTML. Se il valore dell'espressione del segnaposto contiene tag HTML validi, questi verranno visualizzati in formato HTML.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
- [Aggiungere il codice HTML a un report &#40;Generatore report e SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [Aggiungere codice HTML a un report &#40;Generatore report e SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Caselle di testo &#40;Generatore report e SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formattazione di testo e segnaposto &#40;Generatore report e SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Importazione di codice HTML a un report &#40;Generatore report e SSRS &#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [Importazione di codice HTML in un report &#40;Generatore report e SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

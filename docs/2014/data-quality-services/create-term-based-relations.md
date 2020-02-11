@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480823"
 ---
 # <a name="create-term-based-relations"></a>Creare relazioni basate su termini
@@ -26,7 +26,7 @@ ms.locfileid: "65480823"
   
  La trasformazione delle relazioni basate su termini e la trasformazione dei simboli (in cui i caratteri speciali vengono sostituiti da uno spazio o un valore Null) vengono entrambe eseguite in una fase di pre-elaborazione prima dell'analisi. Se è richiesta l'analisi di un dominio composito, essa verrà eseguita prima delle due trasformazioni, perché l'analisi basata su delimitatore richiede l'utilizzo di simboli. Altre operazioni, quali le regole di dominio e le modifiche ai valori del dominio, verranno eseguite dopo le trasformazioni. Per la corrispondenza, le relazioni basate su termini vengono applicate ai dati di origine prima dell'attività di individuazione delle corrispondenze indipendentemente dall'esecuzione della pulizia.  
   
- **Relazioni basate su termini e gestione dominio**  
+ **Relazioni basate su termini e gestione del dominio**  
   
  Quando si applica una relazione basata su termini nella gestione dominio, le modifiche verranno applicate da DQS nell'individuazione delle informazioni, nella pulizia o nei processi di individuazione delle corrispondenze; tuttavia, il valore del dominio stesso non viene modificato da DQS per la conformità con la relazione basata su termini. In altre parole, se si inserisce e si accetta una relazione basata su termini nella scheda **Relazioni basate su termini** della pagina **Gestione dominio** , la modifica non verrà apportata nella scheda **Valori di dominio** della stessa pagina. Questo consente di modificare la TBR di conseguenza.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "65480823"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Per creare relazioni basate su termini, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
-##  <a name="Create"></a> Creare relazioni basate su termini  
+##  <a name="Create"></a>Creare relazioni basate su termini  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Eseguire l'applicazione Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Nella schermata iniziale del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aprire o creare una Knowledge Base. Selezionare **Gestione dominio** come attività, quindi fare clic su **Apri** o **Crea**. Per ulteriori informazioni, vedere [Creare una Knowledge Base](../../2014/data-quality-services/create-a-knowledge-base.md) o [Apertura di una Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md).  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65480823"
   
     6.  Trovare un valore nella tabella Relazioni immettendo una o più cifre nella casella di testo **Trova** . Le corrispondenze per la stringa verranno evidenziate. Utilizzare le frecce in su o in giù per spostarsi tra le diverse istanze della stringa nella tabella.  
   
-    7.  **Correttore ortografico**: se un valore nella colonna **Valore** o **Correggi in** ha una sottolineatura rossa ondulata, il Correttore ortografico sta suggerendo una correzione al valore. Fare clic con il pulsante destro del mouse sul valore con il carattere di sottolineatura e selezionare uno dei valori proposti dal correttore ortografico. In alternativa, è possibile fare clic su **Aggiungi** nel menu di scelta rapida per mantenere il valore originale. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../../2014/data-quality-services/set-domain-properties.md).  
+    7.  **Correttore ortografico**: se un valore nella colonna **valore** o **Correggi a** ha una sottolineatura rossa ondulata, il correttore ortografico sta suggerendo una correzione per il valore. Fare clic con il pulsante destro del mouse sul valore con il carattere di sottolineatura e selezionare uno dei valori proposti dal correttore ortografico. In alternativa, è possibile fare clic su **Aggiungi** nel menu di scelta rapida per mantenere il valore originale. Per ulteriori informazioni, vedere [Utilizzare il correttore ortografico DQS](../../2014/data-quality-services/use-the-dqs-speller.md) e [Imposta proprietà del dominio](../../2014/data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Per utilizzare il correttore ortografico, è possibile abilitarlo nella pagina **Proprietà dominio** o, se è disabilitato nella pagina **Proprietà dominio** , è possibile fare clic sull'icona **Abilita/Disabilita correttore ortografico** nella pagina **Relazioni basate su termini** per abilitarlo in tale pagina.  
@@ -99,7 +99,7 @@ ms.locfileid: "65480823"
   
 7.  Fare clic su **Fine** per completare l'attività di gestione del dominio, come descritto in [Sospensione dell'attività di gestione del dominio](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Completamento: fasi successive alla creazione di relazioni basate su termini  
+##  <a name="FollowUp"></a>Completamento: fasi successive alla creazione di relazioni basate su termini  
  Dopo avere creato le relazioni basate su termini, è possibile eseguire ulteriori attività di gestione del dominio, quali l'individuazione delle informazioni per aggiungere informazioni al dominio o l'aggiunta di criteri di corrispondenza al dominio. Per altre informazioni, vedere [Eseguire l'individuazione delle informazioni](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Creare criteri di corrispondenza](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109713"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
@@ -35,7 +35,7 @@ ms.locfileid: "66109713"
   
      L'immagine seguente illustra il menu **Azioni** .  
   
-     ![Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint](media/rs-openalertdesigneriw.gif "Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint")  
+     ![Aprire Alert Designer dalla raccolta di SharePoint](media/rs-openalertdesigneriw.gif "Aprire Alert Designer dalla raccolta di SharePoint")  
   
      La finestra di progettazione Avviso dati viene visualizzata, con le prime 100 righe del primo feed di dati generato dal report in una tabella.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "66109713"
   
      A seconda del tipo di dati della colonna selezionata, vengono elencati operatori di confronto differenti. Se la colonna dispone di un tipo di dati relativo alla data, verrà visualizzata un'icona di calendario accanto al valore soglia per la regola. È possibile immettere dati facendo clic su una data nel calendario o digitando la data.  
   
-     La finestra di progettazione Avviso Dati fornisce due modalità di confronto: **Modalità immissione valori** e **Modalità selezione campo**. La modalità predefinita è **Modalità immissione valori**. È possibile aggiungere clausole OR solo quando è attiva la **Modalità immissione valori** e si sta usando il confronto di tipo **is** .  
+     La finestra di progettazione Avviso Dati offre due modalità di confronto: **Modalità immissione valori** e **Modalità selezione campo**. La modalità predefinita è **Modalità immissione valori**. È possibile aggiungere clausole OR solo quando è attiva la **Modalità immissione valori** e si sta usando il confronto di tipo **is** .  
   
 9. Per aggiungere una clausola OR, fare clic sulla freccia rivolta verso il basso, quindi su **Modalità immissione valori**.  
   
 10. Digitare il valore di confronto.  
   
-11. Facoltativamente, fare di nuovo clic sui puntini di sospensione **(...)** .  
+11. Facoltativamente, fare di nuovo clic sui puntini di sospensione **(...)**.  
   
      I puntini di sospensione **(...)** vengono visualizzati nella riga contenente la prima clausola.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66109713"
   
 20. Facoltativamente, nella casella di testo **Oggetto** aggiornare la riga dell'oggetto del messaggio di avviso.  
   
-     L'oggetto predefinito è **Avviso dati per \<nome avviso dati>** .  
+     L'oggetto predefinito è **Avviso dati per \<nome avviso dati>**.  
   
 21. Facoltativamente, digitare una descrizione per il messaggio di avviso nella casella di testo **Descrizione** .  
   

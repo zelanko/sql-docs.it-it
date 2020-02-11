@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bcbdacd6d08a6139975c20bb8f1d5010195375b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479348"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Rendere sicura un'applicazione Web Gestione dati master
@@ -23,7 +23,7 @@ ms.locfileid: "65479348"
 > [!NOTE]  
 >  L'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] consente di utilizzare HTTP o HTTPS, ma non entrambi.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire la procedura:  
   
 -   È necessario essere un amministratore nel server Web in cui è installato [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "65479348"
   
 3.  Nel riquadro **Azioni** fare clic su **Binding**.  
   
-4.  Scegliere **Aggiungi**.  
+4.  Fare clic su **Aggiungi**.  
   
 5.  Nell'elenco selezionare **https**.  
   
@@ -46,14 +46,14 @@ ms.locfileid: "65479348"
   
 7.  Fare clic su **OK**.  
   
-8.  Facoltativo. Per rimuovere HTTP in modo che gli utenti possano accedere al sito solo tramite HTTPS, fare clic sulla riga con **http**. Fare clic su **Rimuovi** e nella finestra di dialogo di conferma fare clic su **Sì**.  
+8.  Facoltativa. Per rimuovere HTTP in modo che gli utenti possano accedere al sito solo tramite HTTPS, fare clic sulla riga con **http**. Fare clic su **Rimuovi** e nella finestra di dialogo di conferma fare clic su **Sì**.  
   
     > [!IMPORTANT]  
     >  È necessario modificare le configurazioni di basicHttp e wsHttpBinding dopo la rimozione di HTTP.  
   
 9. Fare clic su **Chiudi** per chiudere la finestra di dialogo **Binding sito**.  
   
-10. Aprire il file Web. config da *unità*: \Programmi\Microsoft SQL Server\120\Master Data services\webapplication.  
+10. Aprire quindi il file Web. config da *unità*: \Programmi\microsoft SQL Server\120\Master Data Services\WebApplication.  
   
 11. Individuare la stringa `<security mode="Message">` e impostarla su `<security mode="Transport">`.  
   

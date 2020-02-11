@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245786"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizzare i menu e i tasti di scelta rapida
@@ -105,7 +105,7 @@ ms.locfileid: "63245786"
   
 4.  Premere TAB per passare all'elenco **Controlli** e usare i tasti di direzione per selezionare il pulsante che si vuole modificare.  
   
-5.  Premere **ALT+M** per selezionare **Modifica selezione**.  
+5.  Premere **ALT+M**per selezionare **Modifica selezione**.  
   
 6.  Premere TAB per passare alla casella **Name** del menu di scelta rapida e digitare un nome da assegnare al pulsante sulla barra degli strumenti, anteponendo una e commerciale (&) alla lettera che si vuole usare come tasto di scelta rapida.  
   

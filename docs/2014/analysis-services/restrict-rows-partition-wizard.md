@@ -1,5 +1,5 @@
 ---
-title: Limitare le righe (Creazione guidata partizione) | Microsoft Docs
+title: Limitazione righe (creazione guidata partizione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070207"
 ---
 # <a name="restrict-rows-partition-wizard"></a>Limitazione righe (Creazione guidata partizione)
   La pagina **Limitazione righe** consente di limitare le righe che verranno recuperate dalla tabella specificata e quindi aggregate e incluse nella partizione.  
   
 > [!NOTE]  
->  Questa pagina viene visualizzata solo se è stata selezionata un'unica tabella nella pagina **Impostazione informazioni origine** .  
+>  Questa pagina viene visualizzata solo se è stata selezionata un'unica tabella nella pagina **impostazione informazioni origine** .  
   
 > [!CAUTION]  
->  Se in **Tabelle disponibili** nella pagina **Impostazione informazioni origine** è stata specificata una tabella usata da un'altra partizione, sarà necessario inserire una query nella pagina **Limitazione righe** o si rischia la duplicazione dei dati nel cubo.  
+>  Se in **tabelle disponibili** nella pagina **impostazione informazioni origine** è stata specificata una tabella utilizzata da un'altra partizione, è necessario specificare una query nella pagina **Limitazione righe** o rischiare la duplicazione dei dati nel cubo.  
   
 ## <a name="options"></a>Opzioni  
  **Specificare una query per limitare le righe**  
@@ -40,10 +40,10 @@ ms.locfileid: "66070207"
 > [!IMPORTANT]  
 >  è possibile specificare una clausola WHERE per utilizzare un subset di record per questa partizione. Quando più partizioni si basano su un'unica tabella dei fatti è essenziale evitare la duplicazione di dati.  
   
- **Controlla**  
+ **Controllo**  
  Verifica che l'istruzione presente in **Query** sia un'istruzione SQL valida.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partizioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905524"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
 
 
-  Calcola la regressione lineare di un set e restituisce il coefficiente di determinazione R<sup>2</sup>.  
+  Calcola la regressione lineare di un set e restituisce il coefficiente di determinazione, R<sup>2</sup>.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,26 +37,26 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero che rappresenta i valori per l'asse X.  
   
-## <a name="remarks"></a>Note  
- La regressione lineare, che utilizza il metodo dei minimi quadrati, calcola l'equazione di una retta di regressione, ovvero la retta di migliore approssimazione per una serie di punti. Retta di regressione contiene l'equazione seguente, in cui una è l'inclinazione e b è l'intercetta:  
+## <a name="remarks"></a>Osservazioni  
+ La regressione lineare, che utilizza il metodo dei minimi quadrati, calcola l'equazione di una retta di regressione, ovvero la retta di migliore approssimazione per una serie di punti. La linea di regressione presenta l'equazione seguente, dove a è la pendenza e b è l'intercetta:  
   
  y = ax+b  
   
- Il **LinRegR2** funzione valuta la setagainst specificato il primo expressionto numerico ottenere i valori per l'asse y. La funzione valuta quindi il set specificato in base alla seconda espressione numerica, se specificata, per ottenere i valori per l'asse X. Se il secondo expressionis numerica non specificata, la funzione utilizza il contesto corrente delle celle nel set specificato come valori per l'asse x. Se non si specifica la x-axisargument viene spesso usato con la dimensione temporale.  
+ La funzione **LinRegR2** valuta l'oggetto di cui è stato specificato il valore per il primo espressione numerico per ottenere i valori per l'asse y. La funzione valuta quindi il set specificato in base alla seconda espressione numerica, se specificata, per ottenere i valori per l'asse X. Se la seconda espressione numerica non è specificata, la funzione utilizza il contesto corrente delle celle nel set specificato come valori per l'asse x. La mancata specifica di x-axisargument viene spesso utilizzata con la dimensione temporale.  
   
- Dopo aver ottenuto il set di punti, il **LinRegR2** funzione restituisce il coefficiente statistico R<sup>2</sup> che descrive l'adattamento dell'equazione lineare ai punti.  
+ Dopo avere ottenuto il set di punti, la funzione **LinRegR2** restituisce l'oggetto statistico R<sup>2</sup> che descrive l'adattamento dell'equazione lineare ai punti.  
   
 > [!NOTE]  
->  Il **LinRegR2** funzione ignora le celle vuote o che contengono testo o valori logici. Tuttavia, la funzione include celle con valori zero.  
+>  La funzione **LinRegR2** ignora le celle vuote o le celle che contengono testo o valori logici. Tuttavia, la funzione include celle con valori zero.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente restituisce il coefficiente statistico R<sup>2</sup> che descrive la bontà dell'adattamento dell'equazione di regressione lineare ai punti per le vendite unitarie e le misure relative alle vendite Negozio.  
+ Nell'esempio seguente viene restituito il risultato statistico R<sup>2</sup> che descrive il grado di adattamento dell'equazione di regressione lineare ai punti per le misure Sales unit e Store Sales.  
   
 ```  
 LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

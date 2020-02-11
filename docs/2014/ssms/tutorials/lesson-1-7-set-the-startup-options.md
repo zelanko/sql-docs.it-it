@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312615"
 ---
 # <a name="set-the-startup-options"></a>Impostare le opzioni di avvio
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] può essere configurato per visualizzare la superficie di progettazione in base alla configurazione preferita all'avvio di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . La possibilità di configurare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare la configurazione preferita consente di risparmiare tempo.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]può essere configurato per aprire l'area di progettazione alla configurazione preferita quando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] viene avviato. La possibilità di configurare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] per visualizzare la configurazione preferita consente di risparmiare tempo.  
   
 ## <a name="configuring-startup-options"></a>Configurazione delle opzioni di avvio  
   
@@ -28,15 +28,15 @@ ms.locfileid: "63312615"
   
 2.  Espandere **Ambiente**e fare clic su **Startup**. Nell'elenco **All'avvio** controllare le opzioni:  
   
-    -   **Apri Esplora oggetti**. Si tratta dell'opzione predefinita.  
+    -   **Aprire Esplora oggetti**. Questa è l'opzione predefinita.  
   
-    -   **Apri nuova finestra Query**.  
+    -   **Aprire una nuova finestra query**.  
   
-    -   **Apri Esplora oggetti e nuova finestra Query**.  
+    -   **Aprire Esplora oggetti e la nuova query**.  
   
-    -   **Apri Esplora oggetti e Monitoraggio attività**.  
+    -   **Aprire Esplora oggetti e monitoraggio attività**.  
   
-    -   **Apri ambiente vuoto**.  
+    -   **Aprire un ambiente vuoto**.  
   
 3.  Selezionare l'opzione desiderata e fare clic su **OK**.  
   

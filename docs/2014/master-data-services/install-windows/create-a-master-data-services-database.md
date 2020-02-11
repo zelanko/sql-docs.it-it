@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482938"
 ---
 # <a name="create-a-master-data-services-database"></a>Creare un database Master Data Services
   Creare un database [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] quando è necessario un nuovo database per supportare l'applicazione Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] e il servizio Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Per informazioni sui requisiti del computer che ospita il database, vedere [Requisiti del database &#40;Master Data Services&#41;](database-requirements-master-data-services.md).  
   

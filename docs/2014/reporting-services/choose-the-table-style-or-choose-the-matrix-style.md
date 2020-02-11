@@ -1,5 +1,5 @@
 ---
-title: Scelta stile tabella o scelta stile matrice | Microsoft Docs
+title: Scegliere lo stile della tabella o scegliere lo stile della matrice | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 137d9d4adf1377d730bac2fc6e847f97d02c2c3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109821"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>Scelta stile tabella o Scelta stile matrice
-  Utilizzare queste pagine della Creazione guidata report per selezionare gli stili delle linee e del testo del report. L'elenco degli stili è basato su un modello configurabile. Progettazione report sono disponibili i seguenti modelli iniziali: Ardesia, foresta, azienda, grassetto, Oceano e generico.  
+  Utilizzare queste pagine della Creazione guidata report per selezionare gli stili delle linee e del testo del report. L'elenco degli stili è basato su un modello configurabile. In Progettazione report sono disponibili i seguenti modelli iniziali: Ardesia, Foresta, Aziendale, Grassetto, Oceano e Generico.  
   
  È inoltre possibile aggiungere ulteriori modelli di stili.  
   

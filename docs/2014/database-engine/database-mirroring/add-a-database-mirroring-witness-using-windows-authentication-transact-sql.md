@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792609"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Aggiungere un server di controllo del mirroring del database tramite l'autenticazione di Windows (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67792609"
   
 ### <a name="to-establish-a-witness"></a>Per creare un server di controllo  
   
-1.  Sull'istanza del server di controllo, assicurarsi che sia presente un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, è necessario che l'istanza del server disponga di un unico endpoint di mirroring del database. Se si prevede di usare questa istanza del server esclusivamente come server di controllo nelle sessioni di mirroring del database, assegnare il ruolo di controllo all'endpoint (ruolo **=** WITNESS). Se si desidera utilizzare l'istanza del server come partner in una o più sessioni di mirroring del database, assegnare il ruolo di server dell'endpoint come ALL.  
+1.  Sull'istanza del server di controllo, assicurarsi che sia presente un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, è necessario che l'istanza del server disponga di un unico endpoint di mirroring del database. Se si intende utilizzare questa istanza del server esclusivamente come server di controllo del mirroring nelle sessioni di mirroring del database, assegnare il ruolo di **=** server di controllo del mirroring all'endpoint (Role Witness). Se si desidera utilizzare l'istanza del server come partner in una o più sessioni di mirroring del database, assegnare il ruolo di server dell'endpoint come ALL.  
   
      Per eseguire un'istruzione SET WITNESS, è necessario che la sessione di mirroring del database sia già iniziata (tra i partner) e che il valore STATE dell'endpoint del server di controllo sia impostato su STARTED.  
   
@@ -52,17 +52,17 @@ ms.locfileid: "67792609"
   
 3.  Connettersi al server principale ed eseguire la seguente istruzione:  
   
-     ALTER DATABASE *< nome_database >* SET WITNESS **=** _< server_network_address >_  
+     ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
   
      dove *<database_name>* è il nome del database di cui eseguire il mirroring (tale nome è lo stesso per entrambi i partner) e *<server_network_address>* è l'indirizzo di rete dell'istanza del server di controllo del mirroring.  
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP **://** \<_indirizzo_sistema>_ **:** \<*porta>*  
+     TCP **://**\<_System-Address>_ **:**\<*porta>*  
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Ad esempio, sull'istanza del server principale l'istruzione ALTER DATABASE seguente imposta il server di controllo del mirroring. Il nome del database è **AdventureWorks**, l'indirizzo del sistema è DBSERVER3, ovvero il nome del server di controllo del mirroring, e la porta usata dall'endpoint del mirroring del database del server di controllo del mirroring è `7022`:  
+     Ad esempio, sull'istanza del server principale l'istruzione ALTER DATABASE seguente imposta il server di controllo del mirroring. Il nome del database è **AdventureWorks**, l'indirizzo di sistema è DBSERVER3, il nome del sistema di controllo e la porta utilizzata dall'endpoint del mirroring del database del server `7022`di controllo del mirroring è:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -128,9 +128,9 @@ ms.locfileid: "67792609"
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Concessione dell'accesso alla rete a un endpoint per il mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [Creare un endpoint del mirroring del database per l'autenticazione Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Stabilire una sessione di mirroring del database tramite autenticazione di Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)   
+ [Consentire l'accesso alla rete a un endpoint del mirroring del database utilizzando l'autenticazione di Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [Creazione di un endpoint del mirroring del database per l'autenticazione di Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Stabilire una sessione di mirroring del database utilizzando l'autenticazione di Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)   
  [Rimuovere il server di controllo del mirroring da una sessione di mirroring del database &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [Server di controllo del mirroring del database](database-mirroring-witness.md)  
   

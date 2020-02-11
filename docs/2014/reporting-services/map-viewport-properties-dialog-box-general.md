@@ -1,5 +1,5 @@
 ---
-title: Eseguire il mapping di finestra di dialogo proprietà Viewport, generale | Microsoft Docs
+title: Finestra di dialogo Proprietà viewport mappa, generale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ec0aaa051ba317cd05a9784c80fb997f5fa19e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108239"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Finestra di dialogo Proprietà viewport mappa, Generale
   Selezionare **Generale** nella finestra di dialogo **Proprietà viewport mappa** per modificare le opzioni del sistema di coordinate, della proiezione e dei limiti.  
   
 ## <a name="options"></a>Opzioni  
- **sistema di coordinate**  
+ **Sistema di coordinate**  
  Indicare il tipo di sistema di coordinate utilizzato dai dati della mappa.  
   
--   **Planare** Scegliere questa opzione quando i dati della mappa sono espressi con le coordinate X e Y, ad esempio per la compilazione di piani.  
+-   **Planar** Scegliere questa opzione quando i dati della mappa sono in coordinate X e Y, ad esempio per la compilazione di piani.  
   
--   **Geografico** Scegliere questa opzione quando i dati della mappa sono espressi con le coordinate della longitudine e della latitudine, ad esempio per la posizione delle città.  
+-   Area **geografica** Scegliere questa opzione quando i dati della mappa sono in coordinate di longitudine e latitudine, ad esempio per le località della città.  
   
  **Proiezione**  
  Specificare il metodo da utilizzare per proiettare le coordinate geografiche su una superficie bidimensionale. Scegliere una proiezione compatibile con i dati che si stanno visualizzando. Le quattro proprietà spaziali interessate dalla proiezione sono area, forma, distanza e direzione. Per le viste della terra, la scelta di una proiezione ottimale dipende dalla vista con allineamento al centro, dai limiti della mappa e dal fattore di zoom.  
@@ -38,21 +38,21 @@ ms.locfileid: "66108239"
   
 -   **Equirettangolare** Scegliere questa opzione per utilizzare longitudine e latitudine come coordinate rettangolari.  
   
--   **Mercator** Scegliere questa proiezione comune per le aree più piccole, per una minor distorsione attorno all'equatore o quando si desidera aggiungere un livello mappa con un livello sezione esistente che utilizza la proiezione Mercator.  
+-   **Mercator** Scegliere questa proiezione diffusa per le aree più piccole, per una minore distorsione intorno all'equatore o quando si desidera aggiungere un livello mappa con un livello sezione esistente che utilizza la proiezione Mercator.  
   
--   **Robinson** Scegliere questa opzione per una minor distorsione delle aree grandi che si estendono dall'equatore ai poli. Sviluppata da Arthur H. Robinson nel 1963.  
+-   **Robinson** Scegliere questa opzione per una minore distorsione delle aree grandi che si estendono dall'equatore ai poli. Sviluppata da Arthur H. Robinson nel 1963.  
   
--   **Fahey** Scegliere questa opzione per una minor distorsione delle aree grandi che si estendono dall'equatore ai poli. Sviluppata da Lawrence Fahey nel 1975.  
+-   **Fahey** Scegliere questa opzione per una minore distorsione delle aree grandi che si estendono dall'equatore ai poli. Sviluppata da Lawrence Fahey nel 1975.  
   
 -   **Eckert1** Scegliere questa opzione per utilizzare paralleli equidistanti in latitudine e linee rette per i meridiani in longitudine.  
   
 -   **Eckert3** Scegliere questa opzione per utilizzare paralleli equidistanti in latitudine e linee curve per i meridiani in longitudine.  
   
--   **HammerAitoff** Scegliere questa opzione per le mappe polari o del mondo.  
+-   **HammerAitoff** Scegliere questa opzione per le mappe polari o le mappe internazionali.  
   
--   **Wagner3** Scegliere questa opzione per le mappe del mondo.  
+-   **Wagner3** Scegliere questa opzione per le mappe internazionali.  
   
--   **Bonne** Scegliere questa opzione per visualizzare il mondo come è presentato in un atlante.  
+-   **Bonne** Scegliere questa opzione per visualizzare il mondo come appare in un Atlante.  
   
  **Opzioni di interruzione pagina**  
  Selezionare le opzioni per indicare il modo in cui il contenuto viene adattato alla pagina di un report.  

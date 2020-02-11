@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298594"
 ---
 # <a name="deploying-a-rendering-extension"></a>Distribuzione di un'estensione per il rendering
-  Dopo avere scritto e compilato l'estensione per il rendering del report [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in una libreria di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , è necessario renderla individuabile dal server di report e da Progettazione report. A tale scopo, copiare l'estensione nella directory appropriata e aggiungere voci ai file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriati.  
+  Dopo avere scritto e compilato l'estensione per il rendering del report [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] in una libreria di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è necessario renderla individuabile dal server di report e da Progettazione report. A tale scopo, copiare l'estensione nella directory appropriata e aggiungere voci ai file di configurazione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriati.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento di estensione del rendering del file di configurazione  
  Dopo avere compilato un'estensione per il rendering in una DLL, è necessario aggiungere una voce al file rsreportserver.config. Per impostazione predefinita, il percorso è %Programmi%\Microsoft SQL Server\MSRS10_50.\<nomeistanza>\Reporting Services\ReportServer. L'elemento padre è \<Render>. Sotto l'elemento Render è presente un elemento Extension per ogni estensione per il rendering. L'elemento `Extension` contiene due attributi, Name e Type.  
   
- Nella tabella seguente vengono descritti gli attributi per il `Extension` (elemento) per estensioni per il rendering:  
+ Nella tabella seguente vengono descritti gli attributi dell' `Extension` elemento per il rendering delle estensioni:  
   
-|attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|**Name**|Nome univoco dell'estensione. La lunghezza massima consentita per l'attributo **Name** è 255 caratteri. Il nome deve essere univoco all'interno di tutte le voci dell'elemento **Extension** di un file di configurazione. Se è presente un nome duplicato, il server di report restituirà un errore.|  
+|**Nome**|Nome univoco dell'estensione. La lunghezza massima consentita per l'attributo **Name** è 255 caratteri. Il nome deve essere univoco all'interno di tutte le voci dell'elemento **Extension** di un file di configurazione. Se è presente un nome duplicato, il server di report restituirà un errore.|  
 |**Tipo**|Elenco delimitato da virgole che include lo spazio dei nomi completo insieme al nome dell'assembly.|  
 |**Visible**|Il valore `false` indica che l'estensione per il rendering non deve essere visibile nelle interfacce utente. Se l'attributo non è incluso, il valore predefinito è `true`.|  
 |**LogAllExecutionRequests**|Il valore `false` indica che una voce viene registrata solo per la prima esecuzione del report in una sessione. Se l'attributo non è incluso, il valore predefinito è `true`.<br /><br /> Questa impostazione determina ad esempio se registrare una voce solo per la prima pagina di cui viene eseguito il rendering in un report (quando il valore è `false`) o una voce per ogni pagina sottoposta a rendering nel report (quando il valore è `true`).|  
@@ -64,7 +64,7 @@ ms.locfileid: "63298594"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     Il valore per **Name** è il nome univoco dell'estensione per il rendering. Il valore per **Type** è un elenco con valori delimitati da virgole che include una voce per lo spazio dei nomi completo dell'implementazione di <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguito dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per il rendering sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio Gestione Report, aggiungere un **Visible** attributo il `Extension` elemento e impostarlo su `false`.  
+     Il valore per **Name** è il nome univoco dell'estensione per il rendering. Il valore per **Type** è un elenco con valori delimitati da virgole che include una voce per lo spazio dei nomi completo dell'implementazione di <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguito dal nome dell'assembly, senza l'estensione dll. Per impostazione predefinita, le estensioni per il rendering sono visibili. Per nascondere un'estensione dalle interfacce utente, ad esempio Gestione report, aggiungere un attributo **Visible** all' `Extension` elemento e impostarlo su. `false`  
   
 ## <a name="verifying-the-deployment"></a>Verifica della distribuzione  
  È inoltre possibile aprire Gestione report e verificare che l'estensione sia inclusa nell'elenco dei tipi di esportazione disponibili per un report.  

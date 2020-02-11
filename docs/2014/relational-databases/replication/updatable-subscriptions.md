@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255386"
 ---
 # <a name="updatable-subscriptions"></a>Sottoscrizioni aggiornabili
-  Con la replica transazionale, è consigliabile utilizzare i dati replicati in sola lettura. È tuttavia possibile modificare i dati replicati nel Sottoscrittore [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando le sottoscrizioni aggiornabili. Se è necessario modificare i dati nel Sottoscrittore, scegliere una delle opzioni seguenti in base ai requisiti specifici.  
+  Con la replica transazionale, i dati replicati devono essere considerati di sola lettura. Tuttavia, è possibile modificare i dati replicati in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un Sottoscrittore utilizzando sottoscrizioni aggiornabili. Se è necessario modificare i dati nel Sottoscrittore, scegliere una delle opzioni seguenti in base ai requisiti specifici.  
   
 |Tipo di sottoscrizione aggiornabile|Requisiti|  
 |---------------------------------|------------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "63255386"
 -   Selezionare **Accoda le modifiche ed esegui il commit appena possibile** per una sottoscrizione ad aggiornamento in coda.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di una sottoscrizione pull](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Sottoscrivere le pubblicazioni](subscribe-to-publications.md)   
  [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  

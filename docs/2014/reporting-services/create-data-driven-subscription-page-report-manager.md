@@ -1,5 +1,5 @@
 ---
-title: Creare la pagina sottoscrizione guidata dai dati (gestione Report) | Microsoft Docs
+title: Pagina Creazione di una sottoscrizione guidata dai dati (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109622"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Pagine Creazione di una sottoscrizione guidata dai dati (Gestione report)
@@ -52,11 +52,11 @@ ms.locfileid: "66109622"
   
 -   Selezionare **Condivisione file Server report** per recapitare i report in una condivisione file. Il report verrà recapitato come file statico, disconnesso dal server di report. Per ulteriori informazioni, vedere [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md).  
   
--   Selezionare **Messaggio di posta elettronica da Server report** per recapitare i report nella posta in arrivo. Per altre informazioni, vedere [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Selezionare **Messaggio di posta elettronica da Server report** per recapitare i report nella posta in arrivo. Per altre informazioni, vedere [Recapito tramite posta elettronica in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 -   Selezionare **Provider recapito Null** per recapitare i report nel database del server di report. Questa opzione consente di creare snapshot del report. Selezionare questa opzione se si desidera precaricare nel server di report snapshot del report specifici degli utenti o con parametri in base a una pianificazione specifica. Per altre informazioni, vedere [Memorizzazione dei report nella cache &#40;SSRS&#41;](report-server/caching-reports-ssrs.md).  
   
- **Specificare un'origine dati che contiene informazioni sul destinatari**  
+ **Specificare un'origine dei dati che contenga informazioni sui destinatari**  
  Consente di specificare la modalità di impostazione della connessione all'origine dati. È possibile selezionare un'origine dati condivisa se è già disponibile un'origine dati contenente le informazioni di connessione necessarie. Si possono inoltre impostare direttamente le informazioni di connessione per la sottoscrizione.  
   
  L'origine dei dati fornisce i dati del Sottoscrittore. Tali dati possono includere nomi e ID dei dipendenti, indirizzi di posta elettronica e preferenze per i formati di esportazione (come HTML o PDF). Se si utilizza l'estensione per il recapito tramite posta elettronica del server di report, è necessario che l'origine dati includa indirizzi di posta elettronica.  
@@ -75,7 +75,7 @@ ms.locfileid: "66109622"
   
  Se l'origine dati utilizza l'autenticazione di Windows, selezionare **Usa come credenziali di Windows** quando si specifica la connessione.  
   
- Se si utilizza un'origine dati che non prevede l'autenticazione delle connessioni utente, ad esempio se l'origine dati è un file XML, selezionare Credenziali non richieste. Per questa opzione è necessario che sia stato configurato l'account di esecuzione automatica. Per altre informazioni, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Se si utilizza un'origine dati che non prevede l'autenticazione delle connessioni utente, ad esempio se l'origine dati è un file XML, selezionare Credenziali non richieste. Per questa opzione è necessario che sia stato configurato l'account di esecuzione automatica. Per ulteriori informazioni, vedere [configurare l'account di esecuzione automatica &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="specify-a-query-page-3"></a>Impostazione della query (pagina 3)  
  Utilizzare questa pagina per immettere la query che consente di recuperare i dati del Sottoscrittore. Per ottenere risultati migliori, eseguire la query in SQL Server Management Studio prima di utilizzarla nella sottoscrizione guidata dai dati. È quindi possibile analizzare i risultati per verificare che contengano le informazioni necessarie. Gli aspetti importanti da tenere presenti nei risultati della query sono i seguenti:  
@@ -90,7 +90,7 @@ ms.locfileid: "66109622"
  **Timeout**  
  Consente di specificare un valore di timeout per la query. Questo valore deve essere sufficiente per consentire il completamento dell'elaborazione della query.  
   
- **Validate**  
+ **Convalida**  
  Fare clic su **Convalida** per verificare la query. Per continuare è necessario che la query generi risultati validi. Se non si fa clic su **Convalida**, la query viene comunque convalidata quando si fa clic su **Avanti**.  
   
 ## <a name="set-delivery-options-page-4"></a>Impostazione delle opzioni di recapito (pagina 4)  
@@ -99,7 +99,7 @@ ms.locfileid: "66109622"
 |Opzione|Per|  
 |-----------------|----------------|  
 |**Specificare un valore statico**|Utilizzare un valore costante per l'impostazione del recapito. Alcune estensioni per il recapito rendono disponibili valori statici tra i quali selezionare quello desiderato. Ad esempio, per il recapito tramite posta elettronica del server di report vengono visualizzati valori per **Includi report**, **Formato di rendering**, **Priorità**e **Includi collegamento**.|  
-|**Ottenere il valore dal database**|Utilizzare un valore dal set di risultati. Le colonne del set di risultati possono essere utilizzate per fornire dati del Sottoscrittore e valori dei parametri del report.|  
+|**Estrai il valore dal database**|Utilizzare un valore dal set di risultati. Le colonne del set di risultati possono essere utilizzate per fornire dati del Sottoscrittore e valori dei parametri del report.|  
 |**Nessun valore**|Omettere l'impostazione nella sottoscrizione.|  
   
 #### <a name="set-delivery-options-for-file-share-delivery"></a>Impostazione delle opzioni di recapito per il recapito alla condivisione file  
@@ -109,19 +109,19 @@ ms.locfileid: "66109622"
  Specificare un nome file per il report. L'estensione per il recapito alla condivisione file consente di recapitare un report come file di applicazione statico a una cartella condivisa. Nella maggior parte dei casi, è necessario utilizzare un valore del database per creare il nome file. In base all'impostazione della modalità di scrittura, se viene utilizzato un valore statico ogni nuovo recapito può sovrascrivere il recapito precedente.  
   
  **Percorso**  
- Specificare una cartella condivisa accessibile in una connessione di rete. Per verificare che la cartella è accessibile, fare clic su **eseguiti** nel menu Start e immettere il percorso della cartella nel formato seguente: \\ \\< computername\>\\< nomecartellacondivisa\>.  
+ Specificare una cartella condivisa accessibile in una connessione di rete. Per verificare che la cartella sia accessibile, fare clic su **Esegui** nel menu Start e immettere il percorso della cartella nel \\ \\ formato:<\> \\ nomecomputer<\>nomecartellacondivisa.  
   
- **Formato di rendering**  
+ **Formato rendering**  
  Specificare il formato di output del file. Il file può essere scritto nei formati di applicazione delle estensioni di rendering installate nel server di report.  
   
  **Modalità scrittura**  
  Specificare se il server di report deve sostituire un file con una versione più recente, incrementarlo o eliminare il recapito se viene trovato un file con lo stesso nome.  
   
- **Estensione file**  
+ **Estensione di file**  
  Specificare True per aggiungere un'estensione di file corrispondente al formato di rendering selezionato.  
   
  **Nome utente**  
- Immettere l'account utente di dominio che dispone dell'autorizzazione per aggiungere file alla cartella condivisa nel formato seguente: \<dominio >\\< nome utente\>.  
+ Immettere l'account utente di dominio che dispone delle autorizzazioni per aggiungere file alla cartella condivisa nel formato \<dominio>\\<nome utente\>.  
   
  **Password**  
  Immettere la password per l'account.  
@@ -132,17 +132,17 @@ ms.locfileid: "66109622"
 |Opzione|Per|  
 |-----------------|----------------|  
 |**Specificare un valore statico**|Utilizzare un valore costante per il parametro se si desidera utilizzare lo stesso parametro per tutti i sottoscrittori. Se il parametro prevede più valori, è possibile selezionare un valore nell'elenco.|  
-|**Utilizzare l'impostazione predefinita**|Alcuni report contengono un valore predefinito per tutti i parametri o alcuni di essi. Se il parametro del report dispone di un valore predefinito, fare clic su questa casella di controllo per utilizzarlo.|  
-|**Ottenere il valore dal database**|Utilizzare un valore dal set di risultati. Le colonne del set di risultati possono essere selezionate come origine per il valore di dati da utilizzare con ogni istanza della sottoscrizione.|  
+|**Usa valore predefinito**|Alcuni report contengono un valore predefinito per tutti i parametri o alcuni di essi. Se il parametro del report dispone di un valore predefinito, fare clic su questa casella di controllo per utilizzarlo.|  
+|**Estrai il valore dal database**|Utilizzare un valore dal set di risultati. Le colonne del set di risultati possono essere selezionate come origine per il valore di dati da utilizzare con ogni istanza della sottoscrizione.|  
   
 ## <a name="specify-a-trigger-page-6"></a>Impostazione di un trigger (pagina 6)  
  Selezionare un evento per l'avvio dell'elaborazione della sottoscrizione.  
   
 |Opzione|Per|  
 |-----------------|----------------|  
-|**Quando i dati del report viene aggiornati nel server di report**|Se il report è configurato per l'esecuzione come snapshot dell'esecuzione del report, è possibile specificare che la sottoscrizione deve essere eseguita quando lo snapshot viene aggiornato.|  
-|**In una pianificazione creata per questa sottoscrizione**|Eseguire la sottoscrizione nella data e all'ora specificate.|  
-|**In una pianificazione condivisa**|Eseguire la sottoscrizione in base alle informazioni di pianificazione fornite tramite una pianificazione condivisa.|  
+|**Quando i dati del report vengono aggiornati nel server di report**|Se il report è configurato per l'esecuzione come snapshot dell'esecuzione del report, è possibile specificare che la sottoscrizione deve essere eseguita quando lo snapshot viene aggiornato.|  
+|**In base a una pianificazione creata per questa sottoscrizione**|Eseguire la sottoscrizione nella data e all'ora specificate.|  
+|**In base a una pianificazione condivisa**|Eseguire la sottoscrizione in base alle informazioni di pianificazione fornite tramite una pianificazione condivisa.|  
   
 ## <a name="schedule-a-subscription-page-7"></a>Pianificazione di una sottoscrizione (pagina 7)  
  Se si sceglie di pianificare la sottoscrizione, è necessario impostare la frequenza di recapito del report. Il primo set di opzioni consente di specificare la frequenza (oraria, giornaliera, settimanale e così via). Il secondo set di opzioni varia a seconda dell'opzione selezionata nel primo gruppo e consente di impostare ulteriori dettagli della pianificazione.  
@@ -150,10 +150,10 @@ ms.locfileid: "66109622"
  **Oraria**  
  Consente di impostare una pianificazione eseguita a intervalli di ore.  
   
- **Giornaliero**  
- Consente di impostare una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: Ogni  *\<giorno >* , ogni giorno feriale e ogni  *\<numero >* giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
+ **Ogni giorno**  
+ Consente di impostare una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: ogni * \<giorno>*, ogni giorno feriale e ogni * \<numero>* giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
   
- **Settimanale**  
+ **Ogni settimana**  
  Consente di impostare una pianificazione eseguita settimanalmente a un'ora specifica. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure i giorni della settimana.  
   
  **Mensile**  
@@ -171,8 +171,8 @@ ms.locfileid: "66109622"
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [Creare una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Creazione di una sottoscrizione guidata dai dati &#40;esercitazione su SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Specificare le credenziali e le informazioni di connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   

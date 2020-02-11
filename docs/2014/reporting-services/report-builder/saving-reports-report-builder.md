@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107625"
 ---
 # <a name="saving-reports-report-builder"></a>Salvataggio di report (Generatore report)
@@ -28,9 +28,9 @@ ms.locfileid: "66107625"
   
 -   Utilizzare la cronologia dei report per salvare versioni di report visualizzabili come copie dei risultati delle esecuzioni dei report in momenti diversi.  
   
- Per altre informazioni sulla visualizzazione e sulla gestione dei report direttamente nel server di report, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) e [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md) nella [documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?LinkId=154888) nel sito msdn.microsoft.com.  
+ Per altre informazioni sulla visualizzazione e sulla gestione dei report direttamente nel server di report, vedere [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) e [Server di report di Reporting Services &#40;modalità nativa&#41;](../report-server/reporting-services-report-server-native-mode.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](https://go.microsoft.com/fwlink/?LinkId=154888) nel sito msdn.microsoft.com.  
   
-##  <a name="SavingReportDefinitions"></a> Salvataggio delle definizioni dei Report  
+##  <a name="SavingReportDefinitions"></a>Salvataggio delle definizioni dei report  
  Sebbene sia possibile salvare i report nel computer in uso, il salvataggio in un server di report offre molti vantaggi.  
   
  Il salvataggio di un report in un server di report presenta i vantaggi seguenti:  
@@ -52,7 +52,7 @@ ms.locfileid: "66107625"
 
   
 ##  <a name="ExportingAndSavingReports"></a> Esportazione e salvataggio di report  
- Se il numero di report da archiviare è limitato, è consigliabile esportare un report e salvarlo come file. Dopo aver esportato un report in un'applicazione, ad esempio in formato PDF o Excel, è possibile salvarlo come file e copiarlo in una directory condivisa protetta in rete. In alternativa, è possibile caricare un file PDF o Excel salvato come risorsa se si desidera mantenere tutte le copie del report, indipendentemente dal formato, nel database del server di report. Per altre informazioni sull'esportazione dei report, vedere [esportazione di report &#40;Generatore Report e SSRS&#41; ](export-reports-report-builder-and-ssrs.md) e [carica un File o un Report &#40;gestione Report&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+ Se il numero di report da archiviare è limitato, è consigliabile esportare un report e salvarlo come file. Dopo aver esportato un report in un'applicazione, ad esempio in formato PDF o Excel, è possibile salvarlo come file e copiarlo in una directory condivisa protetta in rete. In alternativa, è possibile caricare un file PDF o Excel salvato come risorsa se si desidera mantenere tutte le copie del report, indipendentemente dal formato, nel database del server di report. Per ulteriori informazioni sull'esportazione di un report, vedere [esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md) e [caricare un file o un report &#40;Gestione report&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 
   
@@ -72,15 +72,15 @@ ms.locfileid: "66107625"
   
 -   [Salvare un report in una raccolta di SharePoint &#40;Generatore report&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [Salvare i report nel Computer &#40;Generatore Report&#41;](../save-reports-to-your-computer-report-builder.md)  
+-   [Salvare i report nel computer &#40;Generatore report&#41;](../save-reports-to-your-computer-report-builder.md)  
   
 
   
 ## <a name="see-also"></a>Vedere anche  
  [Report, parti del report e definizioni dei report &#40;Generatore report e SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Installare, disinstallare e supporto di Generatore Report](../install-uninstall-and-report-builder-support.md)   
+ [Installazione, disinstallazione e Generatore report del supporto](../install-uninstall-and-report-builder-support.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Stampa di report &#40;Generatore report e SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   
   

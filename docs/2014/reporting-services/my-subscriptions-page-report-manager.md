@@ -1,5 +1,5 @@
 ---
-title: Pagina sottoscrizioni personali (gestione Report) | Microsoft Docs
+title: Pagina Sottoscrizioni personali (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108184"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Pagina Sottoscrizioni personali (Gestione report)
-  La pagina Sottoscrizioni personali consente di visualizzare tutte le sottoscrizioni personali in un'unica posizione. Da questa pagina è possibile accedere a tutte le proprie sottoscrizioni, nonché modificarle o eliminarle. L'utente è proprietario solo delle sottoscrizioni che ha creato. Non è possibile accedere alle sottoscrizioni di altri utenti o a sottoscrizioni disponibili per l'utilizzo ma create da altri utenti, ad esempio quando il nome di un utente viene aggiunto a una sottoscrizione esistente definita da un altro utente. Non si possono creare sottoscrizioni da questa pagina. Per altre informazioni sulla creazione di sottoscrizioni, vedere la [pagina nuova sottoscrizione o modifica sottoscrizione &#40;gestione Report&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
+  La pagina Sottoscrizioni personali consente di visualizzare tutte le sottoscrizioni personali in un'unica posizione. Da questa pagina è possibile accedere a tutte le proprie sottoscrizioni, nonché modificarle o eliminarle. L'utente è proprietario solo delle sottoscrizioni che ha creato. Non è possibile accedere alle sottoscrizioni di altri utenti o a sottoscrizioni disponibili per l'utilizzo ma create da altri utenti, ad esempio quando il nome di un utente viene aggiunto a una sottoscrizione esistente definita da un altro utente. Non si possono creare sottoscrizioni da questa pagina. Per ulteriori informazioni sulla creazione di sottoscrizioni, vedere la [pagina nuova sottoscrizione o modifica sottoscrizione &#40;Gestione report&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
   
  Per impostazione predefinita, le sottoscrizioni vengono elencate in ordine alfabetico in base al nome del report. È possibile fare clic su una diversa intestazione di colonna per modificare l'ordinamento delle sottoscrizioni. Se non si è proprietari di sottoscrizioni o se l'autorizzazione per la creazione o la gestione di sottoscrizioni è disabilitata, nella pagina non viene visualizzata alcuna sottoscrizione.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66108184"
  **Ultima esecuzione**  
  Mostra la data e ora dell'ultima elaborazione della sottoscrizione.  
   
- **Stato**  
+ **Status**  
  Mostra lo stato della sottoscrizione. In genere lo stato indica una nuova sottoscrizione o la data e l'ora dell'ultima esecuzione della sottoscrizione.  
   
  Il valore "Dati non validi" indica che la sottoscrizione include un puntatore a valori crittografati non più validi per le credenziali archiviate utilizzate per eseguire il report. I valori crittografati esistenti diventano inutilizzabili quando le chiavi simmetriche utilizzate per crittografare e decrittografare i dati vengono ricreate sul server di report.  

@@ -1,5 +1,5 @@
 ---
-title: Eseguire query di generatore (Creazione guidata Report) | Microsoft Docs
+title: Generatore di query (creazione guidata report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108001"
 ---
 # <a name="query-builder-report-wizard"></a>Generatore di query (Creazione guidata report)
@@ -40,7 +40,7 @@ ms.locfileid: "66108001"
  **Importa**  
  Consente di aprire la finestra di dialogo **Importa query** e di visualizzare i file con estensione rdl e sql per qualsiasi report disponibile. È possibile utilizzare la query importata così com'è oppure modificarla nel generatore di query.  
   
- **\! (Run)**  
+ **! (Esegui)**  
  Consente di eseguire la query e di restituire un set di risultati nel caso in cui la query sia valida. Si noti che non è possibile eseguire la query nel caso in cui questa sia un'espressione. Per verificare una query basata su un'espressione, è necessario visualizzare l'anteprima del report.  
   
  **Tipo di comando**  

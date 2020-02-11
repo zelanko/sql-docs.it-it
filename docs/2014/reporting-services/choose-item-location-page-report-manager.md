@@ -1,5 +1,5 @@
 ---
-title: Pagina Scegli percorso elemento (gestione Report) | Microsoft Docs
+title: Pagina Scegli percorso elemento (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109894"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Pagina Scegli percorso elemento (Gestione report)
@@ -55,14 +55,14 @@ ms.locfileid: "66109894"
  **Location**  
  Consente di specificare il nome della cartella in cui inserire l'elemento creato. È possibile digitare il nome completo oppure selezionare la cartella nella visualizzazione albero.  
   
- **Visualizzazione struttura ad albero**  
+ **Visualizzazione albero**  
  Mostra la struttura di cartelle dello spazio dei nomi del server di report. Fare clic sul nome di una cartella per aggiungere il percorso completo nel campo **Percorso** .  
   
- Fare clic su di espansione (+) e comprimere le icone (-) nella visualizzazione albero per aprire e chiudere le cartelle senza aggiungere i nomi delle cartelle per i **posizione** campo. Per aggiungere un nome di cartella al campo **Percorso** fare clic sul nome della cartella.  
+ Fare clic sulle icone Espandi (+) e Comprimi (-) nella visualizzazione albero per aprire e chiudere le cartelle senza aggiungere i nomi delle cartelle al campo **percorso** . Per aggiungere un nome di cartella al campo **Percorso** fare clic sul nome della cartella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina Nuovo report collegato &#40;Gestione report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
- [Pagina nuovo modello &#40;gestione Report&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
+ [Pagina nuovo report collegato &#40;Gestione report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [Pagina nuovo modello &#40;Gestione report&#41;](../../2014/reporting-services/new-model-page-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92b068b4bfa7f8b61b5be0904bc47cf080afc861
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106835"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Aggiungere un misuratore a un report (Generatore report e SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66106835"
     > [!NOTE]  
     >  A differenza del grafico, il misuratore è solo di due tipi: lineare e radiale. I misuratori disponibili nella finestra di dialogo **Seleziona tipo di misuratore** rappresentano i modelli per questi due tipi di misuratore. Per questo motivo, dopo aver aggiunto il misuratore al report non è possibile modificarne il tipo. Per farlo, è necessario eliminare il misuratore e aggiungerlo di nuovo.  
   
-     Se al report non sono associati un'origine dati e un set di dati, viene visualizzata la finestra di dialogo **Proprietà origine dati** che consente di eseguire in modo guidato la procedura per creare entrambi. Per altre informazioni, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore Report e SSRS&#41;](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+     Se al report non sono associati un'origine dati e un set di dati, viene visualizzata la finestra di dialogo **Proprietà origine dati** che consente di eseguire in modo guidato la procedura per creare entrambi. Per ulteriori informazioni, vedere [aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
      Se il report ha un'origine dati, ma non un set di dati, viene visualizzata la finestra di dialogo **Proprietà origine dati** in cui sono descritti i passaggi necessari per la creazione. Per altre informazioni, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   

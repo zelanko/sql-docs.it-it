@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 8: Creare un filtro dei dati | Microsoft Docs'
+title: 'Lesson 8: Create a Data Filter (Lezione 8: Creare un filtro di dati) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108385"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lezione 8: Creare un filtro di dati
@@ -35,17 +35,17 @@ ms.locfileid: "66108385"
   
 1.  Aprire il report figlio.  
   
-2.  Selezionare un'intestazione di colonna nella tablix, fare clic sulla cella grigia visualizzata sopra l'intestazione di colonna e quindi fare clic su **proprietà Tablix**.  
+2.  Selezionare un'intestazione di colonna nella Tablix, fare clic con il pulsante destro del mouse sulla cella grigia visualizzata sopra l'intestazione di colonna e quindi scegliere **Proprietà Tablix**.  
   
-3.  Fare clic sui **filtri** pagina e quindi fare clic su **Add**.  
+3.  Fare clic sulla pagina **filtri** , quindi fare clic su **Aggiungi**.  
   
-4.  Nel **espressione** segnalati, fare clic su `ProductID` nell'elenco a discesa. Si tratta della colonna a cui applicare il filtro.  
+4.  Nell' **espressione** archiviato fare clic sull' `ProductID` elenco a discesa. Si tratta della colonna a cui applicare il filtro.  
   
-5.  Fare clic su di uguale ( **=** ) operatore nel **operatore** elenco a discesa.  
+5.  Fare clic sull'operatore**=** EQUAL () nell'elenco a discesa **operatore** .  
   
-6.  Fare clic sul pulsante espressione accanto al **valore** campo, fare clic su **parametri** nel **categoria** area e quindi fare doppio clic `productid` nel  **I valori** area. Il **imposta espressione per: Valore** campo deve contenere un'espressione simile a **= parametri! productid. Valore**.  
+6.  Fare clic sul pulsante espressione accanto al campo **valore** , fare clic su **parametri** nell'area **categoria** , quindi fare doppio clic `productid` nell'area **valori** . Il campo **Imposta espressione per: Valore** dovrebbe contenere ora un'espressione simile a **=Parameters!productid.Value**.  
   
-7.  Fare clic su **OK,** e **OK** nuovamente il **proprietà Tablix** nella finestra di dialogo.  
+7.  Fare clic su **OK** e di nuovo su **OK** nella finestra di dialogo **Proprietà Tablix** .  
   
 8.  Salvare il file con estensione rdlc.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66108385"
   
 2.  Creare una nuova funzione che accetta un parametro, `productid`, di tipo Integer, restituisce un oggetto `datatable` e consente di eseguire le operazioni riportate di seguito.  
   
-    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: Definire una connessione dati e un tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea un'istanza del DataSet, `DataSet2`, creata nel passaggio 2 della [lezione 4: definire una connessione dati e una tabella di dati per il report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Creare una connessione al database di SQL Server per eseguire la query definita **lezione 4: Definire i dati di un connessione e una tabella dati per il Report figlio**.  
+    2.  Creare una connessione al database di SQL Server per eseguire la query definita nella **Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio**.  
   
     3.  Tramite la query verranno restituiti i dati non filtrati.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "66108385"
   
 1.  Aprire Default.aspx.  
   
-2.  Fare clic con il pulsante destro del controllo ReportViewer e quindi fare clic su **proprietà.**  
+2.  Fare clic con il pulsante destro del mouse sul controllo ReportViewer, quindi scegliere **Proprietà.**  
   
-3.  Nel **delle proprietà** pagina, fare clic sul **eventi** icona.  
+3.  Nella pagina **Proprietà** fare clic sull'icona **eventi** .  
   
-4.  Fare doppio clic il **drill-through** evento.  
+4.  Fare doppio clic sull'evento **drill-through** .  
   
      Verrà aggiunta una sezione del gestore eventi nel codice, che sarà simile al blocco riportato di seguito.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66108385"
   
     1.  Recuperare il riferimento all'oggetto del report figlio dal parametro *DrillthroughEventArgs* .  
   
-    2.  Chiamare la funzione, `GetPurchaseOrderDetail`  
+    2.  Chiamare la funzione,`GetPurchaseOrderDetail`  
   
     3.  Associare l'oggetto DataTable di `PurchaseOrderDetail` all'origine dati corrispondente del report.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "66108385"
   
 2.  Creare una nuova funzione che accetta un parametro, `productid`, di tipo Integer, restituisce un oggetto `datatable` e consente di eseguire le operazioni riportate di seguito.  
   
-    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: Definire una connessione dati e un tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea un'istanza del DataSet, `DataSet2`, creata nel passaggio 2 della [lezione 4: definire una connessione dati e una tabella di dati per il report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Creare una connessione al database di SQL Server per eseguire la query definita **lezione 4: Definire i dati di un connessione e una tabella dati per il Report figlio**.  
+    2.  Creare una connessione al database di SQL Server per eseguire la query definita in **Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio**.  
   
     3.  Nella query sarà incluso un parametro, `productid`, per garantire che i dati restituiti vengano filtrati in base a `ProductID` selezionato nel report padre.  
   
@@ -216,11 +216,11 @@ ms.locfileid: "66108385"
   
 1.  Aprire Default.aspx.  
   
-2.  Il pulsante destro del controllo ReportViewer e quindi fare clic su **proprietà**.  
+2.  Fare clic con il pulsante destro del mouse sul controllo ReportViewer, quindi scegliere **Proprietà**.  
   
-3.  Nel **le proprietà** riquadro, fare clic sul **eventi** icona.  
+3.  Nel riquadro **Proprietà** fare clic sull'icona **eventi** .  
   
-4.  Fare doppio clic il **drill-through** evento.  
+4.  Fare doppio clic sull'evento **drill-through** .  
   
      Verrà aggiunta una sezione del gestore eventi nel codice, che sarà simile a quanto riportato di seguito.  
   

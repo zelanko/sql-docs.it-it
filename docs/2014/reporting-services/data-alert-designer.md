@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 94faa6587f69f5944f29f6ec17f3899a6632b49a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109555"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
@@ -44,14 +44,14 @@ ms.locfileid: "66109555"
 > [!NOTE]  
 >  Poiché la funzionalità relativa agli avvisi dati di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è disponibile solo quando si installa [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità SharePoint, il report per cui si desidera creare un avviso deve essere salvato, distribuito o caricato in una raccolta documenti di SharePoint.  
 >   
->  Gli avvisi dati non possono essere creati per report in cui viene utilizzata l'autenticazione integrata di Windows o che richiedono le credenziali. Nei report devono venire utilizzate credenziali archiviate. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Gli avvisi dati non possono essere creati per report in cui viene utilizzata l'autenticazione integrata di Windows o che richiedono le credenziali. Nei report devono venire utilizzate credenziali archiviate. Per ulteriori informazioni, vedere [specificare le credenziali e le informazioni di connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Per aprire la finestra di progettazione Avviso dati, scegliere **Nuovo avviso dati** dal menu **Azioni** sulla barra degli strumenti dei report. Se l'opzione **Nuovo avviso dati** non è visualizzata, il report non è configurato per l'utilizzo di credenziali archiviate. È possibile aggiornare il tipo di credenziali aggiornando l'origine dati del report dalla raccolta di SharePoint.  
   
-##  <a name="AlertDesigner"></a> Interfaccia utente della finestra di progettazione Avviso dati  
+##  <a name="AlertDesigner"></a>Interfaccia utente della finestra di progettazione Avviso dati  
  L'interfaccia della finestra di progettazione Avviso dati è suddivisa in aree. Sono disponibili l'area in cui si seleziona il feed di dati del report, l'area in cui si creano condizioni semplici o complesse aggiungendo regole alle condizioni e così via. Nella figura seguente sono illustrate le aree della finestra di progettazione Avviso dati.  
   
- ![Aree all'interno dell'interfaccia utente della finestra di progettazione Avviso dati](media/rs-alertdesigner.gif "Aree all'interno dell'interfaccia utente della finestra di progettazione Avviso dati")  
+ ![Aree all'interno dell'interfaccia utente Alert Designer](media/rs-alertdesigner.gif "Aree all'interno dell'interfaccia utente Alert Designer")  
    
   
 ### <a name="alert-data"></a>Dati di avviso  
@@ -67,7 +67,7 @@ ms.locfileid: "66109555"
   
  Alcuni report dispongono di milioni di righe di dati. Nella tabella vengono mostrate solo le prime 100 righe di dati nel feed.  
   
-### <a name="alert-name"></a>Nome dell'avviso  
+### <a name="alert-name"></a>Nome avviso  
  Per impostazione predefinita, la definizione di avviso e il report hanno lo stesso nome. È possibile modificare il nome dell'avviso per renderlo più significativo. In questo modo sarà più semplice gestire gli avvisi, determinando quali aggiornare, eliminare e così via.  
   
  È possibile creare più avvisi in un report nonché disporre di più definizioni di avviso con lo stesso nome. Tuttavia si consiglia di utilizzare nomi di avviso univoci in modo da facilitare la differenziazione e la gestione delle definizioni di avviso. L'elenco di tutti gli avvisi creati può essere visualizzato in Gestione avvisi dati. Per altre infomrazioni, vedere [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) e [Gestire gli avvisi dati in Gestione avvisi dati](manage-my-data-alerts-in-data-alert-manager.md).  
@@ -75,9 +75,9 @@ ms.locfileid: "66109555"
 ### <a name="rules-and-clauses"></a>Regole e clausole  
  L'ambito delle modifiche ai dati e delle regole di avviso definisce le modifiche ai dati tramite cui viene attivato l'avviso. L'ambito delle modifiche ai dati può essere uno dei seguenti:  
   
--   **Alcuni dati hanno**: almeno un valore nei dati soddisfa le regole specificate dalla condizione.  
+-   **Tutti i dati hanno**: almeno un valore nei dati soddisfa le regole specificate dalla condizione.  
   
--   **Nessun dato ha**: nessun valore nei dati soddisfa le regole specificate dalla condizione.  
+-   **Nessun dato**. nessun valore nei dati soddisfa le regole specificate dalla condizione.  
   
  Una regola contiene zero, una o più clausole. Più regole vengono combinate tramite l'operatore logico AND. Una regola può includere più clausole combinate dall'operatore OR se nella colonna sono presenti dati di tipo stringa. Di seguito sono illustrate le regole di base che utilizzano una sola clausola, più regole combinate tramite l'operatore AND e più regole con una o più clausole OR.  
   
@@ -93,37 +93,37 @@ ms.locfileid: "66109555"
   
 -   Vendite **è maggiore di** 1500,00  
   
-     **AND** Unità vendute **è minore di** 500  
+     **e** Il numero **di unità vendute è inferiore a** 500  
   
      Data di restituzione **è precedente a** 1/1/2010  
   
 -   Vendite **è maggiore o uguale a** 1500,00  
   
-     **AND** Data di restituzione **è successiva a** 1/1/2010  
+     **e** La data di restituzione **è successiva** alla 1/1/2010  
   
-     **AND** Unità vendute **è maggiore di** 500  
+     **e** Le unità vendute **sono maggiori di** 500  
   
 -   Nome promozione **contiene** Primavera  
   
-     **AND** Unità vendute **è maggiore di** 500  
+     **e** Le unità vendute **sono maggiori di** 500  
   
-     **AND** Resi **è**  0  
+     **e** Restituisce **0**  
   
  **Regole con clausole OR**  
   
 -   Cognome **è** Blythe  
   
-     **OR**  Petulescu  
+     **O**  Petulescu  
   
-     **OR**  Martin  
+     **O**  Martin  
   
 -   Data di restituzione **è successiva a** 1/1/2010  
   
-     **AND** Territorio vendita **è**  Centro  
+     **e** Il territorio di vendita **è** centrale  
   
-     **OR**  Sud  
+     **O**  Sud  
   
-     **OR**  Nord  
+     **O**  Nord  
   
  A seconda del tipo di dati del campo, tramite la finestra di progettazione Avviso dati vengono forniti tipi di confronto diversi. La finestra di progettazione Avviso dati offre tipi di confronto diversi in base al tipo di dati del campo per il quale i valori vengono confrontati. Di seguito sono elencati i tipi di confronto disponibili per i diversi tipi di dati. Il tipo di dati `Boolean` non è supportato nelle regole.  
   
@@ -146,13 +146,13 @@ ms.locfileid: "66109555"
 ### <a name="schedule-settings"></a>Impostazioni di pianificazione  
  Tramite la pianificazione definita per l'avviso dati viene stabilito il criterio di ricorrenza per l'invio del messaggio di avviso dati, nonché quando avviare e arrestare l'invio dei messaggi di avviso. I criteri prevedono singola occorrenza, minuto, giornaliero e settimanale. Anche se un avviso dispone di una sola pianificazione, utilizzando tali intervalli è possibile creare criteri di ricorrenza complessi in grado di soddisfare la maggior parte delle esigenze aziendali. Di seguito sono riportati esempi di criteri di ricorrenza comuni da utilizzare nelle pianificazioni:  
   
--   **Giornaliera, ogni 10 giorni**: gli avvisi vengono inviati una volta al giorno, ogni 10 giorni.  
+-   Ogni giorno **ogni 10** giorni: invia gli avvisi una volta al giorno, ogni 10 giorni.  
   
--   **Settimanale, ogni 2 settimane di lunedì**: gli avvisi vengono inviati solo ogni due settimane di lunedì.  
+-   **Settimanalmente ogni 2 settimane di lunedì** -invia avvisi ogni due settimane solo il lunedì.  
   
--   **Oraria, ogni 12 ore**: gli avvisi vengono inviati ogni 12 ore.  
+-   **Ogni ora ogni 12** ore: Invia avvisi ogni 12 ore.  
   
--   **Minuto, ogni 30 minuti**: gli avvisi vengono inviati ogni 30 minuti.  
+-   **Minuto ogni 30** minuti: Invia avvisi ogni 30 minuti.  
   
  Il criterio di ricorrenza consente di specificare quando viene inviato l'avviso. Se le regole vengono soddisfatte durante l'intervallo specificato dal criterio, l'avviso non viene inviato fino alla fine dell'intervallo.  
   
@@ -161,24 +161,24 @@ ms.locfileid: "66109555"
 > [!IMPORTANT]  
 >  È consigliabile non utilizzare un criterio di ricorrenza con una frequenza maggiore di quella giornaliera, a meno che non vi siano importanti motivi aziendali per farlo. L'elaborazione della definizione di avviso dati in tempo reale non è un scenario supportato. L'elaborazione troppo frequente delle definizioni di avviso dati influisce sulle prestazioni del server di report e sulla distribuzione globale di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-### <a name="email-settings"></a>Impostazioni posta elettronica  
+### <a name="email-settings"></a>Impostazioni di posta elettronica  
  L'opzione **Destinatario/i** consente di specificare gli indirizzi di posta elettronica dei destinatari dei messaggi di avviso dati. Separare più indirizzi di posta elettronica tramite punti e virgola, analogamente a quanto avviene nei messaggi di posta elettronica di Microsoft Office Outlook. È anche possibile specificare come destinatari gruppi di distribuzione, in modo da poter gestire l'elenco destinatari in modo più semplice ed efficace. Se in SharePoint è possibile determinare l'indirizzo di posta elettronica personale quando si crea una definizione di avviso, tale indirizzo viene aggiunto automaticamente all'elenco di destinatari; in caso contrario, è necessario aggiungerlo in modo esplicito come destinatario.  
   
- L'oggetto predefinito del messaggio di posta elettronica è **Avviso dati per \<nome avviso>** . È possibile modificare l'oggetto in base alle proprie esigenze.  
+ L'oggetto predefinito del messaggio di posta elettronica è **Avviso dati per \<nome avviso>**. È possibile modificare l'oggetto in base alle proprie esigenze.  
   
  È anche possibile fornire una descrizione da includere nel messaggio di avviso dati nell'opzione **Descrizione** . L'inserimento di una descrizione, in particolare se vi sono avvisi dati simili, è utile per distinguere rapidamente i messaggi di avviso dati e per comprenderli. Oltre al messaggio di avviso inviato quando i dati del report soddisfano le regole specificate, viene inviato un messaggio di avviso a tutti i destinatari quando si verifica un errore. Per altre informazioni, vedere [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).  
   
  Per altre informazioni sulla modalità di generazione del messaggio di posta elettronica, vedere [Reporting Services Data Alerts](../ssms/agent/alerts.md).  
   
-##  <a name="CreateAlert"></a> Creare una definizione di avviso dati  
+##  <a name="CreateAlert"></a>Creare una definizione di avviso dati  
  Se all'utente vengono concesse le autorizzazioni Visualizzazione elementi e Creazione avvisi di SharePoint, potrà creare una definizione di avviso dati per qualsiasi report per il quale dispone dell'autorizzazione per la visualizzazione, a condizione che nel report vengano utilizzate credenziali archiviate o nessuna credenziale. Il report viene eseguito da una raccolta di SharePoint. I dati disponibili per l'utilizzo nella finestra di progettazione Avviso dati provengono dal report. Se il report è con parametri, potrebbe essere necessario eseguirlo usando valori dei parametri diversi per assicurarsi che i dati di interesse vengano visualizzati nel report. Dopo aver aperto il report, scegliere **Nuovo avviso dati** dal menu **Azioni** sulla barra degli strumenti dei report per aprire la finestra di progettazione Avviso dati. Nell'immagine seguente viene illustrato come aprire la finestra di progettazione Avviso dati.  
   
- ![Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint](media/rs-openalertdesigneriw.gif "Aprire la finestra di progettazione Avviso dati dalla raccolta di SharePoint")  
+ ![Aprire Alert Designer dalla raccolta di SharePoint](media/rs-openalertdesigneriw.gif "Aprire Alert Designer dalla raccolta di SharePoint")  
   
  Per altre informazioni, vedere [Creare un avviso dati nella finestra di progettazione Avviso dati](create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="SaveAlert"></a> Salvare una definizione di avviso dati  
+##  <a name="SaveAlert"></a>Salvare una definizione di avviso dati  
  Tramite la finestra di progettazione Avviso dati viene visualizzato l'URL del sito in cui verrà salvata la definizione di avviso dati. Le definizioni di avviso dati vengono sempre salvate nello stesso sito dei report.  
   
 > [!NOTE]  
@@ -187,12 +187,12 @@ ms.locfileid: "66109555"
  Prima di essere salvata, la definizione di avviso viene convalidata. Per poter salvare la definizione di avviso, è necessario correggere eventuali errori. Per altre informazioni, vedere [Creare un avviso dati nella finestra di progettazione Avviso dati](create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="EditAlert"></a> Modificare una definizione di avviso dati  
+##  <a name="EditAlert"></a>Modificare una definizione di avviso dati  
  Dopo aver salvato la definizione di avviso dati, è possibile riaprirla e quindi modificarla nella finestra di progettazione Avviso dati. È possibile aggiungere, modificare o eliminare regole e clausole, nonché modificare le impostazioni della pianificazione e di posta elettronica. Se il feed di dati del report utilizzato dall'avviso è cambiato e non vengono più forniti i campi di riferimento delle regole di avviso oppure se i tipi di dati o altri metadati dei campi sono cambiati, la definizione di avviso non è più valida ed è necessario correggerla prima di poterla salvare nuovamente. Se si desidera utilizzare un feed di dati diverso, è necessario creare una nuova definizione di avviso.  
   
  Per modificare una definizione di avviso dati, fare clic con il pulsante destro del mouse su di essa in Gestione avvisi dati, quindi scegliere **Modifica**. Nella figura seguente è illustrato il menu di scelta rapida per un avviso dati in Gestione avvisi dati.  
   
- ![Aprire la finestra di progettazione Avviso dati facendo clic su Modifica](media/rs-alertmanageriwopendesigner.gif "Aprire la finestra di progettazione Avviso dati facendo clic su Modifica")  
+ ![Aprire la finestra di progettazione di avvisi dati facendo clic su Modifica](media/rs-alertmanageriwopendesigner.gif "Aprire la finestra di progettazione di avvisi dati facendo clic su Modifica")  
   
  Per altre informazioni, vedere [Modificare un avviso dati nella finestra di progettazione di avvisi](edit-a-data-alert-in-alert-designer.md).  
   
@@ -206,7 +206,7 @@ ms.locfileid: "66109555"
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Reporting Services Data Alerts](../ssms/agent/alerts.md)   
+ [Avvisi dati Reporting Services](../ssms/agent/alerts.md)   
  [Gestione avvisi dati per gli amministratori di avvisi](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Controllare la distribuzione dei Report | Microsoft Docs
+title: Controllare la distribuzione del report | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109694"
 ---
 # <a name="control-report-distribution"></a>Controllare la distribuzione dei report
@@ -47,7 +47,7 @@ ms.locfileid: "66109694"
  Il recapito tramite condivisione file viene utilizzato per inviare un report a un file presente su un disco rigido. Dopo essere stato salvato su disco, un file non è più soggetto al modello di sicurezza basata sui ruoli utilizzato dal server di report per controllare gli accessi degli utenti. Per proteggere un report recapitato a un disco rigido, è possibile associare elenchi di controllo di accesso (ACL) al file stesso o alla cartella che lo contiene. In base al sistema operativo, potrebbero essere disponibili ulteriori opzioni di sicurezza.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+ [Configurare un server di report per il recapito tramite posta elettronica &#40;Configuration Manager SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   

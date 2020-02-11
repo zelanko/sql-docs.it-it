@@ -1,5 +1,5 @@
 ---
-title: Configura visualizzatore dati (scheda istogramma) | Microsoft Docs
+title: Configura visualizzatore dati (scheda Istogramma) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3df1a27d94c3da63e1760e890654dba4045b2f94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060707"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Configura visualizzatore dati (scheda Istogramma)
@@ -29,10 +29,10 @@ ms.locfileid: "66060707"
  Consente di selezionare una colonna da visualizzare come istogramma.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configura visualizzatore dati &#40;scheda Generale&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
- [Configura visualizzatore dati &#40;scheda grafico a colonne&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [Configura visualizzatore dati &#40;scheda griglia&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
- [Configura visualizzatore dati &#40;scheda grafico a dispersione&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+ [Configurare il Visualizzatore dati &#40;scheda generale&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+ [Configurare Visualizzatore dati &#40;scheda Istogramma&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
+ [Configurare la scheda griglia &#40;visualizzatore dati&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
+ [Configurare il Visualizzatore dati &#40;scheda grafico a dispersione&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [Flusso di dati](data-flow/data-flow.md)   
  [Debug di un flusso di dati](troubleshooting/debugging-data-flow.md)  
   

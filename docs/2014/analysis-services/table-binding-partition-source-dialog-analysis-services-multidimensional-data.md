@@ -1,5 +1,5 @@
 ---
-title: Tabella Dettagli (finestra di dialogo origine partizione) dell'associazione (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Dettagli dell'associazione di tabella (finestra di dialogo origine partizione) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067872"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Dettagli dell'associazione di tabella (finestra di dialogo Origine partizione) (Analysis Services - Dati multidimensionali)
@@ -29,7 +29,7 @@ ms.locfileid: "66067872"
  **Look in**  
  Consente di selezionare l'origine dei dati o la vista origine dati contenente le tabelle di origine per la partizione. La vista origine dati utilizzata dal gruppo di misure selezionato è selezionata per impostazione predefinita.  
   
- **Tabelle dei filtri**  
+ **Filtro tabelle**  
  Digitare la stringa usata per limitare le tabelle visualizzate in **Tabelle disponibili**per nome tabella.  
   
  **Trovare le tabelle**  
@@ -43,6 +43,6 @@ ms.locfileid: "66067872"
  Se è stato specificato un filtro in **Filtro tabelle**, l'elenco viene ulteriormente limitato confrontando il filtro con i nomi delle tabelle che soddisfano il criterio specificato. Verranno visualizzate solo le tabelle che contengono la stringa specificata in **Filtro tabelle** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo origine partizione &#40;Analysis Services - dati multidimensionali&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+ [Finestra di dialogo origine partizione &#40;Analysis Services-Dati multidimensionali&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

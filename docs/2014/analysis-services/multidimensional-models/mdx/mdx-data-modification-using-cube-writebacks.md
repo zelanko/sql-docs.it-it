@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei writeback dei cubi (MDX) | Microsoft Docs
+title: Utilizzo di writeback di cubi (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074221"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Utilizzo dei writeback dei cubi (MDX)
-  È possibile aggiornare un cubo usando l'istruzione [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube). Tale istruzione consente di aggiornare una tupla con un valore specifico. Per utilizzare in modo efficace l'istruzione UPDATE CUBE per l'aggiornamento di un cubo, è importante conoscere la sintassi dell'istruzione, le condizioni di errore che possono verificarsi e i possibili effetti degli aggiornamenti su un cubo.  
+  È possibile aggiornare un cubo usando l'istruzione [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) . Tale istruzione consente di aggiornare una tupla con un valore specifico. Per utilizzare in modo efficace l'istruzione UPDATE CUBE per l'aggiornamento di un cubo, è importante conoscere la sintassi dell'istruzione, le condizioni di errore che possono verificarsi e i possibili effetti degli aggiornamenti su un cubo.  
   
 ## <a name="update-cube-statement-syntax"></a>Sintassi dell'istruzione UPDATE CUBE  
  La sintassi dell'istruzione UPDATE CUBE è la seguente:  
@@ -117,6 +117,6 @@ USE_EQUAL_ALLOCATION
 -   Modifica della granularità di una dimensione inclusa nel writeback.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modifica dei dati &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+ [Modifica dei dati &#40;&#41;MDX](mdx-data-modification-modifying-data.md)  
   
   

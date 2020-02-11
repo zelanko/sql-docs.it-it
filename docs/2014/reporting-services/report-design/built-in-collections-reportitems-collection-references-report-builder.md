@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106384"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Riferimenti alla raccolta ReportItems (Generatore report e SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66106384"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Utilizzo della proprietà Valute di ReportItems  
- Gli elementi all'interno di `ReportItems` raccolta hanno una sola proprietà: Valore. È possibile utilizzare il valore per un elemento di `ReportItems` per visualizzare o calcolare i dati di un altro campo del report. Per accedere al valore della casella di testo corrente, è possibile usare la proprietà globale predefinita Me.Value di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] o semplicemente Value. Nelle funzioni per i report come First e nelle funzioni di aggregazione utilizzare la sintassi completa.  
+ Per gli elementi nella raccolta `ReportItems` è disponibile solo la proprietà Value. È possibile utilizzare il valore per un elemento di `ReportItems` per visualizzare o calcolare i dati di un altro campo del report. Per accedere al valore della casella di testo corrente, è possibile usare la proprietà globale predefinita Me.Value di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] o semplicemente Value. Nelle funzioni per i report come First e nelle funzioni di aggregazione utilizzare la sintassi completa.  
   
  Ad esempio:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66106384"
   
      `=ReportItems!Textbox1.Value`  
   
--   Questa espressione, inserita un `ReportItem` proprietà Color, casella di testo Visualizza il testo in nero quando il valore è > 0; in caso contrario, il valore viene visualizzato in rosso:  
+-   Questa espressione, inserita in una `ReportItem` proprietà Color della casella di testo, Visualizza il testo in nero quando il valore è > 0; in caso contrario, il valore viene visualizzato in rosso:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   

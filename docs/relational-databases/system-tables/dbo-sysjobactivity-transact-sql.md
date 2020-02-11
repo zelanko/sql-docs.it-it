@@ -1,5 +1,5 @@
 ---
-title: dbo.sysjobactivity (Transact-SQL) | Microsoft Docs
+title: dbo. sysjobactivity (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -20,33 +20,33 @@ ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902214"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Registra l'attività e lo stato del processo corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  Questa tabella è archiviata nel **msdb** database.
+  Registra l'attività e lo stato del processo corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  Questa tabella è archiviata nel database **msdb** .
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|ID della sessione archiviata nel **syssessions** nella tabella di **msdb** database.|  
+|**session_id**|**int**|ID della sessione archiviata nella tabella **syssessions** del database **msdb** .|  
 |**job_id**|**uniqueidentifier**|ID del processo.|  
 |**run_requested_date**|**datetime**|Data e ora della richiesta di esecuzione del processo.|  
-|**run_requested_source**|**sysname(nvarchar(128))**|Autore della richiesta di esecuzione del processo.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname (nvarchar (128))**|Autore della richiesta di esecuzione del processo.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|Data e ora di accodamento del processo. Se il processo viene eseguito direttamente, questa colonna è NULL.|  
 |**start_execution_date**|**datetime**|Data e ora in cui è pianificata l'esecuzione del processo.|  
 |**last_executed_step_id**|**int**|ID dell'ultimo passaggio del processo eseguito.|  
-|**last_executed_step_**<br /><br /> **data**|**datetime**|Data e ora di inizio dell'esecuzione dell'ultimo passaggio del processo.|  
+|**last_executed_step_**<br /><br /> **date**|**datetime**|Data e ora di inizio dell'esecuzione dell'ultimo passaggio del processo.|  
 |**stop_execution_date**|**datetime**|Data e ora in cui l'esecuzione del processo è stata completata.|  
-|**job_history_id**|**int**|Utilizzato per identificare una riga nel **sysjobhistory** tabella.|  
+|**job_history_id**|**int**|Utilizzato per identificare una riga nella tabella **sysjobhistory** .|  
 |**next_scheduled_run_date**|**datetime**|Data e ora in cui è stata pianificata l'esecuzione successiva del processo.|  
 
 ## <a name="example"></a>Esempio
-In questo esempio restituisce lo stato di runtime per tutti i processi di SQL Server Agent.  Eseguire il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Questo esempio restituirà lo stato della fase di esecuzione per tutti i processi di SQL Server Agent.  Eseguire il seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 ```sql
 SELECT sj.Name, 
     CASE
@@ -62,6 +62,6 @@ WHERE session_id = (
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
+ [dbo. sysjobhistory &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

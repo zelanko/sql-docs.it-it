@@ -16,16 +16,16 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899024"
 ---
 # <a name="functions-on-string-values---contains"></a>Funzioni su valori stringa - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un valore di tipo xs: Boolean che indica se il valore di *$arg1* contiene un valore stringa specificato da *arg2 $* .  
+  Restituisce un valore di tipo xs: Boolean che indica se il valore di *$arg 1* contiene un valore stringa specificato da *$ARG 2*.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,31 +35,31 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *$arg1*  
+ *$arg 1*  
  Valore stringa da testare.  
   
- *$arg2*  
+ *$arg 2*  
  Sottostringa da cercare.  
   
-## <a name="remarks"></a>Note  
- Se il valore di *$arg2* è una stringa di lunghezza zero, la funzione restituisce **True**. Se il valore di *$arg1* è una stringa di lunghezza zero e il valore di *arg2 $* non è una stringa di lunghezza zero, la funzione restituisce **False**.  
+## <a name="remarks"></a>Osservazioni  
+ Se il valore di *$ARG 2* è una stringa di lunghezza zero, la funzione restituisce **true**. Se il valore di *$arg 1* è una stringa di lunghezza zero e il valore di *$ARG 2* non è una stringa di lunghezza zero, la funzione restituisce **false**.  
   
- Se il valore di *$arg1* oppure *arg2 $* è una sequenza vuota, l'argomento viene trattato come stringa di lunghezza zero.  
+ Se il valore di *$arg 1* o *$ARG 2* è la sequenza vuota, l'argomento viene trattato come stringa di lunghezza zero.  
   
  La funzione contains() utilizza le regole di confronto dei punti di codice Unicode predefinite di XQuery per il confronto delle stringhe.  
   
- Il valore di sottostringa specificato per *$arg2* deve essere minore o uguale a 4000 caratteri. Se il valore specificato è maggiore di 4000 caratteri, viene generato un errore dinamico e la funzione Contains () restituisce una sequenza vuota anziché un valore booleano **True** oppure **False**. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono generati errori dinamici nelle espressioni XQuery.  
+ Il valore della sottostringa specificato per *$ARG 2* deve essere minore o uguale a 4000 caratteri. Se il valore specificato è maggiore di 4000 caratteri, si verifica una condizione di errore dinamico e la funzione Contains () restituisce una sequenza vuota anziché un valore booleano **true** o **false**. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono generati errori dinamici nelle espressioni XQuery.  
   
- Per ottenere i confronti tra maiuscole e minuscole, il [maiuscolo](../xquery/functions-on-string-values-upper-case.md) o minuscole funzioni possono essere utilizzate.  
+ Per ottenere confronti senza distinzione tra maiuscole e minuscole, è possibile [usare le funzioni maiuscole](../xquery/functions-on-string-values-upper-case.md) o minuscole.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
- Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per altre informazioni, vedere la sezione "XQuery funzioni riconoscono i surrogati" nell'argomento [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per ulteriori informazioni, vedere la sezione "funzioni XQuery sono compatibili con i surrogati" nell'argomento [modifiche di rilievo apportate alle funzionalità di motore di database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo xml nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo XML nel database AdventureWorks.  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>R. Utilizzo della funzione XQuery contains() per cercare una stringa di caratteri specifica  
- La query seguente trova i prodotti per i quali la descrizione di riepilogo contiene la parola Aerodynamic. La query restituisce il valore ProductID e il <`Summary`> (elemento) per tali prodotti.  
+ La query seguente trova i prodotti per i quali la descrizione di riepilogo contiene la parola Aerodynamic. La query restituisce il ProductID e l'elemento `Summary` <> per tali prodotti.  
   
 ```  
 --The product model description document uses  

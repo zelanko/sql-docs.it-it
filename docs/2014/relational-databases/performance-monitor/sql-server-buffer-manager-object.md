@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250755"
 ---
 # <a name="sql-server-buffer-manager-object"></a>Oggetto di Gestione buffer di SQL Server
-  L'oggetto di **Gestione buffer** fornisce contatori che consentono di monitorare l'utilizzo degli elementi seguenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+  L'oggetto di **Gestione buffer** fornisce contatori per monitorare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la modalità di utilizzo di:  
   
 -   Memoria per archiviare pagine di dati.  
   
@@ -45,28 +45,29 @@ ms.locfileid: "63250755"
 |**Percentuale riscontri cache buffer**|Indica la percentuale di pagine trovate nella cache del buffer senza dover ricorrere a una lettura dal disco. La percentuale è data dal rapporto tra il totale dei riscontri nella cache e il totale di ricerche nella cache eseguite considerate alcune migliaia dei più recenti accessi alla pagina. La variazione della percentuale su lunghi periodi di tempo è limitata. Poiché la lettura dalla cache richiede una quantità di risorse molto minore rispetto alla lettura dal disco, è auspicabile che il valore della percentuale sia elevato. È generalmente possibile aumentare la percentuale di riscontri nella cache del buffer aumentando la quantità di memoria disponibile per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o utilizzando la funzionalità estensione del pool di buffer.|  
 |**Pagine checkpoint/sec**|Indica il numero di pagine al secondo scaricate nel disco tramite checkpoint o altre operazioni che richiedono lo scaricamento di tutte le pagine dirty.|  
 |**Pagine di database**|Indica il numero di pagine con contenuto di database nel pool di buffer.|  
-|**Pagine di estensione allocate**|Numero totale di pagine memorizzate nella cache non disponibili nel file di estensione del pool di buffer.|  
+|**Pagine allocate estensione**|Numero totale di pagine memorizzate nella cache non disponibili nel file di estensione del pool di buffer.|  
 |**Pagine di estensione disponibili**|Numero totale di pagine memorizzate nella cache disponibili nel file di estensione del pool di buffer.|  
-|**Estensione utilizzata in percentuale**|Percentuale del file di paging dell'estensione del pool di buffer occupato dalle pagine di Gestione buffer.|  
+|**Estensione in uso come percentuale**|Percentuale del file di paging dell'estensione del pool di buffer occupato dalle pagine di Gestione buffer.|  
 |**Contatore IO di estensione in attesa**|Lunghezza della coda di I/O per il file di estensione del pool di buffer.|  
 |**Eliminazioni pagine di estensione/sec**|Numero di pagine eliminate dal file dell'estensione del pool di buffer al secondo.|  
 |**Letture pagine di estensione/sec**|Numero di pagine lette dal file dell'estensione del pool di buffer al secondo.|  
 |**Tempo senza riferimenti pagina di estensione**|Numero medio di secondi durante i quali una pagina viene mantenuta nell'estensione del pool di buffer senza riferimenti.|  
 |**Scritture pagine di estensione/sec**|Numero di pagine scritte nel file dell'estensione del pool di buffer al secondo.|  
 |**Blocchi elenco di disponibilità/sec**|Indica il numero di richieste al secondo per cui è stata necessaria l'attesa di una pagina disponibile.|  
-|**Scritture Lazywriter/sec**|Indica il numero di buffer scritti al secondo da Lazywriter di Gestione buffer. *Lazywriter* è un processo di sistema che scarica batch di buffer dirty e obsoleti (buffer contenenti modifiche che devono essere riscritte su disco prima che il buffer possa essere riutilizzato per un'altra pagina) e li rende disponibili per i processi utente. Lazywriter elimina la necessità di eseguire checkpoint frequenti per la creazione di buffer disponibili.|  
+|**Scritture Lazy/sec**|Indica il numero di buffer scritti al secondo da Lazywriter di Gestione buffer. 
+  *Lazywriter* è un processo di sistema che scarica batch di buffer dirty e obsoleti (buffer contenenti modifiche che devono essere riscritte su disco prima che il buffer possa essere riutilizzato per un'altra pagina) e li rende disponibili per i processi utente. Lazywriter elimina la necessità di eseguire checkpoint frequenti per la creazione di buffer disponibili.|  
 |**Permanenza presunta delle pagine**|Indica il numero di secondi durante il quale una pagina viene mantenuta nel pool di buffer senza riferimenti.|  
 |**Ricerche di pagina/sec**|Indica il numero di richieste al secondo per la ricerca di una pagina nel pool di buffer.|  
-|**Letture di pagina/sec**|Indica il numero di letture fisiche di pagine del database eseguite al secondo. Il valore indica il totale di letture fisiche di pagine eseguite in tutti i database. Poiché l'I/O fisico richiede una notevole quantità di risorse, potrebbe essere possibile ridurre i costi utilizzando una cache dei dati di dimensioni maggiori, indici intelligenti e query più efficienti oppure modificando la progettazione del database.|  
+|**Letture pagina/sec**|Indica il numero di letture fisiche di pagine del database eseguite al secondo. Il valore indica il totale di letture fisiche di pagine eseguite in tutti i database. Poiché l'I/O fisico richiede una notevole quantità di risorse, potrebbe essere possibile ridurre i costi utilizzando una cache dei dati di dimensioni maggiori, indici intelligenti e query più efficienti oppure modificando la progettazione del database.|  
 |**Scritture di pagina/sec**|Indica il numero di scritture fisiche di pagine del database eseguite al secondo.|  
 |**Pagine read-ahead/sec**|Indica il numero di pagine lette al secondo prima di essere utilizzate.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Nodo SQLServer:Buffer](sql-server-buffer-node.md)   
+ [SQL Server: nodo buffer](sql-server-buffer-node.md)   
  [Opzioni di configurazione del server Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [Oggetto Plan Cache di SQL Server](sql-server-plan-cache-object.md)   
+ [SQL Server, oggetto Plan Cache](sql-server-plan-cache-object.md)   
  [Monitoraggio dell'utilizzo delle risorse &#40;Monitor di sistema&#41;](monitor-resource-usage-system-monitor.md)   
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
+ [sys. dm_os_performance_counters &#40;&#41;Transact-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [Estensione pool di buffer](../../database-engine/configure-windows/buffer-pool-extension.md)  
   
   

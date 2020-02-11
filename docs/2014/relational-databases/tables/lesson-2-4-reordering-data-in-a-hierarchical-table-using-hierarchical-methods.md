@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110104"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Riordinamento di dati in una tabella gerarchica utilizzando metodi gerarchici
   La riorganizzazione di una gerarchia è un'attività di manutenzione comune. In questa attività verrà usata un'istruzione UPDATE con il metodo [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) per spostare innanzitutto una singola riga in un percorso nuovo della gerarchia. Verrà quindi spostato un sottoalbero intero in un nuovo percorso.  
   
- Il metodo `GetReparentedValue` utilizza due argomenti. Nel primo argomento viene descritta la parte della gerarchia da modificare. Ad esempio, se una gerarchia è **/1/4/2/3/** e si vuole modificare la sezione **/1/4/** , la gerarchia diventa **/2/1/2/3/** , lasciando gli ultimi due nodi (**2/3/** ) inalterati, è necessario specificare i nodi modificati ( **/1/4/** ) come primo argomento. Il secondo argomento specifica il nuovo livello della gerarchia, nell'esempio **/2/1/** . Non è necessario che i due argomenti contengano lo stesso numero di livelli.  
+ Il metodo `GetReparentedValue` utilizza due argomenti. Nel primo argomento viene descritta la parte della gerarchia da modificare. Ad esempio, se una gerarchia è **/1/4/2/3/** e si vuole modificare la sezione **/1/4/** , la gerarchia diventa **/2/1/2/3/**, lasciando gli ultimi due nodi (**2/3/**) inalterati, è necessario specificare i nodi modificati (**/1/4/**) come primo argomento. Il secondo argomento specifica il nuovo livello della gerarchia, nell'esempio **/2/1/**. Non è necessario che i due argomenti contengano lo stesso numero di livelli.  
   
 ### <a name="to-move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Per spostare una sola riga in un percorso nuovo nella gerarchia  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66110104"
     GO  
     ```  
   
-     Wanida ora è al nodo **/3/1/** .  
+     Wanida ora è al nodo **/3/1/**.  
   
 ### <a name="to-reorganize-a-section-of-a-hierarchy"></a>Per riorganizzare una sezione di una gerarchia  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66110104"
     GO  
     ```  
   
-2.  Ora Kevin riporta a Wanida che riporta a Jill che riporta a David. Questo significa che Kevin è al livello **/3/1/1/** . Per spostare tutti i subalterni di Jill a un nuovo responsabile, verranno aggiornati tutti i nodi che hanno **/3/** in **OrgNode** con un nuovo valore. Eseguire il codice seguente per aggiornare Wanida in modo che riporti a Sariya, ma lasciando che Kevin riporti a Wanida:  
+2.  Ora Kevin riporta a Wanida che riporta a Jill che riporta a David. Questo significa che Kevin è al livello **/3/1/1/**. Per spostare tutti i subalterni di Jill a un nuovo responsabile, verranno aggiornati tutti i nodi che hanno **/3/** in **OrgNode** con un nuovo valore. Eseguire il codice seguente per aggiornare Wanida in modo che riporti a Sariya, ma lasciando che Kevin riporti a Wanida:  
   
     ```  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  
@@ -123,6 +123,6 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
  Per riorganizzare una sezione di una gerarchia tramite una stored procedure, vedere la sezione [Spostamento di sottoalberi](../hierarchical-data-sql-server.md#BKMK_MovingSubtrees).  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Riepilogo: La gestione dei dati in una tabella gerarchica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+ [Riepilogo: Gestione di dati in una tabella gerarchica](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
   

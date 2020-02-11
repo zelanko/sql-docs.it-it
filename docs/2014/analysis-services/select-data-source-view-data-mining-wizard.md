@@ -1,5 +1,5 @@
 ---
-title: Selezione vista origine dati (Data Mining Wizard) | Microsoft Docs
+title: Selezione vista origine dati (creazione guidata modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5126ab2c44dbd5045af86cda54068b9ec8ed2f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069677"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>Selezione vista origine dati (Creazione guidata modello di data mining)
@@ -25,21 +25,21 @@ ms.locfileid: "66069677"
 > [!NOTE]  
 >  Questa pagina verrà visualizzata solo dopo aver selezionato **Da database relazionale o data warehouse esistente** nella pagina **Selezione metodo di definizione** della procedura guidata.  
   
- **Per altre informazioni:** [Nei modelli multidimensionali viste origine dati](multidimensional-models/data-source-views-in-multidimensional-models.md), [Creazione guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di Data Mining relazionale](data-mining/create-a-relational-mining-structure.md)  
+ **Per ulteriori informazioni:** [viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md), creazione guidata modello di data [mining &#40;Analysis Services-&#41;di data mining ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [creare una struttura di data mining relazionale](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opzioni  
  **Viste origine dati disponibili**  
  Fare clic sull'origine dei dati relativa alla struttura di data mining.  
   
- **Visualizzazione dei metadati**  
+ **Visualizza metadati**  
  Consente di visualizzare i metadati relativi alla vista origine dati selezionata.  
   
  **Sfoglia**  
  Fare clic su questo pulsante per aprire la finestra di dialogo di visualizzazione **Vista origine dati** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Creare la struttura di Data Mining &#40;Creazione guidata di Data Mining&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [Specificare i tipi di tabella &#40;Creazione guidata di Data Mining&#41;](specify-table-types-data-mining-wizard.md)  
+ [Guida sensibile al contesto della creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Creazione della struttura di data mining &#40;creazione guidata modello di data mining&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [Impostazione tipi di tabella &#40;creazione guidata modello di data mining&#41;](specify-table-types-data-mining-wizard.md)  
   
   

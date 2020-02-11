@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245745"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Proprietà SQL Server Agent (pagina Sistema avvisi)
-  Usare questa pagina per visualizzare e modificare le impostazioni per i messaggi inviati dagli avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Utilizzare questa pagina per visualizzare e modificare le impostazioni per i messaggi inviati [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dagli avvisi di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Sessione di posta elettronica**  
@@ -35,34 +35,34 @@ ms.locfileid: "63245745"
 > [!NOTE]  
 >  Dopo avere modificato il sistema di posta elettronica, è necessario riavviare il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per rendere operative le modifiche.  
   
- **Profilo posta**  
- Consente di impostare il profilo che deve essere utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È inoltre possibile selezionare **\<nuovo profilo di Posta elettronica database>** per creare un nuovo profilo.  
+ **Profilo di posta**  
+ Consente di impostare il profilo che deve essere utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È anche possibile selezionare ** \<nuovo profilo posta elettronica database >** per creare un nuovo profilo.  
   
- **Messaggi di posta elettronica tramite cercapersone**  
+ **Messaggi di posta elettronica cercapersone**  
  Le opzioni incluse in questa sezione consentono di configurare i messaggi di posta elettronica inviati a indirizzi di cercapersone in modo che possano funzionare con il sistema di cercapersone utilizzato.  
   
- **Formato indirizzo per messaggi di posta elettronica tramite cercapersone**  
+ **Formattazione degli indirizzi per i messaggi di posta elettronica tramite cercapersone**  
  Questa sezione consente di specificare il formato degli indirizzi e della riga dell'oggetto dei messaggi di posta elettronica inviati tramite cercapersone.  
   
- **Riga A**  
+ **Riga a**  
  Consente di specificare le opzioni della riga **A** del messaggio  
   
- **Prefix**  
+ **Prefisso**  
  Consente di digitare un testo fisso richiesto dal sistema di cercapersone all'inizio della riga **A** dei messaggi inviati a un cercapersone.  
   
- **Cercapersone**  
+ **Pager**  
  Consente di includere l'indirizzo di posta elettronica del messaggio tra il prefisso e il suffisso.  
   
  **Suffisso**  
  Consente di digitare un testo fisso richiesto dal sistema di cercapersone alla fine della riga **A** dei messaggi inviati a un cercapersone.  
   
- **Riga Cc**  
+ **Linea CC**  
  Consente di specificare le opzioni della riga **Cc** del messaggio.  
   
- **Prefix**  
+ **Prefisso**  
  Consente di digitare un testo fisso richiesto dal sistema di cercapersone all'inizio della riga **Cc** dei messaggi inviati a un cercapersone.  
   
- **Cercapersone**  
+ **Pager**  
  Consente di includere l'indirizzo di posta elettronica del messaggio tra il prefisso e il suffisso.  
   
  **Suffisso**  
@@ -71,13 +71,13 @@ ms.locfileid: "63245745"
  **Oggetto**  
  Consente di specificare le opzioni dell'oggetto del messaggio.  
   
- **Prefix**  
+ **Prefisso**  
  Consente di digitare un testo fisso richiesto dal sistema di cercapersone all'inizio della riga **Oggetto** dei messaggi inviati a un cercapersone.  
   
  **Suffisso**  
  Consente di digitare un testo fisso richiesto dal sistema di cercapersone alla fine della riga **Oggetto** dei messaggi inviati a un cercapersone.  
   
- **Includi corpo del messaggio nel messaggio di notifica**  
+ **Includi il corpo della posta elettronica nel messaggio di notifica**  
  Consente di includere il corpo del messaggio di posta elettronica nel messaggio inviato al cercapersone.  
   
  **Operatore alternativo**  
@@ -96,7 +96,7 @@ ms.locfileid: "63245745"
  Questa sezione consente di abilitare i token dei passaggi del processo che possono essere utilizzati nei processi eseguiti dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per altre informazioni sui token dei passaggi dei processi, vedere [Utilizzo dei token nei passaggi dei processi](use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Qualsiasi utente di Windows che disponga di autorizzazioni di scrittura per il registro eventi di Windows può accedere ai passaggi dei processi attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. I token interessati sono: **$(A-DBN)** , **$(A-SVR)** , **$(A-ERR)** , **$(A-SEV)** e **$(A-MSG)** .  
+>  Qualsiasi utente di Windows che disponga di autorizzazioni di scrittura per il registro eventi di Windows può accedere ai passaggi dei processi attivati dagli avvisi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per evitare rischi per la sicurezza, i token di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che possono essere utilizzati in processi attivati dagli avvisi sono disabilitati per impostazione predefinita. I token interessati sono: **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** e **$(A-MSG)**.  
 >   
 >  Se è necessario utilizzare tali token, prima di abilitarli verificare che solo i membri di gruppi di sicurezza di Windows trusted, ad esempio il gruppo Administrators, dispongano di autorizzazioni di scrittura per il registro eventi del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63245745"
   
 ## <a name="see-also"></a>Vedere anche  
  [Operatori](operators.md)   
- [Configurare SQL Server Agent Mail per utilizzare posta elettronica Database](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
+ [Configurare SQL Server Agent Mail per l'uso di Posta elettronica database](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)  
   
   

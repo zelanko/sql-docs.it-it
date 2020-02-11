@@ -1,5 +1,5 @@
 ---
-title: Creare una sessione eventi estesi utilizzando l'Editor di Query | Microsoft Docs
+title: Creare una sessione eventi estesi tramite l'editor di query | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065025"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Creare una sessione Eventi estesi tramite l'editor di query
-  È possibile creare una sessione Eventi estesi tramite l'editor di query o è possibile creare una sessione in Esplora oggetti. In Esplora oggetti eventi estesi sono disponibili due interfacce di utente che è possibile usare per creare, modificare e visualizzare i dati della sessione eventi: una procedura guidata che descrive il processo di creazione della sessione di eventi e una nuova interfaccia utente della sessione che fornisce opzioni di configurazione più avanzate. È possibile creare sessioni di eventi estesi per la diagnosi della traccia di SQL Server, che consente di risolvere problemi come i seguenti:  
+  È possibile creare una sessione Eventi estesi tramite l'editor di query o è possibile creare una sessione in Esplora oggetti. In Esplora oggetti, gli eventi estesi forniscono due interfacce utente che è possibile usare per creare, modificare e visualizzare i dati della sessione eventi, una procedura guidata che guida l'utente durante il processo di creazione della sessione eventi e una nuova interfaccia utente della sessione che fornisce opzioni di configurazione più avanzate. È possibile creare sessioni di eventi estesi per la diagnosi della traccia di SQL Server, che consente di risolvere problemi come i seguenti:  
   
 -   Trovare le query con il costo più elevato  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66065025"
         WHERE package0.counter <= 5  
         ```  
   
-5.  Aggiungere la destinazione desiderata, dove verranno elaborati e utilizzati i dati degli eventi. Utilizzare il formato seguente:  
+5.  Aggiungere la destinazione desiderata, dove verranno elaborati e utilizzati i dati degli eventi. Utilizzare il seguente formato:  
   
     ```  
     ADD TARGET package_name.target_name  

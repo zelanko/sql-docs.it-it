@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067505"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Creare e gestire indicatori KPI (SSAS tabulare)
-  In questo argomento viene descritto come creare, modificare o eliminare un indicatore di prestazioni chiave (KPI) in un modello tabulare. Per creare un indicatore KPI, si seleziona una misura che restituisca un valore di Base dell'indicatore KPI. Successivamente, utilizzare la finestra di dialogo Indicatore di prestazioni chiave per selezionare una seconda misura o un valore assoluto tramite cui venga restituito un valore di destinazione. È quindi possibile definire le soglie dello stato tramite cui si misurano le prestazioni tra le misure di base e di destinazione.  
+  In questo argomento viene descritto come creare, modificare o eliminare un indicatore di prestazioni chiave (KPI) in un modello tabulare. Per creare un indicatore KPI, selezionare una misura che restituisca il valore di base dell'indicatore KPI. Successivamente, utilizzare la finestra di dialogo Indicatore di prestazioni chiave per selezionare una seconda misura o un valore assoluto tramite cui venga restituito un valore di destinazione. È quindi possibile definire le soglie dello stato tramite cui si misurano le prestazioni tra le misure di base e di destinazione.  
   
  In questo argomento sono incluse le attività seguenti:  
   
@@ -28,16 +28,16 @@ ms.locfileid: "66067505"
   
 -   [Per modificare un indicatore KPI](#bkmk_edit_KPI)  
   
--   [Per eliminare un indicatore KPI e la misura base](#bkmk_delete)  
+-   [Per eliminare un indicatore KPI e la misura di base](#bkmk_delete)  
   
--   [Per eliminare un indicatore KPI e mantenere la misura base](#bkmk_delete_KPI)  
+-   [Per eliminare un indicatore KPI, mantenendo però la misura di base](#bkmk_delete_KPI)  
   
 ## <a name="tasks"></a>Attività  
   
 > [!IMPORTANT]  
->  Prima di creare un indicatore KPI, è innanzitutto necessario creare una misura di base che consenta la restituzione di un valore. Estendere quindi la misura di base a un indicatore KPI. La procedura per creare misure è descritta in un altro argomento, [Create and Manage Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md). Un indicatore KPI richiede inoltre un valore di destinazione, che può essere il valore di un'altra misura predefinita o un valore assoluto. Dopo aver esteso una misura di base a un indicatore KPI, sarà possibile selezionare il valore di destinazione e definire le soglie dello stato nella finestra di dialogo Indicatore di prestazioni chiave.  
+>  Prima di creare un indicatore KPI, è innanzitutto necessario creare una misura di base che consenta la restituzione di un valore. Estendere quindi la misura di base a un indicatore KPI. La procedura per creare misure è descritta in un altro argomento, [Creare e gestire misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md). Un indicatore KPI richiede inoltre un valore di destinazione, che può essere il valore di un'altra misura predefinita o un valore assoluto. Dopo aver esteso una misura di base a un indicatore KPI, sarà possibile selezionare il valore di destinazione e definire le soglie dello stato nella finestra di dialogo Indicatore di prestazioni chiave.  
   
-###  <a name="bkmk_create_KPI"></a> Per creare un indicatore KPI  
+###  <a name="bkmk_create_KPI"></a>Per creare un indicatore KPI  
   
 1.  Nella griglia delle misure fare clic con il pulsante destro del mouse sulla misura che verrà usata come misura di base (valore), quindi scegliere **Crea KPI**.  
   
@@ -56,15 +56,15 @@ ms.locfileid: "66067505"
 > [!TIP]  
 >  È possibile utilizzare la funzionalità Analizza in Excel per testare l'indicatore KPI. Per altre informazioni, vedere la sezione [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md).  
   
-###  <a name="bkmk_edit_KPI"></a> Per modificare un indicatore KPI  
+###  <a name="bkmk_edit_KPI"></a>Per modificare un indicatore KPI  
   
 -   Nella griglia delle misure fare clic con il pulsante destro del mouse sulla misura che viene usata come misura di base (valore) dell'indicatore KPI, quindi scegliere **Modifica impostazioni KPI**.  
   
-###  <a name="bkmk_delete"></a> Per eliminare un indicatore KPI e la misura base  
+###  <a name="bkmk_delete"></a>Per eliminare un indicatore KPI e la misura di base  
   
 -   Nella griglia delle misure fare clic con il pulsante destro del mouse sulla misura che viene usata come misura di base (valore) dell'indicatore KPI, quindi scegliere **Elimina**.  
   
-###  <a name="bkmk_delete_KPI"></a> Per eliminare un indicatore KPI e mantenere la misura base  
+###  <a name="bkmk_delete_KPI"></a>Per eliminare un indicatore KPI, mantenendo però la misura di base  
   
 -   Nella griglia delle misure fare clic con il pulsante destro del mouse sulla misura che viene usata come misura di base (valore) dell'indicatore KPI, quindi scegliere **Elimina KPI**.  
   
@@ -74,8 +74,8 @@ ms.locfileid: "66067505"
 |----------------|-----------------|  
 |Misura di base KPI|ALT+B|  
 |Stato KPI|ALT+S|  
-|Misura|ALT+M|  
-|Valore assoluto|ALT+A|  
+|Measure|ALT+M|  
+|Valore assoluto|ALT + A|  
 |Definisci soglie stato|ALT+U|  
 |Seleziona stile icona|ALT+I|  
 |Tendenza|ALT+T|  
@@ -83,7 +83,7 @@ ms.locfileid: "66067505"
 |Tendenza|ALT+T|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Indicatori KPI &#40;SSAS tabulare&#41;](kpis-ssas-tabular.md)   
+ [Indicatori KPI &#40;&#41;tabulare SSAS](kpis-ssas-tabular.md)   
  [Misure &#40;SSAS tabulare&#41;](measures-ssas-tabular.md)   
  [Creare e gestire misure &#40;SSAS tabulare&#41;](create-and-manage-measures-ssas-tabular.md)  
   

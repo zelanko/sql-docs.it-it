@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d621895212e72479090363a980ddc00fa2b5a0c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107328"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Finestra di dialogo Proprietà set di dati, Parametri
@@ -28,7 +28,7 @@ ms.locfileid: "66107328"
  In caso di dipendenze dei valori predefiniti di un parametro del report da un altro parametro del report collegato a un parametro di query, l'ordine dei parametri del report visualizzati nella finestra di dialogo **Proprietà parametri report** risulta importante. I parametri del report che vengono dopo nell'elenco possono fare riferimento a parametri che vengono prima. Per altre informazioni sui parametri report, vedere [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un nuovo parametro all'elenco.  
   
  **Elimina**  
@@ -37,7 +37,7 @@ ms.locfileid: "66107328"
  **Nome parametro**  
  Digitare il nome di un parametro di query aggiunto al set di dati nella scheda **Query** della finestra di dialogo **Proprietà set di dati** .  
   
- **Valore parametro**  
+ **Valore del parametro**  
  Immettere un valore per il parametro di query. Può trattarsi di un valore statico o di un'espressione che fa riferimento a un oggetto nel report, ma non a un campo o a un elemento del report. Per impostazione predefinita, in **Valore** è contenuta un'espressione che punta a un parametro del report.  
   
  **Freccia in su**  
@@ -48,7 +48,7 @@ ms.locfileid: "66107328"
   
 ## <a name="see-also"></a>Vedere anche  
  [Parametri report &#40;Generatore report e Progettazione report&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)   
  [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   

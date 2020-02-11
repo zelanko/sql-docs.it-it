@@ -1,5 +1,5 @@
 ---
-title: Aggiungere e verificare una connessione dati o un'origine dati (Generatore Report e SSRS) | Microsoft Docs
+title: Aggiungere e verificare una connessione dati o un'origine dati (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107514"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Aggiungere e verificare una connessione dati o un'origine dati (Generatore report e SSRS)
@@ -24,14 +24,14 @@ ms.locfileid: "66107514"
   
  Per creare un'origine dati incorporata, l'utente deve disporre delle informazioni di connessione all'origine esterna di dati oltre a dover conoscere le autorizzazioni necessarie per l'accesso ai dati. Queste informazioni provengono solitamente dal proprietario dell'origine dati. Per verificare che le credenziali specificate siano sufficienti si può testare la connessione.  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md) e [Specifica di credenziali in Generatore report](../specify-credentials-in-report-builder.md).  
+ Per ulteriori informazioni, vedere [connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md) e [specificare le credenziali in Generatore report](../specify-credentials-in-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-create-a-reference-to-a-shared-data-source"></a>Per creare un riferimento a un'origine dati condivisa  
   
-1.  Nel riquadro dei dati del report della barra degli strumenti fare clic su **Nuova** , quindi su **Origine dati**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
+1.  Sulla barra degli strumenti nel riquadro dei dati del report fare clic su **nuovo** e quindi su **origine dati**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
 2.  Nella casella di testo **Nome** digitare un nome per l'origine dei dati.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66107514"
   
 ### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
   
-1.  Nel riquadro dei dati del report della barra degli strumenti fare clic su **Nuova**, quindi su **Origine dati**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
+1.  Sulla barra degli strumenti nel riquadro dei dati del report fare clic su **nuovo**e quindi su **origine dati**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
 2.  Nella casella di testo **Nome** digitare un nome per l'origine dati oppure accettare quello predefinito.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "66107514"
   
 2.  Fare clic su **Test connessione**.  
   
-3.  Se la connessione ha esito positivo, viene visualizzato il messaggio seguente: "Creata connessione completata". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Se la connessione riesce, verrà visualizzato il messaggio seguente: "Creazione connessione completata". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Se la connessione non riesce, viene visualizzato il messaggio seguente: "Impossibile connettersi all'origine dati".  
+4.  In caso contrario, verrà visualizzato il messaggio: "Impossibile connettersi all'origine dati".  
   
 5.  Fare clic su **Dettagli**e utilizzare le informazioni per risolvere il problema.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66107514"
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

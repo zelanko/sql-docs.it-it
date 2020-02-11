@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792931"
 ---
 # <a name="create-the-off-by-default-policy"></a>Creazione di criteri Disattivata per impostazione predefinita
@@ -28,7 +28,7 @@ ms.locfileid: "67792931"
   
 3.  Nella casella **Facet** verificare che il facet **Configurazione superficie di attacco** sia selezionato.  
   
-4.  Nel **espressione** area, nel **campo** , quindi selezionare  **\@DatabaseMailEnabled**nella **operatore** selezionare **=** e il **valore** seleziona **False**.  
+4.  Nella casella **Campo** dell'area **Espressione** selezionare **\@DatabaseMailEnabled**, nella casella **Operatore selezionare** **=** e in **Valore** selezionare **False**.  
   
 5.  Nella pagina **Descrizione** digitare una descrizione per la condizione, quindi scegliere **OK** per creare la condizione.  
   

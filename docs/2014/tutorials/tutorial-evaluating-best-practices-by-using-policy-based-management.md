@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: La valutazione di procedure consigliate tramite la gestione basata su criteri | Microsoft Docs'
+title: 'Esercitazione: valutazione delle procedure consigliate tramite la gestione basata su criteri | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064424"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Esercitazione: Valutazione di procedure consigliate tramite la gestione basata su criteri
@@ -33,10 +33,10 @@ ms.locfileid: "66064424"
   
  L'esercitazione è suddivisa in due lezioni:  
   
- [Lezione 1: Valutare le procedure consigliate su base On Demand](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Lezione 1: Valutazione delle procedure consigliate su richiesta](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  In questa lezione si eseguirà una valutazione su richiesta dei criteri in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Lezione 2: Valutare i criteri per procedure consigliate migliori in base a una pianificazione](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lezione 2: Valutazione di criteri per procedure consigliate in base a una pianificazione prestabilita](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
  In questa lezione verranno configurati i criteri per procedure consigliate da eseguire in base a una pianificazione specifica. Inoltre, nella lezione viene mostrato come configurare criteri pianificati in un'istanza singola, nonché come distribuire i criteri pianificati da una posizione principale in più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements"></a>Requisiti  
@@ -45,7 +45,7 @@ ms.locfileid: "66064424"
  Per utilizzare l'esercitazione è necessario che nel server sia installato [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 ## <a name="start-the-tutorial"></a>Avviare l'esercitazione  
- [Lezione 1: Valutare le procedure consigliate su base On Demand](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [Lezione 1: Valutazione delle procedure consigliate su richiesta](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

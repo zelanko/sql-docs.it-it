@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255231"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Descrizione
@@ -33,7 +33,7 @@ ms.locfileid: "63255231"
  **Collegamento ipertestuale alla Guida aggiuntiva: Indirizzo**  
  Digitare il collegamento ipertestuale di una pagina Web da aprire quando gli utenti fanno clic sul testo del collegamento ipertestuale visualizzato nella pagina **Visualizzazione dettagliata risultati** .  
   
- **Collegamento ipertestuale alla Guida aggiuntiva: Prova collegamento**  
+ **Collegamento ipertestuale alla Guida aggiuntiva: Collegamento test**  
  Fare clic per aprire il collegamento ipertestuale per testare la validità del collegamento.  
   
  **Data creazione**  

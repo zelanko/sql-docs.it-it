@@ -1,5 +1,5 @@
 ---
-title: ALTER TABLE - comando SQL | Microsoft Docs
+title: Comando ALTER TABLE-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901373"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE (comando SQL)
-A livello di codice modifica la struttura di una tabella.  
+Modifica a livello di codice la struttura di una tabella.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,7 +61,7 @@ ALTER TABLE TableName1
   
 ## <a name="arguments"></a>Argomenti  
  *TableName1*  
- Specifica il nome della tabella viene modificata la cui struttura.  
+ Specifica il nome della tabella la cui struttura è stata modificata.  
   
  Aggiungi [COLUMN] *FieldName1*  
  Specifica il nome del campo da aggiungere.  
@@ -69,49 +69,49 @@ ALTER TABLE TableName1
  ALTER [COLUMN] *FieldName1*  
  Specifica il nome di un campo esistente da modificare.  
   
- *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
- Specifica il tipo di campo, larghezza del campo e la precisione di campo (numero di posizioni decimali) per un campo nuovo o modificato.  
+ *FieldType* [( *NFieldWidth* [, *nPrecision*]])  
+ Specifica il tipo di campo, la larghezza del campo e la precisione del campo (numero di posizioni decimali) per un campo nuovo o modificato.  
   
- *FieldType* è una singola lettera indicante che il campo [tipo di dati](../../odbc/microsoft/visual-foxpro-field-data-types.md). Alcuni tipi di dati del campo è necessario specificare *nFieldWidth* oppure *nPrecision* o entrambi.  
+ *FieldType* è una singola lettera che indica il tipo di [dati](../../odbc/microsoft/visual-foxpro-field-data-types.md)del campo. Per alcuni tipi di dati del campo è necessario specificare *nFieldWidth* o *nPrecision* o entrambi.  
   
- *nFieldWidth* e *nPrecision* vengono ignorate per D, G, I, G, M, P, T e Y tipi. Per impostazione predefinita *nPrecision* non è zero (posizioni decimali) se *nPrecision* non viene incluso per i tipi di B, F e N.  
+ *nFieldWidth* e *nPrecision* vengono ignorati per i tipi D, G, I, L, M, P, T e Y. Per impostazione predefinita, *nPrecision* è zero (senza posizioni decimali) se *nPrecision* non è incluso per i tipi B, F o N.  
   
  NULL &#124; NOT NULL  
- Consente o impedisce che i valori null nel campo.  
+ Consente o impedisce i valori null nel campo.  
   
- Se omette NULL e NOT NULL, l'impostazione corrente di SET NULL determina se sono consentiti valori null nel campo. Tuttavia, se si omette NULL e non NULL, include la clausola UNIQUE o PRIMARY KEY, viene ignorata l'impostazione corrente di SET NULL e il campo non è NULL per impostazione predefinita.  
+ Se si omette NULL e NOT NULL, l'impostazione corrente di SET NULL determina se nel campo sono consentiti valori null. Tuttavia, se si omette NULL e NOT NULL e si include la clausola PRIMARY KEY o UNIQUE, l'impostazione corrente di SET NULL viene ignorata e il campo non è NULL per impostazione predefinita.  
   
  CONTROLLARE *lExpression1*  
- Specifica una regola di convalida per il campo. *lExpression1* deve restituire un'espressione logica e può essere una funzione definita dall'utente o una stored procedure. Ogni volta che viene aggiunto un record vuoto, viene verificata la regola di convalida. Viene generato un errore se la regola di convalida non supporta un valore di campo vuoto in un record accodato.  
+ Specifica una regola di convalida per il campo. *lExpression1* deve restituire un'espressione logica e può essere una funzione definita dall'utente o un stored procedure. Ogni volta che viene aggiunto un record vuoto, viene controllata la regola di convalida. Se la regola di convalida non consente un valore di campo vuoto in un record accodato, viene generato un errore.  
   
- ERROR *cMessageText1*  
- Specifica il messaggio di errore visualizzato quando la regola di convalida campo genera un errore.  
+ ERRORE *cMessageText1*  
+ Consente di specificare il messaggio di errore visualizzato quando la regola di convalida dei campi genera un errore.  
   
- DEFAULT *eExpression1*  
- Specifica un valore predefinito per il campo. Il tipo di dati *eExpression1* deve essere lo stesso come il tipo di dati per il campo.  
+ *EEXPRESSION1* predefinito  
+ Specifica un valore predefinito per il campo. Il tipo di dati di *eExpression1* deve corrispondere al tipo di dati per il campo.  
   
  PRIMARY KEY  
- Crea un tag di indice primario. Il tag di indice ha lo stesso nome del campo.  
+ Crea un tag di indice primario. Il tag index ha lo stesso nome del campo.  
   
  UNIQUE  
- Crea un tag di indice candidate con lo stesso nome del campo.  
+ Crea un tag di indice candidato con lo stesso nome del campo.  
   
 > [!NOTE]  
->  Candidato gli indici (creati, includendo l'opzione univoco fornito per compatibilità con ANSI in ALTER TABLE o CREATE TABLE) sono diversi dagli indici creati tramite l'opzione univoco nel comando dell'indice. Le chiavi di indice duplicati; consente a un indice creato utilizzando UNIQUE nel comando indice gli indici candidato non consentono chiavi di indice duplicati.  
+>  Gli indici candidati (creati includendo l'opzione UNIQUE, fornita per la compatibilità ANSI in ALTER TABLE o CREATE TABLE), differiscono dagli indici creati utilizzando l'opzione UNIQUE del comando INDEX. Un indice creato con UNIQUE nel comando INDEX consente le chiavi di indice duplicate; gli indici candidati non consentono chiavi di indice duplicate.  
   
- I valori null e i record duplicati non sono consentiti in un campo che viene usato per un indice di primarie o candidate.  
+ I valori null e i record duplicati non sono consentiti in un campo usato per un indice primario o candidato.  
   
- Se si sta creando un nuovo campo usando Aggiungi colonna, Visual FoxPro non genererà un errore se si crea un indice di primarie o candidate per un campo che supporta valori null. Tuttavia, Visual FoxPro genererà un errore se si tenta di immettere un valore null o duplicato in un campo che viene usato per un indice di primarie o candidate.  
+ Se si sta creando un nuovo campo usando Aggiungi colonna, Visual FoxPro non genererà un errore se si crea un indice primario o candidato per un campo che supporta valori null. Tuttavia, Visual FoxPro genererà un errore se si tenta di immettere un valore null o duplicato in un campo che viene usato per un indice primario o candidato.  
   
- Se si modifica un campo esistente e il database primario o espressione di indice candidato è costituita da campi nella tabella, Visual FoxPro controlla i campi per vedere se contengono valori null o i record duplicati. In caso affermativo, Visual FoxPro genera un errore e la tabella non viene modificata.  
+ Se si modifica un campo esistente e l'espressione di indice primaria o candidata è costituita da campi della tabella, Visual FoxPro controlla i campi per verificare se contengono valori null o record duplicati. In caso affermativo, Visual FoxPro genera un errore e la tabella non viene modificata.  
   
- I riferimenti *TableName2* TAG *TagName1*  
- Specifica la tabella padre alla quale viene stabilita una relazione permanente. TAG *TagName1* specifica i tag di indice della tabella padre in cui si basa la relazione. I nomi di tag di indice possono contenere fino a 10 caratteri.  
+ FA riferimento al tag *TableName2* *TagName1*  
+ Specifica la tabella padre a cui viene stabilita una relazione permanente. TAG *TagName1* specifica il tag di indice della tabella padre su cui si basa la relazione. I nomi dei tag di indice possono contenere un massimo di 10 caratteri.  
   
  NOCPTRANS  
- Impedisce la conversione a una tabella codici diversa per i campi di tipo carattere e memo. Se la tabella viene convertita in un'altra tabella codici, i campi per cui è stato specificato NOCPTRANS non vengono tradotti. NOCPTRANS può essere specificato solo per i campi di tipo carattere e memo.  
+ Impedisce la conversione in una tabella codici diversa per i campi di tipo carattere e memo. Se la tabella viene convertita in un'altra tabella codici, i campi per cui è stato specificato NOCPTRANS non vengono convertiti. NOCPTRANS può essere specificato solo per i campi di tipo carattere e memo.  
   
- L'esempio seguente crea una tabella denominata mytable contenente due campi di tipo carattere e i due campi di tipo memo. Il secondo campo a carattere char2 e il secondo campo di tipo memo, memo2, includere NOCPTRANS per impedire la traduzione.  
+ Nell'esempio seguente viene creata una tabella denominata MyTable che contiene due campi di tipo carattere e due campi di tipo Memo. Il secondo campo carattere, CHAR2, e il secondo campo Memo, Memo2, includono NOCPTRANS per impedire la conversione.  
   
 ```  
 CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;  
@@ -121,76 +121,76 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ALTER [COLUMN] *FieldName2*  
  Specifica il nome di un campo esistente da modificare.  
   
- IMPOSTAZIONE del valore predefinito *eExpression2*  
- Specifica un nuovo valore predefinito per un campo esistente. Il tipo di dati *eExpression2* deve essere lo stesso come il tipo di dati per il campo.  
+ IMPOSTA *EEXPRESSION2* predefinito  
+ Specifica un nuovo valore predefinito per un campo esistente. Il tipo di dati di *eExpression2* deve corrispondere al tipo di dati per il campo.  
   
- CONTROLLO di SET *lExpression2*  
- Specifica una nuova regola di convalida per un campo esistente. *lExpression2* deve restituire un'espressione logica e può essere una funzione definita dall'utente o una stored procedure.  
+ Imposta controllo *lExpression2*  
+ Specifica una nuova regola di convalida per un campo esistente. *lExpression2* deve restituire un'espressione logica e può essere una funzione definita dall'utente o un stored procedure.  
   
- ERROR *cMessageText2*  
- Specifica il messaggio di errore visualizzato quando la regola di convalida campo genera un errore. Il messaggio viene visualizzato solo quando i dati vengono modificati all'interno di una finestra di esplorazione o di modifica.  
+ ERRORE *cMessageText2*  
+ Consente di specificare il messaggio di errore visualizzato quando la regola di convalida dei campi genera un errore. Il messaggio viene visualizzato solo quando i dati vengono modificati in una finestra Sfoglia o modifica.  
   
  DROP DEFAULT  
  Rimuove il valore predefinito per un campo esistente.  
   
- CONTROLLO ELENCO  
+ ELIMINA CONTROLLO  
  Rimuove la regola di convalida per un campo esistente.  
   
- Riepilogo [COLUMN] *FieldName3*  
- Specifica un campo da rimuovere dalla tabella. Rimozione di un campo dalla tabella rimuove anche regola di convalida campi e impostazione del valore del campo predefinito.  
+ DROP [COLUMN] *FieldName3*  
+ Specifica un campo da rimuovere dalla tabella. La rimozione di un campo dalla tabella consente inoltre di rimuovere l'impostazione del valore predefinito del campo e la regola di convalida dei campi.  
   
- Se le espressioni chiave o un trigger di indice fa riferimento il campo, le espressioni diventano non valide quando il campo viene rimosso. In questo caso, un errore non viene generato quando il campo viene rimosso, ma le espressioni di chiave o un trigger di indice non valido verranno generati degli errori in fase di esecuzione.  
+ Se la chiave di indice o le espressioni di trigger fanno riferimento al campo, le espressioni diventano non valide quando il campo viene rimosso. In questo caso, non viene generato un errore quando il campo viene rimosso, ma le espressioni di trigger o la chiave di indice non valide genereranno errori in fase di esecuzione.  
   
- CONTROLLO di SET *lExpression3*  
- Specifica la regola di convalida della tabella. *lExpression3* deve restituire un'espressione logica e può essere una funzione definita dall'utente o una stored procedure.  
+ Imposta controllo *lExpression3*  
+ Specifica la regola di convalida della tabella. *lExpression3* deve restituire un'espressione logica e può essere una funzione definita dall'utente o un stored procedure.  
   
- ERROR *cMessageText3*  
- Specifica il messaggio di errore visualizzato quando la regola di convalida tabella genera un errore. Il messaggio viene visualizzato solo quando i dati vengono modificati all'interno di una finestra di esplorazione o di modifica.  
+ ERRORE *cMessageText3*  
+ Consente di specificare il messaggio di errore visualizzato quando la regola di convalida della tabella genera un errore. Il messaggio viene visualizzato solo quando i dati vengono modificati in una finestra Sfoglia o modifica.  
   
- CONTROLLO ELENCO  
+ ELIMINA CONTROLLO  
  Rimuove la regola di convalida della tabella.  
   
- Aggiungi chiave primaria *eExpression3*TAG *TagName2*  
- Aggiunge un indice primario per la tabella. *eExpression3* specifica l'espressione chiave di indice primario, e *TagName2* specifica il nome del tag indice primario. I nomi di tag di indice possono contenere fino a 10 caratteri. Se TAG *TagName2* viene omesso e *eExpression3* è un singolo campo, il tag di indice primario ha lo stesso nome del campo specificato in *eExpression3*.  
+ AGGIUNGERE il tag *eExpression3*della chiave primaria *TagName2*  
+ Aggiunge un indice primario alla tabella. *eExpression3* specifica l'espressione della chiave di indice primaria e *TagName2* specifica il nome del tag di indice primario. I nomi dei tag di indice possono contenere un massimo di 10 caratteri. Se TAG *TagName2* viene omesso e *eExpression3* è un singolo campo, il tag di indice primario avrà lo stesso nome del campo specificato in *eExpression3*.  
   
  ELIMINA CHIAVE PRIMARIA  
- Rimuove l'indice primario e il tag di indice. Poiché una tabella può avere solo una chiave primaria, non è necessario specificare il nome della chiave primaria. Rimozione dell'indice primario vengono eliminate anche le eventuali relazioni persistenti in base alla chiave primaria.  
+ Rimuove l'indice primario e il relativo tag di indice. Poiché una tabella può avere una sola chiave primaria, non è necessario specificare il nome della chiave primaria. La rimozione dell'indice primario comporta anche l'eliminazione di eventuali relazioni permanenti in base alla chiave primaria.  
   
- Aggiungi UNIQUE *eExpression4*[TAG *TagName3*]  
- Aggiunge un indice di candidati per la tabella. *eExpression4* specifica l'espressione della chiave indice candidato, e *TagName3* specifica il nome del tag indice candidato. I nomi di tag di indice possono contenere fino a 10 caratteri. Se si omette TAG *TagName3* e, se *eExpression4* è un singolo campo, il tag di indice candidato ha lo stesso nome del campo specificato in *eExpression4*.  
+ Aggiungi *EEXPRESSION4*univoco [tag *TagName3*]  
+ Aggiunge un indice candidato alla tabella. *eExpression4* specifica l'espressione della chiave di indice candidata e *TagName3* specifica il nome del tag di indice candidato. I nomi dei tag di indice possono contenere un massimo di 10 caratteri. Se si omette TAG *TagName3* e se *eExpression4* è un singolo campo, il tag index candidato avrà lo stesso nome del campo specificato in *eExpression4*.  
   
- ELENCO di TAG univoco *TagName4*  
- Rimuove l'indice candidato e privo di tag di indice. Poiché una tabella può avere più chiavi candidate, è necessario specificare il nome del tag indice candidato.  
+ DROP UNIQUE TAG *TagName4*  
+ Rimuove l'indice candidato e il relativo tag di indice. Poiché una tabella può avere più chiavi candidate, è necessario specificare il nome del tag di indice candidato.  
   
- ADD FOREIGN KEY [ *eExpression5*] TAG *TagName4*  
- Aggiunge un indice (non primaria) esterno alla tabella. *eExpression5* specifica l'espressione della chiave esterna dell'indice, e *TagName4* specifica il nome del tag indice esterna. I nomi di tag di indice possono contenere fino a 10 caratteri.  
+ Aggiungi chiave esterna [ *eExpression5*] tag *TagName4*  
+ Aggiunge un indice esterno (non primario) alla tabella. *eExpression5* specifica l'espressione di chiave dell'indice esterno e *TagName4* specifica il nome del tag di indice esterno. I nomi dei tag di indice possono contenere un massimo di 10 caratteri.  
   
- I riferimenti *TableName2*[TAG *TagName5*]  
- Specifica la tabella padre alla quale viene stabilita una relazione permanente. Includere TAG *TagName5* per stabilire una relazione basata su un tag di indice esistente per la tabella padre. I nomi di tag di indice possono contenere fino a 10 caratteri. Se si omette TAG *TagName5*, la relazione viene stabilita tramite tag di indice primario della tabella padre.  
+ REFERENCEs *TableName2*[tag *TagName5*]  
+ Specifica la tabella padre a cui viene stabilita una relazione permanente. Includere il TAG *TagName5* per stabilire una relazione basata su un tag di indice esistente per la tabella padre. I nomi dei tag di indice possono contenere un massimo di 10 caratteri. Se si omette il TAG *TagName5*, la relazione viene stabilita usando il tag di indice primario della tabella padre.  
   
- TAG di chiave esterna di rilascio *TagName6*[salvare]  
- Elimina una chiave esterna con il tag dell'indice viene *TagName6*. Se si omette il salvataggio, il tag di indice viene eliminato dall'indice struttura. Includere salvare per impedire l'eliminazione del tag dell'indice dall'indice struttura.  
+ DROP FOREIGN KEY TAG *TagName6*[Save]  
+ Elimina una chiave esterna il cui tag di indice è *TagName6*. Se si omette SAVE, il tag index viene eliminato dall'indice strutturale. Includere SAVE per impedire l'eliminazione del tag index dall'indice strutturale.  
   
- COLONNA di RIDENOMINAZIONE *FieldName4*TO *FieldName5*  
- Consente di modificare il nome di un campo nella tabella. *FieldName4* specifica il nome del campo in cui è stato rinominato. *FieldName5* specifica il nuovo nome del campo.  
+ Rinominare la colonna *FieldName4*in *FieldName5*  
+ Consente di modificare il nome di un campo nella tabella. *FieldName4* specifica il nome del campo che viene rinominato. *FieldName5* specifica il nuovo nome del campo.  
   
 > [!CAUTION]  
->  Prestare attenzione durante la ridenominazione di campi della tabella, perché le espressioni di indice, le regole di convalida campi e tabelle, i comandi e funzioni possono fare riferimento a nomi di campo originale.  
+>  Prestare attenzione quando si rinominano i campi della tabella perché le espressioni di indice, le regole di convalida di campi e tabelle, i comandi e le funzioni possono fare riferimento ai nomi dei campi originali.  
   
  NOVALIDATE  
- Specifica che Visual FoxPro consente modifiche da apportare alla struttura della tabella. Queste modifiche potrebbero violare l'integrità dei dati nella tabella. Per impostazione predefinita, Visual FoxPro impedisce ALTER TABLE di apportare modifiche che violano l'integrità dei dati nella tabella. Includere NOVALIDATE per eseguire l'override di questo comportamento predefinito.  
+ Specifica che Visual FoxPro consente di apportare modifiche alla struttura della tabella. Queste modifiche potrebbero violare l'integrità dei dati nella tabella. Per impostazione predefinita, Visual FoxPro impedisce ad ALTER TABLE di apportare modifiche che violano l'integrità dei dati nella tabella. Includere novalidate per eseguire l'override di questo comportamento predefinito.  
   
-## <a name="remarks"></a>Note  
- È possibile utilizzare ALTER TABLE per modificare la struttura di una tabella che non è stato aggiunto a un database. Tuttavia, Visual FoxPro genera un errore se si includono l'impostazione predefinita, FOREIGN KEY, PRIMARY KEY, riferimenti, o quando si modifica una tabella gratuita di clausole SET.  
+## <a name="remarks"></a>Osservazioni  
+ È possibile utilizzare ALTER TABLE per modificare la struttura di una tabella che non è stata aggiunta a un database. Tuttavia, Visual FoxPro genera un errore se si includono le clausole DEFAULT, FOREIGN KEY, PRIMARY KEY, REFERENCEs o SET quando si modifica una tabella gratuita.  
   
- ALTER TABLE può ricompilare la tabella creando una nuova intestazione di tabella e Accodamento di record per l'intestazione della tabella. Ad esempio, la modifica di tipo o la larghezza del campo potrebbe causare la tabella da ricompilare.  
+ ALTER TABLE può ricompilare la tabella creando una nuova intestazione di tabella e aggiungendo i record all'intestazione della tabella. Se ad esempio si modifica il tipo o la larghezza di un campo, è possibile che la tabella venga ricompilata.  
   
- Dopo che una tabella viene ricompilata, vengono eseguite le regole di convalida campi per tutti i campi il cui tipo o la cui larghezza viene modificati. Se si modifica il tipo o la larghezza di un campo nella tabella, viene eseguita la regola della tabella.  
+ Dopo la ricompilazione di una tabella, vengono eseguite le regole di convalida dei campi per tutti i campi il cui tipo o larghezza è stato modificato. Se si modifica il tipo o la larghezza di qualsiasi campo nella tabella, viene eseguita la regola della tabella.  
   
- Se si modificano le regole di convalida campo o una tabella per una tabella che dispone di record, Visual FoxPro testa le nuove regole di convalida campo o una tabella in base a quelli esistenti e genera un avviso alla prima occorrenza di una regola di convalida campo o una tabella o di una violazione di trigger.  
+ Se si modificano le regole di convalida del campo o della tabella per una tabella con record, Visual FoxPro testa le nuove regole di convalida del campo o della tabella in base ai dati esistenti e genera un avviso sulla prima occorrenza di una regola di convalida di un campo o di una tabella o di una violazione del trigger.  
   
- Se la tabella che è modificare in un database, ALTER TABLE - SQL richiede l'uso esclusivo del database. Per aprire un database per l'utilizzo esclusivo, includere esclusivo nel DATABASE di aprire.  
+ Se la tabella modificata si trova in un database, ALTER TABLE-SQL richiede l'utilizzo esclusivo del database. Per aprire un database per l'utilizzo esclusivo, includere esclusivo nel DATABASE OPEN.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Crea tabella - comando SQL](../../odbc/microsoft/create-table-sql-command.md)   
+ [Comando CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX (comando)](../../odbc/microsoft/index-command.md)

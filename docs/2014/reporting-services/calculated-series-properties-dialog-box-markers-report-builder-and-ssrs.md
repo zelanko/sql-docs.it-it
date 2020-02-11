@@ -1,5 +1,5 @@
 ---
-title: Calcolato finestra di dialogo Proprietà serie, marcatori (Generatore Report e SSRS) | Microsoft Docs
+title: Finestra di dialogo Proprietà serie calcolata, marcatori (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109875"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà serie calcolata, Marcatori (Generatore report e SSRS)
-  Selezionare **Marcatori** nella finestra di dialogo **Proprietà serie calcolata** per definire la modalità di visualizzazione dei marcatori su ogni punto dati di una serie. I marcatori sono disponibili solo per determinati tipi di grafico. I seguenti tipi di grafico supportano gli indicatori: Area, a barre, istogramma, riga, polare e a dispersione. Per altre informazioni sulle caratteristiche dei grafici, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
+  Selezionare **Marcatori** nella finestra di dialogo **Proprietà serie calcolata** per definire la modalità di visualizzazione dei marcatori su ogni punto dati di una serie. I marcatori sono disponibili solo per determinati tipi di grafico. In particolare, sono supportati nei seguenti tipi di grafico: ad area, a barre, istogramma, a linee, polare e a dispersione. Per altre informazioni sulle caratteristiche dei grafici, vedere [Tipi di grafico &#40;Generatore report e SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opzioni  
  **Tipo di marcatore**  
@@ -44,7 +44,7 @@ ms.locfileid: "66109875"
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Definire i colori in un grafico mediante la tavolozza &#40;Generatore report e SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Tracciare i dati su un asse secondario &#40;Report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Tracciare i dati su un asse secondario &#40;Generatore report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Formattazione dei punti dati di un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Aggiungere una media mobile a un grafico &#40;Generatore report e SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   

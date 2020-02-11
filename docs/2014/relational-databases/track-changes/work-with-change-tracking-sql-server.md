@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270217"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utilizzare il rilevamento delle modifiche (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "63270217"
   
      Nella figura seguente viene illustrato il modo in cui CHANGETABLE(CHANGES ...) viene utilizzata per ottenere modifiche.  
   
-     ![Esempio di output della query per il rilevamento delle modifiche](../../database-engine/media/queryoutput.gif "Esempio di output della query per il rilevamento delle modifiche")  
+     ![Esempio di output di query per il rilevamento delle modifiche](../../database-engine/media/queryoutput.gif "Esempio di output di query per il rilevamento delle modifiche")  
   
  Funzione CHANGE_TRACKING_CURRENT_VERSION()  
  Questa funzione viene utilizzata per ottenere la versione corrente che verrà utilizzata alla successiva esecuzione di query sulle modifiche. Tale versione è quella relativa all'ultima transazione di cui è stato eseguito il commit.  

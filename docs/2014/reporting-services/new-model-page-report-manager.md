@@ -1,5 +1,5 @@
 ---
-title: Pagina nuovo modello (gestione Report) | Microsoft Docs
+title: Pagina nuovo modello (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108204"
 ---
 # <a name="new-model-page-report-manager"></a>Pagina Nuovo modello (Gestione report)
@@ -38,10 +38,10 @@ ms.locfileid: "66108204"
     -   Fare clic su **Gestisci** per aprire la pagina delle proprietà Generale per il report. Successivamente, fare clic su **Genera modello** per aprire la pagina Nuovo modello.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di specificare il nome del modello. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Il nome non può contenere i caratteri seguenti:  
   
- ; ? : \@ & = + , $ / * \< > | " /  
+ ; ? : \@ & = +, $/* \< > | " /  
   
  **Descrizione**  
  Indica una descrizione del modello. Gli utenti che visualizzano questo elemento tramite Gestione report possono vedere questa descrizione durante l'esplorazione della gerarchia di cartelle.  

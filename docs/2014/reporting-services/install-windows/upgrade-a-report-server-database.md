@@ -15,23 +15,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108634"
 ---
 # <a name="upgrade-a-report-server-database"></a>Aggiornare un database del server di report
   Il database del server di report fornisce archiviazione per una o più istanze del server di report. Poiché lo schema del database del server di report può essere modificato con ogni nuova versione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario che la versione del database corrisponda alla versione dell'istanza del server di report in uso. Nella maggior parte dei casi, un database del server di report può essere aggiornato automaticamente senza alcun intervento dell'utente.  
   
- **Modalità nativa:** In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità nativa, il database del server di report è costituita in realtà due database i cui nomi predefiniti di "ReportServer e ReportServerTempDB".  
+ **Modalità nativa:** In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità nativa, il database del server di report è costituito in realtà da due database i cui nomi predefiniti sono "ReportServer e ReportServerTempDB".  
   
- **Modalità SharePoint:** In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint il database del server di report è in realtà una raccolta di database per ogni istanza di cui viene creata il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applicazione del servizio.  
+ **Modalità SharePoint:** In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint il database del server di report è in realtà una raccolta di database creata per ogni istanza dell' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applicazione di servizio.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Modalità di aggiornamento di un database del server di report in modalità nativa  
  Nell'elenco seguente sono incluse le condizioni necessarie per l'aggiornamento di un database del server di report:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione aggiorna una singola istanza di un server di report. Lo schema del database del server di report viene quindi aggiornato automaticamente dopo l'avvio del servizio e il server di report determina che la versione dello schema del database non corrisponde alla versione del server.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il programma di installazione aggiorna una singola istanza di un server di report. Lo schema del database del server di report viene quindi aggiornato automaticamente dopo l'avvio del servizio e il server di report determina che la versione dello schema del database non corrisponde alla versione del server.  
   
      All'avvio del servizio, il server di report verifica che la versione dello schema del database corrisponda alla versione del server. Se la versione dello schema del database è precedente, il database viene aggiornato automaticamente alla versione dello schema richiesta dal server di report. La funzionalità di aggiornamento automatico è particolarmente utile se è stato ripristinato o collegato un database del server di report meno recente. Nel file del log di traccia del server di report viene immesso un messaggio indicante che è stato eseguito l'aggiornamento della versione dello schema del database.  
   
@@ -67,8 +68,8 @@ ms.locfileid: "66108634"
 ## <a name="see-also"></a>Vedere anche  
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Creare un database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Procedura guidata cambia Database &#40;modalità nativa SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
- [Eseguire l'aggiornamento e la migrazione di Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [Procedura guidata Cambia database &#40;modalità nativa SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [Aggiornare ed eseguire la migrazione Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Eseguire la migrazione di un'installazione di Reporting Services &#40;modalità nativa&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

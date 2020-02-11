@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 236600f0a4ff2b77daaab2266b7e927e6858447b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106731"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>Aggiungere un'immagine esterna (Generatore report e SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66106731"
   
      Per un'immagine in un server di report in modalità nativa, digitare il percorso relativo dell'immagine nella casella **Usare questa immagine**, ad esempio ../images/image1.jpg.  
   
-     Per un'immagine in un server di report in modalità integrata SharePoint, o qualsiasi altro sito Web, digitare un URL completo dell'immagine nella **utilizzare questa immagine** casella-ad esempio, http://\<NomeServerSharePoint > /\<sito > / Documents/Images/Image1.jpg.  
+     Per un'immagine in un server di report in modalità integrata SharePoint o in qualsiasi altro sito Web, digitare un URL completo dell'immagine nella casella **utilizzare questa immagine** , ad esempio http://\<nomesharepointserver>/\<sito>/Documents/images/image1.jpg.  
   
      Per altre informazioni, vedere [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   

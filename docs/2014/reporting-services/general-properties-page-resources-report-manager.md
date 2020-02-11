@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, le risorse (gestione Report) | Microsoft Docs
+title: Pagina delle proprietà generale, risorse (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109118"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Pagina delle proprietà Generale, Risorse (Gestione report)
@@ -34,13 +34,13 @@ ms.locfileid: "66109118"
 3.  Scegliere **Gestisci**dal menu a discesa. Viene visualizzata la pagina delle proprietà Generale per la risorsa.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
- Digitare un nome per la risorsa. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $ / * \< > | "oppure / per specificare un nome.  
+ **Nome**  
+ Digitare un nome per la risorsa. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : \@ & = +, $/* \< > | "o/quando si specifica un nome.  
   
  **Descrizione**  
  Consente di digitare una descrizione della risorsa. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere alla risorsa.  
   
- **Nascondi in visualizzazione elenco**  
+ **Nascondi in visualizzazione Elenco**  
  Selezionare questa opzione per fare in modo che la risorsa non venga visualizzata per gli utenti che utilizzano la modalità di visualizzazione Elenco in Gestione report. La modalità di visualizzazione Elenco è il formato di visualizzazione predefinito utilizzato per l'esplorazione della gerarchia di cartelle del server di report. Nella visualizzazione Elenco i nomi e le descrizioni degli elementi vengono disposti dall'alto in basso nella pagina. Il formato alternativo è costituito dalla visualizzazione Dettagli, in cui non sono incluse le descrizioni ma sono disponibili altre informazioni sugli elementi. Gli elementi possono essere nascosti nella visualizzazione Elenco ma non nella visualizzazione Dettagli. Se si desidera limitare l'accesso a un elemento, è necessario creare un'assegnazione di ruolo.  
   
  **Tipo**  
@@ -52,16 +52,16 @@ ms.locfileid: "66109118"
  **Elimina**  
  Fare clic per rimuovere la risorsa dal database del server di report.  
   
- **Sposta**  
+ **Spostamento**  
  Fare clic per spostare una risorsa nella gerarchia di cartelle del server di report. Verrà visualizzata la pagina di spostamento degli elementi nella quale è possibile esplorare le cartelle per selezionare un nuovo percorso.  
   
- **Sostituisci**  
+ **Sostituire**  
  Fare clic per aprire la pagina Importa risorsa nella quale è possibile selezionare un file di risorse da una condivisione file.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Pagina Visualizza, risorse &#40;gestione Report&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
- [Pagina delle proprietà sicurezza, Elementi &#40;Gestione report&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [Visualizza pagina, risorse &#40;Gestione report&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
+ [Guida sensibile al contesto Gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Pagina delle proprietà sicurezza, elementi &#40;Gestione report&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

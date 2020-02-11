@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13a67a94f6478c085995142085a93fa85bb27d89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106708"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS)
@@ -41,11 +41,11 @@ ms.locfileid: "66106708"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- I livelli mappa vengono disegnati dal basso verso l'alto nell'ordine in cui vengono visualizzati nel riquadro della mappa. Nella figura precedente, viene disegnato per primo il livello sezione e per ultimo il livello poligono. I livelli disegnati in un secondo momento potrebbero nascondere elementi della mappa di livelli disegnati in precedenza. È possibile modificare l'ordine dei livelli tramite i tasti di direzione sulla barra degli strumenti del riquadro della mappa. Per mostrare o nascondere i livelli, attivare o disattivare l'icona della visibilità. È possibile modificare la trasparenza di un livello nel `Visibility` pagina della **dati livello** finestra di dialogo proprietà.  
+ I livelli mappa vengono disegnati dal basso verso l'alto nell'ordine in cui vengono visualizzati nel riquadro della mappa. Nella figura precedente, viene disegnato per primo il livello sezione e per ultimo il livello poligono. I livelli disegnati in un secondo momento potrebbero nascondere elementi della mappa di livelli disegnati in precedenza. È possibile modificare l'ordine dei livelli tramite i tasti di direzione sulla barra degli strumenti del riquadro della mappa. Per mostrare o nascondere i livelli, attivare o disattivare l'icona della visibilità. È possibile modificare la trasparenza di un livello nella `Visibility` pagina della finestra di dialogo proprietà **dati livello** .  
   
  Nella tabella seguente vengono visualizzate le icone della barra degli strumenti per il riquadro **Mappa** .  
   
-|Simbolo|Descrizione|Utilizzo|  
+|Simbolo|Descrizione|Quando usare le autorizzazioni|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|Creazione guidata livello mappa|Per aggiungere un livello tramite una procedura guidata, fare clic su **Creazione guidata nuovo livello**.|  
 |![rs_IconMapAddLayer](../../tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|Aggiungi livello|Per aggiungere manualmente un livello, fare clic su **Aggiungi livello**, quindi scegliere il tipo di livello mappa da aggiungere.|  
@@ -61,26 +61,26 @@ ms.locfileid: "66106708"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddLayer"></a> Per aggiungere un livello dalla Creazione guidata livello mappa  
+##  <a name="AddLayer"></a>Per aggiungere un livello dalla creazione guidata livello mappa  
   
 -   Nel menu **Inserisci** della barra multifunzione fare clic su **Mappa**, quindi scegliere **Creazione guidata mappa.** La procedura guidata consente di aggiungere un livello alla mappa esistente. La maggior parte delle pagine della Creazione guidata mappa e della Creazione guidata livello mappa sono identiche.  
   
      Per altre informazioni, vedere [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
 
-##  <a name="ChangeLayer"></a> Per modificare le opzioni di un livello tramite la Creazione guidata livello mappa  
+##  <a name="ChangeLayer"></a>Per modificare le opzioni di un livello tramite la creazione guidata livello mappa  
   
--   Eseguire la Creazione guidata livello mappa. Questa procedura guidata consente di modificare le opzioni per un livello creato tramite la Creazione guidata livello mappa. Nel riquadro Mappa fare clic con il pulsante destro del mouse sul livello, quindi fare clic sul pulsante della creazione guidata del livello sulla barra degli strumenti (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+-   Eseguire la Creazione guidata livello mappa. Questa procedura guidata consente di modificare le opzioni per un livello creato tramite la Creazione guidata livello mappa. Nel riquadro della mappa fare clic con il pulsante destro del mouse sul livello, quindi sulla barra degli strumenti fare clic sul pulsante della creazione guidata del livello (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Per altre informazioni, vedere [Creazione guidata mappa e Creazione guidata livello mappa &#40;Generatore report e SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
 
-##  <a name="AddVectorLayer"></a> Per aggiungere un livello punto, linea o poligono dalla barra degli strumenti del riquadro della mappa  
+##  <a name="AddVectorLayer"></a>Per aggiungere un livello punto, linea o poligono dalla barra degli strumenti del riquadro della mappa  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Nella barra degli strumenti fare clic sul pulsante **Aggiungi livello** e, dall'elenco a discesa, scegliere il tipo di livello da aggiungere: **Punto**, **Linea** o **Poligono**.  
+2.  Nella barra degli strumenti fare clic sul pulsante **Aggiungi livello** e, dall'elenco a discesa, scegliere il tipo di livello da aggiungere: **Punto**, **Linea**o **Poligono**.  
   
     > [!NOTE]  
-    >  Sebbene sia possibile aggiungere un livello alla mappa e configurarlo manualmente, è consigliabile utilizzare la Creazione guidata livello mappa per aggiungere nuovi livelli. Per avviare la procedura guidata dal riquadro Mappa della barra degli strumenti, fare clic sul pulsante della creazione guidata del livello (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+    >  Sebbene sia possibile aggiungere un livello alla mappa e configurarlo manualmente, è consigliabile utilizzare la Creazione guidata livello mappa per aggiungere nuovi livelli. Per avviare la procedura guidata dalla barra degli strumenti del riquadro della mappa, fare clic sul pulsante della creazione guidata del livello (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Fare clic con il pulsante destro del mouse sul livello, quindi scegliere **Dati livello**.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66106708"
   
     2.  In **Set di dati analitici**fare clic sul nome del set di dati che contiene i dati analitici e i campi delle corrispondenze per compilare una relazione tra i dati analitici e quelli spaziali.  
   
-    3.  Scegliere **Aggiungi**.  
+    3.  Fare clic su **Aggiungi**.  
   
     4.  Digitare il nome del campo delle corrispondenze del set di dati spaziali.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66106708"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="FilterAnalyticalData"></a> Per filtrare dati analitici per il livello  
+##  <a name="FilterAnalyticalData"></a>Per filtrare i dati analitici per il livello  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66106708"
   
 4.  Definire un'equazione di filtro per limitare i dati analitici utilizzati nella vista mappa. Per altre informazioni, vedere [Esempi di equazioni di filtro &#40;Generatore report e SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
 
-##  <a name="PointProperties"></a> Per controllare le proprietà punto per un livello punto o per i punti centrali del poligono  
+##  <a name="PointProperties"></a>Per controllare le proprietà punto per un livello punto o per i punti centrali del poligono  
   
 1.  Selezionare **Generale** nella finestra di dialogo **Proprietà punto mappa** per modificare le opzioni relative all'etichetta, alla descrizione comando e al tipo di indicatore per gli elementi della mappa seguenti:  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66106708"
   
     -   Punto centrale per tutti i poligoni dinamici o incorporati su un livello poligono. Le regole relative al colore, alle dimensioni e al tipo di marcatore per i punti centrali ignorano queste opzioni. Per sostituire le opzioni per un punto centrale specifico, usare la pagina [Finestra di dialogo Proprietà punto incorporato mappa, Indicatore](../map-embedded-point-properties-dialog-box-marker.md) .  
 
-##  <a name="Embedded"></a> Per specificare i dati incorporati come origine di dati spaziali  
+##  <a name="Embedded"></a>Per specificare i dati incorporati come origine di dati spaziali  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66106708"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="ESRI"></a> Per specificare un file di forma ESRI come origine di dati spaziali  
+##  <a name="ESRI"></a>Per specificare un file di forma ESRI come origine di dati spaziali  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "66106708"
 4.  In **Nome file**digitare il percorso di un file di forma ESRI o fare clic su **Sfoglia** per selezionare un file di forma ESRI.  
   
     > [!NOTE]  
-    >  Se il file di forma si trova sul computer locale, i dati spaziali sono incorporati nella definizione del report. Per recuperare in modo dinamico i dati durante l'elaborazione del report, è necessario caricare il file ESRI con estensione shp e il file di supporto con estensione dbf sul server di report. Per altre informazioni, vedere "procedura: Caricare un File o un Report (gestione Report) "nel [documentazione di Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) nella documentazione Online di SQL Server.  
+    >  Se il file di forma si trova sul computer locale, i dati spaziali sono incorporati nella definizione del report. Per recuperare in modo dinamico i dati durante l'elaborazione del report, è necessario caricare il file ESRI con estensione shp e il file di supporto con estensione dbf sul server di report. Per altre informazioni, vedere "Procedura: Caricamento di un file o di un report (Gestione report)" nella [documentazione relativa a Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) inclusa nella documentazione online di SQL Server.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="DatasetField"></a> Per specificare un campo del set di dati del report come origine di dati spaziali  
+##  <a name="DatasetField"></a>Per specificare un campo del set di dati del report come origine di dati spaziali  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66106708"
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="TileLayer"></a> Per aggiungere un livello sezione  
+##  <a name="TileLayer"></a>Per aggiungere un livello sezione  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "66106708"
 4.  In **Opzioni sezioni**selezionare uno stile della sezione. Se sono disponibili le tessere mappa di Bing, il livello sull'area di progettazione viene aggiornato con lo stile selezionato.  
   
     > [!NOTE]  
-    >  Un livello sezione può essere aggiunto anche quando si aggiunge un livello poligono, linea o punto nella Creazione guidata mappa o Creazione guidata livello mappa. Nella pagina **Scegli opzioni di dati spaziali e vista mappa** selezionare l'opzione **Add a Bing Maps background for this map view (Aggiungi sfondo Bing Maps per la vista mappa)** .  
+    >  Un livello sezione può essere aggiunto anche quando si aggiunge un livello poligono, linea o punto nella Creazione guidata mappa o Creazione guidata livello mappa. Nella pagina **Scegli opzioni di dati spaziali e vista mappa** selezionare l'opzione **Add a Bing Maps background for this map view (Aggiungi sfondo Bing Maps per la vista mappa)**.  
 
-##  <a name="DrawingOrder"></a> Per modificare l'ordine di disegno di un livello  
+##  <a name="DrawingOrder"></a>Per modificare l'ordine di disegno di un livello  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "66106708"
   
 3.  Sulla barra degli strumenti del riquadro della mappa fare clic sulla freccia in su o in giù per modificare l'ordine di disegno di ogni livello.  
 
-##  <a name="Transparency"></a> Per modificare la trasparenza di un livello poligono, linea o punto  
+##  <a name="Transparency"></a>Per modificare la trasparenza di un livello poligono, linea o punto  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "66106708"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="TileTransparency"></a> Per modificare la trasparenza di un livello sezione  
+##  <a name="TileTransparency"></a>Per modificare la trasparenza di un livello sezione  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "66106708"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-##  <a name="Secure"></a> Per specificare una connessione protetta per un livello sezione  
+##  <a name="Secure"></a>Per specificare una connessione protetta per un livello sezione  
   
 1.  Fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66106708"
   
  La connessione per il servizio Web di Bing Maps utilizzerà il servizio HTTP SSL (Secure Sockets Layer) per recuperare le tessere mappa di Bing per questo livello.  
 
-##  <a name="Language"></a> Per specificare la lingua per le etichette delle sezioni  
+##  <a name="Language"></a>Per specificare la lingua per le etichette delle sezioni  
   
 1.  Per impostazione predefinita, per gli stili delle sezioni che consentono di visualizzare le etichette, la lingua viene determinata in base alle impostazioni locali predefinite per Generatore report. È possibile personalizzare l'impostazione della lingua per le etichette delle sezioni come indicato di seguito.  
   
@@ -234,9 +234,9 @@ ms.locfileid: "66106708"
   
      La lingua delle etichette delle sezioni viene impostata in base all'ordine di precedenza seguente: Language delle proprietà del report, impostazioni locali predefinite per Generatore report e TileLanguage delle proprietà della mappa.  
 
-##  <a name="ConditionalHide"></a> Per nascondere un livello basato sul livello di zoom del viewport in base a specifiche condizioni  
+##  <a name="ConditionalHide"></a>Per nascondere in modo condizionale un livello basato sul livello di zoom del viewport  
   
-1.  Impostare `Visibility` opzioni per controllare la visualizzazione per un livello mappa.  
+1.  Impostare `Visibility` le opzioni per controllare la visualizzazione per un livello mappa.  
   
     -   Nel riquadro Livelli mappa fare clic con il pulsante destro del mouse su un livello per selezionarlo e sulla barra degli strumenti di Livelli mappa fare clic su Proprietà per aprire **Proprietà livello mappa**.  
   
@@ -246,10 +246,10 @@ ms.locfileid: "66106708"
   
     -   Immettere i valori di zoom minimo e massimo per la visualizzazione del livello.  
   
-    -   Facoltativo. Immettere un valore per la trasparenza.  
+    -   Facoltativa. Immettere un valore per la trasparenza.  
   
      Inoltre è possibile nascondere il livello in base a condizioni specifiche. Per altre informazioni, vedere [Nascondere un elemento &#40;Generatore report e SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md).  
 
 ## <a name="see-also"></a>Vedere anche  
  [Mappe &#40;Generatore report e SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Risolvere problemi relativi ai report: Report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risoluzione dei problemi relativi ai report: report mappa &#40;Generatore report e SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  

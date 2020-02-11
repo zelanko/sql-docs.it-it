@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e5eb03cabe655b4b1dc1da6735b9b4ef68c05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107244"
 ---
 # <a name="manage-report-data-sources"></a>Gestire origini dati dei report
@@ -39,7 +39,7 @@ ms.locfileid: "66107244"
   
  Si noti che la modifica delle query non fa parte della gestione delle connessioni a origini dati. Per modificare una query per un report o un modello, è necessario utilizzare uno strumento di creazione e apportare le modifiche nella definizione del report o del modello.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Proprietà gestite: Tipo di origine dati, le stringhe di connessione e credenziali  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Proprietà gestite: tipo di origine dati, stringhe di connessione e credenziali.  
  Le proprietà dell'origine dati che è possibile gestire in un server di report sono le seguenti:  
   
 |Proprietà|Descrizione|Modalità di gestione|  
@@ -66,21 +66,21 @@ ms.locfileid: "66107244"
 |Aggiungere proprietà di connessione alle origini dati in un file di definizione del report (con estensione rdl).|Progettazione report|[Creare un'origine dati incorporata o condivisa &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Aggiungere un collegamento al file di un'origine dati condivisa (con estensione rds) nel progetto di un report.|Progettazione report|[Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Creare un elenco predefinito di origini dati che gli utenti possono selezionare in fase di esecuzione. Quando un utente richiede un report, viene fornito un elenco di origini dati. L'utente deve selezionare l'origine dati da utilizzare prima di eseguire il report. Per aggiungere un elenco di selezione di origini dati a un report, si utilizza un'espressione<br /><br /> Tale espressione è nota come connessione all'origine dati dinamica.|Progettazione report|[Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
-|Creare un'origine dei dati condivisa in un server di report.|Gestione report|[Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
+|Creare un'origine dei dati condivisa in un server di report.|Gestione report|[Creare, eliminare o modificare un'origine dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
 |Archiviare credenziali come prerequisito per la creazione di sottoscrizioni o snapshot del report.|Gestione report|[Archiviare le credenziali in un'origine dati di Reporting Services](store-credentials-in-a-reporting-services-data-source.md)|  
 |Modificare le proprietà di connessione alle origini dati in un report pubblicato.|Gestione report|[Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |Creare un'origine dei dati condivisa in un server di report.|Sito di SharePoint|[Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
-|Utilizzare le informazioni di connessione odc esistenti con un report.|Sito di SharePoint|[Utilizzare una connessione Office Data Connection &#40;.odc&#41; ai report &#40;Reporting Services in modalità integrata SharePoint&#41;](use-an-office-data-connection-odc-with-reports.md)|  
+|Utilizzare le informazioni di connessione odc esistenti con un report.|Sito di SharePoint|[Usare una connessione Office Data Connection &#40;.odc&#41; ai report &#40;Reporting Services in modalità integrata SharePoint&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  Le connessioni alle origini dei dati dei report vengono gestite in modo diverso rispetto alla connessione del server di report al relativo database. Per altre informazioni sulla connessione di un server di report al relativo archivio dati interno, vedere [Configurare una connessione del database del server di report &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Associare un report o un modello a un'origine dati condivisa &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Archiviare le credenziali in un'origine dati di Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
+ [Creare, eliminare o modificare un'origine dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Archiviare le credenziali in un'origine dati Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Gestione contenuto del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

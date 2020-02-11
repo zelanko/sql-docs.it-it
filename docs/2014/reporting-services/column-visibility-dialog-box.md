@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo visibilità colonne | Microsoft Docs
+title: Finestra di dialogo Visibilità colonne | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 246189cf3b49212379c5c87f5600388097a2fb11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109766"
 ---
 # <a name="column-visibility-dialog-box"></a>Finestra di dialogo Visibilità colonne
@@ -33,12 +33,12 @@ ms.locfileid: "66109766"
  **Nascondi**  
  Selezionare questa opzione per nascondere l'elemento del report.  
   
- **Mostra o Nascondi in base a un'espressione**  
+ **Mostra o nascondi in base a un'espressione**  
  Selezionare questa opzione per modificare l'impostazione di visibilità iniziale tramite un'espressione.  
   
- Digitare un'espressione che restituisca un valore `Boolean` `True` per nascondere l'elemento e `False` per visualizzarlo. Fare clic sul pulsante Espressione (*fx*) per modificare l'espressione.  
+ Digitare un'espressione che restituisca un valore `Boolean``True` per nascondere l'elemento e `False` per visualizzarlo. Fare clic sul pulsante espressione (*FX*) per modificare l'espressione.  
   
- **Visualizzazione può essere attivata/disattivata tramite questo elemento del report**  
+ **La visualizzazione può essere attivata/disattivata tramite questo elemento del report**  
  Selezionare questa opzione per visualizzare l'immagine dell'elemento Toggle che consente all'utente di visualizzare o nascondere l'elemento del report in un visualizzatore di report HTML.  
   
  Digitare o selezionare il nome di una casella di testo del report in cui visualizzare l'immagine dell'elemento Toggle, ad esempio Textbox1. La casella di testo selezionata deve trovarsi nell'ambito corrente o contenitore dell'elemento del report. Ad esempio, per attivare/disattivare la visibilità di righe associate a un gruppo figlio, selezionare una casella di testo in una riga associata al gruppo padre. Per attivare/disattivare la visibilità di un grafico, selezionare una casella di testo che si trovi nello stesso ambito contenitore del grafico, ad esempio il corpo del report o un rettangolo.  

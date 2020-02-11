@@ -1,5 +1,5 @@
 ---
-title: Bulk Insert Task Editor (pagina Opzioni) | Microsoft Docs
+title: Editor attività Inserimento bulk (pagina Opzioni) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061184"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor attività Inserimento bulk (pagina Opzioni)
-  Utilizzare la pagina **Opzioni** della finestra di dialogo **Editor attività Inserimento bulk** per impostare le proprietà relative all'operazione di inserimento bulk. L'attività Inserimento bulk consente di copiare grandi quantità di dati all'interno di una vista o tabella di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Utilizzare la pagina **Opzioni** della finestra di dialogo **Editor attività Inserimento bulk** per impostare le proprietà relative all'operazione di inserimento bulk. L'attività Inserimento bulk copia grandi quantità di dati in una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tabella o vista.  
   
  Per altre informazioni sull'uso degli inserimenti di massa, vedere [Attività Inserimento bulk](control-flow/bulk-insert-task.md) e [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -43,13 +43,13 @@ ms.locfileid: "66061184"
  Consente di specificare la riga dalla quale iniziare la copia.  
   
  **Opzioni**  
- |Nome|Definizione|  
+ |Termine|Definizione|  
 |----------|----------------|  
 |**Vincoli CHECK**|Selezionare questa opzione per verificare i vincoli di colonna e tabella.|  
-|**Mantieni valori Null**|Selezionare questa opzione per mantenere i valori Null durante l'operazione di inserimento bulk anziché inserire tutti i valori predefiniti per le colonne vuote.|  
-|**Consenti IDENTITY_INSERT**|Selezionare questa opzione per inserire valori esistenti in una colonna Identity.|  
-|**Blocco a livello di tabella**|Selezionare questa opzione per bloccare la tabella durante l'inserimento bulk.|  
-|**Attive trigger**|Selezionare questa opzione per attivare tutti i trigger di eliminazione, aggiornamento o inserimento nella tabella.|  
+|**Mantieni valori null**|Selezionare questa opzione per mantenere i valori Null durante l'operazione di inserimento bulk anziché inserire tutti i valori predefiniti per le colonne vuote.|  
+|**Abilita inserimento identità**|Selezionare questa opzione per inserire valori esistenti in una colonna Identity.|  
+|**Blocco di tabella**|Selezionare questa opzione per bloccare la tabella durante l'inserimento bulk.|  
+|**Attiva trigger**|Selezionare questa opzione per attivare tutti i trigger di eliminazione, aggiornamento o inserimento nella tabella.|  
   
  **SortedData**  
  Consente di specificare la clausola ORDER BY nell'istruzione di inserimento bulk. Il nome della colonna deve corrispondere a una colonna valida della tabella di destinazione. Il valore predefinito è `false`. Questo valore implica che i dati non vengono ordinati da una clausola ORDER BY.  
@@ -62,8 +62,8 @@ ms.locfileid: "66061184"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor attività Inserimento bulk &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor attività Inserimento bulk &#40;pagina Connessione&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Editor attività Inserimento bulk &#40;pagina generale&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor attività Inserimento bulk &#40;pagina connessione&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Pagina Espressioni](expressions/expressions-page.md)   
  [Flusso di controllo](control-flow/control-flow.md)  
   

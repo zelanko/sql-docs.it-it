@@ -1,5 +1,5 @@
 ---
-title: Generatore report le opzioni della finestra di dialogo Impostazioni (Generatore Report) | Microsoft Docs
+title: Finestra di dialogo Opzioni Generatore report, impostazioni (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107622"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Finestra di dialogo Opzioni Generatore report, Impostazioni (Generatore report)
-  Scegliere il **Generatore Report** pulsante e quindi fare clic su **opzioni** per impostare le opzioni per la visualizzazione dei file recenti e le connessioni. È anche possibile modificare il server di report predefinito o aggiungerne uno se tale server non è disponibile.  
+  Fare clic sul pulsante **Generatore report** , quindi fare clic su **Opzioni** per impostare le opzioni per la visualizzazione dei file e delle connessioni recenti. È anche possibile modificare il server di report predefinito o aggiungerne uno se tale server non è disponibile.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Usa questo server di report o sito di SharePoint per impostazione predefinita**  
@@ -46,6 +46,6 @@ ms.locfileid: "66107622"
  Cancellare tutti gli elenchi correnti di siti e server, connessioni ai set di dati condivisi e alle origini dati nonché documenti recenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

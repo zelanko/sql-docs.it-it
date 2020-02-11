@@ -1,5 +1,5 @@
 ---
-title: Pagina filtri, finestre di dialogo grafico (Generatore Report e SSRS) | Microsoft Docs
+title: Pagina filtri, finestre di dialogo dei grafici (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109134"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Pagina Filtri, finestre di dialogo relative ai grafici (Generatore report e SSRS)
-  Fare clic su **filtri** nel:  
+  Fare clic su **filtri** nella:  
   
--   Finestra di dialogo**Proprietà gruppo categorie** per filtrare i punti dati in una serie raggruppata per categoria.  
+-   Finestra di dialogo **Proprietà gruppo categorie** per filtrare i punti dati in una serie raggruppata per categoria.  
   
--   Finestra di dialogo**Proprietà grafico** per definire le opzioni di filtro per il grafico.  
+-   Finestra di dialogo **Proprietà grafico** per definire le opzioni di filtro per il grafico.  
   
--   Finestra di dialogo**Proprietà gruppo serie** per limitare il numero di serie nel gruppo selezionato.  
+-   Finestra di dialogo **Proprietà gruppo serie** per limitare il numero di serie del gruppo selezionato.  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere all'elenco una nuova clausola di filtro.  
   
  **Elimina**  
@@ -47,9 +47,9 @@ ms.locfileid: "66109134"
  Consente di spostare il filtro selezionato di una posizione verso il basso nell'elenco.  
   
  **Espressione**  
- Digitare o scegliere l'espressione alla quale si desidera applicare un filtro. Fare clic sul pulsante Espressione (**fx**) per modificare l'espressione.  
+ Digitare o scegliere l'espressione alla quale si desidera applicare un filtro. Fare clic sul pulsante espressione (**FX**) per modificare l'espressione.  
   
- **Data type**  
+ **Tipo di dati**  
  Scegliere il tipo di dati per **Valore**. Se possibile, scegliere un tipo di dati che corrisponda al tipo di dati per **Espressione**.  
   
  I valori specificati in **Espressione** e **Valore** devono restituire lo stesso tipo di dati. Ad esempio, se **Espressione** è impostato su un campo a cui è associato il tipo di dati System.Int32 e **Valore** è impostato su 7, nell'elenco a discesa selezionare **Integer**.  

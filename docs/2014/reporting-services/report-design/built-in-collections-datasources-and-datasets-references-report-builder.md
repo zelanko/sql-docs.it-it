@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b47503e9a7a2b09ea6e4d9f7f3ce309fd1b99f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106433"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Riferimenti a raccolte DataSources e DataSets (Generatore report e SSRS)
@@ -28,8 +28,8 @@ ms.locfileid: "66106433"
   
 |**Variabile**|`Type`|**Descrizione**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|Percorso completo della definizione dell'origine dati nel server di report. Ad esempio, è possibile includere un elenco di tutte le origini dati utilizzate da un report come parte di una cronologia di report. Nell'esempio seguente è illustrato il percorso completo per l'origine dati denominata AdventureWorks2012:<br /><br /> `/DataSources/AdventureWorks2012` (Indici per tabelle con ottimizzazione per la memoria).|  
-|`Type`|`String`|Tipo di provider di dati per l'origine dati. Ad esempio, `SQL`.|  
+|`DataSourceReference`|`String`|Percorso completo della definizione dell'origine dati nel server di report. Ad esempio, è possibile includere un elenco di tutte le origini dati utilizzate da un report come parte di una cronologia di report. Nell'esempio seguente è illustrato il percorso completo per l'origine dati denominata AdventureWorks2012:<br /><br /> `/DataSources/AdventureWorks2012`.|  
+|`Type`|`String`|Tipo di provider di dati per l'origine dati. Ad esempio: `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  
  La raccolta `DataSets` rappresenta i set di dati a cui si fa riferimento nella definizione del report. È possibile scegliere di includere la query nel report in una casella di testo, in modo che un utente interessato ai dati effettivi contenuti nel report possa vedere il testo del comando originale. Questa raccolta non è disponibile in modalità **Anteprima** . Nella tabella seguente vengono descritti i membri della raccolta `DataSets`.  

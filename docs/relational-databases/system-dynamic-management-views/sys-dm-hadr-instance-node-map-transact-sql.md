@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_instance_node_map (Transact-SQL) | Microsoft Docs
+title: sys. dm_hadr_instance_node_map (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900414"
 ---
-# <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
+# <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita una replica di disponibilità che appartiene al gruppo di disponibilità Always On, restituisce il nome del nodo Windows Server Failover Cluster (WSFC) che ospita l'istanza del server. Questa DMV offre i seguenti utilizzi:  
+  Per ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è ospitata una replica di disponibilità unita in join al gruppo di disponibilità always on, restituisce il nome del nodo WSFC (Windows Server failover cluster) che ospita l'istanza del server. Questa DMV offre i seguenti utilizzi:  
   
 -   Questa DMV è utile per il rilevamento di un gruppo di disponibilità con più repliche di disponibilità ospitate nello stesso nodo WSFC. Si tratta di una configurazione non supportata che si potrebbe verificare dopo un failover dell'istanza del cluster di failover se il gruppo di disponibilità non è stato correttamente configurato. Per altre informazioni, vedere [Clustering di failover e gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
@@ -38,11 +38,11 @@ ms.locfileid: "67900414"
    
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**ag_resource_id**|**nvarchar(256)**|ID univoco del gruppo di disponibilità come una risorsa del cluster wsfc.|  
-|**instance_name**|**nvarchar(256)**|Nome -*server*/*istanza*-di un'istanza del server che ospita una replica del gruppo di disponibilità.|  
+|**ag_resource_id**|**nvarchar(256)**|ID univoco del gruppo di disponibilità come risorsa nel cluster WSFC.|  
+|**instance_name**|**nvarchar(256)**|Nome-**/*istanza*del server-di un'istanza del server che ospita una replica per il gruppo di disponibilità.|  
 |**node_name**|**nvarchar(256)**|Nome del nodo WSFC.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  

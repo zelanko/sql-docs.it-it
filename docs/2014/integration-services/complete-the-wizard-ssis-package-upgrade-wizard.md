@@ -1,5 +1,5 @@
 ---
-title: Completare la procedura guidata (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
+title: Completamento procedura guidata (aggiornamento guidato pacchetti SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060932"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Completamento procedura guidata (Aggiornamento guidato pacchetti SSIS)
   Utilizzare la pagina **Completamento procedura guidata** per verificare e confermare le opzioni di aggiornamento del pacchetto selezionate. Si tratta dell'ultima pagina della procedura guidata. È possibile tornare alle pagine precedenti per modificare le opzioni per questa sessione della procedura guidata.  
   
- **Per eseguire l'Aggiornamento guidato pacchetti SSIS**  
+ **Per eseguire l'aggiornamento guidato pacchetti SSIS**  
   
 -   [Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   

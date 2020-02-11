@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a839fb7253c2e66e024872b74fadc114cd58ecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106485"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Grafici a barre (Generatore report e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66106485"
   
 -   **In pila**. Grafico a barre con più serie impilate in verticale. Se il grafico contiene una sola serie, il grafico a barre in pila verrà visualizzato come grafico a barre.  
   
--   **In pila 100%**. Grafico a barre con più serie impilate in verticale per occupare il 100% dell'area del grafico. Se il grafico contiene una sola serie, tutte le barre si adatteranno al 100% dell'area del grafico.  
+-   **In pila 100%** . Grafico a barre con più serie impilate in verticale per occupare il 100% dell'area del grafico. Se il grafico contiene una sola serie, tutte le barre si adatteranno al 100% dell'area del grafico.  
   
 -   **Cluster 3D**. Grafico a barre con le singole serie visualizzate in righe distinte in un grafico 3D.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66106485"
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formattazione della legenda in un grafico &#40;Generatore report e SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Aggiungere stili smussato, rilievo e trama a un grafico &#40;Generatore report e SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Esercitazione: Aggiunta di un grafico a barre a un report (Generatore report)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Esercitazione: Aggiunta di un grafico a barre a un report](https://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Esercitazione: aggiunta di un grafico a barre a un report (Generatore report)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Esercitazione: aggiunta di un grafico a barre a un report](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

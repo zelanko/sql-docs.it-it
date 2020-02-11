@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services) | Microsoft Docs'
+title: 'Lesson 3: Defining a Dataset for the Table Report (Reporting Services) (Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108456"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lezione 3: Definizione di un set di dati per il report tabella (Reporting Services)
   Dopo aver definito l'origine dati, è necessario definire un set di dati. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]i dati utilizzati nei report sono contenuti in un *set di dati*. Un set di dati contiene un puntatore a un'origine dati e la query utilizzata dal report, nonché le variabili e i campi calcolati.  
   
- Per progettare la query è possibile utilizzare la finestra Progettazione query in Progettazione report. Per questa esercitazione si creerà una query che recupera informazioni sugli ordini di vendita dal [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** database.  
+ Per progettare la query è possibile utilizzare la finestra Progettazione query in Progettazione report. Per questa esercitazione verrà creata una query che recupera le informazioni sugli ordini di vendita dal [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]database **2008** .  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Per definire una query Transact-SQL per i dati del report  
   
-1.  Nel riquadro **Dati report** fare clic su **Nuovo**, quindi su **Set di dati...** Verrà visualizzata la finestra di dialogo **Proprietà set di dati** .  
+1.  Nel riquadro **dei dati del report** fare clic su **nuovo**e quindi su **set**di dati. Verrà visualizzata la finestra di dialogo **Proprietà set di dati** .  
   
 2.  Nella casella **Nome** digitare **AdventureWorksDataset**.  
   
 3.  Fare clic su **Usare un set di dati incorporato nel report**.  
   
-4.  Assicurarsi che il nome dell'origine dati, AdventureWorks2012, sia nel **zdroj dat** casella di testo e che le **tipo di Query** viene **testo**.  
+4.  Verificare che il nome dell'origine dati, AdventureWorks2012, sia presente nella casella di testo **origine dati** e che il **tipo di query** sia **testo**.  
   
 5.  Digitare oppure copiare e incollare la query Transact-SQL seguente nella casella **Query** .  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108456"
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-6.  (Facoltativo) Fare clic sul pulsante **Progettazione query** . La query verrà visualizzata nella finestra Progettazione query basata su testo. È possibile passare alla finestra Progettazione query con interfaccia grafica facendo clic su **Modifica come testo**. Visualizzare i risultati della query facendo clic su esecuzione **(!)**  pulsante sulla barra degli strumenti Progettazione query.  
+6.  (Facoltativo) Fare clic sul pulsante **Progettazione query** . La query verrà visualizzata nella finestra Progettazione query basata su testo. È possibile passare alla finestra Progettazione query con interfaccia grafica facendo clic su **Modifica come testo**. Per visualizzare i risultati della query, fare clic sul pulsante Esegui **(!)** sulla barra degli strumenti Progettazione query.  
   
      Verranno visualizzati i dati contenuti in sei campi di quattro tabelle differenti del database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Nella query vengono utilizzate funzionalità di Transact-SQL come gli alias. La tabella SalesOrderHeader viene ad esempio denominata soh.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66108456"
  In questo modo si è specificata una query che recupera i dati per il report. Il passaggio successivo consiste nella creazione del layout del report. Vedere [Lezione 4: Aggiunta di una tabella al report &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire query di strumenti di progettazione di Report della finestra di progettazione di SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Strumenti di progettazione query in Progettazione report SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Tipo di connessione SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   

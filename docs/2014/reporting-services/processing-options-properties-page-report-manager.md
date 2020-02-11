@@ -1,5 +1,5 @@
 ---
-title: Opzioni di elaborazione pagina delle proprietà (gestione Report) | Microsoft Docs
+title: Pagina delle proprietà opzioni di elaborazione (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108038"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Pagina delle proprietà Opzioni di elaborazione (Gestione report)
@@ -37,7 +37,7 @@ ms.locfileid: "66108038"
 4.  Selezionare la scheda **Opzioni di elaborazione** .  
   
 ## <a name="options"></a>Opzioni  
- **Eseguire sempre questo report con i dati più recenti**  
+ **Esegui sempre il report con i dati più recenti**  
  Selezionare questa opzione se si desidera recuperare i dati del report quando il report viene selezionato dall'utente. Se nella cache è disponibile una copia del report, tale copia viene restituita all'utente. In caso contrario, il recupero dei dati e il rendering vengono eseguiti quando un utente seleziona il report.  
   
  Selezionare **Non memorizzare nella cache copie temporanee del report** per eseguire sempre il report con i dati più recenti. Ogni utente che apre il report attiva una query sull'origine dati contenente i dati utilizzati nel report.  
@@ -48,7 +48,7 @@ ms.locfileid: "66108038"
   
  È inoltre possibile impostare una pianificazione per la scadenza di un report memorizzato nella cache utilizzando una frequenza diversa dai minuti. Per impostare una scadenza giornaliera per un report nella cache, ad esempio, è possibile selezionare un'ora notturna specifica per la scadenza della copia.  
   
- **Eseguire il rendering di report da uno snapshot dell'esecuzione report**  
+ **Esegui il rendering del report da uno snapshot dell'esecuzione del report**  
  Selezionare questa opzione per recuperare un report archiviato come snapshot in base alla pianificazione impostata. Quando si sceglie questa opzione, è possibile pianificare l'elaborazione dei dati in modo che venga eseguita negli orari con minore attività. Diversamente dalle copie memorizzate nella cache che vengono create all'apertura del report da parte di un utente, gli snapshot vengono creati e successivamente aggiornati in base a una pianificazione. Per gli snapshot non è prevista una scadenza, ovvero rimangono attivi fino a quando non vengono sostituiti con versioni più recenti.  
   
  Gli snapshot generati in base alle impostazioni di esecuzione del report hanno le stesse caratteristiche degli snapshot della cronologia dei report. La differenza è rappresentata dal fatto che esiste un solo snapshot dell'esecuzione del report mentre possono esistere potenzialmente molti snapshot della cronologia dei report. È possibile accedere agli snapshot della cronologia dei report dalla pagina Cronologia del report, nella quale vengono archiviate numerose istanze di un report, nelle versioni esistenti in diversi momenti nel tempo. È invece possibile accedere agli snapshot dell'esecuzione del report dalle cartelle, nello stesso modo in cui si accede ai report live. Per gli snapshot di esecuzione del report non sono previsti indicatori visivi particolari per segnalare agli utenti che il report è uno snapshot.  

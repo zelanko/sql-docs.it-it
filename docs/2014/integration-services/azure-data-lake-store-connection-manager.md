@@ -14,20 +14,20 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66462695"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gestione connessioni di Azure Data Lake Store
-  Il **gestione connessione di Azure Data Lake Store** consente a un pacchetto SSIS per connettersi a un servizio di Azure Data Lake Store tramite due tipi di autenticazione: Identità utente Azure AD e l'identità del servizio di Azure AD.  
+  La **Gestione connessioni di Azure Data Lake Store** consente a un pacchetto SSIS di connettersi a un servizio di Azure Data Lake Store tramite due tipi di autenticazione: identità utente Azure AD e identità del servizio di Azure Active Directory.  
 
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Configurare la Gestione connessioni di Azure Data Lake Store 
   
 1.  Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare **AzureDataLake**e fare clic su **Aggiungi**.   
   
-2.  Nella finestra di dialogo dell'editor della Gestione connessioni di Azure Data Lake Store digitare l'URL host di Azure Data Lake Store nel campo **ADLS Host** (Host ADLS). Ad esempio: https:\//test.azuredatalakestore.net o test.azuredatalakestore.net.
+2.  Nella finestra di dialogo dell'editor della Gestione connessioni di Azure Data Lake Store digitare l'URL host di Azure Data Lake Store nel campo **ADLS Host** (Host ADLS). Ad esempio: https:\//test.azuredatalakestore.net o test.azuredatalakestore.NET.
   
 3.  Scegliere il tipo di autenticazione corrispondente per accedere ai dati di Azure Data Lake Store.
 
@@ -43,7 +43,7 @@ ms.locfileid: "66462695"
     2.  Se si seleziona l'opzione di autenticazione **Identità del servizio di Azure AD** , eseguire le operazioni seguenti:
         1. Creare un'applicazione e un'entità servizio di AAD che possano accedere alle risorse di Azure Data Lake.
     
-        2. Assegnare le autorizzazioni corrispondenti all'applicazione AAD per accedere alle risorse di Azure Data Lake. Per altre informazioni su questa opzione di autenticazione, vedere [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) (Usare il portale per creare applicazioni ed entità servizio di Active Directory che possano accedere alle risorse).
+        2. Assegnare le autorizzazioni corrispondenti all'applicazione AAD per accedere alle risorse di Azure Data Lake. Per altre informazioni su questa opzione di autenticazione, vedere [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)(Usare il portale per creare applicazioni ed entità servizio di Active Directory che possano accedere alle risorse).
     
         3. Specificare i valori per **ID client**, **Chiave privata** e **Nome del tenant** .
     

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1f9750813d305834fe36f2c6ab7abfaa1d95075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106766"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Aggiungere un rettangolo o un contenitore (Generatore report e SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66106766"
 2.  Fare clic sulla freccia accanto al pulsante **Bordo** per determinare i lati del rettangolo da modificare.  
   
     > [!NOTE]  
-    >  Se si imposta lo stile di linea su **doppie** e la lunghezza riga è 1 1/2 pt o più ristretto, la riga potrebbe non visualizzata come doppia quando si esegue il report in Generatore Report, progettazione Report o gestione Report. Risulterà doppia quando si esporta il report in altri formati, ad esempio Microsoft Word e Acrobat PDF.  
+    >  Se si imposta lo stile di linea su **doppio** e la lunghezza riga è 1 1/2 PT o più stretta, è possibile che la linea non venga visualizzata come doppia quando si esegue il report in Generatore report, Progettazione report o Gestione report. Risulterà doppia quando si esporta il report in altri formati, ad esempio Microsoft Word e Acrobat PDF.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Rettangoli e linee &#40;Generatore report e SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   

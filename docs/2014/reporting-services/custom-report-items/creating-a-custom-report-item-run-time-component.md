@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265855"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Creazione di un componente runtime dell'elemento del report personalizzato
-  Il componente runtime dell'elemento del report personalizzato viene implementato come componente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usando un linguaggio conforme a CLS e viene chiamato in fase di esecuzione dal componente Elaborazione report. Le proprietà del componente runtime vengono definite nell'ambiente di progettazione modificando il componente della modalità progettazione corrispondente dell'elemento del report personalizzato.  
+  Il componente runtime dell'elemento del report personalizzato viene implementato come [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] componente utilizzando qualsiasi linguaggio conforme a CLS e viene chiamato da elaborazione report in fase di esecuzione. Le proprietà del componente runtime vengono definite nell'ambiente di progettazione modificando il componente della modalità progettazione corrispondente dell'elemento del report personalizzato.  
 
 <!--
 Replacing the following multiValue.....
@@ -147,9 +147,9 @@ namespace Microsoft.Samples.ReportingServices
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura di un elemento del report personalizzato](custom-report-item-architecture.md)   
- [Creazione di un componente dell'elemento del report personalizzato per la fase di progettazione](creating-a-custom-report-item-design-time-component.md)   
+ [Architettura dell'elemento del report personalizzato](custom-report-item-architecture.md)   
+ [Creazione di un componente della fase di progettazione di un elemento del report personalizzato](creating-a-custom-report-item-design-time-component.md)   
  [Librerie di classi dell'elemento del report personalizzato](custom-report-item-class-libraries.md)   
- [Procedura: Distribuire un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
+ [Procedura: Distribuzione di un elemento del report personalizzato](how-to-deploy-a-custom-report-item.md)  
   
   

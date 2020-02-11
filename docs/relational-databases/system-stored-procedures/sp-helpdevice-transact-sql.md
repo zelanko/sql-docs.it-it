@@ -18,21 +18,21 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902987"
 ---
-# <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
+# <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza informazioni sui dispositivi di backup di Microsoft® SQL Server™.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile usare la [Sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) invece la vista del catalogo  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]È consigliabile utilizzare invece la vista del catalogo [sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,10 +42,10 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @devname = ] 'name'` È il nome del dispositivo di backup per il quale vengono restituite informazioni. Il valore di *name* è sempre **sysname**.  
+`[ @devname = ] 'name'`Nome del dispositivo di backup per cui vengono segnalate le informazioni. Il valore di *Name* è sempre di **tipo sysname**.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -53,17 +53,17 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nome logico del dispositivo.|  
 |**physical_name**|**nvarchar(260)**|Nome fisico del file.|  
-|**description**|**nvarchar(255)**|Descrizione del dispositivo.|  
-|**status**|**int**|Un numero che corrisponde alla descrizione dello stato di **descrizione** colonna.|  
-|**cntrltype**|**smallint**|Tipo di controller del dispositivo:<br /><br /> 2 = dispositivo disco<br /><br /> 5 = dispositivo nastro|  
-|**size**|**int**|Dimensioni del dispositivo espresse in pagine da 2 KB.|  
+|**Descrizione**|**nvarchar(255)**|Descrizione del dispositivo.|  
+|**stato**|**int**|Numero che corrisponde alla descrizione dello stato nella colonna **Descrizione** .|  
+|**CntrlType**|**smallint**|Tipo di controller del dispositivo:<br /><br /> 2 = dispositivo disco<br /><br /> 5 = dispositivo nastro|  
+|**dimensioni**|**int**|Dimensioni del dispositivo espresse in pagine da 2 KB.|  
   
-## <a name="remarks"></a>Note  
- Se *name* omette **sp_helpdevice** Visualizza informazioni sul dispositivo di dump specificato. Se *name* non viene specificato, **sp_helpdevice** consente di visualizzare informazioni su tutti i dispositivi di dump nel **Sys. backup_devices** vista del catalogo.  
+## <a name="remarks"></a>Osservazioni  
+ Se si specifica *Name* , **sp_helpdevice** Visualizza informazioni sul dispositivo di dump specificato. Se il *nome* non è specificato, **sp_helpdevice** Visualizza le informazioni su tutti i dispositivi di dump nella vista del catalogo **sys. backup_devices** .  
   
- Dispositivi di dump vengono aggiunti al sistema tramite **sp_addumpdevice**.  
+ I dispositivi di dump vengono aggiunti al sistema utilizzando **sp_addumpdevice**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -76,7 +76,7 @@ EXEC sp_helpdevice;
 ## <a name="see-also"></a>Vedere anche  
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

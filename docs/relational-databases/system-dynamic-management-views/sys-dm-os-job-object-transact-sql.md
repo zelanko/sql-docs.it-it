@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_job_object (Database SQL di Azure) | Microsoft Docs
+title: sys. dm_os_job_object (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
 ms.service: sql-database
@@ -20,40 +20,40 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 43063bb56607d1b5a21ae04b40ee4c7a17825521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900142"
 ---
-# <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Database SQL di Azure)
+# <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Restituisce una riga singola che descrive la configurazione dell'oggetto processo che gestisce il processo di SQL Server, nonché determinate statistiche di utilizzo delle risorse a livello di oggetto processo. Restituisce un set vuoto se SQL Server non è in esecuzione in un oggetto processo. 
+Restituisce una singola riga che descrive la configurazione dell'oggetto processo che gestisce il processo di SQL Server, nonché alcune statistiche sull'utilizzo delle risorse a livello di oggetto processo. Restituisce un set vuoto se SQL Server non è in esecuzione in un oggetto processo. 
 
-Un oggetto processo è un costrutto di Windows che implementa la governance delle risorse di CPU, memoria e i/o a livello di sistema operativo. Per altre informazioni sugli oggetti di processo, vedere [gli oggetti processo](/windows/desktop/ProcThread/job-objects). 
+Un oggetto processo è un costrutto di Windows che implementa la governance delle risorse di CPU, memoria e i/o a livello del sistema operativo. Per ulteriori informazioni sugli oggetti processo, vedere [oggetti processo](/windows/desktop/ProcThread/job-objects). 
   
 |Colonne|Tipo di dati|Descrizione|  
 |-------------|---------------|-----------------|  
-|cpu_rate|**int**|Specifica la parte di cicli del processore che possono usare i thread di SQL Server durante ogni intervallo di pianificazione. Il valore viene indicato come percentuale di cicli disponibili entro un intervallo di pianificazione del ciclo di 10000. Ad esempio, il valore 100 indica che i thread possono usare core CPU viene loro piena capacità.|
-|cpu_affinity_mask|**bigint**|Una maschera di bit che descrive quale processori logici il processo di SQL Server può utilizzare all'interno del gruppo di processori. Ad esempio, cpu_affinity_mask 255 (1111 1111 in formato binario) significa che i primi otto processori logici sono utilizzabile.|
-|cpu_affinity_group|**int**|Il numero del gruppo del processore utilizzata da SQL Server.|
-|memory_limit_mb|**bigint**|La quantità massima di memoria riservata, in MB, che tutti i processi dell'oggetto processo, tra cui SQL Server, è possono usare in modo cumulativo.| 
-|process_memory_limit_mb |**bigint**|La quantità massima di memoria riservata, in MB, che un singolo processo nell'oggetto processo, ad esempio SQL Server, è possibile usare.|
-|workingset_limit_mb |**bigint**|La quantità massima di memoria, in MB, che è possibile usare il set di lavoro di SQL Server.|
-|non_sos_mem_gap_mb|**bigint**|La quantità di memoria, espressa in MB, riservare per gli stack di thread, le DLL e altre allocazioni di memoria non SOS. Memoria di destinazione SOS è la differenza tra `process_memory_limit_mb` e `non_sos_mem_gap_mb`.| 
-|low_mem_signal_threshold_mb|**bigint**|Una soglia di memoria, in MB. Quando la quantità di memoria disponibile per l'oggetto processo è di sotto questa soglia, viene inviato un segnale di notifica di memoria insufficiente per il processo di SQL Server. |
-|total_user_time|**bigint**|Numero totale di 100 segni di graduazione ns che hanno trascorso thread all'interno dell'oggetto processo in modalità utente, poiché è stato creato l'oggetto processo. |
-|total_kernel_time |**bigint**|Numero totale di 100 segni di graduazione ns che hanno trascorso thread all'interno dell'oggetto processo in modalità kernel, poiché è stato creato l'oggetto processo. |
-|write_operation_count |**bigint**|Il numero totale di operazioni i/o su dischi locali emessi da SQL Server poiché è stato creato l'oggetto processo di scrittura. |
-|read_operation_count |**bigint**|Numero totale di operazioni dei / o lettura sui dischi locali emessi da SQL Server poiché è stato creato l'oggetto processo. |
-|peak_process_memory_used_mb|**bigint**|La quantità massima di memoria, in MB, che un singolo processo nell'oggetto processo, ad esempio SQL Server, è utilizzato poiché è stato creato l'oggetto processo.| 
-|peak_job_memory_used_mb|**bigint**|La quantità massima di memoria, in MB, che tutti i processi dell'oggetto processo hanno usato in modo cumulativo poiché l'oggetto processo è stata creata.|
+|cpu_rate|**int**|Specifica la parte di cicli del processore che i thread di SQL Server possono usare durante ogni intervallo di pianificazione. Il valore viene segnalato come percentuale dei cicli disponibili all'interno di un intervallo di pianificazione di 10000 cicli. Ad esempio, il valore 100 indica che i thread possono usare i core CPU sono la capacità completa.|
+|cpu_affinity_mask|**bigint**|Maschera di bit che descrive i processori logici che il processo di SQL Server può utilizzare all'interno del gruppo di processori. Ad esempio, cpu_affinity_mask 255 (1111 1111 in formato binario) indica che è possibile utilizzare i primi otto processori logici.|
+|cpu_affinity_group|**int**|Numero del gruppo di processori utilizzato dal SQL Server.|
+|memory_limit_mb|**bigint**|Quantità massima di memoria vincolata, in MB, che tutti i processi nell'oggetto processo, incluso SQL Server, possono utilizzare cumulativamente.| 
+|process_memory_limit_mb |**bigint**|Quantità massima di memoria vincolata, in MB, che un singolo processo nell'oggetto processo, ad esempio SQL Server, può utilizzare.|
+|workingset_limit_mb |**bigint**|Quantità massima di memoria, in MB, che può essere utilizzata dal SQL Server working set.|
+|non_sos_mem_gap_mb|**bigint**|Quantità di memoria, in MB, riservata per gli stack di thread, le dll e altre allocazioni di memoria non SOS. La memoria di destinazione SOS è la `process_memory_limit_mb` differenza `non_sos_mem_gap_mb`tra e.| 
+|low_mem_signal_threshold_mb|**bigint**|Una soglia di memoria, in MB. Quando la quantità di memoria disponibile per l'oggetto processo è inferiore a questa soglia, al processo di SQL Server viene inviato un segnale di notifica di memoria insufficiente. |
+|total_user_time|**bigint**|Il numero totale di cicli di 100 NS che i thread all'interno dell'oggetto processo hanno impiegato in modalità utente, dal momento della creazione dell'oggetto processo. |
+|total_kernel_time |**bigint**|Il numero totale di cicli di 100 NS che i thread all'interno dell'oggetto processo hanno impiegato in modalità kernel, dall'inizio della creazione dell'oggetto processo. |
+|write_operation_count |**bigint**|Numero totale di operazioni di i/o di scrittura sui dischi locali emessi da SQL Server dall'oggetto del processo creato. |
+|read_operation_count |**bigint**|Numero totale di operazioni di i/o di lettura sui dischi locali emessi da SQL Server dall'oggetto del processo creato. |
+|peak_process_memory_used_mb|**bigint**|Quantità massima di memoria, in MB, utilizzata da un singolo processo nell'oggetto processo, ad esempio SQL Server, dopo la creazione dell'oggetto processo.| 
+|peak_job_memory_used_mb|**bigint**|Quantità massima di memoria, in MB, che tutti i processi nell'oggetto processo sono stati utilizzati cumulativamente dall'oggetto processo creato.|
   
-## <a name="permissions"></a>Permissions  
-In istanza gestita di Database SQL, è necessario `VIEW SERVER STATE` autorizzazione. Nel database SQL è richiesta l'autorizzazione `VIEW DATABASE STATE` nel database.  
+## <a name="permissions"></a>Autorizzazioni  
+In Istanza gestita di database SQL, è `VIEW SERVER STATE` richiesta l'autorizzazione. Nel database SQL è richiesta l'autorizzazione `VIEW DATABASE STATE` nel database.  
  
 ## <a name="see-also"></a>Vedere anche  
 
-Per informazioni sulle istanze gestite, vedere [istanza gestita di Database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+Per informazioni sulle istanze gestite, vedere [istanza gestita di database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

@@ -1,5 +1,5 @@
 ---
-title: Pagina di selezione (gestione Report) dell'origine dati | Microsoft Docs
+title: Pagina di selezione dell'origine dati (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109441"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Pagina di selezione dell'origine dei dati (Gestione report)
@@ -39,7 +39,7 @@ ms.locfileid: "66109441"
  **Location**  
  Specificare il percorso completo dell'origine dati condivisa a partire dal nome della cartella radice. È possibile digitare il nome del percorso oppure selezionare l'origine dati condivisa desiderata nella visualizzazione albero.  
   
- **Visualizzazione struttura ad albero**  
+ **Visualizzazione albero**  
  Mostra la struttura di cartelle dello spazio dei nomi del server di report. Fare clic sul nome di un'origine dei dati condivisa per aggiungere il percorso completo nel campo **Percorso** .  
   
  **OK**  
@@ -47,9 +47,9 @@ ms.locfileid: "66109441"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestire origini dati dei report](report-data/manage-report-data-sources.md)   
- [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
- [Pagina Nuova origine dati &#40;Gestione report&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
+ [Specificare le credenziali e le informazioni di connessione per le origini dati del report](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Pagina delle proprietà origini dati &#40;Gestione report&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
+ [Pagina nuova origine dati &#40;Gestione report&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67413111"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>Aggiungere uno snapshot alla cronologia del report (Gestione report)
@@ -39,7 +39,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
     > [!NOTE]
     > A tale scopo la cronologia del report dovrà essere configurata dall'amministratore su **Consenti creazione manuale della cronologia**. Per altre informazioni, vedere [Limitare la cronologia dei report &#40;Gestione report&#41;](../reports/limit-report-history-report-manager.md).
 
-4. Fare clic su **Applica**.
+4. Fare clic su **Apply**.
 
 ## <a name="to-automatically-add-all-snapshots-to-report-history"></a>Per aggiungere automaticamente tutti gli snapshot alla cronologia del report  
   
@@ -53,7 +53,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 5. Selezionare la casella di controllo **Archivia tutti gli snapshot dell'esecuzione del report nella cronologia**.  
   
-6. Fare clic su **Applica**.  
+6. Fare clic su **Apply**.  
   
 ### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>Per aggiungere automaticamente snapshot alla cronologia del report in base a una pianificazione  
   
@@ -63,13 +63,13 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 3. Fare clic su **Opzioni snapshot**.  
   
-4. Selezionare la casella di controllo **Usa la pianificazione seguente per aggiungere snapshot alla cronologia del report**. Eseguire una delle operazioni seguenti:  
+4. Selezionare la casella di controllo **Usa la pianificazione seguente per aggiungere snapshot alla cronologia del report**. selezionare uno degli elementi seguenti:  
   
     - Selezionare **Pianificazione in base al report**. Compilare i dettagli della pianificazione, selezionare le date di inizio e fine e quindi fare clic su **OK**.  
   
     - Selezionare **Pianificazione condivisa**. Dall'elenco selezionare la pianificazione preferita.  
   
-5. Fare clic su **Applica**.  
+5. Fare clic su **Apply**.  
   
 ## <a name="see-also"></a>Vedere anche
 

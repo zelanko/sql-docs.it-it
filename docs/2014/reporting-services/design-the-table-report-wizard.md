@@ -1,5 +1,5 @@
 ---
-title: Progettazione tabella (Creazione guidata Report) | Microsoft Docs
+title: Progettazione tabella (creazione guidata report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 056e96963c9e8f6450861fb6a54e496b406d0daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109276"
 ---
 # <a name="design-the-table-report-wizard"></a>Progettazione tabella (Creazione guidata report)

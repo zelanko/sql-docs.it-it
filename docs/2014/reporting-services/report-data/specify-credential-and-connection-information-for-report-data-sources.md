@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107043"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Specificare le credenziali e le informazioni sulla connessione per le origini dati del report
@@ -41,7 +41,7 @@ ms.locfileid: "66107043"
 > [!NOTE]  
 >  Le credenziali vengono inoltre utilizzate per autenticare gli utenti che accedono a un server di report. Le informazioni relative all'autenticazione di utenti per l'accesso a un server di report sono disponibili in un altro argomento.  
   
- La connessione a un'origine dei dati esterna viene definita quando si crea il report. Può essere gestita separatamente dopo la pubblicazione del report. È possibile specificare una stringa di connessione statica oppure un'espressione che consente agli utenti di selezionare un'origine dei dati da un elenco dinamico. Per altre informazioni su come specificare una stringa di connessione e al tipo di origine dati, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ La connessione a un'origine dei dati esterna viene definita quando si crea il report. Può essere gestita separatamente dopo la pubblicazione del report. È possibile specificare una stringa di connessione statica oppure un'espressione che consente agli utenti di selezionare un'origine dei dati da un elenco dinamico. Per ulteriori informazioni su come specificare un tipo di origine dati e una stringa di connessione, vedere [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 ## <a name="using-remote-data-sources"></a>Utilizzo di origini dati remote  
  Se il report recupera dati da un server di database remoto, verificare gli elementi seguenti:  
@@ -126,25 +126,25 @@ ms.locfileid: "66107043"
   
  In queste situazioni il server di report si connette a un'origine dei dati remota tramite l'account di esecuzione automatica che è necessario definire a priori. Poiché il server di report non si connette a un server remoto tramite le relative credenziali del servizio, è necessario specificare un account che il server di report può utilizzare per eseguire la connessione. Per altre informazioni sulla creazione di questo account, vedere [Configurare l'account di esecuzione automatica &#40;Gestione configurazione SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-##  <a name="DataSourceConfigurationConnections"></a> Configurazione dell'origine dei dati e connessioni di rete  
+##  <a name="DataSourceConfigurationConnections"></a>Configurazione origine dati e connessioni di rete  
  Nella tabella seguente viene illustrato come vengono eseguite le connessioni per combinazioni specifiche di tipi di credenziali ed estensioni per l'elaborazione dati. Se si usa un'estensione per l'elaborazione dati personalizzata, vedere [Specificare le connessioni per le estensioni per l'elaborazione dati personalizzate](specify-connections-for-custom-data-processing-extensions.md).  
   
-|**Tipo**|**Contesto per la connessione di rete**|**Tipi di origine dei dati**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
+|**Tipo**|**Contesto per la connessione di rete**|**Tipi di origini dati**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |sicurezza integrata|Rappresenta l'utente corrente|Per tutti i tipi di origine dei dati, la connessione viene eseguita tramite l'account utente corrente.|  
 |Credenziali di Windows|Rappresenta l'utente specificato|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB la connessione viene eseguita tramite l'account utente rappresentato.|  
 |Credenziali di database|Rappresenta l'account di esecuzione automatica o l'account del servizio.<br /><br /> (Reporting Services rimuove le autorizzazioni di amministratore quando la richiesta di connessione viene inviata tramite l'identità del servizio).|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Il nome utente e la password vengono accodati alla stringa di connessione.<br /><br /> Per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La connessione ha esito positivo se viene utilizzato il protocollo TCP/IP, in caso contrario ha esito negativo.<br /><br /> Per XML:<br /><br /> La connessione sul server di report ha esito negativo se vengono utilizzate le credenziali del database.|  
-|None|Rappresenta l'account di esecuzione automatica.|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Vengono utilizzate le credenziali definite nella stringa di connessione. La connessione ha esito negativo sul server di report se l'account di esecuzione automatica non è definito.<br /><br /> Per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La connessione ha sempre esito negativo se non vengono specificate credenziali, anche se l'account di esecuzione automatica è stato definito.<br /><br /> Per XML:<br /><br /> La connessione viene eseguita come utente anonimo se l'account di esecuzione automatica è definito; in caso contrario, la connessione ha esito negativo.|  
+|nessuno|Rappresenta l'account di esecuzione automatica.|Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Vengono utilizzate le credenziali definite nella stringa di connessione. La connessione ha esito negativo sul server di report se l'account di esecuzione automatica non è definito.<br /><br /> Per [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La connessione ha sempre esito negativo se non vengono specificate credenziali, anche se l'account di esecuzione automatica è stato definito.<br /><br /> Per XML:<br /><br /> La connessione viene eseguita come utente anonimo se l'account di esecuzione automatica è definito; in caso contrario, la connessione ha esito negativo.|  
   
 ## <a name="setting-credentials-programmatically"></a>Impostazione di credenziali a livello di programmazione  
  È possibile impostare le credenziali tramite codice per controllare l'accesso ai report e al server di report. Per altre informazioni, vedere [Origini dati e metodi di connessione](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Origini dei dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Gestire origini dati dei report](../../integration-services/connection-manager/data-sources.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Creare, eliminare o modificare un'origine dati condivisa &#40;Gestione report&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

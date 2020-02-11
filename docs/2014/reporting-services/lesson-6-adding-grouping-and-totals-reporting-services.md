@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 6: Aggiunta di gruppi e totali (Reporting Services) | Microsoft Docs'
+title: 'Lesson 6: Adding Grouping and Totals (Reporting Services) (Lezione 6: Aggiunta di gruppi e totali (Reporting Services)) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108409"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lezione 6: Aggiunta di gruppi e totali (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   È possibile aggiungere gruppi e totali al report per organizzare e riepilogare i dati.  
   
- Per informazioni sull'aggiunta dei totali parziali ai report, vedere: [Aggiunta di totali ai report di Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
+ Per informazioni sull'aggiunta dei totali in esecuzione ai report, vedere: [aggiunta di totali ai report di Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
- **Contenuto dell'argomento:**  
+ **In questo argomento**  
   
 -   [Per raggruppare i dati in un report](#bkmk_groupdata)  
   
@@ -32,27 +32,27 @@ ms.locfileid: "66108409"
   
 -   [Per aggiungere un totale complessivo a un report](#bkmk_addgrandtotal)  
   
--   [Per pubblicare il Report nel Server di Report (facoltativo)](#bkmk_publishreport)  
+-   [Per pubblicare il report nel server di report (facoltativo)](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a> Per raggruppare i dati in un report  
+##  <a name="bkmk_groupdata"></a>Per raggruppare i dati in un report  
   
 1.  Fare clic sulla scheda **Progettazione** .  
   
-2.  Se non viene visualizzato il **gruppi di righe** riquadro, fare doppio clic nell'area di progettazione e fare clic su **view** e quindi fare clic su **raggruppamento**.  
+2.  Se il riquadro **gruppi di righe** non è visualizzato, fare clic con il pulsante destro del mouse sull'area di progettazione e scegliere **Visualizza** , quindi fare clic su **raggruppamento**.  
   
-3.  Dal riquadro **Dati report** trascinare il campo `Date` nel riquadro **Gruppi di righe**. Posizionarlo al di sopra della riga **(Dettagli)** .  
+3.  Dal riquadro **Dati report** trascinare il campo `Date` nel riquadro **Gruppi di righe**. Posizionarlo al di sopra della riga **(Dettagli)**.  
   
      L'handle di riga contiene ora una parentesi quadra per mostrare un gruppo. La tabella presenta ora due colonne Date, una su ogni lato di una linea verticale tratteggiata.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Dal riquadro **Dati report** trascinare il campo `Order` nel riquadro **Gruppi di righe**. Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)** .  
+4.  Dal riquadro **Dati report** trascinare il campo `Order` nel riquadro **Gruppi di righe**. Posizionarlo al di sotto di Date e al di sopra di **(Dettagli)**.  
   
-     L'handle di riga contiene ora due parentesi quadre per mostrare due gruppi. La tabella ora presenta due `Order` colonne, troppo.  
+     L'handle di riga contiene ora due parentesi quadre per mostrare due gruppi. La tabella include ora anche `Order` due colonne.  
   
-5.  Eliminare le colonne di data e l'ordine originale per il **a destra** della linea doppia. Verranno rimossi i singoli valori dei record in modo da visualizzare solo il valore del gruppo. Selezionare gli handle delle due colonne, fare clic con il pulsante destro del mouse e scegliere **Elimina colonne**.  
+5.  Eliminare le colonne Date e Order originali a **destra** della linea doppia. Verranno rimossi i singoli valori dei record in modo da visualizzare solo il valore del gruppo. Selezionare gli handle delle due colonne, fare clic con il pulsante destro del mouse e scegliere **Elimina colonne**.  
   
-     ![Selezionare le colonne da eliminare](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Selezionare colonne da eliminare")  
+     ![Selezione colonne da eliminare](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "Selezione colonne da eliminare")  
   
      È possibile formattare nuovamente le intestazioni di colonna e la data.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66108409"
   
      ![Tabella raggruppata per data e quindi per numero di ordine](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Tabella raggruppata per data e quindi per numero di ordine")  
   
-##  <a name="bkmk_addtotals"></a> Per aggiungere totali a un report  
+##  <a name="bkmk_addtotals"></a>Per aggiungere totali a un report  
   
 1.  Passare alla Visualizzazione della struttura.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66108409"
   
      Verrà aggiunta una somma delle quantità di tutti gli ordini alla riga dei totali.  
   
-4.  Nella cella vuota a sinistra di `Sum[Qty]`digitare l'etichetta "**Order Total"** .  
+4.  Nella cella vuota a sinistra di `Sum[Qty]`digitare l'etichetta "**Order Total"**.  
   
 5.  È possibile aggiungere un colore di sfondo alla riga dei totali. Selezionare le due celle della somma e la cella dell'etichetta.  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66108409"
   
      ![Visualizzazione Progettazione: tabella di base con totale degli ordini](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Visualizzazione Progettazione: tabella di base con totale degli ordini")  
   
-##  <a name="bkmk_adddailytotal"></a> Per aggiungere un totale giornaliero a un report  
+##  <a name="bkmk_adddailytotal"></a>Per aggiungere un totale giornaliero a un report  
   
-1.  Fare doppio clic sulla cella Order, scegliere **Aggiungi totale**, fare clic su **dopo**.  
+1.  Fare clic con il pulsante destro del mouse sulla cella Order , scegliere **Aggiungi totale**e quindi fare clic su **Dopo**.  
   
-     Verrà aggiunta una nuova riga contenente somme delle quantità e degli importi di ogni giorno e l'etichetta "**totale**" nella colonna Order.  
+     Viene aggiunta una nuova riga contenente le somme della quantità e del dollaro per ogni giorno e l'etichetta "**Total**" nella colonna Order.  
   
-2.  Digitare la parola **Daily** prima della parola **Total** nella stessa cella in modo da definire la frase **Daily Total**.  
+2.  Digitare la parola **Daily** prima della parola **Total** nella stessa cella, in modo che legga il **totale giornaliero**.  
   
 3.  Selezionare la cella **Daily Total** , le due celle **Sum** e la cella vuota compresa tra di esse.  
   
@@ -94,11 +94,11 @@ ms.locfileid: "66108409"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a> Per aggiungere un totale complessivo a un report  
+##  <a name="bkmk_addgrandtotal"></a>Per aggiungere un totale complessivo a un report  
   
 1.  Fare clic con il pulsante destro del mouse sulla cella Date, scegliere **Aggiungi totale**e quindi fare clic su **Dopo**.  
   
-     Verrà aggiunta una nuova riga che contiene le somme delle quantità e dollari per l'intero report e il **totale** etichettare il `Date` colonna.  
+     Viene aggiunta una nuova riga contenente le somme della quantità e del dollaro per l'intero report e l'etichetta **Total** nella `Date` colonna.  
   
 2.  Digitare la parola **Grand** prima della parola **Total** nella stessa cella in modo da definire la frase **Grand Total**.  
   
@@ -114,13 +114,13 @@ ms.locfileid: "66108409"
   
      ![Anteprima: tabella di base con totale complessivo](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Anteprima: tabella di base con totale complessivo")  
   
-##  <a name="bkmk_publishreport"></a> Per pubblicare il Report nel Server di Report (facoltativo)  
+##  <a name="bkmk_publishreport"></a>Per pubblicare il report nel server di report (facoltativo)  
   
 1.  Un passaggio facoltativo consiste nel pubblicare il report completato nel server di report in modalità nativa in modo che sia possibile visualizzare il report da Gestione report.  
   
 2.  Sulla barra degli strumenti fare clic su **Progetto** , quindi scegliere **Proprietà tutorial**.  
   
-3.  Nel **TargetServerURL** digitare il nome del nome del server di report, ad esempio **http://\<nomeserver > / reportserver**  
+3.  In **TargetServerURL** Digitare il nome del server di report, ad esempio **http://\<nomeserver>/ReportServer**  
   
 4.  Fare clic su **OK**.  
   
@@ -128,13 +128,13 @@ ms.locfileid: "66108409"
   
      Se viene visualizzato un messaggio simile al seguente nella finestra di output, la distribuzione è stata completata correttamente.  
   
-    > ---Compilazione avviata: Progetto: tutorial, Configurazione: Eseguire il debug---verrà ignorato 'Sales Orders'. L'elemento è aggiornato. Compilazione completata-- 0 errori, 0 avvisi---distribuzione avviata: Progetto: tutorial, Configurazione: Debug---distribuzione in http://\<nome server > / reportserverDeploying report '/ tutorial/Sales Orders'. Distribuzione completata-- 0 errori, 0 avvisi === compilazione: 1 completata o aggiornata, 0 non riuscite, 0 ignorate === distribuzione: 1 completata, 0 non riuscite, 0 ignorate ===  
+    > ------ Compilazione avviata - Progetto: tutorial, Configurazione: Debug ------'Sales Orders.rdl' verrà ignorato. L'elemento è aggiornato. Compilazione completata--0 errori, 0 avvisi------distribuzione avviata: progetto: esercitazione, configurazione: debug------distribuzione nel\<nome del server http://> report/reportserverDeploying '/tutorial/Sales Orders '. Distribuzione completata--0 errori, 0 avvisi = = = = = = = = = = = compilazione: 1 riuscite o aggiornate, 0 non riuscite, 0 ignorate = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
   
      Se viene visualizzato un messaggio di errore simile al seguente, verificare di disporre delle autorizzazione per il server di report e di aver avviato [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegi di amministratore.  
   
-    > "Le autorizzazioni concesse all'utente ' XXXXXXXX\\< proprio nome utente\>' non sono sufficienti per eseguire questa operazione"  
+    > "Le autorizzazioni concesse all'utente ' XXXXXXXX\\<il nome\>utente ' non sono sufficienti per eseguire questa operazione"  
   
-6.  Avviare Gestione Report con privilegi di amministratore, ad esempio, fare doppio clic sull'icona per Internet Explorer e fare clic su **Esegui come amministratore**.  
+6.  Avviare Gestione report con privilegi di amministratore, ad esempio, fare clic con il pulsante destro del mouse sull'icona di Internet Explorer e scegliere **Esegui come amministratore**.  
   
      Selezionare l'URL Gestione report, ad esempio `http://<server name>/reports`.  
   

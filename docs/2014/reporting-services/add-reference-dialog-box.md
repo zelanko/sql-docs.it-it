@@ -1,5 +1,5 @@
 ---
-title: Aggiungi riferimento al dialogo | Microsoft Docs
+title: Finestra di dialogo Aggiungi riferimento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1990a5feaf4cbf7c4095b39089efb36fbb393755
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110017"
 ---
 # <a name="add-reference-dialog-box"></a>Finestra di dialogo Aggiungi riferimento
@@ -34,7 +34,7 @@ ms.locfileid: "66110017"
 > [!NOTE]  
 >  Quando si pubblica un report che include un riferimento a un assembly esterno, l'assembly deve essere installato nel server di report prima che il report possa essere elaborato correttamente.  
   
- **Recenti**  
+ **Recente**  
  Utilizzare questa opzione per selezionare il nome di un assembly utilizzato di recente.  
   
 ## <a name="see-also"></a>Vedere anche  

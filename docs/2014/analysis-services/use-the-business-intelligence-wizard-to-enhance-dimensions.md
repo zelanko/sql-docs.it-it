@@ -1,5 +1,5 @@
 ---
-title: Usare la procedura guidata di Business Intelligence per migliorare le dimensioni | Microsoft Docs
+title: Utilizzare la configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065512"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Utilizzare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni
@@ -32,12 +32,12 @@ ms.locfileid: "66065512"
   
 -   [Definire l'ordinamento di una dimensione](multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)  
   
--   [Abilitare il writeback della dimensione](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+-   [Attivazione writeback della dimensione](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire le dimensioni del Database](multidimensional-models/define-database-dimensions.md)   
- [Riferimento alle proprietà degli attributo delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)   
- [Creare gerarchie definite dall'utente](multidimensional-models/user-defined-hierarchies-create.md)   
+ [Definire le dimensioni del database](multidimensional-models/define-database-dimensions.md)   
+ [Riferimento alle proprietà degli attributi delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Creazione di gerarchie definite dall'utente](multidimensional-models/user-defined-hierarchies-create.md)   
  [Definire relazioni tra attributi](multidimensional-models/attribute-relationships-define.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

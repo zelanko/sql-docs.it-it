@@ -10,19 +10,20 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261083"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurare l'account del servizio del server di report (Gestione configurazione SSRS)
 
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene implementato come singolo servizio contenente un servizio Web ReportServer, Gestione report e un'applicazione di elaborazione in background utilizzata per l'elaborazione pianificata di report e il recapito di sottoscrizioni. In questo argomento vengono illustrate la configurazione iniziale dell'account del servizio e la modifica dell'account o della password tramite lo strumento di configurazione di Reporting Services.  
   
 ## <a name="initial-configuration"></a>Configurazione iniziale
 
- L'account del servizio del server di report viene definito durante l'installazione. È possibile eseguire il servizio utilizzando un account utente di domino o un account predefinito, ad esempio `NetworkService`. Nessun account predefinito; qualunque sia l'account specificato nella [configurazione Server - account di servizio](../../sql-server/install/server-configuration-service-accounts.md) pagina dell'installazione guidata diventerà l'account iniziale del servizio Server di Report.  
+ L'account del servizio del server di report viene definito durante l'installazione. È possibile eseguire il servizio utilizzando un account utente di domino o un account predefinito, ad esempio `NetworkService`. Non esiste alcun account predefinito. qualsiasi account specificato nella pagina [Configurazione server-account di servizio](../../sql-server/install/server-configuration-service-accounts.md) dell'installazione guidata diventerà l'account iniziale del servizio del server di report.  
   
 > [!IMPORTANT]
 > Benché il servizio Web ReportServer e Gestione report siano applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], non vengono eseguite con l'account [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. L'architettura del servizio esegue entrambe le applicazioni ASP.NET all'interno della stessa identità di processo del server di report. Si tratta di un'importante differenza rispetto alle versioni precedenti, in cui sia il servizio Web ReportServer sia Gestione report vengono eseguite utilizzando la stessa identità del processo di lavoro [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] specificata in IIS.
@@ -33,7 +34,7 @@ ms.locfileid: "63261083"
   
 - Aggiunta automatica del nuovo account al gruppo di server di report creato nel computer locale. Questo gruppo è specificato negli elenchi di controllo di accesso (ACL) utilizzati per la protezione dei file di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-- Aggiornamento automatico delle autorizzazioni di accesso nell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance used to host the report server database. Il nuovo account verrà aggiunto a **RSExecRole**.  
+- Aggiorna automaticamente le autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] di accesso nell'istanza di utilizzata per ospitare il database del server di report. Il nuovo account verrà aggiunto a **RSExecRole**.  
   
      L'account di accesso al database per l'account precedente non verrà rimosso automaticamente. Assicurarsi di rimuovere gli account non più in uso. Per altre informazioni, vedere [Amministrare un database del server di report &#40;modalità nativa SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md) nella documentazione online di SQL Server.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "63261083"
     > [!NOTE]  
     > Se il server di report fa parte di una distribuzione con scalabilità orizzontale, la modifica interesserà solo il server di report che si sta aggiornando. Le chiavi di crittografia per gli altri server di report della distribuzione non sono interessate dalla modifica dell'account del servizio.  
   
- Per istruzioni su come impostare l'account, vedere [configurare un Account del servizio &#40;Gestione configurazione SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
+ Per istruzioni su come impostare l'account, vedere [configurare un account di servizio &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md).  
   
 ## <a name="choosing-an-account"></a>Scelta di un account
 
@@ -62,11 +63,11 @@ ms.locfileid: "63261083"
   
  Per la scelta dell'approccio ottimale per la propria distribuzione, è possibile utilizzare le linee guida e i collegamenti seguenti.  
   
-- [Account del servizio &#40;modalità nativa SSRS&#41;](../../sql-server/install/service-account-ssrs-native-mode.md).  
+- [Account del servizio &#40;&#41;in modalità nativa SSRS ](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
-- [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) nella documentazione online di SQL Server.  
+- [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in documentazione online di SQL Server.  
   
-- [Guida alla pianificazione della sicurezza dei servizi e degli account dei servizi](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [Guida alla pianificazione della sicurezza dei servizi e degli account del servizio](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   
 ## <a name="updating-an-expired-password"></a>Aggiornamento di una password scaduta
 
@@ -74,11 +75,11 @@ ms.locfileid: "63261083"
   
  Per reimpostare la password, effettuare le operazioni seguenti:  
   
-1. Nel **avviare** dal menu **Pannello di controllo**, scegliere **strumenti di amministrazione**, fare clic su **servizi**.  
+1. Dal menu **Start** scegliere **Pannello di controllo**, **strumenti di amministrazione**, quindi fare clic su **Servizi**.  
   
-2. Fare doppio clic su **SQL Server Reporting Services**, selezionare **proprietà**.  
+2. Fare clic con il pulsante destro del mouse su **SQL Server Reporting Services**, scegliere **Proprietà**.  
   
-3. Fare clic su **Accedi**e digitare la nuova password.  
+3. Fare clic **su Accedi**e digitare la nuova password.  
   
 4. Dopo avere aggiornato la password, avviare lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e aggiornare la password nella pagina Account servizio. Tale passaggio aggiuntivo è necessario per aggiornare le informazioni sull'account archiviate internamente dal server di report.  
   
@@ -94,11 +95,11 @@ ms.locfileid: "63261083"
   
  Dopo avere reimpostato le informazioni di accesso al database, è consigliabile riavviare il servizio [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] per garantire che la connessione precedente non venga più utilizzata.  
   
-1. Nelle **strumenti di amministrazione**, fare clic su **Amministrazione centrale SharePoint 2010**.  
+1. In **strumenti di amministrazione**fare clic su **amministrazione centrale SharePoint 2010**.  
   
 2. Fare clic su **Gestione applicazioni**.  
   
-3. Nella sezione Reporting Services, fare clic su **Concedi accesso al Database**.  
+3. Nella sezione Reporting Services fare clic su **Concedi accesso al database**.  
   
 4. Fare clic su **OK**. Verrà visualizzata la finestra di dialogo Immissione credenziali.  
   
@@ -106,17 +107,17 @@ ms.locfileid: "63261083"
   
 6. Per riavviare il servizio, fare clic su **operazioni**.  
   
-7. In topologia e servizi, fare clic su **servizi nel Server**.  
+7. In topologia e servizi fare clic **su servizi nel server**.  
   
-8. Per l'applicazione Web di Windows SharePoint Services, fare clic su **arrestare**.  
+8. Per applicazione Web Windows SharePoint Services fare clic su **Arresta**.  
   
 9. Attendere l'arresto del servizio.  
   
-10. Fare clic su **avviare**.  
+10. Fare clic su **Start**.  
   
 > [!NOTE]  
 > I prodotti e le tecnologie SharePoint richiedono l'utilizzo di account di dominio per la configurazione di servizi, ad esempio Reporting Services con modalità SharePoint.  
   
 ## <a name="next-steps"></a>Passaggi successivi
 
- [Configurare un Account del servizio &#40;Gestione configurazione SSRS&#41; ](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [Account del servizio &#40;modalità nativa SSRS&#41; ](../../sql-server/install/service-account-ssrs-native-mode.md) [configurare gli URL di Server di Report &#40;configurazione SSRS Manager&#41; ](configure-report-server-urls-ssrs-configuration-manager.md) [Gestione configurazione Reporting Services &#40;in modalità nativa&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)
+ [Configurare un account di servizio &#40;ssrs Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [account del servizio &#40;modalità nativa di SSRS&#41;](../../sql-server/install/service-account-ssrs-native-mode.md) [configurare gli url del Server di report &#40;SSRS Configuration Manager](configure-report-server-urls-ssrs-configuration-manager.md)&#41;Reporting Services Configuration Manager &#40;in [modalità nativa](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)&#41;

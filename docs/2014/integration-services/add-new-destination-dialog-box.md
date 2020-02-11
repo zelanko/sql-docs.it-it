@@ -1,5 +1,5 @@
 ---
-title: Aggiungi nuova finestra di dialogo di destinazione | Microsoft Docs
+title: Finestra di dialogo Aggiungi nuova destinazione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061857"
 ---
 # <a name="add-new-destination-dialog-box"></a>Finestra di dialogo Aggiungi nuova destinazione
@@ -26,7 +26,7 @@ ms.locfileid: "66061857"
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |Tipi|Selezionare il tipo di destinazione a cui si desidera connettersi.|  
-|Gestioni connessioni|Selezionare una gestione connessione esistente oppure fare clic su **\<Nuova>** per creare una nuova gestione connessione.|  
+|Gestioni connessioni|Selezionare una gestione connessione esistente oppure fare clic su ** \<nuova>** per creare una nuova gestione connessione.|  
 |Mostra solo installati|Consente di specificare se visualizzare solo le destinazioni installate.|  
 |OK|Fare clic per salvare le modifiche e aprire eventuali finestre di dialogo successive per configurare opzioni aggiuntive.|  
   

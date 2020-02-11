@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 948bf1fd8145da9db9d0e0b81beabb8e7b3efaf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109245"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>Modificare un avviso dati nella finestra di progettazione di avvisi
@@ -27,7 +27,7 @@ ms.locfileid: "66109245"
   
  Nella figura seguente è illustrato il menu di scelta rapida per un avviso dati in Gestione avvisi dati.  
   
- ![Aprire la finestra di progettazione Avviso dati facendo clic su Modifica](media/rs-alertmanageriwopendesigner.gif "Aprire la finestra di progettazione Avviso dati facendo clic su Modifica")  
+ ![Aprire la finestra di progettazione di avvisi dati facendo clic su Modifica](media/rs-alertmanageriwopendesigner.gif "Aprire la finestra di progettazione di avvisi dati facendo clic su Modifica")  
   
  Nella procedura seguente sono inclusi i passaggi per aprire la definizione di avviso per la modifica nella finestra di progettazione Avviso dati di Gestione avvisi dati.  
   

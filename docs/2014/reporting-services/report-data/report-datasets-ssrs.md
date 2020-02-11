@@ -1,5 +1,5 @@
 ---
-title: Aggiungere dati a un Report (Generatore Report e SSRS) | Microsoft Docs
+title: Aggiungere dati a un report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 019ca09c83b0b3011e9940d9a4c988ce223e192f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107116"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Aggiungere dati a un report (Generatore report e SSRS)
@@ -22,13 +22,13 @@ ms.locfileid: "66107116"
   
  Esistono due tipi di set di dati: incorporato e condiviso. Un set di dati incorporato viene definito in un report e viene usato solo dal report specifico. Un set di dati condiviso viene definito sul server di report o un sito di SharePoint e può essere usato da più report. In Generatore report è possibile creare set di dati condivisi in modalità Set di dati condiviso oppure set di dati incorporati in modalità Progettazione report. In Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]è possibile creare set di dati condivisi come parte di un progetto oppure set di dati incorporati come parte di un report.  
   
--   **Set di dati incorporati.** A differenza di applicazioni quali [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel dove si lavora con i dati direttamente in un foglio di lavoro, in Generatore report o Progettazione report si lavora con metadati che rappresentano i dati che verranno recuperati durante l'elaborazione del report. Per creare un set di dati incorporato, selezionare l'origine dati condivisa e specificare una query. Dopo avere creato un set di dati, usare il riquadro dei dati del report per visualizzare la raccolta di campi. È possibile visualizzare i dati di un set di dati in un'area dati quale una tabella o un grafico. In ogni area dati è possibile raggruppare, filtrare e ordinare i dati per organizzarli. Dopo avere progettato il layout del report, eseguire il report per visualizzare i dati effettivi.  
+-   **DataSet incorporati.** A differenza di applicazioni quali [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel dove si lavora con i dati direttamente in un foglio di lavoro, in Generatore report o Progettazione report si lavora con metadati che rappresentano i dati che verranno recuperati durante l'elaborazione del report. Per creare un set di dati incorporato, selezionare l'origine dati condivisa e specificare una query. Dopo avere creato un set di dati, usare il riquadro dei dati del report per visualizzare la raccolta di campi. È possibile visualizzare i dati di un set di dati in un'area dati quale una tabella o un grafico. In ogni area dati è possibile raggruppare, filtrare e ordinare i dati per organizzarli. Dopo avere progettato il layout del report, eseguire il report per visualizzare i dati effettivi.  
   
      Nel riquadro dei dati del report riportato nella figura seguente vengono visualizzati un'origine dati denominata [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)], un set di dati denominato DataSet1 e cinque campi nella raccolta di campi del set di dati. Nel riquadro Layout viene visualizzata una tabella con la riga superiore di intestazioni di colonna e la riga inferiore con celle della tabella contenenti testo. Il testo segnaposto [Name] indica i metadati per il campo Nome. Durante l'esecuzione del report, il testo segnaposto viene sostituito dai valori dei dati effettivi. La tabella può essere espansa in base alle esigenze per visualizzare tutti i dati.  
   
      ![rs_DataDesignandPreview](../media/rs-datadesignandpreview.gif "rs_DataDesignandPreview")  
   
--   **Set di dati condivisi.** Creare un set di dati condiviso quando si vuole usare un set di dati in più report. Per creare un set di dati condiviso e salvarlo in un server di report o in un sito di SharePoint, usare Generatore report in una visualizzazione di progettazione del set di dati condiviso. Per creare un set di dati condiviso come parte di un progetto che può essere distribuito su un server o su un sito, usare Progettazione report.  
+-   **DataSet condivisi.** Creare un set di dati condiviso quando si vuole usare un set di dati in più report. Per creare un set di dati condiviso e salvarlo in un server di report o in un sito di SharePoint, usare Generatore report in una visualizzazione di progettazione del set di dati condiviso. Per creare un set di dati condiviso come parte di un progetto che può essere distribuito su un server o su un sito, usare Progettazione report.  
   
      Nella figura seguente è illustrata una visualizzazione di progettazione set di dati condiviso in Generatore report. È possibile selezionare o modificare la connessione dati, le proprietà del set di dati, la query, i filtri, e facoltativamente contrassegnare i filtri come parametri, nonché visualizzare i risultati della query. Le modifiche vengono quindi salvate nel server o nel sito.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "66107116"
   
  È inoltre possibile aggiungere set di dati a un report aggiungendo parti del report che includono i set di dati da cui dipendono. [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- Per informazioni su come creare un report che visualizza i dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del database, vedere [esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Per compilare un report che include i propri dati, vedere [esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Per informazioni su come creare un report in cui sono visualizzati i dati di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Per creare un report comprendente i propri dati, vedere [Esercitazione: Creare un report grafico rapido offline &#40;Generatore report&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a> Aggiunta di dati del report  
+##  <a name="Methods"></a>Aggiunta di dati del report  
  In Generatore report è possibile aggiungere dati del report nei modi seguenti.  
   
 -   Aggiungendo parti di report da un server di report al report. Ogni parte di report è autonoma e consente di includere set di dati dipendenti. I set di dati sono predefiniti.  
@@ -77,7 +77,7 @@ ms.locfileid: "66107116"
   
 -   [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
 
-##  <a name="QuickStart"></a> Aggiunta di dati con parti di report  
+##  <a name="QuickStart"></a>Aggiunta di dati con parti di report  
  Nelle parti di report sono contenuti i set di dati dai quali dipendono. Questi set di dati vengono creati in base alle origini dati condivise disponibili nel server di report. In Generatore report, quando si aggiunge una parte di report al report in uso, i set di dati dipendenti vengono aggiunti al report come se fossero stati aggiunti manualmente. Ad esempio, in un grafico predefinito è contenuto un set di dati. Per vedere i dati, visualizzare l'anteprima del report.  
   
 > [!NOTE]  
@@ -87,17 +87,17 @@ ms.locfileid: "66107116"
   
 -   Per altre informazioni, vedere [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md) e [Parti del report in Progettazione report &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
 
-##  <a name="Queries"></a> Query e Progettazione query  
+##  <a name="Queries"></a>Query e finestre Progettazione query  
  Per specificare i dati desiderati da un'origine dati, è necessario compilare un comando di query. Per ciascun tipo di origine dati, è disponibile una finestra *Progettazione query* correlata che consente di compilare la query. che può essere basata sull'interfaccia grafica o su testo. In una finestra Progettazione query con interfaccia grafica, vengono visualizzati i metadati che rappresentano i dati nell'origine dati esterna ed è possibile compilare in modo interattivo una query trascinando campi o entità nell'area di progettazione della query. In una Progettazione query basata su testo, si scrivono o importano query nella sintassi della query supportata dall'origine dati esterna.  
   
  Nella Progettazione query, è possibile eseguire la query per visualizzare i dati di esempio e convalidare la sintassi del comando di query. I nomi di colonna nel set di risultati diventano i nomi campo visualizzati nel riquadro dei dati del report. Il set di risultati deve essere un singolo set di righe e colonne in cui esiste lo stesso numero di valori per ogni riga di dati. Non sono supportati più set di risultati di una singola query. Non sono supportate le gerarchie incomplete che non dispongono di un numero costante di colonne e che possono produrre un numero diverso di valori dei dati per ogni riga.  
   
- Per eseguire una query, è necessario disporre di credenziali per la fase di progettazione. Per altre informazioni, vedere [specificare le credenziali in Generatore Report](../specify-credentials-in-report-builder.md) e [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Per eseguire una query, è necessario disporre di credenziali per la fase di progettazione. Per ulteriori informazioni, vedere [specificare le credenziali in Generatore report](../specify-credentials-in-report-builder.md) e [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  Le comunicazioni tra un'estensione per i dati e l'origine dati esterna sono gestite dai provider di dati. Il supporto per la sintassi del comando di query, per i parametri query e per i tipi di dati per i valori nel set di risultati è determinato da ogni provider di dati. Per altre informazioni, vedere l'argomento relativo al tipo specifico di estensione per dati e [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md).  
 
 ##  <a name="HowTo"></a> Procedure  
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -105,17 +105,17 @@ ms.locfileid: "66107116"
   
  [Compilare una query in Progettazione query relazionale &#40;Generatore report e SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Visualizzare set di dati nascosti per i valori dei parametri di dati multidimensionali &#40;Generatore report e SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Mostra i set di dati nascosti per i valori dei parametri per i dati multidimensionali &#40;Generatore report e SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Aggiungere un filtro a un set di dati &#40;Generatore report e SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Impostare una proprietà NoDataMessage per un'area dati &#40;Generatore report e SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Impostare un messaggio di nessun dato per un'area dati &#40;Generatore report e SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Associazione di un parametro di query a un parametro di report &#40;Generatore report e SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Associare un parametro di query a un parametro di report &#40;Generatore report e SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Definizione dei parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Definire i parametri in Progettazione query MDX per Analysis Services &#40;Generatore report e SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
 
-##  <a name="Section"></a> Contenuto della sezione  
+##  <a name="Section"></a>Contenuto della sezione  
  [Parti del report e set di dati in Generatore report](report-parts-and-datasets-in-report-builder.md)  
   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Lezione 6: Aggiungere un controllo ReportViewer all'applicazione | Microsoft Docs"
+title: "Lesson 6: Add a ReportViewer Control to the Application (Lezione 6: Aggiungere un controllo ReportViewer all'applicazione) | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfce5e2bdf71dfb58481fedf05794d3603285449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108414"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lezione 6: Aggiungere un controllo ReportViewer all'applicazione
@@ -22,7 +22,7 @@ ms.locfileid: "66108414"
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>Per aggiungere un controllo ReportViewer all'applicazione  
   
-1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Default.aspx**, quindi scegliere **Progettazione viste**.  
+1.  In **Esplora soluzioni**fare clic con il pulsante destro del mouse su **Default.aspx**e quindi scegliere **Progettazione viste**.  
   
 2.  Dal gruppo **Estensioni AJAX** nella finestra della **casella degli strumenti** trascinare un controllo **ScriptManager** nell'area di progettazione.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66108414"
   
      Quando si seleziona un report, le istanze delle origini dati utilizzate nel report vengono create automaticamente. Il codice viene generato per la creazione di un'istanza di ogni oggetto DataTable e del relativo contenitore [DataSet](https://msdn.microsoft.com/library/system.data.dataset\(v=vs.100\).aspx) . Un controllo [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource\(v=vs.100\).aspx) viene aggiunto all'area di progettazione, corrispondente a ogni origine dati usata nel report. Questo controllo dell'origine dati viene configurato automaticamente.  
   
-     Se si usa Microsoft Visual Studio 2012, assicurarsi che il controllo ObjectDataSource sia associato a DataSet1, completo con lo spazio dei nomi di progetto, se il nome completo è elencato nel **Seleziona oggetto business**casella di riepilogo a discesa (ad esempio Projectnamespace.DataSet1TableAdapters.ProductTableAdapter). Accedere alla casella di riepilogo facendo clic con il pulsante destro del mouse su ObjectDataSource e scegliendo **Configura origine dati**.  
+     Se si usa Microsoft Visual Studio 2012, verificare che il controllo ObjectDataSource sia associato a DataSet1 completo con lo spazio dei nomi del progetto, se il nome completo è elencato nell'elenco a discesa **scegliere l'oggetto business** , ad esempio ProjectNamespace. DataSet1TableAdapters. ProductTableAdapter. Accedere alla casella di riepilogo facendo clic con il pulsante destro del mouse su ObjectDataSource e scegliendo **Configura origine dati**.  
   
 6.  Scegliere Compila sito Web dal menu Compila.  
   

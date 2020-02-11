@@ -1,5 +1,5 @@
 ---
-title: Soluzione alternativa alla limitazione di righe di Excel | Microsoft Docs
+title: Aggirare la limitazione delle righe di Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107544"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Soluzione alternativa per il limite di righe in Excel
@@ -26,9 +26,9 @@ ms.locfileid: "66107544"
   
 1.  Aprire il report in [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] o Gestione report.  
   
-2.  Fare clic con il pulsante destro del mouse sulla riga dei dati nella tabella, quindi scegliere **Aggiungi gruppo** > **Gruppo padre** per aggiungere un gruppo di tabelle esterno.  
+2.  Fare clic con il pulsante destro del mouse sulla riga di dati nella tabella e quindi scegliere **Aggiungi** > gruppo**padre** gruppo per aggiungere un gruppo di tabelle esterno.  
   
-     ![Selezionare Gruppo padre](../media/datarow-selectparentgroup.png "Selezionare Gruppo padre")  
+     ![Selezionare il gruppo padre](../media/datarow-selectparentgroup.png "Selezionare il gruppo padre")  
   
 3.  Immettere la formula seguente nella casella dell'espressione **Raggruppa per** , quindi fare clic su **OK** per aggiungere il gruppo padre.  
   
@@ -40,19 +40,19 @@ ms.locfileid: "66107544"
   
 4.  Per eliminare la colonna di gruppo, fare clic con il pulsante destro del mouse sull'intestazione di colonna, fare clic su **Elimina colonne**, selezionare **Elimina solo colonne**, quindi scegliere **OK**.  
   
-     ![Eliminare una colonna del gruppo](../media/groupcolumn-delete-updated.png "Eliminare una colonna del gruppo")  
+     ![Eliminare una colonna di gruppo](../media/groupcolumn-delete-updated.png "Eliminare una colonna di gruppo")  
   
 5.  Fare clic con il pulsante destro del mouse su **Gruppo 1** nella sezione **Gruppi di righe** , quindi scegliere **Proprietà gruppo**.  
   
-     ![Visualizzare le proprietà del gruppo](../media/groupproperties-updated.png "Visualizzare le proprietà del gruppo")  
+     ![Visualizza proprietà di gruppo](../media/groupproperties-updated.png "Visualizza proprietà di gruppo")  
   
 6.  Nella pagina **Ordinamento** della finestra di dialogo **Proprietà gruppo** selezionare l'opzione di ordinamento predefinita e fare clic su **Elimina**.  
   
-     ![Eliminare l'ordinamento predefinito](../media/groupproperties-sorting-updated.png "Eliminare l'ordinamento predefinito")  
+     ![Elimina ordinamento predefinito](../media/groupproperties-sorting-updated.png "Elimina ordinamento predefinito")  
   
 7.  Nella pagina **Interruzioni di pagina** fare clic su **Tra ogni istanza di un gruppo** , quindi scegliere **OK**.  
   
-     ![Impostare le interruzioni di pagina](../media/groupproperties-pagebreaks-updated.png "Impostare le interruzioni di pagina")  
+     ![Imposta interruzioni di pagina](../media/groupproperties-pagebreaks-updated.png "Imposta interruzioni di pagina")  
   
 8.  Salvare il report. Quando lo si esporta in Excel, viene esportato in più fogli di lavoro, ognuno con un massimo di 65000 righe.  
   

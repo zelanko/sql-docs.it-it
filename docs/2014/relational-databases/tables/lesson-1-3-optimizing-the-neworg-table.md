@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110069"
 ---
 # <a name="optimizing-the-neworg-table"></a>Ottimizzazione della tabella NewOrg
-  Il **NewOrd** creato nella tabella di [popolamento di una tabella con dati gerarchici esistenti](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) attività contiene tutte le informazioni sul personale e rappresenta la struttura gerarchica usando un `hierarchyid`tipo di dati. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna `hierarchyid`.  
+  La tabella **NewOrd** creata nell'attività popolamento di [una tabella con dati gerarchici esistenti](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene tutte le informazioni sui dipendenti e rappresenta la struttura gerarchica utilizzando un `hierarchyid` tipo di dati. Questa attività aggiunge indici nuovi per supportare ricerche nella colonna `hierarchyid`.  
   
 ## <a name="clustered-index"></a>Indice cluster  
- Il `hierarchyid` colonna (**OrgNode**) è la chiave primaria per il **NewOrg** tabella. Quando la tabella è stata creata, conteneva un indice cluster denominato **PK_NewOrg_OrgNode** per applicare l'univocità della colonna **OrgNode** . Questo indice cluster supporta anche una ricerca in profondità nella tabella.  
+ La `hierarchyid` colonna (**OrgNode**) è la chiave primaria per la tabella **NewOrg** . Quando la tabella è stata creata, conteneva un indice cluster denominato **PK_NewOrg_OrgNode** per applicare l'univocità della colonna **OrgNode** . Questo indice cluster supporta anche una ricerca in profondità nella tabella.  
   
 ## <a name="nonclustered-index"></a>Indice non cluster  
  Questo passaggio crea due indici non cluster per supportare le ricerche tipiche.  
@@ -71,7 +71,7 @@ ms.locfileid: "66110069"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Indice Depth-first: I record dei dipendenti vengono archiviati accanto al responsabile.  
+     Indice depth-first: i record relativi ai dipendenti vengono archiviati accanto al responsabile.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66110069"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID**-prima di tutto di indice: Le righe vengono archiviate nel **EmployeeID** sequenza.  
+     Indice **EmployeeID**-First: le righe vengono archiviate nella sequenza **EmployeeID** .  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   

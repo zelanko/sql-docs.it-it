@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107915"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Esportazione in un file PDF (Generatore report e SSRS)
   L'estensione per il rendering PDF consente di eseguire il rendering di un report in file che possono essere aperti in Adobe Acrobat e in altri visualizzatori PDF di terze parti che supportano il formato PDF 1.3. Anche se PDF 1.3 è compatibile con Adobe Acrobat 4.0 e versioni successive, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta Adobe Acrobat 6 e versioni successive. Non è necessaria l'applicazione Adobe per convertire i report mediante l'estensione per il rendering. Per visualizzare o stampare i report in formato PDF è tuttavia necessario disporre di visualizzatori PDF, ad esempio Adobe Acrobat.  
   
- L'estensione per il rendering PDF supporta i caratteri ANSI ed è in grado di convertire i caratteri Unicode dalle lingue giapponese, coreana, cinese tradizionale, cinese semplificato, cirillico, ebraico e arabo con alcune limitazioni. Per altre informazioni sulle limitazioni, vedere [esportazione di report &#40;Generatore Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
+ L'estensione per il rendering PDF supporta i caratteri ANSI ed è in grado di convertire i caratteri Unicode dalle lingue giapponese, coreana, cinese tradizionale, cinese semplificato, cirillico, ebraico e arabo con alcune limitazioni. Per ulteriori informazioni sulle limitazioni, vedere [esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
   
  Il renderer PDF è un renderer di pagine fisiche e, pertanto, presenta un comportamento di paginazione diverso da quello di altri renderer, ad esempio HTML e Excel. In questo argomento vengono fornite informazioni specifiche sul renderer PDF e vengono descritte le eccezioni alle regole.  
   
@@ -65,7 +65,8 @@ ms.locfileid: "66107915"
 |`Title`|Attributo `Name` dell'elemento RDL `Report`.|  
 |`Author`|Elemento RDL `Author`.|  
 |`Subject`|Elemento RDL `Description`.|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|`Creator`|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|Nome e versione dell'estensione per il rendering.|  
 |`CreationDate`|Data e ora di esecuzione del report nel formato PDF `datetime`.|  
   
@@ -80,7 +81,7 @@ ms.locfileid: "66107915"
 ### <a name="document-map"></a>Mappa documento  
  Se il report contiene etichette della mappa documento, al file PDF viene aggiunta una struttura del documento. Ogni etichetta della mappa documento viene visualizzata come voce nella struttura del documento nell'ordine in cui appare nel report. In Acrobat viene aggiunto un segnalibro di destinazione alla struttura del documento solo se viene eseguito il rendering della pagina in cui è presente.  
   
- Se viene eseguito il rendering di una singola pagina, non viene aggiunta alcuna struttura del documento. La mappa documento viene disposta gerarchicamente per riflettere il livello di nidificazione del report. La struttura del documento è accessibile in Acrobat nella scheda Segnalibri. Se si fa clic su una voce all'interno della struttura del documento, nel documento si passa alla posizione contrassegnata con il segnalibro.  
+ Se viene eseguito il rendering di una singola pagina, non viene aggiunta alcuna struttura del documento. La mappa documento viene disposta gerarchicamente per riflettere il livello di nidificazione del report. La struttura del documento è accessibile in Acrobat nella scheda segnalibri. Se si fa clic su una voce all'interno della struttura del documento, il documento passa alla posizione con segnalibro.  
   
 ### <a name="bookmarks"></a>Segnalibri  
  I segnalibri non sono supportati nel rendering in PDF.  
@@ -93,7 +94,7 @@ ms.locfileid: "66107915"
   
   
   
-##  <a name="Compression"></a> Compressione  
+##  <a name="Compression"></a>Compressione  
  La compressione dell'immagine è basata sul tipo di file originale dell'immagine. L'estensione per il rendering in PDF comprime i file PDF per impostazione predefinita.  
   
  Per mantenere la compressione per le immagini incluse nel file PDF, quando possibile, le immagini JPEG vengono archiviate in formato JPEG e tutti gli altri tipi di immagine in formato BMP.  

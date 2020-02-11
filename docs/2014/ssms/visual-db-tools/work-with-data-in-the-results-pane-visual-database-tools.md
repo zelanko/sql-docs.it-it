@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313765"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utilizzo dei dati nel riquadro Risultati (Visual Database Tools)
@@ -115,12 +115,12 @@ ms.locfileid: "63313765"
 ### <a name="what-can-not-be-represented-fully"></a>Elementi che non possono essere rappresentati in modo completo  
  Gli elementi restituiti dal database e visualizzati nel riquadro Risultati sono in gran parte controllati dal provider dell'origine dati in uso. Nel riquadro Risultati non sempre vengono convertiti i dati provenienti da tutti i sistemi di gestione di database. Di seguito vengono descritti alcuni casi in cui si verifica questa situazione.  
   
--   I tipi di dati binari spesso non sono di alcuna utilità per chi lavora nel riquadro Risultati, oltre a richiedere lunghi tempi di download. Vengono pertanto rappresentati da  *\<i dati binari >* oppure *Null*.  
+-   I tipi di dati binari spesso non sono di alcuna utilità per chi lavora nel riquadro Risultati, oltre a richiedere lunghi tempi di download. Quindi sono rappresentati da * \<dati binari>* o *null*.  
   
--   Non è sempre possibile mantenere il livello di precisione e il fattore di scala. Il riquadro Risultati supporta ad esempio un livello di precisione pari a 27. Se i dati sono di un tipo di dati con una precisione maggiore, i dati potrebbero essere troncati o può essere rappresentati da  *\<non è possibile leggere i dati >* .  
+-   Non è sempre possibile mantenere il livello di precisione e il fattore di scala. Il riquadro Risultati supporta ad esempio un livello di precisione pari a 27. Se i dati sono di un tipo di dati con una maggiore precisione, è possibile che i dati siano troncati o che siano rappresentati da * \<Impossibile leggere i dati>*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+ [Esecuzione di operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [Specifica dei criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

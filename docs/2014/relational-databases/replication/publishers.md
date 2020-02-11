@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b28a0543208ab28414fb93def15adf904e2c078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261732"
 ---
-# <a name="publishers"></a>Server di pubblicazione
+# <a name="publishers"></a>Autori
   È possibile concedere ad altri server di pubblicazione l'autorizzazione per l'utilizzo del server di distribuzione. Tenere presente che, se si abilita un server di pubblicazione per l'utilizzo di questo server come server di distribuzione remoto, il server non diventerà un server di pubblicazione. È infatti necessario connettersi al server di pubblicazione, configurarlo per la pubblicazione e selezionare questo server come server di distribuzione. Utilizzando la Creazione guidata nuova pubblicazione è possibile configurare il server di pubblicazione e selezionare un server di distribuzione.  
   
  I server selezionati come server di pubblicazione utilizzeranno il database di distribuzione specificato nella pagina **Database di distribuzione** della creazione guidata. Se si desidera utilizzare un database di distribuzione diverso, non abilitare il server di pubblicazione in questa fase. Utilizzare invece la finestra di dialogo **Proprietà server di distribuzione** per aggiungere i server di pubblicazione dopo aver completato la Configurazione guidata distribuzione.  
@@ -28,7 +28,7 @@ ms.locfileid: "63261732"
  **Server di pubblicazione**  
  Consente di selezionare i server autorizzati all'utilizzo del server di distribuzione corrente. Fare clic sul pulsante delle proprietà ( **...** ) accanto al server di pubblicazione per visualizzare e impostare proprietà aggiuntive.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Se il server desiderato non è incluso nell'elenco, fare clic su **Aggiungi** per aggiungere un server di pubblicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Oracle all'elenco dei server di pubblicazione disponibili.  
   
 ## <a name="see-also"></a>Vedere anche  

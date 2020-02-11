@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793287"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replica di tabelle e indici partizionati
@@ -29,15 +29,15 @@ ms.locfileid: "67793287"
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>Proprietà degli articoli per la replica transazionale e di tipo merge  
  Nella tabella seguente sono inclusi gli oggetti utilizzati per partizionare i dati.  
   
-|Object|Creato tramite|  
+|Oggetto|Creato tramite|  
 |------------|----------------------|  
 |Tabella o indice partizionato|CREATE TABLE o CREATE INDEX|  
-|partition (funzione)|CREATE PARTITION FUNCTION|  
+|Funzione di partizione|CREATE PARTITION FUNCTION|  
 |Schema di partizione|CREATE PARTITION SCHEME|  
   
  Il primo set di proprietà correlato al partizionamento è costituito dalle opzioni dello schema dell'articolo che determinano se gli oggetti di partizionamento devono essere copiati nel Sottoscrittore. È possibile impostare tali opzioni nei modi seguenti:  
   
--   Nella pagina **Proprietà articolo** della Creazione guidata nuova pubblicazione o nella finestra di dialogo Proprietà pubblicazione. Per copiare gli oggetti elencati nella tabella precedente, specificare il valore `true` per le proprietà **copia schemi di partizionamento delle tabelle** e **copia schemi di partizione dell'indice**. Per informazioni su come accedere alla pagina **Proprietà articolo**, vedere [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
+-   Nella pagina **Proprietà articolo** della Creazione guidata nuova pubblicazione o nella finestra di dialogo Proprietà pubblicazione. Per copiare gli oggetti elencati nella tabella precedente, specificare un valore `true` per le proprietà **Copia schemi di partizionamento delle tabelle** e **Copia schemi di partizionamento degli indici**. Per informazioni su come accedere alla pagina **Proprietà articolo**, vedere [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).  
   
 -   Utilizzando il parametro *schema_option* di una delle stored procedure seguenti:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67793287"
   
  Tramite la replica vengono copiati gli oggetti nel Sottoscrittore durante la sincronizzazione iniziale. Se lo schema di partizione utilizza filegroup diversi dal filegroup PRIMARY, tali filegroup devono essere presenti nel Sottoscrittore prima della sincronizzazione iniziale.  
   
- Al termine dell'inizializzazione del Sottoscrittore, le modifiche dei dati vengono propagate al Sottoscrittore e applicate alle partizioni appropriate. Non sono tuttavia supportate le modifiche allo schema di partizione. Replica transazionale e di tipo merge non supportano la replica dei comandi seguenti: Istruzione ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME o l'istruzione REBUILD WITH PARTITION di ALTER INDEX.  Le modifiche associate non verranno replicate automaticamente nel sottoscrittore. È responsabilità dell'utente apportare manualmente modifiche simili nel Sottoscrittore.  
+ Al termine dell'inizializzazione del Sottoscrittore, le modifiche dei dati vengono propagate al Sottoscrittore e applicate alle partizioni appropriate. Non sono tuttavia supportate le modifiche allo schema di partizione. Le repliche transazionale e di tipo merge non supportano la replica dei comandi seguenti: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME e l'istruzione REBUILD WITH PARTITION di ALTER INDEX.  Le modifiche associate non verranno replicate automaticamente nel sottoscrittore. È responsabilità dell'utente apportare manualmente modifiche simili nel Sottoscrittore.  
   
 ## <a name="replication-support-for-partition-switching"></a>Supporto della replica per il cambio della partizione  
  Uno dei vantaggi principali del partizionamento di tabelle consiste nella possibilità di spostare in modo rapido ed efficiente subset di dati tra partizioni. I dati vengono spostati utilizzando il comando SWITCH PARTITION. Per impostazione predefinita, quando una tabella è abilitata per la replica, le operazioni SWITCH PARTITION sono bloccate per i motivi seguenti:  
@@ -70,9 +70,9 @@ ms.locfileid: "67793287"
 ### <a name="enabling-partition-switching"></a>Abilitazione del cambio della partizione  
  Le proprietà seguenti per le pubblicazioni transazionali consentono agli utenti di controllare il comportamento del cambio della partizione in un ambiente replicato:  
   
--   **\@allow_partition_switch**, se impostato su `true`, è possibile eseguire SWITCH PARTITION sul database di pubblicazione.  
+-   allow_partition_switch, se impostato su `true`, è possibile eseguire switch Partition sul database di pubblicazione. ** \@**  
   
--   **\@replicate_partition_switch** determina se l'istruzione SWITCH PARTITION DDL deve essere replicata ai sottoscrittori. Questa opzione è valida solo quando  **\@allow_partition_switch** è impostata su `true`.  
+-   replicate_partition_switch determina se l'istruzione switch Partition DDL deve essere replicata nei Sottoscrittori. ** \@** Questa opzione è valida solo quando ** \@allow_partition_switch** è impostato su `true`.  
   
  È possibile impostare queste proprietà utilizzando [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) durante la creazione della pubblicazione oppure [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) al termine della creazione della pubblicazione. Come notato in precedenza, la replica di tipo merge non supporta il cambio della partizione. Per eseguire SWITCH PARTITION in una tabella abilitata per la replica di tipo merge, rimuovere la tabella dalla pubblicazione.  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108105"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Passare un parametro del report in un URL
@@ -26,7 +26,7 @@ ms.locfileid: "66108105"
 > [!IMPORTANT]  
 >  È importante che nell'URL sia inclusa la sintassi proxy `_vti_bin` per indirizzare la richiesta tramite SharePoint e il proxy HTTP di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Tramite il proxy viene aggiunto del contesto alla richiesta HTTP. Questo contesto è necessario per garantire l'esecuzione corretta del report per i server di report in modalità SharePoint.  
 >   
->  Se non si include la sintassi del proxy, è necessario anteporre al parametro il prefisso *rp:*.  
+>  Se non si include la sintassi del proxy, è necessario anteporre al parametro il prefisso *rp:* .  
   
  Tutti i parametri di query possono disporre di parametri di report corrispondenti. Passare un parametro di query a un report passando il parametro di report corrispondente. Per altre informazioni, vedere [Compilare una query in Progettazione query relazionale &#40;Generatore report e SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   

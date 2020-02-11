@@ -18,18 +18,18 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67894989"
 ---
-# <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
+# <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina o riassegna i processi che appartengono all'account di accesso specificato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,20 +42,20 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @action = ] 'action'` L'azione da intraprendere per l'account di accesso specificato. *azione* viene **varchar (10)** , non prevede alcun valore predefinito. Quando *azione*viene **eliminare**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà *current_owner_login_name*. Quando *azione* viene **RIASSEGNA**, tutti i processi vengono assegnati al *new_owner_login_name*.  
+`[ @action = ] 'action'`Azione da eseguire per l'account di accesso specificato. *Action* è di tipo **varchar (10)** e non prevede alcun valore predefinito. Quando *Action*è **Delete**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà di *current_owner_login_name*. Quando *Action* viene **riassegnata**, tutti i processi vengono assegnati a *new_owner_login_name*.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'` Il nome di account di accesso del proprietario del processo corrente. *current_owner_login_name* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'`Nome dell'account di accesso del proprietario del processo corrente. *current_owner_login_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` Il nome di account di accesso del proprietario del nuovo processo. Usare questo parametro solo se *azione* viene **RIASSEGNA**. *new_owner_login_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'`Nome dell'account di accesso del nuovo proprietario del processo. Utilizzare questo parametro solo se l' *azione* viene **riassegnata**. *new_owner_login_name* è di **tipo sysname**e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ nessuno  
   
-## <a name="permissions"></a>Permissions  
- Per eseguire questa stored procedure, gli utenti devono disporre i **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ Per eseguire questa stored procedure, è necessario che agli utenti venga concesso il ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio tutti i processi di `danw` vengono riassegnati a `françoisa`.  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

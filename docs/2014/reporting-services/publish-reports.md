@@ -1,5 +1,5 @@
 ---
-title: Pubblicare i report | Microsoft Docs
+title: Pubblicare report | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108024"
 ---
 # <a name="publish-reports"></a>Pubblicazione di report
@@ -41,9 +41,9 @@ ms.locfileid: "66108024"
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicazione di origini dati e report](reports/publishing-data-sources-and-reports.md)   
- [Anteprima dei report](reports/previewing-reports.md)   
+ [Visualizzazione in anteprima di report](reports/previewing-reports.md)   
  [Pubblicazione dei report in un server di report](reports/publishing-reports-to-a-report-server.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Esportazione di report &#40;Report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Esportazione di report &#40;Generatore report e SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

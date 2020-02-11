@@ -1,5 +1,5 @@
 ---
-title: Funzionalità interattiva per estensioni (Generatore Report e SSRS) per il Rendering di Report differenti | Microsoft Docs
+title: Funzionalità interattiva per estensioni per il rendering di report diverse (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c66e8e8ce302044cac8caf488ca27a0c0c07651e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107802"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funzionalità interattiva per estensioni per il rendering di report differenti (Generatore report e SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66107802"
 |PDF|I collegamenti drill-through non sono disponibili nel formato PDF. Utilizzare collegamenti ipertestuali per i report in formato PDF con collegamenti ad altre pagine.|  
 |Excel|Il rendering dei collegamenti drill-through viene eseguito in Excel.<br /><br /> Il collegamento diventa un collegamento ipertestuale che punta al report cui fa riferimento il collegamento drill-through. Se si fa clic sul collegamento, viene visualizzato un report in una finestra del browser.|  
 |Word|I collegamenti drill-through vengono visualizzati in Word.<br /><br /> Il collegamento diventa un collegamento ipertestuale che punta al report cui fa riferimento il collegamento drill-through. Se si fa clic sul collegamento, viene visualizzato un report in una finestra del browser.|  
-|Altro|Non disponibili in XML, CSV o Immagine.|  
+|Altri|Non disponibili in XML, CSV o Immagine.|  
   
 ### <a name="toggle-items-within-a-report"></a>Attivazione/disattivazione di elementi all'interno di un report  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66107802"
 |PDF|Il server di report esporta lo stato di visualizzazione corrente del report in formato PDF. L'attivazione o la disattivazione interattiva non è supportata.|  
 |Excel|Il rendering di elementi e collegamenti drill-down che è possibile attivare/disattivare viene eseguito come strutture comprimibili in Excel. In Excel è possibile espandere e comprimere le sezioni del report. Per altre informazioni sulle limitazioni imposte da Excel, vedere [Esportazione in Microsoft Excel &#40;Generatore report e SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|Il server di report esporta lo stato di visualizzazione corrente del report in formato PDF. L'attivazione o la disattivazione interattiva non è supportata.|  
-|Altro|Non disponibili in MHTML, XML o CSV. In caso di esportazione in un formato immagine, il server di report esporta lo stato di visualizzazione corrente del report in formato PDF. L'attivazione o la disattivazione interattiva non è supportata.|  
+|Altri|Non disponibili in MHTML, XML o CSV. In caso di esportazione in un formato immagine, il server di report esporta lo stato di visualizzazione corrente del report in formato PDF. L'attivazione o la disattivazione interattiva non è supportata.|  
   
 ### <a name="interactive-sorting"></a>Ordinamento interattivo  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66107802"
 |PDF|Non disponibile in PDF.|  
 |Excel|Non disponibile in Excel.|  
 |Word|Non disponibile in Word.|  
-|Altro|Non disponibili in MHTML, XML, CSV o Immagine.|  
+|Altri|Non disponibili in MHTML, XML, CSV o Immagine.|  
   
 ### <a name="hyperlinks-to-external-web-content-or-images"></a>Collegamenti ipertestuali a immagini o contenuto Web esterni  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66107802"
 |PDF|L'estensione per il rendering PDF esegue il rendering dei collegamenti ipertestuali. Quando un utente fa clic su un collegamento ipertestuale, le pagine collegate vengono aperte nel browser.|  
 |Excel|I collegamenti ipertestuali vengono visualizzati in Excel.|  
 |Word|I collegamenti ipertestuali vengono visualizzati in Word.|  
-|Altro|I collegamenti ipertestuali non sono disponibili in MHTML, XML, CSV o Immagine.<br /><br /> In MHTML e Immagine le immagini esterne vengono visualizzate come immagini statiche.|  
+|Altri|I collegamenti ipertestuali non sono disponibili in MHTML, XML, CSV o Immagine.<br /><br /> In MHTML e Immagine le immagini esterne vengono visualizzate come immagini statiche.|  
   
 ### <a name="bookmark-or-anchor"></a>Segnalibro o ancoraggio  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66107802"
 |PDF|Non disponibile in PDF.|  
 |Excel|I segnalibri vengono visualizzati in Excel.<br /><br /> Il segnalibro diventa un collegamento ipertestuale che punta al nome dell'elemento del report.|  
 |Word|Il rendering dei segnalibri viene eseguito in Word.<br /><br /> Il segnalibro diventa un collegamento ipertestuale che punta all'elemento del report con il segnalibro. Quando si esporta il report vengono convertiti solo 40 caratteri del nome di un segnalibro o di un ancoraggio, pertanto è possibile che vengano creati nomi di segnalibro o ancoraggio duplicati. Gli spazi vengono convertiti in caratteri di sottolineatura (_).|  
-|Altro|Non disponibili in XML, CSV o Immagine.|  
+|Altri|Non disponibili in XML, CSV o Immagine.|  
   
 ### <a name="prompted-parameters-obtained-at-run-time"></a>Parametri richiesti ottenuti in fase di esecuzione  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66107802"
 |PDF|Il server di report esporta il report in PDF utilizzando i valori dei parametri attualmente in uso per il report.|  
 |Excel|Il server di report esporta il report in Excel utilizzando i valori dei parametri attualmente in uso per il report.|  
 |Word|Il server di report esporta il report in Word utilizzando i valori dei parametri attualmente in uso per il report.|  
-|Altro|Il server di report esporta il report in altri formati utilizzando i valori dei parametri attualmente in uso per il report.|  
+|Altri|Il server di report esporta il report in altri formati utilizzando i valori dei parametri attualmente in uso per il report.|  
   
 ### <a name="filters-applied-at-run-time"></a>Filtri applicati in fase di esecuzione  
   
@@ -106,10 +106,10 @@ ms.locfileid: "66107802"
 |PDF|Il server di report esporta il report in PDF utilizzando i dati filtrati nel report corrente.|  
 |Excel|Il server di report esporta il report in Excel utilizzando i dati filtrati nel report corrente.|  
 |Word|Il server di report esporta il report in Word utilizzando i dati filtrati nel report corrente.|  
-|Altro|Il server di report esporta il report in altri formati utilizzando i dati filtrati nel report corrente.|  
+|Altri|Il server di report esporta il report in altri formati utilizzando i dati filtrati nel report corrente.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esportazione di report &#40;Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [Esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Ordinamento interattivo, mappe documento e collegamenti &#40;Generatore report e SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Matrici &#40;Generatore report e SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

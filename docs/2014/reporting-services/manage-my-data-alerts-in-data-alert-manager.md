@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07c75779d05d22e09e7823b5d0b3bffc2ca7acc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108310"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Gestire gli avvisi dati in Gestione avvisi dati
   Gli utenti di SharePoint possono visualizzare un elenco degli avvisi dati creati e le informazioni sugli avvisi. Possono inoltre eliminare i propri avvisi, aprire definizioni di avviso per la modifica nella finestra di progettazione Avviso dati ed eseguire i propri avvisi. Nella figura seguente sono illustrate le funzionalità disponibili per gli utenti in Gestione avvisi dati.  
   
- ![Funzionalità di Gestione avvisi dati per gli utenti SharePoint](media/rs-alertmanageriw.gif "Funzionalità di Gestione avvisi dati per gli utenti SharePoint")  
+ ![Funzionalità di Gestione avvisi per gli utenti di SharePoint](media/rs-alertmanageriw.gif "Funzionalità di Gestione avvisi per gli utenti di SharePoint")  
   
 ### <a name="to-view-a-list-of-your-alerts"></a>Per visualizzare un elenco di avvisi  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66108310"
   
 2.  Fare clic sull'icona per espandere il menu a discesa in un report, quindi fare clic su **Gestisci avvisi dati**. Nella figura seguente è illustrato il menu a discesa.  
   
-     ![Aprire Gestione avvisi dati dal menu di scelta rapida dei report](media/rs-openalertmanager.gif "Aprire Gestione avvisi dati dal menu di scelta rapida dei report")  
+     ![Aprire Gestione avvisi dal menu di scelta rapida del report](media/rs-openalertmanager.gif "Aprire Gestione avvisi dal menu di scelta rapida del report")  
   
      Verrà aperto Gestione avvisi dati. Per impostazione predefinita, vengono elencati gli avvisi per il report selezionati nella raccolta.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66108310"
   
 ### <a name="to-delete-an-alert-definition"></a>Per eliminare una definizione di avviso  
   
--   Fare clic con il pulsante destro del mouse sull'avviso dati che si desidera eliminare, quindi scegliere **Elimina**.  
+-   Fare clic con il pulsante destro del mouse sull'avviso dati da eliminare e quindi fare clic su **Elimina**.  
   
      Dopo avere eliminato l'avviso, non verranno inviati ulteriori messaggi di avviso.  
   

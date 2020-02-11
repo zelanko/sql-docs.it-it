@@ -1,5 +1,5 @@
 ---
-title: Query di Analysis Services le opzioni di esecuzione (pagina generale) | Microsoft Docs
+title: Opzioni di esecuzione delle query Analysis Services (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b2d8d7b20a7a3a5230d8441eb1f72f19e978eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065302"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Opzioni di esecuzione di Query di Analysis Services (pagina Generale)
@@ -25,7 +25,7 @@ ms.locfileid: "66065302"
  **Timeout esecuzione**  
  Consente di indicare il numero di secondi di attesa prima dell'annullamento della query. Il valore 0 indica un'attesa infinita, ovvero nessun timeout.  
   
- **Ripristina predefiniti**  
+ **Ripristina impostazioni predefinite**  
  Consente di reimpostare le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

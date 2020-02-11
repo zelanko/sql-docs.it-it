@@ -1,5 +1,5 @@
 ---
-title: Impostazione delle opzioni dello strumento e Layout | Microsoft Docs
+title: Impostazione del layout e delle opzioni dello strumento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110195"
 ---
 # <a name="setting-tool-options-and-layout"></a>Impostazione del layout e delle opzioni dello strumento
@@ -32,7 +32,7 @@ ms.locfileid: "66110195"
   
     -   Espandere l'elenco **All'avvio** per mostrare le visualizzazioni possibili all'avvio di Ottimizzazione guidata motore di database. Per impostazione predefinita, è selezionata l'opzione **Mostra una nuova sessione** .  
   
-    -   Fare clic su **Modifica carattere** per visualizzare i tipi di carattere disponibili per gli elenchi di database e le tabelle della scheda **Generale** . I caratteri selezionati per questa opzione vengono utilizzati anche nei report e nelle griglie delle indicazioni dello strumento Ottimizzazione guidata motore di database dopo l'esecuzione dell'ottimizzazione. Per impostazione predefinita, Ottimizzazione guidata motore di database utilizza i caratteri di sistema.  
+    -   Fare clic su **modifica carattere** per visualizzare i tipi di carattere che è possibile scegliere per gli elenchi di database e tabelle nella scheda **generale** . I tipi di carattere scelti per questa opzione vengono utilizzati anche nei report e nelle griglie Ottimizzazione guidata motore di database raccomandazione dopo aver eseguito l'ottimizzazione. Per impostazione predefinita, Ottimizzazione guidata motore di database utilizza i caratteri di sistema.  
   
     -   È possibile impostare **Numero di elementi negli elenchi degli ultimi elementi utilizzati** tra **1** e **10**. In tal modo viene impostato il numero massimo di elementi visualizzati quando si sceglie **Sessioni recenti** o **File recenti** dal menu **File** . Per impostazione predefinita, questa opzione è impostata su **4**.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "66110195"
     -   Per impostazione predefinita, l'opzione **Chiedi conferma prima di arrestare l'analisi della sessione** è selezionata, per evitare l'arresto accidentale di una sessione di ottimizzazione prima che Ottimizzazione guidata motore di database abbia concluso l'analisi di un carico di lavoro.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Uso di Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Lezione 2: Uso dello strumento Ottimizzazione guidata motore di database](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

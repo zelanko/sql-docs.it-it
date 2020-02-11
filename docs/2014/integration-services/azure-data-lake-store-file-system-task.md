@@ -14,22 +14,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 69a521cb72e68141f5706f5187a0288a3f44f241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061383"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Attività File system di Azure Data Lake Store
 
-Il **attività di sistema di File di Azure Data Lake Store** consente agli utenti di eseguire varie operazioni del file system sul [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
+L' **attività Azure Data Lake Store file System** consente agli utenti di eseguire varie operazioni di file system su [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
-Per aggiungere un'attività File System di Azure Data Lake Store a un pacchetto, trascinarla dalla casella degli strumenti SSIS ai canvas di progettazione. Quindi fare doppio clic su attività, o l'attività e scegliere **modifica**, per aprire la finestra di dialogo Editor dell'attività.
+Per aggiungere un'attività File System di Azure Data Lake Store a un pacchetto, trascinarla dalla casella degli strumenti SSIS ai canvas di progettazione. Fare quindi doppio clic sull'attività o fare clic con il pulsante destro del mouse sull'attività e scegliere **modifica**per aprire la finestra di dialogo Editor attività.
 
-La proprietà **Operation** specifica l'operazione del file system da eseguire. Sono supportate le operazioni seguenti.
+La proprietà **Operation** specifica l'operazione del file system da eseguire. Le operazioni supportate sono elencate di seguito.
 
-* **CopyToADLS:** carica i file in ADLS.
-* **CopyFromADLS:** scarica i file da ADLS.
+* **CopyToADLS** per caricare file in ADLS.
+* **CopyFromADLS** per scaricare file da ADLS.
 
 Per qualsiasi operazione è necessario specificare una gestione della connessione di Azure Data Lake.
 
@@ -41,7 +41,7 @@ Di seguito sono riportate le descrizioni delle proprietà specifiche per ogni op
 * **FileNamePattern:** specifica un filtro di nome file per i file di origine. Verranno caricati solo i file il cui nome corrisponde al modello specificato. Sono supportati i caratteri jolly `*` e `?`.
 * **SearchRecursively:** specifica se cercare in modo ricorsivo i file da caricare all'interno della directory di origine.
 * **AzureDataLakeDirectory:** specifica la directory di destinazione di ADLS in cui caricare i file.
-* **FileExpiry:** Specifica una data di scadenza e l'ora per i file caricati in Azure Data Lake Store, o lasciare vuoto per indicare che i file non scadono mai questa proprietà.
+* **Fileexpire:** Specifica una data e un'ora di scadenza per i file caricati in ADLS o lasciare vuota questa proprietà per indicare che i file non scadono mai.
 
 ## <a name="copyfromadls"></a>CopyFromADLS
 

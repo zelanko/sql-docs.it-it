@@ -1,5 +1,5 @@
 ---
-title: Impostazione valute report (configurazione guidata Business Intelligence) | Microsoft Docs
+title: Impostazione valute report (configurazione guidata funzionalità di Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068206"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Impostazione valute report (Configurazione guidata funzionalità di Business Intelligence)
-  Usare la pagina **Impostazione valute report** per definire le valute report per la funzionalità di conversione valuta che copre il tipo di conversione molti-a-molti o uno-a-molti specificato nella pagina **Selezione tipo di conversione**. La valuta report è la valuta in cui vengono convertiti i valori per le misure selezionate nella pagina **Selezione misure**. I membri selezionati dalla dimensione di tipo Valuta definiscono una dimensione di tipo Valuta report per la conversione di valuta generata dalla Configurazione guidata funzionalità di Business Intelligence.  
+  Usare la pagina **Impostazione valute report** per definire le valute report per la funzionalità di conversione valuta che copre il tipo di conversione molti-a-molti o uno-a-molti specificato nella pagina **Selezione tipo di conversione**. La valuta report è la valuta in cui vengono convertiti i valori per le misure selezionate nella pagina **Selezione misure** . I membri selezionati dalla dimensione di tipo Valuta definiscono una dimensione di tipo Valuta report per la conversione di valuta generata dalla Configurazione guidata funzionalità di Business Intelligence.  
   
 > [!NOTE]  
 >  Questa pagina non viene visualizzata se la Configurazione guidata funzionalità di Business Intelligence viene avviata da Progettazione dimensioni oppure facendo clic con il pulsante destro del mouse su una dimensione in Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Questa pagina non viene visualizzata neanche se è stata selezionata l'opzione **Molti-a-uno** nella pagina **Selezione tipo di conversione** .  
@@ -32,8 +32,8 @@ ms.locfileid: "66068206"
  Selezionare un membro specifico per includerlo nella dimensione di tipo Valuta report. Deselezionare un membro specifico per escluderlo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

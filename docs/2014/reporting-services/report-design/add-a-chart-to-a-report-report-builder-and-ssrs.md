@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 257df5742c2f8dec7d48c6d3afb4d6c6373d058c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106886"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Aggiungere un grafico a un report (Generatore report e SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106886"
   
 ### <a name="to-add-a-chart-to-a-report"></a>Per aggiungere un grafico a un report  
   
-1.  Creare un report e definire un set di dati. Per altre informazioni, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
+1.  Creare un report e definire un set di dati. Per ulteriori informazioni, vedere [aggiungere dati a un Report &#40;Generatore report e SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 2.  Nella scheda **Inserisci** fare clic su **Grafico**, quindi su **Inserisci grafico**.  
   

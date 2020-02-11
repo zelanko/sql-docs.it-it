@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107774"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tasti di scelta rapida (Generatore report)
@@ -34,15 +34,15 @@ ms.locfileid: "66107774"
   
 |Descrizione|Combinazione di tasti|  
 |-----------------|---------------------|  
-|Aprire il menu Generatore report.|ALT+F|  
+|Aprire il menu Generatore report.|ALT + F|  
 |Creare un report.|CTRL+N|  
 |Aprire un report.|CTRL+O|  
 |Salvare un report.|CTRL+S, ALT+S|  
 |Spostarsi tra le aree di Generatore report, ad esempio la barra multifunzione, l'area di progettazione, il riquadro Raggruppamento, il riquadro Proprietà e il riquadro Dati.|F6, MAIUSC+F6|  
 |Passare alla barra multifunzione.|ALT|  
-|Passare alla scheda Home sulla barra multifunzione.|ALT+H|  
+|Passare alla scheda Home sulla barra multifunzione.|ALT + H|  
 |Passare alla scheda Inserisci sulla barra multifunzione.|ALT+I|  
-|Passare alla scheda Visualizza sulla barra multifunzione.|ALT+V|  
+|Passare alla scheda Visualizza sulla barra multifunzione.|ALT + V|  
 |Attivare le righe di divisione tra le aree, ad esempio la riga tra il riquadro Raggruppamento e l'area di progettazione.|TAB|  
 |Spostare le righe di divisione tra le aree.|Qualsiasi tasto di direzione. Utilizzare i tasti freccia SU e GIÙ per spostare la riga tra il riquadro Raggruppamento e l'area di progettazione. Utilizzare i tasti freccia DESTRA e SINISTRA per spostare la riga tra il riquadro dei dati del report e l'area di progettazione.|  
 |Spostarsi all'interno di un'area di Generatore report, ad esempio all'interno di una scheda della barra multifunzione.|TAB, MAIUSC+TAB|  
@@ -56,11 +56,11 @@ ms.locfileid: "66107774"
 |Allineare i bordi di più elementi selezionati.|ALT+H+A|  
 |Eseguire il report.|F5, ALT+H+R|  
 |Passare alla modalità progettazione.|F8|  
-|Copia|CTRL+C, ALT+H+C|  
+|Copiare|CTRL+C, ALT+H+C|  
 |Taglia|CTRL+X, ALT+H+X|  
 |Incolla|CTRL+V, ALT+H+V|  
 |Selezionare tutto.|CTRL+A|  
-|Annullare|CTRL+Z, ALT+Z|  
+|Annullamento|CTRL+Z, ALT+Z|  
 |Ripristinare|CTRL+Y, ALT+Y|  
 |Eseguire lo zoom avanti.|CTRL+SEGNO DI ADDIZIONE (+)|  
 |Eseguire lo zoom indietro.|CTRL+SEGNO DI SOTTRAZIONE (-)|  
@@ -92,7 +92,7 @@ ms.locfileid: "66107774"
 |Modalità del tasto di scelta rapida per panoramica e zoom in un'area di visualizzazione della mappa quando è selezionato un viewport mappa.|CTRL+clic con il pulsante sinistro|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Generatore report in SQL Server 2014](report-builder-in-sql-server-2016.md)   
+ [Generatore report SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](report-design-view-report-builder.md)   
  [Glossario &#40;Generatore report&#41;](glossary-report-builder.md)  
   

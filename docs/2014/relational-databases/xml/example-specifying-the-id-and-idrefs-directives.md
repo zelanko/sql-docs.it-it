@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Specifica delle direttive ID e IDREFS | Microsoft Docs'
+title: 'Esempio: specifica delle direttive ID e IDREFS | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288883"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>Esempio: Specifica delle direttive ID e IDREFS
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>Esempio: specifica delle direttive ID, IDREFS
   Un attributo dell'elemento può essere specificato come attributo di tipo `ID` e l'attributo `IDREFS` può quindi essere utilizzato per fare riferimento a tale attributo. In questo modo è possibile creare collegamenti tra più documenti, in modo analogo alla relazione esistente tra chiave primaria e chiave esterna nei database relazionali.  
   
  Nell'esempio seguente viene illustrato l'utilizzo delle direttive `ID` e `IDREFS` per la creazione di attributi dei tipi `ID` e `IDREFS`. Poiché gli ID non possono essere valori Integer, nell'esempio i valori di ID vengono convertiti, ovvero ne viene eseguito il cast di tipo. Vengono utilizzati prefissi per i valori degli ID.  
@@ -78,6 +78,6 @@ FOR XML EXPLICIT;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
+ [Usare la modalità EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

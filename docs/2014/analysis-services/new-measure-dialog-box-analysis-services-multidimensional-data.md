@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Nuova misura (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo nuova misura (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072335"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Nuova misura (Analysis Services - Dati multidimensionali)
@@ -29,7 +29,7 @@ ms.locfileid: "66072335"
 -   Fare clic con il pulsante destro del mouse su un gruppo di misure o una misura nel riquadro **Misure** della scheda **Struttura cubo** in Progettazione cubi e scegliere **Nuova misura** dal menu di scelta rapida.  
   
 ## <a name="options"></a>Opzioni  
- **Usage**  
+ **Utilizzo**  
  Consente di selezionare la funzione di aggregazione che verrà utilizzata dalla nuova misura.  
   
  **Tabella di origine**  
@@ -42,7 +42,7 @@ ms.locfileid: "66072335"
  Selezionare questa opzione per visualizzare tutte le colonne della tabella dei fatti per il gruppo di misure in cui verrà creata la nuova misura. Se questa opzione non è selezionata, in **Colonna di origine** vengono visualizzate solo le colonne numeriche non utilizzate come chiavi primarie logiche o coinvolte in relazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Struttura del cubo &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Struttura Cube &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

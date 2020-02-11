@@ -1,5 +1,5 @@
 ---
-title: Spostamento degli elementi (gestione Report) | Microsoft Docs
+title: Pagina Sposta elementi (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108219"
 ---
 # <a name="move-items-page-report-manager"></a>Pagina Spostamento elementi (Gestione report)
@@ -37,7 +37,7 @@ ms.locfileid: "66108219"
 2.  Nella barra degli strumenti fare clic su **Visualizzazione Dettagli**.  
   
     > [!NOTE]  
-    >  Se viene visualizzato solo **visualizzazione affiancata**, ci si trova già in **visualizzazione dettagli**.  
+    >  Se viene visualizzata solo la **visualizzazione riquadri**, si è già in **visualizzazione dettagli**.  
   
 3.  Selezionare la casella accanto all'elemento, quindi fare clic su **Sposta** nella barra degli strumenti. È possibile selezionare più di una casella se si desidera spostare più elementi nello stesso percorso nuovo.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108219"
 2.  Nella barra degli strumenti fare clic su **Visualizzazione Affiancata**.  
   
     > [!NOTE]  
-    >  Se viene visualizzato solo **visualizzazione dettagli**, ci si trova già in **visualizzazione affiancata**.  
+    >  Se viene visualizzata solo la **visualizzazione dettagli**, si è già in **visualizzazione affiancata**.  
   
 3.  Passare con il puntatore del mouse su un elemento, quindi fare clic sulla freccia a discesa.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66108219"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Pagina delle proprietà generale, cartelle di &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
- [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Pagina delle proprietà generale, le risorse &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
- [Pagina delle proprietà generale, origini dati condivise &#40;gestione Report&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
+ [Pagina delle proprietà generale, cartelle &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+ [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Pagina delle proprietà generale, risorse &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
+ [Pagina delle proprietà generale, origini dati condivise &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

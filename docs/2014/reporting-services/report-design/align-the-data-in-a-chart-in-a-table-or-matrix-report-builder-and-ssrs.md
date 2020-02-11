@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74b6e86e6c9e7fd9d293e4c1bdab952468adb4b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106506"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>Allineare i dati in un grafico di una tabella o matrice (Generatore report e SSRS)
@@ -37,6 +37,6 @@ ms.locfileid: "66106506"
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafici &#40;Generatore report e SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Aggiunta di grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Aggiungere grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107662"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Finestra di dialogo Accesso a Reporting Services (Generatore report)
@@ -24,7 +24,7 @@ ms.locfileid: "66107662"
   
 ## <a name="options"></a>Opzioni  
  **Server**  
- Indica il nome del server di report. Ad esempio, `http://localhost/reportserver`. Per i server di report che utilizzano una porta diversa da quella predefinita, ovvero 80, includere il numero di porta. Ad esempio `http://localhost:8080/reportserver`.  
+ Indica il nome del server di report. Ad esempio: `http://localhost/reportserver`. Per i server di report che utilizzano una porta diversa da quella predefinita, ovvero 80, includere il numero di porta. Ad esempio: `http://localhost:8080/reportserver`.  
   
  **Nome utente**  
  Consente di digitare il nome utente da utilizzare per l'accesso al servizio Web.  
@@ -33,6 +33,6 @@ ms.locfileid: "66107662"
  Consente di digitare la password da utilizzare per l'accesso al servizio Web.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

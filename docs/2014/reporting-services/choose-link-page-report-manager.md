@@ -1,5 +1,5 @@
 ---
-title: Pagina Scegli collegamento (gestione Report) | Microsoft Docs
+title: Pagina Scegli collegamento (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109882"
 ---
 # <a name="choose-link-page-report-manager"></a>Pagina Scegli collegamento (Gestione report)
@@ -31,7 +31,7 @@ ms.locfileid: "66109882"
   
 2.  Passare con il puntatore del mouse sul report collegato, quindi fare clic sulla freccia a discesa.  
   
-3.  Scegliere **Gestisci** dal menu a discesa. Viene visualizzata la pagina delle proprietà **Generale** per il report collegato.  
+3.  Scegliere **Gestisci**dal menu a discesa. Viene visualizzata la pagina delle proprietà **Generale** per il report collegato.  
   
 4.  Nella scheda **Generale** nella pagina delle proprietà fare clic su **Modifica collegamento**.  
   
@@ -39,12 +39,12 @@ ms.locfileid: "66109882"
  **Location**  
  Specificare il nome completo del report pubblicato, incluso il percorso. È possibile digitare il nome completo del report oppure selezionare il report da utilizzare nella visualizzazione albero.  
   
- **Visualizzazione struttura ad albero**  
+ **Visualizzazione albero**  
  Mostra tutte le cartelle nella gerarchia di cartelle nel server di report. Fare clic sul nome del report nella visualizzazione albero per inserire il nome e il percorso nel campo **Percorso** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Pagina Nuovo report collegato &#40;Gestione report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [Pagina delle proprietà generale, report &#40;Gestione report&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Pagina nuovo report collegato &#40;Gestione report&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceca9ef914afeab3420bbd35c46c582c112644dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107846"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generare i feed di dati da un report (Generatore report e SSRS)
-  È possibile generare feed di dati conformi ad Atom da report e usarli in applicazioni in cui sono supportati, ad esempio il client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  È possibile generare feed di dati conformi ad Atom dai report e quindi utilizzare i feed di dati nelle applicazioni, ad [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] esempio il client, che possono utilizzare feed di dati.  
   
  Tramite l'estensione per il rendering Atom di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene generato un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report. Nel documento è elencato almeno un feed di dati per ogni area dati nel report. A seconda del tipo di area dati e dei dati in essa visualizzati, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] potrebbe generare più feed di dati da un'area dati.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66107846"
   
 ### <a name="to-generate-an-atom-service-document"></a>Per generare un documento di servizio Atom  
   
-1.  Dalla pagina Gestione report **Home**, accedere al report da cui si desidera generare feed di dati.  
+1.  Dalla home page di **** Gestione report passare al report dal quale si desidera generare i feed di dati.  
   
 2.  Fare clic sul report.  
   
@@ -82,6 +82,6 @@ ms.locfileid: "66107846"
 6.  Se lo si desidera, aprire il file con estensione atom in un browser, in un editor di testo o in un editor XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esportazione di report &#40;Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
+ [Esportazione di report &#40;Generatore report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

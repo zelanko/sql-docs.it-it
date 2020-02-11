@@ -1,5 +1,5 @@
 ---
-title: Cercare gli aggiornamenti o Turn Off (Generatore Report e SSRS) | Microsoft Docs
+title: Verificare la disponibilità di aggiornamenti o disattivare gli aggiornamenti (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109865"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Verificare o disattivare gli aggiornamenti (Generatore report e SSRS)
@@ -24,22 +24,22 @@ ms.locfileid: "66109865"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>Per attivare e disattivare gli aggiornamenti delle parti di report  
   
-1.  Fare clic sul pulsante Generatore Report e quindi fare clic su **opzioni**.  
+1.  Fare clic sul pulsante Generatore report, quindi su **Opzioni**.  
   
-2.  Nel **le opzioni** finestra di dialogo il **risorse** scheda, selezionare o deselezionare i **Mostra aggiornamenti alle parti del report nella cartella report personali** casella di controllo.  
+2.  Nella scheda **risorse** della finestra di dialogo **Opzioni** selezionare o deselezionare la casella di controllo **Mostra aggiornamenti per parti del report in report personali** .  
   
 > [!NOTE]  
 >  Questa impostazione viene eseguita dall'utente e sarà disabilitata per tutti i report aperti.  
   
 ### <a name="to-check-for-updates"></a>Per verificare gli aggiornamenti  
   
--   Visualizzare l'area di progettazione all'esterno del report o nel corpo del report, quindi scegliere **verificare la presenza di aggiornamenti**.  
+-   Fare clic con il pulsante destro del mouse sull'area di progettazione all'esterno del report oppure nel corpo del report, quindi scegliere **Controlla aggiornamenti**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parti del report &#40;Generatore report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [Pubblicare e ripubblicare parti del Report &#40;Report e SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [Ricerca di parti del Report e impostazione di una cartella predefinita &#40;Report e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Pubblicare e ripubblicare parti del report &#40;Generatore report e SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [Individuare le parti del report e impostare una cartella predefinita &#40;Generatore report e SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [Risolvere i problemi relativi alle parti del report &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Parti del report e set di dati in Generatore report](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

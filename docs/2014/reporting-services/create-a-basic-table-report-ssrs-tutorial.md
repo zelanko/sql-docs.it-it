@@ -15,26 +15,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109675"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Creare un report tabella semplice (esercitazione su SSRS)
-  Questa esercitazione è progettata per la creazione di un report tabella semplice basato sul [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database tramite Progettazione Report. Per creare report è inoltre possibile utilizzare Generatore report o la Creazione guidata report. In questa esercitazione verranno illustrate le procedure per creare un progetto report, impostare le informazioni di connessione, definire una query, aggiungere un'area dati tabella, raggruppare alcuni campi e aggiungere totali, nonché visualizzare il report in anteprima.  
+  Questa esercitazione è stata progettata per illustrare il processo di creazione di un report tabella semplice basato sul database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] tramite Progettazione report. Per creare report è inoltre possibile utilizzare Generatore report o la Creazione guidata report. In questa esercitazione verranno illustrate le procedure per creare un progetto report, impostare le informazioni di connessione, definire una query, aggiungere un'area dati tabella, raggruppare alcuni campi e aggiungere totali, nonché visualizzare il report in anteprima.  
   
 > [!NOTE]  
->  Per completare l'esercitazione, è necessario eseguire [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa. Se [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è eseguito in modalità di integrazione con SharePoint, i passaggi in cui verranno utilizzati URL di server di report non possono essere completati correttamente. Per altre informazioni sulle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modalità, vedere [Server di Report di Reporting Services](reporting-services-report-server.md).  
+>  Per completare l'esercitazione, è necessario eseguire [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità nativa. Se [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è eseguito in modalità di integrazione con SharePoint, i passaggi in cui verranno utilizzati URL di server di report non possono essere completati correttamente. Per ulteriori informazioni sulle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modalità, vedere [Reporting Services server di report](reporting-services-report-server.md).  
   
 ## <a name="requirements"></a>Requisiti  
  Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Motore di database  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] motore di database.  
   
--   Database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  Per altre informazioni, vedere [Adventure Works per SQL Server 2012 (Adventure Works per SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).. Per altre informazioni sul supporto per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database di esempio e codice di esempio per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], vedere [Databases and Samples Overview](https://go.microsoft.com/fwlink/?LinkId=110391) sul sito CodePlex Web.  
+-   Database [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  Per ulteriori informazioni, vedere [Adventure Works per SQL Server 2012 (Adventure Works per SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).. Per ulteriori informazioni sul supporto per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] i database di esempio e il [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]codice di esempio per, vedere [Cenni preliminari sui database e sugli esempi](https://go.microsoft.com/fwlink/?LinkId=110391) nel sito Web CodePlex.  
   
--   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] (Indici per tabelle con ottimizzazione per la memoria).  
+-   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66109675"
  [Lezione 6: Aggiunta di gruppi e totali &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  Quando si esaminano le esercitazioni, è consigliabile aggiungere **successivo** e **Previous** pulsanti alla barra degli strumenti del Visualizzatore di documenti. Per altre informazioni, vedere  
+>  Quando si esaminano le esercitazioni, è consigliabile aggiungere pulsanti **Avanti** e **indietro** alla barra degli strumenti del Visualizzatore di documenti. Per altre informazioni, vedere  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  

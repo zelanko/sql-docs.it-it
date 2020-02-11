@@ -1,5 +1,5 @@
 ---
-title: Specificare la finestra di dialogo Join nidificato (visualizzazione grafico di accuratezza Data Mining) | Microsoft Docs
+title: Finestra di dialogo Specifica join nidificato (visualizzazione Grafico accuratezza modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20106b002eba07a3eb9e2877c84dacb9a98b87b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068323"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>Finestra di dialogo Specifica join nidificato (visualizzazione Grafico accuratezza modello di data mining)
@@ -32,8 +32,8 @@ ms.locfileid: "66068323"
  Fare clic su questo pulsante per eliminare una relazione selezionata nel riquadro **Diagramma** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Crea o Modifica relazione finestra di dialogo &#40;Analysis Services - dati multidimensionali&#41;](create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)  
+ [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
+ [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Finestra di dialogo Crea relazione o modifica relazione &#40;Analysis Services-Dati multidimensionali&#41;](create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)  
   
   

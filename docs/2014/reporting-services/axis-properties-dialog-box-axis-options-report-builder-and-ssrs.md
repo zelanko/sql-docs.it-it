@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà asse, opzioni asse (Generatore Report e SSRS) | Microsoft Docs
+title: Finestra di dialogo Proprietà asse, opzioni asse (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109956"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Finestra di dialogo Proprietà asse, Opzioni asse (Generatore report e SSRS)
-  Selezionare **opzioni dell'asse** nel **orizzontale** oppure **proprietà asse verticale** finestra di dialogo per definire l'aspetto dell'asse specificato del grafico. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]il grafico visualizzava tutte le etichette sull'asse x per impostazione predefinita. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, tuttavia, il grafico ignora le etichette allo scopo di produrre un'immagine più pulita sul grafico ed evitare la sovrapposizione delle etichette. Per altre informazioni, vedere [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Selezionare **Opzioni asse** nella finestra di dialogo **Proprietà** **orizzontali** o asse verticale per definire l'aspetto dell'asse specificato del grafico. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]il grafico visualizzava tutte le etichette sull'asse x per impostazione predefinita. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, tuttavia, il grafico ignora le etichette allo scopo di produrre un'immagine più pulita sul grafico ed evitare la sovrapposizione delle etichette. Per altre informazioni, vedere [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opzioni  
  **Abilita cambi di scala**  
@@ -39,18 +39,18 @@ ms.locfileid: "66109956"
  **Asse scalare**  
  Selezionare questa opzione per visualizzare un set di valori dell'asse su una scala continua. Ad esempio, se il set di dati contiene i dati relativi a gennaio, marzo e novembre, in un asse non scalare verranno visualizzati solo questi mesi, mentre in un asse scalare verranno riportati tutti i mesi dell'anno.  
   
- **Usa scala logaritmica**  
+ **Usa la scala logaritmica**  
  Selezionare questa opzione per indicare che la scala dell'asse è logaritmica. Questa opzione è disponibile solo sull'asse Y se contiene valori numerici positivi.  
   
  Nella casella digitare la base logaritmica da utilizzare quando l'asse è impostato per l'utilizzo di una scala logaritmica. Per impostazione predefinita, viene utilizzata la base 10 per la scala logaritmica di un asse del grafico. Questa opzione è disponibile solo sull'asse Y se è numerico.  
   
- **Minimo**  
+ **Minima**  
  Digitare un'espressione o un valore per il valore minimo dell'asse X. Se omesso, il valore minimo viene determinato in base ai dati restituiti dal set di dati.  
   
  **Massimo**  
  Digitare un'espressione o un valore per il valore massimo dell'asse X. Se omesso, il valore massimo viene determinato in base ai dati restituiti dal set di dati.  
   
- **Interval**  
+ **Intervallo**  
  Digitare un'espressione o un valore per l'intervallo tra le etichette degli assi. Digitare, ad esempio, 1 per visualizzare ogni etichetta di categoria sull'asse. Digitare 2 per visualizzare tutte le altre etichette di categoria. Se questo valore viene omesso, le etichette vengono calcolate automaticamente in base ai valori del set di dati.  
   
  **Tipo di intervallo**  
@@ -65,7 +65,7 @@ ms.locfileid: "66109956"
  [Formattazione dei colori delle serie in un grafico &#40;Generatore report e SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Specificare un intervallo dell'asse &#40;Generatore report e SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tracciare i dati su un asse secondario &#40;Report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Tracciare i dati su un asse secondario &#40;Generatore report e SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Grafici sparkline e barre dei dati &#40;Generatore report e SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Aggiungere o rimuovere i margini da un grafico &#40;Generatore report e SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   

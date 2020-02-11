@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b174f9ad33ee38c2f47ffc8a684cddd7ea4376bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107355"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Finestra di dialogo Proprietà set di dati, Opzioni (Generatore report)
@@ -29,7 +29,7 @@ ms.locfileid: "66107355"
  Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opzioni  
- **Confronto**  
+ **Regole di confronto**  
  Consente di selezionare le impostazioni locali che determinano la sequenza di regole di confronto da utilizzare per l'ordinamento dei dati. Il valore**Default** indica che il server di report eseguirà un tentativo di recupero del valore dal provider di dati quando si esegue il report. Se non è possibile recuperare il valore, il valore predefinito viene ottenuto in base alle impostazioni locali del computer.  
   
  **Distinzione maiuscole/minuscole**  
@@ -45,13 +45,13 @@ ms.locfileid: "66107355"
  Consente di selezionare un valore per indicare la modalità di applicazione della distinzione della larghezza. Questa opzione indica se per i dati viene applicata la distinzione della larghezza e può essere impostata su **True**, **False**o **Auto**. Il valore predefinito **Auto** indica che il server di report eseguirà un tentativo di recupero del valore dal provider di dati quando si esegue il report. Se il provider di dati non supporta il tipo di distinzione della larghezza, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
   
  **Interpretare i subtotali come righe di dettaglio**  
- Selezionare un valore per indicare se si desidera che le righe di subtotali vengano interpretate come righe di dettaglio anziché come righe di aggregazione. Il valore predefinito **automatica**, indica che le righe di subtotali devono essere considerate le righe di dettaglio se il report non utilizza il `Aggregate`funzione () per accedere ai campi nel set di dati. Se si vuole che le righe di subtotali vengano interpretate come righe di aggregazione, scegliere **False**. Se si desidera che le righe di subtotali vengano interpretati come righe di dettaglio e si è certi che non usano i `Aggregate`() di funzione, scegliere **True**.  
+ Selezionare un valore per indicare se si desidera che le righe di subtotali vengano interpretate come righe di dettaglio anziché come righe di aggregazione. Il valore predefinito, **auto**, indica che le righe di subtotali devono essere considerate come righe di dettaglio se il report non utilizza `Aggregate`la funzione () per accedere ai campi del set di dati. Se si vuole che le righe di subtotali vengano interpretate come righe di aggregazione, scegliere **False**. Se si desidera che le righe di subtotali vengano interpretate come righe di dettaglio e si è certi che non `Aggregate`utilizzino la funzione (), scegliere **true**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Funzione di aggregazione &#40;Generatore report e SSRS&#41;](../report-design/report-builder-functions-aggregate-function.md)   
- [Filtrare, raggruppare e ordinare i dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Finestra di dialogo Proprietà set di dati, Query &#40;Generatore report&#41;](dataset-properties-dialog-box-query-report-builder.md)  
+ [Finestra di dialogo Proprietà set di dati, query &#40;Generatore report&#41;](dataset-properties-dialog-box-query-report-builder.md)  
   
   

@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068694"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Impostare o modificare il metodo di connessione preferito per DirectQuery
-  Quando si crea un modello per l'utilizzo nella modalità DirectQuery, è innanzitutto necessario configurare l'ambiente di progettazione affinché supporti l'utilizzo di DirectQuery. A questo scopo, vedere [abilitare la modalità DirectQuery &#40;modello tabulare di SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
+  Quando si crea un modello per l'utilizzo nella modalità DirectQuery, è innanzitutto necessario configurare l'ambiente di progettazione affinché supporti l'utilizzo di DirectQuery. Per eseguire questa operazione, vedere [abilitare la modalità di progettazione DirectQuery &#40;SSAS tabulare&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
   
  Prima di distribuire il modello, è necessario impostare alcune proprietà aggiuntive per consentire agli utenti di accedere al modello utilizzando una delle modalità DirectQuery:  
   
@@ -38,11 +38,11 @@ ms.locfileid: "66068694"
   
 3.  Nel riquadro **Proprietà** modificare la proprietà **DirectQueryMode**su uno dei valori che supportano l'utilizzo di DirectQuery:  
   
-    -   **In-Memory con DirectQuery**: Se si usa questa opzione, il modello viene distribuito, ma è necessario elaborare la cache prima di poter eseguire le query eseguite sul modello.  
+    -   **InMemory con DirectQuery**: se si usa questa opzione, il modello viene distribuito, ma è necessario elaborare la cache prima di poter eseguire query sul modello.  
   
-    -   **DirectQuery with InMemory**: Se si usa questa opzione, la cache sarà disponibile per l'uso da parte dei client se è già stata elaborata. Se si distribuisce il modello con questa impostazione e non si elabora la cache, alcuni client riceveranno un errore al tentativo di connettersi al modello.  
+    -   **DirectQuery con InMemory**: se si usa questa opzione, la cache sarà disponibile per l'uso da parte dei client se è già stata elaborata. Se si distribuisce il modello con questa impostazione e non si elabora la cache, alcuni client riceveranno un errore al tentativo di connettersi al modello.  
   
-    -   **Solo DirectQuery**: Se si usa questa opzione, i metadati vengono distribuiti ma il modello non contiene dati in esso. I client che tentano di connettersi utilizzando la modalità in memoria riceveranno un errore che indica che il modello non esiste o non è stato elaborato.  
+    -   **Solo DirectQuery**: se si usa questa opzione, i metadati vengono distribuiti, ma il modello non contiene dati. I client che tentano di connettersi utilizzando la modalità in memoria riceveranno un errore che indica che il modello non esiste o non è stato elaborato.  
   
 4.  In caso di errori, in Visual Studio aprire l' **Elenco errori** e risolvere eventuali problemi che impedirebbero di distribuire il modello nella modalità DirectQuery.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66068694"
   
     -   **Solo DirectQuery**  
   
-    -   **In-Memory con DirectQuery**  
+    -   **InMemory con DirectQuery**  
   
     -   **DirectQuery with InMemory**  
   
@@ -64,6 +64,6 @@ ms.locfileid: "66068694"
   
 ## <a name="see-also"></a>Vedere anche  
  [Modalità DirectQuery &#40;SSAS tabulare&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Abilitare la modalità di progettazione DirectQuery &#40;tabulare di SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
+ [Abilitare la modalità di progettazione DirectQuery &#40;SSAS tabulare&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
   
   

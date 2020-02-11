@@ -14,40 +14,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479942"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Creare una vista sottoscrizioni (Master Data Services)
-  Creare una vista sottoscrizioni quando si desidera creare una visualizzazione dei dati all'interno di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database per l'uso da sistemi di sottoscrizione.  
+  Creare una vista sottoscrizioni quando si desidera creare una vista dei dati nel database per [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] l'utilizzo da parte dei sistemi di sottoscrizione.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
 -   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Gestione integrazione** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-create-a-subscription-view"></a>Per creare una vista sottoscrizioni  
   
 1.  In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]fare clic su **Gestione integrazione**.  
   
-2.  Dalla barra dei menu scegliere **Crea viste**.  
+2.  Dalla barra dei menu, scegliere **Crea viste**.  
   
-3.  Nel **viste sottoscrizioni** pagina, fare clic su **Aggiungi vista sottoscrizioni**.  
+3.  Nella pagina **viste sottoscrizioni** fare clic su **Aggiungi vista sottoscrizioni**.  
   
-4.  Nel **Crea vista sottoscrizioni** riquadro, nella **nome vista sottoscrizioni** , digitare un nome per la visualizzazione.  
+4.  Nella casella **nome vista** sottoscrizioni del riquadro **Crea vista sottoscrizioni** Digitare un nome per la visualizzazione.  
   
-5.  Selezionare un modello dall'elenco **Modello** .  
+5.  Dall'elenco **Modello** , selezionare un modello.  
   
-6.  Selezionare il **versione** oppure **Flag di versione** opzione e quindi selezionare dall'elenco corrispondente.  
+6.  Selezionare l'opzione **versione** o **flag versione** , quindi selezionare una voce dall'elenco corrispondente.  
   
     > [!TIP]  
     >  Creare una vista sottoscrizioni basata su un flag di versione. Quando si blocca una versione, è possibile riassegnare il flag a una versione aperta senza aggiornare la vista sottoscrizioni.  
   
-7.  Selezionare il **Entity** oppure **gerarchia derivata** opzione e quindi selezionare dall'elenco corrispondente.  
+7.  Selezionare l'opzione **entità** o **gerarchia derivata** , quindi selezionare una voce dall'elenco corrispondente.  
   
 8.  Selezionare un formato di vista sottoscrizioni dall'elenco **Formato** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65479942"
 10. Fare clic su **Salva**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esportazione di dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
+ [Esportazione dei dati &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
  [Eliminare una vista sottoscrizioni &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
  [Creare un flag di versione &#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  
   

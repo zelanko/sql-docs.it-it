@@ -21,19 +21,19 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67906119"
 ---
-# <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
+# <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Restituisce un elenco di tutte le regole di confronto supportate.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,16 +48,16 @@ fn_helpcollations ()
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |Nome|**sysname**|Nome standard delle regole di confronto|  
-|Descrizione|**nvarchar(1000)**|Descrizione delle regole di confronto|  
+|Descrizione|**nvarchar (1000)**|Descrizione delle regole di confronto|  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportate le regole di confronto di Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta anche un numero limitato di (< 80) delle regole di confronto chiamati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regole di confronto, che sono stati sviluppati prima [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportate le regole di confronto di Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le regole di confronto sono ancora supportate per compatibilità con le versioni precedenti, ma non deve essere usati per nuovi progetti di sviluppo. Per altre informazioni sulle regole di confronto di Windows, vedere [Nome delle regole di confronto di Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportate le regole di confronto di Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta inoltre un numero limitato (<80) di regole di confronto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominate regole di confronto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che sono state sviluppate prima delle regole di confronto di Windows supportate. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le regole di confronto sono ancora supportate per compatibilità con le versioni precedenti, ma non devono essere usate per nuove attività di sviluppo. Per altre informazioni sulle regole di confronto di Windows, vedere [Nome delle regole di confronto di Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Per altre informazioni sulle regole di confronto, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Esempi
 
  Nell'esempio seguente vengono restituiti tutti i nomi delle regole di confronto che iniziano con la lettera `L` e la cui descrizione è "binary sort".
 
 > [!Note]
-> Query di SQL Data Warehouse di Azure con fn_helpcollations () deve essere eseguita nel database master.  
+> È necessario eseguire Azure SQL Data Warehouse query su fn_helpcollations () nel database master.  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  
@@ -83,5 +83,5 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 ## <a name="see-also"></a>Vedere anche
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
-[COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
+[COLLATIONPROPERTY &#40;&#41;Transact-SQL](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
 [Supporto delle regole di confronto del database per Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

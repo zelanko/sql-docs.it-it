@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 582e7afef033aac6fdc281e8fc310760a77949a0
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793425"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication-replication-transact-sql-programming"></a>Attivazione di backup coordinati per la replica transazionale (programmazione Transact-SQL della replica)
@@ -32,7 +32,7 @@ ms.locfileid: "67793425"
   
 1.  Nel server di pubblicazione usare la funzione [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) per fare in modo che venga restituita la proprietà **IsSyncWithBackup** del database di pubblicazione. Se la funzione restituisce **1**, i backup coordinati sono già attivati per il database pubblicato.  
   
-2.  Se la funzione nel passaggio 1 restituisce **0**, eseguire [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) nel database di pubblicazione nel server di pubblicazione. Specificare il valore **sincronizzazione con backup** per  **\@optname**, e **true** per  **\@valore**.  
+2.  Se la funzione nel passaggio 1 restituisce **0**, eseguire [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) nel database di pubblicazione nel server di pubblicazione. Specificare il valore **sync with backup** per **\@optname** e **true** per **\@value**.  
   
     > [!NOTE]  
     >  Se si modifica l'opzione **sync with backup** in **false**, il punto di troncamento del database di pubblicazione viene aggiornato dopo l'esecuzione dell'agente di lettura log o dopo un intervallo, in caso di esecuzione continua dell'agente di lettura log. L'intervallo massimo è controllato dal parametro dell'agente **-MessageInterval**, la cui impostazione predefinita è pari a 30 secondi.  
@@ -41,10 +41,10 @@ ms.locfileid: "67793425"
   
 1.  Nel server di distribuzione usare la funzione [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) per fare in modo che venga restituita la proprietà **IsSyncWithBackup** del database di distribuzione. Se la funzione restituisce **1**, i backup coordinati sono già attivati per il database di distribuzione.  
   
-2.  Se la funzione nel passaggio 1 restituisce **0**, eseguire [sp_replicationdboption &#40;Transact-SQL&#41; nel](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) database di pubblicazione nel server di distribuzione. Specificare il valore **sincronizzazione con backup** per  **\@optname** e **true** per  **\@valore**.  
+2.  Se la funzione nel passaggio 1 restituisce **0**, eseguire [sp_replicationdboption &#40;Transact-SQL&#41; nel](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) database di pubblicazione nel server di distribuzione. Specificare il valore **Sync with backup** per ** \@optname** e **true** per ** \@value**.  
   
 ### <a name="to-disable-coordinated-backups"></a>Per disabilitare i backup coordinati  
   
-1.  Nel database di pubblicazione nel server di pubblicazione o nel database di distribuzione nel server di distribuzione eseguire [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Specificare il valore **sincronizzazione con backup** per  **\@optname** e **false** per  **\@valore**.  
+1.  Nel database di pubblicazione nel server di pubblicazione o nel database di distribuzione nel server di distribuzione eseguire [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Specificare il valore **sync with backup** per **\@optname** e **false** per **\@value**.  
   
   

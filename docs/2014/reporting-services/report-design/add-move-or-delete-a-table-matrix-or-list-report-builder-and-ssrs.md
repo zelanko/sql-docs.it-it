@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106594"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Aggiunta, spostamento o eliminazione di una tabella, una matrice o un elenco (Generatore report e SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66106594"
   
 1.  Nella scheda **Inserisci** fare clic su **Tabella** o **Matrice**e quindi scegliere **Creazione guidata tabella** o **Creazione guidata matrice**.  
   
-2.  Seguire i passaggi nel **NewTable** oppure **nuova matrice** procedura guidata.  
+2.  Seguire i **passaggi della procedura guidata per la creazione** di una **nuova matrice** .  
   
 3.  Nella scheda **Home** fare clic su **Esegui** per mostrare il report visualizzabile.  
   

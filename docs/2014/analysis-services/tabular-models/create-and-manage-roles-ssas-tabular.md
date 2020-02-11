@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284897"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Creare e gestire ruoli (SSAS tabulare)
@@ -28,7 +28,7 @@ ms.locfileid: "67284897"
 ## <a name="tasks"></a>Attività  
  Per creare, modificare, copiare ed eliminare ruoli, usare la finestra di dialogo **Gestione ruoli** . Per visualizzare la finestra di dialogo **Gestione ruoli** di [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], fare clic sul menu **Modello** e quindi su **Gestione ruoli**.  
   
-###  <a name="bkmk_new_role"></a> Per creare un nuovo ruolo  
+###  <a name="bkmk_new_role"></a>Per creare un nuovo ruolo  
   
 1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]fare clic sul menu **Modello** e quindi su **Gestione ruoli**.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "67284897"
   
     |Autorizzazione|Descrizione|  
     |----------------|-----------------|  
-    |**None**|I membri non possono apportare alcuna modifica allo schema del modello, né eseguire query sui dati.|  
+    |**Nessuno**|I membri non possono apportare alcuna modifica allo schema del modello, né eseguire query sui dati.|  
     |**Lettura**|I membri possono eseguire query sui dati in base ai filtri di riga, ma non possono apportare alcuna modifica allo schema del modello.|  
     |**Lettura ed elaborazione**|I membri possono eseguire query sui dati in base ai filtri a livello di riga ed effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono apportare alcuna modifica allo schema del modello.|  
-    |**Process**|I membri possono effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono modificare lo schema del modello, né eseguire query sui dati.|  
+    |**Processo**|I membri possono eseguire operazioni Elabora ed Elabora tutto. Non possono modificare lo schema del modello ed eseguire query sui dati.|  
     |**Amministratore**|I membri possono apportare modifiche allo schema del modello ed eseguire query su tutti i dati.|  
   
 5.  Per immettere una descrizione per il ruolo, fare clic sul campo **Descrizione** e quindi digitare una descrizione.  
@@ -61,13 +61,13 @@ ms.locfileid: "67284897"
   
 8.  Nella finestra di dialogo **Selezione utenti o gruppi** immettere oggetti utente o gruppo di Windows come membri.  
   
-9. Scegliere **OK**.  
+9. Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ruoli &#40;SSAS tabulare&#41;](roles-ssas-tabular.md)   
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   
- [Analizzare in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME Function &#40;DAX&#41;](/dax/username-function-dax)   
- [Funzione CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)  
+ [Analizza in Excel &#40;SSAS tabulare&#41;](analyze-in-excel-ssas-tabular.md)   
+ [Funzione USERNAME &#40;&#41;DAX](/dax/username-function-dax)   
+ [Funzione CUSTOMDATA &#40;&#41;DAX](/dax/customdata-function-dax)  
   
   

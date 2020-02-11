@@ -1,5 +1,5 @@
 ---
-title: Pagina nuova sottoscrizione o modifica sottoscrizione (gestione Report) | Microsoft Docs
+title: Pagina nuova sottoscrizione o modifica sottoscrizione (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 968362b2835c0e76f2a44c44e6cd427af863e8e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108135"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>Pagina Nuova sottoscrizione o Modifica sottoscrizione (Gestione report)
@@ -36,7 +36,7 @@ ms.locfileid: "66108135"
   
 3.  Nel menu a discesa eseguire uno dei passaggi seguenti:  
   
-    -   fare clic su **Gestisci**. Verrà visualizzata la pagina delle proprietà Generale per il report. Selezionare la scheda **Sottoscrizioni** . Nella barra degli strumenti fare clic su **Nuova sottoscrizione**o selezionare una sottoscrizione esistente e fare clic su **Modifica**.  
+    -   Fare clic su **Manage**. Verrà visualizzata la pagina delle proprietà Generale per il report. Selezionare quindi la scheda **sottoscrizioni** . Sulla barra degli strumenti fare clic su **nuova sottoscrizione**o selezionare una sottoscrizione esistente e fare clic su **modifica**.  
   
     -   Fare clic su **Sottoscrivi**. Viene visualizzata la pagina **Nuova sottoscrizione** per il report.  
   
@@ -44,29 +44,29 @@ ms.locfileid: "66108135"
  **Recapito**  
  Consente di selezionare l'estensione per il recapito da utilizzare per la distribuzione del report. In base all'estensione per il recapito selezionata, verranno visualizzate le impostazioni seguenti:  
   
--   Per le sottoscrizioni con recapito tramite posta elettronica sono disponibili opzioni di uso comune per gli utenti della posta elettronica, ad esempio i campi **A**, **Oggetto**e **Priorità** . Selezionare **Includi report** per incorporare o allegare il report oppure **Includi collegamento** per includere un URL nel report. L'opzione **Formato di rendering** consente di selezionare il formato di presentazione per il report allegato o incorporato.  
+-   Le sottoscrizioni tramite posta elettronica forniscono campi che hanno familiarità con gli utenti di posta elettronica (ad esempio, campi **a**, **oggetto**e **priorità** ). Selezionare **Includi report** per incorporare o allegare il report oppure **Includi collegamento** per includere un URL nel report. L'opzione **Formato di rendering** consente di selezionare il formato di presentazione per il report allegato o incorporato.  
   
--   Le sottoscrizioni con recapito tramite condivisione file includono campi che consentono di specificare un percorso di destinazione. È possibile recapitare qualsiasi report in una condivisione file. Tuttavia, per i report che supportano funzionalità interattive (inclusi i report matrice che supportano il drill-down in righe e colonne) viene eseguito il rendering come file statici. Non è possibile visualizzare righe e colonne di drill-down in un file statico. Il nome della condivisione file deve essere specificato in formato Uniform Naming Convention (UNC) (ad esempio, \\\mycomputer\public\myreportfiles). Non includere una barra rovesciata finale nel nome del percorso. Il report verrà recapitato in un formato di file basato sul formato di rendering. Ad esempio, se si seleziona **Excel**il report viene recapitato come file con estensione xls.  
+-   Le sottoscrizioni con recapito tramite condivisione file includono campi che consentono di specificare un percorso di destinazione. È possibile recapitare qualsiasi report in una condivisione file. Tuttavia, per i report che supportano funzionalità interattive (inclusi i report matrice che supportano il drill-down in righe e colonne) viene eseguito il rendering come file statici. Non è possibile visualizzare righe e colonne di drill-down in un file statico. Il nome della condivisione file deve essere specificato in formato UNC (Uniform Naming Convention), \\ad esempio \mycomputer\public\myreportfiles. Non includere una barra rovesciata finale nel nome del percorso. Il report verrà recapitato in un formato di file basato sul formato di rendering. Ad esempio, se si seleziona **Excel**il report viene recapitato come file con estensione xls.  
   
  Un'estensione per il recapito è disponibile se è installata e configurata nel server di report. Messaggio di posta elettronica da Server report è l'estensione per il recapito predefinita. Per poterla utilizzare, è tuttavia necessario configurarla. Il recapito alla condivisione file non richiede alcuna configurazione. Per poterlo utilizzare, è tuttavia è necessario definire una cartella condivisa.  
   
 ## <a name="subscription-processing-options"></a>Opzioni di elaborazione sottoscrizione  
  Utilizzare queste opzioni per impostare le condizioni per l'elaborazione della sottoscrizione. Alcune opzioni sono disponibili solo per i report con parametri o eseguiti come snapshot dell'esecuzione del report.  
   
- **Quando viene aggiornato il contenuto del report**  
+ **Quando il contenuto del report viene aggiornato**  
  Selezionare questa opzione per sottoscrivere uno snapshot del report che viene aggiornato in base a una pianificazione. Questa opzione è disponibile solo se si sottoscrive un report eseguito come snapshot dell'esecuzione del report. Il contenuto di uno snapshot dell'esecuzione del report viene in genere aggiornato in base a una pianificazione. Per i report eseguiti in questa modalità è possibile impostare l'elaborazione della sottoscrizione quando viene aggiornato lo snapshot.  
   
  **Quando viene completata l'esecuzione pianificata del report**  
  Consente di creare una pianificazione che determina quando la sottoscrizione verrà elaborata.  
   
- **In una pianificazione condivisa**  
+ **In base a una pianificazione condivisa**  
  Consente di selezionare una pianificazione predefinita per l'elaborazione della sottoscrizione.  
   
  **Immettere i valori dei parametri**  
  Utilizzare questa opzione per la sottoscrizione di un report con parametri. Questa opzione è disponibile solo per i report con parametri. Quando si crea una sottoscrizione a un report con parametri è possibile specificare i valori dei parametri utilizzati per creare la versione del report recapitata tramite la sottoscrizione. Ad esempio, è possibile specificare un codice area per selezionare i dati di vendita di un'area specifica. Se non si specifica un valore verrà utilizzato il valore predefinito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare un Server di Report per il recapito tramite posta elettronica &#40;Gestione configurazione SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+ [Configurare un server di report per il recapito tramite posta elettronica &#40;Configuration Manager SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  

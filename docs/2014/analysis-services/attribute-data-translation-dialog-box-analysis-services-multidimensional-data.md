@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo traduzione dati (Analysis Services - dati multidimensionali) dell'attributo | Microsoft Docs
+title: Finestra di dialogo Traduzione dati attributo (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063071"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Traduzione dati attributo (Analysis Services - Dati multidimensionali)
@@ -29,7 +29,7 @@ ms.locfileid: "66063071"
 -   Fare clic con il pulsante destro del mouse sul riquadro relativo ai **dettagli di traduzione** della scheda **Traduzioni** di **Progettazione dimensioni** e scegliere **Nuova colonna didascalia** o **Modifica colonna didascalia**.  
   
 ## <a name="options"></a>Opzioni  
- **Attribute**  
+ **Attributo**  
  Consente di visualizzare l'attributo selezionato.  
   
  **Lingua**  
@@ -52,18 +52,18 @@ ms.locfileid: "66063071"
 > [!NOTE]  
 >  La selezione di questa opzione comporta la disabilitazione delle opzioni **Maiuscole/minuscole**, **Accentati/non accentati**, **Distinzione Kana**e **Distinzione larghezza** .  
   
- **Distinzione maiuscole / minuscole**  
+ **Distinzione maiuscole/minuscole**  
  Selezionare questa opzione per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua o l'alfabeto associato, nonché per distinguere tra lettere maiuscole e minuscole.  
   
- Se l'opzione non viene selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali le versioni maiuscole e minuscole delle lettere. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] indica se le lettere minuscole debbano essere ordinate più o versione successiva in relazione a lettere maiuscole di lettere quando **distinzione maiuscole/minuscole** non è selezionata.  
+ Se l'opzione non viene selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali le versioni maiuscole e minuscole delle lettere. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]non definisce se le lettere minuscole vengono ordinate più in basso o più in alto rispetto alle lettere maiuscole quando la **distinzione tra maiuscole** e minuscole non è selezionata.  
   
- **/ Non accentati**  
+ **supportano la distinzione tra caratteri accentati e non accentati**  
  Selezionare questa opzione per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua o l'alfabeto associato, nonché per distinguere tra lettere accentate e non accentate. Il carattere 'a' non viene ad esempio considerato uguale ad 'à'.  
   
  Se l'opzione non viene selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali le versioni accentate e non accentate delle lettere.  
   
  **Distinzione Kana**  
- Selezionare questa opzione per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua associata o l'alfabeto, nonché per distinguere tra i due tipi di caratteri kana giapponesi: Hiragana e Katakana.  
+ Selezionare questa opzione per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua o l'alfabeto associato, nonché per distinguere tra i due tipi di caratteri Kana giapponesi, ovvero Hiragana e Katakana.  
   
  Se l'opzione non viene selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali i caratteri Hiragana e Katakana.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66063071"
  Se questa opzione non è selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] SQL Server considera uguali la rappresentazione a un byte e quella a due byte dello stesso carattere.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Dettagli della traduzione &#40;scheda traduzioni, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Dettagli traduzione &#40;scheda Traduzioni, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

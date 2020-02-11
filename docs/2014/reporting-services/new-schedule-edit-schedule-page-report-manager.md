@@ -1,5 +1,5 @@
 ---
-title: 'Pagina Nuova pianificazione: Modifica pianificazione pagina (gestione Report) | Microsoft Docs'
+title: 'Nuova pianificazione: pagina Modifica pianificazione (Gestione report) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108153"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>Pagina Nuova pianificazione: Modifica pianificazione (gestione Report)
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>Nuova pianificazione: pagina Modifica pianificazione (Gestione report)
   Utilizzare la pagina Nuova pianificazione/Modifica pianificazione per creare una pianificazione per un report. Le pianificazioni vengono utilizzate con le sottoscrizioni, per aggiornare i report memorizzati nella cache e per creare snapshot autonomi o nella cronologia dei report.  
   
 > [!NOTE]  
 >  Questa funzionalità non è disponibile in ogni edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- È possibile creare pianificazioni solo per i report eseguibili in modo automatico. Per l'esecuzione automatica di un report è necessario archiviare le credenziali per l'origine dati del report nel database del server di report. Per altre informazioni, vedere [pagina delle proprietà origini dati &#40;gestione Report&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ È possibile creare pianificazioni solo per i report eseguibili in modo automatico. Per l'esecuzione automatica di un report è necessario archiviare le credenziali per l'origine dati del report nel database del server di report. Per ulteriori informazioni, vedere la [pagina delle proprietà origini dati &#40;Gestione report&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
  Non è possibile supportare tutte le combinazioni di frequenze in una singola pianificazione. Ad esempio, se si desidera eseguire un report alle 12.00 e alle 16.00 ogni venerdì è necessario creare due pianificazioni giornaliere, una con giorno di esecuzione venerdì e inizio alle ore 12.00 e l'altra con inizio alle ore 16.00  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66108153"
   
 3.  Nel menu a discesa  
   
-    -   fare clic su **Gestisci**. Verrà visualizzata la pagina delle proprietà Generale per il report. Selezionare la scheda **Sottoscrizioni** .  
+    -   Fare clic su **Manage**. Verrà visualizzata la pagina delle proprietà Generale per il report. Selezionare la scheda **Sottoscrizioni** .  
   
     -   Fare clic su **Sottoscrivi**. Verrà visualizzata la pagina delle proprietà **Sottoscrizioni** per il report.  
   
@@ -78,13 +78,13 @@ ms.locfileid: "66108153"
   
 -   **Ora** definisce una pianificazione eseguita a intervalli di ore. Utilizzare le opzioni nella sezione **Date di inizio e fine** per specificare il giorno di esecuzione della pianificazione.  
   
--   **Giorno** definisce una pianificazione eseguita nei giorni selezionati a un'ora specifica. È possibile specificare i giorni nei modi seguenti: Ogni \< *giorno*>, ogni giorno feriale e ogni \< *numero*> giorni. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
+-   **Giorno** definisce una pianificazione eseguita nei giorni selezionati a un'ora specifica e al minuto. È possibile specificare i giorni nei modi seguenti: ogni \< *giorno*>, ogni giorno feriale e \<ogni *numero*> giorno. La selezione di un'opzione determina la disattivazione delle altre anche se può sembrare che siano selezionati altri giorni.  
   
--   **Settimana** definisce una pianificazione eseguita settimanalmente a un'ora specifica. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure di alcuni giorni della settimana.  
+-   **Settimana** definisce una pianificazione eseguita a intervalli settimanali a un'ora e un minuto specifici. È possibile impostare un intervallo di una o più settimane intere (ad esempio, ogni due settimane) oppure di alcuni giorni della settimana.  
   
--   **Mese** definisce una pianificazione eseguita su base mensile. Per una pianificazione mensile è possibile scegliere un giorno in base a uno schema (ad esempio l'ultima domenica di ogni mese) oppure date specifiche (ad esempio 1 e 15 per indicare il primo e il quindicesimo giorno di ogni mese). Per specificare più giorni e intervalli è possibile utilizzare virgole e trattini, ad esempio, 1, 5, 7-12, 21.  
+-   **Month** definisce una pianificazione eseguita su base mensile. Per una pianificazione mensile è possibile scegliere un giorno in base a uno schema (ad esempio l'ultima domenica di ogni mese) oppure date specifiche (ad esempio 1 e 15 per indicare il primo e il quindicesimo giorno di ogni mese). Per specificare più giorni e intervalli è possibile utilizzare virgole e trattini, ad esempio, 1, 5, 7-12, 21.  
   
--   **Singola occorrenza** definisce una pianificazione eseguita una sola volta. Utilizzare le opzioni nella sezione **Date di inizio e fine** per specificare il giorno di esecuzione della pianificazione. La pianificazione scade subito dopo l'elaborazione.  
+-   **Una volta** definita una pianificazione eseguita una sola volta. Utilizzare le opzioni nella sezione **Date di inizio e fine** per specificare il giorno di esecuzione della pianificazione. La pianificazione scade subito dopo l'elaborazione.  
   
  **Date di inizio e fine**  
  Consente di specificare le date di inizio e fine, ovvero la data di attivazione e la data di scadenza della pianificazione.  

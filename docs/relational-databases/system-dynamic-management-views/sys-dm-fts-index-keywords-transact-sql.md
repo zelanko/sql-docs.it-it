@@ -1,5 +1,5 @@
 ---
-title: DM fts_index_keywords (Transact-SQL) | Microsoft Docs
+title: sys. dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900941"
 ---
-# <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
+# <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni sul contenuto di un indice full-text per la tabella specificata.  
   
- **DM fts_index_keywords** è una funzione a gestione dinamica.  
+ **sys. dm_fts_index_keywords** è una funzione a gestione dinamica.  
   
 > [!NOTE]  
->  Per visualizzare le informazioni sugli indici full-text di livello inferiore, usare il [DM fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) funzione a gestione dinamica a livello di documento.  
+>  Per visualizzare informazioni sull'indice full-text di livello inferiore, utilizzare la funzione a gestione dinamica [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) a livello di documento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,23 +45,23 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- db_id('*database_name*')  
- Una chiamata per il [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) (funzione). Questa funzione accetta un nome di database e restituisce l'ID del database, quale **DM fts_index_keywords** Usa per individuare il database specificato. Se *database_name* viene omesso, viene restituito l'ID del database corrente.  
+ db_id ('*database_name*')  
+ Una chiamata alla funzione [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) . Questa funzione accetta un nome di database e restituisce l'ID del database, che **sys. dm_fts_index_keywords** utilizza per trovare il database specificato. Se *database_name* viene omesso, viene restituito l'ID del database corrente.  
   
- object_id('*table_name*')  
- Una chiamata per il [object_id ()](../../t-sql/functions/object-id-transact-sql.md) (funzione). Tale funzione accetta un nome di tabella e restituisce l'ID della tabella che contiene l'indice full-text da controllare.  
+ object_id ('*table_name*')  
+ Una chiamata alla funzione [object_id ()](../../t-sql/functions/object-id-transact-sql.md) . Tale funzione accetta un nome di tabella e restituisce l'ID della tabella che contiene l'indice full-text da controllare.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**keyword**|**nvarchar(4000)**|Rappresentazione esadecimale della parola chiave archiviata nell'indice full-text.<br /><br /> Nota: OxFF rappresenta il carattere speciale che indica la fine di un file o set di dati.|  
-|**display_term**|**nvarchar(4000)**|Formato leggibile della parola chiave derivato dal formato esadecimale.<br /><br /> Nota: Il **display_term** valore per OxFF è "END OF FILE".|  
+|**parola chiave**|**nvarchar(4000)**|Rappresentazione esadecimale della parola chiave archiviata nell'indice full-text.<br /><br /> Nota: OxFF rappresenta il carattere speciale che indica la fine di un file o di un set di dati.|  
+|**display_term**|**nvarchar(4000)**|Formato leggibile della parola chiave derivato dal formato esadecimale.<br /><br /> Nota: il valore **display_term** per OxFF è "End of file".|  
 |**column_id**|**int**|ID della colonna utilizzata per eseguire l'indicizzazione full-text della parola chiave corrente.|  
 |**document_count**|**int**|Numero di documenti o righe che contengono il termine corrente.|  
   
-## <a name="remarks"></a>Note  
- Le informazioni restituite da **DM fts_index_keywords** sono utili per individuare le operazioni seguenti, tra le altre cose:  
+## <a name="remarks"></a>Osservazioni  
+ Le informazioni restituite da **sys. dm_fts_index_keywords** sono utili per trovare tra le altre cose quanto segue:  
   
 -   Appartenenza di una parola chiave all'indice full-text.  
   
@@ -69,14 +69,14 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 -   Parola chiave più comune nell'indice full-text:  
   
-    -   **document_count** della ognuno *keyword_value* rispetto al totale **document_count**, il numero di documenti di 0xFF.  
+    -   **document_count** di ogni *keyword_value* rispetto al **document_count**totale, il numero di documenti di 0xFF.  
   
     -   In genere è più appropriato definire come parole non significative le parole chiave più comuni.  
   
 > [!NOTE]  
->  Il **document_count** restituito da **DM fts_index_keywords** può essere meno preciso per un documento specifico rispetto al conteggio restituito da **DM fts_index_keywords_by_document** o un **CONTAINS** query. Questa possibile imprecisione è stimata essere minore dell'1%. Questo può verificarsi in quanto un **document_id** potrebbero essere conteggiati due volte se si ripete in più di una riga nel frammento di indice, o se viene visualizzato più volte nella stessa riga. Per ottenere un conteggio più preciso per un documento specifico, usare **DM fts_index_keywords_by_document** o una **CONTAINS** query.  
+>  Il **document_count** restituito da **sys. dm_fts_index_keywords** può essere meno accurato per un documento specifico rispetto al numero restituito da **sys. Dm_fts_index_keywords_by_document** o da una query **Contains** . Questa possibile imprecisione è stimata essere minore dell'1%. Questa inesattezza può verificarsi perché un **document_id** può essere conteggiato due volte quando continua in più di una riga nel frammento di indice o quando viene visualizzato più di una volta nella stessa riga. Per ottenere un conteggio più accurato per un documento specifico, utilizzare **sys. dm_fts_index_keywords_by_document** o una query **Contains** .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -90,7 +90,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni e viste a gestione dinamica la ricerca semantica e ricerca full-Text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Funzioni e viste a gestione dinamica per la ricerca full-text e la ricerca semantica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Ricerca full-text](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   

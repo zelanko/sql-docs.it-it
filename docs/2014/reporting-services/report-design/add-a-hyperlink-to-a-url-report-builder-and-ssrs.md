@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106821"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
@@ -27,10 +27,10 @@ ms.locfileid: "66106821"
   
  È possibile aggiungere un collegamento ipertestuale a un URL in qualsiasi elemento che dispone di una proprietà **Azione** , ad esempio una casella di testo, un'immagine o una serie calcolata in un grafico. Quando l'utente fa clic sul tale elemento del report, viene eseguita l'azione definita. Per altre informazioni, vedere [Finestra di dialogo Proprietà azione &#40;Generatore report e SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) e [Specifica di percorsi di elementi esterni &#40;Generatore report e SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- Per un'introduzione rapida, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
+ Per iniziare rapidamente, vedere [Esercitazione: Formattazione di testo &#40;Generatore report&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
->  I collegamenti associati ai campi del set di dati possono essere esposti ad alterazioni per finalità dannose. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md) nella [documentazione online](https://go.microsoft.com/fwlink/?LinkId=154888) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
+>  I collegamenti associati ai campi del set di dati possono essere esposti ad alterazioni per finalità dannose. Per altre informazioni, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md) nella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]documentazione online[ di ](https://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
   
 ### <a name="to-add-a-hyperlink"></a>Per aggiungere un collegamento ipertestuale  
   

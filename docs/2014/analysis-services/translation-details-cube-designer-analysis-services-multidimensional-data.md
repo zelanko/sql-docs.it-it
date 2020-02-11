@@ -1,5 +1,5 @@
 ---
-title: Dettagli di traduzione (scheda traduzioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Dettagli traduzione (scheda Traduzioni, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065854"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Dettagli traduzione (scheda Traduzioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -31,19 +31,19 @@ ms.locfileid: "66065854"
   
 -   Gruppo di misure  
   
-     Proprietà `Caption`  
+     `Caption`Proprietà  
   
--   Misura  
+-   Measure  
   
      Proprietà `Caption` e `DisplayFolder`  
   
 -   Dimension  
   
-     Proprietà `Caption`  
+     `Caption`Proprietà  
   
--   Perspective  
+-   Prospettiva  
   
-     Proprietà `Caption`  
+     `Caption`Proprietà  
   
 -   Indicatore di prestazioni chiave (KPI)  
   
@@ -51,25 +51,25 @@ ms.locfileid: "66065854"
   
 -   Azione  
   
-     Proprietà `Caption`  
+     `Caption`Proprietà  
   
 -   Set denominato  
   
-     Proprietà `Caption`  
+     `Caption`Proprietà  
   
 -   membro calcolato  
   
-     Proprietà `Caption`  
+     `Caption`Proprietà  
   
- **\<Lingua >**  
+ **\<>della lingua**  
  Consente di digitare il valore della proprietà relativa all'oggetto del cubo nella lingua selezionata.  
   
 ## <a name="context-menu"></a>Menu di scelta rapida  
  Nel menu di scelta rapida visualizzato quando si fa clic con il pulsante destro del mouse su una traduzione nel riquadro relativo ai **dettagli di traduzione** sono disponibili le opzioni seguenti:  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
-|**Nuova traduzione**|Selezionare questa opzione per visualizzare la finestra di dialogo **Seleziona lingua** e creare una nuova traduzione. La traduzione verrà visualizzata sotto forma di nuova colonna all'interno della griglia relativa ai **dettagli di traduzione**.|  
+|**Nuova traduzione**|Selezionare questa opzione per visualizzare la finestra di dialogo **Seleziona lingua** e creare una nuova traduzione. La traduzione verrà visualizzata sotto forma di nuova colonna all'interno della griglia relativa ai dettagli di traduzione. ****|  
 |**Elimina traduzione**|Selezionare questa opzione per eliminare la traduzione selezionata.|  
   
   

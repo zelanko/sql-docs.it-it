@@ -1,5 +1,5 @@
 ---
-title: Segnalare il riquadro dei dati (Generatore Report) | Microsoft Docs
+title: Riquadro dei dati del report (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa8ae6d36ddd7c23b48ec65f8fab387e690f1d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107560"
 ---
 # <a name="report-data-pane-report-builder"></a>Riquadro dei dati del report (Generatore report)
@@ -28,21 +28,21 @@ ms.locfileid: "66107560"
  **Campi predefiniti**  
  Rappresenta campi di uso comune in un report, ad esempio il nome del report o il numero di pagina. Per altre informazioni, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
- **Parametri**  
+ **Parameters**  
  Rappresenta la raccolta dei parametri del report, che possono essere a valore singolo o multivalore. Per ulteriori informazioni, vedere la pagina relativa al [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
   
  **Immagini**  
  Rappresenta il set di immagini utilizzato nel report. Per altre informazioni, vedere [Immagini &#40;Generatore report e SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
- **Origini dei dati**  
- Rappresenta un'origine dati incorporata o un riferimento a un'origine dati condivisa. Tale origine indica un'origine di dati per il report. Un'origine dati è il nodo padre per la raccolta di set di dati che la utilizza. Per altre informazioni, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41; ](report-data/report-datasets-ssrs.md) e [connessioni dati, origini dati e stringhe di connessione in Generatore Report](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ **Origini dati**  
+ Rappresenta un'origine dati incorporata o un riferimento a un'origine dati condivisa. Tale origine indica un'origine di dati per il report. Un'origine dati è il nodo padre per la raccolta di set di dati che la utilizza. Per ulteriori informazioni, vedere [aggiungere dati a un Report &#40;Generatore report e SSRS&#41;](report-data/report-datasets-ssrs.md) e [connessioni dati, origini dati e stringhe di connessione in Generatore report](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
- **Set di dati**  
- Rappresenta i dati recuperati da un'origine dati eseguendo un comando, ad esempio una query [!INCLUDE[tsql](../includes/tsql-md.md)] che recupera i dati da un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Un set di dati è il nodo padre per la raccolta di campi specificati dalla query e include anche i campi calcolati. Generatore report supporta le Progettazione query che consentono di specificare una query. Per altre informazioni, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](report-data/report-datasets-ssrs.md).  
+ **Set**  
+ Rappresenta i dati recuperati da un'origine dati eseguendo un comando, ad esempio una query [!INCLUDE[tsql](../includes/tsql-md.md)] che recupera i dati da un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Un set di dati è il nodo padre per la raccolta di campi specificati dalla query e include anche i campi calcolati. Generatore report supporta le Progettazione query che consentono di specificare una query. Per ulteriori informazioni, vedere [aggiungere dati a un Report &#40;Generatore report e SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Riquadro di raggruppamento &#40;Generatore report&#41;](report-design/grouping-pane-report-builder.md)   
  [Ricerca, visualizzazione e gestione dei report &#40;Generatore report e SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

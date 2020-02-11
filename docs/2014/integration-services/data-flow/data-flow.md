@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ab14ac049e9081e82175512a0107af446a51f37
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67343865"
 ---
 # <a name="data-flow"></a>Flusso di dati
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili tre diversi tipi di componenti flusso di dati: origini, trasformazioni e destinazioni. Le origini estraggono dati da archivi dati quali tabelle e viste di database relazionali, file e database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tramite le trasformazioni è possibile modificare, riepilogare e pulire i dati. Le destinazioni consentono di caricare dati in archivi dati o di creare set di dati in memoria.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] in sono disponibili tre diversi tipi di componenti flusso di dati: origini, trasformazioni e destinazioni. Le origini estraggono dati da archivi dati quali tabelle e viste di database relazionali, file e database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Tramite le trasformazioni è possibile modificare, riepilogare e pulire i dati. Le destinazioni consentono di caricare dati in archivi dati o di creare set di dati in memoria.  
   
 > [!NOTE]  
 >  Quando si utilizzano i provider personalizzati, è necessario aggiornare il file ProviderDescriptors.xml con i valori delle colonne di metadati.  
@@ -97,7 +97,7 @@ ms.locfileid: "67343865"
 ### <a name="sources-available-for-download"></a>Origini disponibili per il download  
  Nella tabella seguente sono elencate le origini aggiuntive che è possibile scaricare dal sito Web di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|`Source`|Descrizione|  
+|Source (Sorgente)|Descrizione|  
 |------------|-----------------|  
 |Origine Oracle|L'origine Oracle è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Origine SAP BI|L'origine SAP BI è il componente di origine del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=16978).|  
@@ -108,35 +108,35 @@ ms.locfileid: "67343865"
 ## <a name="transformations"></a>Trasformazioni  
  Le trasformazioni possono avere funzionalità molto diverse. Possono eseguire attività quali aggiornamento, riepilogo, pulitura, unione e distribuzione dei dati. Consentono di modificare valori nelle colonne, cercare valori nelle tabelle, eliminare dati e aggregare valori nelle colonne.  
   
- Gli input e gli output di una trasformazione definiscono le colonne dei dati in entrata e in uscita. Alcune trasformazioni includono un singolo input e più output, mentre altre includono più input e un singolo output, a seconda delle operazioni eseguite sui dati. Le trasformazioni possono includere anche gli output degli errori, che specificano informazioni sugli errori e sui dati che li hanno provocati, ad esempio dati stringa che non è stato possibile convertire al tipo di dati Integer. Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non prevede alcun limite al numero degli input, degli output regolari e degli output degli errori di una trasformazione. È possibile creare trasformazioni personalizzate che implementano qualsiasi combinazione di più input, output regolari e output degli errori.  
+ Gli input e gli output di una trasformazione definiscono le colonne dei dati in entrata e in uscita. Alcune trasformazioni includono un singolo input e più output, mentre altre includono più input e un singolo output, a seconda delle operazioni eseguite sui dati. Nelle trasformazioni possono anche essere inclusi gli output degli errori tramite cui vengono fornite informazioni sugli errori generati, oltre ai dati che li hanno provocati, ad esempio dati stringa che non è stato possibile convertire in un tipo di dati Integer. Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] non prevede alcun limite al numero degli input, degli output regolari e degli output degli errori di una trasformazione. È possibile creare trasformazioni personalizzate che implementano qualsiasi combinazione di più input, output regolari e output degli errori.  
   
  L'input di una trasformazione è definito come una o più colonne di input. Alcune trasformazioni di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possono inoltre fare riferimento a colonne esterne come input. L'input della trasformazione Comando OLE DB, ad esempio, include colonne esterne. Una colonna di output è una colonna che la trasformazione aggiunge al flusso di dati. Sia gli output regolari che gli output degli errori possono contenere colonne di output. Le colonne di output diventano le colonne di input per il successivo componente flusso di dati, che può essere costituito da un'altra trasformazione o da una destinazione.  
   
  Le trasformazioni seguenti includono proprietà che possono essere aggiornate tramite espressioni di proprietà:  
   
--   [Trasformazione Suddivisione condizionale](transformations/conditional-split-transformation.md)  
+-   [Suddivisione condizionale - trasformazione](transformations/conditional-split-transformation.md)  
   
 -   [Trasformazione Colonna derivata](transformations/derived-column-transformation.md)  
   
--   [Trasformazione Raggruppamento fuzzy](transformations/fuzzy-grouping-transformation.md)  
+-   [Raggruppamento fuzzy - trasformazione](transformations/fuzzy-grouping-transformation.md)  
   
--   [Trasformazione Ricerca fuzzy](transformations/lookup-transformation.md)  
+-   [Ricerca fuzzy - trasformazione](transformations/lookup-transformation.md)  
   
--   [Trasformazione Comando OLE DB](transformations/ole-db-command-transformation.md)  
+-   [Comando OLE DB - trasformazione](transformations/ole-db-command-transformation.md)  
   
--   [Trasformazione Campionamento percentuale](transformations/percentage-sampling-transformation.md)  
+-   [Campionamento percentuale - trasformazione](transformations/percentage-sampling-transformation.md)  
   
--   [Trasformazione Pivot](transformations/pivot-transformation.md)  
+-   [Pivot - trasformazione](transformations/pivot-transformation.md)  
   
--   [Trasformazione Campionamento righe](transformations/row-sampling-transformation.md)  
+-   [Campionamento righe - trasformazione](transformations/row-sampling-transformation.md)  
   
--   [Trasformazione Ordinamento](transformations/sort-transformation.md)  
+-   [Ordinamento - trasformazione](transformations/sort-transformation.md)  
   
--   [Trasformazione UnPivot](transformations/unpivot-transformation.md)  
+-   [UnPivot - trasformazione](transformations/unpivot-transformation.md)  
   
  Per altre informazioni, vedere [Trasformazioni di Integration Services](transformations/integration-services-transformations.md).  
   
-## <a name="destinations"></a>Destinazioni  
+## <a name="destinations"></a>Destinations  
  Una destinazione è il componente flusso di dati che scrive dati da un flusso di dati a un archivio dati specifico oppure crea un set di dati in memoria. È possibile caricare dati in file flat, elaborare oggetti di analisi e fornire dati ad altri processi. È inoltre possibile caricare dati accedendo a tabelle e viste di database ed eseguendo query.  
   
  Un flusso di dati può includere più destinazioni che caricano dati in archivi dati diversi.  
@@ -151,14 +151,14 @@ ms.locfileid: "67343865"
   
  Le destinazioni seguenti includono proprietà che possono essere aggiornate tramite espressioni di proprietà:  
   
--   [Destinazione file flat](flat-file-destination.md)  
+-   [file flat - destinazione](flat-file-destination.md)  
   
 -   [Destinazione SQL Server Compact Edition](sql-server-compact-edition-destination.md)  
   
 ### <a name="destinations-available-for-download"></a>Destinazioni disponibili per il download  
  Nella tabella seguente sono elencate le destinazioni aggiuntive che è possibile scaricare dal sito Web di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|`Source`|Descrizione|  
+|Source (Sorgente)|Descrizione|  
 |------------|-----------------|  
 |Destinazione Oracle|La destinazione Oracle è il componente di destinazione del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per Oracle di Attunity include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Destinazione SAP BI|La destinazione SAP BI è il componente di destinazione del connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../../includes/msconame-md.md)] per SAP BI include anche una gestione connessione e un'origine. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=16978).|  
@@ -178,18 +178,18 @@ ms.locfileid: "67343865"
  Le origini includono output, le destinazioni includono input e le trasformazioni includono sia input che output. Molti componenti flusso di dati possono essere inoltre configurati per l'utilizzo di un output degli errori.  
   
 ### <a name="inputs"></a>Input  
- Le destinazioni e le trasformazioni includono input. Un input contiene una o più colonne di input, che possono fare riferimento a colonne esterne se il componente flusso di dati è stato configurato per utilizzarne. È possibile configurare gli input per monitorare e controllare il flusso di dati: ad esempio è possibile specificare se il componente non deve essere completato correttamente in risposta a un errore, se gli errori devono essere ignorati o se le righe con errori devono essere reindirizzate all'output degli errori. È inoltre possibile assegnare una descrizione all'input o aggiornarne il nome. Per configurare gli input in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , è possibile usare la finestra di dialogo **Editor avanzato** . Per altre informazioni su **Editor avanzato** , vedere [Interfaccia utente di Integration Services](../integration-services-user-interface.md).  
+ Le destinazioni e le trasformazioni includono input. Un input contiene una o più colonne di input, che possono fare riferimento a colonne esterne se il componente flusso di dati è stato configurato per utilizzarne. Gli input possono essere configurati in modo da monitorare e controllare il flusso di dati: è ad esempio possibile specificare se il componente non deve essere completato correttamente in risposta a un errore, se gli errori devono essere ignorati o se le righe con errori devono essere reindirizzate all'output degli errori. È inoltre possibile assegnare una descrizione all'input o aggiornarne il nome. Per configurare gli input in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , è possibile usare la finestra di dialogo **Editor avanzato** . Per altre informazioni su **Editor avanzato** , vedere [Interfaccia utente di Integration Services](../integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>Output  
  Origini e trasformazioni includono sempre output. Un output contiene una o più colonne di output, che possono fare riferimento a colonne esterne se il componente flusso di dati è stato configurato per utilizzarne. Gli output possono essere configurati in modo da fornire informazioni utili per le operazioni di elaborazione dei dati a valle. È ad esempio possibile indicare se l'output è ordinato. È inoltre possibile specificare una descrizione per l'output o aggiornarne il nome. Per configurare gli output in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , è possibile usare la finestra di dialogo **Editor avanzato** .  
   
 ### <a name="error-outputs"></a>Output degli errori  
- Origini, destinazioni e trasformazioni possono includere output degli errori. Usando la finestra di dialogo **Configura output errori** è possibile specificare come il componente flusso di dati risponde agli errori in ogni input o colonna. Se in fase di esecuzione si verifica un errore o un troncamento di dati e il componente flusso di dati è configurato per il reindirizzamento delle righe, le righe di dati con l'errore verranno inviate all'output degli errori. L'output degli errori può essere connesso a trasformazioni che applicano ulteriori trasformazioni o indirizzano i dati verso un'altra destinazione. Per impostazione predefinita, un output degli errori contiene le colonne di output e due colonne di informazioni sugli errori: **ErrorCode** e **ErrorColumn**. Le colonne di output contengono i dati della riga che ha generato l'errore, **ErrorCode** contiene il codice di errore ed **ErrorColumn** identifica la colonna che provoca l'errore.  
+ Origini, destinazioni e trasformazioni possono includere output degli errori. Usando la finestra di dialogo **Configura output errori** è possibile specificare come il componente flusso di dati risponde agli errori in ogni input o colonna. Se in fase di esecuzione si verifica un errore o un troncamento di dati e il componente flusso di dati è configurato per il reindirizzamento delle righe, le righe di dati con l'errore verranno inviate all'output degli errori. L'output degli errori può essere connesso a trasformazioni che applicano ulteriori trasformazioni o indirizzano i dati verso un'altra destinazione. Per impostazione predefinita un output degli errori contiene le colonne di output e due colonne di informazioni sugli errori: **ErrorCode** e **ErrorColumn**. Le colonne di output contengono i dati della riga che ha generato l'errore, **ErrorCode** contiene il codice di errore ed **ErrorColumn** identifica la colonna che provoca l'errore.  
   
  Per altre informazioni, vedere [Gestione degli errori nei dati](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Colonne  
- Input, output e output degli errori sono raccolte di colonne. Ogni colonna è configurabile e a seconda del tipo di colonna (input, output o esterna), [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre proprietà diverse per la colonna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre tre modi diversi per impostare le proprietà della colonna: a livello di codice, tramite finestre di dialogo specifiche del componente o tramite la finestra di dialogo **Editor avanzato**.  
+ Input, output e output degli errori sono raccolte di colonne. Ogni colonna è configurabile e a seconda del tipo di colonna (input, output o esterna), [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre proprietà diverse per la colonna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]in sono disponibili tre diverse modalità di impostazione delle proprietà delle colonne: a livello di codice, tramite finestre di dialogo specifiche del componente o tramite la finestra di dialogo **Editor avanzato** .  
   
 ## <a name="paths"></a>Percorsi  
  I percorsi connettono i componenti flusso di dati. In Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] è possibile visualizzare e modificare le proprietà di un percorso, visualizzare i metadati di output per il punto iniziale di un percorso e collegare i visualizzatori dati a un percorso.  
@@ -211,13 +211,13 @@ ms.locfileid: "67343865"
   
 ## <a name="related-tasks"></a>Attività correlate  
   
--   [Aggiungere o eliminare un componente in un flusso di dati](add-or-delete-a-component-in-a-data-flow.md)  
+-   [Aggiunta o eliminazione di un componente in un flusso di dati](add-or-delete-a-component-in-a-data-flow.md)  
   
--   [Connettere componenti in un flusso di dati](connect-components-in-a-data-flow.md)  
+-   [Connessione di componenti in un flusso di dati](connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>Contenuto correlato  
  Video sulle [prestazioni del connettore Microsoft per Oracle di Attunity (video di SQL Server)](https://go.microsoft.com/fwlink/?LinkID=210369)sul sito Web technet.microsoft.com.  
   
- Risposta curata relativa alla [come creare una stringa di connessione dinamica in SSIS](https://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html).  
+ Risposta curata, [come creare una stringa di connessione dinamica in SSIS](https://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html).  
   
   

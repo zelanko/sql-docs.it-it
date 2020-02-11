@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108694"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Eliminare e ricreare chiavi di crittografia (Gestione configurazione SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66108694"
   
  La chiave simmetrica può essere ricreata solo quando il server di report è in uno stato attivo. La ricreazione delle chiavi di crittografia e la riesecuzione della crittografia del contenuto interferisce con le operazioni del server. Durante l'operazione di riesecuzione della crittografia il server deve essere offline e il server di report non deve ricevere richieste.  
   
- Per reimpostare la chiave simmetrica e i dati crittografati è possibile usare lo strumento di configurazione di Reporting Services o l'utilità **rskeymgmt**. Per altre informazioni sulla creazione della chiave simmetrica, vedere [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
+ Per reimpostare la chiave simmetrica e i dati crittografati è possibile usare lo strumento di configurazione di Reporting Services o l'utilità **rskeymgmt** . Per altre informazioni sulla creazione della chiave simmetrica, vedere [Inizializzare un server di report &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Come ricreare chiavi di crittografia (strumento di configurazione di Reporting Services)  
   
@@ -117,6 +117,6 @@ ms.locfileid: "66108694"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare e gestire chiavi di crittografia &#40;Gestione configurazione SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Archiviare i dati crittografati del server di report &#40;Gestione configurazione SSRS &#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Archiviare dati crittografati del server di report &#40;Configuration Manager SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

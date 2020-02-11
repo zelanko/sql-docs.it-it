@@ -1,5 +1,5 @@
 ---
-title: Usare una connessione Office Data Connection (odc) ai report (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
+title: Usare una connessione Office Data Connection (ODC) con i report (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106957"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Utilizzare una connessione Office Data Connection (odc) ai report (Reporting Services in modalità integrata SharePoint)
-  In particolari scenari è possibile utilizzare un file Office Data Connection (odc) esistente per fornire informazioni di connessione a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Quando si vuole creare un'origine dati condivisa, è possibile usare un file con estensione odc al posto di un file con estensione rsds. Nel server di report il file con estensione odc viene infatti utilizzato in modo analogo del file con estensione rsds, ovvero per il recupero del tipo dell'origine dati, della stringa di connessione e delle informazioni relative alle credenziali.  
+  In particolari scenari è possibile utilizzare un file Office Data Connection (odc) esistente per fornire informazioni di connessione a un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Quando si vuole creare un'origine dati condivisa, è possibile usare un file con estensione odc al posto di un file con estensione rsds. Nel server di report il file con estensione odc viene infatti utilizzato in modo analogo del file con estensione rsds, ovvero per il recupero del tipo dell'origine dati, della stringa di connessione e delle informazioni relative alle credenziali.  
   
  Non tutti i file odc possono essere usati con un report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La possibilità di utilizzare o meno un file con estensione odc è determinata dall'estensione per l'elaborazione dei dati nonché dalle caratteristiche del report e del file stesso:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66106957"
   
 4.  Selezionare **Provider Microsoft OLE DB per SQL Server**e quindi fare clic su **Avanti**.  
   
-5.  Specificare il nome del server, che per impostazione predefinita è il nome di rete del computer, e un account utente dotato di un account di accesso valido e autorizzazioni per il database. Scegliere **Avanti**.  
+5.  Specificare il nome del server, che per impostazione predefinita è il nome di rete del computer, e un account utente dotato di un account di accesso valido e autorizzazioni per il database. Fare clic su **Avanti**.  
   
 6.  Selezionare un database e quindi fare clic su **OK** per chiudere la finestra di dialogo **Collegamento dati** .  
   

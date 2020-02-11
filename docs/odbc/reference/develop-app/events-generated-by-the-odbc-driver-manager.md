@@ -1,5 +1,5 @@
 ---
-title: Gli eventi generati da Gestione Driver ODBC | Microsoft Docs
+title: Eventi generati da Gestione driver ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cd52aa1427e5fa768ab521d3533cbabfa4d6ad0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901356"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Eventi generati da Gestione driver ODBC
 > [!IMPORTANT]  
->  Supporto per Visual Studio Analyzer è stata rimossa a partire da Windows 8 (Visual Studio Analyzer è stato incluso solo nelle versioni precedenti di Visual Studio). Per una meccanismo di risoluzione dei problemi in alternativa, usare l'analisi BID.  
+>  Il supporto per Visual Studio Analyzer è stato rimosso a partire da Windows 8 (Visual Studio Analyzer era incluso solo nelle versioni precedenti di Visual Studio). Per un meccanismo alternativo di risoluzione dei problemi, usare la traccia delle offerte.  
   
- Quando si fa clic sul pulsante Avvia Visual Studio Analyzer, vengono registrati gli eventi generati da Gestione Driver ODBC. Solo lo strumento offre la possibilità di creare eventi personalizzati e gli eventi definiti dal sistema. Per altre informazioni sugli eventi, vedere la *Guida di riferimento di Visual Studio Analyzer* all'interno della suite di Visual Studio della documentazione.  
+ Gli eventi generati da Gestione driver ODBC vengono registrati quando si fa clic sul pulsante avvia Visual Studio Analyzer. Lo strumento stesso offre eventi definiti dal sistema e la possibilità di creare eventi personalizzati. Per ulteriori informazioni sugli eventi, vedere la *Guida di riferimento Visual Studio Analyzer* nella suite di documentazione di Visual Studio.  
   
-|Eventi in Visual Studio Analyzer|Descrizione|  
+|Evento Visual Studio Analyzer|Descrizione|  
 |----------------------------------|-----------------|  
-|**Call**|Generato su ogni API ODBC in ingresso.|  
-|**ReturnException**|Se il codice restituito SQL_ERROR, generato in tutte le API ODBC.|  
-|**ReturnNormal**|Se il codice restituito non SQL_ERROR, generato in ogni API ODBC.|  
-|**Inizio connessione**|Indica l'avvio di una connessione; generato quando Gestione Driver ODBC chiama l'API di connessione del driver.|  
-|**Connessione completata**|Indica il completamento di una connessione; generato quando la connessione del driver API restituiscono da Gestione Driver ODBC.|  
-|**Disconnettere Start**|Generato quando Gestione Driver ODBC chiama la patente **SQLDisconnect** (funzione).|  
-|**Connessione chiusa**|Generato quando il driver **SQLDisconnect** funzione restituisce da Gestione Driver ODBC.|  
-|**QuerySend**|Generato quando Gestione Driver ODBC chiama la patente **SQLPrepare**, **SQLExecute**, **SQLExecDirect** funzioni, nonché a funzioni di catalogo, ad esempio **SQLTables** e **SQLColumns**.|  
-|**QueryResult**|Generato quando il driver restituisce un set di gestione Driver ODBC per le funzioni che interessano query di risultati.|  
+|**Chiamata**|Generato in ogni voce dell'API ODBC.|  
+|**Returnexception**|Generato in ogni API ODBC restituito se il codice restituito è SQL_ERROR.|  
+|**ReturnNormal**|Generato in ogni API ODBC restituito se il codice restituito non è SQL_ERROR.|  
+|**Avvio connessione**|Indica che è stata avviata una connessione. generato quando Gestione driver ODBC chiama le API di connessione del driver.|  
+|**Connessione completata**|Indica che una connessione è stata completata. generato quando le API di connessione del driver tornano a gestione driver ODBC.|  
+|**Disconnetti avvio**|Generato quando Gestione driver ODBC chiama la funzione **SQLConnect** del driver.|  
+|**Disconnessione completata**|Generato quando la funzione **SQLConnect** del driver torna a gestione driver ODBC.|  
+|**QuerySend**|Generato quando Gestione driver ODBC chiama le funzioni **SQLPrepare**, **SQLExecute**e **SQLExecDirect** del driver, oltre alle funzioni di catalogo quali **SQLTables** e **SQLColumns**.|  
+|**QueryResult**|Generato quando il driver restituisce un set di risultati a gestione driver ODBC per le funzioni che interessano le query.|  
 |**TransactionStart**|Generato quando un'applicazione imposta il valore di SQL_ATTR_AUTOCOMMIT su SQL_AUTOCOMMIT_OFF o dopo che un'applicazione chiama correttamente **SQLEndTran**.|  
 |**TransactionCommit**|Generato quando un'applicazione chiama **SQLEndTran** per eseguire il commit di una transazione locale.|  
 |**TransactionRollback**|Generato quando un'applicazione chiama **SQLEndTran** per eseguire il rollback di una transazione locale.|  
-|**JoinDTC**|Generato quando un'applicazione viene aggiunto a Distributed Transaction Coordinator (DTC).|  
-|**LeaveDTC**|Generato quando un'applicazione lascia Distributed Transaction Coordinator (DTC).|
+|**JoinDTC**|Generato quando un'applicazione viene aggiunta al Distributed Transaction Coordinator (DTC).|  
+|**LeaveDTC**|Generato quando un'applicazione lascia il Distributed Transaction Coordinator (DTC).|

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Distribuire un elemento del Report personalizzato | Microsoft Docs'
+title: 'Procedura: Distribuire un elemento del report personalizzato | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265070"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Procedura: Distribuire un elemento del report personalizzato
+# <a name="how-to-deploy-a-custom-report-item"></a>Procedura: Distribuzione di un elemento del report personalizzato
   Per distribuire un elemento del report personalizzato in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario modificare i file di configurazione del server di report e copiare gli assembly del componente runtime e della fase di progettazione nelle cartelle appropriate dell'applicazione sia per Progettazione report sia per il server di report.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Per distribuire un elemento del report personalizzato  

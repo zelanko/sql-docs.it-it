@@ -1,5 +1,5 @@
 ---
-title: "Lezione 7: Aggiungere l'azione drill-through nel Report padre | Microsoft Docs"
+title: "Lesson 7: Add Drillthrough Action on Parent Report (Lezione 7: Aggiungere un'azione drill-through in un report padre) | Microsoft Docs"
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108401"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lezione 7: Aggiungere un'azione drill-through in un report padre
@@ -24,19 +24,19 @@ ms.locfileid: "66108401"
   
 1.  Andare al report padre.  
   
-2.  Fare clic sulla casella di testo che contiene il valore della **nome**.  
+2.  Fare clic sulla casella di testo contenente il valore **nome**.  
   
-3.  Fare clic con il pulsante destro la casella di testo e quindi fare clic su **proprietà casella di testo**.  
+3.  Fare clic con il pulsante destro del mouse sulla casella di testo e scegliere **Proprietà casella di testo**.  
   
 4.  Andare alla scheda **Azione** e selezionare l'opzione **Vai al report** .  
   
 5.  Immettere il nome del report figlio nella sezione **Specifica un report** .  
   
-6.  Fare clic su **Add** sotto **utilizzare i parametri seguenti per eseguire il report** sezione.  
+6.  Fare clic su **Aggiungi** in **utilizzare i parametri seguenti per eseguire il report** .  
   
-7.  Tipo **productid** nel **name** casella e quindi fare clic su **ProductID** nel **valore** elenco a discesa.  
+7.  Digitare **ProductID** nella casella **nome** , quindi fare clic su **ProductID** nell'elenco a discesa **valore** .  
   
-8.  Fare clic su **accettabile** alla fine.  
+8.  Fare clic su **OK** per terminare.  
   
 ## <a name="next-task"></a>Attività successiva  
  È stata aggiunta correttamente un'azione drill-through nel report padre. Successivamente, verrà creato un filtro di dati per la tabella di dati definita per il report figlio.  

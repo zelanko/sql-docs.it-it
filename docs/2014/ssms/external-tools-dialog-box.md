@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245639"
 ---
 # <a name="external-tools-dialog-box"></a>Finestra di dialogo Strumenti esterni
-  Nella finestra di dialogo **Strumenti esterni** è possibile aggiungere strumenti esterni, ad esempio SQLCMD o Blocco note, al menu **Strumenti**. L'aggiunta di strumenti esterni consente di avviare facilmente altre applicazioni dall'ambiente di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. L'output di alcuni strumenti può inoltre essere visualizzato nella finestra **Output** . La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
+  Utilizzare la finestra di dialogo **strumenti esterni** per aggiungere strumenti esterni, ad esempio sqlcmd o blocco note, al menu **strumenti** . L' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] aggiunta di strumenti esterni consente di avviare facilmente altre applicazioni mentre si lavora nell'ambiente. Durante l'avvio dello strumento, è possibile specificare argomenti e una directory di lavoro. L'output di alcuni strumenti può inoltre essere visualizzato nella finestra **Output** . La finestra di dialogo **Strumenti esterni** è accessibile dal menu **Strumenti** .  
   
 ## <a name="options"></a>Opzioni  
  **Contenuto menu**  
@@ -34,16 +34,16 @@ ms.locfileid: "63245639"
  **Sposta giù**  
  Sposta lo strumento selezionato più in basso nell'elenco degli strumenti visualizzati nel menu **Strumenti** .  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di cancellare il contenuto delle caselle di testo e quindi di specificare un nuovo strumento.  
   
  **Elimina**  
  Rimuove lo strumento o il comando dall'elenco **Contenuto menu** e dal menu **Strumenti** .  
   
- **Title**  
+ **Titolo**  
  Consente di immettere il nome dello strumento o del comando che verrà visualizzato nel sottomenu **Strumenti esterni** del menu **Strumenti** . Inserire una e commerciale (&) prima di una lettera contenuta nel nome dello strumento per specificare tale lettera come tasto di scelta rapida. Ad esempio, "&SQLCMD" verrà visualizzato come SQLCMD nel menu **Strumenti**.  
   
- **Command**  
+ **Comando**  
  Specificare il percorso del file da avviare.  
   
  **Argomenti**  
@@ -67,14 +67,15 @@ ms.locfileid: "63245639"
 ## <a name="example"></a>Esempio  
  Immettendo i seguenti valori nella finestra di dialogo **Strumenti esterni** verrà creata una voce di menu con etichetta "DAC" che, quando selezionata, consentirà di aprire un prompt dei comandi e di eseguire l'utilità **sqlcmd** usando la connessione amministrativa dedicata.  
   
-|messaggio|Value|  
+|Box|valore|  
 |---------|-----------|  
-|**Title**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
+|**Titolo**|DAC|  
+|**Comando**|
+  [!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Argomenti**|-A|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti esterni-argomenti](menu-help/external-tools.md)   
+ [Argomenti per gli strumenti esterni](menu-help/external-tools.md)   
  [Elementi generali dell'interfaccia utente](general-user-interface-elements.md)  
   
   

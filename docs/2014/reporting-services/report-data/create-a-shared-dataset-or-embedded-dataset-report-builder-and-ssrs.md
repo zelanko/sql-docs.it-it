@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107432"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Creare un set di dati condiviso o un set di dati incorporato (Generatore report e SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66107432"
   
 4.  In Progettazione query specificare i campi da includere nel set di dati.  
   
-5.  Scegliere **Esegui** ( **!** ) per eseguire la query.  
+5.  Scegliere **Esegui** (**!**) per eseguire la query.  
   
 6.  Sul pulsante **Generatore report** fare clic su **Salva** o su **Salva con nome** per salvare il set di dati condiviso nel server di report.  
   
@@ -113,10 +113,10 @@ ms.locfileid: "66107432"
 ## <a name="see-also"></a>Vedere anche  
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Raccolta di campi del set di dati &#40;Generatore report e SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Finestre di progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)   
- [Guida di Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
+ [Progettazione query &#40;Generatore report&#41;](../query-designers-report-builder.md)   
+ [Guida Generatore report per finestre di dialogo, riquadri e procedure guidate](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-datasets-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Set di dati condivisi e incorporati &#40;Generatore report e SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Set di DataSet incorporati e condivisi &#40;Generatore report e SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

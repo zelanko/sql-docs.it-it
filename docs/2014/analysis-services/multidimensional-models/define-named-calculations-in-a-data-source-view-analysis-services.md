@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a69d5194c6eea3bc81676e8c0c3b1cac1d06270c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075571"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definire calcoli denominati in una vista origine dati (Analysis Services)
-  Un calcolo denominato è un'espressione SQL rappresentata come colonna calcolata. Tale espressione presenta l'aspetto e il comportamento di una colonna della tabella. Un calcolo denominato consente di estendere lo schema relazionale delle tabelle o delle viste esistenti in una vista origine dati senza modificare le tabelle o le viste nell'origine dei dati sottostante. Si considerino gli esempi seguenti:  
+  Un calcolo denominato è un'espressione SQL rappresentata come colonna calcolata. Tale espressione presenta l'aspetto e il comportamento di una colonna della tabella. Un calcolo denominato consente di estendere lo schema relazionale delle tabelle o delle viste esistenti in una vista origine dati senza modificare le tabelle o le viste nell'origine dei dati sottostante. Vedere gli esempi seguenti:  
   
 -   Creare un singolo calcolo denominato derivato da più colonne in una tabella dei fatti, ad esempio moltiplicando un'aliquota di imposta per un prezzo di vendita per ottenere l'ammontare delle imposte.  
   
@@ -59,14 +59,14 @@ FROM
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto o connettersi al database contenente la vista origine dati in cui si desidera definire un calcolo denominato.  
   
-2.  In Esplora soluzioni espandere la cartella **Viste origine dati** , quindi fare doppio clic sulla vista origine dati.  
+2.  In Esplora soluzioni espandere la cartella **Viste origine dati** e quindi fare doppio clic sulla vista origine dati.  
   
 3.  Fare clic con il pulsante destro del mouse sulla tabella in cui si desidera definire il calcolo denominato all'interno del riquadro **Tabelle** o **Diagramma** , quindi scegliere **Nuovo calcolo denominato**. Assicurarsi di fare clic con il pulsante destro del mouse sul nome della tabella e non su un attributo. Il menu sarà simile al seguente:  
   
-     ![Screenshot dell'area di lavoro di diagramma, menu di scelta rapida](../media/ssas-olapdsv-diagram.gif "Screenshot dell'area di lavoro di diagramma, menu di scelta rapida")  
+     ![Schermata dell'area di lavoro del diagramma, menu di scelta rapida](../media/ssas-olapdsv-diagram.gif "Schermata dell'area di lavoro del diagramma, menu di scelta rapida")  
   
     > [!NOTE]  
-    >  Per individuare una tabella o una vista, è possibile usare l'opzione **Trova tabella** scegliendola dal menu **Vista origine dati** o facendo clic con il pulsante destro del mouse su un'area vuota nei riquadri **Tabelle** o **Diagramma** .  
+    >  Per individuare una tabella o una vista, è possibile utilizzare l'opzione **Trova tabella** facendo clic sul menu **vista origine dati** o facendo clic con il pulsante destro del mouse su un'area aperta dei riquadri **tabelle** o **diagramma** .  
   
 4.  Nella finestra di dialogo **Create Named Calculations (Crea calcolo denominato)** effettuare le operazioni seguenti:  
   

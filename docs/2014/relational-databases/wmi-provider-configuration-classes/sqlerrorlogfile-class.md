@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249322"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
@@ -36,17 +36,17 @@ class SQLErrorLogFile
 ```  
   
 ## <a name="properties"></a>Proprietà  
- Classe SQLErrorLogFile definisce le proprietà seguenti.  
+ La classe SQLErrorLogFile definisce le proprietà seguenti.  
   
 |||  
 |-|-|  
-|ArchiveNumber|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Numero dell'archivio per il file di log.|  
-|InstanceName|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
-|LastModified|Tipo di dati: `datetime`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Data dell'ultima modifica apportata al file di log.|  
-|LogFileSize|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
-|Nome|Tipo di dati: `string`<br /><br /> Tipo di accesso: Sola lettura<br /><br /> Qualificatori: Chiave<br /><br /> <br /><br /> Nome del file di log.|  
+|ArchiveNumber|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Numero dell'archivio per il file di log.|  
+|InstanceName|Tipo di dati: `string`<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si trova il file di log.|  
+|LastModified|Tipo di dati: `datetime`<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Data dell'ultima modifica apportata al file di log.|  
+|LogFileSize|Tipo di dati: `uint32`<br /><br /> Tipo di accesso: sola lettura<br /><br /> <br /><br /> Dimensione del file di log, in byte.|  
+|Nome|Tipo di dati: `string`<br /><br /> Tipo di accesso: sola lettura<br /><br /> Qualificatori: chiave<br /><br /> <br /><br /> Nome del file di log.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 |||  
 |-|-|  
@@ -55,7 +55,7 @@ class SQLErrorLogFile
 |Spazio dei nomi|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come recuperare informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire l'esempio, sostituire \< *nome_istanza*> con il nome dell'istanza, ad esempio "Istanza1".  
+ Nell'esempio seguente viene illustrato come recuperare informazioni su tutti i file di log di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per eseguire l'esempio, sostituire \< *Instance_Name*> con il nome dell'istanza, ad esempio, "instance1".  
   
 ```  
 on error resume next  
@@ -75,25 +75,25 @@ Next
 ```  
   
 ## <a name="comments"></a>Commenti  
- Quando *InstanceName* non viene fornito nell'istruzione WQL, la query restituirà le informazioni per l'istanza predefinita. L'istruzione WQL seguente restituisce, ad esempio, informazioni su tutti i file di log dall'istanza predefinita (MSSQLSERVER).  
+ Quando *NomeIstanza* non viene fornito nell'istruzione WQL, la query restituirà informazioni per l'istanza predefinita. L'istruzione WQL seguente restituisce, ad esempio, informazioni su tutti i file di log dall'istanza predefinita (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
-## <a name="security"></a>Sicurezza  
- Per connettersi a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log tramite WMI, è necessario disporre delle autorizzazioni seguenti in entrambi i computer locali e remoti:  
+## <a name="security"></a>Security  
+ Per connettersi a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file di log tramite WMI, è necessario disporre delle autorizzazioni seguenti per i computer locali e remoti:  
   
--   Accesso in lettura per il **Root\Microsoft\SqlServer\ComputerManagement10** dello spazio dei nomi WMI. Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account.  
+-   Accesso in lettura allo spazio dei nomi WMI **allo root\Microsoft\SqlServer\ComputerManagement10** . Per impostazione predefinita, chiunque dispone di accesso in lettura tramite l'autorizzazione Abilita account.  
   
     > [!NOTE]  
-    >  Per informazioni su come verificare autorizzazioni WMI, vedere la sezione sicurezza dell'argomento [visualizzazione file di Log Offline](../logs/view-offline-log-files.md).  
+    >  Per informazioni su come verificare le autorizzazioni WMI, vedere la sezione relativa alla sicurezza nell'argomento [visualizzare i file di log offline](../logs/view-offline-log-files.md).  
   
--   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita l'errore log si trovano nel percorso seguente (dove \< *unità >* rappresenta l'unità in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \< *NomeIstanza*> è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Autorizzazione di lettura per la cartella che contiene i log degli errori. Per impostazione predefinita, i log degli errori si trovano nel percorso seguente, dove \< *unità>* rappresenta l'unità in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui \<è stato installato e *NomeIstanza*> è il nome [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dell'istanza di:  
   
-     **\<Unità >: \Programmi\Microsoft SQL Server\MSSQL11** **.\< NomeIstanza > \mssql\log.**  
+     **Unità>: \Programmi\Microsoft SQL Server\MSSQL11. \<** **\< Nomeistanza> \MSSQL\Log**  
   
- Se si sta eseguendo la connessione attraverso un firewall, assicurarsi che sia impostata un'eccezione nel firewall per WMI nei computer di destinazione remoti. Per altre informazioni, vedere [la connessione a WMI in modalità remota a partire da Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ Se si sta eseguendo la connessione attraverso un firewall, assicurarsi che sia impostata un'eccezione nel firewall per WMI nei computer di destinazione remoti. Per ulteriori informazioni, vedere [connessione a WMI in modalità remota a partire da Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe SqlErrorLogEvent](sqlerrorlogevent-class.md)   

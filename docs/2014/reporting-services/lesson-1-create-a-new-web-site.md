@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Creare un nuovo sito Web | Microsoft Docs'
+title: 'Lesson 1: Create a New Web Site (Lezione 1: Creare un nuovo sito Web) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65426162fc7cd7ada9e66c591420ac64040a4391
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108545"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>Lezione 1: Creare un nuovo sito Web
@@ -26,13 +26,13 @@ ms.locfileid: "66108545"
   
 2.  Scegliere **Nuovo** dal menu **File**e selezionare **Sito Web**.  
   
-3.  Nel **nuovo sito Web** nella finestra di dialogo il **modelli installati** riquadro, selezionare **Visual c#** e quindi scegliere **sito web ASP.NET**.  
+3.  Nel riquadro **modelli installati** della finestra di dialogo **nuovo sito Web** selezionare **Visual C#** , quindi scegliere **sito Web ASP.NET**.  
   
-4.  Nel **ubicazione** , specificare una directory del progetto e scegliere **OK**.  
+4.  Nella casella **percorso** specificare una directory del progetto e fare clic su **OK**.  
   
  Viene visualizzato il progetto di sito Web.  
   
 ## <a name="next-task"></a>Attività successiva  
- È stato creato correttamente un nuovo progetto di sito Web. Successivamente, verranno create una connessione dati e una tabella di dati per il report padre. Vedere [Lezione 2: Definire una connessione dati e un tabella di dati per il Report padre](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ È stato creato correttamente un nuovo progetto di sito Web. Successivamente, verranno create una connessione dati e una tabella di dati per il report padre. Vedere [Lezione 2:Definire una connessione dati e una tabella di dati per il report padre](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

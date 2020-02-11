@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 906f4527bdca38f4571a2e1686f885a2857e47c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106787"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Aggiungere un sottoreport e di parametri (Generatore report e SSRS)
@@ -52,7 +52,7 @@ ms.locfileid: "66106787"
   
 2.  Nella finestra di dialogo **Proprietà sottoreport** fare clic su **Parametri**.  
   
-3.  Scegliere **Aggiungi**. Alla griglia dei parametri verrà aggiunta una nuova riga.  
+3.  Fare clic su **Aggiungi**. Alla griglia dei parametri verrà aggiunta una nuova riga.  
   
 4.  Nella casella di testo **Nome** digitare il nome di un parametro nel sottoreport o sceglierlo dalla casella di riepilogo. Il nome deve corrispondere a un parametro del report e non al parametro di query nel sottoreport.  
   

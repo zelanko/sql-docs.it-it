@@ -1,5 +1,5 @@
 ---
-title: Elemento modello pagina sicurezza (gestione Report) | Microsoft Docs
+title: Pagina sicurezza elemento modello (Gestione report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108227"
 ---
 # <a name="model-item-security-page-report-manager"></a>Pagina sicurezza elemento modello (Gestione report)
@@ -61,17 +61,17 @@ ms.locfileid: "66108227"
 4.  Selezionare la scheda **Sicurezza elemento modello** .  
   
 ## <a name="options"></a>Opzioni  
- **Proteggere singoli elementi del modello in modo indipendente per questo modello**  
+ **sicurezza indipendente dei singoli elementi del modello**  
  Selezionare questa casella di controllo per attivare la sicurezza a livello di elemento del modello.  
   
- **Specificare la sicurezza per singoli elementi del modello nella modalità**  
+ **Specificare le impostazioni di sicurezza per singoli elementi del modello**  
  Visualizza tutti gli elementi inclusi in un modello. È possibile spostarsi nello spazio dei nomi del modello per selezionare l'elemento per il quale si desidera impostare la sicurezza. È possibile selezionare un solo elemento per volta. Assicurarsi di creare la prima assegnazione di ruolo nel nodo radice prima di passare alle altre entità e cartelle.  
   
  **Eredita autorizzazioni dall'elemento padre**  
  Selezionare questa opzione per ereditare le impostazioni di sicurezza dell'elemento padre.  
   
- **Assegna autorizzazione di lettura ai seguenti utenti e gruppi (separati da punto e virgola)**  
- Selezionare questa opzione per impostare l'account utente o di gruppo per il quale viene stabilito l'accesso. Se si utilizza la sicurezza predefinita, gli account utente o di gruppo corrispondono agli account di dominio di Windows. Specificare gli account nel formato seguente:  *\<dominio >\\< account\>* .  
+ **Assegna autorizzazione di lettura ai seguenti utenti e gruppi (separati da un punto e virgola)**  
+ Selezionare questa opzione per impostare l'account utente o di gruppo per il quale viene stabilito l'accesso. Se si utilizza la sicurezza predefinita, gli account utente o di gruppo corrispondono agli account di dominio di Windows. Specificare gli account nel formato: * \<dominio>\\<account\>*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida sensibile al contesto del server di report in Management Studio](tools/report-server-in-management-studio-f1-help.md)  

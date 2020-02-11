@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63281988"
 ---
 # <a name="display-the-query-window"></a>Visualizzare la finestra Query
@@ -26,7 +26,7 @@ ms.locfileid: "63281988"
   
 1.  Sulla barra degli strumenti fare clic su **Query del Motore di database**. Nella finestra di dialogo **Connetti al Motore di database** fare clic su **Connetti**.  
   
-2.  In Esplora oggetti fare clic con il pulsante destro del mouse sul server e quindi scegliere **Nuova query**. In questo caso l'editor di query utilizza le informazioni di connessione del server registrato.  
+2.  In Esplora oggetti fare clic con il pulsante destro del mouse sul server e quindi scegliere **nuova query**. In questo caso l'editor di query utilizza le informazioni di connessione del server registrato.  
   
      Si noti la modalità con cui le finestre vengono visualizzate come finestre a schede a destra di Esplora oggetti.  
   

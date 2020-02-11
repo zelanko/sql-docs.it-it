@@ -1,5 +1,5 @@
 ---
-title: Selezione attributi dimensione (Creazione guidata dimensione) | Microsoft Docs
+title: Selezione attributi dimensione (creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67624347"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selezione attributi dimensione (Creazione guidata dimensione)
@@ -25,7 +25,7 @@ ms.locfileid: "67624347"
 > [!NOTE]  
 >  Se non è possibile leggere i valori di una colonna, ingrandire la finestra della procedura guidata e modificare la larghezza di ogni intestazione di colonna fino a leggerne i valori.  
   
- **Per aprire la creazione guidata dimensione**  
+ **Per aprire la Creazione guidata dimensione.**  
   
 -   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **Dimensioni**in **Esplora soluzioni** per scegliere un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi fare clic su **Nuova dimensione**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67624347"
 > [!NOTE]  
 >  Impossibile deselezionare la casella di controllo per l'attributo chiave.  
   
- **Nome dell'attributo**  
+ **Nome attributo**  
  Elenca gli attributi disponibili.  
   
  Per modificare il nome di un attributo, fare clic sul nome dell’attributo e digitare un nuovo nome.  
@@ -54,14 +54,14 @@ ms.locfileid: "67624347"
 |----------|--------------|  
 |Una dimensione contiene una gerarchia padre-figlio e **Consenti esplorazione** non è selezionato.|La procedura guidata lascia la proprietà `AttributeHierarchyEnabled` impostata su `True` e imposta l'attributo `AttributeHierarchyVisible` su `False` per l'attributo chiave.|  
 |Una tabella in una dimensione contiene una chiave esterna a una tabella che non è nella dimensione|La procedura guidata seleziona la chiave esterna come un attributo da includere, ma non selezionerà **Consenti esplorazione**. Se si mantengono queste impostazioni, la proprietà `AttributeHiearchyEnabled` dell’attributo sarà impostata su `True` e la proprietà `AttributeHierarchyVisible` sarà impostata su `False`.|  
-|Una dimensione contiene tabelle con schema snowflake raggiungibili tramite colonne chiavi esterne che ammettono valori Null.<br /><br /> \- e -<br /><br /> Consenti esplorazione per l'attributo basato sulla chiave della tabella con schema snowflake non è selezionato|La procedura guidata creerà il nuovo attributo con la proprietà `AttributeHiearchyEnabled` impostata su `True` e la proprietà `AttributeHierarchyVisible` impostata su `False`.|  
+|Una dimensione contiene tabelle con schema snowflake raggiungibili tramite colonne chiavi esterne che ammettono valori Null.<br /><br /> e<br /><br /> Consenti esplorazione per l'attributo basato sulla chiave della tabella con schema snowflake non è selezionato|La procedura guidata creerà il nuovo attributo con la proprietà `AttributeHiearchyEnabled` impostata su `True` e la proprietà `AttributeHierarchyVisible` impostata su `False`.|  
   
  **Tipo di attributo**  
  (Facoltativo) Impostare il tipo per l'attributo. Il valore predefinito è **Regolare**. Il tipo di attributo fornisce l’istruzione alle applicazioni client riguardo le informazioni che l'attributo potrebbe contenere.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5daf807904f833a5e8cbe8f237d3f5df77e3887b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107814"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Nascondere un elemento (Generatore report e SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "66107814"
         >  Quando si specifica un'espressione per la visibilità, viene impostata la proprietà Hidden dell'elemento di report, come mostrato nell'immagine seguente. L'espressione valutata consente di mostrare l'elemento di report quando il valore è False e di nasconderlo quando il valore è True.   
         > ![Finestra di dialogo Properties_Visibility e proprietà Hidden](../media/hiddenproperty-propertiesvisibility.png "Finestra di dialogo Properties_Visibility e proprietà Hidden")  
   
-4.  Fare due volte clic su **OK** .  
+4.  Fare clic due volte su **OK** .  
   
 ### <a name="to-hide-static-rows-in-a-table-matrix-or-list"></a>Per nascondere le righe statiche di una tabella, matrice o elenco  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66107814"
 3.  Nella finestra di dialogo **Visibilità colonne** eseguire i passaggi 3 e 4 della prima procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Azione di drill-down &#40;Generatore report e SSRS &#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Azione di drill-down &#40;Generatore report e SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
  [Aggiungere un'azione Espandi o Comprimi a un elemento &#40;Generatore report e SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   

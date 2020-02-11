@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b920446018c9199ed0bd436e67a65d43341f7f43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067424"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>Creare e gestire prospettive (SSAS tabulare)
@@ -37,27 +37,27 @@ ms.locfileid: "66067424"
 ## <a name="tasks"></a>Attività  
  Per creare prospettive si utilizzerà la finestra di dialogo **Prospettive** in cui è possibile aggiungere, modificare, eliminare, copiare e visualizzare prospettive. Per visualizzare la finestra di dialogo **Prospettive** , in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]fare clic sul menu **Modello** , quindi scegliere **Prospettive**.  
   
-###  <a name="bkmk_add"></a> Per aggiungere una prospettiva  
+###  <a name="bkmk_add"></a>Per aggiungere una prospettiva  
   
 -   Per aggiungere una nuova prospettiva, fare clic su **Nuova prospettiva**. È possibile selezionare e deselezionare gli oggetti campo da includere e fornire un nome per la nuova prospettiva.  
   
      Se si crea una prospettiva vuota con tutti i campi dell'oggetto campo, un utente che utilizza questa prospettiva visualizzerà un elenco di campi vuoto. Le prospettive devono contenere almeno una tabella e una colonna.  
   
-###  <a name="bkmk_edit"></a> Per modificare una prospettiva  
+###  <a name="bkmk_edit"></a>Per modificare una prospettiva  
   
--   Per modificare una prospettiva, selezionare e deselezionare i campi nella colonna della prospettiva, che aggiunge e rimuove gli oggetti campo dalla prospettiva.  
+-   Per modificare una prospettiva, selezionare e deselezionare i campi nella colonna della prospettiva, che consente di aggiungere e rimuovere oggetti campo dalla prospettiva.  
   
-###  <a name="bkmk_rename"></a> Per rinominare una prospettiva  
+###  <a name="bkmk_rename"></a>Per rinominare una prospettiva  
   
--   Quando passa il mouse sull'intestazione di colonna della prospettiva (il nome della prospettiva), il **Rinomina** viene visualizzato il pulsante. Per rinominare la prospettiva, fare clic su **Rinomina**, quindi immettere un nuovo nome o modificare quello esistente.  
+-   Quando si passa il mouse sull'intestazione di colonna di una prospettiva (il nome della prospettiva), viene visualizzato il pulsante **Rinomina** . Per rinominare la prospettiva, fare clic su **Rinomina**, quindi immettere un nuovo nome o modificare quello esistente.  
   
-###  <a name="bkmk_delete"></a> Per eliminare una prospettiva  
+###  <a name="bkmk_delete"></a>Per eliminare una prospettiva  
   
--   Quando passa il mouse sull'intestazione di colonna della prospettiva (il nome della prospettiva), il **eliminare** viene visualizzato il pulsante. Per eliminare la prospettiva, fare clic sul pulsante **Elimina** , quindi scegliere **Sì** nella finestra di conferma.  
+-   Quando si passa il mouse sull'intestazione di colonna di una prospettiva (il nome della prospettiva), viene visualizzato il pulsante **Elimina** . Per eliminare la prospettiva, fare clic sul pulsante **Elimina** , quindi scegliere **Sì** nella finestra di conferma.  
   
-###  <a name="bkmk_copy"></a> Per copiare una prospettiva  
+###  <a name="bkmk_copy"></a>Per copiare una prospettiva  
   
--   Quando passa il mouse sull'intestazione di colonna della prospettiva, la **copia** viene visualizzato il pulsante. Per creare una copia di tale prospettiva, fare clic sul pulsante **Copia** . Una copia della prospettiva selezionata viene aggiunta come nuova prospettiva a destra delle prospettive esistenti. Il nome della nuova prospettiva viene ereditato dalla prospettiva copiata e alla fine del nome viene accodata un'annotazione *- Copy* . Se, ad esempio, una copia del *vendite* prospettiva viene creata, la nuova prospettiva viene denominata *vendite - copia*.  
+-   Quando si passa il mouse sull'intestazione di colonna di una prospettiva, viene visualizzato il pulsante **copia** . Per creare una copia di tale prospettiva, fare clic sul pulsante **Copia** . Una copia della prospettiva selezionata viene aggiunta come nuova prospettiva a destra delle prospettive esistenti. Il nome della nuova prospettiva viene ereditato dalla prospettiva copiata e alla fine del nome viene accodata un'annotazione *- Copy* . Se, ad esempio, viene creata una copia della prospettiva *Sales* , la nuova prospettiva viene denominata *Sales-Copy*.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Prospettive &#40;SSAS tabulare&#41;](perspectives-ssas-tabular.md)   

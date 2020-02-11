@@ -14,39 +14,39 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 778365e8fc7f40700b0f8c1683260f15c860a32a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109404"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Finestra di dialogo Proprietà set di dati, Opzioni
-  Selezionare **le opzioni** nel **proprietà set di dati** finestra di dialogo per modificare le opzioni di dati, ad esempio le regole di confronto e i subtotali, per la query. Per altre informazioni, vedere [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+  Selezionare **Opzioni** nella finestra di dialogo **Proprietàset** per modificare le opzioni dei dati, ad esempio le opzioni per le regole di confronto e i subtotali, per la query. Per altre informazioni, vedere [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="options"></a>Opzioni  
- **Confronto**  
- Consente di selezionare le impostazioni locali che determinano la sequenza di regole di confronto da utilizzare per l'ordinamento dei dati. Il valore**Default** indica che il server di report eseguirà un tentativo di recupero del valore dal provider di dati quando si esegue il report. Se non è possibile recuperare il valore, il valore predefinito viene ottenuto in base alle impostazioni locali del computer.  
+ **Regole di confronto**  
+ Consente di selezionare le impostazioni locali che determinano la sequenza di regole di confronto da utilizzare per l'ordinamento dei dati. **Default** indica che il server di report deve tentare di derivare il valore dal provider di dati durante l'esecuzione del report. Se non è possibile recuperare il valore, il valore predefinito viene ottenuto in base alle impostazioni locali del computer.  
   
- **Distinzione maiuscole/minuscole**  
- Consente di selezionare un valore per indicare la modalità di applicazione della distinzione tra maiuscole e minuscole. Questa opzione indica se per i dati viene applicata la distinzione tra maiuscole e minuscole. È possibile impostare l'opzione **Distinzione maiuscole/minuscole** su **True**, **False**o **Auto**. Il valore predefinito **Auto** indica che il server di report eseguirà un tentativo di recupero del valore dal provider di dati quando si esegue il report. Se il provider di dati non supporta il tipo di distinzione tra maiuscole e minuscole, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
+ **Distinzione tra maiuscole e minuscole**  
+ Consente di selezionare un valore per indicare la modalità di applicazione della distinzione tra maiuscole e minuscole. Questa opzione indica se per i dati viene applicata la distinzione tra maiuscole e minuscole. È possibile impostare la **distinzione tra maiuscole e minuscole** su **true**, **false**o **auto**. Il valore predefinito **auto**indica che il server di report deve tentare di derivare il valore dal provider di dati durante l'esecuzione del report. Se il provider di dati non supporta il tipo di distinzione tra maiuscole e minuscole, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
   
- **Distinzione caratteri accentati/non accentati**  
- Consente di selezionare un valore per indicare la modalità di applicazione della distinzione tra caratteri accentati e non accentati. L'opzione**Distinzione caratteri accentati/non accentati** indica se per i dati viene applicata la distinzione tra caratteri accentati e non accentati e può essere impostata su **True**, **False**o **Auto**. Il valore predefinito **Auto** indica che il server di report eseguirà un tentativo di recupero del valore dal provider di dati quando si esegue il report. Se il provider di dati non supporta il tipo di distinzione tra caratteri accentati e non accentati, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
+ **Distinzione tra caratteri accentati**  
+ Consente di selezionare un valore per indicare la modalità di applicazione della distinzione tra caratteri accentati e non accentati. Distinzione tra **caratteri accentati** indica se i dati sono sensibili alla distinzione tra caratteri accentati e possono essere impostati su **true**, **false**o **auto**. Il valore predefinito **auto**indica che il server di report deve tentare di derivare il valore dal provider di dati quando il report viene eseguito. Se il provider di dati non supporta il tipo di distinzione tra caratteri accentati e non accentati, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
   
- **Distinzione Kana**  
- Consente di selezionare un valore per indicare la modalità di applicazione della distinzione dei caratteri Kana. Questa opzione indica se per i dati viene applicata la distinzione dei caratteri Kana e può essere impostata su **True**, **False**o **Auto**. Il valore predefinito **Auto** indica che il server di report eseguirà un tentativo di recupero del valore dal provider di dati quando si esegue il report. Se il provider di dati non supporta il tipo di distinzione dei caratteri Kana, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
+ **Sensibilità distinzione Kana**  
+ Consente di selezionare un valore per indicare la modalità di applicazione della distinzione dei caratteri Kana. Questa opzione indica se i dati sono distinzione Kana sensibili; può essere impostato su **true**, **false**o **auto**. Il valore predefinito **auto**indica che il server di report deve tentare di derivare il valore dal provider di dati durante l'esecuzione del report. Se il provider di dati non supporta il tipo di distinzione dei caratteri Kana, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
   
  **Distinzione larghezza**  
- Consente di selezionare un valore per indicare la modalità di applicazione della distinzione della larghezza. Questa opzione indica se per i dati viene applicata la distinzione della larghezza e può essere impostata su **True**, **False**o **Auto**. Il valore predefinito **Auto** indica che il server di report eseguirà un tentativo di recupero del valore dal provider di dati quando si esegue il report. Se il provider di dati non supporta il tipo di distinzione della larghezza, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
+ Consente di selezionare un valore per indicare la modalità di applicazione della distinzione della larghezza. Questa opzione indica se i dati sono con distinzione larghezza e possono essere impostati su **true**, **false**o **auto**. Il valore predefinito **auto**indica che il server di report deve tentare di derivare il valore dal provider di dati durante l'esecuzione del report. Se il provider di dati non supporta il tipo di distinzione della larghezza, il report viene eseguito come se il valore fosse **False**. Se si conosce il valore e si è certi che sia supportato, scegliere **True**.  
   
  **Interpretare i subtotali come righe di dettaglio**  
- Selezionare un valore per indicare se si desidera che le righe di subtotali vengano interpretate come righe di dettaglio anziché come righe di aggregazione. Il valore predefinito **automatica**, indica che le righe di subtotali devono essere considerate le righe di dettaglio se il report non utilizza il `Aggregate`funzione () per accedere ai campi nel set di dati. Se si vuole che le righe di subtotali vengano interpretate come righe di aggregazione, scegliere **False**. Se si desidera che le righe di subtotali vengano interpretati come righe di dettaglio e si è certi che non usano i `Aggregate`() di funzione, scegliere **True**.  
+ Selezionare un valore per indicare se si desidera che le righe di subtotali vengano interpretate come righe di dettaglio anziché come righe di aggregazione. Il valore predefinito, **auto**, indica che le righe di subtotali devono essere considerate come righe di dettaglio se il report non utilizza `Aggregate`la funzione () per accedere ai campi del set di dati. Se si vuole che le righe di subtotali vengano interpretate come righe di aggregazione, scegliere **False**. Se si desidera che le righe di subtotali vengano interpretate come righe di dettaglio e si è certi che non `Aggregate`utilizzino la funzione (), scegliere **true**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare le impostazioni locali per un Report o una casella di testo &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Windows_collation_name &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
- [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [Funzione di aggregazione &#40;Report e SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
+ [Impostazione delle impostazioni locali per un report o una casella di testo &#40;Reporting Services&#41;](report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)   
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Nome delle regole di confronto di Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [SQL Server nome delle regole di confronto &#40;&#41;Transact-SQL](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
+ [Funzione di aggregazione &#40;Generatore report e SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
   
   

@@ -14,18 +14,18 @@ ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da8dd850e62f46042287569f1e4bb8520b18151f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901650"
 ---
 # <a name="odbc-data-source-administrator"></a>Amministratore origine dati ODBC
-Amministrazione origine dati di Microsoft® ODBC gestisce le origini dati e i driver di database. Questa applicazione si trova nel Pannello di controllo di Windows sotto **strumenti di amministrazione**. A partire da Windows 8, l'icona è denominata **origini dati ODBC**, e nei sistemi operativi a 64 bit è disponibile una versione a 32 e 64 bit.  
+L'amministratore dell'origine dati ODBC di Microsoft® gestisce i driver e le origini dati del database. Questa applicazione si trova nel pannello di controllo di Windows in **strumenti di amministrazione**. A partire da Windows 8, l'icona è denominata **origini dati ODBC**e nei sistemi operativi a 64 bit sono disponibili una versione a 32 bit e 64 bit.  
   
- Per informazioni sulle procedure dettagliate Amministratore ODBC, aprire il [Amministrazione origine dati ODBC](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) finestra di dialogo e fare clic su **Guida**.  
+ Per informazioni sulle procedure dettagliate dell'amministratore ODBC, aprire la finestra di dialogo [Amministrazione origine dati ODBC](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) **e fare clic**su?.  
   
- È possibile usare i comandi di PowerShell per gestire i driver e origini dati. Per altre informazioni su questi comandi di PowerShell, vedere [i comandi di PowerShell di componenti Windows Data Access](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ È possibile usare i comandi di PowerShell per gestire driver e origini dati. Per altre informazioni su questi comandi di PowerShell, vedere [comandi di PowerShell per Windows Data Access Components](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

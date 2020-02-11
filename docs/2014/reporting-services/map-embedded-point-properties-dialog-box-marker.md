@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà punto incorporato, marcatore mappa | Microsoft Docs
+title: Finestra di dialogo Proprietà punto incorporato mappa, marcatore | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108328"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Finestra di dialogo Proprietà punto incorporato mappa, Marcatore
@@ -27,7 +27,7 @@ ms.locfileid: "66108328"
   
 -   Punto centrale per il poligono attualmente selezionato. Questa pagina viene visualizzata solo quando si seleziona l'opzione di sostituzione nella pagina Finestra di dialogo Proprietà punto centrale poligono incorporato mappa, Generale. Queste opzioni si applicano solo al punto centrale del poligono selezionato e alle opzioni di sostituzione impostate nella finestra di dialogo Proprietà punto centrale per il livello poligono.  
   
- Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS &#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Per altre informazioni, vedere [Modificare legende della mappa, scala dei colori e regole associate &#40;Generatore report e SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opzioni  
  **Tipo di marcatore**  

@@ -1,5 +1,5 @@
 ---
-title: Rimuovere le istruzioni che modificano oggetti di sistema | Microsoft Docs
+title: Rimuovere istruzioni che modificano oggetti di sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f65d379076eb213971bba97b970b8aa866ca3a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66428871"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>Rimuovere le istruzioni che modificano oggetti di sistema
@@ -34,10 +34,10 @@ ms.locfileid: "66428871"
  `Ad hoc updates to system catalogs are not allowed.`  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Modificare gli script SQL in modo che utilizzino API ufficiali e documentate. Ad esempio, usare ALTER DATABASE *database_name* SET EMERGENCY anziché eseguire un'istruzione UPDATE sulle **sysdatabases** tabella di sistema.  
+ Modificare gli script SQL in modo che utilizzino API ufficiali e documentate. Utilizzare, ad esempio, ALTER DATABASE *database_name* set Emergency anziché eseguire un'istruzione Update sulla tabella di sistema **sysdatabases** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLSetCursorName (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLSetCursorName (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab3e9a0ee13cca4950ec7797b2cebed3a0437f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905471"
 ---
 # <a name="sqlsetcursorname-visual-foxpro-odbc-driver"></a>SQLSetCursorName (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: A livello centrale  
+ Conformità API ODBC: livello principale  
   
- Associa un handle di istruzione attiva, un nome di cursore *hstmt*. **SQLSetCursorName** è inclusa nell'API di Visual FoxPro ODBC Driver perché è una parte della funzionalità dell'API ODBC a livello di base; non può essere utilizzato con altre funzioni API perché il driver non supporta gli aggiornamenti posizionati.  
+ Associa un nome di cursore a un handle di istruzione attivo, *HSTMT*. **SQLSetCursorName** è incluso nell'API del driver ODBC Visual FoxPro perché fa parte della funzionalità API ODBC di livello principale; non può essere usato con altre funzioni API perché il driver non supporta gli aggiornamenti posizionati.  
   
- Per altre informazioni, vedere [SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md) in *ODBC Programmer ' s Reference*.

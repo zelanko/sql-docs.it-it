@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107715"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendering in formato HTML (Generatore report e SSRS)
@@ -26,15 +26,15 @@ ms.locfileid: "66107715"
   
  In alcuni scenari i parametri del report possono essere utilizzati per avviare attacchi intrusivi negli script durante il rendering di report in HTML. Per altre informazioni sulla sicurezza dei report, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md).  
   
- Per altre informazioni sui browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
+ Per ulteriori informazioni sui browser, vedere [Planning for Reporting Services e Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Rendering in formato MHTML  
+##  <a name="RenderingMHTML"></a>Rendering in formato MHTML  
  L'estensione per il rendering HTML può inoltre consentire l'esecuzione del rendering dei report in formato MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML estende HTML per incorporare oggetti codificati, ad esempio immagini, in documenti HTML. Tale estensione consente di incorporare risorse, quali immagini, documenti o altri file binari, come strutture MIME nel codice HTML del report, in un singolo file. I report MHTML sono utili anche per l'incorporamento di elementi in messaggi di posta elettronica, in quanto tutte le risorse vengono incluse nel report. Sebbene il rendering MHTML venga eseguito dall'estensione per il rendering HTML, talvolta questa funzionalità viene denominata anche estensione per il rendering MHTML.  
   
-##  <a name="BrowserSupport"></a> Supporto browser  
+##  <a name="BrowserSupport"></a>Supporto browser  
  Questa estensione per il rendering supporta le seguenti versioni di browser:  
   
 -   Internet Explorer 5.5 e versioni successive  
@@ -45,7 +45,7 @@ ms.locfileid: "66107715"
   
  In considerazione delle caratteristiche dei diversi browser, è possibile che il report visualizzabile sia leggermente diverso a seconda del browser. Ad esempio, la casella di testo contiene una proprietà chiamata WritingMode. non supportata in Firefox.  
   
-##  <a name="HTMLSpecificRenderingRules"></a> Regole di rendering specifiche di HTML  
+##  <a name="HTMLSpecificRenderingRules"></a>Regole di rendering specifiche di HTML  
  Durante il rendering vengono applicate le seguenti regole specifiche di HTML:  
   
 -   Il renderer compila una struttura di tabella HTML in cui inserire tutti gli elementi di ogni raccolta `ReportItems`, se ne è disponibile più di una.  
@@ -80,7 +80,7 @@ ms.locfileid: "66107715"
 ### <a name="hyperlinks-and-drillthrough"></a>Collegamenti ipertestuali e collegamenti drill-through  
  Il rendering di collegamenti ipertestuali e collegamenti drill-through restituisce collegamenti ipertestuali in elementi del report racchiudendo l'elemento in cui sono definiti tra tag di ancoraggio HTML (\<a>).  
   
-### <a name="search"></a>Cerca  
+### <a name="search"></a>Ricerca  
  La caratteristica Cerca consente agli utenti di cercare una stringa di testo all'interno del report.  
   
  Ulteriori funzionalità di ricerca vengono fornite dal controllo Web Form ReportViewer.  

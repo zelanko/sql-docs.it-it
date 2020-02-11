@@ -1,5 +1,5 @@
 ---
-title: Impostazione informazioni origine (Creazione guidata dimensione) | Microsoft Docs
+title: Impostazione informazioni origine (creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068174"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Impostazione informazioni origine (Creazione guidata dimensione)
   Utilizzare la pagina **Selezione tabella principale della dimensione** per selezionare la vista origine dati, la tabella principale della dimensione, le colonne chiave e le colonne nome membro per la dimensione da creare.  
   
- **Per aprire la creazione guidata dimensione**  
+ **Per aprire la Creazione guidata dimensione.**  
   
 -   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse sulla cartella **Dimensioni**in **Esplora soluzioni** per scegliere un progetto di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , quindi fare clic su **Nuova dimensione**.  
   
@@ -43,8 +43,8 @@ ms.locfileid: "66068174"
  Consente di selezionare la colonna contenente i nomi membro per la dimensione nella tabella specificata nell'opzione **Tabella principale** . È necessario specificare una colonna nome quando si utilizza una chiave composta. Per creare una colonna nome per una chiave composta, si consiglia di creare un calcolo denominato nella vista origine dati che concatena le colonne chiave specificate. Quando si utilizza una chiave singola, la colonna nome è facoltativa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

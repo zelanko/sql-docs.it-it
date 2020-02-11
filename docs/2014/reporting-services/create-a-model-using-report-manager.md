@@ -1,5 +1,5 @@
 ---
-title: Creare un modello tramite Gestione Report | Microsoft Docs
+title: Creare un modello utilizzando Gestione report | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109665"
 ---
 # <a name="create-a-model-using-report-manager"></a>Creare un modello tramite Gestione report
@@ -26,7 +26,7 @@ ms.locfileid: "66109665"
  Il modello di report che viene generato si basa interamente sullo schema dell'origine dei dati condivisa. Non è possibile scegliere quali parti dell'origine dei dati includere nel modello, né modificare le regole o i metadati del modello generato. È tuttavia possibile impostare le proprietà del modello dopo che quest'ultimo è stato generato e definire le assegnazioni di ruolo che limitano l'accesso all'intero modello o a parte di esso.  
   
 > [!NOTE]  
->  Un modello basato su Oracle generato utilizzando Gestione Report oppure [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] includerà oggetti di database che fanno parte dello schema per l'account utente utilizzato per la connessione all'origine dati Oracle. Il nome dell'account utente viene specificato nelle credenziali delle proprietà per l'origine dei dati.  
+>  Un modello basato su Oracle generato utilizzando Gestione report o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] includerà oggetti di database che fanno parte dello schema per l'account utente utilizzato per la connessione all'origine dati Oracle. Il nome dell'account utente viene specificato nelle credenziali delle proprietà per l'origine dei dati.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>Per creare una nuova origine dei dati per un modello di report tramite Gestione report  
   
@@ -40,15 +40,15 @@ ms.locfileid: "66109665"
   
 5.  Verificare che la casella di controllo **Attiva questa origine dei dati** sia selezionata.  
   
-6.  Dalla lista **Tipo di connessione** selezionare il tipo di origine dei dati a cui connettersi. Il tipo di connessione deve essere uno dei seguenti: **Oracle**, **Microsoft SQL Server** oppure **Microsoft SQL Server Analysis Services**.  
+6.  Dalla lista **Tipo di connessione** selezionare il tipo di origine dei dati a cui connettersi. Il tipo di connessione deve essere uno dei seguenti: **Oracle**, **Microsoft SQL Server** o **Microsoft SQL Server Analysis Services**.  
   
 7.  Nella casella **Stringa di connessione** specificare la stringa di connessione che punta al database.  
   
 8.  Selezionare il metodo di connessione che gli utenti di Generatore report dovranno utilizzare per connettersi al database.  
   
-    -   Autenticazione di Windows: Selezionare questa opzione quando si desidera che il sistema operativo per eseguire l'autenticazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agli utenti. Questa opzione consente l'utilizzo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] delle caratteristiche di sicurezza di Windows, ad esempio la crittografia della password, per l'autenticazione degli utenti. Si consiglia di selezionare questa opzione.  
+    -   Autenticazione di Windows: selezionare questa opzione affinché gli utenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengano autenticati dal sistema operativo. Questa opzione consente l'utilizzo in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] delle caratteristiche di sicurezza di Windows, ad esempio la crittografia della password, per l'autenticazione degli utenti. Si consiglia di selezionare questa opzione.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Autenticazione: Selezionare questa opzione quando si desidera che gli utenti utilizzino un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] account di accesso è stato creato. Gli utenti dovranno fornire un nome e una password di accesso validi per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Autenticazione: selezionare questa opzione se si desidera che gli utenti usino [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] un account di accesso creato. Gli utenti dovranno fornire un nome e una password di accesso validi per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
         > [!CAUTION]  
         >  Se possibile, è consigliabile utilizzare l'autenticazione di Windows.  
@@ -82,6 +82,6 @@ ms.locfileid: "66109665"
 ## <a name="see-also"></a>Vedere anche  
  [Concessione di autorizzazioni in un server di report in modalità nativa](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Pagina Nuova origine dati &#40;Gestione report&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
+ [Pagina nuova origine dati &#40;Gestione report&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  
   
   
