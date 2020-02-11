@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942077"
 ---
-# <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
+# <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Configura opzioni di pianificazione automatica o personalizzate per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Configura le opzioni di pianificazione automatizzate o personalizzate [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]per.  
     
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,39 +49,39 @@ EXEC managed_backup.sp_backup_config_schedule
   
 ##  <a name="Arguments"></a> Argomenti  
  @database_name  
- Il nome del database per l'abilitazione del backup gestito in un database specifico. Se è NULL o *, il backup gestito verrà applicata a tutti i database nel server.  
+ Nome del database per l'abilitazione del backup gestito in un database specifico. Se è NULL o *, questo backup gestito si applica a tutti i database nel server.  
   
  @scheduling_option  
- Specificare 'System' per la pianificazione del backup e controllato dal sistema. Specificare 'Custom' per una pianificazione personalizzata definita per i parametri di altro.  
+ Specificare "System" per la pianificazione dei backup controllata dal sistema. Specificare ' Custom ' per una pianificazione personalizzata definita dagli altri parametri dell'.  
   
  @full_backup_freq_type  
- Il tipo di frequenza per l'operazione di backup gestito, che può essere impostata su 'Daily' o 'Weekly'.  
+ Tipo di frequenza per l'operazione di backup gestito, che può essere impostata su' Daily ' o ' Weekly '.  
   
  @days_of_week  
- I giorni della settimana per i backup quando @full_backup_freq_type è impostata su settimanale. Specificare i nomi di stringa completo, ad esempio "Monday".  È inoltre possibile specificare più di nome di un giorno, separati da una barra verticale. Ad esempio N'Monday | Mercoledì | Venerdì '.  
+ I giorni della settimana per i backup quando @full_backup_freq_type è impostato su settimanale. Specificare nomi di stringa completi, ad esempio ' Monday '.  È anche possibile specificare più di un nome di giorno, separati dalla pipe. Ad esempio N'Monday | Mercoledì | Venerdì.  
   
  @backup_begin_time  
- L'ora di inizio della finestra di backup. I backup non verranno più avviati all'esterno dell'intervallo di tempo, definito da una combinazione di @backup_begin_time e @backup_duration.  
+ Ora di inizio della finestra di backup. I backup non verranno avviati al di fuori dell'intervallo di tempo, definito da una combinazione di @backup_begin_time e @backup_duration.  
   
  @backup_duration  
- La durata del periodo di tempo di backup. Si noti che non c'è garanzia che i backup verranno completati durante l'intervallo di tempo definito da @backup_begin_time e @backup_duration. Operazioni di backup che vengono avviate nell'intervallo di tempo ma che superano la durata della finestra non verranno annullate.  
+ Durata dell'intervallo di tempo di backup. Si noti che non esiste alcuna garanzia che i backup vengano completati durante l'intervallo di tempo @backup_begin_time definito @backup_durationda e. Le operazioni di backup avviate in questo intervallo di tempo ma che superano la durata della finestra non verranno annullate.  
   
  @log_backup_freq  
- Questa impostazione determina la frequenza dei backup del log delle transazioni. Questi backup si verificano a intervalli regolari anziché in base alla pianificazione specificata per i backup del database. @log_backup_freq può essere in minuti o ore e 0 è valido, che non indica nessun backup del log. La disabilitazione dei backup del log solo sarebbe ideale per i database con un modello di recupero con registrazione minima.  
+ Ciò determina la frequenza dei backup del log delle transazioni. Questi backup avvengono a intervalli regolari anziché alla pianificazione specificata per i backup del database. @log_backup_freqpuò essere in minuti o ore e 0 è valido, che indica nessun backup del log. La disabilitazione dei backup del log è appropriata solo per i database con un modello di recupero con registrazione minima.  
   
 > [!NOTE]  
->  Se il modello di recupero viene modificato da simple a full, è necessario riconfigurare il log_backup_freq da 0 a un valore diverso da zero.  
+>  Se il modello di recupero viene modificato da semplice a completo, è necessario riconfigurare il log_backup_freq da 0 a un valore diverso da zero.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
- 0 (esito positivo) o 1 (esito negativo)  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **db_backupoperator** ruolo del database con **ALTER ANY CREDENTIAL** autorizzazioni, e **EXECUTE** autorizzazioni sul **sp_delete BackupHistory** stored procedure.  
+### <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo **db_backupoperator** database, con autorizzazioni **ALTER ANY CREDENTIAL** e autorizzazioni **Execute** per **sp_delete_backuphistory** stored procedure.  
   
 ## <a name="see-also"></a>Vedere anche  
- [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
+ [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   

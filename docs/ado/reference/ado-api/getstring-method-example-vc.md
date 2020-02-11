@@ -15,16 +15,16 @@ ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932441"
 ---
 # <a name="getstring-method-example-vc"></a>Esempio del metodo GetString (VC++)
-Questo esempio viene illustrato il [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) (metodo).  
+Questo esempio illustra il metodo [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) .  
   
- Si supponga si sta eseguendo il debug di un problema di accesso dati e si desidera un modo semplice e veloce di stampa del contenuto corrente di un piccolo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Si supponga di eseguire il debug di un problema di accesso ai dati e di disporre di un modo semplice e rapido per stampare il contenuto corrente di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)di piccole dimensioni.  
   
 ## <a name="example"></a>Esempio  
   
@@ -169,13 +169,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>Esempio di Input  
+## <a name="sample-input"></a>Input di esempio  
   
 ```  
 MD  
 ```  
   
-## <a name="sample-output"></a>Esempio di output  
+## <a name="sample-output"></a>Output di esempio  
   
 ```  
 Enter a state (CA, IN, KS, MD, MI, OR, TN, UT): State = 'md'  
