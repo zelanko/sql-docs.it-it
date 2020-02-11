@@ -18,10 +18,10 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919914"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Raccolte (sintassi ADO per Visual C++)
@@ -39,7 +39,7 @@ Refresh(void);
   
 -   [Metodo Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
--   [Metodo Delete (raccolta di parametri ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Metodo Delete (raccolta Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
 -   [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -70,7 +70,7 @@ Refresh(void);
   
 -   [Metodo Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
--   [Metodo Delete (raccolta di parametri ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Metodo Delete (raccolta Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
 -   [Metodo Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -141,7 +141,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
 -   [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Raccolta Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Raccolta Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Raccolta Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

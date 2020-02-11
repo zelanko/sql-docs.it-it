@@ -1,5 +1,5 @@
 ---
-title: ActionEnum | Microsoft Docs
+title: ActionEnum indicante | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fad40c6daed6fd86f93da3f658af6a21c33ca762
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928626"
 ---
 # <a name="actionenum"></a>ActionEnum
-Specifica il tipo di azione da eseguire quando [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) viene chiamato.  
+Specifica il tipo di azione da eseguire quando viene chiamata l' [autorizzazione](../../../ado/reference/adox-api/setpermissions-method-adox.md) .  
   
-|Costante|Value|Descrizione|  
+|Costante|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**adAccessDeny**|3|Il gruppo o utente verrà negata le autorizzazioni specificate.|  
+|**adAccessDeny**|3|Al gruppo o all'utente verranno negate le autorizzazioni specificate.|  
 |**adAccessGrant**|1|Il gruppo o l'utente avrà almeno le autorizzazioni richieste.|  
-|**adAccessRevoke**|4|Diritti di accesso esplicita di un utente o il gruppo verranno revocati.|  
-|**adAccessSet**|2|L'utente o gruppo disporrà esattamente le autorizzazioni richieste.|
+|**adAccessRevoke**|4|Eventuali diritti di accesso espliciti al gruppo o all'utente verranno revocati.|  
+|**adAccessSet**|2|Il gruppo o l'utente avrà esattamente le autorizzazioni richieste.|

@@ -16,27 +16,27 @@ ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921425"
 ---
 # <a name="actualsize-property-ado"></a>Proprietà ActualSize (ADO)
-Indica la lunghezza effettiva del valore del campo espressa in byte.  
+Indica la lunghezza effettiva del valore di un campo in byte.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Restituisce un **lungo** valore.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Restituisce un valore **Long** .  
   
-## <a name="remarks"></a>Note  
- Usare la **ActualSize** proprietà per restituire la lunghezza effettiva di un [campo](../../../ado/reference/ado-api/field-object.md) valore dell'oggetto. Per tutti i campi, il **ActualSize** proprietà è di sola lettura. Se ADO non è possibile determinare la lunghezza del **campo** valore dell'oggetto, il **ActualSize** restituisce proprietà **adUnknown**.  
+## <a name="remarks"></a>Osservazioni  
+ Utilizzare la proprietà **ActualSize** per restituire la lunghezza effettiva del valore di un oggetto [campo](../../../ado/reference/ado-api/field-object.md) . Per tutti i campi, la proprietà **ActualSize** è di sola lettura. Se ADO non è in grado di determinare la lunghezza del valore dell'oggetto **campo** , la proprietà **ActualSize** restituisce **adUnknown**.  
   
- Il **ActualSize** e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) le proprietà sono diverse, come illustrato nell'esempio seguente. Oggetto **campo** oggetto con un tipo dichiarato della **adVarChar** e una lunghezza massima di 50 caratteri restituisce un **DefinedSize** valore della proprietà di 50, ma il  **Esempio di ActualSize** valore restituito della proprietà è la lunghezza dei dati archiviati nel campo del record corrente. **I campi** con un **DefinedSize** maggiori di 255 byte vengono gestite come colonne a lunghezza variabile.  
+ Le proprietà **ActualSize** e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) sono diverse, come illustrato nell'esempio seguente. Un oggetto **campo** con un tipo dichiarato di **adVarChar** e una lunghezza massima di 50 caratteri restituisce un valore di proprietà **DefinedSize** pari a 50, ma il valore della proprietà **ActualSize** restituito è la lunghezza dei dati archiviati nel campo per il record corrente. I **campi** con un **DefinedSize** maggiore di 255 byte vengono trattati come colonne a lunghezza variabile.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di ActualSize e DefinedSize (esempio di proprietà (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [Esempio di ActualSize e l'esempio di proprietà DefinedSize (VC + +)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+ [Esempio di proprietà ActualSize e DefinedSize (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [Esempio di proprietà ActualSize e DefinedSize (VC + +)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [Proprietà DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)

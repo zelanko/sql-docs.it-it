@@ -1,5 +1,5 @@
 ---
-title: Informazioni sul file di personalizzazione. | Microsoft Docs
+title: Informazioni sul file di personalizzazione | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,19 +13,19 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921966"
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sul file di personalizzazione
-Ogni intestazione di sezione nel file di personalizzazione è costituito da parentesi quadre ( **[]** ) che contiene un tipo e un parametro. Per le stringhe letterali sono indicati i quattro tipi di sezioni **connettersi**, **sql**, **elencoutenti**, oppure **log**. Il parametro è la stringa letterale, il valore predefinito, un identificatore specificato dall'utente o nulla.  
+Ogni intestazione di sezione nel file di personalizzazione è costituita da parentesi quadre (**[]**) contenenti un tipo e un parametro. I quattro tipi di sezione sono indicati dalle stringhe letterali **Connect**, **SQL**, **Users**o **logs**. Il parametro è la stringa letterale, l'impostazione predefinita, un identificatore specificato dall'utente o Nothing.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Pertanto, ogni sezione è contrassegnata con una delle intestazioni delle sezioni seguenti:  
+ Ogni sezione è quindi contrassegnata con una delle seguenti intestazioni di sezione:  
   
 ```console
   
@@ -39,39 +39,39 @@ identifier
   
 ```  
   
- Intestazioni delle sezioni sono le parti seguenti.  
+ Le intestazioni della sezione hanno le parti seguenti.  
   
 |Parte|Descrizione|  
 |----------|-----------------|  
-|**connect**|Una stringa letterale che modifica la stringa di connessione.|  
-|**sql**|Una stringa letterale che modifica una stringa di comando.|  
-|**userlist**|Una stringa letterale che modifica i diritti di accesso di un utente specifico.|  
-|**logs**|Valore letterale stringa che specifica un file di log di registrazione errori operativi.|  
-|**default**|Una stringa letterale che viene usata se è specificato o è disponibile alcun identificatore.|  
-|*identifier*|Stringa che corrisponde a una stringa nel **connettersi** oppure **comando** stringa.<br /><br /> -Usare questa sezione se contiene l'intestazione della sezione **connettere** e la stringa dell'identificatore è presente nella stringa di connessione.<br />-Usare questa sezione se contiene l'intestazione della sezione **sql** e la stringa dell'identificatore è presente nella stringa di comando.<br />-Usare questa sezione se contiene l'intestazione della sezione **userlist** e la stringa dell'identificatore corrisponde a un **connettersi** identificatore di sezione.|  
+|**connettersi**|Stringa letterale che modifica una stringa di connessione.|  
+|**sql**|Stringa letterale che modifica una stringa di comando.|  
+|**UserList**|Stringa letterale che modifica i diritti di accesso di un utente specifico.|  
+|**log**|Stringa letterale che specifica un file di log che registra errori operativi.|  
+|**predefinita**|Stringa letterale utilizzata se non viene specificato o trovato alcun identificatore.|  
+|*identificatore*|Stringa che corrisponde a una stringa nella stringa di **connessione** o di **comando** .<br /><br /> -Usare questa sezione se l'intestazione della sezione contiene **Connect** e la stringa dell'identificatore si trova nella stringa di connessione.<br />-Usare questa sezione se l'intestazione della sezione contiene **SQL** e la stringa dell'identificatore si trova nella stringa di comando.<br />-Usare questa sezione se l'intestazione della sezione contiene **Users** e la stringa dell'identificatore corrisponde a un identificatore di sezione **Connect** .|  
   
- Il **DataFactory** chiama il gestore, passando i parametri di client. Il gestore di ricerca intere stringhe nei parametri del client che corrispondono a identificatori nelle intestazioni di sezione appropriata. Se viene trovata una corrispondenza, il contenuto della sezione viene applicato al parametro del client.  
+ **DataFactory** chiama il gestore, passando i parametri client. Il gestore cerca le stringhe intere nei parametri client che corrispondono agli identificatori nelle intestazioni di sezione appropriate. Se viene trovata una corrispondenza, il contenuto della sezione viene applicato al parametro client.  
   
- Una sezione viene usata nelle circostanze seguenti:  
+ Una sezione specifica viene utilizzata nelle circostanze seguenti:  
   
--   Oggetto **connettersi** sezione viene usata se la parte valore del client di connettersi, parola chiave della stringa "**origine dati =** _valore_", corrisponde a un **connettersi** Identificatore di sezione. 
+-   Una sezione **Connect** viene usata se la parte relativa al valore della parola chiave della stringa di connessione del client, "**Data Source =**_value_", corrisponde a un identificatore di sezione **Connect** . 
   
--   Un' **sql** sezione viene usata se la stringa di comando del client contiene una stringa che corrisponde a un **sql** identificatore di sezione.  
+-   Viene utilizzata una sezione **SQL** se la stringa di comando del client contiene una stringa che corrisponde a un identificatore di sezione **SQL** .  
   
--   Oggetto **connettersi** oppure **sql** sezione con un parametro predefinito viene usato se non vi è alcun identificatore corrispondente.  
+-   Se non esiste un identificatore corrispondente, viene utilizzata una sezione **Connect** o **SQL** con un parametro predefinito.  
   
--   Oggetto **elencoutenti** sezione viene usata se il **elencoutenti** sezione identificatore corrisponde a una **connettersi** identificatore di sezione. Se non esiste una corrispondenza, il contenuto del **elencoutenti** sezione vengono applicate per la connessione disciplinata dalle **connettersi** sezione.  
+-   Viene utilizzata una sezione **Users** se l'identificatore della sezione **dell'utente** corrisponde a un identificatore di sezione **Connect** . Se esiste una corrispondenza, il contenuto della sezione dell' **utente** viene applicato alla connessione governata dalla sezione **Connect** .  
   
--   Se la stringa in una stringa di connessione o un comando non corrisponde l'identificatore in qualsiasi **connettersi** oppure **sql** intestazione della sezione e non esiste alcun **connettersi** o **sql**  sezione intestazione con un parametro predefinito, la stringa del client viene usato senza alcuna modifica.  
+-   Se la stringa in una connessione o in una stringa di comando non corrisponde all'identificatore in nessuna intestazione della sezione **connessione** o **SQL** e non è presente alcuna intestazione di sezione **Connect** o **SQL** con un parametro predefinito, la stringa client viene utilizzata senza modifiche.  
   
--   Il **registri** sezione viene utilizzata ogni volta che il **DataFactory** è in esecuzione.  
+-   La sezione **logs** viene usata ogni volta che la **DataFactory** è in funzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sezione sulla connessione del File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Sezione Log File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Sezione SQL del File di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Sezione UserList del File personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Impostazioni Client richieste](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [Sezione connessione file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Sezione log file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [Sezione SQL del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Sezione utenti del file di personalizzazione](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Personalizzazione di datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [Impostazioni client obbligatorie](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Scrittura di un gestore personalizzato](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 

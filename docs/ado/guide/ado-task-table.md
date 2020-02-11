@@ -1,5 +1,5 @@
 ---
-title: Tabella delle attività ADO | Microsoft Docs
+title: Tabella attività ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,36 +14,36 @@ ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927020"
 ---
-# <a name="ado-programming-task-table"></a>Tabella delle attività programmatori ADO
-La tabella seguente elenca le attività di programmazione contenute nel *Guida per programmatori ADO* e vengono forniti i riferimenti per ogni attività. Questi riferimenti possono essere visualizzate le descrizioni testuali o gli esempi di codice in cui è possibile trovare informazioni sulla funzionalità ADO che esegue l'attività.
+# <a name="ado-programming-task-table"></a>Tabella delle attività di programmazione ADO
+Nella tabella seguente sono elencate le attività di programmazione contenute nella *Guida per programmatori ADO* e vengono forniti riferimenti per ogni attività. Questi riferimenti possono essere descrizioni testuali o esempi di codice in cui è possibile trovare informazioni sulla funzionalità ADO che esegue l'attività.
 
 |Attività ADO|Riferimenti|
 |--------------|----------------|
-|La connessione a un provider di dati|[Connettersi a origini dati](../../ado/guide/data/connecting-to-data-sources.md)|
-|L'esecuzione di comandi o la chiamata di stored procedure|[Preparare ed eseguire i comandi](../../ado/guide/data/preparing-and-executing-commands.md)|
-|Apertura di un **Recordset**|[Ricevere i risultati](../../ado/guide/data/receiving-results.md)|
-|Determinare le dimensioni di un **Recordset**|[Dimensioni del Recordset](../../ado/guide/data/current-record-and-size-of-recordset.md) e [i limiti dell'oggetto Recordset](../../ado/guide/data/boundaries-of-a-recordset.md)|
-|Lo spostamento in un record specifico|[Esplorare i dati](../../ado/guide/data/navigating-through-data.md)|
-|L'accesso ai valori di colonna|[Raccolta Fields](../../ado/guide/data/the-fields-collection.md)|
-|La ricerca di dati|[Uso dei recordset](../../ado/guide/data/working-with-recordsets.md)|
-|Modifica dei dati e la modifica dei valori|[Modifica di record esistenti](../../ado/guide/data/editing-existing-records.md)|
+|Connessione a un provider di dati|[Connettersi alle origini dati](../../ado/guide/data/connecting-to-data-sources.md)|
+|Esecuzione di comandi o chiamata di stored procedure|[Comandi di preparazione ed esecuzione](../../ado/guide/data/preparing-and-executing-commands.md)|
+|Apertura di un **Recordset**|[Ricevi risultati](../../ado/guide/data/receiving-results.md)|
+|Determinazione delle dimensioni di un **Recordset**|[Dimensioni del recordset](../../ado/guide/data/current-record-and-size-of-recordset.md) e [dei limiti del recordset](../../ado/guide/data/boundaries-of-a-recordset.md)|
+|Passaggio a un record specifico|[Esplorazione dei dati](../../ado/guide/data/navigating-through-data.md)|
+|Accesso ai valori delle colonne|[Raccolta Fields](../../ado/guide/data/the-fields-collection.md)|
+|Ricerca di dati|[Utilizzo dei recordset](../../ado/guide/data/working-with-recordsets.md)|
+|Modifica dei dati e modifica dei valori|[Modifica di record esistenti](../../ado/guide/data/editing-existing-records.md)|
 |Aggiunta di nuovi dati|[Aggiunta di record](../../ado/guide/data/adding-records.md)|
-|L'eliminazione o la rimozione dei dati|[Eliminazione di record mediante il metodo Delete](../../ado/guide/data/deleting-records-using-the-delete-method.md)|
-|La registrazione di modifiche all'origine dati|[Aggiornamento dei dati](../../ado/guide/data/updating-data.md)|
-|Inizio, eseguire il commit e rollback delle transazioni|[Elaborazione di transazioni](../../ado/guide/data/transaction-processing.md)|
-|Il salvataggio dei record in un file (XML o binario)|[Persistenza dei dati](../../ado/guide/data/persisting-data.md)|
+|Eliminazione o rimozione di dati|[Eliminazione di record con il metodo Delete](../../ado/guide/data/deleting-records-using-the-delete-method.md)|
+|Invio di modifiche all'origine dati|[Aggiornamento dei dati](../../ado/guide/data/updating-data.md)|
+|Inizio, commit ed esecuzione del rollback delle transazioni|[Elaborazione di transazioni](../../ado/guide/data/transaction-processing.md)|
+|Salvataggio di record in un file (XML o binario)|[Persistenza dei dati](../../ado/guide/data/persisting-data.md)|
 |Gestione degli errori|[Errori ADO](../../ado/guide/data/ado-errors.md)|
-|Gestione degli eventi e programmazione asincrona|[Riepilogo dei gestori eventi ADO](../../ado/guide/data/ado-event-handler-summary.md)|
-|Scelta di tipo e posizione del cursore|[Tipi di cursori](../../ado/guide/data/types-of-cursors-ado.md)|
-|Scelta dei tipi di blocco|[Tipi di blocchi](../../ado/guide/data/types-of-locks.md)|
-|Restituzione di record correlati in un **Recordset**|[Riepilogo di Data Shaping](../../ado/guide/data/data-shaping-overview.md)|
-|L'accesso ai dati semistrutturati|[Record e flussi](../../ado/guide/data/records-and-streams.md)|
-|Utilizzo di XML for query o comandi input|[Flussi di comandi](../../ado/guide/data/command-streams.md)|
+|Gestione di eventi, programmazione asincrona|[Riepilogo dei gestori eventi ADO](../../ado/guide/data/ado-event-handler-summary.md)|
+|Scelta del percorso e del tipo del cursore|[Tipi di cursori](../../ado/guide/data/types-of-cursors-ado.md)|
+|Scelta di tipi di blocco|[Tipi di blocchi](../../ado/guide/data/types-of-locks.md)|
+|Restituzione di record correlati in un **Recordset**|[Riepilogo data shaping](../../ado/guide/data/data-shaping-overview.md)|
+|Accesso a dati semi-strutturati|[Record e flussi](../../ado/guide/data/records-and-streams.md)|
+|Utilizzo di XML per le query o l'input del comando|[Flussi di comandi](../../ado/guide/data/command-streams.md)|
 |Restituzione di dati XML da un provider|[Recupero di set di risultati nei flussi](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
 |Pubblicazione in IIS|[Uso di ADO per Internet Publishing](../../ado/guide/data/using-ado-for-internet-publishing.md)|

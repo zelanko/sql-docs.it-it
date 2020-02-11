@@ -1,5 +1,5 @@
 ---
-title: Visualizzare cronologia progetti | Microsoft Docs
+title: Visualizza cronologia progetto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773497"
 ---
 # <a name="view-project-history"></a>Visualizzare cronologia progetti
@@ -32,11 +32,11 @@ ms.locfileid: "62773497"
   
 ### <a name="to-view-the-history-of-a-vss-project"></a>Per visualizzare la cronologia di un progetto di VSS  
   
-1.  In Esplora soluzioni selezionare il progetto desiderato.  
+1.  In Esplora soluzioni selezionare il progetto.  
   
-2.  Nel **File** dal menu **controllo del codice sorgente** e fare clic su **Visualizza cronologia**.  
+2.  Scegliere **controllo del codice sorgente** dal menu **file** e fare clic su **Visualizza cronologia**.  
   
-3.  Nel **cronologia delle** \<progetto > finestra di dialogo casella, eseguire una delle azioni seguenti:  
+3.  Nella finestra **di dialogo cronologia del** \<progetto> eseguire una delle azioni seguenti:  
   
     -   Visualizzare una copia del sistema di controllo del codice sorgente di un file selezionato.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62773497"
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare e recuperare le informazioni sulla versione](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Visualizzare lo stato di File](../../2014/database-engine/view-file-status.md)   
+ [Visualizza stato file](../../2014/database-engine/view-file-status.md)   
  [Recuperare i file](../../2014/database-engine/retrieve-files.md)   
  [Confronto di file](../../2014/database-engine/compare-files.md)  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823799"
 ---
 # <a name="manage-files-with-encoding"></a>Gestione di file con codifica
@@ -42,7 +42,7 @@ ms.locfileid: "62823799"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>Per salvare un file con una codifica o un tipo di terminazione riga diversi  
   
-1.  Nel **File** menu, fare clic su **salvare \<filename > come**.  
+1.  Nel menu **file** fare clic su **Salva \<nomefile> come**.  
   
 2.  Nella finestra di dialogo **Salva file con nome** espandere il pulsante **Salva** e quindi fare clic su **Salva con codifica**.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62823799"
 -   Non è possibile utilizzare in sicurezza file UTF8 con Visual SourceSafe perché durante l'archiviazione, l'estrazione, il controllo delle differenze e l'unione vengono apportate modifiche che causano problemi per gli editor di questo tipo di file.  
   
 ## <a name="see-also"></a>Vedere anche  
- [File della gestione di soluzioni e progetti](files-that-manage-solutions-and-projects.md)   
+ [File per la gestione di soluzioni e progetti](files-that-manage-solutions-and-projects.md)   
  [Associare estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

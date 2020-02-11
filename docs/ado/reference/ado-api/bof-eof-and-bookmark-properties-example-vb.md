@@ -1,5 +1,5 @@
 ---
-title: Proprietà BOF, EOF e segnalibro (esempio di proprietà (VB) | Microsoft Docs
+title: Esempio di proprietà BOF, EOF e Bookmark (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920432"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Esempio delle proprietà BOF, EOF e Bookmark (VB)
-Questo esempio Usa la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) delle proprietà per visualizzare un messaggio se un utente tenta di spostarsi oltre il primo o ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa il [segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md) proprietà per consentire all'utente di contrassegnare un record in un **Recordset** e tornarvi in un secondo momento.  
+In questo esempio vengono usate le proprietà [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) per visualizzare un messaggio se un utente tenta di spostarsi oltre il primo o l'ultimo record di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa la proprietà [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) per consentire all'utente di contrassegnare un record in un **Recordset** e tornare in un secondo momento.  
   
 ```  
 'BeginBOFVB  
@@ -129,13 +129,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- Questo esempio Usa la **segnalibro** e [filtro](../../../ado/reference/ado-api/filter-property.md) delle proprietà per creare una visualizzazione limitata della **Recordset**. Solo i record fa riferimento la matrice dei segnalibri sono accessibili.  
+ In questo esempio vengono utilizzate le proprietà **segnalibro** e [filtro](../../../ado/reference/ado-api/filter-property.md) per creare una visualizzazione limitata del **Recordset**. Sono accessibili solo i record a cui fa riferimento la matrice di segnalibri.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà BOF, EOF proprietà (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [Proprietà BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Proprietà Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

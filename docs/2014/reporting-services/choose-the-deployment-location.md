@@ -1,5 +1,5 @@
 ---
-title: Scelta percorso distribuzione | Microsoft Docs
+title: Scegliere il percorso di distribuzione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e902d40a75e3034bb22f27711de325914d255435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109833"
 ---
 # <a name="choose-the-deployment-location"></a>Scelta percorso distribuzione
@@ -24,7 +24,7 @@ ms.locfileid: "66109833"
   
 ## <a name="options"></a>Opzioni  
  **Server di report**  
- Digitare l'URL della directory virtuale del server di report, ad esempio, http://localhost/reportserver. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report. Per impostazione predefinita, il server di report viene installato con una directory virtuale denominata reportserver.  
+ Digitare l'URL della directory virtuale del server di report, ad esempio http://localhost/reportserver. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report. Per impostazione predefinita, il server di report viene installato con una directory virtuale denominata reportserver.  
   
  **Cartella di distribuzione**  
  Consente di digitare il nome della cartella di destinazione per la pubblicazione dei report contenuti nel progetto Server report. Il valore predefinito per la cartella è il nome del progetto. Se la cartella non esiste nel server di report, verrà creata durante la pubblicazione dei report.  

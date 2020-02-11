@@ -1,5 +1,5 @@
 ---
-title: Istruzioni SQL dinamiche | Microsoft Docs
+title: SQL dinamico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 131abdd4a401e336ccd78ca79fdf6666b1911fee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915452"
 ---
 # <a name="dynamic-sql"></a>SQL dinamica
-Sebbene SQL statica funziona bene in molte situazioni, c'è una classe di applicazioni in cui l'accesso ai dati non è possibile determinare in anticipo. Si supponga, ad esempio, che un foglio di calcolo consente agli utenti di immettere una query, che il foglio di calcolo invia al sistema DBMS per recuperare i dati. Il contenuto di questa query ovviamente non può essere noto al programmatore quando viene scritto il programma di foglio di calcolo.  
+Sebbene SQL statico funzioni correttamente in molte situazioni, esiste una classe di applicazioni in cui non è possibile determinare in anticipo l'accesso ai dati. Si supponga, ad esempio, che un foglio di calcolo consenta a un utente di immettere una query, che il foglio di calcolo invia quindi al sistema DBMS per recuperare i dati. Il contenuto di questa query, ovviamente, non può essere noto al programmatore quando viene scritto il programma di foglio di calcolo.  
   
- Per risolvere questo problema, il foglio di calcolo adotta un formato di embedded SQL denominato SQL dinamico. A differenza delle istruzioni SQL statiche, che sono impostate come hardcoded nel programma, le istruzioni SQL dinamiche possono essere compilate in fase di esecuzione e inserite in una variabile di stringa di host. Sono quindi inviati per il sistema DBMS per l'elaborazione. Poiché il sistema DBMS deve generare un piano di accesso in fase di esecuzione per le istruzioni SQL dinamiche, istruzioni SQL dinamiche è in genere più lento rispetto alle soluzioni SQL statico. Quando viene compilato un programma che contiene le istruzioni SQL dinamiche, le istruzioni SQL dinamiche non vengono rimossi dal programma, come in SQL statico. Al contrario, vengono sostituiti con una chiamata di funzione che passa l'istruzione per il sistema DBMS; istruzioni SQL statiche del programma stesso vengono gestite normalmente.  
+ Per risolvere questo problema, il foglio di calcolo utilizza un modulo di SQL incorporato denominato SQL dinamico. Diversamente dalle istruzioni SQL statiche, che sono hardcoded nel programma, le istruzioni SQL dinamiche possono essere compilate in fase di esecuzione e inserite in una variabile host stringa. Vengono quindi inviati al sistema DBMS per l'elaborazione. Poiché il sistema DBMS deve generare un piano di accesso in fase di esecuzione per le istruzioni SQL dinamiche, SQL dinamico è in genere più lento rispetto a SQL statico. Quando viene compilato un programma contenente istruzioni SQL dinamiche, le istruzioni SQL dinamiche non vengono rimosse dal programma, come in SQL statico. Vengono invece sostituiti da una chiamata di funzione che passa l'istruzione al sistema DBMS. le istruzioni SQL statiche nello stesso programma vengono gestite normalmente.  
   
- Il modo più semplice per eseguire un'istruzione SQL dinamica è con un'istruzione EXECUTE IMMEDIATE. Questa istruzione passa l'istruzione SQL per il sistema DBMS per la compilazione e l'esecuzione.  
+ Il modo più semplice per eseguire un'istruzione SQL dinamica è con un'istruzione EXECUTE IMMEDIATE. Questa istruzione passa l'istruzione SQL al sistema DBMS per la compilazione e l'esecuzione.  
   
- Uno svantaggio dell'istruzione EXECUTE immediata è che il sistema DBMS deve passare attraverso ognuno dei cinque passaggi di un'istruzione SQL ogni volta che viene eseguita l'istruzione di elaborazione. L'overhead necessario per questo processo può essere significativo se numerose istruzioni vengono eseguite in modo dinamico ed è dispendioso se tali istruzioni sono simili. Per risolvere questa situazione, SQL dinamico offre una forma ottimizzata di esecuzione denominata esecuzione preparata, che usa la procedura seguente:  
+ Uno svantaggio dell'istruzione EXECUTE IMMEDIATE è che il sistema DBMS deve superare ognuno dei cinque passaggi dell'elaborazione di un'istruzione SQL ogni volta che viene eseguita l'istruzione. Il sovraccarico causato da questo processo può essere significativo se molte istruzioni vengono eseguite in modo dinamico ed è inutile se tali istruzioni sono simili. Per risolvere questo problema, SQL dinamico offre una forma ottimizzata di esecuzione denominata esecuzione preparata, che usa i passaggi seguenti:  
   
-1.  Il programma genera un'istruzione SQL in un buffer, come avviene per l'istruzione EXECUTE IMMEDIATE. Invece di variabili host, un punto interrogativo (?) può essere sostituito per una costante in un punto qualsiasi nel testo dell'istruzione per indicare che un valore per la costante verrà fornito in un secondo momento. Il punto interrogativo viene chiamato come un marcatore di parametro.  
+1.  Il programma crea un'istruzione SQL in un buffer, così come avviene per l'istruzione EXECUTE IMMEDIATE. Anziché le variabili host, un punto interrogativo (?) può essere sostituito da una costante in un punto qualsiasi del testo dell'istruzione per indicare che un valore per la costante verrà fornito in un secondo momento. Il punto interrogativo viene chiamato indicatore di parametro.  
   
-2.  Il programma passa l'istruzione SQL per il sistema DBMS con un'istruzione PREPARE, le richieste che il sistema DBMS analizza, eseguire la convalida e ottimizza l'istruzione e genera un'esecuzione piano. Il programma utilizza quindi un'istruzione EXECUTE (non un'istruzione EXECUTE IMMEDIATE) per eseguire l'istruzione PREPARE in un secondo momento. Passa i valori dei parametri per l'istruzione tramite una struttura di dati speciale denominata di SQL Data Area o SQLDA.  
+2.  Il programma passa l'istruzione SQL al sistema DBMS con un'istruzione Prep, che richiede che il sistema DBMS analizzi, convalidi e ottimizzi l'istruzione e generi un piano di esecuzione. Il programma usa quindi un'istruzione EXECUTE (non un'istruzione EXECUTE IMMEDIATE) per eseguire l'istruzione prepare in un secondo momento. Passa i valori dei parametri per l'istruzione tramite una struttura di dati speciale denominata area dati SQL o SQLDA.  
   
-3.  Il programma è possibile usare l'istruzione EXECUTE più volte, specificando i valori dei parametri diversi ogni volta che viene eseguita l'istruzione dinamica.  
+3.  Il programma può utilizzare ripetutamente l'istruzione EXECUTE, specificando valori di parametro diversi ogni volta che viene eseguita l'istruzione dinamica.  
   
- Esecuzione preparata è ancora non lo stesso come istruzione SQL statica. In SQL statico, i primi quattro passaggi dell'elaborazione di un'istruzione SQL è avvengono in fase di compilazione. In esecuzione preparata, questi passaggi vengono comunque eseguiti in fase di esecuzione, ma vengono eseguiti solo una volta. esecuzione del piano di viene eseguita solo quando viene chiamato EXECUTE. Ciò consente di eliminare alcuni degli svantaggi delle prestazioni inerenti nell'architettura di istruzioni SQL dinamiche. La figura seguente mostra le differenze tra SQL statico, istruzioni SQL dinamiche con esecuzione immediata e istruzioni SQL dinamiche con l'esecuzione preparata.
+ L'esecuzione preparata non è ancora identica a SQL statico. In SQL statico, i primi quattro passaggi per l'elaborazione di un'istruzione SQL si verificano in fase di compilazione. Nell'esecuzione preparata, questi passaggi vengono eseguiti in fase di esecuzione, ma vengono eseguiti solo una volta. l'esecuzione del piano si verifica solo quando viene chiamato EXECUTE. Questo consente di eliminare alcuni svantaggi delle prestazioni inerenti all'architettura di SQL dinamico. Nella figura seguente vengono illustrate le differenze tra SQL statico, SQL dinamico con esecuzione immediata e SQL dinamico con esecuzione preparata.

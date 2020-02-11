@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109990"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Modalità alternative di acquisizione di una connessione dati (Generatore report)
@@ -37,7 +37,7 @@ ms.locfileid: "66109990"
   
 3.  Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**. Verrà visualizzato il messaggio "Creazione connessione completata". [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Scegliere **Avanti**.  
+4.  Fare clic su **Avanti**.  
   
      Se necessario, immettere le credenziali. Per salvare in locale le credenziali, selezionare **Salva password con la connessione**. Se non si seleziona questa opzione, le credenziali verranno richieste ogni volta che si esegue il report.  
   
@@ -65,14 +65,14 @@ ms.locfileid: "66109990"
   
      Verrà visualizzato il messaggio "Creazione connessione completata". [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Se viene richiesto un nome utente e una password, immettere le credenziali. Per salvare in locale le credenziali, selezionare **Salva password con la connessione**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Esercitazioni su &#40;Generatore Report&#41;](report-builder-tutorials.md)  
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)  
   
   

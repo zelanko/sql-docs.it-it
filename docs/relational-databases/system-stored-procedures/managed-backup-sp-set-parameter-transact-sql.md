@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_set_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942039"
 ---
-# <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact-SQL)
+# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Imposta il valore del parametro di sistema dell'amministrazione intelligente specificato.  
@@ -35,7 +35,7 @@ ms.locfileid: "67942039"
  I parametri disponibili sono correlati al [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Questi parametri vengono utilizzati per impostare le notifiche tramite posta elettronica, abilitare eventi estesi specifici e abilitare i criteri di gestione basata su criteri impostati dall'utente. È necessario specificare il nome del parametro e le coppie di valori del parametro.  
 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,31 +47,31 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> Argomenti  
  @parameter_name  
- Nome del parametro per cui si desidera impostare il valore. @parameter_name è nvarchar (128). I nomi dei parametri disponibili sono **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, e **StorageOperationDebugXevent**.  
+ Nome del parametro per cui si desidera impostare il valore. @parameter_nameè di tipo NVARCHAR (128). I nomi dei parametri disponibili sono **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**e **StorageOperationDebugXevent**.  
   
  @parameter_value  
- Valore del parametro che si desidera impostare. @parameter il valore è nvarchar (128).  Di seguito vengono indicati il nome del parametro e le coppie di valori consentiti:  
+ Valore del parametro che si desidera impostare. @parametervalue è di tipo NVARCHAR (128).  Di seguito vengono indicati il nome del parametro e le coppie di valori consentiti:  
   
--   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = "email"  
+-   @parameter_name=' SSMBackup2WANotificationEmailIds ': @parameter_value =' email '  
   
--   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy' : @parameter_value  = { 'true' | 'false' }  
+-   @parameter_name=' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value = {' true ' | ' false '}  
   
--   @parameter_name = 'SSMBackup2WADebugXevent': @parameter_value  = { 'true' | 'false' }  
+-   @parameter_name=' SSMBackup2WADebugXevent ': @parameter_value = {' true ' | ' false '}  
   
--   @parameter_name = 'FileRetentionDebugXevent' : @parameter_value  = { 'true' | 'false' }  
+-   @parameter_name=' FileRetentionDebugXevent ': @parameter_value = {' true ' | ' false '}  
   
--   @parameter_name = 'StorageOperationDebugXevent' = { 'true' | 'false' }  
+-   @parameter_name=' StorageOperationDebugXevent ' = {' true ' | ' false '}  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
- 0 (esito positivo) o 1 (esito negativo)  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Sezione facoltativa in cui vengono descritte le procedure consigliate che l'utente deve conoscere quando viene eseguita l'istruzione o la routine.  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
- È necessario **EXECUTE** autorizzazioni sul **managed_backup.sp_set_parameter** stored procedure.  
+### <a name="permissions"></a>Autorizzazioni  
+ Sono necessarie le autorizzazioni **Execute** per **managed_backup. sp_set_parameter** stored procedure.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti vengono abilitati eventi estesi operativi e di debug.  

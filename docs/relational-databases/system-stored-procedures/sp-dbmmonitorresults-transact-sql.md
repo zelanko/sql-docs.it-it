@@ -19,18 +19,18 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899167"
 ---
-# <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
+# <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce le righe di stato per un database monitorato dalla tabella di stato in cui è archiviata la cronologia di Monitoraggio mirroring del database e consente di scegliere in anticipo se lo stato della procedura verrà aggiornato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,11 +60,11 @@ sp_dbmmonitorresults database_name
   
  5 = Righe relative agli ultimi due giorni  
   
- 6 = righe relative alle ultime 100  
+ 6 = ultime 100 righe  
   
- 7 = righe relative alle ultime 500  
+ 7 = ultime 500 righe  
   
- 8 = righe relative alle ultime 1000  
+ 8 = ultime 1.000 righe  
   
  9 = Ultimo milione di righe  
   
@@ -73,10 +73,10 @@ sp_dbmmonitorresults database_name
   
  Se il valore è 0, non aggiorna lo stato del database. I risultati vengono calcolati utilizzando solo le ultime due righe, la cui data dipende dal momento in cui è stato eseguito l'aggiornamento della tabella di stato.  
   
- 1 = aggiorna lo stato per il database chiamando **sp_dbmmonitorupdate** prima di calcolare i risultati. Tuttavia, se la tabella dello stato è stata aggiornata entro i 15 secondi precedenti, o l'utente non è un membro del **sysadmin** ruolo predefinito del server **sp_dbmmonitorresults** viene eseguita senza aggiornare lo stato.  
+ 1 = aggiorna lo stato del database chiamando **sp_dbmmonitorupdate** prima di calcolare i risultati. Tuttavia, se la tabella dello stato è stata aggiornata entro i 15 secondi precedenti o se l'utente non è un membro del ruolo predefinito del server **sysadmin** , **sp_dbmmonitorresults** viene eseguito senza aggiornare lo stato.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- Nessuna  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ nessuno  
   
 ## <a name="result-sets"></a>Set di risultati  
  Restituisce il numero richiesto di righe dello stato della cronologia per il database specificato. Ogni riga contiene le informazioni seguenti:  
@@ -84,8 +84,8 @@ sp_dbmmonitorresults database_name
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome di un database con mirroring.|  
-|**role**|**int**|Ruolo di mirroring corrente dell'istanza del server:<br /><br /> 1 = Database principale<br /><br /> 2 = Database mirror|  
-|**mirroring_state**|**int**|Stato del database:<br /><br /> 0 = degli elementi sospesi<br /><br /> 1 = disconnesso<br /><br /> 2 = Sincronizzazione in corso<br /><br /> 3 = Failover in sospeso<br /><br /> 4 = Sincronizzato|  
+|**ruolo**|**int**|Ruolo di mirroring corrente dell'istanza del server:<br /><br /> 1 = Database principale<br /><br /> 2 = Database mirror|  
+|**mirroring_state**|**int**|Stato del database:<br /><br /> 0 = sospeso<br /><br /> 1 = disconnesso<br /><br /> 2 = Sincronizzazione in corso<br /><br /> 3 = Failover in sospeso<br /><br /> 4 = Sincronizzato|  
 |**witness_status**|**int**|Stato di connessione del server di controllo del mirroring nella sessione di mirroring del database. I possibili valori sono i seguenti:<br /><br /> 0 = Sconosciuto<br /><br /> 1 = Connesso<br /><br /> 2 = Disconnesso|  
 |**log_generation_rate**|**int**|Quantità di log generati a partire dall'ultimo aggiornamento dello stato di mirroring del database, espressa in kilobyte al secondo.|  
 |**unsent_log**|**int**|Dimensioni del log non inviato nella coda di invio nel database principale, espressa in kilobyte.|  
@@ -99,14 +99,14 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Ora approssimativa dell'orologio di sistema del database principale rispetto al quale è aggiornato il database mirror. Questo valore è significativo solo nell'istanza del server principale.|  
 |**local_time**|**datetime**|Ora dell'orologio di sistema nell'istanza locale del server al momento dell'aggiornamento della riga.|  
   
-## <a name="remarks"></a>Note  
- **sp_dbmmonitorresults** possono essere eseguite solo nel contesto del **msdb** database.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_dbmmonitorresults** possono essere eseguite solo nel contesto del database **msdb** .  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **sysadmin** ruolo predefinito del server o nel **dbm_monitor** ruolo predefinito del database nel **msdb** database. Il **dbm_monitor** ruolo consente ai membri di visualizzare lo stato di mirroring del database, ma non eseguirne l'aggiornamento, ma non visualizzare o configurare gli eventi di mirroring del database.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **dbm_monitor** nel database **msdb** . Il ruolo **dbm_monitor** consente ai membri di visualizzare lo stato di mirroring del database, ma non di aggiornarlo, ma non di visualizzare né configurare gli eventi di mirroring del database.  
   
 > [!NOTE]  
->  La prima volta che **sp_dbmmonitorupdate** viene eseguita, viene creato il **dbm_monitor** ruolo predefinito del database nel **msdb** database. I membri del **sysadmin** ruolo predefinito del server può aggiungere qualsiasi utente per il **dbm_monitor** ruolo predefinito del database.  
+>  La prima volta che si esegue **sp_dbmmonitorupdate** , viene creato il ruolo predefinito del database **dbm_monitor** nel database **msdb** . I membri del ruolo predefinito del server **sysadmin** possono aggiungere qualsiasi utente al ruolo predefinito del database **dbm_monitor** .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituite le righe registrate nelle due ore precedenti senza aggiornare lo stato del database.  
@@ -118,10 +118,10 @@ EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio del mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitoraddmonitoring &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

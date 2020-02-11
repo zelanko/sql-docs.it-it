@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fd70d208960af1f121795bfdf8a657ceaf59f21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775294"
 ---
 # <a name="install-sql-server-replication"></a>Installare la replica di SQL Server
@@ -39,11 +39,11 @@ ms.locfileid: "62775294"
 ## <a name="installing-replication-from-the-command-prompt"></a>Installazione della replica dal prompt dei comandi  
  **Per installare la replica durante l'installazione di una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
--   Visualizzare [installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
+-   Vedere [Install SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014](install-sql-server.md)   
- [Installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md)   
+ [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)   
  [Funzionalità supportate dalle edizioni di SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
   

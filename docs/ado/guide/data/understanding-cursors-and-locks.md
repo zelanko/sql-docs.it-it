@@ -1,5 +1,5 @@
 ---
-title: Informazioni su cursori e blocchi | Microsoft Docs
+title: Informazioni sui cursori e sui blocchi | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923798"
 ---
 # <a name="understanding-cursors-and-locks"></a>Informazioni su cursori e blocchi
-È importante comprendere il funzionamento dei cursori in modo che è possibile selezionare il tipo di cursore migliore e più efficiente per i requisiti di accesso ai dati di un'applicazione. Una configurazione di cursore-ottimali può risultare quasi lente operazioni di accesso ai dati.  
+È importante comprendere il funzionamento dei cursori in modo da poter selezionare il tipo di cursore migliore e più efficiente per i requisiti di accesso ai dati di un'applicazione. Una configurazione di cursore inferiore a quella ottimale può rendere le operazioni di accesso ai dati molto lente.  
   
- Molte funzionalità di ADO **Recordset** oggetto dipendono dal tipo e posizione del cursore, nonché il tipo di blocco.  
+ Molte funzionalità dell'oggetto **Recordset** ADO sono determinate dal tipo e dalla posizione del cursore, nonché dal tipo di blocco.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

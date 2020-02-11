@@ -1,5 +1,5 @@
 ---
-title: Provider Microsoft OLE DB per Microsoft Indexing Service | Microsoft Docs
+title: Provider Microsoft OLE DB per il servizio di indicizzazione Microsoft | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,56 +15,56 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926668"
 ---
-# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Provider Microsoft OLE DB per Microsoft Panoramica del servizio di indicizzazione
-Il Provider Microsoft OLE DB per Microsoft Indexing Service fornisce l'accesso di sola lettura a livello di codice per file system e i dati Web indicizzati dal servizio di indicizzazione Microsoft. Le applicazioni ADO possono eseguire query SQL per recuperare le informazioni sulle proprietà di contenuto e file.
+# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Panoramica di Microsoft OLE DB provider per il servizio di indicizzazione Microsoft
+Il provider Microsoft OLE DB per Microsoft Indexing Service fornisce l'accesso di sola lettura a livello di codice ai file system e ai dati web indicizzati dal servizio Microsoft Indexing. Le applicazioni ADO possono eseguire query SQL per recuperare il contenuto e le informazioni sulle proprietà del file.
 
- Il provider è a thread libero e abilitata per UNICODE.
+ Il provider è a thread libero e il formato UNICODE è abilitato.
 
 ## <a name="connection-string-parameters"></a>Parametri della stringa di connessione
- Per connettersi a questo provider, impostare il **Provider =** argomento per il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà:
+ Per connettersi a questo provider, impostare l'argomento **provider =** sulla proprietà [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) su:
 
 ```vb
 MSIDXS
 ```
 
- Leggere il [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà restituirà anche questa stringa.
+ La lettura della proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) restituirà anche questa stringa.
 
 ## <a name="typical-connection-string"></a>Stringa di connessione tipica
- Una stringa di connessione tipica per questo provider è:
+ Una stringa di connessione tipica per questo provider è la seguente:
 
 ```vb
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 
- La stringa è costituita da queste parole chiave:
+ La stringa è costituita dalle parole chiave seguenti:
 
 |Parola chiave|Descrizione|
 |-------------|-----------------|
-|**Provider**|Specifica il Provider OLE DB per Microsoft Indexing Service. In genere questo è l'unica parola chiave specificata nella stringa di connessione.|
-|**Data Source**|Specifica il nome del catalogo del servizio di indicizzazione. Se questa parola chiave non viene specificata, viene utilizzato il catalogo di sistema predefinito.|
-|**Locale Identifier**|Specifica un numero a 32 bit univoco (ad esempio, 1033) che specifica le preferenze relative alla lingua dell'utente. Se questa parola chiave non viene specificata, viene usato l'identificatore delle impostazioni locali del sistema predefinito.|
+|**Provider**|Specifica il provider di OLE DB per il servizio di indicizzazione Microsoft. Si tratta in genere dell'unica parola chiave specificata nella stringa di connessione.|
+|**Origine dati**|Specifica il nome del catalogo del servizio di indicizzazione. Se questa parola chiave non è specificata, viene utilizzato il catalogo di sistema predefinito.|
+|**Identificatore delle impostazioni locali**|Specifica un numero univoco a 32 bit (ad esempio, 1033) che specifica le preferenze relative alla lingua dell'utente. Se questa parola chiave non è specificata, viene utilizzato l'identificatore delle impostazioni locali di sistema predefinito.|
 
 ## <a name="command-text"></a>Testo comando
- La sintassi di query SQL del servizio di indicizzazione è costituito da estensioni per il SQL-92 **selezionate** istruzione e il relativo **FROM** e **dove** clausole. I risultati della query vengono restituiti tramite set di righe OLE DB, che possono essere utilizzate da ADO e modificati come [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti.
+ La sintassi di query SQL del servizio di indicizzazione è costituita dalle estensioni all'istruzione SQL-92 **Select** e dalle clausole **from** e **where** . I risultati della query vengono restituiti tramite OLE DB set di righe, che possono essere utilizzati da ADO e modificati come oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
 
- È possibile cercare parole o frasi esatte o usare caratteri jolly per eseguire la ricerca di radici di parole o modelli. Logica di ricerca può basarsi su prossimità in altre parole, termini ponderati o decisioni booleane. È anche possibile cercare "testo libero", che consente di trovare corrispondenze basate su significato, anziché termini esatti.
+ È possibile cercare parole o frasi esatte oppure usare caratteri jolly per cercare modelli o steli di parole. La logica di ricerca può essere basata su decisioni booleane, termini ponderati o prossimità ad altre parole. È anche possibile eseguire la ricerca per "testo libero", che trova le corrispondenze in base al significato, anziché a parole esatte.
 
- Il sottolinguaggio del comando specifico è completamente documentato in linguaggi di Query per la documentazione del servizio di indicizzazione.
+ Il dialetto del comando specifico è completamente documentato nella documentazione relativa ai linguaggi di query per l'indicizzazione del servizio.
 
- Il provider non accetta chiamate di stored procedure o i nomi di tabella semplice (ad esempio, il [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) proprietà sarà sempre **adCmdText**).
+ Il provider non accetta stored procedure chiamate o nomi di tabella semplici (ad esempio, la proprietà [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) sarà sempre **adCmdText**).
 
-## <a name="recordset-behavior"></a>Comportamento dell'oggetto Recordset
- Le tabelle seguenti elencano le funzionalità disponibili con un **Recordset** aprire l'oggetto con questo provider. Solo il tipo di cursore statico (**adOpenStatic**) è disponibile.
+## <a name="recordset-behavior"></a>Comportamento del recordset
+ Nelle tabelle seguenti sono elencate le funzionalità disponibili con un oggetto **Recordset** aperto con questo provider. È disponibile solo il tipo di cursore statico (**adOpenStatic**).
 
- Per informazioni più dettagliate sui **Recordset** comportamento per la configurazione del provider, eseguire il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo ed enumerare il [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta del **Recordset** per determinare se sono presenti proprietà dinamiche specifiche del provider.
+ Per informazioni più dettagliate sul comportamento del **Recordset** per la configurazione del provider, eseguire il metodo [Supports](../../../ado/reference/ado-api/supports-method.md) ed enumerare la raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) del **Recordset** per determinare se sono presenti proprietà dinamiche specifiche del provider.
 
- **Disponibilità di proprietà Recordset ADO standard:**
+ **Disponibilità delle proprietà del recordset ADO standard:**
 
 |Proprietà|Disponibilità|
 |--------------|------------------|
@@ -74,13 +74,13 @@ MSIDXS
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|
 |[Segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)*|lettura/scrittura|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|sempre **adUseServer come**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|sempre **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|
-|[MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponibile|
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponibile|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Sola lettura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|
@@ -89,31 +89,31 @@ MSIDXS
 |[Stato](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|
 |[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|
 
- \*I segnalibri è necessario attivare il provider per questa funzionalità esiste nel **Recordset**.
+ \*I segnalibri devono essere abilitati nel provider affinché questa funzionalità sia presente nel **Recordset**.
 
- **Disponibilità di metodi di Recordset ADO standard:**
+ **Disponibilità dei metodi Recordset ADO standard:**
 
 |Metodo|Disponibile?|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|
-|[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Yes|
+|[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Sì|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|
-|[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Yes|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Sì|
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sì|
 |[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|
-|[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Yes|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Yes|
-|[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|
-|[Rieseguire una query](../../../ado/reference/ado-api/requery-method.md)|Yes|
-|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Yes|
-|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|
-|[Update](../../../ado/reference/ado-api/update-method.md)|No|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|
+|[Spostamento](../../../ado/reference/ado-api/move-method-ado.md)|Sì|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sì|
+|[Apri](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|
+|[Risincronizza](../../../ado/reference/ado-api/resync-method.md)|Sì|
+|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|
+|[Aggiornamento](../../../ado/reference/ado-api/update-method.md)|No|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
 
- Per dettagli specifici sull'implementazione e informazioni funzionale su Provider Microsoft OLE DB per Microsoft Indexing Service, consultare il [Guida per programmatori OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), oppure visitare la pagina servizi Web di Windows NT Server Web sito.
+ Per informazioni dettagliate sull'implementazione e informazioni funzionali sul provider Microsoft OLE DB per Microsoft Indexing Service, consultare la [Guida per programmatori OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)oppure visitare la pagina dei servizi Web del sito Web Windows NT Server.
 
 ## <a name="see-also"></a>Vedere anche
- [Proprietà CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [proprietà ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [proprietà Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [ Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [supporta (metodo)](../../../ado/reference/ado-api/supports-method.md)
+ Proprietà [CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [CONNECTIONSTRING Property (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Properties collection](../../../ado/reference/ado-api/properties-collection-ado.md) (ADO) [provider Property](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO) supporta il [Metodo](../../../ado/reference/ado-api/supports-method.md)
