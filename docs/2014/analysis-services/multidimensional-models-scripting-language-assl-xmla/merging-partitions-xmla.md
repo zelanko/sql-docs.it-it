@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702038"
 ---
 # <a name="merging-partitions-xmla"></a>Unione di partizioni (XMLA)
-  Se le partizioni hanno la stessa progettazione delle aggregazioni e struttura, è possibile unire la partizione tramite il [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) comando XML for Analysis (XMLA). L'unione è un'azione particolarmente importante da eseguire quando si gestiscono partizioni, soprattutto per le partizioni che contengono dati cronologici partizionati in base alla data.  
+  Se le partizioni hanno la stessa struttura e progettazione delle aggregazioni, è possibile unire la partizione usando il comando [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) in XML for Analysis (XMLA). L'unione è un'azione particolarmente importante da eseguire quando si gestiscono partizioni, soprattutto per le partizioni che contengono dati cronologici partizionati in base alla data.  
   
  Un cubo finanziario può utilizzare ad esempio due partizioni:  
   
@@ -34,19 +34,19 @@ ms.locfileid: "62702038"
  Entrambe le partizioni utilizzano impostazioni di archiviazione diverse, ma la stessa progettazione delle aggregazioni. Anziché elaborare il cubo attraverso anni di dati cronologici al termine dell'anno, è possibile utilizzare il comando `MergePartitions` per unire la partizione relativa all'anno corrente con quella relativa agli anni precedenti. In questo modo è possibile mantenere i dati aggregati senza che sia necessaria un'elaborazione completa del cubo che potrebbe richiedere molto tempo.  
   
 ## <a name="specifying-partitions-to-merge"></a>Specifica di partizioni da unire  
- Quando il `MergePartitions` comando viene eseguito, i dati aggregati archiviati nelle partizioni di origine specificate nella [origine](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) viene aggiunta alla partizione di destinazione specificata nella proprietà il [destinazione](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) proprietà.  
+ Quando si `MergePartitions` esegue il comando, i dati di aggregazione archiviati nelle partizioni di origine specificate nella proprietà di [origine](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) vengono aggiunti alla partizione di destinazione specificata nella proprietà di [destinazione](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) .  
   
 > [!NOTE]  
 >  La proprietà `Source` può contenere più di un riferimento all'oggetto partizione, a differenza della proprietà `Target`.  
   
- Per essere unite, le partizioni specificate nelle proprietà `Source` e `Target` devono essere contenute dallo stesso gruppo di misure e devono utilizzare la stessa progettazione delle aggregazioni. In caso contrario si verifica un errore.  
+ Per essere unite, le partizioni specificate nelle proprietà `Source` e `Target` devono essere contenute dallo stesso gruppo di misure e devono utilizzare la stessa progettazione delle aggregazioni. In caso contrario, si verifica un errore.  
   
  Le partizioni specificate in `Source` vengono eliminate dopo che il comando `MergePartitions` è stato completato correttamente.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="description"></a>Descrizione  
- L'esempio seguente unisce tutte le partizioni del **Customer Counts** gruppo di misure del **Adventure Works** cubo la **Adventure Works DW** esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di database nel **Customers_2004** partizione.  
+ Nell'esempio seguente vengono unite tutte le partizioni del gruppo di misure **Customer Counts** del cubo **Adventure Works** nel database [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di esempio **Adventure Works DW** nella partizione **Customers_2004** .  
   
 ### <a name="code"></a>Codice  
   

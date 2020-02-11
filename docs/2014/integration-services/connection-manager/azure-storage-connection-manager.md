@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833559"
 ---
 # <a name="azure-storage-connection-manager"></a>Gestione connessione dell'archiviazione di Azure
-  La gestione connessione di archiviazione di Azure consente a un pacchetto SSIS per connettersi a un account di archiviazione di Azure usando i valori specificati per la proprietà: Nome dell'account di archiviazione e Chiave dell'account.  
+  Il componente Gestione connessione dell'archiviazione di Azure consente di connettere un pacchetto SSIS a un account di archiviazione di Azure usando i valori specificati per le proprietà: Nome dell'account di archiviazione e Chiave dell'account.  
   
 1.  Nella finestra di dialogo **Aggiungi gestione connessione SSIS** selezionare **Sottoscrizione di Azure**, quindi fare clic su **Aggiungi**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Controllo file In uso | Microsoft Docs
+title: Controllare i file in uso | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096524"
 ---
 # <a name="check-files-in-use"></a>Controllo file in uso
@@ -26,7 +26,7 @@ ms.locfileid: "66096524"
   
  Per eliminare la necessità di riavviare il computer dopo l'installazione, verrà visualizzato un elenco dei processi che bloccano i file necessari. Arrestare o terminare i processi e le applicazioni elencati. Fare clic su **Aggiorna controllo** per ripetere il controllo. Per arrestare un controllo in esecuzione, fare clic su **Arresta controllo** . Se non vengono rilevati file bloccati, la tabella risulta vuota. Dopo la chiusura o l'arresto di tutti i processi bloccati, fare clic su **Avanti** per continuare.  
   
- Le informazioni verranno registrate nei file di log. Per altre informazioni su come visualizzare i file di log, vedere [visualizzare e leggere i file Log di SQL Server Setup](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) e [come: Leggere un File di Log SQL Server Setup](https://go.microsoft.com/fwlink/?LinkID=134490).  
+ Le informazioni verranno registrate nei file di log. Per altre informazioni sulla visualizzazione dei file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) e [Procedura: Lettura di un file di log del programma di installazione di SQL Server](https://go.microsoft.com/fwlink/?LinkID=134490).  
   
  Nel file di log sono incluse le seguenti informazioni:  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66096524"
   
 -   Account con il quale viene eseguito il processo  
   
--   ID processo  
+-   ID di processo  
   
 -   Nome del file bloccato  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66096524"
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|Process|Indica il nome completo del processo che utilizza i file da aggiornare.|  
+|Processo|Indica il nome completo del processo che utilizza i file da aggiornare.|  
 |Type|Indica il tipo di processo.|  
 |Account|Indica l'account con il quale viene eseguito il processo.|  
-|ID processo|Indica l'ID del processo.|  
+|ID di processo|Indica l'ID del processo.|  
   
   
