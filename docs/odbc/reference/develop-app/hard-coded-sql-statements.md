@@ -1,5 +1,5 @@
 ---
-title: Le istruzioni SQL hard-Coded | Microsoft Docs
+title: Istruzioni SQL hardcoded | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139147"
 ---
 # <a name="hard-coded-sql-statements"></a>Istruzioni SQL hard-coded
-Le applicazioni che eseguono attività fissa in genere contengono istruzioni SQL hard-coded. Ad esempio, un sistema di immissione dell'ordine potrebbe usare la chiamata seguente a ordini di vendita aperti elenco:  
+Le applicazioni che eseguono un'attività fissa contengono in genere istruzioni SQL hardcoded. Ad esempio, un sistema di immissione degli ordini può utilizzare la chiamata seguente per elencare gli ordini di vendita aperti:  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Esistono diversi vantaggi per le istruzioni SQL hard-coded: Possono essere verificate quando l'applicazione viene scritta; sono più semplici da implementare rispetto a istruzioni costruite in fase di esecuzione. e semplificano l'applicazione.  
+ Sono disponibili diversi vantaggi per le istruzioni SQL hardcoded, che possono essere testate quando viene scritta l'applicazione; sono più semplici da implementare rispetto alle istruzioni costruite in fase di esecuzione. e semplificano l'applicazione.  
   
- Usando i parametri delle istruzioni e preparazione di istruzioni forniscono modi ancora migliori per usare le istruzioni SQL hard-coded. Si supponga, ad esempio, che la tabella di parti contiene le colonne PartID, descrizione e il prezzo. Un modo per inserire una nuova riga in questa tabella, è possibile costruire ed eseguire un' **Inserisci** istruzione:  
+ L'utilizzo dei parametri di istruzione e della preparazione di istruzioni fornisce un modo ancora migliore per utilizzare istruzioni SQL hardcoded. Si supponga, ad esempio, che la tabella Parts includa le colonne PartID, Description e price. Un modo per inserire una nuova riga in questa tabella consiste nel costruire ed eseguire un'istruzione **Insert** :  
   
 ```  
 #define DESC_LEN 51  
@@ -51,7 +51,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Un metodo migliore consiste nell'utilizzare un'istruzione con parametri, a livello di codice. Ciò comporta due vantaggi in un'istruzione con valori di dati hardcoded. Prima di tutto risulta più semplice costruire un'istruzione con parametri poiché i valori dei dati possono essere inviati nei rispettivi tipi nativi, ad esempio numeri interi e numeri a virgola mobile anziché convertendoli in stringhe. In secondo luogo, un'istruzione di questo tipo può essere utilizzata più di volta semplicemente eseguendo la modifica dei valori di parametro e rieseguire. non è necessario ricompilarlo.  
+ Un modo ancora migliore consiste nell'usare un'istruzione con parametri hardcoded. Questa operazione presenta due vantaggi rispetto a un'istruzione con valori di dati hardcoded. In primo luogo, è più semplice costruire un'istruzione con parametri perché i valori dei dati possono essere inviati nei relativi tipi nativi, ad esempio numeri interi e numeri a virgola mobile, anziché convertirli in stringhe. In secondo luogo, tale istruzione può essere usata più di una volta semplicemente modificando i valori dei parametri e eseguendola di nuovo; non è necessario ricompilarlo.  
   
 ```  
 #define DESC_LEN 51  
@@ -78,7 +78,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Supponendo che questa istruzione deve essere eseguito più volte, possa essere preparato per migliorare l'efficienza ancora maggiore:  
+ Supponendo che questa istruzione venga eseguita più di una volta, può essere preparata per un'efficienza ancora maggiore:  
   
 ```  
 #define DESC_LEN 51  
@@ -106,7 +106,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- Probabilmente il modo più efficiente di utilizzare l'istruzione consiste nel creare una procedura contenente l'istruzione, come illustrato nell'esempio di codice seguente. Poiché la procedura viene costruita in fase di sviluppo e archiviata nell'origine dati, non dovrà essere preparata in fase di esecuzione. Uno svantaggio di questo metodo è che la sintassi per la creazione di procedure è specifici del DBMS e le procedure devono essere costruite separatamente per ogni sistema DBMS in cui l'applicazione deve essere eseguita.  
+ Probabilmente il modo più efficiente per utilizzare l'istruzione è creare una routine che contiene l'istruzione, come illustrato nell'esempio di codice seguente. Poiché la procedura viene costruita in fase di sviluppo e archiviata nell'origine dati, non è necessario prepararla in fase di esecuzione. Uno svantaggio di questo metodo è che la sintassi per la creazione di procedure è specifica di DBMS e le procedure devono essere costruite separatamente per ogni DBMS in cui l'applicazione deve essere eseguita.  
   
 ```  
 #define DESC_LEN 51  
@@ -129,4 +129,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- Per altre informazioni sui parametri, le istruzioni preparate e procedure, vedere [esecuzione di un'istruzione](../../../odbc/reference/develop-app/executing-a-statement.md).
+ Per ulteriori informazioni sui parametri, le istruzioni preparate e le procedure, vedere [esecuzione di un'istruzione](../../../odbc/reference/develop-app/executing-a-statement.md).

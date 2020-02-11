@@ -16,18 +16,18 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a091df0cbbeb2883ff9905d7c5b3718d50efa86b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762547"
 ---
-# <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
+# <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifica le proprietà dei pacchetti DTS di una sottoscrizione. Questa stored procedure viene eseguita nel database di sottoscrizione del Sottoscrittore.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,16 +49,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 > [!NOTE]  
 >  A ogni pacchetto DTS deve essere associata una password.  
   
-`[ @dts_package_location = ] 'dts_package_location'`Specifica la posizione del pacchetto. *dts_package_location* è di **tipo nvarchar (12)** e il valore predefinito è null, che specifica che il percorso del pacchetto deve rimanere invariato. Il percorso del pacchetto può essere modificato nel database di **distribuzione** o nel Sottoscrittore.  
+`[ @dts_package_location = ] 'dts_package_location'`Specifica la posizione del pacchetto. *dts_package_location* è di **tipo nvarchar (12)** e il valore predefinito è null, che specifica che il percorso del pacchetto deve rimanere invariato. Il percorso del pacchetto può essere modificato nel database di **distribuzione** o nel **Sottoscrittore**.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_changesubscriptiondtsinfo** viene utilizzato per la replica snapshot e la replica transazionale che sono solo sottoscrizioni push.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** o del creatore della sottoscrizione possono eseguire **sp_changesubscriptiondtsinfo**.  
+## <a name="permissions"></a>Autorizzazioni  
+ È possibile eseguire **sp_changesubscriptiondtsinfo**solo i membri del ruolo predefinito del server **sysadmin** , **db_owner** ruolo predefinito del database o l'autore della sottoscrizione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

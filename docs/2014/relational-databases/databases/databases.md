@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154578"
 ---
 # <a name="databases"></a>Database
@@ -36,17 +36,17 @@ ms.locfileid: "70154578"
 ## <a name="working-with-databases"></a>Utilizzo dei database  
  La maggior parte degli utenti che operano con i database utilizza lo strumento [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Lo strumento [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dispone di un'interfaccia utente grafica per la creazione di database e degli oggetti nei database. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa anche un editor di query per interagire con i database scrivendo istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile installare [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dal disco dell'installazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o scaricandolo da MSDN.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |||  
 |-|-|  
 |[Database di sistema.](system-databases.md)|[Eliminare file di dati o file di log da un database](delete-data-or-log-files-from-a-database.md)|  
 |[Database indipendenti](contained-databases.md)|[Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database](display-data-and-log-space-information-for-a-database.md)|  
-|[SQL Server file di dati in Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentare le dimensioni di un database](increase-the-size-of-a-database.md)|  
+|[File di dati di SQL Server in Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentare le dimensioni di un database](increase-the-size-of-a-database.md)|  
 |[Filegroup e file di database](database-files-and-filegroups.md)|[Rinominare un database](rename-a-database.md)|  
 |[Stati del database](database-states.md)|[Impostare un database in modalità utente singolo](set-a-database-to-single-user-mode.md)|  
 |[Stati dei file](file-states.md)|[Compattare un database](shrink-a-database.md)|  
-|[Stimare le dimensioni di un database](estimate-the-size-of-a-database.md)|[Compattare un file](shrink-a-file.md)|  
+|[Stima delle dimensioni di un database](estimate-the-size-of-a-database.md)|[Compattare un file](shrink-a-file.md)|  
 |[Copiare database in altri server](copy-databases-to-other-servers.md)|[Visualizzare o modificare le proprietà di un database](view-or-change-the-properties-of-a-database.md)|  
 |[Collegamento e scollegamento di un database &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[Visualizzare un elenco di database in un'istanza di SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[Aggiungere file di dati o file di log a un database](add-data-or-log-files-to-a-database.md)|[Visualizzare o modificare il livello di compatibilità di un database](view-or-change-the-compatibility-level-of-a-database.md)|  
@@ -57,8 +57,8 @@ ms.locfileid: "70154578"
 ## <a name="related-content"></a>Contenuto correlato  
  [Indici](../indexes/indexes.md)  
   
- [Viste](../views/views.md)  
+ [Visualizzazioni](../views/views.md)  
   
- [Stored procedure &#40;motore di database&#41;](../stored-procedures/stored-procedures-database-engine.md)  
+ [Stored procedure &#40;Motore di database&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dbb5a12fdcb3c326957d719882feec4fe948190c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761841"
 ---
-# <a name="mssqlserver7911"></a>MSSQLSERVER_7911
+# <a name="mssqlserver_7911"></a>MSSQLSERVER_7911
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62761841"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_REPAIR_PAGE_DEALLOCATED|  
-|Testo del messaggio|Correzione: La pagina P_ID è stata deallocata dall'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE).|  
+|Testo del messaggio|Correzione: la pagina P_ID è stata deallocata all'oggetto con ID O_ID, indice con ID I_ID, partizione con ID PN_ID, unità allocazione con ID A_ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Spiegazione  
  Si tratta di un messaggio informativo generato dall'istruzione REPAIR in cui viene indicato che una pagina è stata deallocata dalla matrice di slot a pagina singola di una mappa di allocazione degli indici (IAM, Index Allocation Map).  
   
 ## <a name="user-action"></a>Azione dell'utente  
- None  
+ nessuno  
   
   
