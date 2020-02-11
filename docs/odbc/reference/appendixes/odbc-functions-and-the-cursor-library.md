@@ -1,5 +1,5 @@
 ---
-title: Funzioni ODBC e libreria di cursori | Microsoft Docs
+title: Funzioni ODBC e la libreria di cursori | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100658"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>Funzioni ODBC e libreria di cursori
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- Quando la libreria di cursori ODBC è abilitata per una connessione, gestione Driver chiama le funzioni nella libreria di cursori anziché nel driver. La libreria di cursori esegue la funzione o chiama tale driver specificato.  
+ Quando la libreria di cursori ODBC è abilitata per una connessione, gestione driver chiama le funzioni nella libreria di cursori anziché nel driver. La libreria di cursori esegue la funzione o la chiama nel driver specificato.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

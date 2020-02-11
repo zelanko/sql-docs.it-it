@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,22 +19,22 @@ ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28d98f7f95d9e9c2af967976b875f61388342583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090167"
 ---
-# <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Fornisce informazioni (statistiche generali) sul comportamento corrente del processo di Garbage Collection [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
- Le righe vengono sottoposte al Garbage Collection durante l'elaborazione delle transazioni regolare o dal thread principale di Garbage Collection a cui si fa riferimento come thread di lavoro inattivo. Quando si esegue il commit di una transazione utente, lo rimuove dalla coda un elemento di lavoro dalla coda di garbage collection ([sys.dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Le righe che sono state sottoposte a Garbage Collection ma senza accesso da parte della transazione principale dell'utente vengono sottoposte al Garbage Collection dal thread di lavoro inattivo, come parte dell'analisi di elementi nascosti (analisi per le aree dell'indice a cui si accede di meno).  
+ Le righe vengono sottoposte al Garbage Collection durante l'elaborazione delle transazioni regolare o dal thread principale di Garbage Collection a cui si fa riferimento come thread di lavoro inattivo. Quando viene eseguito il commit di una transazione utente, viene rimosso un elemento di lavoro dalla coda Garbage Collection ([sys. dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Le righe che sono state sottoposte a Garbage Collection ma senza accesso da parte della transazione principale dell'utente vengono sottoposte al Garbage Collection dal thread di lavoro inattivo, come parte dell'analisi di elementi nascosti (analisi per le aree dell'indice a cui si accede di meno).  
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome colonna|type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|Numero di righe esaminate dal sottosistema di Garbage Collection dal momento in cui è stato avviato il server.|  
 |rows_no_sweep_needed|**bigint**|Numero di righe che sono state rimosse senza analisi di elementi nascosti.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68090167"
 |sweep_rows_expired|**bigint**|Righe scadute lette dall'elaborazione degli elementi nascosti.|  
 |sweep_rows_expired_removed|**bigint**|Righe scadute rimosse dall'elaborazione degli elementi nascosti.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per l'istanza.  
   
 ## <a name="usage-scenario"></a>Scenario di utilizzo  
@@ -70,6 +70,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

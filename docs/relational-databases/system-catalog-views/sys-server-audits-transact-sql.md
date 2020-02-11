@@ -1,5 +1,5 @@
 ---
-title: Sys. server_audits (Transact-SQL) | Microsoft Docs
+title: sys. server_audits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125000"
 ---
-# <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
+# <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -34,23 +34,23 @@ ms.locfileid: "68125000"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|ID del controllo.|  
-|**name**|**sysname**|Nome del controllo.|  
-|**AUDIT_GUID**|**uniqueidentifier**|GUID per il controllo che consente di enumerare i controlli con membro&#124;operazioni di collegamento specifiche del controllo del Database durante l'avvio del server e database.|  
+|**nome**|**sysname**|Nome del controllo.|  
+|**audit_guid**|**uniqueidentifier**|GUID per il controllo utilizzato per enumerare i controlli con server membro&#124;specifiche del controllo del database durante le operazioni di avvio del server e di connessione del database.|  
 |**create_date**|**datetime**|Data UTC di creazione del controllo.|  
 |**modify_date**|**datetime**|Data UTC dell'ultima modifica del controllo.|  
 |**principal_id**|**int**|ID del proprietario del controllo registrato nel server.|  
-|**type**|**char(2)**|Tipo di controllo:<br /><br /> SL: registro eventi di sicurezza NT<br /><br /> AL: registro eventi applicazioni NT<br /><br /> FL: File nel file system|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
-|**ON_FAILURE**|**tinyint**|Voce in condizione di errore:<br /><br /> 0 - continua<br /><br /> 1: arresto dell'istanza del server<br /><br /> 2 - Errore operazione|  
-|**on_failure_desc**|**nvarchar(60)**|Voce in condizione di errore:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 - disabilitato<br /><br /> 1: abilitato|  
-|**QUEUE_DELAY**|**int**|Tempo massimo di attesa, in millisecondi, prima della scrittura su disco. Se il valore è 0, il controllo garantirà una scrittura prima che un evento possa continuare.|  
-|**predicate**|**nvarchar(3000)**|Espressione del predicato applicata all'evento.|  
+|**tipo**|**carattere (2)**|Tipo di controllo:<br /><br /> SL-NT registro eventi di sicurezza<br /><br /> Log eventi dell'applicazione AL-NT<br /><br /> File FL file system|  
+|**type_desc**|**nvarchar (60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
+|**on_failure**|**tinyint**|Voce in condizione di errore:<br /><br /> 0-continua<br /><br /> 1-arrestare un'istanza del server<br /><br /> 2-operazione non riuscita|  
+|**on_failure_desc**|**nvarchar (60)**|Voce in condizione di errore:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
+|**is_state_enabled**|**tinyint**|0-disabilitato<br /><br /> 1: abilitato|  
+|**queue_delay**|**int**|Tempo massimo di attesa, in millisecondi, prima della scrittura su disco. Se il valore è 0, il controllo garantirà una scrittura prima che un evento possa continuare.|  
+|**predicato**|**nvarchar (3000)**|Espressione del predicato applicata all'evento.|  
   
-## <a name="permissions"></a>Permissions  
- Le entità con la **ALTER ANY SERVER AUDIT** oppure **VIEW ANY DEFINITION** autorizzazione ha accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negata **VIEW ANY DEFINITION** l'autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le entità con l'autorizzazione **ALTER ANY Server Audit** o **View any Definition** possono accedere a questa vista del catalogo. Non è inoltre necessario negare l'autorizzazione **View any Definition** per l'entità.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

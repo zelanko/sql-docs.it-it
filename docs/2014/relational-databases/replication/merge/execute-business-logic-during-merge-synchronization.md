@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999571"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Esecuzione di logiche di business durante la sincronizzazione di tipo merge
@@ -29,7 +29,7 @@ ms.locfileid: "62999571"
   
 -   Riferimento all'API: <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Istruzioni sull'implementazione di un gestore della logica di business: [Implementare un gestore della logica di business per un articolo di merge](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Le istruzioni per implementare un gestore della logica di business: [Implementare un gestore della logica di business per un articolo di merge](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Utilizzi dei gestori della logica di business  
  Il processo di sincronizzazione di tipo merge consente di richiamare i gestori della logica di business per eseguire le operazioni seguenti:  
@@ -91,8 +91,8 @@ ms.locfileid: "62999571"
   
 ## <a name="see-also"></a>Vedere anche  
  [Replica di tipo merge](merge-replication.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [Sottoscrivere le pubblicazioni](../subscribe-to-publications.md)   
  [Sincronizzare i dati](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [Sincronizzazione Web per la replica di tipo merge](../web-synchronization-for-merge-replication.md)  
   
   

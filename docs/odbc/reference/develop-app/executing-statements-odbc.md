@@ -11,14 +11,14 @@ ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71f99fadf1b4a0885dd1615de781cbc393c6da33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069940"
 ---
 # <a name="executing-statements-odbc"></a>Esecuzione di istruzioni (ODBC)
-Le applicazioni ODBC eseguono quasi tutti gli accessi di database tramite l'esecuzione di istruzioni SQL. La sequenza generale di eventi è per allocare un handle di istruzione, impostare gli attributi di istruzione, eseguire l'istruzione, recuperare altri risultati e liberare l'handle di istruzione.  
+Le applicazioni ODBC eseguono quasi tutti gli accessi al database eseguendo istruzioni SQL. La sequenza generale degli eventi prevede l'allocazione di un handle di istruzione, l'impostazione di qualsiasi attributo di istruzione, l'esecuzione dell'istruzione, il recupero di tutti i risultati e l'impostazione dell'handle dell'istruzione.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

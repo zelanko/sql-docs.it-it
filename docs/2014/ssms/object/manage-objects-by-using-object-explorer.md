@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ffd514fcdf5479f91e31d3bb5f261bba7ab4cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999644"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Gestire oggetti tramite Esplora oggetti
@@ -50,14 +50,14 @@ ms.locfileid: "62999644"
 ### <a name="open-a-connected-query-editor"></a>Apertura di un editor di query connesso  
  Quando Esplora oggetti è connesso a un server, è possibile aprire una nuova finestra Editor del codice utilizzando le impostazioni di connessione di Esplora oggetti. Per aprire una nuova finestra Editor del codice, fare clic con il pulsante destro del mouse sul nome del server in Esplora oggetti e scegliere **Nuova query**. Per aprire una finestra Editor del codice usando un particolare database, fare clic con il pulsante destro del mouse sul nome del database e scegliere **Nuova query**. Quando viene aperta una nuova query per un server Analysis Services è possibile selezionare query DMX, MDX o XMLA.  
   
-### <a name="start-powershell"></a>Avvio di PowerShell  
+### <a name="start-powershell"></a>Avviare PowerShell  
  È possibile avviare una sessione di PowerShell facendo clic con il pulsante destro del mouse sulla maggior parte delle cartelle e degli oggetti nell'albero di Esplora oggetti e scegliendo **Avvia PowerShell**. Verrà avviata una sessione di PowerShell in cui è abilitato il supporto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell e con il percorso impostato sull'oggetto su cui si è fatto clic con il pulsante destro del mouse in Esplora oggetti. È quindi possibile immettere comandi di PowerShell in un ambiente PowerShell interattivo. Per altre informazioni, vedere [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora oggetti](object-explorer.md)   
  [Aprire e configurare Esplora oggetti](open-and-configure-object-explorer.md)   
  [Connettersi a un'istanza da Esplora oggetti](connect-to-an-instance-from-object-explorer.md)   
- [Riquadro Dettagli Esplora oggetti](object-explorer-details-pane.md)   
+ [Riquadro dei Dettagli Esplora oggetti](object-explorer-details-pane.md)   
  [Report personalizzati in Management Studio](custom-reports-in-management-studio.md)  
   
   

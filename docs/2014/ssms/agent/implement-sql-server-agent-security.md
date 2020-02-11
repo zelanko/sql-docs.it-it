@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137522"
 ---
-# <a name="implement-sql-server-agent-security"></a>Implementare la sicurezza di SQL Server Agent
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent consente all'amministratore del database di eseguire ciascun passaggio di un processo in un contesto di sicurezza in cui sono disponibili solo le autorizzazioni necessarie all'esecuzione di tale passaggio e che viene determinato da un proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impostare le autorizzazioni per un particolare passaggio di un processo, è necessario creare un proxy che disponga delle autorizzazioni necessarie e quindi assegnare questo proxy al passaggio del processo. È possibile specificare un proxy per più di un passaggio di processo. Per i passaggi che richiedono le medesime autorizzazioni, viene utilizzato lo stesso proxy.  
+# <a name="implement-sql-server-agent-security"></a>Implementazione della sicurezza di SQL Server Agent
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent consente all'amministratore del database di eseguire ciascun passaggio del processo in un contesto di sicurezza che dispone solo delle autorizzazioni necessarie per eseguire tale passaggio, determinato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un proxy di Agent. Per impostare le autorizzazioni per un particolare passaggio di un processo, è necessario creare un proxy che disponga delle autorizzazioni necessarie e quindi assegnare questo proxy al passaggio del processo. È possibile specificare un proxy per più di un passaggio di processo. Per i passaggi che richiedono le medesime autorizzazioni, viene utilizzato lo stesso proxy.  
   
  Nella sezione che segue viene spiegato quale ruolo di database concedere agli utenti affinché possano creare o eseguire processi utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -65,18 +65,18 @@ ms.locfileid: "63137522"
   
 -   ACE dipende dalle DLL di configurazione seguenti di proprietà di SSDP, perché le API delle DLL vengono richiamate da ACE:  
   
-    -   **SCO**: Microsoft.SqlServer.Configuration.Sco.dll, incluse le nuove convalide SCO per gli account virtuali  
+    -   **SCO** -Microsoft. SqlServer. Configuration. sco. dll, incluse le nuove convalide SCO per gli account virtuali  
   
-    -   **Cluster**: Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **Cluster** -Microsoft. SqlServer. Configuration. cluster. dll  
   
-    -   **SFC**: Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** -Microsoft. SqlServer. Configuration. SqlConfigBase. dll  
   
-    -   **Extension**: Microsoft.SqlServer.Configuration.ConfigExtension.dll  
+    -   **Estensione** -Microsoft. SqlServer. Configuration. ConfigExtension. dll  
   
 ## <a name="see-also"></a>Vedere anche  
  [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
- [sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
- [Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [sp_addrolemember &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
+ [sp_droprolemember &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
+ [Centro sicurezza per il motore di Database di SQL Server e il Database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

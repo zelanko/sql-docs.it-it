@@ -1,5 +1,5 @@
 ---
-title: Uso di applicazioni a 32 Bit con driver a 32 Bit | Microsoft Docs
+title: Uso di applicazioni a 32 bit con driver a 32 bit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,33 +14,33 @@ ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4d14cc65b31a0641149ace931efe46c914ad1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088163"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Uso delle applicazioni a 32 bit con driver a 32 bit
-È possibile eseguire applicazioni a 32 bit con driver a 32 bit. Le applicazioni a 32 bit e il driver a 32 bit è possibile usare l'API Win32®.  
+È possibile eseguire applicazioni a 32 bit con driver a 32 bit. Le applicazioni a 32 bit e i driver a 32 bit utilizzano l'API Win32®.  
   
-## <a name="architecture"></a>Architettura  
- La figura seguente mostra le applicazioni a 32 come comunicare con driver a 32 bit. L'applicazione chiama il gestore dei Driver a 32 bit che a sua volta chiama driver a 32 bit.  
+## <a name="architecture"></a>Architecture  
+ Nella figura seguente viene illustrato il modo in cui le applicazioni a 32 bit comunicano con i driver a 32 bit. L'applicazione chiama Gestione driver a 32 bit, che a sua volta chiama i driver a 32 bit.  
   
- ![Come 32&#45;di comunicare con 32 bit app&#45;i driver di bit](../../odbc/microsoft/media/sdka6.gif "sdka6")  
+ ![Modalità di comunicazione delle app&#45;bit 32 con i driver di bit per la&#45;32](../../odbc/microsoft/media/sdka6.gif "sdka6")  
   
 > [!IMPORTANT]  
->  Non usare l'installazione thunk DLL a 32 bit su Windows NT o Windows 2000. Anche se presenta lo stesso nome di file del programma di installazione a 32 bit DLL, è un'altra DLL.  
+>  Non usare la DLL del programma di installazione di thunk a 32 bit in WindowsNT/Windows2000. Anche se ha lo stesso nome di file della DLL del programma di installazione a 32 bit, è un'altra DLL.  
   
 ## <a name="administration"></a>Amministrazione  
- È possibile gestire le origini dati per i driver a 32 bit con l'amministratore dell'origine dati ODBC. Per aprire l'amministratore ODBC in computer che eseguono Windows 2000, aprire il pannello di controllo di Windows, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **origini dati (ODBC)** . Nei computer che eseguono versioni precedenti di Microsoft Windows, l'icona è denominata **ODBC a 32 bit** o semplicemente **ODBC**.  
+ È possibile gestire le origini dati per i driver a 32 bit tramite Amministrazione origine dati ODBC. Per aprire Amministratore ODBC nei computer che eseguono Windows 2000, aprire il pannello di controllo di Windows, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **origini dati (ODBC)**. Nei computer che eseguono versioni precedenti di Microsoft Windows, l'icona è denominata **ODBC a 32 bit** o semplicemente **ODBC**.  
   
 ## <a name="components"></a>Componenti  
- Il componente ODBC include i file seguenti per l'esecuzione di applicazioni a 32 bit con driver a 32 bit. Questi componenti si trovano nella directory \Redist.  
+ Il componente ODBC include i file seguenti per l'esecuzione di applicazioni a 32 bit con driver a 32 bit. Questi componenti si trovano nella directory redist  
   
 |Nome file|Descrizione|  
 |---------------|-----------------|  
-|Odbc32.dll|Gestione Driver a 32 bit|  
-|Odbccp32.dll|DLL di installazione a 32 bit|  
-|Odbcad32.exe|programma di amministrazione di ODBC 32-bit|  
-|Odbcinst.hlp|File di programma di installazione della Guida|  
-|Msvcrt40.dll|Libreria di runtime C|
+|Odbc32. dll|Gestione driver a 32 bit|  
+|Odbccp32. dll|DLL del programma di installazione a 32 bit|  
+|Odbcad32. exe|programma di amministrazione ODBC a 32 bit|  
+|Odbcinst. hlp|File della guida del programma di installazione|  
+|MSVCRT40. dll|Libreria di runtime C|

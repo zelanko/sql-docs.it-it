@@ -15,19 +15,19 @@ ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094353"
 ---
 # <a name="sequence-of-status-records"></a>Sequenza di record di stato
-Se vengono restituiti due o più record di stato, il gestore dei Driver e il driver necessario classificarle in base alle regole seguenti. Il record con il valore più alto è il primo record. L'origine di un record (gestione Driver, driver, gateway e così via) non viene considerato quando i record di rango.  
+Se vengono restituiti due o più record di stato, la gestione driver e il driver vengono classificati in base alle regole seguenti. Il record con il rango più alto è il primo record. L'origine di un record (Gestione driver, driver, gateway e così via) non viene considerata quando i record di rango.  
   
--   **Errori** record di stato che descrivono gli errori hanno la priorità più alta. Tra i record degli errori, i record che indicano un errore della transazione o un errore della transazione possibili outrank tutti gli altri record. Se due o più record di descrivere la stessa condizione di errore, SQLSTATEs definito dalla specifica Open dell'interfaccia della riga di gruppo (classi 03 tramite HZ) outrank SQLSTATEs definite da ODBC e definiti dal driver.  
+-   **Errori** di I record di stato che descrivono errori hanno il rango più alto. Tra i record degli errori, i record che indicano un errore di transazione o un possibile errore di transazione classificano tutti gli altri record. Se due o più record descrivono la stessa condizione di errore, gli stati definiti dalla specifica dell'interfaccia della riga di comando per il gruppo aperto (classi da 03 a HZ) sono in grado di classificare sqlstati definiti da ODBC e definiti dal driver.  
   
--   **N valori di dati definito dall'implementazione** i record di stato che descrivono i valori di dati non definiti dal driver (classe 02) hanno la seconda priorità più alta.  
+-   **Implementazione-nessun valore di dati definito** I record di stato che descrivono i valori di dati non definiti dal driver (classe 02) hanno il secondo rango più alto.  
   
--   **Avvisi** i record di stato che descrivono gli avvisi (classe 01) hanno la priorità più bassa. Se due o più record di descrivere la stessa condizione di avviso, di avviso SQLSTATEs definito dalla specifica CLI di gruppo aprire outrank SQLSTATEs definite da ODBC e definiti dal driver.  
+-   **Avvisi** di I record di stato che descrivono gli avvisi (classe 01) hanno il rango più basso. Se due o più record descrivono la stessa condizione di avviso, gli avvisi SQLSTATE definiti dalla specifica dell'interfaccia della riga di comando per il gruppo Open definiscono la definizione di SQLSTATE definito da ODBC e dal driver.  
   
- Se sono presenti due o più record con il valore più alto, non viene specificato di record che rappresenta il primo record. L'ordine di tutti gli altri record è definito. In particolare, poiché gli avvisi possono apparire prima di errori, le applicazioni devono controllare tutti i record di stato quando una funzione restituisce un valore diverso da SQL_SUCCESS.
+ Se sono presenti due o più record con il rango più alto, non è definito quale record è il primo record. L'ordine di tutti gli altri record non è definito. In particolare, poiché gli avvisi possono essere visualizzati prima degli errori, le applicazioni devono controllare tutti i record di stato quando una funzione restituisce un valore diverso da SQL_SUCCESS.

@@ -19,14 +19,14 @@ ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f952b21267b73c7ae508f46d896dbfdbb4160e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100576"
 ---
 # <a name="processing-batches-of-sql-statements"></a>Elaborazione di batch di istruzioni SQL
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di utilizzare questa funzionalità nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa funzionalità. Microsoft consiglia di utilizzare la funzionalità di cursore del driver.  
   
- La libreria di cursori non supporta i batch di istruzioni SQL, incluse le istruzioni SQL per il quale l'attributo di istruzione SQL_ATTR_PARAMSET_SIZE è maggiore di 1. Se un'applicazione invia un batch di istruzioni SQL per la libreria di cursori, i risultati sono indefiniti.
+ La libreria di cursori non supporta i batch di istruzioni SQL, incluse le istruzioni SQL per le quali l'attributo SQL_ATTR_PARAMSET_SIZE Statement è maggiore di 1. Se un'applicazione invia un batch di istruzioni SQL alla libreria di cursori, i risultati non sono definiti.

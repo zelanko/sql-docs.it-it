@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990197"
 ---
 # <a name="column-properties-visual-database-tools"></a>Proprietà colonne (Visual Database Tools)
@@ -41,13 +41,13 @@ ms.locfileid: "62990197"
  **Categoria Identità**  
  Viene espansa per visualizzare le proprietà **Nome** e **Database** .  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome della colonna.  
   
  **Database**  
  Consente di visualizzare il nome dell'origine dei dati della colonna selezionata (solo per OLE DB).  
   
- **Categoria Varie**  
+ **Categoria varie**  
  Viene espansa per visualizzare le proprietà rimanenti.  
   
  **Tipo di dati**  
@@ -62,16 +62,16 @@ ms.locfileid: "62990197"
  **Identità**  
  Indica se la colonna selezionata è la colonna di identità per la tabella. (si applica solo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
- **Lunghezza**  
+ **Length**  
  Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri.  
   
- **Ammette valori Null**  
+ **Nullable**  
  Indica se la colonna accetta valori Null.  
   
- **Precisione**  
+ **Precision**  
  Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
- **Scala**  
+ **Scalabilità**  
  Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di dati numerici. Questo valore deve essere inferiore o uguale al valore di precisione. Questa proprietà corrisponde a **0** per i tipi di dati non numerici.  
   
 ## <a name="column-properties-tab"></a>Scheda Proprietà colonne  
@@ -83,7 +83,7 @@ ms.locfileid: "62990197"
  **Categoria Generale**  
  Viene espansa per visualizzare le proprietà **Nome**, **Consenti valori Null**, **Tipo di dati**, **Valore predefinito dell'associazione**, **Lunghezza**, **Precisione**e **Scala**.  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome della colonna. Per modificare il nome, digitarlo nella casella di testo.  
   
 > [!CAUTION]  
@@ -95,16 +95,16 @@ ms.locfileid: "62990197"
  **Tipo di dati**  
  Consente di visualizzare il tipo di dati della colonna selezionata. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore. Per altre informazioni, vedere [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
- **Valore predefinito dell'associazione**  
+ **Valore predefinito o binding**  
  Mostra il valore predefinito utilizzato per la colonna quando non ne viene specificato alcuno. Nell'elenco a discesa sono contenuti tutti i valori predefiniti globali impostati nell'origine dei dati. Per associare la colonna a un valore predefinito globale, selezionarlo dall'elenco a discesa. In alternativa, per creare un vincolo predefinito per la colonna, digitare direttamente il valore predefinito come testo.  
   
- **Lunghezza**  
+ **Length**  
  Indica il numero di caratteri consentiti per i tipi di dati basati su caratteri. Questa proprietà è disponibile solo per tipi di dati basati su caratteri.  
   
- **Precisionee**  
+ **Precision**  
  Indica il numero massimo di cifre ammesse per i tipi di dati numerici. Questa proprietà corrisponde a **0** per i tipi di dati non numerici. Questa proprietà è disponibile solo per tipi di dati numerici.  
   
- **Scala**  
+ **Scalabilità**  
  Indica il numero massimo di cifre ammesse dopo la virgola decimale nei tipi di dati numerici. Questo valore deve essere inferiore o uguale al valore di precisione. Questa proprietà corrisponde a **0** per i tipi di dati non numerici. Questa proprietà è disponibile solo per tipi di dati numerici.  
   
  **Categoria Progettazione tabelle**  
@@ -113,25 +113,25 @@ ms.locfileid: "62990197"
  **Regole di confronto**  
  Indica l'impostazione delle regole di confronto per la colonna selezionata. Per modificare questa impostazione, scegliere **Regole di confronto** e fare clic sui puntini di sospensione **(...)** a destra del valore.  
   
- **Categoria Specifica colonna calcolata**  
+ **Categoria specifica colonna calcolata**  
  Si espande per visualizzare le proprietà **Formula** e **Persistente**. Se la colonna è calcolata, verrà visualizzata anche la formula. Per modificare la formula, espandere questa categoria e apportare la modifica nella proprietà **Formula** .  
   
  **Formula**  
  Consente di visualizzare la formula se la colonna selezionata è una colonna calcolata. Utilizzare questo campo per immettere o modificare una formula.  
   
- **Persistente**  
+ **Permanente**  
  Consente di salvare la colonna calcolata con l'origine dei dati. Una colonna calcolata persistente può essere indicizzata.  
   
- **Tipo di dati abbreviato**  
+ **Tipo di dati condensato**  
  Consente di visualizzare informazioni sul tipo di dati del campo, nello stesso formato dell'istruzione SQL CREATE TABLE. Un campo contenente ad esempio una stringa di lunghezza variabile con un massimo di 20 caratteri viene rappresentato come "varchar(20)". Per modificare questa proprietà, digitare direttamente il valore desiderato.  
   
  **Descrizione**  
  Consente di visualizzare la descrizione della colonna. Per visualizzare la descrizione completa o modificarla, fare clic su Descrizione e sui puntini di sospensione **(...)** a destra della proprietà.  
   
- **Categoria Specifica full-text**  
+ **Categoria specifica full-text**  
  Viene espansa per visualizzare le proprietà specifiche per le colonne full-text.  
   
- **Con indice full-text**  
+ **Con indicizzazione full-text**  
  Indica se la colonna è indicizzata con un indice full-text. Questa proprietà può essere impostata su **Sì** solo se il tipo di dati della colonna consente ricerche full-text e se per la tabella a cui la colonna appartiene è specificato un indice full-text. Per modificare questo valore, fare clic su di esso, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
  **Colonna di tipo full-text**  
@@ -143,12 +143,12 @@ ms.locfileid: "62990197"
  **Semantica statistica**  
  Selezionare se abilitare l'indicizzazione semantica statistica per la colonna selezionata. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- Se si seleziona una lingua in **Lingua** prima di selezionare **Semantica statistica** e alla lingua selezionata non è associato alcun modello di lingua semantico, l'opzione **Semantica statistica** viene impostata su **No** e non può essere modificata. Se si seleziona **Sì** per l'opzione **Semantica statistica** prima di selezionare una lingua in **Lingua**, le lingue disponibili nella colonna **Lingua** saranno limitate a quelle per cui è disponibile un modello di lingua semantico.  
+ Se si seleziona una lingua in **Lingua** prima di selezionare **Semantica statistica**e alla lingua selezionata non è associato alcun modello di lingua semantico, l'opzione **Semantica statistica** viene impostata su **No** e non può essere modificata. Se si seleziona **Sì** per l'opzione **Semantica statistica** prima di selezionare una lingua in **Lingua**, le lingue disponibili nella colonna **Lingua** saranno limitate a quelle per cui è disponibile un modello di lingua semantico.  
   
  **Con Sottoscrittore non SQL Server**  
  Indica se la colonna è associata a un Sottoscrittore SQL Server non Microsoft.  
   
- **Categoria Specifica identità**  
+ **Categoria specifica identità**  
  Si espande per visualizzare le proprietà **Identity**, **Incremento Identity**e **Valore di inizializzazione identity**.  
   
  **Identità**  
@@ -163,28 +163,29 @@ ms.locfileid: "62990197"
  **Deterministico**  
  Indica se il tipo di dati della colonna selezionata può essere determinato con certezza.  
   
- **Con pubblicazione di tipo DTS**  
+ **Pubblicato da DTS**  
  Indica se la pubblicazione della colonna è di tipo DTS.  
   
- **Is Indexable**  
+ **Indicizzabile**  
  Indica se la colonna selezionata può essere indicizzata. Le colonne calcolate non deterministiche, ad esempio, non sono indicizzabili.  
   
  **Con pubblicazione di tipo merge**  
  Indica se la pubblicazione della colonna è di tipo merge.  
   
- **Non per la replica**  
+ **Non è per la replica**  
  Indica se durante la replica vengono mantenuti i valori di identità originari. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
  **Replicato**  
  Indica se questa colonna è replicata in un'altra posizione.  
   
  **RowGuid**  
- Indica se la colonna viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come ROWGUID. È possibile impostare questo valore su **Yes** solo per una colonna con tipo di dati di `uniqueidentifier`. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
+ Indica se la colonna viene utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come ROWGUID. È possibile impostare questo valore su **Sì** solo per una colonna con tipo di `uniqueidentifier`dati. Per modificare questa proprietà, fare clic sul valore, espandere l'elenco a discesa e selezionare un nuovo valore.  
   
  **Dimensione**  
  Indica la dimensione in byte consentita dal tipo di dati della colonna. Un tipo di dati `nchar`, ad esempio, può avere come lunghezza 10 (numero di caratteri), ma come dimensione 20, in modo da supportare i set di caratteri Unicode.  
   
 > [!NOTE]  
->  La lunghezza di un tipo di dati `varchar(max)` varia per ogni riga. sp_help restituisce (-1) come lunghezza delle `varchar(max)` colonna. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizza -1 come dimensione della colonna.  
+>  La lunghezza di un tipo di dati `varchar(max)` varia per ogni riga. sp_help restituisce (-1) come lunghezza della `varchar(max)` colonna. 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] visualizza -1 come dimensione della colonna.  
   
   

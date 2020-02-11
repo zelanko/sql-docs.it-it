@@ -18,18 +18,18 @@ ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108528"
 ---
-# <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
+# <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea e popola un cursore in base al piano di esecuzione creato da sp_cursorprepare. Questa routine, insieme a sp_cursorprepare, svolge la stessa funzione di sp_cursoropen, ma viene suddivisa in due fasi. è possibile richiamare sp_cursorexecute specificando ID = 4 in un pacchetto del flusso TDS.  
+  Crea e popola un cursore in base al piano di esecuzione creato da sp_cursorprepare. Questa procedura, associata a sp_cursorprepare, ha la stessa funzione di sp_cursoropen, ma è suddivisa in due fasi. sp_cursorexecute viene richiamato specificando ID = 4 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,32 +43,32 @@ sp_cursorexecute prepared_handle, cursor
   
 ## <a name="arguments"></a>Argomenti  
  *prepared_handle*  
- L'istruzione preparata *gestire* valore restituito da sp_cursorprepare. *prepared_handle* è un parametro obbligatorio che richiede un **int** valore di input.  
+ Valore dell' *handle* dell'istruzione preparata restituito da sp_cursorprepare. *prepared_handle* è un parametro obbligatorio che richiede un valore di input **int** .  
   
- *cursor*  
- Identificatore del cursore generato da SQL Server. *cursore* è un parametro obbligatorio che deve essere fornito su tutte le routine successive che agiscono sul cursore, ad esempio sp_cursorfetch  
+ *cursore*  
+ Identificatore del cursore generato da SQL Server. *Cursor* è un parametro obbligatorio che deve essere fornito in tutte le procedure successive che agiscono sul cursore, ad esempio sp_cursorfetch  
   
  *scrollopt*  
- Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede un **int** valore di input. Il sp_cursorexecute*scrollopt* parametro ha le stesse opzioni dei valori di quelle per sp_cursoropen.  
+ Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede un valore di input **int** . Il parametro sp_cursorexecute*scrollopt* ha le stesse opzioni di valore di quelle per sp_cursoropen.  
   
 > [!NOTE]  
 >  Il valore PARAMETERIZED_STMT non è supportato.  
   
 > [!IMPORTANT]  
->  Se un *scrollopt* valore viene omesso, il valore predefinito è KEYSET indipendentemente *scrollopt* valore specificato in sp_cursorprepare.  
+>  Se non si specifica un valore *scrollopt* , il valore predefinito è KEYSET indipendentemente dal valore di *scrollopt* specificato in sp_cursorprepare.  
   
  *ccopt*  
- Opzione del controllo della valuta. *ccopt* è un parametro facoltativo che richiede un **int** valore di input. Il sp_cursorexecute*ccopt* parametro ha le stesse opzioni dei valori di quelle per sp_cursoropen.  
+ Opzione del controllo della valuta. *ccopt* è un parametro facoltativo che richiede un valore di input **int** . Il parametro sp_cursorexecute*ccopt* ha le stesse opzioni di valore di quelle per sp_cursoropen.  
   
 > [!IMPORTANT]  
->  Se un *ccopt* valore viene omesso, il valore predefinito è OPTIMISTIC indipendentemente *ccopt* valore specificato in sp_cursorprepare.  
+>  Se non si specifica un valore *ccopt* , il valore predefinito è ottimistico indipendentemente dal valore di *ccopt* specificato in sp_cursorprepare.  
   
- *rowcount*  
- Parametro facoltativo che indica il numero di righe del buffer di recupero da utilizzare con AUTO_FETCH. Il valore predefinito è 20 righe. *conteggio delle righe* si comporta in modo diverso quando assegnato come valore di input rispetto a un valore restituito.  
+ *RowCount*  
+ Parametro facoltativo che indica il numero di righe del buffer di recupero da utilizzare con AUTO_FETCH. Il valore predefinito è 20 righe. il *conteggio delle righe* si comporta in modo diverso quando viene assegnato come valore di input rispetto a un valore restituito.  
   
 |Come valore di input|Come valore restituito|  
 |--------------------|---------------------|  
-|Quando viene specificato AUTO_FETCH con i cursori FAST_FORWARD *rowcount* rappresenta il numero di righe da inserire nel buffer di recupero.|Rappresenta il numero di righe nel set di risultati. Quando la *scrollopt* viene specificato il valore AUTO_FETCH, *rowcount* restituisce il numero di righe recuperate nel buffer di recupero.|  
+|Quando AUTO_FETCH viene specificato con FAST_FORWARD cursori *RowCount* rappresenta il numero di righe da inserire nel buffer di recupero.|Rappresenta il numero di righe nel set di risultati. Quando viene specificato il valore *scrollopt* AUTO_FETCH, *RowCount* restituisce il numero di righe recuperate nel buffer di recupero.|  
   
  *bound_param*  
  Indica l'utilizzo facoltativo di parametri aggiuntivi.  
@@ -77,20 +77,20 @@ sp_cursorexecute prepared_handle, cursor
 >  I parametri dopo il quinto vengono passati insieme sul piano dell'istruzione come parametri di input.  
   
 ## <a name="code-return-value"></a>Valore restituito del codice  
- *conteggio delle righe* potrebbe restituire i valori seguenti.  
+ *RowCount* può restituire i valori seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |-1|Numero di righe non note.|  
 |-n|Un popolamento asincrono è attivo.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Parametri scrollopt e ccopt  
- *scrollopt* e *ccopt* risultano utili per i piani memorizzati nella cache vengono interrotti per la cache del server, vale a dire che è necessario ricompilare l'handle preparato che identifica l'istruzione. Il *scrollopt* e *ccopt* valori di parametro devono corrispondere i valori inviati nella richiesta originale a sp_cursorprepare.  
+ *scrollopt* e *ccopt* sono utili quando i piani memorizzati nella cache vengono interrotti per la cache del server, vale a dire che l'handle preparato che identifica l'istruzione deve essere ricompilato. I valori dei parametri *scrollopt* e *ccopt* devono corrispondere ai valori inviati nella richiesta originale a sp_cursorprepare.  
   
 > [!NOTE]  
->  PARAMETERIZED_STMT non deve essere assegnato a *scrollopt*.  
+>  PARAMETERIZED_STMT non devono essere assegnati a *scrollopt*.  
   
  Se non si riesce a fornire valori corrispondenti, i piani verranno ricompilati impedendo le operazioni di preparazione ed esecuzione.  
   
@@ -98,8 +98,8 @@ sp_cursorexecute prepared_handle, cursor
  Per richiedere che vengano restituiti metadati sull'elenco di selezione del cursore nel flusso TDS, è possibile impostare il flag di input RPC RETURN_METADATA su 1.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

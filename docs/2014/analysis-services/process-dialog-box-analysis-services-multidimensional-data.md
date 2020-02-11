@@ -1,5 +1,5 @@
 ---
-title: Elaborare la finestra di dialogo (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo elabora (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070751"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Elabora (Analysis Services - Dati multidimensionali)
@@ -42,8 +42,8 @@ ms.locfileid: "66070751"
  **Tipo**  
  Consente di visualizzare il tipo dell'oggetto da elaborare.  
   
- **Opzioni elaborazione**  
- Consente di selezionare il tipo di elaborazione da eseguire sull'oggetto selezionato. Per altre informazioni sulle opzioni di elaborazione disponibili, vedere [elaborazione di oggetti modello multidimensionale](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ **Opzioni di elaborazione**  
+ Consente di selezionare il tipo di elaborazione da eseguire sull'oggetto selezionato. Per ulteriori informazioni sulle opzioni di elaborazione disponibili, vedere [elaborazione di oggetti del modello multidimensionale](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  **Impostazioni**  
  Consente di visualizzare il collegamento ipertestuale **Configura** al momento della selezione di **Elaborazione incrementale** in **Opzioni elaborazione** per cubi, gruppi di misure o partizioni. Per aprire la finestra di dialogo **Aggiornamento incrementale** , fare clic su **Configura** . Per altre informazioni sulla finestra di dialogo **Aggiornamento incrementale**, vedere [Finestra di dialogo Aggiornamento incrementale &#40;Analysis Services - Dati multidimensionali&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
@@ -51,20 +51,20 @@ ms.locfileid: "66070751"
  **Rimuovi**  
  Fare clic su questo pulsante per rimuovere gli elementi selezionati da **Elenco oggetti**.  
   
- **Analisi di impatto**  
+ **Analisi di effetto**  
  Fare clic su questo pulsante per aprire la finestra di dialogo **Analisi di impatto** e visualizzare gli oggetti interessati dall'attività di elaborazione. Per altre informazioni sulla finestra di dialogo **Analisi di impatto**, vedere [Finestra di dialogo Analisi di impatto &#40;Analysis Services - Dati multidimensionali&#41;](impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
 >  Questa opzione è disabilitata quando si seleziona l'opzione **Elabora oggetti interessati** nella finestra di dialogo **Cambia impostazioni** .  
   
- **Cambia impostazioni**  
+ **Modifica impostazioni**  
  Fare clic su questo pulsante per aprire la finestra di dialogo **Cambia impostazioni** e modificare le impostazioni che controllano l'elaborazione degli oggetti selezionati, incluse quelle relative a writeback, elaborazione batch ed errori di chiave della dimensione. Per altre informazioni sulla finestra di dialogo **Cambia impostazioni**, vedere [Finestra di dialogo Cambia impostazioni &#40;Analysis Services - Dati multidimensionali&#41;](change-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Esegui**  
  Fare clic su questo pulsante per elaborare gli oggetti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Finestra di dialogo Stato elaborazione &#40;Analysis Services - dati multidimensionali&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Finestra di dialogo Stato elaborazione &#40;Analysis Services-Dati multidimensionali&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   
   

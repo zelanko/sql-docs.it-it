@@ -1,5 +1,5 @@
 ---
-title: Oggetto DataSpace e metodo CreateObject (VBScript) | Microsoft Docs
+title: Esempio di oggetto DataSpace e metodo CreateObject (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c9eb9a15094f6c08bacb9e063c707163548875a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964332"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>Esempio dell'oggetto DataSpace e del metodo CreateObject (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Nell'esempio seguente viene illustrato come utilizzare il [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo il [Servizi Desktop remoto. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) con l'oggetto di business, impostazione predefinita [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Per testare questo esempio, tagliare e incollare questo codice tra il \<Body > e \</Body > tag in HTML un normale del documento e denominarlo **DataSpaceVBS**. Lo script identificherà il server.  
+ Nell'esempio seguente viene illustrato come utilizzare il metodo [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) di [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) con l'oggetto business predefinito, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Per testare questo esempio, tagliare e incollare il codice tra i \<tag body> \<e/body> in un documento HTML normale e denominarlo **DataSpaceVBS. asp**. Lo script ASP identificherà il server.  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -130,12 +130,12 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
 <!-- EndDataSpaceVBS -->  
 ```  
   
- Nell'esempio seguente viene illustrato come utilizzare il **CreateObject** metodo per creare un'istanza di un oggetto business personalizzato, VbBusObjCls. Usa anche Active Server Pages sullo scripting per identificare il nome del server Web.  
+ Nell'esempio seguente viene illustrato come utilizzare il metodo **CreateObject** per creare un'istanza di un oggetto business personalizzato, vbbusobj. VbBusObjCls. Viene inoltre utilizzata la Active Server pagine di scripting per identificare il nome del server Web.  
   
- Per visualizzare un esempio completo, aprire il selettore di applicazioni di esempio. Nel **livello Client** colonna, selezionare **VBScript in Internet Explorer**. Nel **livello intermedio** colonna, selezionare **oggetto Business di Visual Basic personalizzata**.  
+ Per visualizzare l'esempio completo, aprire il selettore di applicazioni di esempio. Nella colonna **livello client** selezionare **VBScript in Internet Explorer**. Nella colonna **livello intermedio** selezionare **Custom Visual Basic Business Object**.  
   
 > [!NOTE]
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = yes** oppure **Integrated Security = SSPI** anziché un ID utente e password informazioni nella stringa di connessione.  
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare **Trusted_Connection = Yes** o **Integrated Security = SSPI** anziché le informazioni relative a ID utente e password nella stringa di connessione.  
   
 ```  
 Sub Window_OnLoad()  
@@ -147,7 +147,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo CreateObject (Servizi Desktop remoto)](../../../ado/reference/rds-api/createobject-method-rds.md)   
+ [Metodo CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [Oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 
 

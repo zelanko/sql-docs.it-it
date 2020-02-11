@@ -1,5 +1,5 @@
 ---
-title: Transazioni ODBC | Microsoft Docs
+title: ODBC transazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 521a2ffbf0f8eb5e2590ae6e42d50dc71d536683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086037"
 ---
 # <a name="transactions-odbc"></a>Transazioni ODBC
-Oggetto *transazione* è un'unità di lavoro che viene eseguita come una singola operazione atomica, vale a dire, l'operazione ha esito positivo o non riesce nel suo complesso. Si consideri, ad esempio, il trasferimento di denaro da una banca a un'altra. Ciò comporta due passaggi: prelievo del denaro dal primo account e che lo inserisce nella seconda. È importante che entrambi questi passaggi avranno esito positivo; non è accettabile per un unico passaggio abbia esito positivo e l'altro errore. Un database che supporta le transazioni è in grado di garantire questo.  
+Una *transazione* è un'unità di lavoro eseguita come singola operazione atomica; ovvero l'operazione ha esito positivo o negativo nel suo complesso. Si consideri, ad esempio, il trasferimento di denaro da un conto bancario a un altro. Questo implica due passaggi: il ritiro del denaro dal primo account e il relativo deposito nel secondo. È importante che entrambi i passaggi abbiano esito positivo. non è accettabile che un passaggio abbia esito positivo e l'altro abbia esito negativo. Un database che supporta le transazioni può garantire questo problema.  
   
- Le transazioni possono essere completate da entrambi in corso *commit* o in corso *rollback*. Quando una transazione viene eseguito il commit, le modifiche apportate in quanto transazione vengono rese permanenti. Quando una transazione viene eseguito il rollback, le righe interessate vengono restituite lo stato che si trovavano prima dell'inizio della transazione. Per estendere l'esempio di trasferimento di account, un'applicazione esegue un'istruzione SQL venga addebitato il primo account e un'istruzione SQL diversa per il secondo account di credito. Se entrambe le istruzioni hanno esito positivo, quindi esegue il commit della transazione. Ma se l'istruzione non riesce per qualsiasi motivo, l'applicazione esegue il rollback della transazione. In entrambi i casi, l'applicazione garantisce uno stato coerente alla fine della transazione.  
+ Per completare le transazioni è necessario eseguire il *commit* o il *rollback*. Quando viene eseguito il commit di una transazione, le modifiche apportate in tale transazione vengono rese permanenti. Quando viene eseguito il rollback di una transazione, le righe interessate vengono restituite allo stato in cui si trovavano prima dell'avvio della transazione. Per estendere l'esempio di trasferimento dell'account, un'applicazione esegue un'istruzione SQL per addebitare il primo account e un'altra istruzione SQL per accreditare il secondo account. Se entrambe le istruzioni hanno esito positivo, l'applicazione eseguirà il commit della transazione. Tuttavia, se una delle due istruzioni ha esito negativo per qualsiasi motivo, l'applicazione esegue il rollback della transazione. In entrambi i casi, l'applicazione garantisce uno stato coerente alla fine della transazione.  
   
- Una singola transazione può includere più operazioni di database che si verificano in momenti diversi. Se altre transazioni ha accesso completo ai risultati intermedi, le transazioni potrebbero interferire con loro. Ad esempio, si supponga che una transazione inserisce una riga, una seconda transazione legge tale riga e della prima transazione viene eseguito il rollback. La seconda transazione ora dispone di dati per una riga che non esiste.  
+ Una singola transazione può includere più operazioni di database che si verificano in momenti diversi. Se altre transazioni hanno accesso completo ai risultati intermedi, le transazioni potrebbero interferire tra loro. Si supponga, ad esempio, che una transazione inserisca una riga, una seconda transazione legga la riga e venga eseguito il rollback della prima transazione. La seconda transazione dispone ora di dati per una riga inesistente.  
   
- Per risolvere questo problema, esistono vari schemi per isolare le transazioni uno da altro. *Isolamento delle transazioni* viene in genere implementata dal blocco di righe, che preclude più di una transazione dall'uso della stessa riga nello stesso momento. In alcuni database, il blocco di una riga può anche bloccare le altre righe.  
+ Per risolvere questo problema, esistono diversi schemi per isolare le transazioni l'una dall'altra. L' *isolamento delle transazioni* viene in genere implementato tramite il blocco di righe, che impedisce a più di una transazione di utilizzare la stessa riga nello stesso momento. In alcuni database il blocco di una riga può anche bloccare altre righe.  
   
- Isolamento delle transazioni deriva ridotto *concorrenza,* o la possibilità di due transazioni utilizzano gli stessi dati nello stesso momento. Per altre informazioni, vedere [impostazione del livello di isolamento delle transazioni](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md).  
+ Con l'isolamento delle transazioni maggiore viene rilevata una *concorrenza* ridotta o la possibilità di due transazioni di utilizzare contemporaneamente gli stessi dati. Per ulteriori informazioni, vedere [impostazione del livello di isolamento delle transazioni](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

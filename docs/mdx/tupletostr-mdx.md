@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d6cde1f60274d1437517d89e48b111e9e7298b9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097367"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
 
-  Restituisce una stringa in formato multidimensionale espressioni MDX che corrisponde a una tupla specificata.  
+  Restituisce una stringa in formato MDX (Multidimensional Expression) che corrisponde a una tupla specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,11 +31,11 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una tupla.  
   
-## <a name="remarks"></a>Note  
- Questa funzione viene utilizzata per trasferire una rappresentazione stringa di una tupla a una funzione esterna per l'analisi. La stringa restituita è racchiusa tra parentesi graffe {} e ogni membro, se più di uno è espressamente definito nella tupla, è separato da virgole.  
+## <a name="remarks"></a>Osservazioni  
+ Questa funzione viene utilizzata per trasferire una rappresentazione stringa di una tupla a una funzione esterna per l'analisi. La stringa restituita è racchiusa tra parentesi graffe {} e ogni membro, se più di uno è definito espressamente nella tupla, è separato da una virgola.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce la stringa ([Date]. [ Anno di calendario. Year].&[2001],[Geography].[Geography].[Country].&[United], [Geography]. [Geography]. [Paese]. & [United States]):  
+ Nell'esempio seguente viene restituita la stringa ([DATE]. [ Anno di calendario]. & [2001], [Geography]. [Geography]. [Paese]. & [Stati Uniti]):  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   
@@ -63,6 +63,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

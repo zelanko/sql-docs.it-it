@@ -18,18 +18,18 @@ ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108349"
 ---
-# <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
+# <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Chiude il log degli errori corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e rinumera le estensioni del log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, esattamente come quando si riavvia il server. Il nuovo log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent contiene una riga in cui è registrata l'operazione di creazione di un nuovo log.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,19 +38,19 @@ ms.locfileid: "68108349"
 sp_cycle_agent_errorlog  
 ```  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ nessuno  
   
-## <a name="remarks"></a>Note  
- Ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente è avviato, corrente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registro errori dell'agente è stato rinominato **SQLAgent.1**; **SQLAgent.1** diventa **SQLAgent.2**, **SQLAgent.2** diventa **SQLAgent.3**e così via. **sp_cycle_agent_errorlog** consente di rinumerare i file di log degli errori senza arrestare e riavviare il server.  
+## <a name="remarks"></a>Osservazioni  
+ Ogni volta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che viene avviato Agent, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log degli errori corrente di Agent viene rinominato in **SQLAgent. 1**; **SQLAgent. 1** diventa **SQLAgent. 2**, **SQLAgent. 2** diventa **SQLAgent. 3**e così via. **sp_cycle_agent_errorlog** consente di scorrere i file di log degli errori senza arrestare e avviare il server.  
   
- Questa stored procedure deve essere eseguita dal **msdb** database.  
+ Questo stored procedure deve essere eseguito dal database **msdb** .  
   
-## <a name="permissions"></a>Permissions  
- Le autorizzazioni di esecuzione **sp_cycle_errorlog** sono limitati ai membri delle **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le autorizzazioni di esecuzione per **sp_cycle_agent_errorlog** sono limitate ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene rinumerato il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -64,6 +64,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_cycle_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
+ [sp_cycle_errorlog &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_registry (Transact-SQL) | Microsoft Docs
+title: sys. dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090720"
 ---
-# <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
+# <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce le informazioni di configurazione e installazione archiviate nel Registro di sistema di Windows per l'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Restituisce una riga per ogni chiave del Registro di sistema. Utilizzare la DMV in per restituire informazioni diverse, ad esempio i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili nel computer host o i valori di configurazione della rete per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,12 +33,12 @@ ms.locfileid: "68090720"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nome della chiave del Registro di sistema Ammette i valori Null.|  
-|value_name|**nvarchar(256)**|Nome del valore della chiave. Si tratta dell'elemento visualizzato nei **nome** colonna dell'Editor del Registro di sistema. Ammette i valori Null.|  
-|value_data|**sql_variant**|Valore dei dati della chiave. Si tratta del valore visualizzato nei **dati** colonna dell'Editor del Registro di sistema per una voce specificata. Ammette i valori Null.|  
+|value_name|**nvarchar(256)**|Nome del valore della chiave. Si tratta dell'elemento visualizzato nella colonna **nome** dell'editor del registro di sistema. Ammette i valori Null.|  
+|value_data|**sql_variant**|Valore dei dati della chiave. Si tratta del valore visualizzato nella colonna di **dati** dell'editor del registro di sistema per una determinata voce. Ammette i valori Null.|  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [sys. dm_server_services &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

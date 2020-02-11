@@ -18,21 +18,21 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108617"
 ---
-# <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
+# <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Viene creato un database su supporti rimovibili. Vengono creati tre o più file, uno per le tabelle del catalogo di sistema, uno per il log delle transazioni e uno o più per le tabelle di dati, quindi viene inserito il database in questi file.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] È consigliabile usare [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]È invece consigliabile utilizzare [create database](../../t-sql/statements/create-database-sql-server-transact-sql.md) .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,38 +55,38 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'` È il nome del database da creare per utilizzarlo nei supporti rimovibili. *dbname* viene **sysname**.  
+`[ @dbname = ] 'dbname'`Nome del database da creare per l'utilizzo su supporti rimovibili. *dbname* è di **tipo sysname**.  
   
-`[ @syslogical = ] 'syslogical'` È il nome logico del file che contiene le tabelle del catalogo di sistema. *syslogical* viene **sysname**.  
+`[ @syslogical = ] 'syslogical'`Nome logico del file contenente le tabelle del catalogo di sistema. *syslogical* è di **tipo sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'` È il nome fisico. In esso è incluso un percorso completo del file contenente le tabelle del catalogo di sistema. *sysphysical* viene **nvarchar(260)** .  
+`[ @sysphysical = ] 'sysphysical'`È il nome fisico. In esso è incluso un percorso completo del file contenente le tabelle del catalogo di sistema. *sysphysical* è di **tipo nvarchar (260)**.  
   
-`[ @syssize = ] syssize` È la dimensione, in megabyte del file che contiene il sistema tabelle del catalogo. *syssize* viene **int**. Il valore minimo *syssize* è 1.  
+`[ @syssize = ] syssize`Dimensioni in megabyte del file contenente le tabelle del catalogo di sistema. *syssize* è di **tipo int**. Il valore minimo di *syssize* è 1.  
   
-`[ @loglogical = ] 'loglogical'` È il nome logico del file che contiene il log delle transazioni. *loglogical* viene **sysname**.  
+`[ @loglogical = ] 'loglogical'`Nome logico del file contenente il log delle transazioni. *loglogical* è di **tipo sysname**.  
   
-`[ @logphysical = ] 'logphysical'` È il nome fisico. In esso è incluso un percorso completo del file contenente il log delle transazioni. *logphysical* viene **nvarchar(260)** .  
+`[ @logphysical = ] 'logphysical'`È il nome fisico. In esso è incluso un percorso completo del file contenente il log delle transazioni. *logphysical* è di **tipo nvarchar (260)**.  
   
-`[ @logsize = ] logsize` È la dimensione, in megabyte del file che contiene il log delle transazioni. *LogSize* viene **int**. Il valore minimo *logsize* è 1.  
+`[ @logsize = ] logsize`Dimensioni in megabyte del file contenente il log delle transazioni. *logsize* è di **tipo int**. Il valore minimo di *logsize* è 1.  
   
-`[ @datalogical1 = ] 'datalogical'` È il nome logico di un file contenente le tabelle di dati. *datalogical* viene **sysname**.  
+`[ @datalogical1 = ] 'datalogical'`Nome logico di un file contenente le tabelle di dati. *datalogicalal* è di **tipo sysname**.  
   
  Il numero dei file di dati è compreso tra 1 e 16. Vengono in genere creati più file di dati quando si prevede che il database sia di grandi dimensioni e debba essere pertanto suddiviso su più dischi.  
   
-`[ @dataphysical1 = ] 'dataphysical'` È il nome fisico. In esso è incluso un percorso completo di un file contenente le tabelle di dati. *dataphysical* viene **nvarchar(260)** .  
+`[ @dataphysical1 = ] 'dataphysical'`È il nome fisico. In esso è incluso un percorso completo di un file contenente le tabelle di dati. *dataphysical* è di **tipo nvarchar (260)**.  
   
-`[ @datasize1 = ] 'datasize'` È la dimensione, in megabyte di un file che contiene le tabelle di dati. *DataSize* viene **int**. Il valore minimo *datasize* è 1.  
+`[ @datasize1 = ] 'datasize'`Dimensioni in megabyte di un file contenente tabelle di dati. *DataSize* è di **tipo int**. Il valore di *DataSize* minimo è 1.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Utilizzare questa stored procedure se si desidera creare una copia del database su un supporto rimovibile, ad esempio un CD, e distribuire il database ad altri utenti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CREATE DATABASE, CREATE ANY DATABASE o ALTER ANY DATABASE.  
   
  Per mantenere il controllo sull'utilizzo del disco per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorizzazione per la creazione dei database è in genere limitata a pochi account di accesso.  
@@ -96,7 +96,7 @@ sp_create_removable
   
 |Operazione nel database|Autorizzazioni impostate per i file|  
 |---------------------------|------------------------------|  
-|Modifica per l'aggiunta di un nuovo file|Data creazione|  
+|Modifica per l'aggiunta di un nuovo file|Data di creazione|  
 |Esecuzione del backup|Collegamento|  
 |Ripristino|Scollegamento|  
   
@@ -120,12 +120,12 @@ EXEC sp_create_removable 'inventory',
   
 ## <a name="see-also"></a>Vedere anche  
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [sp_certify_removable &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_dbremove &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

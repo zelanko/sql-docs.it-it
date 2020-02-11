@@ -16,49 +16,49 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea99ec6a5b0a76ce0647e3681a4cf919d3f086b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087769"
 ---
 # <a name="types-of-drivers"></a>Tipi di driver
-Driver ODBC possono essere classificati come indicato di seguito:  
+I driver ODBC possono essere classificati come segue:  
   
--   **32 bit ODBC 2.**  
-     **_x_ Driver** driver A 32 bit che:  
+-   **ODBC 2 a 32 bit.**  
+     **driver _x_ ** un driver a 32 bit che:  
   
-    -   Consente di esportare solo ODBC *2.x* funzioni.  
+    -   Esporta solo le funzioni ODBC *2. x* .  
   
-    -   Mostra ODBC *2.x* comportamento per modifiche del comportamento.  
+    -   Mostra il comportamento di ODBC *2. x* per le modifiche comportamentali.  
   
--   **ISO e aprire i Driver compatibili con gruppo** driver A 32 bit che:  
+-   **Driver conformi a ISO e Apri gruppo** Driver a 32 bit che:  
   
-    -   Esporta tutte le funzioni che sono documentate nei documenti Open Group o ISO CLI. Ciò include alcune delle funzioni che sono deprecate in ODBC.  
+    -   Esporta tutte le funzioni documentate nel gruppo Open o nei documenti dell'interfaccia della riga di comando ISO. Verranno incluse alcune funzioni deprecate in ODBC.  
   
-    -   Presenta un comportamento ODBC 3.0 per modifiche del comportamento.  
+    -   Presenta il comportamento ODBC 3,0 per le modifiche comportamentali.  
   
-    -   Non necessariamente esamina la gestione dei Driver ODBC 3.0.  
+    -   Non passa necessariamente attraverso Gestione driver ODBC 3,0.  
   
--   **Driver ODBC 3.0** driver A 32 bit che:  
+-   **Driver ODBC 3,0** Driver a 32 bit che:  
   
-    -   Esporta solo le funzioni che sono nella versione 3.0 di ODBC meno funzioni deprecate.  
+    -   Esporta solo le funzioni presenti in ODBC 3,0 meno funzioni deprecate.  
   
-    -   È in grado di che esibisce ODBC *2.x* comportamento o il comportamento ODBC 3.0 rispetto alle modifiche di comportamento, basato sull'attributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
+    -   È in grado di esporre il comportamento ODBC *2. x* o ODBC 3,0 in relazione alle modifiche comportamentali, in base all'attributo SQL_ATTR_APP_ODBC_VERSION Environment.  
   
--   **Driver ODBC 3.5 (o versioni successive) ANSI** driver A 32 bit che:  
+-   **Driver ANSI 3,5 (o versione successiva) ODBC** Driver a 32 bit che:  
   
-    -   Esporta solo le funzioni che sono in ODBC 3.5 meno funzioni deprecate.  
+    -   Esporta solo le funzioni presenti in ODBC 3,5 meno funzioni deprecate.  
   
-    -   È in grado di che esibisce ODBC *2.x* comportamento o il comportamento ODBC 3.0 o comportamento ODBC 3.5 rispetto alle modifiche del comportamento, basato sull'attributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
+    -   È in grado di esporre il comportamento ODBC *2. x* o ODBC 3,0 o il comportamento ODBC 3,5 rispetto alle modifiche comportamentali, in base all'attributo SQL_ATTR_APP_ODBC_VERSION Environment.  
   
--   **Driver ODBC 3.5 (o versioni successive) Unicode** driver A 32 bit che:  
+-   **Driver Unicode ODBC 3,5 (o versione successiva)** Driver a 32 bit che:  
   
-    -   Supporta tutte le funzionalità di un driver ODBC 3.5 ANSI.  
+    -   Supporta tutte le funzionalità di un driver ODBC 3,5 ANSI.  
   
-    -   Esporta le versioni Unicode delle stringa ODBC tutte le API.  
+    -   Esporta versioni Unicode di tutte le API stringa ODBC.  
   
-    -   Può archiviare ed elaborare i dati Unicode nell'origine dati.  
+    -   Consente di archiviare ed elaborare dati Unicode nell'origine dati.  
   
 > [!NOTE]  
->  driver ODBC a 16 bit non funziona direttamente con ODBC *3.x* gestione Driver. Tuttavia, è possibile che i driver lavorare con la gestione di Driver ODBC 2.0, che successivamente thunk fino a 16 bit i *3.x* gestione Driver.
+>  i driver ODBC a 16 bit non funzioneranno direttamente con Gestione driver ODBC *3. x* . Tuttavia, è possibile che i driver a 16 bit funzionino con Gestione driver ODBC 2,0, che successivamente consente di eseguire il thunk fino alla gestione driver *3. x* .

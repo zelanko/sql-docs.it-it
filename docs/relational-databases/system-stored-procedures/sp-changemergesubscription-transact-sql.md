@@ -16,13 +16,13 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124873"
 ---
-# <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
+# <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica le proprietà selezionate di una sottoscrizione push di tipo merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -42,20 +42,20 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione da modificare. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. La pubblicazione deve essere già esistente e conforme alle regole per gli identificatori.  
+`[ @publication = ] 'publication'`Nome della pubblicazione da modificare. *Publication* è di **tipo sysname**e il valore predefinito è null. La pubblicazione deve essere già esistente e conforme alle regole per gli identificatori.  
   
-`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscriber_db*viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber_db = ] 'subscriber_db'`Nome del database di sottoscrizione. *subscriber_db*è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @property = ] 'property'` È la proprietà da modificare per la pubblicazione specificata. *proprietà* viene **sysname**, e può essere uno dei valori nella tabella.  
+`[ @property = ] 'property'`Proprietà da modificare per la pubblicazione specificata. *Property* è di **tipo sysname**. i possibili valori sono i valori della tabella.  
   
-`[ @value = ] 'value'` Nuovo valore per l'oggetto specificato *proprietà*. *valore* viene **nvarchar(255**, e può essere uno dei valori nella tabella.  
+`[ @value = ] 'value'`Nuovo valore per la *Proprietà*specificata. *value* è di **tipo nvarchar (255)**. i possibili valori sono i valori della tabella.  
   
-|Proprietà|Valore|Descrizione|  
+|Proprietà|valore|Descrizione|  
 |--------------|-----------|-----------------|  
-|**description**||Descrizione della sottoscrizione di tipo merge.|  
-|**priority**||Priorità della sottoscrizione. La priorità viene utilizzata dal sistema di risoluzione predefinito per eseguire una selezione in caso di conflitti.|  
+|**Descrizione**||Descrizione della sottoscrizione di tipo merge.|  
+|**priorità**||Priorità della sottoscrizione. La priorità viene utilizzata dal sistema di risoluzione predefinito per eseguire una selezione in caso di conflitti.|  
 |**merge_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
 |**merge_job_password**||Password dell'account di Windows utilizzato per l'esecuzione dell'agente.|  
 |**publisher_security_mode**|**1**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di Windows.|  
@@ -66,27 +66,27 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|Esegue la connessione al Sottoscrittore utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**subscriber_login**||Nome dell'account di accesso nel Sottoscrittore.|  
 |**subscriber_password**||Password complessa per l'account di accesso fornito per il Sottoscrittore.|  
-|**sync_type**|**automatic**|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
-||**Nessuno**|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate. Le tabelle di sistema e i dati vengono sempre trasferiti.|  
+|**sync_type**|**Automatico**|Lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti per primi nel Sottoscrittore.|  
+||**nessuno**|Il Sottoscrittore dispone già dello schema e dei dati iniziali per le tabelle pubblicate. Le tabelle di sistema e i dati vengono sempre trasferiti.|  
 |**use_interactive_resolver**|**true**|Consente la risoluzione interattiva dei conflitti per tutti gli articoli che la prevedono.|  
 ||**false**|I conflitti vengono risolti automaticamente utilizzando un sistema di risoluzione predefinito o personalizzato.|  
 |NULL (predefinito)|NULL (predefinito)||  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_changemergesubscription** viene utilizzata nella replica di tipo merge.  
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_changemergesubscription**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_changemergesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

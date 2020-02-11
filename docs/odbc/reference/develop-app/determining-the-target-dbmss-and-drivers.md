@@ -1,5 +1,5 @@
 ---
-title: Per determinare il DBMS di destinazione e i driver | Microsoft Docs
+title: Determinazione dei sistemi DBMS e dei driver di destinazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7065aa88d60a508df9946d38d0dded220c4bb7a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106144"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinazione dei DBMS e dei driver di destinazione
-La domanda successiva da prendere in considerazione è, quali sono il DBMS di destinazione per l'applicazione e quali driver sono disponibili che supportano tali DBMS? Poiché applicazioni generiche tendono a essere estremamente interoperativi, la questione del DBMS di destinazione è più applicabile alle applicazioni personalizzate e verticale. Tuttavia, la domanda dei driver di destinazione si applica a tutte le applicazioni, poiché i driver variano notevolmente in velocità, qualità, il supporto delle funzionalità e disponibilità. Inoltre, se i driver devono essere ridistribuito con l'applicazione, i costi e la disponibilità di piani di contratti multilicenza dovranno essere considerati.  
+La domanda successiva da considerare è, quali sono i DBMS di destinazione per l'applicazione e quali sono i driver disponibili che supportano questi sistemi DBMS? Poiché le applicazioni generiche tendono a essere altamente interoperative, la questione dei DBMS di destinazione è la più applicabile alle applicazioni personalizzate e verticali. Tuttavia, la domanda dei driver di destinazione si applica a tutte le applicazioni, perché i driver variano notevolmente in velocità, qualità, supporto delle funzionalità e disponibilità. Inoltre, se i driver devono essere ridistribuiti con l'applicazione, è necessario prendere in considerazione il costo e la disponibilità dei piani di licenza.  
   
- Per molte applicazioni personalizzate, la destinazione DBMS sono evidenti: Essi sono esistenti DBMS che l'applicazione è progettata per accedere. Deve essere considerato anche DBMS in cui è pianificata migrazione futura. Tuttavia, la domanda importante per queste applicazioni è che i driver da usare con essi. Per altre applicazioni personalizzate: quelli che non sono progettati per accedere a un DBMS esistente - il DBMS di destinazione può essere scelto in base a supporto delle funzionalità, il supporto di utenti simultanei, la disponibilità di driver e convenienza.  
+ Per molte applicazioni personalizzate, i DBMS di destinazione sono ovvi: sono DBMS esistenti a cui l'applicazione è progettata per accedere. Devono essere presi in considerazione anche i DBMS a cui è pianificata la migrazione futura. Tuttavia, la domanda principale per queste applicazioni è il driver o i driver da usare con loro. Per altre applicazioni personalizzate, ovvero quelle che non sono progettate per accedere a un sistema DBMS esistente, è possibile scegliere i DBMS di destinazione in base al supporto delle funzionalità, al supporto utente simultaneo, alla disponibilità dei driver e all'accessibilità.  
   
- Per le applicazioni verticali, la destinazione di che DBMS in genere vengono scelti in base il supporto delle funzionalità, la disponibilità di driver e sul mercato. Ad esempio, un'applicazione di verticale progettata per le piccole imprese deve avere come destinazione DBMS che sono accessibili da tali aziende; un'applicazione verticale progettata come componente aggiuntivo di DBMS esistente deve avere come destinazione ampiamente usato DBMS.  
+ Per le applicazioni verticali, i DBMS di destinazione vengono in genere scelti in base al supporto delle funzionalità, alla disponibilità dei driver e al mercato. Un'applicazione verticale progettata per le piccole imprese, ad esempio, deve essere destinata a DBMS accessibili a tali aziende; un'applicazione verticale progettata come componente aggiuntivo per i DBMS esistenti deve essere destinata a DBMS ampiamente diffusi.  
   
- Quando si sceglie di DBMS di destinazione, le differenze tra i database desktop e server devono essere considerate. I database desktop, ad esempio Paradox, dBASE e Btrieve sono meno potenti rispetto ai database del server. Poiché in genere sono accessibili attraverso i meno potenti motori SQL trovati nel driver più basati su file, spesso non includono il supporto delle transazioni pieno, supportano un minor numero di utenti simultanei e non dispongono di SQL. Tuttavia, sono poco costose e hanno una grande base installata.  
+ Quando si scelgono i DBMS di destinazione, è necessario considerare le differenze tra i database desktop e server. I database desktop come dBASE, Paradox e Btrieve sono meno potenti dei database server. Poiché in genere si accede ai motori SQL meno potenti disponibili nella maggior parte dei driver basati su file, spesso manca il supporto completo delle transazioni, supporta un minor numero di utenti simultanei e SQL limitato. Tuttavia, sono poco costosi e hanno una base installata di grandi dimensioni.  
   
- Server database, ad esempio Oracle, DB2 e SQL Server forniscono il supporto delle transazioni pieno, supportano molti utenti simultanei e hanno SQL avanzate. Sono molto più costose e avere una base installata più piccoli. D'altra parte, i prezzi di software tendono a essere superiore, l'offset in qualche modo un mercato potenziale più piccolo.  
+ I database server come Oracle, DB2 e SQL Server offrono il supporto completo delle transazioni, supportano molti utenti simultanei e hanno SQL avanzato. Sono molto più costosi e hanno una base installata di dimensioni minori. D'altra parte, i prezzi del software tendono a essere più elevati, in modo da compensare un mercato potenziale più piccolo.  
   
- Di conseguenza, destinazione DBMS in alcuni casi può essere scelto in base le funzionalità richieste dall'applicazione e il mercato di destinazione dell'applicazione. Ad esempio, un sistema di immissione dell'ordine per le aziende di grandi dimensioni potrebbe non essere destinati i database desktop perché questi non dispongono di supporto delle transazioni sufficiente. Un simile sistema progettato per le piccole imprese potrà escludere la maggior parte dei database del server in base ai costi. E gli sviluppatori di applicazioni generiche potrebbero entrambi come destinazione, ma evitare di utilizzare le caratteristiche avanzate presenti nel database del server.
+ In questo modo, è talvolta possibile scegliere i DBMS di destinazione in base alle funzionalità richieste dall'applicazione e al mercato di destinazione dell'applicazione. Ad esempio, un sistema di immissione degli ordini per le aziende di grandi dimensioni potrebbe non essere destinato ai database desktop perché questi non sono idonei per supportare le transazioni. Un sistema simile progettato per le piccole imprese potrebbe escludere la maggior parte dei database del server in base ai costi. E gli sviluppatori di applicazioni generiche possono essere destinati a entrambi, ma evitare di usare le funzionalità avanzate disponibili nei database del server.

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_actions (Transact-SQL) | Microsoft Docs
+title: sys. dm_audit_actions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,32 +19,32 @@ ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936971"
 ---
-# <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
+# <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Restituisce una riga per ogni azione di controllo che può essere segnalata nel log di controllo e per ogni gruppo di azioni di controllo che possono essere configurate come parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, vedere [SQL Server Audit &#40;motore di Database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Restituisce una riga per ogni azione di controllo che può essere segnalata nel log di controllo e per ogni gruppo di azioni di controllo che possono essere configurate come parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per ulteriori informazioni sul [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controllo, vedere [SQL Server audit &#40;motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar(4)**|ID dell'azione di controllo. Correlato per il **action_id** valore scritto in ogni record di controllo. Ammette i valori Null. Per i gruppi di controllo, il valore è Null.|  
+|**action_id**|**varchar (4)**|ID dell'azione di controllo. Correlato al valore **action_id** scritto in ogni record di controllo. Ammette i valori Null. Per i gruppi di controllo, il valore è Null.|  
 |**action_in_log**|**bit**|Indica se un'azione può essere scritta in un log di controllo. Sono disponibili i valori seguenti:<br /><br /> 1 = Sì<br /><br /> 0 = No|  
-|**name**|**sysname**|Nome dell'azione di controllo o del gruppo di azioni. Non ammette i valori Null.|  
-|**class_desc**|**nvarchar(120)**|Nome della classe dell'oggetto al quale si applica l'azione di controllo. Tale oggetto può appartenere all'ambito del server, del database o dello schema, ma non un oggetto dello schema. Non ammette i valori Null.|  
-|**parent_class_desc**|**nvarchar(120)**|Nome della classe padre per l'oggetto descritto da class_desc. Se class_desc è un oggetto server, il valore è Null.|  
-|**covering_parent_action_name**|**nvarchar(120)**|Nome dell'azione di controllo o del gruppo di controllo che contiene l'azione di controllo descritta in questa riga. Viene utilizzato per creare una gerarchia di azioni e azioni di copertura. Ammette i valori Null.|  
-|**configuration_level**|**nvarchar(10)**|Indica che l'azione o il gruppo di azioni specificato in questa riga è configurabile a livello di gruppo o di azione. Se l'azione non è configurabile, il valore è Null.|  
-|**containing_group_name**|**nvarchar(120)**|Nome del gruppo di controllo contenente l'azione specificata. Se il valore in name è un gruppo, questo nome è Null.|  
+|**nome**|**sysname**|Nome dell'azione di controllo o del gruppo di azioni. Non ammette i valori Null.|  
+|**class_desc**|**nvarchar (120)**|Nome della classe dell'oggetto al quale si applica l'azione di controllo. Tale oggetto può appartenere all'ambito del server, del database o dello schema, ma non un oggetto dello schema. Non ammette i valori Null.|  
+|**parent_class_desc**|**nvarchar (120)**|Nome della classe padre per l'oggetto descritto da class_desc. Se class_desc è un oggetto server, il valore è Null.|  
+|**covering_parent_action_name**|**nvarchar (120)**|Nome dell'azione di controllo o del gruppo di controllo che contiene l'azione di controllo descritta in questa riga. Viene utilizzato per creare una gerarchia di azioni e azioni di copertura. Ammette i valori Null.|  
+|**configuration_level**|**nvarchar (10)**|Indica che l'azione o il gruppo di azioni specificato in questa riga è configurabile a livello di gruppo o di azione. Se l'azione non è configurabile, il valore è Null.|  
+|**containing_group_name**|**nvarchar (120)**|Nome del gruppo di controllo contenente l'azione specificata. Se il valore in name è un gruppo, questo nome è Null.|  
   
-## <a name="permissions"></a>Permissions  
- Le entità devono disporre **seleziona** l'autorizzazione. Per impostazione predefinita, tale autorizzazione è concessa al ruolo public.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le entità devono disporre dell'autorizzazione **Select** . Per impostazione predefinita, tale autorizzazione è concessa al ruolo public.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] (Indici per tabelle con ottimizzazione per la memoria). Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

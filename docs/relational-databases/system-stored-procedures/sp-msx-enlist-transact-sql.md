@@ -18,21 +18,21 @@ ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 905ec9c26fe84ceaf1230665c3ff13e2e7ffe9f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108036"
 ---
-# <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
+# <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Consente di aggiungere il server corrente all'elenco di server disponibili nel server master.  
   
 > [!CAUTION]  
->  Il **sp_msx_enlist** stored procedure modifica il Registro di sistema. La modifica manuale del Registro di sistema non è un'operazione consigliata, in quanto modifiche inadeguate o non corrette possono causare gravi problemi di configurazione nel sistema. La modifica del Registro di sistema tramite l'editor corrispondente deve essere pertanto eseguita esclusivamente da utenti esperti. Per ulteriori informazioni, vedere la documentazione di Microsoft Windows.  
+>  Il **sp_msx_enlist** stored procedure modifica il registro di sistema. La modifica manuale del Registro di sistema non è un'operazione consigliata, in quanto modifiche inadeguate o non corrette possono causare gravi problemi di configurazione nel sistema. La modifica del Registro di sistema tramite l'editor corrispondente deve essere pertanto eseguita esclusivamente da utenti esperti. Per ulteriori informazioni, vedere la documentazione di Microsoft Windows.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,18 +43,18 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @msx_server_name = ] 'msx_server'` Il nome del server di amministrazione multiserver (master). *msx_server* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @msx_server_name = ] 'msx_server'`Nome del server di amministrazione multiserver (Master). *msx_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @location = ] 'location'` Il percorso del server di destinazione da aggiungere. *ubicazione* viene **nvarchar(100)** , con un valore predefinito è NULL.  
+`[ @location = ] 'location'`Percorso del server di destinazione da aggiungere. *location* è di **tipo nvarchar (100)** e il valore predefinito è null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ nessuno  
   
-## <a name="permissions"></a>Permissions  
- Le autorizzazioni di esecuzione per questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
+## <a name="permissions"></a>Autorizzazioni  
+ Le autorizzazioni per l'esecuzione di questa procedura vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente il server corrente viene integrato nel server master `AdventureWorks1`. L'ubicazione del server corrente è `Building 21, Room 309, Rack 5`.  
@@ -69,8 +69,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_msx_defect &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
+ [xp_cmdshell &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
   
   

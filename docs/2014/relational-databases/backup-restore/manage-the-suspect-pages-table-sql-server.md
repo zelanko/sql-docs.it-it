@@ -19,20 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921957"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>Gestione della tabella suspect_pages (SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>Gestione della tabella suspect_pages (SQL Server)
   In questo argomento viene descritto come gestire la tabella **suspect_pages** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La tabella **suspect_pages** , usata per la gestione di informazioni sulle pagine sospette, è importante per stabilire se è necessario un ripristino. La tabella [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) è contenuta nel [database msdb](../databases/msdb-database.md).  
   
  Una pagina è considerata "sospetta" quando nel [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] si verifica uno dei seguenti errori quando viene tentata la lettura di una pagina di dati:  
   
--   Un [errore 823](../errors-events/mssqlserver-823-database-engine-error.md) causato da un controllo di ridondanza ciclico (CRC) generato dal sistema operativo, ad esempio un errore del disco (alcuni errori hardware)  
+-   [Errore 823](../errors-events/mssqlserver-823-database-engine-error.md) causato da un controllo di ridondanza ciclico (CRC) emesso dal sistema operativo, ad esempio un errore del disco (alcuni errori hardware)  
   
--   Un [errore 824](../errors-events/mssqlserver-824-database-engine-error.md), ad esempio una pagina incompleta (qualsiasi errore logico)  
+-   [Errore 824](../errors-events/mssqlserver-824-database-engine-error.md), ad esempio una pagina incompleta (qualsiasi errore logico)  
   
  L'ID di ogni pagina sospetta viene registrato nella tabella **suspect_pages** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra tutte le pagine sospette rilevate durante la normale elaborazione, ad esempio nei casi seguenti:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62921957"
   
  La tabella **suspect_pages** viene aggiornata in base alle necessità durante un'operazione di ripristino, di correzione DBCC o di rimozione del database.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62921957"
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Recommendations"></a> Indicazioni  
+###  <a name="Recommendations"></a> Raccomandazioni  
   
 -   **Errori registrati nella tabella suspect_pages**  
   
@@ -120,9 +120,9 @@ ms.locfileid: "62921957"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Chiunque abbia accesso a **msdb** può leggere i dati nella tabella **suspect_pages** . Chiunque disponga dell'autorizzazione UPDATE nella tabella suspect_pages può aggiornare i relativi record. I membri del ruolo predefinito del database **db_owner** in **msdb** o del ruolo predefinito del server **sysadmin** possono inserire, aggiornare ed eliminare i record.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Per gestire la tabella suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Per gestire la tabella suspect_pages  
   
 1.  In **Esplora oggetti**connettersi a un'istanza di [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], espandere tale istanza, quindi espandere **Database**.  
   
@@ -132,9 +132,9 @@ ms.locfileid: "62921957"
   
 4.  Nella finestra Query, modificare, aggiornare o eliminare le righe desiderate.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Per gestire la tabella suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Per gestire la tabella suspect_pages  
   
 1.  Connettersi al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -166,7 +166,7 @@ GO
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [Ripristino di pagine &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

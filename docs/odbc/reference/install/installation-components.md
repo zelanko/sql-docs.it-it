@@ -14,24 +14,24 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34d1b6d143f6f40d73e2feeb0b718f3c3b3248fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094128"
 ---
 # <a name="installation-components"></a>Componenti di installazione
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. È consigliabile installare solo in modo esplicito ODBC nelle versioni precedenti di Windows.  
   
- Il processo di installazione viene avviato quando l'utente esegue il programma di installazione. Il programma di installazione funziona in combinazione con il *DLL di installazione* e una *DLL di installazione driver* per ogni driver. Il programma di installazione sia il programma di installazione DLL utilizzare gli argomenti in di **SQLInstallDriverEx** e **SQLInstallTranslatorEx** funzioni per determinare quali file copiare o eliminare per ciascun componente. Nella figura seguente mostra la relazione tra questi componenti di installazione.  
+ Il processo di installazione viene avviato quando l'utente esegue il programma di installazione. Il programma di installazione funziona insieme alla *dll* del programma di installazione e a una *dll di installazione driver* per ogni driver. Sia il programma di installazione che la DLL del programma di installazione usano gli argomenti nelle funzioni **SQLInstallDriverEx** e **SQLInstallTranslatorEx** per determinare i file da copiare o eliminare per ogni componente. Nella figura seguente viene illustrata la relazione tra questi componenti di installazione.  
   
- ![Relazione tra i componenti di installazione](../../../odbc/reference/install/media/pr29.gif "pr29")  
+ ![Relazione tra componenti di installazione](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]
->  Il file Odbc.inf che è stato usato in ODBC *2.x* per descrivere i file necessari per ogni ODBC componente non verrà utilizzata in ODBC *3.x*. I driver di ODBC *3.x* componenti non sono necessario creare un file Odbc.inf. La rimozione dei **la funzione SQLInstallDriver** e **la funzione SQLInstallODBC**e la rimozione del **SQLInstallTranslator**, hanno sottoposto a rendering Odbc.inf non necessari. Le informazioni del driver che erano nelle sezioni della parola chiave Driver del Odbc.inf sono ora disponibili nel *lpszDriver* nell'argomento **SQLInstallDriverEx**. Le informazioni di Microsoft translator che usato in [ODBC Microsoft Translator] e le sezioni specifiche di Microsoft Translator di Odbc.inf sono ora disponibili nel *lpszTranslator* argomenti del **SQLInstallTranslatorEx**. Queste modifiche consentono il programma di installazione ODBC garantire la portabilità tra piattaforme.  
+>  Il file ODBC. inf utilizzato in ODBC *2. x* per descrivere i file richiesti da ogni componente ODBC non viene utilizzato in ODBC *3. x*. I driver che inviano i componenti ODBC *3. x* non devono creare un file ODBC. inf. Il rendering di ODBC. inf non è necessario per la rimozione di **SQLInstallDriver** e **SQLInstallODBC**e per la deprecazione di **SQLInstallTranslator**. Le informazioni sul driver utilizzate nelle sezioni della parola chiave driver di ODBC. inf sono ora disponibili nell'argomento *lpszDriver* in **SQLInstallDriverEx**. Le informazioni di conversione che erano utilizzate nelle sezioni [ODBC Translator] e Translator Specification di ODBC. inf sono ora disponibili nell'argomento *lpszTranslator* di **SQLInstallTranslatorEx**. Queste modifiche consentono al programma di installazione ODBC di essere più portabile su più piattaforme.  
   
- Per altre informazioni su questi componenti, vedere gli argomenti seguenti alla fine di questa sezione.  
+ Per ulteriori informazioni su questi componenti, vedere gli argomenti seguenti alla fine di questa sezione.  
   
 -   [Programma di installazione](../../../odbc/reference/install/setup-program.md)  
   

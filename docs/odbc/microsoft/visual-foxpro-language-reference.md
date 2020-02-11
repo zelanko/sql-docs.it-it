@@ -1,5 +1,5 @@
 ---
-title: Riferimenti al linguaggio Visual FoxPro | Microsoft Docs
+title: Riferimenti per il linguaggio Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88993a80fa629c2f4cdc8448483fc8a65a6f2adf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087817"
 ---
 # <a name="visual-foxpro-language-reference"></a>Informazioni di riferimento sul linguaggio Visual FoxPro

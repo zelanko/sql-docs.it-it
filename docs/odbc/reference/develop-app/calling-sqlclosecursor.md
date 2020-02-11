@@ -17,11 +17,11 @@ ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 447a0892049317813fa9fe6986e6219922a11e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068695"
 ---
 # <a name="calling-sqlclosecursor"></a>Chiamata di SQLCloseCursor
-In quanto **SQLCloseCursor** è quasi identico **SQLFreeStmt** con SQL_CLOSE, gestione Driver non esegue il mapping a questa funzione. Funzioni di sostituzione vengono mappate in modo che esistente ODBC *2.x* spostare facilmente le applicazioni a ODBC *3.x* usando le nuove funzioni. Tale cambiamento rende più semplice per tali applicazioni iniziare a usare nuovi ODBC *3.x* funzionalità all'interno di codice condizionale in modo modulare. **SQLCloseCursor** non rappresenta alcuna nuova funzionalità. Un'applicazione non riuscirà a ottenere alcun vantaggio spostando **SQLCloseCursor** dalla **SQLFreeStmt** con SQL_CLOSE.
+Poiché **SQLCloseCursor** è quasi uguale a **SQLFreeStmt** con SQL_CLOSE, gestione driver non esegue il mapping di questa funzione. Viene eseguito il mapping delle funzioni di sostituzione in modo che le applicazioni ODBC *2. x* esistenti possano passare facilmente a ODBC *3. x* usando le nuove funzioni. Questo tipo di spostamento rende più semplice per queste applicazioni iniziare a utilizzare la nuova funzionalità ODBC *3. x* all'interno del codice condizionale in modo modulare. **SQLCloseCursor** non rappresenta alcuna nuova funzionalità. Per un'applicazione non si ottengono vantaggi passando a **SQLCloseCursor** da **SQLFreeStmt** con SQL_CLOSE.

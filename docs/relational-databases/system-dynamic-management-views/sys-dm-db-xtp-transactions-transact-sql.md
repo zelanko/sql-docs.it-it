@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc5f12e50c1e7a7d639acdbf9a244406ce9366c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097929"
 ---
-# <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
+# <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Indica le transazioni attive nel motore di database OLTP in memoria.  
@@ -43,8 +43,8 @@ ms.locfileid: "68097929"
 |end_tsn|**bigint**|Numero di serie di fine della transazione.|  
 |state|**int**|Stato della transazione:<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|Descrizione dello stato della transazione.|  
-|result|**int**|Risultato della transazione. Di seguito sono indicati i valori possibili.<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
-|result_desc|**nvarchar**|Risultato della transazione. Di seguito sono indicati i valori possibili.<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> error<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
+|risultato|**int**|Risultato della transazione. Di seguito sono indicati i valori possibili.<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
+|result_desc|**nvarchar**|Risultato della transazione. Di seguito sono indicati i valori possibili.<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERRORE<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|Solo per uso interno.|  
 |is_speculative|**bit**|Solo per uso interno.|  
 |is_prepared|**bit**|Solo per uso interno.|  
@@ -65,19 +65,19 @@ ms.locfileid: "68097929"
 |scan_area|**int**|Solo per uso interno.|  
 |scan_area_desc|**nvarchar**|Solo per uso interno.|  
 |scan_location|**int**|Solo per uso interno.|  
-|dependent_1_address|**varbinary(8)**|Solo per uso interno.|  
-|dependent_2_address|**varbinary(8)**|Solo per uso interno.|  
-|dependent_3_address|**varbinary(8)**|Solo per uso interno.|  
-|dependent_4_address|**varbinary(8)**|Solo per uso interno.|  
-|dependent_5_address|**varbinary(8)**|Solo per uso interno.|  
-|dependent_6_address|**varbinary(8)**|Solo per uso interno.|  
-|dependent_7_address|**varbinary(8)**|Solo per uso interno.|  
-|dependent_8_address|**varbinary(8)**|Solo per uso interno.|  
+|dependent_1_address|**varbinary (8)**|Solo per uso interno.|  
+|dependent_2_address|**varbinary (8)**|Solo per uso interno.|  
+|dependent_3_address|**varbinary (8)**|Solo per uso interno.|  
+|dependent_4_address|**varbinary (8)**|Solo per uso interno.|  
+|dependent_5_address|**varbinary (8)**|Solo per uso interno.|  
+|dependent_6_address|**varbinary (8)**|Solo per uso interno.|  
+|dependent_7_address|**varbinary (8)**|Solo per uso interno.|  
+|dependent_8_address|**varbinary (8)**|Solo per uso interno.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

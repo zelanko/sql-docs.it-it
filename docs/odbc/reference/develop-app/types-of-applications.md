@@ -17,66 +17,66 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70263b98f6b0e933f8b14fbfa74428c77317f462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087798"
 ---
 # <a name="types-of-applications"></a>Tipi di applicazioni
 Le applicazioni ODBC possono essere classificate come segue:  
   
--   **Pure ODBC 2.**  
-     **_x_ applicazione** applicazione A 32 bit che:  
+-   **ODBC pure 2.**  
+     ** _x_ applicazione** un'applicazione a 32 bit che:  
   
-    -   Chiama solo ODBC 2. *x* funzioni (inclusa la funzione ODBC 1.0 **SQLSetParam**). Ad esempio ODBC 1. *x* le applicazioni che sono state trasferite a 32 bit.  
+    -   Chiama solo ODBC 2. funzioni *x* (inclusa la funzione ODBC 1,0 **SQLSetParam**). Che includono ODBC 1. *x* applicazioni che sono state trasferite a 32 bit.  
   
-    -   Si aspetta che ODBC 2. *x* comportamento per le funzionalità che hanno subito modifiche del comportamento. (Vedere [modifiche del comportamento](../../../odbc/reference/develop-app/behavioral-changes.md) per altre informazioni.)  
+    -   Prevede ODBC 2. comportamento *x* per le funzionalità che hanno modificato il comportamento. Per ulteriori informazioni, vedere [modifiche del comportamento](../../../odbc/reference/develop-app/behavioral-changes.md) .  
   
-    -   Non è stato ricompilato con le intestazioni di ODBC 3.5.  
+    -   Non è stato ricompilato con le intestazioni ODBC 3,5.  
   
--   **Pure ODBC 2.**  
-     **_x_ dell'applicazione ricompilata** un puro di ODBC 2. *x* applicazione che è stato ricompilato utilizzando i file di intestazione ODBC 3.5, impostando ODBCVER = 0x0250.  
+-   **ODBC pure 2.**  
+     **_x_ applicazione ricompilata** ODBC 2 puro. applicazione *x* ricompilata utilizzando i file di intestazione ODBC 3,5, impostando ODBCVer = 0x0250.  
   
--   **Pure ODBC 2.**  
-     **_x_ Unicode Application** un puro di ODBC 2. *x* ricompilato l'applicazione che è conforme a Unicode e Usa il tipo di dati SQL_WCHAR.  
+-   **ODBC pure 2.**  
+     **_x_ applicazione Unicode** un ODBC 2 puro. *x* applicazione ricompilata che è conforme a Unicode e utilizza il tipo di dati SQL_WCHAR.  
   
--   **Gruppo aperta pure e ISO**-**applicazione conforme a ODBC** applicazione A 32 bit che:  
+-   **Applicazione ODBC Open Group e**-**conforme allo standard** ISO un'applicazione a 32 bit che:  
   
-    -   Chiama le funzioni definite negli standard Open Group o ISO CLI. (Queste funzioni possono includere funzioni deprecate 3.0).  
+    -   Chiama funzioni definite negli standard del gruppo aperto o dell'interfaccia della riga di comando ISO. Queste funzioni possono includere funzioni 3,0 deprecate.  
   
-    -   Non usa i tipi di dati Unicode.  
+    -   Non utilizza i tipi di dati Unicode.  
   
-    -   È previsto il comportamento ODBC 3.0 per le funzionalità che hanno subito modifiche del comportamento.  
+    -   Prevede il comportamento di ODBC 3,0 per le funzionalità che hanno modificato il comportamento.  
   
--   **Applicazione di pura ODBC 3.0** applicazione A 32 bit che:  
+-   **Applicazione ODBC 3,0 pure** Applicazione a 32 bit che:  
   
-    -   Viene compilato con le 3.0 intestazioni.  
+    -   Viene compilato con le intestazioni 3,0.  
   
-    -   Chiama qualsiasi funzione ODBC 3.0, magari con quelli che sono deprecati.  
+    -   Chiama qualsiasi funzione ODBC 3,0, eventualmente includendo gli elementi deprecati.  
   
-    -   È previsto il comportamento ODBC 3.0 per le funzionalità che hanno subito modifiche del comportamento.  
+    -   Prevede il comportamento di ODBC 3,0 per le funzionalità che hanno modificato il comportamento.  
   
--   **Applicazione di pura ODBC 3.5** A 32 o 64 bit dell'applicazione che:  
+-   **Applicazione ODBC 3,5 pure** Un'applicazione 32 o a 64 bit che:  
   
-    -   Può usare tipi di dati Unicode.  
+    -   Può utilizzare tipi di dati Unicode.  
   
-    -   Chiama qualsiasi funzione ODBC 3.5, magari con quelli che sono deprecati.  
+    -   Chiama qualsiasi funzione ODBC 3,5, eventualmente includendo gli elementi deprecati.  
   
-    -   Comportamento di ODBC 3.5 per le funzionalità che hanno subito modifiche del comportamento è previsto.  
+    -   Prevede il comportamento di ODBC 3,5 per le funzionalità che hanno modificato il comportamento.  
   
--   **Applicazione di pura ODBC 3.8 (o versioni successive)** applicazione A 32 bit o 64 bit che:  
+-   **Applicazione ODBC 3,8 (o versione successiva)** Applicazione a 32 bit o a 64 bit che:  
   
-    -   Può usare tipi di dati Unicode.  
+    -   Può utilizzare tipi di dati Unicode.  
   
-    -   Chiama qualsiasi funzione ODBC 3.8, magari con quelli che sono deprecati.  
+    -   Chiama qualsiasi funzione ODBC 3,8, eventualmente includendo gli elementi deprecati.  
   
-    -   Comportamento di ODBC 3.8 per le funzionalità che hanno subito modifiche del comportamento è previsto.  
+    -   Prevede il comportamento di ODBC 3,8 per le funzionalità che hanno modificato il comportamento.  
   
--   **Sostituito applicazione** A 32 o 64 bit dell'applicazione che:  
+-   **Applicazione sostituita** Un'applicazione 32 o a 64 bit che:  
   
-    -   Nuovo comportamento implementa per funzionalità duplicate.  
+    -   Implementa un nuovo comportamento per la funzionalità duplicata.  
   
-    -   Utilizza tutte le nuove funzionalità in una versione successiva di ODBC solo all'interno di codice condizionale.  
+    -   Utilizza tutte le nuove funzionalità di una versione successiva di ODBC solo all'interno del codice condizionale.  
   
-    -   Ha limitato il codice condizionale per gestire modifiche del comportamento o ha eseguito la registrazione per una versione precedente dell'applicazione ODBC.
+    -   Dispone di un codice condizionale limitato per gestire le modifiche comportamentali o si è registrato come versione precedente dell'applicazione ODBC.
