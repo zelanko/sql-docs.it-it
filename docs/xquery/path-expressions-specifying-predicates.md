@@ -1,5 +1,5 @@
 ---
-title: Specifica di predicati in un passo dell'espressione di percorso | Microsoft Docs
+title: Specifica di predicati in un passaggio dell'espressione di percorso | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946434"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Espressioni di percorso - Specifica predicati
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Come descritto nell'argomento [espressioni di percorso in XQuery](../xquery/path-expressions-xquery.md), un passo dell'asse in un'espressione di percorso include i componenti seguenti:  
+  Come descritto nell'argomento relativo alle [espressioni di percorso in XQuery](../xquery/path-expressions-xquery.md), un passaggio dell'asse in un'espressione di percorso include i componenti seguenti:  
   
 -   [Un asse](../xquery/path-expressions-specifying-axis.md).  
   
--   Un test del nodo. Per altre informazioni, vedere [specificando i Test di nodo in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md).  
+-   Un test del nodo. Per altre informazioni, vedere [specifica del test di nodo in un passaggio dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md).  
   
 -   Zero o più predicati Operazione facoltativa.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67946434"
 ## <a name="predicates"></a>Predicati  
  Per filtrare una sequenza di nodi applicando un test specifico, è possibile utilizzare un predicato. L'espressione del predicato è racchiusa tra parentesi quadre ed è associata all'ultimo nodo di un'espressione di percorso.  
   
- Ad esempio, si supponga che un valore del parametro SQL (x) del **xml** è dichiarato il tipo di dati, come illustrato nell'esempio seguente:  
+ Si supponga, ad esempio, che venga dichiarato un valore di parametro SQL (x) del tipo di dati **XML** , come illustrato nell'esempio seguente:  
   
 ```  
 declare @x xml  
@@ -70,13 +70,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- Si noti che in ognuno dei casi, il predicato viene associato al nodo dell'espressione di percorso nella quale è applicato. Ad esempio, la prima espressione di percorso seleziona il primo <`Name`> elemento all'interno di ogni/nodo /People/Person e, con l'istanza XML specificata, restituisce le informazioni seguenti:  
+ Si noti che in ognuno dei casi, il predicato viene associato al nodo dell'espressione di percorso nella quale è applicato. Ad esempio, la prima espressione di percorso seleziona il primo `Name` <elemento> all'interno di ogni nodo/People/Person e, con l'istanza XML specificata, restituisce quanto segue:  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- Tuttavia, la seconda espressione di percorso Seleziona tutti gli elementi <`Name`> gli elementi che sono sotto il primo nodo di persona/utenti /. Viene pertanto restituito quando segue:  
+ Tuttavia, la seconda espressione di percorso seleziona tutti `Name` gli elementi <> sotto il primo nodo/People/Person. Viene pertanto restituito quando segue:  
   
 ```  
 <Name>John</Name>  
@@ -105,7 +105,7 @@ select @x.query('/People/Person[contains(Name[1], "J") and xs:integer(Age[1]) < 
 /child::root/child::Location[attribute::LocationID=10]  
 ```  
   
- La condizione specificata dal predicato viene applicata a tutti i <`Location`> nodi figlio dell'elemento. Vengono pertanto restituiti solo i centri di lavorazione il cui valore dell'attributo LocationID è 10.  
+ La condizione specificata dal predicato viene applicata a tutti gli `Location` elementi figlio del nodo dell'elemento <>. Vengono pertanto restituiti solo i centri di lavorazione il cui valore dell'attributo LocationID è 10.  
   
  L'espressione di percorso precedente viene eseguita nell'istruzione SELECT seguente:  
   
@@ -134,11 +134,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     L'espressione di percorso nella query seguente restituisce solo quelli <`Location`> i nodi elemento con un attributo LotSize specificato. Se il predicato restituisce una sequenza vuota per un determinato <`Location`>, che centro di lavorazione non viene restituito nel risultato.  
+     L'espressione di percorso in questa query restituisce solo i `Location` nodi <> elemento per i quali è stato specificato un attributo LotSize. Se il predicato restituisce una sequenza vuota per uno `Location` specifico <>, il centro di lavorazione non viene restituito nel risultato.  
   
-2.  I valori possono essere solo xs: integer, xs: Boolean o nodo di predicato\*. Per il nodo\*, il predicato restituisce True se sono presenti nodi e False per una sequenza vuota. Qualsiasi altro tipo numerico, ad esempio double e float, genera un errore di tipizzazione statica. Il valore di verità del predicato di un'espressione è True se e solo se il valore di tipo integer risultante è uguale al valore della posizione del contesto. Inoltre, i valori letterali integer solo e il **Last** funzione riducono la cardinalità dell'espressione per passi filtrata a 1.  
+2.  I valori dei predicati possono essere solo XS: Integer, XS:\*Boolean o node. Per Node\*, il predicato restituisce true se sono presenti nodi e false per una sequenza vuota. Qualsiasi altro tipo numerico, ad esempio double e float, genera un errore di tipizzazione statica. Il valore di verità del predicato di un'espressione è True se e solo se il valore di tipo integer risultante è uguale al valore della posizione del contesto. Inoltre, solo i valori letterali integer e la funzione **Last ()** riducono la cardinalità dell'espressione Step filtrata su 1.  
   
-     Ad esempio, la query seguente recupera il terzo nodo figlio dell'elemento di <`Features`> elemento.  
+     Ad esempio, la query seguente recupera il terzo nodo elemento figlio dell'elemento <`Features`>.  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -156,11 +156,11 @@ WHERE ProductModelID=7
   
     -   Nel terzo passo viene inoltre specificato un carattere jolly (*) che indica tutti i nodi nel test dei nodi. Il predicato filtra tuttavia i nodi e restituisce solo il nodo nella terza posizione.  
   
-    -   La query restituisce il terzo elemento figlio del nodo dell'elemento di <`Features`> figlio dell'elemento il <`ProductDescription`> gli elementi figlio della radice del documento.  
+    -   La query restituisce il terzo nodo elemento figlio della <`Features`> elementi figlio del <`ProductDescription` elemento figlio> della radice del documento.  
   
 3.  Se il valore dell'espressione predicato è un valore semplice booleano, il valore di verità del predicato è uguale al valore dell'espressione predicato.  
   
-     Ad esempio, la query seguente viene specificata con un **xml**variabile del tipo che contiene un'istanza XML, l'istanza XML di sondaggio dei clienti. La query recupera i clienti con figli. In questa query, che sarebbe \<lt;HasChildren>1</HasChildren&gt > 1\</HasChildren >.  
+     Ad esempio, la query seguente viene specificata in base a una variabile di tipo **XML**che include un'istanza XML, l'istanza XML del sondaggio del cliente. La query recupera i clienti con figli. In questa query, \<HasChildren>1\</HasChildren>.  
   
     ```  
     declare @x xml  
@@ -191,9 +191,9 @@ WHERE ProductModelID=7
   
      Dalla query precedente si noti quanto segue:  
   
-    -   L'espressione nel **per** ciclo prevede due passaggi e il secondo passo specifica un predicato. il cui valore è di tipo booleano. Se il valore è True, anche il valore di verità del predicato è True.  
+    -   L'espressione nel ciclo **for** prevede due passaggi e il secondo passaggio specifica un predicato. il cui valore è di tipo booleano. Se il valore è True, anche il valore di verità del predicato è True.  
   
-    -   La query restituisce il <`Customer`> elementi figlio, il cui valore del predicato è True, del \<Survey > gli elementi figlio della radice del documento. Questo è il risultato:  
+    -   La query restituisce gli elementi `Customer` figlio di <>, il cui valore del predicato \<è true, degli elementi figlio del sondaggio> della radice del documento. Risultato:  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -201,7 +201,7 @@ WHERE ProductModelID=7
   
 4.  Se il valore dell'espressione predicato è una sequenza che contiene almeno un nodo, il valore di verità del predicato è True.  
   
- Ad esempio, la query seguente recupera il valore ProductModelID per i modelli di prodotto la cui descrizione del catalogo XML include almeno una funzionalità, elemento figlio di <`Features`> elemento, dallo spazio dei nomi associato il **wm**prefisso.  
+ Ad esempio, la query seguente recupera ProductModelID per i modelli di prodotto la cui descrizione del catalogo XML include almeno una funzionalità, un elemento figlio `Features` dell'elemento <>, dallo spazio dei nomi associato al prefisso **WM** .  
   
 ```  
 SELECT ProductModelID  
@@ -215,11 +215,11 @@ WHERE CatalogDescription.exist('
   
  Dalla query precedente si noti quanto segue:  
   
--   La clausola WHERE specifica i [metodo exist () (tipo di dati XML)](../t-sql/xml/exist-method-xml-data-type.md).  
+-   La clausola WHERE specifica il [metodo exist () (tipo di dati XML)](../t-sql/xml/exist-method-xml-data-type.md).  
   
--   L'espressione di percorso all'interno di **exist ()** metodo specifica un predicato nel secondo passaggio. Se l'espressione del predicato restituisce una sequenza di almeno una caratteristica, il valore di verità dell'espressione del predicato è True. In questo caso, poiché il **exist ()** metodo restituisce True, viene restituito ProductModelID.  
+-   L'espressione di percorso all'interno del metodo **exist ()** specifica un predicato nel secondo passaggio. Se l'espressione del predicato restituisce una sequenza di almeno una caratteristica, il valore di verità dell'espressione del predicato è True. In questo caso, poiché il metodo **exist ()** restituisce true, viene restituito ProductModelID.  
   
 ## <a name="static-typing-and-predicate-filters"></a>Tipizzazione statica e filtri del predicato  
- I predicati possono inoltre influire sul tipo di un'espressione derivato staticamente. I valori letterali integer e il **Last** funzione riducono la cardinalità dell'espressione per passi filtrata al massimo uno.  
+ I predicati possono inoltre influire sul tipo di un'espressione derivato staticamente. I valori letterali integer e la funzione **Last ()** riducono la cardinalità dell'espressione Step filtrata al massimo uno.  
   
   

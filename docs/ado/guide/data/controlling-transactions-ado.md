@@ -13,14 +13,14 @@ ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a8a13ee7637c0cb16e33e626a218e28242dabf4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925773"
 ---
 # <a name="controlling-transactions-ado"></a>Controllo delle transazioni (ADO)
-ADO supporta l'elaborazione all'interno di una connessione con l'aiuto di transazioni di **BeginTrans**, **CommitTrans**, e **RollbackTrans** metodi su un  **Connessione** oggetto. L'idea generale dell'implementazione di elaborazione delle transazioni nel ADO è illustrato nel seguente frammento di codice semplice.  
+ADO supporta l'elaborazione delle transazioni all'interno di una connessione con l'ausilio dei metodi **BeginTrans**, **CommitTrans**e **RollbackTrans** su un oggetto **Connection** . L'idea generale dell'implementazione dell'elaborazione delle transazioni in ADO è illustrata nel semplice frammento di codice seguente.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -77,6 +77,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- In questo caso l'elaborazione delle transazioni viene usata per assicurarsi che i due record vengono aggiornati come singola unità di operazione e che i nomi dei due prodotti INTERSCAMBIATI o non apportare alcuna modifica.  
+ Qui viene utilizzata l'elaborazione delle transazioni per garantire che i due record vengano aggiornati come un'unità di operazione e che i due nomi di prodotto siano interscambiati o che non siano stati modificati.  
   
- Per le discussioni dettagliate dell'elaborazione delle transazioni, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).
+ Per informazioni dettagliate sull'elaborazione delle transazioni [, vedere aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).

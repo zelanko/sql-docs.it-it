@@ -16,48 +16,48 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931646"
 ---
 # <a name="parenturl-property-ado"></a>Proprietà ParentURL (ADO)
-Indica una stringa URL assoluto che punta all'elemento padre [Record](../../../ado/reference/ado-api/record-object-ado.md) dell'oggetto corrente **Record** oggetto.  
+Indica una stringa URL assoluta che punta al [record](../../../ado/reference/ado-api/record-object-ado.md) padre dell'oggetto **record** corrente.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce un **stringa** valore che indica l'URL dell'elemento padre **Record**.  
+ Restituisce un valore **stringa** che indica l'URL del **record**padre.  
   
-## <a name="remarks"></a>Note  
- Il **ParentURL** proprietà dipende dall'origine consente di aprire le **Record** oggetto. Ad esempio, il **Record** possono essere aperti con un'origine che contiene un nome di percorso relativo di una directory a cui fanno riferimento le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) proprietà.  
+## <a name="remarks"></a>Osservazioni  
+ La proprietà **ParentURL** dipende dall'origine utilizzata per aprire l'oggetto **record** . Ad esempio, è possibile aprire il **record** con un'origine contenente un percorso relativo di una directory a cui fa riferimento la proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) .  
   
- Si supponga che "second" è una cartella inclusa in "first". Aprire il **Record** oggetto usando la sintassi seguente:  
+ Si supponga che "Second" sia una cartella contenuta in "First". Aprire l'oggetto **record** utilizzando la sintassi seguente:  
   
 ```  
 record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- A questo punto, il valore di `the` **ParentURL** è di proprietà `"https://first"`, la stessa come **ActiveConnection**.  
+ A questo punto, il `the` valore della proprietà `"https://first"` **ParentURL** è uguale a **ActiveConnection**.  
   
- L'origine può anche essere un URL assoluto, ad esempio, `"https://first/second"`. Il **ParentURL** proprietà viene quindi `"https://first"`, il livello superiore `"second"`.  
+ L'origine può anche essere un URL assoluto, ad esempio `"https://first/second"`,. La proprietà **ParentURL** è quindi `"https://first"`il livello precedente `"second"`.  
   
  Questa proprietà può essere un valore null se:  
   
--   Non vi è alcun elemento padre dell'oggetto corrente; ad esempio, se il **Record** oggetto rappresenta la radice di una directory.  
+-   Nessun elemento padre per l'oggetto corrente. ad esempio, se l'oggetto **record** rappresenta la radice di una directory.  
   
--   Il **Record** oggetto rappresenta un'entità che non può essere specificata con un URL.  
+-   L'oggetto **record** rappresenta un'entità che non può essere specificata con un URL.  
   
  Questa proprietà è di sola lettura.  
   
 > [!NOTE]
->  Questa proprietà è supportata solo dai provider di origine di documento, ad esempio la [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per altre informazioni, vedere [record e campi specificati dal provider](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+>  Questa proprietà è supportata solo dai provider di origine del documento, ad esempio il [provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [record e campi forniti dal provider](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
 > [!NOTE]
->  Gli URL che utilizzano lo schema http chiama automaticamente il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per altre informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Gli URL che usano lo schema http richiameranno automaticamente il [provider di Microsoft OLE DB per la pubblicazione Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluto e relativo](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 > [!NOTE]
->  Se il record corrente contiene un record di dati da un oggetto ADO **Recordset**, l'accesso alla **ParentURL** proprietà causa un errore di run-time, che indica che non è possibile utilizzare alcun URL.  
+>  Se il record corrente contiene un record di dati di un **Recordset**ADO, l'accesso alla proprietà **ParentURL** genera un errore di run-time, a indicare che non è possibile alcun URL.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

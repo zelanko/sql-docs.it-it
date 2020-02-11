@@ -13,14 +13,14 @@ ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: deca1648d6ef4f9ba3a1dfd020dc5193c8cc0d25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932428"
 ---
 # <a name="idsoshapeextensions-interface"></a>Interfaccia IDSOShapeExtensions
-Ottiene l'oggetto origine dati OLE DB sottostante per il provider di forma.  
+Ottiene l'oggetto origine dati OLE DB sottostante per il provider di forme.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,11 +38,11 @@ public:
   
 |||  
 |-|-|  
-|[Metodo GetDataProviderDSO](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Recupera l'oggetto origine dati OLE DB sottostante dal provider di forma.|  
+|[Metodo GetDataProviderDSO](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Recupera l'oggetto origine dati OLE DB sottostante dal provider di forme.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Versione:** ADO 2.0 e versioni successiva  
+ **Versione:** ADO 2,0 e versioni successive  
   
- **Libreria:** msado15.dll  
+ **Libreria:** msado15. dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887441"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definizione dei dati MDX - CREATE SUBCUBE
@@ -35,27 +35,27 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Espressione SELECT MDX (Multidimensional Expression) valida che non contiene clausole WITH, NON EMPTY o HAVING e non richiede le proprietà della dimensione o delle celle.  
   
- Per una spiegazione dettagliata della sintassi sulle istruzioni SELECT e sulla clausola **non visiva** , vedere [ &#40;istruzione SELECT&#41; MDX](../mdx/mdx-data-manipulation-select.md) .  
+ Per una spiegazione dettagliata della sintassi sulle istruzioni SELECT e sulla clausola **non visiva** , vedere [istruzione SELECT &#40;&#41;MDX](../mdx/mdx-data-manipulation-select.md) .  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se nella definizione di un sottocubo vengono eseguiti i membri predefiniti, le coordinate verranno modificate in modo appropriato. Per gli attributi che possono essere aggregati, il membro predefinito viene spostato nel membro [Totale]. Per gli attributi che non possono essere aggregati, il membro predefinito viene spostato in un membro presente nel sottocubo. Nella tabella seguente sono inclusi alcuni sottocubi di esempio e i relativi membri predefiniti.  
   
 |Membro predefinito originale|Aggregabile|sub-SELECT|Membro predefinito modificato|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|Yes|{Time.Year.2003}|Nessuna modifica|  
-|Time. Year. [1997]|Yes|{Time.Year.2003}|Time.Year.All|  
+|Time.Year.All|Sì|{Time.Year.2003}|Nessuna modifica|  
+|Time. Year. [1997]|Sì|{Time.Year.2003}|Time.Year.All|  
 |Time. Year. [1997]|No|{Time.Year.2003}|Time. Year. [2003]|  
-|Time. Year. [1997]|Yes|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time. Year. [1997]|Sì|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
 |Time. Year. [1997]|No|{Time.Year.2003, Time.Year.2004}|Either Time.Year.[2003] o<br /><br /> Time.Year.[2004]|  
   
  I sottocubi includono sempre membri [Totale].  
   
  Gli oggetti di sessione creati nel contesto di un sottocubo vengono eliminati all'eliminazione del sottocubo.  
   
- Per ulteriori informazioni sui sottocubi, vedere [compilazione di sottocubi in &#40;&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)MDX MDX.  
+ Per ulteriori informazioni sui sottocubi, vedere [compilazione di sottocubi in mdx &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creato un sottocubo che limita lo spazio di un cubo disponibile per i membri con paese Canada. Viene quindi utilizzata la funzione Members per restituire tutti i membri del livello Country della gerarchia definita dall'utente Geography, restituendo solo il paese Canada.  
+ Nell'esempio seguente viene creato un sottocubo che limita lo spazio di un cubo disponibile per i membri con paese Canada. Viene quindi utilizzata la funzione **Members** per restituire tutti i membri del livello Country della gerarchia definita dall'utente Geography, restituendo solo il paese Canada.  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -92,9 +92,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
 |||||  
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
-|All Resellers|$2,031,079.39|$506,172.45|$1,524,906.93|  
-|Value Added Reseller|$767,388.52|$175,002.81|$592,385.71|  
-|Warehouse|$1,263,690.86|$331,169.64|$932,521.23|  
+|All Resellers|$2.031.079,39|$506,172.45|$1,524,906.93|  
+|Value Added Reseller|$767.388,52|$175,002.81|$592,385.71|  
+|Warehouse|$1.263.690,86|$331,169.64|$932,521.23|  
   
  L'eliminazione e la nuova creazione del sottocubo utilizzando la clausola NON VISUAL crea un sottocubo che tiene i totali reali per tutti i membri in Products.Category e Resellers.[Business Type], che siano visibili o meno nel sottocubo.  
   
@@ -129,8 +129,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti chiave di MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [MDX (istruzioni &#40;di SCRIPTing MDX)&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Istruzione &#40;DROP SUBCUBE-MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Istruzioni di scripting MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)   
+ [Istruzione DROP SUBCUBE &#40;&#41;MDX](../mdx/mdx-data-definition-drop-subcube.md)   
  [Istruzione SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

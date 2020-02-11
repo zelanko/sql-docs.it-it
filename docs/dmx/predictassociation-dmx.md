@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3038bd010c5ca76ad26a301bad45ff4e1aa29460
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008065"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939502"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Consente di stimare l'appartenenza associativa.  
   
-Ad esempio, è possibile usare la funzione PredictAssociation per ottenere il set di raccomandazioni ha lo stato corrente del carrello acquisti per cliente. 
+Ad esempio, è possibile usare la funzione PredictAssociation per ottenere il set di raccomandazioni dato lo stato corrente del carrello acquisti per un cliente. 
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,29 +30,29 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>Si applica a  
- Algoritmi che contengono tabelle nidificate stimabili, tra cui alcuni algoritmi di classificazione e associazione. Gli algoritmi di classificazione che supportano le tabelle nidificate includono la [!INCLUDE[msCoName](../includes/msconame-md.md)] alberi delle decisioni [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes, e [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi Neural Network.  
+ Algoritmi che contengono tabelle nidificate stimabili, tra cui associazioni e alcuni algoritmi di classificazione. Gli algoritmi di classificazione che supportano le tabelle nidificate includono [!INCLUDE[msCoName](../includes/msconame-md.md)] gli [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi Decision Trees [!INCLUDE[msCoName](../includes/msconame-md.md)] , Naive Bayes e Neural Network.  
   
 ## <a name="return-type"></a>Tipo restituito  
- \<espressione di tabella >  
+ \<espressione di tabella>  
   
-## <a name="remarks"></a>Note  
- Le opzioni per la **PredictAssociation** funzione includono EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (predefinita), INPUT_ONLY, INCLUDE_STATISTICS e INCLUDE_NODE_ID.  
+## <a name="remarks"></a>Osservazioni  
+ Le opzioni per la funzione **PredictAssociation** includono EXCLUDE_NULL, INCLUDE_NULL, inclusive, Exclusive (default), INPUT_ONLY, INCLUDE_STATISTICS e INCLUDE_NODE_ID.  
   
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY e INCLUDE_STATISTICS sono applicabili solo a riferimenti a colonne di tabella, mentre EXCLUDE_NULL e INCLUDE_NULL sono applicabili solo a riferimenti a colonne scalari.  
   
  INCLUDE_STATISTICS restituisce solo **$Probability** e **$AdjustedProbability**.  
   
- Se il parametro numerico *n* è specificato, il **PredictAssociation** funzione restituisce i primi n valori più probabili in base alla probabilità:  
+ Se viene specificato il parametro numerico *n* , la funzione **PredictAssociation** restituisce i primi n valori più probabili in base alla probabilità:  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- Se si include **$AdjustedProbability**, l'istruzione restituisce le prime *n* valori in base il **$AdjustedProbability**.  
+ Se si include **$AdjustedProbability**, l'istruzione restituisce i primi *n* valori in base al **$AdjustedProbability**.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa il **PredictAssociation** funzione per restituire i quattro prodotti Adventure Works di database che sono probabilmente verranno venduti insieme.  
+ Nell'esempio seguente viene utilizzata la funzione **PredictAssociation** per restituire i quattro prodotti del database Adventure Works che con maggiore probabilità verranno venduti insieme.  
   
 ```  
 SELECT  
@@ -60,7 +60,7 @@ SELECT
 From  
   [Association]  
 ```  
-Nell'esempio seguente viene illustrato come è possibile usare una tabella nidificata come input per la funzione di stima utilizzando la clausola SHAPE. Query SHAPE crea un set di righe con customerId come una sola colonna e una tabella nidificata come una seconda colonna, che contiene l'elenco dei prodotti di che un cliente ha già evidenziato. 
+Nell'esempio seguente viene illustrato come è possibile utilizzare una tabella nidificata come input per la funzione di stima, utilizzando la clausola SHAPE. La query SHAPE crea un set di righe con customerId come una colonna e una tabella nidificata come seconda colonna, che contiene l'elenco dei prodotti già portati da un cliente. 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items
@@ -77,8 +77,8 @@ SHAPE {
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

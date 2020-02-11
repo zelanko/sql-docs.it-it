@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Configurazione delle autorizzazioni per oggetti di Database | Microsoft Docs'
+title: 'Lezione 2: Configurazione delle autorizzazioni per gli oggetti di database | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642585"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lezione 2: Configurazione delle autorizzazioni per gli oggetti di database
@@ -32,7 +32,7 @@ ms.locfileid: "62642585"
   
 -   [Concessione dell'accesso a un oggetto di database](lesson-2-4-granting-access-to-a-database-object.md)  
   
--   [Riepilogo: Configurazione delle autorizzazioni per oggetti di Database](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+-   [Riepilogo: Configurazione delle autorizzazioni per gli oggetti di database](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Creazione di un account di accesso](lesson-2-1-creating-a-login.md)  

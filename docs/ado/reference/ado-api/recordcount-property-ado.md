@@ -18,37 +18,37 @@ ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931475"
 ---
 # <a name="recordcount-property-ado"></a>Proprietà RecordCount (ADO)
 
-Indica il numero di record in una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.
+Indica il numero di record in un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
   
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un **lungo** valore che indica il numero di record nelle **Recordset**.
+Restituisce un valore **Long** che indica il numero di record nel **Recordset**.
   
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Usare la **RecordCount** sono di proprietà per scoprire il numero di record in un **Recordset** oggetto. La proprietà restituisce -1 se ADO non è possibile determinare il numero di record oppure se il tipo di cursore o provider non supporta **RecordCount**. Leggere il **RecordCount** proprietà in una classe chiusa **Recordset** provoca un errore.
+Utilizzare la proprietà **RecordCount** per determinare il numero di record presenti in un oggetto **Recordset** . La proprietà restituisce-1 quando ADO non è in grado di determinare il numero di record o se il tipo di cursore o il provider non supporta **RecordCount**. La lettura della proprietà **RecordCount** in un **Recordset** chiuso causa un errore.
 
-#### <a name="bookmarks-or-approximate-positioning"></a>Segnalibri o approssimativo di posizionamento
+#### <a name="bookmarks-or-approximate-positioning"></a>Segnalibri o posizionamento approssimativo
 
-Se l'oggetto Recordset *viene* supporta entrambi i segnalibri o simulare il posizionamento, questa proprietà restituisce il numero esatto di record del recordset. Questa proprietà restituisce il numero esatto indipendentemente dal fatto che il Recordset è stato completamente popolato.
+Se *l'oggetto recordset supporta* segnalibri o posizionamento approssimativo, questa proprietà restituisce il numero esatto di record nel recordset. Questa proprietà restituisce il numero esatto indipendentemente dal fatto che il recordset sia stato popolato completamente.
 
-Al contrario, se l'oggetto Recordset *non* supporta segnalibri o approssimativo di posizionamento, accedere a questa proprietà potrebbe essere un numero significativo sulle risorse. Termina lo svuotamento si verifica perché tutti i record devono recuperare e conteggiate per restituire un valore di RecordCount accurato.
+Al contrario, se l'oggetto recordset non *supporta* segnalibri o posizionamento approssimativo, l'accesso a questa proprietà potrebbe essere un svuotamento significativo delle risorse. Lo svuotamento si verifica perché tutti i record devono essere recuperati e conteggiati per restituire un valore RecordCount preciso.
 
 - **adBookmark** correlate ai segnalibri.
 - **adApproxPosition** è correlato al posizionamento approssimativo.
 
 > [!NOTE]
-> In ADO 2.8 e versioni precedenti, il provider SQLOLEDB recupera tutti i record quando viene utilizzato un cursore lato server, nonostante il fatto che restituisce **True** per entrambe **supporta (adApproxPosition)** e**Supporta (adBookmark)** .
+> Nelle versioni ADO 2,8 e precedenti, il provider SQLOLEDB recupera tutti i record quando viene usato un cursore sul lato server, nonostante il fatto che restituisca **true** per entrambi i **supporti (AdApproxPosition)** e **supporta (adBookmark)**.
   
-Il tipo di cursore del **Recordset** oggetto influisce sulla possibilità di determinare il numero di record. Il **RecordCount** proprietà restituirà -1 per un cursore forward-only; il conteggio effettivo per un valore statico o keyset cursor; e -1 o il conteggio effettivo per un cursore dinamico, a seconda dell'origine dati.
+Il tipo di cursore dell'oggetto **Recordset** influiscono sulla possibilità di determinare il numero di record. La proprietà **RecordCount** restituirà-1 per un cursore di sola trasmissione. conteggio effettivo per un cursore statico o keyset; e-1 o il conteggio effettivo per un cursore dinamico, a seconda dell'origine dati.
   
 ## <a name="applies-to"></a>Si applica a
 
@@ -56,7 +56,7 @@ Il tipo di cursore del **Recordset** oggetto influisce sulla possibilità di det
   
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio di proprietà RecordCount (VB) e filtro](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
-[Esempio di proprietà RecordCount (VC + +) e filtro](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
+[Esempio di proprietà Filter e RecordCount (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
+[Esempio di proprietà Filter e RecordCount (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
 [Proprietà AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
 [Proprietà PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

@@ -13,62 +13,62 @@ ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d903b2a5f971d0b6c7114a9e5229bff6133d743
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923450"
 ---
 # <a name="what-is-a-cursor"></a>Informazioni sui cursori
-Nei database relazionali le operazioni vengono eseguite su set di righe completi. Il set di righe restituito da un'istruzione SELECT include tutte le righe che soddisfano le condizioni specificate nella clausola WHERE dell'istruzione. Il set di righe completo restituito dall'istruzione è noto come set di risultati. Le applicazioni, specialmente quelle che sono interattivi e online, non sono sempre funziona in modo efficace con l'intero set di risultati come un'unità. In tali applicazioni deve essere pertanto disponibile un meccanismo per l'elaborazione di una riga singola o di un blocco di righe di dimensioni ridotte. I cursori sono un'estensione dei set di risultati che implementano appunto tale meccanismo.  
+Nei database relazionali le operazioni vengono eseguite su set di righe completi. Il set di righe restituito da un'istruzione SELECT include tutte le righe che soddisfano le condizioni specificate nella clausola WHERE dell'istruzione. Il set di righe completo restituito dall'istruzione è noto come set di risultati. Le applicazioni, in particolare quelle interattive e online, non possono sempre funzionare in modo efficace con l'intero set di risultati come unità. In tali applicazioni deve essere pertanto disponibile un meccanismo per l'elaborazione di una riga singola o di un blocco di righe di dimensioni ridotte. I cursori sono un'estensione dei set di risultati che implementano appunto tale meccanismo.  
   
- Un cursore viene implementato in una libreria di cursori. Una libreria di cursori è un software, spesso implementata come parte di un sistema di database o un'API, accesso ai dati che viene usato per gestire gli attributi dei dati restituiti da un'origine dati (un set di risultati). Questi attributi includono la gestione della concorrenza, la posizione nel set di risultati, numero di righe restituite e indica se è possibile spostare in avanti o indietro (o entrambi) tramite il risultato impostato (funzionalità di scorrimento).  
+ Un cursore viene implementato da una libreria di cursori. Una libreria di cursori è un software, spesso implementato come parte di un sistema di database o di un'API di accesso ai dati, usato per gestire gli attributi dei dati restituiti da un'origine dati (un set di risultati). Questi attributi includono la gestione della concorrenza, la posizione nel set di risultati, il numero di righe restituite e la possibilità di spostarsi avanti o indietro (o entrambi) tramite il set di risultati (scorrevolezza).  
   
- Un cursore tiene traccia della posizione nel set di risultati e consente di eseguire più operazioni riga per riga in un set di risultati, con o senza dover tornare alla tabella originale. In altre parole, i cursori concettualmente restituiscono un set di risultati basato su tabelle all'interno dei database. Il cursore viene così chiamato perché indica la posizione corrente nel set di risultati, esattamente come il cursore su uno schermo indica la posizione corrente.  
+ Un cursore tiene traccia della posizione nel set di risultati e consente di eseguire più operazioni riga per riga rispetto a un set di risultati, con o senza tornare alla tabella originale. In altre parole, i cursori restituiscono concettualmente un set di risultati basato sulle tabelle all'interno dei database. Il nome del cursore è il seguente, in quanto indica la posizione corrente nel set di risultati, così come il cursore sullo schermo di un computer indica la posizione corrente.  
   
- È importante acquisire familiarità con il concetto di cursori prima di passare a informazioni specifiche del loro utilizzo in ADO.  
+ È importante acquisire familiarità con il concetto di cursori prima di procedere per apprendere le specifiche del loro utilizzo in ADO.  
   
- Utilizzo di cursori, è possibile:  
+ Utilizzando i cursori, è possibile:  
   
--   Specificare il posizionamento su righe specifiche del set di risultati.  
+-   Consente di specificare il posizionamento in righe specifiche del set di risultati.  
   
--   Recuperare una riga o un blocco di righe basato sulla posizione corrente del set di risultati.  
+-   Recuperare una riga o un blocco di righe in base alla posizione del set di risultati corrente.  
   
 -   Modificare i dati nelle righe in corrispondenza della posizione corrente nel set di risultati.  
   
--   Definire diversi livelli di sensibilità alle modifiche dei dati apportate da altri utenti.  
+-   Definire diversi livelli di sensibilità per le modifiche dei dati apportate da altri utenti.  
   
- Ad esempio, si consideri un'applicazione che visualizza un elenco dei prodotti disponibili per un potenziale acquirente. L'aggregazione buyer scorre l'elenco per visualizzare i costi e i dettagli sul prodotto e quindi seleziona un prodotto per l'acquisto. Lo scorrimento aggiuntiva e la selezione avviene per il resto dell'elenco. Per quanto riguarda l'aggregazione buyer, i prodotti vengono visualizzati uno alla volta, ma l'applicazione usa un cursore scorrevole per esplorare il set di risultati su e giù.  
+ Si consideri, ad esempio, un'applicazione che visualizza un elenco di prodotti disponibili per un potenziale acquirente. Il compratore scorre l'elenco per visualizzare i dettagli e i costi del prodotto e infine seleziona un prodotto per l'acquisto. Lo scorrimento e la selezione aggiuntivi vengono eseguite per il resto dell'elenco. Per quanto riguarda l'acquirente, i prodotti vengono visualizzati uno alla volta, ma l'applicazione utilizza un cursore scorrevole per scorrere verso l'alto e verso il basso il set di risultati.  
   
  È possibile utilizzare i cursori in diversi modi:  
   
--   Senza righe affatto.  
+-   Senza alcuna riga.  
   
 -   Con alcune o tutte le righe in una singola tabella.  
   
--   Con alcune o tutte le righe delle tabelle unite in join in modo logico.  
+-   Con alcune o tutte le righe delle tabelle unite logicamente.  
   
--   Di sola lettura o aggiornabili a livello di campo o del cursore.  
+-   Come di sola lettura o aggiornabile a livello di cursore o di campo.  
   
--   Di tipo forward-only o scorrevole completamente.  
+-   Come di sola trasmissione o completamente scorrevole.  
   
--   Con i keyset del cursore che si trova nel server.  
+-   Con il keyset del cursore posizionato sul server.  
   
--   Sensibile alle modifiche della tabella sottostante causate da altre applicazioni (ad esempio l'appartenenza, ordinamento, inserimenti, aggiornamenti ed eliminazioni).  
+-   Sensibili alle modifiche apportate alla tabella sottostante causate da altre applicazioni, ad esempio appartenenza, ordinamento, inserimenti, aggiornamenti ed eliminazioni.  
   
--   Esistenti nel server o client.  
+-   Esistente sul server o sul client.  
   
- I cursori di sola lettura consentono agli utenti di esplorare il set di risultati e i cursori possono implementare gli aggiornamenti di singole righe di lettura/scrittura. I cursori complessi possono essere definiti con i keyset che puntano alle righe della tabella di base. Anche se alcuni cursori sono di sola lettura in avanti, altri utenti possono spostarsi avanti e indietro e fornire un aggiornamento dinamico del set di risultati in base alle modifiche che stanno effettuando altre applicazioni al database.  
+ I cursori di sola lettura consentono agli utenti di esplorare il set di risultati e i cursori di lettura/scrittura possono implementare singoli aggiornamenti delle righe. I cursori complessi possono essere definiti con i set di tasti che puntano alle righe della tabella di base. Sebbene alcuni cursori siano di sola lettura in una direzione successiva, altri possono spostarsi avanti e indietro e fornire un aggiornamento dinamico del set di risultati in base alle modifiche apportate da altre applicazioni al database.  
   
- Non tutte le applicazioni devono utilizzare cursori per l'accesso o l'aggiornamento dati. Alcune query non richiedono infatti l'aggiornamento diretto delle righe utilizzando un cursore. I cursori devono essere una delle tecniche ultimo si sceglie di recuperare i dati, e quindi è consigliabile scegliere il cursore con impatto più basso possibile. Quando si crea un set di risultati, utilizzando una stored procedure, il set di risultati non è aggiornabile tramite cursore modificare o aggiornare i metodi.  
+ Non tutte le applicazioni devono utilizzare i cursori per accedere ai dati o aggiornarli. Alcune query non richiedono semplicemente l'aggiornamento diretto delle righe tramite un cursore. I cursori devono essere una delle ultime tecniche scelte per recuperare i dati e quindi scegliere il cursore di effetto più basso possibile. Quando si crea un set di risultati utilizzando un stored procedure, il set di risultati non è aggiornabile mediante i metodi di modifica o di aggiornamento del cursore.  
   
 ## <a name="concurrency"></a>Concorrenza  
- In alcune applicazioni multiutente è molto importante per i dati presentati all'utente finale per essere aggiornati come possibili. Un classico esempio di un sistema di questo tipo è un sistema di prenotazione delle compagnie aeree, in cui molti utenti potrebbero avere scelto lo stesso prenotazione posto sul volo specificato (e pertanto un singolo record). In casi come questo, la progettazione dell'applicazione deve gestire operazioni simultanee in un singolo record.  
+ In alcune applicazioni multiutente è molto importante che i dati presentati all'utente finale siano i più aggiornati possibili. Un esempio classico di un sistema di questo tipo è un sistema di prenotazione delle compagnie aeree, in cui molti utenti potrebbero tendersi per la stessa sede in un determinato volo (e quindi un singolo record). In un caso di questo tipo, la progettazione dell'applicazione deve gestire operazioni simultanee in un singolo record.  
   
- In altre applicazioni, la concorrenza non è importante. In questi casi, non può essere giustificata la spesa interessati a mantenere che i dati correnti in qualsiasi momento.  
+ In altre applicazioni, la concorrenza non è altrettanto importante. In questi casi, non è possibile giustificare le spese necessarie per mantenere aggiornati i dati in qualsiasi momento.  
   
 ## <a name="position"></a>Posizione  
- Un cursore tiene anche traccia della posizione corrente in un set di risultati. Considerare la posizione del cursore come un puntatore al record corrente, allo stesso modo una matrice di indice fa riferimento al valore in un percorso specifico nella matrice.  
+ Un cursore tiene inoltre traccia della posizione corrente in un set di risultati. Si pensi alla posizione del cursore come puntatore al record corrente, in modo analogo al modo in cui un indice della matrice punta al valore in corrispondenza della posizione specifica nella matrice.  
   
 ## <a name="scrollability"></a>Scorrimento  
- Il tipo di cursore utilizzato dall'applicazione interessa anche la possibilità di spostarsi avanti e indietro tra le righe in un set di risultati. Ciò è talvolta detta supporto dello scorrimento. La possibilità di proseguire *e* con le versioni precedenti attraverso il risultato di un set aumenta la complessità del cursore e pertanto è più costoso implementare. Per questo motivo, è consigliabile richiedere un cursore con questa funzionalità solo quando necessario.
+ Il tipo di cursore utilizzato dall'applicazione influisca anche sulla possibilità di spostarsi avanti e indietro nelle righe di un set di risultati. Questa operazione viene a volte definita scorrimento. La possibilità di spostarsi avanti *e* indietro tramite un set di risultati aggiunge alla complessità del cursore ed è quindi più onerosa da implementare. Per questo motivo, è consigliabile richiedere un cursore con questa funzionalità solo quando è necessario.

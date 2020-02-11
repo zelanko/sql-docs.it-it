@@ -1,5 +1,5 @@
 ---
-title: Salvare e aprire l'esempio di metodi (VB) | Microsoft Docs
+title: Esempio di metodi Save e Open (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d42488f8f167cc7c98f663478c742963d24253c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931192"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Esempio dei metodi Save e Open (VB)
-Questi tre esempi che illustrano come il [salvare](../../../ado/reference/ado-api/save-method.md) e [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodi possono essere usati insieme.  
+Questi tre esempi illustrano il modo in cui i metodi [Save](../../../ado/reference/ado-api/save-method.md) e [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) possono essere usati insieme.  
   
- Si supponga che si prevede un viaggio d'affari e vuole portare con sé una tabella da un database. Prima di procedere, si accede ai dati come una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salvarlo in un form trasportabile. Quando si arriva a rappresenti la destinazione, è accedere il **Recordset** come un'unità locale disconnesso **Recordset**. Si apportano modifiche per il **Recordset**e quindi salvarlo nuovamente. Infine, quando si ritorna home, riconnettersi al database e aggiornarlo con le modifiche apportate in viaggio.  
+ Si supponga che si stia procedendo a un viaggio di lavoro e che si voglia eseguire una tabella da un database. Prima di procedere, è possibile accedere ai dati come [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salvarli in un modulo trasportabile. Quando si arriva alla destinazione, si accede al **Recordset** come **Recordset**locale disconnesso. Apportare modifiche al **Recordset**e quindi salvarlo di nuovo. Infine, quando si torna a casa, si esegue nuovamente la connessione al database e la si aggiorna con le modifiche apportate in viaggio.  
   
- In primo luogo, accedere e salvare il ***autori*** tabella.  
+ Per prima cosa, accedere alla tabella ***authors*** e salvarla.  
   
 ```  
 'BeginSaveVB  
@@ -84,20 +84,20 @@ End Sub
 'EndSaveVB  
 ```  
   
- Si è arrivati a questo punto, la destinazione. Si accederà il ***Authors*** tabella come un'unità locale disconnesso **Recordset**. È necessario disporre di **MSPersist** provider nel computer in cui si usa per accedere al file salvato, a:\Pubs.xml.  
+ A questo punto, si è arrivati alla destinazione. Sarà possibile accedere alla tabella ***authors*** come **Recordset**locale e disconnesso. È necessario disporre del provider **MSPersist** nel computer in uso per accedere al file salvato, a:\pubs.XML.  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
- Infine, restituire home. A questo punto è possibile aggiornare il database con le modifiche.  
+ Infine, viene restituito Home. A questo punto, aggiornare il database con le modifiche apportate.  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Informazioni sulla persistenza dei Recordset](../../../ado/guide/data/more-about-recordset-persistence.md)   
+ [Metodo Open (recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Ulteriori informazioni sulla persistenza dei recordset](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Metodo Save](../../../ado/reference/ado-api/save-method.md)

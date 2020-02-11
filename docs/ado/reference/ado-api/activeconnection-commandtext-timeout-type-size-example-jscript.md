@@ -1,5 +1,5 @@
 ---
-title: Stored Procedure di esempio di proprietà (JScript) | Microsoft Docs
+title: Esempio di proprietà di stored procedure (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c9c474cfe2b1d38154129070cb11c91434ee4fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921551"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, dimensioni e direzione (esempio di proprietà (JScript)
-Questo esempio Usa la [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md), e [direzione](../../../ado/reference/ado-api/direction-property.md) le proprietà per eseguire una stored procedure. Tagliare e incollare il codice seguente al blocco note o un altro editor di testo e salvarlo come **ActiveConnectionJS**.  
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>Esempio di proprietà ActiveConnection, CommandText, CommandTimeout, CommandType, Size e Direction (JScript)
+In questo esempio vengono usate le proprietà [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md)e [Direction](../../../ado/reference/ado-api/direction-property.md) per eseguire un stored procedure. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come **ActiveConnectionJS. asp**.  
   
 ```  
 <!-- BeginActiveConnectionJS -->  
@@ -173,14 +173,14 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
+ [Proprietà ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Proprietà CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Proprietà CommandTimeout (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [Proprietà CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Proprietà Direction](../../../ado/reference/ado-api/direction-property.md)   
- [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)   
+ [Parameter (oggetto)](../../../ado/reference/ado-api/parameter-object.md)   
  [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Proprietà Size (parametro ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [Oggetto recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Proprietà Size (Parameter - ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

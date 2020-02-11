@@ -1,5 +1,5 @@
 ---
-title: Catalogo di esempio di proprietà ActiveConnection (VC + +) | Microsoft Docs
+title: Esempio di proprietà ActiveConnection di Catalog (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d7808e685792fda9c6a6a6a468a275d9d10bb87f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 976864842781828f3505ed18ab9ff81fda570c86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967104"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925609"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Esempio della proprietà ActiveConnection di Catalog (VC++)
-Impostando il [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) proprietà a una connessione valida, aprire "aperta" nel catalogo. Da un catalogo aperto, è possibile accedere gli oggetti dello schema contenuti all'interno di tale catalogo.  
+Impostando la proprietà [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) su una connessione aperta valida, viene aperto il catalogo. Da un catalogo aperto, è possibile accedere agli oggetti dello schema contenuti nel catalogo.  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  
@@ -75,7 +75,7 @@ void OpenConnectionX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionX...." << endl;  
+      cout << "Error occurred in OpenConnectionX...." << endl;  
    }  
   
    if (m_pCnn)  
@@ -106,7 +106,7 @@ void OpenConnectionWithStringX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionWithStringX...." << endl;  
+      cout << "Error occurred in OpenConnectionWithStringX...." << endl;  
    }  
 }  
 ```  

@@ -15,14 +15,14 @@ ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919339"
 ---
 # <a name="count-property-example-vc"></a>Esempio della proprietà Count (VC++)
-Questo esempio viene illustrato il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) con due raccolte nelle proprietà il ***dipendente*** database. La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli di enumerare le raccolte.  
+In questo esempio viene illustrata la proprietà [count](../../../ado/reference/ado-api/count-property-ado.md) con due raccolte nel database ***Employee*** . La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli che enumerano queste raccolte.  
   
 ```  
 // BeginCountCpp.cpp  

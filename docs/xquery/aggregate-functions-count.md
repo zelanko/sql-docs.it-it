@@ -16,10 +16,10 @@ ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986310"
 ---
 # <a name="aggregate-functions---count"></a>Funzioni di aggregazione - count
@@ -38,11 +38,11 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  Elementi da contare.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Restituisce 0 se *$arg* è una sequenza vuota.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>R. Utilizzo della funzione XQuery count() per il conteggio del numero di centri di lavorazione nella produzione di un modello di prodotto  
  La query seguente conta il numero di centri di lavorazione nel processo di produzione di un modello di prodotto (ProductModelID=7).  
@@ -62,13 +62,13 @@ WHERE Production.ProductModel.ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   Il **dello spazio dei nomi** parola chiave nella [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) definisce un prefisso dello spazio dei nomi. Il prefisso viene quindi utilizzato nel corpo della query XQuery.  
+-   La parola chiave **namespace** nel [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md) definisce un prefisso dello spazio dei nomi. Il prefisso viene quindi utilizzato nel corpo della query XQuery.  
   
--   La query costruisce codice XML che include il <`NoOfWorkStations`> elemento.  
+-   La query costruisce il codice XML che include `NoOfWorkStations` l'elemento <>.  
   
--   Il **Count ()** funzionare nei conteggi di corpo della query XQuery il numero di <`Location`> elementi.  
+-   La funzione **Count ()** nel corpo della query XQuery conta il numero di `Location` elementi <>.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -91,14 +91,14 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- È possibile ottenere la restituzione dei valori in un tipo non xml, come illustrato nella query seguente. La query Usa la [metodo Value () (tipo di dati xml)](../t-sql/xml/value-method-xml-data-type.md) per recuperare il numero di località di lavoro center.  
+ È possibile ottenere la restituzione dei valori in un tipo non xml, come illustrato nella query seguente. La query usa il [metodo value () (tipo di dati XML)](../t-sql/xml/value-method-xml-data-type.md) per recuperare il conteggio delle posizioni del centro di lavorazione.  
   
 ```  
 SELECT  ProductModelID,   
@@ -109,7 +109,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 ProductModelID    Name            WorkCtrCount  

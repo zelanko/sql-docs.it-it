@@ -20,25 +20,25 @@ ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f2777eeb23e7a78a1df757a9054a04c7f6f9df2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966444"
 ---
 # <a name="definedsize-property-adox"></a>Proprietà DefinedSize (ADOX)
-Indica la dimensione massima definita della colonna.  
+Indica le dimensioni massime indicate della colonna.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta e restituisce un **lungo** valore che rappresenta la lunghezza massima in caratteri di valori di dati.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta e restituisce un valore **Long** che rappresenta la lunghezza massima in caratteri dei valori dei dati.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il valore predefinito è zero (0).  
   
- Questa proprietà è di sola lettura per [colonna](../../../ado/reference/adox-api/column-object-adox.md) già aggiunti a una raccolta di oggetti.  
+ Questa proprietà è di sola lettura per gli oggetti [Column](../../../ado/reference/adox-api/column-object-adox.md) già accodati a una raccolta.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di proprietà DefinedSize (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)
+ [Esempio della proprietà DefinedSize (VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)

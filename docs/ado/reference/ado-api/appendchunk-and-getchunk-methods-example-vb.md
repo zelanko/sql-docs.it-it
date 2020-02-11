@@ -1,5 +1,5 @@
 ---
-title: Esempio di AppendChunk e GetChunk (esempio di metodi (VB) | Microsoft Docs
+title: Esempio di metodi AppendChunk e GetChunk (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7183dbc6b54e5560784e5de602a45da8e5a235a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920622"
 ---
-# <a name="appendchunk-and-getchunk-methods-example-vb"></a>Esempio di AppendChunk e GetChunk (esempio di metodi (VB)
-Questo esempio Usa la [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) metodi per riempire un campo immagine con i dati da un altro record.  
+# <a name="appendchunk-and-getchunk-methods-example-vb"></a>Esempio di metodi AppendChunk e GetChunk (VB)
+Questo esempio usa i metodi [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) e [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) per riempire un campo immagine con i dati di un altro record.  
   
 ```  
 'BeginAppendChunkVB  
@@ -149,6 +149,6 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
+ [Field (oggetto)](../../../ado/reference/ado-api/field-object.md)   
  [Metodo GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
  [Oggetto Parameter](../../../ado/reference/ado-api/parameter-object.md)

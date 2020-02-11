@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -21,32 +21,32 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68742898"
 ---
-# <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
+# <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce dati statistici aggregati sulle prestazioni delle stored procedure memorizzate nella cache. La vista restituisce una riga per ogni piano di stored procedure memorizzato nella cache e la durata della riga è uguale al periodo in cui la stored procedure rimane memorizzata nella cache. Quando una stored procedure viene rimossa dalla cache, la riga corrispondente viene elimina dalla vista. A questo punto, viene generato un evento di traccia SQL di statistiche sulle prestazioni simile a **sys. dm _exec_query_stats**.  
+  Restituisce dati statistici aggregati sulle prestazioni delle stored procedure memorizzate nella cache. La vista restituisce una riga per ogni piano di stored procedure memorizzato nella cache e la durata della riga è uguale al periodo in cui la stored procedure rimane memorizzata nella cache. Quando una stored procedure viene rimossa dalla cache, la riga corrispondente viene elimina dalla vista. A questo punto, viene generato un evento di traccia SQL di Performance Statistics simile a **sys.dm_exec_query_stats**.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.  
   
 > [!NOTE]
-> I risultati di **sys. dm _exec_procedure_stats** possono variare a seconda dell'esecuzione, perché i dati riflettono solo le query finite e non quelli ancora in corso.
-> Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm _pdw_nodes_exec_procedure_stats**. 
+> I risultati di **sys. dm_exec_procedure_stats** possono variare a seconda dell'esecuzione, perché i dati riflettono solo le query finite e non quelli ancora in corso.
+> Per chiamare questo oggetto [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, usare il nome **sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|ID del database in cui è contenuta la stored procedure.|  
 |**object_id**|**int**|Numero di identificazione dell'oggetto della stored procedure.|  
-|**type**|**char(2)**|Tipo dell'oggetto:<br /><br /> P = stored procedure SQL<br /><br /> PC = stored procedure assembly (CLR)<br /><br /> X = stored procedure estesa|  
-|**type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary(64)**|Questa operazione può essere utilizzata per la correlazione con le query in **sys. dm _exec_query_stats** eseguite all'interno di questo stored procedure.|  
-|**plan_handle**|**varbinary(64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con la vista a gestione dinamica **sys. dm _exec_cached_plans** .<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
+|**tipo**|**carattere (2)**|Tipo dell'oggetto:<br /><br /> P = stored procedure SQL<br /><br /> PC = stored procedure assembly (CLR)<br /><br /> X = stored procedure estesa|  
+|**type_desc**|**nvarchar (60)**|Descrizione del tipo di oggetto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**sql_handle**|**varbinary (64)**|Questa operazione può essere utilizzata per la correlazione con le query in **sys. dm_exec_query_stats** eseguite dall'interno di questo stored procedure.|  
+|**plan_handle**|**varbinary (64)**|Identificatore del piano in memoria. Si tratta di un identificatore temporaneo, che rimane costante solo se il piano rimane nella cache. Questo valore può essere utilizzato con la vista a gestione dinamica **sys. dm_exec_cached_plans** .<br /><br /> È sempre 0x000 quando una stored procedure compilata in modo nativo esegue una query su una tabella ottimizzata per la memoria.|  
 |**cached_time**|**datetime**|Ora in cui la stored procedure è stata aggiunta alla cache.|  
 |**last_execution_time**|**datetime**|Ora dell'ultima esecuzione della stored procedure.|  
 |**execution_count**|**bigint**|Il numero di volte in cui il stored procedure è stato eseguito dopo l'ultima compilazione.|  
@@ -70,24 +70,24 @@ ms.locfileid: "68742898"
 |**last_elapsed_time**|**bigint**|Tempo trascorso, in microsecondi, per l'ultima esecuzione completata del stored procedure.|  
 |**min_elapsed_time**|**bigint**|Tempo minimo trascorso, in microsecondi, per qualsiasi esecuzione completata di questo stored procedure.|  
 |**max_elapsed_time**|**bigint**|Tempo massimo trascorso, in microsecondi, per qualsiasi esecuzione completata di questo stored procedure.|  
-|**total_spills**|**bigint**|Numero totale di pagine rilasciate dall'esecuzione di questo stored procedure da quando è stato compilato.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] da CU3|  
-|**last_spills**|**bigint**|Numero di pagine distribuite durante l'ultima esecuzione del stored procedure.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] da CU3|  
-|**min_spills**|**bigint**|Numero minimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] da CU3|  
-|**max_spills**|**bigint**|Il numero massimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: A partire [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] da CU3|  
+|**total_spills**|**bigint**|Numero totale di pagine rilasciate dall'esecuzione di questo stored procedure da quando è stato compilato.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
+|**last_spills**|**bigint**|Numero di pagine distribuite durante l'ultima esecuzione del stored procedure.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
+|**min_spills**|**bigint**|Numero minimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
+|**max_spills**|**bigint**|Il numero massimo di pagine che questo stored procedure ha mai distribuito durante una singola esecuzione.<br /><br /> **Si applica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partire da CU3|  
 |**pdw_node_id**|**int**|Identificatore del nodo su cui si trova questa distribuzione.<br /><br />**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
-|**total_page_server_reads**|**bigint**|Numero totale di letture di pagine del server eseguite dalle esecuzioni di questo stored procedure da quando è stato compilato.<br /><br /> **Si applica a**: Iperscalabilità del database SQL di Azure|  
-|**last_page_server_reads**|**bigint**|Numero di letture di pagine del server eseguite durante l'ultima esecuzione del stored procedure.<br /><br /> **Si applica a**: Iperscalabilità del database SQL di Azure|  
-|**min_page_server_reads**|**bigint**|Numero minimo di letture di pagine del server eseguite da questo stored procedure durante una singola esecuzione.<br /><br /> **Si applica a**: Iperscalabilità del database SQL di Azure|  
-|**max_page_server_reads**|**bigint**|Numero massimo di letture di pagine del server eseguite da questo stored procedure durante una singola esecuzione.<br /><br /> **Si applica a**: Iperscalabilità del database SQL di Azure|  
+|**total_page_server_reads**|**bigint**|Numero totale di letture di pagine del server eseguite dalle esecuzioni di questo stored procedure da quando è stato compilato.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
+|**last_page_server_reads**|**bigint**|Numero di letture di pagine del server eseguite durante l'ultima esecuzione del stored procedure.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
+|**min_page_server_reads**|**bigint**|Numero minimo di letture di pagine del server eseguite da questo stored procedure durante una singola esecuzione.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
+|**max_page_server_reads**|**bigint**|Numero massimo di letture di pagine del server eseguite da questo stored procedure durante una singola esecuzione.<br /><br /> **Si applica a**: iperscalabilità del database SQL di Azure|  
   
  <sup>1</sup> per le stored procedure compilate in modo nativo quando la raccolta delle statistiche è abilitata, il tempo di lavoro viene raccolto in millisecondi. Se la query viene eseguita in meno di un millisecondo, il valore sarà 0.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]è richiesta `VIEW SERVER STATE` l'autorizzazione.   
-`VIEW DATABASE STATE` Nei livelli [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium, richiede l'autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
+Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, richiede l' `VIEW DATABASE STATE` autorizzazione nel database. Nei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli standard e Basic, richiede l' **amministratore del server** o un account **amministratore Azure Active Directory** .   
    
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Le statistiche nella vista vengono aggiornate quando viene completata l'esecuzione della stored procedure.  
   
 ## <a name="examples"></a>Esempi  
@@ -103,11 +103,11 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Funzioni &#40;e viste a gestione dinamica relative all'esecuzione Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
-[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
+[Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[sys. dm_exec_sql_text &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys. dm_exec_query_plan &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys. dm_exec_query_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
+[sys. dm_exec_trigger_stats &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
   

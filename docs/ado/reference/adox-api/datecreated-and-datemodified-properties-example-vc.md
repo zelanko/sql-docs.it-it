@@ -1,5 +1,5 @@
 ---
-title: DateCreated e proprietà DateModified (VC + +) | Microsoft Docs
+title: Esempio di proprietà DateCreated e DateModified (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07fe23064173ba6e5c64294f9ea89615909cb10f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd6117e48fbdf79af24227b9b5b499afd1a60288
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966602"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939595"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>Esempio delle proprietà DateCreated e DateModified (VC++)
-Questo esempio viene illustrato il [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) e [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) le proprietà mediante l'aggiunta di un nuovo [colonna](../../../ado/reference/adox-api/column-object-adox.md) esistente [tabella](../../../ado/reference/adox-api/table-object-adox.md) e da creazione di una nuova **tabella**. La procedura DateOutput è necessaria per eseguire questo esempio.  
+In questo esempio vengono illustrate le proprietà [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) e [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) mediante l'aggiunta di una nuova [colonna](../../../ado/reference/adox-api/column-object-adox.md) a una [tabella](../../../ado/reference/adox-api/table-object-adox.md) esistente e la creazione di una nuova **tabella**. Per eseguire questo esempio, è necessaria la procedura DateOutput.  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -101,7 +101,7 @@ void DateCreatedX() {
     }  
   
     catch(...) {  
-        cout << "Error occured in include files...." << endl;  
+        cout << "Error occurred in include files...." << endl;  
     }  
 }  
   

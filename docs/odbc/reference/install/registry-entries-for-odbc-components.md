@@ -17,15 +17,15 @@ ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbee5187a7318e0953ea61d92f7478d83e5afaff
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70009344"
 ---
 # <a name="registry-entries-for-odbc-components"></a>Voci del Registro di sistema per i componenti ODBC
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. È consigliabile installare solo in modo esplicito ODBC nelle versioni precedenti di Windows.  
   
  La DLL del programma di installazione mantiene le informazioni nel registro di sistema relative a ogni componente ODBC installato. Nei computer che eseguono Microsoft Windows NT e Microsoft Windows 95/98, queste informazioni vengono archiviate nelle sottochiavi della chiave seguente nel registro di sistema:  
 
@@ -43,8 +43,8 @@ ms.locfileid: "70009344"
   
 -   [Sottochiavi di specifica del driver](../../../odbc/reference/install/driver-specification-subkeys.md)  
   
--   [Sottochiave Default Driver](../../../odbc/reference/install/default-driver-subkey.md)  
+-   [Sottochiave Default del driver](../../../odbc/reference/install/default-driver-subkey.md)  
   
 -   [Sottochiave ODBC Translators](../../../odbc/reference/install/odbc-translators-subkey.md)  
   
--   [Sottochiavi di specifica delle funzioni di conversione](../../../odbc/reference/install/translator-specification-subkeys.md)
+-   [Sottochiavi di specifica dei convertitori](../../../odbc/reference/install/translator-specification-subkeys.md)
