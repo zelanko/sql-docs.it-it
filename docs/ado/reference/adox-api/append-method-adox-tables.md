@@ -1,5 +1,5 @@
 ---
-title: Append (metodo) (oggetti Table ADOX) | Microsoft Docs
+title: Metodo Append (tabelle ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967242"
 ---
 # <a name="append-method-adox-tables"></a>Metodo Append (raccolta Tables ADOX)
-Aggiunge un nuovo [tabella](../../../ado/reference/adox-api/table-object-adox.md) dell'oggetto per il [tabelle](../../../ado/reference/adox-api/tables-collection-adox.md) raccolta.  
+Aggiunge un nuovo oggetto [Table](../../../ado/reference/adox-api/table-object-adox.md) alla raccolta [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,21 +35,21 @@ Tables.Append Table
   
 #### <a name="parameters"></a>Parametri  
  *Tabella*  
- Oggetto **Variant** valore che contiene un riferimento al **tabella** da accodare o il nome della tabella per creare e aggiungere.  
+ Valore **Variant** che contiene un riferimento alla **tabella** da accodare o il nome della tabella da creare e aggiungere.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se il provider non supporta la creazione di tabelle, si verificherà un errore.  
   
 ## <a name="applies-to"></a>Si applica a  
- [Raccolta di oggetti Table (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Raccolta Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle e colonne aggiungere metodi, esempio di proprietà Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Metodi di Accodamento di colonne e tabelle, esempio di proprietà Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Esempio di proprietà ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Append (metodo) (oggetti Column ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (metodo) (oggetti Group ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append (metodo) (oggetti Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append (metodo) (oggetti Key ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append (metodo) (oggetti procedure ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append (metodo) (User ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Metodo Append (oggetti View ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Metodo Append (colonne ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Metodo Append (gruppi ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Metodo Append (indici ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Metodo Append (chiavi ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Metodo Append (routine ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Metodo Append (utenti ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
+ [Metodo Append (raccolta Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

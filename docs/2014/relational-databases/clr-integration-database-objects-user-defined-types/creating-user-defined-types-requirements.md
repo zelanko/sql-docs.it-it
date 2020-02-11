@@ -1,5 +1,5 @@
 ---
-title: Requisiti del tipo definito dall'utente | Microsoft Docs
+title: Requisiti dei tipi definiti dall'utente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,23 +21,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919664"
 ---
 # <a name="user-defined-type-requirements"></a>Requisiti per i tipi definiti dall'utente
-  È necessario apportare alcune decisioni di progettazione importante durante la creazione di un tipo definito dall'utente (UDT) per l'installazione nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
+  Quando si crea un tipo definito dall'utente (UDT) da installare in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario prendere alcune importanti decisioni di progettazione. Benché nella maggior parte dei casi sia consigliabile creare il tipo definito dall'utente come struttura, la creazione come classe rappresenta un'altra opzione valida. Perché il tipo venga registrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la definizione del tipo definito dall'utente deve essere conforme alle specifiche relative alla creazione di tali tipi.  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisiti per l'implementazione di tipi definiti dall'utente  
  Ai fini dell'esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo definito dall'utente deve implementare i requisiti seguenti nella relativa definizione:  
   
  Il tipo definito dall'utente deve specificare `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`. L'utilizzo di `System.SerializableAttribute` è facoltativo ma consigliato.  
   
--   Il tipo definito dall'utente deve implementare l'interfaccia `System.Data.SqlTypes.INullable` nella classe o nella struttura creando un metodo `static` (`Shared` in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) `Null` pubblico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il valore null per impostazione predefinita. Questa condizione è necessaria affinché il codice in esecuzione nel tipo definito dall'utente sia in grado di riconoscere un valore Null.  
+-   Il tipo definito dall'utente deve implementare l'interfaccia `System.Data.SqlTypes.INullable` nella classe o nella struttura creando un metodo `static` (`Shared` in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) `Null` pubblico. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il valore null per impostazione predefinita. Questa condizione è necessaria affinché il codice in esecuzione nel tipo definito dall'utente sia in grado di riconoscere un valore Null.  
   
--   Nel tipo definito dall'utente deve essere incluso un metodo `static` `Shared` (o `Parse`) che supporti l'analisi e un metodo `ToString` pubblico per la conversione in una rappresentazione di stringa dell'oggetto.  
+-   Nel tipo definito dall'utente deve essere incluso un metodo `static``Shared` (o `Parse`) che supporti l'analisi e un metodo `ToString` pubblico per la conversione in una rappresentazione di stringa dell'oggetto.  
   
 -   Un tipo definito dall'utente con un formato di serializzazione definito dall'utente deve implementare l'interfaccia `System.Data.IBinarySerialize` e fornire un metodo `Read` e un metodo `Write`.  
   
@@ -51,7 +52,7 @@ ms.locfileid: "62919664"
   
 -   Il tipo definito dall'utente deve esporre elementi dati come campi pubblici o routine di proprietà.  
   
--   Nomi pubblici non può contenere più di 128 caratteri e deve essere conforme per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regole di denominazione per gli identificatori come definito in [identificatori del Database](../databases/database-identifiers.md).  
+-   I nomi pubblici non possono contenere più di 128 caratteri e devono essere conformi alle regole di denominazione per gli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificatori come definito negli [identificatori del database](../databases/database-identifiers.md).  
   
 -   Le colonne `sql_variant` non possono contenere istanze di un tipo definito dall'utente.  
   
@@ -69,9 +70,9 @@ ms.locfileid: "62919664"
 ## <a name="native-serialization"></a>Serializzazione nativa  
  La scelta degli attributi di serializzazione corretti per il tipo definito dall'utente dipende dal tipo definito dall'utente che si desidera creare. Nel formato di serializzazione `Native` viene utilizzata una struttura molto semplice che consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di archiviare una rappresentazione nativa efficace del tipo definito dall'utente nel disco. Il formato `Native` rappresenta la scelta consigliata se il tipo definito dall'utente è semplice e contiene solo campi dei tipi seguenti:  
   
- **bool**, **byte**, **sbyte**, **breve**, **ushort**, **int**,  **uint**, **lungo**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **bool**, **byte**, **SByte**, **short**, **ushort**, **int**, **uint**, **Long**, **ULONG**, **float**, **Double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Tipi di valore sono composte da dei campi dei tipi precedenti sono buoni candidati per `Native` formato, ad esempio `structs` in Visual c# (o `Structures` come viene denominato in Visual Basic). Un tipo definito dall'utente specificato, ad esempio, con il formato di serializzazione `Native` può contenere un campo di un altro tipo definito dall'utente specificato anch'esso con il formato `Native`. Se la definizione del tipo definito dall'utente è più complessa e contiene tipi di dati non inclusi nell'elenco precedente, è invece necessario specificare il formato di serializzazione `UserDefined`.  
+ I tipi di valore composti da campi dei tipi precedenti sono candidati validi per `Native` il formato, ad esempio `structs` in Visual C# (o `Structures` come sono noti in Visual Basic). Un tipo definito dall'utente specificato, ad esempio, con il formato di serializzazione `Native` può contenere un campo di un altro tipo definito dall'utente specificato anch'esso con il formato `Native`. Se la definizione del tipo definito dall'utente è più complessa e contiene tipi di dati non inclusi nell'elenco precedente, è invece necessario specificare il formato di serializzazione `UserDefined`.  
   
  Il formato `Native` deve soddisfare i requisiti seguenti:  
   
@@ -79,9 +80,11 @@ ms.locfileid: "62919664"
   
 -   Tutti i campi devono essere serializzabili.  
   
--   `System.Runtime.InteropServices.StructLayoutAttribute` deve essere specificato come `StructLayout.LayoutKindSequential` se il tipo definito dall'utente è specificato in una classe e non in una struttura. Questo attributo controlla il layout fisico dei campi dati e viene utilizzato per forzare la disposizione dei membri in base all'ordine in cui vengono visualizzati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza questo attributo per determinare l'ordine dei campi per i tipi definiti dall'utente con più valori.  
+-   
+  `System.Runtime.InteropServices.StructLayoutAttribute` deve essere specificato come `StructLayout.LayoutKindSequential` se il tipo definito dall'utente è specificato in una classe e non in una struttura. Questo attributo controlla il layout fisico dei campi dati e viene utilizzato per forzare la disposizione dei membri in base all'ordine in cui vengono visualizzati. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza questo attributo per determinare l'ordine dei campi per i tipi definiti dall'utente con più valori.  
   
- Per un esempio di un tipo definito dall'utente definito con `Native` serializzazione, vedere il punto di tipo definito dall'utente nella [codifica di tipi](creating-user-defined-types-coding.md).  
+ Per un esempio di un tipo definito dall' `Native` utente definito con la serializzazione, vedere il tipo definito dall'utente Point in [codifica dei tipi definiti dall'utente](creating-user-defined-types-coding.md).  
   
 ## <a name="userdefined-serialization"></a>Serializzazione UserDefined  
  L'impostazione del formato `UserDefined` per l'attributo `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` garantisce allo sviluppatore il controllo completo sul formato binario. Quando si specifica la proprietà dell'attributo `Format` come `UserDefined`, è necessario effettuare le operazioni seguenti nel codice:  
@@ -92,7 +95,7 @@ ms.locfileid: "62919664"
   
 -   Scrivere il codice per implementare i metodi `Read` e `Write` per il tipo definito dall'utente implementando l'interfaccia `System.Data.Sql.IBinarySerialize`.  
   
- Per un esempio di un tipo definito dall'utente definito con `UserDefined` serializzazione, vedere il tipo definito dall'utente Currency in [codifica di tipi](creating-user-defined-types-coding.md).  
+ Per un esempio di un tipo definito dall' `UserDefined` utente definito con la serializzazione, vedere il tipo definito dall'utente Currency in [codifica dei tipi definiti dall'utente](creating-user-defined-types-coding.md).  
   
 > [!NOTE]  
 >  Ai fini dell'indicizzazione, i campi con tipo definito dall'utente devono utilizzare la serializzazione nativa o essere resi persistenti.  
@@ -100,7 +103,8 @@ ms.locfileid: "62919664"
 ## <a name="serialization-attributes"></a>Attributi di serializzazione  
  Gli attributi consentono di determinare la modalità di utilizzo della serializzazione per costruire la rappresentazione di archiviazione dei tipi definiti dall'utente e per trasmettere tali tipi al client in base al valore. Quando si crea il tipo definito dall'utente, viene richiesto di specificare `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`. L'attributo `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` indica che la classe è un tipo definito dall'utente e specifica l'archiviazione per il tipo definito dall'utente. È eventualmente possibile specificare l'attributo `Serializable`, anche se non è necessario in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` include le proprietà indicate di seguito.  
+ 
+  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` include le proprietà indicate di seguito.  
   
  `Format`  
  Specifica il formato di serializzazione, che può essere `Native` o `UserDefined` a seconda dei tipi di dati del tipo definito dall'utente.  
@@ -112,7 +116,7 @@ ms.locfileid: "62919664"
  Indica se tutte le istanze del tipo definito dall'utente sono della stessa lunghezza.  
   
  `MaxByteSize`  
- Dimensioni massime, in byte, dell'istanza. È necessario specificare `MaxByteSize` con il formato di serializzazione `UserDefined`. Per un tipo definito dall'utente per cui è specificata una serializzazione definita dall'utente, `MaxByteSize` si riferisce alle dimensioni totali del tipo definito dall'utente nel formato serializzato definito dall'utente. Il valore di `MaxByteSize` deve essere compreso nell'intervallo tra 1 e 8000 o impostato su -1 a indicare che il tipo definito dall'utente è maggiore di 8000 byte (le dimensioni totali non possono superare le dimensioni LOB massime). Si consideri un tipo definito dall'utente con una proprietà di una stringa di 10 caratteri (`System.Char`). Quando il tipo definito dall'utente viene serializzato utilizzando un oggetto BinaryWriter, le dimensioni totali della stringa serializzata sono 22 byte: 2 byte per carattere UTF-16 Unicode, moltiplicato per il numero massimo di caratteri più 2, il controllo byte di overhead generato dalla serializzazione di un flusso binario. Di conseguenza, nel determinare il valore di `MaxByteSize`, è necessario considerare le dimensioni totali del tipo definito dall'utente serializzato, ovvero le dimensioni dei dati serializzati in formato binario più l'overhead generato dalla serializzazione.  
+ Dimensioni massime, in byte, dell'istanza. È necessario specificare `MaxByteSize` con il formato di serializzazione `UserDefined`. Per un tipo definito dall'utente per cui è specificata una serializzazione definita dall'utente, `MaxByteSize` si riferisce alle dimensioni totali del tipo definito dall'utente nel formato serializzato definito dall'utente. Il valore di `MaxByteSize` deve essere compreso nell'intervallo tra 1 e 8000 o impostato su -1 a indicare che il tipo definito dall'utente è maggiore di 8000 byte (le dimensioni totali non possono superare le dimensioni LOB massime). Si consideri un tipo definito dall'utente con una proprietà di una stringa di 10 caratteri (`System.Char`). Quando il tipo definito dall'utente viene serializzato utilizzando un oggetto BinaryWriter, le dimensioni totali della stringa serializzata sono pari a 22 byte per ciascun carattere Unicode UTF-16, moltiplicati per il numero massimo di caratteri, più 2 byte di controllo per l'overhead generato dalla serializzazione di un flusso binario. Di conseguenza, nel determinare il valore di `MaxByteSize`, è necessario considerare le dimensioni totali del tipo definito dall'utente serializzato, ovvero le dimensioni dei dati serializzati in formato binario più l'overhead generato dalla serializzazione.  
   
  `ValidationMethodName`  
  Nome del metodo utilizzato per convalidare le istanze del tipo definito dall'utente.  
@@ -140,15 +144,15 @@ ms.locfileid: "62919664"
   
 -   Minore di (\<)  
   
--   Maggiore o uguale a (> =)  
+-   Maggiore o uguale a (>=)  
   
--   Minore o uguale a (< =)  
+-   Minore o uguale a (<=)  
   
 ### <a name="implementing-nullability"></a>Implementazione del supporto dei valori Null  
- Oltre a specificare correttamente gli attributi per gli assembly, la classe deve inoltre supportare i valori Null. Benché i tipi definiti dall'utente caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportino i valori Null, perché un tipo definito dall'utente possa riconoscere un valore Null è necessario che la classe implementi l'interfaccia `INullable`. Per altre informazioni e un esempio di come implementare l'ammissione di valori null in un tipo definito dall'utente, vedere [codifica di tipi](creating-user-defined-types-coding.md).  
+ Oltre a specificare correttamente gli attributi per gli assembly, la classe deve inoltre supportare i valori Null. Benché i tipi definiti dall'utente caricati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportino i valori Null, perché un tipo definito dall'utente possa riconoscere un valore Null è necessario che la classe implementi l'interfaccia `INullable`. Per ulteriori informazioni e un esempio di come implementare il supporto di valori null in un tipo definito dall'utente, vedere [codifica di tipi definiti dall'utente](creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Conversioni di stringhe  
- Per supportare la conversione di stringhe da e verso il tipo definito dall'utente, è necessario fornire un metodo `Parse` e un metodo `ToString` nella classe. Il metodo `Parse` consente la conversione di una stringa in un tipo definito dall'utente. Tale metodo deve essere dichiarato come `static` (o `Shared` in Visual Basic) e accetta un parametro di tipo `System.Data.SqlTypes.SqlString`. Per altre informazioni e un esempio di come implementare il `Parse` e `ToString` metodi, vedere [codifica di tipi](creating-user-defined-types-coding.md).  
+ Per supportare la conversione di stringhe da e verso il tipo definito dall'utente, è necessario fornire un metodo `Parse` e un metodo `ToString` nella classe. Il metodo `Parse` consente la conversione di una stringa in un tipo definito dall'utente. Tale metodo deve essere dichiarato come `static` (o `Shared` in Visual Basic) e accetta un parametro di tipo `System.Data.SqlTypes.SqlString`. Per ulteriori informazioni e un esempio di come implementare i `Parse` metodi e `ToString` , vedere codifica di [tipi definiti dall'utente](creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Serializzazione XML  
  I tipi definiti dall'utente devono supportare la conversione da e verso il tipo di dati `xml` rispettando la conformità al contratto per la serializzazione XML. Nello spazio dei nomi `System.Xml.Serialization` sono contenute classi utilizzate per la serializzazione di oggetti in documenti o flussi di formato XML. È possibile scegliere di implementare la serializzazione `xml` utilizzando l'interfaccia `IXmlSerializable`, che fornisce formattazione personalizzata per la serializzazione e la deserializzazione XML.  

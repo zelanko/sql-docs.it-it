@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196665"
 ---
 # <a name="use-sparse-columns"></a>Utilizzo di colonne di tipo sparse
@@ -85,7 +85,7 @@ ms.locfileid: "68196665"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **Tipi di dati di lunghezza dipendente dalla precisione**  
+ **Tipi di dati con lunghezza dipendente dalla precisione**  
   
 |Tipo di dati|Byte non di tipo sparse|Byte di tipo sparse|Percentuale valori Null|  
 |---------------|---------------------|------------------|---------------------|  
@@ -99,14 +99,14 @@ ms.locfileid: "68196665"
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Utilizzare il tipo `decimal` come stima conservativa.|||  
   
- **Tipi di dati di lunghezza dipendente dai dati**  
+ **Tipi di dati con lunghezza dipendente dai dati**  
   
 |Tipo di dati|Byte non di tipo sparse|Byte di tipo sparse|Percentuale valori Null|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|Varia in base al tipo di dati sottostante|||  
-|`varchar` o `char`|2*|4*|60%|  
-|`nvarchar` o `nchar`|2*|4*+|60%|  
-|`varbinary` o `binary`|2*|4*|60%|  
+|`varchar`o`char`|2*|4*|60%|  
+|`nvarchar`o`nchar`|2*|4*+|60%|  
+|`varbinary`o`binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
@@ -232,7 +232,7 @@ WHERE ProductionSpecification IS NOT NULL ;
  `1      Tire Spec 1  AXZZ217                  27`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare set di colonne](../tables/use-column-sets.md)   
+ [Usare set di colonne](../tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [sys.columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)  

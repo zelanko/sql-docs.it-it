@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 788defce7f897e4da3a3680118c573b5a73ac3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917054"
 ---
 # <a name="log-shipping-monitor-settings"></a>Impostazioni monitoraggio log shipping
@@ -28,7 +28,7 @@ ms.locfileid: "62917054"
  **Istanza server di monitoraggio**  
  Visualizza il nome dell'istanza del server attualmente configurato come server di monitoraggio per la configurazione per il log shipping.  
   
- **Connect**  
+ **Connettere**  
  Consente di scegliere un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da utilizzare come server di monitoraggio e di connettersi a tale istanza. È necessario che l'account utilizzato per la connessione sia membro del ruolo predefinito del server sysadmin nell'istanza del server secondario.  
   
  **Tramite rappresentazione dell'account proxy del processo**  
@@ -43,7 +43,7 @@ ms.locfileid: "62917054"
  **Nome processo**  
  Indica il nome del processo di gestione degli avvisi di SQL Server Agent utilizzato dal log shipping per generare avvisi in caso di superamento dei valori soglia per il backup o il ripristino. Al momento della prima creazione di tale processo è possibile modificarne il nome nell'apposita casella.  
   
- **Pianificazione**  
+ **Pianificare**  
  Indica la pianificazione corrente del processo di gestione degli avvisi di SQL Server Agent.  
   
  **Modifica**  

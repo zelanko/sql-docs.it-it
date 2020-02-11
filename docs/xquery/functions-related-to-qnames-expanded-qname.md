@@ -1,5 +1,5 @@
 ---
-title: Expanded-QName (XQuery) | Microsoft Docs
+title: expanded-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004586"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funzioni correlate a elementi QName - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un valore del tipo xs: QName con lo spazio dei nomi specificato nell'URI le *$paramURI* e il nome locale specificato nella *$paramLocal*. Se *$paramURI* è una stringa vuota o una sequenza vuota, rappresenta nessuno spazio dei nomi.  
+  Restituisce un valore del tipo xs: QName con l'URI dello spazio dei nomi specificato nell' *$paramURI* e il nome locale specificato nell' *$paramLocal*. Se *$paramURI* è la stringa vuota o la sequenza vuota, non rappresenta alcuno spazio dei nomi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,28 +40,29 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Parte dell'elemento QName che rappresenta il nome locale.  
   
-## <a name="remarks"></a>Note  
- Si applica quanto segue per il **expanded-QName()** funzione:  
+## <a name="remarks"></a>Osservazioni  
+ Per la funzione **expanded-QName ()** si applica quanto segue:  
   
--   Se il *$paramLocal* valore specificato non è presente nella forma lessicale corretta per il tipo xs: NCName, la sequenza vuota, viene restituita e rappresenta un errore dinamico.  
+-   Se il valore *$paramLocal* specificato non è nel formato lessicale corretto per il tipo xs: NCName, viene restituita la sequenza vuota e viene rappresentato un errore dinamico.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la conversione dal tipo xs:QName a un tipo diverso. Per questo motivo, il **expanded-QName()** funzione non può essere utilizzata nella costruzione di strutture XML. Ad esempio, quando si costruisce un nodo come `<e> expanded-QName(...) </e>`, il valore deve essere non tipizzato. A questo scopo è necessario convertire il valore del tipo xs:QName restituito da `expanded-QName()` in xdt:untypedAtomic. La funzionalità non è tuttavia supportata. Una soluzione a questo problema è illustrata in un esempio di seguito in questo argomento.  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta la conversione dal tipo xs:QName a un tipo diverso. Per questo motivo, non è possibile usare la funzione **expanded-QName ()** nella costruzione XML. Ad esempio, quando si costruisce un nodo come `<e> expanded-QName(...) </e>`, il valore deve essere non tipizzato. A questo scopo è necessario convertire il valore del tipo xs:QName restituito da `expanded-QName()` in xdt:untypedAtomic. La funzionalità non è tuttavia supportata. Una soluzione a questo problema è illustrata in un esempio di seguito in questo argomento.  
   
--   È possibile modificare o confrontare i valori di tipo QName esistenti. Ad esempio, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` confronta il valore dell'elemento <`e`>, con l'elemento QName restituito dalle **expanded-QName()** (funzione).  
+-   È possibile modificare o confrontare i valori di tipo QName esistenti. `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` Confronta, ad esempio, il valore dell'elemento <`e`> con il QName restituito dalla funzione **expanded-QName ()** .  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate **** in diverse colonne di tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML nel database.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>R. Sostituzione di un valore di nodo di tipo QName  
  Nell'esempio seguente viene illustrata la procedura per modificare il valore di un nodo elemento di tipo QName. Nell'esempio vengono eseguite le operazioni seguenti:  
   
 -   Crea una raccolta di XML Schema che definisce un elemento di tipo QName.  
   
--   Crea una tabella con un **xml** colonna del tipo tramite la raccolta di XML schema.  
+-   Crea una tabella con una colonna di tipo **XML** tramite la raccolta di XML Schema.  
   
 -   Salva un'istanza XML nella tabella.  
   
--   Usa il **Modify ()** metodo del tipo di dati xml per modificare il valore dell'elemento di tipo QName nell'istanza. Il **expanded-QName()** funzione viene utilizzata per generare il nuovo valore di tipo QName.  
+-   Usa il metodo **Modify ()** del tipo di dati XML per modificare il valore dell'elemento di tipo QName nell'istanza di. La funzione **expanded-QName ()** viene usata per generare il nuovo valore di tipo QName.  
   
 ```  
 -- If XML schema collection (if exists)  
@@ -98,7 +99,7 @@ go
 </Root>   
 ```  
   
- Nella query seguente, la <`ElemQN`> valore dell'elemento viene sostituito con il **Modify ()** metodo il tipo di dati xml e il valore di sostituzione dell'istruzione XML DML, come illustrato.  
+ Nella query seguente, il valore dell' `ElemQN` elemento <> viene sostituito utilizzando il metodo **Modify ()** del tipo di dati XML e il valore Replace di XML DML, come illustrato.  
   
 ```  
 -- the value.  
@@ -113,7 +114,7 @@ SELECT * from T
 go  
 ```  
   
- Di seguito è riportato il risultato. Si noti che l'elemento <`ElemQN`> dell'elemento QName tipo ha ora un nuovo valore:  
+ Di seguito è riportato il risultato. Si noti che l'elemento `ElemQN` <> di tipo QName dispone ora di un nuovo valore:  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -132,7 +133,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. Gestione delle limitazioni di utilizzo della funzione expanded-QName()  
- Il **expanded-QName-** funzione non può essere utilizzata nella costruzione di strutture XML. Questa condizione è illustrata nell'esempio seguente. Per ovviare a questa limitazione, nell'esempio viene inserito per prima cosa un nodo, che verrà poi modificato.  
+ Impossibile utilizzare la funzione **expanded-QName** nella costruzione XML. Ciò è illustrato nell'esempio seguente. Per ovviare a questa limitazione, nell'esempio viene inserito per prima cosa un nodo, che verrà poi modificato.  
   
 ```  
 -- if exists drop the table T  
@@ -157,7 +158,7 @@ SELECT *
 FROM T  
 ```  
   
- Il seguente tenta di aggiungere un altro <`root`> elemento ma ha esito negativo, perché la funzione expanded-QName() non è supportata nella costruzione di strutture XML.  
+ Il tentativo seguente aggiunge un altro `root` elemento <> ma ha esito negativo perché la funzione expanded-QName () non è supportata nella costruzione XML.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -165,7 +166,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Una soluzione consiste nell'inserire un'istanza con un valore per la <`root`> elemento e quindi modificarlo. In questo esempio viene usato un valore iniziale null quando la <`root`> viene inserito l'elemento. Raccolta di XML schema in questo esempio consente un valore null per la <`root`> elemento.  
+ Per risolvere il problema, inserire prima un'istanza con un valore per l'elemento <`root`> e quindi modificarlo. In questo esempio viene usato un valore iniziale nil quando viene inserito l' `root` elemento <>. La raccolta XML Schema in questo esempio consente un valore nil per l'elemento `root`> <.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -186,7 +187,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- È possibile confrontare il valore dell'elemento QName, come illustrato nella query seguente. La query restituisce solo il <`root`> gli elementi i cui valori corrispondono il nome completo del tipo valore restituito per il **expanded-QName()** (funzione).  
+ È possibile confrontare il valore dell'elemento QName, come illustrato nella query seguente. La query restituisce solo gli elementi `root`> <i cui valori corrispondono al valore di tipo QName restituito dalla funzione **expanded-QName ()** .  
   
 ```  
 SELECT xmlCol.query('  
@@ -200,9 +201,9 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
- C'è una limitazione: Il **expanded-QName()** funzione accetta la sequenza vuota come secondo argomento e restituisce un valore vuoto anziché generare un errore di run-time quando il secondo argomento non è corretto.  
+ Esiste una limitazione: la funzione **expanded-QName ()** accetta la sequenza vuota come secondo argomento e restituirà Empty anziché generare un errore di run-time quando il secondo argomento non è corretto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni correlate a elementi QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [Funzioni correlate a QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

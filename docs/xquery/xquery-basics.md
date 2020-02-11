@@ -15,10 +15,10 @@ ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 81a506c9f7b079dc86062976fca1b8785c1a80dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946059"
 ---
 # <a name="xquery-basics"></a>Nozioni fondamentali su XQuery
@@ -26,11 +26,11 @@ ms.locfileid: "67946059"
 
   In questa sezione vengono illustrate le nozioni fondamentali su XQuery.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Sequenza e QName &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Sequence e QName &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  Descrive sequenze, elementi QName e spazi dei nomi predefiniti.  
   
- [Contesto delle espressioni e valutazione delle Query &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [Contesto delle espressioni e valutazione delle query &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  Descrive i due contesti nei quali viene valutata un'espressione XQuery, ovvero statico e dinamico.  
   
  [Atomizzazione &#40;XQuery&#41;](../xquery/atomization-xquery.md)  

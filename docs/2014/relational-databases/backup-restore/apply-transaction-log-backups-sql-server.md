@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922936"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Applicazione dei backup di log delle transazioni (SQL Server)
@@ -30,15 +30,15 @@ ms.locfileid: "62922936"
   
  **Contenuto dell'argomento**  
   
--   [Requisiti per ripristinare i backup del Log delle transazioni](#Requirements)  
+-   [Requisiti per il ripristino dei backup del log delle transazioni](#Requirements)  
   
--   [Recupero e log delle transazioni](#RecoveryAndTlogs)  
+-   [Log delle transazioni e ripristino](#RecoveryAndTlogs)  
   
--   [Utilizzo dei backup del Log per il ripristino al punto di errore](#PITrestore)  
+-   [Utilizzo dei backup del log per eseguire il ripristino fino al momento dell'errore](#PITrestore)  
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="Requirements"></a> Requisiti per ripristinare i backup del Log delle transazioni  
+##  <a name="Requirements"></a>Requisiti per il ripristino dei backup del log delle transazioni  
  Per applicare un backup del log delle transazioni devono essere soddisfatti i requisiti seguenti:  
   
 -   **Numero sufficiente di backup del log per una sequenza di ripristino:** per completare una sequenza di ripristino, è necessario che sia disponibile il backup di un numero sufficiente di record del log. I backup del log necessari, incluso il [backup della parte finale del log](tail-log-backups-sql-server.md) se richiesto, devono essere disponibili prima dell'inizio della sequenza di ripristino.  
@@ -50,7 +50,7 @@ ms.locfileid: "62922936"
     > [!TIP]  
     >  È consigliabile ripristinare tutti i backup del log (RESTORE LOG *nome_database* WITH NORECOVERY). Dopo aver ripristinato l'ultimo backup del log, recuperare il database in un'operazione separata (RESTORE DATABASE *nome_database* WITH RECOVERY).  
   
-##  <a name="RecoveryAndTlogs"></a> Recupero e log delle transazioni  
+##  <a name="RecoveryAndTlogs"></a>Log delle transazioni e ripristino  
  Quando si recupera il database al termine dell'operazione di ripristino, viene eseguito il rollback di tutte le transazioni incomplete. Questa procedura è nota come *fase di rollback*. L'esecuzione del rollback è necessaria per ripristinare l'integrità del database. Dopo il rollback il database passa nello stato online, dopodiché non è possibile applicare alcun altro backup del log delle transazioni al database.  
   
  Si supponga, ad esempio, che una serie di backup del log delle transazioni includa una transazione con esecuzione prolungata. L'inizio della transazione viene registrato nel primo backup del log delle transazioni, mentre la fine della transazione viene registrata nel secondo backup del log delle transazioni. Il primo backup del log delle transazioni non include un record di un'operazione di commit o rollback. Se viene eseguita un'operazione di recupero quando è applicato il primo backup del log delle transazioni, la transazione con esecuzione prolungata verrà considerata incompleta e verrà eseguito il rollback delle modifiche dei dati registrate nel primo backup del log delle transazioni. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è possibile applicare il secondo backup del log delle transazioni dopo questo punto.  
@@ -58,10 +58,10 @@ ms.locfileid: "62922936"
 > [!NOTE]  
 >  In alcuni casi, durante il ripristino del log è possibile aggiungere un file in modo esplicito.  
   
-##  <a name="PITrestore"></a> Utilizzo dei backup del Log per il ripristino al punto di errore  
+##  <a name="PITrestore"></a>Uso dei backup del log per eseguire il ripristino fino al punto di errore  
  Si osservi a titolo di esempio la sequenza di eventi seguente:  
   
-|Time|Evento|  
+|Tempo|Event|  
 |----------|-----------|  
 |8\.00|Backup del database per creare un backup completo del database.|  
 |12.00|Backup del log delle transazioni|  
@@ -75,13 +75,13 @@ ms.locfileid: "62922936"
   
  Per ripristinare lo stato del database corrispondente alle ore 21.45 (punto di errore), è possibile utilizzare una delle procedure alternative seguenti:  
   
- **Alternativa 1: ripristinare il database da un backup completo più recente**  
+ **Alternativa 1: ripristino del database dal backup completo più recente**  
   
 1.  Creare un backup della parte finale del log delle transazioni attivo a partire dal momento dell'errore.  
   
 2.  Non ripristinare del backup completo del database delle 18.00. Ripristinare invece il backup completo del database più recente effettuato alle 18.00, quindi applicare il backup del log effettuato alle 20.00 e il backup della parte finale del log.  
   
- **Alternativa 2: ripristinare il database da un backup completo precedente**  
+ **Alternativa 2: ripristino del database da un backup completo precedente**  
   
 > [!NOTE]  
 >  Questa procedura alternativa è utile nel caso non sia possibile utilizzare il backup completo del database effettuato alle 18.00 del backup completo del database delle 18.00. Questa procedura richiede più tempo di quello necessario per il ripristino del backup completo del database delle 18.00.  
@@ -102,7 +102,7 @@ ms.locfileid: "62922936"
   
  **Per eseguire il ripristino fino al punto di recupero**  
   
--   [Ripristinare un database al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
+-   [Ripristinare un database fino al punto di errore nel modello di recupero con registrazione completa &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   

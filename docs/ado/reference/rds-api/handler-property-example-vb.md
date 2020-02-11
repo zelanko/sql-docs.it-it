@@ -15,19 +15,19 @@ ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a72e393716d3d24fdb9f0f95be9faae85651696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964108"
 ---
 # <a name="handler-property-example-vb"></a>Esempio della proprietà Handler (VB)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo esempio viene illustrato il [Servizi Desktop remoto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto [gestore](../../../ado/reference/rds-api/handler-property-rds.md) proprietà. (Vedere [personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) per altri dettagli.)  
+ In questo esempio viene illustrata la proprietà del [gestore](../../../ado/reference/rds-api/handler-property-rds.md) dell'oggetto [DataControl di RDS](../../../ado/reference/rds-api/datacontrol-object-rds.md) . Per altri dettagli, vedere [personalizzazione di datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md) .  
   
- Si supponga che le sezioni seguenti nel file dei parametri, MSDFMAP, si trovano nel server:  
+ Si supponga che le sezioni seguenti nel file di parametri, msdfmap. ini, si trovino sul server:  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +37,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Il codice è simile al seguente. Il comando assegnato al [SQL](../../../ado/reference/rds-api/sql-property.md) corrisponderà a proprietà di ***AuthorById*** identificatore e recupera una riga per autore Michael O'Leary. Il **DataControl** oggetto **Recordset** proprietà viene assegnato a un disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) semplicemente per comodità di codifica.  
+ Il codice è simile al seguente. Il comando assegnato alla proprietà [SQL](../../../ado/reference/rds-api/sql-property.md) corrisponderà all'identificatore ***AuthorById*** e recupererà una riga per l'autore Michael Leary. La proprietà **Recordset** oggetto **DataControl** viene assegnata a un oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) disconnesso esclusivamente come praticità di codifica.  
   
 ```  
 'BeginHandlerVB  
@@ -79,7 +79,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Proprietà Handler (Servizi Desktop remoto)](../../../ado/reference/rds-api/handler-property-rds.md)
 
 

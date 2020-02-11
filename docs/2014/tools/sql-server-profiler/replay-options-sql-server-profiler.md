@@ -1,5 +1,5 @@
 ---
-title: Per la riproduzione (SQL Server Profiler) | Microsoft Docs
+title: Opzioni di riproduzione (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025737"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Opzioni di riproduzione (SQL Server Profiler)
@@ -28,7 +28,7 @@ ms.locfileid: "63025737"
  In questo argomento vengono descritte le opzioni specificate con la finestra di dialogo **Configurazione riproduzione** .  
   
 > [!NOTE]  
->  È consigliabile utilizzare Distributed Replay Utility per riprodurre un'applicazione OLTP intensiva (con molte connessioni simultanee attive o una velocità effettiva elevata). Distributed Replay Utility può riprodurre dati di traccia da più computer, per simulare in modo migliore un carico di lavoro di importanza critica. Per altre informazioni, vedere [Riesecuzione distribuita di SQL Server](../distributed-replay/sql-server-distributed-replay.md).  
+>  È consigliabile utilizzare Distributed Replay Utility per riprodurre un'applicazione OLTP intensiva (con molte connessioni simultanee attive o una velocità effettiva elevata). Distributed Replay Utility può riprodurre dati di traccia da più computer, per simulare in modo migliore un carico di lavoro di importanza critica. Per altre informazioni, vedere [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md).  
   
 ## <a name="basic-replay-options"></a>Opzioni di riproduzione di base  
  **Server di riproduzione**  
@@ -46,18 +46,18 @@ ms.locfileid: "63025737"
  **Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**  
  Consente di utilizzare metodi di debug quali l'esecuzione istruzione per istruzione di una traccia. Se l'opzione non è selezionata, non è garantito che l'ordine nel quale vengono riprodotti gli eventi sia consistente con l'ordine in cui sono stati acquisiti in origine.  
   
- **Riproduci gli eventi utilizzando più thread**  
+ **Riproduci gli eventi usando più thread**  
  Ottimizza le prestazioni e disabilita il debug. Gli eventi vengono riprodotti nell'ordine in cui sono stati registrati per un ID di processo server (SPID), ma non viene garantito l'ordinamento degli SPID.  
   
  **Visualizza risultati di riproduzione**  
- Visualizza i risultati della riproduzione. Si tratta dell'opzione predefinita. Se la traccia che si desidera riprodurre è molto estesa, è possibile disabilitare questa opzione per risparmiare spazio su disco.  
+ Visualizza i risultati della riproduzione. Questa è l'opzione predefinita. Se la traccia che si desidera riprodurre è molto estesa, è possibile disabilitare questa opzione per risparmiare spazio su disco.  
   
 > [!NOTE]  
 >  Per ottenere le migliori prestazioni di riproduzione, è consigliabile selezionare l'opzione per la riproduzione con più thread e deselezionare l'opzione per la visualizzazione dei risultati.  
   
 ## <a name="advanced-replay-options"></a>Opzioni avanzate di riproduzione  
  **Riproduci SPID di sistema**  
- Riproduce tutti gli SPID. Si tratta dell'opzione predefinita.  
+ Riproduce tutti gli SPID. Questa è l'opzione predefinita.  
   
  **Riproduci un solo SPID**  
  Riproduce il numero di SPID selezionato nell'elenco.  

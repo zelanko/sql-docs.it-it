@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032411"
 ---
 # <a name="object-dependencies"></a>Dipendenze tra oggetti
@@ -27,22 +27,22 @@ ms.locfileid: "63032411"
  Utilizzare questa finestra di dialogo per individuare le dipendenze prima di modificare o eliminare l'oggetto selezionato.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Gli oggetti che dipendono** _\<oggetto selezionato >_  
+ **Oggetti che dipendono dall'**  _\<oggetto selezionato>_  
  Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze che dipendono dall'oggetto selezionato.  
   
- **Gli oggetti in cui** _\<oggetto selezionato >_ **dipende dal**  
+ **Oggetti da cui**_\<dipende l'oggetto selezionato>_ ****      
  Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze da cui dipende l'oggetto selezionato.  
   
  **Dipendenze**  
- Se **gli oggetti che dipendono**  _\<oggetto selezionato >_ è selezionato, verrà visualizzata una visualizzazione gerarchica degli oggetti che dipendono dall'oggetto selezionato. Se **oggetti in cui**  _\<oggetto selezionato >_ **dipende** è selezionato, verrà visualizzata una visualizzazione gerarchica degli oggetti da cui dipende l'oggetto selezionato .  
+ Se si fa clic su **oggetti che dipendono** dall' _ \<oggetto selezionato>_ , viene visualizzata una vista gerarchica degli oggetti che dipendono dall'oggetto selezionato. Se si fa clic su **oggetti da cui** _ \<dipende>oggetto selezionato_ , viene visualizzata una vista gerarchica degli oggetti da cui dipende l'oggetto selezionato. ****  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome dell'oggetto selezionato nella visualizzazione albero **Dipendenze** precedente.  
   
  **Tipo**  
  Consente di visualizzare il tipo dell'oggetto selezionato nella visualizzazione albero **Dipendenze** precedente.  
   
- **Data e ora ultima sincronizzazione**  
+ **Ora ultima sincronizzazione**  
  > [!NOTE]  
 >  Questa opzione è disponibile solo nella pagina **Avanzate** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63032411"
  > [!NOTE]  
 >  Questa opzione è disponibile solo nella pagina **Generale** .  
   
- Consente di visualizzare il tipo di dipendenza tra due oggetti. I possibili valori sono i seguenti:  
+ Consente di visualizzare il tipo di dipendenza tra due oggetti. Può essere uno dei valori seguenti:  
   
 -   Dipendenza associata a schema  
   

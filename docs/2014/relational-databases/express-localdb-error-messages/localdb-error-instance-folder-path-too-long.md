@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94439a6981a2cf891a55bcbda7498db83e1fa52e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990575"
 ---
-# <a name="localdberrorinstancefolderpathtoolong"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
+# <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
     
 ## <a name="details"></a>Dettagli  
   
@@ -27,7 +27,7 @@ ms.locfileid: "62990575"
 |ID evento|260|  
 |Origine evento|Runtime database locale di SQL Server 12.0|  
 |Componente|API di Runtime database locale|  
-|Testo del messaggio|La lunghezza del percorso completo della cartella di istanze del database locale è superiore a MAX_PATH. L'istanza deve essere archiviata nella cartella: SQL Server locale DB\Instances %%LOCALAPPDATA%%\Microsoft\Microsoft\\< nome istanza\>.|  
+|Testo del messaggio|La lunghezza del percorso completo della cartella di istanze del database locale è superiore a MAX_PATH. L'istanza deve essere archiviata nella cartella:%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server Local\\ DB\Instances<nome\>istanza.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Percorso di archiviazione richiesto per l'istanza più lungo di MAX_PATH.  

@@ -1,5 +1,5 @@
 ---
-title: Opzioni (oggetti di SQL Server Explorer-comandi) | Microsoft Docs
+title: Opzioni (comandi Esplora oggetti di SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999301"
 ---
-# <a name="options-sql-server-object-explorer-commands"></a>Opzioni (oggetti di SQL Server Explorer-comandi)
+# <a name="options-sql-server-object-explorer-commands"></a>Opzioni (comandi Esplora oggetti di SQL Server)
   Quando si fa clic con il pulsante destro del mouse in una tabella o una vista di Esplora oggetti, le due opzioni seguenti consentono di impostare la visualizzazione delle righe nella tabella:  
   
 -   **Seleziona le prime 1000 righe**  
@@ -33,16 +33,16 @@ ms.locfileid: "62999301"
  Usare la finestra di dialogo **Opzioni generali di scripting** per modificare il numero delle righe da aprire.  
   
 ## <a name="general-scripting-options"></a>Opzioni generali di scripting  
- **Valore di Select Top \<n > comando record di controllo**  
+ **Valore per il comando \<Select Top n> audit record**  
  Specifica il numero di righe del controllo da restituire. Il valore predefinito è 1.000 righe.  
   
- **Valore per la modifica le prime \<n > righe di comando**  
+ **Valore per il comando \<modifica prime n> righe**  
  Specifica il numero di righe restituito durante la modifica delle righe di una tabella. Il valore predefinito è 200 righe.  
   
- **Valore di Select Top \<n > righe di comando**  
+ **Valore per il comando \<Select Top n> Rows**  
  Specifica il numero di righe da restituire secondo quanto specificato nello script creato nell'editor di query. Il valore predefinito è 1000 righe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Assembly (motore di Database) | Microsoft Docs
+title: Assembly (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920775"
 ---
 # <a name="assemblies-database-engine"></a>Assembly (Motore di database)
   Gli argomenti di questa sezione includono informazioni utili per comprendere, progettare e implementare assembly.  
   
- Gli assembly sono file DLL utilizzati in un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distribuire funzioni, stored procedure, trigger, aggregazioni definite dall'utente e tipi definiti dall'utente che vengono scritti in uno dei linguaggi di codice gestito ospitati dal [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common language runtime (CLR), anziché in [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Gli assembly sono file dll utilizzati in un'istanza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di per distribuire funzioni, stored procedure, trigger, funzioni di aggregazione definite dall'utente e tipi definiti dall'utente scritti in uno dei linguaggi di codice gestito ospitati dal [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), anziché in [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Un assembly di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è un oggetto che fa riferimento a un modulo di applicazione gestito (file con estensione dll) creato nel linguaggio CLR di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Un assembly contiene i metadati della classe e codice gestito. Il caricamento di un assembly in un'istanza di SQL Server è il primo passaggio da eseguire per creare uno degli oggetti di database seguenti:  
   
--   Funzioni CLR. Per altre informazioni, vedere [creare le funzioni CLR](../user-defined-functions/create-clr-functions.md).  
+-   Funzioni CLR. Per altre informazioni, vedere [create CLR Functions](../user-defined-functions/create-clr-functions.md).  
   
--   Stored procedure CLR. Per altre informazioni, vedere [Stored procedure CLR](../../database-engine/dev-guide/clr-stored-procedures.md).  
+-   Stored procedure CLR. Per ulteriori informazioni, vedere [stored procedure CLR](../../database-engine/dev-guide/clr-stored-procedures.md).  
   
--   Trigger CLR. Per altre informazioni, vedere [creare trigger CLR](../triggers/create-clr-triggers.md).  
+-   Trigger CLR. Per altre informazioni, vedere [create CLR Triggers](../triggers/create-clr-triggers.md).  
   
--   Funzioni di aggregazione definite dall'utente. Per altre informazioni, vedere [aggregazioni definite dall'utente Create](../user-defined-functions/create-user-defined-aggregates.md).  
+-   Funzioni di aggregazione definite dall'utente. Per altre informazioni, vedere [creare funzioni di aggregazione definite dall'utente](../user-defined-functions/create-user-defined-aggregates.md).  
   
 -   Tipi definiti dall'utente. Per altre informazioni, vedere [Uso dei tipi definiti dall'utente](../native-client/features/using-user-defined-types.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62920775"
   
 -   Includono i metadati relativi alle dipendenze da altri assembly a cui viene fatto riferimento nell'assembly.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

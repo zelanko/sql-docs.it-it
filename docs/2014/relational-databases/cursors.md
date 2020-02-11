@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918692"
 ---
 # <a name="cursors"></a>Cursori
@@ -42,10 +42,12 @@ ms.locfileid: "62918692"
   
 ## <a name="concepts"></a>Concetti  
  Implementazione dei cursori  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'implementazione di tre tipi di cursori.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'implementazione di tre tipi di cursori.  
   
  cursori Transact-SQL  
- Sono basati sulla sintassi DECLARE CURSOR e sono principalmente usati in trigger, stored procedure e script [!INCLUDE[tsql](../includes/tsql-md.md)] . [!INCLUDE[tsql](../includes/tsql-md.md)] vengono implementati nel server e gestiti dalle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] inviate dal client al server. Possono essere inoltre inclusi in batch, stored procedure o trigger.  
+ Sono basati sulla sintassi DECLARE CURSOR e sono principalmente usati in trigger, stored procedure e script [!INCLUDE[tsql](../includes/tsql-md.md)] . 
+  [!INCLUDE[tsql](../includes/tsql-md.md)] vengono implementati nel server e gestiti dalle istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] inviate dal client al server. Possono essere inoltre inclusi in batch, stored procedure o trigger.  
   
  Cursori API (Application Programming Interface) del server  
  Supportano le funzioni dei cursori API in OLE DB e ODBC. Questi cursori sono implementati nel server. Ogni volta che un'applicazione client chiama una funzione per un cursore API, il provider OLE DB o il driver ODBC di Native Client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trasmette al server la richiesta di eseguire un'azione sul cursore API del server.  
@@ -59,27 +61,32 @@ ms.locfileid: "62918692"
   
  Poiché non è supportato lo scorrimento a ritroso del cursore, la maggior parte delle modifiche apportate alle righe nel database in seguito al recupero non sono visibili tramite il cursore. Nei casi in cui un valore usato per determinare la posizione della riga all'interno del set di risultati viene modificato, ad esempio tramite l'aggiornamento di una colonna coperta da un indice cluster, il valore modificato sarà visibile tramite il cursore.  
   
- Anche se i modelli di cursore API del database considerano un cursore forward-only un tipo distinto di cursore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non fa questa distinzione. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera il forward-only e lo scorrimento come opzioni da applicare ai cursori statici, gestiti da keyset e dinamici. [!INCLUDE[tsql](../includes/tsql-md.md)] supportano i cursori dinamici, i cursori gestiti da keyset e i cursori statici forward-only. In base ai modelli di cursore dell'API di database i cursori dinamici, gestiti da keyset o statici sono sempre scorrevoli. I cursori API del database con una proprietà o un attributo impostato su forward-only vengono implementati in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come cursori forward-only dinamici.  
+ Anche se i modelli di cursore API del database considerano un cursore forward-only un tipo distinto di cursore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non fa questa distinzione. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera il forward-only e lo scorrimento come opzioni da applicare ai cursori statici, gestiti da keyset e dinamici. 
+  [!INCLUDE[tsql](../includes/tsql-md.md)] supportano i cursori dinamici, i cursori gestiti da keyset e i cursori statici forward-only. In base ai modelli di cursore dell'API di database i cursori dinamici, gestiti da keyset o statici sono sempre scorrevoli. I cursori API del database con una proprietà o un attributo impostato su forward-only vengono implementati in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] come cursori forward-only dinamici.  
   
- Static  
+ Statico  
  Il set di risultati completo di un cursore statico viene compilato nel database **tempdb** all'apertura del cursore. Un cursore statico visualizza sempre il set di risultati così come è visualizzato all'apertura del cursore. I cursori statici rilevano poche modifiche o addirittura nessuna, ma utilizzano un numero relativamente ridotto di risorse per lo scorrimento.  
   
  Nel cursore non vengono riportate né le modifiche al database che hanno effetto sull'appartenenza del set di risultati, né le modifiche apportate ai valori inclusi nelle colonne delle righe del set di risultati. Un cursore statico non visualizza le nuove righe inserite nel database dopo l'apertura del cursore, anche se tali righe soddisfano le condizioni di ricerca dell'istruzione SELECT del cursore. Non visualizza inoltre gli aggiornamenti eseguiti da altri utenti nelle righe del set di risultati. Un cursore statico riflette invece le operazioni di eliminazione di righe dal database dopo l'apertura del cursore. Il risultato delle operazioni UPDATE, INSERT e DELETE non viene mai riportato nel cursore statico, né le modifiche eseguite sulla stessa connessione in cui è stato aperto il cursore (a meno che il cursore non venga chiuso e riaperto).  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono sempre di sola lettura.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono sempre di sola lettura.  
   
  Poiché il set di risultati di un cursore statico viene archiviato in una tabella di lavoro in **tempdb**, la lunghezza delle righe non può essere maggiore della lunghezza di riga massima consentita per le tabelle di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)] definisce i cursori statici come cursori di tipo insensitive. Alcune API di database li identificano come cursori snapshot.  
+ 
+  [!INCLUDE[tsql](../includes/tsql-md.md)] definisce i cursori statici come cursori di tipo insensitive. Alcune API di database li identificano come cursori snapshot.  
   
  Keyset  
  L'appartenenza e l'ordine delle righe di un cursore gestito da keyset vengono fissati al momento dell'apertura del cursore. I cursori gestiti da keyset vengono controllati da un set di identificatori univoci, ovvero chiavi, noti come keyset. Le chiavi sono costituite da un set di colonne che identificano in modo univoco le righe del set di risultati. Il keyset corrisponde al set di valori chiave di tutte le righe risultanti dall'istruzione SELECT al momento dell'apertura del cursore. Il keyset di un cursore gestito da keyset viene compilato nel database **tempdb** all'apertura del cursore.  
   
- Dynamic  
+ Dinamico  
  I cursori dinamici sono l'opposto dei cursori statici. Quando si scorre un cursore dinamico vengono visualizzate tutte le modifiche apportate alle righe del set di risultati corrispondente. I valori di dati, l'ordine e l'appartenenza delle righe del set di risultati possono variare a ogni operazione di recupero. I risultati delle istruzioni UPDATE, INSERT e DELETE eseguite da tutti gli utenti sono visibili nel cursore. Gli aggiornamenti sono visibili immediatamente se eseguiti nel cursore tramite una funzione API quale **SQLSetPos** o la clausola WHERE CURRENT OF [!INCLUDE[tsql](../includes/tsql-md.md)] . Gli aggiornamenti eseguiti all'esterno del cursore risultano visibili solo dopo l'operazione di commit, a meno che il livello di isolamento della transazione non sia impostato su read uncommitted. I piani dinamici del cursore non usano mai indici spaziali.  
   
 ## <a name="requesting-a-cursor"></a>Richiesta di cursori  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due metodi per richiedere un cursore:  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta due metodi per richiedere un cursore:  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)]  
   
@@ -87,7 +94,8 @@ ms.locfileid: "62918692"
   
 -   Funzioni per i cursori delle API di database  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta la funzionalità per i cursori delle API di database seguenti:  
+     
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta la funzionalità per i cursori delle API di database seguenti:  
   
     -   ADO ([!INCLUDE[msCoName](../includes/msconame-md.md)] ActiveX Data Object)  
   
@@ -100,7 +108,8 @@ ms.locfileid: "62918692"
  Se non è stato richiesto né un cursore [!INCLUDE[tsql](../includes/tsql-md.md)] , né un cursore API, per impostazione predefinita [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] restituisce all'applicazione un set di risultati completo, ovvero un set di risultati predefinito.  
   
 ## <a name="cursor-process"></a>Processo del cursore  
- [!INCLUDE[tsql](../includes/tsql-md.md)] e i cursori API prevedono una sintassi diversa, ma per tutti i cursori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene usata la seguente procedura generale:  
+ 
+  [!INCLUDE[tsql](../includes/tsql-md.md)] e i cursori API prevedono una sintassi diversa, ma per tutti i cursori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] viene usata la seguente procedura generale:  
   
 1.  Associare un cursore al set di risultati di un'istruzione [!INCLUDE[tsql](../includes/tsql-md.md)] e definirne le caratteristiche, ad esempio se le righe del cursore sono aggiornabili.  
   
@@ -113,12 +122,12 @@ ms.locfileid: "62918692"
 5.  Chiudere il cursore.  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Cursor Behaviors](native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+ [Comportamenti del cursore](native-client-odbc-cursors/cursor-behaviors.md) [come vengono implementati i cursori](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
  [Cursori &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
  [Funzioni per i cursori &#40;Transact-SQL&#41;](/sql/t-sql/functions/cursor-functions-transact-sql)   
- [Stored procedure per cursori &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
+ [Stored procedure di cursore &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   
   

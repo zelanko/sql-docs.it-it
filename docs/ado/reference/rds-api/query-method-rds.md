@@ -1,5 +1,5 @@
 ---
-title: Metodo (RDS) di query | Microsoft Docs
+title: Metodo query (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963820"
 ---
 # <a name="query-method-rds"></a>Metodo Query (Servizi Desktop remoto)
-Viene utilizzata una stringa di query SQL valida per restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Usa una stringa di query SQL valida per restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,25 +34,25 @@ Set Recordset = DataFactory.Query(Connection, Query)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Recordset*  
- Una variabile oggetto che rappresenta un **Recordset** oggetto.  
+ *recordset*  
+ Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
  *DataFactory*  
- Una variabile oggetto che rappresenta un' [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto.  
+ Variabile oggetto che rappresenta un oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) .  
   
  *Connessione*  
- Oggetto **stringa** valore contenente le informazioni di connessione del server. Come avviene per i [Connect](../../../ado/reference/rds-api/connect-property-rds.md) proprietà.  
+ Valore **stringa** che contiene le informazioni di connessione al server. Questa operazione è simile alla proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) .  
   
  *Query*  
- Oggetto **stringa** che contiene la query SQL.  
+ **Stringa** che contiene la query SQL.  
   
-## <a name="remarks"></a>Note  
- La query deve usare il sottolinguaggio SQL del server di database. Se si verifica un errore con la query che è stata eseguita, viene restituito uno stato di risultato. Il **Query** metodo non esegue alcun controllo su sintassi il **Query** stringa.  
+## <a name="remarks"></a>Osservazioni  
+ La query deve usare il sottolinguaggio SQL del server di database. Se si verifica un errore con la query eseguita, viene restituito lo stato del risultato. Il metodo di **query** non esegue alcun controllo della sintassi sulla stringa di **query** .  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di oggetto DataFactory, metodo Query e metodo CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
+ [Esempio dell'oggetto DataFactory e dei metodi Query e CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

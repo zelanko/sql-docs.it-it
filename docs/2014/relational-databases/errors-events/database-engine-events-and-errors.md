@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c0e2316d8222709b3b276f3206bf82b4343d24c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916483"
 ---
 # <a name="database-engine-events-and-errors"></a>Eventi ed errori di Motore di database
   In questo argomento vengono fornite informazioni sugli errori e gli eventi del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Informazioni sugli errori del Motore di database](../native-client-ole-db-errors/errors.md)  
  Descrive il formato dei messaggi di errore di [!INCLUDE[ssDE](../../includes/ssde-md.md)] e illustra la procedura per visualizzare i messaggi di errore e restituirli alle applicazioni.  
   

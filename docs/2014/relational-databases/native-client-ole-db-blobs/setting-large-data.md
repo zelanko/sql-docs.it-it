@@ -1,5 +1,5 @@
 ---
-title: Impostazione dati di grandi dimensioni | Microsoft Docs
+title: Impostazione di dati di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140619"
 ---
 # <a name="setting-large-data"></a>Impostazione di dati di grandi dimensioni
-  Con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
+  Con il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native client, è possibile impostare dati BLOB passando un puntatore a un oggetto di archiviazione del consumer.  
   
  Il consumer crea un oggetto di archiviazione che contiene i dati e passa un puntatore a tale oggetto di archiviazione al provider. Il provider legge quindi i dati dall'oggetto di archiviazione del consumer e li scrive nella colonna BLOB.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "63140619"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>Come impostare dati di grandi dimensioni  
- Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama il metodo **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. Per impostare dati BLOB  
+ Per passare un puntatore al proprio oggetto di archiviazione, il consumer crea una funzione di accesso che associa il valore della colonna BLOB e quindi chiama i metodi **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. Per impostare dati BLOB  
   
-1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento *dwFlag* della struttura DBOBJECT su STGM_READ e impostare l'elemento *iid* su IID_ISequentialStream (l'interfaccia da esporre).  
+1.  Creare una struttura DBOBJECT che descrive il modo in cui accedere alla colonna BLOB. Impostare l'elemento *dwFlag* della struttura DBOBJECT su STGM_READ e impostare l'elemento *IID* su IID_ISequentialStream (l'interfaccia da esporre).  
   
 2.  Impostare le proprietà nel gruppo di proprietà DBPROPSET_ROWSET in modo che il set di righe sia aggiornabile.  
   
@@ -719,6 +719,6 @@ Exit:
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti BLOB e OLE](blobs-and-ole-objects.md)   
- [Uso di tipi valore di grandi dimensioni](../native-client/features/using-large-value-types.md)  
+ [Utilizzo di tipi di dati per valori di grandi dimensioni](../native-client/features/using-large-value-types.md)  
   
   

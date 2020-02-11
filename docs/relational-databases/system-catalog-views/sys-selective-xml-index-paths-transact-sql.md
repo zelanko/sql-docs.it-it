@@ -1,5 +1,5 @@
 ---
-title: Sys. selective_xml_index_paths (Transact-SQL) | Microsoft Docs
+title: sys. selective_xml_index_paths (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135185"
 ---
-# <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
+# <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Disponibili a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, ogni riga in sys.selective_xml_index_paths rappresenta un percorso promosso per un determinato indice XML selettivo.  
@@ -48,10 +48,10 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**object_id**|**int**|ID della tabella con la colonna XML.|  
 |**index_id**|**int**|ID univoco dell'indice XML selettivo.|  
 |**path_id**|**int**|ID del percorso XML promosso|  
-|**path**|**nvarchar(4000)**|Percorso promosso. Ad esempio, '/a/b/c/d/e'.|  
-|**name**|**sysname**|Nome del percorso.|  
+|**percorso**|**nvarchar(4000)**|Percorso promosso. Ad esempio, '/a/b/c/d/e'.|  
+|**nome**|**sysname**|Nome del percorso.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
-|**path_type_desc**|**sysname**|In base **path_type** il valore 'XQUERY' o 'SQL'.|  
+|**path_type_desc**|**sysname**|Basato sul valore **path_type** ' XQuery ' o ' SQL '.|  
 |**xml_component_id**|**int**|ID univoco del componente di XML Schema nel database.|  
 |**xquery_type_description**|**nvarchar(4000)**|Nome del tipo XSD specificato.|  
 |**is_xquery_type_inferred**|**bit**|1 = il tipo viene dedotto.|  
@@ -63,14 +63,14 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**max_length**|**smallint**|Lunghezza massima (in byte) del tipo.<br /><br /> -1 = La colonna è di tipo varchar(max), nvarchar(max), varbinary(max) o xml.|  
 |**precisione**|**tinyint**|Precisione massima del tipo se numerico. In caso contrario, 0|  
 |**scala**|**tinyint**|Scala massima del tipo se numerico. Altrimenti, è impostato su 0.|  
-|**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario, NULL.|  
+|**collation_name**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario, NULL.|  
 |**is_singleton**|**bit**|0 = hint SINGLETON non presente.<br /><br /> 1 = hint di ottimizzazione SINGLETON applicato.|  
   
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+## <a name="permissions"></a>Autorizzazioni  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]Per altre informazioni, vedere [configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML schema &#40;sistema di tipi XML&#41; viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [XML Schema &#40;viste del catalogo&#41; di sistema di tipo XML &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

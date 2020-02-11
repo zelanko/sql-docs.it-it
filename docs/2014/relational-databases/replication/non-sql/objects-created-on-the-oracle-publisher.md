@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022142"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oggetti creati nel server di pubblicazione Oracle
-  Con la replica[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati oggetti di database nel server di pubblicazione Oracle in modo da abilitare il rilevamento e l'inoltro delle modifiche.[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non determina l'installazione di file binari nel server di pubblicazione Oracle. Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la replica installa gli oggetti di database nel server di pubblicazione Oracle per abilitare il rilevamento[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] delle modifiche e l'invio (non installa alcun file binario nel server di pubblicazione Oracle). Nella tabella seguente vengono elencati gli oggetti creati nel server di pubblicazione Oracle quando viene identificato come server di pubblicazione nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le descrizioni degli oggetti hanno esclusivamente scopo informativo. Non modificare tali oggetti.  
   
-|Nome oggetto|Tipo oggetto|Descrizione|  
+|Nome oggetto|Tipo di oggetto|Descrizione|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|Tabella|Tabella di rilevamento delle modifiche utilizzata per archiviare informazioni quando vengono apportate modifiche alla tabella pubblicata. Viene creata una tabella di rilevamento delle modifiche per ogni tabella pubblicata.|  
 |HREPL_Changes|Tabella|Tabella utilizzata internamente dal processo Xactset per determinare il numero di modifiche in attesa di assegnazione a un set di transazioni. Per altre informazioni su questo processo, vedere [Ottimizzazione delle prestazioni per i server di pubblicazione Oracle](performance-tuning-for-oracle-publishers.md).|  
@@ -41,12 +41,12 @@ ms.locfileid: "63022142"
 |HREPL|Package e corpo package|Package di codice di supporto del server di pubblicazione, creato nel server di pubblicazione.|  
 |MSSQLSERVERDISTRIBUTOR|Sinonimo public|Sinonimo public per la tabella HREPL_Distributor. Se si configura un server di distribuzione da utilizzare con un server di pubblicazione Oracle e questo sinonimo è già presente nel database, viene eliminato e ricreato.<br /><br /> Eliminando il sinonimo public e l'utente di replica Oracle configurato con l'opzione CASCADE verranno rimossi tutti gli oggetti di replica dal server di pubblicazione Oracle.|  
 |HREPL_Len_I_J_K|Funzione|Funzione definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eseguire query relative alla lunghezza di una colonna LONG (in caso di generazione di comandi con parametri per tabelle con colonne LONG pubblicate). Viene creata una funzione per ogni tabella pubblicata con una colonna LONG.|  
-|HREPL_DropPublisher|Routine|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eliminare il server di pubblicazione Oracle.|  
-|HREPL_ExecuteCommand|Routine|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eseguire un comando nel server di pubblicazione.|  
+|HREPL_DropPublisher|Procedura|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eliminare il server di pubblicazione Oracle.|  
+|HREPL_ExecuteCommand|Procedura|Procedura definita all'esterno del codice del package di pubblicazione Oracle, utilizzata per eseguire un comando nel server di pubblicazione.|  
 |HREPL_ArticleN_Trigger_Row|Trigger|Trigger generato per ogni tabella pubblicata, utilizzato per rilevare le modifiche alle righe.|  
 |HREPL_ArticleN_Trigger_Stmt|Trigger|Trigger generato per ogni tabella pubblicata, utilizzato per rilevare le modifiche a livello di istruzione.|  
-|HREPL_Article_I_J|visualizzazione|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella pubblicata.|  
-|HREPL_Log_I_J_K|visualizzazione|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella di rilevamento delle modifiche.|  
+|HREPL_Article_I_J|Visualizza|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella pubblicata.|  
+|HREPL_Log_I_J_K|Visualizza|Vista creata per ogni tabella pubblicata, utilizzata per eseguire query sulla tabella di rilevamento delle modifiche.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   

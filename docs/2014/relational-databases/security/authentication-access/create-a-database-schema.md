@@ -18,16 +18,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011980"
 ---
 # <a name="create-a-database-schema"></a>Creazione di uno schema di database
   In questo argomento si illustra come creare uno schema in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63011980"
   
      [Sicurezza](#Security)  
   
--   **Per creare un schema mediante:**  
+-   **Per creare uno schema tramite:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63011980"
   
 -   Per specificare un altro utente come proprietario dello schema che viene creato, l'utente deve disporre dell'autorizzazione IMPERSONATE per quell'utente. Se si specifica un ruolo di database come proprietario, il chiamante deve disporre dell'appartenenza al ruolo oppure dell'autorizzazione ALTER per il ruolo.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 ##### <a name="to-create-a-schema"></a>Per creare uno schema  
   
@@ -74,13 +74,13 @@ ms.locfileid: "63011980"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- La finestra di dialogo **Schema - Nuovo** offre anche opzioni in altre due pagine: **Autorizzazioni** e **Proprietà estese**.  
+ Nella finestra di dialogo **schema-nuovo** sono inoltre disponibili opzioni in due pagine aggiuntive: **autorizzazioni** e **proprietà estese**.  
   
 -   Nella pagina **Autorizzazioni** sono elencate tutte le possibili entità a protezione diretta e le autorizzazioni su quelle entità a protezione diretta che possono essere concesse all'account di accesso.  
   
 -   La pagina **Proprietà estese** consente di aggiungere proprietà personalizzate a utenti di database.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-a-schema"></a>Per creare uno schema  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211509"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurare un computer multihomed per l'accesso a SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "68211509"
   
  Prima di continuare con questo argomento, è necessario conoscere le informazioni disponibili nell'argomento [Configurare Windows Firewall per consentire l'accesso a SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). In tale argomento sono contenute informazioni di base sulle modalità di funzionamento dei componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con il firewall.  
   
- **Presupposti per l'esecuzione di questo esempio:**  
+ **Presupposti per questo esempio:**  
   
 -   Nel computer sono installate due schede di rete, di cui una o più possono essere wireless. È possibile simulare la presenza di due schede di rete tramite l'indirizzo IP di una scheda di rete e utilizzando l'indirizzo IP di loopback (127.0.0.1) come seconda scheda di rete.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68211509"
   
 -   In questo esempio l'accesso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene configurato tramite la porta TCP 1433. È possibile configurare le altre porte utilizzate dai componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diversi tramite gli stessi passaggi generali.  
   
- **Di seguito vengono elencati i passaggi generali dell'esempio:**  
+ **I passaggi generali di questo esempio sono i seguenti:**  
   
 -   Determinare gli indirizzi IP nel computer.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68211509"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Per determinare gli indirizzi IP disponibili nel computer  
   
-1.  Nel computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato, fare clic su **avviare**, fare clic su **eseguire**, digitare `cmd` e quindi [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  Nel computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è installato fare clic sul pulsante **Start**, scegliere **Esegui**, `cmd` digitare e [!INCLUDE[clickOK](../../includes/clickok-md.md)]quindi.  
   
 2.  Nella finestra del prompt dei comandi digitare `ipconfig,`, quindi premere INVIO per elencare gli indirizzi IP disponibili nel computer.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "68211509"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Per determinare le porte e gli indirizzi IP usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
+1.  Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
   
-2.  In **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nel riquadro della console espandere **Configurazione di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , espandere **Protocolli per \<nome istanza>** e quindi fare doppio clic su **TCP/IP**.  
+2.  In ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, nel riquadro della console espandere ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurazione di rete**, espandere **protocolli per \<nome istanza>**, quindi fare doppio clic su **TCP/IP**.  
   
-3.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP, nel formato **IP1**, **IP2**fino a **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP configurato nel computer.  
+3.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP nel formato **IP1**, **IP2**e **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP configurato nel computer.  
   
 4.  Per ogni indirizzo IP, la presenza del valore **0** nella finestra di dialogo **Porte dinamiche TCP**indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è in attesa su porte dinamiche. Poiché in questo esempio vengono utilizzate porte fisse e non porte dinamiche, che potrebbero subire modifiche in caso di riavvio, se nella finestra di dialogo **Porte dinamiche TCP** è contenuto il valore **0**, eliminare lo 0.  
   
@@ -85,13 +85,13 @@ ms.locfileid: "68211509"
   
 1.  Nel computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accedere come amministratore.  
   
-2.  Fare clic su **avviare**, fare clic su **eseguito**, digitare `wf.msc`, fare clic su **OK**.  
+2.  Fare clic sul pulsante **Start**, scegliere `wf.msc` **Esegui**, digitare e fare clic su **OK**.  
   
 3.  Nella finestra di dialogo **Controllo account utente** fare clic su **Continua** per usare le credenziali di amministratore per aprire lo snap-in Windows Firewall con sicurezza avanzata.  
   
 4.  Nella pagina **Panoramica** confermare che Windows Firewall è abilitato.  
   
-5.  Nel riquadro sinistro fare clic su **Regole connessioni in entrata**.  
+5.  Nel riquadro sinistro fare clic su **Regole connessioni in ingresso**.  
   
 6.  Fare clic con il pulsante destro del mouse su **Regole connessioni in entrata**, quindi scegliere **Nuova regola** per aprire **Creazione guidata nuova regola connessioni in entrata**.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68211509"
 10. Nella pagina **Azione** esaminare le opzioni. Poiché in questo esempio non si utilizza il firewall per forzare connessioni protette, fare clic su **Consenti la connessione**, quindi su **Avanti**.  
   
     > [!NOTE]  
-    >  Nell'ambiente potrebbe essere necessario utilizzare connessioni protette. Se si seleziona una delle opzioni relative alle connessioni protette, potrebbe essere necessario configurare un certificato e l'opzione **Forza crittografia**. Per altre informazioni sulle connessioni protette, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) e [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Nell'ambiente potrebbe essere necessario utilizzare connessioni protette. Se si seleziona una delle opzioni relative alle connessioni protette, potrebbe essere necessario configurare un certificato e l'opzione **Forza crittografia** . Per altre informazioni sulle connessioni protette, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md) e [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 11. Nella pagina **Profilo** selezionare uno o più profili per la regola. Se non si ha familiarità con i profili del firewall, fare clic sul collegamento **Ulteriori informazioni sui profili** nel programma firewall.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "68211509"
 9. Per configurare gli altri indirizzi IP in un computer multihomed, ripetere questa procedura utilizzando un altro indirizzo IP e un'altra regola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Servizio SQL Server Browser &#40;motore di database e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- [Connessione a SQL Server tramite un server proxy &#40;Gestione configurazione SQL Server&#41;](../../relational-databases/sql-server-configuration-manager.md)  
+ [Motore di database &#40;del servizio SQL Server Browser e SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Connettersi a SQL Server tramite un server proxy &#40;Gestione configurazione SQL Server&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
   

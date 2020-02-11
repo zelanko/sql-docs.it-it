@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011918"
 ---
 # <a name="principals-database-engine"></a>Entità (Motore di database)
-  Le*entità* possono richiedere risorse di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Analogamente ad altri componenti del modello di autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le entità possono essere organizzate in una gerarchia. L'ambito di influenza di un'entità dipende dall'ambito della definizione dell'entità: Windows, server o database e se l'entità è indivisibile o raccolta. Un account di accesso di Windows è un esempio di entità indivisibile mentre un gruppo di Windows è un esempio di entità costituita da una raccolta. Ogni entità dispone di un ID di sicurezza (SID).  
+  Le *entità sono entità* che possono richiedere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] risorse. Analogamente ad altri componenti del modello di autorizzazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le entità possono essere organizzate in una gerarchia. Il campo di influenza di un'entità dipende dall'ambito della definizione dell'entità (Windows, server o database) e dal tipo di entità (indivisibile o raccolta). Un account di accesso di Windows è un esempio di entità indivisibile mentre un gruppo di Windows è un esempio di entità costituita da una raccolta. Ogni entità dispone di un ID di sicurezza (SID).  
   
  **Entità a livello di Windows**  
   
@@ -44,15 +44,15 @@ ms.locfileid: "63011918"
   
 -   Account di accesso locale di Windows  
   
- **Entità**-**a livello di** **principals**  
+ ****-**** **Entità** a livello di SQL Server  
   
--   Account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Accesso  
   
 -   Ruolo del server  
   
  **Entità a livello di database**  
   
--   Utente di database  
+-   Utente database  
   
 -   Ruolo del database  
   
@@ -64,31 +64,38 @@ ms.locfileid: "63011918"
 ## <a name="public-database-role"></a>Ruolo di database public  
  Ogni utente di database appartiene al ruolo di database public. Quando a un utente non sono state concesse o negate autorizzazioni specifiche per un'entità a protezione diretta, l'utente eredita le autorizzazioni concesse al ruolo public su tale entità a protezione diretta.  
   
-## <a name="informationschema-and-sys"></a>INFORMATION_SCHEMA e sys  
- Ogni database comprende due entità che appaiono come utenti nelle viste del catalogo: INFORMATION_SCHEMA e sys. Queste entità sono richieste da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], e non posso essere modificate o eliminate.  
+## <a name="information_schema-and-sys"></a>INFORMATION_SCHEMA e sys  
+ Ogni database comprende due entità che appaiono come utenti in viste di catalogo: INFORMATION_SCHEMA e sys. Queste entità sono richieste da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], e non posso essere modificate o eliminate.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Account di accesso basati su certificati di SQL Server  
  Le entità del server i cui nomi sono racchiusi tra due simboli di cancelletto (##) sono solo per uso interno di sistema. Al momento dell'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono create le seguenti entità che non devono essere eliminate.  
   
--   \##MS_SQLResourceSigningCertificate##  
+-   
+  \##MS_SQLResourceSigningCertificate##  
   
--   \##MS_SQLReplicationSigningCertificate##  
+-   
+  \##MS_SQLReplicationSigningCertificate##  
   
--   \##MS_SQLAuthenticatorCertificate##  
+-   
+  \##MS_SQLAuthenticatorCertificate##  
   
--   \##MS_AgentSigningCertificate##  
+-   
+  \##MS_AgentSigningCertificate##  
   
--   \##MS_PolicyEventProcessingLogin##  
+-   
+  \##MS_PolicyEventProcessingLogin##  
   
--   \##MS_PolicySigningCertificate##  
+-   
+  \##MS_PolicySigningCertificate##  
   
--   \##MS_PolicyTsqlExecutionLogin##  
+-   
+  \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>L'utente Guest  
- Ogni database include un **guest**. Le autorizzazioni garantite all'utente **guest** sono ereditate dagli utenti che hanno accesso al database ma non dispongono di un account utente nel database. Il **guest** non è possibile eliminare l'utente, ma è possibile disabilitarlo revocando la relativa del `CONNECT` l'autorizzazione. Il `CONNECT` autorizzazione può essere richiamata eseguendo `REVOKE CONNECT FROM GUEST` all'interno di un database diverso da master o tempdb.  
+ Ogni database include un **guest**. Le autorizzazioni garantite all'utente **guest** sono ereditate dagli utenti che hanno accesso al database ma non dispongono di un account utente nel database. Non è possibile eliminare l'utente **Guest** , ma è possibile disabilitarlo revocando l' `CONNECT` autorizzazione. È `CONNECT` possibile revocare l'autorizzazione eseguendo `REVOKE CONNECT FROM GUEST` all'interno di qualsiasi database diverso da master o tempdb.  
   
 ## <a name="client-and-database-server"></a>Client e server di database  
- Per definizione, un client e un server di database sono entità di sicurezza e possono essere protetti. È possibile autenticare queste entità mutuamente prima che sia stabilita una connessione di rete sicura. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) protocollo di autenticazione, che definisce quali client interagiscono con un servizio di autenticazione di rete.  
+ Per definizione, un client e un server di database sono entità di sicurezza e possono essere protetti. È possibile autenticare queste entità mutuamente prima che sia stabilita una connessione di rete sicura. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]supporta il protocollo di autenticazione [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) , che definisce il modo in cui i client interagiscono con un servizio di autenticazione di rete.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  In questa sezione della documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sono inclusi i seguenti argomenti:  
@@ -102,11 +109,11 @@ ms.locfileid: "63011918"
 -   [Ruoli applicazione](application-roles.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza di SQL Server](../securing-sql-server.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
+ [Protezione SQL Server](../securing-sql-server.md)   
+ [sys. database_principals &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
  [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
- [sys.sql_logins &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
- [sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
+ [sys. sql_logins &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
+ [sys. database_role_members &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
  [Ruoli a livello di server](server-level-roles.md)   
  [Ruoli a livello di database](database-level-roles.md)  
   

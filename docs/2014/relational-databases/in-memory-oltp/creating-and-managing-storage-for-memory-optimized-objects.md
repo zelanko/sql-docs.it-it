@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073846"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Creazione e gestione dell'archiviazione per gli oggetti con ottimizzazione per la memoria
@@ -32,7 +32,7 @@ ms.locfileid: "63073846"
   
  L'archiviazione per le tabelle ottimizzate per la memoria presenta gli attributi chiave seguenti:  
   
--   Tutte le tabelle ottimizzate per la memoria vengono eseguito il mapping a un filegroup ottimizzato per la memoria. Il filegroup viene compilato usando il filegroup filestream.  
+-   Tutte le tabelle ottimizzate per la memoria sono mappate a un filegroup ottimizzato per la memoria. Questo filegroup viene compilato utilizzando il filegroup FILESTREAM.  
   
 -   Non sono presenti pagine e i dati vengono salvati in modo permanente come riga.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63073846"
   
 -   A differenza delle tabelle basate su disco, lo spazio di archiviazione per le tabelle ottimizzate per la memoria non è compresso. Quando si esegue la migrazione di una tabella basata su disco (ROW o PAGE) compressa a una tabella ottimizzata per la memoria, è necessario tenere conto della variazione di dimensioni.  
   
--   Una tabella ottimizzata per la memoria può essere durevole o non durevole. È sufficiente configurare l'archiviazione per durabilità memoria tabelle con ottimizzazione per.  
+-   Una tabella ottimizzata per la memoria può essere durevole o non durevole. È sufficiente configurare l'archiviazione per le tabelle con ottimizzazione per la memoria durevoli.  
   
  In questa sezione vengono descritte le coppie di file di checkpoint e altri aspetti della modalità di archiviazione dei dati nelle tabelle ottimizzate per la memoria.  
   

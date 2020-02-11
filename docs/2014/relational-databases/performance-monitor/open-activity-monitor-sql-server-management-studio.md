@@ -16,22 +16,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032005"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Aprire Monitoraggio attività (SQL Server Management Studio)
   In questo argomento viene descritto come aprire Monitoraggio attività per ottenere informazioni sui processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sul modo in cui questi processi influiscono sull'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viene inoltre descritto come impostare l'intervallo di aggiornamento del Monitoraggio attività.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
      [Sicurezza](#Security)  
   
--   **Per aprire l'utilizzo di Monitoraggio attività:**  
+-   **Per aprire il Monitoraggio attività:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,11 +47,11 @@ ms.locfileid: "63032005"
   
  Per eseguire il comando KILL in un processo, è necessario che l'utente sia un membro del ruolo predefinito del server sysadmin o processadmin.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Per aprire Monitoraggio attività in SQL Server Management Studio  
   
-1.  Nella barra degli strumenti standard di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fare clic su **Monitoraggio attività**.  
+1.  Sulla barra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] degli strumenti standard fare clic su **monitoraggio attività**.  
   
 2.  Nella finestra di dialogo **Connetti al server** selezionare il nome del server e la modalità di autenticazione, quindi fare clic su **Connetti**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63032005"
   
 4.  Per attivare le modifiche, chiudere e riaprire [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a> Per impostare l'intervallo di aggiornamento di Monitoraggio attività  
+###  <a name="Refresh"></a>Per impostare l'intervallo di aggiornamento di monitoraggio attività  
   
 -   Aprire il Monitoraggio attività.  
   

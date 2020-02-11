@@ -16,18 +16,18 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124583"
 ---
-# <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
+# <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un elenco di tutte le modifiche dello schema in sospeso. Questa stored procedure può essere utilizzata con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), che consente agli amministratori di ignorare le modifiche dello schema in sospeso selezionate in modo che non vengano replicate. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
+  Restituisce un elenco di tutte le modifiche dello schema in sospeso. Questo stored procedure può essere utilizzato con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), che consente a un amministratore di ignorare le modifiche dello schema in sospeso selezionate in modo che non vengano replicate. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,34 +38,35 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @starting_schemaversion = ] starting_schemaversion` È la modifica dello schema del numero più bassa da includere nel set di risultati.  
+`[ @starting_schemaversion = ] starting_schemaversion`Modifica dello schema con il numero più basso da includere nel set di risultati.  
   
 ## <a name="result-set"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**article_name**|**sysname**|Nome dell'articolo a cui si applica la modifica dello schema, oppure **Publication-wide** per le modifiche dello schema che si applicano all'intera pubblicazione.|  
-|**schemaversion**|**int**|Numero della modifica dello schema in sospeso.|  
+|**article_name**|**sysname**|Nome dell'articolo a cui si applica la modifica dello schema oppure a **livello di pubblicazione** per le modifiche dello schema valide per l'intera pubblicazione.|  
+|**SchemaVersion**|**int**|Numero della modifica dello schema in sospeso.|  
 |**schematype**|**sysname**|Valore di testo che rappresenta il tipo di modifica dello schema.|  
-|**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] che descrive la modifica dello schema.|  
-|**schemastatus**|**nvarchar(10)**|Specifica se è in sospeso una modifica dello schema per l'articolo. I possibili valori sono i seguenti:<br /><br /> **Attiva** = modifica dello schema è in sospeso<br /><br /> **inattivo** = modifica dello schema non è attiva<br /><br /> **ignorare** = modifica dello schema non viene replicata|  
+|**schematext**|**nvarchar(max)**|
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] che descrive la modifica dello schema.|  
+|**schemastatus**|**nvarchar (10)**|Specifica se è in sospeso una modifica dello schema per l'articolo. I possibili valori sono i seguenti:<br /><br /> **attivo** = modifica dello schema in sospeso<br /><br /> **inactive** = modifica dello schema inattiva<br /><br /> **Skip** = la modifica dello schema non viene replicata|  
 |**schemaguid**|**uniqueidentifier**|Identifica la modifica dello schema.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_enumeratependingschemachanges** viene utilizzata nella replica di tipo merge.  
   
- **sp_enumeratependingschemachanges**, utilizzato con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), è progettata per il supporto della replica di tipo merge e deve essere utilizzato solo quando altre azioni correttive, ad esempio la reinizializzazione, non è stato possibile risolvere la situazione.  
+ **sp_enumeratependingschemachanges**, utilizzato con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), è concepito per supportare la replica di tipo merge e deve essere utilizzato solo quando altre azioni correttive, ad esempio la reinizializzazione, non riescono a correggere la situazione.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_enumeratependingschemachanges**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_enumeratependingschemachanges**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

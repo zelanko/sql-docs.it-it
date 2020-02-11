@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990699"
 ---
 # <a name="extended-events"></a>Eventi estesi
@@ -26,10 +26,10 @@ ms.locfileid: "62990699"
  Per ulteriori informazioni sugli eventi estesi, visitare il sito Web [Eventi estesi di SQL Server](https://blogs.msdn.com/b/extended_events/).  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Vantaggi degli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono utilizzate poche risorse per le prestazioni. Per gli eventi estesi sono disponibili due interfacce utente grafiche (**Creazione guidata nuova sessione** e **Nuova sessione**) per creare, modificare, visualizzare e analizzare i dati della sessione.  
+ Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono utilizzate poche risorse per le prestazioni. Con gli eventi estesi sono disponibili due interfacce utente grafiche (**creazione guidata nuova sessione** e **nuova sessione**) per creare, modificare, visualizzare e analizzare i dati della sessione.  
   
 ## <a name="extended-events-concepts"></a>Concetti degli eventi estesi  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli eventi estesi sono basati su concetti esistenti, ad esempio un evento o un consumer di eventi, usano concetti di Event Tracing for Windows (ETW) e ne introducono di nuovi.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gli eventi estesi (eventi estesi) si basano su concetti esistenti, ad esempio un evento o un consumer di eventi, usano i concetti di Event Tracing for Windows e introduce nuovi concetti.  
   
  Nella seguente tabella vengono descritti i concetti negli eventi estesi.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62990699"
 |[Pacchetti degli eventi estesi di SQL Server](sql-server-extended-events-packages.md)|Vengono descritti i pacchetti degli eventi estesi che contengono oggetti utilizzati per ottenere ed elaborare dati durante l'esecuzione di una sessione degli eventi estesi.|  
 |[Destinazioni degli eventi estesi di SQL Server](../../database-engine/sql-server-extended-events-targets.md)|Vengono descritti i consumer di eventi che possono ricevere dati durante una sessione dell'evento.|  
 |[Motore degli eventi estesi di SQL Server](sql-server-extended-events-engine.md)|Viene descritto il motore che implementa e gestisce una sessione degli eventi estesi.|  
-|[Sessioni degli eventi estesi di SQL Server](sql-server-extended-events-sessions.md)|Viene descritta la sessione Eventi estesi.|  
+|[Sessioni Eventi estesi di SQL Server](sql-server-extended-events-sessions.md)|Viene descritta la sessione Eventi estesi.|  
   
 ## <a name="extended-events-architecture"></a>Architettura degli eventi estesi  
  Gli eventi estesi (Eventi estesi) costituiscono un sistema generale di gestione degli eventi per sistemi server. L'infrastruttura degli eventi estesi supporta la correlazione di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e in certe condizioni, la correlazione di dati dal sistema operativo e dalle applicazioni di database. Nel secondo caso, l'output degli eventi estesi deve essere indirizzato a ETW (Event Tracing for Windows) per correlare i dati degli eventi con i dati degli eventi delle applicazioni o del sistema operativo.  
@@ -103,6 +103,6 @@ ms.locfileid: "62990699"
  [Distribuire un'applicazione livello dati](../data-tier-applications/deploy-a-data-tier-application.md)   
  [Monitorare le applicazioni livello dati](../data-tier-applications/monitor-data-tier-applications.md)   
  [Viste a gestione dinamica degli eventi estesi](../views/views.md)   
- [Viste del catalogo degli eventi estesi &#40;Transact-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
+ [Viste del catalogo degli eventi estesi &#40;&#41; Transact-SQL] (~/Relational-Databases/System-catalog-views/Extended-Events-catalog-views-Transact-SQL  
   
   

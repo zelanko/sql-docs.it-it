@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049154"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Ordinamento di righe (Visual Database Tools)
@@ -89,7 +89,7 @@ ms.locfileid: "63049154"
   
      Si noti che la query utilizza `state` come colonna di ordinamento secondaria. Due stati che hanno lo stesso numero di autori verranno quindi disposti in ordine alfabetico.  
   
--   **È possibile eseguire l'ordinamento usando dati internazionali** È possibile ordinare una colonna usando convenzioni di confronto diverse dalle convenzioni predefinite per tale colonna. Ad esempio, è possibile scrivere una query che recupera tutti i titoli dei libri da Jaime Pati?? o. Per visualizzare i titoli in ordine alfabetico, si utilizza una sequenza di confronto spagnola per la colonna title. Il codice SQL risultante potrebbe essere simile al seguente:  
+-   **È possibile eseguire l'ordinamento usando dati internazionali** È possibile ordinare una colonna usando convenzioni di confronto diverse dalle convenzioni predefinite per tale colonna. Ad esempio, è possibile scrivere una query che recupera tutti i titoli dei libri di Jaime pati?? o. Per visualizzare i titoli in ordine alfabetico, si utilizza una sequenza di confronto spagnola per la colonna title. Il codice SQL risultante potrebbe essere simile al seguente:  
   
     ```  
     SELECT title  
@@ -111,7 +111,7 @@ ms.locfileid: "63049154"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ordina e raggruppa i risultati della Query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

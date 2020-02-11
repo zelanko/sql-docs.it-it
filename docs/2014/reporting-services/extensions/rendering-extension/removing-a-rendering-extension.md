@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77a8a9ac44b35f338f978913985617e4f264ddb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62988056"
 ---
 # <a name="removing-a-rendering-extension"></a>Rimozione di un'estensione per il rendering
-  Per rimuovere un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensione per il rendering, rimuovere semplicemente il `Extension` (elemento) per l'estensione per il rendering dal file RSReportServer. config, situato nella **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< Nome istanza > Services\ReportServer.** cartella. Se sono state create voci per una finestra di progettazione di Report, nonché un server di report, rimuovere il `Extension` elemento il [RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md) anche. Dopo la rimozione delle informazioni di configurazione, l'estensione per il rendering non è più disponibile per il componente.  
+  Per rimuovere un' [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] estensione per il rendering, è `Extension` sufficiente rimuovere l'elemento per l'estensione per il rendering dal file RSReportServer. config, che si trova in **%Programmi%\Microsoft SQL Server \ MSRS10_50.\< Nome istanza> cartella Services\ReportServer \Reporting** . Se sono state apportate voci per un Progettazione report e un server di report, `Extension` rimuovere anche l'elemento dal [file di configurazione RSReportDesigner](../../report-server/rsreportdesigner-configuration-file.md) . Dopo la rimozione delle informazioni di configurazione, l'estensione per il rendering non è più disponibile per il componente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [File di configurazione di Reporting Services](../../report-server/reporting-services-configuration-files.md)   

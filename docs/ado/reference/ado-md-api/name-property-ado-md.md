@@ -1,5 +1,5 @@
 ---
-title: Assegnare un nome proprietà (ADO MD) | Microsoft Docs
+title: Proprietà Name (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -23,20 +23,20 @@ ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c248139abfd136d5c79658592e0e49d5e10444aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949390"
 ---
 # <a name="name-property-ado-md"></a>Proprietà Name (ADO MD)
 Indica il nome di un oggetto.  
   
 ## <a name="return-values"></a>Valori restituiti  
- Restituisce un **stringa** ed è di sola lettura.  
+ Restituisce una **stringa** ed è di sola lettura.  
   
-## <a name="remarks"></a>Note  
- È possibile recuperare il **nome** proprietà di un oggetto per un riferimento ordinale, dopo il quale è possibile fare riferimento all'oggetto direttamente per nome. Ad esempio, se `cdf.CubeDefs(0).Name` produce "Bobs Video Store", è possibile fare riferimento a questo [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) come `cdf.CubeDefs("Bobs Video Store")`.  
+## <a name="remarks"></a>Osservazioni  
+ È possibile recuperare la proprietà **Name** di un oggetto in base a un riferimento ordinale, dopo di che è possibile fare riferimento all'oggetto direttamente in base al nome. Se `cdf.CubeDefs(0).Name` , ad esempio, produce "Bob video store", è possibile fare riferimento a questo [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) come `cdf.CubeDefs("Bobs Video Store")`.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -47,7 +47,7 @@ Indica il nome di un oggetto.
 |[Oggetto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Catalog (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
+ [Esempio di catalogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Proprietà Caption (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Proprietà Description (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
  [Proprietà UniqueName (ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)

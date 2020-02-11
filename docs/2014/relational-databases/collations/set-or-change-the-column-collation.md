@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918967"
 ---
 # <a name="set-or-change-the-column-collation"></a>Impostare o modificare le regole di confronto delle colonne
@@ -36,9 +36,9 @@ ms.locfileid: "62918967"
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (Indici per tabelle con ottimizzazione per la memoria). Per altre informazioni, vedere [Regole di confronto e supporto Unicode](collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Regole di confronto e supporto Unicode](collation-and-unicode-support.md).  
   
--   Usando il `Column.Collation` proprietà [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   Utilizzo della `Column.Collation` proprietà in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (Management Objects).  
   
  Non è possibile modificare le regole di confronto di una colonna a cui fa riferimento uno qualsiasi degli elementi seguenti:  
   
@@ -87,7 +87,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- In quanto **tempdb** utilizza regole di confronto server predefinite e `TestPermTab.Col1` utilizza regole di confronto diverse, SQL Server restituito un errore: "Impossibile risolvere il conflitto di regole di confronto tra 'Latin1_General_CI_AS_KS_WS' e 'Estonian_CS_AS' Estonian_CS_AS nell'operazione".  
+ Poiché **tempdb** utilizza le regole di confronto predefinite del server e `TestPermTab.Col1` utilizza regole di confronto diverse, in SQL Server viene restituito un errore in cui viene indicato che è impossibile risolvere il conflitto delle regole di confronto tra Latin1_General_CI_AS_KS_WS ed Estonian_CS_AS nell'operazione.  
   
  Per evitare l'errore è possibile utilizzare una delle alternative seguenti:  
   

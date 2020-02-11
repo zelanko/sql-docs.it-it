@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127274"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API Stored procedure estesa)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Consente di modificare i dati da un tipo all'altro.  
   
@@ -67,7 +68,7 @@ destlen
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. La struttura contiene tutte le informazioni di controllo utilizzate dall'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client. Se specificato, l'handle *srvproc* viene passato alla funzione di gestione degli errori dell'API Stored procedure estesa quando si verifica un errore.  
   
- *srctype*  
+ *srcType*  
  Indica il tipo a cui appartengono i dati da convertire. Questo parametro può appartenere a qualsiasi tipo di dati dell'API Stored procedure estesa.  
   
  *src*  
@@ -76,7 +77,7 @@ destlen
  *srclen*  
  Specifica la lunghezza, espressa in byte, dei dati da convertire. Se *srclen* è 0, **srv_convert** inserisce un valore Null nella variabile di destinazione. A meno che non sia 0, questo parametro viene ignorato per i tipi di dati a lunghezza fissa e in tal caso si presuppone che i dati di origine siano NULL. Per i dati appartenenti al tipo SRVCHAR, una lunghezza di -1 indica che la stringa ha una terminazione Null.  
   
- *desttype*  
+ *destType*  
  Indica il tipo di dati in cui convertire l'origine. Questo parametro può appartenere a qualsiasi tipo di dati dell'API Stored procedure estesa.  
   
  *dest*  
@@ -90,7 +91,7 @@ destlen
 ## <a name="returns"></a>Valori di codice restituiti  
  La lunghezza dei dati convertiti, espressa in byte, se la conversione del tipo di dati viene eseguita correttamente. Quando **srv_convert** rileva una richiesta di conversione non supportata, chiama il gestore degli errori specificato dallo sviluppatore, se disponibile, imposta un numero di errore globale e restituisce -1.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La funzione **srv_willconvert** determina se una specifica conversione è consentita.  
   
  La conversione in tipi di dati numerici approssimati SRVFLT4 o SRVFLT8 può causare una perdita di precisione. Lo stesso problema può verificarsi durante la conversione da tipi di dati numerici approssimati SRVFLT4 o SRVFLT8 in SRVCHAR o SRVTEXT.  
@@ -115,7 +116,7 @@ destlen
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
- [srv_setutype &#40;API Stored procedure estesa&#41;](srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert &#40;API Stored procedure estesa&#41;](srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_setutype &#40;API stored procedure estesa&#41;](srv-setutype-extended-stored-procedure-api.md)   
+ [srv_willconvert &#40;API stored procedure estesa&#41;](srv-willconvert-extended-stored-procedure-api.md)  
   
   

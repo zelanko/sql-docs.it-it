@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917146"
 ---
 # <a name="database-snapshots-sql-server"></a>Snapshot del database (SQL Server)
-  Uno snapshot del database è una vista statica di sola lettura di un database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ovvero il *database di origine*. Lo snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Lo snapshot di un database deve risiedere sempre nella stessa istanza del server dove si trova il relativo database di origine. Con l'aggiornamento del database di origine, viene aggiornato anche lo snapshot del database. Pertanto, più a lungo viene conservato uno snapshot del database, più è probabile che utilizzi tutto il proprio spazio disponibile su disco.  
+  Uno snapshot del database è una vista statica di sola lettura di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, ovvero il *database di origine*. Lo snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Lo snapshot di un database deve risiedere sempre nella stessa istanza del server dove si trova il relativo database di origine. Con l'aggiornamento del database di origine, viene aggiornato anche lo snapshot del database. Pertanto, più a lungo viene conservato uno snapshot del database, più è probabile che utilizzi tutto il proprio spazio disponibile su disco.  
   
  È possibile generare più snapshot di uno stesso database di origine. Ogni snapshot del database viene mantenuto finché non viene eliminato esplicitamente dal proprietario del database.  
   
@@ -35,24 +35,24 @@ ms.locfileid: "62917146"
   
  **Contenuto dell'argomento**  
   
--   [Panoramica delle caratteristiche](#FeatureOverview)  
+-   [Panoramica delle funzionalità](#FeatureOverview)  
   
 -   [Vantaggi degli snapshot del database](#Benefits)  
   
 -   [Termini e definizioni](#TermsAndDefinitions)  
   
--   [Prerequisiti e limitazioni per gli snapshot del database](#LimitationsRequirements)  
+-   [Prerequisiti per e limitazioni per gli snapshot del database](#LimitationsRequirements)  
   
 -   [Attività correlate](#RelatedTasks)  
   
-##  <a name="FeatureOverview"></a> Panoramica delle caratteristiche  
+##  <a name="FeatureOverview"></a>Panoramica delle funzionalità  
  Gli snapshot del database operano a livello di pagine di dati. Prima che una pagina del database di origine venga modificata per la prima volta, la pagina originale viene copiata dal database di origine allo snapshot. Nello snapshot viene archiviata la pagina originale, mantenendo i record di dati nello stato corrispondente al momento in cui è stato creato lo snapshot. Lo stesso processo viene ripetuto per ogni pagina modificata per la prima volta. All'utente uno snapshot del database appare sempre come non modificato, in quanto le operazioni di lettura nello snapshot del database accedono sempre alle pagine di dati originali, indipendentemente dalla posizione.  
   
  Per archiviare le pagine originali copiate, lo snapshot utilizza uno o più *file sparse*. All'inizio un file sparse è un file essenzialmente vuoto che non contiene alcun dato utente e in cui non è stato allocato spazio su disco per i dati utente. Man mano che una sempre maggiore quantità di pagine viene aggiornata nel database di origine, la dimensione del file aumenta. Nella figura seguente vengono illustrati gli effetti di due modelli di aggiornamento diversi sulle dimensioni di uno snapshot. Il modello di aggiornamento A rappresenta un ambiente in cui solo il 30% delle pagine originali è stato aggiornato durante la vita dello snapshot. Il modello di aggiornamento B rappresenta un ambiente in cui durante la vita dello snapshot è stato aggiornato l'80% delle pagine originali.  
   
  ![Modelli di aggiornamento alternativi e dimensioni dello snapshot](../../database-engine/media/dbview-04.gif "Modelli di aggiornamento alternativi e dimensioni dello snapshot")  
   
-##  <a name="Benefits"></a> Vantaggi degli snapshot del database  
+##  <a name="Benefits"></a>Vantaggi degli snapshot del database  
   
 -   È possibile utilizzare gli snapshot per la generazione di report.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62917146"
   
      In un ambiente di testing, può essere utile, durante l'esecuzione ripetuta di un protocollo di test, che il database contenga dati identici all'inizio di ogni sessione di test. Prima di eseguire la prima sessione, uno sviluppatore o un tester di applicazioni può creare uno snapshot del database nel database di prova. Dopo ogni test, sarà possibile ripristinare rapidamente lo stato precedente del database ripristinando il relativo snapshot.  
   
-##  <a name="TermsAndDefinitions"></a> Termini e definizioni  
+##  <a name="TermsAndDefinitions"></a>Termini e definizioni  
  database snapshot  
  Vista statica, di sola lettura e consistente dal punto di vista transazionale di un database (di origine).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62917146"
  file sparse  
  File fornito dal file system NTFS che richiede molto meno spazio su disco rispetto allo spazio necessario per una modalità di gestione diversa. Un file di tipo sparse viene utilizzato per archiviare pagine copiate in uno snapshot del database. Un file di tipo sparse appena creato richiede poco spazio su disco. Man mano che i dati vengono scritti in uno snapshot del database, lo spazio su disco viene allocato gradualmente dal file system NTFS nel file di tipo sparse corrispondente.  
   
-##  <a name="LimitationsRequirements"></a> Prerequisiti e limitazioni per gli snapshot del database  
+##  <a name="LimitationsRequirements"></a>Prerequisiti per e limitazioni per gli snapshot del database  
  **Contenuto della sezione**  
   
 -   [Prerequisiti](#Prerequisites)  
@@ -136,7 +136,7 @@ ms.locfileid: "62917146"
 > [!NOTE]  
 >  Tutti i modelli di recupero supportano gli snapshot del database.  
   
-###  <a name="LimitsOnSourceDb"></a> Limitazioni del database di origine  
+###  <a name="LimitsOnSourceDb"></a>Limitazioni del database di origine  
  In presenza di snapshot del database, al database di origine dello snapshot si applicano le limitazioni seguenti:  
   
 -   Non è possibile eliminare, scollegare o ripristinare il database.  
@@ -148,7 +148,7 @@ ms.locfileid: "62917146"
   
 -   Non è possibile eliminare file dal database di origine o da uno snapshot.  
   
-###  <a name="LimitsOnDbSS"></a> Limitazioni degli snapshot del database  
+###  <a name="LimitsOnDbSS"></a>Limitazioni degli snapshot del database  
  Agli snapshot del database si applicano le limitazioni seguenti:  
   
 -   È necessario creare e mantenere uno snapshot del database sulla stessa istanza del server in cui si trova il database di origine.  
@@ -192,9 +192,9 @@ ms.locfileid: "62917146"
     > [!NOTE]  
     >  Un'istruzione SELECT eseguita in uno snapshot del database non deve specificare una colonna FILESTREAM. In caso contrario, verrà restituito il seguente messaggio di errore: `Could not continue scan with NOLOCK due to data movement.`  
   
--   Se le statistiche relative a uno snapshot di sola lettura mancano o non sono aggiornate, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e gestisce statistiche temporanee in tempdb. Per altre informazioni, vedere [Statistics](../statistics/statistics.md).  
+-   Se le statistiche relative a uno snapshot di sola lettura mancano o non sono aggiornate, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea e gestisce statistiche temporanee in tempdb. Per ulteriori informazioni, vedere [statistiche](../statistics/statistics.md).  
   
-###  <a name="DiskSpace"></a> Requisiti relativi allo spazio su disco  
+###  <a name="DiskSpace"></a>Requisiti di spazio su disco  
  Gli snapshot del database richiedono spazio su disco. Se uno snapshot del database esaurisce lo spazio su disco, viene contrassegnato come sospetto e deve essere eliminato. Il database di origine, tuttavia, non viene influenzato e continua a funzionare normalmente. Gli snapshot tuttavia utilizzano lo spazio su disco in maniera molto più efficiente rispetto a una copia completa di un database. Uno snapshot richiede esclusivamente lo spazio necessario per le pagine che vengono modificate durante la sua durata. Poiché in genere gli snapshot vengono conservati per periodi di tempo limitati, le loro dimensioni non rappresentano un problema.  
   
  Più a lungo viene conservato uno snapshot, più è probabile che utilizzi tutto lo spazio disponibile. Le dimensioni massime cui un file sparse può arrivare sono quelle del file del database di origine corrispondente al momento della creazione dello snapshot.  
@@ -204,7 +204,7 @@ ms.locfileid: "62917146"
 > [!NOTE]  
 >  Tranne che per lo spazio del file, uno snapshot del database utilizza approssimativamente le stesse risorse di un database.  
   
-###  <a name="OfflineFGs"></a> Snapshot del database con filegroup offline  
+###  <a name="OfflineFGs"></a>Snapshot del database con filegroup offline  
  I filegroup offline nel database di origine influenzano gli snapshot del database quando si tenta di eseguire una delle operazioni seguenti:  
   
 -   Creare uno snapshot  
@@ -236,6 +236,6 @@ ms.locfileid: "62917146"
 -   [Eliminare uno snapshot del database &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mirroring e snapshot del database &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
+ [Mirroring del database e snapshot del database &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

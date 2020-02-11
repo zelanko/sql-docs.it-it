@@ -18,16 +18,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985744"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Sicurezza dall'accesso di codice in Reporting Services
-  La sicurezza dall'accesso di codice si basa su tre concetti principali, ovvero evidenza, gruppi di codice e set di autorizzazione denominati. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] i componenti Gestione report, Progettazione report e server di report dispongono ognuno di un file di criteri che configura la sicurezza dall'accesso di codice per assembly personalizzati ed estensioni per i dati, il recapito, il rendering e di sicurezza. Nelle sezioni seguenti viene fornita una panoramica sulla sicurezza dall'accesso di codice. Per altre informazioni sugli argomenti trattati in questa sezione, vedere la sezione relativa al modello dei criteri di sicurezza nella documentazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  
+  La sicurezza dall'accesso di codice si basa su tre concetti principali, ovvero evidenza, gruppi di codice e set di autorizzazione denominati. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] i componenti Gestione report, Progettazione report e server di report dispongono ognuno di un file di criteri che configura la sicurezza dall'accesso di codice per assembly personalizzati ed estensioni per i dati, il recapito, il rendering e di sicurezza. Nelle sezioni seguenti viene fornita una panoramica sulla sicurezza dall'accesso di codice. Per informazioni più dettagliate sugli argomenti trattati in questa sezione, vedere l' [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] argomento relativo al modello di criteri di sicurezza nella documentazione di SDK.  
   
- In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] la sicurezza dall'accesso di codice viene utilizzata perché, anche se il server di report è compilato in base a tecnologia [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], è presente una differenza sostanziale tra un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] tipica e il server di report. Mentre un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] tipica non esegue codice utente, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa un'architettura aperta ed estensibile che consente agli utenti di programmare in base ai file di definizione del report usando l'elemento **Code** di Report Definition Language e di sviluppare funzionalità specifiche in un assembly personalizzato da usare nei report. Gli sviluppatori possono inoltre progettare e distribuire estensioni potenti che consentono di ottimizzare le funzionalità del server di report. Queste caratteristiche di potenza e flessibilità determinano la necessità di utilizzare il maggior livello di sicurezza possibile.  
+ In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] la sicurezza dall'accesso di codice viene utilizzata perché, anche se il server di report è compilato in base a tecnologia [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], è presente una differenza sostanziale tra un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] tipica e il server di report. Mentre un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] tipica non esegue codice utente, 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa un'architettura aperta ed estensibile che consente agli utenti di programmare in base ai file di definizione del report usando l'elemento **Code** di Report Definition Language e di sviluppare funzionalità specifiche in un assembly personalizzato da usare nei report. Gli sviluppatori possono inoltre progettare e distribuire estensioni potenti che consentono di ottimizzare le funzionalità del server di report. Queste caratteristiche di potenza e flessibilità determinano la necessità di utilizzare il maggior livello di sicurezza possibile.  
   
  Gli sviluppatori di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] possono utilizzare qualsiasi assembly di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] nei report e sfruttare tutte le funzionalità degli assembly distribuiti nella Global Assembly Cache (CAG). L'unico elemento che il server di report può controllare sono le autorizzazioni concesse per le espressioni del report e per gli assembly personalizzati caricati. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per impostazione predefinita agli assembly personalizzati vengono concesse solo le autorizzazioni **Execute**.  
   
@@ -93,6 +94,6 @@ ms.locfileid: "62985744"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sviluppo sicuro &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
+ [&#40;di sviluppo sicuro Reporting Services&#41;](secure-development-reporting-services.md)  
   
   

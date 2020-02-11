@@ -17,20 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990194"
 ---
-# <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Disinstallare un'istanza esistente di SQL Server (programma di installazione)
+# <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Disinstallare un'istanza esistente di SQL Server (Programma di installazione)
   In questo articolo viene descritto come disinstallare un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I passaggi inclusi in questo argomento consentono inoltre di preparare il sistema per poter reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Per disinstallare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario essere un amministratore locale che dispone dell'autorizzazione necessaria per accedere come servizio.  
   
 > [!NOTE]  
->  Per disinstallare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare la funzionalità per la rimozione del nodo disponibile nel programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rimuovere ogni nodo singolarmente. Per altre informazioni, vedere [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+>  Per disinstallare un cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilizzare la funzionalità per la rimozione del nodo disponibile nel programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per rimuovere ogni nodo singolarmente. Per ulteriori informazioni, vedere [aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;il programma di installazione&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
  Prima di disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], considerare le informazioni importanti seguenti:  
   
@@ -66,21 +66,21 @@ ms.locfileid: "62990194"
   
     -   Templog.ldf  
   
-    -   `ReportServer[$InstanceName]` (Thisis il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] database predefinito.)  
+    -   `ReportServer[$InstanceName]`Si tratta del [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] database predefinito.  
   
     -   ReportServer[$InstanceName]TempDB, ovvero il database temporaneo predefinito di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 2.  **Eliminare i gruppi di sicurezza locali.** Prima di disinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], eliminare i gruppi di sicurezza locali per i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  **Arrestare tutti i** **servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Prima di disinstallare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è consigliabile arrestare tutti i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le connessioni attive possono impedire la corretta esecuzione della disinstallazione.  
+3.  **Arrestare tutti i** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **servizi.**   Prima di disinstallare i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è consigliabile arrestare tutti i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le connessioni attive possono impedire la corretta esecuzione della disinstallazione.  
   
-4.  **Utilizzare un account dotato di autorizzazioni appropriate.** Accedere al server utilizzando l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account che dispone di autorizzazioni equivalenti. È possibile, ad esempio, accedere al server utilizzando un account membro del gruppo di amministratori locali.  
+4.  **Utilizzare un account con le autorizzazioni appropriate.** Accedere al server utilizzando l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un account che dispone di autorizzazioni equivalenti. È possibile, ad esempio, accedere al server utilizzando un account membro del gruppo di amministratori locali.  
   
 ### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Per avviare il processo di disinstallazione, nel **Pannello di controllo** scegliere **Programmi e funzionalità**.  
   
-2.  Fare clic destro **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** e selezionare **Disinstalla**. Fare clic su **Rimuovi**. Verrà avviata l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+2.  Fare clic ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** con il pulsante destro del mouse e scegliere **Disinstalla**. Fare clic su **Rimuovi**. Verrà avviata l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Verranno eseguite le regole di supporto dell'installazione per verificare la configurazione del computer. Scegliere **Avanti**per continuare.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62990194"
   
 1.  Se il processo di disinstallazione non viene completato correttamente, tentare di eliminare la causa del problema. Gli articoli seguenti possono aiutare a individuare la causa della mancata disinstallazione:  
   
-    -   [Come identificare i problemi del programma di installazione di SQL Server 2008 nei file di log dell'installazione](https://support.microsoft.com/kb/955396/en-us)  
+    -   [Come identificare i problemi di installazione di SQL Server 2008 nei file di log del programma di installazione](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

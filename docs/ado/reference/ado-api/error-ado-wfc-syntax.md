@@ -1,5 +1,5 @@
 ---
-title: Errore (ADO - WFC sintassi) | Microsoft Docs
+title: Errore (sintassi ADO-WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: a22c6688-5321-4e6a-ba2a-87985a0e854a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 201218ba5c82b88fabbb26e279f52ce95bb79527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933020"
 ---
 # <a name="error-ado---wfc-syntax"></a>Errore (sintassi ADO/WFC)
-## <a name="package-commswfcdata"></a>creare un pacchetto com.ms. wfc.  
+## <a name="package-commswfcdata"></a>pacchetto com. ms. wfc. Data  
   
 ### <a name="properties"></a>Proprietà  
   

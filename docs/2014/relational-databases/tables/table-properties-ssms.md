@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196712"
 ---
 # <a name="table-properties"></a>Table Properties
   In questo argomento vengono descritte le proprietà della tabella visualizzate nella finestra di dialogo Proprietà tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni su come visualizzare queste proprietà, vedere [Visualizzare la definizione di una tabella](view-the-table-definition.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 1.  [Pagina Generale](#GeneralPage)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68196712"
  **Data creazione**  
  Data e ora di creazione della tabella.  
   
- **Name**  
+ **Nome**  
  Nome della tabella.  
   
  **Schema**  
@@ -81,9 +81,9 @@ ms.locfileid: "68196712"
  Evita che venga eseguita l'escalation blocchi nella maggior parte dei casi. I blocchi a livello di tabella non vengono completamente disattivati. Quando si esegue l'analisi di una tabella che non dispone di alcun indice cluster nel livello di isolamento serializzabile, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve acquisire un blocco di tabella per proteggere l'integrità dei dati.  
   
  **Tabella replicata**  
- Indica se la tabella è stata replicata in un altro database usando la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori possibili sono `True` o `False`.  
+ Indica se la tabella è stata replicata in un altro database usando la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I possibili valori sono `True` o `False`.  
   
-##  <a name="ChangeTracking"></a> Pagina Rilevamento modifiche  
+##  <a name="ChangeTracking"></a>Pagina Rilevamento modifiche  
  **Rilevamento delle modifiche**  
  Indica se il rilevamento delle modifiche è abilitato per la tabella. Il valore predefinito è `False`.  
   
@@ -91,41 +91,41 @@ ms.locfileid: "68196712"
   
  Per abilitare il rilevamento delle modifiche, è necessario che la tabella disponga di una chiave primaria e che si disponga dell'autorizzazione per modificare la tabella. È anche possibile configurare il rilevamento delle modifiche usando [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   
- **Colonne di rilevamento aggiornate**  
+ **Rileva colonne aggiornate**  
  Indica se [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] rileva le colonne che sono state aggiornate.  
   
  Per altre informazioni sul rilevamento delle modifiche, vedere [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a> Pagina FileTable  
+##  <a name="FileTable"></a>Pagina FileTable  
  Consente di visualizzare le proprietà della tabella correlate alle tabelle FileTable. Per altre informazioni, vedere [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
- **Regole di confronto colonna Name tabella FileTable**  
+ **Regole di confronto colonna nome FileTable**  
  Regole di confronto applicate alla colonna **Name** in una tabella FileTable. La colonna **Name** contiene i nomi di file e directory.  
   
- **Nome di directory FileTable**  
+ **Nome della directory FileTable**  
  Cartella radice per la tabella FileTable.  
   
  **Spazio dei nomi FileTable abilitato**  
  Se impostato su `True`, questo valore indica che la tabella è una tabella FileTable. Se si modifica questo valore in `False`, la tabella FileTable viene modificata in una comune tabella utente. Se in seguito si desidera modificare di nuovo la tabella in tabella FileTable, questa dovrà superare un controllo di coerenza per tabelle FileTable affinché la conversione riesca.  
   
-##  <a name="Storage"></a> Pagina Archivio  
+##  <a name="Storage"></a>Pagina archiviazione  
  Consente di visualizzare le proprietà relative all'archiviazione della tabella selezionata.  
   
 ### <a name="compression"></a>Compressione  
  **Tipo di compressione**  
  Tipo di compressione della tabella. Questa proprietà è disponibile solo per le tabelle non partizionate. Per altre informazioni, vedere [Data Compression](../data-compression/data-compression.md).  
   
- **Partizioni che usano la compressione di pagina**  
+ **Partizioni che utilizzano la compressione di pagina**  
  Numeri di partizioni che usano la compressione di pagina. Questa proprietà è disponibile solo per le tabelle partizionate.  
   
  **Partizioni non compresse**  
  Numeri di partizioni non compresse. Questa proprietà è disponibile solo per le tabelle partizionate.  
   
- **Partizioni che usano la compressione di riga**  
+ **Partizioni che utilizzano la compressione di riga**  
  Numeri di partizioni che usano la compressione di riga. Questa proprietà è disponibile solo per le tabelle partizionate.  
   
 ### <a name="filegroup"></a>Filegroup  
- **Filegroup dati di testo**  
+ **Filegroup di testo**  
  Nome del filegroup che contiene i dati di testo della tabella.  
   
  **Filegroup**  
@@ -140,13 +140,13 @@ ms.locfileid: "68196712"
  Se la tabella non contiene dati FILESTREAM, il campo è vuoto.  
   
 ### <a name="general"></a>Generale  
- **Formato di archiviazione vardecimal abilitato**  
- Quando `True`, questo valore di sola lettura indica che `decimal` e `numeric` tipi di dati vengono archiviati usando il formato di archiviazione vardecimal. Per modificare questa opzione, usare il `vardecimal storage format` opzione della [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Il formato di archiviazione vardecimal è deprecato. ed è necessario usare il tipo di compressione ROW.  
+ **Il formato di archiviazione vardecimal è abilitato**  
+ Se `True`, questo valore di sola lettura indica che `decimal` i `numeric` tipi di dati e vengono archiviati utilizzando il formato di archiviazione vardecimal. Per modificare questa opzione, usare l' `vardecimal storage format` opzione di [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Il formato di archiviazione vardecimal è deprecato. ed è necessario usare il tipo di compressione ROW.  
   
  **Spazio degli indici**  
  Quantità di spazio occupata dagli indici nella tabella, espresso in megabyte. Questo valore non include lo spazio usato dagli indici XML per la tabella. Se gli indici XML appartengono alla tabella, usare in alternativa [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  
   
- **Numero di righe**  
+ **Conteggio righe**  
  Numero di righe della tabella.  
   
  **Spazio dati**  
@@ -155,7 +155,7 @@ ms.locfileid: "68196712"
 ### <a name="partitioning"></a>Partizionamento  
  Questa sezione è disponibile solo se la tabella è partizionata. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
- **Colonna di partizione**  
+ **Colonna partizione**  
  Nome della colonna in relazione alla quale è partizionata la tabella.  
   
  **Schema di partizione**  
@@ -170,7 +170,7 @@ ms.locfileid: "68196712"
  Lo schema di partizione FILESTREAM deve essere simmetrico rispetto allo schema specificato nell'opzione **Schema partizione** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare la definizione di una tabella](view-the-table-definition.md)   
- [Modificare colonne &#40;Motore di database&#41;](../tables/modify-columns-database-engine.md)  
+ [Visualizzare la definizione della tabella](view-the-table-definition.md)   
+ [Modificare le colonne &#40;motore di database&#41;](../tables/modify-columns-database-engine.md)  
   
   

@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032115"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Monitoraggio dell'utilizzo delle risorse (Monitor di sistema)
@@ -80,12 +80,12 @@ ms.locfileid: "63032115"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Viene descritto quando utilizzare Monitoraggio di sistema e ne viene illustrato l'impatto sulle prestazioni.|[Eseguire Monitoraggio di sistema](run-system-monitor.md)|  
-|Viene descritto come monitorare i contatori dei dischi per determinare l'attività dei dischi e la quantità di operazioni di I/O generate dai componenti di SQL Server.|[Monitoraggio dell'utilizzo del disco](monitor-disk-usage.md)|  
-|Viene descritto come monitorare un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino in intervalli normali.|[Monitorare l'utilizzo della CPU](monitor-cpu-usage.md)|  
-|Viene descritto come monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che l'utilizzo della memoria rientri negli intervalli standard.|[Monitoraggio dell'utilizzo della memoria](monitor-memory-usage.md)|  
+|Viene descritto come monitorare i contatori dei dischi per determinare l'attività dei dischi e la quantità di operazioni di I/O generate dai componenti di SQL Server.|[Monitorare l'uso del disco](monitor-disk-usage.md)|  
+|Viene descritto come monitorare un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino in intervalli normali.|[Monitorare l'uso della CPU](monitor-cpu-usage.md)|  
+|Viene descritto come monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che l'utilizzo della memoria rientri negli intervalli standard.|[Monitorare l'uso della memoria](monitor-memory-usage.md)|  
 |Viene descritto come creare un avviso generato nel momento in cui viene raggiunto un valore soglia di un contatore di Monitoraggio di sistema.|[Creare un avviso del database di SQL Server](create-a-sql-server-database-alert.md)|  
 |Viene descritto come creare grafici, avvisi, log e report per monitorare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Creare grafici, avvisi, log e report](create-charts-alerts-logs-and-reports.md)|  
-|Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Utilizzare oggetti di SQL Server](use-sql-server-objects.md)|  
-|Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività OLTP in memoria.|[XTP &#40;OLTP In memoria&#41; i contatori delle prestazioni](../../integration-services/performance/performance-counters.md)|  
+|Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Usare oggetti di SQL Server](use-sql-server-objects.md)|  
+|Vengono elencati oggetti e contatori utilizzati da Monitoraggio di sistema per monitorare le attività OLTP in memoria.|[XTP &#40;i contatori delle prestazioni di OLTP in memoria&#41;](../../integration-services/performance/performance-counters.md)|  
   
   

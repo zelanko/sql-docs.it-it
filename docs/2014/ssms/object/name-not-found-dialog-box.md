@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999549"
 ---
-# <a name="name-not-found-dialog-box"></a>Finestra di dialogo Nome non trovato
+# <a name="name-not-found-dialog-box"></a>Nome non trovato - finestra di dialogo
   Non è possibile trovare uno o più oggetti specificati nella finestra di dialogo. Selezionare un'opzione per continuare.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
@@ -31,13 +31,13 @@ ms.locfileid: "62999549"
  **Selezionare questo tipo di oggetto**  
  Visualizza i tipi di oggetti selezionati usando il pulsante **Tipi di oggetti** .  
   
- **Tipi di oggetti**  
+ **Tipi di oggetto**  
  Fare clic per aprire la finestra di dialogo **Seleziona tipi di oggetti** e selezionare i tipi di oggetti nell'elenco.  
   
  **Immettere il nome dell'oggetto**  
  Contiene il nome dell'oggetto non trovato. Correggere il nome dell'oggetto o digitare un nuovo nome di oggetto.  
   
- **Rimuovere** *\<il nome oggetto >* **dalla selezione**  
+ *****Rimuovi\<nome oggetto>* **dalla selezione**      
  Selezionare questa opzione per chiudere la finestra di dialogo **Nome non trovato** e rimuovere l'elemento dalla finestra di dialogo **Seleziona oggetti** .  
   
   

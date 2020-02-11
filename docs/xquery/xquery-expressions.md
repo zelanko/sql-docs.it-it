@@ -1,5 +1,5 @@
 ---
-title: Le espressioni XQuery | Microsoft Docs
+title: Espressioni XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1f136f07b500a52a5382fff6f4388840d2007892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946021"
 ---
 # <a name="xquery-expressions"></a>Espressioni XQuery
@@ -35,7 +35,7 @@ ms.locfileid: "67946021"
  [Espressioni di percorso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
  Descrive le espressioni di percorso XQuery. Queste espressioni consentono di individuare nodi, ad esempio di testo, attributo o elemento, all'interno di un documento.  
   
- [Le espressioni di sequenza &#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
+ [Espressioni di sequenza &#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
  Descrive gli operatori XQuery utilizzabili per lavorare con sequenze di numeri.  
   
  [Espressioni aritmetiche &#40;XQuery&#41;](../xquery/arithmetic-expressions-xquery.md)  
@@ -44,29 +44,29 @@ ms.locfileid: "67946021"
  [Espressioni di confronto &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
  Descrive le espressioni di confronto supportate da XQuery, ovvero le espressioni di confronto generali, per il confronto di valori, per il confronto di nodi e per il confronto dell'ordine dei nodi.  
   
- [Espressioni logiche &#40;XQuery&#41;](../xquery/logical-expressions-xquery.md)  
- Viene descritto il supporto XQuery per la logica **e** e **o** operatori.  
+ [Espressioni logiche &#40;&#41;XQuery](../xquery/logical-expressions-xquery.md)  
+ Viene descritto il supporto XQuery per gli **operatori and e** **or** logici.  
   
- [Costruzione di strutture XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
+ [Costrutto XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
  Descrive i costruttori XQuery che consentono di costruire strutture XML all'interno di una query.  
   
- [Istruzione e iterazione FLWOR &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [Istruzione FLWOR e iterazione &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
  Descrive la sintassi per le iterazioni con l'istruzione FLOWR. FLOWR è l'acronimo di FOR, LET, WHERE, ORDER BY e RETURN. LET non è supportato.  
   
- [Ordinati e non ordinato di espressioni &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
- Descrive la modalità di ordinamento per le operazioni XQuery. Per impostazione predefinita, la modalità di ordinamento è impostata su **ordinati**.  
+ [Espressioni ordinate e non ordinate &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
+ Descrive la modalità di ordinamento per le operazioni XQuery. Per impostazione predefinita, la modalità di ordinamento è impostata su **ordinato**.  
   
  [Espressioni condizionali &#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
- Viene descritto il supporto XQuery per il parametro condizionale **if-then-else** istruzione.  
+ Viene descritto il supporto XQuery per l'istruzione Conditional **if-then-else** .  
   
- [Espressioni quantificate &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
+ [Espressioni quantificate &#40;&#41;XQuery](../xquery/quantified-expressions-xquery.md)  
  Descrive i quantificatori esistenziali e universali in XQuery.  
   
  [Espressioni SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  
  Descrive la sintassi SequenceType in XQuery.  
   
- [Convalidare le espressioni &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
- Il **convalidare** espressione non è supportata.  
+ [Convalidare espressioni &#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
+ L'espressione **Validate** non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

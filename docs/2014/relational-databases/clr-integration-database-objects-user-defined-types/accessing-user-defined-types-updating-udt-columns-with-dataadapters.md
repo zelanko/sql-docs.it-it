@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento di colonne UDT con DataAdapter | Microsoft Docs
+title: Aggiornamento di colonne con tipo definito dall'utente con DataAdapter | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,17 +24,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919641"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Aggiornamento di colonne con tipo definito dall'utente con DataAdapter
   Per la modifica e il recupero dei dati i tipi definiti dall'utente utilizzano `System.Data.DataSet` e `System.Data.SqlClient.SqlDataAdapter`.  
   
 ## <a name="populating-a-dataset"></a>Popolamento di set di dati  
- È possibile utilizzare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT per selezionare i valori delle colonne con tipo definito dall'utente per popolare un set di dati utilizzando un adattatore dati. L'esempio seguente presuppone la presenza di un **punti** tabella definita con la struttura seguente e alcuni dati di esempio. Quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni consentono di creare le **punti** di tabella e inserire alcune righe.  
+ È possibile utilizzare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT per selezionare i valori delle colonne con tipo definito dall'utente per popolare un set di dati utilizzando un adattatore dati. Nell'esempio seguente si presuppone che sia stata definita una tabella **Points** con la struttura seguente e alcuni dati di esempio. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti creano la tabella **Points** e inseriscono alcune righe.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +46,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- Il frammento di codice ADO.NET seguente recupera una stringa di connessione valida, crea un nuovo `SqlDataAdapter`e popola una `System.Data.DataTable` con le righe di dati dalle **punti** tabella.  
+ Nel frammento di codice ADO.NET seguente viene recuperata una stringa di connessione `SqlDataAdapter`valida, viene creato un `System.Data.DataTable` nuovo oggetto e viene popolato un oggetto con le righe di dati della tabella **Points** .  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,9 +85,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  Nell'esempio ADO.NET seguente sono presenti due metodi:  
   
--   `UserProvidedCommands`, che illustra come fornire `InsertCommand`, `UpdateCommand`, e `DeleteCommand` oggetti per l'aggiornamento il `Point` UDT nel **punti** tabella (che non contiene un `timestamp` colonna).  
+-   `UserProvidedCommands`, che dimostra come fornire `InsertCommand`gli oggetti `UpdateCommand`, e `DeleteCommand` per l'aggiornamento del `Point` tipo definito dall'utente nella tabella **Points** , che non `timestamp` contiene una colonna.  
   
--   `CommandBuilder`, che illustra come usare un `SqlCommandBuilder` nella **Points_ts** tabella che contiene il `timestamp` colonna.  
+-   `CommandBuilder`, in cui viene illustrato come utilizzare `SqlCommandBuilder` un oggetto nella tabella **Points_ts** che contiene `timestamp` la colonna.  
   
 ```vb  
 Imports System  
@@ -370,6 +370,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso ai tipi definiti dall'utente in ADO.NET](accessing-user-defined-types-in-ado-net.md)  
+ [Accesso ai tipi definiti dall'utente in ADO .NET](accessing-user-defined-types-in-ado-net.md)  
   
   

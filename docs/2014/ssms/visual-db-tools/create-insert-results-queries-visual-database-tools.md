@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63031970"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Creazione di query di accodamento (Visual Database Tools)
@@ -76,15 +76,15 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     >  In Progettazione query e Progettazione viste non è possibile stabilire in anticipo le tabelle e le viste da aggiornare. Pertanto nell'elenco **Nome tabella** della finestra di dialogo **Choose Table for Insert From Query** (Scegli tabella per query di inserimento) sono visualizzate tutte le tabelle e le viste disponibili nella connessione dati su cui si esegue la query, anche quelle che non sono valide come tabelle o viste di destinazione.  
   
-4.  Nel rettangolo che rappresenta la tabella o l'oggetto con valori di tabella scegliere i nomi delle colonne di cui si desidera copiare il contenuto. Per copiare righe intere, scegliere  **\* (tutte le colonne)** .  
+4.  Nel rettangolo che rappresenta la tabella o l'oggetto con valori di tabella scegliere i nomi delle colonne di cui si desidera copiare il contenuto. Per copiare intere righe, scegliere ** \* (tutte le colonne)**.  
   
      Le colonne selezionate verranno aggiunte alla colonna **Colonna** del riquadro Criteri.  
   
-5.  Nella colonna **Aggiungi** del riquadro Criteri selezionare una colonna di destinazione nella tabella di destinazione per ogni colonna da copiare. Scegli *tablename.\**  se si desidera copiare righe intere. I tipi di dati nelle colonne della tabella di destinazione devono essere uguali o compatibili con quelli delle colonne nella tabella di origine.  
+5.  Nella colonna **Aggiungi** del riquadro Criteri selezionare una colonna di destinazione nella tabella di destinazione per ogni colonna da copiare. Scegliere *TableName.\* * se si stanno copiando intere righe. I tipi di dati nelle colonne della tabella di destinazione devono essere uguali o compatibili con quelli delle colonne nella tabella di origine.  
   
 6.  Se si desidera copiare le righe in un particolare ordine, specificare il criterio di ordinamento. Per informazioni dettagliate, vedere [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md).  
   
-7.  Specificare le righe da copiare immettendo le condizioni di ricerca nella colonna **Filtro**. Per informazioni dettagliate, vedere [Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  
+7.  Specificare le righe da copiare immettendo le condizioni di ricerca nella colonna **Filtro** . Per informazioni dettagliate, vedere [Specifica di criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  
   
      Se non si specifica alcuna condizione di ricerca, tutte le righe della tabella di origine verranno copiate nella tabella di destinazione.  
   

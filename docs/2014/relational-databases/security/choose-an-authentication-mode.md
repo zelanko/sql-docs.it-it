@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011338"
 ---
 # <a name="choose-an-authentication-mode"></a>Scegliere una modalità di autenticazione
-  Durante l'installazione è necessario selezionare una modalità di autenticazione per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Sono disponibili due modalità: Modalità di autenticazione di Windows e la modalità mista. La modalità di autenticazione di Windows abilita l'autenticazione di Windows e disabilita quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La modalità mista abilita sia l'autenticazione di Windows sia quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'autenticazione di Windows è sempre disponibile e non può essere disabilitata.  
+  Durante l'installazione è necessario selezionare una modalità di autenticazione per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Sono disponibili due modalità: la modalità di autenticazione di Windows e la modalità mista. La modalità di autenticazione di Windows abilita l'autenticazione di Windows e disabilita quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La modalità mista abilita sia l'autenticazione di Windows sia quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'autenticazione di Windows è sempre disponibile e non può essere disabilitata.  
   
 ## <a name="configuring-the-authentication-mode"></a>Configurazione della modalità di autenticazione  
  Se si seleziona l'autenticazione in modalità mista durante l'installazione, è necessario specificare e confermare una password complessa per l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato sa. L'account sa consente di connettersi utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -67,7 +67,7 @@ ms.locfileid: "63011338"
   
 1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
-2.  Nel **eseguiti** finestra di dialogo, digitare `secpol.msc`e quindi fare clic su **OK**.  
+2.  Nella finestra di dialogo **Esegui** Digitare `secpol.msc`e quindi fare clic su **OK**.  
   
 3.  Nell'applicazione **Impostazioni sicurezza locale** espandere **Impostazioni di sicurezza**e **Criteri account**, quindi fare clic su **Criteri password**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63011338"
   
 -   Consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di supportare ambienti con sistemi operativi misti, in cui tutti gli utenti non sono autenticati da un dominio Windows.  
   
--   Consente agli utenti di effettuare la connessione da domini sconosciuti o non trusted: ad esempio un'applicazione in cui clienti specifici si connettono con account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegnati per verificare lo stato dei loro ordini.  
+-   Consente agli utenti di connettersi da domini sconosciuti o non attendibili. ad esempio un'applicazione in cui clienti specifici si connettono con account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegnati per verificare lo stato dei loro ordini.  
   
 -   Consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di supportare applicazioni Web in cui gli utenti creano le proprie identità.  
   

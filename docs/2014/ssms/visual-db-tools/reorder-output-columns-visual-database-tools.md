@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63063067"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Riordinamento delle colonne di output (Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "63063067"
   
 2.  Fare clic sul selettore di riga e trascinare la riga nella nuova posizione.  
   
-     oppure  
+     -oppure-  
   
      Modificare l'ordine dei nomi di colonna nel [riquadro SQL](sql-pane-visual-database-tools.md).  
   
@@ -41,8 +41,8 @@ ms.locfileid: "63063067"
 >  Per aggiungere una riga di dati in una determinata posizione nel riquadro Criteri, inserire una riga vuota in tale riquadro, quindi specificare la colonna di dati da inserire. Per altre informazioni dettagliate, vedere [Aggiungere colonne a query &#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ordina e raggruppa i risultati della Query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [Riepilogo dei risultati di Query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Ordinare e raggruppare i risultati delle query &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [Riepilogare i risultati delle query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

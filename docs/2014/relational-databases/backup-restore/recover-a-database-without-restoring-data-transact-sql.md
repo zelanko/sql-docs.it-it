@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921798"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recupero di un database senza ripristino dei dati (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921798"
  RESTORE DATABASE *nome_database* WITH RECOVERY  
   
 > [!NOTE]  
->  La clausola FROM **=** \<*DispositivoBackup>* non viene usata per i ripristini con solo recupero perché il backup non è necessario.  
+>  La clausola **=** \<from *backup_device>* non viene utilizzata per i ripristini solo recupero perché non è necessario alcun backup.  
   
  **Esempio**  
   
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorks2012
   
  La sintassi dell'istruzione [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) per un ripristino del file con solo recupero è la seguente:  
   
- RESTORE DATABASE *nome_database* { FILE **=** _nome_file_logico_ | FILEGROUP **=** _nome_filegroup_logico_ }[ **,** ...*n* ] WITH RECOVERY  
+ Restore database *database_name* { **=** file _logical_file_name_ | Filegroup **=** _logical_filegroup_name_ } [ **,**... *n* ] con ripristino  
   
  **Esempio**  
   

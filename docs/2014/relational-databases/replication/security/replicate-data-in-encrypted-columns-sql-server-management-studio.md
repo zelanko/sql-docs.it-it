@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955844"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicare dati in colonne crittografate (SQL Server Management Studio)
   La replica consente di pubblicare dati di colonna crittografati. Per decrittografare e utilizzare tali dati nel Sottoscrittore, la chiave utilizzata per crittografare i dati nel server di pubblicazione deve essere presente anche nel Sottoscrittore. La replica non rappresenta un meccanismo protetto per il trasporto di chiavi di crittografia. La chiave di crittografia deve essere ricreata manualmente nel Sottoscrittore. In questo argomento verrà illustrato come crittografare una colonna nel server di pubblicazione e garantire che la chiave di crittografia sia disponibile nel Sottoscrittore.  
   
- I passaggi principali sono i seguenti:  
+ I passaggi di base sono i seguenti:  
   
 1.  Creare la chiave simmetrica nel server di pubblicazione.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62955844"
   
 6.  Sottoscrivere la pubblicazione. Per altre informazioni, vedere [Creare una sottoscrizione pull](../create-a-pull-subscription.md) o [Creare una sottoscrizione push](../create-a-push-subscription.md).  
   
-7.  Inizializzare la sottoscrizione. Per altre informazioni, vedere [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+7.  Inizializzare la sottoscrizione. Per altre informazioni, vedere [Creazione e applicazione dello snapshot iniziale](../create-and-apply-the-initial-snapshot.md).  
   
 8.  Nel Sottoscrittore eseguire [CREATE SYMMETRIC KEY](/sql/t-sql/statements/create-symmetric-key-transact-sql) utilizzando i valori del passaggio 1 per ALGORITHM, KEY_SOURCE e IDENTITY_VALUE. È possibile specificare un valore diverso per ENCRYPTION BY.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62955844"
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza della replica di SQL Server](view-and-modify-replication-security-settings.md)   
+ [Sicurezza replica di SQL Server](view-and-modify-replication-security-settings.md)   
  [Creare chiavi simmetriche identiche su due server](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

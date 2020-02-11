@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918811"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurazione del data warehouse di gestione (SQL Server Management Studio)
@@ -59,15 +59,15 @@ ms.locfileid: "62918811"
   
 6.  Ripetere il passaggio 5 fino a quando tutte le istanze del database che utilizzano l'agente di raccolta dati sono configurate per caricare dati sul data warehouse di gestione condiviso.  
   
-####  <a name="Wizard"></a> Configurazione guidata data warehouse di gestione  
- **Pagina introduttiva**  
+####  <a name="Wizard"></a>Configurare la procedura guidata data warehouse gestione  
+ **Pagina iniziale**  
   
  La pagina iniziale corrisponde alla pagina di avvio di Configurazione guidata raccolta dati e la sua visualizzazione è facoltativa.  
   
  **Non visualizzare più questa pagina iniziale.**  
  Selezionare questa opzione per evitare la visualizzazione di questa pagina al prossimo avvio di Configurazione guidata raccolta dati.  
   
- **Configurazione archiviazione del data warehouse di gestione**  
+ **Pagina Configura archiviazione data warehouse di gestione**  
   
  Utilizzare questa pagina per selezionare un server di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un data warehouse di gestione. Il data warehouse di gestione è un database relazionale in cui vengono archiviati i dati raccolti.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918811"
   
  L'opzione **Nuovo** è disponibile solo in caso di configurazione di un set di raccolta dati.  
   
- **Pagina Mapping account di accesso e utenti**  
+ **Pagina mapping account di accesso e utenti**  
   
  Utilizzare questa pagina per eseguire il mapping degli account di accesso ai ruoli utente del database per il data warehouse di gestione.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62918811"
   
  Specificare un account di accesso selezionando la casella di controllo **Mapping** .  
   
- **Appartenenza a ruoli del database per:** *\<nome data warehouse>*  
+ **Appartenenza a ruoli del database per:**  *\<data warehouse nome>*  
  Selezionare il ruolo del data warehouse di gestione cui viene eseguito il mapping dell'account di accesso facendo clic nella casella di controllo di una o più delle opzioni seguenti:  
   
 -   **mdw_admin**  
@@ -109,14 +109,14 @@ ms.locfileid: "62918811"
   
  Utilizzare questa pagina per verificare e completare la configurazione della raccolta di dati. L'albero nella finestra di visualizzazione mostra le configurazioni applicate e le azioni eseguite dopo la selezione di **Fine**.  
   
- **Pagina Stato Configurazione guidata raccolta dati**  
+ **Pagina Stato configurazione guidata raccolta dati**  
   
  Utilizzare questa pagina per visualizzare i risultati di ciascun passaggio di configurazione.  
   
  **Dettagli**  
  Consente di visualizzare ogni passaggio di configurazione in una riga nella griglia **Dettagli** . Ogni riga contiene una colonna **Azione** con la descrizione del passaggio e una colonna **Stato** con l'indicazione dell'esito positivo o negativo dello stesso. In presenza di errori, nella colonna **Messaggio** è visualizzato un messaggio.  
   
- **Arresta**  
+ **Stop**  
  Consente di arrestare l'elaborazione della procedura guidata.  
   
  **Report**  
@@ -130,12 +130,12 @@ ms.locfileid: "62918811"
   
 -   Invia report per posta elettronica  
   
- **Chiudi**  
+ **Close**  
  Consente di chiudere la procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
- [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
+ [sp_syscollector_enable_collector &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [sp_syscollector_disable_collector &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
  [Raccolta dati](data-collection.md)   
  [Gestire raccolta dati](manage-data-collection.md)  
   

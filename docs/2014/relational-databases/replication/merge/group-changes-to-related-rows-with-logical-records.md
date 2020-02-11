@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999838"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Raggruppamento di modifiche alla righe correlate con record logici
@@ -33,7 +33,7 @@ ms.locfileid: "62999838"
   
  Si considerino le tre tabelle correlate seguenti:  
   
- ![Record logico per tre tabelle solo con nomi di colonna](../media/logical-records-01.gif "Record logico per tre tabelle solo con nomi di colonna")  
+ ![Record logico per tre tabelle, con solo i nomi di colonna](../media/logical-records-01.gif "Record logico per tre tabelle, con solo i nomi di colonna")  
   
  La tabella **Customers** è la tabella padre in questa relazione e presenta una colonna chiave primaria **CustID**. La tabella **Orders** ha una colonna chiave primaria **OrderID**, con un vincolo di chiave esterna nella colonna **CustID** che fa riferimento alla colonna **CustID** nella tabella **Customers** . Analogamente, la tabella **OrderItems** ha una colonna chiave primaria **OrderItemID**, con un vincolo di chiave esterna nella colonna **OrderID** che fa riferimento alla colonna **OrderID** nella tabella **Orders** .  
   

@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136423"
 ---
-# <a name="create-an-operator"></a>Creazione di un operatore
-  In questo argomento viene illustrato come configurare un utente per la ricezione di notifiche relative ai processi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="create-an-operator"></a>Create an Operator
+  In questo argomento viene descritto come configurare un utente per la ricezione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di notifiche relative [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ai processi [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] di [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent in tramite o.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -45,18 +45,19 @@ ms.locfileid: "63136423"
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
+-   Le opzioni Cercapersone e **net send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
 -   Si noti che per inviare notifiche tramite posta elettronica e cercapersone agli operatori, è necessario configurare SQL Server Agent per l'utilizzo di Posta elettronica database. Per ulteriori informazioni, vedere [Procedura: Assegnazione di avvisi a un operatore (SQL Server Management Studio)](assign-alerts-to-an-operator.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono creare gli operatori.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-create-an-operator"></a>Per creare un operatore  
   
@@ -68,25 +69,25 @@ ms.locfileid: "63136423"
   
      Nella pagina **Generale** della finestra di dialogo **Nuovo operatore** sono disponibili le opzioni indicate di seguito.  
   
-     **Name**  
+     **Nome**  
      Consente di modificare il nome dell'operatore.  
   
-     **Abilitata**  
+     **Enabled**  
      Consente di abilitare l'operatore. Se non è abilitato, all'operatore non verranno inviate notifiche.  
   
-     **Indirizzo posta elettronica**  
+     **Nome posta elettronica**  
      Specifica l'indirizzo di posta elettronica dell'operatore.  
   
-     **Indirizzo Net Send**  
+     **Indirizzo net send**  
      Specifica l'indirizzo da usare per **Net Send**.  
   
-     **Indirizzo cercapersone**  
+     **Nome posta elettronica cercapersone**  
      Specifica l'indirizzo di posta elettronica da utilizzare per il cercapersone dell'operatore.  
   
-     **Pianificazione cercapersone per operatore in servizio**  
+     **Pianificazione cercapersone per servizio**  
      Consente di impostare gli orari in cui il cercapersone è attivo.  
   
-     **Lunedì - Domenica**  
+     **Lunedì-domenica**  
      Consente di selezionare i giorni in cui il cercapersone è attivo.  
   
      **Inizio giornata lavorativa**  
@@ -112,15 +113,15 @@ ms.locfileid: "63136423"
      **Posta elettronica**  
      Consente di inviare una notifica all'operatore tramite posta elettronica.  
   
-     **Cercapersone**  
+     **Pager**  
      Inviare una notifica all'operatore tramite un messaggio di posta elettronica all'indirizzo del cercapersone.  
   
-     **Net send**  
+     **NET SEND**  
      Notificare questo operatore tramite **Net Send**.  
   
 4.  Al termine della creazione del nuovo operatore, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-create-an-operator"></a>Per creare un operatore  
   
@@ -147,6 +148,6 @@ ms.locfileid: "63136423"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_add_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_add_operator &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql).  
   
   

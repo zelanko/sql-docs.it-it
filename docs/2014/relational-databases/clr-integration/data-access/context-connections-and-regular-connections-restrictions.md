@@ -1,5 +1,5 @@
 ---
-title: Restrizioni sulle normali e connessioni di contesto | Microsoft Docs
+title: Restrizioni relative alle connessioni normali e di contesto | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919163"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Restrizioni relative alle connessioni normali e di contesto
-  In questo argomento vengono illustrate le restrizioni associate all'esecuzione di codice nel [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] elabora tramite connessioni normali e di contesto.  
+  In questo argomento vengono illustrate le restrizioni associate all'esecuzione del [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] codice nel processo tramite il contesto e le connessioni regolari.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrizioni relative alle connessioni di contesto  
  Quando si sviluppa l'applicazione, tenere presenti le restrizioni seguenti che si applicano alle connessioni di contesto:  
@@ -40,14 +40,14 @@ ms.locfileid: "62919163"
   
 -   Quando si utilizza "context connection=true", non è possibile utilizzare altre parole chiave della stringa di connessione.  
   
--   La proprietà `SqlConnection.DataSource` restituisce null invece del nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se la stringa di connessione per l'oggetto `SqlConnection` è "context connection=true".  
+-   La proprietà `SqlConnection.DataSource` restituisce null invece del nome dell'istanza di `SqlConnection` se la stringa di connessione per l'oggetto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è "context connection=true".  
   
 -   L'impostazione della proprietà `SqlCommand.CommandTimeout` non ha effetto quando il comando viene eseguito su una connessione di contesto.  
   
 ## <a name="restrictions-on-regular-connections"></a>Restrizioni relative alle connessioni normali  
  Quando si sviluppa l'applicazione, tenere presenti le restrizioni seguenti che si applicano alle connessioni normali:  
   
--   Non è supportata l'esecuzione asincrona di comandi su server interni. Se si include "async=true" nella stringa di connessione di un comando, quindi si esegue il comando, viene generata l'eccezione `System.NotSupportedException`. Viene visualizzato questo messaggio: "L'elaborazione asincrona non è supportata durante l'esecuzione all'interno di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processo."  
+-   Non è supportata l'esecuzione asincrona di comandi su server interni. Se si include "async=true" nella stringa di connessione di un comando, quindi si esegue il comando, viene generata l'eccezione `System.NotSupportedException`. Viene visualizzato il messaggio "Asynchronous Processing non è supportato se eseguito in un processo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]".  
   
 -   Non è supportato l'oggetto `SqlDependency`.  
   

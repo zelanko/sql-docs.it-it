@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127336"
 ---
-# <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API Stored procedure estesa)
+# <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API Stored procedure estesa)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Definisce il nome della colonna e i tipi di dati di origine e di destinazione per una colonna specifica in una riga.  
   
@@ -82,13 +83,13 @@ srcdata
  *namelen*  
  Specifica la lunghezza, espressa in byte, di *column_name*. Se *namelen* è SRV_NULLTERM, *column_name* deve essere con terminazione Null.  
   
- *desttype*  
+ *destType*  
  Specifica il tipo di dati della colonna della riga di destinazione. Si tratta del tipo di dati inviato al client. È necessario specificarlo anche se i dati sono NULL. Per altre informazioni, vedere [Tipi di dati &#40;API Stored procedure estesa&#41;](data-types-extended-stored-procedure-api.md).  
   
  *destlen*  
  Specifica la lunghezza, espressa in byte, dei dati da inviare al client. Per tipi di dati a lunghezza fissa che non consentono i valori Null, *destlen* viene ignorato. Per tipi di dati a lunghezza variabile e a lunghezza fissa che consentono i valori Null, *destlen* specifica la lunghezza massima dei dati di destinazione.  
   
- *srctype*  
+ *srcType*  
  Specifica il tipo di dati dei dati di origine.  
   
  *srclen*  
@@ -102,7 +103,7 @@ srcdata
 ## <a name="returns"></a>Valori di codice restituiti  
  Il numero della colonna descritta. La prima colonna è la colonna 1. Se si verifica un errore, viene restituito 0.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La funzione **srv_describe** deve essere chiamata una volta per ogni colonna nella riga prima della prima chiamata a **srv_sendrow**. Le colonne di una riga possono essere descritte in qualsiasi ordine.  
   
  Per modificare il percorso e lunghezza dei dati di origine nelle righe della colonna prima dell'invio del set di risultati completo, usare rispettivamente **srv_setcoldata** e **srv_setcollen**.  
@@ -115,8 +116,8 @@ srcdata
 >  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
- [srv_sendrow &#40;API Stored procedure estesa&#41;](srv-sendrow-extended-stored-procedure-api.md)   
- [srv_setutype &#40;API Stored procedure estesa&#41;](srv-setutype-extended-stored-procedure-api.md)   
- [srv_setcoldata &#40;API Stored procedure estesa&#41;](srv-setcoldata-extended-stored-procedure-api.md)  
+ [srv_sendrow &#40;API stored procedure estesa&#41;](srv-sendrow-extended-stored-procedure-api.md)   
+ [srv_setutype &#40;API stored procedure estesa&#41;](srv-setutype-extended-stored-procedure-api.md)   
+ [srv_setcoldata &#40;API stored procedure estesa&#41;](srv-setcoldata-extended-stored-procedure-api.md)  
   
   

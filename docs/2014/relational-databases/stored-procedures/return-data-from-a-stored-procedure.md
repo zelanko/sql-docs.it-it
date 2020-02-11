@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140437"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Restituire dati da una stored procedure
@@ -71,7 +71,7 @@ GO
  Se si specifica OUTPUT per un parametro quando si chiama una procedura e tale parametro non è stato definito utilizzando OUTPUT nella definizione della procedura, viene restituito un messaggio di errore. Tuttavia, è possibile eseguire una procedura con i parametri di output e non specificare OUTPUT in fase di esecuzione della procedura. Non viene restituito alcun errore, ma non è possibile utilizzare il valore di output nel programma chiamante.  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>Utilizzo del tipo di dati cursor nei parametri OUTPUT  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] possono usare le procedure di `cursor` tipo di dati solo per i parametri di OUTPUT. Se il `cursor` tipo di dati specificato per un parametro, le parole chiave VARYING e OUTPUT devono essere specificate per il parametro nella definizione della procedura. Un parametro può essere specificato solo come OUTPUT, ma se nella dichiarazione del parametro viene specificata la parola chiave VARYING, il tipo di dati deve essere `cursor` e necessario specificare anche la parola chiave OUTPUT.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]le routine possono utilizzare `cursor` il tipo di dati solo per i parametri di output. Se per `cursor` un parametro viene specificato il tipo di dati, è necessario specificare entrambe le parole chiave VARYING e output per tale parametro nella definizione della procedura. Un parametro può essere specificato solo come OUTPUT, ma se nella dichiarazione del parametro è specificata la parola chiave VARYing, il tipo di `cursor` dati deve essere e deve essere specificata anche la parola chiave output.  
   
 > [!NOTE]  
 >  Il tipo di dati `cursor` non può essere associato a variabili di applicazione tramite le API di database, quali OLE DB, ODBC, ADO e DB-Library. Poiché in un'applicazione è possibile eseguire una procedura solo in seguito all'associazione dei parametri OUTPUT, le procedure con parametri OUTPUT di tipo `cursor` non possono essere chiamate dalle API di database. È possibile chiamare queste procedure da trigger, procedure o batch [!INCLUDE[tsql](../../../includes/tsql-md.md)] solo quando la variabile OUTPUT di tipo `cursor` è assegnata a una variabile locale [!INCLUDE[tsql](../../../includes/tsql-md.md)] di tipo `cursor`.  
@@ -104,7 +104,7 @@ GO
     >  Lo stato chiuso di un cursore è rilevante solo in fase di restituzione. È possibile, ad esempio, chiudere un cursore nel corso di una procedura, riaprirlo in una fase successiva e restituire il set di risultati di tale cursore al trigger, alla procedura o al batch chiamante.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Esempi di parametri di output di tipo cursor  
- Nell'esempio seguente viene creata una procedure che è specificato un parametro di output `@currency`_`cursor` usando il `cursor` tipo di dati. La procedura viene quindi chiamata in un batch.  
+ Nell'esempio seguente viene creata una stored procedure che specifica un parametro di output `@currency`_`cursor` utilizzando il `cursor` tipo di dati. La procedura viene quindi chiamata in un batch.  
   
  Creare innanzitutto la procedura per la dichiarazione e l'apertura di un cursore per la tabella Currency.  
   
@@ -145,7 +145,7 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>Restituzione di dati tramite un codice restituito  
- Una procedura può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per specificare il codice restituito per una procedura, utilizzare l'istruzione RETURN. Come per i parametri OUTPUT, è necessario salvare il codice restituito in una variabile quando la procedura viene eseguita per utilizzare il valore del codice restituito nel programma chiamante. Ad esempio, la variabile di assegnazione `@result` del tipo di dati `int` viene usato per archiviare il codice restituito dalla routine `my_proc`, ad esempio:  
+ Una procedura può restituire un valore intero, denominato codice restituito, per indicare lo stato di esecuzione di una procedura. Per specificare il codice restituito per una procedura, utilizzare l'istruzione RETURN. Come per i parametri OUTPUT, è necessario salvare il codice restituito in una variabile quando la procedura viene eseguita per utilizzare il valore del codice restituito nel programma chiamante. La variabile `@result` di assegnazione del tipo `int` di dati, ad esempio, viene utilizzata per archiviare il codice restituito `my_proc`dalla procedura, ad esempio:  
   
 ```  
 DECLARE @result int;  
@@ -254,11 +254,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [PRINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
- [SET @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
+ [DICHIARARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [STAMPA &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
+ [IMPOSTA @local_variable &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
  [Cursori](../cursors.md)   
- [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)   
+ [RETURN &#40;&#41;Transact-SQL](/sql/t-sql/language-elements/return-transact-sql)   
  [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)  
   
   

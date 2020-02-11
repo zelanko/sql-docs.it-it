@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989071"
 ---
 # <a name="filter-published-data"></a>Filtro dei dati pubblicati
@@ -72,14 +72,14 @@ ms.locfileid: "62989071"
     > [!NOTE]  
     >  Nelle pubblicazioni transazionali i filtri di riga comportano un notevole aumento dell'overhead in quanto la clausola di filtro per l'articolo viene valutata per ogni riga del log di una tabella pubblicata per stabilire se deve essere replicata. È consigliabile evitare l'uso dei filtri di riga nelle pubblicazioni transazionali se ogni nodo di replica può supportare il carico completo dei dati e se il set di dati complessivo è relativamente ridotto.  
   
--   Con la replica di tipo merge, utilizzare i filtri di riga con parametri anziché creare più pubblicazioni con filtri di riga statici. Per altre informazioni, vedere [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Con la replica di tipo merge, utilizzare i filtri di riga con parametri anziché creare più pubblicazioni con filtri di riga statici. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Per definire o modificare un filtro di riga statico, vedere [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
 ## <a name="column-filters"></a>Filtri colonne  
  Nella figura seguente viene illustrata una pubblicazione in cui la colonna C viene esclusa tramite un filtro.  
   
- ![Filtri di colonna](../media/repl-17.gif "Filtri di colonna")  
+ ![Applicazioni filtri alle colonne](../media/repl-17.gif "Applicazioni filtri alle colonne")  
   
  È inoltre possibile utilizzare contemporaneamente il filtro di riga e di colonna, come illustrato di seguito.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62989071"
 |Tutte le colonne di una pubblicazione di tipo merge SQL Server 7.0|Nelle pubblicazioni di tipo merge SQL Server 7.0 non è possibile filtrare le colonne.|  
 |Timestamp|Pubblicazioni snapshot o transazionali SQL Server 7.0 che consentono sottoscrizioni aggiornabili|  
   
- <sup>1</sup> se si pubblica una tabella in una pubblicazione di tipo merge e tale tabella contiene già una colonna del tipo di dati `uniqueidentifier` con il `ROWGUIDCOL` impostata la proprietà della replica può usare questa colonna invece di creare una colonna aggiuntiva denominata **rowguid**. In questo caso è necessario pubblicare la colonna esistente.  
+ <sup>1</sup> se si pubblica una tabella in una pubblicazione di tipo merge e tale tabella contiene già una colonna di tipo `uniqueidentifier` di dati `ROWGUIDCOL` con la proprietà impostata, la replica può usare questa colonna invece di creare una colonna aggiuntiva denominata **rowguid**. In questo caso è necessario pubblicare la colonna esistente.  
   
  Per definire o modificare un filtro colonne, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62989071"
   
 -   La replica transazionale consente di replicare una vista indicizzata come vista o come tabella. Se la vista viene replicata come tabella, non sarà possibile filtrare le colonne dalla tabella.  
   
- I filtri di riga non sono progettati per funzionare nei database. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata intenzionalmente l'esecuzione di `sp_replcmds` (in cui vengono eseguiti i filtri) al proprietario del database (`dbo`). Al `dbo` non sono associati privilegi tra database. Grazie all'aggiunta di CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], tramite la logica `sp_replcmds` le tabelle di rilevamento delle modifiche vengono popolate con le informazioni che possono essere restituite all'utente e su cui quest'ultimo può eseguire una query. Per motivi di sicurezza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limitata l'esecuzione di questa logica in modo che un malintenzionato `dbo` non possa rubare il percorso di esecuzione. Ad esempio, un `dbo` malintenzionato potrebbe aggiungere trigger nelle tabelle CDC che quindi verrebbero eseguite nel contesto della chiamata a `sp_replcmds` da parte dell'utente, in questo caso l'agente di lettura log.  Se all'account con cui l'agente è in esecuzione sono associati privilegi superiori, il `dbo` malintenzionato potrebbe tentare l'escalation dei suoi privilegi.  
+ I filtri di riga non sono progettati per funzionare nei database. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene limitata intenzionalmente l'esecuzione di `sp_replcmds` (in cui vengono eseguiti i filtri) al proprietario del database (`dbo`). Al `dbo` non sono associati privilegi tra database. Grazie all'aggiunta di CDC (Change Data Capture) in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], tramite la logica `sp_replcmds` le tabelle di rilevamento delle modifiche vengono popolate con le informazioni che possono essere restituite all'utente e su cui quest'ultimo può eseguire una query. Per motivi di sicurezza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , limita l'esecuzione di questa logica in modo che un malintenzionato `dbo` non possa rubare questo percorso di esecuzione. Ad esempio, un `dbo` malintenzionato potrebbe aggiungere trigger nelle tabelle CDC che quindi verrebbero eseguite nel contesto della chiamata a `sp_replcmds` da parte dell'utente, in questo caso l'agente di lettura log.  Se all'account con cui l'agente è in esecuzione sono associati privilegi superiori, il `dbo` malintenzionato potrebbe tentare l'escalation dei suoi privilegi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Pubblicare dati e oggetti di database](publish-data-and-database-objects.md)  

@@ -1,5 +1,5 @@
 ---
-title: Gli elementi figlio (MDX) | Microsoft Docs
+title: Elementi figlio (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016801"
 ---
 # <a name="children-mdx"></a>Children (MDX)
@@ -31,8 +31,8 @@ Member_Expression.Children
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Note  
- Il **figli** funzione restituisce un set disposto in ordine naturale contenente gli elementi figlio di un membro specificato. Se non esistono membri figlio del membro specificato, la funzione restituisce un set vuoto.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Children** restituisce un set ordinato in modo naturale che contiene gli elementi figlio di un membro specificato. Se non esistono membri figlio del membro specificato, la funzione restituisce un set vuoto.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono restituiti i figli del membro United States della gerarchia Geography nella dimensione Geography.  
@@ -42,7 +42,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- L'esempio seguente restituisce tutti i membri il **misure** dimensione sull'asse delle colonne, inclusi tutti i membri calcolati e il set di tutti gli elementi figlio del `[Product].[Model Name]` gerarchia sull'asse delle righe dell'attributo dal **Adventure Works** cubo.  
+ Nell'esempio seguente vengono restituiti tutti i membri della dimensione **measures** sull'asse delle colonne, inclusi tutti i membri calcolati e il set di tutti gli `[Product].[Model Name]` elementi figlio della gerarchia dell'attributo sull'asse delle righe dal cubo **Adventure Works** .  
   
 ```  
 SELECT  
@@ -55,9 +55,9 @@ FROM
   
 |Versione|Cronologia|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Contenuto modificato:**<br /> -Aggiornamento sintassi e sugli argomenti per migliorarne la chiarezza.<br /><br /> -Aggiunta di esempi aggiornati.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Contenuto modificato:**<br /> -Argomenti e sintassi aggiornati per migliorare la chiarezza.<br /><br /> -Sono stati aggiunti esempi aggiornati.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

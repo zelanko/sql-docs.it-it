@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015702"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Aggiunta di colonne a query (Visual Database Tools)
@@ -34,13 +34,13 @@ ms.locfileid: "63015702"
   
 -   Nel **riquadro Diagramma**selezionare la casella di controllo accanto alla colonna da includere.  
   
-     oppure  
+     -oppure-  
   
 -   Nel **riquadro Criteri**spostarsi sulla prima riga vuota della griglia, fare clic sul campo nella colonna **Colonna** e selezionare un nome di colonna dall'elenco a discesa.  
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Per aggiungere tutte le colonne di una tabella o di un oggetto con valori di tabella  
   
--   Nel **riquadro Diagramma**, selezionare la casella di controllo accanto a  **\*(tutte le colonne)** .  
+-   Nel **riquadro diagramma**selezionare la casella di controllo accanto a ** \*(tutte le colonne)**.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Per aggiungere tutte le colonne per tutte le tabelle e gli oggetti con struttura di tabella  
   
@@ -51,10 +51,10 @@ ms.locfileid: "63015702"
 3.  Nella finestra Proprietà fare clic su **Tutte le colonne** e scegliere **Sì** o **No** dall'elenco a discesa.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rimuovere colonne dai risultati di Query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Rimuovere colonne dai risultati della query &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Rimuovere colonne da query &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
  [Specificare i criteri di ricerca &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Riepilogo dei risultati di Query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Riepilogare i risultati delle query &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

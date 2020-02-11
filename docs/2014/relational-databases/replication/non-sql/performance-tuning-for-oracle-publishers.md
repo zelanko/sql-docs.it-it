@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022231"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Ottimizzazione delle prestazioni per i server di pubblicazione Oracle
@@ -24,7 +24,7 @@ ms.locfileid: "63022231"
   
  Sono inoltre disponibili due opzioni per i server di pubblicazione Oracle relative alle prestazioni:  
   
--   Specifica l'opzione di pubblicazione appropriata: Oracle o Oracle Gareway.  
+-   Impostazione dell'opzione di pubblicazione appropriata: Oracle o Oracle Gateway.  
   
 -   Configurazione del processo del set di transazioni in modo che le modifiche vengano elaborate sul server di pubblicazione a intervalli appropriati.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "63022231"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](oracle-publishing-overview.md)  
+ [Panoramica della pubblicazione Oracle](oracle-publishing-overview.md)  
   
   

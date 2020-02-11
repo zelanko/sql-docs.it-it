@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917728"
 ---
 # <a name="create-a-database-mail-account"></a>Creare un account di Posta elettronica database.
@@ -25,9 +25,9 @@ ms.locfileid: "62917728"
   
 -   **Prima di iniziare:**  [Prerequisiti](#Prerequisites)  
   
--   **Per creare Account di posta elettronica Database, utilizzando:**  [Configurazione guidata Posta elettronica database](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per creare un account di Posta elettronica database usando:**  [Configurazione guidata Posta elettronica database](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Passaggi successivi per configurare la posta elettronica Database](#FollowUp)  
+-   **Completamento:**  [Passaggi successivi per configurare Posta elettronica database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62917728"
   
 -   Per completare la creazione del nuovo account, rivedere le azioni da eseguire nella pagina **Completamento procedura guidata** quindi fare clic su **Fine** .  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per creare un account di Posta elettronica database utilizzando Transact-SQL**  
   
  Eseguire la stored procedure **msdb.dbo.sysmail_add_account_sp** per creare l'account, specificando le seguenti informazioni:  
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: Passaggi successivi alla configurazione di posta elettronica Database  
+##  <a name="FollowUp"></a> Completamento: Passaggi successivi per configurare Posta elettronica database  
   
 -   [Creare un profilo di Posta elettronica database](create-a-database-mail-profile.md)  
   

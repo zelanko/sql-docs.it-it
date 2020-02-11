@@ -1,5 +1,5 @@
 ---
-title: Creazione di oggetti di Database con Common Language Runtime (CLR) Integration | Microsoft Docs
+title: Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919251"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Compilazione di oggetti di database con l'integrazione con CLR (Common Language Runtime)
-  È possibile compilare oggetti di database tramite il [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definito "routine CLR". Queste routine includono gli elementi seguenti:  
+  È possibile creare oggetti di database utilizzando [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'oggetto definito "routine CLR". Queste routine includono gli elementi seguenti:  
   
 -   Funzioni definite dall'utente con valori scalari  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62919251"
   
  Le routine CLR hanno la stessa struttura in codice gestito. Viene eseguito il mapping di tali routine a metodi pubblici e statici (condivisi in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET) di una classe. Oltre alle routine, è possibile definire tipi definiti dall'utente e funzioni di aggregazione definite dall'utente utilizzando .NET Framework. Viene eseguito il mapping dei tipi definiti dall'utente (UDT) e delle aggregazioni definite dall'utente a intere classi di .NET Framework.  
   
- Ogni tipo di routine .NET Framework ha un [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] che il [!INCLUDE[tsql](../../../includes/tsql-md.md)] equivalente può essere utilizzato. Le funzioni scalari definite dall'utente, ad esempio, possono essere utilizzate in qualsiasi espressione scalare. Una funzione con valori di tabella può essere utilizzata in qualsiasi clausola FROM. Una procedura può essere richiamata in un'istruzione EXEC o da un'applicazione client.  
+ Ogni tipo di .NET Framework routine dispone di [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] un oggetto [!INCLUDE[tsql](../../../includes/tsql-md.md)] che può essere utilizzato dall'oggetto equivalente. Le funzioni scalari definite dall'utente, ad esempio, possono essere utilizzate in qualsiasi espressione scalare. Una funzione con valori di tabella può essere utilizzata in qualsiasi clausola FROM. Una procedura può essere richiamata in un'istruzione EXEC o da un'applicazione client.  
   
 > [!NOTE]  
 >  L'esecuzione di un oggetto CLR (funzione definita dall'utente, tipo definito dall'utente o trigger) sul Common Language Runtime può avvenire su più thread (piano parallelo), se il Query Optimizer decide che è vantaggioso. Tuttavia, se una funzione definita dall'utente accede ai dati, l'esecuzione sarà su un piano seriale. Anche in caso di esecuzione in una versione server precedente a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] e se in una funzione definita dall'utente sono contenuti parametri LOB o valori restituiti, l'esecuzione deve essere su un piano seriale.  
@@ -62,7 +62,7 @@ ms.locfileid: "62919251"
  [Funzioni CLR definite dall'utente](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Viene descritto come implementare e utilizzare i diversi tipi di funzioni CLR, ovvero le funzioni con valori di tabella, le funzioni scalari e le funzioni di aggregazione definite dall'utente.  
   
- [Tipi definiti dall'utente per CLR](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipi CLR definiti dall'utente](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Viene descritto come implementare e utilizzare i tipi CLR definiti dall'utente.  
   
  [Stored procedure CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)  
@@ -72,6 +72,6 @@ ms.locfileid: "62919251"
  Viene descritto come implementare e utilizzare i trigger CLR.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Common Language Runtime &#40;CLR&#41; panoramica dell'integrazione](../common-language-runtime-integration-overview.md)  
+ [Panoramica dell'integrazione di Common Language Runtime &#40;CLR&#41;](../common-language-runtime-integration-overview.md)  
   
   

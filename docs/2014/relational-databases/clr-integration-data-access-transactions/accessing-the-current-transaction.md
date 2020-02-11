@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920013"
 ---
 # <a name="accessing-the-current-transaction"></a>Accesso alla transazione corrente
@@ -43,7 +43,7 @@ ms.locfileid: "62920013"
   
 -   La funzione o procedura gestita può restituire un valore utilizzando un parametro di output. La procedura [!INCLUDE[tsql](../../includes/tsql-md.md)] chiamante può controllare il valore restituito e, se necessario, eseguire `ROLLBACK TRANSACTION`.  
   
--   La funzione o procedura gestita può generare un'eccezione personalizzata. Il chiamante [!INCLUDE[tsql](../../includes/tsql-md.md)] può rilevare l'eccezione generata dalla procedura gestita o funzione in un blocco try/catch ed eseguire procedure `ROLLBACK TRANSACTION`.  
+-   La funzione o procedura gestita può generare un'eccezione personalizzata. La procedura [!INCLUDE[tsql](../../includes/tsql-md.md)] chiamante può intercettare l'eccezione generata dalla procedura o dalla funzione gestita in un blocco try/catch ed `ROLLBACK TRANSACTION`eseguire.  
   
 -   La funzione o procedura gestita può annullare la transazione corrente chiamando il metodo `Transaction.Rollback` se viene soddisfatta una determinata condizione.  
   
@@ -64,7 +64,7 @@ The context transaction which was active before entering user defined routine, t
  Anche questa eccezione è prevista e, per continuare l'esecuzione è necessario un blocco try/catch intorno all'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che esegue l'azione che attiva il trigger. Nonostante le due eccezioni generate, viene eseguito il rollback della transazione e le modifiche non vengono sottoposte a commit.  
   
 ### <a name="example"></a>Esempio  
- Di seguito è riportato un esempio di transazione sottoposta a rollback da una procedura gestita mediante il metodo `Transaction.Rollback`. Si noti il blocco try/catch intorno al metodo `Transaction.Rollback` nel codice gestito. Lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un assembly e una stored procedure gestita. Tenere presente che il `EXEC uspRollbackFromProc` viene inserito in un blocco try/catch, in modo che viene rilevata l'eccezione generata quando la procedura gestita venga completata.  
+ Di seguito è riportato un esempio di transazione sottoposta a rollback da una procedura gestita mediante il metodo `Transaction.Rollback`. Si noti il blocco try/catch intorno al metodo `Transaction.Rollback` nel codice gestito. Lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un assembly e una stored procedure gestita. Tenere presente che l' `EXEC uspRollbackFromProc` istruzione viene sottoposta a incapsulamento in un blocco try/catch, in modo che venga rilevata l'eccezione generata al termine dell'esecuzione della procedura gestita.  
   
 ```csharp  
 using System;  

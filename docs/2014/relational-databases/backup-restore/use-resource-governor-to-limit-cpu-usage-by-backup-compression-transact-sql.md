@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920794"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utilizzo di Resource Governor per limitare l'utilizzo della CPU da parte della compressione dei backup (Transact-SQL)
@@ -76,7 +76,7 @@ ms.locfileid: "62920794"
   
      Per altre informazioni, vedere [GRANT - autorizzazioni per entità di database &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-principal-permissions-transact-sql).  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Esempio a: Impostazione di un account di accesso e di un utente (Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>Esempio A: Impostazione di un account di accesso e di un utente (Transact-SQL)  
  L'esempio seguente è rilevante solo se si sceglie di creare un nuovo account di accesso e un nuovo utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire backup con priorità bassa. In alternativa, è possibile utilizzare un account di accesso e un utente esistenti, se appropriati.  
   
 > [!IMPORTANT]  
@@ -124,7 +124,7 @@ GO
   
  **Per configurare Resource Governor (SQL Server Management Studio)**  
   
--   [Configurare Resource Governor utilizzando un modello](../resource-governor/configure-resource-governor-using-a-template.md)  
+-   [Configurare Resource Governor usando un modello](../resource-governor/configure-resource-governor-using-a-template.md)  
   
 -   [Creare un pool di risorse](../resource-governor/create-a-resource-pool.md)  
   
@@ -183,7 +183,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Esempio b: Configurazione di Resource Governor (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Esempio B: Configurazione di Resource Governor (Transact-SQL)  
  Nell'esempio seguente vengono effettuati i passaggi seguenti all'interno di un'unica transazione:  
   
 1.  Creazione del pool di risorse `pMAX_CPU_PERCENT_20` .  
@@ -261,7 +261,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> Compressione di backup utilizzando una sessione con utilizzo della CPU limitato  
  Per creare un backup compresso in una sessione con un utilizzo massimo della CPU limitato, accedere come l'utente specificato nella funzione di classificazione. Nel comando di backup specificare WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) o selezionare **Comprimi backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Per creare un backup compresso del database, vedere [Creazione di un backup completo del database &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Esempio c: Creazione di un backup compresso (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Esempio C: Creazione di un backup compresso (Transact-SQL)  
  Nell'esempio seguente [BACKUP](/sql/t-sql/statements/backup-transact-sql) viene creato un backup compresso completo del database [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] nel nuovo file di backup formattato `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
 ```sql  

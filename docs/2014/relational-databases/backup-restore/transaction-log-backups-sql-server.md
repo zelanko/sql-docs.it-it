@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920680"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backup di log delle transazioni (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62920680"
   
  **Contenuto dell'argomento**  
   
--   [Funzionamento di una sequenza di backup del Log](#LogBackupSequence)  
+-   [Modalità di funzionamento di una sequenza di backup del log](#LogBackupSequence)  
   
 -   [Indicazioni](#Recommendations)  
   
@@ -37,20 +37,20 @@ ms.locfileid: "62920680"
   
 -   [Contenuto correlato](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> Funzionamento di una sequenza di backup del Log  
+##  <a name="LogBackupSequence"></a>Modalità di funzionamento di una sequenza di backup del log  
  La sequenza della *catena di log* dei backup del log delle transazioni è indipendente dai backup dei dati. Si consideri ad esempio la sequenza di eventi seguente:  
   
-|Time|Evento|  
+|Tempo|Event|  
 |----------|-----------|  
 |8\.00|Backup del database|  
-|12\.00|Backup del log delle transazioni|  
-|16\.00|Backup del log delle transazioni|  
-|18\.00|Backup del database|  
-|20\.00|Backup del log delle transazioni|  
+|12.00|Backup del log delle transazioni|  
+|16.00|Backup del log delle transazioni|  
+|18.00|Backup del database|  
+|20.00|Backup del log delle transazioni|  
   
  Il backup del log delle transazioni creato alle 20.00 contiene record del log delle transazioni a partire dalle 16.00 fino alle 20.00, il che include l'ora in cui è stato creato il backup del database completo, ovvero le 18.00. La sequenza di backup del log delle transazioni è continua dal backup del database completo iniziale creato alle 8.00 all'ultimo backup del log delle transazioni creato alle 20.00. Per informazioni su come applicare i backup del log, vedere l'esempio in [Applicare backup log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-##  <a name="Recommendations"></a> Indicazioni  
+##  <a name="Recommendations"></a> Raccomandazioni  
   
 -   Se un log delle transazioni è danneggiato, il lavoro eseguito dopo il backup valido più recente viene perso. Pertanto è consigliabile inserire i file di log in una risorsa di archiviazione con tolleranza di errore.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "62920680"
  Per pianificare i processi di backup, vedere [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Log delle transazioni &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [Backup e ripristino di database SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Backup della parte finale del log &#40;SQL Server&#41;](tail-log-backups-sql-server.md)   
- [Applicare backup log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)  
+ [Applicare backup di log delle transazioni &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023908"
 ---
-# <a name="mssqleng024070"></a>MSSQL_ENG024070
+# <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
 ## <a name="message-details"></a>Dettagli messaggio  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63023908"
 ## <a name="explanation"></a>Spiegazione  
  Questo errore generale può essere generato indipendentemente dal fatto che la replica venga utilizzata o meno. Per un server di una topologia di replica, l'errore viene normalmente generato in seguito alla modifica dell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite Gestione controllo servizi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, anziché tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando si tenta di eseguire un processo di agente dopo aver modificato l'account di servizio, il processo potrebbe avere esito negativo e restituire un messaggio di errore simile al seguente:  
   
- "Eseguito come utente: \<UserAccount>. Sottosistema Snapshot repliche: agente \<AgentName > non è riuscita. Eseguito come utente: \<UserAccount>. Il client non dispone di un privilegio necessario. Passaggio non riuscito. `[SQLSTATE 42000] (Error 14151)` (Indici per tabelle con ottimizzazione per la memoria). Passaggio non riuscito."  
+ "Executed as user \<: AccountUtente>. Replica-sottosistema snapshot repliche: \<Agent agentname> non riuscito. Eseguita come utente: \<AccountUtente>. Il client non dispone di un privilegio necessario. Passaggio non riuscito. `[SQLSTATE 42000] (Error 14151)`. Passaggio non riuscito."  
   
  Questo problema si verifica perché Gestione controllo servizi di Windows non concede le autorizzazioni necessarie al nuovo account di servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

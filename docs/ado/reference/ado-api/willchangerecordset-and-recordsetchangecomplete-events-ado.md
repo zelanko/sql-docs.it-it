@@ -20,14 +20,14 @@ ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4e2f1485c18ce1fecc76d4eb23aa4132d85329
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938680"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventi WillChangeRecordset e RecordsetChangeComplete (ADO)
-Il **WillChangeRecordset** eventi viene chiamato prima che un'operazione in sospeso viene modificato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il **RecordsetChangeComplete** eventi viene chiamato dopo la **Recordset** è stato modificato.  
+L'evento **WillChangeRecordset** viene chiamato prima che un'operazione in sospeso modifichi il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). L'evento **RecordsetChangeComplete** viene chiamato dopo che il **Recordset** è stato modificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,31 +39,31 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parametri  
  *adReason*  
- Un' [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) valore che specifica il motivo di questo evento. Il valore può essere **adRsnRequery**, **adRsnResynch**, **adRsnClose**, **o adRsnOpen**.  
+ Valore [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) che specifica il motivo di questo evento. Il valore può essere **adRsnRequery**, **adRsnResynch**, **adRsnClose**, **adRsnOpen**.  
   
  *adStatus*  
- Un' [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valore dello stato.  
+ Valore di stato di [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
- Quando **WillChangeRecordset** viene chiamato, questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento ha esito positivo. È impostato su **adStatusCantDeny** se questo evento non è possibile richiedere l'annullamento dell'operazione in sospeso.  
+ Quando viene chiamato **WillChangeRecordset** , questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento è riuscita. Viene impostato su **adStatusCantDeny** se questo evento non può richiedere l'annullamento dell'operazione in sospeso.  
   
- Quando **RecordsetChangeComplete** viene chiamato, questo parametro è impostato su **adStatusOK** se è stata completata correttamente, l'operazione che ha causato l'evento **adStatusErrorsOccurred** se l'operazione non è riuscita, oppure **adStatusCancel** se l'operazione associata accettate in precedenza **WillChangeRecordset** evento è stato annullato.  
+ Quando viene chiamato **RecordsetChangeComplete** , questo parametro è impostato su **adStatusOK** se l'operazione che ha causato l'evento è riuscita, **adStatusErrorsOccurred** se l'operazione ha esito negativo o **AdStatusCancel** se l'operazione associata all'evento **WillChangeRecordset** precedentemente accettato è stata annullata.  
   
- Prima di **WillChangeRecordset** restituisce un valore di questo parametro impostato su **adStatusCancel** per richiedere l'annullamento dell'operazione in sospeso o impostare questo parametro su adStatusUnwantedEvent per evitare successivi notifiche.  
+ Prima della restituzione di **WillChangeRecordset** , impostare questo parametro su **adStatusCancel** per richiedere l'annullamento dell'operazione in sospeso o impostare questo parametro su adStatusUnwantedEvent per impedire le notifiche successive.  
   
- Prima di **WillChangeRecordset** oppure **RecordsetChangeComplete** restituisce un valore, impostare questo parametro **adStatusUnwantedEvent** per evitare le notifiche successivi.  
+ Prima della restituzione di **WillChangeRecordset** o **RecordsetChangeComplete** , impostare questo parametro su **adStatusUnwantedEvent** per impedire le notifiche successive.  
   
  *pError*  
- Un' [errore](../../../ado/reference/ado-api/error-object.md) oggetto. Viene descritto l'errore generato se il valore di *adStatus* viene **adStatusErrorsOccurred**; in caso contrario, non è impostata.  
+ Oggetto [Error](../../../ado/reference/ado-api/error-object.md) . Viene descritto l'errore che si è verificato se il valore di *adStatus* è **adStatusErrorsOccurred**; in caso contrario, non è impostato.  
   
  *pRecordset*  
- Oggetto **Recordset** oggetto. Il **Recordset** per cui si è verificato questo evento.  
+ Oggetto **Recordset** . **Recordset** per il quale si è verificato l'evento.  
   
-## <a name="remarks"></a>Note  
- Oggetto **WillChangeRecordset** o **RecordsetChangeComplete** evento può verificarsi a causa della **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) o[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodi.  
+## <a name="remarks"></a>Osservazioni  
+ È possibile che si verifichi un evento **WillChangeRecordset** o **RecordsetChangeComplete** a causa della [Requery](../../../ado/reference/ado-api/requery-method.md) o dei metodi [aperti](../../../ado/reference/ado-api/open-method-ado-recordset.md) del **Recordset** .  
   
- Se il provider non supporta i segnalibri, un **RecordsetChange viene generata** notifica degli eventi si verifica ogni volta che le nuove righe vengono recuperate dal provider. La frequenza dell'evento dipende il **RecordsetCacheSize** proprietà.  
+ Se il provider non supporta i segnalibri, viene generata una notifica di evento **RecordsetChange** ogni volta che le nuove righe vengono recuperate dal provider. La frequenza di questo evento dipende dalla proprietà **RecordsetCacheSize** .  
   
- È necessario impostare il **adStatus** parametro per **adStatusUnwantedEvent** per ogni possibile **adReason** valore per arrestare completamente la notifica degli eventi per qualsiasi evento che include un' **adReason** parametro.  
+ È necessario impostare il parametro **adStatus** su **adStatusUnwantedEvent** per ogni possibile valore **adReason** per arrestare completamente la notifica degli eventi per qualsiasi evento che includa un parametro **adReason** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

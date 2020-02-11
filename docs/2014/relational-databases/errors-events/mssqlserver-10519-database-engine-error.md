@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bb9c6f7fddc9ba0d4430b42ba5472a59c29e3cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916236"
 ---
-# <a name="mssqlserver10519"></a>MSSQLSERVER_10519
+# <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62916236"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|Testo del messaggio|Impossibile creare la Guida di piano ' %. \*ls' perché gli hint specificati nelle `@hints` non possono essere applicati all'istruzione specificata da `@stmt` o `@statement_start_offset`. Verificare che gli hint possano essere applicati all'istruzione.|  
+|Testo del messaggio|Impossibile creare la guida di piano '%.\*ls' perché gli hint specificati in `@hints` non possono essere applicati all'istruzione specificata da `@stmt` o `@statement_start_offset`. Verificare che gli hint possano essere applicati all'istruzione.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Gli hint specificati in `@hints` non possono essere applicati all'istruzione specificata da `@stmt` o `@statement_start_offset`.  
@@ -39,7 +39,7 @@ ms.locfileid: "62916236"
  Specificare hint che possono essere applicati all'istruzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Guide di piano](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

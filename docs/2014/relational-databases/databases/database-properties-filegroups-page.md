@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917118"
 ---
 # <a name="database-properties-filegroups-page"></a>Proprietà database (pagina Filegroup)
@@ -31,7 +31,7 @@ ms.locfileid: "62917118"
  I filegroup ottimizzati per la memoria sono necessari per consentire ai database di contenere una o più tabelle ottimizzate per la memoria.  
   
 ## <a name="row-and-filestream-data-filegroup-options"></a>Opzioni di filegroup di righe e di dati FILESTREAM  
- **Name**  
+ **Nome**  
  Consente di immettere il nome del filegroup.  
   
  **File**  
@@ -43,20 +43,20 @@ ms.locfileid: "62917118"
  **Default**  
  Consente di impostare il filegroup come filegroup predefinito. È possibile avere un filegroup predefinito per le righe e un filegroup predefinito per i dati FILESTREAM.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere una nuova riga vuota alla griglia in cui sono elencati i filegroup per il database.  
   
  **Rimuovi**  
  Consente di rimuovere il filegroup selezionato dalla griglia.  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>Opzioni di filegroup di dati con ottimizzazione per la memoria  
- **Name**  
+ **Nome**  
  Consente di immettere il nome del filegroup ottimizzato per la memoria.  
   
  **File FILESTREAM**  
  Visualizza il numero di file (contenitori) nel filegroup di dati ottimizzato per la memoria. È possibile aggiungere contenitori nella pagina **File** .  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere una nuova riga vuota alla griglia in cui sono elencati i filegroup per il database.  
   
  **Rimuovi**  

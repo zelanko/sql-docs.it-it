@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074016"
 ---
 # <a name="implement-jobs"></a>Implementazione di processi
@@ -35,13 +35,13 @@ ms.locfileid: "63074016"
 |-|-|  
 |**Descrizione**|**Argomento**|  
 |Contiene informazioni sulla creazione dei processi e sull'assegnazione della proprietà.|[Crea processi](create-jobs.md)|  
-|Contiene informazioni sull'organizzazione dei processi in categorie.|[Organizzare processi](organize-jobs.md)|  
+|Contiene informazioni sull'organizzazione dei processi in categorie.|[organizzare processi](organize-jobs.md)|  
 |Contiene informazioni sui diversi tipi di passaggi di processo che è possibile creare e sulla rispettiva modalità di gestione.|[Gestire passaggi di processo](manage-job-steps.md)|  
 |Contiene informazioni sulla definizione del momento di avvio dei processi e sulla relativa frequenza di esecuzione.|[Creazione e collegamento di pianificazioni ai processi](create-and-attach-schedules-to-jobs.md)|  
 |Sono incluse informazioni sull'esecuzione manuale dei processi (senza pianificazione).|[Esecuzione di processi](run-jobs.md)|  
 |Sono incluse informazioni sulla configurazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per rispondere ai processi. È possibile configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio, in modo da notificare agli amministratori il completamento dei processi.|[Specifica delle risposte ai processi](specify-job-responses.md)|  
 |Contiene informazioni sulla visualizzazione dei processi esistenti e sulla cronologia processo eseguiti, nonché sulle modalità di modifica dei processi.|[Visualizzare o modificare processi](view-or-modify-jobs.md)|  
-|Contiene informazioni sulla modalità di eliminazione dei processi.|[Eliminare processi](delete-jobs.md)|  
+|Contiene informazioni sulla modalità di eliminazione dei processi.|[eliminare processi](delete-jobs.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione della sicurezza di SQL Server Agent](implement-sql-server-agent-security.md)  

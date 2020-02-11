@@ -15,17 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022663"
 ---
 # <a name="new-agent-profile"></a>Nuovo profilo agente
   La finestra di dialogo **Nuovo profilo agente** consente di creare un nuovo profilo. I nuovi profili sono sempre basati su profili esistenti, ma possono essere modificati in base ai requisiti delle applicazioni. Dopo aver creato un profilo, è possibile applicarlo a processi agente esistenti e creati in un secondo momento nella finestra di dialogo **Profili agente** . I valori dei parametri degli agenti possono essere modificati nella finestra di dialogo \<Proprietà **NomeProfiloAgente>** .  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di immettere un nome per il profilo.  
   
  **Descrizione**  
@@ -40,7 +40,7 @@ ms.locfileid: "63022663"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [Agente merge repliche](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [Agente di lettura coda repliche](agents/replication-queue-reader-agent.md)  
   

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033503"
 ---
 # <a name="schedule-the-policies"></a>Pianificazione criteri
@@ -22,23 +22,23 @@ ms.locfileid: "63033503"
   
 ### <a name="to-schedule-the-best-practices-policies"></a>Per pianificare i criteri per procedure consigliate  
   
-1.  In Esplora oggetti, espandere **Management**, espandere **gestione dei criteri**, espandere **criteri**, fare doppio clic su un criterio di procedure ottimo e quindi fare clic su  **Proprietà**.  
+1.  In Esplora oggetti espandere **gestione**, **Gestione criteri**e **criteri, fare**clic con il pulsante destro del mouse su criteri per procedure consigliate e quindi scegliere **Proprietà**.  
   
     > [!NOTE]  
-    >  In alternativa, per vedere facilmente quali criteri sono associati alle procedure consigliate e ordinare le categorie delle procedure consigliate, espandere **Management**, espandere **gestione dei criteri**, quindi fare clic su **i criteri**. Scegliere **Dettagli Esplora oggetti** dal menu **Visualizza**. Nel **dettagli Esplora oggetti** riquadro, fare clic sui **categoria** intestazione per ordinare i criteri in base alla categoria. I criteri per procedure consigliate migliori hanno il prefisso **procedure consigliate Microsoft**. Fare doppio clic sui criteri che si desidera configurare e quindi fare clic su **proprietà**.  
+    >  In alternativa, per individuare facilmente i criteri associati alle procedure consigliate e per ordinare le categorie procedure consigliate, espandere **gestione**, **Gestione criteri**, quindi fare clic su **criteri**. Scegliere **Dettagli Esplora oggetti** dal menu **Visualizza**. Nel riquadro **dettagli Esplora oggetti** fare clic sull'intestazione **categoria** per ordinare i criteri per categoria. I criteri per procedure consigliate prevedono il prefisso **Microsoft Best Practices**. Fare clic con il pulsante destro del mouse sui criteri che si desidera configurare, quindi scegliere **Proprietà**.  
   
-2.  Nel **generali** pagina della **Apri criteri** nella finestra di dialogo il **modalità di valutazione** elenco, fare clic su **su pianificazione**.  
+2.  Nella pagina **generale** della finestra di dialogo **Apri criteri** , nell'elenco **modalità di valutazione** , fare clic **su pianificazione**.  
   
-3.  Accanto al **pianificazione** fare clic su **Scegli** per specificare una pianificazione esistente oppure fare clic su **New** per creare una nuova pianificazione.  
+3.  Accanto alla casella **pianificazione** fare clic su **Seleziona** per specificare una pianificazione esistente oppure fare clic su **nuova** per creare una nuova pianificazione.  
   
-4.  Dopo aver configurato una pianificazione, è possibile selezionare i **abilitato** casella di controllo nella parte superiore della pagina per abilitare i criteri pianificati.  
+4.  Dopo aver configurato una pianificazione, è possibile selezionare la casella di controllo **abilitato** nella parte superiore della pagina per abilitare i criteri pianificati.  
   
 5.  Ripetere i passaggi da 1 a 4 per tutti i criteri che si desidera pianificare.  
   
     > [!NOTE]  
-    >  Per visualizzare i risultati di valutazione dopo l'esecuzione di criteri pianificati, aprire il log Cronologia criteri nell'istanza di destinazione. Per aprire il log, fare doppio clic su **criteri di gestione**, quindi fare clic su **Visualizza cronologia**.  
+    >  Per visualizzare i risultati di valutazione dopo l'esecuzione di criteri pianificati, aprire il log Cronologia criteri nell'istanza di destinazione. Per aprire il log, fare clic con il pulsante destro del mouse su **Gestione criteri**, quindi scegliere **Visualizza cronologia**.  
   
-## <a name="summary"></a>Riepilogo  
+## <a name="summary"></a>Summary  
  I criteri pianificati sono stati configurati per essere eseguiti in un'istanza singola di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se si desidera distribuire i criteri pianificati in più istanze, continuare con la prossima attività in questa esercitazione.  
   
 ## <a name="next-steps"></a>Passaggi successivi  

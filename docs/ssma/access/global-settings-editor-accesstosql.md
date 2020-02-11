@@ -10,20 +10,20 @@ ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c57efc70353d3499096a2faceb55ce21037411
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986398"
 ---
 # <a name="global-settings-editor-accesstosql"></a>Impostazioni globali (Editor) (AccessToSQL)
-Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per specificare le impostazioni per finestre dell'editor di codice.  
+Utilizzare la pagina editor della finestra di dialogo **Impostazioni globali** per specificare le impostazioni per le finestre dell'editor di codice.  
   
-Per accedere a impostazioni dell'editor, scegliere il **degli strumenti** dal menu **impostazioni globali**, fare clic su **GUI** nella parte inferiore del riquadro a sinistra e quindi selezionare **Editor**.  
+Per accedere alle impostazioni dell'editor, scegliere **Impostazioni globali**dal menu **strumenti** , fare clic su **GUI** nella parte inferiore del riquadro sinistro, quindi selezionare **Editor**.  
   
 ## <a name="options"></a>Opzioni  
-**Visualizzare i numeri di riga nell'editor**  
-Per visualizzare i numeri di riga nelle finestre dell'editor di codice, selezionare **True**.  
+**Mostra i numeri di riga negli editor**  
+Per visualizzare i numeri di riga nelle finestre dell'editor di codice, selezionare **true**.  
   
-Se è selezionata una finestra dell'editor di codice quando si modifica questa impostazione, si potrebbe essere necessario selezionare di nuovo l'oggetto corrente e aggiornare la visualizzazione.  
+Se si seleziona una finestra dell'editor di codice quando si modifica questa impostazione, potrebbe essere necessario selezionare nuovamente l'oggetto corrente per aggiornare la visualizzazione.  
   

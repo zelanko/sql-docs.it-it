@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188749"
 ---
 # <a name="view-information-about-an-operator"></a>Visualizzazione delle informazioni relative a un operatore
-  In questo argomento viene descritta la procedura per visualizzare le infomazioni relative a un operatoe di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento viene descritto come visualizzare le informazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relative a un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] operatore di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)]in tramite o.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68188749"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
+ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire questo stored procedure. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68188749"
   
  Per informazioni dettagliate sulle autorizzazioni di questi ruoli, vedere [Ruoli di database predefiniti di SQL Server Agent](sql-server-agent-fixed-database-roles.md).  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-operator"></a>Per visualizzare le informazioni relative a un operatore  
   
@@ -66,17 +66,17 @@ ms.locfileid: "68188749"
   
 4.  Fare clic con il pulsante destro del mouse sull'operatore da visualizzare e selezionare **Proprietà**.  
   
-     Per altre informazioni sulle opzioni disponibili contenute nella finestra di dialogo _Proprietà_**nome_operatore** , vedere:  
+     Per ulteriori informazioni sulle opzioni disponibili contenute nella finestra di dialogo**proprietà** _operator_name_, vedere:  
   
-    -   [Proprietà operatore e operatore New &#40;pagina Generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Proprietà operatore e nuovo operatore &#40;pagina generale&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Proprietà operatore: Nuovo operatore &#40;pagina delle notifiche&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Proprietà operatore: pagina nuove notifiche operatore &#40;&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [Proprietà operatore &#40;pagina Cronologia&#41;](operator-properties-history-page.md)  
   
 5.  Al termine, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-view-information-about-an-operator"></a>Per visualizzare le informazioni relative a un operatore  
   
@@ -97,6 +97,6 @@ ms.locfileid: "68188749"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_help_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_help_operator &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
   
   

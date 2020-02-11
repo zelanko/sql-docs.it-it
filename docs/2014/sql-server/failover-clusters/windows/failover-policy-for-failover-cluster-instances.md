@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050085"
 ---
-# <a name="failover-policy-for-failover-cluster-instances"></a>Criteri di failover per istanze del cluster di failover
-  In un'istanza del cluster di failover (FCI, Failover Cluster Instance) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo un nodo può possedere il gruppo di risorse del cluster WSFC (Windows Server Failover Cluster) a un'ora specificata. Le richieste del client vengono servite tramite questo nodo nell'istanza FCI. In caso di errore e riavvio non eseguito, la proprietà del gruppo viene spostata in un altro nodo WSFC nell'istanza FCI. Questo processo viene chiamato failover. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta l'affidabilità di rilevamento dell'errore e offre criteri di failover flessibili.  
+# <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
+  In un'istanza del cluster di failover (FCI, Failover Cluster Instance) di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo un nodo può possedere il gruppo di risorse del cluster WSFC (Windows Server Failover Cluster) a un'ora specificata. Le richieste del client vengono servite tramite questo nodo nell'istanza FCI. In caso di errore e riavvio non eseguito, la proprietà del gruppo viene spostata in un altro nodo WSFC nell'istanza FCI. Questo processo viene chiamato failover. 
+  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta l'affidabilità di rilevamento dell'errore e offre criteri di failover flessibili.  
   
  Un'istanza FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dipende dal servizio WSFC sottostante per il rilevamento del failover. Pertanto, due meccanismi determinano il comportamento del failover per l'istanza FCI: la prima è la funzionalità di WSFC nativa e la seconda è la funzionalità aggiunta dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -33,28 +34,28 @@ ms.locfileid: "63050085"
 > [!IMPORTANT]  
 >  I failover automatici da e verso un'istanza FCI non sono consentiti in un gruppo di disponibilità AlwaysOn. I failover manuali da e verso un'istanza FCI sono consentiti in un gruppo di disponibilità AlwaysOn.  
   
-##  <a name="Concepts"></a> Panoramica dei criteri di failover  
+##  <a name="Concepts"></a>Panoramica dei criteri di failover  
  Il processo del failover si può essere suddiviso nei passaggi indicati di seguito.  
   
-1.  [Monitoraggio dello stato di integrità](failover-policy-for-failover-cluster-instances.md#monitor)  
+1.  [Monitorare lo stato di integrità](failover-policy-for-failover-cluster-instances.md#monitor)  
   
-2.  [Determinazione di errori](failover-policy-for-failover-cluster-instances.md#determine)  
+2.  [Determinazione degli errori](failover-policy-for-failover-cluster-instances.md#determine)  
   
 3.  [Risposta agli errori](failover-policy-for-failover-cluster-instances.md#respond)  
   
-###  <a name="monitor"></a> Monitoraggio dello stato di integrità  
+###  <a name="monitor"></a>Monitorare lo stato di integrità  
  Tre sono i tipi di stato di integrità che vengono monitorati per l'istanza FCI:  
   
 -   [Stato del servizio SQL Server](failover-policy-for-failover-cluster-instances.md#service)  
   
 -   [Velocità di risposta dell'istanza di SQL Server](failover-policy-for-failover-cluster-instances.md#instance)  
   
--   [Diagnostica dei componenti di SQL Server](failover-policy-for-failover-cluster-instances.md#component)  
+-   [Diagnostica componenti SQL Server](failover-policy-for-failover-cluster-instances.md#component)  
   
-####  <a name="service"></a> Stato del servizio SQL Server  
+####  <a name="service"></a>Stato del servizio SQL Server  
  Il servizio WSFC esegue il monitoraggio lo stato iniziale del servizio SQL Server sul nodo FCI attivo per rilevare quando viene arrestato il servizio SQL Server.  
   
-####  <a name="instance"></a> Velocità di risposta dell'istanza di SQL Server  
+####  <a name="instance"></a>Velocità di risposta dell'istanza di SQL Server  
  Durante l'avvio di SQL Server, il servizio WSFC utilizza la DLL risorse del motore di database di SQL Server per creare una nuova connessione a un thread separato utilizzata esclusivamente per il monitoraggio dello stato di integrità. In tal modo si assicura che l'istanza di SQL disponga delle risorse richieste per restituire lo stato di integrità durante il caricamento. Tramite questa connessione dedicata, SQL Server esegue la stored procedure di sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) in modalità ripetizione per restituire periodicamente lo stato di integrità dei componenti di SQL Server per la DLL risorse.  
   
  La DLL risorse determina la velocità di risposta dell'istanza di SQL utilizzando un timeout di controllo integrità. La proprietà HealthCheckTimeout consente di definire il tempo di attesa della DLL risorse per la stored procedure sp_server_diagnostics prima che venga stabilita la mancata risposta da parte dell'istanza di SQL al servizio WSFC. Questa proprietà è configurabile utilizzando T-SQL così come nello snap-in Gestione cluster di failover. Per altre informazioni, vedere [Configurazione delle impostazioni HealthCheckTimeout](configure-healthchecktimeout-property-settings.md). Di seguito viene descritta l'influenza di questa proprietà sulle impostazioni del timeout e dell'intervallo di ripetizione:  
@@ -65,7 +66,7 @@ ms.locfileid: "63050085"
   
 -   Se la connessione dedicata viene persa, la DLL risorse ritenterà la connessione all'istanza di SQL per il tempo specificato da HealthCheckTimeout prima che riporti al servizio WSFC che l'istanza SQL non risponde.  
   
-####  <a name="component"></a> Diagnostica dei componenti di SQL Server  
+####  <a name="component"></a>Diagnostica componenti SQL Server  
  La stored procedure di sistema sp_server_diagnostics raccoglie periodicamente i dati di diagnostica dei componenti sull'istanza di SQL. Le informazioni diagnostiche raccolte vengono visualizzate in una riga per ognuno dei componenti seguenti e passate al thread chiamante.  
   
 1.  sistema  
@@ -85,7 +86,7 @@ ms.locfileid: "63050085"
 > [!TIP]  
 >  La stored procedure sp_server_diagnostic viene utilizzata dalla tecnologia SQL Server AlwaysOn, ma è anche disponibile per essere usata da qualsiasi istanza di SQL Server per il rilevamento e la risoluzione dei problemi.  
   
-####  <a name="determine"></a> Determinazione di errori  
+####  <a name="determine"></a>Determinazione degli errori  
  La DLL risorse del motore di database di SQL Server determina se lo stato di integrità rilevato è una condizione di errore utilizzando la proprietà FailureConditionLevel. La proprietà FailureConditionLevel definisce quale stato integrità rilevato causa il riavvio o il failover. Sono disponibili più livelli di opzioni, da nessun riavvio o failover automatico a tutte le possibili condizioni di errore che comportano un riavvio o un failover automatico. Per altre informazioni su come configurare questa proprietà, vedere [Configurare le impostazioni della proprietà FailureConditionLevel](configure-failureconditionlevel-property-settings.md).  
   
  Le condizioni di errore vengono impostate in base a un ordine crescente. In ognuno dei livelli 1-5 sono incluse tutte le condizioni dei livelli precedenti oltre alle proprie condizioni specifiche. Pertanto, in ogni livello la probabilità di un failover o di un riavvio è maggiore. I livelli delle condizioni di errore sono descritti nella tabella seguente.  
@@ -103,8 +104,8 @@ ms.locfileid: "63050085"
   
  *Valore predefinito  
   
-####  <a name="respond"></a> Risposta agli errori  
- Una volta rilevata una o più condizioni di errore, il servizio WSFC risponde agli errori in base allo stato del quorum WSFC e alle impostazioni di riavvio e failover del gruppo di risorse di FCI. Se l'istanza FCI ha perso il quorum WSFC, l'intera istanza FCI viene portata offline e perde la disponibilità elevata. Se l'istanza FCI ancora mantiene il quorum WSFC, è possibile che il servizio WSFC risponda prima tentando di riavviare il nodo in errore e quindi eseguendo il failover se i tentativi del riavvio non riescono. Le impostazioni di riavvio e failover vengono configurate nello snap-in Gestione cluster di failover. Per altre informazioni su queste impostazioni, vedere [ \<risorsa > proprietà: Scheda Criteri](https://technet.microsoft.com/library/cc725685.aspx).  
+####  <a name="respond"></a>Risposta agli errori  
+ Una volta rilevata una o più condizioni di errore, il servizio WSFC risponde agli errori in base allo stato del quorum WSFC e alle impostazioni di riavvio e failover del gruppo di risorse di FCI. Se l'istanza FCI ha perso il quorum WSFC, l'intera istanza FCI viene portata offline e perde la disponibilità elevata. Se l'istanza FCI ancora mantiene il quorum WSFC, è possibile che il servizio WSFC risponda prima tentando di riavviare il nodo in errore e quindi eseguendo il failover se i tentativi del riavvio non riescono. Le impostazioni di riavvio e failover vengono configurate nello snap-in Gestione cluster di failover. Per ulteriori informazioni su queste impostazioni, vedere [ \<proprietà> risorse: scheda criteri](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Per altre informazioni, vedere [Modalità quorum WSFC e configurazione del voto &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Le proprietà degli oggetti, metodi ed eventi della dimensione | Microsoft Docs
+title: Proprietà, metodi ed eventi dell'oggetto Dimension | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,28 +13,28 @@ ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 86fb1c06f34f3c8c6688c234b8c2714cd61c089e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938527"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Dimension
-## <a name="propertiescollections"></a>Le proprietà e le raccolte  
+## <a name="propertiescollections"></a>Proprietà/raccolte  
  [Proprietà Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
   
- [Raccolta hierarchies](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+ [Raccolta Hierarchies](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
   
- [Nome proprietà](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Proprietà Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
  [Raccolta delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Proprietà UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName (proprietà)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Metodi  
  No.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

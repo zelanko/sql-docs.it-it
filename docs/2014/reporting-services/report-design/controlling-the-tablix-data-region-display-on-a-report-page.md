@@ -1,5 +1,5 @@
 ---
-title: Controllare la visualizzazione dell'area dati Tablix in una pagina del Report (Generatore Report e SSRS) | Microsoft Docs
+title: Controllo della visualizzazione dell'area dati Tablix in una pagina del report (Generatore report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6fd4b09947bc10a9e4e960ca1097f807a47c14f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106205"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controllo della visualizzazione dell'area dati Tablix in una pagina del report (Generatore report e SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66106205"
   
 -   **Visualizzazione di un messaggio quando non sono presenti dati**. Quando per un set di dati del report non esistono dati in fase di esecuzione, è possibile scrivere un messaggio personalizzato da visualizzare in sostituzione dell'area dati. Per altre informazioni, vedere [Impostazione di una proprietà NoDataMessage per un'area dati &#40;Generatore report e SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
--   **Nascondere i dati in modo condizionale**. Per controllare in modo condizionale se mostrare o nascondere parti di un'area dati o un'area dati, è possibile impostare la proprietà Hidden `True` o su un'espressione. Le espressioni possono includere riferimenti ai parametri di report. È inoltre possibile specificare un elemento Toggle in modo da consentire all'utente di visualizzare i dati di dettaglio. Per altre informazioni, vedere [Azione di drill-down &#40;Generatore report e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
+-   **Nascondere i dati in modo condizionale**. Per controllare in modo condizionale se visualizzare o nascondere un'area dati o parti di un'area dati, è possibile impostare la proprietà Hidden `True` su o su un'espressione. Le espressioni possono includere riferimenti ai parametri di report. È inoltre possibile specificare un elemento Toggle in modo da consentire all'utente di visualizzare i dati di dettaglio. Per altre informazioni, vedere [Azione di drill-down &#40;Generatore report e SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
   
 -   **Unione di celle.** È possibile combinare più celle contigue di una tabella in un'unica cella. Questa operazione viene denominata estensione su più colonne o unione di celle. Le celle possono essere combinate solo orizzontalmente o verticalmente. Quando si uniscono le celle, vengono mantenuti soltanto i dati della prima cella, mentre i dati delle altre celle vengono rimossi. Le celle unite possono essere nuovamente suddivise nelle colonne originali. Per altre informazioni, vedere [Unire le celle in un'area dati &#40;Generatore report e SSRS& #41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66106205"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Controllo della visualizzazione di gruppi di colonne e righe Tablix  
  Per controllare come vengono visualizzati i gruppi di aree dati Tablix occorre considerare la struttura di gruppo. Un'area dati Tablix può disporre di quattro aree, come mostrato nella figura seguente:  
   
- ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Aree area dati Tablix](../media/rs-tablixareas.gif "Aree dell'area dati Tablix")  
   
  L'area del gruppo di righe e l'area del gruppo di colonne contengono intestazioni di gruppo. Quando per un'area dati Tablix sono previste intestazioni di gruppo, è possibile controllare come le righe e le colonne vengono ripetute impostando proprietà nella pagina **Generale** della finestra di dialogo **Proprietà Tablix** .  
   

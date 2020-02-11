@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015303"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migrazione a OLTP in memoria
@@ -40,14 +40,14 @@ ms.locfileid: "63015303"
   
 -   [Query tra database](cross-database-queries.md)  
   
--   [Migrazione di vincoli Check e Foreign Key](../../database-engine/migrating-check-and-foreign-key-constraints.md)  
+-   [Migrazione di vincoli CHECK e di chiave esterna](../../database-engine/migrating-check-and-foreign-key-constraints.md)  
   
 -   [Implementazione di IDENTITY in una tabella con ottimizzazione per la memoria](implementing-identity-in-a-memory-optimized-table.md)  
   
  Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Aggiungere o rimuovere articoli da una pubblicazione (SQL Server Management Studio) | Microsoft Docs
+title: Aggiungere ed eliminare articoli in una pubblicazione (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3301be2f0af9960a48602a1b540fa2cac2f39914
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021368"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>Aggiunta ed eliminazione di articoli in una pubblicazione (SQL Server Management Studio)
@@ -43,7 +43,7 @@ ms.locfileid: "63021368"
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire un articolo](define-an-article.md)   
+ [Define an Article](define-an-article.md)   
  [Pubblicare dati e oggetti di database](publish-data-and-database-objects.md)  
   
   

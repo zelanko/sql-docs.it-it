@@ -1,5 +1,5 @@
 ---
-title: Proprietà-nuovo avviso (pagina risposta) di avviso | Microsoft Docs
+title: Proprietà avviso-nuovo avviso (pagina risposta) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062159"
 ---
-# <a name="alert-properties-new-alert-response-page"></a>Avviso proprietà-nuovo avviso (pagina risposta)
-  Usare questa pagina per specificare un processo che si vuole eseguire e per ottenere un elenco di operatori da notificare in risposta a un avviso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+# <a name="alert-properties-new-alert-response-page"></a>Proprietà avviso-nuovo avviso (pagina risposta)
+  Utilizzare questa pagina per specificare un processo che si desidera eseguire e per ottenere un elenco di operatori da notificare in risposta a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviso di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Esegui processo**  
@@ -29,10 +29,10 @@ ms.locfileid: "63062159"
  **Nuovo processo**  
  Apre la finestra di dialogo **Nuovo processo** . Questo pulsante non è disponibile se l'opzione **Esegui processo** non è selezionata.  
   
- **Visualizza processo**  
+ **Visualizzare il processo**  
  Consente di visualizzare o modificare il processo selezionato. Questa opzione non è disponibile se l'opzione **Esegui processo** non è selezionata.  
   
- **Invia notifica a operatori**  
+ **Notifica operatori**  
  Consente di abilitare i controlli che consentono di aggiungere, rimuovere o modificare operatori.  
   
  **Elenco operatori**  
@@ -41,13 +41,13 @@ ms.locfileid: "63062159"
  **Posta elettronica**  
  Consente di utilizzare la posta elettronica per l'invio della notifica all'operatore.  
   
- **Cercapersone**  
+ **Pager**  
  Utilizzare l'indirizzo di posta elettronica del cercapersone per l'invio della notifica all'operatore.  
   
- **Net send**  
+ **NET SEND**  
  Usare **Net Send** per l'invio della notifica all'operatore.  
   
- **Nuovo operatore**  
+ **Operatore New**  
  Visualizza la finestra di dialogo **Nuovo operatore** in cui è possibile creare un nuovo operatore.  
   
  **Visualizza operatore**  
@@ -55,7 +55,7 @@ ms.locfileid: "63062159"
   
 ## <a name="see-also"></a>Vedere anche  
  [Avvisi](alerts.md)   
- [Creare un avviso con gravità a livello](create-an-alert-using-severity-level.md)   
+ [Creare un avviso utilizzando il livello di gravità](create-an-alert-using-severity-level.md)   
  [Avvisi](alerts.md)   
  [Modificare un avviso](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  

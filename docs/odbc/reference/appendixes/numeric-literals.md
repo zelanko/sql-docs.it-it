@@ -16,16 +16,16 @@ ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3409376b5fd2f71ecff8d510d17ce3771e63fa73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990690"
 ---
 # <a name="numeric-literals"></a>Valori letterali numerici
-Valori letterali numerici vengono usati quando i valori di dati numerici vengono archiviati nelle stringhe di caratteri. Per la conversione dei dati numerici di SQL su una stringa SQL_C_CHAR o conversione di dati C numerici su una stringa SQL_CHAR o SQL_VARCHAR, sintassi dei valori letterali numerica viene usata per specificare che viene archiviato nel database di destinazione. Per una conversione di un valore numerico archiviato come stringa SQL_C_CHAR a dati numerici di SQL o un valore numerico archiviato come stringa SQL_CHAR a dati C numerici, questa sintassi viene utilizzata per convalidare ciò che viene archiviato nell'origine.  
+I valori letterali numerici vengono usati quando i valori di dati numerici vengono archiviati in stringhe di caratteri. Per la conversione di dati SQL numerici in una stringa SQL_C_CHAR o la conversione di dati C numerici in una stringa SQL_CHAR o SQL_VARCHAR, viene usata la sintassi numerica letterale per specificare gli elementi archiviati nella destinazione. Per la conversione di un valore numerico archiviato come stringa di SQL_C_CHAR in dati SQL numerici o un valore numerico archiviato come stringa di SQL_CHAR in dati numerici C, questa sintassi viene usata per convalidare ciò che viene archiviato nell'origine.  
   
- Valori letterali numerici devono essere conformi alla sintassi definita nella sezione [sintassi dei valori letterali numerici](../../../odbc/reference/appendixes/numeric-literal-syntax.md) nell'appendice c: Grammatica SQL.  
+ I valori letterali numerici devono essere conformi alla sintassi definita nella sezione relativa alla [sintassi dei valori letterali numerici](../../../odbc/reference/appendixes/numeric-literal-syntax.md) nell'Appendice C: grammatica SQL.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

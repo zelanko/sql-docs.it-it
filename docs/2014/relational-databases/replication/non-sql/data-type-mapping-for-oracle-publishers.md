@@ -15,49 +15,49 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022648"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapping dei tipi di dati per i server di pubblicazione Oracle
-  I tipi di dati Oracle e i tipi di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sempre corrispondono in modo preciso. Se possibile, durante la pubblicazione di una tabella Oracle viene selezionato automaticamente il tipo di dati corrispondente. Nei casi in cui il mapping di un singolo tipo di dati non risulti chiaro, vengono forniti mapping di tipi di dati alternativi. Per informazioni sulla selezione di mapping alternativi, vedere la sezione "Specifica di mapping di tipi di dati alternativi" più avanti in questo argomento.  
+  I tipi di dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e i tipi di dati Oracle non sempre corrispondono esattamente. Se possibile, durante la pubblicazione di una tabella Oracle viene selezionato automaticamente il tipo di dati corrispondente. Nei casi in cui il mapping di un singolo tipo di dati non risulti chiaro, vengono forniti mapping di tipi di dati alternativi. Per informazioni sulla selezione di mapping alternativi, vedere la sezione "Specifica di mapping di tipi di dati alternativi" più avanti in questo argomento.  
   
  Nella tabella seguente viene illustrato il mapping predefinito tra i tipi di dati Oracle e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando i dati del server di pubblicazione Oracle vengono spostati nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La colonna Alternativi indica se sono disponibili mapping alternativi.  
   
-|Tipo di dati Oracle|Tipo di dati di SQL Server|Alternativi|  
+|Tipo di dati Oracle|Tipo di dati di SQL Server|Alternative|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|Yes|  
-|BLOB|VARBINARY(MAX)|Yes|  
-|CHAR([1-2000])|CHAR([1-2000])|Yes|  
-|CLOB|VARCHAR(MAX)|Yes|  
-|DATE|DATETIME|Yes|  
-|FLOAT|FLOAT|no|  
+|BFILE|VARBINARY(MAX)|Sì|  
+|BLOB|VARBINARY(MAX)|Sì|  
+|CHAR([1-2000])|CHAR([1-2000])|Sì|  
+|CLOB|VARCHAR(MAX)|Sì|  
+|DATE|DATETIME|Sì|  
+|FLOAT|FLOAT|No|  
 |FLOAT([1-53])|FLOAT([1-53])|No|  
-|FLOAT([54-126])|FLOAT|no|  
-|INT|NUMERIC(38)|Yes|  
-|INTERVAL|DATETIME|Yes|  
-|LONG|VARCHAR(MAX)|Yes|  
-|LONG RAW|IMAGE|Yes|  
+|FLOAT([54-126])|FLOAT|No|  
+|INT|NUMERIC(38)|Sì|  
+|INTERVAL|DATETIME|Sì|  
+|LONG|VARCHAR(MAX)|Sì|  
+|LONG RAW|IMAGE|Sì|  
 |NCHAR([1-1000])|NCHAR([1-1000])|No|  
-|NCLOB|NVARCHAR(MAX)|Yes|  
-|NUMBER|FLOAT|Yes|  
+|NCLOB|NVARCHAR(MAX)|Sì|  
+|NUMBER|FLOAT|Sì|  
 |NUMBER([1-38])|NUMERIC([1-38])|No|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Yes|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sì|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
 |RAW([1-2000])|VARBINARY([1-2000])|No|  
 |real|FLOAT|No|  
 |ROWID|CHAR(18)|No|  
-|timestamp|DATETIME|Yes|  
-|TIMESTAMP(0-7)|DATETIME|Yes|  
-|TIMESTAMP(8-9)|DATETIME|Yes|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Yes|  
+|timestamp|DATETIME|Sì|  
+|TIMESTAMP(0-7)|DATETIME|Sì|  
+|TIMESTAMP(8-9)|DATETIME|Sì|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Sì|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|No|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Yes|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Sì|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|No|  
 |UROWID|CHAR(18)|No|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|Yes|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|Sì|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Considerazioni sul mapping dei tipi di dati  
  Durante la replica di dati da un database Oracle, è opportuno considerare i problemi relativi ai tipi di dati riportati di seguito.  
@@ -65,7 +65,7 @@ ms.locfileid: "63022648"
 ### <a name="unsupported-data-types"></a>Tipi di dati non supportati  
  I tipi di dati seguenti non sono supportati e pertanto non è possibile replicare le colonne che li contengono:  
   
--   Tipi di oggetti  
+-   Tipi di oggetto  
   
 -   Tipi XML  
   
@@ -81,7 +81,7 @@ ms.locfileid: "63022648"
 ### <a name="float-and-number-types"></a>Tipi FLOAT e NUMBER  
  La scala e la precisione specificate durante il mapping dei tipi di dati FLOAT e NUMBER dipende dalla scala e dalla precisione specificate per la colonna che utilizza il tipo di dati nel database Oracle. La precisione è il numero di cifre in un numero. La scala è il numero di cifre a destra della virgola decimale in un numero. Il numero 123,45, ad esempio, ha una precisione di 5 e una scala di 2.  
   
- In Oracle è possibile definire i numeri con una scala maggiore della precisione, ad esempio NUMBER(4,5), mentre in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la precisione deve essere uguale o maggiore della scala. Per assicurare che non vi è alcun troncamento dei dati, se la scala è maggiore della precisione nel server di pubblicazione Oracle, la precisione viene impostata la scalabilità quando viene eseguito il mapping al tipo di dati: Number(4,5) sarebbe numeric(5,5.  
+ In Oracle è possibile definire i numeri con una scala maggiore della precisione, ad esempio NUMBER(4,5), mentre in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la precisione deve essere uguale o maggiore della scala. Per garantire che i dati non vengano troncati, se la scala è maggiore della precisione nel server di pubblicazione Oracle, la precisione viene impostata su un valore uguale a quello della scala quando si esegue il mapping del tipo di dati. Il mapping di NUMBER(4,5) sarebbe NUMERIC(5,5).  
   
 > [!NOTE]  
 >  Se non si specifica una scala e una precisione per NUMBER, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono automaticamente utilizzate la scala massima (8) e la precisione massima (38). Per migliorare le prestazioni e le operazioni di archiviazione durante la replica dei dati, è consigliabile impostare una scala e una precisione specifiche in Oracle.  

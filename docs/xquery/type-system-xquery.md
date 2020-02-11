@@ -1,5 +1,5 @@
 ---
-title: Tipo di sistema (XQuery) | Microsoft Docs
+title: Sistema di tipi (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -24,10 +24,10 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946207"
 ---
 # <a name="type-system-xquery"></a>Sistema di tipi (XQuery)
@@ -35,22 +35,22 @@ ms.locfileid: "67946207"
 
   XQuery è un linguaggio fortemente tipizzato per i tipi di schema e tipizzato in modo debole per i dati non tipizzati. I tipi predefiniti di XQuery sono:  
   
--   Tipi predefiniti di XML schema nel **http://www.w3.org/2001/XMLSchema** dello spazio dei nomi.  
+-   Tipi incorporati di XML Schema nello **http://www.w3.org/2001/XMLSchema** spazio dei nomi.  
   
--   Tipi definiti nel **http://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi.  
+-   Tipi definiti nello **http://www.w3.org/2004/07/xpath-datatypes** spazio dei nomi.  
   
  Questo argomento descrive inoltre quanto segue:  
   
 -   Valore tipizzato e valore stringa di un nodo.  
   
--   Il [funzione data &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) e il [funzione string &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
+-   La [funzione dati &#40;&#41;XQuery](../xquery/data-accessor-functions-data-xquery.md) e la [funzione stringa &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   Individuazione di una corrispondenza per il tipo di sequenza restituito da un'espressione.  
   
 ## <a name="built-in-types-of-xml-schema"></a>Tipi predefiniti di XML Schema  
  I tipi predefiniti di XML Schema hanno un prefisso predefinito xs Alcuni di questi tipi includono **xs: integer** e **xs: String**. Tutti questi tipi predefiniti sono supportati ed è possibile utilizzarli per la creazione di una raccolta di XML Schema.  
   
- Quando si esegue una query su codice XML tipizzato, il tipo statico e dinamico dei nodi è determinato dalla raccolta di XML Schema associata alla colonna o alla variabile su cui viene eseguita la query. Per altre informazioni sui tipi statici e dinamici, vedere [contesto delle espressioni e valutazione delle Query &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Ad esempio, la query seguente viene eseguita su un oggetto tipizzato **xml** colonna (`Instructions`). Nell'espressione viene utilizzato l'elemento `instance of` per verificare che il valore tipizzato dell'attributo `LotSize` restituito sia di tipo `xs:decimal`.  
+ Quando si esegue una query su codice XML tipizzato, il tipo statico e dinamico dei nodi è determinato dalla raccolta di XML Schema associata alla colonna o alla variabile su cui viene eseguita la query. Per ulteriori informazioni sui tipi statici e dinamici, vedere il [contesto dell'espressione e la valutazione delle Query &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Ad esempio, la query seguente viene specificata in base a **** una colonna XML`Instructions`tipizzata (). Nell'espressione viene utilizzato l'elemento `instance of` per verificare che il valore tipizzato dell'attributo `LotSize` restituito sia di tipo `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,13 +64,13 @@ WHERE ProductModelID=7
  Queste informazioni relative alla tipizzazione vengono fornite dalla raccolta di XML Schema associata alla colonna.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>Tipi definiti nello spazio dei nomi dei tipi di dati XPath  
- I tipi definiti nel **http://www.w3.org/2004/07/xpath-datatypes** dello spazio dei nomi hanno un prefisso predefinito **xdt**. Per questi tipi sono valide le osservazioni seguenti:  
+ I tipi definiti nello **http://www.w3.org/2004/07/xpath-datatypes** spazio dei nomi hanno un prefisso predefinito di **xdt**. Per questi tipi sono valide le osservazioni seguenti:  
   
--   Non è possibile utilizzarli per la creazione di una raccolta di XML Schema. Questi tipi vengono utilizzati nel sistema di tipi XQuery e vengono usati per [XQuery e tipizzazione statica](../xquery/xquery-and-static-typing.md). È possibile eseguire il cast ai tipi atomici, ad esempio, **xdt: untypedAtomic**, nella **xdt** dello spazio dei nomi.  
+-   Non è possibile utilizzarli per la creazione di una raccolta di XML Schema. Questi tipi vengono utilizzati nel sistema di tipi XQuery e vengono utilizzati per [XQuery e tipizzazione statica](../xquery/xquery-and-static-typing.md). È possibile eseguire il cast ai tipi atomici, ad esempio **xdt: untypedAtomic**, nello spazio dei nomi **xdt** .  
   
--   Quando si eseguono query su dati XML non tipizzati, il tipo statico e dinamico dei nodi elemento è **xdt: non tipizzato**, e il tipo di valori di attributo è **xdt: untypedAtomic**. Il risultato di una **query ()** metodo genera codice XML non tipizzato. Ciò significa che i nodi XML vengono restituiti come **xdt: non tipizzato** e **xdt: untypedAtomic**, rispettivamente.  
+-   Quando si esegue una query su codice XML non tipizzato, il tipo statico e dinamico dei nodi elemento è **xdt: non tipizzato**e il tipo di valori di attributo è **xdt: untypedAtomic**. Il risultato di un metodo **query ()** genera codice XML non tipizzato. Ciò significa che i nodi XML vengono restituiti rispettivamente come **xdt: untyped** e **xdt: untypedAtomic**.  
   
--   Il **xdt: daytimeduration** e **xdt: yearmonthduration** tipi non sono supportati.  
+-   I tipi **xdt: dayTimeDuration** e **xdt: yearMonthDuration** non sono supportati.  
   
  Nell'esempio seguente, la query viene eseguita su una variabile XML non tipizzata. L'espressione `data(/a[1]`) restituisce una sequenza di un singolo valore atomico. La funzione `data()` restituisce il valore tipizzato dell'elemento `<a>`. Il codice XML su cui viene eseguita la query è non tipizzato e pertanto il tipo del valore restituito è `xdt:untypedAtomic`. Di conseguenza, `instance of` restituisce true.  
   
@@ -96,16 +96,16 @@ SELECT @x.query( '/a[1] instance of element()')
 > [!NOTE]  
 >  Quando si esegue una query su un'istanza XML tipizzata e l'espressione della query include l'asse padre, le informazioni relative al tipo statico dei nodi risultanti non sono più disponibili. Il tipo dinamico rimane tuttavia associato ai nodi.  
   
-## <a name="typed-value-vs-string-value"></a>Valore tipizzato e Valore stringa  
- A ogni nodo è associato un valore tipizzato e un valore stringa. Per i dati XML tipizzati, il tipo del valore tipizzato è fornito dalla raccolta di XML Schema associata alla colonna o alla variabile su cui viene eseguita la query. Per i dati XML non tipizzati, è il tipo del valore tipizzato **xdt: untypedAtomic**.  
+## <a name="typed-value-vs-string-value"></a>Valore tipizzato e valore stringa  
+ A ogni nodo è associato un valore tipizzato e un valore stringa. Per i dati XML tipizzati, il tipo del valore tipizzato è fornito dalla raccolta di XML Schema associata alla colonna o alla variabile su cui viene eseguita la query. Per i dati XML non tipizzati, il tipo del valore tipizzato è **xdt: untypedAtomic**.  
   
- È possibile usare la **data ()** oppure **String ()** funzione per recuperare il valore di un nodo:  
+ È possibile utilizzare la funzione **Data ()** o **String ()** per recuperare il valore di un nodo:  
   
--   Il [funzione data &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) restituisce il valore tipizzato di un nodo.  
+-   La [funzione dati &#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md) restituisce il valore tipizzato di un nodo.  
   
--   Il [funzione string &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) restituisce il valore di stringa del nodo.  
+-   La [funzione stringa &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md) restituisce il valore stringa del nodo.  
   
- Nella raccolta di XML schema seguente, la <`root`> viene definito l'elemento di tipo integer:  
+ Nella raccolta di XML Schema seguente viene definito l' `root` elemento> <del tipo Integer:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +132,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- Nell'esempio seguente viene calcolato il totale degli attributi `LaborHours`. Il `data()` funzione recupera i valori tipizzati degli `LaborHours` attributi da tutti i <`Location`> elementi per un modello di prodotto. Secondo lo schema XML associato con il `Instruction` colonna, `LaborHours` è di **xs: decimal** tipo.  
+ Nell'esempio seguente viene calcolato il totale degli attributi `LaborHours`. La `data()` funzione recupera i valori tipizzati `LaborHours` degli attributi da tutti gli `Location` elementi <> per un modello di prodotto. In base alla XML Schema associata alla `Instruction` colonna, `LaborHours` è di tipo **xs: Decimal** .  
   
 ```  
 SELECT Instructions.query('   
@@ -146,7 +146,7 @@ WHERE ProductModelID=7
  Il risultato restituito dalla query è 12.75.  
   
 > [!NOTE]  
->  L'utilizzo esplicito del **data ()** funzione in questo esempio è solo a scopo illustrativo. Se non è specificato, **SUM ()** applica in modo implicito il **data ()** funzione per estrarre i valori tipizzati dei nodi.  
+>  L'utilizzo esplicito della funzione **Data ()** in questo esempio è a solo illustrazione. Se non viene specificato, **Sum ()** applica in modo implicito la funzione **Data ()** per estrarre i valori tipizzati dei nodi.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modelli e autorizzazioni di SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

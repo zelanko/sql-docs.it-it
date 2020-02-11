@@ -1,5 +1,5 @@
 ---
-title: Riferimento all'API DLL di installazione | Microsoft Docs
+title: Informazioni di riferimento sull'API DLL di installazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26e5c36b41f68627a634714cfa06525c99451450
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947058"
 ---
 # <a name="setup-dll-api-reference"></a>Informazioni di riferimento sull'API per l'installazione DLL
-In questa sezione viene descritta la sintassi del programma di installazione di driver API DLL, che è costituito da due funzioni (**ConfigDriver** e **ConfigDSN**). **ConfigDriver** e **ConfigDSN** può essere rappresentato nella DLL del driver o in una DLL di configurazione.  
+In questa sezione viene descritta la sintassi dell'API DLL di installazione driver, che è costituita da due funzioni (**ConfigDriver** e **ConfigDSN**). **ConfigDriver** e **ConfigDSN** possono trovarsi nella dll del driver o in una DLL di installazione separata.  
   
- Inoltre, in questa sezione viene descritta la sintassi della configurazione di Microsoft translator, API DLL, che è costituito da una singola funzione (**ConfigTranslator**). **ConfigTranslator** può essere translator DLL o in una DLL di configurazione.  
+ In questa sezione viene inoltre descritta la sintassi dell'API della DLL di installazione del convertitore, che è costituita da una singola funzione (**ConfigTranslator**). **ConfigTranslator** può essere presente nella DLL di conversione o in una DLL di installazione separata.  
   
- Ogni funzione viene etichettata con la versione di ODBC in cui è stato introdotto in.  
+ Ogni funzione è contrassegnata con la versione di ODBC in cui è stata introdotta.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
