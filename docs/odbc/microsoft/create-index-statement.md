@@ -1,5 +1,5 @@
 ---
-title: Istruzione CREATE INDEX | Microsoft Docs
+title: CREATE INDEX-istruzione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081913"
 ---
 # <a name="create-index-statement"></a>Istruzione CREATE INDEX
-La sintassi dell'istruzione CREATE INDEX è:  
+La sintassi dell'istruzione CREATE INDEX è la seguente:  
   
- Crea indice [UNIQUE] *-nome dell'indice* via *nome-tabella* (*identificatore di colonna* [Centro sicurezza di AZURE] [DESC] [, *colonna identificatore* [ASC][DESC]...]) CON \< *elenco di opzioni di indice*>  
+ CREATE [UNIQUE] index *index-name* sul *nome di tabella* (*column-identifier* [ASC] [Desc] [, *column-identifier* [ASC] [Desc]...]) \< *Elenco di opzioni con indice*>  
   
- in cui \< *elenco di opzioni di indice*> può essere: PRIMARIO &#124; NULL NON CONSENTIRE &#124; IGNORA NULL  
+ dove \<> *elenco di opzioni di indice* può essere: Primary &#124; non consentire null &#124; ignore null  
   
- Solo il driver Microsoft Access usa le opzioni di indice impedisce NULL e Ignora NULL. Il file dBASE e i driver Paradox accetta la sintassi, ma ignoreranno la presenza di entrambe le opzioni.  
+ Solo il driver Microsoft Access utilizza le opzioni non consentire valori NULL e ignora Indice NULL. I driver dBASE e Paradox accettano la sintassi, ma ignorano la presenza di una delle due opzioni.  
   
- Quando viene usato il driver Paradox, l'istruzione CREATE INDEX crea i file di chiave primari Paradox e file secondari.  
+ Quando si utilizza il driver Paradox, l'istruzione CREATE INDEX crea file di chiave primaria e file secondari di Paradox.  
   
- Questa istruzione non è supportata dai driver Microsoft Excel o di testo.
+ Questa istruzione non è supportata dai driver di Microsoft Excel o di testo.

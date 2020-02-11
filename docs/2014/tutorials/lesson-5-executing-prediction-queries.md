@@ -1,5 +1,5 @@
 ---
-title: "Lezione 5: L'esecuzione di query di stima | Microsoft Docs"
+title: 'Lezione 5: esecuzione di query di stima | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822313"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Lezione 5: Esecuzione di query di stima
-  In questa lezione si userà il [SELECT FROM \<model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) forma dell'istruzione SELECT per creare due tipi diversi di stime basate su albero delle decisioni del modello creato in [ Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining di associazione](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Di seguito è riportata la definizione di questi tipi di stima.  
+  In questa lezione verrà utilizzato il modulo [Select from \<Model> prediction join (DMX)](/sql/dmx/select-from-model-cases-dmx) dell'istruzione SELECT per creare due tipi diversi di stime in base al modello di albero delle decisioni creato nella [lezione 2: aggiunta di modelli di data mining alla struttura di data mining Association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Di seguito è riportata la definizione di questi tipi di stima.  
   
  Query singleton  
  Utilizzare una query singleton per fornire valori ad hoc in caso di esecuzione di stime. È ad esempio possibile determinare se un cliente sia il probabile acquirente di una bicicletta passando alla query input come la distanza dal luogo di lavoro, il prefisso telefonico o il numero di figli del cliente. La query singleton restituisce un valore che indica con quale probabilità il cliente acquisterà una bicicletta in base agli input forniti.  
@@ -26,7 +26,7 @@ ms.locfileid: "62822313"
  Query batch  
  Una query batch consente di determinare quali clienti, all'interno di una tabella di potenziali clienti, è probabile che acquistino una bicicletta. Ad esempio, se il reparto marketing fornisce un elenco di clienti con i relativi attributi, è possibile utilizzare una stima batch per stabilire quali di essi è probabile che acquistino una bicicletta.  
   
- Il [SELECT FROM \<model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) forma dell'istruzione SELECT contiene tre parti:  
+ Il modulo [Select \<from Model> prediction join (DMX)](/sql/dmx/select-from-model-cases-dmx) dell'istruzione SELECT contiene tre parti:  
   
 -   Un elenco di funzioni di stima e di colonne del modello di data mining restituite nei risultati. I risultati possono anche includere le colonne di input provenienti dall'origine dati.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62822313"
   
 -   Un mapping tra le colonne del modello di data mining e i dati di origine. Se i nomi corrispondono, è possibile utilizzare la sintassi NATURAL e tralasciare i mapping delle colonne.  
   
- Per migliorare ulteriormente la query, è possibile utilizzare le funzioni di stima che forniscono informazioni aggiuntive, quali la probabilità che una stima sia confermata dai fatti, e supporto per la stima nel set di dati di training. Per altre informazioni sulle funzioni di stima, vedere [funzioni &#40;DMX&#41;](/sql/dmx/functions-dmx).  
+ Per migliorare ulteriormente la query, è possibile utilizzare le funzioni di stima che forniscono informazioni aggiuntive, quali la probabilità che una stima sia confermata dai fatti, e supporto per la stima nel set di dati di training. Per ulteriori informazioni sulle funzioni di stima, vedere [funzioni &#40;&#41;DMX ](/sql/dmx/functions-dmx).  
   
  Le stime in questa esercitazione sono basate sulla tabella ProspectiveBuyer nel database di esempio [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. La tabella ProspectiveBuyer contiene un elenco di potenziali clienti con le relative caratteristiche. I clienti in questa tabella sono indipendenti dai clienti utilizzati per creare il modello di data mining dell'albero delle decisioni.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62822313"
 -   Creazione di una query batch per determinare quali clienti, all'interno di una tabella di clienti, è probabile che acquistino una bicicletta.  
   
 ## <a name="singleton-query"></a>Query singleton  
- Il primo passaggio consiste nell'usare la [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx) in una query di stima singleton. Di seguito è riportato un esempio generico dell'istruzione singleton:  
+ Il primo passaggio consiste nell'utilizzare il [modello SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx) in una query di stima singleton. Di seguito è riportato un esempio generico dell'istruzione singleton:  
   
 ```  
 SELECT <select list> FROM [<mining model name>]   
@@ -76,7 +76,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>Per creare una query di stima singleton  
   
-1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -94,7 +94,7 @@ ORDER BY <expression>
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
     ```  
   
-     L'istruzione AS viene utilizzata per creare un alias delle colonne restituite dalla query. Il [PredictHistogram](/sql/dmx/predicthistogram-dmx) funzione restituisce le statistiche sulla stima, compresa la probabilità e supporto. Per altre informazioni sulle funzioni che possono essere utilizzati in un'istruzione di stima, vedere [funzioni &#40;DMX&#41;](/sql/dmx/functions-dmx).  
+     L'istruzione AS viene utilizzata per creare un alias delle colonne restituite dalla query. La funzione [PredictHistogram](/sql/dmx/predicthistogram-dmx) restituisce statistiche sulla stima, incluse la probabilità e il supporto. Per ulteriori informazioni sulle funzioni che possono essere utilizzate in un'istruzione di stima, vedere [funzioni &#40;&#41;DMX ](/sql/dmx/functions-dmx).  
   
 4.  Sostituire quanto segue:  
   
@@ -140,16 +140,16 @@ ORDER BY <expression>
        2 AS [Total Children]) AS t  
     ```  
   
-6.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+6.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-7.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Singleton_Query.dmx`.  
+7.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Singleton_Query.dmx`il nome.  
   
-8.  Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
+8.  Sulla barra degli strumenti fare clic sul pulsante **Esegui** .  
   
      La query restituisce una stima sulla probabilità che un cliente con le caratteristiche specificate acquisti una bicicletta, nonché le statistiche relative a tale stima.  
   
 ## <a name="batch-query"></a>Query batch  
- Il passaggio successivo consiste nell'usare la [SELECT FROM &#60;modello&#62; PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx) in una query di stima batch. Di seguito è riportato un esempio generico di istruzione batch:  
+ Il passaggio successivo consiste nell'utilizzare il [modello SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx) in una query di stima batch. Di seguito è riportato un esempio generico di istruzione batch:  
   
 ```  
 SELECT TOP <number> <select list>   
@@ -162,7 +162,7 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression>  
 ```  
   
- Come nella query singleton, le prime due righe del codice definiscono le colonne del modello di data mining restituite dalla query, nonché il nome del modello di data mining utilizzato per generare la stima. La parte superiore \<numero > istruzione specifica che la query restituirà solo il numero o i risultati specificati da \<numero >.  
+ Come nella query singleton, le prime due righe del codice definiscono le colonne del modello di data mining restituite dalla query, nonché il nome del modello di data mining utilizzato per generare la stima. Il numero \<Top> istruzione specifica che la query restituirà solo il numero o i risultati specificati per \<numero>.  
   
  Le successive righe del codice definiscono i dati di origine su cui si basano le stime:  
   
@@ -171,7 +171,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   AS [<input alias>]  
 ```  
   
- Sebbene siano disponibili diverse opzioni per il recupero dei dati di origine, in questa esercitazione si utilizzerà OPENQUERY. Per altre informazioni sulle opzioni disponibili, vedere [ &#60;query sull'origine dati&#62;](/sql/dmx/source-data-query).  
+ Sebbene siano disponibili diverse opzioni per il recupero dei dati di origine, in questa esercitazione si utilizzerà OPENQUERY. Per altre informazioni sulle opzioni disponibili, vedere [&#60;query sui dati di origine&#62;](/sql/dmx/source-data-query).  
   
  La riga successiva definisce il mapping tra le colonne di origine nel modello di data mining e le colonne nei dati di origine:  
   
@@ -191,11 +191,11 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression> [DESC|ASC]  
 ```  
   
- Utilizzare ORDER BY in combinazione con il primo \<numero > istruzione, per filtrare i risultati restituiti. In questa stima, ad esempio, verranno restituiti i primi dieci acquirenti di biciclette, ordinati in base alla probabilità che la stima si riveli corretta. È possibile utilizzare la sintassi [DESC|ASC] per controllare l'ordine di visualizzazione dei risultati.  
+ Per filtrare i risultati restituiti, utilizzare ORDER \<by in combinazione con l'istruzione di numero Top>. In questa stima, ad esempio, verranno restituiti i primi dieci acquirenti di biciclette, ordinati in base alla probabilità che la stima si riveli corretta. È possibile utilizzare la sintassi [DESC|ASC] per controllare l'ordine di visualizzazione dei risultati.  
   
 #### <a name="to-create-a-batch-prediction-query"></a>Per creare una query di stima batch  
   
-1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+1.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -327,16 +327,16 @@ ORDER BY <expression> [DESC|ASC]
     ORDER BY PredictProbability([Bike Buyer]) DESC  
     ```  
   
-7.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+7.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-8.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Batch_Prediction.dmx`.  
+8.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Batch_Prediction.dmx`il nome.  
   
-9. Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
+9. Sulla barra degli strumenti fare clic sul pulsante **Esegui** .  
   
      La query restituisce una tabella con i nomi dei clienti, una stima relativa all'acquisto di una bicicletta da parte di ogni cliente e la probabilità che la stima si riveli corretta.  
   
  Si conclude così l'esercitazione Bike Buyer. A questo punto si dispone di un set di modelli di data mining che è possibile utilizzare per valutare le analogie tra i propri clienti e stimare se i potenziali clienti acquisteranno una bicicletta.  
   
- Per informazioni su come usare DMX in uno scenario Market Basket, vedere [esercitazione su DMX per Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md).  
+ Per informazioni sull'utilizzo di DMX in uno scenario Market basket, vedere l' [esercitazione su Market basket DMX](../../2014/tutorials/market-basket-dmx-tutorial.md).  
   
   

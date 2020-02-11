@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e0417ddf5c4c09cfffa07b7b76918a89622aec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771807"
 ---
 # <a name="handling-events-programmatically"></a>Gestione degli eventi a livello di programmazione
@@ -39,7 +39,7 @@ ms.locfileid: "62771807"
   
  La classe <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> è una classe che implementa già l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>; pertanto, un'alternativa all'implementazione diretta di <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> consiste nel derivare da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed eseguire l'override degli eventi specifici ai quali si desidera rispondere. Specificare quindi la classe come parametro per i metodi `Validate` e `Execute` di <xref:Microsoft.SqlServer.Dts.Runtime.Package> per ricevere i callback degli eventi.  
   
- Nell'esempio di codice seguente viene illustrata una classe che deriva da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. La classe viene quindi specificata come parametro per il `Validate` e `Execute` metodi del pacchetto.  
+ Nell'esempio di codice seguente viene illustrata una classe che deriva da <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> ed esegue l'override del metodo <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. La classe viene quindi fornita come parametro ai metodi `Validate` e `Execute` del pacchetto.  
   
 ```csharp  
 using System;  
@@ -247,7 +247,7 @@ Module Module1
 End Module  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestori eventi di Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md)   

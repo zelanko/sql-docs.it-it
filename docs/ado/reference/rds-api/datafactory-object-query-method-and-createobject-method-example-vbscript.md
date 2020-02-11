@@ -1,5 +1,5 @@
 ---
-title: Creare l'oggetto RDSServer usando CreateObject (VBScript) | Microsoft Docs
+title: Creare un oggetto RDSServer. DataFactory usando CreateObject (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 909406b39a8acdd5e598b56b300124abf7bb1170
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964358"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Esempio dell'oggetto DataFactory e dei metodi Query e CreateObject (VBScript)
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Questo esempio viene creato un [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) dell'oggetto usando la [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) metodo del [Servizi Desktop remoto. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto. Per testare questo esempio, tagliare e incollare questo codice tra il \<Body > e \</Body > tag in HTML un normale del documento e denominarlo **DataFactoryVBS**. Lo script identificherà il server.  
+ Questo esempio Mostra come creare un oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) usando il metodo [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) di [RDS. Oggetto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . Per testare questo esempio, tagliare e incollare il codice tra i \<tag body> \<e/body> in un documento HTML normale e denominarlo **DataFactoryVBS. asp**. Lo script ASP identificherà il server.  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -137,9 +137,9 @@ to bring back a Recordset. </H4>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo CreateObject (Servizi Desktop remoto)](../../../ado/reference/rds-api/createobject-method-rds.md)   
+ [Metodo CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [Oggetto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [Metodo Query (Servizi Desktop remoto)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

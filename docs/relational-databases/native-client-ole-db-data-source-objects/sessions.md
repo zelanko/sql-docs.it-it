@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a2e5896456f3c4f8074b62f6e1d4707cc7c41d21
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73770811"
 ---
 # <a name="sessions"></a>Sessioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Una sessione del provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB rappresenta una singola connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessione del provider OLE DB di Native client rappresenta una singola connessione a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]istanza di.  
   
- Il provider OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client richiede che le sessioni delimitino lo spazio delle transazioni per un'origine dati. Tutti gli oggetti comando creati da uno specifico oggetto di sessione partecipano alla transazione locale o distribuita dell'oggetto in questione.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client richiede che le sessioni delimitatino lo spazio delle transazioni per un'origine dati. Tutti gli oggetti comando creati da uno specifico oggetto di sessione partecipano alla transazione locale o distribuita dell'oggetto in questione.  
   
  Il primo oggetto di sessione creato nell'origine dati inizializzata riceve la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stabilita in fase di inizializzazione. Quando tutti i riferimenti nelle interfacce dell'oggetto di sessione vengono rilasciati, la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diventa disponibile per un altro oggetto di sessione creato nell'origine dati.  
   
  Un oggetto di sessione aggiuntivo creato nell'origine dati stabilisce una connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come specificato dall'origine dati. La connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eliminata quando l'applicazione rilascia tutti i riferimenti agli oggetti creati nella sessione.  
   
- Nell'esempio seguente viene illustrato come utilizzare il provider di OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Nell'esempio seguente viene illustrato come utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client per connettersi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un database:  
   
 ```  
 int main()  
@@ -181,7 +181,7 @@ EXIT:
 }  
 ```  
   
- La connessione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti sessione del provider OLE DB di Native client a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può generare un sovraccarico significativo per le applicazioni che creano e rilasciano continuamente oggetti sessione. L'overhead può essere ridotto al minimo gestendo in modo efficiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti sessione del provider di Native client OLE DB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le applicazioni del provider OLE DB Native client possono mantenere attiva la connessione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un oggetto sessione mantenendo un riferimento su almeno un'interfaccia dell'oggetto.  
+ La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connessione di oggetti di sessione del provider OLE DB Native client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'istanza di può generare un sovraccarico significativo per le applicazioni che creano e rilasciano continuamente oggetti sessione. L'overhead può essere ridotto al minimo gestendo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo efficiente gli oggetti sessione del provider OLE DB di Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Le applicazioni del provider OLE DB Native client possono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantenere attiva la connessione di un oggetto sessione mantenendo un riferimento su almeno un'interfaccia dell'oggetto.  
   
  La gestione di un pool di riferimenti agli oggetti di creazione del comando consente ad esempio di mantenere attive le connessioni a tali oggetti di sessione nel pool. Al momento della richiesta degli oggetti di sessione, il codice di manutenzione del pool passa un puntatore di interfaccia **IDBCreateCommand** valido al metodo dell'applicazione che richiede la sessione. Quando il metodo dell'applicazione non richiede più la sessione, restituisce di nuovo il puntatore all'interfaccia al codice di manutenzione del pool, anziché rilasciare il riferimento dell'applicazione all'oggetto di creazione del comando.  
   
@@ -189,6 +189,6 @@ EXIT:
 >  Nell'esempio precedente l'interfaccia **IDBCreateCommand** viene usata perché l'interfaccia **ICommand** implementa il metodo **GetDBSession**, ovvero l'unico metodo nell'ambito del comando o del set di righe che consenta a un oggetto di determinare la sessione nella quale è stato creato. Pertanto, solo ed esclusivamente un oggetto comando consente a un'applicazione di recuperare un puntatore all'oggetto origine dati dal quale possono essere create sessioni aggiuntive.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti &#40;origine dati OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Oggetti origine dati &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

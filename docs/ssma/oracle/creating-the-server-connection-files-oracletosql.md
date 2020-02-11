@@ -1,5 +1,5 @@
 ---
-title: Creazione di file di connessione del Server (OracleToSQL) | Microsoft Docs
+title: Creazione dei file di connessione del server (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,14 +14,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266115"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>Creazione dei file di connessione del server (OracleToSQL)
-Nella sezione dei server del file di script o in un file di connessione server separato, è possibile specificare le informazioni sul server. Il parametro della riga di comando per il file di connessione del server è, `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione server sia file di script, viene considerata la definizione del server nel file di script.  
+È possibile specificare le informazioni sul server nella sezione server del file script o in un file di connessione server separato. Il parametro della riga di comando per il file di connessione `-c <serverconnectionfile>`del server è,. Se lo stesso ID server è presente nel file di script e nel file di connessione al server, viene considerata la definizione del server nel file di script.  
   
 **Esempio: 1**  
   
@@ -102,8 +102,8 @@ Nella sezione dei server del file di script o in un file di connessione server s
 </sql-server>  
 ```  
   
-## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo in costi operativi console consiste [esecuzione della Console SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+## <a name="next-step"></a>passaggio successivo  
+Il passaggio successivo per la gestione della console è [l'esecuzione della console SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione della console SSMA](executing-the-ssma-console-oracletosql.md)  

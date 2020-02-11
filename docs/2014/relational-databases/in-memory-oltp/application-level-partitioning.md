@@ -11,18 +11,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468337"
 ---
 # <a name="application-level-partitioning"></a>Partizionamento a livello di applicazione
-  Questo esempio illustra il partizionamento a livello di applicazione, in cui i dati vengono archiviati in una tabella ottimizzata per la memoria o una tabella basata su disco, a seconda del fatto che l'ordine si verifichi prima o dopo una data specifica. Tutti gli ordini più recenti o uguali al *hotDate* sono nelle tabelle ottimizzate per la memoria e tutti gli ordini prima le *hotDate* presenti nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella ottimizzata per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  
+  Questo esempio illustra il partizionamento a livello di applicazione, in cui i dati vengono archiviati in una tabella ottimizzata per la memoria o una tabella basata su disco, a seconda del fatto che l'ordine si verifichi prima o dopo una data specifica. Tutti gli ordini più recenti o uguali a *hotDate* si trovano nella tabella ottimizzata per la memoria e tutti gli ordini prima di *hotDate* sono nella tabella basata su disco. Si supponga un pesante carico di lavoro OLTP con molte transazioni simultanee. Questa regola di business (ordini recenti in una tabella ottimizzata per la memoria) deve essere applicata anche se diverse transazioni simultanee stanno tentando di modificare *hotDate*.  
   
- Questo esempio non viene utilizzata [Partitioned Tables](../partitions/partitioned-tables-and-indexes.md) per la tabella basata su disco, ma tiene traccia di punto di una divisione esplicito tra le due tabelle usando una terza tabella. Il punto di divisione può essere usato per garantire che i dati appena aggiunti vengano inseriti sempre nella tabella appropriata in base alla data. Inoltre, può essere usato per determinare la posizione in cui cercare i dati. I dati che arrivano in ritardo vengono ancora inseriti nella tabella appropriata.  
+ In questo esempio non vengono utilizzate [tabelle partizionate](../partitions/partitioned-tables-and-indexes.md) per la tabella basata su disco, ma viene tenuto traccia di un punto di divisione esplicito tra le due tabelle utilizzando una terza tabella. Il punto di divisione può essere usato per garantire che i dati appena aggiunti vengano inseriti sempre nella tabella appropriata in base alla data. Inoltre, può essere usato per determinare la posizione in cui cercare i dati. I dati che arrivano in ritardo vengono ancora inseriti nella tabella appropriata.  
   
- Per un esempio correlato che usa le tabelle partizionate, vedere [modello di applicazione per le tabelle di partizionamento](memory-optimized-tables.md).  
+ Per un esempio correlato che usa tabelle partizionate, vedere [modello di applicazione per il partizionamento di tabelle ottimizzate per la memoria](memory-optimized-tables.md).  
   
 ## <a name="code-listing"></a>Listato di codice  
   
@@ -220,7 +220,7 @@ SELECT * FROM [dbo].[SalesOrders_cold] ORDER BY so_date DESC
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Esempi di codice di OLTP in memoria](in-memory-oltp-code-samples.md)  
   
   

@@ -21,18 +21,18 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c1510260a5b381b91a399984121834ca4ce30b5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771308"
 ---
-# <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
+# <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Questa stored procedure viene utilizzata per controllare una clausola di filtro in qualsiasi tabella per determinarne la validità per la tabella e per restituire informazioni sul filtro specificato, incluso se il filtro può essere utilizzato con partizioni pre-calcolate. Questa stored procedure viene eseguita nel database contenente la pubblicazione nel server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,19 +56,19 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Indica se la pubblicazione è idonea per l'utilizzo di partizioni pre-calcolate. dove **1** indica che è possibile utilizzare le partizioni pre-calcolate e **0** indica che non è possibile utilizzarle.|  
 |**has_dynamic_filters**|**bit**|Indica se la clausola di filtro fornita include almeno un filtro di riga con parametri. dove **1** indica che viene utilizzato un filtro di riga con parametri e **0** indica che tale funzione non viene utilizzata.|  
-|**dynamic_filters_function_list**|**nvarchar(500)**|Elenca le funzioni nella clausola di filtro che filtrano dinamicamente un articolo. Ogni funzione è separata da un punto e virgola.|  
-|**uses_host_name**|**bit**|Se nella clausola di filtro viene utilizzata la funzione [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) , dove **1** indica che questa funzione è presente.|  
-|**uses_suser_sname**|**bit**|Se nella clausola di filtro viene utilizzata la funzione [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) , dove **1** indica che questa funzione è presente.|  
+|**dynamic_filters_function_list**|**nvarchar (500)**|Elenca le funzioni nella clausola di filtro che filtrano dinamicamente un articolo. Ogni funzione è separata da un punto e virgola.|  
+|**uses_host_name**|**bit**|Se la funzione [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) viene utilizzata nella clausola di filtro, dove **1** indica che questa funzione è presente.|  
+|**uses_suser_sname**|**bit**|Se la funzione [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) viene utilizzata nella clausola di filtro, dove **1** indica che questa funzione è presente.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_check_subset_filter** viene utilizzata per la replica di tipo merge.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_check_subset_filter** viene utilizzata nella replica di tipo merge.  
   
- **sp_check_subset_filter** può essere eseguito su qualsiasi tabella anche se la tabella non è pubblicata. Questa stored procedure può essere utilizzata per verificare una clausola di filtro prima di definire un articolo filtrato.  
+ **sp_check_subset_filter** possono essere eseguite su qualsiasi tabella anche se la tabella non è pubblicata. Questa stored procedure può essere utilizzata per verificare una clausola di filtro prima di definire un articolo filtrato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_check_subset_filter**.  
   
 ## <a name="see-also"></a>Vedere anche  

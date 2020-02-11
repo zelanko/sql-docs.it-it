@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138276"
 ---
 # <a name="mdx-scripting---scope"></a>Scripting MDX - SCOPE
@@ -72,18 +72,18 @@ Limited_Set ::=
  *single_tuple*  
  Una tupla singola.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'istruzione SCOPE determina il sottocubo che interessato dall'esecuzione di una o più istruzioni MDX. Se l'istruzione MDX non è racchiusa all'interno di un'istruzione SCOPE, il suo ambito implicito è l'intero cubo.  
   
 > [!NOTE]  
 >  In una istruzione SCOPE i membri nascosti vengono esposti.  
   
- Istruzioni SCOPE creano sottocubi che espongono "buchi" indipendentemente i **MDX Compatibility** impostazione. L'istruzione `Scope( Customer.State.members )`, ad esempio, può includere gli stati per aree o paesi che non contengono stati ma al posto dei quali sono stati inseriti membri segnaposto altrimenti invisibili.  
+ Le istruzioni SCOPE creeranno sottocubi che espongono "buchi" indipendentemente dall'impostazione di **compatibilità MDX** . L'istruzione `Scope( Customer.State.members )`, ad esempio, può includere gli stati per aree o paesi che non contengono stati ma al posto dei quali sono stati inseriti membri segnaposto altrimenti invisibili.  
   
  L'istruzione SCOPE non ha effetto sui membri calcolati e sui set denominati creati all'interno dell'istruzione SCOPE.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, lo script di calcolo MDX in Adventure Works soluzione di esempio, definisce l'ambito corrente come trimestre fiscale dell'anno fiscale 2005 e la misura di sales amount quota e quindi assegna un valore alle celle nell'ambito corrente usando il  **ParallelPeriod** (funzione). Nell'esempio viene quindi modificato l'ambito utilizzando un'altra istruzione SCOPE e quindi esegue un'altra assegnazione mediante la [This (MDX)](../mdx/this-mdx.md) (funzione).  
+ Nell'esempio seguente, dallo script di calcolo MDX nella soluzione di esempio Adventure Works, viene definito l'ambito corrente come trimestre fiscale nell'anno fiscale 2005 e la misura Sales Amount Quota, quindi viene assegnato un valore alle celle nell'ambito corrente tramite la funzione **ParallelPeriod** . Nell'esempio viene quindi modificato l'ambito utilizzando un'altra istruzione SCOPE, quindi viene eseguita un'altra assegnazione utilizzando la funzione [this (MDX)](../mdx/this-mdx.md) .  
   
 ```  
 Scope   
@@ -114,6 +114,6 @@ End Scope ;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Istruzioni di scripting MDX &#40;&#41;MDX](../mdx/mdx-scripting-statements-mdx.md)  
   
   

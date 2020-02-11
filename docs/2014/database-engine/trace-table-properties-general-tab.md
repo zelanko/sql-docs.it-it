@@ -1,5 +1,5 @@
 ---
-title: Tracciare le proprietà della tabella (scheda Generale) | Microsoft Docs
+title: Proprietà tabella di traccia (scheda generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088735"
 ---
 # <a name="trace-table-properties-general-tab"></a>Proprietà tabella di traccia (scheda Generale)
-  Usare la **generali** scheda della finestra di **proprietà tabella di traccia** finestra di dialogo per visualizzare le proprietà di una tabella di traccia.  
+  Utilizzare la scheda **generale** della finestra di dialogo **Proprietà tabella di traccia** per visualizzare le proprietà di una tabella di traccia.  
   
- Per visualizzare questa finestra, utilizzare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per aprire una tabella di traccia e quindi scegliere il **File** dal menu fare clic su **proprietà**.  
+ Per visualizzare questa finestra, utilizzare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] per aprire una tabella di traccia, quindi scegliere **Proprietà**dal menu **file** .  
   
 ## <a name="options"></a>Opzioni  
  **Nome tabella**  
@@ -33,16 +33,16 @@ ms.locfileid: "66088735"
  **Nome provider di traccia**  
  Visualizza il nome dell'istanza tracciata di SQL Server.  
   
- **Tipo provider di traccia**  
+ **Tipo di provider di traccia**  
  Visualizza il tipo di server che ha fornito la traccia.  
   
- **version**  
+ **Versione**  
  Visualizza la versione del server che ha fornito la traccia.  
   
- **Righe**  
+ **prime righe**  
  Visualizza il numero di righe della tabella di traccia.  
   
- **Dimensioni dei dati (pagine)**  
+ **Dimensione dati (in pagine)**  
  Visualizza il numero di pagine di dati della tabella di traccia.  
   
 ## <a name="see-also"></a>Vedere anche  

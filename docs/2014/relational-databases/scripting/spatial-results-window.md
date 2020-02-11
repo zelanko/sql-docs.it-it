@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243246"
 ---
 # <a name="spatial-results-window"></a>Finestra Risultati spaziali
@@ -23,7 +23,7 @@ ms.locfileid: "75243246"
 > [!NOTE]  
 >  La finestra **Risultati spaziali** è disponibile solo se i risultati vengono restituiti in una griglia nella finestra **Risultati** . Se si richiede invece la restituzione dei risultati come testo, tale finestra non sarà disponibile.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opzioni  
  **Selezionare la colonna spaziale**  
  Consente di specificare la colonna che si desidera visualizzare tra le colonne spaziali nei risultati delle query. È possibile selezionare solo una colonna alla volta.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75243246"
   
  Questa opzione non è disponibile quando in una query vengono restituite solo istanze di punti.  
   
- **Seleziona proiezione**  
+ **Selezionare la proiezione**  
  Consente di visualizzare i dati geografici in quattro tipi di proiezione, ovvero Equirectangular, Mercator, Robinson e Bonne.  
   
  Questa opzione non è disponibile per i dati geometrici.  
@@ -50,8 +50,8 @@ ms.locfileid: "75243246"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di dati spaziali in Esplora oggetti](view-spatial-data-in-object-explorer.md)   
- [&#40;di dati spaziali SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [Editor di query motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Dati spaziali &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
+ [Editor di query del motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
  [Editor di query e di testo &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

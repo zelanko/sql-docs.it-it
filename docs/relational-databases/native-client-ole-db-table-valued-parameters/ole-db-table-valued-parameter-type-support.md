@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69f7994848d02d6e5e0036aaf132e6294f8d5d90
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761629"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Supporto del tipo di parametro con valori di tabella OLE DB
@@ -57,10 +57,10 @@ CoType RowsetTVP
  Le conversioni da e verso DBTYPE_TABLE per altri tipi non sono supportate. IConvertType::CanConvert restituisce S_FALSE per la conversione non supportata per tutte le richieste diverse dalla conversione da DBTYPE_TABLE a DBTYPE_TABLE. In questa situazione si presuppone l'uso di DBCONVERTFLAGS_PARAMETER sull'oggetto Command.  
   
 ## <a name="methods"></a>Metodi  
- Per informazioni sui metodi di OLE DB che supportano i parametri con valori di tabella, vedere [OLE DB metodi&#41;di supporto &#40;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)per i tipi di parametro con valori di tabella.  
+ Per informazioni sui metodi di OLE DB che supportano i parametri con valori di tabella, vedere [OLE DB supporto dei tipi di parametro con valori di tabella &#40;&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Proprietà  
- Per informazioni sulle proprietà di OLE DB che supportano i parametri con valori di tabella, vedere [OLE DB proprietà&#41;di supporto &#40;del tipo di parametro con valori di tabella](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Per informazioni sulle proprietà di OLE DB che supportano i parametri con valori di tabella, vedere [OLE DB tipo di parametro con valori di tabella supporto di &#40;proprietà&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

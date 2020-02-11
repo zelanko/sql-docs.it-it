@@ -1,5 +1,5 @@
 ---
-title: Gli attributi di esempio di proprietà (VC + +) | Microsoft Docs
+title: Esempio di proprietà Attributes (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a234817f40809185c3c4cdb8fbcd2d10e5833db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 794fcee913b41d98c0703244df86eb90efe3f740
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967098"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918817"
 ---
 # <a name="attributes-property-example-vc"></a>Esempio della proprietà Attributes (VC++)
-Questo esempio viene illustrato il [attributi](../../../ado/reference/adox-api/attributes-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md). Impostandola su **adColNullable** consente all'utente di impostare il valore di una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) su una stringa vuota. In questo caso, l'utente può distinguere un record in cui i dati non sono noto e un record in cui i dati non sono applicabile.  
+In questo esempio viene illustrata la proprietà [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) di una [colonna](../../../ado/reference/adox-api/column-object-adox.md). Impostando il valore su **adColNullable** , l'utente può impostare il valore di un [campo](../../../ado/reference/ado-api/field-object.md) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) su una stringa vuota. In questa situazione, l'utente può distinguere tra un record in cui i dati non sono noti e un record in cui i dati non sono applicabili.  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -179,7 +179,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in AttributesX...." << endl;  
+      cout << "Error occurred in AttributesX...." << endl;  
    }  
   
    if (m_pRstEmployees)  

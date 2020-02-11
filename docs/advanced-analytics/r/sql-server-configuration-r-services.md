@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727342"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configurazione di SQL Server per l'uso con R
@@ -48,7 +48,7 @@ Per il modello per l'individuazione dei curricula corrispondenti, l'uso di scrip
 
 Nel sistema operativo Windows è consigliabile usare l'opzione di risparmio energia **Prestazioni elevate**. L'uso di un'impostazione diversa causa prestazioni ridotte o non uniformi quando si usa SQL Server.
 
-### <a name="disk-io"></a>I/O su disco
+### <a name="disk-io"></a>I/O disco
 
 I processi di training e stima che usano R Services sono associati intrinsecamente all'I/O e dipendono dalla velocità dei dischi in cui è archiviato il database. Possono essere utili unità più veloci, come le unità SSD.
 
@@ -94,7 +94,7 @@ Per altre informazioni, vedere i documenti seguenti:
 
 + [Guida agli indici columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
-### <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria
+### <a name="memory-optimized-tables"></a>Tabelle ottimizzate per la memoria
 
 La memoria non è attualmente più un problema per i computer moderni. Poiché le specifiche hardware continuano a migliorare, è relativamente semplice ottenere RAM con costi contenuti. Allo stesso tempo, tuttavia, i dati vengono prodotti sempre più rapidamente e devono essere elaborati con bassa latenza.
 
@@ -172,7 +172,7 @@ Per informazioni dettagliate, incluso codice di esempio, vedere questa esercitaz
 
 Questa sezione riepiloga i metodi adottati in questi case study e in altri test per l'ottimizzazione di carichi di lavoro di Machine Learning specifici. I carichi di lavoro comuni includono il training del modello, l'estrazione delle caratteristiche e la progettazione delle caratteristiche, oltre a vari scenari di assegnazione dei punteggi: singola riga, batch di piccole dimensioni e batch di grandi dimensioni.
 
-### <a name="feature-engineering"></a>Progettazione delle funzionalità
+### <a name="feature-engineering"></a>Progettazione delle funzioni
 
 Un punto problematico per R è che in genere viene elaborato su una singola CPU. Si tratta di un importante collo di bottiglia delle prestazioni per molte attività, in particolare per la progettazione delle caratteristiche. Nella soluzione per l'individuazione dei curricula corrispondenti, solo l'attività di progettazione delle caratteristiche crea 2.500 caratteristiche di prodotto incrociato che è necessario combinare alle 100 caratteristiche originali. Questa attività richiederebbe una quantità di tempo significativa se tutte le operazioni venissero eseguite su una singola CPU.
 

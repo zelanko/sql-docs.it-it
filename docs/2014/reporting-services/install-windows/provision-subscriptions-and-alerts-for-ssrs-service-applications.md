@@ -17,20 +17,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69724baa3790f2b7475369c8f947a4201bcd57f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108715"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisioning di sottoscrizioni e avvisi per le applicazioni di servizio SSRS
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le sottoscrizioni e gli avvisi dati richiedono SQL Server Agent e la configurazione di autorizzazioni per SQL Server Agent. Se vengono visualizzati messaggi di errore indicanti che si richiede SQL Server Agent sebbene sia in esecuzione, aggiornare o verificare le autorizzazioni. L'ambito di questo argomento è [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in modalità SharePoint e vengono descritti tre modi per aggiornare le autorizzazioni di SQL Server Agent con sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le credenziali utilizzata nei passaggi di questo argomento devono disporre delle autorizzazioni sufficienti per concedere autorizzazioni di esecuzione a RSExecRole per gli oggetti nell'applicazione di servizio, il database msdb e database master.  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- ![Autorizzazioni di SQL Agent per database di applicazioni di servizio](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "Autorizzazioni di SQL Agent per database di applicazioni di servizio")  
+ ![Autorizzazioni di SQL Agent per i database dell'applicazione di servizio](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "Autorizzazioni di SQL Agent per i database dell'applicazione di servizio")  
   
 ||Descrizione|  
 |------|-----------------|  
@@ -57,9 +58,9 @@ ms.locfileid: "66108715"
   
 4.  Digitare le credenziali dell'amministratore di SharePoint se sufficienti per accedere al database master e ai database dell'applicazione di servizio.  
   
-5.  Fare clic sul pulsante **OK** .  
+5.  Fare clic sul pulsante **OK**.  
   
-##  <a name="bkmk_download"></a> Per scaricare lo script Transact-SQL  
+##  <a name="bkmk_download"></a>Per scaricare lo script Transact-SQL  
   
 1.  Nel gruppo **Gestione applicazioni** di Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio**.  
   
@@ -77,20 +78,20 @@ ms.locfileid: "66108715"
   
 2.  Scegliere **Tutti i programmi** dal menu **Start**.  
   
-3.  Espandere **prodotti Microsoft SharePoint 2010** e fare clic su **Shell di gestione SharePoint 2010**.  
+3.  Espandere **prodotti Microsoft sharepoint 2010** e fare clic su **SharePoint 2010 Management Shell**.  
   
 4.  Aggiornare il seguente cmdlet di PowerShell sostituendo il nome del database del server di report, l'account del pool di applicazioni e il percorso dell'istruzione.  
   
-     **Sintassi del cmdlet:** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **Sintassi del cmdlet:**`Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **Cmdlet di esempio:** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **Cmdlet di esempio:**`Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## <a name="using-the-transact-sql-script"></a>Utilizzo dello script Transact-SQL  
  Le seguenti procedure possono essere utilizzate con gli script scaricati dalla pagina di provisioning o creati tramite PowerShell.  
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>Per caricare lo script Transact-SQL in SQL Server Management Studio  
   
-1.  Per aprire SQL Server Management Studio, scegliere il **avviare** menu, fare clic su **Microsoft SQL Server 2012** e fare clic su **SQL Server Management Studio**.  
+1.  Per aprire SQL Server Management Studio, fare clic sul menu **Start** , scegliere **Microsoft SQL Server 2012** e fare clic su **SQL Server Management Studio**.  
   
 2.  Nella finestra di dialogo **Connetti al server** impostare le opzioni seguenti:  
   
@@ -116,6 +117,6 @@ ms.locfileid: "66108715"
   
      L'istruzione viene aggiunta alla finestra della query.  
   
-5.  Fare clic su **Esegui**.  
+5.  Fare clic su **Execute**.  
   
   

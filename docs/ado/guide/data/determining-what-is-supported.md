@@ -1,5 +1,5 @@
 ---
-title: Determinazione delle funzionalità supportate | Microsoft Docs
+title: Determinazione degli elementi supportati | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc42e9128ccc1ccb43996f554ffe280916884307
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925527"
 ---
 # <a name="determining-what-is-supported"></a>Determinazione delle funzionalità supportate
-Il **supporta** metodo viene utilizzato per determinare se un determinato **Recordset** oggetto supporta un determinato tipo di funzionalità. Presenta la sintassi seguente:  
+Il metodo **Supports** viene utilizzato per determinare se un oggetto **Recordset** specificato supporta un particolare tipo di funzionalità. Ha la sintassi seguente:  
   
 ```  
   
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="remarks"></a>Note  
- Il **supporta** metodo restituisce un valore booleano che indica se il provider supporta tutte le funzionalità identificate dall'argomento CursorOptions. È possibile usare la **supporta** metodo per determinare quali tipi di funzionalità di un **Recordset** supporta dell'oggetto. Se il **Recordset** oggetto supporta le funzionalità di cui costanti corrispondente sono *CursorOptions*, il **supporta** restituzione del metodo **True**. In caso contrario, restituisce **False**.  
+## <a name="remarks"></a>Osservazioni  
+ Il metodo **Supports** restituisce un valore booleano che indica se il provider supporta tutte le funzionalità identificate dall'argomento CursorOptions. È possibile utilizzare il metodo **Supports** per determinare i tipi di funzionalità supportati da un oggetto **Recordset** . Se l'oggetto **Recordset** supporta le funzionalità le cui costanti corrispondenti si trovano in *CursorOptions*, il metodo **Supports** restituisce **true**. In caso contrario, restituisce **false**.  
   
- Usando il **supporta** metodo, è possibile cercare la capacità del **Recordset** oggetto per aggiungere nuovi record, usare i segnalibri, usare il **trovare** metodo, utilizzare lo scorrimento, utilizzare il  **Indice** proprietà, nonché per eseguire gli aggiornamenti in batch. Per un elenco completo di costanti e i relativi significati, vedere [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  
+ Utilizzando il metodo **Supports** , è possibile verificare la capacità dell'oggetto **Recordset** di aggiungere nuovi record, utilizzare i segnalibri, utilizzare il metodo **Find** , utilizzare lo scorrimento, utilizzare la proprietà **index** e per eseguire gli aggiornamenti in batch. Per un elenco completo delle costanti e dei relativi significati, vedere [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  
   
- Anche se il **supporta** metodo può restituire **True** per una determinata funzionalità, ma questa soluzione non garantisce che il provider può rendere la funzionalità disponibile in tutte le circostanze. Il **supporta** metodo restituisce semplicemente se il provider supporta la funzionalità specificata, presupponendo che vengano soddisfatte determinate condizioni. Ad esempio, il **supporta** metodo potrebbe indicare che un **Recordset** oggetto supporti gli aggiornamenti, anche se il cursore è basato su un join tra più tabelle - alcune colonne di cui non sono aggiornabili.
+ Sebbene il metodo **Supports** possa restituire **true** per una determinata funzionalità, non garantisce che il provider possa rendere la funzionalità disponibile in tutte le circostanze. Il metodo **Supports** restituisce semplicemente un valore che indica se il provider può supportare la funzionalità specificata, supponendo che vengano soddisfatte determinate condizioni. Il metodo **Supports** , ad esempio, può indicare che un oggetto **Recordset** supporta gli aggiornamenti, anche se il cursore è basato su un join a più tabelle, alcune colonne di che non sono aggiornabili.

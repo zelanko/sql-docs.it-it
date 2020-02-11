@@ -14,10 +14,10 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728897"
 ---
 # <a name="transactions-master-data-services"></a>Transazioni (Master Data Services)
@@ -54,7 +54,7 @@ ms.locfileid: "73728897"
   
  È anche possibile chiamare le stored procedure seguenti per pulire i log delle transazioni.  
   
-|Stored procedure|Descrizione|  
+|Stored Procedure|Descrizione|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|Pulisce la cronologia delle transazioni|  
 |mdm.udpValidationsCleanup|Pulisce la cronologia di convalida|  
@@ -77,7 +77,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>Impostazioni sistema  
- In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] è disponibile un'impostazione che determina se le transazioni vengono registrate quando i record vengono gestiti in modo temporaneo. È possibile regolare questa impostazione in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o direttamente nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
+ In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] è disponibile un'impostazione che determina se le transazioni vengono registrate quando i record vengono gestiti in modo temporaneo. È possibile regolare questa impostazione in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o direttamente nella tabella Impostazioni sistema del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Per altre informazioni, vedere [Impostazioni di sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
  In caso di importazione di dati in questa versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è possibile specificare se registrare transazioni all'avvio della stored procedure. Per altre informazioni, vedere [Stored procedure di gestione temporanea &#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md).  
   

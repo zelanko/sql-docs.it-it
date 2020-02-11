@@ -16,13 +16,13 @@ ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 75c66d1077b111837197957cc845b690b794ea24
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771054"
 ---
-# <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
+# <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Aggiunge una colonna a un articolo di tabella esistente che è stato pubblicato. È possibile aggiungere la nuova colonna in tutti i server di pubblicazione che pubblicano la tabella specificata oppure solo in una pubblicazione specifica della tabella. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -30,7 +30,7 @@ ms.locfileid: "68771054"
 > [!IMPORTANT]
 >  Questa stored procedure è deprecata e viene supportata per motivi di compatibilità con le versioni precedenti. Deve essere utilizzato solo con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] autori e [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] sottoscrittori di ripubblicazione. Questa stored procedure non deve essere utilizzata nelle colonne con tipi di dati introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versioni successive.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,46 +46,46 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @source_object =]'*source_object*'  
+ [ @source_object =] '*source_object*'  
  Nome dell'articolo di tabella che contiene la nuova colonna da aggiungere. *source_object* è di **tipo nvarchar (358**) e non prevede alcun valore predefinito.  
   
- [ @column =]'*colonna*'  
+ [ @column =] '*colonna*'  
  Nome della colonna della tabella da aggiungere per la replica. *Column* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
- [ @typetext =]'*TypeText*'  
- Definizione della colonna da aggiungere. *TypeText* è di **tipo nvarchar (3000)** e non prevede alcun valore predefinito. Se, ad esempio, la colonna order_filled viene aggiunta ed è un campo a carattere singolo, non NULL e il valore predefinito è **N**, order_filled sarà il parametro *Column* , mentre la definizione della colonna, **char (1) NOT NULL CONSTRAINT il valore predefinito di constraint_name ' n'** corrisponde al valore del parametro *TypeText* .  
+ [ @typetext =] '*TypeText*'  
+ Definizione della colonna da aggiungere. *TypeText* è di **tipo nvarchar (3000)** e non prevede alcun valore predefinito. Se, ad esempio, la colonna order_filled viene aggiunta ed è un campo a carattere singolo, non NULL, e il valore predefinito è **N**, order_filled sarebbe il parametro della *colonna* , mentre la definizione del **vincolo char (1) not null constraint_name valore predefinito ' n'** corrisponderebbe al parametro *TypeText* .  
   
- [ @publication_to_add =]'*publication_to_add*'  
- Nome della pubblicazione cui si desidera aggiungere la nuova colonna. *publication_to_add* è di **tipo nvarchar (4000)** e il valore predefinito è **All**. Se **tutte**le pubblicazioni contenenti questa tabella sono interessate. Se si specifica *publication_to_add* , la nuova colonna verrà aggiunta solo per questa pubblicazione.  
+ [ @publication_to_add =] '*publication_to_add*'  
+ Nome della pubblicazione cui si desidera aggiungere la nuova colonna. *publication_to_add* è di **tipo nvarchar (4000)** e il valore predefinito è **All**. Se **tutte**le pubblicazioni contenenti questa tabella sono interessate. Se viene specificato *publication_to_add* , viene aggiunta la nuova colonna solo per questa pubblicazione.  
   
- [ @from_agent =] *from_agent*  
- Specifica se la stored procedure viene eseguita da un agente di replica. *from_agent* è di **tipo int**e il valore predefinito è **0**, dove il valore **1** viene utilizzato quando il stored procedure viene eseguito da un agente di replica e in tutti gli altri casi è necessario utilizzare il valore predefinito **0**.  
+ [ @from_agent = ] *from_agent*  
+ Specifica se la stored procedure viene eseguita da un agente di replica. *from_agent* è di **tipo int**e il valore predefinito è **0**, mentre il valore **1** viene utilizzato quando questo stored procedure viene eseguito da un agente di replica e in tutti gli altri casi è necessario utilizzare il valore predefinito **0**.  
   
- [ @schema_change_script =]'*schema_change_script*'  
- Specifica il nome e il percorso di uno script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per modificare le stored procedure personalizzate generate dal sistema. *schema_change_script* è di **tipo nvarchar (4000)** e il valore predefinito è null. La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. *schema_change_script* viene eseguito dopo che è stata apportata una modifica dello schema a un articolo di tabella replicato utilizzando sp_repladdcolumn e può essere utilizzato per eseguire una delle operazioni seguenti:  
+ [ @schema_change_script =] '*schema_change_script*'  
+ Specifica il nome e il percorso di uno script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per modificare le stored procedure personalizzate generate dal sistema. *schema_change_script* è di **tipo nvarchar (4000)** e il valore predefinito è null. La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. *schema_change_script* viene eseguita dopo che è stata apportata una modifica dello schema a un articolo di tabella replicato utilizzando sp_repladdcolumn e che può essere utilizzato per eseguire una delle operazioni seguenti:  
   
 -   Se le stored procedure personalizzate vengono rigenerate automaticamente, è possibile utilizzare *schema_change_script* per eliminare queste stored procedure personalizzate e sostituirle con stored procedure personalizzate definite dall'utente che supportano il nuovo schema.  
   
 -   Se le stored procedure personalizzate non vengono rigenerate automaticamente, è possibile utilizzare *schema_change_script*per rigenerare tali stored procedure o per creare stored procedure personalizzate definite dall'utente.  
   
- [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
+ [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*  
  Abilita o disabilita la funzionalità che consente di invalidare uno snapshot. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **1**.  
   
  **1** specifica che le modifiche apportate all'articolo possono causare l'invalidità dello snapshot. in tal caso, il valore **1** consente di eseguire il nuovo snapshot.  
   
  **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot.  
   
- [ @force_reinit_subscription =] *force_reinit_subscription*  
- Abilita o disabilita la funzionalità che consente di reinizializzare la sottoscrizione. *force_reinit_subscription* è un **bit** il cui valore predefinito è **0**.  
+ [ @force_reinit_subscription = ] *force_reinit_subscription*  
+ Abilita o disabilita la funzionalità che consente di reinizializzare la sottoscrizione. *force_reinit_subscription* è un **bit** e il valore predefinito è **0**.  
   
  **0** specifica che le modifiche apportate all'articolo non provocano la reinizializzazione della sottoscrizione.  
   
  **1** specifica che le modifiche apportate all'articolo possono causare la reinizializzazione della sottoscrizione. in tal caso, il valore **1** consente la reinizializzazione della sottoscrizione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server sysadmin e del ruolo predefinito del database db_owner possono eseguire sp_repladdcolumn.  
   
 ## <a name="see-also"></a>Vedere anche  

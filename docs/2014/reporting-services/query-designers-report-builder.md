@@ -1,5 +1,5 @@
 ---
-title: Eseguire una query finestre di progettazione (Generatore Report) | Microsoft Docs
+title: Finestre Progettazione query (Generatore report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58a7e1a9d5ae71d659cfd214b46f3a004ea71101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108006"
 ---
 # <a name="query-designers-report-builder"></a>Finestre di progettazione query (Generatore report)
@@ -24,19 +24,19 @@ ms.locfileid: "66108006"
   
  Negli argomenti seguenti viene descritta l'interfaccia utente di ogni finestra Progettazione query.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Interfaccia utente della finestra di progettazione Query MDX di Analysis Services &#40;Generatore Report&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
+-   [Analysis Services interfaccia utente di progettazione query MDX &#40;Generatore report&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
   
--   [Interfaccia utente della finestra Progettazione Query basata su testo &#40;Generatore Report&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
+-   [Interfaccia utente di progettazione query basata su testo &#40;Generatore report&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
   
--   [Interfaccia utente della finestra Progettazione Query relazionale &#40;Generatore Report&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
+-   [Interfaccia utente di progettazione query relazionale &#40;Generatore report&#41;](report-data/relational-query-designer-user-interface-report-builder.md)  
   
--   [Interfaccia utente di progettazione di SAP NetWeaver BI Query &#40;Generatore Report&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
+-   [Interfaccia utente di progettazione query SAP NetWeaver BI &#40;Generatore report&#41;](../../2014/reporting-services/sap-netweaver-bi-query-designer-user-interface-report-builder.md)  
   
--   [Interfaccia utente di progettazione di Hyperion Essbase Query &#40;Generatore Report&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md)  
+-   [Interfaccia utente di progettazione query Hyperion Essbase &#40;Generatore report&#41;](../../2014/reporting-services/hyperion-essbase-query-designer-user-interface-report-builder.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

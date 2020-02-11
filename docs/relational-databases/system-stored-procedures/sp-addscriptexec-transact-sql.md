@@ -16,18 +16,18 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022456"
 ---
-# <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
+# <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Invia uno script SQL (file con estensione sql) a tutti i Sottoscrittori di una pubblicazione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,45 +40,45 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @scriptfile = ] 'scriptfile'` È il percorso completo del file script SQL. *scriptfile* viene **nvarchar (4000)** , non prevede alcun valore predefinito.  
+`[ @scriptfile = ] 'scriptfile'`È il percorso completo del file script SQL. *scriptfile* è di **tipo nvarchar (4000)** e non prevede alcun valore predefinito.  
   
-`[ @skiperror = ] 'skiperror'` Indica se l'agente di distribuzione o dell'agente di Merge verrà interrotta quando viene rilevato un errore durante l'elaborazione di script. *SkipError* viene **bit**, con un valore predefinito è 0.  
+`[ @skiperror = ] 'skiperror'`Indica se il agente di distribuzione o agente di merge deve arrestarsi quando viene rilevato un errore durante l'elaborazione dello script. *SkipError* è di **bit**e il valore predefinito è 0.  
   
- **0** = l'agente verrà arrestato.  
+ **0** = l'agente si arresterà.  
   
  **1** = l'agente continua lo script e ignora l'errore.  
   
-`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere usata durante la pubblicazione da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  il *Server* di pubblicazione non deve essere utilizzato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la pubblicazione da un server di pubblicazione.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- **sp_addscriptexec** viene utilizzata nella replica transazionale, replica e di tipo merge.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_addscriptexec** viene utilizzata per la replica transazionale e la replica di tipo merge.  
   
- **sp_addscriptexec** non viene usato per la replica snapshot.  
+ **sp_addscriptexec** non viene utilizzato per la replica snapshot.  
   
- Per utilizzare **sp_addscriptexec**, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio deve disporre di lettura e le autorizzazioni di scrittura per le autorizzazioni di posizione e lettura di snapshot per la posizione in cui gli script vengono archiviate.  
+ Per utilizzare **sp_addscriptexec**, l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio deve disporre delle autorizzazioni di lettura e scrittura per la posizione dello snapshot e le autorizzazioni di lettura per il percorso in cui sono archiviati gli script.  
   
- Il [utilità sqlcmd](../../tools/sqlcmd-utility.md) viene usato per eseguire lo script nel sottoscrittore e lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di distribuzione o dell'agente di Merge durante la connessione al database di sottoscrizione. Quando l'agente viene eseguito su una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il [utilità osql](../../tools/osql-utility.md) viene usato al posto di [sqlcmd](../../tools/sqlcmd-utility.md).  
+ L' [utilità sqlcmd](../../tools/sqlcmd-utility.md) viene utilizzata per eseguire lo script nel Sottoscrittore e lo script viene eseguito nel contesto di sicurezza utilizzato dal agente di distribuzione o agente di merge durante la connessione al database di sottoscrizione. Quando l'agente viene eseguito in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], viene utilizzata l' [utilità osql](../../tools/osql-utility.md) anziché [SQLCMD](../../tools/sqlcmd-utility.md).  
   
- **sp_addscriptexec** è utile per applicare script a sottoscrittori e Usa [sqlcmd](../../tools/sqlcmd-utility.md) per applicare il contenuto dello script al sottoscrittore. Tuttavia, poiché le configurazioni dei Sottoscrittori sono soggette a variazioni, gli script testati prima dell'invio al server di pubblicazione potrebbero comunque causare errori in un Sottoscrittore. *SkipError* offre la possibilità di avere l'agente di distribuzione o dell'agente di Merge ignorare gli errori e continuare. Uso [sqlcmd](../../tools/sqlcmd-utility.md) per testare gli script prima dell'esecuzione **sp_addscriptexec**.  
+ **sp_addscriptexec** è utile per l'applicazione di script ai sottoscrittori e utilizza [SQLCMD](../../tools/sqlcmd-utility.md) per applicare il contenuto dello script al Sottoscrittore. Tuttavia, poiché le configurazioni dei Sottoscrittori sono soggette a variazioni, gli script testati prima dell'invio al server di pubblicazione potrebbero comunque causare errori in un Sottoscrittore. *SkipError* offre la possibilità di agente di distribuzione o agente di merge ignorare gli errori e continuare con. Usare [SQLCMD](../../tools/sqlcmd-utility.md) per testare gli script prima di eseguire **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Gli errori ignorati vengono comunque registrati nella cronologia dell'agente a titolo di riferimento.  
   
- Usando **sp_addscriptexec** per registrare un file di script per le pubblicazioni utilizzando FTP per il recapito di snapshot è supportato solo per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
+ L'utilizzo di **sp_addscriptexec** per pubblicare un file di script per le pubblicazioni mediante FTP per il recapito di snapshot è supportato solo per i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_addscriptexec**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_addscriptexec**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire script durante la sincronizzazione &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
+ [Esecuzione di script durante la sincronizzazione &#40;la programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Sincronizzare i dati](../../relational-databases/replication/synchronize-data.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

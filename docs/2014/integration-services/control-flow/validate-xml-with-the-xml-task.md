@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829579"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,14 +25,14 @@ ms.locfileid: "62829579"
   
  L'immagine seguente mostra l' **Editor attività XML** con le impostazioni necessarie per la convalida di XML con l'output di errore completo.  
   
- ![Proprietà attività XML nell'Editor attività XML](../media/xmltaskproperties.jpg "Proprietà attività XML nell'Editor attività XML")  
+ ![Proprietà delle attività XML nell'Editor attività XML](../media/xmltaskproperties.jpg "Proprietà delle attività XML nell'Editor attività XML")  
   
  Prima che fosse disponibile la proprietà `ValidationDetails`, la convalida XML da parte dell'Attività XML restituiva solo un risultato di tipo True o False, senza informazioni sugli errori o sulle rispettive posizioni. Attualmente, quando si imposta `ValidationDetails` su True, il file di output contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML.  
   
  La funzionalità di convalida XML è facilmente scalabile per documenti XML di grandi dimensioni e un numero elevato di errori. Dato che il file di output è in formato XML, è possibile eseguire una query e analizzare l'output. Ad esempio, se l'output contiene un numero elevato di errori, è possibile raggrupparli usando un [!INCLUDE[tsql](../../../includes/tsql-md.md)] , come descritto in questo argomento.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introdotta la `ValidationDetails` in proprietà [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La proprietà è anche disponibile in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in SQL Server 2016.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) ha introdotto `ValidationDetails` la proprietà [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in Service Pack 2. La proprietà è disponibile anche in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in SQL Server 2016.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Esempio di output per un file XML valido  
  Ecco un file di output di esempio con i risultati della convalida per un file XML valido.  
@@ -120,6 +120,6 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività XML](xml-task.md)   
- [XML Task Editor &#40;General Page&#41;](../xml-task-editor-general-page.md)  
+ [Editor attività XML &#40;pagina generale&#41;](../xml-task-editor-general-page.md)  
   
   

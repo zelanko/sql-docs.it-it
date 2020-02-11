@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229390"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
@@ -28,7 +28,7 @@ ms.locfileid: "75229390"
   
  ![Power View per l'architettura dei modelli multidimensionali](../media/daxmd-architecture.gif "Power View per l'architettura dei modelli multidimensionali")  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  **Requisiti del server**  
   
 -   SQL Server 2014 Enterprise o Business Intelligence Edition con Analysis Services in esecuzione in modalità multidimensionale  
@@ -64,7 +64,7 @@ ms.locfileid: "75229390"
 |Relazione gruppo di misure dimensione del cubo|Relazione|  
 |Prospettiva|Prospettiva|  
 |KPI|KPI|  
-|Gerarchie utente/padre-figlio|Hierarchy|  
+|Gerarchie utente/padre-figlio|Gerarchia|  
 |Cartella di visualizzazione|Cartella di visualizzazione|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>Misure, gruppi di misure e indicatori KPI  
@@ -217,7 +217,7 @@ ms.locfileid: "75229390"
   
  La richiesta DISCOVER_CSDL_METADATA presenta le restrizioni seguenti:  
   
-|Nome|Obbligatoria|Description|  
+|Nome|Obbligatoria|Descrizione|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sì|Nome del catalogo\database.|  
 |PERSPECTIVE_NAME|Sì, se il cubo contiene più di una prospettiva. Facoltativo se è presente un solo cubo o una prospettiva predefinita.|Nome del cubo o della prospettiva nel database multidimensionale.|  

@@ -2,7 +2,7 @@
 title: Visualizzare i report di analisi per gli aggiornamenti di SQL Server
 description: Visualizzare i report di analisi in Database Experimentation Assistant
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 02/04/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,78 +12,76 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317747"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76977590"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Visualizzare i report di analisi in Database Experimentation Assistant
 
-Dopo aver usato Database Experimentation Assistant (DEA) per [creare un report di analisi](database-experimentation-assistant-create-report.md), attenersi alla procedura seguente per esaminare il report per ottenere informazioni dettagliate sulle prestazioni in base al test a/B.
+Dopo aver usato Database Experimentation Assistant (DEA) per [creare un report di analisi](database-experimentation-assistant-create-report.md), è possibile esaminare il report per ottenere informazioni dettagliate sulle prestazioni in base al test a/B eseguito.
 
-## <a name="select-a-server"></a>Selezionare un server.
+## <a name="open-an-existing-analysis-report"></a>Aprire un report di analisi esistente
 
-In DEA selezionare l'icona di menu. Nel menu espanso selezionare report di **analisi** accanto all'icona dell'elenco di controllo per aprire la finestra report di analisi.
+1. In DEA selezionare l'icona dell'elenco, specificare il nome del server e il tipo di autenticazione, selezionare o deselezionare le caselle di controllo **Crittografa connessione** e **attendibilità del server certificato** nel modo appropriato per lo scenario, quindi selezionare **Connetti**.
 
-In **report di analisi**immettere il nome di un computer che esegue SQL Server che dispone di un database di analisi e quindi selezionare **Connetti**.
+   ![Connetti al server con il report](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
-![Connettersi a un report esistente](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+2. Nella schermata **report di analisi** , sul lato sinistro, selezionare la voce per il report che si desidera visualizzare.
 
-Se non sono presenti dipendenze, nella pagina dei **prerequisiti vengono richiesti** i collegamenti per installarli. Se necessario, installare i prerequisiti, quindi selezionare **Riprova**.
-
-![Pagina dei prerequisiti](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
-
-## <a name="select-an-analysis-report-to-view"></a>Selezionare un report di analisi da visualizzare
-
-Nell'elenco dei report di analisi, fare doppio clic su un report per aprirlo.
-
-![Visualizza report esistente](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
-
-È possibile ottenere informazioni dettagliate sull'ottima rappresentazione del carico di lavoro, come illustrato in questo grafico di esempio:
-
-![Grafici Rep del carico di lavoro](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
+   ![Apre un file di report esistente](./media/database-experimentation-assistant-view-report/dea-select-report-to-view.png)
 
 ## <a name="view-and-understand-the-analysis-report"></a>Visualizzare e comprendere il report di analisi
 
 In questa sezione viene illustrato il report di analisi.
 
-### <a name="query-categories"></a>Categorie di query
+Nella prima pagina del report vengono visualizzate le informazioni sulla versione e le informazioni di compilazione per i server di destinazione in cui è stato eseguito l'esperimento. La soglia consente di regolare la sensibilità o la tolleranza dell'analisi di test A/B. Per impostazione predefinita, la soglia è impostata su 5%; qualsiasi miglioramento delle prestazioni >= 5% è classificato come "migliorato".  L'elenco a discesa consente di valutare il report con diverse soglie di prestazioni.
 
-Selezionare sezioni diverse del grafico a torta a sinistra per visualizzare solo le query che rientrano in tale categoria.
+È possibile esportare i dati del report in un file CSV selezionando il pulsante **Esporta** .  In qualsiasi pagina del report di analisi è possibile selezionare **stampa** per stampare gli elementi visibili sullo schermo in quel momento.
 
-![Sezioni della torta del report](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+### <a name="query-distribution"></a>Distribuzione di query
 
-- **Query**ridotte: query con prestazioni migliori in a rispetto a B.  
-- **Errori**: query che mostrano errori nell'istanza B ma non nell'istanza a.  
-- **Query migliorate**: query con prestazioni migliori nell'istanza B rispetto all'istanza a.  
-- **Query indeterminate**: query con una modifica indeterminata delle prestazioni.  
-- **Stesso**: query in cui le prestazioni sono rimaste invariate tra le istanze a e B.
+- Selezionare sezioni diverse dei grafici a torta per visualizzare solo le query che appartengono a tale categoria.
+
+   ![Categorie di report come sezioni della torta](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+
+  - **Danneggiato**: query con prestazioni peggiori nella destinazione 2 rispetto alla destinazione 1.
+  - **Errori**: query che hanno mostrato errori almeno una volta in almeno una delle destinazioni.
+  - **Miglioramento**: query con prestazioni migliori sulla destinazione 2 rispetto alla destinazione 1.
+  - **Non è possibile valutare**: le query con dimensioni di esempio troppo ridotte per l'analisi statistica. Per l'analisi di test A/B, DEA richiede che le stesse query dispongano di almeno 15 esecuzioni in ogni destinazione.
+  - **Stesso**: query senza differenza statistica tra target 1 e target 2.
+
+  Eventuali query di errore vengono visualizzate in grafici distinti; un grafico a barre che classifica gli errori per tipo e un grafico a torta classificazione degli errori in base all'ID errore.
+
+   ![Grafici delle query di errore](./media/database-experimentation-assistant-view-report/dea-error-query-charts.png)
+
+  Esistono quattro possibili tipi di errori:
+
+  - **Errori esistenti**: errori presenti sia nella destinazione 1 che nella destinazione 2.
+  - **Nuovi errori**: errori nuovi nella destinazione 2.
+  - **Errori risolti**: errori presenti nella destinazione 1 ma risolti nella destinazione 2.
+  - **Blocchi di aggiornamento**: errori che bloccano l'aggiornamento al server di destinazione.
+
+  Facendo clic su qualsiasi barra o sezione a torta nei grafici si esegue il drill-down nella categoria e vengono visualizzate le metriche delle prestazioni, anche per la categoria **non è possibile valutare** .
+
+  Il dashboard Mostra inoltre le prime cinque query migliorate e ridotte per offrire una panoramica delle prestazioni rapide.
 
 ### <a name="individual-query-drill-down"></a>Drill-down per query singole
 
-È possibile selezionare i collegamenti al modello di query per visualizzare informazioni più dettagliate su query specifiche.
+È possibile selezionare i collegamenti al modello di query per informazioni più dettagliate su query specifiche.
 
-![Drill-down query](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+![Eseguire il drill-down in una query specifica](./media/database-experimentation-assistant-view-report/dea-query-drill-down-report.png)
 
-Selezionare una query specifica per aprire un riepilogo di confronto per la query.
+- Selezionare una query specifica per aprire il relativo riepilogo di confronto.
 
-![Riepilogo confronto](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
+   ![Riepilogo del confronto](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-È possibile visualizzare le istanze A e B su cui è stata eseguita la query. È anche possibile visualizzare un modello di come potrebbe apparire la query. Una tabella Visualizza informazioni sulle query specifiche per le istanze A e B.
+   È possibile trovare statistiche di riepilogo per la query, ad esempio il numero di esecuzioni, la durata media, la CPU media, le letture/scritture e il numero di errori.  Se la query è una query di errore, nella scheda **informazioni sull'errore** vengono visualizzati maggiori dettagli sull'errore.  Nella scheda **informazioni sul piano di query** è possibile trovare informazioni sui piani di query usati per la query nella destinazione 1 e nella destinazione 2.
 
-### <a name="error-queries"></a>Query di errore
-
-Il report di riepilogo confronto include le sezioni informazioni **sugli errori** espandibili e **informazioni sul piano di query** . Nelle sezioni vengono illustrati gli errori e le informazioni sul piano per entrambe le istanze.
-
-Selezionare la torta di errore (rosso) per visualizzare questi tipi di errori:
-
-- **Errori esistenti**: errori che si sono verificati in un oggetto.
-- **Nuovi errori**: errori che si sono verificati in B.
-- **Errori risolti**: errori che si sono verificati in, ma non in B.
-
-![Grafici degli errori](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+   > [!NOTE]
+   > Se si sta analizzando l'evento esteso (. XEL), le informazioni sul piano di query non vengono raccolte per limitare le richieste di memoria nel computer dell'utente.
 
 ## <a name="see-also"></a>Vedere anche
 

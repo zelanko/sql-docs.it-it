@@ -1,5 +1,5 @@
 ---
-title: Inizializzazione dei campi di descrizione | Microsoft Docs
+title: Inizializzazione dei campi del descrittore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c78162bcf0421fee609abe5fcacf9613e0f8020b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138936"
 ---
 # <a name="initialization-of-descriptor-fields"></a>Inizializzazione dei campi di descrizione
-Quando si alloca un descrittore riga dell'applicazione, i relativi campi ricevano valori iniziali come indicato nella [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Il valore iniziale del campo SQL_DESC_TYPE è SQL_DEFAULT. Ciò consente un trattamento dei dati del database per la presentazione all'applicazione standard. L'applicazione può specificare diverse modalità di gestione dei dati impostando i campi del record del descrittore.  
+Quando viene allocato un descrittore di riga dell'applicazione, i relativi campi ricevono i valori iniziali come indicato in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Il valore iniziale del campo SQL_DESC_TYPE è SQL_DEFAULT. In questo modo viene fornito un trattamento standard dei dati del database per la presentazione all'applicazione. L'applicazione può specificare diversi trattamenti dei dati impostando i campi del record del descrittore.  
   
- Il valore iniziale di SQL_DESC_ARRAY_SIZE nell'intestazione del descrittore è 1. L'applicazione può modificare questo campo per abilitare recupero di più righe.  
+ Il valore iniziale di SQL_DESC_ARRAY_SIZE nell'intestazione del descrittore è 1. L'applicazione può modificare questo campo per abilitare il recupero più righe.  
   
- Il concetto di un valore predefinito non è valido per i campi di un'implementazione. Un'applicazione può accedere ai campi di un'implementazione solo quando è presente un'istruzione preparata o eseguita associata.  
+ Il concetto di valore predefinito non è valido per i campi di un IRD. Un'applicazione può accedere ai campi di un IRD solo quando è associata a un'istruzione preparata o eseguita.  
   
- Determinati campi di un IPD sono definiti solo dopo il IPD sono popolate automaticamente dal driver. In caso contrario, non sono definite. Questi campi sono SQL_DESC_CASE_SENSITIVE SQL_DESC_FIXED_PREC_SCALE, descrizione SQL_DESC_TYPE_NAME, SQL_DESC_UNSIGNED e SQL_DESC_LOCAL_TYPE_NAME.
+ Determinati campi di un dpi vengono definiti solo dopo che il dpi è stato popolato automaticamente dal driver. In caso contrario, non sono definite. Questi campi sono SQL_DESC_CASE_SENSITIVE, SQL_DESC_FIXED_PREC_SCALE, SQL_DESC_TYPE_NAME, SQL_DESC_UNSIGNED e SQL_DESC_LOCAL_TYPE_NAME.

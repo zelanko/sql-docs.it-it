@@ -16,18 +16,18 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771574"
 ---
-# <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
+# <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce l'elenco delle informazioni sulla sottoscrizione associate a una pubblicazione, un articolo, un Sottoscrittore o un set di sottoscrizioni. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -67,26 +67,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**subscriber**|**sysname**|Nome del Sottoscrittore.|  
 |**pubblicazione**|**sysname**|Nome della pubblicazione.|  
-|**article**|**sysname**|Nome dell'articolo.|  
+|**articolo**|**sysname**|Nome dell'articolo.|  
 |**database di destinazione**|**sysname**|Nome del database di destinazione per i dati replicati.|  
-|**stato della sottoscrizione**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattivo<br /><br /> **1** = sottoscritto<br /><br /> **2** = attivo|  
+|**Stato della sottoscrizione**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattivo<br /><br /> **1** = sottoscritto<br /><br /> **2** = attivo|  
 |**tipo di sincronizzazione**|**tinyint**|Tipo di sincronizzazione per la sottoscrizione:<br /><br /> **1** = automatico<br /><br /> **2** = nessuna|  
-|**tipo di sottoscrizione**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = Pull<br /><br /> **2** = Anonimo|  
-|**sottoscrizione completa**|**bit**|Indica se la sottoscrizione è associata a tutti gli articoli della pubblicazione:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
+|**tipo di sottoscrizione**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = Anonimo|  
+|**full subscription**|**bit**|Indica se la sottoscrizione è associata a tutti gli articoli della pubblicazione:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
 |**nome sottoscrizione**|**nvarchar(255)**|Nome della sottoscrizione.|  
 |**modalità di aggiornamento**|**int**|**0** = sola lettura<br /><br /> **1** = sottoscrizione ad aggiornamento immediato|  
-|**ID processo di distribuzione**|**binary(16)**|ID di processo dell'agente di distribuzione.|  
-|**loopback_detection**|**bit**|Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **0** = restituisce.<br /><br /> **1** = non viene restituito.<br /><br /> Utilizzato con la replica transazionale bidirezionale. Per altre informazioni, vedere [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|**distribution job id**|**binario (16)**|ID di processo dell'agente di distribuzione.|  
+|**loopback_detection**|**bit**|Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **0** = restituisce.<br /><br /> **1** = non viene restituito.<br /><br /> Utilizzato con la replica transazionale bidirezionale. Per ulteriori informazioni, vedere [replica transazionale bidirezionale](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |**offload_enabled**|**bit**|Specifica se per un agente di replica è impostata l'esecuzione con ripartizione del carico di lavoro nel Sottoscrittore.<br /><br /> Se è **0**, Agent viene eseguito nel server di pubblicazione.<br /><br /> Se è **1**, Agent viene eseguito nel Sottoscrittore.|  
-|**offload_server**|**sysname**|Nome del server abilitato per l'attivazione remota degli agenti. Se NULL, viene usato il offload_server corrente elencato nella tabella [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) .|  
+|**offload_server**|**sysname**|Nome del server abilitato per l'attivazione remota degli agenti. Se NULL, viene utilizzata la offload_server corrente elencata in [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) tabella.|  
 |**dts_package_name**|**sysname**|Specifica il nome del pacchetto Data Transformation Services (DTS).|  
-|**dts_package_location**|**int**|Posizione del pacchetto DTS, se assegnato alla sottoscrizione. Se è presente un pacchetto, un valore pari a **0** indica il percorso del pacchetto nel **server di distribuzione**. Il valore **1** specifica il Sottoscrittore.|  
-|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows e 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica l'autenticazione di.|  
+|**dts_package_location**|**int**|Posizione del pacchetto DTS, se assegnato alla sottoscrizione. Se è presente un pacchetto, un valore pari a **0** indica il percorso del pacchetto nel **server di distribuzione**. Il valore **1** specifica il **Sottoscrittore**.|  
+|**subscriber_security_mode**|**smallint**|Modalità di sicurezza nel Sottoscrittore, dove **1** indica l'autenticazione di Windows **** e 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica l'autenticazione di.|  
 |**subscriber_login**|**sysname**|Nome dell'account di accesso nel Sottoscrittore.|  
-|**subscriber_password**||La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato è mascherato da una stringa **&#42;&#42;&#42;&#42;&#42;** "".|  
+|**subscriber_password**||La password effettiva per il Sottoscrittore non viene mai restituita. Il risultato è mascherato da una stringa "**&#42;&#42;&#42;&#42;&#42;&#42;**".|  
 |**job_login**|**sysname**|Nome dell'account di Windows utilizzato per l'esecuzione dell'agente di distribuzione.|  
-|**job_password**||La password effettiva per il processo non viene mai restituita. Il risultato è mascherato da una stringa **&#42;&#42;&#42;&#42;&#42;** "".|  
-|**distrib_agent_name**|**nvarchar(100)**|Nome del processo dell'agente che sincronizza la sottoscrizione.|  
+|**job_password**||La password effettiva per il processo non viene mai restituita. Il risultato è mascherato da una stringa "**&#42;&#42;&#42;&#42;&#42;&#42;**".|  
+|**distrib_agent_name**|**nvarchar (100)**|Nome del processo dell'agente che sincronizza la sottoscrizione.|  
 |**subscriber_type**|**tinyint**|Tipo di Sottoscrittore. I possibili tipi sono i seguenti:<br /><br /> **0** = sottoscrittore SQL Server<br /><br /> **1** = server origine dati ODBC<br /><br /> **2** = database Microsoft Jet (deprecato)<br /><br /> **3** = provider OLE DB|  
 |**subscriber_provider**|**sysname**|ProgID univoco con il quale viene registrato il provider OLE DB per l'origine dei dati non SQL Server.|  
 |**subscriber_datasource**|**nvarchar(4000)**|Nome dell'origine dei dati riconosciuto dal provider OLE DB.|  
@@ -94,19 +94,19 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**subscriber_location**|**nvarchar(4000)**|Percorso del database riconosciuto dal provider OLE DB.|  
 |**subscriber_catalog**|**sysname**|Catalogo da utilizzare per stabilire una connessione al provider OLE DB|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpsubscription** viene utilizzata per la replica snapshot e transazionale.  
   
-## <a name="permissions"></a>Permissions  
- Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita al ruolo **public** . All'utente vengono restituite solo le informazioni relative alle sottoscrizioni create dall'utente stesso. Le informazioni su tutte le sottoscrizioni vengono restituite ai membri del ruolo predefinito del server **sysadmin** nel server di pubblicazione o ai membri del ruolo predefinito del database **db_owner** nel database di pubblicazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita al ruolo **public** . All'utente vengono restituite solo le informazioni relative alle sottoscrizioni create dall'utente stesso. Le informazioni su tutte le sottoscrizioni vengono restituite ai membri del ruolo predefinito del server **sysadmin** nel server di pubblicazione o ai membri del **db_owner** ruolo predefinito del database nel database di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

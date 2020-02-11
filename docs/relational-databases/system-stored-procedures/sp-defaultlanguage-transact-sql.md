@@ -18,21 +18,21 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120088"
 ---
-# <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
+# <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica la lingua predefinita di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]In alternativa, usare [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,27 +43,27 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @loginame = ] 'login'` È il nome di account di accesso. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* può essere un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un utente di Windows o un gruppo.  
+`[ @loginame = ] 'login'`Nome dell'account di accesso. *login* è di **tipo sysname**e non prevede alcun valore predefinito. l' *account di accesso* può [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essere un account di accesso esistente o un utente o un gruppo di Windows.  
   
-`[ @language = ] 'language'` È la lingua predefinita dell'account di accesso. *linguaggio* viene **sysname**, con un valore predefinito è NULL. *linguaggio* deve essere una lingua valida nel server. Se *language* non viene specificato, *language* è impostato per la lingua predefinita del server lingua predefinita è definita dal **sp_configure** variabile di configurazione **lingua predefinita**. Se si modifica la lingua predefinita del server non viene modificata la lingua predefinita degli account di accesso esistenti.  
+`[ @language = ] 'language'`Lingua predefinita dell'account di accesso. *Language* è di **tipo sysname**e il valore predefinito è null. la *lingua* deve essere una lingua valida nel server. Se la *lingua* non è specificata *, il linguaggio viene* impostato sulla lingua predefinita del server. la lingua predefinita è definita dalla variabile di configurazione **sp_configure** **lingua predefinita**. Se si modifica la lingua predefinita del server non viene modificata la lingua predefinita degli account di accesso esistenti.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- **sp_defaultlanguage** chiama ALTER LOGIN, che supporta opzioni aggiuntive. Per informazioni su come modificare altre impostazioni predefinite di account di accesso, vedere [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
+## <a name="remarks"></a>Osservazioni  
+ **sp_defaultlanguage** chiama ALTER LOGIN, che supporta opzioni aggiuntive. Per informazioni sulla modifica delle impostazioni predefinite degli account di accesso, vedere [ALTER login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- Per modificare la lingua della sessione corrente, eseguire l'istruzione SET LANGUAGE. Uso di @@LANGUAGE funzione per visualizzare l'impostazione della lingua corrente.  
+ Per modificare la lingua della sessione corrente, eseguire l'istruzione SET LANGUAGE. Utilizzare la funzione@LANGUAGE @ per visualizzare l'impostazione della lingua corrente.  
   
- Se la lingua predefinita di un account di accesso viene eliminata dal server, l'account di accesso acquisisce la lingua predefinita del server. **sp_defaultlanguage** non può essere eseguita all'interno di una transazione definita dall'utente.  
+ Se la lingua predefinita di un account di accesso viene eliminata dal server, l'account di accesso acquisisce la lingua predefinita del server. Impossibile eseguire **sp_defaultlanguage** in una transazione definita dall'utente.  
   
- Le informazioni sulle lingue installate nel server sono visibili nel **Sys. syslanguages** vista del catalogo.  
+ Le informazioni sulle lingue installate nel server sono visibili nella vista del catalogo **sys. syslanguages** .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente l'istruzione `ALTER LOGIN` viene utilizzata per modificare la lingua predefinita dell'account di accesso `Fathima` e impostarla sull'arabo. Questo è il metodo consigliato.  
+ Nell'esempio seguente l'istruzione `ALTER LOGIN` viene utilizzata per modificare la lingua predefinita dell'account di accesso `Fathima` e impostarla sull'arabo. Questo è il metodo preferito.  
   
 ```  
 ALTER LOGIN Fathima WITH DEFAULT_LANGUAGE = Arabic;  
@@ -71,11 +71,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [sys. syslanguages &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

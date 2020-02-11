@@ -17,7 +17,7 @@
       href: views/views.md
     - name: Stored procedure +
       href: stored-procedures/stored-procedures-database-engine.md
-    - name: Cerca
+    - name: Ricerca
       href: ../database-engine/search-sql-server.md
       items:
         - name: Ricerca full-text +
@@ -159,11 +159,11 @@
     - name: 'Esercitazione: Introduzione al motore di database'
       href: tutorial-getting-started-with-the-database-engine.md
       items:
-        - name: 'Lezione 1: Connessione al motore di database'
+        - name: 'Lezione 1: Connessione al Motore di database'
           href: lesson-1-connecting-to-the-database-engine.md
         - name: 'Lezione 2: Connessione da un altro computer'
           href: lesson-2-connecting-from-another-computer.md
-    - name: 'Esercitazione: Uso del tipo di dati hierarchyid'
+    - name: 'Esercitazione: Utilizzo del tipo di dati hierarchyid'
       href: tables/tutorial-using-the-hierarchyid-data-type.md
       items:
         - name: 'Lezione 1: Conversione di una tabella in una struttura gerarchica'
@@ -188,23 +188,23 @@
               href: tables/lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md
             - name: Riordinamento di dati in una tabella gerarchica utilizzando metodi gerarchici
               href: tables/lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md
-            - name: 'Riepilogo: Gestione dei dati in una tabella gerarchica'
+            - name: 'Riepilogo: Gestione di dati in una tabella gerarchica'
               href: tables/lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
-    - name: 'Esercitazione: Firma di stored procedure con un certificato'
+    - name: 'Esercitazione: Firma di stored procedure tramite un certificato'
       href: tutorial-signing-stored-procedures-with-a-certificate.md
-    - name: 'Esercitazione: Catene di proprietà e cambio di contesto'
+    - name: 'Tutorial: Ownership Chains and Context Switching'
       href: tutorial-ownership-chains-and-context-switching.md
     - name: 'Esercitazione: Amministrazione di server tramite la gestione basata su criteri'
       href: policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
       items:
-        - name: 'Lezione 1: Creare e applicare criteri Disattivata per impostazione predefinita'
+        - name: 'Lezione 1: Creazione e applicazione di criteri Disattivata per impostazione predefinita'
           href: policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
           items:
             - name: Creazione di criteri Disattivata per impostazione predefinita
               href: policy-based-management/lesson-1-1-create-the-off-by-default-policy.md
             - name: Configurazione di un server per l'esecuzione di criteri Disattivata per impostazione predefinita
               href: policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md
-        - name: 'Lezione 2: Creare e applicare criteri per gli standard di denominazione'
+        - name: 'Lezione 2: Creazione e applicazione di criteri per gli standard di denominazione'
           href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
           items:
             - name: Creazione di criteri Nome Finance
@@ -221,7 +221,7 @@
               href: ../tutorials/perform-an-on-demand-evaluation-by-using-object-explorer.md
             - name: Esecuzione di una valutazione su richiesta utilizzando Server registrati
               href: ../tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md
-        - name: 'Lezione 2: Valutazione di criteri per procedure consigliate in base a una pianificazione'
+        - name: 'Lezione 2: Valutazione di criteri per procedure consigliate in base a una pianificazione prestabilita'
           href: ../tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md
           items:
             - name: Importazione dei criteri in un'istanza singola
@@ -230,14 +230,14 @@
               href: ../tutorials/schedule-the-policies.md
             - name: Distribuzione di criteri pianificati in istanze multiple
               href: ../tutorials/deploy-scheduled-policies-to-multiple-instances.md
-    - name: 'Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure'
+    - name: 'Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Azure'
       href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
       items:
-        - name: 'Lezione 1: Creare oggetti di Archiviazione di Azure'
+        - name: 'Lezione 1: Creare gli oggetti di Archiviazione di Azure'
           href: ../tutorials/lesson-1-create-windows-azure-storage-objects.md
         - name: 'Lezione 2: Creare le credenziali di SQL Server'
           href: ../tutorials/lesson-2-create-a-sql-server-credential.md
-        - name: 'Lezione 3: Scrivere un backup completo del database nel servizio Archiviazione BLOB di Azure'
+        - name: 'Lezione 3: Scrivere un backup completo del database nel servizio di archiviazione BLOB di Azure'
           href: ../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md
         - name: 'Lezione 4: Eseguire un ripristino da un backup completo del database'
           href: ../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md

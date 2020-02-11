@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105306"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -27,7 +27,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *start*  
+ *iniziare*  
  (Facoltativo) Espressione numerica che imposta la posizione iniziale per ciascuna ricerca. Se questo valore viene omesso, la ricerca inizia in corrispondenza della posizione del primo carattere. Se start è Null, il valore restituito dalla funzione è indefinito.  
   
  *searched_string*  
@@ -36,13 +36,13 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  Espressione stringa di cui eseguire la ricerca.  
   
- *Compare*  
- (Facoltativo) Valore intero. Questo argomento viene sempre ignorato. È definito per la compatibilità con le altre **Instr** funzioni in altri linguaggi.  
+ *Confrontare*  
+ (Facoltativo) Valore intero. Questo argomento viene sempre ignorato. Viene definito per la compatibilità con altre funzioni **InStr** in altri linguaggi.  
   
 ## <a name="return-value"></a>Valore restituito  
- Valore intero con posizione iniziale della *String2* nelle *String1*.  
+ Valore intero con la posizione iniziale di *string2* in *String1*.  
   
- È inoltre **InStr** funzione restituisce i valori elencati nella tabella seguente a seconda della condizione:  
+ Inoltre, la funzione **InStr** restituisce i valori elencati nella tabella seguente, a seconda della condizione:  
   
 |Condizione|Valore restituito|  
 |---------------|------------------|  
@@ -53,13 +53,13 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 non trovato|zero (0)|  
 |start è maggiore di Len(String2)|zero (0)|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
 > [!WARNING]  
->  **InStr** sempre esegue un confronto tra maiuscole e minuscole.  
+>  **InStr** esegue sempre un confronto senza distinzione tra maiuscole e minuscole.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato l'utilizzo dei **Instr** (funzione) e vengono mostrati diversi scenari di risultato.  
+ Nell'esempio seguente viene illustrato l'utilizzo della funzione **InStr** e vengono visualizzati diversi scenari di risultato.  
   
 ```  
 with   

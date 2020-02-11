@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d65b0b0f9707eb137ab3c76cae350d265f3fc971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868842"
 ---
-# <a name="mssqlserver2539"></a>MSSQLSERVER_2539
+# <a name="mssqlserver_2539"></a>MSSQLSERVER_2539
     
 ## <a name="details"></a>Dettagli  
   
@@ -36,6 +36,6 @@ ms.locfileid: "62868842"
  Queste informazioni fanno parte dell'output generato dal comando DBCC CHECKALLOC e riepilogano gli extent allocati, le pagine utilizzate e le pagine riservate del database specificato.  
   
 ## <a name="user-action"></a>Azione dell'utente  
- None  
+ nessuno  
   
   

@@ -21,22 +21,22 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844473"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Database di SQL Azure)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contiene statistiche per gli eventi di **connettività** del database [!INCLUDE[ssSDS](../../includes/sssds-md.md)], offrendo una panoramica delle connessioni al database riuscite ed errori. Per altre informazioni sugli eventi di connettività, vedere tipi di evento in [sys &#40;. event_log database&#41;SQL di Azure](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contiene statistiche per [!INCLUDE[ssSDS](../../includes/sssds-md.md)] gli eventi di **connettività** del database, offrendo una panoramica delle connessioni al database riuscite ed errori. Per altre informazioni sugli eventi di connettività, vedere tipi di evento in [sys. event_log &#40;database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistiche|Tipo|Descrizione|  
+|Statistiche|Type|Descrizione|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nome del database.|  
-|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Esempio:<br /><br /> 28/09/2011 16:00:00<br />' 2011-09-28 16:05:00'<br />' 2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Data e ora UTC dell'inizio dell'intervallo di aggregazione. L'ora è sempre un multiplo di 5 minuti. Ad esempio:<br /><br /> 28/09/2011 16:00:00<br />'29-09-2011 16:05:00'<br />'28-09-2011 16:10:00'|  
 |**end_time**|**datetime2**|Data e ora UTC della fine dell'intervallo di aggregazione. **End_time** è sempre esattamente 5 minuti dopo rispetto al **start_time** corrispondente nella stessa riga.|  
 |**success_count**|**int**|Numero di connessioni riuscite.|  
 |**total_failure_count**|**int**|Numero totale di connessioni non riuscite. Si tratta della somma di **connection_failure_count**, **terminated_connection_count**e **throttled_connection_count**e non include gli eventi deadlock.|  
@@ -71,7 +71,7 @@ start_time                    end_time
 
  I dati in questa vista vengono accumulati nel tempo. In genere, vengono accumulati entro un'ora dall'inizio dell'intervallo di aggregazione, ma la visualizzazione di tutti i dati nella vista potrebbe richiedere fino a un massimo di 24 ore. Durante questo tempo, le informazioni contenute all'interno di una singola riga possono essere aggiornate periodicamente.  
   
-### <a name="data-retention"></a>Mantenimento dei dati
+### <a name="data-retention"></a>Conservazione dei dati
 
  I dati in questa vista vengono conservati per un massimo di 30 giorni o meno, a seconda del numero di database e del numero di eventi univoci generati da ogni database. Per prolungare il mantenimento di queste informazioni, copiare i dati in un database separato. Dopo aver creato una copia iniziale della vista, le relative righe possono essere aggiornate quando i dati vengono accumulati. Per mantenere aggiornata la copia dei dati, eseguire periodicamente un'analisi delle righe della tabella per cercare un eventuale aumento del numero di eventi di righe esistenti e per identificare le righe nuove (è possibile effettuare questa operazione per le righe univoche mediante le ore di inizio e di fine), quindi aggiornare la copia dei dati con queste modifiche.  
   
@@ -79,9 +79,9 @@ start_time                    end_time
 
  In questa vista non possono essere incluse tutte le informazioni relative a connessioni ed errori:  
   
-- Questa vista non include tutti gli errori [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database che possono verificarsi, ma solo quelli specificati nei tipi di evento in [sys &#40;. event_log database&#41;SQL di Azure](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- Questa vista non include tutti gli [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errori del database che possono verificarsi, ma solo quelli specificati nei tipi di evento in [sys. event_log &#40;&#41;del database SQL di Azure ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-- Se si verifica un errore del computer all'interno del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] datacenter, è possibile che nella tabella eventi manchi una piccola quantità di dati.  
+- Se si verifica un errore del computer nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Data Center, è possibile che nella tabella eventi manchi una piccola quantità di dati.  
   
 - Se un indirizzo IP è stato bloccato tramite DoSGuard, gli eventi di tentativi di connessione dall'indirizzo IP in questione non possono essere raccolti, né verranno visualizzati in questa vista.  
   

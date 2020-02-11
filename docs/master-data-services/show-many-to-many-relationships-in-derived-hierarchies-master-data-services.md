@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728946"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Mostrare le relazioni molti-a-molti nelle gerarchie derivate (Master Data Services)
@@ -42,17 +42,17 @@ ms.locfileid: "73728946"
   
  Nella schermata precedente si noti che l'entità **Dipendente** appare sotto **Livelli correnti** al centro come unico livello. La gerarchia derivata **Anteprima** a destra mostra semplicemente un elenco di tutti i membri dell'entità **Dipendente** . La sezione **Livelli disponibili** a sinistra mostra i livelli che possono essere aggiunti sopra il livello corrente (**Dipendente**). Molti di questi sono attributi basati su dominio (DBA) per l'entità **Dipendente** , incluso il DBA **Reparto** .  
   
- A partire da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], esiste un nuovo tipo di livello che modella le relazioni M2M, ad esempio: **Corso (mappato mediante RegistrazioneCorso.Studente)** . Il nome del livello è più dettagliato rispetto degli altri, in modo da riflettere le informazioni aggiuntive necessarie per descrivere univocamente la relazione di mapping. Trascinare il livello fino al livello **Dipendente** nella sezione **Livelli correnti** :  
+ A partire da [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], esiste un nuovo tipo di livello che modella le relazioni M2M, ad esempio: **Corso (mappato mediante RegistrazioneCorso.Studente)**. Il nome del livello è più dettagliato rispetto degli altri, in modo da riflettere le informazioni aggiuntive necessarie per descrivere univocamente la relazione di mapping. Trascinare il livello fino al livello **Dipendente** nella sezione **Livelli correnti** :  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- A questo punto l'anteprima mostra i dipendenti raggruppati in base ai corsi di formazione per i quali sono registrati. Poiché si tratta di una relazione M2M, ogni membro figlio può avere più elementi padre. Nell'esempio precedente il dipendente **6 {Hillman, Reinout N}** è registrato come studente in due corsi, **1 {Master Data Services 101}** e **4 {Career-Limiting Moves}** .  
+ A questo punto l'anteprima mostra i dipendenti raggruppati in base ai corsi di formazione per i quali sono registrati. Poiché si tratta di una relazione M2M, ogni membro figlio può avere più elementi padre. Nell'esempio precedente il dipendente **6 {Hillman, Reinout N}** è registrato come studente in due corsi, **1 {Master Data Services 101}** e **4 {Career-Limiting Moves}**.  
   
  Questa relazione di mapping può essere visualizzata anche invertita, raggruppando i corsi per studente:  
   
  ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
- Ancora una volta è possibile notare che un elemento figlio può apparire sotto più elementi padre: corso di formazione **1 {Master Data Services 101}** appare sia sotto **6 {Hillman, Reinout N}** sia sotto **40 {Ford, Jeffrey L}** .  
+ Ancora una volta è possibile notare che un elemento figlio può apparire sotto più elementi padre: corso di formazione **1 {Master Data Services 101}** appare sia sotto **6 {Hillman, Reinout N}** sia sotto **40 {Ford, Jeffrey L}**.  
   
  I membri dell'entità di mapping **RegistrazioneCorso** non sono mostrati all'interno della gerarchia derivata. Vengono usati semplicemente per definire le relazioni tra i membri padre e figlio nella gerarchia.  
   
@@ -72,10 +72,11 @@ ms.locfileid: "73728946"
   
  I livelli M2M possono essere nascosti, esattamente come gli altri livelli di una gerarchia derivata.  
    
-### <a name="M2MSample"></a> Relazione molti-a-molti (M2M) nel modello di esempio  
+### <a name="M2MSample"></a>Relazione M2M nel modello di esempio  
 Per una dimostrazione di una relazione molti-a-molti, visualizzare la gerarchia derivata Region Climate del modello di esempio Customer incluso in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Come mostra l'immagine seguente, il nome del livello che modella questa relazione è ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mappato attraverso RegionClimate.Region)** . ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** mostra le regioni raggruppate in base ai tipi di clima a cui sono associate. Questa è una relazione molti-a-molti poiché include regioni (membri figlio) associate a più climi (membri padre). Ad esempio, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** è associata a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** e ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** .  
+Come mostra l'immagine seguente, il nome del livello che modella questa relazione è ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mappato attraverso RegionClimate.Region)**. 
+  ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** mostra le regioni raggruppate in base ai tipi di clima a cui sono associate. Questa è una relazione molti-a-molti poiché include regioni (membri figlio) associate a più climi (membri padre). Ad esempio, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** è associata a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** e ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -90,8 +91,8 @@ Per istruzioni sulla distribuzione del modello di esempio Customer e di altri mo
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a> Sicurezza dei membri  
- Una gerarchia che consente la duplicazione dei membri (consente che un membro abbia più di un elemento padre) non può essere usata per assegnare autorizzazioni di sicurezza ai membri. Esempio:  
+##  <a name="bkmk_member_security"></a>Sicurezza del membro  
+ Una gerarchia che consente la duplicazione dei membri (consente che un membro abbia più di un elemento padre) non può essere usata per assegnare autorizzazioni di sicurezza ai membri. Ad esempio:  
   
 -   Una gerarchia derivata ricorsiva (RDH) che non effettua l'ancoraggio delle ricorsioni null (ciascun membro al livello ricorsivo appare sia sotto la radice sia sotto il suo elemento padre ricorsivo).  
   

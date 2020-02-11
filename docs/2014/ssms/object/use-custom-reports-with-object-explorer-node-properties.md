@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823698"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utilizzo di report personalizzati con proprietà dei nodi di Esplora oggetti
@@ -1000,7 +1000,7 @@ ms.locfileid: "62823698"
   
 ## <a name="see-also"></a>Vedere anche  
  [Report personalizzati in Management Studio](custom-reports-in-management-studio.md)   
- [Aggiungere un Report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
+ [Aggiungere un report personalizzato a Management Studio](add-a-custom-report-to-management-studio.md)   
  [Visualizzare gli avvisi relativi all'esecuzione di report personalizzati](unsuppress-run-custom-report-warnings.md)  
   
   

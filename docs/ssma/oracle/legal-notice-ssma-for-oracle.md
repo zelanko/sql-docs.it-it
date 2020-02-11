@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 3380531a26e062d6b06c2f08cb5bc36a8df55004
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262977"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Note legali (SSMA per Oracle)
@@ -22,7 +22,7 @@ La presente documentazione, incluse le applicazioni di esempio in essa contenute
   
 Obiettivo principale degli esempi inclusi nella documentazione è quello di illustrare un concetto o l'utilizzo comune di un'istruzione o di una clausola specifica. La maggior parte degli esempi non include il codice completo normalmente disponibile in un sistema completo e finale, in quanto una parte dei normali dati di convalida o la gestione degli errori vengono in genere rimossi dagli esempi per mettere in maggiore evidenza il concetto o l'istruzione specifici illustrati nell'esempio stesso. I servizi del Servizio Supporto Tecnico Clienti Microsoft non sono disponibili per gli esempi e il codice sorgente incluso.  
   
-Se non diversamente specificato, ad aziende, organizzazioni, prodotti, nomi di dominio, indirizzi di posta elettronica, persone, luoghi ed eventi citati in questo documento sono fittizio e nessuna associazione con qualsiasi società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica persona, luogo o evento è intenzionale o può essere presupposta. Il rispetto di tutte le leggi applicabili in materia di copyright è a esclusivo carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
+Se non specificato diversamente, le aziende, le organizzazioni, i prodotti, i nomi di dominio, gli indirizzi di posta elettronica, le persone, i luoghi e gli eventi di esempio descritti nel presente documento sono fittizi e nessuna associazione con nessuna società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica, persona, luogo o evento è intenzionale o può essere dedotto. Il rispetto di tutte le applicabili leggi in materia di copyright è esclusivamente a carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
   
 Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.  
   
@@ -35,7 +35,7 @@ SAP NetWeaver è un marchio registrato di SAP AG in Germania e in altri paesi/ar
 Altri nomi di prodotti e società citati nel presente documento sono marchi dei rispettivi proprietari.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Criteri relativi alla documentazione per il supporto e l'aggiornamento di SQL Server  
-Il contenuto visualizzato nella documentazione di SQL Server viene pubblicato solo dopo sufficienti test. Documentazione del prodotto - documentazione Online di SQL Server, file Leggimi, documenti su problemi noti e articoli della Knowledge Base - contiene contenuti relativi alle funzionalità di SQL Server e le funzionalità che è sufficientemente solidi da poter essere usati da tutti i clienti. Tali criteri si applicano alla documentazione di SQL Server, inclusi i file leggimi relativi a versioni e Service Pack. I file leggimi sono considerati estensioni della documentazione online.  
+Il contenuto visualizzato nella documentazione di SQL Server viene pubblicato solo dopo sufficienti test. La documentazione del prodotto, documentazione online di SQL Server, file Leggimi, documenti sui problemi noti e articoli della Knowledge base, contiene contenuti relativi SQL Server caratteristiche e funzionalità sufficientemente affidabili per essere sicuri per l'utilizzo generale da tutti i clienti. Tali criteri si applicano alla documentazione di SQL Server, inclusi i file leggimi relativi a versioni e Service Pack. I file leggimi sono considerati estensioni della documentazione online.  
   
 In alcuni casi, una determinata funzionalità non può essere usata direttamente dai clienti e, pertanto, non è stata documentata. A meno che una funzionalità non venga descritta anche nella documentazione di SQL Server pubblicata da Microsoft, il contenuto della documentazione o di siti Web di terze parti non è supportato dall'assistenza clienti Microsoft e non deve essere usato in applicazioni o database di produzione.  
   

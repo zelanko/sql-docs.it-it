@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231283"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utilizzo della modalità EXPLICIT con FOR XML
-  Come illustrato nell'argomento [Costruzione di codice XML tramite la clausola FOR XML](../xml/for-xml-sql-server.md), le modalità RAW e AUTO forniscono scarso controllo sulla forma del codice XML generato dai risultati della query. La modalità EXPLICIT tuttavia offre maggiore flessibilità nella generazione del codice XML desiderato dal risultato di una query.  
+  Come descritto nell'argomento relativo alla [costruzione di codice XML tramite for XML](../xml/for-xml-sql-server.md), la modalità RAW e auto non fornisce un controllo molto sulla forma del codice XML generato dai risultati della query. La modalità EXPLICIT tuttavia offre maggiore flessibilità nella generazione del codice XML desiderato dal risultato di una query.  
   
  La query in modalità EXPLICIT deve essere formulata in modo tale che le informazioni aggiuntive relative al codice XML, ad esempio la nidificazione desiderata vengano specificate in modo esplicito nell'ambito della query stessa. In base al codice XML desiderato, la formulazione di query in modalità EXPLICIT può essere un'operazione complessa. L' [uso della modalità PATH](../xml/use-path-mode-with-for-xml.md) con annidamento è un'alternativa più semplice alla scrittura di query in modalità EXPLICIT.  
   
@@ -55,24 +55,24 @@ ms.locfileid: "63231283"
   
     -   Per le righe con valore 2 nella colonna **Tag**, le colonne **Order!2!id** e **Order!2!date** formano un gruppo che viene quindi usato per la costruzione di elementi, <`Order id=... date=... /`>.  
   
-    -   Per le righe con valore 3 nella colonna **Tag**, le colonne **OrderDetail!3!id!id** e **OrderDetail!3!pid!idref** formano un gruppo. Ognuna di queste righe genera un elemento <`OrderDetail id=... pid=...`> da queste colonne.  
+    -   Per le righe con valore 3 nella colonna **Tag** , le colonne **OrderDetail!3!id!id** e **OrderDetail!3!pid!idref** formano un gruppo. Ognuna di queste righe genera un elemento <`OrderDetail id=... pid=...`> da queste colonne.  
   
 -   Si noti che nella generazione della gerarchia XML le righe vengono elaborate in ordine. La gerarchia XML viene determinata come descritto di seguito:  
   
-    -   La prima riga specifica il valore 1 di **Tag** e il valore NULL di **Parent**. L'elemento corrispondente, <`Customer`>, viene pertanto aggiunto nel codice XML come elemento di livello principale.  
+    -   La prima riga specifica il valore 1 di **Tag** e il valore NULL di **Parent** . L'elemento corrispondente, <`Customer`>, viene pertanto aggiunto nel codice XML come elemento di livello principale.  
   
         ```  
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   La seconda riga identifica il valore 2 di **Tag** e il valore 1 di **Parent**. L'elemento <`Order`> viene pertanto aggiunto come elemento figlio dell'elemento <`Customer`>.  
+    -   La seconda riga identifica il valore 2 di **Tag** e il valore 1 di **Parent** . L'elemento <`Order`> viene pertanto aggiunto come elemento figlio dell'elemento <`Customer`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   Le due righe successive identificano il valore 3 di **Tag** e il valore 2 di **Parent**. I due elementi <`OrderDetail`> vengono pertanto aggiunti come elementi figlio dell'elemento <`Order`>.  
+    -   Le due righe successive identificano il valore 3 di **Tag** e il valore 2 di **Parent** . I due elementi <`OrderDetail`> vengono pertanto aggiunti come elementi figlio dell'elemento <`Order`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -81,7 +81,7 @@ ms.locfileid: "63231283"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   L'ultima riga identifica 2 come valore di **Tag** e 1 come valore di **Parent**. Un altro elemento figlio <`Order`> viene pertanto aggiunto all'elemento padre <`Customer`>.  
+    -   L'ultima riga identifica 2 come valore di **Tag** e 1 come valore di **Parent** . Un altro elemento figlio <`Order`> viene pertanto aggiunto all'elemento padre <`Customer`>.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -93,7 +93,7 @@ ms.locfileid: "63231283"
         </Customer>  
         ```  
   
- Per riassumere, per generare il codice XML desiderato in modalità EXPLICIT vengono usati i valori presenti nelle colonne di metadati **Tag** e **Parent**, le informazioni specificate nei nomi delle colonne e l'ordinamento corretto delle righe.  
+ Per riassumere, per generare il codice XML desiderato in modalità EXPLICIT vengono usati i valori presenti nelle colonne di metadati **Tag** e **Parent** , le informazioni specificate nei nomi delle colonne e l'ordinamento corretto delle righe.  
   
 ### <a name="universal-table-row-ordering"></a>Ordinamento delle righe della tabella universale  
  Nella generazione del codice XML, le righe della tabella universale vengono elaborate in ordine. Per recuperare le istanze figlio corrette associate al rispettivo elemento padre, è pertanto necessario che le righe del set vengano ordinate in modo tale che il nodo dell'elemento padre sia seguito immediatamente dagli elementi figlio.  
@@ -123,14 +123,14 @@ ElementName!TagNumber!AttributeName!Directive
   
  Se si specifica *Directive*, *AttributeName* può essere vuoto. Ad esempio, ElementName!TagNumber!!Directive. In questo caso, il valore della colonna è direttamente contenuto da *ElementName*.  
   
- *Directive*  
- *Directive* è facoltativo e può essere usato per specificare altre informazioni per la generazione del codice XML. *Directive* svolge due funzioni.  
+ *Direttiva*  
+ La *direttiva* è facoltativa e può essere utilizzata per fornire informazioni aggiuntive per la costruzione del codice XML. La *direttiva* ha due scopi.  
   
  Il primo è la codifica dei valori come ID, IDREF e IDREFS. È possibile specificare le parole chiave **ID**, **IDREF**e **IDREFS** come valori di *Directive*. Queste direttive sovrascrivono i tipi di attributo, consentendo di creare collegamenti tra più documenti.  
   
  È anche possibile usare *Directive* per definire il mapping tra i dati di tipo stringa e il codice XML. Le parole chiave **hide**, **element, elementxsinil**, **xml**, **xmltext**e **cdata** possono essere usate come valori di *Directive*. La direttiva **hide** nasconde il nodo. È utile quando si recuperano i valori solo a scopo di ordinamento, ma non si desidera che vengano inseriti nel codice XML risultante.  
   
- La direttiva **element** genera un elemento contenuto anziché un attributo. I dati contenuti vengono codificati come entità. Ad esempio, il carattere **<** viene convertito in &lt;. Per i valori di colonna NULL non vengono generati elementi. Se si vuole che venga generato un elemento anche per i valori di colonna NULL è possibile specificare la direttiva **elementxsinil** . Verrà generato un elemento con attributo xsi:nil=TRUE.  
+ La direttiva **element** genera un elemento contenuto anziché un attributo. I dati contenuti vengono codificati come entità. Il **<** carattere, ad esempio, &lt;diventa. Per i valori di colonna NULL non vengono generati elementi. Se si vuole che venga generato un elemento anche per i valori di colonna NULL è possibile specificare la direttiva **elementxsinil** . Verrà generato un elemento con attributo xsi:nil=TRUE.  
   
  La direttiva **xml** equivale a una direttiva **element** , ma non viene eseguita alcuna codifica di entità. Si noti che è possibile combinare la direttiva **element** con **ID**, **IDREF**o **IDREFS**, mentre la direttiva **xml** può essere usata solo con **hide**.  
   
@@ -144,33 +144,33 @@ ElementName!TagNumber!AttributeName!Directive
   
  Se si specifica *AttributeName* il nome del tag viene sostituito dal nome specificato. In caso contrario, l'attributo viene aggiunto all'elenco corrente di attributi degli elementi che lo racchiudono inserendo il contenuto all'inizio dell'oggetto di contenimento senza codifica di entità. La colonna con questa direttiva deve essere di tipo testo, ad esempio **varchar**, **nvarchar**, **char**, **nchar**, **text**o **ntext**. Questa direttiva può essere usa solo con **hide**. Risulta particolarmente utile per il recupero dei dati di overflow archiviati in una colonna. Se il contenuto non è in un formato XML corretto, il funzionamento non è prevedibile.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Negli esempi seguenti viene illustrato l'utilizzo della modalità EXPLICIT.  
   
 -   [Esempio: Recupero di informazioni sui dipendenti](../xml/example-retrieving-employee-information.md)  
   
--   [Esempio: Specifica della direttiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
+-   [Esempio: specifica della direttiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
   
--   [Esempio: Specifica della direttiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Esempio: specifica della direttiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Esempio: Creazione di elementi di pari livello con la modalità EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Esempio: Creazione di elementi di pari livello utilizzando la modalità EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Esempio: Specifica delle direttive ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Esempio: specifica delle direttive ID, IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Esempio: Specifica delle direttive ID e IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Esempio: specifica delle direttive ID, IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Esempio: Specifica della direttiva HIDE](../xml/example-specifying-the-hide-directive.md)  
+-   [Esempio: specifica della direttiva HIDE](../xml/example-specifying-the-hide-directive.md)  
   
--   [Esempio: Specifica della direttiva ELEMENT e della codifica di entità](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Esempio: specifica della direttiva ELEMENT e della codifica di entità](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Esempio: Specifica della direttiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
+-   [Esempio: specifica della direttiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
   
--   [Esempio: Specifica della direttiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
+-   [Esempio: specifica della direttiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare la modalità RAW con FOR XML](../xml/use-raw-mode-with-for-xml.md)   
- [Utilizzo della modalità AUTO con FOR XML](../xml/use-auto-mode-with-for-xml.md)   
- [Utilizzare la modalità PATH con FOR XML](../xml/use-path-mode-with-for-xml.md)   
+ [Usare la modalità AUTO con FOR XML](../xml/use-auto-mode-with-for-xml.md)   
+ [Usare la modalità PATH con FOR XML](../xml/use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   

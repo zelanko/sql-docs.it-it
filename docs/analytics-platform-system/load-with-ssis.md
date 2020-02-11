@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401008"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Caricare i dati con Integration Services in parallelo data warehouse
@@ -56,7 +56,7 @@ Per eseguire il pacchetto dall'interno SQL Server Data Tools, fare clic con il p
 ### <a name="run-from-powershell"></a>Esegui da PowerShell  
 Per eseguire il pacchetto da Windows PowerShell, utilizzando l'utilità **dtexec** :`dtexec /FILE <packagePath>`  
   
-Ad esempio: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Ad esempio, usare `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Esegui da un prompt dei comandi di Windows 
 Per eseguire il pacchetto da un prompt dei comandi di Windows, utilizzando l'utilità **dtexec** :`dtexec /FILE <packagePath>`  
@@ -84,7 +84,7 @@ Viene quindi eseguito il mapping dei dati da Integration Services a SQL Server P
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -151,7 +151,7 @@ Quando si caricano dati con Integration Services, SQL ServerPDW usa i blocchi a 
   
 ## <a name="Examples"></a>Esempi  
   
-### <a name="Walkthrough"></a>Un. Caricamento semplice da file flat  
+### <a name="Walkthrough"></a>R. Caricamento semplice da file flat  
 La procedura dettagliata seguente illustra un caricamento semplice dei dati usando Integration Services per caricare i dati dei file flat in un'appliance di SQL Server PDW.  In questo esempio si presuppone che Integration Services sia già stato installato nel computer client e che sia stata installata la destinazione SQL Server PDW, come descritto in precedenza.  
   
 In questo esempio verrà caricato nella `Orders` tabella, che include il codice DDL seguente. La `Orders` tabella fa parte del `LoadExampleDB` database.  
@@ -216,7 +216,7 @@ Specificare la destinazione per il flusso di dati.
   
 4.  Selezionare **Crea una nuova connessione**.  
   
-5.  Immettere le informazioni relative al server, all'utente, alla password e al database di destinazione con informazioni specifiche per il dispositivo. (Di seguito sono riportati alcuni esempi). Fare clic su **OK**.  
+5.  Immettere le informazioni relative al server, all'utente, alla password e al database di destinazione con informazioni specifiche per il dispositivo. (Di seguito sono riportati alcuni esempi). Fare quindi clic su **OK**.  
   
     Per le connessioni InfiniBand, **nome server**: immettere <nome-dispositivo>-SQLCTL01, 17001.  
   
@@ -256,8 +256,8 @@ Eseguire il pacchetto nel computer Integration Services.
 [Designing Your SSIS Packages for Parallelism (SQL Server Video)](https://msdn.microsoft.com/library/dd795221.aspx)  
 [Esempi di Microsoft SQL Server Community: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Miglioramento dei caricamenti incrementali tramite Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
-[Trasformazione Dimensione a modifica lenta](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
-[Attività Inserimento bulk](../integration-services/control-flow/bulk-insert-task.md)  
+[Dimensione a modifica lenta - trasformazione](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+[Inserimento bulk - attività](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

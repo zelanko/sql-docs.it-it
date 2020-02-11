@@ -1,5 +1,5 @@
 ---
-title: Utilizzare sp_rename per rinominare il nome di indice duplicati | Microsoft Docs
+title: Usare sp_rename per rinominare il nome di indice duplicato | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091363"
 ---
-# <a name="use-sprename-to-rename-duplicate-index-name"></a>Utilizzare sp_rename per rinominare gli indici duplicati
+# <a name="use-sp_rename-to-rename-duplicate-index-name"></a>Utilizzare sp_rename per rinominare gli indici duplicati
   Sono stati rilevati nomi di indici di tabella o di vista duplicati. Rinominare gli indici prima di eseguire l'aggiornamento.  
   
 ## <a name="component"></a>Componente  
@@ -42,7 +42,7 @@ ms.locfileid: "66091363"
           AND i.name = o.name and i.indid < o.indid);  
     ```  
   
-2.  Uso **sp_rename** per cambiare uno dei nomi di indice. Poiché i nomi di indice sono uguali, non è possibile determinare quale indice verrà rinominato. Questa operazione consente quindi di differenziare gli indici.  
+2.  Utilizzare **sp_rename** per modificare uno dei nomi degli indici. Poiché i nomi di indice sono uguali, non è possibile determinare quale indice verrà rinominato. Questa operazione consente quindi di differenziare gli indici.  
   
     ```  
     EXEC sp_rename N'table_name.index_name', N'new_index_name', N'INDEX'  
@@ -58,10 +58,10 @@ ms.locfileid: "66091363"
     WHERE i.id = OBJECT_ID('table_or_view_name')  
     ```  
   
-4.  Se necessario, utilizzare **sp_rename** nuovamente per correggere i nomi di indice.  
+4.  Se necessario, utilizzare di nuovo **sp_rename** per correggere i nomi degli indici.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

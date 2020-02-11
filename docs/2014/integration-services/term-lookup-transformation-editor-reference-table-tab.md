@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055144"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor trasformazione Ricerca termini (scheda Tabella di riferimento)
@@ -27,10 +27,10 @@ ms.locfileid: "66055144"
  Per ulteriori informazioni sulla trasformazione Ricerca termini, vedere [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## <a name="options"></a>Opzioni  
- **gestione connessione OLE DB**  
+ **Gestione connessione OLE DB**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova connessione usando la finestra di dialogo **Configura gestione connessione OLE DB** .  
   
  **Nome tabella di riferimento**  
@@ -41,8 +41,8 @@ ms.locfileid: "66055144"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor trasformazione Ricerca termini &#40;scheda Ricerca termini&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [Editor trasformazione Ricerca termini &#40;scheda ricerca termini&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
  [Editor trasformazione Ricerca termini &#40;scheda Avanzate&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
- [Trasformazione Estrazione termini](data-flow/transformations/term-extraction-transformation.md)  
+ [Estrazione termini - trasformazione](data-flow/transformations/term-extraction-transformation.md)  
   
   

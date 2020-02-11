@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+title: sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 description: Restituisce lo stato corrente dei semafori di risorsa utilizzati per limitare l'ottimizzazione delle query simultanee
 ms.custom: seo-dt-2019
 ms.date: 04/06/2017
@@ -21,13 +21,13 @@ author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165005"
 ---
-# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Restituisce lo stato corrente dei semafori di risorsa utilizzati per limitare l'ottimizzazione delle query simultanee.
@@ -35,12 +35,12 @@ Restituisce lo stato corrente dei semafori di risorsa utilizzati per limitare l'
 |Colonna|Type|Descrizione|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|ID pool di risorse in Resource Governor|  
-|**name**|**sysname**|Nome del controllo di compilazione (Gateway Small, gateway medio, Big gateway)|
+|**nome**|**sysname**|Nome del controllo di compilazione (Gateway Small, gateway medio, Big gateway)|
 |**max_count**|**int**|Numero massimo configurato di compilazioni simultanee|
 |**active_count**|**int**|Numero attualmente attivo di compilazioni in questo controllo|
 |**waiter_count**|**int**|Il numero di attese in questo controllo|
 |**threshold_factor**|**bigint**|Fattore di soglia che definisce la parte di memoria massima utilizzata dall'ottimizzazione delle query.  Per il gateway di piccole dimensioni, threshold_factor indica l'utilizzo massimo della memoria ottimizzatore in byte per una query prima che sia necessaria per ottenere un accesso nel gateway di piccole dimensioni.  Per il gateway medio e di grandi dimensioni, threshold_factor Mostra la parte della memoria totale del server disponibile per questo controllo. Viene usato come divisore durante il calcolo della soglia di utilizzo della memoria per il controllo.|
-|**threshold**|**bigint**|Memoria soglia successiva in byte.  La query è necessaria per ottenere un accesso a questo gateway se il consumo di memoria raggiunge questa soglia.  "-1" se la query non è necessaria per ottenere l'accesso a questo gateway.|
+|**soglia**|**bigint**|Memoria soglia successiva in byte.  La query è necessaria per ottenere un accesso a questo gateway se il consumo di memoria raggiunge questa soglia.  "-1" se la query non è necessaria per ottenere l'accesso a questo gateway.|
 |**is_active**|**bit**|Indica se la query è necessaria per passare il controllo corrente.|
 
 
@@ -72,4 +72,4 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Come usare il comando DBCC MEMORYSTATUS per monitorare l'utilizzo della memoria in SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-di attesa per la [compilazione di query di grandi dimensioni RESOURCE_SEMAPHORE_QUERY_COMPILE SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+[di attesa per la compilazione di query di grandi dimensioni in RESOURCE_SEMAPHORE_QUERY_COMPILE SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

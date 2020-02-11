@@ -1,5 +1,5 @@
 ---
-title: Esempio NumericScale e Precision Properties (VC + +) | Microsoft Docs
+title: Esempio di proprietà NumericScale e Precision (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917959"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Esempio delle proprietà NumericScale e Precision (VC++)
-Questo esempio Usa la [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [precisione](../../../ado/reference/ado-api/precision-property-ado.md) le proprietà per visualizzare la scala numerica e la precisione dei campi nel ***sconti*** tabella del  ***Pubs*** database.  
+In questo esempio vengono utilizzate le proprietà [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [Precision](../../../ado/reference/ado-api/precision-property-ado.md) per visualizzare la scala numerica e la precisione dei campi nella tabella ***sconti*** del database ***pubs*** .  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  

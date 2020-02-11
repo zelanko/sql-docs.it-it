@@ -1,5 +1,5 @@
 ---
-title: Esempi di File (DTA) di Input XML | Microsoft Docs
+title: Esempi di file di input XML (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3cf9ec0ff53fced20701b0b5b3379c1ec8dac219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186524"
 ---
 # <a name="xml-input-file-samples-dta"></a>Esempi di file di input XML (DTA)
-  Questa sezione contiene esempi di file di input XML che possono essere usati con lo strumento della riga di comando **dta** . Questo strumento è una delle interfacce utente di Ottimizzazione guidata motore di database, un ulteriore strumento che consente di ottimizzare le prestazioni delle query. Ottimizzazione guidata motore di database analizza gli effetti di un carico di lavoro su uno o più database. Un carico di lavoro è un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. Dopo aver analizzato gli effetti del carico di lavoro, Ottimizzazione guidata motore di database genera un'indicazione per l'aggiunta di indici, viste indicizzate o strategie di partizionamento che consentono di migliorare le prestazioni delle query sui database.  
+  In questa sezione sono contenuti file di input XML di esempio che è possibile utilizzare con lo strumento da riga di comando **DTA** . Questo strumento è una delle interfacce utente di Ottimizzazione guidata motore di database, un ulteriore strumento che consente di ottimizzare le prestazioni delle query. Ottimizzazione guidata motore di database analizza gli effetti di un carico di lavoro su uno o più database. Un carico di lavoro è un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. Dopo aver analizzato gli effetti del carico di lavoro, Ottimizzazione guidata motore di database genera un'indicazione per l'aggiunta di indici, viste indicizzate o strategie di partizionamento che consentono di migliorare le prestazioni delle query sui database.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Esempio di file di input XML semplice &#40;DTA&#41;](simple-xml-input-file-sample-dta.md)  
   

@@ -14,10 +14,10 @@ ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728939"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Richiedere valori di attributo (Master Data Services)
@@ -32,9 +32,9 @@ ms.locfileid: "73728939"
 ## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-require-attribute-values"></a>Per richiedere valori di attributo  
   
@@ -46,15 +46,15 @@ ms.locfileid: "73728939"
   
 4.  Nell'elenco a discesa **Entità** selezionare un'entità.  
   
-5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro a cui applicare la regola business.  
+5.  Nell'elenco a discesa **Tipi di membri** selezionare un tipo di membro a cui applicare la regola di business.  
   
-6.  Scegliere **Aggiungi**.  
+6.  Fare clic su **Aggiungi**.  
   
 7.  Nella casella **Nome** digitare un nome per la regola business.  
   
-8.  Nel campo **Descrizione** digitare la descrizione aggiornata della regola di business (facoltativo).  
+8.  Nel campo **Descrizione** digitare la descrizione aggiornata della regola business (facoltativo).  
   
-9. Nel blocco **Then** fare clic su **Aggiungi**. Verrà visualizzato un pannello.  
+9. Nel blocco **Then** fare clic su **Aggiungi**. Viene visualizzato un pannello.  
   
 10. Nell'elenco a discesa **Operatore** selezionare **Azione richiesta**.  
   
@@ -68,16 +68,16 @@ ms.locfileid: "73728939"
   
 15. Nella finestra di dialogo di conferma fare clic su **OK**. Il valore nella colonna **Stato della regola di business** è **Attiva**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
   
 -   Applicare regole business ai dati eseguendo una delle procedure riportate di seguito:  
   
     -   [Convalidare membri specifici rispetto a regole business &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [Convalidare una versione usando le regole di business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [Convalidare una versione rispetto alle regole business &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Regole di business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [Regole business &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Gerarchie derivate &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244116"
 ---
 # <a name="run-a-matching-project"></a>Eseguire un progetto corrispondente
@@ -30,17 +30,17 @@ ms.locfileid: "75244116"
   
  La preparazione del processo di corrispondenza prevede la creazione dei criteri di corrispondenza con uno o più regole di corrispondenza e l'esecuzione dei criteri sui dati di esempio. Il processo del progetto corrispondente è diverso dal processo per i criteri di corrispondenza in quanto la Knowledge Base non viene popolata con le informazioni di corrispondenza ottenute dal progetto corrispondente. Per ulteriori informazioni sulla creazione dei criteri di corrispondenza, vedere [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario avere creato una Knowledge Base con criteri di corrispondenza composti da una o più regole di corrispondenza.  
   
 -   Se i dati di origine per la corrispondenza si trovano in un file di Excel, è necessario che Microsoft Excel sia installato nel computer del [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . In caso contrario, non sarà possibile selezionare il file di Excel nella fase di mapping. I file creati da Microsoft Excel potranno presentare l'estensione xlsx, xls o csv. Se viene utilizzata la versione a 64 bit di Excel, sono supportati solo i file di Excel 2003 (xls), mentre non sono supportati file di Excel 2007 o 2010 (xlsx). Se si utilizza una versione a 64 bit di Excel 2007 o 2010, salvare il file come file xls o csv o installare una versione a 32 bit di Excel.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire un progetto corrispondente, è necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN.  
   
 ##  <a name="StartingaMatchingProject"></a>Primo passaggio: avvio di un progetto corrispondente  

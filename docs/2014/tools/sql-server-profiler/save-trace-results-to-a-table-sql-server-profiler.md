@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792692"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>Salvare i risultati della traccia in una tabella (SQL Server Profiler)
@@ -40,9 +40,9 @@ ms.locfileid: "67792692"
   
 5.  Nell'elenco **Proprietario** selezionare il proprietario della traccia.  
   
-6.  Nell'elenco **Tabella** digitare o selezionare il nome della tabella per i risultati della traccia. Fare clic su **OK**.  
+6.  Nell'elenco **Tabella** digitare o selezionare il nome della tabella per i risultati della traccia. Scegliere **OK.**  
   
-7.  Nel **proprietà traccia** finestra di dialogo, seleziona la **numero massimo di righe (in migliaia)** casella di controllo per specificare il numero massimo di righe da salvare.  
+7.  Nella finestra di dialogo **Proprietà traccia** selezionare la casella di controllo **Imposta numero massimo di righe (in migliaia)** per specificare il numero massimo di righe da salvare.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](sql-server-profiler.md)  

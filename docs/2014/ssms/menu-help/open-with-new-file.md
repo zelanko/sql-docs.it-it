@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240147"
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
@@ -29,7 +29,7 @@ ms.locfileid: "63240147"
  **Apri**  
  Fare clic su **Apri** per aprire il documento nell'editor selezionato.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Fare clic su questo pulsante per aggiungere un programma all'elenco visualizzato in **Selezionare un programma dall'elenco**. È possibile digitare il percorso del programma nel campo **Nome programma** oppure fare clic su **Sfoglia**per selezionare il percorso del programma. In **Nome descrittivo**immettere il nome del programma da includere nell'elenco visualizzato in **Selezionare un programma dall'elenco**.  
   
  **Rimuovi**  
@@ -39,7 +39,7 @@ ms.locfileid: "63240147"
  Per specificare un editor predefinito ed eventuali opzioni di codifica della lingua per il tipo di file selezionato, selezionare un programma nell'elenco visualizzato in **Selezionare un programma dall'elenco** e quindi fare clic su **Predefinito**. Alla successiva apertura di questo tipo di file in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], il documento verrà aperto nel nuovo editor predefinito.  
   
 > [!NOTE]  
->  Nell'elenco di programmi visualizzato in **Selezionare un programma dall'elenco**, il nome dell'editor predefinito per il tipo di file selezionato è seguito da **(Predefinito)**.  
+>  Nell'elenco di programmi visualizzato in **Selezionare un programma dall'elenco**, il nome dell'editor predefinito per il tipo di file selezionato è seguito da **(Predefinito)** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Associare estensioni di file a un editor di codice](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

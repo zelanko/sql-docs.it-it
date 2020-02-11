@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Creazione della struttura di Data Mining Market Basket | Microsoft Docs'
+title: 'Lezione 1: creazione della struttura di data mining Market basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676258"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lezione 1: Creazione della struttura di data mining Market Basket
-  In questa lezione verrà creata una struttura di data mining che consente di stimare quali prodotti di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] un cliente tende ad acquistare contemporaneamente. Se non si ha familiarità con le strutture di data mining e sul loro ruolo nel data mining, vedere [strutture di Data Mining &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
+  In questa lezione verrà creata una struttura di data mining che consente di stimare quali prodotti di [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] un cliente tende ad acquistare contemporaneamente. Se non si ha familiarità con le strutture di data mining e il relativo ruolo in data mining, vedere strutture di data mining [&#40;Analysis Services di data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- La struttura di data mining di associazione che verrà creato in questa lezione supporta l'aggiunta di modelli di data mining in base il [algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). Nelle lezioni successive si utilizzeranno i modelli di data mining per stimare il tipo di prodotti che un cliente tende ad acquistare contemporaneamente, ovvero per un'analisi di mercato sugli acquisti. Ad esempio, è possibile individuare la tendenza ad acquistare contemporaneamente mountain bike, pneumatici per bicicletta e caschi.  
+ La struttura di data mining Association che verrà creata in questa lezione supporta l'aggiunta di modelli di data mining basati sull' [algoritmo Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). Nelle lezioni successive si utilizzeranno i modelli di data mining per stimare il tipo di prodotti che un cliente tende ad acquistare contemporaneamente, ovvero per un'analisi di mercato sugli acquisti. Ad esempio, è possibile individuare la tendenza ad acquistare contemporaneamente mountain bike, pneumatici per bicicletta e caschi.  
   
- In questa lezione, la struttura di data mining viene definita utilizzando le tabelle nidificate. L'utilizzo delle tabelle nidificate è determinato dal fatto che il dominio dei dati che verrà definito dalla struttura è contenuto in due diverse tabelle di origine. Per altre informazioni sulle tabelle annidate, vedere [tabelle annidate &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
+ In questa lezione, la struttura di data mining viene definita utilizzando le tabelle nidificate. L'utilizzo delle tabelle nidificate è determinato dal fatto che il dominio dei dati che verrà definito dalla struttura è contenuto in due diverse tabelle di origine. Per ulteriori informazioni sulle tabelle nidificate, vedere [tabelle nidificate &#40;Analysis Services-&#41;di data mining ](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
 ## <a name="create-mining-structure-statement"></a>Istruzione CREATE MINING STRUCTURE  
- Per creare una struttura di data mining contenente una tabella nidificata, viene utilizzata la [Crea struttura di data MINING &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) istruzione. Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
+ Per creare una struttura di data mining contenente una tabella nidificata, utilizzare l'istruzione [create mining structure &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx) . Il codice nell'istruzione può essere suddiviso nelle parti seguenti:  
   
 -   Denominazione della struttura  
   
@@ -55,7 +55,7 @@ CREATE MINING STRUCTURE [<Mining Structure Name>]
 CREATE MINING STRUCTURE [Mining Structure Name]  
 ```  
   
- Per informazioni sulla denominazione di un oggetto in DMX, vedere [identificatori &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Per informazioni sulla denominazione di un oggetto in DMX, vedere [identificatori &#40;&#41;DMX ](/sql/dmx/identifiers-dmx).  
   
  La riga successiva del codice definisce la colonna chiave per la struttura di data mining, che identifica in modo univoco un'entità nei dati di origine:  
   
@@ -77,7 +77,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
    <nested mining structure columns> )  
 ```  
   
- Per informazioni sui tipi di cui è possibile definire le colonne della struttura di data mining, vedere [colonne della struttura di Data Mining](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
+ Per informazioni sui tipi di colonne della struttura di data mining che è possibile definire, vedere [colonne della struttura di data mining](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
 > [!NOTE]  
 >  Per impostazione predefinita, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crea un set di dati di controllo del 30% per ogni struttura di data mining; tuttavia, quando si utilizza DMX per creare una struttura di data mining, è necessario aggiungere manualmente il set di dati di controllo, se lo si desidera.  
@@ -98,9 +98,9 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 1.  Aprire [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Nel **Connetti al Server** della finestra di dialogo per **tipo di Server**, selezionare **Analysis Services**. Nelle **nome Server**, digitare `LocalHost`, o il nome dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che si desidera connettersi a fini di questa lezione. Fare clic su **Connetti**.  
+2.  Nella finestra di dialogo **Connetti al server** selezionare **Analysis Services**per **tipo di server**. In **nome server**, digitare `LocalHost`o il nome dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si desidera connettersi per questa lezione. Fare clic su **Connetti**.  
   
-3.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+3.  In **Esplora oggetti**fare clic con il pulsante destro del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mouse sull'istanza di, scegliere **nuova query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -164,29 +164,29 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     )  
     ```  
   
-5.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
+5.  Scegliere **Salva DMXQuery1. DMX con nome**dal menu **file** .  
   
-6.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Market Basket Structure.dmx`.  
+6.  Nella finestra di dialogo **Salva con** nome individuare la cartella appropriata e assegnare al file `Market Basket Structure.dmx`il nome.  
   
 ## <a name="executing-the-query"></a>Esecuzione della query  
- Il passaggio conclusivo consiste nell'esecuzione della query. Dopo la creazione e il salvataggio di una query, per creare la struttura di data mining sul server è necessario che la query (l'istruzione) venga eseguita. Per altre informazioni sull'esecuzione di query nell'Editor di Query, vedere [Editor di Query motore di Database &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
+ Il passaggio conclusivo consiste nell'esecuzione della query. Dopo la creazione e il salvataggio di una query, per creare la struttura di data mining sul server è necessario che la query (l'istruzione) venga eseguita. Per ulteriori informazioni sull'esecuzione di query nell'editor di query, vedere [motore di database editor di query &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>Per eseguire la query  
   
--   Nell'Editor di Query nella barra degli strumenti, fare clic su **Execute**.  
+-   Nell'editor di query fare clic su **Esegui**sulla barra degli strumenti.  
   
-     Lo stato della query viene visualizzato nei **messaggi** scheda nella parte inferiore dell'Editor di Query al termine dell'esecuzione dell'istruzione. Dovrebbero essere visualizzati i messaggi seguenti:  
+     Lo stato della query viene visualizzato nella scheda **messaggi** nella parte inferiore dell'editor di query al termine dell'esecuzione dell'istruzione. Dovrebbero essere visualizzati i messaggi seguenti:  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Una nuova struttura denominata **Market Basket** ora esista nel server.  
+     Nel server esiste già una nuova struttura denominata **Market basket** .  
   
  Nella lezione successiva verranno aggiunti modelli di data mining alla struttura di data mining Market Basket appena creata.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

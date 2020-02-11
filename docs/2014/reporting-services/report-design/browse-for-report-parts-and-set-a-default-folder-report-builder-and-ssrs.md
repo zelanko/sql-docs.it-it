@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dd881c13b2398f3a1783f53190097653d04d78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106455"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Ricerca di parti del report e impostazione di una cartella predefinita (Generatore report e SSRS)
@@ -63,10 +63,10 @@ ms.locfileid: "66106455"
  Non è necessario riavviare Generatore report affinché questa impostazione venga applicata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Verificare o gli aggiornamenti Turn Off &#40;Report e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [Verificare la disponibilità di aggiornamenti o disattivare gli aggiornamenti &#40;Generatore report e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [Parti del report &#40;Generatore report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Parti del report e set di dati in Generatore report](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Risolvere i problemi relativi alle parti del report &#40;Generatore report e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Pubblicare e ripubblicare parti del report &#40;Generatore report e SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

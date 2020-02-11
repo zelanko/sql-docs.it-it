@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893498"
 ---
 # <a name="using-set-expressions"></a>Utilizzo di espressioni set
@@ -22,7 +22,7 @@ ms.locfileid: "68893498"
   
  L'espressione completa di un set è costituita da zero o più tuple specificate in modo esplicito e racchiuse tra parentesi graffe:  
   
- { [ { *Tuple_expression* | *Member_expression* } [ , { *Tuple_expression* | *Member_expression* } ] ... ] }  
+ {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
   
  Le espressioni di membro specificate in un'espressione set vengono convertite in espressioni di tupla a un membro.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68893498"
   
  è costituito da tre tuple, ognuna delle quali contiene due riferimenti espliciti a membri sulla gerarchia Product Categories della dimensione Product e sulla gerarchia Calendar della dimensione Date.  
   
- Per esempi di funzioni che restituiscono set, vedere [utilizzo di membri, Tuple e set &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+ Per esempi di funzioni che restituiscono set, vedere [utilizzo di membri, Tuple e set &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  

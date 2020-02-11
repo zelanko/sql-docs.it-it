@@ -1,5 +1,5 @@
 ---
-title: Flat File Connection Manager Editor (pagina generale) | Microsoft Docs
+title: Editor gestione connessione file flat (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058748"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Editor gestione connessione file flat (pagina Generale)
@@ -51,10 +51,10 @@ ms.locfileid: "66058748"
  **Formato**  
  Consente di indicare se il file utilizza il tipo di formattazione delimitato, a larghezza fissa o non allineato a destra.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate dai delimitatori specificati nella pagina **Colonne** .|  
-|A larghezza fissa|Le colonne hanno una larghezza fissa.|  
+|File a larghezza fissa|Le colonne hanno una larghezza fissa.|  
 |Non allineato a destra|I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa, ad eccezione dell'ultima. L'ultima colonna è delimitata dal delimitatore di riga.|  
   
  **Qualificatore di testo**  
@@ -66,27 +66,27 @@ ms.locfileid: "66058748"
  **Delimitatore riga di intestazione**  
  Consente di selezionare il delimitatore per la riga di intestazione nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
-|**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
-|**{LF}**|La riga di intestazione è delimitata da un carattere di avanzamento riga.|  
+|**CR Se**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
+|**CR**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
+|**Se**|La riga di intestazione è delimitata da un carattere di avanzamento riga.|  
 |**Punto e virgola {;}**|La riga di intestazione è delimitata da un carattere punto e virgola.|  
 |**Due punti {:}**|La riga di intestazione è delimitata da un carattere due punti.|  
-|**Virgola {,}**|La riga di intestazione è delimitata da una virgola.|  
-|**Tabulazione {t}**|La riga di intestazione è delimitata da un carattere di tabulazione.|  
+|**Virgole{,}**|La riga di intestazione è delimitata da una virgola.|  
+|**Tab {t}**|La riga di intestazione è delimitata da un carattere di tabulazione.|  
 |**Barra verticale {&#124;}**|La riga di intestazione è delimitata da una barra verticale.|  
   
  **Righe di intestazione da ignorare**  
  Consente di specificare il numero di eventuali righe di intestazione o righe di dati iniziali da ignorare.  
   
- **Nomi di colonne nella prima riga di dati**  
+ **Nomi di colonna nella prima riga di dati**  
  Consente di indicare se prevedere o fornire nomi di colonne nella prima riga di dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor gestione connessione file flat &#40;pagina Colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [Editor gestione connessione file flat &#40;pagina Avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
- [Editor gestione connessione file flat &#40;pagina Anteprima&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
+ [Editor gestione connessione file flat &#40;pagina colonne&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Editor gestione connessione file flat &#40;pagina avanzate&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [Editor gestione connessione file flat &#40;pagina anteprima&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

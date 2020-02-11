@@ -14,10 +14,10 @@ ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727913"
 ---
 # <a name="reserved-words-master-data-services"></a>Parole riservate (Master Data Services)
@@ -35,20 +35,20 @@ ms.locfileid: "73727913"
   
 -   [Gerarchie esplicite](../master-data-services/reserved-words-master-data-services.md#exhierarchies)  
   
--   [Attributi](../master-data-services/reserved-words-master-data-services.md#attributes)  
+-   [Attributes](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [Membri](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [Members](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a> Modelli  
+##  <a name="models"></a>Modelli  
  Se si crea un modello con il nome impostato su **Name** o **Code**, non selezionare **Crea entità con lo stesso nome del modello** poiché non è possibile usare **Name** o **Code** per il nome di un'entità.  
   
-##  <a name="entities"></a> Entità  
+##  <a name="entities"></a>Entità  
  Per i nomi dell'entità, non è possibile utilizzare **Name** o **Code**.  
   
-##  <a name="exhierarchies"></a> Gerarchie esplicite  
+##  <a name="exhierarchies"></a>Gerarchie esplicite  
  Per i nomi della gerarchia espliciti, non è possibile utilizzare **Name** o **Code**.  
   
-##  <a name="attributes"></a> Attributi  
+##  <a name="attributes"></a>Attributi  
   
 -   **ID**  
   
@@ -76,10 +76,10 @@ ms.locfileid: "73727913"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Membri  
+##  <a name="members"></a>Membri  
  Per i membri, non è possibile usare **MDMMemberStatus**, **MDMUnused**o **ROOT** per il valore di attributo **Code** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
+ [Panoramica di Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

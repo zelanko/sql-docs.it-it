@@ -1,5 +1,5 @@
 ---
-title: Oggetti origine dati persistenti | Microsoft Docs
+title: Oggetti origine dati permanente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231442"
 ---
 # <a name="persisted-data-source-objects"></a>Oggetti origine dati persistenti
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta gli oggetti di origine dati persistente con il **IPersistFile** interfaccia.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider di OLE DB di Native Client supporta oggetti origine dati salvati in modo permanente con l'interfaccia **IPersistFile** .  
   
 ## <a name="examples"></a>Esempi  
  **A. Rendere persistente l'inizializzazione dell'origine dati:**  
@@ -137,7 +137,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Usare l'inizializzazione dell'origine dati persistente:**  
+ **B. Utilizzare l'inizializzazione dell'origine dati persistente:**  
   
  In questo esempio viene utilizzato un oggetto origine dati persistente con proprietà di inizializzazione aggiuntive che forniscono un account di accesso e una password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

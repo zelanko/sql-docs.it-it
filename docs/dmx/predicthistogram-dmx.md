@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893855"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
@@ -33,11 +33,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>Tipo restituito  
  Tabella.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Un istogramma genera colonne di statistiche. La struttura delle colonne dell'istogramma restituito dipende dal tipo di riferimento di colonna usato con la funzione **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Colonne scalari  
- Per un \<riferimento a colonna scalare >, l'istogramma restituito dalla funzione **PredictHistogram** è costituito dalle colonne seguenti:  
+ Per un \<riferimento a colonna scalare>, l'istogramma restituito dalla funzione **PredictHistogram** è costituito dalle colonne seguenti:  
   
 -   Valore stimato.  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      La colonna **$AdjustedProbability** è un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] estensione della OLE DB [!INCLUDE[msCoName](../includes/msconame-md.md)] per la specifica di data mining.  
   
 ## <a name="cluster-columns"></a>Colonne cluster  
- L'istogramma restituito dalla funzione **PredictHistogram** per un \<riferimento a una colonna cluster > è costituito dalle colonne seguenti:  
+ L'istogramma restituito dalla funzione **PredictHistogram** per un \<riferimento a una colonna cluster> è costituito dalle colonne seguenti:  
   
 -   **$Cluster** (rappresenta il nome del cluster)  
   
@@ -84,16 +84,16 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [&#40;&#41;DMX del cluster](../dmx/cluster-dmx.md)   
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
  [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
  [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [Guida di riferimento &#40;alle&#41; funzioni DMX di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funzioni &#40;di stima generali DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
