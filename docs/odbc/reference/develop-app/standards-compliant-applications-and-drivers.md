@@ -1,5 +1,5 @@
 ---
-title: Applicazioni conformi agli standard e driver | Microsoft Docs
+title: Applicazioni e driver conformi agli standard | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4980cfe64a5a8e8404c6b5b0bdc8b1aba484f0c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107335"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Applicazioni e driver conformi agli standard
-Un'applicazione conforme agli standard o un driver è quella più conforme alla specifica CAE gruppo Open "gestione dei dati: SQL a livello di chiamata Interface (CLI)"e ISO/IEC 9075-3:1995 (E) a livello di chiamata CLI (interfaccia SQL /).  
+Un driver o un'applicazione conforme agli standard è conforme alla specifica CAE del gruppo aperto "Gestione dati: interfaccia della riga di comando di SQL (CLI)" e all'interfaccia a livello di chiamata ISO/IEC 9075-3:1995 (E) (SQL/CLI).  
   
- ODBC *3.x* garantisce le caratteristiche seguenti:  
+ ODBC *3. x* garantisce le funzionalità seguenti:  
   
--   Un'applicazione scritta in base alle specifiche Open Group e ISO CLI funzionerà con un database ODBC *3.x* driver o un driver conforme agli standard quando viene compilato con ODBC *3.x* intestazione file, con collegamenti e ODBC *3.x* librerie, e quando riesce ad accedere al driver tramite ODBC *3.x* gestione Driver.  
+-   Un'applicazione scritta nelle specifiche dell'interfaccia della riga di comando ISO e del gruppo aperto funzionerà con un driver ODBC *3. x* o un driver conforme agli standard quando viene compilato con i file di intestazione ODBC *3. x* e collegato alle librerie ODBC 3 *.* x e quando ottiene l'accesso al driver tramite Gestione driver ODBC *3. x* .  
   
--   È possibile utilizzare un driver scritti in base alle specifiche Open Group e ISO CLI con un database ODBC *3.x* applicazione o un'applicazione conforme agli standard quando viene compilato con ODBC *3.x* i file di intestazione e collegato con ODBC *3.x* librerie, e quando l'applicazione può accedere al driver tramite ODBC *3.x* gestione Driver.  
+-   Un driver scritto nelle specifiche dell'interfaccia della riga di comando ISO e del gruppo aperto funzionerà con un'applicazione ODBC *3. x* o un'applicazione conforme agli standard quando viene compilata con i file di intestazione ODBC *3. x* e collegata alle librerie ODBC *3.* x e quando l'applicazione ottiene l'accesso al driver tramite Gestione driver ODBC *3. x* .  
   
- Driver e conforme agli standard delle applicazioni vengono compilate con il flag di compilazione ODBC_STD.  
+ I driver e le applicazioni conformi agli standard vengono compilati con il flag di compilazione ODBC_STD.  
   
- Le applicazioni conformi agli standard mostrano il comportamento seguente:  
+ Le applicazioni conformi agli standard presentano il comportamento seguente:  
   
--   Se un'applicazione conforme agli standard chiama **SQLAllocEnv** (che può verificarsi poiché **SQLAllocEnv** è una funzione valida nel Open Group e ISO CLI), la chiamata viene mappata a  **SQLAllocHandleStd** in fase di compilazione. Di conseguenza, in fase di esecuzione, l'applicazione chiama **SQLAllocHandleStd**. Nel corso dell'elaborazione di questa chiamata, gestione Driver imposta l'attributo di ambiente SQL_ATTR_ODBC_VERSION su SQL_OV_ODBC3. Una chiamata a **SQLAllocHandleStd** equivale a una chiamata a **SQLAllocHandle** con un *HandleType* SQL_HANDLE_ENV e una chiamata a **SQLSetEnvAttr** per impostare SQL_ATTR_ODBC_VERSION su SQL_OV_ODBC3.  
+-   Se un'applicazione conforme agli standard chiama **SQLAllocEnv** (che può verificarsi perché **SQLAllocEnv** è una funzione valida nel gruppo Open e nell'interfaccia della riga di comando ISO), la chiamata viene mappata a **SQLAllocHandleStd** in fase di compilazione. Di conseguenza, in fase di esecuzione, l'applicazione chiama **SQLAllocHandleStd**. Durante l'elaborazione della chiamata, gestione driver imposta l'attributo SQL_ATTR_ODBC_VERSION Environment su SQL_OV_ODBC3. Una chiamata a **SQLAllocHandleStd** equivale a una chiamata a **SQLAllocHandle** con *HandleType* di SQL_HANDLE_ENV e una chiamata a **SQLSetEnvAttr** per impostare SQL_ATTR_ODBC_VERSION SQL_OV_ODBC3.  
   
--   Se un'applicazione conforme agli standard chiama **SQLBindParam** (che può verificarsi poiché **SQLBindParam** è una funzione valida nel Open Group e ISO CLI), ODBC *3.x* La chiamata a chiamata di equivalenti in esegue il mapping di Gestione driver **SQLBindParameter**. (Vedere [Mapping di SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.)  
+-   Se un'applicazione conforme agli standard chiama **SQLBindParam** (che può verificarsi perché **SQLBindParam** è una funzione valida nel gruppo Open e nell'interfaccia della riga di comando ISO), gestione driver ODBC *3. x* esegue il mapping della chiamata alla chiamata equivalente in **SQLBindParameter**. Per la compatibilità con le versioni precedenti, vedere [mapping di SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) in Appendice G: linee guida sui driver.  
   
--   In modo da allinearsi con la CLI di ISO, ODBC *3.x* file di intestazione contengono alias per i tipi di informazioni usati nelle chiamate a **SQLGetInfo**. Un'applicazione conforme agli standard può usare questi alias anziché di ODBC *3.x* tipi di informazioni. Per altre informazioni, vedere l'argomento successivo [file di intestazione](../../../odbc/reference/develop-app/header-files.md).  
+-   Per l'allineamento con l'interfaccia della riga di comando ISO, i file di intestazione ODBC *3. x* contengono alias per i tipi di informazioni usati nelle chiamate a **SQLGetInfo**. Un'applicazione conforme agli standard può utilizzare questi alias anziché i tipi di informazioni ODBC *3. x* . Per ulteriori informazioni, vedere l'argomento successivo relativo ai [file di intestazione](../../../odbc/reference/develop-app/header-files.md).  
   
--   Un'applicazione conforme agli standard è necessario verificare che tutte le funzionalità che supporta sono supportate nel driver che funzionerà con. Impostare l'attributo di istruzione SQL_ATTR_CURSOR_SCROLLABLE su SQL_SCROLLABLE e impostando l'attributo di istruzione SQL_ATTR_CURSOR_SENSITIVITY su SQL_SENSITIVE o SQL_INSENSITIVE sono funzionalità che sono disponibili come funzioni facoltative negli standard ma non vengono inclusi nel file ODBC *3.x* Core livello e pertanto potrebbe non essere supportato da ODBC tutte *3.x* driver. Se un'applicazione conforme agli standard Usa queste funzionalità, è necessario verificare che il driver che funzionerà con supportarle.
+-   Un'applicazione conforme agli standard deve verificare che tutte le funzionalità supportate siano supportate nel driver che funzionerà con. L'impostazione dell'attributo SQL_ATTR_CURSOR_SCROLLABLE Statement su SQL_SCROLLABLE e sull'impostazione dell'attributo SQL_ATTR_CURSOR_SENSITIVITY Statement su SQL_INSENSITIVE o SQL_SENSITIVE sono le funzionalità disponibili come funzionalità facoltative negli standard, ma che non sono incluse nel livello principale ODBC *3. x* e pertanto potrebbero non essere supportate da tutti i driver ODBC *3. x* . Se un'applicazione conforme agli standard utilizza queste funzionalità, deve verificare che il driver che utilizzerà li supporti.

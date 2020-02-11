@@ -1,5 +1,5 @@
 ---
-title: Rimuovi nodo Cluster di Failover SQL Server | Microsoft Docs
+title: Rimuovere SQL Server nodo del cluster di failover | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,15 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d17cb2a5713dbe8326259851db346c2edc942215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093040"
 ---
 # <a name="remove-sql-server-failover-cluster-node"></a>Rimozione di un nodo del cluster di failover di SQL Server
   Utilizzare la pagina Rimuovi nodo cluster di failover per identificare il computer da rimuovere come nodo del cluster di failover di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-  Questa pagina è da intendersi come un riferimento all'interfaccia grafica. Per istruzioni sulla rimozione di un nodo del cluster, vedere [aggiungere o rimuovere nodi](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md#Remove). 
+  Questa pagina è destinata a un riferimento all'interfaccia grafica. Per istruzioni sulla rimozione di un nodo del cluster, vedere [aggiungere o rimuovere nodi](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md#Remove). 
   
   

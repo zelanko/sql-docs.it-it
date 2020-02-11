@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832455"
 ---
 # <a name="data-flow-task"></a>Attività Flusso di dati
@@ -44,7 +44,9 @@ ms.locfileid: "62832455"
  ![Flussi di dati](../media/mw-dts-09.gif "Flussi di dati")  
   
 ## <a name="log-entries"></a>Voci di log  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include un set di eventi del log disponibili per tutte le attività. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornisce anche voci di log personalizzate a molte attività. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md). L'attività Flusso di dati include le voci di log personalizzate seguenti:  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include un set di eventi del log disponibili per tutte le attività. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornisce anche voci di log personalizzate a molte attività. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md). L'attività Flusso di dati include le voci di log personalizzate seguenti:  
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
@@ -86,9 +88,9 @@ ms.locfileid: "62832455"
   
  Per molti eventi vengono scritte più voci nel log e i messaggi relativi a numerose voci di log contengono dati complessi. Per semplificare la comprensione e la comunicazione del contenuto dei messaggi complessi, è possibile analizzare il testo dei messaggi. In base alla posizione dei log, è possibile utilizzare istruzioni Transact-SQL o un componente script per separare il testo complesso in colonne o altri formati che si ritengono più utili.  
   
- Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB : 1180 : Ordinamento : 1181 : Input ordinamento : 76", analizzato in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
+ Nella tabella seguente viene ad esempio illustrato il messaggio "Sono state passate righe come input per un componente del flusso di dati. :  : 1185 : Output origine OLE DB : 1180 : Ordinamento : 1181 : Input ordinamento : 76", scomposto in colonne. Il messaggio è stato scritto dall'evento `OnPipelineRowsSent` quando le righe sono state inviate dall'origine OLE DB alla trasformazione Ordinamento.  
   
-|colonna|Descrizione|Value|  
+|Colonna|Descrizione|valore|  
 |------------|-----------------|-----------|  
 |**PathID**|Valore della proprietà `ID` del percorso tra l'origine OLE DB e la trasformazione Ordinamento.|1185|  
 |**PathName**|Valore della proprietà `Name` del percorso.|Output origine OLE DB|  

@@ -14,20 +14,20 @@ ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7f4fa71c06b4a9bf3b01d39fa02d4eadeb9b0778
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125724"
 ---
 # <a name="sqlparamoptions-mapping"></a>Mapping di SQLParamOptions
-Quando un'applicazione chiama **SQLParamOptions** tramite un database ODBC *3.x* driver, la chiamata  
+Quando un'applicazione chiama **SQLParamOptions** tramite un driver ODBC *3. x* , la chiamata  
   
 ```  
 SQLParamOptions(hstmt, crow, piRow);  
 ```  
   
- verrà mappato alle due chiamate **SQLSetStmtAttr** come indicato di seguito:  
+ verrà eseguito il mapping a due chiamate di **SQLSetStmtAttr** come indicato di seguito:  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_PARAMSET_SIZE, crow, 0);  

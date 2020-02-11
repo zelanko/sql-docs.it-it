@@ -1,5 +1,5 @@
 ---
-title: Opzioni (Editor di testo - pagina Transact-SQL-generale) | Microsoft Docs
+title: Opzioni (editor di testo-Transact-SQL-pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089166"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>Opzioni (Editor di testo - pagina Transact-SQL-generale)
+# <a name="options-text-editor---transact-sql--general-page"></a>Opzioni (editor di testo-Transact-SQL-pagina generale)
   Utilizzare la finestra di dialogo delle opzioni **Generale** per cambiare il comportamento di modifica generale dell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizzato per modificare gli script [!INCLUDE[tsql](../includes/tsql-md.md)] . Per visualizzare le impostazioni scegliere **Opzioni** dal menu **Strumenti**, espandere la sottocartella **Transact-SQL** e quindi fare clic su **Generale**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Opzioni di impostazione in più posizioni  
  Le opzioni per l'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)] possono essere impostate anche nella finestra di dialogo **Tutti i linguaggi - Generale** . Se si utilizza la finestra di dialogo **Tutti i linguaggi** per impostare opzioni diverse per gli altri editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio DMX o MDX, è necessario reimpostare le opzioni dell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)] tramite questa finestra di dialogo.  
   
 ## <a name="statement-completion"></a>Completamento istruzioni  
- **Elenco membri automatico**  
+ **Elenco automatico membri**  
  Quando questa casella di controllo è selezionata, nell'editor vengono visualizzati gli elenchi di database e oggetti di schema, le colonne, le funzioni con valori di tabella o le funzioni disponibili durante la digitazione. Scegliere l'elemento desiderato nell'elenco popup per inserirlo nel codice.  
   
  **Nascondi membri avanzati**  
@@ -38,16 +38,16 @@ ms.locfileid: "66089166"
  Quando questa casella di controllo è selezionata, vengono visualizzate le informazioni sui parametri per una stored procedure o una funzione che si trova immediatamente a sinistra del punto di inserimento (cursore). Le informazioni includono un elenco dei parametri disponibili con i relativi nomi e i tipi di dati.  
   
 ## <a name="settings"></a>Impostazioni  
- **Attiva spazio virtuale**  
+ **Abilita spazio virtuale**  
  Se questa casella di controllo è selezionata, è possibile fare clic in un punto qualsiasi oltre la fine di una riga di codice ed effettuare la digitazione. Selezionare la casella di controllo per inserire i commenti sempre nel medesimo punto accanto al codice. Se si seleziona questa casella di controllo, la casella di controllo **A capo automatico** viene disabilitata.  
   
- **Ritorno a capo automatico**  
+ **A capo automatico**  
  Se questa casella di controllo è selezionata, le parti di una riga che si estendono orizzontalmente oltre l'area visibile dell'editor vengono visualizzate automaticamente nella riga successiva. Selezionando questa casella di controllo, la casella di controllo **Mostra icone per ritorno a capo automatico** viene abilitata e la casella di controllo **Attiva spazio virtuale** viene disabilitata.  
   
- **Mostra icone per ritorno a capo automatico**  
+ **Mostra icona per ritorno a capo automatico**  
  Se questa casella di controllo è selezionata, viene visualizzato un simbolo di ritorno a capo nel punto in cui una riga lunga va a capo sulla riga successiva.  
   
- **Applica comandi Taglia o copia a righe vuote quando è presente nessuna selezione**  
+ **Applica comandi Taglia o Copia a righe vuote in assenza di selezione**  
  Questa casella di controllo consente di impostare il comportamento dell'editor nei casi in cui si posiziona il punto di inserimento in una riga vuota senza selezionare alcun elemento e quindi si fa clic su **Copia** o **Taglia**.  
   
  Se la casella di controllo è selezionata, la riga vuota viene copiata o incollata. Se quindi si fa clic su **Incolla**, viene inserita una nuova riga vuota.  

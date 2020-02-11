@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139321"
 ---
 # <a name="-equal-to-mdx"></a>= (uguale a) (MDX)
@@ -21,7 +21,7 @@ ms.locfileid: "68139321"
   Esegue un'operazione di confronto che determina se il valore di un'espressione MDX (Multidimensional Expression) è uguale a quello di un'altra espressione MDX.  
   
 > [!NOTE]  
->  Per confrontare gli oggetti, usare il [IS &#40;MDX&#41; ](../mdx/is-mdx.md) operatore. Ad esempio, utilizzare l'operatore IS per controllare se il membro corrente su un asse della query è un membro specifico.  
+>  Per confrontare gli oggetti, utilizzare l'operatore [&#41;&#40;MDX](../mdx/is-mdx.md) . Ad esempio, utilizzare l'operatore IS per controllare se il membro corrente su un asse della query è un membro specifico.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,11 +37,11 @@ MDX_Expression = MDX_Expression
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano basato sulle condizioni seguenti:  
   
--   **true** se il valore del primo parametro è uguale a quello del secondo parametro.  
+-   **true** se il valore del primo parametro è uguale al valore del secondo parametro.  
   
--   **false** se il valore del primo parametro non è uguale a quello del secondo parametro.  
+-   **false** se il valore del primo parametro non è uguale al valore del secondo parametro.  
   
--   **true** se entrambi i parametri sono null, o un parametro è null e l'altro parametro è 0.  
+-   **true** se entrambi i parametri sono null o se un parametro è null e l'altro parametro è 0.  
   
 ## <a name="examples"></a>Esempi  
  Nella query seguente vengono illustrati degli esempi relativi a queste condizioni:  
@@ -75,6 +75,6 @@ MDX_Expression = MDX_Expression
  `From [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

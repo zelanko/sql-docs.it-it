@@ -16,18 +16,18 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768953"
 ---
-# <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
+# <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Consente di modificare il processo di agente che genera lo snapshot per una sottoscrizione di una pubblicazione con un filtro di riga con parametri. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,61 +53,61 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argomenti  
 `[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nome del processo di snapshot da modificare. *dynamic_snapshot_jobname*è di **tipo sysname**e il valore predefinito è n'%'. Se viene specificato *dynamic_snapshot_jobid* , è necessario usare il valore predefinito per *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nome del processo di snapshot da modificare. *dynamic_snapshot_jobname*è di **tipo sysname**e il valore predefinito è n'%'. Se *dynamic_snapshot_jobid* è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobname*.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`ID del processo di snapshot da modificare. *dynamic_snapshot_jobid* è di tipo **uniqueidentifier**e il valore predefinito è null. Se viene specificato *dynamic_snapshot_jobname*, è necessario usare il valore predefinito per *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`ID del processo di snapshot da modificare. *dynamic_snapshot_jobid* è di tipo **uniqueidentifier**e il valore predefinito è null. Se *dynamic_snapshot_jobname*è specificato, è necessario utilizzare il valore predefinito per *dynamic_snapshot_jobid*.  
   
 `[ @frequency_type = ] frequency_type`Frequenza con cui pianificare l'agente. *frequency_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Su richiesta|  
+|**1**|Singola occorrenza|  
+|**2**|On demand|  
 |**4**|Ogni giorno|  
-|**8**|Settimanale|  
+|**8**|Ogni settimana|  
 |**16**|Mensile|  
 |**32**|Mensile relativa|  
 |**64**|Avvio automatico|  
-|**128**|Periodica|  
+|**128**|Ricorrente|  
 |NULL (predefinito)||  
   
 `[ @frequency_interval = ] frequency_interval`Giorni in cui viene eseguito l'agente. *frequency_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Domenica|  
-|**2**|Lunedì|  
-|**3**|Martedì|  
-|**4**|Mercoledì|  
-|**5**|Giovedì|  
-|**6**|Venerdì|  
+|**1**|Sunday|  
+|**2**|Monday|  
+|**3**|Tuesday|  
+|**4**|Wednesday|  
+|**5**|Thursday|  
+|**6**|Friday|  
 |**7**|Sabato|  
-|**8**|Day|  
-|**9**|Giorni feriali|  
+|**8**|Giorno|  
+|**9**|Giorni della settimana|  
 |**10**|Giorni festivi|  
 |NULL (predefinito)||  
   
 `[ @frequency_subday = ] frequency_subday`Frequenza di ripianificazione durante il periodo definito. *frequency_subday* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Una volta|  
-|**2**|Secondo|  
+|**1**|Una sola volta|  
+|**2**|Second|  
 |**4**|Minuto|  
 |**8**|Ora|  
 |NULL (predefinito)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo di *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Intervallo per *frequency_subday*. *frequency_subday_interval* è di **tipo int**e il valore predefinito è null.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Data di esecuzione del agente di merge. Questo parametro viene utilizzato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Data di esecuzione del agente di merge. Questo parametro viene usato quando *frequency_type* è impostato su **32** (mensile relativo). *frequency_relative_interval* è di **tipo int**. i possibili valori sono i seguenti.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**1**|Primo|  
-|**2**|Secondo|  
+|**1**|First (Primo)|  
+|**2**|Second|  
 |**4**|Terzo|  
 |**8**|Quarto|  
-|**16**|Ultimo|  
+|**16**|Last (Ultimo)|  
 |NULL (predefinito)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Fattore di occorrenza utilizzato da *frequency_type*. *frequency_recurrence_factor* è di **tipo int**e il valore predefinito è null.  
@@ -127,15 +127,15 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_changedynamicsnapshot_job** viene utilizzato nella replica di tipo merge per le pubblicazioni con filtri di riga con parametri.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_changedynamicsnapshot_job** viene utilizzata nella replica di tipo merge per le pubblicazioni con filtri di riga con parametri.  
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Vedere anche  

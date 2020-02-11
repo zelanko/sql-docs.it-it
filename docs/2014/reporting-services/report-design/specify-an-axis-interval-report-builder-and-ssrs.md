@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104852"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Specificare un intervallo dell'asse (Generatore report e SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66104852"
 > [!NOTE]  
 >  L'asse delle categorie è in genere l'asse orizzontale, ovvero l'asse X. Tuttavia, per i grafici a barre, l'asse delle categorie è l'asse verticale, ovvero l'asse y.  
   
- Un esempio di un grafico che specifica intervalli dell'asse diversi è disponibile come report di esempio. Per altre informazioni sul download di questo e di altri report di esempio, vedere la pagina relativa ai [report di esempio per Generatore report e Progettazione report](https://go.microsoft.com/fwlink/?LinkId=198283) di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Un esempio di un grafico che specifica intervalli dell'asse diversi è disponibile come report di esempio. Per ulteriori informazioni sul download di questo report di esempio e di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]altri, vedere [Generatore report e progettazione report report di esempio](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "66104852"
   
 1.  Fare clic con il pulsante destro del mouse sull'asse delle categorie, quindi scegliere **Proprietà asse**. Verrà visualizzata la finestra di dialogo **Proprietà asse** .  
   
-2.  Nelle **opzioni di asse**, impostare `Interval` al **1**. Verranno visualizzate tutte le etichette dei gruppi di categorie. Se si desidera visualizzare tutte le etichette dei gruppi di categorie sull'asse X, digitare **2**.  
+2.  In **Opzioni asse**impostare `Interval` su **1**. Verranno visualizzate tutte le etichette dei gruppi di categorie. Se si desidera visualizzare tutte le etichette dei gruppi di categorie sull'asse X, digitare **2**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66104852"
   
 1.  Fare clic con il pulsante destro del mouse sull'asse da modificare, quindi scegliere **Proprietà asse**. Verrà visualizzata la finestra di dialogo **Proprietà asse** .  
   
-2.  Nella **opzioni di asse**, impostare `Interval` al **automatica**. Verrà visualizzato il numero ottimale di etichette di categorie che è possibile adattare lungo l'asse.  
+2.  In **Opzioni asse**impostare `Interval` su **auto**. Il grafico visualizzerà il numero ottimale di etichette di categorie che possono adattarsi lungo l'asse.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -57,6 +57,6 @@ ms.locfileid: "66104852"
  [Ordinamento dei dati in un'area dati &#40;Generatore report e SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Finestra di dialogo Proprietà asse, Opzioni asse &#40;Generatore report e SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [Specificare una scala logaritmica &#40;Generatore report e SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Traccia di dati su un asse secondario &#40;Generatore report e SSRS&#41;](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Tracciare i dati su un asse secondario &#40;Generatore report e SSRS&#41;](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   

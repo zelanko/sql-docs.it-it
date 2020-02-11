@@ -1,5 +1,5 @@
 ---
-title: osql non supporta più I comandi | Microsoft Docs
+title: osql non supporta più comandi | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ce7bfa0bbeec5c5ca83b7139f0ff28e3994021d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093721"
 ---
 # <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql non supporta più comandi
-  Il **osql** utilità non supporta la **ED** e **!!** .  
+  L'utilità **osql** non supporta **ed** e **!!** .  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Rimuovere i riferimenti per il **ED** e **!!** dagli script.  
+ Rimuovere i riferimenti a **ed** e **!!** dagli script.  
   
- Se si desidera utilizzare il **ED** e **!!** i comandi, usare il **sqlcmd** utilità anziché **osql**.  
+ Se si desidera utilizzare **ed** e **!!** utilizzare l'utilità **SQLCMD** anziché **osql**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -13,21 +13,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130675"
 ---
 # <a name="smo-object-model-diagram"></a>Diagramma del modello a oggetti SMO
   In questo diagramma viene illustrata la gerarchia di oggetti SMO e le relazioni tra i tipi di oggetti. L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Server> è l'oggetto di livello principale.  
   
- ![Diagramma che mostra le relazioni gerarchiche](../../../2014/database-engine/dev-guide/media/object-diagram.gif "Diagramma che mostra le relazioni gerarchiche")  
+ ![Diagramma che illustra le relazioni gerarchiche](../../../2014/database-engine/dev-guide/media/object-diagram.gif "Diagramma che illustra le relazioni gerarchiche")  
   
- ![Modello a oggetti, visualizzazione albero che mostra la gerarchia](../../../2014/database-engine/dev-guide/media/object-diagram-02.gif "Modello a oggetti, visualizzazione albero che mostra la gerarchia")  
+ ![Modello a oggetti, visualizzazione albero che illustra la gerarchia](../../../2014/database-engine/dev-guide/media/object-diagram-02.gif "Modello a oggetti, visualizzazione albero che illustra la gerarchia")  
   
- ![Modello a oggetti, visualizzazione albero che mostra la gerarchia](../../../2014/database-engine/dev-guide/media/object-diagram-03.gif "Modello a oggetti, visualizzazione albero che mostra la gerarchia")  
+ ![Modello a oggetti, visualizzazione albero che illustra la gerarchia](../../../2014/database-engine/dev-guide/media/object-diagram-03.gif "Modello a oggetti, visualizzazione albero che illustra la gerarchia")  
   
- ![Modello a oggetti, visualizzazione albero che mostra la gerarchia](../../../2014/database-engine/dev-guide/media/object-diagram-04.gif "Modello a oggetti, visualizzazione albero che mostra la gerarchia")  
+ ![Modello a oggetti, visualizzazione albero che illustra la gerarchia](../../../2014/database-engine/dev-guide/media/object-diagram-04.gif "Modello a oggetti, visualizzazione albero che illustra la gerarchia")  
   
   

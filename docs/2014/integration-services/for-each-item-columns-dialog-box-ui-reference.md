@@ -1,5 +1,5 @@
 ---
-title: Per ogni riferimento all'interfaccia utente di elemento colonne della finestra di dialogo | Microsoft Docs
+title: Riferimento all'interfaccia utente della finestra di dialogo colonne per ogni elemento | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058552"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>Riferimento all'interfaccia utente della finestra di dialogo Colonne For Each Item
@@ -31,14 +31,14 @@ ms.locfileid: "66058552"
  **Tipo di dati**  
  Consente di selezionare il tipo di dati.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Aggiungere una nuova colonna.  
   
  **Rimuovi**  
  Selezionare una colonna e quindi fare clic su **Rimuovi**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor ciclo foreach &#40;pagina della raccolta&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Editor ciclo foreach &#40;pagina raccolta&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   
   

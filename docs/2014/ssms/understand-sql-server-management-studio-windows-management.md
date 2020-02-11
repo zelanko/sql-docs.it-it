@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188646"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Informazioni sulla gestione delle finestre di SQL Server Management Studio
-  Le finestre degli strumenti in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] costituiscono un sistema efficiente, flessibile e funzionale che consente di eseguire le operazioni seguenti:  
+  Le finestre degli strumenti [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] in sono un sistema altamente funzionale, flessibile ed efficiente che consente di:  
   
 -   Ingrandire l'area di lavoro dell'utente per facilitare lo sviluppo e la gestione.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63188646"
 >  Quando un account di accesso (o un utente di database indipendente) si connette e viene autenticato, tramite la connessione vengono memorizzate nella cache le informazioni relative all'identità sull'account di accesso. In caso di un account di accesso con l'autenticazione di Windows, sono incluse informazioni sull'appartenenza ai gruppi di Windows. L'identità dell'account di accesso rimane autenticata, a condizione che la connessione venga mantenuta. Per forzare le modifiche nell'identità, ad esempio una reimpostazione della password o una modifica dell'appartenenza al gruppo di Windows, l'account di accesso deve disconnettersi dall'autorità di autenticazione (Windows o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) e accedere di nuovo. Un membro del ruolo predefinito del server **sysadmin** o qualsiasi account di accesso con l'autorizzazione **ALTER ANY CONNECTION** può usare il comando **KILL** per terminare una connessione e forzare la riconnessione di un account di accesso. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] è possibile usare di nuovo le informazioni di connessione quando si aprono più connessioni alle finestre Esplora oggetti ed Editor di query. Chiudere tutte le connessioni per forzare la riconnessione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)   
+ [Usa SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)   
  [Ambiente di SQL Server Management Studio](the-sql-server-management-studio-environment.md)  
   
   

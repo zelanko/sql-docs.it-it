@@ -1,5 +1,5 @@
 ---
-title: I cursori dinamici | Microsoft Docs
+title: Cursori dinamici | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,20 +14,20 @@ ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 86e51b7880004117e8efc96bd310c6de705d43a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925500"
 ---
 # <a name="dynamic-cursors"></a>Cursori dinamici
-I cursori dinamici rilevano tutte le modifiche apportate alle righe nel set di risultati, indipendentemente dal fatto che si verificano le modifiche dall'interno del cursore o da altri utenti all'esterno del cursore. Tutti i insert, update e istruzioni delete eseguite da tutti gli utenti sono visibili nel cursore. Il cursore dinamico può rilevare eventuali modifiche apportate alle righe, ordine e i valori nel set di risultati dopo l'apertura del cursore. Gli aggiornamenti apportati all'esterno del cursore non sono visibili fino a quando non sono state assegnate (a meno che il livello di isolamento delle transazioni di cursore è impostato su "commit").  
+I cursori dinamici rilevano tutte le modifiche apportate alle righe nel set di risultati, indipendentemente dal fatto che vengano apportate all'interno del cursore o da altri utenti all'esterno del cursore. Tutte le istruzioni INSERT, Update e DELETE eseguite da tutti gli utenti sono visibili tramite il cursore. Il cursore dinamico può rilevare le modifiche apportate alle righe, all'ordine e ai valori nel set di risultati dopo l'apertura del cursore. Gli aggiornamenti eseguiti all'esterno del cursore non sono visibili finché non ne viene eseguito il commit, a meno che il livello di isolamento della transazione del cursore non sia impostato su "non sottoposto a commit".  
   
- Si supponga, ad esempio, un cursore dinamico recupera due righe e un'altra applicazione, quindi aggiorna una di queste righe e consente di eliminare l'altra. Se a questo punto il cursore dinamico recupera tali righe, non troverà la riga eliminata, ma visualizzerà i nuovi valori per la riga aggiornata.  
+ Si supponga, ad esempio, che un cursore dinamico recuperi due righe e un'altra applicazione, quindi aggiorna una di queste righe ed Elimina l'altra. Se a questo punto il cursore dinamico recupera tali righe, non troverà la riga eliminata, ma visualizzerà i nuovi valori per la riga aggiornata.  
   
- Il cursore dinamico è un'ottima scelta se l'applicazione deve rilevare tutti gli aggiornamenti simultanei apportati da altri utenti. Usare la **Impostare CursorTypeEnum** per indicare che si desidera utilizzare un cursore dinamico in ADO.  
+ Il cursore dinamico è una scelta ottimale se l'applicazione deve rilevare tutti gli aggiornamenti simultanei eseguiti da altri utenti. Utilizzare il **CursorTypeEnum adOpenDynamic** per indicare che si desidera utilizzare un cursore dinamico in ADO.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cursori forward-Only](../../../ado/guide/data/forward-only-cursors.md)   
+ [Cursori di sola trasmissione](../../../ado/guide/data/forward-only-cursors.md)   
  [Cursori statici](../../../ado/guide/data/static-cursors.md)   
  [Cursori keyset](../../../ado/guide/data/keyset-cursors.md)

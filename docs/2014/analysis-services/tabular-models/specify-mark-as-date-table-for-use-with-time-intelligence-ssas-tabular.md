@@ -1,5 +1,5 @@
 ---
-title: Specificare contrassegna come tabella data per l'uso con Intelligence in tempo (SSAS tabulare) | Microsoft Docs
+title: Specificare Contrassegna come tabella data per l'uso con la funzionalità di Business Intelligence per l'ora (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284885"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Specificare Contrassegna come tabella data per l'utilizzo con funzionalità di Business Intelligence per le gerarchie temporali (SSAS tabulare)
@@ -36,11 +36,11 @@ ms.locfileid: "67284885"
   
 1.  In Progettazione modelli fare clic sulla tabella relativa alla data.  
   
-2.  Fare clic sul menu **Tabella** , selezionare **Data**, quindi scegliere **Contrassegna come tabella data**  
+2.  Scegliere **Data**dal menu **tabella** , quindi fare clic su **Contrassegna come tabella data**  
   
 3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare una colonna da utilizzare come identificatore univoco. In questa colonna devono essere inclusi valori univoci e il tipo di dati utilizzato deve essere Date. Ad esempio:  
   
-    |Date|  
+    |Data|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -52,6 +52,6 @@ ms.locfileid: "67284885"
   
 ## <a name="see-also"></a>Vedere anche  
  [Calcoli &#40;SSAS tabulare&#41;](calculations-ssas-tabular.md)   
- [Funzioni di Business Intelligence di tempo &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
+ [Funzioni di Business Intelligence per le attività temporali &#40;&#41;DAX](/dax/time-intelligence-functions-dax)  
   
   

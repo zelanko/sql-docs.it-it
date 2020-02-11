@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211811"
 ---
 # <a name="rename-columns-database-engine"></a>Ridenominazione di colonne (motore di database)
   È possibile rinominare un nome tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -64,12 +64,12 @@ ms.locfileid: "68211811"
   
 2.  In **Nome colonna**, selezionare il nome da cambiare e digitarne uno nuovo.  
   
-3.  Nel menu **File** scegliere **Salva**_table name_.  
+3.  Scegliere **Salva** **nome tabella** dal menu _File_.  
   
 > [!NOTE]  
 >  Per cambiare il nome di una colonna, è anche possibile utilizzare la scheda **Proprietà colonne** . A tale scopo, selezionare la colonna di cui si desidera cambiare il nome e digitare un nuovo valore per **Nome**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per rinominare una colonna**  
   
 #### <a name="to-rename-a-column"></a>Per rinominare una colonna  
@@ -87,6 +87,6 @@ ms.locfileid: "68211811"
     GO  
     ```  
   
- Per altre informazioni, vedere [sp_rename &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql).  
+ Per ulteriori informazioni, vedere [sp_rename &#40;&#41;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql).  
   
   

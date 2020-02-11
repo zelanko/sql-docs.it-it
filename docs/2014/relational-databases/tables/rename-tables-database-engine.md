@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196735"
 ---
 # <a name="rename-tables-database-engine"></a>Ridenominazione di tabelle (motore di database)
@@ -28,7 +28,7 @@ ms.locfileid: "68196735"
 > [!CAUTION]  
 >  Fare attenzione prima di rinominare una tabella. Se query, viste, funzioni definite dall'utente, stored procedure o programmi esistenti fanno riferimento a tale tabella, la modifica del nome renderà questi oggetti non validi.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68196735"
   
      [Sicurezza](#Security)  
   
--   **Per rinominare una tabella:**  
+-   **Per rinominare una tabella utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68196735"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-rename-a-table"></a>Per rinominare una tabella  
   
@@ -64,9 +64,9 @@ ms.locfileid: "68196735"
   
 4.  Per annullare questa azione, premere ESC prima di uscire dal campo.  
   
-5.  Dal menu **File** scegliere **Salva**_nome tabella_.  
+5.  Scegliere **Salva****nome tabella** dal menu _File_.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-rename-a-table"></a>Per rinominare una tabella  
   

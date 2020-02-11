@@ -1,5 +1,5 @@
 ---
-title: INFORMATION_SCHEMA. I nomi di schemi restituisce lo schema in un database, non i database in un'istanza | Microsoft Docs
+title: INFORMATION_SCHEMA. SCHEMI restituisce i nomi di schema in un database, non i database in un'istanza | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0e3683ee043785ec6adc349ac52301280c7bc2b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094726"
 ---
-# <a name="informationschemaschemata-returns-schema-names-in-a-database-not-databases-in-an-instance"></a>INFORMATION_SCHEMA.SCHEMATA restituisce i nomi degli schemi di un database, non i database di un'istanza
+# <a name="information_schemaschemata-returns-schema-names-in-a-database-not-databases-in-an-instance"></a>INFORMATION_SCHEMA.SCHEMATA restituisce i nomi degli schemi di un database, non i database di un'istanza
   Sono state rilevate istruzioni che fanno riferimento alla vista INFORMATION_SCHEMA.SCHEMATA. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la vista restituisce tutti i database inclusi in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive restituisce tutti gli schemi di un database.  
   
 ## <a name="component"></a>Componente  
@@ -29,10 +29,10 @@ ms.locfileid: "66094726"
  Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la vista INFORMATION_SCHEMA.SCHEMATA restituisce tutti i database inclusi in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre ora restituisce tutti gli schemi di un database, in modo conforme allo standard SQL.  
   
 ## <a name="corrective-action"></a>Azione correttiva  
- Modificare l'applicazione per fare riferimento il **Sys. Databases** per restituire tutti i database in un'istanza della vista del catalogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Modificare l'applicazione in modo che faccia riferimento alla vista del catalogo **sys. databases** per restituire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tutti i database in un'istanza di.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Problemi di aggiornamento del motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Problemi di aggiornamento motore di database](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 preparazione aggiornamento &#91;nuova&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

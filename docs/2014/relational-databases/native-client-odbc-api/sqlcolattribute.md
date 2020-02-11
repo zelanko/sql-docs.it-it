@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067672"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-  È possibile usare `SQLColAttribute` per recuperare un attributo di una colonna del set di risultati per le istruzioni ODBC preparate o eseguite. La chiamata `SQLColAttribute` su istruzioni preparate provoca un round trip al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riceve i dati di colonna del set di risultati come parte dell'esecuzione dell'istruzione, quindi la chiamata `SQLColAttribute` dopo il completamento della **SQLExecute** oppure **SQLExecDirect** viene non comporta un round trip del server.  
+  È possibile utilizzare `SQLColAttribute` per recuperare un attributo di una colonna del set di risultati per istruzioni ODBC preparate o eseguite. La `SQLColAttribute` chiamata su istruzioni preparate genera un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]round trip a. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native client riceve i dati della colonna del set di risultati come parte dell' `SQLColAttribute` esecuzione dell'istruzione, quindi la chiamata al completamento di **SQLExecute** o **SQLExecDirect** non comporta un round trip del server.  
   
 > [!NOTE]  
 >  Gli attributi di identificazione di colonna ODBC non sono disponibili in tutti i set di risultati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -32,16 +32,16 @@ ms.locfileid: "63067672"
 |SQL_COLUMN_TABLE_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
 |SQL_DESC_BASE_COLUMN_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
 |SQL_DESC_BASE_TABLE_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
-|SQL_DESC_CATALOG_NAME|Nome del database. Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
+|SQL_DESC_CATALOG_NAME|nome del database. Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
 |SQL_DESC_LABEL|Disponibile in tutti i set di risultati. Il valore è identico al valore del campo SQL_DESC_NAME.<br /><br /> Il campo è di lunghezza zero solo se una colonna è il risultato di un'espressione e l'espressione non contiene un'assegnazione di etichetta.|  
 |SQL_DESC_NAME|Disponibile in tutti i set di risultati. Il valore è identico al valore del campo SQL_DESC_LABEL.<br /><br /> Il campo è di lunghezza zero solo se una colonna è il risultato di un'espressione e l'espressione non contiene un'assegnazione di etichetta.|  
 |SQL_DESC_SCHEMA_NAME|Nome del proprietario. Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.<br /><br /> Disponibile solo se viene specificato il nome del proprietario per la colonna nell'istruzione SELECT.|  
 |SQL_DESC_TABLE_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED per tutte le colonne in un set di risultati, a meno che una colonna non sia il risultato di un'espressione che non contiene un'assegnazione di etichetta come parte dell'espressione. Quando SQL_DESC_UNNAMED restituisce SQL_UNNAMED, tutti gli attributi di identificazione di colonna ODBC contengono stringhe di lunghezza zero per la colonna.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver utilizza l'istruzione SET FMTONLY per ridurre il sovraccarico del server quando `SQLColAttribute` viene chiamato per ma non eseguite le istruzioni preparate.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Il driver ODBC di Native client utilizza l'istruzione SET FMTONLY per ridurre l' `SQLColAttribute` overhead del server quando viene chiamato per istruzioni preparate ma non eseguite.  
   
- Per i tipi di valori di grandi dimensioni, `SQLColAttribute` restituirà i valori seguenti:  
+ Per i tipi di valore `SQLColAttribute` di grandi dimensioni, restituirà i valori seguenti:  
   
 |Identificatore del campo|Descrizione della modifica|  
 |----------------------|---------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "63067672"
   
  Per tutte le versioni, gli attributi di colonna vengono indicati solo per il primo set di risultati quando più set di risultati vengono generati da un batch preparato di istruzioni SQL.  
   
- Gli attributi di colonna seguenti sono estensioni esposte dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client restituisce tutti i valori di *NumericAttrPtr* parametro. I valori vengono restituiti come SDWORD (signed long) ad eccezione di SQL_CA_SS_COMPUTE_BYLIST, che è un puntatore a una matrice di WORD.  
+ Gli attributi di colonna seguenti sono estensioni esposte dal driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client restituisce tutti i valori nel parametro *NumericAttrPtr* . I valori vengono restituiti come SDWORD (signed long) ad eccezione di SQL_CA_SS_COMPUTE_BYLIST, che è un puntatore a una matrice di WORD.  
   
 |Identificatore del campo|Valore restituito|  
 |----------------------|--------------------|  
@@ -68,13 +68,13 @@ ms.locfileid: "63067672"
 |SQL_CA_SS_COLUMN_UTYPE|Tipo di dati di base del tipo di dati definito dall'utente della colonna di SQL Server. Le definizioni dei valori dei tipi sono incluse in sqlncli.h.|  
 |SQL_CA_SS_COLUMN_VARYLEN|TRUE se i dati della colonna possono variare in lunghezza; in caso contrario, FALSE.|  
 |SQL_CA_SS_COMPUTE_BYLIST|Puntatore a una matrice di WORD (unsigned short) che specifica le colonne utilizzate nella frase BY di una clausola COMPUTE. Se la clausola COMPUTE non specifica una frase BY, viene restituito un puntatore NULL.<br /><br /> Il primo elemento della matrice contiene il conteggio di colonne dell'elenco BY. I numeri ordinali di colonna sono elementi aggiuntivi.|  
-|SQL_CA_SS_COMPUTE_ID|*computeid* di una riga che rappresenta il risultato di una clausola COMPUTE nell'istruzione Transact-SQL SELECT corrente.|  
+|SQL_CA_SS_COMPUTE_ID|*ComputeID* di una riga che è il risultato di una clausola COMPUTE nell'istruzione Transact-SQL SELECT corrente.|  
 |SQL_CA_SS_NUM_COMPUTES|Numero di clausole COMPUTE specificate nell'istruzione Transact-SQL SELECT corrente.|  
 |SQL_CA_SS_NUM_ORDERS|Numero di colonne specificate in una clausola ORDER BY di un'istruzione ODBC o Transact-SQL SELECT.|  
   
- \*   È disponibile se l'attributo dell'istruzione SQL_SOPT_SS_HIDDEN_COLUMNS è impostato su SQL_HC_ON.  
+ \*Disponibile se l'attributo Statement SQL_SOPT_SS_HIDDEN_COLUMNS è impostato su SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ha introdotto i campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare rispettivamente il nome della raccolta XML schema, il nome dello schema e il nome del catalogo. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sono stati introdotti campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare rispettivamente il nome della raccolta XML Schema, il nome dello schema e il nome del catalogo. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
 |Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
@@ -94,21 +94,22 @@ ms.locfileid: "63067672"
  L'identificatore SQL_DESC_TYPE_NAME del campo di descrizione esistente viene utilizzato per indicare il nome del tipo definito dall'utente. Il campo SQL_DESC_TYPE per una colonna con tipo definito dall'utente è SQL_SS_UDT.  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Supporto di SQLColAttribute per le caratteristiche avanzate di data e ora  
- Per i valori restituiti per i tipi data/ora, vedere la sezione "Informazioni restituite nei campi IRD" in [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Per i valori restituiti per i tipi data/ora, vedere la sezione "informazioni restituite nei campi IRD" nei [metadati dei parametri e dei risultati](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per ulteriori informazioni, vedere [miglioramenti di data e ora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Supporto di SQLColAttribute per tipi CLR definiti dall'utente di grandi dimensioni  
- `SQLColAttribute` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ 
+  `SQLColAttribute` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Supporto di SQLColAttribute per colonne di tipo sparse  
- SQLColAttribute esegue una query il nuovo campo implementazione riga IRD (descrittore), SQL_CA_SS_IS_COLUMN_SET, per determinare se una colonna è una `column_set` colonna.  
+ SQLColAttribute esegue una query sul campo IRD (nuovo descrittore di righe di implementazione) SQL_CA_SS_IS_COLUMN_SET per determinare se `column_set` una colonna è una colonna.  
   
- Per altre informazioni, vedere [supporto per colonne di tipo Sparse &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
+ Per ulteriori informazioni, vedere [supporto di colonne di tipo sparse &#40;&#41;ODBC ](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLColAttribute](https://go.microsoft.com/fwlink/?LinkId=59334)   
- [Dettagli di implementazione di API ODBC](odbc-api-implementation-details.md)   
+ [SQLColAttribute (funzione)](https://go.microsoft.com/fwlink/?LinkId=59334)   
+ [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   
   

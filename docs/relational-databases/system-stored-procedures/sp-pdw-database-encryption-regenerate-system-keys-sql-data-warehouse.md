@@ -13,17 +13,17 @@ ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67463471"
 ---
-# <a name="sppdwdatabaseencryptionregeneratesystemkeys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
+# <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Uso **sp_pdw_database_encryption_regenerate_system_keys** per ruotare la chiave di crittografia del database e del certificato per i database interni che vengono crittografati quando Transparent Data Encryption è abilitato nell'appliance. incluso `tempdb`. Ciò avrà esito positivo solo se TDE è abilitata.  
+  Usare **sp_pdw_database_encryption_regenerate_system_keys** per ruotare il certificato e la chiave di crittografia del database per i database interni crittografati quando è abilitata la funzionalità Transparent Data Encryption nell'appliance. Include `tempdb`. Questa operazione avrà esito positivo solo se si abilita Transparent Data Encryption.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,19 +33,19 @@ ms.locfileid: "67463471"
 sp_pdw_database_encryption_regenerate_system_keys  ;  
 ```  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- La procedura non ha parametri.  
+## <a name="remarks"></a>Osservazioni  
+ La routine non dispone di parametri.  
   
- Questa procedura deve essere utilizzata quando il traffico nell'appliance è insufficiente.  
+ Questa procedura deve essere usata quando il traffico nell'appliance è basso.  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **sysadmin** ruolo predefinito del database, o **CONTROL SERVER** l'autorizzazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'appartenenza al ruolo predefinito del database **sysadmin** o all'autorizzazione **Control Server** .  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente consente di rigenerare le chiavi di crittografia del database.  
+ Nell'esempio seguente vengono rigenerate le chiavi di crittografia del database.  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  

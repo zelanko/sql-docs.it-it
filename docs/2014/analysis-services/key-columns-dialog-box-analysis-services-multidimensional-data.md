@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo colonne (Analysis Services - dati multidimensionali) della chiave | Microsoft Docs
+title: Finestra di dialogo colonne chiave (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079469"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Colonne chiave (Analysis Services - Dati multidimensionali)
   Usare la finestra di dialogo **Colonne chiave** per modificare la proprietà **KeyColumns** di un attributo. Per altre informazioni, vedere [Modificare la proprietà KeyColumn di un attributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
- **Per visualizzare la finestra di dialogo colonne chiave**  
+ **Per visualizzare la finestra di dialogo Colonne chiave**  
   
--   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], selezionare un attributo e nella finestra **Proprietà** fare clic sul pulsante con i puntini di sospensione ( **...** ) associato alla proprietà **KeyColumns** di quell'attributo.  
+-   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], selezionare un attributo e nella finestra **Proprietà** fare clic sul pulsante con i puntini di sospensione (**...**) associato alla proprietà **KeyColumns** di quell'attributo.  
   
 ## <a name="options"></a>Opzioni  
  **Tabella di origine**  
@@ -42,7 +42,7 @@ ms.locfileid: "66079469"
   
  Per rimuovere una colonna dall'elenco **Colonne chiave** , selezionare la colonna e fare click sul pulsante **\<** .  
   
- **Su**  
+ **Attivo**  
  Fare clic per spostare verso l'alto di una posizione la colonna selezionata in **Colonne chiave** .  
   
 > [!NOTE]  
@@ -61,6 +61,6 @@ ms.locfileid: "66079469"
  Fare clic per rimuovere la colonna selezionata dalle colonne elencate in **Colonne chiave**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestre di progettazione e finestre di dialogo di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Finestre di progettazione e finestre di dialogo Analysis Services &#40;dati multidimensionali&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Impostare i parametri per la finestra di dialogo | Microsoft Docs
+title: Finestra di dialogo Imposta parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056869"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
@@ -29,13 +29,13 @@ ms.locfileid: "66056869"
  **Usa parametro esistente**  
  Selezionare questa opzione per associare la proprietà dell'attività a un parametro esistente, quindi selezionare il parametro dall'elenco a discesa.  
   
- **Non utilizzare il parametro**  
+ **Non usare il parametro**  
  Selezionare questa opzione per rimuovere un riferimento a un parametro. Il parametro non viene eliminato.  
   
  **Crea nuovo parametro**  
  Selezionare questa opzione per creare un nuovo parametro che si desidera associare alla proprietà dell'attività.  
   
- **Name**  
+ **Nome**  
  Specificare il nome del parametro che si desidera creare.  
   
  **Descrizione**  
@@ -44,13 +44,13 @@ ms.locfileid: "66056869"
  **Valore**  
  Specificare il valore predefinito per il parametro. Definito anche valore predefinito per la progettazione, potrà essere sostituito in seguito in fase di distribuzione.  
   
- **Ambito**  
+ **Scope**  
  Specificare l'ambito del parametro selezionando l'opzione **Progetto** o **Pacchetto**. I parametri del progetto vengono utilizzati per fornire input esterno ricevuto dal progetto a uno o più pacchetti nel progetto. I parametri del pacchetto consentono di modificare l'esecuzione del pacchetto senza doverlo modificare e ridistribuire.  
   
- **Sensibile**  
+ **Distinzione**  
  Specificare se il parametro è sensibile selezionando o deselezionando la casella di controllo. I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.  
   
- **Obbligatorio**  
+ **Obbligatoria**  
  Specificare se il parametro richiede che un valore diverso dal valore predefinito per la progettazione venga specificato prima dell'esecuzione del pacchetto.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  

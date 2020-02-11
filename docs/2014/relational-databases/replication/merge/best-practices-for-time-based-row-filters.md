@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210718"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Procedure consigliate per i filtri di riga basati sul tempo
@@ -26,7 +26,7 @@ ms.locfileid: "68210718"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Con un filtro di questo tipo, l'esecuzione dell'agente di merge ha in genere due risultati: le righe che soddisfano il filtro vengono replicate nei Sottoscrittori, mentre le righe che non soddisfano più il filtro vengono rimosse dai Sottoscrittori. (Per altre informazioni sui filtri con `HOST_NAME()`, vedere [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) La replica di tipo merge, tuttavia, consente di replicare e pulire esclusivamente i dati che sono stati modificati dopo l'ultima sincronizzazione, indipendentemente dalla modalità di definizione di un filtro di riga per tali dati.  
+ Con un filtro di questo tipo, l'esecuzione dell'agente di merge ha in genere due risultati: le righe che soddisfano il filtro vengono replicate nei Sottoscrittori, mentre le righe che non soddisfano più il filtro vengono rimosse dai Sottoscrittori. Per ulteriori informazioni sul filtro con, `HOST_NAME()`vedere [filtri di riga con parametri](parameterized-filters-parameterized-row-filters.md). Tuttavia, la replica di tipo merge replica e pulisce solo i dati che sono stati modificati dopo l'ultima sincronizzazione, indipendentemente dalla modalità di definizione di un filtro di riga per tali dati.  
   
  Affinché la replica di tipo merge elabori una riga, è necessario che i dati contenuti in tale riga soddisfino il filtro di riga e che siano stati modificati dopo l'ultima sincronizzazione. Nel caso della tabella **SalesOrderHeader** , **OrderDate** viene immesso quando si inserisce una riga. Le righe vengono quindi replicate nel Sottoscrittore come previsto poiché l'inserimento rappresenta una modifica ai dati. Se tuttavia nel Sottoscrittore sono presenti righe che non soddisfano più il filtro, ovvero sono relative a ordini immessi da più di sette giorni, queste verranno rimosse dal Sottoscrittore a meno che non siano state aggiornate per altri motivi.  
   
@@ -60,7 +60,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replica**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
-|2|Pranzo|112|2006-10-10|0|  
+|2|Pasto principale|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Matrimonio|112|2006-10-12|0|  
   
@@ -84,7 +84,7 @@ GO
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replica**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
-|2|Pranzo|112|2006-10-10|1|  
+|2|Pasto principale|112|2006-10-10|1|  
 |3|Party|112|2006-10-11|1|  
 |4|Matrimonio|112|2006-10-12|1|  
   
@@ -92,7 +92,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [GETDATE &#40;Transact-SQL&#41;](/sql/t-sql/functions/getdate-transact-sql)   
- [Implementare processi](../../../ssms/agent/implement-jobs.md)   
+ [Implementazione di processi](../../../ssms/agent/implement-jobs.md)   
  [Filtri di riga con parametri](parameterized-filters-parameterized-row-filters.md)  
   
   

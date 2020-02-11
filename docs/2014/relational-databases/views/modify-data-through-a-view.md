@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211670"
 ---
 # <a name="modify-data-through-a-view"></a>Modificare i dati tramite una vista
   È possibile modificare i dati di una tabella di base sottostante in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68211670"
   
      [Sicurezza](#Security)  
   
--   **Per modificare i dati della tabella tramite una vista, utilizzando:**  
+-   **Per modificare i dati della tabella tramite una vista utilizzando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68211670"
 ####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione UPDATE, INSERT o DELETE per la tabella di destinazione, a seconda dell'azione eseguita.  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>Per modificare i dati della tabella tramite una vista  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211670"
     > [!IMPORTANT]  
     >  Non è possibile inserire una riga se la vista fa riferimento a più di una tabella di base.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-update-table-data-through-a-view"></a>Per aggiornare i dati della tabella tramite una vista  
   

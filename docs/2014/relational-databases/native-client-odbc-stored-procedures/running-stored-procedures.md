@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di Stored procedure | Documenti di Microsoft
+title: Esecuzione di stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206735"
 ---
 # <a name="running-stored-procedures"></a>Esecuzione delle stored procedure
-  Una stored procedure è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  Una stored procedure è un oggetto eseguibile archiviato in un database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta  
   
 -   Stored procedure:  
   
@@ -55,18 +55,18 @@ ms.locfileid: "68206735"
   
      Le stored procedure estese possono utilizzare le caratteristiche C e C++ non disponibili nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-     Per un esempio di come chiamare una stored procedure, vedere [processo codici e i parametri di Output &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
+     Per un esempio di come chiamare una stored procedure, vedere [elaborare i codici restituiti e i parametri di Output &#40;&#41;ODBC ](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Chiamata di una stored procedure](calling-a-stored-procedure.md)  
   
--   [Invio in batch di chiamate di stored procedure](batching-stored-procedure-calls.md)  
+-   [Invio in batch di chiamate a stored procedure](batching-stored-procedure-calls.md)  
   
--   [Elaborazione dei risultati delle stored procedure](processing-stored-procedure-results.md)  
+-   [Risultati dell'elaborazione delle stored procedure](processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [Esecuzione di procedure per la Stored procedure &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+ [Procedure per l'esecuzione di stored procedure &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

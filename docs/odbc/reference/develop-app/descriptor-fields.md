@@ -1,5 +1,5 @@
 ---
-title: I campi di descrizione | Microsoft Docs
+title: Campi del descrittore | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106175"
 ---
 # <a name="descriptor-fields"></a>Campi del descrittore
-Contengono i descrittori *intestazione* e *record* campi che descrivono completamente le colonne o parametri.  
+I descrittori contengono campi di *intestazione* e *record* che descrivono completamente colonne o parametri.  
   
- Un descrittore contiene una sola copia dei seguenti campi di intestazione. La modifica di un campo di intestazione influisce su tutte le colonne o parametri.  
+ Un descrittore contiene una sola copia dei campi di intestazione seguenti. La modifica di un campo di intestazione influiscono su tutte le colonne o i parametri.  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ Contengono i descrittori *intestazione* e *record* campi che descrivono completa
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Un descrittore contiene zero o più record del descrittore. Ogni record descrive una colonna o parametro, a seconda del tipo di descrittore. Quando è associato una nuova colonna o parametro, viene aggiunto un nuovo record per il descrittore. Quando una colonna o parametro non è associato, un record viene rimosso dal descrittore. Ogni record contiene una sola copia dei campi seguenti:  
+ Un descrittore contiene zero o più record di descrittori. Ogni record descrive una colonna o un parametro, a seconda del tipo di descrittore. Quando viene associata una nuova colonna o un nuovo parametro, al descrittore viene aggiunto un nuovo record. Quando una colonna o un parametro non è associato, un record viene rimosso dal descrittore. Ogni record contiene una sola copia dei campi seguenti:  
   
 |||  
 |-|-|  
@@ -54,9 +54,9 @@ Contengono i descrittori *intestazione* e *record* campi che descrivono completa
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- Numero di attributi di istruzione corrisponde al campo di intestazione di un descrittore. L'impostazione di questi attributi tramite una chiamata a **SQLSetStmtAttr** e impostando il campo di intestazione corrispondente descrittore chiamando **SQLSetDescField** hanno lo stesso effetto. Lo stesso vale per **SQLGetStmtAttr** e **SQLGetDescField**, entrambi di cui recuperare le stesse informazioni. Chiamare le funzioni di istruzione anziché le funzioni di descrittore ha il vantaggio che un handle di descrittore non devono essere recuperati.  
+ Molti attributi di istruzione corrispondono al campo di intestazione di un descrittore. L'impostazione di questi attributi tramite una chiamata a **SQLSetStmtAttr** e l'impostazione del campo di intestazione del descrittore corrispondente chiamando **SQLSetDescField** hanno lo stesso effetto. Lo stesso vale per **SQLGetStmtAttr** e **SQLGetDescField**, che recuperano entrambe le stesse informazioni. La chiamata alle funzioni dell'istruzione invece che alle funzioni descrittore ha il vantaggio di non dover recuperare un handle del descrittore.  
   
- Impostando gli attributi di istruzione, è possono impostare i campi di intestazione seguente:  
+ I campi di intestazione seguenti possono essere impostati impostando gli attributi dell'istruzione:  
   
 |||  
 |-|-|  

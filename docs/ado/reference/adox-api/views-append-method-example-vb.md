@@ -1,5 +1,5 @@
 ---
-title: Append oggetti View (VB) di esempio di metodo | Microsoft Docs
+title: Esempio di metodo Append views (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964797"
 ---
 # <a name="views-append-method-example-vb"></a>Esempio del metodo Append di Views (VB)
-Il codice seguente viene illustrato come utilizzare un [comandi](../../../ado/reference/ado-api/command-object-ado.md) oggetto e il [viste](../../../ado/reference/adox-api/views-collection-adox.md) raccolta [Append](../../../ado/reference/adox-api/append-method-adox-views.md) metodo per creare una nuova visualizzazione nell'origine dati sottostante.  
+Nel codice seguente viene illustrato come utilizzare un oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) e il metodo [Append](../../../ado/reference/adox-api/append-method-adox-views.md) della raccolta [views](../../../ado/reference/adox-api/views-collection-adox.md) per creare una nuova visualizzazione nell'origine dati sottostante.  
   
 ```  
 ' BeginCreateViewVB  
@@ -63,7 +63,7 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append (metodo) (View ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)   
+ [Metodo Append (viste ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Oggetto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Raccolta Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

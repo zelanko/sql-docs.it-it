@@ -1,5 +1,5 @@
 ---
-title: Copia di massa dei dati di testo e immagine | Microsoft Docs
+title: Copia bulk di dati di testo e immagine | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067477"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copia bulk di dati di tipo text e image
-  Grandi **testo**, **ntext**, e **immagine** valori vengono copiati tramite i [bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) (funzione). Codice [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per il **testo**, **ntext**, oppure **immagine** colonna con un *pData* puntatore impostato su NULL che indica i dati vengano forniti insieme **bcp_moretext**. È importante specificare la lunghezza esatta dei dati fornita per ogni **testo**, **ntext**, o **immagine** colonna in ogni riga la copia bulk. Se la lunghezza dei dati per una colonna è diversa dalla lunghezza della colonna specificata nella [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), usare [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) per impostare la lunghezza sul valore appropriato. Oggetto [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) invia tutto il non -**testo**, non-**ntext**e non-**immagine** dati; è quindi chiamare **bcp_moretext** per inviare il **testo**, **ntext**, oppure **immagine** dati in unità distinte. Funzioni di copia bulk determinano che tutti i dati è stato inviato per l'oggetto corrente **testo**, **ntext**, o **immagine** colonna quando la somma delle lunghezze dei dati inviati tramite **bcp_moretext** è uguale alla lunghezza specificata nell'ultimo **bcp_collen** oppure **bcp_bind**.  
+  I valori di grandi dimensioni di tipo **Text**, **ntext**e **Image** vengono copiati in blocco utilizzando la funzione [bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) . Il codice [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per la colonna di tipo **Text**, **ntext**o **Image** con un puntatore *pData* impostato su null indicante che i dati verranno forniti con **bcp_moretext**. È importante specificare la lunghezza esatta dei dati forniti per ogni colonna di tipo **Text**, **ntext**o **Image** in ogni riga di cui è stata eseguita la copia bulk. Se la lunghezza dei dati di una colonna è diversa dalla lunghezza della colonna specificata in [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), utilizzare [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) per impostare la lunghezza sul valore appropriato. Una [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) Invia tutti i dati non di tipo**Text**, non di tipo**ntext**e non di**immagine** ; si chiamerà quindi **bcp_moretext** per inviare i dati di tipo **Text**, **ntext**o **Image** in unità separate. Le funzioni di copia bulk determinano che tutti i dati sono stati inviati per la colonna di tipo **Text**, **ntext**o **Image** corrente quando la somma delle lunghezze dei dati inviati tramite **bcp_moretext** è uguale alla lunghezza specificata nell' **bcp_collen** o **bcp_bind**più recente.  
   
- **bcp_moretext** non ha un parametro per identificare una colonna. Quando sono presenti più **testo**, **ntext**, o **immagine** colonne in una riga **bcp_moretext** opera sul **testo**, **ntext**, o **immagine** colonne iniziando dalla colonna con il numero ordinale più basso e procedendo verso la colonna con il numero ordinale più alto. **bcp_moretext** va da una colonna a quella successiva quando la somma delle lunghezze dei dati inviati è uguale alla lunghezza specificata nell'ultimo **bcp_collen** oppure **bcp_bind** per la colonna corrente.  
+ **bcp_moretext** non dispone di un parametro per identificare una colonna. Quando in una riga sono presenti più colonne di tipo **Text**, **ntext**o **Image** , **bcp_moretext** opera sulle colonne **Text**, **ntext**o **Image** a partire dalla colonna con il numero ordinale più basso e procedendo alla colonna con il numero ordinale più alto. **bcp_moretext** passa da una colonna a quella successiva quando la somma delle lunghezze dei dati inviati è uguale alla lunghezza specificata nell' **bcp_collen** o **bcp_bind** più recente per la colonna corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni di copia Bulk &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
+ [Esecuzione di operazioni di copia bulk &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

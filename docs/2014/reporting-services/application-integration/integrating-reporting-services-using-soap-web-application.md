@@ -17,19 +17,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a90135c634e45f3fb4e3ff9c780347caaea24f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126268"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>Utilizzo dell'API SOAP in un'applicazione Web
-  È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. L'API SOAP è un servizio Web e, in quanto tale, è possibile accedervi in modo semplice per fornire caratteristiche di creazione di report aziendali alle applicazioni aziendali personalizzate. È possibile accedere al servizio Web ReportServer da un'applicazione Web nello stesso modo in cui si accede all'API SOAP da un'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile generare una classe proxy che espone le proprietà e i metodi del servizio Web ReportServer e consente di utilizzare un'infrastruttura e strumenti familiari per compilare applicazioni aziendali in tecnologia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  È possibile accedere alle funzionalità complete del server di report tramite l'API SOAP di Reporting Services. L'API SOAP è un servizio Web e, in quanto tale, è possibile accedervi in modo semplice per fornire caratteristiche di creazione di report aziendali alle applicazioni aziendali personalizzate. È possibile accedere al servizio Web ReportServer da un'applicazione Web nello stesso modo in cui si accede all'API SOAP da un'applicazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]Utilizzando, è possibile generare una classe proxy che espone le proprietà e i metodi del servizio Web ReportServer e consente di utilizzare un'infrastruttura e strumenti familiari per compilare applicazioni aziendali sulla [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tecnologia.  
   
  È possibile accedere alla funzionalità di gestione dei report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la stessa facilità da un'applicazione Web o da un'applicazione Windows. Da un'applicazione Web, è possibile aggiungere e rimuovere gli elementi al e dal database del server di report, impostare la sicurezza degli elementi, modificare gli elementi del database del server di report, gestire le pianificazione e il recapito e altro ancora.  
   
 ## <a name="enabling-impersonation"></a>Abilitazione della rappresentazione  
- Il primo passaggio per la configurazione dell'applicazione Web consiste nell'attivare la rappresentazione dal client del servizio Web. Con la rappresentazione, le applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] possono venire eseguite con l'identità del client per il quale operano. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] si basa su [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per autenticare l'utente e passare un token autenticato all'applicazione [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] o, nel caso in cui non sia possibile autenticare l'utente, passare un token non autenticato. In entrambi i casi, l'applicazione [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] rappresenta il token ricevuto, se la rappresentazione è abilitata. È possibile abilitare la rappresentazione nel client modificando il file Web.config dell'applicazione client come indicato di seguito:  
+ Il primo passaggio per la configurazione dell'applicazione Web consiste nell'attivare la rappresentazione dal client del servizio Web. Con la rappresentazione, le applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] possono venire eseguite con l'identità del client per il quale operano. 
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] si basa su [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per autenticare l'utente e passare un token autenticato all'applicazione [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] o, nel caso in cui non sia possibile autenticare l'utente, passare un token non autenticato. In entrambi i casi, l'applicazione [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] rappresenta il token ricevuto, se la rappresentazione è abilitata. È possibile abilitare la rappresentazione nel client modificando il file Web.config dell'applicazione client come indicato di seguito:  
   
 ```  
 <!-- Web.config file. -->  
@@ -39,10 +40,10 @@ ms.locfileid: "63126268"
 > [!NOTE]  
 >  Per impostazione predefinita, la rappresentazione è disabilitata.  
   
- Per altre informazioni sulla rappresentazione in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], vedere la documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ Per ulteriori informazioni sulla [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] rappresentazione, vedere la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentazione di SDK.  
   
 ## <a name="managing-the-report-server-using-soap-api"></a>Gestione del server di report tramite l'API SOAP  
- È inoltre possibile utilizzare l'applicazione Web per gestire un server di report e i relativi contenuti. Gestione report, disponibile con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è un esempio di applicazione Web compilata completamente utilizzando [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e l'API SOAP di Reporting Services. È possibile aggiungere le funzionalità di Gestione report alle applicazioni Web personalizzate. Ad esempio, è possibile restituire un elenco di report disponibili nel database del server di report e visualizzarli in un [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] `Listbox` controllo per gli utenti cui scegliere. Nel codice seguente viene eseguita la connessione al database del server di report e viene restituito un elenco di elementi disponibili nel database del server di report. I report disponibili vengono aggiunti quindi a un controllo ListBox, in cui viene visualizzato il percorso di ogni report.  
+ È inoltre possibile utilizzare l'applicazione Web per gestire un server di report e i relativi contenuti. Gestione report, disponibile con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è un esempio di applicazione Web compilata completamente utilizzando [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] e l'API SOAP di Reporting Services. È possibile aggiungere le funzionalità di Gestione report alle applicazioni Web personalizzate. È ad esempio possibile che si desideri restituire un elenco di report disponibili nel database del server di report e visualizzarli in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] `Listbox` un controllo per consentire agli utenti di scegliere tra loro. Nel codice seguente viene eseguita la connessione al database del server di report e viene restituito un elenco di elementi disponibili nel database del server di report. I report disponibili vengono aggiunti quindi a un controllo ListBox, in cui viene visualizzato il percorso di ogni report.  
   
 ```vb  
 Private Sub Page_Load(sender As Object, e As System.EventArgs)  
@@ -84,8 +85,8 @@ private void Page_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni tramite servizio Web e .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Integrazione di Reporting Services nelle applicazioni](../application-integration/integrating-reporting-services-into-applications.md)   
+ [Integrazione di Reporting Services in applicazioni](../application-integration/integrating-reporting-services-into-applications.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Uso dell'API SOAP in un'applicazione Windows](integrating-reporting-services-using-soap-windows-application.md)  
+ [Utilizzo dell'API SOAP in un'applicazione Windows](integrating-reporting-services-using-soap-windows-application.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Controllo del codice sorgente Esplora soluzione | Microsoft Docs
+title: Controllo del codice sorgente Esplora soluzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,21 +19,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843113"
 ---
 # <a name="solution-explorer-source-control"></a>Controllo del codice sorgente di Esplora soluzioni
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Esplora soluzioni può essere integrato in un sistema di controllo sorgente separato. Dopo aver integrato una soluzione o un progetto in un sistema di controllo del codice sorgente, è possibile controllare l'accesso ai file e il controllo delle versioni per gli script e le query dei progetti.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Esplora soluzioni possono essere integrati in un sistema di controllo del codice sorgente distinto. Dopo aver integrato una soluzione o un progetto in un sistema di controllo del codice sorgente, è possibile controllare l'accesso ai file e il controllo delle versioni per gli script e le query dei progetti.  
   
 ## <a name="solution-and-project-source-control"></a>Controllo del codice sorgente di soluzioni e progetti  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- Il controllo del codice sorgente è un sistema nel quale un componente centrale di un prodotto server archivia e tiene traccia delle versioni dei file, controllando inoltre l'accesso ai file. Un tipico sistema di controllo del codice sorgente include un provider di controllo del codice sorgente e due o più client di controllo del codice sorgente. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] può essere integrato con un servizio di controllo del codice sorgente. Ciò significa che è possibile utilizzare lo strumento come client per il provider di controllo del codice sorgente. Senza uscire dall'ambiente, è possibile gestire facilmente sia i progetti individuali che quelli di team. Il provider del controllo del codice sorgente non è incluso in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+ Il controllo del codice sorgente è un sistema nel quale un componente centrale di un prodotto server archivia e tiene traccia delle versioni dei file, controllando inoltre l'accesso ai file. Un tipico sistema di controllo del codice sorgente include un provider di controllo del codice sorgente e due o più client di controllo del codice sorgente. 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] può essere integrato con un servizio di controllo del codice sorgente. Ciò significa che è possibile utilizzare lo strumento come client per il provider di controllo del codice sorgente. Senza uscire dall'ambiente, è possibile gestire facilmente sia i progetti individuali che quelli di team. Il provider del controllo del codice sorgente non è incluso in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 #### <a name="to-select-a-source-control-provider"></a>Per selezionare un provider del controllo del codice sorgente  
   
@@ -41,11 +42,11 @@ ms.locfileid: "62843113"
   
 2.  In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], scegliere **Opzioni** dal menu **Strumenti**.  
   
-3.  Nel **opzioni** finestra di dialogo, espandere **controllo del codice sorgente**, quindi fare clic sul **Selezione plug-in** pagina.  
+3.  Nella finestra di dialogo **Opzioni** espandere **controllo del codice sorgente**, quindi fare clic sulla pagina **Selezione plug-in** .  
   
-4.  Nel **plug-in del controllo del codice sorgente corrente** , selezionare il plug-in del controllo del codice sorgente.  
+4.  Nella casella **plug-in del controllo del codice sorgente corrente** selezionare il plug-in del controllo del codice sorgente.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
@@ -59,8 +60,8 @@ ms.locfileid: "62843113"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora soluzioni](../ssms/solution/solution-explorer.md)   
- [Soluzioni di &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)   
- [I progetti &#40;SQL Server Management Studio&#41;](../ssms/solution/projects-sql-server-management-studio.md)   
+ [Soluzioni &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)   
+ [Progetti &#40;SQL Server Management Studio&#41;](../ssms/solution/projects-sql-server-management-studio.md)   
  [File per la gestione di soluzioni e progetti](../ssms/solution/files-that-manage-solutions-and-projects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Supporto internazionale (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: Supporto internazionale (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,25 +19,25 @@ ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e987c224f2d716fcab3bf898b1cb276e922e48ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085498"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>Supporto multilingue (driver ODBC Visual FoxPro)
-Il Driver ODBC Microsoft Visual FoxPro supporta:  
+Il driver ODBC di Microsoft Visual FoxPro supporta:  
   
--   Double-byte character set (DBCS)  
+-   Set di caratteri a doppio byte (DBCS)  
   
--   Più sequenze di collazione  
+-   Più sequenze di confronto  
   
- Definisce una sequenza di confronto di *ordinamento* per i dati archiviati nel database o tabella di Visual FoxPro. Per impostazione predefinita, il driver è configurato per usare le sequenze di collazione che supportano la lingua del sistema operativo.  
+ Una sequenza di confronto definisce il *tipo di ordinamento* per i dati archiviati in una tabella o un database Visual FoxPro. Per impostazione predefinita, il driver è configurato per l'utilizzo delle sequenze di confronto che supportano la versione della lingua del sistema operativo.  
   
- Per un elenco di sequenze di collazione supportati, vedere [SET COLLATE](../../odbc/microsoft/set-collate-command.md).  
+ Per un elenco delle sequenze di confronto supportate, vedere [SET COLLATE](../../odbc/microsoft/set-collate-command.md).  
   
 ## <a name="locale"></a>locale  
- Il set di informazioni che corrisponde a una determinata lingua e paese/area geografica. Le impostazioni locali indica le impostazioni specifiche, ad esempio separatori decimali, date e formati di ora e ordinamento dei caratteri.  
+ Set di informazioni che corrisponde a una lingua e a un paese specificati. Le impostazioni locali indicano impostazioni specifiche, ad esempio separatori decimali, formati di data e ora e ordinamento caratteri.  
   
 ## <a name="sort-order"></a>ordinamento  
- Gli ordinamenti incorporano le regole di ordinamento di diverse *delle impostazioni locali*s, consentendo di ordinare correttamente i dati in tali lingue. In Visual FoxPro, l'ordinamento corrente determina i risultati dei confronti di espressione di caratteri e l'ordine in cui i record visualizzati in indicizzate o tabelle di ordinamento.
+ Gli ordinamenti incorporano le regole di ordinamento delle diverse *impostazioni locali*, consentendo di ordinare correttamente i dati in tali lingue. In Visual FoxPro, l'ordinamento corrente determina i risultati dei confronti delle espressioni di caratteri e l'ordine in cui i record vengono visualizzati nelle tabelle indicizzate o ordinate.

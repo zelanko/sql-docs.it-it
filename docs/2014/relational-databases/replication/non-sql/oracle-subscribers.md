@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022229"
 ---
 # <a name="oracle-subscribers"></a>Sottoscrittori Oracle
@@ -66,7 +66,7 @@ ms.locfileid: "63022229"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Ad esempio `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     Ad esempio: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  Se la configurazione di rete è riuscita, sarà possibile accedere e verrà visualizzato il prompt `SQL` .  
   

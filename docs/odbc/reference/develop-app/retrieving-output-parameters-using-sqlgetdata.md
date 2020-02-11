@@ -1,5 +1,5 @@
 ---
-title: Recupero di parametri di Output tramite SQLGetData | Microsoft Docs
+title: Recupero di parametri di output tramite SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,73 +15,73 @@ ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020507"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Recupero di parametri di output tramite SQLGetData
-Prima di ODBC 3.8, un'applicazione è stato possibile recuperare solo i parametri di output di una query con un buffer di output associata. Tuttavia, è difficile allocare un buffer molto grande quando la dimensione del valore del parametro è molto grande (ad esempio, un'immagine di grandi dimensioni). ODBC 3.8 introduce un nuovo modo per recuperare i parametri di output in parti. Un'applicazione ora è possibile chiamare **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Come avviene per il recupero dei dati di colonna di grandi dimensioni.  
+Prima di ODBC 3,8, un'applicazione poteva recuperare solo i parametri di output di una query con un buffer di output associato. Tuttavia, è difficile allocare un buffer di dimensioni molto grandi quando la dimensione del valore del parametro è molto grande, ad esempio un'immagine di grandi dimensioni. ODBC 3,8 introduce un nuovo modo per recuperare i parametri di output in parti. Un'applicazione ora può chiamare **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. Questa operazione è simile al recupero di dati di colonna di grandi dimensioni.  
   
- Per associare un parametro di output o un parametro di input/output da recuperare in parti, chiamare **SQLBindParameter** con il *InputOutputType* argomento impostato su SQL_PARAM_OUTPUT_STREAM o SQL_PARAM_INPUT_OUTPUT _STREAM. Con SQL_PARAM_INPUT_OUTPUT_STREAM, un'applicazione può utilizzare **SQLPutData** i dati di input nel parametro e quindi usare **SQLGetData** per recuperare il parametro di output. I dati di input devono essere nel data-at-execution (. DAE) del modulo usando **SQLPutData** invece l'associazione a un buffer allocato precedentemente.  
+ Per associare un parametro di output o un parametro di input/output da recuperare in parti, chiamare **SQLBindParameter** con l'argomento *InputOutputType* impostato su SQL_PARAM_OUTPUT_STREAM o SQL_PARAM_INPUT_OUTPUT_STREAM. Con SQL_PARAM_INPUT_OUTPUT_STREAM, un'applicazione può utilizzare **SQLPutData** per inserire i dati nel parametro, quindi utilizzare **SQLGetData** per recuperare il parametro di output. I dati di input devono essere nel form data-at-execution (DAE), usando **SQLPutData** anziché associarlo a un buffer preallocato.  
   
- Questa funzionalità può essere utilizzata dalle applicazioni ODBC 3.8 o ricompilate ODBC 3.x e ODBC 2.x applicazioni e queste applicazioni devono disporre di un driver ODBC 3.8 che supporta il recupero dei parametri di output usando **SQLGetData** e il Driver ODBC 3.8 Gestore. Per informazioni su come abilitare un'applicazione precedente usare nuove funzionalità ODBC, vedere [matrice di compatibilità](../../../odbc/reference/develop-app/compatibility-matrix.md).  
+ Questa funzionalità può essere utilizzata da applicazioni ODBC 3,8 o da applicazioni ODBC 3. x e ODBC 2. x ricompilate e tali applicazioni devono disporre di un driver ODBC 3,8 che supporta il recupero di parametri di output tramite **SQLGetData** e ODBC 3,8 driver Manager. Per informazioni su come consentire a un'applicazione precedente di utilizzare le nuove funzionalità ODBC, vedere [Compatibility Matrix](../../../odbc/reference/develop-app/compatibility-matrix.md).  
   
 ## <a name="usage-example"></a>Esempio di utilizzo  
- Ad esempio, prendere in considerazione l'esecuzione di una stored procedure, **{chiamata sp_f(?,?)}** , dove entrambi i parametri vengono associati come SQL_PARAM_OUTPUT_STREAM e la stored procedure non restituisce Nessun set di risultati (più avanti in questo argomento è possibile trovare uno scenario più complesso):  
+ Si consideri, ad esempio, l'esecuzione di un stored procedure, **{CALL sp_f (?,?)}**, in cui entrambi i parametri sono associati come SQL_PARAM_OUTPUT_STREAM e il stored procedure non restituisce alcun set di risultati. più avanti in questo argomento si troverà uno scenario più complesso:  
   
-1.  Per ogni parametro, chiamare **SQLBindParameter** con *InputOutputType* impostato su SQL_PARAM_OUTPUT_STREAM e *ParameterValuePtr* impostata su un token, ad esempio un numero di parametro , un puntatore ai dati o un puntatore a una struttura che l'applicazione utilizza per associare i parametri di input. In questo esempio verrà utilizzato il numero ordinale del parametro come il token.  
+1.  Per ogni parametro, chiamare **SQLBindParameter** con *InputOutputType* impostato su SQL_PARAM_OUTPUT_STREAM e *ParameterValuePtr* impostato su un token, ad esempio un numero di parametro, un puntatore ai dati o un puntatore a una struttura che l'applicazione utilizza per associare i parametri di input. Questo esempio userà il parametro ordinale come token.  
   
-2.  Eseguire la query con **SQLExecDirect** oppure **SQLExecute**. SQL_PARAM_DATA_AVAILABLE verrà restituito, che indica che sono disponibili parametri flusso di output per il recupero.  
+2.  Eseguire la query con **SQLExecDirect** o **SQLExecute**. Verrà restituito SQL_PARAM_DATA_AVAILABLE, a indicare che sono disponibili parametri di output trasmessi per il recupero.  
   
-3.  Chiamare **SQLParamData** per ottenere il parametro che è disponibile per il recupero. **SQLParamData** restituirà SQL_PARAM_DATA_AVAILABLE con il token del primo parametro disponibile, che viene impostato nel **SQLBindParameter** (passaggio 1). Il token viene restituito nel buffer che il *ValuePtrPtr* punta a.  
+3.  Chiamare **SQLParamData** per ottenere il parametro disponibile per il recupero. **SQLParamData** restituirà SQL_PARAM_DATA_AVAILABLE con il token del primo parametro disponibile, impostato in **SQLBindParameter** (passaggio 1). Il token viene restituito nel buffer a cui punta *ValuePtrPtr* .  
   
-4.  Chiamare **SQLGetData** con l'argomento *Col*or\_*Param_Num* impostata sul parametro ordinale per recuperare i dati del primo parametro disponibile. Se **SQLGetData** restituisce SQL_SUCCESS_WITH_INFO e SQLState 01004 (dati troncati) e il tipo è di lunghezza variabile sia il client di server, è più dati da recuperare dal primo parametro disponibile. È possibile continuare a chiamare **SQLGetData** fino a quando non viene restituito SQL_SUCCESS o SQL_SUCCESS_WITH_INFO con un diverso **SQLState**.  
+4.  Chiamare **SQLGetData** con l'argomento *col*_or\_*Param_Num* impostato sull'ordinale del parametro per recuperare i dati del primo parametro disponibile. Se **SQLGetData** restituisce SQL_SUCCESS_WITH_INFO e SQLSTATE 01004 (dati troncati) e il tipo è a lunghezza variabile nel client e nel server, è necessario recuperare più dati dal primo parametro disponibile. È possibile continuare a chiamare **SQLGetData** fino a quando non restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO con un valore **SQLSTATE**diverso.  
   
-5.  Ripetere i passaggi 3 e 4 per recuperare il parametro corrente.  
+5.  Ripetere il passaggio 3 e il passaggio 4 per recuperare il parametro corrente.  
   
-6.  Chiamare **SQLParamData** nuovamente. Se viene restituito nulla eccetto SQL_PARAM_DATA_AVAILABLE, non è non è più flussi di dati di parametro per il recupero e il codice restituito sarà il codice restituito dell'istruzione successiva che viene eseguita.  
+6.  Chiamare nuovamente **SQLParamData** . Se restituisce qualcosa ad eccezione di SQL_PARAM_DATA_AVAILABLE, non sono presenti altri dati di parametro trasmessi da recuperare e il codice restituito sarà il codice restituito dell'istruzione successiva eseguita.  
   
-7.  Chiamare **SQLMoreResults** per elaborare il successivo set di parametri fino a quando non viene restituito SQL_NO_DATA. **SQLMoreResults** restituirà SQL_NO_DATA in questo esempio, se l'attributo di istruzione SQL_ATTR_PARAMSET_SIZE è stata impostata su 1. In caso contrario, **SQLMoreResults** restituirà SQL_PARAM_DATA_AVAILABLE per indicare che sono disponibili parametri flusso di output per il successivo set di parametri da recuperare.  
+7.  Chiamare **SQLMoreResults** per elaborare il set di parametri successivo fino a quando non viene restituito SQL_NO_DATA. **SQLMoreResults** restituirà SQL_NO_DATA in questo esempio se l'attributo Statement SQL_ATTR_PARAMSET_SIZE è stato impostato su 1. In caso contrario, **SQLMoreResults** restituirà SQL_PARAM_DATA_AVAILABLE per indicare che sono disponibili parametri di output trasmessi per il set di parametri successivo da recuperare.  
   
- Simile a un parametro di input DAE, il token utilizzato nell'argomento *ParameterValuePtr* nelle **SQLBindParameter** (passaggio 1) può essere un puntatore che punta a una struttura di dati dell'applicazione, che contiene il ordinale del parametro e informazioni specifiche dell'applicazione, se necessario.  
+ Analogamente a un parametro di input DAE, il token usato nell'argomento *ParameterValuePtr* in **SQLBindParameter** (passaggio 1) può essere un puntatore che punta a una struttura di dati dell'applicazione, che contiene il numero ordinale del parametro e altre informazioni specifiche dell'applicazione, se necessario.  
   
- L'ordine del flusso di output restituito o parametri di input/output viene specifici del driver e potrebbe non essere sempre lo stesso l'ordine specificato nella query.  
+ L'ordine dei parametri restituiti di output o di input/output trasmessi è specifico del driver e potrebbe non essere sempre uguale all'ordine specificato nella query.  
   
- Se l'applicazione non chiama **SQLGetData** nel passaggio 4, viene eliminato il valore del parametro. Analogamente, se l'applicazione chiama **SQLParamData** prima di tutto di un parametro di valore è stato letto dal **SQLGetData**, viene eliminato il resto del valore e l'applicazione può elaborare quello successivo parametro.  
+ Se l'applicazione non chiama **SQLGetData** nel passaggio 4, il valore del parametro viene ignorato. Analogamente, se l'applicazione chiama **SQLParamData** prima che tutti i valori di un parametro siano stati letti da **SQLGetData**, il resto del valore viene ignorato e l'applicazione può elaborare il parametro successivo.  
   
- Se l'applicazione chiama **SQLMoreResults** prima di tutto l'output inviato nel flusso di elaborazione dei parametri (**SQLParamData** continuerà a restituire SQL_PARAM_DATA_AVAILABLE), tutti i parametri rimanenti vengono ignorati. Analogamente, se l'applicazione chiama **SQLMoreResults** prima di tutto di un parametro di valore è stato letto dal **SQLGetData**, il resto del valore e tutti i parametri rimanenti viene rimossi e il applicazione può continuare a elaborare il successivo set di parametri.  
+ Se l'applicazione chiama **SQLMoreResults** prima dell'elaborazione di tutti i parametri di output trasmessi (**SQLParamData** restituisce comunque SQL_PARAM_DATA_AVAILABLE), tutti i parametri rimanenti vengono eliminati. Analogamente, se l'applicazione chiama **SQLMoreResults** prima che tutti i valori di un parametro siano stati letti da **SQLGetData**, il resto del valore e tutti i parametri rimanenti vengono eliminati e l'applicazione può continuare a elaborare il set di parametri successivo.  
   
- Si noti che un'applicazione può specificare il tipo di dati C in entrambe **SQLBindParameter** e **SQLGetData**. Il tipo di dati C specificato con **SQLGetData** esegue l'override specificato nel tipo di dati C **SQLBindParameter**, a meno che il tipo di dati C specificato in **SQLGetData** è SQL_APD_TYPE.  
+ Si noti che un'applicazione può specificare il tipo di dati C sia in **SQLBindParameter** che in **SQLGetData**. Il tipo di dati C specificato con **SQLGetData** sostituisce il tipo di dati c specificato in **SQLBindParameter**, a meno che non sia SQL_APD_TYPE il tipo di dati c specificato in **SQLGetData** .  
   
- Anche se un parametro di output inviati come flusso è più utile quando il tipo di dati del parametro di output è di tipo BLOB, questa funzionalità può essere usata anche con qualsiasi tipo di dati. Nel driver vengono specificati i tipi di dati supportati dai parametri di output inviati come flusso.  
+ Anche se un parametro di output trasmesso è più utile quando il tipo di dati del parametro di output è di tipo BLOB, questa funzionalità può essere usata anche con qualsiasi tipo di dati. I tipi di dati supportati dai parametri di output trasmessi vengono specificati nel driver.  
   
- Se sono presenti parametri SQL_PARAM_INPUT_OUTPUT_STREAM da elaborare **SQLExecute** oppure **SQLExecDirect** , prima di tutto verrà restituito SQL_NEED_DATA. Un'applicazione può chiamare **SQLParamData** e **SQLPutData** per inviare i dati dei parametri DAE. Durante l'elaborazione, tutti i parametri di input DAE **SQLParamData** restituisce SQL_PARAM_DATA_AVAILABLE per indicare parametri flusso di output sono disponibili.  
+ Se sono presenti SQL_PARAM_INPUT_OUTPUT_STREAM parametri da elaborare, **SQLExecute** o **SQLExecDirect** restituirà SQL_NEED_DATA prima. Un'applicazione può chiamare **SQLParamData** e **SQLPutData** per inviare i dati del parametro DAE. Quando vengono elaborati tutti i parametri di input DAE, **SQLParamData** restituisce SQL_PARAM_DATA_AVAILABLE per indicare che i parametri di output trasmessi sono disponibili.  
   
- Quando vengono trasmessi parametri di output e i parametri di output associata da elaborare, il driver determina l'ordine per l'elaborazione di parametri di output. Pertanto, se un parametro di output è associato a un buffer (il **SQLBindParameter** parametro *InputOutputType* è impostato su SQL_PARAM_OUTPUT o SQL_PARAM_INPUT_OUTPUT), non può essere inserito nel buffer fino alla  **SQLParamData** restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO. Un'applicazione deve leggere un limite solo dopo che un buffer **SQLParamData** restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO Dopotutto trasmessi in flusso i parametri di output vengono elaborati.  
+ Quando sono presenti parametri di output con flusso e parametri di output associati da elaborare, il driver determina l'ordine di elaborazione dei parametri di output. Quindi, se un parametro di output è associato a un buffer (il parametro **SQLBindParameter** *InputOutputType* è impostato su SQL_PARAM_INPUT_OUTPUT o SQL_PARAM_OUTPUT), il buffer potrebbe non essere popolato fino a quando **SQLParamData** restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO. Un'applicazione deve leggere un buffer associato solo dopo che **SQLParamData** restituisce SQL_SUCCESS o SQL_SUCCESS_WITH_INFO dopo l'elaborazione di tutti i parametri di output trasmessi.  
   
- L'origine dati può restituire che un avviso e risultati impostate, in aggiunta al parametro del flusso di output. In generale, gli avvisi e set di risultati vengono elaborate separatamente da un parametro di output inviati come flusso tramite la chiamata **SQLMoreResults**. Gli avvisi di processo e il risultato impostato prima di elaborare il parametro di flusso di output.  
+ L'origine dati può restituire un avviso e un set di risultati, oltre al parametro di output trasmesso. In generale, gli avvisi e i set di risultati vengono elaborati separatamente da un parametro di output trasmesso tramite una chiamata a **SQLMoreResults**. Elaborare gli avvisi e il set di risultati prima di elaborare il parametro di output trasmesso.  
   
- Nella tabella seguente vengono descritti diversi scenari di un singolo comando inviata al server e il modo in cui l'applicazione dovrebbe funzionare.  
+ Nella tabella seguente vengono descritti i diversi scenari di un singolo comando inviato al server e il modo in cui l'applicazione dovrebbe funzionare.  
   
 |Scenario|Valore restituito da SQLExecute o SQLExecDirect|Operazioni successive|  
 |--------------|---------------------------------------------------|---------------------|  
-|I dati includono solo parametri di output inviati come flusso|SQL_PARAM_DATA_AVAILABLE|Uso **SQLParamData** e **SQLGetData** per recuperare i parametri di output inviati come flusso.|  
-|I dati includono un set di risultati e trasmettere i parametri di output|SQL_SUCCESS|Recuperare il set di risultati con **SQLBindCol** e **SQLGetData**.<br /><br /> Chiamare **SQLMoreResults** per avviare l'elaborazione dei parametri di output inviati come flusso. Deve restituire SQL_PARAM_DATA_AVAILABLE.<br /><br /> Uso **SQLParamData** e **SQLGetData** per recuperare i parametri di output inviati come flusso.|  
-|I dati includono un messaggio di avviso e trasmettere i parametri di output|SQL_SUCCESS_WITH_INFO|Uso **SQLGetDiagRec** e **SQLGetDiagField** per elaborare i messaggi di avviso.<br /><br /> Chiamare **SQLMoreResults** per avviare l'elaborazione dei parametri di output inviati come flusso. Deve restituire SQL_PARAM_DATA_AVAILABLE.<br /><br /> Uso **SQLParamData** e **SQLGetData** per recuperare i parametri di output inviati come flusso.|  
-|Dati includono un messaggio di avviso, set di risultati e trasmettere i parametri di output|SQL_SUCCESS_WITH_INFO|Uso **SQLGetDiagRec** e **SQLGetDiagField** per elaborare i messaggi di avviso. Quindi chiamare **SQLMoreResults** per iniziare a elaborare il risultato impostato.<br /><br /> Recuperare un set di risultati con **SQLBindCol** e **SQLGetData**.<br /><br /> Chiamare **SQLMoreResults** per avviare l'elaborazione dei parametri di output inviati come flusso. **SQLMoreResults** deve restituire SQL_PARAM_DATA_AVAILABLE.<br /><br /> Uso **SQLParamData** e **SQLGetData** per recuperare i parametri di output inviati come flusso.|  
-|Parametro di query con parametri di input DAE, ad esempio, un flusso input/output (. DAE)|NEED_DATA SQL|Chiamare **SQLParamData** e **SQLPutData** DAE di inviare i dati dei parametri di input.<br /><br /> Dopo l'elaborazione, tutti i parametri di input DAE **SQLParamData** può restituire qualsiasi codice che **SQLExecute** e **SQLExecDirect** può restituire. I case in questa tabella possono quindi essere applicati.<br /><br /> Se il codice restituito è SQL_PARAM_DATA_AVAILABLE, sono disponibili parametri flusso di output. Un'applicazione deve chiamare **SQLParamData** nuovamente per recuperare il token per il parametro di output inviati come flusso, come descritto nella prima riga della tabella.<br /><br /> Se il codice restituito è SQL_SUCCESS, è un set di risultati per l'elaborazione o l'elaborazione è stata completata.<br /><br /> Se il codice restituito SQL_SUCCESS_WITH_INFO, sono presenti messaggi di avviso per l'elaborazione.|  
+|I dati includono solo parametri di output trasmessi|SQL_PARAM_DATA_AVAILABLE|Usare **SQLParamData** e **SQLGetData** per recuperare i parametri di output trasmessi.|  
+|I dati includono un set di risultati e i parametri di output trasmessi|SQL_SUCCESS|Recuperare il set di risultati con **SQLBindCol** e **SQLGetData**.<br /><br /> Chiamare **SQLMoreResults** per avviare l'elaborazione dei parametri di output trasmessi. Deve restituire SQL_PARAM_DATA_AVAILABLE.<br /><br /> Usare **SQLParamData** e **SQLGetData** per recuperare i parametri di output trasmessi.|  
+|I dati includono un messaggio di avviso e i parametri di output trasmessi|SQL_SUCCESS_WITH_INFO|Usare **SQLGetDiagRec** e **SQLGetDiagField** per elaborare i messaggi di avviso.<br /><br /> Chiamare **SQLMoreResults** per avviare l'elaborazione dei parametri di output trasmessi. Deve restituire SQL_PARAM_DATA_AVAILABLE.<br /><br /> Usare **SQLParamData** e **SQLGetData** per recuperare i parametri di output trasmessi.|  
+|I dati includono un messaggio di avviso, un set di risultati e i parametri di output trasmessi|SQL_SUCCESS_WITH_INFO|Usare **SQLGetDiagRec** e **SQLGetDiagField** per elaborare i messaggi di avviso. Chiamare quindi **SQLMoreResults** per avviare l'elaborazione del set di risultati.<br /><br /> Recuperare un set di risultati con **SQLBindCol** e **SQLGetData**.<br /><br /> Chiamare **SQLMoreResults** per avviare l'elaborazione dei parametri di output trasmessi. **SQLMoreResults** deve restituire SQL_PARAM_DATA_AVAILABLE.<br /><br /> Usare **SQLParamData** e **SQLGetData** per recuperare i parametri di output trasmessi.|  
+|Eseguire una query con parametri di input DAE, ad esempio un parametro di input/output (DAE) trasmesso|NEED_DATA SQL|Chiamare **SQLParamData** e **SQLPutData** per inviare i dati del parametro di input DAE.<br /><br /> Dopo l'elaborazione di tutti i parametri di input DAE, **SQLParamData** può restituire qualsiasi codice restituito che **SQLExecute** e **SQLExecDirect** può restituire. È quindi possibile applicare i case in questa tabella.<br /><br /> Se il codice restituito è SQL_PARAM_DATA_AVAILABLE, i parametri di output trasmessi sono disponibili. Un'applicazione deve chiamare nuovamente **SQLParamData** per recuperare il token per il parametro di output trasmesso, come descritto nella prima riga della tabella.<br /><br /> Se il codice restituito è SQL_SUCCESS, è disponibile un set di risultati da elaborare o l'elaborazione è stata completata.<br /><br /> Se il codice restituito è SQL_SUCCESS_WITH_INFO, sono presenti messaggi di avviso da elaborare.|  
   
- Dopo aver **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** restituisce SQL_PARAM_DATA_AVAILABLE, un errore nella sequenza della funzione verranno generato se un'applicazione chiama un funzione che non è presente nell'elenco seguente:  
+ Quando **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** restituisce SQL_PARAM_DATA_AVAILABLE, viene generato un errore di sequenza di funzioni se un'applicazione chiama una funzione non presente nell'elenco seguente:  
   
--   **SQLAllocHandle** / **SQLAllocHandleStd**  
+-   **** / **SQLAllocHandleStd** SQLAllocHandle  
   
 -   **SQLDataSources** / **SQLDrivers**  
   
--   **SQLGetInfo** / **SQLGetFunctions**  
+-   **** / **SQLGetFunctions** SQLGetInfo  
   
--   **SQLGetConnectAttr** / **SQLGetEnvAttr** / **SQLGetDescField** / **SQLGetDescRec**  
+-   **SQLGetConnectAttr** / **** SQLGetEnvAttr / **** SQLGetDescField / **SQLGetDescRec**  
   
 -   **SQLNumParams**  
   
@@ -93,26 +93,26 @@ Prima di ODBC 3.8, un'applicazione è stato possibile recuperare solo i parametr
   
 -   **SQLMoreResults**  
   
--   **SQLGetDiagField** / **SQLGetDiagRec**  
+-   **** / **SQLGetDiagRec** SQLGetDiagField  
   
 -   **SQLCancel**  
   
 -   **SQLCancelHandle** (con handle di istruzione)  
   
--   **SQLFreeStmt** (con l'opzione = SQL_CLOSE, SQL_DROP o SQL_UNBIND)  
+-   **SQLFreeStmt** (con Option = SQL_CLOSE, SQL_DROP o SQL_UNBIND)  
   
 -   **SQLCloseCursor**  
   
 -   **SQLDisconnect**  
   
--   **SQLFreeHandle** (con HandleType = SQL_HANDLE_STMT)  
+-   **SQLFreeHandle** (with HandleType = SQL_HANDLE_STMT)  
   
 -   **SQLGetStmtAttr**  
   
- Le applicazioni possono usare comunque **SQLSetDescField** oppure **SQLSetDescRec** per impostare le informazioni di associazione. Mapping di campo non verranno modificate. Tuttavia, i campi all'interno di descrittore potrebbero restituire nuovi valori. Ad esempio, potrebbe restituire SQL_DESC_PARAMETER_TYPE SQL_PARAM_INPUT_OUTPUT_STREAM o SQL_PARAM_OUTPUT_STREAM.  
+ Le applicazioni possono comunque utilizzare **SQLSetDescField** o **SQLSetDescRec** per impostare le informazioni di binding. Il mapping dei campi non verrà modificato. Tuttavia, i campi all'interno del descrittore potrebbero restituire nuovi valori. Ad esempio, SQL_DESC_PARAMETER_TYPE potrebbe restituire SQL_PARAM_INPUT_OUTPUT_STREAM o SQL_PARAM_OUTPUT_STREAM.  
   
-## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>Scenario di utilizzo: Recuperare un'immagine in parti da un Set di risultati  
- **SQLGetData** utilizzabile per ottenere i dati in parti quando una stored procedure restituisce un set di risultati contenente una sola riga di metadati su un'immagine e l'immagine viene restituita in un parametro di output di grandi dimensioni.  
+## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>Scenario di utilizzo: recuperare un'immagine in parti da un set di risultati  
+ **SQLGetData** può essere utilizzato per ottenere i dati in parti quando un stored procedure restituisce un set di risultati contenente una riga di metadati relativi a un'immagine e l'immagine viene restituita in un parametro di output di grandi dimensioni.  
   
 ```  
 // CREATE PROCEDURE SP_TestOutputPara  
@@ -193,8 +193,8 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>Scenario di utilizzo: Inviare e ricevere un oggetto grande come parametro di Input/Output flusso  
- **SQLGetData** utilizzabile per ottenere e inviare dati in parti quando una stored procedure ha esito positivo di un oggetto grande come parametro di input/output, il valore da e verso il database di streaming. Non è necessario archiviare tutti i dati in memoria.  
+## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>Scenario di utilizzo: inviare e ricevere un Large Object come parametro di input/output trasmesso  
+ **SQLGetData** può essere utilizzato per ottenere e inviare dati in parti quando un stored procedure passa un oggetto di grandi dimensioni come parametro di input/output, in modo da trasmettere il valore da e verso il database. Non è necessario archiviare tutti i dati in memoria.  
   
 ```  
 // CREATE PROCEDURE SP_TestInOut  

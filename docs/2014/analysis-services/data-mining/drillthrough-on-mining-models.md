@@ -1,5 +1,5 @@
 ---
-title: Drill-through sui modelli di Data Mining | Microsoft Docs
+title: Drill-through sui modelli di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084601"
 ---
 # <a name="drillthrough-on-mining-models"></a>Drill-through sui modelli di data mining
-  Il termine*drill-through* fa riferimento alla possibilità di eseguire query su un modello o una struttura di data mining e di ottenere dati dettagliati non esposti nel modello.  
+  Il *drill-through* indica la possibilità di eseguire query su un modello di data mining o una struttura di data mining e di ottenere dati dettagliati non esposti nel modello.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dispone di due diverse opzioni per il drill-through dei dati del case. È possibile eseguire il drill-through nei case utilizzati per compilare i dati o nei case della struttura di data mining.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due diverse opzioni per il drill-through dei dati del case. È possibile eseguire il drill-through nei case utilizzati per compilare i dati o nei case della struttura di data mining.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Drill-through nei case del modello e drill-through nella struttura  
- Il drill-through nei **case del modello** è utile per trovare dettagli aggiuntivi su regole, schemi o cluster in un modello. Ad esempio, non utilizzare le informazioni di contatto dei clienti per l'analisi in un modello di clustering, anche se i dati erano disponibili, il drill-through, è possibile ottenere l'accesso a tali informazioni dal modello.  
+ Il drill-through nei **case del modello** è utile per trovare dettagli aggiuntivi su regole, schemi o cluster in un modello. Ad esempio, non si utilizzeranno le informazioni di contatto del cliente per l'analisi in un modello di clustering, anche se i dati erano disponibili, utilizzando il drill-through, è possibile ottenere l'accesso a tali informazioni dal modello.  
   
  Al contrario, il **drill-through dei dati della struttura** consente l'accesso a informazioni non disponibili nel modello. Ad esempio, alcune colonne della struttura potrebbero essere state escluse da un modello perché il tipo di dati era incompatibile o i dati non erano utili per l'analisi.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "66084601"
   
  Non tutti i modelli supportano il drill-through; ciò dipende dall'algoritmo utilizzato per creare il modello. Nella tabella seguente vengono elencati i tipi di modelli che non supportano il drill-through o lo supportano con alcune limitazioni. Se il tipo di modello non è elencato, significa che supporta il drill-through.  
   
-|**Nome algoritmo**|**Supporto del drill-through**|  
+|**Nome algoritmo**|**Supporto per il drill-through**|  
 |------------------------|----------------------------------|  
 |Algoritmo Microsoft Naive Bayes|Non supportato.<br /><br /> Questi algoritmi non assegnano case ai nodi specifici nel contenuto.|  
 |Algoritmo Microsoft Neural Network|Non supportato.<br /><br /> Questi algoritmi non assegnano case ai nodi specifici nel contenuto.|  
@@ -60,7 +61,7 @@ ms.locfileid: "66084601"
 |Recuperare dati del case per un modello tramite il drill-through|[Eseguire il drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md)|  
 |Abilitare il drill-through su un modello di data mining esistente|[Abilitare il drill-through per un modello di data mining](enable-drillthrough-for-a-mining-model.md)|  
 |Per tipi di modelli specifici, vedere gli esempi di query drill-through.|[Query di data mining](data-mining-queries.md)|  
-|Abilitare il drill-through in Creazione guidata modello di data mining|[Completamento procedura guidata &#40;Creazione guidata modello di data mining&#41;](../completing-the-wizard-data-mining-wizard.md).|  
+|Abilitare il drill-through in Creazione guidata modello di data mining|[Completamento della procedura guidata &#40;&#41;creazione guidata modello di data mining ](../completing-the-wizard-data-mining-wizard.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Drill-through sulle strutture di data mining](drillthrough-on-mining-structures.md)  

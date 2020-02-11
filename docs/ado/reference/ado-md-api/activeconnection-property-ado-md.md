@@ -18,39 +18,39 @@ ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911588"
 ---
 # <a name="activeconnection-property-ado-md"></a>Proprietà ActiveConnection (ADO MD)
-Indica a quale ADO [connessione](../../../ado/reference/ado-api/connection-object-ado.md) set di celle corrente dell'oggetto o attualmente catalogo a cui appartiene.  
+Indica a quale oggetto della [connessione](../../../ado/reference/ado-api/connection-object-ado.md) ADO appartiene attualmente il Cell o il catalogo corrente.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta o restituisce un **Variant** che contiene una stringa che definisce una connessione oppure **connessione** oggetto. Il valore predefinito è vuoto.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta o restituisce una **variante** che contiene una stringa che definisce una connessione o un oggetto **connessione** . Il valore predefinito è vuoto.  
   
-## <a name="remarks"></a>Note  
- È possibile impostare questa proprietà per un valido ADO **connessione** oggetto o a una stringa di connessione valida. Quando questa proprietà è impostata su una stringa di connessione, il provider crea un nuovo **connessione** utilizzando questa definizione dell'oggetto e viene aperta la connessione.  
+## <a name="remarks"></a>Osservazioni  
+ È possibile impostare questa proprietà su un oggetto **connessione** ADO valido o su una stringa di connessione valida. Quando questa proprietà è impostata su una stringa di connessione, il provider crea un nuovo oggetto **connessione** utilizzando questa definizione e apre la connessione.  
   
- Se si usa la *ActiveConnection* argomento del [aprire](../../../ado/reference/ado-md-api/open-method-ado-md.md) metodo per aprire una [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto, il **ActiveConnection** proprietà verrà ereditare il valore dell'argomento.  
+ Se si usa l'argomento *ActiveConnection* del metodo [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) per aprire un oggetto [cellt](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) , la proprietà **ActiveConnection** erediterà il valore dell'argomento.  
   
- Impostando il **ActiveConnection** proprietà di un [catalogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) oggetto **Nothing** rilascia i dati associati, inclusi i dati nel [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) raccolta e i relativi [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md), e [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) oggetti. Chiusura di un **connessione** oggetto utilizzato per aprire un **catalogo** ha lo stesso effetto dell'impostazione il **ActiveConnection** proprietà **Nothing**.  
+ Se si imposta la proprietà **ActiveConnection** di un oggetto [Catalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) su Nothing, i dati associati **non** vengono rilasciati, inclusi i dati nella raccolta [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) e gli oggetti [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [livello](../../../ado/reference/ado-md-api/level-object-ado-md.md)e [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) correlati. La chiusura di un oggetto **Connection** utilizzato per aprire un **Catalogo** ha lo stesso effetto dell'impostazione della proprietà **ActiveConnection** su **Nothing**.  
   
- Modifica del database predefinito della connessione fa riferimento il **ActiveConnection** proprietà di un **catalogo** oggetto invalida il contenuto del **catalogo**.  
+ La modifica del database predefinito della connessione a cui fa riferimento la proprietà **ActiveConnection** di un oggetto **Catalog** invalida il contenuto del **Catalogo**.  
   
- Si verificherà un errore se si prova a modificare la **ActiveConnection** proprietà di apertura **Cellset** oggetto.  
+ Si verificherà un errore se si tenta di modificare la proprietà **ActiveConnection** per un oggetto del **celle** aperto.  
   
 > [!NOTE]
->  In Visual Basic, ricordarsi di usare il **impostato** (parola chiave) durante l'impostazione di **ActiveConnection** proprietà da un **connessione** oggetto. Se si omette il **impostato** (parola chiave), che sarà effettivamente impostato il **ActiveConnection** uguale alla proprietà di **connessione** proprietà predefinita dell'oggetto,  **ConnectionString**. Il codice funzionerà; Tuttavia, si creerà un aggiuntivi per la connessione all'origine dati, che può incidere negativamente sulle prestazioni.  
+>  In Visual Basic, ricordarsi di usare la parola chiave **set** quando si imposta la proprietà **ActiveConnection** su un oggetto **Connection** . Se si omette la parola chiave **set** , si imposta la proprietà **ActiveConnection** uguale alla proprietà predefinita dell'oggetto **Connection** , **ConnectionString**. Il codice funzionerà; Tuttavia, si creerà una connessione aggiuntiva all'origine dati, che può avere implicazioni negative sulle prestazioni.  
   
- Quando si usa il provider di dati MSOLAP, impostare l'origine dati in una stringa di connessione a un nome di server e il catalogo iniziale per il nome di un catalogo dall'origine dati. Per connettersi a un file di cubo che viene disconnesso da un server, impostare il percorso per il percorso completo di. File CUB. In entrambi i casi, impostare il provider per il nome del provider. Ad esempio, la stringa seguente usa il Provider MSOLAP per la connessione a un catalogo denominato Bobs Video Store in un server denominato **Servername**:  
+ Quando si utilizza il provider di dati MSOLAP, impostare l'origine dati in una stringa di connessione su un nome di server e impostare il catalogo iniziale sul nome di un catalogo dall'origine dati. Per connettersi a un file di cubo disconnesso da un server, impostare il percorso sul percorso completo della. File CUB. In entrambi i casi, impostare il provider sul nome del provider. Ad esempio, la stringa seguente usa il provider MSOLAP per connettersi a un catalogo denominato Bob video Store in un server denominato **ServerName**:  
   
 ```  
 "Data Source=Servername;Initial Catalog=Bobs Video Store;Provider=msolap"  
 ```  
   
- La stringa seguente si connette a un file di cubo locale in corrispondenza della posizione C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub:  
+ La stringa seguente si connette a un file di cubo locale nel percorso C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub:  
   
 ```  
 "Location=C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub;Provider=msolap"  
@@ -63,6 +63,6 @@ Indica a quale ADO [connessione](../../../ado/reference/ado-api/connection-objec
 |[Oggetto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Oggetto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Esempio di celle (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Metodo Open (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

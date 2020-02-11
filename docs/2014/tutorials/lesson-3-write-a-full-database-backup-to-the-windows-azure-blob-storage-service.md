@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Scrivere un backup completo del database nel servizio di archiviazione BLOB di Azure | Microsoft Docs'
+title: 'Lezione 3: scrivere un backup completo del database nel servizio di archiviazione BLOB di Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153469"
 ---
 # <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Lezione 3: Scrivere un backup completo del database nel servizio di archiviazione BLOB di Azure
@@ -44,6 +44,6 @@ ms.locfileid: "70153469"
 5.  In Esplora oggetti connettersi alla risorsa di archiviazione Azure. Sfogliare per individuare il contenitore e i file di backup appena creati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: Eseguire un ripristino da un backup](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)completo del database.  
+ [Lezione 4: eseguire un ripristino da un backup completo del database](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md).  
   
   

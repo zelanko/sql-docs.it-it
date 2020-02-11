@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067305"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partizioni e modalità DirectQuery (SSAS tabulare)
   In questa sezione viene illustrato come utilizzare le partizioni nei modelli DirectQuery. Per informazioni più generali sulle partizioni nei modelli tabulari, vedere [Partizioni &#40;SSAS tabulare&#41;](partitions-ssas-tabular.md).  
   
- Per istruzioni su come modificare la partizione utilizzata o visualizzare le informazioni sulla partizione, vedere [modificare la partizione DirectQuery &#40;modello tabulare di SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md).  
+ Per istruzioni su come modificare la partizione usata o visualizzare informazioni sulla partizione, vedere [modificare la partizione DirectQuery &#40;SSAS tabulare&#41;](../change-the-directquery-partition-ssas-tabular.md).  
   
 ## <a name="using-partitions-in-directquery-mode"></a>Utilizzo di partizioni in modalità DirectQuery  
  Per ogni tabella, è necessario specificare una sola partizione da utilizzare come origine dati DirectQuery.  In presenza di più partizioni, quando si abilita la modalità DirectQuery per il modello, per impostazione predefinita la prima partizione creata nella tabella viene contrassegnata come partizione DirectQuery. Questa impostazione potrà essere modificata in seguito tramite Gestione partizioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "66067305"
   
  Sono disponibili due opzioni di elaborazione per la partizione DirectQuery: Per impostare questa proprietà, utilizzare **Gestore partizioni** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e selezionare la proprietà **Opzione di elaborazione** . Nella tabella seguente vengono elencati i valori di questa proprietà e vengono illustrati gli effetti di ciascun valore combinato alla proprietà DirectQueryUsage nella stringa di connessione:  
   
-|**DirectQueryUsage** property|Proprietà**Opzione di elaborazione**|Note|  
+|Proprietà **DirectQueryUsage**|Proprietà **opzione di elaborazione**|Note|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|Non elaborare mai questa partizione|Se il modello utilizza solo DirectQuery, l'elaborazione non è mai necessaria.<br /><br /> Nei modelli ibridi è possibile configurare la partizione DirectQuery in modo che non venga mai elaborata. Ad esempio, se si lavora su un set di dati di grandi dimensioni e non si desidera che i risultati completi vengano aggiunti alla cache, è possibile specificare che la partizione DirectQuery includa l'unione dei risultati di tutte le altre partizioni nella tabella e quindi non elaborare mai l'unione. Le query dirette all'origine relazionale non saranno interessate, mentre le query sui dati memorizzati nella cache combineranno i dati delle altre partizioni.|  
 |In-Memory con DirectQuery|Consenti l'elaborazione della partizione|Se il modello utilizza la modalità ibrida, è necessario utilizzare la stessa partizione per le query su In-Memory e sull'origine dati DirectQuery.|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069218"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Selezione (finestra di dialogo Proprietà partizione) (SSMS)
@@ -30,16 +30,16 @@ ms.locfileid: "66069218"
   
  La griglia include le colonne seguenti:  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
-|**Name**|Consente di visualizzare il nome della partizione.|  
+|**Nome**|Consente di visualizzare il nome della partizione.|  
 |**Origine**|Consente di visualizzare la tabella o la query utilizzata per reperire i dati di origine per la partizione.|  
 |**Aggregazioni**|Consente di visualizzare una stringa che descrive la progettazione delle aggregazioni utilizzata dalla partizione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo proprietà di partizione &#40;SQL Server Management Studio&#41;](partition-properties-dialog-box-ssms.md)   
- [Generale &#40;finestra di dialogo Proprietà partizione&#41; &#40;SQL Server Management Studio&#41;](general-partition-properties-dialog-box-ssms.md)   
- [La memorizzazione nella cache &#40;finestra di dialogo Proprietà partizione&#41; &#40;SQL Server Management Studio&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
- [Configurazione errori per cubi, partizioni e l'elaborazione della dimensione &#40;SSAS - multidimensionale&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
+ [Finestra di dialogo Proprietà partizione &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
+ [Finestra di dialogo Proprietà generali &#40;partizione&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
+ [Caching attivo &#40;finestra di dialogo Proprietà partizione&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
+ [Configurazione degli errori per l'elaborazione di cubi, partizioni e dimensioni &#40;SSAS-multidimensionale&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   
   

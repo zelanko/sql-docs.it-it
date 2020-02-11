@@ -12,10 +12,10 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251723"
 ---
 # <a name="data-quality-client-home-screen"></a>Schermata iniziale del client Data Quality
@@ -24,7 +24,7 @@ ms.locfileid: "75251723"
 
   Questa schermata consente di accedere alle interfacce utente per ciascuno dei tre gruppi principali di attività [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): gestione della Knowledge Base, progetti Data Quality e amministrazione.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opzioni  
   
 ### <a name="knowledge-base-management"></a>Gestione Knowledge Base  
  Una Knowledge Base DQS è un repository di metadati utilizzati da DQS per migliorare la qualità dei dati. Questi metadati vengono creati sia dalla piattaforma DQS in un processo computerizzato di individuazione delle informazioni che dall'amministratore dei dati in un processo interattivo di gestione del dominio.  
@@ -52,7 +52,7 @@ ms.locfileid: "75251723"
  **Progetto Data Quality recente**  
  Dall'elenco visualizzato, selezionare un progetto già creato. È possibile aprire un progetto bloccato solo se si è gli autori del blocco. In tal caso, il progetto verrà aperto nello stato in cui era al momento della chiusura, indicato in parentesi. Se il progetto è stato completato, verrà aperto nel passaggio Esporta dell'attività.  
   
-### <a name="administration"></a>Administration  
+### <a name="administration"></a>Amministrazione  
  L'amministrazione DQS consente di monitorare, configurare e gestire DQS.  
   
  **Monitoraggio attività**  
@@ -64,6 +64,6 @@ ms.locfileid: "75251723"
 ## <a name="see-also"></a>Vedere anche  
  [Knowledge base e domini DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [Progetti Data Quality &#40;&#41;DQS](../data-quality-services/data-quality-projects-dqs.md)   
- [Amministrazione DQS](../data-quality-services/dqs-administration.md)  
+ [amministrazione dqs](../data-quality-services/dqs-administration.md)  
   
   

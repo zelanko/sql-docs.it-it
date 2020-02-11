@@ -1,5 +1,5 @@
 ---
-title: Metodo SubmitChanges (Servizi Desktop remoto) | Microsoft Docs
+title: Metodo SubmitChanges (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +14,17 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963286"
 ---
 # <a name="submitchanges-method-rds"></a>Metodo SubmitChanges (Servizi Desktop remoto)
-Invia le modifiche in locale memorizzata nella cache e aggiornabile in sospeso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per l'origine dati specificata nel [Connect](../../../ado/reference/rds-api/connect-property-rds.md) proprietà o nella [URL](../../../ado/reference/rds-api/url-property-rds.md) proprietà.  
+Invia le modifiche in sospeso del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) memorizzato nella cache locale e aggiornabile all'origine dati specificata nella proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) o nella proprietà [URL](../../../ado/reference/rds-api/url-property-rds.md) .  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,27 +35,27 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
   
 #### <a name="parameters"></a>Parametri  
  *DataControl*  
- Una variabile oggetto che rappresenta un [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
+ Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *DataFactory*  
- Una variabile oggetto che rappresenta un' [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto.  
+ Variabile oggetto che rappresenta un oggetto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) .  
   
  *Connessione*  
- Oggetto **stringa** valore che rappresenta la connessione creata con il **Servizi Desktop remoto. DataControl** dell'oggetto [Connect](../../../ado/reference/rds-api/connect-property-rds.md) proprietà.  
+ Valore **stringa** che rappresenta la connessione creata con **RDS. **Proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md) dell'oggetto DataControl.  
   
- *Recordset*  
- Una variabile oggetto che rappresenta un **Recordset** oggetto.  
+ *recordset*  
+ Variabile oggetto che rappresenta un oggetto **Recordset** .  
   
-## <a name="remarks"></a>Note  
- Il [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) devono essere impostate prima di poter usare il **SubmitChanges** metodo con il  **SERVIZI DESKTOP REMOTO. DataControl** oggetto.  
+## <a name="remarks"></a>Osservazioni  
+ Per poter usare il metodo **SubmitChanges** con RDS, è necessario impostare le proprietà [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md)e [SQL](../../../ado/reference/rds-api/sql-property.md) **. Oggetto DataControl** .  
   
- Se si chiama il [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) metodo dopo aver chiamato **SubmitChanges** per lo stesso **Recordset** oggetto, il **CancelUpdate** chiamata ha esito negativo perché le modifiche sono state già eseguito il commit.  
+ Se si chiama il metodo [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) dopo aver chiamato **SubmitChanges** per lo stesso oggetto **Recordset** , la chiamata a **CancelUpdate** ha esito negativo perché è già stato eseguito il commit delle modifiche.  
   
- Solo i record modificati vengono inviati per la modifica e su tutte le modifiche esito positivo o negativo di tutte le modifiche tra loro.  
+ Solo i record modificati vengono inviati per la modifica e tutte le modifiche vengono riuscite o tutte le modifiche vengono interrotte insieme.  
   
- È possibile usare **SubmitChanges** solo con il valore predefinito **RDSServer** oggetto. Oggetti business personalizzati non è possibile usare questo metodo.  
+ È possibile usare **SubmitChanges** solo con l'oggetto **RDSServer. DataFactory** predefinito. Gli oggetti business personalizzati non possono utilizzare questo metodo.  
   
- Se il **URL** proprietà è stata impostata, **SubmitChanges** invierà le modifiche nel percorso specificato dall'URL.  
+ Se è stata impostata la proprietà **URL** , **SubmitChanges** invierà le modifiche al percorso specificato dall'URL.  
   
 ## <a name="applies-to"></a>Si applica a  
   
@@ -65,8 +65,8 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di metodo SubmitChanges (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
- [Comando pulsanti di Address Book](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [Metodo CancelUpdate (Servizi Desktop remoto)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+ [Pulsanti di comando Rubrica](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
+ [Metodo CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Metodo Refresh (Servizi Desktop remoto)](../../../ado/reference/rds-api/refresh-method-rds.md)
 
 

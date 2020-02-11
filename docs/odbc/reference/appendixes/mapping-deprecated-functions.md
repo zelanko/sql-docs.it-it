@@ -18,20 +18,20 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990706"
 ---
 # <a name="mapping-deprecated-functions"></a>Mapping di funzioni deprecate
-Questa sezione vengono descritte le funzioni come deprecate vengono mappati da ODBC *3.x* gestione Driver per garantire la compatibilità con le versioni precedenti di ODBC *3.x* driver che vengono usati con ODBC *2.x* le applicazioni. Gestione Driver esegue il mapping indipendentemente dalla versione dell'applicazione. Poiché ogni ODBC *2.x* funzioni nell'elenco seguente viene mappato a ODBC corrispondente *3.x* funzione quando viene chiamato in un database ODBC *3.x* driver ODBC *3.x* driver non deve implementare ODBC *2.x* funzioni.  
+In questa sezione viene descritto il mapping delle funzioni deprecate da parte di gestione driver ODBC *3. x* per garantire la compatibilità con le versioni precedenti dei driver ODBC *3. x* utilizzati con le applicazioni ODBC *2. x* . Gestione driver esegue questo mapping indipendentemente dalla versione dell'applicazione. Poiché ogni funzione ODBC *2. x* nell'elenco seguente viene mappata alla funzione ODBC *3. x* corrispondente quando viene chiamata in un driver ODBC *3. x* , non è necessario che il driver ODBC *3. x* implementi le funzioni ODBC *2. x* .  
   
- Il mapping nell'elenco viene attivato quando il driver è un database ODBC *3.x* e il driver non supporta la funzione che viene eseguito il mapping.  
+ Il mapping nell'elenco viene attivato quando il driver è un driver ODBC *3. x* e il driver non supporta la funzione di cui è in corso il mapping.  
   
- Nella tabella seguente sono elencate le funzionalità di tutti i duplicati che è stato introdotto in ODBC *3.x*.  
+ Nella tabella seguente sono elencate tutte le funzionalità duplicate introdotte in ODBC *3. x*.  
   
-|ODBC *2.x* (funzione)|ODBC *3.x* (funzione)|  
+|Funzione ODBC *2. x*|Funzione ODBC *3. x*|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -41,7 +41,7 @@ Questa sezione vengono descritte le funzioni come deprecate vengono mappati da O
 |**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt** con un *opzione* di SQL_DROP|**SQLFreeHandle**|  
+|**SQLFreeStmt** con l' *opzione* SQL_DROP|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
@@ -51,9 +51,9 @@ Questa sezione vengono descritte le funzioni come deprecate vengono mappati da O
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] anche se questa funzione non esisteva in ODBC *2.x*, si trova negli standard Open Group e ISO.  
+ [1] anche se questa funzione non esisteva in ODBC *2. x*, si trova negli standard Open Group e ISO.  
   
- [2] si tratta di una funzione ODBC 1.0.  
+ [2] si tratta di una funzione ODBC 1,0.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

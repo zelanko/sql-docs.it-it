@@ -14,10 +14,10 @@ ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6edcf577b7783662a02efc3531ac02c2535ef078
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245422"
 ---
 # <a name="manage-dqs-log-files"></a>Gestire i file di log DQS
@@ -48,7 +48,7 @@ ms.locfileid: "75245422"
   
 -   Classe e metodo  
   
--   Messaggio  
+-   Message  
   
  Oltre a questi valori, nel file di log vengono visualizzate anche informazioni sulla versione dell'applicazione, il nome del computer, il nome dell'utente e il sistema operativo.  
   
@@ -68,14 +68,14 @@ ms.locfileid: "75245422"
 ##  <a name="DQSCleansing"></a>File di log del componente di pulizia DQS  
  Il file di log del [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] , DQSSSISLog.log, include i log delle attività eseguite utilizzando il [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Il file di log del componente [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] è disponibile in %APPDATA%\SSDQS\Log. Il file di log di [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] contiene un set di informazioni simili a quelle del file di log del server, ma per [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
-##  <a name="RT"></a>Attività correlate  
+##  <a name="RT"></a> Attività correlate  
   
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
-|Descrive come configurare le impostazioni di gravità del log per file di log DQS utilizzando il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Configurare i livelli di gravità per i file di log DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
+|Descrive come configurare le impostazioni di gravità del log per file di log DQS utilizzando il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Configurare livelli di gravità per i file di log DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |Descrive come configurare manualmente le impostazioni avanzate per i file di log DQS.|[Configurare le impostazioni avanzate per i file di log DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione DQS](../data-quality-services/dqs-administration.md)  
+ [amministrazione dqs](../data-quality-services/dqs-administration.md)  
   
   

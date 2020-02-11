@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059564"
 ---
 # <a name="derived-column-transformation-editor"></a>Editor trasformazione Colonna derivata
@@ -27,10 +27,10 @@ ms.locfileid: "66059564"
  Per altre informazioni sulla trasformazione Colonna derivata, vedere [Trasformazione Colonna derivata](data-flow/transformations/derived-column-transformation.md).  
   
 ## <a name="options"></a>Opzioni  
- **Variabili e Colonne**  
+ **Variabili e colonne**  
  Consente di compilare un'espressione che utilizza una variabile o una colonna di input tramite un'operazione di trascinamento della variabile o della colonna dall'elenco di variabili e colonne disponibili in una riga di tabella esistente nel riquadro sottostante o in una nuova riga alla fine dell'elenco.  
   
- **Funzioni e Operatori**  
+ **Funzioni e operatori**  
  Compilare un'espressione che utilizza una funzione o un operatore per valutare i dati di input e indirizzare i dati di output trascinando le funzioni e gli operatori dall'elenco al riquadro sottostante.  
   
  **Nome colonna derivata**  
@@ -44,24 +44,24 @@ ms.locfileid: "66059564"
   
  È possibile specificare il valore di questa proprietà tramite un'espressione di proprietà.  
   
- **Argomenti correlati**: [Espressioni di Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md) e [Funzioni &#40;espressione SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Argomenti correlati**: [Integration Services &#40;espressioni di&#41; ssis](expressions/integration-services-ssis-expressions.md), [operatori &#40;espressione SSIS&#41;](expressions/operators-ssis-expression.md)e [funzioni &#40;espressione SSIS](expressions/functions-ssis-expression.md)&#41;  
   
  **Tipo di dati**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene valutata automaticamente l'espressione e viene impostato automaticamente il tipo di dati appropriato. Il valore di questa colonna è di sola lettura. Per altre informazioni, vedere [Tipi di dati di Integration Services](data-flow/integration-services-data-types.md).  
   
- **Lunghezza**  
+ **Length**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione colonna derivata** viene valutata automaticamente l'espressione e impostata la lunghezza della colonna per i dati stringa. Il valore di questa colonna è di sola lettura.  
   
- **Precisione**  
+ **Precision**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene impostata automaticamente la precisione per i dati numerici in base al tipo di dati. Il valore di questa colonna è di sola lettura.  
   
- **Scala**  
+ **Scalabilità**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene impostata automaticamente la scala per i dati numerici in base al tipo di dati. Il valore di questa colonna è di sola lettura.  
   
  **Tabella codici**  
  Se si aggiungono dati a una nuova colonna, nella finestra di dialogo **Editor trasformazione Colonna derivata** viene impostata automaticamente la tabella codici per il tipo di dati DT_STR. È possibile aggiornare **Tabella codici**.  
   
- **Configura output errori**  
+ **Configurare l'output degli errori**  
  Consente di indicare come gestire gli errori tramite la finestra di dialogo [Configura output errori](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Vedere anche  

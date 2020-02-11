@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835567"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Procedura di visualizzazione delle proprietà dell'istanza di CDC
@@ -30,7 +30,7 @@ ms.locfileid: "62835567"
   
      Le informazioni relative all'istanza vengono visualizzate nella parte centrale di CDC Designer Console. È suddivisa in quattro schede. Tutte le schede sono in sola lettura.  
   
-     **Stato**  
+     **Status**  
      In questa scheda vengono visualizzate le informazioni relative allo stato corrente di Change Data Capture per l'istanza. Per informazioni sul contenuto di questa scheda, vedere la sezione **Schede del visualizzatore** in [Manage a CDC Instance](manage-a-cdc-instance.md).  
   
      **Oracle**  
@@ -39,7 +39,7 @@ ms.locfileid: "62835567"
      **Tabelle**  
      In questa scheda vengono visualizzate le informazioni relative alle tabelle incluse in Change Data Capture. Vengono anche elencate le colonne acquisite. Per informazioni sul contenuto di questa scheda, vedere [Edit Tables](edit-tables.md).  
   
-     **Advanced**  
+     **Funzionalità avanzate**  
      In questa scheda viene visualizzato un elenco delle proprietà avanzate definite nell'editor delle proprietà. Per informazioni sul contenuto di questa scheda, vedere [Edit the Advanced Properties](edit-the-advanced-properties.md).  
   
   

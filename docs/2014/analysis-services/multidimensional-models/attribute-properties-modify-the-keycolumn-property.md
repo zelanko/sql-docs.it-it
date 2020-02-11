@@ -1,5 +1,5 @@
 ---
-title: Modificare la proprietà KeyColumn di un attributo | Microsoft Docs
+title: Modificare la proprietà della colonna di colonna di un attributo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077245"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Modificare la proprietà KeyColumn di un attributo
@@ -32,9 +32,9 @@ ms.locfileid: "66077245"
   
     -   In **Esplora soluzioni**fare clic con il pulsante destro del mouse sulla dimensione nella cartella **Dimensioni** e quindi scegliere **Apri** o **Progettazione viste**.  
   
-         oppure  
+         -oppure-  
   
-    -   In Progettazione cubi nel **struttura cubo** scheda, espandere la dimensione del cubo nel **dimensioni** riquadro e fare clic su **modifica \<dimensione >**.  
+    -   Nella scheda **Struttura cubo** di Progettazione cubi espandere la dimensione del cubo nel riquadro **dimensioni** e fare clic su ** \<modifica>dimensione **.  
   
 3.  Nel riquadro **Attributi** della scheda **Struttura dimensione** fare clic sull'attributo per il quale si vuole modificare la proprietà **KeyColumns** .  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66077245"
 8.  Per modificare l'ordine delle colonne chiave, selezionare una colonna e quindi fare clic sul pulsante **Su** o **Giù** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alle proprietà degli attributi delle dimensioni](dimension-attribute-properties-reference.md)  
+ [Riferimento alle proprietà degli attributo delle dimensioni](dimension-attribute-properties-reference.md)  
   
   

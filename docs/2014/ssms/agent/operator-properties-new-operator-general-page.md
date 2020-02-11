@@ -1,5 +1,5 @@
 ---
-title: Proprietà operatore e operatore New (pagina generale) | Microsoft Docs
+title: Proprietà operatore e nuovo operatore (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,42 +13,42 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211343"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>Proprietà Operatore e Nuovo operatore (pagina Generale)
-  Utilizzare questa pagina per visualizzare e modificare le proprietà generali degli operatori di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Utilizzare questa pagina per visualizzare e modificare le proprietà generali degli [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operatori di Agent.  
   
 ## <a name="options"></a>Opzioni  
- **Name**  
+ **Nome**  
  Consente di modificare il nome dell'operatore.  
   
- **Abilitata**  
+ **Enabled**  
  Consente di abilitare l'operatore. Se non è abilitato, all'operatore non verranno inviate notifiche.  
   
- **Indirizzo posta elettronica**  
+ **Nome posta elettronica**  
  Specifica l'indirizzo di posta elettronica dell'operatore.  
   
- **Indirizzo Net Send**  
+ **Indirizzo net send**  
  Specifica l'indirizzo da usare per **Net Send**.  
   
- **Indirizzo cercapersone**  
+ **Nome posta elettronica cercapersone**  
  Specifica l'indirizzo di posta elettronica da utilizzare per il cercapersone dell'operatore.  
   
- **Pianificazione cercapersone per operatore in servizio**  
+ **Pianificazione cercapersone per servizio**  
  Consente di impostare gli orari in cui il cercapersone è attivo.  
   
- **Lunedì - Domenica**  
+ **Lunedì-domenica**  
  Consente di selezionare i giorni in cui il cercapersone è attivo.  
   
  **Inizio giornata lavorativa**  
  Consente di selezionare l'ora a partire da cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent invierà messaggi al cercapersone.  
   
  **Fine giornata lavorativa**  
- Consente di selezionare l'ora a partire da cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non invierà più messaggi al cercapersone.  
+ Consente di selezionare l'ora oltre cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non invierà più messaggi al cercapersone.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Operatori](operators.md)  

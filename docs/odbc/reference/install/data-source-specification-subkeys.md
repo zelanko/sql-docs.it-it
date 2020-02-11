@@ -15,27 +15,27 @@ ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fae642b46b4c652583622ec4832b3217d0b1681c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068548"
 ---
 # <a name="data-source-specification-subkeys"></a>Sottochiavi di specifica dell'origine dati
-Ogni origine dati elencate nella sottochiave ODBC Zdroje dat ha una sottochiave propri. Questa sottochiave ha lo stesso nome come valore corrispondente nella sottochiave origini dati ODBC. I valori sotto questa sottochiave necessario elencare la DLL del driver e possono elencare una descrizione dell'origine dati. Se il driver supporta i traduttori, i valori possono elencare il nome di una funzione di conversione predefinita, la DLL di conversione predefinita e l'opzione di conversione predefinita. I valori possono inoltre essere elencate altre informazioni richieste dal driver per la connessione all'origine dati. Ad esempio, il driver potrebbe richiedere un nome del server, nome del database o nome dello schema.  
+Ogni origine dati elencata nella sottochiave origini dati ODBC presenta una sottochiave. Questa sottochiave ha lo stesso nome del valore corrispondente nella sottochiave origini dati ODBC. I valori in questa sottochiave devono elencare la DLL del driver e possono elencare una descrizione dell'origine dati. Se il driver supporta i convertitori, i valori possono elencare il nome di un convertitore predefinito, la DLL di traduzione predefinita e l'opzione di conversione predefinita. I valori possono anche elencare altre informazioni richieste dal driver per la connessione all'origine dati. Ad esempio, il driver potrebbe richiedere il nome del server, il nome del database o il nome dello schema.  
   
- I formati dei valori vengono visualizzati nella tabella seguente. È necessario solo il valore di Driver.  
+ I formati dei valori sono indicati nella tabella seguente. È necessario solo il valore del driver.  
   
-|Nome|Tipo di dati|Data|  
+|Nome|Tipo di dati|data|  
 |----------|---------------|----------|  
-|Descrizione|REG_SZ|*description*|  
-|Driver|REG_SZ|*driver-DLL-path*|  
-|TranslationDLL|REG_SZ|*translator-DLL-path*|  
-|TranslationName|REG_SZ|*translator-name*|  
-|TranslationOption|REG_SZ|*translation-option*|  
-|*opt-value-name*|*opt-value-type*|*opt-value-data*|  
+|Descrizione|REG_SZ|*Descrizione*|  
+|Driver|REG_SZ|*Driver-DLL-Path*|  
+|TranslationDLL|REG_SZ|*translator-DLL-percorso*|  
+|Translationname|REG_SZ|*nome traduttore*|  
+|TranslationOption|REG_SZ|*Translation-opzione*|  
+|*nome-valore-opt*|*opt-valore-tipo*|*opt-value-dati*|  
   
- Si supponga, ad esempio, il driver SQL Server richiede il nome del server e un flag per OEM per la conversione ANSI e definisce i valori del Server e non vengono per questi. Si supponga inoltre che l'origine dati di inventario utilizza il convertitore di tabella codici di Microsoft® per la conversione tra tabelle codici multilingue (850) e il Windows® latino 1 (1250). I valori nella sottochiave inventario potrebbero essere come segue:  
+ Si supponga, ad esempio, che il driver SQL Server richieda il nome del server e un flag per la conversione da OEM a ANSI e definisce i valori server e OEMTOANSI per questi. Si supponga inoltre che l'origine dati di inventario utilizzi il convertitore della tabella codici di Microsoft® per tradurre tra le tabelle codici di Windows® Latin 1 (1250) e multilingue (850). I valori nella sottochiave Inventory possono essere i seguenti:  
   
 ```  
 Description : REG_SZ : Inventory database on server InvServ  

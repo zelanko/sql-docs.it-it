@@ -14,19 +14,19 @@ ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 76f89af5ea6a7b1ab7a01bda14cce391a1b4b750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122770"
 ---
 # <a name="sqldatarecord-object"></a>Oggetto SqlDataRecord
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Il **SqlDataRecord** oggetto rappresenta una singola riga di dati, insieme ai relativi metadati.  
+  L'oggetto **SqlDataRecord** rappresenta una singola riga di dati, insieme ai metadati correlati.  
   
- Le stored procedure gestite possono inviare al client set di risultati che non provengono da un **SqlDataReader**. Il **SqlDataRecord** classe, insieme con **SendResultsStart**, **SendResultsRow**, e **SendResultsEnd** metodi del **SqlPipe** oggetto, consente alle stored procedure per l'invio di set di risultati personalizzati al client.  
+ Le stored procedure gestite possono inviare al client set di risultati che non sono da un oggetto **SqlDataReader**. La classe **SqlDataRecord** , insieme ai **metodi SendResultsStart**, **SendResultsRow**e **SendResultsEnd** dell'oggetto **SqlPipe** , consente alle stored procedure di inviare set di risultati personalizzati al client.  
   
- Per altre informazioni, vedere la **Microsoft.SqlServer.Server.SqlDataRecord** classe documentazione di riferimento nella documentazione di .NET Framework SDK.  
+ Per ulteriori informazioni, vedere la documentazione di riferimento della classe **Microsoft. SqlServer. Server. SqlDataRecord** nella documentazione di .NET Framework SDK.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un nuovo record relativo a un dipendente, che viene successivamente restituito al chiamante.  

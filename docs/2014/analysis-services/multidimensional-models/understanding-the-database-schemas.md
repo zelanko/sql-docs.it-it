@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811052"
 ---
 # <a name="understanding-the-database-schemas"></a>Informazioni sugli schemi di database
@@ -82,7 +82,7 @@ ms.locfileid: "68811052"
  La procedura guidata genera una tabella separata per l'archiviazione dei valori tradotti per ogni proprietà nel gruppo di misure che richiede una colonna per la traduzione. La procedura guidata crea inoltre una colonna separata per ogni lingua in cui i valori devono essere tradotti.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversione del tipo di dati e lunghezze predefinite  
- La generazione guidata schema consente di ignorare i tipi di dati in tutti i casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tranne che per le colonne che utilizzano il `wchar` tipo di dati. La dimensione dei dati `wchar` viene convertita direttamente nel tipo di dati `nvarchar`. Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati `wchar` è maggiore di 4000 byte, la Generazione guidata schema genererà un errore.  
+ La generazione guidata schema consente di ignorare i tipi di dati in tutti i casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tranne che per le colonne che utilizzano il tipo di dati. La dimensione dei dati `wchar` viene convertita direttamente nel tipo di dati `nvarchar`. Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati `wchar` è maggiore di 4000 byte, la Generazione guidata schema genererà un errore.  
   
  Se per un elemento di dati, ad esempio l'associazione di un attributo, non è stata specificata la lunghezza, per la colonna verrà utilizzata la lunghezza predefinita specificata nella tabella seguente.  
   

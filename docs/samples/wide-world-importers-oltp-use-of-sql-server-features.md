@@ -11,10 +11,10 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 69f0027041b4acf45a54d8d8d655bc8772417dc6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811538"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Uso delle funzionalità e delle funzionalità di SQL Server
@@ -29,7 +29,7 @@ WideWorldImporters è progettato per illustrare molte delle principali funzional
 |Funzionalità o funzionalità di SQL Server|Usare in WideWorldImporters|
 |:-------------------------------|:------------------------|
 |Tabelle temporali|Sono disponibili molte tabelle temporali, incluse tutte le tabelle di riferimento per stile di ricerca e le entità principali, ad esempio StockItems, Customers e Suppliers. L'uso di tabelle temporali consente di tenere traccia facilmente della cronologia di queste entità.|
-|Chiamate AJAX per JSON|L'applicazione utilizza spesso chiamate AJAX per eseguire query su queste tabelle: Persons, Customers, Suppliers e StockItems. Le chiamate restituiscono i dati in formato JSON. Vedere ad esempio il stored procedure `Website.SearchForCustomers`.|
+|Chiamate AJAX per JSON|L'applicazione utilizza spesso chiamate AJAX per eseguire query su queste tabelle: persone, clienti, fornitori e StockItems. Le chiamate restituiscono i dati in formato JSON. Vedere ad esempio il stored procedure `Website.SearchForCustomers`.|
 |Sacchetti proprietà/valore JSON|Alcune tabelle contengono colonne che contengono dati JSON per estendere i dati relazionali nella tabella. Ad esempio, `Application.SystemParameters` ha una colonna per le impostazioni dell' `Application.People` applicazione e ha una colonna per registrare le preferenze dell'utente. Queste tabelle usano una `nvarchar(max)` colonna per registrare i dati JSON, insieme a un vincolo check usando la funzione `ISJSON` predefinita per assicurarsi che i valori della colonna siano JSON validi.|
 |Sicurezza a livello di riga|Sicurezza a livello di riga (RLS) viene usato per limitare l'accesso alla tabella Customers, in base all'appartenenza ai ruoli. Ogni territorio di vendita ha un ruolo e un utente. Per visualizzare un limite di accesso a RLS, usare lo script corrispondente in Sample-script. zip, che fa parte della [versione dell'esempio](https://go.microsoft.com/fwlink/?LinkID=800630).|
 |Analisi operativa in tempo reale|(Versione completa del database) Le tabelle `Sales.InvoiceLines` transazionali di base `Sales.OrderLines` e entrambe dispongono di un indice columnstore non cluster per supportare l'esecuzione efficiente di query analitiche nel database transazionale con un minimo effetto sul carico di lavoro operativo. L'esecuzione di transazioni e analisi nello stesso database è detta anche [elaborazione ibrida transazionale/analitica (HTAP)](https://wikipedia.org/wiki/Hybrid_Transactional/Analytical_Processing_(HTAP)). Per verificarne il funzionamento, usare lo script corrispondente in Sample-script. zip, che fa parte della [versione dell'esempio](https://go.microsoft.com/fwlink/?LinkID=800630).|
@@ -47,6 +47,6 @@ WideWorldImporters è progettato per illustrare molte delle principali funzional
 |Elaborazione elenco|Viene fornito un tipo `Website.OrderIDList` di tabella di esempio. Viene utilizzato da una procedura `Website.InvoiceCustomerOrders`di esempio. La procedura usa le espressioni di tabella comuni (CTE), TRY/CATCH, JSON_MODIFY, XACT_ABORT, NOCOUNT, THROW e XACT_STATE per illustrare la possibilità di elaborare un elenco di ordini anziché un solo ordine, per ridurre al minimo i round trip dall'applicazione al motore di database.|
 |Compressione GZip|Nella visualizzazione `Warehouse.VehicleTemperature` la tabella include i dati completi del sensore. Tuttavia, quando questi dati Risaleno a più di alcuni mesi, viene compresso per conservare spazio. La funzione COMPRESS usa la compressione GZip.<br/><br/>La vista `Website.VehicleTemperatures` usa la funzione Decompress durante il recupero dei dati compressi in precedenza.|
 |Archivio query|Query Store è abilitato nel database. Dopo aver eseguito alcune query, seguire questa procedura:<br/><br/>1. Aprire il database in Management Studio.<br/>2. Aprire il Query Store del nodo, che si trova nel database.<br/>3. Aprire il report *prime query per consumo di risorse*. Vedere le esecuzioni di query e visualizzare i piani per le query appena eseguite.|
-|STRING_SPLIT|La colonna `DeliveryInstructions` nella tabella `Sales.Invoices` include un valore delimitato da virgole che può essere usato per illustrare STRING_SPLIT.|
+|STRING_SPLIT|La colonna `DeliveryInstructions` nella tabella `Sales.Invoices` include un valore delimitato da virgole che può essere utilizzato per illustrare STRING_SPLIT.|
 |Audit|SQL Server controllo può essere abilitato per questo database di esempio eseguendo l'istruzione seguente nel database:<br/><br/>`EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>Nel database SQL di Azure il controllo viene abilitato tramite il [portale di Azure](https://portal.azure.com/).<br/><br/>Le operazioni di sicurezza che coinvolgono account di accesso, ruoli e autorizzazioni vengono registrate su tutti i sistemi in cui è abilitato il controllo (inclusi i sistemi Standard Edition). Il controllo viene indirizzato al registro applicazioni perché è disponibile in tutti i sistemi e non richiede autorizzazioni aggiuntive. Viene visualizzato un avviso per una maggiore sicurezza, che deve essere reindirizzato al registro di sicurezza o a un file in una cartella sicura. Viene fornito un collegamento per descrivere la configurazione aggiuntiva richiesta.<br/><br/>Per i sistemi Evaluation/Developer/Enterprise Edition, viene controllato l'accesso a tutti i dati transazionali finanziari.|
 | &nbsp; | &nbsp; |

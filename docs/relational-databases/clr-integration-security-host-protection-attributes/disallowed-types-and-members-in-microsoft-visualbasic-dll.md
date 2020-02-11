@@ -14,10 +14,10 @@ ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b717c350bae35606dcf0aae09610c085ccff1767
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75240161"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Tipi e membri non consentiti in Microsoft.VisualBasic.dll
@@ -65,14 +65,14 @@ ms.locfileid: "75240161"
 |Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor ()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Sincronizzazione|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Sincronizzazione|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Sincronizzazione|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Sincronizzazione|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Sincronizzazione|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Sincronizzazione|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Sincronizzazione|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Sincronizzazione|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Synchronization|  
 |Microsoft.VisualBasic.Logging.Log|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.ClipboardProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.FileSystemProxy|ExternalProcessMgmt|  

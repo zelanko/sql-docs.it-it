@@ -1,5 +1,5 @@
 ---
-title: Modificare un nome di attributo (Master Data Services) | Microsoft Docs
+title: Modificare il nome di un attributo (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: de5cc28bfd034001c7bc18da9d934277e01935a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484057"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>Modificare il nome di un attributo (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]è possibile modificare il nome di un attributo.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Per eseguire questa procedura:  
   
--   È necessario disporre di autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
+-   È necessario disporre dell'autorizzazione per accedere all'area funzionale **Amministrazione sistema** .  
   
--   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   È necessario essere un amministratore del modello. Per altre informazioni, vedere [Amministratori &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-an-attribute-name"></a>Per modificare il nome di un attributo  
   
@@ -41,9 +41,9 @@ ms.locfileid: "65484057"
   
 5.  Fare clic su **Modifica entità selezionata**.  
   
-6.  Nel **modifica entità** pagina, fare clic sull'attributo con il nome che si desidera modificare.  
+6.  Nella pagina **Modifica entità** fare clic sull'attributo con il nome che si desidera modificare.  
   
-7.  Fare clic su **Modifica attributo selezionato**.  
+7.  Fare clic su **modifica attributo selezionato**.  
   
 8.  Nella casella **Nome** digitare il nome aggiornato dell'attributo. Per un elenco di parole che non vanno usate come nomi di attributo, vedere [Parole riservate &#40;Master Data Services&#41;](reserved-words-master-data-services.md).  
   

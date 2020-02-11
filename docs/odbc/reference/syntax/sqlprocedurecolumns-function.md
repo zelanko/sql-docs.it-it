@@ -20,18 +20,18 @@ ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a869d38782478b69ce47656455c38c2b4645b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005746"
 ---
 # <a name="sqlprocedurecolumns-function"></a>Funzione SQLProcedureColumns
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 ODBC: ODBC  
+ Versione introdotta: ODBC 1,0 Standard Compliance: ODBC  
   
- **Riepilogo**  
- **SQLProcedureColumns** restituisce l'elenco dei parametri di input e output, nonché le colonne che costituiscono il set di risultati per le procedure specificate. Il driver restituisce le informazioni come set di risultati dell'istruzione specificata.  
+ **Summary**  
+ **SQLProcedureColumns** restituisce l'elenco dei parametri di input e output, nonché le colonne che costituiscono il set di risultati per le procedure specificate. Il driver restituisce le informazioni come un set di risultati nell'istruzione specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,96 +51,96 @@ SQLRETURN SQLProcedureColumns(
   
 ## <a name="arguments"></a>Argomenti  
  *StatementHandle*  
- [Input] Handle di istruzione.  
+ Input Handle di istruzione.  
   
  *CatalogName*  
- [Input] Nome del catalogo della procedura. Se un driver supporta i cataloghi per alcune procedure ma non per altri, ad esempio quando il driver recupera i dati da diversi DBMS, una stringa vuota ("") indica le procedure che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca di stringa.  
+ Input Nome del catalogo delle procedure. Se un driver supporta i cataloghi per alcune procedure ma non per altri, ad esempio quando il driver recupera dati da DBMS diversi, una stringa vuota ("") indica le procedure che non dispongono di cataloghi. *CatalogName* non può contenere un criterio di ricerca di stringhe.  
   
- Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il caso non è significativo. Se si tratta, SQL_FALSE *CatalogName* è un normale argomento; viene considerato letteralmente e relativi case è significativa. Per altre informazioni, vedere [argomenti nelle funzioni di catalogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+ Se l'attributo SQL_ATTR_METADATA_ID Statement è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il case non è significativo. Se è SQL_FALSE, *CatalogName* è un argomento normale; viene trattato letteralmente e il suo caso è significativo. Per ulteriori informazioni, vedere [arguments in Catalog Functions](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  *NameLength1*  
- [Input] Lunghezza in caratteri della **CatalogName*.  
+ Input Lunghezza in caratteri di **CatalogName*.  
   
  *SchemaName*  
- [Input] Criterio di ricerca di stringa per i nomi dello schema di procedura. Se un driver supporta gli schemi per alcune procedure ma non per altri, ad esempio quando il driver recupera i dati da diversi DBMS, una stringa vuota ("") indica le procedure che non dispongono degli schemi.  
+ Input Modello di ricerca di stringhe per i nomi degli schemi di procedura. Se un driver supporta schemi per alcune procedure ma non per altri, ad esempio quando il driver recupera dati da sistemi DBMS diversi, una stringa vuota ("") indica le procedure che non dispongono di schemi.  
   
- Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il caso non è significativo. Se si tratta, SQL_FALSE *SchemaName* è un argomento di valore modello; viene considerato letteralmente e relativi case è significativa.  
+ Se l'attributo SQL_ATTR_METADATA_ID Statement è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il case non è significativo. Se è SQL_FALSE, *SchemaName* è un argomento del valore del modello; viene trattato letteralmente e il suo caso è significativo.  
   
  *NameLength2*  
- [Input] Lunghezza in caratteri della **SchemaName*.  
+ Input Lunghezza in caratteri di **SchemaName*.  
   
  *ProcName*  
- [Input] Criterio di ricerca di stringa per i nomi delle procedure.  
+ Input Modello di ricerca di stringhe per i nomi delle procedure.  
   
- Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *ProcName* viene considerato come un identificatore e il caso non è significativo. Se si tratta, SQL_FALSE *ProcName* è un argomento di valore modello; viene considerato letteralmente e relativi case è significativa.  
+ Se l'attributo SQL_ATTR_METADATA_ID Statement è impostato su SQL_TRUE, *ProcName* viene considerato come un identificatore e il case non è significativo. Se è SQL_FALSE, *ProcName* è un argomento del valore del modello; viene trattato letteralmente e il suo caso è significativo.  
   
  *NameLength3*  
- [Input] Lunghezza in caratteri della **ProcName*.  
+ Input Lunghezza in caratteri di **ProcName*.  
   
  *ColumnName*  
- [Input] Criterio di ricerca di stringa dei nomi di colonna.  
+ Input Modello di ricerca di stringhe per i nomi di colonna.  
   
- Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *ColumnName* viene considerato come un identificatore e il caso non è significativo. Se si tratta, SQL_FALSE *ColumnName* è un argomento di valore modello; viene considerato letteralmente e relativi case è significativa.  
+ Se l'attributo SQL_ATTR_METADATA_ID Statement è impostato su SQL_TRUE, *ColumnName* viene considerato come un identificatore e il relativo case non è significativo. Se è SQL_FALSE, *ColumnName* è un argomento del valore del modello; viene trattato letteralmente e il suo caso è significativo.  
   
  *NameLength4*  
- [Input] Lunghezza in caratteri della **ColumnName*.  
+ Input Lunghezza in caratteri di **ColumnName*.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLProcedureColumns** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* SQL_HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLProcedureColumns** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti dal Driver Gestore. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
+ Quando **SQLProcedureColumns** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con *HandleType* di SQL_HANDLE_STMT e un *handle* di *statementHandle*. La tabella seguente elenca i valori SQLSTATE restituiti comunemente da **SQLProcedureColumns** e ne illustra ognuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|08S01|Errore del collegamento di comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è stato possibile prima dell'elaborazione di funzione è stata completata.|  
-|24000|Stato del cursore non valido|Il cursore è stato aperto scegliere il *StatementHandle*, e **SQLFetch** oppure **SQLFetchScroll** fosse stata chiamata. Questo errore viene restituito da Gestione Driver, se **SQLFetch** oppure **SQLFetchScroll** non restituisce SQL_NO_DATA e viene restituito dal driver se **SQLFetch** oppure **SQLFetchScroll** è stato restituito SQL_NO_DATA.<br /><br /> Un cursore è stato aperto nel *StatementHandle*, ma **SQLFetch** oppure **SQLFetchScroll** non fosse stata chiamata.|  
-|40001|Errore di serializzazione.|Il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
-|40003|Completamento dell'istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLError** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
-|HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY008|Operazione annullata|L'elaborazione asincrona è stata abilitata per il *StatementHandle*. La funzione è stata chiamata e prima esecuzione, completata **SQLCancel** oppure **SQLCancelHandle** è stato chiamato sul *StatementHandle*. Quindi la funzione è stata chiamata nuovamente sul *StatementHandle*.<br /><br /> La funzione è stata chiamata e prima esecuzione, completata **SQLCancel** o **SQLCancelHandle** è stato chiamato sul *StatementHandle* da un thread diverso in un applicazioni multithread.|  
-|HY009|Utilizzo non valido del puntatore null|L'attributo di istruzione SQL_ATTR_METADATA_ID è stato impostato su SQL_TRUE, il *CatalogName* argomento era un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce che i nomi di catalogo sono supportati.<br /><br /> (DM) l'attributo di istruzione SQL_ATTR_METADATA_ID è stato impostato su SQL_TRUE e il *SchemaName*, *ProcName*, o *ColumnName* argomento era un puntatore null.|  
-|HY010|Errore nella sequenza della funzione|(DM) a cui è stata chiamata per l'handle di connessione che è associata una funzione in modo asincrono in esecuzione la *StatementHandle*. Questa funzione aynschronous era ancora in esecuzione quando è stata chiamata la funzione SQLProcedureColumns.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per il *StatementHandle* e restituito SQL_PARAM_DATA_ È DISPONIBILE. Questa funzione è stata chiamata prima per tutti i parametri trasmessi sono stati recuperati i dati.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione, non è presente uno, il *StatementHandle* ed era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oppure **SQLSetPos** è stato chiamato per il  *StatementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dei dati è stati inviati per tutti i parametri data-at-execution o più colonne.|  
-|HY090|Lunghezza della stringa o buffer non valido|(DM) il valore di uno degli argomenti di lunghezza nome era minore di 0 ma non uguale a SQL_NTS.<br /><br /> Il valore di uno degli argomenti di lunghezza nome superato il valore di lunghezza massima consentita per il catalogo corrispondente, schema, procedure o nome di colonna.|  
-|HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettere e le funzioni di sola lettura sono consentite.|(DM) per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Funzionalità opzionale non implementata|È stato specificato un catalogo di procedure e i driver o origine dati non supporta cataloghi.<br /><br /> È stato specificato uno schema di procedure e i driver o origine dati non supporta gli schemi.<br /><br /> È stato specificato un criterio di ricerca di stringa per lo schema procedura, nome della routine o nome di colonna e l'origine dati non supporta criteri di ricerca per uno o più di questi argomenti.<br /><br /> La combinazione delle impostazioni correnti degli attributi di istruzione SQL_ATTR_CURSOR_TYPE e SQL_ATTR_CONCURRENCY non era supportata dall'origine dati o driver.<br /><br /> L'attributo di istruzione SQL_ATTR_USE_BOOKMARKS è stata impostata su SQL_UB_VARIABLE e l'attributo SQL_ATTR_CURSOR_TYPE di istruzione è stata impostata su un tipo di cursore per i quali il driver non supporta i segnalibri.|  
-|HYT00|Timeout|Il periodo di timeout è scaduto prima che l'origine dati ha restituito il set di risultati. Il periodo di timeout viene impostato tramite **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT.|  
-|HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione è scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Driver non supporta questa funzione|Il driver (DM) associato il *StatementHandle* non supporta la funzione.|  
-|IM017|Polling è disabilitato in modalità di notifica asincrona|Ogni volta che viene usato il modello di notifica, viene disabilitato il polling.|  
-|IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente in questo handle.|Se la chiamata di funzione precedente dell'handle di restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato su handle per eseguire operazioni di post-elaborazione e completare l'operazione.|  
+|01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|08S01|Errore collegamento comunicazione|Il collegamento di comunicazione tra il driver e l'origine dati a cui è stato connesso il driver non è riuscito prima del completamento dell'elaborazione della funzione.|  
+|24000|Stato del cursore non valido|Un cursore è stato aperto in *statementHandle*e **SQLFetch** o **SQLFetchScroll** è stato chiamato. Questo errore viene restituito da Gestione driver se **SQLFetch** o **SQLFetchScroll** non ha restituito SQL_NO_DATA e viene restituito dal driver se **SQLFetch** o **SQLFetchScroll** ha restituito SQL_NO_DATA.<br /><br /> Un cursore è stato aperto in *statementHandle*, ma non è stato chiamato **SQLFetch** o **SQLFetchScroll** .|  
+|40001|Errore di serializzazione|È stato eseguito il rollback della transazione a causa di un deadlock delle risorse con un'altra transazione.|  
+|40003|Completamento istruzione sconosciuto|La connessione associata non è riuscita durante l'esecuzione di questa funzione e non è possibile determinare lo stato della transazione.|  
+|HY000|Errore generale:|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLError** nel buffer * \*MessageText* descrive l'errore e la sua origine.|  
+|HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
+|HY008|Operation canceled|L'elaborazione asincrona è stata abilitata per *statementHandle*. La funzione è stata chiamata e prima del completamento dell'esecuzione è stato chiamato **SQLCancel** o **SQLCancelHandle** in *statementHandle*. La funzione è stata chiamata nuovamente in *statementHandle*.<br /><br /> La funzione è stata chiamata e prima del completamento dell'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato su *statementHandle* da un thread diverso in un'applicazione multithread.|  
+|HY009|Uso non valido del puntatore null|L'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE, l'argomento *CatalogName* è un puntatore null e il SQL_CATALOG_NAME *InfoType* restituisce i nomi dei cataloghi supportati.<br /><br /> (DM) l'attributo SQL_ATTR_METADATA_ID Statement è stato impostato su SQL_TRUE e l'argomento *SchemaName*, *ProcName*o *ColumnName* è un puntatore null.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle*. Questa funzione aynschronous era ancora in esecuzione quando è stata chiamata la funzione SQLProcedureColumns.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** è stato chiamato per *statementHandle* e restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima del recupero dei dati per tutti i parametri trasmessi.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona (non questa) per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
+|HY090|Lunghezza della stringa o del buffer non valida|(DM) il valore di uno degli argomenti della lunghezza del nome è minore di 0 ma non uguale a SQL_NTS.<br /><br /> Il valore di uno degli argomenti della lunghezza del nome supera il valore di lunghezza massima per il nome del catalogo, dello schema, della routine o della colonna corrispondente.|  
+|HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Funzionalità facoltativa non implementata|È stato specificato un catalogo delle procedure e il driver o l'origine dati non supporta i cataloghi.<br /><br /> È stato specificato uno schema di routine e il driver o l'origine dati non supporta gli schemi.<br /><br /> È stato specificato un criterio di ricerca di stringhe per lo schema della routine, il nome della procedura o il nome della colonna e l'origine dati non supporta i criteri di ricerca per uno o più di questi argomenti.<br /><br /> La combinazione delle impostazioni correnti degli attributi SQL_ATTR_CONCURRENCY e SQL_ATTR_CURSOR_TYPE istruzione non è supportata dal driver o dall'origine dati.<br /><br /> L'attributo SQL_ATTR_USE_BOOKMARKS Statement è stato impostato su SQL_UB_VARIABLE e l'attributo SQL_ATTR_CURSOR_TYPE Statement è stato impostato su un tipo di cursore per il quale il driver non supporta i segnalibri.|  
+|HYT00|Timeout|Il periodo di timeout è scaduto prima che l'origine dati restituisse il set di risultati. Il periodo di timeout viene impostato tramite **SQLSetStmtAttr**, SQL_ATTR_QUERY_TIMEOUT.|  
+|HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Il driver non supporta questa funzione|(DM) il driver associato a *statementHandle* non supporta la funzione.|  
+|IM017|Polling disabilitato in modalità di notifica asincrona|Ogni volta che viene utilizzato il modello di notifica, il polling è disabilitato.|  
+|IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente nell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, è necessario chiamare **SQLCompleteAsync** sull'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- Questa funzione viene in genere utilizzata prima dell'esecuzione dell'istruzione per recuperare informazioni sui parametri di procedure e le colonne che costituiscono il set di risultati o i set restituiti dalla procedura, se presente. Per altre informazioni, vedere [procedure](../../../odbc/reference/develop-app/procedures-odbc.md).  
+ Questa funzione viene in genere utilizzata prima dell'esecuzione dell'istruzione per recuperare informazioni sui parametri di routine e sulle colonne che costituiscono il set di risultati o i set restituiti dalla procedura, se presente. Per ulteriori informazioni, vedere [procedure](../../../odbc/reference/develop-app/procedures-odbc.md).  
   
 > [!NOTE]  
->  **SQLProcedureColumns** potrebbe non restituire tutte le colonne utilizzate da una procedura. Ad esempio, un driver potrebbe restituire solo le informazioni sui parametri usati da una procedura e non le colonne in un set di risultati che vengono generati.  
+>  **SQLProcedureColumns** potrebbe non restituire tutte le colonne utilizzate da una routine. Un driver, ad esempio, potrebbe restituire solo le informazioni sui parametri utilizzati da una stored procedure e non sulle colonne di un set di risultati che genera.  
   
- Il *SchemaName*, *ProcName*, e *ColumnName* argomenti accettano criteri di ricerca. Per altre informazioni sui pattern di ricerca validi, vedere [argomenti del valore criterio](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
+ Gli argomenti *SchemaName*, *ProcName*e *ColumnName* accettano i criteri di ricerca. Per ulteriori informazioni sui criteri di ricerca validi, vedere argomenti relativi ai [valori di pattern](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
 > [!NOTE]  
->  Per altre informazioni su uso generale, gli argomenti e i dati restituiti di funzioni di catalogo ODBC, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  
+>  Per ulteriori informazioni sull'utilizzo generale, sugli argomenti e sui dati restituiti delle funzioni del catalogo ODBC, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- **SQLProcedureColumns** restituisce i risultati come un set di risultati standard, ordinato in base PROCEDURE_CAT, PROCEDURE_SCHEM, PROCEDURE_NAME e COLUMN_TYPE. Vengono restituiti i nomi di colonna per ogni procedura nell'ordine seguente: il nome del valore restituito, i nomi di ogni parametro nella chiamata di procedura (nell'ordine di chiamata) e quindi i nomi di ogni colonna nel set di risultati restituito dalla procedura (nell'ordine delle colonne).  
+ **SQLProcedureColumns** restituisce i risultati come set di risultati standard, ordinati in base PROCEDURE_CAT, PROCEDURE_SCHEM, PROCEDURE_NAME e COLUMN_TYPE. I nomi di colonna vengono restituiti per ogni routine nell'ordine seguente: il nome del valore restituito, i nomi di ogni parametro nella chiamata di procedura (in ordine di chiamata) e quindi i nomi di ogni colonna nel set di risultati restituito dalla procedura (in ordine di colonna).  
   
- Le applicazioni devono essere associati a colonne specifiche del driver relativa alla fine del set di risultati. Per altre informazioni, vedere [i dati restituiti dalle funzioni catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
+ Le applicazioni devono associare le colonne specifiche del driver rispetto alla fine del set di risultati. Per ulteriori informazioni, vedere [dati restituiti da funzioni di catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
- Per determinare la lunghezza effettiva delle colonne PROCEDURE_CAT, PROCEDURE_SCHEM, PROCEDURE_NAME e COLUMN_NAME, un'applicazione può chiamare **SQLGetInfo** con il SQL_MAX_ SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, PROCEDURE_NAME_LEN e SQL_MAX_COLUMN_NAME_LEN opzioni.  
+ Per determinare le lunghezze effettive delle colonne PROCEDURE_CAT, PROCEDURE_SCHEM, PROCEDURE_NAME e COLUMN_NAME, un'applicazione può chiamare **SQLGetInfo** con le opzioni SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_PROCEDURE_NAME_LEN e SQL_MAX_COLUMN_NAME_LEN.  
   
- Le colonne seguenti sono state rinominate per ODBC 3. *x*. Le modifiche ai nomi di colonna non influenzano la compatibilità con le versioni precedenti poiché nelle applicazioni associati dal numero di colonna.  
+ Le colonne seguenti sono state rinominate per ODBC 3. *x*. Le modifiche al nome di colonna non influiscono sulla compatibilità con le versioni precedenti perché le applicazioni vengono associate per numero di colonna  
   
-|Colonna ODBC 2.0|ODBC 3. *x* colonna|  
+|ODBC 2,0-colonna|ODBC 3. colonna *x*|  
 |---------------------|-----------------------|  
 |PROCEDURE_QUALIFIER|PROCEDURE_CAT|  
-|PROCEDURE _OWNER|PROCEDURE_SCHEM|  
+|_OWNER PROCEDURE|PROCEDURE_SCHEM|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  
 |SCALE|DECIMAL_DIGITS|  
 |RADIX|NUM_PREC_RADIX|  
   
- Le colonne seguenti sono stati aggiunti al set di risultati restituito da **SQLProcedureColumns** per ODBC 3. *x*:  
+ Le colonne seguenti sono state aggiunte al set di risultati restituito da **SQLProcedureColumns** per ODBC 3. *x*:  
   
 -   COLUMN_DEF  
   
@@ -152,43 +152,43 @@ SQLRETURN SQLProcedureColumns(
   
 -   IS_NULLABLE  
   
- Nella tabella seguente elenca le colonne nel set di risultati. Le colonne aggiuntive oltre a 19 (IS_NULLABLE) colonna possono essere definite dal driver. Un'applicazione deve accedere a colonne specifiche del driver procede a ritroso dalla fine del set di risultati anziché specificare una posizione ordinale esplicita. Per altre informazioni, vedere [i dati restituiti dalle funzioni catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
+ Nella tabella seguente sono elencate le colonne del set di risultati. È possibile definire colonne aggiuntive oltre la colonna 19 (IS_NULLABLE) dal driver. Un'applicazione deve ottenere l'accesso alle colonne specifiche del driver eseguendo il conteggio a discesa dalla fine del set di risultati anziché specificare una posizione ordinale esplicita. Per ulteriori informazioni, vedere [dati restituiti da funzioni di catalogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nome colonna|Numero colonna|Tipo di dati|Commenti|  
+|Nome colonna|Numero di colonna|Tipo di dati|Commenti|  
 |-----------------|-------------------|---------------|--------------|  
-|PROCEDURE_CAT (ODBC 2.0)|1|Varchar|Nome del catalogo della procedura. NULL se non applicabile all'origine dati. Se un driver supporta i cataloghi per alcune procedure ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per tutte le procedure che non dispone di cataloghi.|  
-|PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|Nome dello schema della procedura. NULL se non applicabile all'origine dati. Se un driver supporta gli schemi per alcune procedure ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per tutte le procedure che non dispongono degli schemi.|  
-|PROCEDURE_NAME (ODBC 2.0)|3|Non NULL varchar|Nome della procedura. Per una routine che non dispone di un nome, viene restituita una stringa vuota.|  
-|COLUMN_NAME (ODBC 2.0)|4|Non NULL varchar|Nome colonna della procedura. Il driver restituisce una stringa vuota per una colonna di procedure che non dispone di un nome.|  
-|COLUMN_TYPE (ODBC 2.0)|5|Smallint non NULL|Definisce la colonna di procedure come parametro o una colonna del set di risultati:<br /><br /> SQL_PARAM_TYPE_UNKNOWN: Colonna della procedura è un parametro il cui tipo è sconosciuto. ODBC (1.0)<br /><br /> SQL_PARAM_INPUT: Colonna della procedura è un parametro di input. ODBC (1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT: Colonna della procedura è un parametro di input/output. ODBC (1.0)<br /><br /> SQL_PARAM_OUTPUT: Colonna della procedura è un parametro di output. (ODBC 2.0)<br /><br /> SQL_RETURN_VALUE: Colonna della procedura è il valore restituito della procedura. (ODBC 2.0)<br /><br /> SQL_RESULT_COL: Colonna della procedura è una colonna del set di risultati. ODBC (1.0)|  
-|DATA_TYPE (ODBC 2.0)|6|Smallint non NULL|Tipo di dati SQL. Può trattarsi di un tipo di dati SQL ODBC o un tipo di dati specifici del driver SQL. Per i tipi di dati datetime e interval, questa colonna restituisce i tipi di dati concisa (ad esempio, SQL_TYPE_TIME o SQL_INTERVAL_YEAR_TO_MONTH). Per un elenco di tipi di dati SQL ODBC validi, vedere [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) nell'appendice d: Tipi di dati. Per informazioni sui tipi di dati specifici del driver SQL, vedere la documentazione del driver.|  
-|TYPE_NAME (ODBC 2.0)|7|Non NULL varchar|Nome del tipo di dati dipende dall'origine dati; ad esempio, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" o "() CHAR FOR BIT DATA".|  
-|COLUMN_SIZE (ODBC 2.0)|8|Integer|La dimensione della colonna della colonna della procedura sull'origine dati. Viene restituito NULL per i tipi di dati in cui le dimensioni di colonna non sono applicabile. Per altre informazioni riguardanti la precisione, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) nell'appendice d: Tipi di dati.|  
-|BUFFER_LENGTH (ODBC 2.0)|9|Integer|La lunghezza in byte dei dati trasferiti in un' **SQLGetData** oppure **SQLFetch** operazione se si specifica SQL_C_DEFAULT. Per i dati numerici, questa dimensione può essere diversa rispetto alla dimensione dei dati archiviati nell'origine dati. Per altre informazioni, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), nell'appendice d: Tipi di dati.|  
-|DECIMAL_DIGITS (ODBC 2.0)|10|Smallint|Le cifre decimali della colonna della procedura sull'origine dati. Viene restituito NULL per i tipi di dati in cui cifre decimali non sono applicabile. Per altre informazioni relative al cifre decimali, vedere [le dimensioni di colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), nell'appendice d: Tipi di dati.|  
-|NUM_PREC_RADIX (ODBC 2.0)|11|Smallint|Per i tipi di dati numerici, 10 o 2.<br /><br /> Se 10, i valori di COLUMN_SIZE e DECIMAL_DIGITS assegnare il numero di cifre decimali è consentita per la colonna. Ad esempio, una colonna DECIMAL(12,5) restituirebbe un NUM_PREC_RADIX pari a 10, un valore di COLUMN_SIZE pari a 12 e un DECIMAL_DIGITS pari a 5; una colonna di tipo FLOAT potrebbe restituire un NUM_PREC_RADIX pari a 10, un valore di COLUMN_SIZE 15 e DECIMAL_DIGITS NULL.<br /><br /> Se è 2, i valori di COLUMN_SIZE e DECIMAL_DIGITS assegnare il numero di bit consentiti nella colonna. Ad esempio, una colonna di tipo FLOAT potrebbe restituire un NUM_PREC_RADIX 2, un valore di COLUMN_SIZE pari a 53 e DECIMAL_DIGITS NULL.<br /><br /> Viene restituito NULL per i tipi di dati in cui NUM_PREC_RADIX non è applicabile.|  
-|NULLABLE (ODBC 2.0)|12|Smallint non NULL|Indica se la colonna di routine accetta un valore NULL:<br /><br /> SQL_NO_NULLS: Colonna della procedura non accetta valori NULL.<br /><br /> SQL_NULLABLE: Colonna della procedura accetta valori NULL.<br /><br /> SQL_NULLABLE_UNKNOWN: Non è noto se la colonna procedura accetta valori NULL.|  
-|SEZIONE OSSERVAZIONI (ODBC 2.0)|13|Varchar|Descrizione della colonna della procedura.|  
-|COLUMN_DEF (ODBC 3.0)|14|Varchar|Valore predefinito della colonna.<br /><br /> Se è stato specificato NULL come valore predefinito, questa colonna è la parola NULL, non è racchiuso tra virgolette. Se il valore predefinito non può essere rappresentato senza troncamento, questa colonna contiene troncata, con nessuna inclusione tra virgolette singole. Se è stato specificato alcun valore predefinito, questa colonna è NULL.<br /><br /> Il valore di COLUMN_DEF può essere utilizzato nella generazione di una nuova definizione di colonna, tranne quando contiene il valore di TRONCAMENTO.|  
-|SQL_DATA_TYPE (ODBC 3.0)|15|Smallint non NULL|Il valore del tipo di dati SQL perché viene visualizzato nel campo SQL_DESC_TYPE del descrittore. Questa colonna corrisponde alla colonna DATA_TYPE, tranne i tipi di dati Data/ora e intervallo.<br /><br /> Per i tipi di dati datetime e interval, il campo SQL_DATA_TYPE nel set di risultati restituirà SQL_DATETIME o SQL_INTERVAL, e il campo SQL_DATETIME_SUB restituirà il codice secondario per il tipo di dati datetime o intervallo specifico. (Vedere [appendice d: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).)|  
-|SQL_DATETIME_SUB (ODBC 3.0)|16|Smallint|Il codice di sottotipo per i tipi di dati Data/ora e intervallo. Per gli altri tipi di dati in questa colonna viene restituito NULL.|  
-|CHAR_OCTET_LENGTH (ODBC 3.0)|17|Integer|Colonna di tipo la lunghezza massima in byte di un carattere o dati binari. Per gli tutti gli altri tipi di dati, il valore di questa colonna è NULL.|  
-|ORDINAL_POSITION (ODBC 3.0)|18|Integer non NULL|Per i parametri inpui e outpui, la posizione ordinale del parametro nella definizione della stored procedure (parametro in ordine crescente in, a partire da 1). Per un valore restituito (se presente), viene restituito 0. Per le colonne di set di risultati, imposta la posizione ordinale della colonna nel risultato, con la prima colonna nel set in fase di risultati numero 1. Se sono presenti più set di risultati, le posizioni ordinali di colonna vengono restituite in modo specifico del driver.|  
-|IS_NULLABLE (ODBC 3.0)|19|Varchar|"NO" se la colonna non ammette valori null.<br /><br /> "Sì" se la colonna ammette valori null.<br /><br /> Quando non è noto se i valori Null sono supportati, in questa colonna viene restituita una stringa di lunghezza zero.<br /><br /> Per determinare il supporto di valori Null vengono seguite le regole ISO. In un sistema DBMS conforme a ISO SQL non vengono restituite stringhe vuote.<br /><br /> Il valore restituito per questa colonna è diverso dal valore restituito per la colonna NULLABLE. (Vedere la descrizione della colonna che ammette valori null).|  
+|PROCEDURE_CAT (ODBC 2,0)|1|Varchar|Nome catalogo procedure; NULL se non è applicabile all'origine dati. Se un driver supporta i cataloghi per alcune procedure ma non per altri, ad esempio quando il driver recupera dati da DBMS diversi, restituisce una stringa vuota ("") per le procedure che non dispongono di cataloghi.|  
+|PROCEDURE_SCHEM (ODBC 2,0)|2|Varchar|Nome schema procedura; NULL se non è applicabile all'origine dati. Se un driver supporta schemi per alcune procedure ma non per altri, ad esempio quando il driver recupera dati da sistemi DBMS diversi, restituisce una stringa vuota ("") per le procedure che non dispongono di schemi.|  
+|PROCEDURE_NAME (ODBC 2,0)|3|Varchar NOT NULL|Nome della procedura. Viene restituita una stringa vuota per una routine che non ha un nome.|  
+|COLUMN_NAME (ODBC 2,0)|4|Varchar NOT NULL|Nome della colonna della procedura. Il driver restituisce una stringa vuota per una colonna di routine che non ha un nome.|  
+|COLUMN_TYPE (ODBC 2,0)|5|Smallint non NULL|Definisce la colonna procedure come parametro o colonna del set di risultati:<br /><br /> SQL_PARAM_TYPE_UNKNOWN: la colonna procedure è un parametro il cui tipo è sconosciuto. (ODBC 1,0)<br /><br /> SQL_PARAM_INPUT: la colonna procedure è un parametro di input. (ODBC 1,0)<br /><br /> SQL_PARAM_INPUT_OUTPUT: la colonna procedure è un parametro di input/output. (ODBC 1,0)<br /><br /> SQL_PARAM_OUTPUT: la colonna procedure è un parametro di output. (ODBC 2,0)<br /><br /> SQL_RETURN_VALUE: la colonna procedure è il valore restituito della stored procedure. (ODBC 2,0)<br /><br /> SQL_RESULT_COL: la colonna procedure è una colonna del set di risultati. (ODBC 1,0)|  
+|DATA_TYPE (ODBC 2,0)|6|Smallint non NULL|Tipo di dati SQL. Può trattarsi di un tipo di dati SQL ODBC o di un tipo di dati SQL specifico del driver. Per i tipi di dati DateTime e Interval, questa colonna restituisce i tipi di dati concisi, ad esempio SQL_TYPE_TIME o SQL_INTERVAL_YEAR_TO_MONTH. Per un elenco dei tipi di dati ODBC SQL validi, vedere tipi di dati [SQL](../../../odbc/reference/appendixes/sql-data-types.md) in Appendice D: tipi di dati. Per informazioni sui tipi di dati SQL specifici del driver, vedere la documentazione del driver.|  
+|TYPE_NAME (ODBC 2,0)|7|Varchar NOT NULL|Nome del tipo di dati dipendente dall'origine dati; ad esempio, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" o "CHAR () FOR BIT DATA".|  
+|COLUMN_SIZE (ODBC 2,0)|8|Integer|Dimensione della colonna della procedura nell'origine dati. Viene restituito NULL per i tipi di dati in cui le dimensioni della colonna non sono applicabili. Per ulteriori informazioni sulla precisione, vedere [dimensioni della colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendice D: tipi di dati.|  
+|BUFFER_LENGTH (ODBC 2,0)|9|Integer|Lunghezza in byte dei dati trasferiti in un'operazione **SQLGetData** o **SQLFetch** se viene specificato SQL_C_DEFAULT. Per i dati numerici, questa dimensione può essere diversa da quella dei dati archiviati nell'origine dati. Per ulteriori informazioni, vedere [dimensioni della colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), in Appendice D: tipi di dati.|  
+|DECIMAL_DIGITS (ODBC 2,0)|10|Smallint|Cifre decimali della colonna della procedura nell'origine dati. Viene restituito NULL per i tipi di dati in cui le cifre decimali non sono applicabili. Per ulteriori informazioni sulle cifre decimali, vedere [dimensioni della colonna, cifre decimali, lunghezza dell'ottetto di trasferimento e dimensioni di visualizzazione](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md), in Appendice D: tipi di dati.|  
+|NUM_PREC_RADIX (ODBC 2,0)|11|Smallint|Per i tipi di dati numerici, 10 o 2.<br /><br /> Se è 10, i valori in COLUMN_SIZE e DECIMAL_DIGITS indicano il numero di cifre decimali consentito per la colonna. Una colonna DECIMAL (12, 5) restituisce ad esempio un NUM_PREC_RADIX di 10, un COLUMN_SIZE di 12 e un DECIMAL_DIGITS di 5. una colonna FLOAT può restituire un NUM_PREC_RADIX di 10, un COLUMN_SIZE di 15 e un DECIMAL_DIGITS NULL.<br /><br /> Se è 2, i valori in COLUMN_SIZE e DECIMAL_DIGITS forniscono il numero di bit consentiti nella colonna. Una colonna FLOAT, ad esempio, può restituire un NUM_PREC_RADIX di 2, una COLUMN_SIZE di 53 e un DECIMAL_DIGITS NULL.<br /><br /> Viene restituito NULL per i tipi di dati in cui NUM_PREC_RADIX non è applicabile.|  
+|NULLABLE (ODBC 2,0)|12|Smallint non NULL|Indica se la colonna della procedura accetta un valore NULL:<br /><br /> SQL_NO_NULLS: la colonna procedure non accetta valori NULL.<br /><br /> SQL_NULLABLE: la colonna procedure accetta i valori NULL.<br /><br /> SQL_NULLABLE_UNKNOWN: non è noto se la colonna della procedura accetta valori NULL.|  
+|OSSERVAZIONI (ODBC 2,0)|13|Varchar|Descrizione della colonna della procedura.|  
+|COLUMN_DEF (ODBC 3,0)|14|Varchar|Valore predefinito della colonna.<br /><br /> Se è stato specificato NULL come valore predefinito, questa colonna è la parola NULL, non racchiusa tra virgolette. Se il valore predefinito non può essere rappresentato senza troncamento, la colonna contiene TRONCAta, senza virgolette singole di inclusione. Se non è stato specificato alcun valore predefinito, questa colonna è NULL.<br /><br /> Il valore di COLUMN_DEF può essere utilizzato per generare una nuova definizione di colonna, tranne quando contiene il valore TRONCAto.|  
+|SQL_DATA_TYPE (ODBC 3,0)|15|Smallint non NULL|Il valore del tipo di dati SQL visualizzato nel campo SQL_DESC_TYPE del descrittore. Questa colonna corrisponde alla colonna DATA_TYPE, ad eccezione dei tipi di dati DateTime e Interval.<br /><br /> Per i tipi di dati DateTime e Interval, il campo SQL_DATA_TYPE nel set di risultati restituirà SQL_INTERVAL o SQL_DATETIME e il campo SQL_DATETIME_SUB restituirà il sottocodice per l'intervallo o il tipo di dati DateTime specifico. Vedere [Appendice D: tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
+|SQL_DATETIME_SUB (ODBC 3,0)|16|Smallint|Codice del sottotipo per i tipi di dati DateTime e Interval. Per gli altri tipi di dati in questa colonna viene restituito NULL.|  
+|CHAR_OCTET_LENGTH (ODBC 3,0)|17|Integer|Lunghezza massima in byte di una colonna con tipo di dati character o Binary. Per gli tutti gli altri tipi di dati, il valore di questa colonna è NULL.|  
+|ORDINAL_POSITION (ODBC 3,0)|18|Integer non NULL|Per i parametri di input e di output, la posizione ordinale del parametro nella definizione della procedura (in ordine crescente del parametro, a partire da 1). Per un valore restituito (se presente), viene restituito 0. Per le colonne del set di risultati, la posizione ordinale della colonna nel set di risultati, con la prima colonna del set di risultati che è il numero 1. Se sono presenti più set di risultati, le posizioni ordinali di colonna vengono restituite in modo specifico del driver.|  
+|IS_NULLABLE (ODBC 3,0)|19|Varchar|"NO" se la colonna non include valori NULL.<br /><br /> "YES" se la colonna può includere valori NULL.<br /><br /> Quando non è noto se i valori Null sono supportati, in questa colonna viene restituita una stringa di lunghezza zero.<br /><br /> Per determinare il supporto di valori Null vengono seguite le regole ISO. In un sistema DBMS conforme a ISO SQL non vengono restituite stringhe vuote.<br /><br /> Il valore restituito per questa colonna è diverso dal valore restituito per la colonna NULLABLE. (Vedere la descrizione della colonna NULLABLE).|  
   
 ## <a name="code-example"></a>Esempio di codice  
- Visualizzare [le chiamate di procedura](../../../odbc/reference/develop-app/procedure-calls.md).  
+ Vedere [chiamate di routine](../../../odbc/reference/develop-app/procedure-calls.md).  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
 |Associazione di un buffer a una colonna in un set di risultati|[Funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Annullare l'elaborazione di istruzione|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Il recupero di una singola riga o un blocco di dati in una direzione di tipo forward-only|[Funzione SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|Imposta il recupero di un blocco di dati o lo scorrimento di un risultato|[Funzione SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Annullamento dell'elaborazione di istruzioni|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Recupero di una singola riga o di un blocco di dati in una direzione di sola trasmissione|[Funzione SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
+|Recupero di un blocco di dati o scorrimento di un set di risultati|[Funzione SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Restituzione di un elenco di procedure in un'origine dati|[Funzione SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

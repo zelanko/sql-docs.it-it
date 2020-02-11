@@ -16,14 +16,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198418"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
-  Il*controllo* di un'istanza del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o di un database individuale comporta il rilevamento e la registrazione di eventi che si verificano nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di creare controlli del server che possono contenere specifiche del controllo del server per gli eventi a livello di server e specifiche del controllo del database per gli eventi a livello di database. Gli eventi controllati possono essere scritti nei registri eventi o nei file di controllo.  
+  Il*controllo* di un'istanza del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o di un database individuale comporta il rilevamento e la registrazione di eventi che si verificano nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di creare controlli del server che possono contenere specifiche del controllo del server per gli eventi a livello di server e specifiche del controllo del database per gli eventi a livello di database. Gli eventi controllati possono essere scritti nei log eventi o in file di controllo.  
   
  Per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sono disponibili numerosi livelli di controllo, a seconda dei requisiti legislativi o standard previsti per la propria installazione. In[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit sono disponibili gli strumenti e i processi necessari per abilitare, archiviare e visualizzare controlli in vari oggetti server e di database.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "68198418"
 ## <a name="sql-server-audit-components"></a>Componenti di SQL Server Audit  
  Per *controllo* si intende la combinazione di più elementi in un unico pacchetto per un gruppo specifico di azioni server o del database. Tramite la combinazione dei componenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit viene generato un output denominato controllo, così come tramite la combinazione della definizione del report con elementi grafici e dati viene generato un report.  
   
- Per creare un controllo, in[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit vengono usati gli *eventi estesi* . Per ulteriori informazioni sugli eventi estesi, vedere [eventi estesi](../../extended-events/extended-events.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]audit utilizza *gli eventi estesi* per semplificare la creazione di un controllo. Per ulteriori informazioni sugli eventi estesi, vedere [eventi estesi](../../extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
- L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli.  
+ L'oggetto di *controllo SQL Server* raccoglie una singola istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli.  
   
  Quando si definisce un controllo, è necessario specificare il percorso per l'output dei risultati, ovvero la destinazione del controllo. Il controllo viene creato con stato *disabilitato* e non controlla alcuna azione in modo automatico. In seguito all'abilitazione del controllo, la relativa destinazione riceve dati dal controllo stesso.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68198418"
 ### <a name="database-audit-specification"></a>Specifica controllo database  
  Anche l'oggetto *specifica controllo database* appartiene a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit. È possibile creare una specifica del controllo del database per ogni database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e per ogni controllo.  
   
- Nella specifica del controllo del database vengono raccolte azioni di controllo a livello di database generate dalla funzionalità degli eventi estesi. A questa specifica è possibile aggiungere gruppi di azioni di controllo o eventi di controllo. Gli*eventi di controllo* sono le azioni atomiche che possono essere controllate dal motore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mentre i*gruppi di azioni di controllo* sono gruppi predefiniti di azioni. Sia gli eventi di controllo che i gruppi di azioni si trovano nell'ambito del database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tali azioni vengono inviate al controllo che le registra nella destinazione. In una specifica del controllo di un database utente non includere oggetti con ambito server, ad esempio viste di sistema.  
+ Nella specifica del controllo del database vengono raccolte azioni di controllo a livello di database generate dalla funzionalità degli eventi estesi. A questa specifica è possibile aggiungere gruppi di azioni di controllo o eventi di controllo. Gli *eventi di controllo* sono le azioni atomiche che possono essere controllate [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dal motore. I gruppi di azioni di *controllo* sono gruppi predefiniti di azioni. Sia gli eventi di controllo che i gruppi di azioni si trovano nell'ambito del database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Tali azioni vengono inviate al controllo che le registra nella destinazione. In una specifica del controllo di un database utente non includere oggetti con ambito server, ad esempio viste di sistema.  
   
  I gruppi di azioni di controllo a livello di database e le azioni di controllo sono descritti nell'argomento [Azioni e gruppi di azioni di SQL Server Audit](sql-server-audit-action-groups-and-actions.md).  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68198418"
 > [!IMPORTANT]  
 >  Qualsiasi utente autenticato può leggere e scrivere nel registro eventi applicazioni di Windows, per cui sono necessarie autorizzazioni inferiori rispetto al registro eventi di sicurezza di Windows e risulta pertanto meno sicuro di quest'ultimo.  
   
- Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) Nelle [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, è possibile impostare più granulare **applicazione generata** criterio dalla riga di comando usando il programma criteri di controllo (`AuditPol.exe)`. Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](https://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](https://go.microsoft.com/fwlink/?LinkId=101455). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
+ Per scrivere nel registro eventi di sicurezza di Windows, è necessario che l'account di servizio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga aggiunto ai criteri **Generazione controlli di sicurezza** . Per impostazione predefinita, gli account di sistema locale, Servizio Locale e Servizio di rete appartengono a tali criteri. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) È inoltre necessario che i criteri di sicurezza **Controlla accesso agli oggetti** siano abilitati sia per **Esito positivo** che per **Esito negativo**. Questa impostazione può essere configurata tramite lo snap-in dei criteri di sicurezza (secpol.msc) In [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, è possibile impostare i criteri più granulari **generati dall'applicazione** dalla riga di comando tramite il programma criteri di`AuditPol.exe)`controllo (. Per altre informazioni sulla procedura per abilitare la scrittura nel registro di protezione di Windows, vedere [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](write-sql-server-audit-events-to-the-security-log.md). Per ulteriori informazioni sul programma Auditpol.exe, vedere l'articolo 921469 della Microsoft Knowledge Base, [Utilizzo dei Criteri di gruppo per configurare impostazioni di controllo della sicurezza dettagliate](https://support.microsoft.com/kb/921469/). I registri eventi di Windows sono globali nel sistema operativo Windows. Per ulteriori informazioni sui registri eventi di Windows, vedere la pagina relativa ai [cenni preliminari sul Visualizzatore eventi](https://go.microsoft.com/fwlink/?LinkId=101455). Se sono necessarie autorizzazioni più specifiche sul controllo, utilizzare la destinazione del file binario.  
   
  Quando si salvano informazioni di controllo in un file, per contribuire a impedirne l'alterazione, è possibile limitare l'accesso al percorso del file nei modi seguenti:  
   
@@ -71,7 +71,8 @@ ms.locfileid: "68198418"
   
 -   I lettori di controllo autorizzati a leggere i file di controllo devono disporre dell'autorizzazione in lettura.  
   
- Se dispongono dell'autorizzazione, gli altri utenti di Windows possono leggere il file di controllo anche quando si verifica un'operazione di scrittura in un file da parte del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../../includes/ssde-md.md)] non accetta un blocco esclusivo che impedisce le operazioni di lettura.  
+ Se dispongono dell'autorizzazione, gli altri utenti di Windows possono leggere il file di controllo anche quando si verifica un'operazione di scrittura in un file da parte del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] . 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] non accetta un blocco esclusivo che impedisce le operazioni di lettura.  
   
  Poiché [!INCLUDE[ssDE](../../../includes/ssde-md.md)] può accedere al file, gli accessi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che dispongono dell'autorizzazione CONTROL SERVER possono utilizzare [!INCLUDE[ssDE](../../../includes/ssde-md.md)] per accedere ai file di controllo. Per registrare un utente che sta leggendo il file di controllo, definire un controllo in master.sys.fn_get_audit_file. In tal modo viene registrato l'accesso al file di controllo tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]effettuato dagli account di accesso dotati dell'autorizzazione CONTROL SERVER.  
   
@@ -119,14 +120,14 @@ ms.locfileid: "68198418"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Mirroring del database e SQL Server Audit  
  Un database che dispone di una specifica del controllo del database definita e che utilizza il mirroring del database includerà la specifica del controllo del database. Per funzionare correttamente sull'istanza SQL Server con mirroring, è necessario che siano configurati gli elementi seguenti:  
   
--   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Questa impostazione può essere configurata usando il comando CREATE AUDIT WITH GUID`=` *\<GUID controllo del Server di origine*>.  
+-   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Questa configurazione può essere configurata tramite il comando Crea controllo`=`con*\<GUID GUID dal> di controllo del server di origine* .  
   
 -   Per le destinazioni del file binario, l'account di servizio del server mirror deve disporre delle autorizzazioni appropriate per il percorso in cui verrà scritto l'itinerario di controllo.  
   
 -   Per le destinazioni del registro eventi di Windows, i criteri di sicurezza nel computer in cui si trova il server mirror devono consentire all'account di servizio di accedere al registro eventi applicazioni o di sicurezza.  
   
 ### <a name="auditing-administrators"></a>Controllo degli amministratori  
- I membri del `sysadmin` ruolo predefinito del server vengono identificati come i **dbo** utente in ogni database. Per controllare le azioni degli amministratori, controllare le azioni dell'utente **dbo** .  
+ I membri del `sysadmin` ruolo predefinito del server vengono identificati come utente **dbo** in ogni database. Per controllare le azioni degli amministratori, controllare le azioni dell'utente **dbo** .  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>Creazione e gestione di controlli con Transact-SQL  
  È possibile utilizzare istruzioni DDL, DMV e funzioni, nonché viste del catalogo per implementare tutti gli aspetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.  
@@ -136,11 +137,11 @@ ms.locfileid: "68198418"
   
 |||  
 |-|-|  
-|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CREATE SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREA CONTROLLO SERVER](/sql/t-sql/statements/create-server-audit-transact-sql)|  
+|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CREA SPECIFICA CONTROLLO SERVER](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
 |[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
-|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[ELIMINA CONTROLLO SERVER](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
+|[CREA SPECIFICA CONTROLLO DATABASE](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[ELIMINA SPECIFICA CONTROLLO SERVER](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>Viste e funzioni dinamiche  
  Nella tabella seguente vengono elencate le viste e le funzioni dinamiche che è possibile utilizzare per il controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -157,14 +158,14 @@ ms.locfileid: "68198418"
   
 |Viste del catalogo|Descrizione|  
 |-------------------|-----------------|  
-|[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
+|[sys. database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server per tutti i database.|  
 |[sys.server_audits](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)|Contiene una riga per ogni controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
 |[sys.server_audit_specifications](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)|Contiene informazioni sulle specifiche del controllo del server in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
-|[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contiene informazioni sui dettagli (azioni) delle specifiche del controllo del server in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
+|[sys. server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contiene informazioni sui dettagli (azioni) delle specifiche del controllo del server in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|Contiene informazioni estese sul tipo di controllo dei file in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  A ogni funzionalità e comando per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit sono associati requisiti di autorizzazione singoli.  
   
  Per creare, modificare o eliminare un controllo del server o una specifica del controllo del server, le entità server devono disporre dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER. Per creare, modificare o eliminare una specifica del controllo del database, le entità di database devono disporre dell'autorizzazione ALTER ANY DATABASE AUDIT o dell'autorizzazione ALTER o CONTROL per il database. Le entità devono inoltre disporre dell'autorizzazione necessaria per connettersi al database o dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER.  
@@ -186,25 +187,26 @@ ms.locfileid: "68198418"
  Per altre informazioni su come concedere diritti e autorizzazioni, vedere [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
 > [!CAUTION]  
->  Le entità nel ruolo sysadmin possono alterare qualsiasi componente del controllo, mentre quelle nel ruolo db_owner possono alterare le specifiche del controllo in un database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit convaliderà una situazione in cui un accesso che crea o modifica una specifica del controllo dispone almeno dell'autorizzazione ALTER ANY DATABASE AUDIT, ma non esegue alcuna convalida quando si collega un database. È necessario presupporre che tutte le specifiche del controllo del database siano attendibile come le entità nel ruolo sysadmin o db_owner.  
+>  Le entità nel ruolo sysadmin possono alterare qualsiasi componente del controllo, mentre quelle nel ruolo db_owner possono alterare le specifiche del controllo in un database. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit convaliderà una situazione in cui un accesso che crea o modifica una specifica del controllo dispone almeno dell'autorizzazione ALTER ANY DATABASE AUDIT, ma non esegue alcuna convalida quando si collega un database. È necessario presupporre che tutte le specifiche del controllo del database siano attendibile come le entità nel ruolo sysadmin o db_owner.  
   
 ## <a name="related-tasks"></a>Attività correlate  
  [Creazione di un controllo del server e di una specifica del controllo del server](create-a-server-audit-and-server-audit-specification.md)  
   
  [Creazione di un controllo del server e di una specifica del controllo del database](create-a-server-audit-and-database-audit-specification.md)  
   
- [Visualizzazione di un log di controllo di SQL Server](view-a-sql-server-audit-log.md)  
+ [Visualizzazione di un log di controllo SQL Server](view-a-sql-server-audit-log.md)  
   
  [Scrittura di eventi di controllo di SQL Server nel registro di sicurezza](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>Argomenti strettamente correlati al controllo  
- [Proprietà server &#40;pagina Sicurezza&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
+ [Proprietà Server &#40;pagina sicurezza&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
  Viene illustrato come attivare il controllo degli account di accesso per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I record di controllo vengono archiviati nel registro applicazioni di Windows.  
   
  [Opzione di configurazione del server c2 audit mode](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  Viene illustrata la modalità di controllo conforme alla sicurezza C2 in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Categoria di eventi Security Audit &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
+ [Categoria di eventi di controllo di sicurezza &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  Vengono illustrati gli eventi di controllo che è possibile utilizzare in [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. Per altre informazioni, vedere [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md).  
   
  [Traccia SQL](../../sql-trace/sql-trace.md)  
@@ -213,11 +215,11 @@ ms.locfileid: "68198418"
  [Trigger DDL](../../triggers/ddl-triggers.md)  
  Vengono illustrate le modalità di utilizzo di trigger DDL (Data Definition Language) per tenere traccia delle modifiche apportate ai database.  
   
- [Microsoft TechNet: TechCenter di SQL Server: Sicurezza e protezione di SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fornisce informazioni aggiornate sulla sicurezza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Azioni e gruppi di azioni di SQL Server Audit](sql-server-audit-action-groups-and-actions.md)   
- [Record di SQL Server Audit](sql-server-audit-records.md)  
+ [Azioni e gruppi di azioni di controllo SQL Server](sql-server-audit-action-groups-and-actions.md)   
+ [Record di controllo SQL Server](sql-server-audit-records.md)  
   
   

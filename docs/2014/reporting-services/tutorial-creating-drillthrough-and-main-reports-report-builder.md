@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b074195ecda842e0270f3cadce790be30fdce7cc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892378"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
@@ -27,15 +27,15 @@ ms.locfileid: "68892378"
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
- **Nel report drill-through si apprenderà come:**  
+ **Nel report drill-through verranno illustrate le procedure per:**  
   
-1.  [Creazione di un report matrice drill-through e di un set di dati dalla creazione guidata tabella o matrice](#DMatrixAndDataset)  
+1.  [Creare un report matrice drill-through e un set di dati da Creazione guidata tabella o matrice](#DMatrixAndDataset)  
   
     1.  [Specificare una connessione dati](#DConnection)  
   
     2.  [Creare una query MDX](#DMDXQuery)  
   
-    3.  [Organizzare i dati in stile gruppi](#DLayout)  
+    3.  [Organizzare dati in gruppi](#DLayout)  
   
     4.  [Aggiungere subtotali e totali](#DTotals)  
   
@@ -43,17 +43,17 @@ ms.locfileid: "68892378"
   
 2.  [Formattare i dati come valuta](#DFormat)  
   
-3.  [Aggiungere colonne per visualizzare i valori delle vendite in grafici sparkline](#DSparkline)  
+3.  [Aggiungere colonne per presentare i valori vendite in grafici sparkline](#DSparkline)  
   
-4.  [Aggiungi titolo rapporto con nome categoria prodotto](#DReportTitle)  
+4.  [Aggiungere un titolo report con nome Product Category](#DReportTitle)  
   
-5.  [Aggiornare le proprietà del parametro](#DParameter)  
+5.  [Aggiornare le proprietà dei parametri](#DParameter)  
   
 6.  [Salvare il report in una raccolta di SharePoint](#DSave)  
   
- **Nel report principale si apprenderà come:**  
+ **Nel report principale verranno illustrate le procedure per:**  
   
-1.  [Creare il report matrice principale e il set di dati dalla creazione guidata tabella o matrice](#MMatrixAndDataset)  
+1.  [Creare il report di matrice principale e il set di dati da Creazione guidata tabella o matrice](#MMatrixAndDataset)  
   
     1.  [Specificare una connessione dati](#MConnection)  
   
@@ -65,13 +65,13 @@ ms.locfileid: "68892378"
   
     5.  [Scegliere uno stile](#MStyle)  
   
-2.  [Rimuovere la riga del totale complessivo](#MGrandTotal)  
+2.  [Rimuovere la riga Totale complessivo](#MGrandTotal)  
   
-3.  [Configurare l'azione della casella di testo per il drill-through](#MDrillthrough)  
+3.  [Configurare la Casella di testo Azione per il drill-through](#MDrillthrough)  
   
 4.  [Sostituire i valori numerici con gli indicatori](#MIndicators)  
   
-5.  [Aggiornare le proprietà del parametro](#MParameter)  
+5.  [Aggiornare le proprietà dei parametri](#MParameter)  
   
 6.  [Aggiungere un titolo al report](#MTitle)  
   
@@ -79,17 +79,17 @@ ms.locfileid: "68892378"
   
 8.  [Eseguire i report principali e drill-through](#MRunReports)  
   
- Tempo stimato per il completamento di questa esercitazione: 30 minuti.  
+ Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Questa esercitazione richiede l'accesso al cubo vendite Contoso. Questo requisito si applica sia al drill-through che ai report principali. Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="DMatrixAndDataset"></a> 1. Creare un report drill-through da Creazione guidata tabella o matrice  
+##  <a name="DMatrixAndDataset"></a>1. creare un report drill-through da Creazione guidata tabella o matrice  
  Nella finestra di dialogo Attività iniziali, creare un report matrice tramite **Creazione guidata tabella o matrice**. Nella procedura guidata sono disponibili due modalità: progettazione report e progettazione del set di dati condivisi. In questa esercitazione si utilizzerà modalità progettazione report.  
   
 #### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
   
-1.  Fare clic sul pulsante **Start**, scegliere **programmi** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , **Generatore report**e quindi fare clic su **Generatore report**.  
+1.  Fare clic sul pulsante **Start**, scegliere **programmi**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Generatore report**e quindi fare clic su **Generatore report**.  
   
      Verrà visualizzata la finestra di dialogo **Introduzione** . Se non viene visualizzato, fare clic sul pulsante **Generatore report** , quindi su **nuovo**.  
   
@@ -97,12 +97,12 @@ ms.locfileid: "68892378"
   
 3.  Nel riquadro destro verificare che sia selezionata **Creazione guidata tabella o matrice** .  
   
-##  <a name="DConnection"></a> 1a. Specificare una connessione dati  
+##  <a name="DConnection"></a>1a. Specificare una connessione dati  
  Una connessione dati contiene le informazioni necessarie per connettersi a un'origine dati esterna, ad esempio cubo di Analysis Services o un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Per specificare una connessione dati, è possibile utilizzare un'origine dati condivisa dal server di report o creare un'origine dati incorporata che sia utilizzata solo in questo report. In questa esercitazione si utilizzerà un'origine dati incorporata. Per altre informazioni sull'uso di un'origine dati condivisa, vedere [Modalità alternative di acquisizione di una connessione dati &#40;Generatore report&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
   
-1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dati** .  
+1.  Nella pagina **Scegliere un set di dati** selezionare **Crea un set di dati**, quindi fare clic su **Avanti**. Verrà visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
 2.  Fare clic su **Nuovo**. Verrà visualizzata la finestra di dialogo **Proprietà origine dati** .  
   
@@ -110,7 +110,7 @@ ms.locfileid: "68892378"
   
 4.  In **Seleziona il tipo di connessione**, scegliere **Microsoft SQL Server Analysis Services**, quindi fare clic su **Compila**.  
   
-5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
 6.  In **Nome server**, digitare il nome di un server nel quale è installata un'istanza di Analysis Services.  
   
@@ -124,7 +124,8 @@ ms.locfileid: "68892378"
     Data Source=<servername>; Initial Catalog = Contoso  
     ```  
   
-     `<servername>` è il nome di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con installato Analysis Services.  
+     
+  `<servername>` è il nome di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con installato Analysis Services.  
   
 10. Fare clic su **Tipo credenziali**.  
   
@@ -135,15 +136,15 @@ ms.locfileid: "68892378"
   
      Viene visualizzata la pagina **Scegliere una connessione a un'origine dei dati** .  
   
-12. Per verificare che la connessione all'origine dati possa essere eseguita, fare clic su **Test connessione**.  
+12. Per verificare che la connessione all'origine dati avvenga correttamente, fare clic su **Test connessione**.  
   
-     Verrà visualizzato il messaggio **Creazione connessione completata** .  
+     Viene visualizzata la connessione al messaggio **creata correttamente** .  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 14. Fare clic su **Avanti**.  
   
-##  <a name="DMDXQuery"></a> 1b. Creare una query MDX  
+##  <a name="DMDXQuery"></a>1b. Creare una query MDX  
  In un report, è possibile utilizzare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da utilizzare solo nel report. In questa esercitazione si creerà un set di dati incorporato.  
   
 #### <a name="to-create-query-filters"></a>Per creare filtri query  
@@ -153,7 +154,7 @@ ms.locfileid: "68892378"
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    >  Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode (Passa alla modalità progettazione)](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode(Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 6 in [Per creare il set di dati](#DSkip).  
+    >  Se non si vuole creare manualmente la query MDX, fare clic sull'icona ![Passa alla modalità progettazione](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passare alla modalità progettazione"), impostare Progettazione query in modalità query, incollare la query MDX completata nella finestra di progettazione query e quindi procedere con il passaggio 6 in [Per creare il set di dati](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -167,9 +168,9 @@ ms.locfileid: "68892378"
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online**, fare clic su **Rivenditore**, quindi fare clic su **OK**.  
   
-     La query include ora un filtro per includere solo questi canali: Online e rivenditore.  
+     Ora la query include un filtro per includere solo questi canali: Online e Rivenditore.  
   
-6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
+6.  Espandere la dimensione Sales Territory, quindi trascinare Sales Territory Group nella colonna **Hierarchy** (sotto il **nome del canale**).  
   
 7.  Aprire l'elenco **Espressione filtro** , espandere **Tutte le aree di vendita**, fare clic su **America del Nord**, quindi fare clic su **OK**.  
   
@@ -208,11 +209,11 @@ ms.locfileid: "68892378"
   
 5.  Trascinare la misura Importo vendite nel riquadro dei dati, quindi posizionarlo a destra di Product Subcategory Name.  
   
-6.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)** .  
+6.  Sulla barra degli strumenti Progettazione query fare clic su **Esegui (!)**.  
   
 7.  Fare clic su **Avanti**.  
   
-##  <a name="DLayout"></a> 1c. Organizzare i dati in gruppi  
+##  <a name="DLayout"></a>1C. Organizzare i dati in gruppi  
  Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizzano dati dettagliati e dati aggregati.  
   
 #### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
@@ -238,12 +239,12 @@ ms.locfileid: "68892378"
   
 6.  Fare clic su **Avanti**.  
   
-##  <a name="DTotals"></a> 1d. Aggiungere subtotali e totali  
+##  <a name="DTotals"></a>1D. Aggiungere subtotali e totali  
  Dopo avere creato i gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare i valori di aggregazione per i campi. È anche possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Per aggiungere subtotali e totali  
   
-1.  Nella pagina **Scegliere il layout** in **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
+1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
      Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  
   
@@ -256,13 +257,13 @@ ms.locfileid: "68892378"
   
 1.  Nel riquadro Stili della pagina **scegliere uno stile** selezionare Slate.  
   
-2.  Scegliere **Fine**.  
+2.  Fare clic su **Fine**.  
   
      La tabella viene aggiunta all'area di progettazione.  
   
 3.  Fare clic su **Esegui (!)** per visualizzare un'anteprima del report.  
   
-##  <a name="DFormat"></a> 2. Formattare i dati come valuta  
+##  <a name="DFormat"></a>2. formattare i dati come valuta  
  Applicare la formattazione della valuta ai campi dell'importo vendite nel report drill-through.  
   
 #### <a name="to-format-data-as-currency"></a>Per formattare i dati come valuta  
@@ -273,7 +274,7 @@ ms.locfileid: "68892378"
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic su **Valuta**.  
   
-##  <a name="DSparkline"></a> 3. Aggiungere colonne per presentare i valori vendite in grafici sparkline  
+##  <a name="DSparkline"></a>3. aggiungere colonne per visualizzare i valori delle vendite nei grafici sparkline  
  Anziché mostrare vendite e margini di profitto come valori in valuta, il report mostra i valori in un grafico sparkline.  
   
 #### <a name="to-add-sparklines-to-columns"></a>Per aggiungere grafici sparkline alle colonne  
@@ -306,7 +307,7 @@ ms.locfileid: "68892378"
   
 13. Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
-##  <a name="DReportTitle"></a> 4. Aggiungere un titolo report con nome Product Category  
+##  <a name="DReportTitle"></a>4. aggiungere un titolo al report con il nome della categoria di prodotto  
  Nella parte superiore del report viene visualizzato il titolo del report. È possibile posizionare il titolo del report in un'apposita intestazione oppure, se il report ne è privo, in una casella di testo nella parte superiore del corpo del report. In questa esercitazione sarà utilizzata la casella di testo che viene posizionata automaticamente nella parte superiore del corpo del report.  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
@@ -315,7 +316,7 @@ ms.locfileid: "68892378"
   
 2.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-3.  Digitare **Vendite e margini per categoria:** .  
+3.  Digitare **Vendite e margini per categoria:**.  
   
 4.  Fare clic con il pulsante destro del mouse, quindi fare clic su **Crea segnaposto**.  
   
@@ -333,7 +334,7 @@ ms.locfileid: "68892378"
   
  Il titolo del report include il nome della prima categoria di prodotto. In un secondo momento, dopo avere eseguito questo report come report drill-through, il nome della categoria di prodotto si modificherà dinamicamente per riflettere il nome della categoria di prodotto selezionata nel report principale.  
   
-##  <a name="DParameter"></a> 5. Aggiornare le proprietà dei parametri  
+##  <a name="DParameter"></a>5. aggiornare le proprietà del parametro  
  Per impostazione predefinita i parametri sono visibili; questa impostazione non è adatta per questo report. È possibile aggiornare le proprietà dei parametri per il report drill-through.  
   
 #### <a name="to-hide-a-parameter"></a>Per nascondere un parametro:  
@@ -356,7 +357,7 @@ ms.locfileid: "68892378"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="DSave"></a> 6. Salvare il report in una raccolta di SharePoint  
+##  <a name="DSave"></a>6. salvare il report in una raccolta di SharePoint  
  È possibile salvare il report in una raccolta di SharePoint, in un server di report o nel computer locale. Se il report viene salvato nel computer locale, non saranno disponibili alcune caratteristiche di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , ad esempio le parti del report e i sottoreport. In questa esercitazione verranno illustrate le procedure per il salvataggio del report nella raccolta di SharePoint.  
   
 #### <a name="to-save-the-report"></a>Per salvare il report  
@@ -378,7 +379,7 @@ ms.locfileid: "68892378"
   
 4.  Fare clic su **Salva**.  
   
-     **Siti e server recenti** elenca le librerie sul sito di SharePoint.  
+     **Siti e server recenti** elenca le librerie nel sito di SharePoint.  
   
 5.  Passare alla raccolta dove si salverà il report.  
   
@@ -389,16 +390,16 @@ ms.locfileid: "68892378"
   
 7.  Fare clic su **Salva**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Creazione di un nuovo report da Creazione guidata tabella o matrice  
- Dalla finestra di dialogo **Attività iniziali** creare un report matrice tramite **Creazione guidata tabella o matrice**.  
+##  <a name="MMatrixAndDataset"></a>1. creare un nuovo report da Creazione guidata tabella o matrice  
+ Nella finestra di dialogo **Introduzione** creare un report matrice utilizzando la **creazione guidata tabella o matrice**.  
   
 #### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
   
-1.  Fare clic sul pulsante **Start**, scegliere **programmi** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , **Generatore report**e quindi fare clic su **Generatore report**.  
+1.  Fare clic sul pulsante **Start**, scegliere **programmi**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Generatore report**e quindi fare clic su **Generatore report**.  
   
 2.  Nella finestra di dialogo **Attività iniziali** verificare che l'opzione **Nuovo report** sia selezionata e fare clic su **Creazione guidata tabella o matrice**.  
   
-##  <a name="MConnection"></a> 1a. Specificare una connessione dati  
+##  <a name="MConnection"></a>1a. Specificare una connessione dati  
  Verrà aggiunta un'origine dati incorporata al report principale.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Per creare un'origine dati incorporata  
@@ -411,9 +412,9 @@ ms.locfileid: "68892378"
   
 4.  In **Seleziona il tipo di connessione**, scegliere **Microsoft SQL Server Analysis Services**, quindi fare clic su **Compila**.  
   
-5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)** .  
+5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  In **Nome server**, digitare il nome di un server nel quale è installata un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+6.  In **nome server**Digitare il nome di un server in cui è installata un' [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di.  
   
 7.  In **Selezionare o immettere un nome di database**specificare il cubo Contoso.  
   
@@ -437,17 +438,17 @@ ms.locfileid: "68892378"
   
 14. Fare clic su **Avanti**.  
   
-##  <a name="MMDXQuery"></a> 1b. Creare una query MDX  
+##  <a name="MMDXQuery"></a>1b. Creare una query MDX  
  Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettazione query per creare filtri, parametri, membri calcolati e il set di dati stesso.  
   
 #### <a name="to-create-query-filters"></a>Per creare filtri query  
   
-1.  Nella sezione relativa al cubo del riquadro Metadati della pagina **Progetta query** fare clic sul pulsante con i puntini di sospensione **(...)** .  
+1.  Nella sezione relativa al cubo del riquadro Metadati della pagina **Progetta query** fare clic sul pulsante con i puntini di sospensione **(...)**.  
   
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    >  Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode (Passa alla modalità progettazione)](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode (Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 5 in [Per creare il set di dati](#MSkip).  
+    >  Se non si vuole creare manualmente la query MDX, fare clic sull'icona ![Passa alla modalità progettazione](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passare alla modalità progettazione"), impostare Progettazione query in modalità query, incollare la query MDX completata nella finestra di progettazione query e quindi procedere con il passaggio 5 in [Per creare il set di dati](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -461,7 +462,7 @@ ms.locfileid: "68892378"
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online** e **Rivenditore**, quindi fare clic su **OK**.  
   
-     La query include ora un filtro per includere solo questi canali: Online e rivenditore.  
+     Ora la query include un filtro per includere solo questi canali: Online e Rivenditore.  
   
 6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
@@ -491,7 +492,7 @@ ms.locfileid: "68892378"
   
 1.  Posizionare il cursore nel riquadro Membri calcolati, fare clic con il pulsante destro del mouse su **Nuovo membro calcolato**.  
   
-2.  Nel riquadro Metadati espandere **Misure** , quindi espandere Vendite.  
+2.  Nel riquadro Metadati espandere **misure** , quindi espandere vendite.  
   
 3.  Trascinare la misura Quantità vendite nella casella **Espressione** , digitare il carattere di sottrazione (-), quindi trascinare la misura Quantità margine vendite nella casella **Espressione** dopo il carattere di sottrazione.  
   
@@ -529,13 +530,13 @@ ms.locfileid: "68892378"
   
 4.  Trascinare Fatturato netto da Membri calcolati al riquadro dati e posizionarlo a destra di `Net QTY`.  
   
-5.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)** .  
+5.  Sulla barra degli strumenti Progettazione query fare clic su **Esegui (!)**.  
   
      Controllare il set di risultati della query  
   
 6.  Fare clic su **Avanti**.  
   
-##  <a name="MLayout"></a> 1c. Organizzare i dati in gruppi  
+##  <a name="MLayout"></a>1C. Organizzare i dati in gruppi  
  Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizza dati dettagliati e dati aggregati.  
   
 #### <a name="to-organize-data-into-groups"></a>Per organizzare i dati in gruppi  
@@ -546,7 +547,8 @@ ms.locfileid: "68892378"
   
 3.  Trascinare `Net_QTY` in **Valori**.  
   
-     `Net_QTY` viene aggregata automaticamente dalla funzione Sum, l'aggregazione predefinita per i campi numerici. Il valore è `[Sum(Net_QTY)]`.  
+     
+  `Net_QTY` viene aggregata automaticamente dalla funzione Sum, l'aggregazione predefinita per i campi numerici. Il valore è `[Sum(Net_QTY)]`.  
   
      È possibile aprire l'elenco a discesa per visualizzare le altre funzioni di aggregazione disponibili. Non modificare la funzione di aggregazione.  
   
@@ -554,14 +556,14 @@ ms.locfileid: "68892378"
   
      I passaggi 3 e 4 consentono di specificare i dati da visualizzare nella matrice.  
   
-##  <a name="MTotals"></a> 1d. Aggiungere subtotali e totali  
+##  <a name="MTotals"></a>1D. Aggiungere subtotali e totali  
  Nei report è possibile mostrare subtotali e totali complessivi. I dati nei report principali sono visualizzati come un indicatore; il totale complessivo verrà rimosso dopo avere completato la procedura guidata.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Per aggiungere subtotali e totali complessivi  
   
 1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
-     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga viene visualizzata nel seguente modo: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria`[Sum(Net_ QTY)]` di `[Sum(Net_Sales)]`prodotto (e e la quarta riga contiene i totali.  
+     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga sarà visualizzata nella modalità seguente: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`e la quarta riga contiene i totali.  
   
 2.  Fare clic su **Avanti**.  
   
@@ -572,11 +574,11 @@ ms.locfileid: "68892378"
   
 1.  Nel riquadro Stili della pagina **scegliere uno stile** selezionare Slate.  
   
-2.  Scegliere **Fine**.  
+2.  Fare clic su **Fine**.  
   
 3.  Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
-##  <a name="MGrandTotal"></a> 2. Rimuovere la riga Totale complessivo  
+##  <a name="MGrandTotal"></a>2. rimuovere la riga del totale complessivo  
  I valori dei dati vengono mostrati come stati dell'indicatore, includendo i totali del gruppo di colonne. Rimuovere la riga che visualizza il totale complessivo.  
   
 #### <a name="to-remove-the-grand-total-row"></a>Per rimuovere la riga Totale complessivo  
@@ -587,7 +589,7 @@ ms.locfileid: "68892378"
   
 3.  Fare clic su **Esegui**per visualizzare un'anteprima del report.  
   
-##  <a name="MDrillthrough"></a> 3. Configurare la Casella di testo Azione per il drill-through  
+##  <a name="MDrillthrough"></a>3. configurare l'azione della casella di testo per il drill-through  
  Per abilitare il drill-through, specificare un'azione nella casella di testo del report principale.  
   
 #### <a name="to-enable-an-action"></a>Per abilitare un'azione  
@@ -596,7 +598,7 @@ ms.locfileid: "68892378"
   
 2.  Fare clic con il pulsante destro del mouse sulla cella contenente Product_Category_Name, quindi fare clic su **Proprietà casella di testo**.  
   
-3.  Fare clic sulla scheda **Azione** .  
+3.  Fare clic sulla scheda **Azione**.  
   
 4.  Selezionare **Vai al report**.  
   
@@ -606,7 +608,7 @@ ms.locfileid: "68892378"
   
 7.  Nell'elenco **Nome** selezionare ProductProductCategoryName.  
   
-8.  In **Valore**digitare `[Product_Category_Name.UniqueName]`.  
+8.  In **Value** (Valore) digitare `[Product_Category_Name.UniqueName]`.  
   
      Product_Category_Name è un campo nel set di dati.  
   
@@ -631,7 +633,7 @@ ms.locfileid: "68892378"
   
  I nomi della categoria di prodotto sono nel comune formato di collegamento (blu e sottolineato).  
   
-##  <a name="MIndicators"></a> 4. Sostituire i valori numerici con gli indicatori  
+##  <a name="MIndicators"></a>4. sostituire i valori numerici con gli indicatori  
  Utilizzare indicatori per mostrare lo stato di quantità e vendite per i canali Online e Rivenditore.  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>Per aggiungere un indicatore per i valori Net QTY  
@@ -644,7 +646,7 @@ ms.locfileid: "68892378"
   
 4.  Fare clic sul tipo **3 segnali** , quindi fare clic su **OK**.  
   
-5.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)** . Selezionare `Net_QTY`.  
+5.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)**. Selezionare `Net_QTY`.  
   
 6.  Ripetere i passaggi da 2 a 5 per la cella `[Sum(Net QTY)]` nel gruppo di righe `[Product_Category_Name]` all'interno di **Totale**.  
   
@@ -656,13 +658,13 @@ ms.locfileid: "68892378"
   
 3.  Fare clic sul tipo **3 segnali** , quindi fare clic su **OK**.  
   
-4.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)** . Selezionare `Net_Sales`.  
+4.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)**. Selezionare `Net_Sales`.  
   
 5.  Ripetere i passaggi da 1 a 4 per la cella `[Sum(Net_Sales)]` nel gruppo di righe `[Product_Category_Name]` all'interno di **Totale**.  
   
 6.  Per visualizzare l'anteprima del report, fare clic su **Esegui**.  
   
-##  <a name="MParameter"></a> 5. Aggiornare le proprietà dei parametri  
+##  <a name="MParameter"></a>5. aggiornare le proprietà del parametro  
  Per impostazione predefinita, i parametri sono visibili; questa impostazione non è adatta per questo report. È possibile aggiornare le proprietà dei parametri per rendere il parametro interno.  
   
 #### <a name="to-make-the-parameter-internal"></a>Per rendere interno il parametro  
@@ -677,14 +679,14 @@ ms.locfileid: "68892378"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="MTitle"></a> 6. Aggiungere un titolo al report  
+##  <a name="MTitle"></a>6. aggiungere un titolo al report  
  Aggiungere un titolo a un report principale  
   
 #### <a name="to-add-a-report-title"></a>Per aggiungere il titolo di un report  
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Vendite per categoria di prodotto 2009: categoria Online e Rivenditore:** .  
+2.  Digitare **2009 Product Category Sales: Categoria Online e Rivenditore**.  
   
 3.  Selezionare il testo digitato.  
   
@@ -692,7 +694,7 @@ ms.locfileid: "68892378"
   
 5.  Per visualizzare l'anteprima del report, fare clic su **Esegui**.  
   
-##  <a name="MSave"></a> 7. Salvare il report principale in una raccolta di SharePoint  
+##  <a name="MSave"></a>7. salvare il report principale in una raccolta di SharePoint  
  Salvare il report principale in una raccolta di SharePoint  
   
 #### <a name="to-save-the-report"></a>Per salvare il report  
@@ -718,7 +720,7 @@ ms.locfileid: "68892378"
   
 7.  Fare clic su **Salva**.  
   
-##  <a name="MRunReports"></a> 8. Eseguire i report principali e drill-through  
+##  <a name="MRunReports"></a>8. eseguire i report principali e drill-through  
  Eseguire il report principale, quindi fare clic su valori nella colonna della categoria di prodotto per eseguire il report drill-through.  
   
 #### <a name="to-run-the-reports"></a>Per eseguire i report  

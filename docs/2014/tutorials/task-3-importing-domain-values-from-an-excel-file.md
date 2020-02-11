@@ -1,5 +1,5 @@
 ---
-title: 'Attività 3: Importazione di valori di dominio da un File di Excel | Microsoft Docs'
+title: 'Attività 3: importazione di valori di dominio da un file di Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,35 +10,35 @@ ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: d86d71a3d62ca94eed2da5ad91fbdd60ee4989f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66822986"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>Attività 3: Importazione dei valori di dominio da un file di Excel
 
-  In questa attività si importano valori per il **stato** dominio da un foglio di lavoro di un file di Excel.  
+  In questa attività vengono importati i valori per il dominio di **stato** da un foglio di lavoro di un file di Excel.  
   
-1.  Fare clic su **lo stato** dominio le **elenco di domini**.  
+1.  Fare clic su dominio **stato** nell' **elenco domini**.  
   
-2.  Verificare che il **i valori di dominio** scheda è attiva nel riquadro di destra.  
+2.  Verificare che la scheda **valori di dominio** sia attiva nel riquadro di destra.  
   
-3.  Nel riquadro di destra, nella barra degli strumenti, fare clic su **freccia giù** accanto al **Importa valori** pulsante, quindi scegliere **Importa valori validi da Excel**.  
+3.  Nel riquadro destro, sulla barra degli strumenti, fare clic sulla **freccia in giù** accanto al pulsante **Importa valori** , quindi fare clic su **Importa valori validi da Excel**.  
   
-     ![Importa valori validi da Excel dal Menu](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-01.jpg "Importa valori validi dal Menu di Excel")  
+     ![Importa valori validi dal menu Excel](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-01.jpg "Importa valori validi dal menu Excel")  
   
-4.  Fare clic su **esplorare**, selezionare **Suppliers. xls**, fare clic su **Open**.  
+4.  Fare clic su **Sfoglia**, selezionare **Suppliers. xls**, quindi fare clic su **Apri**.  
   
-5.  Selezionare **StatesToImport$** per il **foglio di lavoro**.  
+5.  Selezionare **StatesToImport $** per il **foglio di foglio**.  
   
-     ![Finestra di dialogo di valori di dominio di importazione](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-02.jpg "Importa dominio i valori nella finestra di dialogo")  
+     ![Finestra di dialogo Importa valori di dominio](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-02.jpg "Finestra di dialogo Importa valori di dominio")  
   
-6.  Fare clic su **OK** per chiudere la **Importa valori di dominio** nella finestra di dialogo. Verranno visualizzati tutti i nomi degli stati importati nell'elenco. Si noti che **Mostra solo nuovi** opzione viene selezionata automaticamente dopo l'importazione. Quando si importano valori e non vengono visualizzati i valori precedenti nell'elenco, è perché questa opzione viene abilitata automaticamente dopo l'importazione. Per visualizzare tutti i valori, deselezionare la casella di controllo. Se viene di nuovo importato lo stesso set di valori, nessuno di questi ultimi viene importato come se fosse già presente nel dominio.  
+6.  Fare clic su **OK** per chiudere la finestra di dialogo **Importa valori di dominio** . Verranno visualizzati tutti i nomi degli stati importati nell'elenco. Si noti che l'opzione **Mostra solo nuovi** viene selezionata automaticamente dopo l'importazione. Quando si importano i valori e i valori precedenti non vengono visualizzati nell'elenco, questo è dovuto al fatto che questa opzione viene abilitata automaticamente dopo l'importazione. Per visualizzare tutti i valori, deselezionare la casella di controllo. Se viene di nuovo importato lo stesso set di valori, nessuno di questi ultimi viene importato come se fosse già presente nel dominio.  
   
-     ![Mostra nuova casella di controllo su valori di dominio](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "Mostra nuova casella di controllo su valori di dominio")  
+     ![Casella di controllo Mostra solo nuovi in Valori di dominio](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "Casella di controllo Mostra solo nuovi in Valori di dominio")  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  [Attività 4: Impostazione delle regole di dominio](../../2014/tutorials/task-4-setting-domain-rules.md)  
   
   

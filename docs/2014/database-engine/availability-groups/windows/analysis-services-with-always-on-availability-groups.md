@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889229"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
@@ -28,9 +28,9 @@ ms.locfileid: "68889229"
   
  Utilizzare un provider di dati che supporti il protocollo TDS (Tabular Data Stream) versione 7.4 o successive, ad esempio SQL Server Native Client 11.0 o il provider di dati per SQL Server in .NET Framework 4.02.  
   
- **(Per i carichi di lavoro di sola lettura)** . Il ruolo della replica secondaria deve essere configurato per le connessioni di sola lettura, il gruppo di disponibilità deve presentare un elenco di routing e la connessione nell'origine dati di Analysis Services deve specificare il listener del gruppo di disponibilità. In questo argomento sono incluse le indicazioni necessarie per eseguire l'attivazione.  
+ **(Per i carichi di lavoro di sola lettura)**. Il ruolo della replica secondaria deve essere configurato per le connessioni di sola lettura, il gruppo di disponibilità deve presentare un elenco di routing e la connessione nell'origine dati di Analysis Services deve specificare il listener del gruppo di disponibilità. In questo argomento sono incluse le indicazioni necessarie per eseguire l'attivazione.  
   
-##  <a name="bkmk_UseSecondary"></a> Elenco di controllo: usare una replica secondaria per le operazioni di sola lettura  
+##  <a name="bkmk_UseSecondary"></a>Elenco di controllo: utilizzare una replica secondaria per le operazioni di sola lettura  
  È possibile configurare una connessione all'origine dati per l'utilizzo di una replica secondaria leggibile se la soluzione di Analysis Services include il writeback. Se si dispone di una connessione di rete veloce, la replica secondaria genera una latenza dati molto bassa, fornendo dati pressoché identici a quelli della replica primaria. Utilizzando la replica secondaria per le operazioni di Analysis Services, è possibile ridurre le contese di lettura-scrittura sulla replica primaria e utilizzare in modo migliore le repliche secondarie nel gruppo di disponibilità.  
   
  Per impostazione predefinita, gli accessi in lettura e scrittura e l'accesso con finalità di lettura sono entrambi consentiti alla replica primaria, ma alle repliche secondarie non sono consentite connessioni. Per impostare una connessione client di sola lettura a una replica secondaria, è necessaria una configurazione aggiuntiva. La configurazione richiede l'impostazione di proprietà sulla replica secondaria e l'esecuzione di uno script T-SQL per la definizione di un elenco di routing di sola lettura. Effettuare le procedure seguenti per assicurarsi di avere eseguito entrambi i passaggi.  
@@ -55,7 +55,7 @@ ms.locfileid: "68889229"
   
     -   Nell'elenco a discesa **Secondario leggibile** selezionare **Solo finalità di lettura**.  
   
-    -   Nell'elenco a discesa **Connessioni nel ruolo primario** selezionare **Consenti tutte le connessioni**. Questa è l'impostazione predefinita.  
+    -   Nell'elenco a discesa **Connessioni nel ruolo primario** selezionare **Consenti tutte le connessioni**. Questa è la modalità predefinita.  
   
     -   Facoltativamente, nell'elenco a discesa **Modalità di disponibilità** selezionare **Commit sincrono**. Questo passaggio non è obbligatorio, ma assicura la parità dei dati tra la replica primaria e quella secondaria.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "68889229"
   
      Per determinare il nome del listener del gruppo di disponibilità, è possibile rivolgersi a un amministratore di database o connettersi a un'istanza del gruppo di disponibilità e visualizzare la relativa configurazione della disponibilità AlwaysOn. Nella schermata seguente il listener del gruppo di disponibilità è **AdventureWorks2**.  
   
-     ![Cartella di disponibilità AlwaysOn in Management Studio](../../media/ssas-alwaysoninfoinssms.png "Cartella di disponibilità AlwaysOn in Management Studio")  
+     ![Cartella della disponibilità AlwaysOn in Management Studio](../../media/ssas-alwaysoninfoinssms.png "Cartella della disponibilità AlwaysOn in Management Studio")  
   
 4.  In Gestione connessione scegliere **Tutto** nel riquadro di navigazione sinistro per visualizzare la griglia delle proprietà del provider di dati.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68889229"
   
  L'origine dati è ora definita. È ora possibile procedere alla compilazione di un modello, partendo dalla vista origine dati o, nel caso di modelli tabulari, dalla creazione di relazioni. Quando è il momento di recuperare dati dal database di disponibilità, ad esempio quando si è pronti a elaborare o distribuire la soluzione, è possibile testare la configurazione per verificare che i dati siano accessibili dalla replica secondaria.  
   
-##  <a name="bkmk_test"></a> Testare la configurazione  
+##  <a name="bkmk_test"></a>Testare la configurazione  
  Dopo avere configurato la replica secondaria e creato una connessione all'origine dati in Analysis Services, è possibile confermare che i comandi di query ed elaborazione vengano reindirizzati alla replica secondaria. È anche possibile eseguire un failover manuale pianificato per verificare il piano di recupero per questo scenario.  
   
 #### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Passaggio 1: Confermare che la connessione all'origine dati venga reindirizzata alla replica secondaria  
@@ -167,7 +167,7 @@ ms.locfileid: "68889229"
   
      Nella finestra di traccia vengono visualizzati gli eventi correlati all'applicazione **Microsoft SQL Server Analysis Services**. Vengono anche visualizzate le istruzioni `SELECT` che consentono di recuperare dati da un database sull'istanza del server che ospita la replica secondaria, a prova che la connessione è stata effettuata attraverso il listener alla replica secondaria.  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Passaggio 2: Eseguire un failover pianificato per effettuare il test della configurazione  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>Passaggio 2: Eseguire un failover pianificato per testare la configurazione  
   
 1.  In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] verificare le repliche primaria e secondaria per assicurarsi che entrambe siano configurate per la modalità commit sincrono e siano attualmente sincronizzate.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "68889229"
   
 3.  Eseguire un comando di elaborazione o query da Analysis Services. Poiché l'origine dati è stata configurata per una connessione di sola lettura, il comando viene eseguito sulla replica secondaria.  
   
-4.  In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] connettersi alla replica secondaria.  
+4.  In [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]connettersi alla replica secondaria.  
   
 5.  Espandere il nodo **Disponibilità elevata AlwaysOn** e il nodo **Gruppi di disponibilità** .  
   
@@ -198,10 +198,10 @@ ms.locfileid: "68889229"
   
 9. Ripetere il comando di query o elaborazione nella soluzione di Analysis Services, quindi osservare le tracce side-by-side in SQL Server Profiler. Le prove dell'elaborazione saranno visibili sull'altra istanza, che è ora la nuova replica secondaria.  
   
-##  <a name="bkmk_whathappens"></a> Cosa accade dopo un failover  
+##  <a name="bkmk_whathappens"></a>Cosa accade dopo un failover  
  Durante un failover, una replica secondaria assume il ruolo primario e la replica primaria precedente passa al ruolo secondario. Tutte le connessioni client vengono terminate, la proprietà del listener del gruppo di disponibilità viene trasferita insieme al ruolo di replica primaria alla nuova istanza di SQL Server e l'endpoint del listener viene associato alle porte TCP e agli indirizzi IP virtuali della nuova istanza. Per altre informazioni, vedere [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- In caso di failover durante l'elaborazione, viene visualizzato l'errore seguente nella finestra di output o nel file di log di Analysis Services: "Errore OLE DB: Errore OLE DB o ODBC: Errore di collegamento durante la comunicazione; 08S01; Provider TCP: Connessione in corso interrotta forzatamente dall'host remoto. ; 08S01."  
+ Se si verifica un failover durante l'elaborazione, si verifica l'errore seguente nel file di log o nella finestra di output di Analysis Services: "Errore OLE DB: errore OLE DB o ODBC: Errore di collegamento durante la comunicazione; 08S01; Provider TPC: Connessione in corso interrotta forzatamente dall'host remoto. ; 08S01."  
   
  Questo errore viene risolto se si attende un minuto e si riprova. Se il gruppo di disponibilità viene configurato correttamente per la replica secondaria leggibile, l'elaborazione verrà ripresa sulla nuova replica secondaria al successivo tentativo.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "68889229"
 ##  <a name="bkmk_writeback"></a>Writeback quando si utilizza un database di disponibilità AlwaysOn  
  Il writeback è una funzionalità di Analysis Services che supporta l'analisi di simulazione in Excel. È comunemente utilizzato per attività di elaborazione budget e previsioni nelle applicazioni personalizzate.  
   
- Il supporto per il writeback richiede una connessione client READWRITE. Se in Excel si prova a eseguire il writeback in una connessione di sola lettura, si verifica l'errore seguente: "Impossibile recuperare i dati dall'origine dati esterna." "Impossibile recuperare i dati dall'origine dati esterna."  
+ Il supporto per il writeback richiede una connessione client READWRITE. In Excel se si prova a eseguire il writeback in una connessione di sola lettura, si verifica l'errore seguente: "Impossibile recuperare i dati dall'origine dati esterna." "Impossibile recuperare i dati dall'origine dati esterna."  
   
  Se una connessione è stata configurata per l'accesso continuo a una replica secondaria leggibile, è ora necessario configurare una nuova connessione che utilizzi una connessione READWRITE alla replica primaria.  
   
@@ -218,9 +218,9 @@ ms.locfileid: "68889229"
   
 ## <a name="see-also"></a>Vedere anche  
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Repliche secondarie attive: Repliche secondarie &#40;leggibili gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Repliche secondarie attive: repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Criteri AlwaysOn per problemi operativi con Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [Abilitare il writeback della dimensione](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
+ [Attivazione writeback della dimensione](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

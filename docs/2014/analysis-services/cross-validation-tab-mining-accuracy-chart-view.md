@@ -1,5 +1,5 @@
 ---
-title: Scheda convalida incrociata (vista grafico di accuratezza Data Mining) | Microsoft Docs
+title: Scheda convalida incrociata (vista Grafico accuratezza modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086623"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Scheda Convalida incrociata (vista Grafico accuratezza modello di data mining)
   La convalida incrociata consente di partizionare una struttura di data mining in sezioni trasversali, eseguire in maniera iterativa il training dei modelli e testarli a fronte di ciascuna sezione trasversale. È possibile specificare un numero di riduzioni in cui suddividere i dati. Ciascuna riduzione viene a sua volta utilizzata come dati di test, mentre i dati rimanenti vengono usati per eseguire il training di un nuovo modello. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] viene quindi generato un set di misure di accuratezza standard per ogni modello. Confrontando le misure relative ai modelli generati per ogni sezione trasversale, è possibile valutare l'affidabilità del modello di data mining per l'intero set di dati.  
   
- Per altre informazioni, vedere [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
+ Per altre informazioni, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Non è possibile usare la funzione di convalida incrociata con i modelli compilati mediante l'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series o [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering. Se si esegue il report su una struttura di data mining che contiene tali tipi di modelli, questi ultimi non saranno inclusi nel report.  
@@ -42,7 +42,7 @@ ms.locfileid: "66086623"
 -   Fare clic su **Ottieni risultati** per visualizzare i risultati della convalida incrociata.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Conteggio di riduzione**  
+ **Conteggio di riduzioni**  
  Specificare il numero di riduzioni, o partizioni, da creare. Poiché il valore minimo è 2, metà del set di dati viene utilizzata per il testing e l'altra metà per il training.  
   
  Per le strutture di data mining di sessione, il valore massimo è 10.  
@@ -57,7 +57,7 @@ ms.locfileid: "66086623"
   
  Se **0**è il valore specificato, tutti i case nei dati di origine vengono usati per la convalida incrociata.  
   
- Nessun valore predefinito.  
+ Non esiste alcun valore predefinito.  
   
 > [!NOTE]  
 >  Il tempo di elaborazione è direttamente proporzionale all'aumento del numero di case.  
@@ -74,7 +74,7 @@ ms.locfileid: "66086623"
   
  Opzione disabilitata per i modelli di clustering.  
   
- **Soglia**  **di destinazione**  
+ ******Soglia** di destinazione    
  Specificare un valore compreso tra 0 e 1 per indicare la probabilità di stima al di sopra della quale uno stato stimato viene considerato corretto. Il valore può essere impostato con incrementi di 0,1.  
   
  Il valore predefinito è `null`, ad indicare che la stima più probabile viene conteggiata come corretta.  
@@ -96,12 +96,12 @@ ms.locfileid: "66086623"
   
  Si supponga ad esempio che vengano effettuate tre stime per un particolare stato di destinazione e che le probabilità di ogni stima siano 0,05, 0,15 e 0,8. Se si imposta la soglia su 0,5, solo una stima viene conteggiata come corretta. Se si imposta **Soglia** **di destinazione** su 0,10, due stime vengono conteggiate come corrette.  
   
- Quando **destinazione** **soglia** è impostato su `null`, che rappresenta il valore predefinito, la stima più probabile per ogni case è conteggiata come corretta. Nell'esempio precedente, 0,05, 0,15 e 0,8 sono le probabilità per le stime nei tre diversi case. Nonostante le probabilità siano molto diverse, ciascuna stima viene conteggiata come corretta, perché ogni case genera una sola stima. Si tratta inoltre delle stime migliori per tali case.  
+ Quando la **soglia** di **destinazione** è `null`impostata su, ovvero il valore predefinito, la stima più probabile per ogni case viene conteggiata come corretta. Nell'esempio precedente, 0,05, 0,15 e 0,8 sono le probabilità per le stime nei tre diversi case. Nonostante le probabilità siano molto diverse, ciascuna stima viene conteggiata come corretta, perché ogni case genera una sola stima. Si tratta inoltre delle stime migliori per tali case.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)   
- [Convalida incrociata &#40;Analysis Services - Data mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
- [Misure nel Report di convalida incrociata](data-mining/measures-in-the-cross-validation-report.md)   
- [Stored procedure di data mining &#40;Analysis Services - Data mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Test e convalida &#40;&#41;di data mining](data-mining/testing-and-validation-data-mining.md)   
+ [Convalida incrociata &#40;Analysis Services-&#41;di data mining](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [Misure nel report di convalida incrociata](data-mining/measures-in-the-cross-validation-report.md)   
+ [Stored procedure di data mining &#40;Analysis Services-&#41;di data mining](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

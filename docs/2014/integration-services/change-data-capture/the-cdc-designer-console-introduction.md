@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62834643"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introduzione a CDC Designer Console
   In questa sezione vengono illustrate le procedure di installazione relative a Progettazione Change Data Capture per Oracle di Attunity.  
   
 ## <a name="installation"></a>Installazione  
- In questa sezione vengono illustrate le procedure di installazione relative a Progettazione Change Data Capture per Oracle di Attunity. Per installare CDC Designer Console, eseguire manualmente **Attunityoraclecdcdesigner** dai supporti di installazione di SQL Server.  Pacchetti di installazione per x86 e x64 si trovano in **.\Tools\AttunityCDCOracle\\**  nei supporti di installazione di SQL Server.  
+ In questa sezione vengono illustrate le procedure di installazione relative a Progettazione Change Data Capture per Oracle di Attunity. Per installare la console di CDC Designer, eseguire manualmente **AttunityOracleCdcDesigner. msi** dal supporto di installazione di SQL Server.  I pacchetti di installazione per x86 e x64 si trovano in **.\Tools\AttunityCDCOracle\\ ** sul supporto di installazione di SQL Server.  
   
 ## <a name="supported-windows-environments"></a>Ambienti Windows supportati  
  CDC Designer Console può essere eseguita negli ambienti Windows seguenti:  
@@ -37,26 +37,26 @@ ms.locfileid: "62834643"
 ## <a name="database-prerequisites"></a>Prerequisiti del database  
  Per utilizzare Progettazione Change Data Capture per Oracle di Attunity, si utilizza un database Oracle. Progettazione Change Data Capture per Oracle di Attunity supporta le versioni seguenti:  
   
- **Database Oracle**  
+ **Oracle Database**  
   
--   Oracle Database 10g Release 2: 10.2.0.1-10.2.0.5 (set di patch a partire da aprile 2010)  
+-   Database Oracle 10g Release 2: 10.2.0.1-10.2.0.5 (set di patch a partire da aprile 2010)  
   
--   Oracle Database 11g Release 1: 11.1.0.6-11.1.0.7 (set di patch a partire da settembre 2008)  
+-   Database Oracle 11g Release 1: 11.1.0.6-11.1.0.7 (set di patch a partire da settembre 2008)  
   
--   Oracle Database 11g Release 2: 11.2.0.1-11.2.0.3 (set di patch a partire da settembre 2011)  
+-   Database Oracle 11g Release 2: 11.2.0.1-11.2.0.3 (set di patch a partire da settembre 2011)  
   
  **Database SQL Server**  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con supporto per SQL Server CDC  
   
 ## <a name="software-prerequisites"></a>Prerequisiti software  
- Di seguito è elencato il software necessario:  
+ È richiesto il software seguente:  
   
--   Client Oracle 10.x  
+-   Client Oracle 10. x  
   
 -   Client Oracle 11.x  
   
- **Nota**: È necessario usare la versione a 32 o 64 bit di questo software in base alla versione di Oracle CDC Designer console installata.  
+ **Nota**: è necessario usare la versione a 32 bit o a 64 bit del software in base alla versione installata di Oracle CDC Designer Console.  
   
  Oracle CDC Designer Console utilizza il provider Oracle ODBC per comunicare con il database di origine Oracle.  
   

@@ -1,5 +1,5 @@
 ---
-title: Nozioni fondamentali di controlli di origine | Microsoft Docs
+title: Nozioni fondamentali sul controllo del codice sorgente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842986"
 ---
 # <a name="source-control-basics"></a>Nozioni fondamentali sul controllo del codice sorgente
@@ -53,7 +53,7 @@ ms.locfileid: "62842986"
 |-|-|  
 |**Attività**|**Argomento**|  
 |Impostare le opzioni di controllo del codice sorgente|[Impostare le opzioni di controllo del codice sorgente](../../2014/database-engine/set-source-control-options.md)|  
-|Modificare le connessioni del controllo del codice sorgente|[Modificare le connessioni del controllo del codice sorgente](../../2014/database-engine/change-source-control-connections.md)|  
+|Modificare le connessioni del controllo del codice sorgente|[Modifica delle connessioni del controllo del codice sorgente](../../2014/database-engine/change-source-control-connections.md)|  
 |Escludere file dal controllo del codice sorgente|[Esclusione di file dal controllo del codice sorgente](../../2014/database-engine/exclude-files-from-source-control.md)|  
   
   

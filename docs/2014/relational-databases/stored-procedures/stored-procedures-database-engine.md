@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197113"
 ---
 # <a name="stored-procedures-database-engine"></a>Stored procedure (Motore di database)
-  Una stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un gruppo di una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure un riferimento a un metodo CLR (Common Runtime Language) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Le stored procedure assomigliano ai costrutti di altri linguaggi di programmazione perché possono essere utilizzate per:  
+  Un stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un gruppo di una o più [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni o un riferimento a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] metodo Common Runtime Language (CLR). Le stored procedure assomigliano ai costrutti di altri linguaggi di programmazione perché possono essere utilizzate per:  
   
 -   Accettare parametri di input e restituire più valori sotto forma di parametri di output al programma che esegue la chiamata.  
   
@@ -52,22 +52,23 @@ ms.locfileid: "68197113"
  Semplificazione della manutenzione  
  Quando si effettua la chiamata delle stored procedure tramite le applicazioni client e si mantengono le operazioni nel database solo nel livello dati, in caso di modifiche nel database sottostante è necessario aggiornare unicamente le stored procedure. Si mantiene separato il livello applicazione senza che venga interessato dalle modifiche a layout del database, relazioni o processi.  
   
- Miglioramento delle prestazioni  
+ prestazioni migliorate  
  Per impostazione predefinita, una stored procedure viene compilata solo alla prima esecuzione e si crea un piano di esecuzione da riutilizzare nelle esecuzioni successive. Dal momento che non è necessaria la creazione di un nuovo piano da parte del sistema di elaborazione delle query, l'elaborazione della stored procedure richiede generalmente un tempo minore.  
   
  Se c'è stata modifica significativa alle tabelle o ai dati a cui fa riferimento la stored procedure, è possibile che il piano precompilato comporti in realtà un'esecuzione più lenta della stored procedure. In questo caso, la ricompilazione della stored procedure e la forzatura di un nuovo piano di esecuzione possono migliorare le prestazioni.  
   
 ## <a name="types-of-stored-procedures"></a>Tipi di stored procedure  
- Definita dall'utente  
- È possibile creare una stored procedure definita dall'utente in un database definito dall'utente o in tutti i database del sistema a eccezione del **database delle risorse**. La stored procedure può essere sviluppata in [!INCLUDE[tsql](../../includes/tsql-md.md)] o come un riferimento a un metodo CLR (Common Runtime Language) di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Route definite dall'utente  
+ È possibile creare una stored procedure definita dall'utente in un database definito dall'utente o in tutti i database del sistema a eccezione del **database delle risorse** . La stored procedure può essere sviluppata in [!INCLUDE[tsql](../../includes/tsql-md.md)] o come riferimento a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] metodo Common Runtime Language (CLR).  
   
- Temporanea  
+ Temporanee  
  Le stored procedure temporanee sono un tipo di stored procedure definite dall'utente. Sono simili alle stored procedure permanenti, ma vengono archiviate in **tempdb**. Esistono due tipi di stored procedure temporanee:locali e globali. I due tipi differiscono per i nomi, la visibilità e la disponibilità. Le stored procedure temporanee locali contengono un solo simbolo di cancelletto (#) come primo carattere del nome, sono visibili solo durante la connessione utente corrente e vengono eliminate alla chiusura della connessione. Le stored procedure temporanee globali contengono due simboli di cancelletto (##) come primi caratteri del nome, sono visibili per tutti gli utenti in seguito alla creazione e vengono eliminate al termine dell'ultima sessione che utilizza la stored procedure.  
   
  Sistema  
- Le stored procedure di sistema sono incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sono archiviate fisicamente nel **database delle risorse** , interno e nascosto e livello logico compaiono nello schema **sys** di tutti i database di sistema e di quelli definiti dall'utente. Inoltre, il database **msdb** contiene anche stored procedure di sistema nello schema **dbo** che vengono utilizzate per la pianificazione di avvisi e processi. Dal momento che le stored procedure di sistema iniziano con il prefisso **sp_** , si consiglia di non utilizzare questo prefisso per l'assegnazione di un nome alle procedure definite dall'utente. Per un elenco completo delle stored procedure di sistema, vedere [Stored procedure di sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)  
+ Le stored procedure di sistema sono incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sono archiviate fisicamente nel **database delle risorse** , interno e nascosto e livello logico compaiono nello schema **sys** di tutti i database di sistema e di quelli definiti dall'utente. Inoltre, il database **msdb** contiene anche stored procedure di sistema nello schema **dbo** che vengono utilizzate per la pianificazione di avvisi e processi. Dal momento che le stored procedure di sistema iniziano con il prefisso **sp_**, si consiglia di non utilizzare questo prefisso per l'assegnazione di un nome alle procedure definite dall'utente. Per un elenco completo delle stored procedure di sistema, vedere [Stored procedure di sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le stored procedure di sistema che forniscono ai programmi esterni un'interfaccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per varie attività di manutenzione. Tali stored procedure estese utilizzano il prefisso xp_. Per un elenco completo delle stored procedure estese, vedere [Stored procedure estese generali &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le stored procedure di sistema che forniscono ai programmi esterni un'interfaccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per varie attività di manutenzione. Tali stored procedure estese utilizzano il prefisso xp_. Per un elenco completo delle stored procedure estese, vedere [Stored procedure estese generali &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
   
  Definite dall'utente estese  
  Le stored procedure estese permettono di creare routine esterne in un linguaggio di programmazione come C e sono DLL che possono essere caricate ed eseguite in modo dinamico da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -80,7 +81,7 @@ ms.locfileid: "68197113"
 |||  
 |-|-|  
 |**Descrizione dell'attività**|**Argomento**|  
-|Viene descritto il processo di creazione di una stored procedure.|[Creare una stored procedure](../stored-procedures/create-a-stored-procedure.md)|  
+|Viene descritto il processo di creazione di una stored procedure.|[Creazione di una stored procedure](../stored-procedures/create-a-stored-procedure.md)|  
 |Viene descritto il processo di modifica di una stored procedure.|[Modificare una stored procedure](../stored-procedures/modify-a-stored-procedure.md)|  
 |Viene descritto il processo di eliminazione di una stored procedure.|[Eliminare una stored procedure](../stored-procedures/delete-a-stored-procedure.md)|  
 |Viene descritto come eseguire una stored procedure.|[Eseguire una stored procedure](../stored-procedures/execute-a-stored-procedure.md)|  

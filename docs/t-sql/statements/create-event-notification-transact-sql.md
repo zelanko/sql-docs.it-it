@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902805"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67902805"
 
   Crea un oggetto che invia a un servizio di Service Broker informazioni relative a un evento di un database o un server. Le notifiche degli eventi possono essere create solo mediante istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -100,7 +100,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] prevede un tipo di messaggio e un contratto specifici per le notifiche degli eventi. Pertanto, essendo già disponibile un servizio di inizializzazione di Service Broker che specifica il nome di contratto `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`, non è necessario crearne uno.  
   
  Il servizio di destinazione che riceve le notifiche degli eventi deve rispettare il contratto esistente.  
@@ -132,7 +132,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >   
 >  Per copiare ed eseguire questi esempi, è necessario sostituire il GUID con quello del computer e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso. Come illustrato nella sezione Argomenti precedente, è possibile acquisire **'** _broker\_instance\_specifier_ **'** eseguendo una query sulla colonna service_broker_guid della vista del catalogo sys.databases.  
   
-### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Creazione di una notifica degli eventi con ambito server  
+### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>R. Creazione di una notifica degli eventi con ambito server  
  Nell'esempio seguente vengono creati gli oggetti necessari per la configurazione di un servizio di destinazione con [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Il servizio di destinazione fa riferimento al tipo di messaggio e al contratto del servizio di inizializzazione per le notifiche degli eventi, quindi viene creata una notifica degli eventi per tale servizio di destinazione che invia una notifica ogni volta che si verifica un evento di traccia `Object_Created` nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```sql  

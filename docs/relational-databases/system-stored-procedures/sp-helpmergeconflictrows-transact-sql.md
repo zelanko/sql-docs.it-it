@@ -16,18 +16,18 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68137765"
 ---
-# <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
+# <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce le righe nella tabella dei conflitti specificata. Questa stored procedure viene eseguita nel computer in cui è archiviata la tabella dei conflitti.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,39 +41,39 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%** . Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Ad esempio, se il **MSmerge_conflict_Customers** tabella include le righe con conflitti per il **WA** e il **autorità di certificazione** pubblicazioni, passando un nome della pubblicazione **autorità di certificazione**  recupera i conflitti che riguardano il **autorità di certificazione** pubblicazione.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **%** **tipo sysname**e il valore predefinito è. Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Se, ad esempio, nella tabella **MSmerge_conflict_Customers** sono presenti righe con conflitti per le pubblicazioni **WA** e **CA** , il passaggio di un nome di pubblicazione **CA** consente di recuperare i conflitti relativi alla pubblicazione della **CA** .  
   
-`[ @conflict_table = ] 'conflict_table'` È il nome della tabella dei conflitti. *conflict_table* viene **sysname**, non prevede alcun valore predefinito. Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando i nomi di formato con **MSmerge_conflict\__pubblicazione\_articolo_** , con una tabella per ogni articolo pubblicato.  
+`[ @conflict_table = ] 'conflict_table'`Nome della tabella dei conflitti. *conflict_table* è di **tipo sysname**e non prevede alcun valore predefinito. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando l'articolo formato nomi con **MSmerge_conflict\_pubblicazione\_**, con una tabella per ogni articolo pubblicato.  
   
-`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts` Indica se il set di risultati contiene informazioni sui conflitti di record logico. *logical_record_conflicts* viene **int**, valore predefinito pari a 0. **1** indica che vengono restituite le informazioni sui conflitti di record logico.  
+`[ @logical_record_conflicts = ] logical_record_conflicts`Indica se il set di risultati contiene informazioni sui conflitti tra record logici. *logical_record_conflicts* è di **tipo int**e il valore predefinito è 0. **1** indica che vengono restituite informazioni sui conflitti tra record logici.  
   
 ## <a name="result-sets"></a>Set di risultati  
- **sp_helpmergeconflictrows** , verrà restituito un set costituito la struttura della tabella di base e le colonne aggiuntive.  
+ **sp_helpmergeconflictrows** restituisce un set di risultati costituito dalla struttura della tabella di base e da queste colonne aggiuntive.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**varchar(255)**|Origine del conflitto.|  
-|**conflict_type**|**int**|Codice che indica il tipo di conflitto:<br /><br /> **1** = conflitto aggiornamento: Il conflitto viene rilevato a livello di riga.<br /><br /> **2** = conflitto aggiornamento colonna: Il conflitto viene rilevato a livello di colonna.<br /><br /> **3** = conflitto di aggiornamento Delete Wins: L'eliminazione prevale nel conflitto.<br /><br /> **4** = aggiornamento conflitto di eliminazione Wins: Rowguid eliminato che perde nel conflitto viene registrato in questa tabella.<br /><br /> **5** = inserimento di caricamento non riuscito: L'inserimento dal sottoscrittore non può essere applicato nel server di pubblicazione.<br /><br /> **6** = inserimento di download non riuscito: L'inserimento dal server di pubblicazione non può essere applicato nel Sottoscrittore.<br /><br /> **7** = eliminazione di caricamento non è riuscita: Impossibile caricare l'eliminazione dal Sottoscrittore al server di pubblicazione.<br /><br /> **8** = eliminazione di download non è riuscita: Impossibile scaricare l'eliminazione dal server di pubblicazione al sottoscrittore.<br /><br /> **9** = aggiornamento di caricamento non riuscito: Non è stato possibile applicare l'aggiornamento nel Sottoscrittore nel server di pubblicazione.<br /><br /> **10** = aggiornamento di download non riuscito: Non è stato possibile applicare l'aggiornamento nel server di pubblicazione al sottoscrittore.<br /><br /> **12** = Delete Wins aggiornamento del Record logico: Il record logico eliminato non prioritario viene registrato in questa tabella.<br /><br /> **13** = aggiornamento di inserimento di Record logico dei conflitti: Inserire un conflitti di record logico con un aggiornamento.<br /><br /> **14** = conflitto aggiornamento Wins eliminazione di Record logico: Il record logico aggiornato non prioritario viene registrato in questa tabella.|  
+|**origin_datasource**|**varchar (255)**|Origine del conflitto.|  
+|**conflict_type**|**int**|Codice che indica il tipo di conflitto:<br /><br /> **1** = conflitto di aggiornamento: il conflitto viene rilevato a livello di riga.<br /><br /> **2** = conflitto di aggiornamento della colonna: conflitto rilevato a livello di colonna.<br /><br /> **3** = conflitto di aggiornamento di eliminazione WINS: il conflitto viene eliminato.<br /><br /> **4** = conflitto di eliminazione di aggiornamento WINS: il ROWGUID eliminato che perde il conflitto viene registrato in questa tabella.<br /><br /> **5** = inserimento di caricamento non riuscito: Impossibile applicare l'inserimento dal Sottoscrittore al server di pubblicazione.<br /><br /> **6** = inserimento di download non riuscito: Impossibile applicare l'inserimento dal server di pubblicazione nel Sottoscrittore.<br /><br /> **7** = eliminazione del caricamento non riuscita: non è stato possibile caricare l'eliminazione nel Sottoscrittore nel server di pubblicazione.<br /><br /> **8** = eliminazione del download non riuscita: non è stato possibile scaricare l'eliminazione nel server di pubblicazione nel Sottoscrittore.<br /><br /> **9** = aggiornamento di caricamento non riuscito: non è stato possibile applicare l'aggiornamento nel Sottoscrittore al server di pubblicazione.<br /><br /> **10** = aggiornamento di download non riuscito: non è stato possibile applicare l'aggiornamento nel server di pubblicazione al Sottoscrittore.<br /><br /> **12** = eliminazione WINS aggiornamento record logico: il record logico eliminato che perde il conflitto viene registrato in questa tabella.<br /><br /> **13** = conflitto di inserimento dei record logici: l'inserimento in un record logico è in conflitto con un aggiornamento.<br /><br /> **14** = conflitto di aggiornamento WINS di eliminazione di record logici: il record logico aggiornato che perde il conflitto viene registrato in questa tabella.|  
 |**reason_code**|**int**|Codice di errore che può essere sensibile al contesto.|  
-|**reason_text**|**varchar(720)**|Descrizione dell'errore che può essere sensibile al contesto.|  
+|**reason_text**|**varchar (720)**|Descrizione dell'errore che può essere sensibile al contesto.|  
 |**pubid**|**uniqueidentifier**|Identificatore della pubblicazione.|  
 |**MSrepl_create_time**|**datetime**|Ora in cui sono state aggiunte le informazioni sui conflitti.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_helpmergeconflictrows** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database e il **replmonitor** nel database di distribuzione possono eseguire **sp_helpmergeconflictrows**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** , il **db_owner** ruolo predefinito del database e il ruolo **replmonitor** nel database di distribuzione possono eseguire **sp_helpmergeconflictrows**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare le informazioni sui conflitti per le pubblicazioni di tipo Merge &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [Visualizzazione delle informazioni sui conflitti per le pubblicazioni di tipo merge &#40;la programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

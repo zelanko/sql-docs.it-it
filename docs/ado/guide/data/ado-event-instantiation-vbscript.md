@@ -1,5 +1,5 @@
 ---
-title: 'Creazione di istanze di eventi ADO: VBScript | Microsoft Docs'
+title: 'Creazione di istanze evento ADO: VBScript | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 0db15a15-d597-4c04-9ade-1ac0f0ebec0a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 693ae7e34c6857ae70c9a20b8e60dd2b0a57032e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926097"
 ---
 # <a name="ado-event-instantiation-vbscript"></a>Creazione di istanze di eventi ADO: VBScript

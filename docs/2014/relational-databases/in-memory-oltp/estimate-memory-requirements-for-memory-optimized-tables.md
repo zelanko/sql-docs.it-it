@@ -11,14 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811014"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
-  Se si crea una nuova [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabella ottimizzata per la memoria o si esegue la migrazione di una tabella basata su disco esistente a una tabella ottimizzata per la memoria, è importante avere una stima ragionevole delle esigenze di memoria di ogni tabella in modo da poter effettuare il provisioning del server con sufficiente memoria. In questa sezione viene descritto come stimare la quantità di memoria necessaria per contenere i dati di una tabella ottimizzata per la memoria.  
+  Se si crea una nuova [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabella ottimizzata per la memoria o si esegue la migrazione di una tabella basata su disco esistente a una tabella ottimizzata per la memoria, è importante disporre di una stima ragionevole delle esigenze di memoria di ogni tabella, in modo da poter effettuare il provisioning del server con memoria sufficiente. In questa sezione viene descritto come stimare la quantità di memoria necessaria per contenere i dati di una tabella ottimizzata per la memoria.  
   
  Se si prende in considerazione la migrazione da tabelle basate su disco a tabelle ottimizzate per la memoria, prima di procedere con questo argomento, vedere [Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) per informazioni aggiuntive sulle tabelle più appropriate per la migrazione. Tutti gli argomenti disponibili in [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md) offrono informazioni aggiuntive sulla migrazione da tabelle basate su disco a tabelle ottimizzate per la memoria.  
   
@@ -119,30 +119,30 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Impostazione delle dimensioni della matrice dell'indice hash**  
   
- Le dimensioni della matrice di hash vengono `(bucket_count= <value>)` impostate \<da where value > è un valore intero maggiore di zero. Se \<il valore > non è una potenza di 2, il valore effettivo di bucket_count viene arrotondato per eccesso alla potenza di 2 successiva più vicina.  Nella tabella di esempio, (bucket_count = 5 milioni), poiché 5 milioni non è una potenza di 2, il numero effettivo di bucket viene arrotondato per eccesso a 8.388.608 (2<sup>23</sup>).  È necessario utilizzare questo numero, non 5.000.000, quando si calcola la memoria necessaria per la matrice di hash.  
+ Le dimensioni della matrice di hash vengono `(bucket_count= <value>)` impostate \<da where value> è un valore intero maggiore di zero. Se \<il valore> non è una potenza di 2, il bucket_count effettivo viene arrotondato per eccesso alla potenza di 2 successiva più vicina.  Nella tabella di esempio (bucket_count = 5 milioni), poiché 5 milioni non è una potenza di 2, il numero effettivo di bucket viene arrotondato per eccesso a 8.388.608 (2<sup>23</sup>).  È necessario utilizzare questo numero, non 5.000.000, quando si calcola la memoria necessaria per la matrice di hash.  
   
  Pertanto, nell'esempio, la memoria necessaria per ogni matrice di hash è:  
   
- 8\.388.608 * 8 = 2<sup>23</sup> \* 8 = 2<sup>23</sup> \* 2<sup>3</sup> = 2<sup>26</sup> = 67.108.864 o circa 64 MB.  
+ 8.388.608 * 8 = 2<sup>23</sup> \* 8 = 2<sup>23</sup> \* 2<sup>3</sup> = 2<sup>26</sup> = 67.108.864 o circa 64 MB.  
   
  Poiché vi sono tre indici hash, la memoria necessaria per gli indici hash è 3 * 64 MB = 192 MB.  
   
  **Memoria per gli indici non cluster**  
   
- Gli indici non cluster vengono implementati come alberi b con i nodi interni contenenti il valore di indice e i puntatori ai nodi successivi.  Nei nodi foglia sono inclusi il valore di indice e un puntatore alla riga di tabella in memoria.  
+ Gli indici non cluster vengono implementati come oggetti BTree con i nodi interni contenenti il valore di indice e i puntatori ai nodi successivi.  Nei nodi foglia sono inclusi il valore di indice e un puntatore alla riga di tabella in memoria.  
   
- A differenza degli indici hash, gli indici non cluster non hanno una dimensione del bucket fissa. Le dimensioni dell'indice aumentano e si riducono dinamicamente in base ai dati.  
+ A differenza degli indici hash, gli indici non cluster non hanno dimensioni fisse per il bucket. Le dimensioni dell'indice aumentano e si riducono dinamicamente in base ai dati.  
   
- La memoria necessaria per gli indici non cluster può essere calcolata nel modo seguente:  
+ La memoria necessaria per gli indici non cluster può essere calcolata come indicato di seguito:  
   
 -   **Memoria allocata ai nodi non foglia**   
     Per una configurazione tipica, la memoria allocata ai nodi non foglia è una percentuale minima della memoria globale utilizzata dall'indice, che per le sue dimensioni contenute può essere sicuramente ignorata.  
   
 -   **Memoria per i nodi foglia**   
-    I nodi foglia hanno una riga per ogni chiave univoca della tabella che punta alle righe di dati con questa chiave univoca.  Se si dispone di più righe con la stessa chiave, ovvero se si dispone di un indice non cluster non univoco, è presente una sola riga nel nodo foglia dell'indice che punta a una delle righe con le altre righe collegate tra loro.  Pertanto, la memoria totale necessaria può essere approssimata nel modo seguente:   
+    I nodi foglia hanno una riga per ogni chiave univoca della tabella che punta alle righe di dati con questa chiave univoca.  Se si hanno più righe con la stessa chiave, ovvero si ha un indice non cluster non univoco, c'è una sola riga nel nodo foglia dell'indice che punta a una delle righe, con le altre righe collegate tra loro.  Pertanto, la memoria totale necessaria può essere approssimata nel modo seguente:   
     memoryForNonClusteredIndex = (pointerSize + sum (keyColumnDataTypeSizes) * rowsWithUniqueKeys  
   
- Gli indici non cluster sono migliori se usati per le ricerche di intervallo, come esemplificato dalla query seguente:  
+ Gli indici non cluster rappresentano la soluzione migliore in caso di ricerche in intervalli, come esemplificato dalla query seguente:  
   
 ```sql  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Creazione di un avviso SQL Server Agent tramite il Provider WMI per eventi del Server | Microsoft Docs'
+title: 'Esempio: creazione di un avviso SQL Server Agent tramite il provider WMI per eventi del server | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195839"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Esempio: Creazione di un avviso di SQL Server Agent tramite il provider WMI per eventi del server
   Un utilizzo comune del provider di eventi WMI consiste nel creare avvisi di SQL Server Agent in risposta a eventi specifici. Nell'esempio seguente viene presentato un avviso semplice che salva eventi Deadlock Graph XML in una tabella per l'analisi successiva. SQL Server Agent invia una richiesta WQL, riceve eventi WMI ed esegue un processo in risposta all'evento. Si noti che benché diversi oggetti di Service Broker siano interessati dall'elaborazione del messaggio di notifica, il provider di eventi WMI gestisce i dettagli della creazione e della gestione di tali oggetti.  
   
 ## <a name="example"></a>Esempio  
- Viene innanzitutto creata una tabella nel database `AdventureWorks` in cui includere l'evento Deadlock Graph. La tabella contiene due colonne: Il `AlertTime` colonna contiene la durata di esecuzione dell'avviso, e il `DeadlockGraph` colonna contiene il documento XML che contiene l'evento deadlock graph.  
+ Viene innanzitutto creata una tabella nel database `AdventureWorks` in cui includere l'evento Deadlock Graph. La tabella è costituita da due colonne: la colonna `AlertTime` contiene la durata di esecuzione dell'avviso, mentre la colonna `DeadlockGraph` contiene il documento XML che include l'evento Deadlock Graph.  
   
  Viene quindi creato l'avviso. Lo script crea innanzitutto il processo eseguito dall'avviso, aggiunge un passaggio del processo al processo e specifica come destinazione del processo l'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lo script crea quindi l'avviso.  
   
- Il passaggio del processo recupera le **TextData** proprietà dell'istanza dell'evento WMI e inserisce tale valore nel **DeadlockGraph** colonna del **DeadlockEvents** tabella. Si noti che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte in modo implicito la stringa in formato XML. Poiché utilizza il sottosistema [!INCLUDE[tsql](../../includes/tsql-md.md)], il passaggio del processo non specifica un proxy.  
+ Il passaggio del processo recupera la proprietà **TextData** dell'istanza dell'evento WMI e inserisce tale valore nella colonna **DeadlockGraph** della tabella **DeadlockEvents** . Si noti che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte in modo implicito la stringa in formato XML. Poiché utilizza il sottosistema [!INCLUDE[tsql](../../includes/tsql-md.md)], il passaggio del processo non specifica un proxy.  
   
  L'avviso esegue il processo ogni volta che viene registrato un evento di traccia Deadlock Graph. Per un avviso WMI, SQL Server Agent crea una query di notifica utilizzando lo spazio dei nomi e l'istruzione WQL specificati. Per questo avviso, SQL Server Agent esegue il monitoraggio dell'istanza predefinita nel computer locale. L'istruzione WQL richiede tutti gli eventi `DEADLOCK_GRAPH` nell'istanza predefinita. Per modificare l'istanza monitorata dall'avviso, sostituire il nome dell'istanza per `MSSQLSERVER` in `@wmi_namespace` per l'avviso.  
   
 > [!NOTE]  
->  Per SQL Server Agent riceva eventi WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] deve essere abilitata nel **msdb** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Per SQL Server Agent la ricezione di eventi WMI [!INCLUDE[ssSB](../../includes/sssb-md.md)] , è necessario che sia abilitato [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]in **msdb** e.  
   
 ```  
 USE AdventureWorks ;  
@@ -89,7 +89,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Test dell'esempio  
- Per visualizzare l'esecuzione del processo, provocare un deadlock. Nelle [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], aprire due **Query SQL** schede e connettere entrambe le query alla stessa istanza. Eseguire lo script seguente in una delle schede delle query. Questo script produce un set di risultati e viene terminato.  
+ Per visualizzare l'esecuzione del processo, provocare un deadlock. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire due schede **query SQL** e connettere entrambe le query alla stessa istanza. Eseguire lo script seguente in una delle schede delle query. Questo script produce un set di risultati e viene terminato.  
   
 ```  
 USE AdventureWorks ;  
@@ -102,7 +102,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Eseguire lo script seguente nella seconda scheda della query. Questo script produce un set di risultati e quindi si blocca, in attesa di acquisire un blocco su `Production.Product`.  
+ Eseguire lo script seguente nella seconda scheda della query. Questo script produce un set di risultati e quindi si blocca, in attesa di acquisire `Production.Product`un blocco su.  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +118,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Eseguire lo script seguente nella prima scheda della query. Questo script si blocca, in attesa di acquisire un blocco su `Production.Location`. Dopo un breve timeout, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglierà questo script o lo script nell'esempio come vittima del deadlock e terminerà la transazione.  
+ Eseguire lo script seguente nella prima scheda della query. Questo script si blocca, in attesa di acquisire un `Production.Location`blocco su. Dopo un breve timeout, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglierà questo script o lo script nell'esempio come vittima del deadlock e terminerà la transazione.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

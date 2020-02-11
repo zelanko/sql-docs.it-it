@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010149"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilità di FileTable con altre funzionalità di SQL Server
@@ -80,7 +80,7 @@ ms.locfileid: "66010149"
 -   L'arresto anomalo di handle Win32, ad esempio la terminazione esplicita di handle Win32 effettuata da un amministratore OPPURE a causa di un arresto del database, provocherà la mancata esecuzione dei trigger utente durante le operazioni di recupero, anche qualora il contenuto di FILESTREAM sia stato modificato dall'applicazione Win32 arrestata in modo anomalo.  
   
 ##  <a name="OtherViews"></a> Viste e tabelle FileTable  
- **Viste**  
+ **Visualizzazioni**  
  È possibile creare una vista in una tabella FileTable come in qualsiasi altra tabella. A una vista creata in una tabella FileTable, tuttavia, si applicano le considerazioni seguenti:  
   
 -   Nella vista non sarà disponibile alcuna semantica FileTable, ad esempio il comportamento delle colonne nella vista, incluse le colonne degli attributi dei file, sarà quello di normali colonne della vista senza alcuna semantica speciale. Lo stesso vale per le righe che rappresentano file/directory.  

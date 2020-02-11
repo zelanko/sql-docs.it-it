@@ -1,5 +1,5 @@
 ---
-title: Esecuzione diretta ODBC | Microsoft Docs
+title: ODBC di esecuzione diretta | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039802"
 ---
 # <a name="direct-execution-odbc"></a>Esecuzione diretta ODBC
-Esecuzione diretta è il modo più semplice per eseguire un'istruzione. Quando l'istruzione viene inviata per l'esecuzione, l'origine dati lo compila in un piano di accesso e quindi esegue il piano di accesso.  
+L'esecuzione diretta è il modo più semplice per eseguire un'istruzione. Quando l'istruzione viene inviata per l'esecuzione, l'origine dati la compila in un piano di accesso e quindi esegue tale piano di accesso.  
   
- Esecuzione diretta viene comunemente utilizzata dalle applicazioni generiche che compilano ed eseguono le istruzioni in fase di esecuzione. Ad esempio, il codice seguente compila un'istruzione SQL e viene eseguito una sola volta:  
+ L'esecuzione diretta è comunemente utilizzata dalle applicazioni generiche che compilano ed eseguono istruzioni in fase di esecuzione. Nel codice seguente, ad esempio, viene compilata un'istruzione SQL che viene eseguita una sola volta:  
   
 ```  
 SQLCHAR *SQLStatement;  
@@ -36,20 +36,20 @@ BuildStatement(SQLStatement);
 SQLExecDirect(hstmt, SQLStatement, SQL_NTS);  
 ```  
   
- Esecuzione diretta risulta più adatta per le istruzioni che verranno eseguite una sola volta. Il principale svantaggio è che l'istruzione SQL viene analizzata ogni volta che viene eseguita. Inoltre, l'applicazione non è possibile recuperare le informazioni sul set di risultati creati tramite l'istruzione (se presente) fino a quando l'istruzione viene eseguita; Ciò è possibile se l'istruzione viene preparata ed eseguita in due passaggi distinti.  
+ L'esecuzione diretta funziona meglio per le istruzioni che verranno eseguite una sola volta. Il suo svantaggio principale è che l'istruzione SQL viene analizzata ogni volta che viene eseguita. Inoltre, l'applicazione non è in grado di recuperare informazioni sul set di risultati creato dall'istruzione, se presente, fino a dopo l'esecuzione dell'istruzione. Questo è possibile se l'istruzione viene preparata ed eseguita in due passaggi distinti.  
   
- Per eseguire un'istruzione direttamente, l'applicazione esegue le azioni seguenti:  
+ Per eseguire direttamente un'istruzione, l'applicazione esegue le azioni seguenti:  
   
-1.  Imposta i valori dei parametri. Per altre informazioni, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
+1.  Imposta i valori di tutti i parametri. Per ulteriori informazioni, vedere [parametri di istruzione](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
   
-2.  Le chiamate **SQLExecDirect** e lo passa a una stringa contenente l'istruzione SQL.  
+2.  Chiama **SQLExecDirect** e la passa a una stringa contenente l'istruzione SQL.  
   
-3.  Quando **SQLExecDirect** viene chiamato, il driver:  
+3.  Quando viene chiamato **SQLExecDirect** , il driver:  
   
-    -   Modifica l'istruzione SQL per usare la grammatica SQL dell'origine dati senza analizzare l'istruzione. sono inclusi sostituendo le sequenze di escape descritte in [sequenze di Escape in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). L'applicazione può recuperare il modulo di un'istruzione SQL modificato chiamando **SQLNativeSql**. Se è impostato l'attributo di istruzione SQL_ATTR_NOSCAN, le sequenze di escape non vengono sostituite.  
+    -   Modifica l'istruzione SQL in modo che utilizzi la grammatica SQL dell'origine dati senza analizzare l'istruzione; Ciò include la sostituzione delle sequenze di escape descritte in [sequenze di escape in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). L'applicazione può recuperare il formato modificato di un'istruzione SQL chiamando **SQLNativeSql**. Le sequenze di escape non vengono sostituite se è impostato l'attributo dell'istruzione SQL_ATTR_NOSCAN.  
   
-    -   Recupera i valori di parametro corrente e li converte in base alle esigenze. Per altre informazioni, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
+    -   Recupera i valori di parametro correnti e li converte secondo necessità. Per ulteriori informazioni, vedere [parametri di istruzione](../../../odbc/reference/develop-app/statement-parameters.md), più avanti in questa sezione.  
   
     -   Invia l'istruzione e i valori dei parametri convertiti all'origine dati per l'esecuzione.  
   
-    -   Restituisce gli eventuali errori. Queste includono la sequenziazione o diagnostica stato ad esempio SQLSTATE 24000 (stato del cursore non valido), errori sintattici, ad esempio SQLSTATE 42000 (sintassi o violazione di accesso) e gli errori semantici, ad esempio SQLSTATE 42S02 (di Base nella tabella o vista non trovato).
+    -   Restituisce eventuali errori. Sono incluse la sequenziazione o la diagnostica dello stato, ad esempio SQLSTATE 24000 (stato del cursore non valido), errori sintattici come SQLSTATE 42000 (errore di sintassi o violazione di accesso) ed errori semantici come SQLSTATE 42S02 (tabella di base o vista non trovata).

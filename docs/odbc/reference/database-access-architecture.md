@@ -1,5 +1,5 @@
 ---
-title: Architettura di accesso del database | Microsoft Docs
+title: Architettura di accesso al database | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fba8cf4f3f3553fafd2296e294db3a9105de330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135561"
 ---
 # <a name="database-access-architecture"></a>Architettura di accesso ai database
-Una delle domande per lo sviluppo di ODBC è la parte dell'architettura di accesso di database devono essere standardizzati. Le interfacce di programmazione SQL descritto nella sezione precedente - embedded SQL, i moduli SQL e CLI - sono solo una parte di questa architettura. Infatti, poiché ODBC è stato utilizzato principalmente per connettere le applicazioni basate sul computer di personal minicomputer e mainframe DBMS, sono disponibili anche numerosi dei componenti di rete, alcune delle quali potrebbe essere standardizzati.  
+Una delle domande nello sviluppo di ODBC è stata la parte dell'architettura di accesso al database per la standardizzazione. Le interfacce di programmazione SQL descritte nella sezione precedente-SQL embedded, moduli SQL e interfacce della riga sono solo una parte di questa architettura. Infatti, poiché ODBC era destinato principalmente alla connessione di applicazioni basate su personal computer ai sistemi DBMS minicomputer e mainframe, era anche disponibile un numero di componenti di rete, alcuni dei quali potevano essere standardizzati.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

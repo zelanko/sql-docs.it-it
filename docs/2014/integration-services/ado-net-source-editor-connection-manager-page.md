@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061684"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor origine ADO NET (pagina Gestione connessione)
@@ -36,7 +36,7 @@ ms.locfileid: "66061684"
  **Gestione connessione ADO.NET**  
  Selezionare una gestione connessione esistente nell'elenco o crearne una nuova facendo clic su **Nuova**.  
   
- **Nuova**  
+ **Nuovo**  
  Consente di creare una nuova gestione connessione usando la finestra di dialogo **Configura gestione connessione ADO.NET** .  
   
  **Modalità di accesso ai dati**  
@@ -48,7 +48,7 @@ ms.locfileid: "66061684"
 |Comando SQL|Consente di recuperare dati dall'origine dei dati [!INCLUDE[vstecado](../includes/vstecado-md.md)] usando una query SQL.|  
   
  **Anteprima**  
- Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Vista dati** . L'**anteprima** supporta la visualizzazione di un massimo di 200 righe.  
+ Consente di visualizzare in anteprima i risultati nella finestra di dialogo **Vista dati** . L' **Anteprima** può visualizzare fino a 200 righe.  
   
 > [!NOTE]  
 >  Quando vengono visualizzati i dati in anteprima, le colonne con tipo definito dall'utente CLR (UDT) non contengono dati. Vengono invece visualizzati i valori \<dimensione valore eccessiva per la visualizzazione> o System.Byte[]. Il primo viene visualizzato se si accede all'origine dei dati mediante il [!INCLUDE[vstecado](../includes/vstecado-md.md)] , il secondo se si utilizza il provider [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
@@ -56,7 +56,7 @@ ms.locfileid: "66061684"
 ## <a name="data-access-mode-dynamic-options"></a>Opzioni dinamiche relative alla modalità di accesso ai dati  
   
 ### <a name="data-access-mode--table-or-view"></a>Modalità di accesso ai dati = Tabella o vista  
- **Nome tabella o vista**  
+ **Nome della tabella o della vista**  
  Consente di selezionare il nome della tabella o della vista nell'elenco dei nomi disponibili nell'origine dei dati.  
   
 ### <a name="data-access-mode--sql-command"></a>Modalità di accesso ai dati = Comando SQL  
@@ -70,8 +70,8 @@ ms.locfileid: "66061684"
  Usare la finestra di dialogo **Apri** per individuare il file contenente il testo della query SQL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor origine ADO NET &#40;pagina Colonne&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Editor origine ADO NET &#40;pagina Output errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor origine ADO NET &#40;pagina colonne&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor origine ADO NET &#40;pagina output degli errori&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Gestione connessione ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

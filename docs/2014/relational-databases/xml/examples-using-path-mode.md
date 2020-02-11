@@ -1,5 +1,5 @@
 ---
-title: 'Esempi: Utilizzo della modalità PATH | Microsoft Docs'
+title: Esempi d'uso della modalità PATH | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287777"
 ---
-# <a name="examples-using-path-mode"></a>Esempi: Uso della modalità PATH
+# <a name="examples-using-path-mode"></a>Esempi di utilizzo della modalità PATH
   Negli esempi seguenti viene illustrato l'utilizzo della modalità PATH nella creazione di codice XML da una query SELECT. Molte di queste query vengono specificate sui documenti XML di istruzioni per la produzione di biciclette archiviate nella colonna Instructions della tabella ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Specifica di una query semplice in modalità PATH  
@@ -37,7 +37,7 @@ FOR XML PATH;
 GO  
 ```  
   
- Il risultato seguente è codice XML incentrato sugli elementi in cui il valore di ogni colonna nel set di righe risultante viene inserito in un elemento. Poiché la clausola `SELECT` non specifica alcun alias per i nomi delle colonne, i nomi degli elementi figlio generati sono gli stessi nomi di colonna corrispondenti nella clausola `SELECT`. Per ogni riga del set di righe viene aggiunto un tag <`row`>.  
+ Il risultato seguente è codice XML incentrato sugli elementi in cui il valore di ogni colonna nel set di righe risultante viene inserito in un elemento. Poiché la clausola `SELECT` non specifica alcun alias per i nomi delle colonne, i nomi degli elementi figlio generati sono gli stessi nomi di colonna corrispondenti nella clausola `SELECT` . Per ogni riga del set di righe viene aggiunto un tag <`row`>.  
   
  `<row>`  
   
@@ -111,7 +111,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -135,7 +135,7 @@ FOR XML PATH ('ProductModelData');
 GO  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
  `< ProductModelData id="122">`  
   
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Di seguito è riportato il risultato parziale. Poiché la query specifica ManuInstr come nome di colonna, il codice XML restituito per il `query()` metodo viene eseguito il wrapping un <`ManuInstr`> tag come illustrato nell'esempio seguente:  
+ Di seguito è riportato il risultato parziale. Poiché la query specifica ManuInstr come nome della colonna, il codice XML restituito dal `query()` metodo viene sottoposta a `ManuInstr` incapsulamento in un <> tag, come illustrato nell'esempio seguente:  
   
  `<Root>`  
   
@@ -244,7 +244,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- Il prefisso `MI` è inoltre definito in `WITH XMLNAMESPACES`. Di conseguenza, il metodo `query()` del tipo `xml` specificato non definisce il prefisso nel prologo della query. Questo è il risultato:  
+ Il prefisso `MI` è inoltre definito in `WITH XMLNAMESPACES`. Di conseguenza, il metodo `query()` del tipo `xml` specificato non definisce il prefisso nel prologo della query. Risultato:  
   
  `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -395,7 +395,7 @@ GO
   
  L'attributo `@xml:lang` aggiunto all'elemento <`English`> viene definito nello spazio dei nomi xml predefinito.  
   
- Questo è il risultato:  
+ Risultato:  
   
  `<Translation>`  
   
@@ -432,7 +432,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   

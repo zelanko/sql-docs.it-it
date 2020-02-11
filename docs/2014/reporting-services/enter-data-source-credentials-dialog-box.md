@@ -1,5 +1,5 @@
 ---
-title: Immettere una finestra di dialogo credenziali origine dei dati | Microsoft Docs
+title: Finestra di dialogo Immetti credenziali origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109241"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Finestra di dialogo Immetti credenziali origine dei dati
-  La finestra di dialogo **Immetti credenziali origine dei dati** consente di specificare le credenziali di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessarie per il recupero dei dati dall'origine.  
+  Utilizzare la finestra di dialogo **Immetti credenziali origine dati** per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificare le credenziali in modo che sia possibile recuperare i dati dall'origine dati.  
   
 ## <a name="options"></a>Opzioni  
  **Nome utente**  

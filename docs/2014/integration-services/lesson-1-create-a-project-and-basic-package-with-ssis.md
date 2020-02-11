@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Creazione del progetto e il pacchetto di base | Microsoft Docs'
+title: 'Lezione 1: creazione del progetto e del pacchetto di base | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767503"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lezione 1: Creazione del progetto e del pacchetto di base
   In questa lezione verrà creato un pacchetto ETL semplice tramite cui vengono estratti i dati da un'unica origine file flat, trasformati i dati usando due componenti di trasformazione Ricerca e scritti i dati in questione nella tabella dei fatti **FactCurrency** di **AdventureWorksDW2012**. In questa lezione si imparerà a creare nuovi pacchetti, aggiungere e configurare connessioni origine e destinazione dati e usare nuovi componenti flusso di controllo e flusso di dati.  
   
 > [!IMPORTANT]  
->  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni sull'installazione e distribuzione **AdventureWorksDW2012**, vedere [Microsoft SQL Server Product Samples: Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
+>  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per ulteriori informazioni sull'installazione e sulla distribuzione di **AdventureWorksDW2012**, vedere [Microsoft SQL Server Product samples: Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
   
 ## <a name="understanding-the-package-requirements"></a>Informazioni sui requisiti del pacchetto  
  Per questa esercitazione è richiesto Microsoft SQL Server Data Tools.  
@@ -60,43 +60,43 @@ ms.locfileid: "62767503"
 ### <a name="looking-at-the-destination"></a>Esame della destinazione  
  La destinazione finale dei dati di origine è la tabella dei fatti **FactCurrency** di **AdventureWorksDW**. La tabella dei fatti **FactCurrency** presenta quattro colonne e ha relazioni con due tabelle delle dimensioni, come mostrato nella tabella seguente.  
   
-|Nome colonna|Tipo di dati|Tabella di ricerca|Colonna di ricerca|  
+|Nome colonna|Tipo di dati|Tabella di ricerca|colonna di ricerca|  
 |-----------------|---------------|------------------|-------------------|  
-|AverageRate|FLOAT|None|None|  
+|AverageRate|float|nessuno|nessuno|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|None|None|  
+|EndOfDayRate|float|nessuno|nessuno|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Mapping dei dati di origine per la compatibilità con la destinazione  
  L'analisi dei formati dei dati di origine e di destinazione indica che per i valori **CurrencyKey** e **DateKey** saranno necessarie le ricerche. Tramite le trasformazioni mediante le quali verranno svolte queste ricerche si otterranno i valori **CurrencyKey** e **DateKey** usando le chiavi alternative ottenute dalle tabelle delle dimensioni **DimCurrency** e **DimDate** .  
   
 |Colonna file flat|Nome tabella|Nome colonna|Tipo di dati|  
 |----------------------|----------------|-----------------|---------------|  
-|0|FactCurrency|AverageRate|FLOAT|  
+|0|FactCurrency|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|Data|  
-|3|FactCurrency|EndOfDayRate|FLOAT|  
+|3|FactCurrency|EndOfDayRate|float|  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
  In questa lezione sono incluse le attività seguenti:  
   
 -   [Passaggio 1: Creazione di un nuovo progetto di Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Passaggio 2: Aggiunta e configurazione della gestione connessione file flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Passaggio 2: Aggiunta e configurazione di una gestione connessione file flat](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Passaggio 3: Aggiunta e configurazione di una gestione connessione OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Passaggio 4: Aggiunta di un'attività flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Passaggio 4: Aggiunta di un'attività Flusso di dati al pacchetto](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Passaggio 5: Aggiunta e configurazione dell'origine file flat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Passaggio 6: Aggiunta e configurazione delle trasformazioni ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Passaggio 6: Aggiunta e configurazione delle trasformazioni Ricerca](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Passaggio 7: Aggiunta e configurazione della destinazione OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Passaggio 8: Effettua la comprensione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Passaggio 8: Semplificazione della comprensione del pacchetto della lezione 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Passaggio 9: Test del pacchetto dell'esercitazione della lezione 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Passaggio 9: Test del pacchetto creato nella lezione 1 dell'esercitazione](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Inizio della lezione  
  [Passaggio 1: Creazione di un nuovo progetto di Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
