@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63057121"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
     
 ## <a name="message-details"></a>Dettagli messaggio  
   
@@ -52,33 +52,33 @@ ms.locfileid: "63057121"
   
      Controllare i dettagli dell'errore in Monitoraggio replica e quindi riavviare l'agente se si è arrestato. Nei dettagli dell'errore potrebbero essere contenute informazioni aggiuntive sui motivi del malfunzionamento dell'agente. Se l'agente è in esecuzione, non arrestarlo né riavviarlo, poiché ciò potrebbe aggravare il problema. Per informazioni sulla visualizzazione dello stato dell'agente e dei dettagli di errore in Monitoraggio replica, vedere gli argomenti seguenti:  
   
-    -   Per l'agente Snapshot, agente di lettura Log e agente di lettura coda, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+    -   Per la agente di snapshot, agente di lettura log e agente di lettura coda, vedere [visualizzare le informazioni ed eseguire attività con monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-    -   Per l'agente di distribuzione e dell'agente di Merge, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+    -   Per agente di distribuzione e agente di merge, vedere [visualizzare le informazioni ed eseguire attività con monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Se l'errore viene generato spesso perché l'agente è occupato:  
   
      Potrebbe essere necessario riprogettare l'applicazione in modo da ridurre il tempo di elaborazione.  
   
-     È possibile aumentare l'intervallo di controllo dello stato dell'agente tramite la finestra di dialogo **Proprietà processo** . Per informazioni sull'accesso a questa finestra di dialogo per i processi di replica, vedere [visualizzare le informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     È possibile aumentare l'intervallo di controllo dello stato dell'agente tramite la finestra di dialogo **Proprietà processo** . Per informazioni sull'accesso a questa finestra di dialogo per i processi di replica, vedere [visualizzare le informazioni ed eseguire attività con monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Se l'agente non è in grado di accedere a uno dei computer nella topologia:  
   
-     È consigliabile impostare il parametro **-LoginTimeOut** su un valore inferiore rispetto all'intervallo di esecuzione del processo di controllo degli agenti di replica. In alcuni casi, il valore di **-LoginTimeOut** è superiore a causa di problemi di rete che determinano il timeout degli accessi. Impostando **-LoginTimeOut** su un valore inferiore, sarà possibile ricevere errori più specifici e quindi risolvere più facilmente i problemi di accesso che potrebbero essere causati da autorizzazioni, problemi di rete o altro. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
+     È consigliabile impostare il parametro **-LoginTimeOut** su un valore inferiore rispetto all'intervallo di esecuzione del processo di controllo degli agenti di replica. In alcuni casi, il valore di **-LoginTimeout** è impostato su un valore superiore a causa di problemi di rete che causano il timeout degli accessi. Se **-LoginTimeout** è impostato su un valore inferiore, la replica può segnalare errori più specifici, consentendo di risolvere i problemi di accesso che potrebbero essere causati da autorizzazioni, problemi di rete o altri problemi. I parametri degli agenti possono essere specificati nei profili agente e dalla riga di comando. Per altre informazioni, vedere:  
   
-    -   [Usare i profili agenti di replica](agents/replication-agent-profiles.md)  
+    -   [Utilizzo dei profili agenti di replica](agents/replication-agent-profiles.md)  
   
     -   [Visualizzare e modificare i parametri del prompt dei comandi dell'agente di replica &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
+    -   [Concetti relativi ai file eseguibili dell'agente di replica](concepts/replication-agent-executables-concepts.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione dell'agente di replica](agents/replication-agent-administration.md)   
  [Guida di riferimento a errori ed eventi &#40;replica&#41;](errors-and-events-reference-replication.md)   
- [Agente distribuzione repliche](agents/replication-distribution-agent.md)   
- [Agente lettura log repliche](agents/replication-log-reader-agent.md)   
- [Agente merge repliche](agents/replication-merge-agent.md)   
- [Agente di lettura coda repliche](agents/replication-queue-reader-agent.md)   
- [Agente snapshot repliche](agents/replication-snapshot-agent.md)  
+ [agente di distribuzione di replica](agents/replication-distribution-agent.md)   
+ [agente di lettura log di replica](agents/replication-log-reader-agent.md)   
+ [agente di merge di replica](agents/replication-merge-agent.md)   
+ [agente di lettura coda di replica](agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

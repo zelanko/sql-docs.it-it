@@ -1,5 +1,5 @@
 ---
-title: Specificare le credenziali in Generatore Report | Microsoft Docs
+title: Specificare le credenziali in Generatore report | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101136"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Specifica di credenziali in Generatore report
@@ -23,7 +23,7 @@ ms.locfileid: "66101136"
  In una definizione di report ogni definizione di origine dati specifica un nome, una stringa di connessione, se usare la sicurezza integrata e il tipo di prompt da visualizzare se le credenziali sono richieste ma non sono state specificate. Le credenziali non vengono salvate nella definizione del report. Dopo la pubblicazione di un report nel server di report, le origini dati possono essere gestite indipendentemente dalla definizione del report. I proprietari delle origini dati possono specificare le credenziali per origini dati incorporate e condivise nel server di report.  
   
 > [!NOTE]  
->  L'amministratore del server di report deve concedere a un utente le autorizzazioni appropriate per esplorare il server di report in modo da selezionare origini dati condivise o modelli o da aprire o salvare report. Per altre informazioni, vedere [di installazione, disinstallazione e supporto di Generatore Report](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
+>  L'amministratore del server di report deve concedere a un utente le autorizzazioni appropriate per esplorare il server di report in modo da selezionare origini dati condivise o modelli o da aprire o salvare report. Per ulteriori informazioni, vedere [installazione, disinstallazione e supporto Generatore report](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -62,7 +62,7 @@ ms.locfileid: "66101136"
 -   Non sono necessarie credenziali.  
   
 ### <a name="windows-integrated-security"></a>Sicurezza integrata di Windows  
- Quando si seleziona **Usa autenticazione di Windows (sicurezza integrata)** , il token di sicurezza dell'utente corrente viene passato all'origine dati. In questo caso, all'utente non viene richiesto di digitare un nome utente o una password. Questa opzione richiede in genere che le caratteristiche di delega siano abilitate. In caso contrario, è possibile usare questa opzione solo per accedere a un'origine dati disponibile nello stesso computer.  
+ Quando si seleziona **Usa autenticazione di Windows (sicurezza integrata)**, il token di sicurezza dell'utente corrente viene passato all'origine dati. In questo caso, all'utente non viene richiesto di digitare un nome utente o una password. Questa opzione richiede in genere che le caratteristiche di delega siano abilitate. In caso contrario, è possibile usare questa opzione solo per accedere a un'origine dati disponibile nello stesso computer.  
   
 ### <a name="user-name-and-password-login"></a>Accesso tramite nome utente e password  
  Quando si seleziona **Usa il nome utente e la password seguenti**, è necessario specificare un nome utente e una password per accedere all'origine dati. Per un database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , le credenziali possono essere relative a un account di accesso al database. Le credenziali vengono passate all'origine dati per l'autenticazione.  
@@ -71,14 +71,14 @@ ms.locfileid: "66101136"
  Quando si specifica di richiedere le credenziali, ogni utente che accede al report deve immettere un nome utente e una password per recuperare i dati. Questa opzione è consigliata per i report contenenti dati riservati. Le credenziali fornite dall'utente possono essere relative a un account di Windows o a un account di accesso al database. Se il server di database non riconosce le credenziali fornite o se l'utente specificato non dispone dell'autorizzazione per il recupero dei dati, la connessione non riesce.  
   
 ### <a name="no-credentials"></a>Connessioni senza credenziali  
- Le credenziali non sono richieste per questa origine dati. Per eseguire questo report nel server di report, è necessario configurare l'account di esecuzione automatica. Per altre informazioni, vedere [configurare l'Account di esecuzione automatica &#40;Gestione configurazione SSRS&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nella documentazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](https://go.microsoft.com/fwlink/?linkid=121312).  
+ Le credenziali non sono richieste per questa origine dati. Per eseguire questo report nel server di report, è necessario configurare l'account di esecuzione automatica. Per ulteriori informazioni, vedere [configurare l'account di esecuzione automatica &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) nella [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] documentazione di nella documentazione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [online](https://go.microsoft.com/fwlink/?linkid=121312)di.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare, disinstallare e supporto di Generatore Report](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
+ [Installazione, disinstallazione e Generatore report del supporto](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
  [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Finestra di dialogo, le impostazioni di opzioni di Generatore report &#40;Generatore Report&#41;](report-builder/set-default-options-for-report-builder.md)   
+ [Finestra di dialogo Opzioni Generatore report, impostazioni &#40;Generatore report&#41;](report-builder/set-default-options-for-report-builder.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Generatore report](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Aggiungere e verificare una connessione dati o un'origine dati &#40;Report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Aggiungere dati a un report &#40;Generatore report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Aggiungere e verificare una connessione dati o un'origine dati &#40;Generatore report e SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

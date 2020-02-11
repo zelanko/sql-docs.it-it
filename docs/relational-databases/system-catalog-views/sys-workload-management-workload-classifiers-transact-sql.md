@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 585eb4551fb688f4f6a620729310b0245462cbff
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632969"
 ---
 # <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys. workload_management_workload_classifiers (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "73632969"
 
  Restituisce i dettagli per i classificatori del carico di lavoro.  
   
-|Nome colonna|tipo di dati|Descrizione|Intervallo|  
+|Nome colonna|Tipo di dati|Descrizione|Range|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|ID univoco del classificatore. Non ammette i valori Null||
 group_name|**sysname**|Nome del gruppo di carico di lavoro a cui è assegnato il classificatore. Non ammette i valori Null. Joinable a sys. workload_management_workload_groups ||
@@ -33,7 +33,7 @@ name|**sysname**|Nome del classificatore. Deve essere univoco per l'istanza. Non
 |importance|**sysname**|È l'importanza relativa di una richiesta nel gruppo del carico di lavoro e nei gruppi di carico di lavoro per le risorse condivise.  L'importanza specificata nel classificatore sostituisce l'impostazione di importanza del gruppo di carico di lavoro. Ammette i valori Null.  Se è null, viene utilizzata l'impostazione di importanza del gruppo di carico di lavoro.|Low, below_normal, Normal (impostazione predefinita), above_normal, High |
 |create_time|**datetime**|Ora di creazione del classificatore. Non ammette i valori Null.||
 modify_time|**datetime**|Ora dell'Ultima modifica del classificatore. Non ammette i valori Null.||
-is_enabled|**bit**|INTERNO||
+is_enabled|**bit**|INTERNAL||
 |&nbsp;||||
   
 ## <a name="permissions"></a>Autorizzazioni

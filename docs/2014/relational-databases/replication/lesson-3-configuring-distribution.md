@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721103"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lezione 3: Configurazione della distribuzione
@@ -26,20 +26,20 @@ ms.locfileid: "62721103"
   
 ### <a name="configuring-distribution-at-the-publisher"></a>Configurazione della distribuzione nel server di pubblicazione  
   
-1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], quindi espandere il nodo del server.  
+1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e quindi espandere il nodo del server.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Replica** e scegliere **Configura distribuzione**.  
   
     > [!NOTE]  
-    >  Se è stata effettuata la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **localhost** anziché il nome effettivo del server, verrà visualizzato un avviso in cui viene indicata l'impossibilità di stabilire una connessione tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il server **'localhost'** . Fare clic su **OK** nella finestra di dialogo di avviso. Nella finestra di dialogo **Connetti al server** modificare **Nome server** sostituendo **localhost** con il nome del server. Fare clic su **Connetti**.  
+    >  Se è stata effettuata la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **localhost** anziché il nome effettivo del server, verrà visualizzato un avviso in cui viene indicata l'impossibilità di stabilire una connessione tra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il server **'localhost'**. Fare clic su **OK** nella finestra di dialogo di avviso. Nella finestra di dialogo **Connetti al server** modificare **Nome server** sostituendo **localhost** con il nome del server. Fare clic su **Connetti**.  
   
      Verrà avviata la Configurazione guidata distribuzione.  
   
-3.  Nel **distributore** pagina, selezionare **'** _\<ServerName >_ **' fungerà da database di distribuzione; SQL Server verrà creato un database di distribuzione e di log**, quindi fare clic su **successivo**.  
+3.  Nella pagina **server di distribuzione** selezionare **'**_\<nomeserver>_' fungerà **da server di distribuzione per se stesso. SQL Server creerà un database di distribuzione e un log**e quindi fare clic su **Avanti**.  
   
-4.  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in esecuzione, nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent** selezionare **Sì**e configurare l'avvio automatico del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Scegliere **Avanti**.  
+4.  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in esecuzione, nella pagina [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Agent** selezionare **Sì**e configurare l'avvio automatico del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Fare clic su **Avanti**.  
   
-5.  Nella casella di testo **Cartella snapshot** immettere **\\\\** \<_Nome_computer>_ **\repldata**, dove \<*Nome_computer>* è il nome del server di pubblicazione e quindi fare clic su **Avanti**.  
+5.  Immettere ** \\ ** \< _Machine_Name>_ **\repldata** nella casella di testo **cartella snapshot** , in \<cui *Machine_Name>* è il nome del server di pubblicazione, quindi fare clic su **Avanti**.  
   
 6.  Accettare i valori predefiniti nella pagine seguenti della procedura guidata.  
   
@@ -47,19 +47,19 @@ ms.locfileid: "62721103"
   
 ### <a name="setting-database-permissions-at-the-publisher"></a>Impostazione delle autorizzazioni per il database nel server di pubblicazione  
   
-1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere la cartella **Sicurezza**, fare clic con il pulsante destro del mouse su **Account di accesso**e quindi scegliere **Nuovo account di accesso**.  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere **sicurezza**, fare clic con il pulsante destro del mouse su **account di accesso**, quindi scegliere **nuovo account di accesso**.  
   
-2.  Nella pagina **Generale** fare clic su **Cerca**, nella casella **Immettere il nome dell'oggetto da selezionare** immettere \<_Nome_computer>_ **\repl_snapshot**, dove \<*Nome_computer>* è il nome del server di pubblicazione locale, fare clic su **Controlla nomi** e quindi su **OK**.  
+2.  Nella pagina **generale** fare clic su **Cerca**, immettere \< _Machine_Name>_ **\ repl_snapshot** nella casella **immettere il nome dell'oggetto da selezionare** , dove \< *Machine_Name>* è il nome del server di pubblicazione locale, fare clic su **Controlla nomi**e quindi su **OK**.  
   
-3.  Nell'elenco **Utenti con mapping all'account di accesso seguente** nella pagina **Mapping utenti** selezionare il database **e il database di** distribuzione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
+3.  Nell'elenco utenti con mapping **a questo account di accesso** nella pagina **mapping** utenti selezionare i database **** e [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] la distribuzione.  
   
-     Nel **appartenenza al ruolo del Database** elenco selezionare la `db_owner` ruolo per l'account di accesso per entrambi i database.  
+     Nell'elenco **appartenenza a ruoli del database** selezionare `db_owner` il ruolo per l'account di accesso per entrambi i database.  
   
 4.  Fare clic su **OK** per creare l'account di accesso.  
   
-5.  Ripetere i passaggi da 1 a 4 per creare un account di accesso per l'account locale repl_logreader. Questo account di accesso deve essere mappato anche gli utenti che sono membri del `db_owner` ruolo predefinito del database nel **distribuzione** e **AdventureWorks** i database.  
+5.  Ripetere i passaggi da 1 a 4 per creare un account di accesso per l'account locale repl_logreader. È necessario eseguire il mapping di questo account di accesso anche agli utenti `db_owner` che sono membri del ruolo predefinito del database nei database **AdventureWorks** e di **distribuzione** .  
   
-6.  Ripetere i passaggi da 1 a 4 per creare un account di accesso per l'account locale repl_distribution. Questo account di accesso deve essere mappato a un utente che è un membro del `db_owner` ruolo predefinito del database nel **distribuzione** database.  
+6.  Ripetere i passaggi da 1 a 4 per creare un account di accesso per l'account locale repl_distribution. È necessario eseguire il mapping di questo account di accesso a un utente membro `db_owner` del ruolo predefinito del database nel database di **distribuzione** .  
   
 7.  Ripetere i passaggi da 1 a 4 per creare un account di accesso per l'account locale repl_merge. Questo account deve avere mapping di utenti nel database di **distribuzione** e nel database **AdventureWorks** .  
   

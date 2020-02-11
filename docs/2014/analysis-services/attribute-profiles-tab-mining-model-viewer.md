@@ -1,5 +1,5 @@
 ---
-title: Attributo definisce il profilo della scheda (Visualizzatore modello di Data Mining) | Microsoft Docs
+title: Scheda profili attributi (Visualizzatore modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063164"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Scheda Profili attributo (Visualizzatore modello di data mining)
   Usare la scheda **Profili attributo** per vedere il modo in cui la distribuzione dei valori di input in uno stato del modello Naive Bayes contribuisce a ogni stato dell'attributo risultante. La distribuzione dei valori viene mostrata come un istogramma colorato e tutte le distribuzioni vengono presentate in un formato tabulare per rendere più semplice il confronto dei valori.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Per ulteriori informazioni:** [algoritmo Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [visualizzare un modello utilizzando il Visualizzatore Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -40,21 +40,21 @@ ms.locfileid: "66063164"
  **Barre istogramma**  
  Consente di selezionare il numero di barre da includere nell'istogramma. Se esistono più barre di quante ne sono state scelte per la visualizzazione, le barre di importanza più alta vengono mantenute, mentre le barre rimanenti vengono raggruppate in **Altro**.  
   
- **Predictable**  
+ **Stimabile**  
  Consente di selezionare una colonna stimabile nel modello di data mining.  
   
  **Profili attributo**  
  La tabella contiene le colonne seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**Attributi**|Elenca le colonne del modello di data mining contenute nel modello di data mining.|  
+|**Attributes**|Elenca le colonne del modello di data mining contenute nel modello di data mining.|  
 |**Stati**|Colonna facoltativa che descrive lo stato rappresentato dal colore nella riga degli attributi. Aggiungere o rimuovere la colonna usando la casella di controllo **Mostra legenda** .|  
 |**Popolazione**|Consente di visualizzare la distribuzione dell'attributo nell'intero set di dati.|  
-|**Colonna per gli Stati dell'attributo stimabile**|Consente di visualizzare una colonna per ogni stato della colonna stimabile, con ogni riga corrispondente a un attributo di input nel modello.|  
+|**Colonna per gli stati dell'attributo stimabile**|Consente di visualizzare una colonna per ogni stato della colonna stimabile, con ogni riga corrispondente a un attributo di input nel modello.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   

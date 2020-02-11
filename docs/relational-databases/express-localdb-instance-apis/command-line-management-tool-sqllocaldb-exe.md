@@ -1,5 +1,5 @@
 ---
-title: 'Strumento di gestione della riga di comando: SqlLocalDB.exe | Microsoft Docs'
+title: 'Strumento di gestione della riga di comando: SqlLocalDB. exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126952"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Strumento di gestione della riga di comando: SqlLocalDB.exe
@@ -28,7 +28,7 @@ ms.locfileid: "68126952"
 ## <a name="sqllocaldb-options"></a>Opzioni di SqlLocalDB  
  SqlLocalDB supporta le opzioni seguenti.  
   
-|Opzione|Descrizione|  
+|Opzione|Risultato|  
 |------------|------------------|  
 |`-?`|Viene stampato il testo della Guida.|  
 |`create\|c "instance name" [version-number] [-s]`|Viene creata una nuova istanza del database locale con una versione e un nome specificati.<br /><br /> Se il parametro [version-number] viene omesso, il valore predefinito è la versione della build di SqlLocalDB.<br /><br /> Tramite il parametro -s viene avviata la nuova istanza del database locale dopo la relativa creazione.|  

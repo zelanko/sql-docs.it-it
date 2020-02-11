@@ -19,18 +19,18 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032629"
 ---
-# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
+# <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea un tipo di agente di raccolta per l'agente di raccolta dati. Un tipo di agente di raccolta dati è un wrapper logico intorno al [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacchetti che forniscono il meccanismo effettivo per raccogliere dati e caricarli nel data warehouse di gestione.  
+  Crea un tipo di agente di raccolta per l'agente di raccolta dati. Un tipo di agente di raccolta è un wrapper [!INCLUDE[ssIS](../../includes/ssis-md.md)] logico intorno ai pacchetti che fornisce il meccanismo effettivo per raccogliere dati e caricarli nel data warehouse di gestione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,27 +47,27 @@ sp_syscollector_create_collector_type
   
 ## <a name="arguments"></a>Argomenti  
  [ @collector_type_uid = ] '*collector_type_uid*'  
- GUID del tipo di agente di raccolta. *collector_type_uid* viene **uniqueidentifier** e se è NULL verrà creato automaticamente e restituito come OUTPUT.  
+ GUID del tipo di agente di raccolta. *collector_type_uid* è di tipo **uniqueidentifier** e se è null, verrà creata e restituita automaticamente come output.  
   
- [ @name =] '*nome*'  
- Nome del tipo di agente di raccolta. *nome* viene **sysname** e deve essere specificato.  
+ [ @name = ] '*Name*'  
+ Nome del tipo di agente di raccolta. *Name* è di **tipo sysname** e deve essere specificato.  
   
- [ @parameter_schema =] '*parameter_schema*'  
- XML Schema per questo tipo di agente di raccolta. *parameter_schema* viene **xml** con valore predefinito è NULL.  
+ [ @parameter_schema = ] '*parameter_schema*'  
+ XML Schema per questo tipo di agente di raccolta. *parameter_schema* è di **XML** e il valore predefinito è null.  
   
- [ @parameter_formatter =] '*parameter_formatter*'  
- Modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. *parameter_formatter* viene **xml** con valore predefinito è NULL.  
+ [ @parameter_formatter = ] '*parameter_formatter*'  
+ Modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. *parameter_formatter* è di **XML** e il valore predefinito è null.  
   
- [@collection_package_id =] *collection_package_id*  
- È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* viene **uniqueidentifier** ed è obbligatorio.  
+ [@collection_package_id = ] *collection_package_id*  
+ È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* è **uniqueidentifier** ed è obbligatorio.  
   
- [@upload_package_id =] *upload_package_id*  
- Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* viene **uniqueidentifier** ed è obbligatorio.  
+ [@upload_package_id = ] *upload_package_id*  
+ Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* è di tipo **uniqueidentifier** ed è obbligatorio.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questa procedura, è richiesta l'appartenenza al ruolo predefinito del database dc_admin (con autorizzazione EXECUTE) .  
   
 ## <a name="example"></a>Esempio  

@@ -1,5 +1,5 @@
 ---
-title: Gestione della memoria per OLTP In memoria | Microsoft Docs
+title: Gestione della memoria per OLTP in memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774835"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Gestione della memoria per OLTP in memoria
@@ -24,7 +24,7 @@ ms.locfileid: "62774835"
   
 |Sezione|Descrizione|  
 |-------------|-----------------|  
-|[Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Stimare le esigenze di memoria della tabella.|  
+|[Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Stimare le esigenze di memoria di una tabella.|  
 |[Associare un database con tabelle con ottimizzazione per la memoria a un pool di risorse](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Procedura dettagliata per associare un database a un pool di risorse.|  
 |[Monitorare e risolvere i problemi relativi all'utilizzo della memoria](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Strumenti che è possibile utilizzare per monitorare l'utilizzo di memoria. Viene illustrata anche la risoluzione dei problemi nel caso in cui l'utilizzo di memoria diventi troppo elevato.|  
 |[Risolvere i problemi di memoria insufficiente](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|Passaggi per recuperare da una situazione di memoria insufficiente.|  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151038"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Stima della cardinalità (SQL Server)
@@ -32,22 +32,22 @@ ms.locfileid: "63151038"
   
  Per garantire le prestazioni ottimali per le query, fare riferimento alle indicazioni riportate di seguito per testare il carico di lavoro con il nuovo strumento di stima della cardinalità prima di abilitarlo nel sistema di produzione.  
   
-1.  Aggiornare tutti i database esistenti per l'uso del nuovo strumento di stima della cardinalità. A questo scopo, usare [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) per impostare il livello di compatibilità del database su 120.  
+1.  Aggiornare tutti i database esistenti per l'uso del nuovo strumento di stima della cardinalità. A tale scopo, usare [ALTER DATABASE Compatibility level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) per impostare il livello di compatibilità del database su 120.  
   
 2.  Eseguire il carico di lavoro di prova con il nuovo strumento di stima della cardinalità e quindi risolvere gli eventuali nuovi problemi relativi alle prestazioni adottando le attuali procedure per la risoluzione dei problemi.  
   
 3.  Quando il carico di lavoro è in esecuzione con il nuovo strumento di stima della cardinalità (con livello di compatibilità del database impostato su 120 in SQL Server 2014) e le prestazioni di una query specifica registrano una regressione, è possibile eseguire la query con il flag di traccia 9481 per usare la versione dello strumento di stima della cardinalità usato in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni precedenti. Per eseguire una query con un flag di traccia, vedere l'articolo della Knowledge Base relativo all' [abilitazione del comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi al livello della query specifica](https://support.microsoft.com/kb/2801413).  
   
-4.  Se non è possibile modificare tutti i database in una sola volta per usare la nuova stima di cardinalità, è possibile usare lo strumento di stima della cardinalità precedente per tutti i database usando [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) a impostare il livello di compatibilità del database su 110.  
+4.  Se non è possibile modificare contemporaneamente tutti i database per usare il nuovo strumento di stima della cardinalità, è possibile usare lo strumento di stima della cardinalità precedente per tutti i database usando il [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) per impostare il livello di compatibilità del database su 110.  
   
 5.  Se il carico di lavoro è in esecuzione con il livello di compatibilità del database impostato su 110 e si vuole verificare o eseguire una query specifica con il nuovo strumento di stima della cardinalità, è possibile eseguire la query con il flag di traccia 2312 per usare la versione di tale strumento inclusa in SQL Server 2014.  Per eseguire una query con un flag di traccia, vedere l'articolo della Knowledge Base relativo all' [abilitazione del comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi al livello della query specifica](https://support.microsoft.com/kb/2801413).  
   
 ## <a name="new-xevents"></a>Nuovi XEvent  
  Sono disponibili due nuovi XEvent query_optimizer_estimate_cardinality per supportare i nuovi piani di query.  
   
--   *query_optimizer_estimate_cardinality* si verifica quando Query Optimizer stima la cardinalità in un'espressione relazionale.  
+-   *query_optimizer_estimate_cardinality* si verifica quando il Query Optimizer stima la cardinalità in un'espressione relazionale.  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors si verifica quando entrambi i flag di traccia 2312 e 9481 sono abilitati e tentano di forzare contemporaneamente sia il comportamento precedente della stima della cardinalità sia quello nuovo.  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors si verifica quando sono abilitati sia flag 2312 che 9481, tentando di forzare contemporaneamente il comportamento di stima di cardinalità precedente e nuovo.  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti sono illustrate alcune delle modifiche introdotte nelle nuove stime della cardinalità. Il codice per la stima della cardinalità è stato riscritto. La logica è complessa e non è possibile fornire un elenco completo di tutte le modifiche.  
@@ -67,15 +67,15 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
  Questo comportamento è stato modificato. Ora, anche se le statistiche non sono state aggiornate per i dati crescenti più recenti aggiunti dall'ultimo aggiornamento delle statistiche, il nuovo strumento di stima della cardinalità presuppone che i valori esistano e usa la cardinalità media per ogni valore nella colonna come stima della cardinalità.  
   
 ### <a name="example-b-new-cardinality-estimates-assume-filtered-predicates-on-the-same-table-have-some-correlation"></a>Esempio B. Le nuove stime della cardinalità presuppongono che i predicati filtrati nella stessa tabella presentino una correlazione.  
- Per questo esempio, si supponga che nella tabella Cars siano presenti 1000 righe, che in Make siano presenti 200 corrispondenze per "Honda", che in Model siano presenti 50 corrispondenze per "Civic" e che tutte le Civic siano Honda. Di conseguenza, il 20% dei valori nella colonna Make sono "Honda", il 5% dei valori nella colonna del modello sono "Civic" e il numero effettivo di Honda Civic è 50. Le stime della cardinalità precedenti presuppongono che i valori nelle colonne Make e Model siano indipendenti gli uni dagli altri. Query optimizer precedente stima che sono presenti 10 Honda Civic (.05 *.20 \* 1000 righe = 10 righe).  
+ Per questo esempio, si supponga che nella tabella Cars siano presenti 1000 righe, che in Make siano presenti 200 corrispondenze per "Honda", che in Model siano presenti 50 corrispondenze per "Civic" e che tutte le Civic siano Honda. Di conseguenza, il 20% dei valori nella colonna Make sono "Honda", il 5% dei valori nella colonna del modello sono "Civic" e il numero effettivo di Honda Civic è 50. Le stime della cardinalità precedenti presuppongono che i valori nelle colonne Make e Model siano indipendenti gli uni dagli altri. Il Query Optimizer precedente stima che ci sono 10 Honda Civics (05 * 0,20 \* 1000 righe = 10 righe).  
   
 ```  
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  
 ```  
   
- Questo comportamento è stato modificato. Ora, le nuove stime della cardinalità presuppongono che le colonne Make e Model presentino una *certa* correlazione. Query Optimizer stima una cardinalità più elevata mediante l'aggiunta di un componente esponenziale all'equazione di stima. Query optimizer ora stima che 22,36 righe (.05 * SQRT(.20) \* 1000 righe = 22,36 righe) corrispondono al predicato. Per questo scenario e per la distribuzione di dati specifica, 22,36 righe è un risultato più vicino alle 50 righe che saranno restituite dalla query.  
+ Questo comportamento è stato modificato. Ora, le nuove stime della cardinalità presuppongono che le colonne Make e Model presentino una *certa* correlazione. Query Optimizer stima una cardinalità più elevata mediante l'aggiunta di un componente esponenziale all'equazione di stima. Il Query Optimizer ora stima che 22,36 righe (0,05 * SQRT (. 20) \* 1000 righe = 22,36 righe) corrispondano al predicato. Per questo scenario e per la distribuzione di dati specifica, 22,36 righe è un risultato più vicino alle 50 righe che saranno restituite dalla query.  
   
- Si noti che la nuova logica di stima della cardinalità ordina le selettività del predicato e aumenta l'esponente. Ad esempio, se le selettività del predicato.05.20 e.25, la stima della cardinalità sarebbe (.05 * SQRT(.20) \* SQRT(SQRT(.25))).  
+ Si noti che la nuova logica di stima della cardinalità ordina le selettività del predicato e aumenta l'esponente. Se, ad esempio, il predicato selettività era 0,05, 0,20 e 0,25, la stima della cardinalità sarebbe (. 05 * SQRT (20 \* ) SQRT (sqrt (. 25))).  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>Esempio C. Le nuove stime della cardinalità presuppongono che i predicati filtrati in tabelle diverse siano indipendenti.  
  Per questo esempio, lo strumento di stima della cardinalità precedente presuppone che i filtri s.type e r.date del predicato siano correlati. Tuttavia, i risultati di prova sui carichi di lavoro più recenti mostrano che i filtri del predicato sulle colonne in tabelle diverse non sono in genere correlati tra loro.  

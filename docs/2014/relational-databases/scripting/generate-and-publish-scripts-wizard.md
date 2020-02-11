@@ -43,14 +43,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242113"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Genera e pubblica script
-  È possibile utilizzare la **procedura guidata genera e pubblica script** per creare script per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] trasferimento di un database tra istanze [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]di o. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.  
+  È possibile usare la procedura guidata **Genera e pubblica script** per creare script per il trasferimento di un database tra le istanze del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. È possibile generare script per un database in un'istanza del motore di database nella rete locale o da [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Gli script generati possono essere eseguiti in un'altra istanza del motore di database o in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. È inoltre possibile usare la procedura guidata per pubblicare direttamente il contenuto di un database in un servizio Web creato tramite Database Publishing Services. È possibile creare script per un intero database o limitare la creazione a oggetti specifici.  
   
 1.  **Prima di iniziare:**  [pubblicazione in un servizio ospitato](#PubHostSvc), [autorizzazioni](#Permissions)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "75242113"
   
  Per pubblicare un database in un servizio di hosting Web, selezionare l'opzione **Pubblica su servizio Web** nella pagina **Imposta opzioni di generazione script** della procedura guidata.  
   
-###  <a name="Permissions"></a>Autorizzazioni  
+###  <a name="Permissions"></a> Autorizzazioni  
  L'autorizzazione minima per pubblicare un database è l'appartenenza al ruolo predefinito del database db_ddladmin per il database di origine. L'autorizzazione minima per pubblicare uno script del database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al provider di hosting è l'appartenenza al ruolo predefinito del database db_ddladmin sul database di destinazione.  
   
  È inoltre necessario fornire un nome utente e una password per accedere all'account del provider di hosting ed eseguire la pubblicazione guidata. Il database di destinazione deve essere creato nel provider di hosting prima della pubblicazione del database di origine. La pubblicazione sovrascrive gli oggetti presenti nel database esistente.  
@@ -78,28 +78,28 @@ ms.locfileid: "75242113"
   
 3.  Completare le finestre di dialogo della procedura guidata.  
   
-    -   [Pagina introduttiva](#Introduction)  
+    -   [Pagina Introduzione](#Introduction)  
   
     -   [Pagina Seleziona oggetti](#ChooseObjects)  
   
     -   [Pagina Imposta opzioni di generazione script](#SetScriptOpt)  
   
-    -   [Pagina Opzioni di scripting avanzate](#AdvScriptOpt)  
+    -   [Pagina Opzioni di generazione script avanzate](#AdvScriptOpt)  
   
     -   [Pagina Gestisci provider](#MgProviders)  
   
     -   [Pagina Opzioni di pubblicazione avanzate](#AdvPubOpts)  
   
-    -   [Pagina Configurazione provider](#ProvConfig)  
+    -   [Pagina Configurazione del provider](#ProvConfig)  
   
     -   [Pagina Riepilogo](#Summary)  
   
     -   [Pagina Salva o pubblica script](#SavePubScripts)  
   
-###  <a name="Introduction"></a>Pagina introduttiva  
+###  <a name="Introduction"></a> Pagina Introduzione  
  In questa pagina vengono descritti i passaggi per la generazione o la pubblicazione di uno script.  
   
- Non **visualizzare più questa pagina: consente di non visualizzare più** questa pagina al successivo avvio della **procedura guidata genera e pubblica script**.  
+ **Non visualizzare più questa pagina** : consente di non visualizzare più questa pagina al successivo avvio della procedura guidata **Genera e pubblica script**.  
   
  **Next >** : consente di passare alla pagina **Choose Method** .  
   
@@ -110,13 +110,13 @@ ms.locfileid: "75242113"
   
  Crea **script per intero database** : fare clic per generare script per tutti gli oggetti nel database e includere uno script per il database stesso.  
   
- **Seleziona oggetti di database specifici** : fare clic per limitare la procedura guidata per la generazione di script solo per gli oggetti specifici nel database scelto:  
+ **Seleziona oggetti di database specifici** : fare clic per limitare la generazione degli script solo agli oggetti specifici nel database prescelto:  
   
--   **Oggetti di database** : selezionare almeno un oggetto da includere nello script.  
+-   **Oggetti di database** : consente di selezionare almeno un oggetto da includere nello script.  
   
--   **Seleziona tutto** : seleziona tutte le caselle di controllo disponibili.  
+-   **Seleziona tutto** : consente di selezionare tutte le caselle di controllo disponibili.  
   
--   Deseleziona **tutto** : consente di deselezionare tutte le caselle di controllo. Per continuare, è necessario selezionare almeno un oggetto di database.  
+-   **Deseleziona tutto** : consente di deselezionare tutte le caselle di controllo. Per continuare, è necessario selezionare almeno un oggetto di database.  
   
 ###  <a name="SetScriptOpt"></a>Pagina Imposta opzioni di generazione script  
  Usare questa pagina per specificare se si desidera che tramite la procedura guidata gli script vengano salvati nel percorso prescelto o vengano usati per pubblicare oggetti di database in un provider di hosting Web remoto. Ai fini della pubblicazione, è necessario avere accesso a un servizio Web installato usando il servizio Web Database Publishing Services.  
@@ -162,7 +162,7 @@ ms.locfileid: "75242113"
   
 -   **Includi intestazioni descrittive** : se è impostato su **true**, allo script vengono aggiunti commenti descrittivi che separano lo script in sezioni per ogni oggetto. L'impostazione predefinita è **False**.  
   
--   **Includi if not exists** : se è impostato su **true**, lo script include un'istruzione che controlla se l'oggetto esiste già nel database e non tenta di creare un nuovo oggetto se l'oggetto esiste già. L'impostazione predefinita è **False**.  
+-   **Includi if not exists** : se è impostato su **true**, lo script include un'istruzione che controlla se l'oggetto esiste già nel database e non tenta di creare un nuovo oggetto se l'oggetto esiste già. Il valore predefinito è **False**.  
   
 -   **Includi nomi di vincoli di sistema** : se è **false**, il valore predefinito dei vincoli che sono stati automaticamente denominati nel database di origine vengono automaticamente rinominati nel database di destinazione. Se è impostato su **True**, i vincoli hanno lo stesso nome nel database di origine e in quello di destinazione.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "75242113"
   
 -   **Script per account di accesso** : quando l'oggetto da inserire nello script è un utente del database, questa opzione consente di creare gli account di accesso da cui l'utente dipende. L'impostazione predefinita è **False**.  
   
--   **Script per autorizzazioni a livello di oggetto** : consente di includere script per l'impostazione dell'autorizzazione per gli oggetti nel database. L'impostazione predefinita è **False**.  
+-   **Script per autorizzazioni a livello di oggetto** : consente di includere script per l'impostazione dell'autorizzazione per gli oggetti nel database. Il valore predefinito è **False**.  
   
 -   **Script** per statistiche: se è impostato su **script per statistiche**, questa `CREATE STATISTICS` opzione include l'istruzione per ricreare le statistiche sull'oggetto. L'opzione **Genera script per statistiche e istogrammi** consente inoltre di creare informazioni sugli istogrammi. Il valore predefinito è **Non generare script per statistiche**. Per altre informazioni, vedere [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
@@ -244,7 +244,7 @@ ms.locfileid: "75242113"
   
 3.  **Pubblica impostazioni predefinite** : include gli oggetti predefiniti usati per impostare i valori predefiniti nelle colonne della tabella. Il valore predefinito è **true**. Per altre informazioni, vedere [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
-4.  **Pubblica oggetti dipendenti** : pubblica tutti gli oggetti che devono essere presenti quando viene eseguito lo script per l'oggetto selezionato. Il valore predefinito è **true**.  
+4.  **Pubblica oggetti dipendenti** : pubblica tutti gli oggetti che devono essere presenti quando viene eseguito lo script per l'oggetto selezionato. Il valore predefinito è **True**.  
   
 5.  **Pubblica proprietà estese** : consente di includere le proprietà estese nello script che viene inviato al provider per la pubblicazione, se l'oggetto dispone di proprietà estese. Il valore predefinito è **true**.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242113"
   
  **Opzioni tabella/vista** : le opzioni seguenti si applicano solo alle tabelle o alle viste.  
   
-1.  **Pubblica vincoli check** : consente di includere la `CHECK` creazione di vincoli nel processo di pubblicazione. Il valore predefinito è **true**. I vincoli `CHECK` richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Pubblica vincoli check** : consente di includere la `CHECK` creazione di vincoli nel processo di pubblicazione. Il valore predefinito è **True**. I vincoli `CHECK` richiedono che i dati immessi in una tabella rispettino una condizione specificata. Per altre informazioni, vedere [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Pubblica chiavi esterne** : consente di includere la creazione di chiavi esterne nel processo di pubblicazione. Il valore predefinito è **true**. Le chiavi esterne indicano e impongono le relazioni tra tabelle. Per altre informazioni, vedere [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
@@ -276,7 +276,7 @@ ms.locfileid: "75242113"
   
 4.  **Pubblica indici** : consente di includere indici nelle tabelle nel processo di pubblicazione. Il valore predefinito è **true**. Gli indici consentono di trovare dati rapidamente.  
   
-5.  **Pubblica chiavi primarie** : consente di includere la creazione di chiavi primarie nel processo di pubblicazione. Il valore predefinito è **true**. Le chiavi primarie identificano in modo univoco ogni riga di una tabella. Per altre informazioni, vedere [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
+5.  **Pubblica chiavi primarie** : consente di includere la creazione di chiavi primarie nel processo di pubblicazione. Il valore predefinito è **True**. Le chiavi primarie identificano in modo univoco ogni riga di una tabella. Per altre informazioni, vedere [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
 6.  **Pubblica trigger** : consente di includere la creazione di trigger DML nel processo di pubblicazione. Il valore predefinito è **true**. Un trigger DML è un'azione programmata per l'esecuzione quando si verifica un evento DML (Data Manipulation Language) nel server di database. Per altre informazioni, vedere [DML Triggers](../triggers/dml-triggers.md).  
   
@@ -319,7 +319,7 @@ ms.locfileid: "75242113"
   
  **Annulla** : consente di annullare tutte le modifiche apportate in questa finestra di dialogo e tornare alla procedura guidata.  
   
-###  <a name="Summary"></a>Pagina Riepilogo  
+###  <a name="Summary"></a> Pagina Riepilogo  
  In questa pagina vengono riepilogate le opzioni selezionate nella procedura guidata. Per modificare un'opzione, fare clic su **Indietro**. Per avviare la generazione di script da salvare o pubblicare, fare clic su **Avanti**.  
   
  **Controlla selezioni** : consente di visualizzare le selezioni effettuate per ogni pagina della procedura guidata. Espandere un nodo per visualizzare le opzioni selezionate per la pagina corrispondente.  

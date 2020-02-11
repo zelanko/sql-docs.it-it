@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831705"
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
@@ -31,7 +31,7 @@ ms.locfileid: "62831705"
   
  ![Eseguibili collegati con un vincolo di precedenza](../media/ssis-pcsimple.gif "Eseguibili collegati con un vincolo di precedenza")  
   
- In un flusso di controllo lineare, ovvero senza diramazioni, la sequenza di esecuzione delle attività è regolata unicamente dai vincoli di precedenza. In un flusso di controllo con diramazioni l'ordine di esecuzione delle attività e dei contenitori situati immediatamente dopo una diramazione è determinato dal motore di run-time di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. Il motore di run-time determina anche l'ordine di esecuzione dei flussi di lavoro non connessi in un flusso di controllo.  
+ In un flusso di controllo lineare, ovvero senza diramazioni, la sequenza di esecuzione delle attività è regolata unicamente dai vincoli di precedenza. In un flusso di controllo con diramazioni l'ordine di esecuzione delle attività e dei contenitori situati immediatamente dopo una diramazione è determinato dal motore di run-time di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Il motore di run-time determina anche l'ordine di esecuzione dei flussi di lavoro non connessi in un flusso di controllo.  
   
  L'architettura a contenitori nidificati di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] consente a tutti i contenitori, ad eccezione del contenitore Host attività che incapsula una sola attività, di includere altri contenitori, ognuno con un proprio flusso di controllo. I contenitori Ciclo For, Ciclo Foreach e Sequenza possono includere più attività e altri contenitori, che a loro volta possono includere più attività e contenitori. Un pacchetto con un'attività Script e un contenitore Sequenza può ad esempio includere un vincolo di precedenza che collega l'attività Script e il contenitore Sequenza. Il contenitore Sequenza include tre attività Script e i relativi vincoli di precedenza collegano le tre attività Script in modo da formare un flusso di controllo. Nella figura seguente vengono illustrati i vincoli di precedenza utilizzati in un pacchetto con due livelli di nidificazione.  
   
@@ -50,7 +50,8 @@ ms.locfileid: "62831705"
 -   Specificare se il vincolo di precedenza deve essere valutato singolarmente o insieme ad altri vincoli applicati all'eseguibile soggetto al vincolo.  
   
 ## <a name="evaluation-operations"></a>Operazioni di valutazione  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre le operazioni di valutazione seguenti:  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre le operazioni di valutazione seguenti:  
   
 -   Un vincolo che utilizza solo il risultato dell'esecuzione dell'eseguibile con precedenza per determinare se l'eseguibile soggetto al vincolo deve essere eseguito o meno. Il risultato dell'esecuzione dell'eseguibile con precedenza indica se l'esecuzione ha avuto esito positivo, negativo o semplicemente se è stata completata. Si tratta dell'operazione predefinita.  
   
@@ -60,7 +61,8 @@ ms.locfileid: "62831705"
   
 -   Un'espressione o un vincolo che utilizza il risultato dell'esecuzione dell'eseguibile con precedenza o il risultato restituito dalla valutazione dell'espressione.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] In Progettazione SSIS vengono usati i colori per identificare il tipo di vincolo di precedenza. Il vincolo Success è verde, il vincolo Failure è rosso e il vincolo Completion è blu. Per visualizzare in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] etichette di testo che indicano il tipo di vincolo, è necessario configurare le funzionalità di accessibilità di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] In Progettazione SSIS vengono usati i colori per identificare il tipo di vincolo di precedenza. Il vincolo Success è verde, il vincolo Failure è rosso e il vincolo Completion è blu. Per visualizzare in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] etichette di testo che indicano il tipo di vincolo, è necessario configurare le funzionalità di accessibilità di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] .  
   
  L'espressione deve essere un'espressione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] valida e in essa possono essere incluse funzioni, operatori, nonché variabili personalizzate e di sistema. Per altre informazioni, vedere [Espressioni di Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md) e [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
@@ -98,7 +100,7 @@ ms.locfileid: "62831705"
  Articolo tecnico relativo agli [esempi di espressioni SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)nel sito Web social.technet.microsoft.com  
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiunta di espressioni ai vincoli di precedenza](../add-expressions-to-precedence-constraints.md)   
+ [Aggiungere espressioni ai vincoli di precedenza](../add-expressions-to-precedence-constraints.md)   
  [Più vincoli di precedenza](../multiple-precedence-constraints.md)  
   
   

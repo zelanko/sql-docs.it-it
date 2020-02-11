@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f86d2fe9f361470f96123f1035fe9ad51fc7cbe0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915616"
 ---
-# <a name="mssqlserver17053"></a>MSSQLSERVER_17053
+# <a name="mssqlserver_17053"></a>MSSQLSERVER_17053
     
 ## <a name="details"></a>Dettagli  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62915616"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|OS_ERROR|  
-|Testo del messaggio|%ls: Errore del sistema operativo %ls.|  
+|Testo del messaggio|%ls: è stato rilevato l'errore del sistema operativo %ls.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Si è verificato un errore del sistema operativo generico.  Lo stato risultante non è chiaro.  

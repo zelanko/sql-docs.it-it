@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 19778bce64e5779471e78b8c4305e1bd6315c0ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099205"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Errore di Reporting Services
@@ -47,7 +47,7 @@ ms.locfileid: "66099205"
 ## <a name="user-action"></a>Azione dell'utente  
  Se questo errore inizia a verificarsi dopo che il file di configurazione è stato modificato manualmente, rimuovere le modifiche e immettere il valore precedente o ripristinare una versione precedente se è disponibile un backup.  
   
- Per rivedere informazioni sul messaggio di errore aggiuntive che accompagna il `rsServerConfiguration` errori, esaminare i report server trace log file, che si trovano in \Microsoft SQL Server\MSRS12.\< NomeIstanza > Services\LogFiles. Per altre informazioni, vedere [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
+ Per rivedere informazioni aggiuntive sul messaggio di errore che accompagnano l' `rsServerConfiguration` errore, esaminare i file di log di traccia del server di report, disponibili in \Microsoft SQL Server\MSRS12. \<NomeIstanza > \Reporting Services\LogFiles. Per altre informazioni, vedere [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Solo interno  
   

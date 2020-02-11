@@ -18,18 +18,18 @@ ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f0cb7f631b75be4e8b2f4063b03aca1895ba6900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997340"
 ---
-# <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
+# <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina la cronologia di esecuzione dei criteri nella gestione basata su criteri. È possibile utilizzare questa stored procedure per eliminare la cronologia di esecuzione per criteri specifici o per tutti i criteri, nonché per eliminare la cronologia di esecuzione precedente a una data specifica.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,17 +40,17 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @policy_id = ] policy_id` È l'identificatore dei criteri per il quale si desidera eliminare la cronologia di esecuzione. *policy_id* viene **int**ed è obbligatorio. Può essere NULL.  
+`[ @policy_id = ] policy_id`Identificatore dei criteri per i quali si desidera eliminare la cronologia di esecuzione. *policy_id* è di **tipo int**ed è obbligatorio. Può essere NULL.  
   
-`[ @oldest_date = ] 'oldest_date'` È la data meno recente per il quale si desidera mantenere la cronologia di esecuzione dei criteri. Qualsiasi cronologia di esecuzione precedente a questa data viene eliminata. *oldest_date* viene **datetime**ed è obbligatorio. Può essere NULL.  
+`[ @oldest_date = ] 'oldest_date'`Data meno recente per cui si desidera memorizzare la cronologia di esecuzione dei criteri. Qualsiasi cronologia di esecuzione precedente a questa data viene eliminata. *oldest_date* è di tipo **DateTime**ed è obbligatorio. Può essere NULL.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syspolicy_delete_policy_execution_history nel contesto del database di sistema msdb.  
   
- Per ottenere valori per *policy_id*, e per visualizzare le date della cronologia di esecuzione, è possibile usare la query seguente:  
+ Per ottenere i valori per *policy_id*e per visualizzare le date della cronologia di esecuzione, è possibile utilizzare la query seguente:  
   
 ```  
 SELECT a.name AS N'policy_name', b.policy_id, b.start_date, b.end_date  
@@ -61,19 +61,19 @@ ON a.policy_id = b.policy_id
   
  Il comportamento seguente è valido se si specifica NULL per uno o entrambi i valori:  
   
--   Per eliminare l'intera cronologia di esecuzione, specificare NULL per entrambi *policy_id* e per *oldest_date*.  
+-   Per eliminare tutta la cronologia di esecuzione dei criteri, specificare NULL per *policy_id* e per *oldest_date*.  
   
--   Per eliminare l'intera cronologia di esecuzione per criteri specifici, specificare un identificatore dei criteri *policy_id*, e si specifica NULL come *oldest_date*.  
+-   Per eliminare la cronologia di esecuzione dei criteri per uno specifico criterio, specificare un identificatore dei criteri per *policy_id*e specificare NULL come *oldest_date*.  
   
--   Per eliminare la cronologia di esecuzione dei criteri per tutti i criteri prima di una data specifica, specificare NULL per *policy_id*e specificare una data *oldest_date*.  
+-   Per eliminare la cronologia di esecuzione dei criteri per tutti i criteri prima di una data specifica, specificare NULL per *policy_id*e specificare una data per *oldest_date*.  
   
- Per archiviare la cronologia di esecuzione dei criteri, è possibile aprire il log Cronologia criteri in Esplora oggetti ed esportare la cronologia di esecuzione in un file. Per accedere al log cronologia criteri, espandere **Management**, fare doppio clic su **gestione dei criteri**, quindi fare clic su **Visualizza cronologia**.  
+ Per archiviare la cronologia di esecuzione dei criteri, è possibile aprire il log Cronologia criteri in Esplora oggetti ed esportare la cronologia di esecuzione in un file. Per accedere al log della cronologia dei criteri, espandere **gestione**, fare clic con il pulsante destro del mouse su **Gestione criteri**, quindi scegliere **Visualizza cronologia**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'appartenenza al ruolo predefinito del database PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possibile elevazione di credenziali: Gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che possono influenzare l'operazione dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possibile elevazione di credenziali: gli utenti nel ruolo PolicyAdministratorRole possono creare trigger server e pianificare le esecuzioni di criteri che influiscono sul funzionamento dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli utenti con il ruolo PolicyAdministratorRole possono ad esempio creare criteri che impediscono la creazione della maggior parte degli oggetti nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. A causa di questa possibile elevazione di credenziali, il ruolo PolicyAdministratorRole deve essere concesso solo a utenti ritenuti attendibili per il controllo della configurazione del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eliminata la cronologia di esecuzione dei criteri precedente a una data specifica, per criteri con ID 7.  
@@ -86,8 +86,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure della gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_purge_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
+ [Stored procedure per la gestione basata su criteri &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_set_config_history_retention &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_purge_history &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   
   

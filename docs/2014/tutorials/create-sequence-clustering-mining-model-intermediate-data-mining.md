@@ -1,5 +1,5 @@
 ---
-title: Creazione di una struttura modello di Data Mining (esercitazione intermedia di Data Mining) Sequence Clustering | Microsoft Docs
+title: Creazione di una struttura del modello di data mining Sequence Clustering (Esercitazione intermedia sul data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273483"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Creazione di una struttura del modello di data mining Sequence Clustering (Esercitazione intermedia sul data mining)
@@ -26,71 +26,71 @@ ms.locfileid: "63273483"
   
 ### <a name="to-create-a-sequence-clustering-structure-and-model"></a>Per creare una struttura e un modello di data mining Sequence Clustering  
   
-1.  In Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], fare doppio clic su **strutture di Data Mining** e selezionare **nuova struttura di Data Mining**.  
+1.  In Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]fare clic con il pulsante destro del mouse su **strutture di data mining** e scegliere **nuova struttura di data mining**  
   
 2.  Nella pagina iniziale **Creazione guidata modello di data mining** fare clic su **Avanti**.  
   
-3.  Nel **Selezione metodo di definizione** verificare che **da esistenti database relazionale o data warehouse** sia selezionata e quindi fare clic su **Next**.  
+3.  Nella pagina **Selezione metodo di definizione** verificare che sia selezionato **da database relazionale o data warehouse esistente** e quindi fare clic su **Avanti**.  
   
-4.  Nel **creare la struttura di Data Mining** verificare che l'opzione **Crea struttura di data mining con un modello di data mining** sia selezionata. Successivamente, fare clic sull'elenco a discesa, l'opzione **tecnica di data mining si desidera utilizzare?** e selezionare **Microsoft Sequence Clustering**. Scegliere **Avanti**.  
+4.  Nella pagina **Crea la struttura di data mining** verificare che sia selezionata l'opzione **crea struttura di data mining con un modello di data mining** . Quindi, fare clic sull'elenco a discesa dell'opzione **che data mining tecnica si desidera utilizzare**e selezionare **Microsoft Sequence Clustering**. Fare clic su **Avanti**.  
   
-     Il **selezione vista origine dati** verrà visualizzata la pagina. Sotto **viste origine dati disponibili**, selezionare `Orders`.  
+     Verrà visualizzata la pagina **Selezione vista origine dati** . In **viste origine dati disponibili**selezionare `Orders`.  
   
-     Orders è la stessa vista origine dati utilizzata per lo scenario di analisi degli acquisti. Se non è stato creato questa vista origine dati, vedere [aggiunta di una vista origine dati con tabelle nidificate &#40;esercitazione intermedia sul Data Mining dei dati&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
+     Orders è la stessa vista origine dati utilizzata per lo scenario di analisi degli acquisti. Se questa vista origine dati non è stata creata, vedere [aggiunta di una vista origine dati con tabelle nidificate &#40;esercitazione intermedia sul Data Mining&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
   
-5.  Scegliere **Avanti**.  
+5.  Fare clic su **Avanti**.  
   
-6.  Nel **specificare i tipi di tabella** pagina, selezionare la **Case** casella di controllo accanto al **vAssocSeqOrders** tabella e selezionare il **Nested** casella di controllo accanto al **vAssocSeqLineItems** tabella. Scegliere **Avanti**.  
+6.  Nella pagina **impostazione tipi di tabelle** selezionare la casella di controllo **case** accanto alla tabella **vAssocSeqOrders** , quindi selezionare la casella di controllo **nidificata** accanto alla tabella **vAssocSeqLineItems** . Fare clic su **Avanti**.  
   
     > [!NOTE]  
-    >  Se si verifica un errore quando si seleziona il **Case** oppure **Nested** caselle di controllo, è possibile che il join nella vista origine dati non è corretto. La tabella nidificata **vAssocSeqLineItems**, deve essere connessa alla tabella del case, **vAssocSeqOrders** tramite un join molti-a-uno. È possibile modificare la relazione facendo clic con il pulsante destro del mouse sulla linea di join e invertendo la direzione del join. Per altre informazioni, vedere [Create o finestra di dialogo Modifica relazione &#40;Analysis Services - dati multidimensionali&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
+    >  Se si verifica un errore quando si selezionano le caselle di controllo **case** o **nidificate** , è possibile che il join nella vista origine dati non sia corretto. La tabella nidificata, **vAssocSeqLineItems**, deve essere connessa alla tabella del case, **vAssocSeqOrders,** da un join molti-a-uno. È possibile modificare la relazione facendo clic con il pulsante destro del mouse sulla linea di join e invertendo la direzione del join. Per ulteriori informazioni, vedere finestra di [dialogo Crea relazione o modifica relazione &#40;Analysis Services-&#41;dati multidimensionali ](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
   
-7.  Nel **specificare i dati di Training** pagina, scegliere le colonne da utilizzare nel modello selezionando una casella di controllo, come indicato di seguito:  
+7.  Nella pagina **impostazione dati di training** scegliere le colonne da utilizzare nel modello selezionando una casella di controllo come segue:  
   
-    -   **IncomeGroup** selezionare il **Input** casella di controllo.  
+    -   **IncomeGroup** Selezionare la casella di controllo **input** .  
   
          Questa colonna contiene interessanti informazioni sui clienti che è possibile utilizzare per il clustering. Verranno utilizzate nel primo modello e ignorate nel secondo modello.  
   
-    -   **OrderNumber** selezionare il `Key` casella di controllo.  
+    -   **OrderNumber** Selezionare la `Key` casella di controllo.  
   
          Questo campo sarà utilizzato come identificatore per la tabella del case o `Key`. In generale, è consigliabile non utilizzare mai il campo chiave della tabella del case come input, perché la chiave contiene valori univoci che non sono utili per il clustering.  
   
-    -   **Area geografica** selezionare il **Input** casella di controllo.  
+    -   **Area geografica** Selezionare la casella di controllo **input** .  
   
          Questa colonna contiene interessanti informazioni sui clienti che è possibile utilizzare per il clustering. Verranno utilizzate nel primo modello e ignorate nel secondo modello.  
   
-    -   **LineNumber** selezionare il `Key` e **Input** caselle di controllo.  
+    -   **LineNumber** Selezionare le `Key` caselle di controllo e **input** .  
   
-         Il **LineNumber** campo verrà utilizzato come identificatore per la tabella nidificata, o `Sequence Key`. La chiave di una tabella nidificata deve essere sempre utilizzata per l'input.  
+         Il campo **lineNumber** verrà utilizzato come identificatore per la tabella nidificata o `Sequence Key`. La chiave di una tabella nidificata deve essere sempre utilizzata per l'input.  
   
-    -   **Modello** selezionare il **Input** e **stimabile** caselle di controllo.  
+    -   **Modello** di Selezionare le caselle di controllo **input** e **stimabile** .  
   
-     Verificare che le selezioni siano corrette e quindi fare clic su **successivo**.  
+     Verificare che le selezioni siano corrette, quindi fare clic su **Avanti**.  
   
-8.  Nel **contenuto e tipo di dati specificare colonne** pagina, verificare che la griglia contenga le colonne, i tipi di contenuto e tipi di dati indicati nella tabella seguente e quindi fare clic su **successivo**.  
+8.  Nella pagina **impostazione tipo di contenuto e dati delle colonne** verificare che la griglia contenga le colonne, i tipi di contenuto e i tipi di dati indicati nella tabella seguente, quindi fare clic su **Avanti**.  
   
-    |Tabelle/Colonne|Tipo di contenuto|Tipo di dati|  
+    |Tabelle/Colonne|Content Type|Tipo di dati|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Testo|  
-    |OrderNumber|Chiave|Testo|  
-    |Region|Discrete|Testo|  
+    |IncomeGroup|Discrete|Text|  
+    |OrderNumber|Chiave|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
-    |Line Number|Key Sequence|Long|  
-    |Modello|Discrete|Testo|  
+    |Line Number|Key Sequence|long|  
+    |Modello|Discrete|Text|  
   
-9. Nel **crea Set di Testing** pagina, modificare il **percentuale dei dati per i test** su 20, quindi fare clic su **Avanti**.  
+9. Nella pagina **Crea set di testing** modificare la **percentuale di dati per il testing** su 20, quindi fare clic su **Avanti**.  
   
-10. Nel **Completamento procedura guidata** pagina, per il **nome struttura di Data Mining**, tipo `Sequence Clustering with Region`.  
+10. Nella pagina **Completamento procedura guidata** Digitare `Sequence Clustering with Region`per il **nome della struttura di data mining**.  
   
-11. Per il **nome del modello di Data Mining**, tipo `Sequence Clustering with Region`.  
+11. Per il **nome del modello di data mining**, digitare `Sequence Clustering with Region`.  
   
-12. Verificare i **Consenti drill-through** casella e quindi fare clic su **fine**.  
+12. Selezionare la casella **Consenti drill-through** , quindi fare clic su **fine**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Elaborazione del modello Sequence Clustering](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione modelli di data mining](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
+ [Algoritmo Microsoft Sequence Clustering](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   
   

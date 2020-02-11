@@ -1,5 +1,5 @@
 ---
-title: Rilevare richieste non riuscite Input e Output | Microsoft Docs
+title: Rilevare la richiesta di output di input non riuscita | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0abd1541baeda6152a80980e85e6c902b45e886c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705163"
 ---
-# <a name="detect-failed-input-output-request"></a>Rilevare richieste di Input e Output non riuscita
+# <a name="detect-failed-input-output-request"></a>Rileva richiesta output di input non riuscita
   Questa regola consente di controllare l'evento con ID 50 nel registro eventi di sistema. Questo errore è provocato da una richiesta di I/O non riuscita.  
   
 ## <a name="best-practices-recommendations"></a>Procedure consigliate  

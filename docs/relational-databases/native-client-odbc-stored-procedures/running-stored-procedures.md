@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05956ff9111fe9b296da0a35acba42e46e1a47a2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73778086"
 ---
 # <a name="running-stored-procedures"></a>Esecuzione delle stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Una stored procedure è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  Una stored procedure è un oggetto eseguibile archiviato in un database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta  
   
 -   Stored procedure:  
   
@@ -58,18 +58,18 @@ ms.locfileid: "73778086"
   
      Le stored procedure estese possono utilizzare le caratteristiche C e C++ non disponibili nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-     Per un esempio di come chiamare una stored procedure, vedere [elaborare i codici restituiti e i parametri &#40;di&#41;output ODBC](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
+     Per un esempio di come chiamare una stored procedure, vedere [elaborare i codici restituiti e i parametri di Output &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Chiamata di una stored procedure](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
   
--   [Invio in batch di chiamate di stored procedure](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)  
+-   [Invio in batch di chiamate a stored procedure](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)  
   
--   [Elaborazione dei risultati delle stored procedure](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
+-   [Risultati dell'elaborazione delle stored procedure](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Procedure per l'esecuzione di stored procedure &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;nome del servizio&gt; proprietà (scheda servizio) | Microsoft Docs
+title: Proprietà NS&lt;$ nome&gt; servizio (scheda servizio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049607"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Proprietà NS$&lt;nome servizio&gt; (scheda Servizio)
-  Si tratta del servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
+  Questo servizio è il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] servizio. I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  
@@ -30,26 +30,26 @@ ms.locfileid: "63049607"
  **Codice di uscita**  
  Quando si verifica un errore, il numero dell'errore viene visualizzato in questa casella. Questo numero può risultare utile per la risoluzione dei problemi. È possibile cercarlo nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base oppure comunicarlo al personale del supporto tecnico.  
   
- **Host Name**  
+ **Nome host**  
  Visualizza il nome del computer o del cluster che esegue la ricerca full-text.  
   
- **Name**  
+ **Nome**  
  Indica il nome visualizzato del servizio.  
   
- **ID processo**  
+ **ID di processo**  
  Visualizza l'ID di processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Tipo di servizio SQL Server**  
- Tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati diversi servizi.  
+ **Tipo di servizio SQL**  
+ Tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installa diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  
   
--   Manuale: Questo servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
+-   Manuale: il servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
   
--   Automatico: Il servizio tenta di avviare all'avvio del computer.  
+-   Automatico: viene eseguito un tentativo automatico di avvio del servizio all'avvio del computer.  
   
--   Disabilitato: Il servizio non può essere avviato.  
+-   Disabilitato: il servizio non può essere avviato.  
   
  **Stato**  
  Indica se il servizio è in esecuzione, arrestato o disabilitato.  

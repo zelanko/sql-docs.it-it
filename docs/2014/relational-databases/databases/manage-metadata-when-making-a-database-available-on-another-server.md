@@ -1,5 +1,5 @@
 ---
-title: Gestire i metadati quando si rende disponibile un Database in un'altra istanza del Server (SQL Server) | Microsoft Docs
+title: Gestire i metadati quando si rende disponibile un database in un'altra istanza del server (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -34,12 +34,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917357"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929910"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server (SQL Server)
   Le informazioni contenute in questo argomento sono relative alle situazioni seguenti:  
@@ -54,11 +54,11 @@ ms.locfileid: "62917357"
   
 -   Collegamento di una copia di un database in un'altra istanza del server.  
   
- Alcune applicazioni dipendono da informazioni, entità e/o oggetti esterni all'ambito di un database in modalità a utente singolo. Un'applicazione include in genere dipendenze nei database **master** e **msdb** , nonché nel database utente. Qualsiasi elemento archiviato all'esterno di un database utente necessario per il corretto funzionamento di tale database deve essere reso disponibile nell'istanza del server di destinazione. Ad esempio, gli account di accesso per un'applicazione vengono archiviati come metadati nel database **master** e devono essere creati nuovamente nel server di destinazione. Se il piano di manutenzione di un'applicazione o un database dipende da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent i cui metadati sono archiviati nel database **msdb** , è necessario creare nuovamente tali processi nell'istanza del server di destinazione. Analogamente, i metadati per un trigger a livello di server vengono archiviati nel database **master**.  
+ Alcune applicazioni dipendono da informazioni, entità e/o oggetti esterni all'ambito di un database in modalità a utente singolo. In genere, un'applicazione dispone di dipendenze nei database **Master** e **msdb** e anche nel database utente. Qualsiasi elemento archiviato all'esterno di un database utente necessario per il corretto funzionamento di tale database deve essere reso disponibile nell'istanza del server di destinazione. Ad esempio, gli account di accesso per un'applicazione vengono archiviati come metadati nel database **Master** e devono essere ricreati nel server di destinazione. Se il piano di manutenzione di un'applicazione o un database dipende da processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent i cui metadati sono archiviati nel database **msdb** , è necessario creare nuovamente tali processi nell'istanza del server di destinazione. Analogamente, i metadati per un trigger a livello di server vengono archiviati nel **database master**.  
   
- Quando il database per un'applicazione viene spostato in un'altra istanza del server, è necessario ricreare tutti i metadati delle entità e degli oggetti dipendenti nei database **master** e **msdb** dell'istanza del server di destinazione. Ad esempio, se un'applicazione del database utilizza trigger a livello di server, non è sufficiente collegare o ripristinare il database nel nuovo sistema. Il database non funzionerà come previsto a meno che non si ricreino manualmente i metadati per tali trigger nel database **master** .  
+ Quando si sposta il database per un'applicazione in un'altra istanza del server, è necessario ricreare tutti i metadati delle entità e degli oggetti dipendenti nei database **Master** e **msdb** dell'istanza del server di destinazione. Ad esempio, se un'applicazione del database utilizza trigger a livello di server, non è sufficiente collegare o ripristinare il database nel nuovo sistema. Il database non funzionerà come previsto, a meno che non si ricreino manualmente i metadati per tali trigger nel database **Master** .  
   
-##  <a name="information_entities_and_objects"></a> Informazioni, entità e oggetti archiviati all'esterno dei database utente  
+##  <a name="information_entities_and_objects"></a>Informazioni, entità e oggetti archiviati all'esterno dei database utente  
  Nel resto dell'argomento vengono riepilogate le potenziali problematiche che possono influenzare un database reso disponibile in un'altra istanza del server. Potrebbe essere necessario ricreare uno o più tipi di informazioni, entità o oggetti indicati nell'elenco seguente. Per visualizzare un riepilogo, fare clic sul collegamento per l'elemento.  
   
 -   [Impostazioni di configurazione del server](#server_configuration_settings)  
@@ -67,15 +67,15 @@ ms.locfileid: "62917357"
   
 -   [Query tra database](#cross_database_queries)  
   
--   [Proprietà dei database](#database_ownership)  
+-   [Proprietà del database](#database_ownership)  
   
--   [Query distribuite o server collegati](#distributed_queries_and_linked_servers)  
+-   [Query distribuite/server collegati](#distributed_queries_and_linked_servers)  
   
 -   [Dati crittografati](#encrypted_data)  
   
 -   [Messaggi di errore definiti dall'utente](#user_defined_error_messages)  
   
--   [Notifiche degli eventi ed eventi di Strumentazione gestione Windows (WMI) (a livello del server)](#event_notif_and_wmi_events)  
+-   [Notifiche degli eventi ed eventi di Strumentazione gestione Windows (WMI) (a livello di server)](#event_notif_and_wmi_events)  
   
 -   [Stored procedure estese](#extended_stored_procedures)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62917357"
   
 -   [Processi](#jobs)  
   
--   [Account di accesso](#logins)  
+-   [Logins](#logins)  
   
 -   [Autorizzazioni](#permissions)  
   
@@ -93,16 +93,17 @@ ms.locfileid: "62917357"
   
 -   [Procedure di avvio](#startup_procedures)  
   
--   [Trigger (a livello del server)](#triggers)  
+-   [Trigger (a livello di server)](#triggers)  
   
-##  <a name="server_configuration_settings"></a> Server Configuration Settings  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive i servizi e le funzionalità chiave vengono installati e avviati in modo selettivo. In questo modo, è possibile ridurre la superficie di attacco del sistema. Nella configurazione predefinita di nuove installazioni, molte funzionalità non sono abilitate. Se il database si basa su qualsiasi funzionalità o servizio disabilitato per impostazione predefinita, tale funzionalità o servizio dovrà essere abilitato nell'istanza del server di destinazione.  
+##  <a name="server_configuration_settings"></a>Impostazioni di configurazione del server  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive i servizi e le funzionalità chiave vengono installati e avviati in modo selettivo. In questo modo, è possibile ridurre la superficie di attacco del sistema. Nella configurazione predefinita di nuove installazioni, molte funzionalità non sono abilitate. Se il database si basa su qualsiasi funzionalità o servizio disabilitato per impostazione predefinita, tale funzionalità o servizio dovrà essere abilitato nell'istanza del server di destinazione.  
   
  Per altre informazioni su queste impostazioni e sulla relativa abilitazione o disabilitazione, vedere [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="credentials"></a> Credenziali  
+##  <a name="credentials"></a>Credenziali  
  Una credenziale è un record contenente le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La maggior parte delle credenziali è costituita da un account di accesso e da una password di Windows.  
   
  Per altre informazioni su questa funzionalità, vedere [Credenziali &#40;Motore di database&#41;](../security/authentication-access/credentials-database-engine.md).  
@@ -112,7 +113,7 @@ ms.locfileid: "62917357"
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="cross_database_queries"></a> Cross-Database Queries  
+##  <a name="cross_database_queries"></a>Query tra database  
  Il valore predefinito delle opzioni DB_CHAINING e TRUSTWORTHY è OFF. Se una di queste opzioni è impostata su ON per il database originale, può essere necessario abilitarla nel database nell'istanza del server di destinazione. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
  Le operazioni di collegamento e scollegamento consentono la disabilitazione del concatenamento della proprietà tra database per il database. Per informazioni su come abilitare il concatenamento, vedere [Opzione di configurazione del server cross db ownership chaining](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
@@ -121,20 +122,22 @@ ms.locfileid: "62917357"
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="database_ownership"></a> Database Ownership  
+##  <a name="database_ownership"></a>Proprietà del database  
  Quando un database viene ripristinato in un altro computer, l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o l'utente di Windows che ha iniziato l'operazione di ripristino diventa automaticamente il proprietario del nuovo database. Al momento del ripristino, l'amministratore di sistema o il nuovo proprietario del database possono modificare il proprietario del database.  
   
-##  <a name="distributed_queries_and_linked_servers"></a> Query distribuite e server collegati  
+##  <a name="distributed_queries_and_linked_servers"></a>Query distribuite e server collegati  
  Le query distribuite e i server collegati sono supportati per le applicazioni OLE DB. Le query distribuite consentono di accedere ai dati da più origini di dati eterogenee nello stesso computer o in computer diversi. Una configurazione con server collegati consente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire comandi su origini dei dati OLE DB in server remoti. Per altre informazioni su queste funzionalità, vedere [Server collegati &#40;Motore di database&#41;](../linked-servers/linked-servers-database-engine.md).  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="encrypted_data"></a> Encrypted Data  
+##  <a name="encrypted_data"></a>Dati crittografati  
  Se nel database che si sta rendendo disponibile in un'altra istanza del server sono contenuti dati crittografati e se la chiave master del database è protetta dalla chiave master del servizio nel server originale, potrebbe essere necessario ricreare la crittografia della chiave master del servizio. La *chiave master del database* è una chiave simmetrica che viene utilizzata per proteggere le chiavi private di certificati e chiavi asimmetriche in un database crittografato. Al momento della creazione, la chiave master del database viene crittografata con l'algoritmo Triple DES e una password specificata dall'utente.  
   
- Per abilitare la decrittografia automatica della chiave master del database in un'istanza del server, viene crittografata una copia di questa chiave utilizzando la chiave master del servizio. Questa copia crittografata viene archiviata sia nel database che nel database **master**. La copia archiviata nel database **master** viene generalmente aggiornata in modo automatico in seguito a ogni modifica della chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di decrittografare la chiave master del database con la chiave master del servizio dell'istanza. Se il tentativo non riesce, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si esegue una ricerca nell'archivio delle credenziali per individuare le credenziali di chiave master con lo stesso GUID del database per cui è richiesta la chiave master. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta quindi di decrittografare la chiave master del database con ogni credenziale corrispondente fino a quando non si riesce a completare l'operazione o non sono disponibili altre credenziali da provare. Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario utilizzare l'istruzione OPEN MASTER KEY e una password.  
+ Per abilitare la decrittografia automatica della chiave master del database in un'istanza del server, viene crittografata una copia di questa chiave utilizzando la chiave master del servizio. Questa copia crittografata viene archiviata sia nel database che nel database **master**. In genere, la copia archiviata nel **database master** viene aggiornata automaticamente ogni volta che viene modificata la chiave master. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di decrittografare la chiave master del database con la chiave master del servizio dell'istanza. Se il tentativo non riesce, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si esegue una ricerca nell'archivio delle credenziali per individuare le credenziali di chiave master con lo stesso GUID del database per cui è richiesta la chiave master. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta quindi di decrittografare la chiave master del database con ogni credenziale corrispondente fino a quando non si riesce a completare l'operazione o non sono disponibili altre credenziali da provare. Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario utilizzare l'istruzione OPEN MASTER KEY e una password.  
   
- Quando viene copiato, ripristinato o collegato un database crittografato in una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia della chiave master del database crittografata dalla chiave master del servizio non viene archiviata nel database **master** nell'istanza del server di destinazione. Nell'istanza del server di destinazione, è necessario aprire la chiave master del database. Per aprire la chiave master, eseguire l'istruzione seguente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'** . È quindi consigliabile abilitare la decrittografia automatica della chiave master del database eseguendo l'istruzione seguente: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. L'istruzione ALTER MASTER KEY fornisce all'istanza del server una copia della chiave master del database crittografata con la chiave master del servizio. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Quando viene copiato, ripristinato o collegato un database crittografato in una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia della chiave master del database crittografata dalla chiave master del servizio non viene archiviata nel database **master** nell'istanza del server di destinazione. Nell'istanza del server di destinazione, è necessario aprire la chiave master del database. Per aprire la chiave master eseguire l'istruzione OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. È quindi consigliabile abilitare la decrittografia automatica della chiave master del database eseguendo l'istruzione ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. L'istruzione ALTER MASTER KEY fornisce all'istanza del server una copia della chiave master del database crittografata con la chiave master del servizio. Per altre informazioni, vedere [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Per informazioni sull'abilitazione della decrittografia automatica della chiave master del database di un database mirror, vedere [Impostare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -142,18 +145,18 @@ ms.locfileid: "62917357"
   
 -   [Gerarchia di crittografia](../security/encryption/encryption-hierarchy.md)  
   
--   [Impostare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
+-   [Impostazione di un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   
 -   [Creare chiavi simmetriche identiche su due server](../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
+##  <a name="user_defined_error_messages"></a>Messaggi di errore definiti dall'utente  
  I messaggi di errore definiti dall'utente sono contenuti nella vista del catalogo [sys.messages](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages) . Questa vista del catalogo è archiviata nel database **master**. Se un'applicazione del database dipende da messaggi di errore definiti dall'utente e il database è reso disponibile in un'altra istanza del server, usare [sp_addmessage](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql) per aggiungere tali messaggi definiti dall'utente nell'istanza del server di destinazione.  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="event_notif_and_wmi_events"></a> Le notifiche degli eventi e gli eventi di Windows Management Instrumentation (WMI) (a livello di Server)  
+##  <a name="event_notif_and_wmi_events"></a>Notifiche degli eventi ed eventi di Strumentazione gestione Windows (WMI) (a livello di server)  
   
 ### <a name="server-level-event-notifications"></a>Notifiche degli eventi a livello di server  
  Le notifiche degli eventi a livello di server sono archiviate nel database **msdb**. Se un'applicazione del database si basa su notifiche degli eventi a livello di server, tali notifiche devono pertanto essere ricreate nell'istanza del server di destinazione. Per visualizzare le notifiche degli eventi in un'istanza del server, usare la vista del catalogo [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) . Per altre informazioni, vedere [Event Notifications](../service-broker/event-notifications.md).  
@@ -166,12 +169,12 @@ ms.locfileid: "62917357"
 > [!NOTE]  
 >  Per altre informazioni, vedere [Concetti relativi al provider WMI per eventi del server](../wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
- **Per creare un avviso di WMI utilizzando SQL Server Management Studio**  
+ **Per creare un avviso WMI utilizzando SQL Server Management Studio**  
   
 -   [Creare un avviso per evento WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>Funzionamento delle notifiche degli eventi per un database con mirroring  
- Il recapito tra database delle notifiche degli eventi che richiede un database con mirroring è remoto, per definizione, in quanto per il database con mirroring è possibile eseguire il failover. [!INCLUDE[ssSB](../../includes/sssb-md.md)] offre uno speciale supporto per i database con mirroring, sotto forma di *route con mirroring*. Un route con mirroring dispone di due indirizzi, uno per l'istanza del server principale e uno per l'istanza del server mirror.  
+ Il recapito tra database delle notifiche degli eventi che richiede un database con mirroring è remoto, per definizione, in quanto per il database con mirroring è possibile eseguire il failover. [!INCLUDE[ssSB](../../includes/sssb-md.md)]fornisce supporto speciale per i database con mirroring, sotto forma di *Route con mirroring*. Un route con mirroring dispone di due indirizzi, uno per l'istanza del server principale e uno per l'istanza del server mirror.  
   
  Impostando i route con mirroring, si rende il routing di [!INCLUDE[ssSB](../../includes/sssb-md.md)] compatibile con il mirroring del database. I route con mirroring consentono a [!INCLUDE[ssSB](../../includes/sssb-md.md)] di reindirizzare in modo trasparente le conversazioni all'istanza del server principale corrente. Prendere, ad esempio, in considerazione un servizio, Service_A, ospitato da un database con mirroring, Database_A. Si supponga che sia necessario un altro servizio, Service_B ospitato da Database_B, che comunichi con Service_A. Affinché tale comunicazione sia possibile, Database_B deve contenere una route con mirroring per Service_A. Inoltre, Database_A deve contenere una route di trasporto TCP senza mirroring a Service_B che, diversamente da una route locale, rimane valido dopo il failover. Questi route consentono il ritorno degli ACK dopo un failover. Dato che il servizio del mittente è sempre denominato nello stesso modo, il route deve specificare l'istanza del broker.  
   
@@ -183,10 +186,10 @@ ms.locfileid: "62917357"
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
+##  <a name="extended_stored_procedures"></a>Stored procedure estese  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare invece la funzionalità [Integrazione CLR](../clr-integration/common-language-runtime-integration-overview.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Usare invece l' [integrazione con CLR](../clr-integration/common-language-runtime-integration-overview.md) .  
   
  Le stored procedure estese sono programmate utilizzando l'API per stored procedure estese di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un membro del ruolo predefinito del server **sysadmin** può registrare una stored procedure estesa con un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e concedere agli utenti l'autorizzazione a eseguire la procedura. Le stored procedure estese possono essere aggiunte soltanto al database **master** .  
   
@@ -199,41 +202,45 @@ ms.locfileid: "62917357"
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
+##  <a name="ifts_service_properties"></a>Proprietà del motore di ricerca full-text per SQL Server  
  Le proprietà per il motore di ricerca full-text vengono impostate da [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql). Verificare che l'istanza del server di destinazione disponga delle impostazioni necessarie per queste proprietà. Per altre informazioni su queste proprietà, vedere [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextserviceproperty-transact-sql).  
   
  Se le versioni del componente [word breaker e stemmer](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md) o del componente [filtri di ricerca full-text](../search/configure-and-manage-filters-for-search.md) sono diverse nelle istanze del server originale e del server di destinazione, l'indice e le query full-text possono comportarsi in modo diverso. Anche il [thesaurus](../search/full-text-search.md) viene archiviato in file specifici dell'istanza. È necessario trasferire una copia di questi file in un percorso equivalente nell'istanza del server di destinazione oppure ricrearli nella nuova istanza.  
   
 > [!NOTE]  
->  Quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di cataloghi full-text in un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../search/upgrade-full-text-search.md).  
+>  Quando si collega un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] contenente file di cataloghi full-text in un'istanza del server di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , i file di catalogo vengono collegati dal percorso precedente insieme agli altri file del database, come in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni, vedere [Aggiornamento della ricerca full-text](../search/upgrade-full-text-search.md).  
   
  Per ulteriori informazioni, vedere anche:  
   
 -   [Backup e ripristino di indici e cataloghi full-text](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
--   [Mirroring di database e cataloghi full-text &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
+-   [Mirroring del database e cataloghi full-text &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="jobs"></a> Processi  
+##  <a name="jobs"></a>Processi  
  Se il database si basa su processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, sarà necessario ricrearli nell'istanza del server di destinazione. I processi dipendono dai relativi ambienti. Se si pianifica di ricreare un processo esistente nell'istanza del server di destinazione, può essere necessario modificare l'istanza del server di destinazione in modo che corrisponda all'ambiente di tale processo nell'istanza del server originale. I fattori ambientali seguenti sono significativi:  
   
 -   Account di accesso utilizzato dal processo  
   
      Per creare o eseguire i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario aggiungere tutti gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiesti dal processo all'istanza del server di destinazione. Per altre informazioni, vedere [Configurare un utente per la creazione e la gestione di processi di SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-     L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nonché le relative autorizzazioni di rete. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con un account utente specificato. Il contesto del servizio SQL Server Agent influisce sulle impostazioni per il processo e per il relativo ambiente di esecuzione. È necessario che l'account abbia accesso alle risorse, ad esempio alle condivisioni di rete, richieste dal processo. Per informazioni su come selezionare e modificare l'account di avvio del servizio, vedere [Selezionare un account per il servizio SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
+     L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nonché le relative autorizzazioni di rete. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con un account utente specificato. Il contesto del servizio SQL Server Agent influisce sulle impostazioni per il processo e per il relativo ambiente di esecuzione. È necessario che l'account abbia accesso alle risorse, ad esempio alle condivisioni di rete, richieste dal processo. Per informazioni su come selezionare e modificare l'account di avvio del servizio, vedere [Selezionare un account per il servizio SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      Per un corretto funzionamento, è necessario che l'account di avvio del servizio sia configurato con dominio, file system e autorizzazioni per il Registro di sistema appropriati. Inoltre, un processo potrebbe richiedere una risorsa di rete condivisa che deve essere configurata per l'account del servizio. Per informazioni, vedere [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, associato a un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dispone di un proprio hive del Registro di sistema e i relativi processi presentano in genere dipendenze da una o più delle impostazioni in questo hive del Registro di sistema. Per funzionare come previsto, un processo richiede queste impostazioni del Registro di sistema. Se si utilizza uno script per ricreare un processo in un altro servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, è possibile che nel Registro di sistema relativo non siano disponibili le impostazioni corrette per tale processo. Affinché i processi ricreati funzionino correttamente in un'istanza del server di destinazione, è necessario che i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent originale e di destinazione presentino le stesse impostazioni del Registro di sistema.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, associato a un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dispone di un proprio hive del Registro di sistema e i relativi processi presentano in genere dipendenze da una o più delle impostazioni in questo hive del Registro di sistema. Per funzionare come previsto, un processo richiede queste impostazioni del Registro di sistema. Se si utilizza uno script per ricreare un processo in un altro servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, è possibile che nel Registro di sistema relativo non siano disponibili le impostazioni corrette per tale processo. Affinché i processi ricreati funzionino correttamente in un'istanza del server di destinazione, è necessario che i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent originale e di destinazione presentino le stesse impostazioni del Registro di sistema.  
   
     > [!CAUTION]  
     >  La modifica delle impostazioni del Registro di sistema nel servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent di destinazione per gestire un processo ricreato può essere problematica se le impostazioni correnti sono necessarie per altri processi. Se, inoltre, il Registro di sistema viene modificato in modo non appropriato, il sistema potrebbe venire gravemente danneggiato. Prima di modificare il Registro di sistema, è consigliabile eseguire il backup di tutti i dati importanti disponibili nel computer.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
      Un proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent definisce il contesto di sicurezza per il passaggio di processo specificato. Affinché un processo venga eseguito nell'istanza del server di destinazione, è necessario ricreare in tale istanza tutti i proxy di cui necessita il processo. Per altre informazioni, vedere [Creare un proxy di SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md) e [Risolvere i problemi relativi a processi multiserver che usano proxy](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
@@ -241,23 +248,23 @@ ms.locfileid: "62917357"
   
 -   [Implementazione di processi](../../ssms/agent/implement-jobs.md)  
   
--   [Gestione di account di accesso e di processi dopo un cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (per il mirroring del database)  
+-   [Gestione di account di accesso e processi dopo il cambio di ruolo &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (per il mirroring del database)  
   
--   [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (quando si installa un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (quando si installa un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]istanza di)  
   
 -   [Configurare SQL Server Agent](../../ssms/agent/sql-server-agent.md) (quando si installa un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
 -   [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   
- **Per visualizzare processi esistenti e relative proprietà**  
+ **Per visualizzare i processi esistenti e le relative proprietà**  
   
 -   [Monitoraggio delle attività del processo](../../ssms/agent/monitor-job-activity.md)  
   
--   [sp_help_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-job-transact-sql)  
+-   [sp_help_job &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-job-transact-sql)  
   
 -   [Visualizzare informazioni sui passaggi di processo](../../ssms/agent/view-job-step-information.md)  
   
--   [dbo.sysjobs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)  
+-   [dbo. sysjobs &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobs-transact-sql)  
   
  **Per creare un processo**  
   
@@ -270,7 +277,7 @@ ms.locfileid: "62917357"
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="logins"></a> Account di accesso  
+##  <a name="logins"></a>Account  
  L'accesso a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido. Questo account di accesso viene utilizzato nel processo di autenticazione che verifica se l'entità può connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un utente del database il cui account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrispondente non è definito o è definito in modo errato in un'istanza del server non potrà accedere a tale istanza. Questo utente viene definito *utente orfano* del database nell'istanza del server. Un utente del database può divenire isolato (orfano) dopo il ripristino, il collegamento o la copia di un database in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per generare uno script per tutti gli oggetti nella copia originale del database o per alcuni di essi, è possibile utilizzare Generazione guidata script e, nella finestra di dialogo **Selezione opzioni generazione script** , impostare l'opzione **Script per account di accesso** su **True**.  
@@ -290,15 +297,15 @@ ms.locfileid: "62917357"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Autorizzazioni GRANT, REVOKE o DENY per gli oggetti di sistema  
  Le autorizzazioni per gli oggetti di sistema, ad esempio stored procedure, stored procedure estese, funzioni e viste, sono archiviate nel database **master** e devono essere configurate nell'istanza del server di destinazione.  
   
- Per generare uno script per tutti gli oggetti nella copia originale del database o per alcuni di essi, è possibile utilizzare Generazione guidata script e, nella finestra di dialogo **Selezione opzioni generazione script** , impostare l'opzione **Script per autorizzazioni a livello oggetto** su **True**.  
+ Per generare uno script per alcuni o tutti gli oggetti nella copia originale del database è possibile usare la procedura guidata di generazione script e, nella finestra di dialogo **Selezione opzioni generazione script** impostare l'opzione **Script per autorizzazioni a livello oggetto** su **True**.  
   
 > [!IMPORTANT]  
 >  Se si creano script per account di accesso, le password non vengono incluse negli script. Se sono presenti account di accesso che utilizzano l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario modificare lo script nella destinazione.  
   
- Gli oggetti di sistema sono visibili nella vista del catalogo [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) . Le autorizzazioni per gli oggetti di sistema sono visibili nella vista del catalogo [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) nel database **master**. Per informazioni su come eseguire query in queste viste del catalogo e su come concedere autorizzazioni per gli oggetti di sistema, vedere [GRANT - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql). Per altre informazioni, vedere [REVOKE - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-system-object-permissions-transact-sql) e [DENY - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-system-object-permissions-transact-sql).  
+ Gli oggetti di sistema sono visibili nella vista del catalogo [sys.system_objects](/sql/relational-databases/system-catalog-views/sys-system-objects-transact-sql) . Le autorizzazioni per gli oggetti di sistema sono visibili nella vista del catalogo [sys. database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) nel database **Master** . Per informazioni su come eseguire query in queste viste del catalogo e su come concedere autorizzazioni per gli oggetti di sistema, vedere [GRANT - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-system-object-permissions-transact-sql). Per altre informazioni, vedere [REVOKE - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-system-object-permissions-transact-sql) e [DENY - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-system-object-permissions-transact-sql).  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>Autorizzazioni GRANT, REVOKE o DENY per un'istanza del server  
- Le autorizzazioni nell'ambito del server vengono archiviate nel database **master** e devono essere configurate nell'istanza del server di destinazione. Per informazioni sulle autorizzazioni del server di un'istanza del server, eseguire una query nella vista del catalogo [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql). Per informazioni sulle entità del server, eseguire una query nella vista del catalogo [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) e per informazioni sull'appartenenza ai ruoli del server, eseguire una query nella vista del catalogo [sys.server_role_members](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql).  
+ Le autorizzazioni nell'ambito del server vengono archiviate nel database **master** e devono essere configurate nell'istanza del server di destinazione. Per informazioni sulle autorizzazioni del server di un'istanza del server, eseguire una query nella vista del catalogo [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) . Per informazioni sulle entità del server, eseguire una query nella vista del catalogo [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)e per informazioni sull'appartenenza ai ruoli del server, eseguire una query nella vista del catalogo [sys.server_role_members](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql) .  
   
  Per altre informazioni, vedere [GRANT - autorizzazioni per server&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql), [REVOKE - autorizzazioni per server &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-server-permissions-transact-sql) e [DENY - autorizzazioni per server &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-server-permissions-transact-sql).  
   
@@ -316,36 +323,36 @@ ms.locfileid: "62917357"
   
 -   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
- **Per eseguire il mapping di un certificato o una chiave asimmetrica a un account di accesso**  
+ **Per eseguire il mapping di un certificato o di una chiave asimmetrica a un account di accesso**  
   
 -   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
  **Per assegnare autorizzazioni all'account di accesso con mapping**  
   
--   [GRANT - autorizzazioni per server &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)  
+-   [CONCEDERE autorizzazioni server &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-server-permissions-transact-sql)  
   
  Per ulteriori informazioni su certificati e chiavi asimmetriche, vedere [Encryption Hierarchy](../security/encryption/encryption-hierarchy.md).  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="replication_settings"></a> Replication Settings  
+##  <a name="replication_settings"></a>Impostazioni di replica  
  Se si ripristina un backup di un database replicato in un altro server o database, le impostazioni di replica non potranno essere mantenute. In questo caso, è necessario ricreare tutte le pubblicazioni e le sottoscrizioni dopo il ripristino dei backup. Per semplificare questo processo, creare script per le impostazioni di replica correnti e per l'abilitazione e la disabilitazione della replica. Per ricreare più agevolmente le impostazioni di replica, copiare questi script e modificare i riferimenti al nome del server in base all'istanza del server di destinazione.  
   
  Per altre informazioni, vedere [Backup e ripristino di database replicati](../replication/administration/back-up-and-restore-replicated-databases.md), [Mirroring e replica del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) e [Log shipping e replica &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="sb_applications"></a> Service Broker Applications  
+##  <a name="sb_applications"></a>Applicazioni Service Broker  
  Insieme al database vengono spostati molti aspetti di un'applicazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Tuttavia, alcuni aspetti dell'applicazione dovranno essere ricreati o riconfigurati nella nuova posizione.  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="startup_procedures"></a> Startup Procedures  
+##  <a name="startup_procedures"></a>Procedure di avvio  
  Una procedura di avvio è una stored procedure contrassegnata per l'esecuzione automatica che viene eseguita a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se il database dipende da procedure di avvio, è necessario definire tali procedure nell'istanza del server di destinazione e configurarle per l'esecuzione automatica all'avvio.  
   
  [&#91;Torna all'inizio&#93;](#information_entities_and_objects)  
   
-##  <a name="triggers"></a> Triggers (at Server Level)  
+##  <a name="triggers"></a>Trigger (a livello di server)  
  I trigger DDL attivano stored procedure in risposta a vari eventi DDL (Data Definition Language). Questi eventi corrispondono principalmente a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che iniziano con le parole chiave CREATE, ALTER e DROP. Alcune stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare trigger DDL.  
   
  Per ulteriori informazioni su questa funzionalità, vedere [DDL Triggers](../triggers/ddl-triggers.md).  
@@ -354,12 +361,12 @@ ms.locfileid: "62917357"
   
 ## <a name="see-also"></a>Vedere anche  
  [Database indipendenti](contained-databases.md)   
- [Copia di database in altri server](copy-databases-to-other-servers.md)   
+ [Copiare database in altri server](copy-databases-to-other-servers.md)   
  [Collegamento e scollegamento di un database &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
- [Eseguire il failover in un database secondario per il log shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
+ [Eseguire il failover a un &#40;secondario per il log shipping SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [Cambio di ruolo durante una sessione di mirroring del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Impostare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
+ [Configurare un database mirror crittografato](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [Gestione configurazione SQL Server](../sql-server-configuration-manager.md)   
- [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
+ [Risolvere i problemi degli utenti orfani &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   
   

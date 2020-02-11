@@ -15,36 +15,37 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657785"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client espone campi di descrizione specifici del driver per il descrittore riga di implementazione (IRD) solo. Nell'IRD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i campi di descrizione vengono fatto riferimento tramite attributi di colonna specifici del driver. Per informazioni su un elenco completo dei campi di descrizione specifici del driver disponibili, vedere [SQLColAttribute](sqlcolattribute.md).  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC di Native Client espone solo i campi di descrizione specifici del driver per il descrittore della riga di implementazione (IRD). All'interno di IRD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ai campi del descrittore viene fatto riferimento tramite attributi di colonna specifici del driver. Per informazioni su un elenco completo dei campi di descrizione specifici del driver disponibili, vedere [SQLColAttribute](sqlcolattribute.md).  
   
  I campi di descrizione che contengono stringhe dell'identificatore di colonna sono spesso stringhe di lunghezza zero. Tutti i valori dei campi di descrizione specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono di sola lettura.  
   
- Ad esempio gli attributi recuperati con SQLColAttribute, i campi di descrizione che gli attributi a livello di riga di report (ad esempio SQL_CA_SS_COMPUTE_ID) vengono indicati per tutte le colonne nel set di risultati.  
+ Come gli attributi recuperati con SQLColAttribute, i campi di descrizione che segnalano gli attributi a livello di riga (ad esempio SQL_CA_SS_COMPUTE_ID) vengono segnalati per tutte le colonne del set di risultati.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField e parametri con valori di tabella  
- SQLGetDescField utilizzabile per ottenere i valori per attributi estesi dei parametri con valori di tabella e le colonne dei parametri con valori di tabella. Per altre informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ SQLGetDescField può essere utilizzato per ottenere i valori per gli attributi estesi dei parametri con valori di tabella e delle colonne di parametri con valori di tabella. Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40;&#41;ODBC ](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>Supporto di SQLGetDescField per le caratteristiche avanzate di data e ora  
- Per informazioni sui campi di descrizione disponibili con i tipi di data/ora nuove, vedere [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Per informazioni sui campi di descrizione disponibili con i nuovi tipi di data/ora, vedere [parametri e metadati dei risultati](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per ulteriori informazioni, vedere [miglioramenti di data e ora &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- A partire [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], può restituire SQLGetDescField `SQL_C_SS_TIME2` (per `time` tipi) o `SQL_C_SS_TIMESTAMPOFFSET` (per `datetimeoffset`) invece di `SQL_C_BINARY`, se l'applicazione utilizza ODBC 3.8.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]A partire da, SQLGetDescField può `SQL_C_SS_TIME2` restituire ( `time` per i tipi `SQL_C_SS_TIMESTAMPOFFSET` ) o `datetimeoffset`(per) `SQL_C_BINARY`invece di, se l'applicazione usa ODBC 3,8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>Supporto di SQLGetDescField per tipi definiti dall'utente CLR di grandi dimensioni  
- `SQLGetDescField` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ 
+  `SQLGetDescField` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per ulteriori informazioni, vedere [tipi CLR definiti dall'utente di grandi dimensioni &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>Supporto di SQLGetDescField per colonne di tipo sparse  
- SQLGetDescField può essere utilizzato per eseguire una query sul nuovo campo IRD, sql_ca_ss_is_column_set, per determinare se una colonna è una `column_set` colonna.  
+ È possibile utilizzare SQLGetDescField per eseguire una query sul nuovo campo IRD SQL_CA_SS_IS_COLUMN_SET per determinare se una colonna `column_set` è una colonna.  
   
- Per altre informazioni, vedere [supporto per colonne di tipo Sparse &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
+ Per ulteriori informazioni, vedere [supporto di colonne di tipo sparse &#40;&#41;ODBC ](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -152,7 +153,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetDescField](https://go.microsoft.com/fwlink/?LinkId=59351)   
- [Dettagli di implementazione dell'API ODBC](odbc-api-implementation-details.md)  
+ [SQLGetDescField (funzione)](https://go.microsoft.com/fwlink/?LinkId=59351)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

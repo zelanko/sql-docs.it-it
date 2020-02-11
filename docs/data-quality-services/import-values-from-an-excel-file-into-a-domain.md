@@ -14,10 +14,10 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254823"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importare i valori da un file di Excel in un dominio
@@ -32,14 +32,14 @@ ms.locfileid: "75254823"
   
 -   Importare i valori in un dominio popolato esistente. In questo caso, vengono importati solo i nuovi valori. I valori già presenti non verranno importati.  
   
-##  <a name="BeforeYouBegin"></a>Prima di iniziare  
+##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
-###  <a name="Prerequisites"></a>Prerequisiti  
+###  <a name="Prerequisites"></a> Prerequisiti  
  Per importare i domini da un file di Excel, è necessario che Excel sia installato nel computer in cui è installata l'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] in modo da potere importare i valori di dominio o un dominio completo. È necessario avere creato un file di Excel con i valori di dominio (vedere [How the import works](#How)). Infine, è necessario avere creato e aperto una Knowledge Base in cui importarvi il dominio.  
   
-###  <a name="Security"></a>Sicurezza  
+###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a>Autorizzazioni  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre del ruolo dqs_kb_editor o dqs_administrator nel database DQS_MAIN per importare i valori di dominio da un file di Excel.  
   
 ##  <a name="Import"></a>Importare i valori da un file di Excel in un dominio  

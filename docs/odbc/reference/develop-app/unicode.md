@@ -14,26 +14,26 @@ ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e0044a2e2efbf0d8921a07ed4679806ba50bcd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087558"
 ---
 # <a name="unicode"></a>Unicode
-Unicode consente di definire la codifica dei caratteri in molte lingue.  
+Unicode definisce la codifica per i caratteri in molte lingue.  
   
- Per altre informazioni sullo standard Unicode, vedere [The Unicode Consortium](https://www.unicode.org).  
+ Per ulteriori informazioni sullo standard Unicode, vedere [il Consorzio Unicode](https://www.unicode.org).  
   
- Definisce un set di caratteri universali. Una tabella codici ANSI di Windows definisce un set di caratteri, in genere contenente caratteri per una lingua. Potrebbe essere più difficile da scrivere un'applicazione che è necessaria per utilizzare tabelle codici diverse.  
+ Unicode definisce un set di caratteri universali. Una tabella codici ANSI di Windows definisce un set di caratteri che in genere contiene caratteri per una lingua. Potrebbe essere più difficile scrivere un'applicazione necessaria per utilizzare tabelle codici diverse.  
   
- Unicode non richiede una tabella codici. Viene eseguito il mapping di ogni punto di codice in un singolo carattere in un qualsiasi linguaggio.  
+ Unicode non richiede una tabella codici. Ogni punto di codice viene mappato a un singolo carattere in una lingua.  
   
- Attualmente, l'unico Unicode che ODBC supporta la codifica è UCS-2, che utilizza un integer a 16 bit (lunghezza fissa) per rappresentare un carattere. Unicode consente alle applicazioni di lavorare in linguaggi diversi.  
+ Attualmente, l'unica codifica Unicode supportata da ODBC è UCS-2, che usa un Integer a 16 bit (a lunghezza fissa) per rappresentare un carattere. Unicode consente alle applicazioni di funzionare in linguaggi diversi.  
   
- La gestione Driver ODBC 3.5 (o versione successiva) è abilitata per Unicode. Ciò influisce su due aree principali: chiamate di funzione e tipi di dati stringa. Gli argomenti di stringa funzione di gestione Driver mappe e dati di tipo stringa come richiesto dall'applicazione e driver, entrambi possono essere abilitata per Unicode o ANSI abilitati. Queste due aree sono illustrate in dettaglio nelle sezioni [gli argomenti della funzione Unicode](../../../odbc/reference/develop-app/unicode-function-arguments.md) e [dati Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
+ La gestione driver ODBC 3,5 (o versione successiva) è abilitata per Unicode. Questo effetto riguarda due aree principali: le chiamate di funzione e i tipi di dati stringa. Gestione driver esegue il mapping degli argomenti della stringa di funzione e dei dati di tipo stringa come richiesto dall'applicazione e dal driver, che possono essere abilitati per Unicode o ANSI. Queste due aree sono descritte in dettaglio nelle sezioni argomenti della [funzione Unicode](../../../odbc/reference/develop-app/unicode-function-arguments.md) e [dati Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
   
- La gestione Driver ODBC 3.5 (o versioni successive) supporta l'utilizzo di un driver di Unicode con un'applicazione Unicode e nelle applicazioni ANSI. Supporta inoltre l'utilizzo di un driver ANSI con applicazioni ANSI. Gestione Driver fornisce mapping Unicode-to-ANSI limitato per un'applicazione Unicode funziona con un driver ANSI.  
+ Gestione driver ODBC 3,5 (o versione successiva) supporta l'utilizzo di un driver Unicode con un'applicazione Unicode e un'applicazione ANSI. Supporta inoltre l'utilizzo di un driver ANSI con un'applicazione ANSI. Gestione driver fornisce un mapping da Unicode a ANSI limitato per un'applicazione Unicode che utilizza un driver ANSI.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   
