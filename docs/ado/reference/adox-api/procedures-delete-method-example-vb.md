@@ -1,5 +1,5 @@
 ---
-title: Procedure di esempio del metodo Delete (VB) | Microsoft Docs
+title: Esempio di metodo Delete di Procedures (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5c7dfc901434c086b46bfb11c70e1eb2ee3bff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965366"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Esempio del metodo Delete di Procedures (VB)
-Il codice seguente viene illustrato come eliminare una stored procedure utilizzando il [eliminare](../../../ado/reference/adox-api/delete-method-adox-collections.md) metodo per il [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) raccolta.  
+Nel codice seguente viene illustrato come eliminare una stored procedure utilizzando il metodo [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) della raccolta [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) .  
   
 ```  
 ' BeginDeleteProcedureVB  
@@ -57,6 +57,6 @@ End Sub
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Elimina metodo (raccolte ADOX)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+ [Metodo Delete (raccolte ADOX)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [Oggetto procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Raccolta Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

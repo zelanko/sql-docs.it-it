@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022489"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Backup e ripristino di server di pubblicazione Oracle
@@ -46,8 +46,8 @@ ms.locfileid: "63022489"
      Se è necessario eliminare e riconfigurare il server di pubblicazione, eliminare il sinonimo public **MSSQLSERVERDISTRIBUTOR** e l'utente di replica Oracle configurato con l'opzione **CASCADE** per rimuovere tutti gli oggetti di replica dal server di pubblicazione Oracle.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire il backup e ripristino di database replicati](../administration/back-up-and-restore-replicated-databases.md)   
+ [Backup e ripristino di database replicati](../administration/back-up-and-restore-replicated-databases.md)   
  [Configurare un server di pubblicazione Oracle](configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](oracle-publishing-overview.md)  
+ [Panoramica della pubblicazione Oracle](oracle-publishing-overview.md)  
   
   

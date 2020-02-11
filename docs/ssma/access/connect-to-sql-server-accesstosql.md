@@ -1,5 +1,5 @@
 ---
-title: Connettersi a SQL Server (AccessToSQL) | Microsoft Docs
+title: Connetti a SQL Server (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,46 +10,46 @@ ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 006a90ca082861aea4fecbe6934947afa2020335
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006665"
 ---
-# <a name="connect-to-sql-server-accesstosql"></a>Connettersi a SQL Server (AccessToSQL)
-Usare la **Connetti al Server SQL** finestra di dialogo per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera eseguire la migrazione a. Per l'accesso di **Connetti al Server SQL** finestra di dialogo il **File** dal menu fare clic su **Connetti a SQL Server**.  
+# <a name="connect-to-sql-server-accesstosql"></a>Connetti a SQL Server (AccessToSQL)
+Utilizzare la finestra di dialogo **Connetti a SQL Server** per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui si desidera eseguire la migrazione. Per accedere alla finestra di dialogo **Connetti a SQL Server** , scegliere **Connetti a SQL Server**dal menu **file** .  
   
 ## <a name="options"></a>Opzioni  
 **Nome server**  
-Immettere o selezionare l'istanza di SQL Server a cui connettersi. Per impostazione predefinita, viene visualizzata l'istanza che connesso a più di recente.  
+Consente di immettere o selezionare l'istanza di SQL Server a cui connettersi. Per impostazione predefinita, viene visualizzata l'istanza di connessa più di recente.  
   
--   Se ci si connette all'istanza predefinita nel computer locale, è possibile immettere **localhost** o un punto ( **.** ).  
+-   Se ci si connette all'istanza predefinita nel computer locale, è possibile immettere **localhost** o un punto (**.**).  
   
 -   Se ci si connette all'istanza predefinita in un altro computer, immettere il nome del computer.  
   
--   Se ci si connette a un'istanza denominata in un altro computer, immettere il nome del computer, una barra rovesciata e il nome dell'istanza, ad esempio *MyServer*\\*MyInstance*.  
+-   Se ci si connette a un'istanza denominata in un altro computer, immettere il nome del computer, una barra rovesciata e il nome dell'istanza, ad esempio *MyServer*\\*istanza*.  
   
 **Porta server**  
-Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è configurato per accettare connessioni abilitata l'impostazione predefinita la porta (1433), immettere il numero di porta. In caso contrario, lasciare vuoto questo valore.  
+Se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è configurata in modo da accettare le connessioni sulla porta predefinita (1433), immettere il numero di porta. In caso contrario, lasciare vuoto questo valore.  
   
 **Database**  
-Specificare il database per eseguire la migrazione di oggetti e dati. Questa opzione non è disponibile durante la riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Consente di specificare il database in cui eseguire la migrazione di oggetti e dati. Questa opzione non è disponibile quando si esegue la riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-**Autenticazione**  
-Selezionare il metodo di autenticazione usato per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per usare l'account di Windows corrente, selezionare l'autenticazione di Windows. Per specificare una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso e password, selezionare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione.  
+**autenticazione**  
+Selezionare il metodo di autenticazione utilizzato per la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per utilizzare l'account di Windows corrente, selezionare autenticazione di Windows. Per specificare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso e una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] password, selezionare autenticazione.  
   
 **Nome utente**  
-Se si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, immettere l'account di accesso per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si usa l'autenticazione di Windows, questa opzione non è disponibile.  
+Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, immettere l'account di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l'istanza di. Se si utilizza l'autenticazione di Windows, questa opzione non è disponibile.  
   
 **Password**  
-Se si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, immettere la password per l'account di accesso nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si usa l'autenticazione di Windows, questa opzione non è disponibile.  
+Se si utilizza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di, immettere la password per l'account di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tale istanza di. Se si utilizza l'autenticazione di Windows, questa opzione non è disponibile.  
   
-**Encrypt Connection**  
-Se si desidera connettersi in modo sicuro a SQL Server, utilizzare Crittografa connessione controllando il **Crittografa connessione** casella di controllo.  
+**Crittografa connessione**  
+Se si desidera connettersi in modo sicuro a SQL Server, utilizzare la casella di controllo Crittografa connessione selezionando la casella di controllo **Crittografa connessione** .  
   
-**TrustServerCertificate**  
-Se si desidera utilizzare questa opzione, selezionare la **considera attendibile certificato Server** casella di controllo.  
+**Certificato server attendibile**  
+Se si desidera utilizzare questa opzione, selezionare la casella di controllo **certificato server attendibile** .  
   
 > [!NOTE]  
-> Per abilitare **considera attendibile certificato Server**, "Crittografa" deve essere impostata su **True**.  
+> Per abilitare il **certificato del server di attendibilità**, "Encrypt" deve essere impostato su **true**.  
   

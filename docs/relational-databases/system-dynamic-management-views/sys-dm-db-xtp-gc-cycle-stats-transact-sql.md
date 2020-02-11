@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,38 +21,38 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026856"
 ---
-# <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Restituisce lo stato corrente delle transazioni su cui è stato eseguito il commit e che hanno eliminato una o più righe. Il thread inattivo di Garbage Collection viene attivato ogni minuto o quando il numero delle transazioni DML su cui è stato eseguito il commit supera una soglia interna dopo l'ultimo ciclo di Garbage Collection. Come parte del ciclo di Garbage Collection, sposta le transazioni che sono state sottoposte al commit in una o più code associate alle generazioni. Le transazioni che hanno generato versioni non aggiornate vengono raggruppate in unità di 16 transazioni di 16 generazioni come indicato di seguito:  
   
--   Generazione 0: Consente di archiviare tutte le transazioni che è stato eseguito il commit in precedenza la transazione attiva meno recente. Le versioni di riga generate da queste transazioni sono immediatamente disponibili per il Garbage Collection.  
+-   Generazione 0: archivia tutte le transazioni di cui è stato eseguito il commit prima della transazione attiva meno recente. Le versioni di riga generate da queste transazioni sono immediatamente disponibili per il Garbage Collection.  
   
--   1-14: Archivia le transazioni con timestamp maggiore della transazione attiva meno recente. Le versioni di riga non possono essere sottoposte a Garbage Collection. Ogni generazione può contenere fino a 16 transazioni. In queste generazioni possono essere presenti 224 (14 * 16) transazioni.  
+-   Generazione 1-14: archivia le transazioni con un timestamp maggiore della transazione attiva meno recente. Le versioni di riga non possono essere sottoposte a Garbage Collection. Ogni generazione può contenere fino a 16 transazioni. In queste generazioni possono essere presenti 224 (14 * 16) transazioni.  
   
--   Generazione 15: Le transazioni rimanenti con timestamp maggiore della transazione attiva meno recente passano alla generazione 15. Analogamente alla generazione 0, non vi sono limiti di numero di transazioni nella generazione 15.  
+-   Generazione 15: le transazioni rimanenti con un timestamp maggiore della transazione attiva meno recente passano alla generazione 15. Analogamente alla generazione 0, non vi sono limiti di numero di transazioni nella generazione 15.  
   
  Quando sono presenti richieste di memoria, il thread di Garbage Collection aggiorna l'hint della transazione attiva meno recente in modo aggressivo forzando il Garbage Collection.  
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nome colonna|type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Identificatore univoco del ciclo di Garbage Collection.|  
 |ticks_at_cycle_start|**bigint**|Tick all'avvio del ciclo.|  
 |ticks_at_cycle_end|**bigint**|Tick alla fine del ciclo.|  
-|base_generation|**bigint**|Il valore di generazione di base corrente nel database. Rappresenta il timestamp della transazione attiva meno recente utilizzato per identificare le transazioni per il Garbage Collection. L'ID della transazione attiva meno recente viene aggiornato in incrementi di 16. Ad esempio, se l'ID di transazione 124, 125, 126... 139, il valore sarà 124. Quando si aggiunge un'altra transazione, ad esempio 140, il valore sarà 140.|  
+|base_generation|**bigint**|Il valore di generazione di base corrente nel database. Rappresenta il timestamp della transazione attiva meno recente utilizzato per identificare le transazioni per il Garbage Collection. L'ID della transazione attiva meno recente viene aggiornato in incrementi di 16. Ad esempio, se si dispone di ID transazione come 124, 125, 126... 139, il valore sarà 124. Quando si aggiunge un'altra transazione, ad esempio 140, il valore sarà 140.|  
 |xacts_copied_to_local|**bigint**|Numero di transazioni copiate dalla pipeline di transazione nella matrice di generazione del database.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Numero di transazioni in ogni generazione.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il server.  
   
 ## <a name="usage-scenario"></a>Scenario di utilizzo  
@@ -92,6 +92,6 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

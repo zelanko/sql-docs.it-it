@@ -20,17 +20,18 @@ ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c39074a8d1caf59d47990524a6030242ac33f95c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005474"
 ---
 # <a name="srv_rpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber (API Stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce il componente numerico per la chiamata alla stored procedure remota corrente.  
   
@@ -50,7 +51,7 @@ srvproc
 ## <a name="returns"></a>Valori di codice restituiti  
  Il componente numerico per la stored procedure remota corrente. Se il client non utilizza un componente numerico durante l'esecuzione della stored procedure remota o se non è presente una stored procedure remota corrente, restituisce - 1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Questa funzione restituisce solo il componente numerico della stored procedure remota. Non include gli identificatori facoltativi per il proprietario, il nome della stored procedure remota e il nome del database.  
   
 > [!IMPORTANT]  

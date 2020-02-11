@@ -1,5 +1,5 @@
 ---
-title: 'Dimostrazione: Miglioramento delle prestazioni di OLTP In memoria | Microsoft Docs'
+title: 'Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,27 +11,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071786"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: miglioramento delle prestazioni di OLTP in memoria
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Dimostrazione: Miglioramento delle prestazioni di OLTP in memoria
   Questo esempio mostra i miglioramenti delle prestazioni che si ottengono quando si utilizza OLTP in memoria, mettendo a confronto le differenze nei tempi di risposta per l'esecuzione di una query Transact-SQL identica su tabelle ottimizzate per la memoria e su tabelle basate su disco tradizionali. Viene anche creata una stored procedure compilata in modo nativo (basata sulla stessa query), che viene quindi eseguita per dimostrare che in genere si ottengono i tempi di risposta migliori eseguendo query su una tabella ottimizzata per la memoria con una stored procedure compilata in modo nativo. Questo esempio illustra solo un aspetto dei miglioramenti delle prestazioni in caso di accesso ai dati in tabelle ottimizzate per la memoria, ovvero l'efficienza dell'accesso ai dati durante l'esecuzione di inserimenti. Questo esempio è a thread singolo e non sfrutta i vantaggi della concorrenza di OLTP in memoria. Un carico di lavoro che utilizza la concorrenza avrà un miglioramento più significativo delle prestazioni.  
   
 > [!NOTE]  
->  Un altro esempio che illustra le tabelle ottimizzate per la memoria è disponibile all'indirizzo [esempio di OLTP In memoria di SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+>  Un altro esempio che illustra le tabelle ottimizzate per la memoria è disponibile nell' [esempio di OLTP in memoria SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Per completare questo esempio, sarà necessario eseguire queste operazioni:  
   
-1.  Creare un database denominato **imoltp** e modificare i dettagli del file da impostarlo per l'uso di OLTP In memoria.  
+1.  Creare un database denominato **imoltp** e modificare i dettagli del file per configurarlo per l'uso di OLTP in memoria.  
   
 2.  Creare gli oggetti di database per l'esempio, ovvero tre tabelle e una stored procedure compilata in modo nativo.  
   
 3.  Eseguire le diverse query e visualizzare i tempi di risposta per ognuna.  
   
- Per configurare il **imoltp** del database per questo esempio, creare innanzitutto una cartella vuota: **c:\imoltp_data**, e quindi eseguire il codice seguente:  
+ Per configurare il database **imoltp** per questo esempio, creare prima di tutto una cartella vuota: **c:\ imoltp_data**e quindi eseguire il codice seguente:  
   
 ```sql  
 USE master  
@@ -182,13 +182,13 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  I risultati previsti forniscono tempi di risposta effettivi che mostrano come l'utilizzo di tabelle ottimizzate per la memoria e di stored procedure compilate in modo nativo in genere garantisca in modo coerente tempi di risposta più rapidi rispetto all'esecuzione degli stessi carichi di lavoro su tabelle basate su disco tradizionali.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni a AdventureWorks per illustrare OLTP In memoria](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
- [OLTP in memoria &#40;ottimizzazione per la memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [Estensioni a AdventureWorks per illustrare OLTP in memoria](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [OLTP in memoria &#40;l'ottimizzazione in memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Tabelle con ottimizzazione per la memoria](memory-optimized-tables.md)   
  [Stored procedure compilate in modo nativo](natively-compiled-stored-procedures.md)   
  [Requisiti per l'uso di tabelle ottimizzate per la memoria](requirements-for-using-memory-optimized-tables.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [CREAZIONE di &#40;di DATABASE SQL Server&#41;Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [Opzioni per file e filegroup ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE e tabelle ottimizzate per la memoria](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [CREATE PROCEDURE e tabelle con ottimizzazione per la memoria](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

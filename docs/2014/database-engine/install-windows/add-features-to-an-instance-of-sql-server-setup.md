@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779372"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>Aggiungere funzionalità a un'istanza di SQL Server 2014 (programma di installazione)
   In questo argomento vengono fornite istruzioni dettagliate per aggiungere funzionalità a un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Alcuni componenti o servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono specifici di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essi sono anche noti come specifici dell'istanza. Condividono la stessa versione dell'istanza che li ospita e vengono utilizzati esclusivamente per quell'istanza. È possibile aggiungere i componenti specifici dell'istanza a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], insieme ai componenti condivisi, se non sono già installati. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Per aggiungere funzionalità a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal prompt dei comandi, vedere [installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
+ Per aggiungere funzionalità a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal prompt dei comandi, vedere [Install SQL Server 2014 dal](install-sql-server-from-the-command-prompt.md)prompt dei comandi.  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Prima di continuare, rivedere gli argomenti in [Pianificazione di un'installazione di SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
@@ -53,11 +53,11 @@ ms.locfileid: "62779372"
   
 7.  Nella pagina Tipo di installazione selezionare l'opzione **Aggiungi funzionalità a un'istanza esistente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** e quindi selezionare l'istanza da aggiornare.  
   
-8.  Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Una volta selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per altre informazioni, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md). Ogni componente può essere installato una sola volta in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per installare più componenti, è necessario installare un'istanza aggiuntiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+8.  Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Una volta selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo. Per ulteriori informazioni, vedere [edizioni e componenti di SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md). Ogni componente può essere installato una sola volta in un'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per installare più componenti, è necessario installare un'istanza aggiuntiva di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
   
-     Controllo configurazione sistema consentirà di verificare lo stato del sistema del computer prima che l'installazione continui. Per continuare, fare clic su **Avanti** .  
+     Controllo configurazione sistema consentirà di verificare lo stato del sistema del computer prima che l'installazione continui. Fare clic su **Avanti** per continuare.  
   
 9. Nella pagina Requisiti di spazio su disco viene calcolato lo spazio su disco necessario per le funzionalità specificate e vengono confrontati i requisiti con lo spazio su disco disponibile nel computer in cui è in esecuzione il programma di installazione.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62779372"
   
 11. Nella pagina Configurazione server - Account di servizio specificare gli account di accesso per i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I servizi effettivamente configurati in questa pagina dipendono dalle caratteristiche selezionate per l'installazione.  
   
-     È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per fornire privilegi minimi per ogni servizio, in modo che i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abbiano le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione del server - Account di servizio](../../sql-server/install/server-configuration-service-accounts.md) e [Configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     È possibile assegnare lo stesso account di accesso a tutti i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure configurare singolarmente l'account di ogni servizio. È inoltre possibile specificare se i servizi verranno avviati automaticamente, manualmente o se sono disabilitati. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di configurare gli account del servizio singolarmente per fornire privilegi minimi per ogni servizio, in modo che i servizi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abbiano le autorizzazioni minime necessarie per completare le attività. Per altre informazioni, vedere [Configurazione Server - Account di servizio](../../sql-server/install/server-configuration-service-accounts.md) e [Configurare account di servizio e autorizzazioni di Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Per specificare lo stesso account di accesso per tutti gli account del servizio nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], immettere le credenziali nei campi visualizzati nella parte inferiore della pagina.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "62779372"
   
     -   Modalità di sicurezza: selezionare l'autenticazione di Windows o l'autenticazione mista per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si seleziona l'autenticazione Modalità mista, è necessario specificare una password complessa per l'account amministratore di sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito.  
   
-         Quando viene stabilita la connessione tra un dispositivo e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il meccanismo di sicurezza è lo stesso sia in modalità mista che di autenticazione di Windows. Per altre informazioni, vedere [configurazione del motore di Database - Provisioning Account](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+         Quando viene stabilita la connessione tra un dispositivo e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il meccanismo di sicurezza è lo stesso sia in modalità mista che di autenticazione di Windows. Per ulteriori informazioni, vedere [motore di database configurazione-provisioning dell'account](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Amministratori: è necessario specificare almeno un amministratore di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [configurazione del motore di Database - Provisioning Account](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Amministratori: è necessario specificare almeno un amministratore di sistema per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiungere l'account usato per eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fare clic su **Aggiungi utente corrente**. Per aggiungere o rimuovere account dall'elenco degli amministratori di sistema, fare clic su **Aggiungi** o **Rimuovi**, quindi modificare l'elenco di utenti, gruppi o computer con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [motore di database configurazione-provisioning dell'account](../../sql-server/install/database-engine-configuration-account-provisioning.md).  
   
      Dopo aver modificato l'elenco, fare clic su **OK**. Verificare l'elenco di amministratori nella finestra di dialogo di configurazione. Quando l'elenco è completo, fare clic su **Avanti**.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62779372"
     > [!IMPORTANT]  
     >  Se si specificano directory di installazione non predefinite, verificare che le cartelle di installazione siano univoche per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nessuna delle directory presenti in questa finestra di dialogo deve essere condivisa con le directory di altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Per altre informazioni, vedere [Configurazione Motore di database - Directory dati](../../sql-server/install/database-engine-configuration-data-directories.md).  
+     Per altre informazioni, vedere [Configurazione del motore di database - Directory dati](../../sql-server/install/database-engine-configuration-data-directories.md).  
   
 15. Utilizzare la pagina Configurazione [!INCLUDE[ssDE](../../includes/ssde-md.md)] - FILESTREAM per abilitare la funzione FILESTREAM per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni su FILESTREAM, vedere [Configurazione del motore di database - Filestream](../../sql-server/install/database-engine-configuration-filestream.md). Scegliere Avanti per continuare.  
   
@@ -147,8 +147,8 @@ ms.locfileid: "62779372"
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e leggere i file di log del programma di installazione di SQL Server](view-and-read-sql-server-setup-log-files.md)   
  [Convalidare un'installazione di SQL Server](validate-a-sql-server-installation.md)   
- [Eliminare un'installazione SQL Server 2014](repair-a-failed-sql-server-installation.md)   
- [Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata di &#40;programma di installazione&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Installazione di SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
+ [Eliminare un'installazione di SQL Server 2014](repair-a-failed-sql-server-installation.md)   
+ [Eseguire l'aggiornamento a SQL Server 2014 usando l'installazione guidata &#40;&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Installare SQL Server 2014 dal prompt dei comandi](install-sql-server-from-the-command-prompt.md)  
   
   

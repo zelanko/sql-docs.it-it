@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026862"
 ---
-# <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Restituisce le statistiche relative alle operazioni checkpoint OLTP in memoria del database corrente. Se il database non include oggetti OLTP in memoria, viene restituito un set di risultati vuoto.  
@@ -39,54 +39,54 @@ USE In_Memory_db_name
 SELECT * FROM sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
-**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è notevolmente diverso rispetto alle versioni più recenti e viene illustrato più basso nell'argomento relativo alla [SQL Server 2014](#bkmk_2014).**
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]è sostanzialmente diverso dalle versioni più recenti e viene descritto più in basso nell'argomento all' [SQL Server 2014](#bkmk_2014).**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive  
- Nella tabella seguente vengono descritte le colonne in `sys.dm_db_xtp_checkpoint_stats`, a partire **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
+## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]e versioni successive  
+ Nella tabella seguente vengono descritte le colonne `sys.dm_db_xtp_checkpoint_stats`in, a **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** partire da.  
   
-|Nome colonna|type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Ultimo LSN visualizzato dal controller.|  
-|end_of_log_lsn|**numeric(38)**|LSN di fine del log.|  
-|bytes_to_end_of_log|**bigint**|Byte non elaborati dal controller, corrispondenti ai byte tra log `last_lsn_processed` e `end_of_log_lsn`.|  
-|log_consumption_rate|**bigint**|Frequenza di utilizzo di log delle transazioni dal controller (in KB/sec).|  
-|active_scan_time_in_ms|**bigint**|Tempo trascorso per il controller esegua l'analisi del log delle transazioni.|  
-|total_wait_time_in_ms|**bigint**|Tempo di attesa cumulativo per il controller durante l'analisi non eseguita del log.|  
-|waits_for_io|**bigint**|Numero di attese dei / o causati dal thread del controller log.|  
-|io_wait_time_in_ms|**bigint**|Tempo cumulativo trascorso in attesa dei / o log dal thread del controller.|  
-|waits_for_new_log_count|**bigint**|Numero di attese causati dal thread del controller per un nuovo registro da generare.|  
-|new_log_wait_time_in_ms|**bigint**|Tempo cumulativo trascorso in attesa di un nuovo log dal thread del controller.|  
-|idle_attempts_count|**bigint**|Numero di volte in cui il controller di transizione a uno stato di inattività.|  
-|tx_segments_dispatched|**bigint**|Numero di segmenti visto dal controller e di spedizione i serializzatori. Segmento è una contigua parte del log che costituisce un'unità di serializzazione. Attualmente viene ridimensionato a 1MB, ma può cambiare in futuro.|  
-|segment_bytes_dispatched|**bigint**|Numero totale di byte di byte inviati dal controller per i serializzatori, poiché il database riavviare.|  
-|bytes_serialized|**bigint**|Numero totale di byte serializzati dal riavvio del database.|  
+|end_of_log_lsn|**numerico (38)**|LSN della fine del log.|  
+|bytes_to_end_of_log|**bigint**|Byte di log non elaborati dal controller, corrispondenti ai byte compresi tra `last_lsn_processed` e `end_of_log_lsn`.|  
+|log_consumption_rate|**bigint**|Frequenza di utilizzo del log delle transazioni da parte del controller (in KB al secondo).|  
+|active_scan_time_in_ms|**bigint**|Tempo impiegato dal controller per l'analisi attiva del log delle transazioni.|  
+|total_wait_time_in_ms|**bigint**|Tempo di attesa cumulativo per il controller durante la mancata analisi del log.|  
+|waits_for_io|**bigint**|Numero di attese per l'i/o di log incorse dal thread del controller.|  
+|io_wait_time_in_ms|**bigint**|Tempo cumulativo trascorso in attesa del log IO dal thread del controller.|  
+|waits_for_new_log_count|**bigint**|Numero di attese subite dal thread del controller per la generazione di un nuovo log.|  
+|new_log_wait_time_in_ms|**bigint**|Tempo cumulativo trascorso in attesa di un nuovo log da parte del thread del controller.|  
+|idle_attempts_count|**bigint**|Numero di volte in cui il controller ha avuto una transizione a uno stato di inattività.|  
+|tx_segments_dispatched|**bigint**|Numero di segmenti visualizzati dal controller e inviati ai serializzatori. Segment è una parte contigua del log che costituisce un'unità di serializzazione. È attualmente dimensionato su 1 MB, ma può cambiare in futuro.|  
+|segment_bytes_dispatched|**bigint**|Numero totale di byte di byte inviati dal controller ai serializzatori, dal riavvio del database.|  
+|bytes_serialized|**bigint**|Numero totale di byte serializzati dopo il riavvio del database.|  
 |serializer_user_time_in_ms|**bigint**|Tempo impiegato dai serializzatori in modalità utente.|  
 |serializer_kernel_time_in_ms|**bigint**|Tempo impiegato dai serializzatori in modalità kernel.|  
-|xtp_log_bytes_consumed|**bigint**|Numero totale di byte di log utilizzati dal riavvio del database.|  
-|checkpoints_closed|**bigint**|Numero di checkpoint chiusi perché il database riavviare.|  
-|last_closed_checkpoint_ts|**bigint**|Timestamp dell'ultimo checkpoint chiusi.|  
-|hardened_recovery_lsn|**numeric(38)**|Verrà avviato il recupero da questo LSN.|  
-|hardened_root_file_guid|**uniqueidentifier**|GUID del file radice che finalizzati in seguito all'ultimo checkpoint completato.|  
-|hardened_root_file_watermark|**bigint**|**Interno solo**. Fino a che punto è possibile leggere il file radice fino a (questo è un tipo internamente rilevante solo - denominato BSN).|  
-|hardened_truncation_lsn|**numeric(38)**|LSN del punto di troncamento.|  
-|log_bytes_since_last_close|**bigint**|Byte dall'ultima chiusura alla fine corrente del log.|  
+|xtp_log_bytes_consumed|**bigint**|Numero totale di byte di log utilizzati dopo il riavvio del database.|  
+|checkpoints_closed|**bigint**|Numero di checkpoint chiusi dopo il riavvio del database.|  
+|last_closed_checkpoint_ts|**bigint**|Timestamp dell'ultimo checkpoint chiuso.|  
+|hardened_recovery_lsn|**numerico (38)**|Il recupero verrà avviato da questo LSN.|  
+|hardened_root_file_guid|**uniqueidentifier**|GUID del file radice che è stato finalizzato in seguito all'ultimo checkpoint completato.|  
+|hardened_root_file_watermark|**bigint**|**Solo interno**. Fino a che punto è possibile leggere il file radice fino a (si tratta di un tipo solo internamente pertinente, denominato del BSN).|  
+|hardened_truncation_lsn|**numerico (38)**|LSN del punto di troncamento.|  
+|log_bytes_since_last_close|**bigint**|Byte dall'ultima chiusura alla fine del log corrente.|  
 |time_since_last_close_in_ms|**bigint**|Tempo trascorso dall'ultima chiusura del checkpoint.|  
-|current_checkpoint_id|**bigint**|Attualmente, i nuovi segmenti vengono assegnati a questo checkpoint. Il sistema di checkpoint è una pipeline. Il checkpoint corrente è quello che vengono assegnati a segmenti dal log. Dopo che è stato raggiunto un limite, il checkpoint viene rilasciato il controller e una nuova istanza creata come corrente.|  
+|current_checkpoint_id|**bigint**|Attualmente vengono assegnati nuovi segmenti a questo checkpoint. Il sistema di checkpoint è una pipeline. Il checkpoint corrente è quello a cui vengono assegnati i segmenti del log. Una volta raggiunto il limite, il checkpoint viene rilasciato dal controller e ne viene creato uno nuovo come corrente.|  
 |current_checkpoint_segment_count|**bigint**|Numero di segmenti nel checkpoint corrente.|  
-|recovery_lsn_candidate|**bigint**|**Internamente solo**. Candidato per essere selezionato come recoverylsn quando current_checkpoint_id viene chiusa.|  
-|outstanding_checkpoint_count|**bigint**|Numero di checkpoint nella pipeline in attesa di essere chiuso.|  
-|closing_checkpoint_id|**bigint**|ID del punto di arresto di chiusura.<br /><br /> I serializzatori lavorano in parallelo, in modo che una volta effettuato terminati il checkpoint è un candidato per essere chiuso dal thread di chiusura. Ma il thread di chiusura solo possibile chiudere una alla volta e deve essere in ordine, in modo che il checkpoint di chiusura è quella che sta lavorando per il thread di chiusura.|  
-|recovery_checkpoint_id|**bigint**|ID del checkpoint da utilizzare per il ripristino.|  
+|recovery_lsn_candidate|**bigint**|**Solo internamente**. Candidato da prelevare come RecoveryLSN quando current_checkpoint_id si chiude.|  
+|outstanding_checkpoint_count|**bigint**|Numero di checkpoint in attesa di chiusura della pipeline.|  
+|closing_checkpoint_id|**bigint**|ID del checkpoint di chiusura.<br /><br /> I serializzatori operano in parallelo, quindi, una volta completati, il checkpoint è un candidato per essere chiuso dal thread di chiusura. Il thread di chiusura può tuttavia chiudersi solo uno alla volta e deve essere in ordine, quindi il Checkpoint di chiusura è quello in cui il thread di chiusura sta lavorando.|  
+|recovery_checkpoint_id|**bigint**|ID del checkpoint da utilizzare nel ripristino.|  
 |recovery_checkpoint_ts|**bigint**|Timestamp del checkpoint di ripristino.|  
-|bootstrap_recovery_lsn|**numeric(38)**|LSN recupero per il bootstrap.|  
+|bootstrap_recovery_lsn|**numerico (38)**|LSN di recupero per il bootstrap.|  
 |bootstrap_root_file_guid|**uniqueidentifier**|GUID del file radice per il bootstrap.|  
-|internal_error_code|**bigint**|Errore rilevato da uno qualsiasi dei controller, serializzatore, close e thread di unione.|
-|bytes_of_large_data_serialized|**bigint**|La quantità di dati che è stati serializzati. |  
+|internal_error_code|**bigint**|Errore visualizzato da uno dei thread controller, serializer, Close e merge.|
+|bytes_of_large_data_serialized|**bigint**|Quantità di dati serializzati. |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- Nella tabella seguente vengono descritte le colonne in `sys.dm_db_xtp_checkpoint_stats`, per **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
+ Nella tabella seguente vengono descritte le colonne `sys.dm_db_xtp_checkpoint_stats`di per **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
-|Nome colonna|type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|Numero di byte di log tra il numero di sequenza del file di log (LSN) corrente e la fine del log del thread.|  
 |total_log_blocks_processed|**bigint**|Numero complessivo di blocchi di log elaborati dall'avvio del server.|  
@@ -102,12 +102,12 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |checkpoint_lsn|**numerico (38)**|Numero di sequenza del file di log (LSN) di recupero associato all'ultimo checkpoint completato OLTP in memoria.|  
 |current_lsn|**numerico (38)**|LSN del record del log attualmente in elaborazione.|  
 |end_of_log_lsn|**numerico (38)**|LSN di fine del log.|  
-|task_address|**varbinary(8)**|Indirizzo di SOS_Task. Join a sys.dm_os_tasks per ottenere ulteriori informazioni.|  
+|task_address|**varbinary (8)**|Indirizzo di SOS_Task. Join a sys.dm_os_tasks per ottenere ulteriori informazioni.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione `VIEW DATABASE STATE` per il server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

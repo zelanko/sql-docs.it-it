@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071593"
 ---
 # <a name="cross-database-queries"></a>Query tra database
@@ -22,7 +22,7 @@ ms.locfileid: "63071593"
   
  Le variabili di tabella non sono transazionali. Pertanto, le variabili di tabella ottimizzata per la memoria possono essere utilizzate nelle query tra database e possono quindi facilitare lo spostamento di dati da un database nelle tabelle ottimizzate per la memoria a un altro. È possibile utilizzare due transazioni. Nella prima transazione, inserire i dati della tabella remota nella variabile. Nella seconda transazione, inserire i dati nella tabella ottimizzata per la memoria locale dalla variabile.  
   
- Ad esempio, per copiare la riga dalla tabella t1 nel database db1 alla tabella t2 in db2, tramite variabile @v1 di tipo dbo.tt1, è possibile utilizzare qualcosa di simile:  
+ Ad esempio, per copiare la riga dalla tabella T1 nel database DB1 alla tabella T2 in DB2, usando una @v1 variabile di tipo dbo. TT1, è possibile usare qualcosa di simile a quanto segue:  
   
 ```sql  
 USE db2   

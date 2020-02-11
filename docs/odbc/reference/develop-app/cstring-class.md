@@ -13,11 +13,11 @@ ms.assetid: 18630642-76fa-43c4-a154-3f0969ec9b50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90c92476337bb1059b7272830e33094edc58dbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002077"
 ---
 # <a name="cstring-class"></a>Classe CString
-Poiché gli oggetti del **CString** classe in Microsoft® Visual C++® sono firmati e gli argomenti delle stringhe in funzioni di ODBC non sono firmati, le applicazioni che passano **CString** oggetti alle funzioni ODBC senza esegue il cast di essi riceverà gli avvisi del compilatore.
+Poiché gli oggetti della classe **CString** in Microsoft® Visual C++® sono firmati e gli argomenti di stringa nelle funzioni ODBC non sono firmati, le applicazioni che passano oggetti **CString** alle funzioni ODBC senza eseguirne il cast riceveranno avvisi del compilatore.

@@ -1,5 +1,5 @@
 ---
-title: max (funzione) (XQuery) | Microsoft Docs
+title: Funzione Max (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985956"
 ---
 # <a name="aggregate-functions---max"></a>Funzioni di aggregazione - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Da una sequenza di valori atomici, restituisce *$arg*, l'unico elemento il cui valore è maggiore di quello di tutti gli altri.  
+  Restituisce da una sequenza di valori atomici, *$arg*, un elemento il cui valore è maggiore di quello di tutti gli altri.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,25 +38,25 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Sequenza di valori atomici dalla quale deve essere restituito il valore massimo.  
   
-## <a name="remarks"></a>Note  
- Tutti i tipi di valori atomizzati passati a **max** devono essere sottotipi dello stesso tipo di base. Tipi di base accettati sono i tipi che supportano il **gt** operazione. Tra questi tipi sono inclusi i tre tipi di base numerici predefiniti, ovvero i tipi di base di data/ora xs:string, xs:boolean e xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:double. Se c'è una combinazione di questi tipi, o se vengono passati altri valori di altri tipi, viene generato un errore statico.  
+## <a name="remarks"></a>Osservazioni  
+ Tutti i tipi di valori atomizzati passati a **Max ()** devono essere sottotipi dello stesso tipo di base. I tipi di base accettati sono i tipi che supportano l'operazione **gt** . Tra questi tipi sono inclusi i tre tipi di base numerici predefiniti, ovvero i tipi di base di data/ora xs:string, xs:boolean e xdt:untypedAtomic. Per i valori di tipo xdt:untypedAtomic viene eseguito il cast a xs:double. Se è presente una combinazione di questi tipi o se vengono passati altri valori di altri tipi, viene generato un errore statico.  
   
- Il risultato del **max** riceve il tipo di base dei tipi passati, ad esempio xs: double nel caso di xdt: untypedAtomic. Se l'input è una sequenza vuota calcolata in modo statico, la sequenza vuota è implicita e viene restituito un errore statico.  
+ Il risultato di **Max ()** riceve il tipo di base dei tipi passati, ad esempio xs: Double nel caso di xdt: untypedAtomic. Se l'input è una sequenza vuota calcolata in modo statico, la sequenza vuota è implicita e viene restituito un errore statico.  
   
- Il **max** funzione restituisce un valore nella sequenza che è maggiore di qualsiasi altro nella sequenza di input. Per i valori xs:string, vengono utilizzate le regole di confronto predefinite dei punti di codice Unicode. Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, il valore viene ignorato nella sequenza di input *$arg*. Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituita la sequenza vuota.  
+ La funzione **Max ()** restituisce un valore nella sequenza maggiore di qualsiasi altro oggetto nella sequenza di input. Per i valori xs:string, vengono utilizzate le regole di confronto predefinite dei punti di codice Unicode. Se non è possibile eseguire il cast di un valore xdt: untypedAtomic a xs: Double, il valore viene ignorato nella sequenza di input *$arg*. Se l'input è una sequenza vuota calcolata in modo dinamico, viene restituita la sequenza vuota.  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate **** in diverse colonne di tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML nel database.  
   
 ### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>R. Utilizzo della funzione XQuery max() per trovare i centri di lavorazione del processo di produzione che hanno il maggior numero di ore di manodopera  
- La query illustrata nel [funzione min (XQuery)](../xquery/aggregate-functions-min.md) può essere riscritto per utilizzare il **max ()** (funzione).  
+ La query fornita in [funzione min (XQuery)](../xquery/aggregate-functions-min.md) può essere riscritta in modo da utilizzare la funzione **Max ()** .  
   
 ## <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  
   
--   Il **max (** ) funzione esegue il mapping di tutti i valori interi a xs: decimal.  
+-   La funzione **Max (**) esegue il mapping di tutti i numeri interi a xs: Decimal.  
   
--   Il **max** funzione con valori di tipo xs: Duration non è supportata.  
+-   La funzione **Max ()** su valori di tipo xs: Duration non è supportata.  
   
 -   Non sono supportate le sequenze con combinazioni di tipi che non rispettano i limiti del tipo di base.  
   

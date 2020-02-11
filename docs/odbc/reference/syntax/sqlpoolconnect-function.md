@@ -13,18 +13,18 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c390dacb5072c5d516e95b4fe6b789bfffbbd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005808"
 ---
 # <a name="sqlpoolconnect-function"></a>Funzione SQLPoolConnect
 **Conformità**  
- Versione introdotta: Conformità agli standard 3,8 ODBC: ODBC  
+ Versione introdotta: ODBC 3,8 Standard Compliance: ODBC  
   
- **Riepilogo**  
- **SQLPoolConnect** consente di creare una nuova connessione se nessuna connessione nel pool può essere riutilizzata.  
+ **Summary**  
+ **SQLPoolConnect** viene utilizzato per creare una nuova connessione se non è possibile riutilizzare una connessione nel pool.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,44 +40,44 @@ SQLRETURN  SQLPoolConnect(
   
 ## <a name="arguments"></a>Argomenti  
  *hDbc*  
- [Input] L'handle di connessione.  
+ Input Handle di connessione.  
   
  *hDbcInfoToken*  
- [Input] L'handle del token per la nuova richiesta di connessione dell'applicazione.  
+ Input Handle del token per la nuova richiesta di connessione dell'applicazione.  
   
  *wszOutConnectString*  
- [Output] Puntatore a un buffer per la stringa di connessione completata. Connessione all'origine dati di destinazione, questo buffer contiene la stringa di connessione completata. Le applicazioni è consigliabile allocare almeno 1.024 caratteri per questo buffer.  
+ Output Puntatore a un buffer per la stringa di connessione completata. Al completamento della connessione all'origine dati di destinazione, il buffer contiene la stringa di connessione completata. Le applicazioni devono allocare almeno 1.024 caratteri per questo buffer.  
   
- Se *wszOutConnectString* sia impostato su NULL *cchConnectStringLen* continuerà a restituire il numero totale di caratteri (escluso il carattere di terminazione null per i dati di tipo carattere) disponibili per restituire il buffer a cui punta *wszOutConnectString*.  
+ Se *wszOutConnectString* è null, *cchConnectStringLen* restituirà comunque il numero totale di caratteri, escluso il carattere di terminazione null per i dati di tipo carattere, disponibile per restituire nel buffer a cui punta *wszOutConnectString*.  
   
  *cchConnectStringBuffer*  
- [Input] Lunghezza di **wszOutConnectString* buffer, in caratteri.  
+ Input Lunghezza del buffer **wszOutConnectString* , in caratteri.  
   
  *cchConnectStringLen*  
- [Output] Puntatore a un buffer in cui restituire il numero totale di caratteri (escluso il carattere di terminazione null) disponibili per restituire \* *wszOutConnectString*. Se il numero di caratteri disponibili da restituire è maggiore o uguale a *cchConnectStringBuffer*, il completamento stringa di connessione nel \* *wszOutConnectString* viene troncato a *cchConnectStringBuffer* meno la lunghezza di un carattere di terminazione null.  
+ Output Puntatore a un buffer in cui restituire il numero totale di caratteri, escluso il carattere di terminazione null, disponibile per restituire in \* *wszOutConnectString*. Se il numero di caratteri disponibili per restituire è maggiore o uguale a *cchConnectStringBuffer*, la stringa di connessione completata in \* *wszOutConnectString* viene troncata a *cchConnectStringBuffer* meno la lunghezza di un carattere di terminazione null.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Simile a [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) per qualsiasi input errore di convalida, ad eccezione del fatto che la gestione di Driver utilizzerà un **HandleType** di SQL_HANDLE_DBC_INFO_TOKEN e un **gestire** di *hDbcInfoToken*.  
+ Simile a [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) per qualsiasi errore di convalida dell'input, con la differenza che Gestione driver utilizzerà un **HandleType** di SQL_HANDLE_DBC_INFO_TOKEN e un **handle** di *hDbcInfoToken*.  
   
-## <a name="remarks"></a>Note  
- Gestione Driver garantisce che padre gestire HENV *hDbc* e *hDbcInfoToken* sono uguali.  
+## <a name="remarks"></a>Osservazioni  
+ Gestione driver garantisce che l'handle HENV padre di *HDBC* e *hDbcInfoToken* siano uguali.  
   
- A differenza [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), è presente alcun *DriverCompletion* argomento per richiedere agli utenti di immettere le informazioni di connessione. Una finestra di dialogo richiesta non è consentito nello scenario del pool di connessioni.  
+ A differenza di [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), non esiste alcun argomento di *DriverCompletion* per richiedere agli utenti di immettere le informazioni di connessione. Una finestra di dialogo di richiesta non è consentita nello scenario di pool.  
   
  Le applicazioni non devono chiamare direttamente questa funzione. Un driver ODBC che supporta il pool di connessioni compatibile con il driver deve implementare questa funzione.  
   
- Ogni volta che un driver restituisce SQL_ERROR o SQL_INVALID_HANDLE, gestione Driver restituisce l'errore all'applicazione (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) oppure [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+ Ogni volta che un driver restituisce SQL_ERROR o SQL_INVALID_HANDLE, gestione driver restituisce l'errore all'applicazione (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Ottiene le informazioni di diagnostica da ogni volta che un driver restituisce SQL_SUCCESS_WITH_INFO, gestione Driver *hDbcInfoToken*e restituiscono SQL_SUCCESS_WITH_INFO all'applicazione in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Ogni volta che un driver restituisce SQL_SUCCESS_WITH_INFO, gestione driver otterrà le informazioni di diagnostica da *hDbcInfoToken*e restituirà SQL_SUCCESS_WITH_INFO all'applicazione in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Quando un'applicazione usa [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *wszOutConnectString* sarà un buffer NULL (gli ultimi tre parametri verranno tutti impostati su NULL, 0, NULL). In caso contrario, il driver deve restituire la stringa di connessione di output, che sarà restituita all'applicazione [funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) chiamare.  
+ Quando un'applicazione usa [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *wszOutConnectString* sarà un buffer null (gli ultimi tre parametri verranno tutti impostati su NULL, 0, null). In caso contrario, il driver deve restituire la stringa di connessione di output, che verrà restituita alla chiamata della [funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) dell'applicazione.  
   
- Includere sqlspi.h per lo sviluppo di driver ODBC.  
+ Includere sqlspi. h per lo sviluppo di driver ODBC.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sviluppo di un Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Sviluppo di un driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Pool di connessioni compatibile con il driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Sviluppo del rilevamento di pool di connessioni in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

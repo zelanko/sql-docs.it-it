@@ -1,5 +1,5 @@
 ---
-title: Le istruzioni di generazione di risultati e senza risultati | Microsoft Docs
+title: Istruzioni per la generazione di risultati e senza risultato | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55b2ff4d428f02b59883b675fde95531366f0b4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020597"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Istruzioni per la generazione di risultati e senza risultati
-Istruzioni SQL possono essere suddivisi nelle categorie seguenti cinque a regime di controllo libero:  
+Le istruzioni SQL possono essere suddivise in categorie separate nelle cinque categorie seguenti:  
   
--   **Generare istruzioni che generano Set** si tratta di istruzioni SQL che generano un set di risultati. Ad esempio, un **seleziona** istruzione.  
+-   **Set di risultati-generazione di istruzioni** Si tratta di istruzioni SQL che generano un set di risultati. Ad esempio, un'istruzione **Select** .  
   
--   **Le istruzioni per la generazione di conteggio di righe** si tratta di istruzioni SQL che generano un conteggio delle righe interessate. Ad esempio, un' **UPDATE** oppure **eliminare** istruzione.  
+-   **Conteggio righe-generazione di istruzioni** Si tratta di istruzioni SQL che generano un conteggio delle righe interessate. Ad esempio, un'istruzione **Update** o **Delete** .  
   
--   **Istruzioni Data Definition Language (DDL)** si tratta di istruzioni SQL che modificano la struttura del database. Ad esempio, **CREATE TABLE** oppure **DROP INDEX**.  
+-   **Istruzioni DDL (Data Definition Language)** Si tratta di istruzioni SQL che modificano la struttura del database. Ad esempio, **Create Table** o **Drop index**.  
   
--   **Le istruzioni di modifica del contesto** si tratta di istruzioni SQL che modificano il contesto di un database. Ad esempio, il **utilizzo** e **impostare** le istruzioni in SQL Server.  
+-   **Istruzioni** per la modifica del contesto Si tratta di istruzioni SQL che modificano il contesto di un database. Ad esempio, le istruzioni **use** e **set** in SQL Server.  
   
--   **Istruzioni amministrative** si tratta di istruzioni SQL utilizzate per scopi amministrativi in un database. Ad esempio, **concessione** e **REVOKE**.  
+-   **Istruzioni amministrative** Si tratta di istruzioni SQL utilizzate per scopi amministrativi in un database. Ad esempio, **Grant** e **Revoke**.  
   
- Le istruzioni SQL nelle prime due categorie sono noti collettivamente come *istruzioni che generano risultati*. Istruzioni SQL in quest'ultime tre categorie sono noti collettivamente come *senza risultati istruzioni*. ODBC definisce la semantica di batch che includono istruzioni solo generazione di risultati. Questa semantica varia notevolmente e pertanto è specifiche dell'origine dati. Ad esempio, il driver SQL Server non supporta il trascinamento di un oggetto e quindi si fa riferimento a o ricreare lo stesso oggetto nello stesso batch. Pertanto, il termine *batch* quando usata in questo manuale si riferisce solo ai batch di generazione di risultati le istruzioni.
+ Le istruzioni SQL nelle prime due categorie sono note collettivamente come *istruzioni di generazione dei risultati*. Le istruzioni SQL nelle ultime tre categorie sono note collettivamente come *istruzioni senza risultato*. ODBC definisce la semantica dei batch che includono solo istruzioni per la generazione di risultati. Queste semantiche variano notevolmente e sono pertanto specifiche dell'origine dati. Il driver SQL Server, ad esempio, non supporta l'eliminazione di un oggetto e quindi il riferimento o la ricreazione dello stesso oggetto nello stesso batch. Il termine *batch* usato in questo manuale si riferisce quindi solo ai batch di istruzioni di generazione dei risultati.

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4560ecbecd5db2e0f93e6910239fde27d54c028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036872"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 
 
-  Restituisce la deviazione standard della popolazione di un'espressione numerica valutata su un set, utilizzando la formula della popolazione distorta (dividendo *n*).  
+  Restituisce la deviazione standard della popolazione di un'espressione numerica valutata su un set, utilizzando la formula della popolazione distorta (dividendo per *n*).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,8 +34,8 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Note  
- Il **StdevP** funzione Usa la formula della popolazione distorta formula, mentre le [Stdev](../mdx/stdev-mdx.md) funzione utilizza la formula della popolazione non distorta.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **StDevP** usa la formula della popolazione distorta, mentre la funzione [StDev](../mdx/stdev-mdx.md) usa la formula della popolazione non distorta.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituita la deviazione standard per Internet Order Quantity, valutata sui primi tre mesi dell'anno di calendario 2003 utilizzando la formula della popolazione distorta.  
@@ -52,6 +52,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

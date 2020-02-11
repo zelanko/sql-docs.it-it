@@ -1,5 +1,5 @@
 ---
-title: DISTINCT (MDX) | Microsoft Docs
+title: Distinct (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 283f1c10f4030ea2efc23ee237a61b402cefb396
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999896"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
@@ -31,8 +31,8 @@ Distinct(Set_Expression)
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- Se il **Distinct** individua tuple duplicate nel set specificato, la funzione mantiene solo la prima istanza della tupla duplicata lasciando intatto l'ordine del set.  
+## <a name="remarks"></a>Osservazioni  
+ Se la funzione **Distinct** trova tuple duplicate nel set specificato, la funzione mantiene solo la prima istanza della tupla duplicata lasciando l'ordine del set intatto.  
   
 ## <a name="examples"></a>Esempi  
  Nella query di esempio seguente viene illustrato come utilizzare la funzione Distinct con un set denominato, così come come utilizzarla con la Count per trovare il numero di tuple distinte in un set:  
@@ -60,6 +60,6 @@ Distinct(Set_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

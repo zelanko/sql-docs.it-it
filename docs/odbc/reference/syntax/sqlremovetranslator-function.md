@@ -20,18 +20,18 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a577a868f7b56a6677da3cb12cfb29057ea66f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68024518"
 ---
 # <a name="sqlremovetranslator-function"></a>Funzione SQLRemoveTranslator
 **Conformità**  
- Versione introdotta: ODBC 3.0  
+ Versione introdotta: ODBC 3,0  
   
- **Riepilogo**  
- **SQLRemoveTranslator** Rimuove informazioni su una funzione di conversione dalla sezione delle informazioni di sistema e decrementa Odbcinst. ini conteggio di utilizzo di componenti di Microsoft translator di 1.  
+ **Summary**  
+ **SQLRemoveTranslator** rimuove le informazioni su un convertitore dalla sezione Odbcinst. ini delle informazioni sul sistema e decrementa di 1 il numero di utilizzo dei componenti del traduttore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,29 +44,29 @@ BOOL SQLRemoveTranslator(
   
 ## <a name="arguments"></a>Argomenti  
  *lpszTranslator*  
- [Input] Il nome di funzione di conversione come registrato nella chiave Odbcinst. ini di informazioni di sistema.  
+ Input Nome del convertitore registrato nella chiave Odbcinst. ini delle informazioni sul sistema.  
   
  *lpdwUsageCount*  
- [Output] Il conteggio di utilizzo del convertitore dopo la chiamata a questa funzione.  
+ Output Conteggio di utilizzo del traduttore dopo la chiamata a questa funzione.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore. Se le informazioni di sistema non esiste alcuna voce quando questa funzione viene chiamata, la funzione restituisce FALSE.  
+ La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo. Se nelle informazioni di sistema non è presente alcuna voce quando viene chiamata questa funzione, la funzione restituisce FALSE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLRemoveTranslator** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
+ Quando **SQLRemoveTranslator** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|Componente non trovato nel Registro di sistema|Il programma di installazione non è stato possibile rimuovere le informazioni di Microsoft translator perché non esiste nel Registro di sistema o non è stato trovato nel Registro di sistema.|  
-|ODBC_ERROR_INVALID_NAME|Nome del driver o traduttore non valido|Il *lpszTranslator* argomento non è valido.|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|Non è stato possibile incrementare o decrementare il conteggio di utilizzo del componente|Il programma di installazione non è stato possibile diminuire il conteggio di utilizzo del driver.|  
-|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è stato possibile eseguire la funzione a causa della mancanza di memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non è stato specificato alcun errore di programma di installazione.|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|Componente non trovato nel registro di sistema|Il programma di installazione non è riuscito a rimuovere le informazioni del traduttore perché non esisteva nel registro di sistema o non è stato trovato nel registro di sistema.|  
+|ODBC_ERROR_INVALID_NAME|Nome del driver o del traduttore non valido|L'argomento *lpszTranslator* non è valido.|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|Non è stato possibile incrementare o decrementare il numero di utilizzi dei componenti|Il programma di installazione non è riuscito a decrementare il conteggio di utilizzo del driver.|  
+|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è riuscito a eseguire la funzione a causa di memoria insufficiente.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLRemoveTranslator** si integra con i [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md) funzione e gli aggiornamenti di utilizzo componente conteggio nelle informazioni di sistema. Questa funzione deve essere chiamata solo da un'applicazione di installazione.  
+ **SQLRemoveTranslator** completa la funzione [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md) e aggiorna il conteggio di utilizzo dei componenti nelle informazioni di sistema. Questa funzione deve essere chiamata solo da un'applicazione di installazione.  
   
- **SQLRemoveTranslator** verrà decrementa il conteggio di utilizzo del componente di 1. Se il conteggio di utilizzo del componente è pari a 0, la voce di Microsoft translator nelle informazioni di sistema verrà rimossa. La voce di Microsoft translator è nel seguente percorso nelle informazioni di sistema, sotto il nome di funzione di conversione:  
+ **SQLRemoveTranslator** decrementerà il numero di utilizzo del componente di 1. Se il conteggio utilizzo componenti passa a 0, la voce di traduzione nelle informazioni sul sistema verrà rimossa. La voce Translator si trova nel percorso seguente nelle informazioni di sistema, sotto il nome del traduttore:  
   
  `HKEY_LOCAL_MACHINE`  
   
@@ -76,12 +76,12 @@ BOOL SQLRemoveTranslator(
   
  `Odbcinst.ini`  
   
- **SQLRemoveTranslator** non vengono effettivamente rimossi tutti i file. Il programma chiamante è responsabile per l'eliminazione di file e mantenere il conteggio di utilizzo di file. Solo dopo che hanno raggiunto il conteggio di utilizzo del componente sia il conteggio di utilizzo file zero è un file eliminato fisicamente. È possibile eliminare alcuni file in un componente e ad altri utenti non eliminati, a seconda del fatto che i file vengono usati da altre applicazioni che hanno incrementato il conteggio di utilizzo di file.  
+ **SQLRemoveTranslator** non rimuove effettivamente alcun file. Il programma chiamante è responsabile dell'eliminazione dei file e della gestione del numero di utilizzo del file. Solo dopo che il conteggio di utilizzo del componente e il conteggio di utilizzo file sono stati raggiunti zero è un file eliminato fisicamente. È possibile eliminare alcuni file in un componente e non eliminarli, a seconda che i file vengano utilizzati da altre applicazioni che hanno incrementato il numero di utilizzo del file.  
   
- **SQLRemoveTranslator** nota anche come parte di un processo di aggiornamento. Se un'applicazione rileva che deve eseguire un aggiornamento e il driver è installato in precedenza, il driver debba essere rimossi e reinstallato. **SQLRemoveTranslator** deve essere chiamato prima di tutto per diminuire il conteggio di utilizzo del componente, quindi **SQLInstallTranslatorEx** deve essere chiamato per incrementare il conteggio di utilizzo del componente. Il programma di installazione dell'applicazione deve sostituire fisicamente i file precedenti con i nuovi file. Il conteggio di utilizzo file rimarranno invariati e altre applicazioni che usano i file di versioni precedenti useranno la versione più recente.  
+ **SQLRemoveTranslator** viene chiamato anche come parte di un processo di aggiornamento. Se un'applicazione rileva che è necessario eseguire un aggiornamento e in precedenza ha installato il driver, il driver deve essere rimosso e quindi reinstallato. **SQLRemoveTranslator** deve essere chiamato prima per decrementare il numero di utilizzo del componente, quindi è necessario chiamare **SQLInstallTranslatorEx** per incrementare il conteggio di utilizzo dei componenti. Il programma di installazione dell'applicazione deve sostituire fisicamente i file obsoleti con i nuovi file. Il conteggio di utilizzo file rimarrà invariato e altre applicazioni che utilizzano i file della versione precedente utilizzeranno ora la versione più recente.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Installazione di una funzione di conversione|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|
+|Installazione di un convertitore|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|

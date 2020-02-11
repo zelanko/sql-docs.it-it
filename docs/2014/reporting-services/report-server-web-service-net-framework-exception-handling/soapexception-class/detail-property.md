@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046007"
 ---
 # <a name="detail-property"></a>Proprietà Detail
   La proprietà **Detail** della classe [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** ha la struttura XML seguente:  
   
 ## <a name="elements"></a>Elementi  
- **Detail**  
+ **Dettaglio**  
  Elemento di livello principale che contiene tutti gli altri elementi relativi ai dettagli dell'errore.  
   
  **ErrorCode**  
@@ -33,7 +33,7 @@ ms.locfileid: "63046007"
  **HttpStatus**  
  Codice di stato HTTP.  
   
- **Message**  
+ **Messaggio**  
  Messaggio di errore e codice di errore assegnati dal server di report.  
   
  **HelpLink**  
@@ -46,7 +46,7 @@ ms.locfileid: "63046007"
  Nome del prodotto. Il valore predefinito è **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Versione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La lunghezza massima è di 15 caratteri. Il formato del numero di versione deve essere come segue: 8.00.0xxx.00.  
+ Versione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La lunghezza massima è di 15 caratteri. Il formato del numero di versione deve essere analogo a 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  ID delle impostazioni locali o della lingua della DLL INTL dell'applicazione (ad esempio, 0x41A).  
@@ -63,7 +63,7 @@ ms.locfileid: "63046007"
  **Origine**  
  Elemento figlio di **MoreInformation**. Indica l'origine dell'errore.  
   
- **Message**  
+ **Messaggio**  
  Elemento figlio di **MoreInformation**. Indica il messaggio di errore di un'eccezione nidificata. Questo elemento include gli attributi XML per **ErrorCode** e **HelpLink**.  
   
  **Avvisi**  

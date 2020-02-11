@@ -1,5 +1,5 @@
 ---
-title: Lo scaricamento di un'estesa DLL della Stored Procedure | Microsoft Docs
+title: Scaricamento di una DLL di stored procedure estesa | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,24 +14,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2772c8d6470f9ad6eb5e8b7cadb6dedd136bd48b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137580"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>Caricamento di una DLL di stored procedure estesa
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Usare invece l'integrazione con CLR.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Carica una DLL della stored procedure estesa appena viene effettuata una chiamata a una delle funzioni della DLL. La DLL rimane caricata fino a che il server non viene spento o fino a che l'amministratore di sistema non utilizza l'istruzione DBCC per scaricarla. Ad esempio, questo comando Scarica i **xp_hello. dll**, consentendo all'amministratore di sistema copiare una versione più recente di questo file nella directory senza spegnere il server:  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carica una dll di stored procedure estesa non appena viene effettuata una chiamata a una delle funzioni della dll. La DLL rimane caricata fino a che il server non viene spento o fino a che l'amministratore di sistema non utilizza l'istruzione DBCC per scaricarla. Ad esempio, questo comando Scarica il file **xp_hello. dll**, consentendo all'amministratore di sistema di copiare una versione più recente di questo file nella directory senza arrestare il server:  
   
 ```  
 DBCC xp_hello(FREE)  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DBCC dllname &#40;FREE&#41; &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dllname-free-transact-sql)  
+ [DBCC dllname &#40;FREE&#41; &#40;&#41;Transact-SQL](/sql/t-sql/database-console-commands/dbcc-dllname-free-transact-sql)  
   
   

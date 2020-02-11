@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e663d99b799bdfaeedecfd9324222a6f01f6aa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127771"
 ---
-# <a name="localdberrorwaittimeout"></a>LOCALDB_ERROR_WAIT_TIMEOUT
+# <a name="localdb_error_wait_timeout"></a>LOCALDB_ERROR_WAIT_TIMEOUT
     
 ## <a name="details"></a>Dettagli  
   

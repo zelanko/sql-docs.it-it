@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126240"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Utilizzo dell'accesso con URL in un'applicazione Windows
@@ -31,7 +31,7 @@ ms.locfileid: "63126240"
 -   Utilizzo del controllo <xref:System.Windows.Forms.WebBrowser> in un Windows Form per visualizzare un report.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Avvio di Internet Explorer da un Windows Form  
- È possibile utilizzare la classe <xref:System.Diagnostics.Process> per accedere a un processo in esecuzione in un computer. La classe <xref:System.Diagnostics.Process> è un costrutto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utile per avviare, arrestare, controllare e monitorare le applicazioni. Per visualizzare un report specifico nel database del server di report, è possibile avviare il processo **IExplore**, passando in URL al report. L'esempio di codice seguente può essere utilizzato per avviare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer e passare un URL del report specifico quando l'utente fa clic su un pulsante in un Windows Form.  
+ È possibile utilizzare la classe <xref:System.Diagnostics.Process> per accedere a un processo in esecuzione in un computer. La <xref:System.Diagnostics.Process> classe è un costrutto utile [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per avviare, arrestare, controllare e monitorare le applicazioni. Per visualizzare un report specifico nel database del server di report, è possibile avviare il processo **IExplore**, passando in URL al report. L'esempio di codice seguente può essere utilizzato per avviare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer e passare un URL del report specifico quando l'utente fa clic su un pulsante in un Windows Form.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,7 +87,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Per aggiungere il controllo WebBrowser al Windows Form  
   
-1.  Creare una nuova applicazione Windows usando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Creare una nuova applicazione Windows in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
 2.  Individuare il controllo <xref:System.Windows.Forms.WebBrowser> nella finestra di dialogo **Casella degli strumenti**.  
   
@@ -114,7 +114,7 @@ webBrowser1.Navigate(url);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Integrazione di Reporting Services nelle applicazioni](../application-integration/integrating-reporting-services-into-applications.md)   
+ [Integrazione di Reporting Services in applicazioni](../application-integration/integrating-reporting-services-into-applications.md)   
  [Integrazione di Reporting Services tramite l'accesso con URL](integrating-reporting-services-using-url-access.md)   
  [Integrazione di Reporting Services tramite SOAP](integrating-reporting-services-using-soap.md)   
  [Integrazione di Reporting Services tramite i controlli ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)   

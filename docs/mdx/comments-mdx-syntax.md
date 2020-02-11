@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1ffcb57a48c7d6e265daa786912cfd37f0b43754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001523"
 ---
 # <a name="comments-mdx-syntax"></a>Commenti (sintassi MDX)
@@ -29,13 +29,13 @@ ms.locfileid: "68001523"
  MDX supporta gli indicatori di commento seguenti:  
   
  // (barra doppia)  
- Questo indicatore di commento può essere utilizzato sulla stessa riga del codice da eseguire o su una riga a parte. Tutti i caratteri situati tra la barra doppia e la fine della riga vengono trattati come commento. Per commenti su più righe, specificare la barra doppia all'inizio di ogni riga di commento. Per altre informazioni, vedere [ &#40;commento&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md).  
+ Questo indicatore di commento può essere utilizzato sulla stessa riga del codice da eseguire o su una riga a parte. Tutti i caratteri situati tra la barra doppia e la fine della riga vengono trattati come commento. Per commenti su più righe, specificare la barra doppia all'inizio di ogni riga di commento. Per ulteriori informazioni, vedere [&#40;commento&#41; &#40;&#41;MDX ](../mdx/comment-mdx-double-slash.md).  
   
  -- (trattino doppio)  
- Questo indicatore di commento può essere utilizzato sulla stessa riga del codice da eseguire o su una riga a parte. Tutti i caratteri situati tra il trattino doppio e la fine della riga vengono trattati come commento. Per commenti su più righe, specificare il trattino doppio all'inizio di ogni riga di commento. Per altre informazioni, vedere [- &#40;commento&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md).  
+ Questo indicatore di commento può essere utilizzato sulla stessa riga del codice da eseguire o su una riga a parte. Tutti i caratteri situati tra il trattino doppio e la fine della riga vengono trattati come commento. Per commenti su più righe, specificare il trattino doppio all'inizio di ogni riga di commento. Per ulteriori informazioni, vedere [&#40;commento&#41; &#40;&#41;MDX ](../mdx/comment-mdx-operator-reference.md).  
   
- /* ... \*/ (barra-asterisco coppia di caratteri)  
- Questo indicatore di commento può essere utilizzato sulla stessa riga del codice da eseguire, su una riga a parte o all'interno del codice eseguibile. Tutti gli elementi della coppia di commenti di apertura (/\*) per la coppia di chiusura del commento (\*/) è considerato parte del commento. Per commenti su più righe, la coppia di caratteri di apertura del commento (/\*) deve iniziare il commento e la coppia di caratteri di chiusura del commento (\*/) deve terminare il commento. Nelle righe del commento non deve essere inserito nessun altro simbolo di commento. Per altre informazioni, vedere [/ *... \*/ (Commento)](../mdx/comment-mdx.md).  
+ /* ... \*/(coppie di caratteri barra-asterisco)  
+ Questo indicatore di commento può essere utilizzato sulla stessa riga del codice da eseguire, su una riga a parte o all'interno del codice eseguibile. Tutti gli elementi della coppia di commenti (\*/) alla coppia di caratteri di\*chiusura (/) vengono considerati parte del commento. Per un commento su più righe, la coppia di caratteri di apertura del commento\*(/) deve iniziare il commento e la coppia di caratteri di chiusura\*-commento (/) deve terminare il commento. Nelle righe del commento non deve essere inserito nessun altro simbolo di commento. Per ulteriori informazioni, vedere [/*... / \*(Commento)](../mdx/comment-mdx.md).  
   
 ## <a name="example"></a>Esempio  
  Nella query seguente vengono illustrati esempi dei tre tipi di commento:  
@@ -63,6 +63,6 @@ ms.locfileid: "68001523"
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementi della sintassi MDX &#40;&#41;MDX](../mdx/mdx-syntax-elements-mdx.md)  
   
   

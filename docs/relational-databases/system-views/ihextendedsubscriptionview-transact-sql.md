@@ -1,5 +1,5 @@
 ---
-title: IHextendedSubscriptionView (Transact-SQL) | Microsoft Docs
+title: Vista IHextendedSubscriptionView (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029568"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **IHextendedSubscriptionView** visualizzazione espone informazioni sulla sottoscrizione di una pubblicazione non SQL Server. Questa vista è archiviata nel **distribuzione** database.  
+  La vista **vista IHextendedSubscriptionView** espone informazioni sulla sottoscrizione a una pubblicazione non SQL Server. Questa vista è archiviata nel database di **distribuzione** .  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -35,23 +35,23 @@ ms.locfileid: "68029568"
 |**dest_db**|**sysname**|Nome del database di destinazione.|  
 |**srvid**|**smallint**|ID univoco di un Sottoscrittore.|  
 |**login_name**|**sysname**|Account di accesso utilizzato per la connessione a un Sottoscrittore.|  
-|**distribution_jobid**|**binary**|Identifica il processo dell'agente di distribuzione.|  
+|**distribution_jobid**|**BINARY**|Identifica il processo dell'agente di distribuzione.|  
 |**publisher_database_id**|**int**|Identifica il database di pubblicazione.|  
 |**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push: l'agente di distribuzione viene eseguito nel Sottoscrittore.<br /><br /> **1** = pull: l'agente di distribuzione viene eseguito nel server di distribuzione.|  
-|**sync_type**|**tinyint**|Tipo di sincronizzazione iniziale:<br /><br /> **1** = automatica<br /><br /> **2** = nessuno|  
-|**status**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattivo<br /><br /> **1** = sottoscritta<br /><br /> **2** = attivo|  
+|**sync_type**|**tinyint**|Tipo di sincronizzazione iniziale:<br /><br /> **1** = automatico<br /><br /> **2** = nessuna|  
+|**stato**|**tinyint**|Stato della sottoscrizione:<br /><br /> **0** = inattivo<br /><br /> **1** = sottoscritto<br /><br /> **2** = attivo|  
 |**snapshot_seqno_flag**|**bit**|Indica se viene utilizzato un numero di sequenza dello snapshot.|  
-|**independent_agent**|**bit**|Specifica se per la pubblicazione è disponibile un agente di distribuzione autonomo.<br /><br /> **0** = la pubblicazione utilizza un agente di distribuzione condiviso, e ogni coppia database del server di pubblicazione/sottoscrittore del database ha un solo agente condiviso.<br /><br /> **1** = è disponibile un agente di distribuzione autonomo per la pubblicazione.|  
+|**independent_agent**|**bit**|Specifica se per la pubblicazione è disponibile un agente di distribuzione autonomo.<br /><br /> **0** = la pubblicazione utilizza un agente di distribuzione condiviso e ogni coppia database del server di pubblicazione/database del Sottoscrittore dispone di un solo agente condiviso.<br /><br /> **1** = è presente una agente di distribuzione autonoma per questa pubblicazione.|  
 |**subscription_time**|**datetime**|Solo per uso interno.|  
-|**loopback_detection**|**bit**|Si applica alle sottoscrizioni che fanno parte di una topologia di replica transazionale bidirezionale. Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **1** = non restituisce le transazioni.<br /><br /> **0** = restituisce le transazioni.|  
+|**loopback_detection**|**bit**|Si applica alle sottoscrizioni che fanno parte di una topologia di replica transazionale bidirezionale. Il rilevamento di loopback determina se l'agente di distribuzione deve inviare nuovamente al Sottoscrittore le transazioni provenienti dal Sottoscrittore:<br /><br /> **1** = non viene restituito.<br /><br /> **0** = restituisce.|  
 |**agent_id**|**int**|ID univoco dell'agente di distribuzione.|  
-|**update_mode**|**tinyint**|Indica il tipo di modalità di aggiornamento. I possibili valori sono i seguenti:<br /><br /> **0** = sola lettura.<br /><br /> **1** = aggiornamento immediato.<br /><br /> **2** = aggiornamento in coda tramite MSMQ.<br /><br /> **3** = immediato aggiornare con aggiornamento in coda come failover usando Accodamento messaggi.<br /><br /> **4** = aggiornamento in coda tramite una coda di SQL Server.<br /><br /> **5** = aggiornamento immediato con failover dell'aggiornamento in coda, tramite la coda SQL Server.|  
-|**publisher_seqno**|**varbinary(16)**|Numero di sequenza della transazione nel server di pubblicazione per questa sottoscrizione.|  
-|**ss_cplt_seqno**|**varbinary(16)**|Numero di sequenza utilizzato per indicare il completamento dell'elaborazione simultanea degli snapshot.|  
+|**update_mode**|**tinyint**|Indica il tipo di modalità di aggiornamento. I possibili valori sono i seguenti:<br /><br /> **0** = sola lettura.<br /><br /> **1** = aggiornamento immediato.<br /><br /> **2** = aggiornamento in coda tramite Accodamento messaggi.<br /><br /> **3** = aggiornamento immediato con aggiornamento in coda come failover tramite Accodamento messaggi.<br /><br /> **4** = aggiornamento in coda tramite SQL Server coda.<br /><br /> **5** = aggiornamento immediato con failover di aggiornamento in coda, usando SQL Server coda.|  
+|**publisher_seqno**|**varbinary (16)**|Numero di sequenza della transazione nel server di pubblicazione per questa sottoscrizione.|  
+|**ss_cplt_seqno**|**varbinary (16)**|Numero di sequenza utilizzato per indicare il completamento dell'elaborazione simultanea degli snapshot.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Replica di database eterogenei](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

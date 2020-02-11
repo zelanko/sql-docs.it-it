@@ -1,5 +1,5 @@
 ---
-title: La modifica dei dati di tipo definito dall'utente | Microsoft Docs
+title: Manipolazione dei dati UDT | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -30,17 +30,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874309"
 ---
 # <a name="manipulating-udt-data"></a>Manipolazione dei dati UDT
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] non fornisce una sintassi specifica per l'istruzione INSERT, UPDATE o DELETE quando si modificano i dati nelle colonne con tipo definito dall'utente (UDT). Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST o CONVERT vengono utilizzate per eseguire il cast dei tipi di dati nativi al tipo UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Inserimento di dati in una colonna con tipo definito dall'utente  
- Quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] consentono di inserire tre righe di dati di esempio nel **punti** tabella. Il **punto** tipo di dati è costituita da X e Y integer valori che vengono esposti come proprietà del tipo in questione. È necessario utilizzare la funzione CAST o CONVERT per eseguire il cast di valori delimitati da virgole valori X e Y per il **punto** tipo. Le prime due istruzioni utilizzano la funzione CONVERT per convertire un valore stringa per il **punto** tipo e la terza istruzione utilizza la funzione CAST:  
+ Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti consentono di inserire tre righe di dati di esempio nella tabella **Points** . Il tipo di dati **Point** è costituito da valori integer X e Y esposti come proprietà del tipo definito dall'utente. È necessario utilizzare la funzione CAST o CONVERT per eseguire il cast dei valori X e Y delimitati da virgole al tipo di **punto** . Le prime due istruzioni utilizzano la funzione CONVERT per convertire un valore stringa nel tipo **Point** e la terza istruzione utilizza la funzione cast:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -55,7 +56,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Per visualizzare l'output visualizzato in un formato leggibile, chiamare il `ToString` metodo per il **punto** tipo definito dall'utente, che converte il valore nella relativa rappresentazione di stringa.  
+ Per visualizzare l'output visualizzato in un formato leggibile, chiamare `ToString` il metodo del tipo definito dall'utente **Point** , che converte il valore nella relativa rappresentazione di stringa.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -82,7 +83,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- Il **punto** UDT espone le coordinate X e Y come proprietà che è quindi possibile selezionare singolarmente. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di selezionare le coordinate X e Y separatamente:  
+ Il tipo definito dall'utente **Point** espone le coordinate X e Y come proprietà, che è quindi possibile selezionare singolarmente. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di selezionare le coordinate X e Y separatamente:  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -129,7 +130,7 @@ SELECT @PointValue.ToString() AS PointValue;
  La differenza tra l'utilizzo di SELECT e di SET per l'assegnazione delle variabili sta nel fatto che SELECT consente di assegnare più variabili in un'istruzione SELECT, mentre la sintassi di SET richiede che ogni assegnazione di variabile contenga la relativa istruzione SET.  
   
 ## <a name="comparing-data"></a>Confronto dei dati  
- È possibile utilizzare gli operatori di confronto per confrontare i valori nel tipo definito dall'utente se la proprietà `IsByteOrdered` è stata impostata su `true` durante la definizione della classe. Per altre informazioni, vedere [creazione di un tipo definito dall'utente](creating-user-defined-types.md).  
+ È possibile utilizzare gli operatori di confronto per confrontare i valori nel tipo definito dall'utente se la proprietà `IsByteOrdered` è stata impostata su `true` durante la definizione della classe. Per ulteriori informazioni, vedere [creazione di un tipo definito dall'utente](creating-user-defined-types.md).  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -156,7 +157,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Chiamata dei metodi UDT  
- È anche possibile richiamare i metodi definiti nel tipo definito dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il **punto** classe contiene tre metodi `Distance`, `DistanceFrom`, e `DistanceFromXY`. Per i listati di codice che definisce questi tre metodi, vedere [codifica di tipi](creating-user-defined-types-coding.md).  
+ È anche possibile richiamare i metodi definiti nel tipo definito dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)]. La classe **Point** contiene tre metodi, `Distance` `DistanceFrom`, e `DistanceFromXY`. Per gli elenchi di codice che definiscono questi tre metodi, vedere [codifica di tipi definiti dall'utente](creating-user-defined-types-coding.md).  
   
  Nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente viene chiamato il metodo `PointValue.Distance`:  
   
@@ -167,7 +168,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- I risultati vengono visualizzati nei `Distance` colonna:  
+ I risultati vengono visualizzati nella `Distance` colonna:  
   
 ```  
 IDXYDistance  
@@ -177,7 +178,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- Il `DistanceFrom` metodo accetta un argomento di **puntare** tipo di dati e Visualizza la distanza dal punto specificato a PointValue:  
+ Il `DistanceFrom` metodo accetta un argomento del tipo di dati **Point** e visualizza la distanza dal punto specificato a PointValue:  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -264,6 +265,6 @@ WHERE ID = 2
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di tipi definiti dall'utente in SQL Server](working-with-user-defined-types-in-sql-server.md)  
+ [Utilizzo dei tipi definiti dall'utente in SQL Server](working-with-user-defined-types-in-sql-server.md)  
   
   

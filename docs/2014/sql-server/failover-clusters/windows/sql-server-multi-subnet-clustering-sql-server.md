@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049474"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering su più subnet di SQL Server (SQL Server)
@@ -28,28 +28,32 @@ ms.locfileid: "63049474"
   
  
   
-##  <a name="VisualElement"></a> Clustering di failover su più subnet di SQL Server (due nodi, due subnet)  
+##  <a name="VisualElement"></a>SQL Server cluster di failover su più subnet (due nodi, due subnet)  
  Nella figura seguente è illustrata un'istanza di cluster di failover (FCI) con due nodi e due subnet in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Architettura con più subnet con MultiSubnetFailover](../../../database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Architettura con più subnet con MultiSubnetFailover")  
+ ![Architettura Multi-Subnet con MultiSubnetFailover](../../../database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Architettura Multi-Subnet con MultiSubnetFailover")  
   
 
   
-##  <a name="Configurations"></a> Configurazioni di istanze di cluster di failover su più subnet  
+##  <a name="Configurations"></a>Configurazioni di istanze del cluster di failover su più subnet  
  Di seguito sono riportati alcuni esempi di FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui vengono utilizzate più subnet:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 sono inclusi i nodi Node1 e Node2. Node1 è connesso a Subnet1. Node2 è connesso a Subnet1. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'installazione riconosce tale configurazione come cluster con più subnet e imposta la dipendenza delle risorse di indirizzo IP su **OR**.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 sono inclusi i nodi Node1 e Node2. Node1 è connesso a Subnet1. Node2 è connesso a Subnet1. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Il programma di installazione considera questa configurazione come un cluster su più subnet e imposta la dipendenza delle risorse indirizzo IP su **or**.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 sono inclusi i nodi Node1, Node2 e Node3. Node1 e Node2 sono connessi a Subnet1. Node3 è connesso a Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'installazione riconosce tale configurazione come cluster con più subnet e imposta la dipendenza delle risorse di indirizzo IP su **OR**. Poiché Node1 e Node2 si trovano nella stessa subnet, questa configurazione garantisce un'elevata disponibilità locale aggiuntiva.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 sono inclusi i nodi Node1, Node2 e Node3. Node1 e Node2 sono connessi a Subnet1. Node3 è connesso a Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Il programma di installazione considera questa configurazione come un cluster su più subnet e imposta la dipendenza delle risorse indirizzo IP su **or**. Poiché Node1 e Node2 si trovano nella stessa subnet, questa configurazione garantisce un'elevata disponibilità locale aggiuntiva.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 sono inclusi i nodi Node1 e Node2. Node1 si trova in Subnet1. Node2 è su Subnet1 e Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'installazione riconosce tale configurazione come cluster con più subnet e imposta la dipendenza delle risorse di indirizzo IP su **OR**.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 sono inclusi i nodi Node1 e Node2. Node1 si trova in Subnet1. Node2 è su Subnet1 e Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Il programma di installazione considera questa configurazione come un cluster su più subnet e imposta la dipendenza delle risorse indirizzo IP su **or**.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 sono inclusi i nodi Node1 e Node2. Node1 è connesso a Subnet1 e a Subnet2. Anche Node2 è connesso a Subnet1 e a Subnet2. La dipendenza delle risorse di indirizzo IP viene impostata su **AND** dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLCLUST1 sono inclusi i nodi Node1 e Node2. Node1 è connesso a Subnet1 e a Subnet2. Anche Node2 è connesso a Subnet1 e a Subnet2. La dipendenza delle risorse di indirizzo IP viene impostata su **AND** dall'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!NOTE]  
     >  Questa configurazione non è considerata come una configurazione di cluster di failover su più subnet poiché i nodi di tipo cluster si trovano nello stesso set di subnet.  
   
-##  <a name="ComponentsAndConcepts"></a> Considerazioni relative alle risorse di indirizzo IP  
+##  <a name="ComponentsAndConcepts"></a>Considerazioni sulle risorse di indirizzo IP  
  In una configurazione del cluster di failover su più subnet, gli indirizzi IP non sono di proprietà di tutti i nodi del cluster di failover e potrebbero non essere tutti online durante l'avvio di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], è possibile impostare la dipendenza delle risorse di indirizzo IP su **OR**. Questa operazione consente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di essere online quando è presente almeno un indirizzo IP valido a cui possa associarsi.  
   
 > [!NOTE]  
@@ -66,8 +70,8 @@ ms.locfileid: "63049474"
   
  Quando si esegue un'installazione side-by-side di una FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con un'istanza autonoma del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], prestare attenzione per evitare conflitti del numero di porta TCP negli indirizzi IP. Di solito i conflitti si verificano quando due istanze del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] sono entrambe configurate per utilizzare la porta TCP predefinita (1433). Per evitare conflitti, configurare un'istanza in modo che venga utilizzata una porta fissa non predefinita. La configurazione di una porta fissa è di solito più facile nell'istanza autonoma. Configurare il [!INCLUDE[ssDE](../../../includes/ssde-md.md)] in modo che vengano utilizzate porte diverse per evitare un conflitto di indirizzo IP/porta TCP non previsto che blocca l'avvio di un'istanza quando si verifica un errore di una FCI di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel nodo di standby.  
   
-##  <a name="DNS"></a> Latenza di recupero del client durante i failover  
- Una FCI su più subnet abilita per impostazione predefinita la risorsa cluster RegisterAllProvidersIP per il nome di rete. In una configurazione con più subnet, sia gli indirizzi IP online che offline del nome di rete verranno registrati sul server DNS. L'applicazione client recupera quindi tutti gli indirizzi IP registrati dal server DNS e tenta di connettersi agli indirizzi in sequenza o in parallelo. Ciò significa che il tempo di recupero del client nei failover con più subnet non dipende più dalle latenze di aggiornamento DNS. Per impostazione predefinita, il client prova gli indirizzi IP in sequenza. Quando il client utilizza il nuovo parametro `MultiSubnetFailover=True` facoltativo nella stringa di connessione, prova invece gli indirizzi IP simultaneamente e si connette al primo server che risponde. In questo modo è possibile ridurre la latenza di recupero del client quando si verificano i failover. Per altre informazioni, vedere [connettività Client AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) e [creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+##  <a name="DNS"></a>Latenza di recupero del client durante il failover  
+ Una FCI su più subnet abilita per impostazione predefinita la risorsa cluster RegisterAllProvidersIP per il nome di rete. In una configurazione con più subnet, sia gli indirizzi IP online che offline del nome di rete verranno registrati sul server DNS. L'applicazione client recupera quindi tutti gli indirizzi IP registrati dal server DNS e tenta di connettersi agli indirizzi in sequenza o in parallelo. Ciò significa che il tempo di recupero del client nei failover con più subnet non dipende più dalle latenze di aggiornamento DNS. Per impostazione predefinita, il client prova gli indirizzi IP in sequenza. Quando il client utilizza il nuovo parametro `MultiSubnetFailover=True` facoltativo nella stringa di connessione, prova invece gli indirizzi IP simultaneamente e si connette al primo server che risponde. In questo modo è possibile ridurre la latenza di recupero del client quando si verificano i failover. Per ulteriori informazioni, vedere [connettività client AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) e [creare o configurare un listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
  Con librerie client legacy o provider di dati di terze parti non è possibile utilizzare il parametro `MultiSubnetFailover` nella stringa di connessione. Per assicurarsi che l'applicazione client funzioni in maniera ottimale con FCI su più subnet in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], provare a regolare il timeout di connessione nella stringa di connessione client di 21 secondi per ogni indirizzo IP aggiuntivo. In questo modo non si verifica il timeout del tentativo di riconnessione del client prima che siano stati scorsi tutti gli indirizzi IP nella FCI su più subnet.  
   
@@ -82,9 +86,9 @@ ms.locfileid: "63049474"
 |Installazione di un cluster di failover di SQL Server|[Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Aggiornamento sul posto del cluster di failover di SQL Server esistente|[Eseguire l'aggiornamento di un'istanza del cluster di failover di SQL Server &#40;installazione&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Gestione del cluster di failover di SQL Server esistente|[Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Clustering di failover di Windows|[Procedure consigliate per Cluster di Failover multisito di Microsoft Windows](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|  
+|Clustering di failover di Windows|[Procedure consigliate per il cluster di failover multisito di Microsoft Windows](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|  
 |Utilizzare lo snap-in Gestione cluster di failover per visualizzare gli eventi e i log WSFC|[Visualizzare eventi e log per un cluster di failover](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|Utilizzare Windows PowerShell per creare un file di log per tutti i nodi (o un nodo specifico) in un cluster di failover WSFC|[Pagina relativa al cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)|  
+|Utilizzare Windows PowerShell per creare un file di log per tutti i nodi (o un nodo specifico) in un cluster di failover WSFC|[Cmdlet del cluster di failover Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)|  
   
  
   

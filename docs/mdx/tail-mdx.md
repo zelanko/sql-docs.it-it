@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d48a374d7d84c1137f082eb12dec638557b14e5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036658"
 ---
 # <a name="tail-mdx"></a>Tail (MDX)
@@ -31,14 +31,14 @@ Tail(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Count*  
+ *Conteggio*  
  Espressione numerica valida che specifica il numero di tuple che devono essere restituite.  
   
-## <a name="remarks"></a>Note  
- Il **Tail** funzione restituisce il numero di tuple specificato dalla fine del set specificato. L'ordine degli elementi viene mantenuto. Il valore predefinito *conteggio* è 1. Se il numero specificato di tuple è minore di 1, la funzione restituisce il set vuoto. Se il numero di tuple specificato supera il numero di tuple nel set, la funzione restituisce il set originale.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **tail** restituisce il numero specificato di Tuple dalla fine del set specificato. L'ordine degli elementi viene mantenuto. Il valore predefinito di *count* è 1. Se il numero specificato di tuple è minore di 1, la funzione restituisce il set vuoto. Se il numero di tuple specificato supera il numero di tuple nel set, la funzione restituisce il set originale.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene restituita la misura Reseller Sales per le cinque sottocategorie di prodotti più vendute, indipendentemente dalla gerarchia, in base a Reseller Gross Profit. Il **Tail** funzione viene utilizzata per restituire solo gli ultimi cinque set del risultato dopo il reverse-ordinamento del risultato mediante il **ordine** (funzione).  
+ Nell'esempio seguente viene restituita la misura Reseller Sales per le cinque sottocategorie di prodotti più vendute, indipendentemente dalla gerarchia, in base a Reseller Gross Profit. La funzione **tail** viene utilizzata per restituire solo gli ultimi cinque set nel risultato dopo che il risultato viene ordinato in ordine inverso utilizzando la funzione **Order** .  
   
 ```  
 SELECT Tail  
@@ -53,6 +53,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

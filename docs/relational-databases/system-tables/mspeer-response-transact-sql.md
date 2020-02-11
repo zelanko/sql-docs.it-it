@@ -18,22 +18,22 @@ ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c930a5eeae8bfdb7d952610fadc0b7d779033435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026667"
 ---
-# <a name="mspeerresponse-transact-sql"></a>MSpeer_response (Transact-SQL)
+# <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSpeer_response** tabella viene utilizzata nella replica Peer-to-Peer per archiviare la risposta di ogni nodo a una richiesta di stato di pubblicazione. Questa tabella è archiviata nel database di pubblicazione.  
+  La tabella **MSpeer_response** viene utilizzata nella replica peer-to-peer per archiviare la risposta di ogni nodo a una richiesta di stato della pubblicazione. Questa tabella è archiviata nel database di pubblicazione.  
   
 ## <a name="definition"></a>Definizione  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**request_id**|**int**|Identifica una voce di richiesta di stato nella [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) tabella.|  
+|**request_id**|**int**|Identifica una voce della richiesta di stato nella tabella [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) .|  
 |**peer**|**sysname**|Peer che ha generato la risposta.|  
 |**peer_db**|**sysname**|Database di sottoscrizione del peer che ha generato la risposta.|  
 |**received_date**|**datetime**|Data e ora di ricezione della richiesta peer.|  

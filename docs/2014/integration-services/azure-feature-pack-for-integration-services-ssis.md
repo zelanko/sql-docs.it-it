@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772131"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
@@ -65,7 +65,7 @@ Il Feature Pack di SQL Server Integration Services (SSIS) per Azure è un'estens
     
     -   [Destinazione di Azure Data Lake Store](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Enumeratore Blob di Azure & enumeratore File di Azure Data Lake Store. Vedere [Foreach Loop Container](control-flow/foreach-loop-container.md).  
+-   Enumeratore BLOB di Azure & enumeratore del file ADLS. Vedere [contenitore ciclo foreach](control-flow/foreach-loop-container.md).  
   
  
 ## <a name="download-the-feature-pack"></a>Scaricare il Feature Pack  
@@ -73,11 +73,11 @@ Scaricare il Feature Pack di SQL Server Integration Services (SSIS) per Azure.
   
 -   [Microsoft SQL Server 2014 Integration Services Feature Pack per Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
 Prima di installare questo Feature Pack, è necessario installare i prerequisiti seguenti.  
   
 -   SQL Server Integration Services  
--   .Net Framework 4.5  
+-   .NET Framework 4.5  
   
 ## <a name="scenarios"></a>Scenari  
   

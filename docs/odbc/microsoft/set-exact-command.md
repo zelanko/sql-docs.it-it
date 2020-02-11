@@ -1,5 +1,5 @@
 ---
-title: SET EXACT (comando) | Microsoft Docs
+title: IMPOSTA comando esatto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 686ecc89f44bac4b219b760e55160f451a15c503
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997732"
 ---
 # <a name="set-exact-command"></a>SET EXACT (comando)
-Specifica le regole di confronto di due stringhe di lunghezza diversa.  
+Specifica le regole per il confronto di due stringhe di lunghezze diverse.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,40 +30,40 @@ SET EXACT ON | OFF
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- ON  
- Specifica che le espressioni devono corrispondere esattamente carattere per carattere siano equivalenti. Per il confronto vengono ignorati gli spazi vuoti finali nelle espressioni. Per il confronto, il valore inferiore tra due espressioni viene riempito a destra con spazi vuoti in base alla lunghezza dell'espressione più lunga.  
+ ATTIVA  
+ Specifica che le espressioni devono corrispondere a un carattere per essere equivalente. Eventuali spazi vuoti finali nelle espressioni vengono ignorati per il confronto. Per il confronto, la più breve delle due espressioni viene riempita a destra con spazi vuoti in modo da corrispondere alla lunghezza dell'espressione più lunga.  
   
  OFF  
- (Predefinito). Specifica che, per essere equivalenti, espressioni devono corrispondere esattamente carattere per carattere fino a quando non viene raggiunta la fine dell'espressione sul lato destro.  
+ (Impostazione predefinita). Specifica che, per essere equivalente, le espressioni devono corrispondere al carattere per il carattere fino a quando non viene raggiunta la fine dell'espressione sul lato destro.  
   
-## <a name="remarks"></a>Note  
- Il SET esatto impostazione non ha effetto se entrambe le stringhe sono della stessa lunghezza.  
+## <a name="remarks"></a>Osservazioni  
+ L'impostazione esatta SET non ha effetto se entrambe le stringhe hanno la stessa lunghezza.  
   
-## <a name="string-comparisons"></a>Confronti di stringhe  
- Visual FoxPro ha due operatori relazionali che verifica l'uguaglianza.  
+## <a name="string-comparisons"></a>Confronti tra stringhe  
+ In Visual FoxPro sono presenti due operatori relazionali che verificano l'uguaglianza.  
   
- I = operatore esegue un confronto tra due valori dello stesso tipo. Questo operatore è adatta per il confronto dei caratteri, numerici, date e dati logici.  
+ L'operatore = esegue un confronto tra due valori dello stesso tipo. Questo operatore è adatto per confrontare dati di tipo carattere, numerici, di data e logici.  
   
- Tuttavia, quando si confrontano le espressioni di caratteri con l'operatore =, i risultati potrebbero non essere esattamente quello previsto. Espressioni di caratteri vengono confrontate carattere per carattere da sinistra verso destra fino a quando una delle espressioni non è uguale a altro, fino alla fine dell'espressione sul lato destro del = operatore è raggiungibile (SET esatto OFF), o fino a quando non sono le entità finali di entrambe le espressioni raggiunto (impostato esattamente su ON).  
+ Tuttavia, quando si confrontano le espressioni di caratteri con l'operatore =, i risultati potrebbero non essere esattamente quelli previsti. Le espressioni di caratteri vengono confrontate con il carattere da sinistra a destra finché una delle espressioni non è uguale all'altra, fino a quando non viene raggiunta la fine dell'espressione a destra dell'operatore = (SET EXACT OFF) o fino a quando le entità finali di entrambe le espressioni sono raggiunto (impostazione esatta in).  
   
- I = = operatore può essere usato quando è necessario un confronto esatto dei dati di tipo carattere. Se due espressioni di caratteri vengono confrontate con l'operatore = =, le espressioni su entrambi i lati del = = operator deve contenere esattamente gli stessi caratteri, compresi gli spazi vuoti, per essere considerate uguali. L'impostazione SET EXACT viene ignorata quando vengono confrontate le stringhe di caratteri utilizzando = =.  
+ L'operatore = = può essere utilizzato quando è necessario un confronto esatto dei dati di tipo carattere. Se due espressioni di caratteri vengono confrontate con l'operatore = =, le espressioni su entrambi i lati dell'operatore = = devono contenere esattamente gli stessi caratteri, inclusi gli spazi vuoti, da considerare uguali. L'impostazione esatta SET viene ignorata quando le stringhe di caratteri vengono confrontate con = =.  
   
- Nella tabella seguente viene illustrato come la scelta dell'operatore e l'impostazione SET EXACT interessano i confronti. (Un carattere di sottolineatura rappresenta uno spazio vuoto).  
+ Nella tabella seguente viene illustrato il modo in cui la scelta dell'operatore e l'impostazione esatta hanno effetto sui confronti. Un carattere di sottolineatura rappresenta uno spazio vuoto.  
   
-|Confronto|= ESATTA OFF|= ESATTA SU|= = ESATTA su ON oppure OFF|  
+|Confronto|= EXACT OFF|= EXACT ON|= = ESATTA ON o OFF|  
 |----------------|------------------|-----------------|--------------------------|  
-|"abc" = "abc"|Corrispondenza|Corrispondenza|Corrispondenza|  
-|"ab" = "abc"|Nessuna corrispondenza|Nessuna corrispondenza|Nessuna corrispondenza|  
-|"abc" = "ab"|Corrispondenza|Nessuna corrispondenza|Nessuna corrispondenza|  
-|"abc" = "ab_"|Nessuna corrispondenza|Nessuna corrispondenza|Nessuna corrispondenza|  
-|"ab" = "ab_"|Nessuna corrispondenza|Corrispondenza|Nessuna corrispondenza|  
-|"ab_" = "ab"|Corrispondenza|Corrispondenza|Nessuna corrispondenza|  
-|"" = "ab"|Nessuna corrispondenza|Nessuna corrispondenza|Nessuna corrispondenza|  
-|"ab" = ""|Corrispondenza|Nessuna corrispondenza|Nessuna corrispondenza|  
-|"__" = ""|Corrispondenza|Corrispondenza|Nessuna corrispondenza|  
-|"" = "___"|Nessuna corrispondenza|Corrispondenza|Nessuna corrispondenza|  
-|TRIM("___") = ""|Corrispondenza|Corrispondenza|Corrispondenza|  
-|"" = TRIM("___")|Corrispondenza|Corrispondenza|Corrispondenza|  
+|"ABC" = "ABC"|Corrispondente|Corrispondente|Corrispondente|  
+|"AB" = "ABC"|Nessuna corrispondenza|Nessuna corrispondenza|Nessuna corrispondenza|  
+|"ABC" = "AB"|Corrispondente|Nessuna corrispondenza|Nessuna corrispondenza|  
+|"ABC" = "ab_"|Nessuna corrispondenza|Nessuna corrispondenza|Nessuna corrispondenza|  
+|"AB" = "ab_"|Nessuna corrispondenza|Corrispondente|Nessuna corrispondenza|  
+|"ab_" = "AB"|Corrispondente|Corrispondente|Nessuna corrispondenza|  
+|"" = "AB"|Nessuna corrispondenza|Nessuna corrispondenza|Nessuna corrispondenza|  
+|"AB" = ""|Corrispondente|Nessuna corrispondenza|Nessuna corrispondenza|  
+|"__" = ""|Corrispondente|Corrispondente|Nessuna corrispondenza|  
+|"" = "___"|Nessuna corrispondenza|Corrispondente|Nessuna corrispondenza|  
+|TRIM ("_ _") = ""|Corrispondente|Corrispondente|Corrispondente|  
+|"" = TRIM ("_ _")|Corrispondente|Corrispondente|Corrispondente|  
   
 ## <a name="see-also"></a>Vedere anche  
  [SET ANSI (comando)](../../odbc/microsoft/set-ansi-command.md)

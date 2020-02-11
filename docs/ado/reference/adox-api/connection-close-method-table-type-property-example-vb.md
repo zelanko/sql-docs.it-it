@@ -1,5 +1,5 @@
 ---
-title: Connessione Close (metodo), esempio di proprietà Table Type (VB) | Microsoft Docs
+title: Metodo di chiusura della connessione, esempio di proprietà del tipo di tabella (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4559a8d46852f37f2e828ce8f4abbd0e40845744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966701"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Esempio del metodo Close di Connection e della proprietà Type di Table (VB)
-Impostando il [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) proprietà **Nothing** deve chiudere la connessione al catalogo. Raccolte associate sarà vuote. Saranno rese orfane tutti gli oggetti che sono stati creati da oggetti dello schema nel catalogo. Tutte le proprietà per gli oggetti memorizzati nella cache sarà ancora disponibile, ma un tentativo di leggere le proprietà che richiede una chiamata al provider avrà esito negativo.  
+Se si imposta la proprietà [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) su **Nothing** , la connessione al catalogo verrà chiusa. Le raccolte associate saranno vuote. Tutti gli oggetti creati dagli oggetti dello schema nel catalogo saranno orfani. Eventuali proprietà degli oggetti memorizzati nella cache saranno comunque disponibili, ma un tentativo di leggere le proprietà che richiedono una chiamata al provider avrà esito negativo.  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -66,7 +66,7 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- Chiusura di un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto utilizzato per aprire il catalogo deve avere lo stesso effetto dell'impostazione il **ActiveConnection** proprietà **Nothing**.  
+ La chiusura di un oggetto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) utilizzato per aprire il catalogo deve avere lo stesso effetto dell'impostazione della proprietà **ActiveConnection** su **Nothing**.  
   
 ```  
 Attribute VB_Name = "Connection"  
@@ -76,7 +76,7 @@ Attribute VB_Name = "Connection"
  [Proprietà ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Oggetto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Raccolta di colonne (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Raccolta Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Oggetto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Raccolta di tabelle (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Raccolta Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Proprietà Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

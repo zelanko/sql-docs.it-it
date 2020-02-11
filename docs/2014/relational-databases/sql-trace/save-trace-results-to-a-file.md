@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136448"
 ---
 # <a name="save-trace-results-to-a-file"></a>Salvare i risultati della traccia in un file
@@ -34,7 +34,7 @@ ms.locfileid: "63136448"
   
 -   Eseguire l'ottimizzazione delle query  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] salva i risultati della traccia in un file quando vengono specificati un percorso e un nome file per l'argomento **@tracefile** della stored procedure **sp_trace_create**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Salva i risultati della traccia in un file quando vengono specificati un percorso e un nome **@tracefile** file per l'argomento della **sp_trace_create**stored procedure.  
   
 > [!NOTE]  
 >  Se nella stored procedure **sp_trace_create** si specifica un percorso per il salvataggio del file di traccia, è necessario che la directory sia accessibile al server. Si noti anche che se viene specificata una directory locale in **sp_trace_create**, si tratta di una directory locale nel computer server.  

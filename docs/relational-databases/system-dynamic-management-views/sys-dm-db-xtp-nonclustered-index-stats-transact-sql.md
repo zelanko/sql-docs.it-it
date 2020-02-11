@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026792"
 ---
-# <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   sys.dm_db_xtp_nonclustered_index_stats include statistiche sulle operazioni sugli indici non cluster nelle tabelle ottimizzate per la memoria. sys.dm_db_xtp_nonclustered_index_stats contiene una riga per ogni indice non cluster in una tabella ottimizzata per la memoria nel database corrente.  
@@ -38,17 +38,17 @@ ms.locfileid: "68026792"
   
  Numerosi tentativi sono indicativi di problemi di concorrenza; contattare il supporto [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Per altre informazioni sugli indici con ottimizzazione per la memoria, non cluster, vedere [panoramica dei meccanismi interni OLTP In memoria SQL Server](https://t.co/T6zToWc6y6), pagina 17.  
+ Per ulteriori informazioni sugli indici non cluster ottimizzati per la memoria, vedere [SQL Server Panoramica degli elementi interni di OLTP in memoria](https://t.co/T6zToWc6y6), pagina 17.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID dell'oggetto.|  
-|xtp_object_id|**bigint**|ID della tabella con ottimizzazione per la memoria.|  
+|xtp_object_id|**bigint**|ID della tabella ottimizzata per la memoria.|  
 |index_id|**int**|ID dell'indice.|  
 |delta_pages|**bigint**|Numero totale di pagine delta per questo indice nell'albero.|  
-|internal_pages|**bigint**|Per uso interno. Numero totale di pagine interne per questo indice nell'albero.|  
+|internal_pages|**bigint**|Solo per uso interno. Numero totale di pagine interne per questo indice nell'albero.|  
 |leaf_pages|**bigint**|Numero totale di pagine foglia per questo indice nell'albero.|  
-|outstanding_retired_nodes|**bigint**|Per uso interno. Numero totale di nodi per questo indice nelle strutture interne.|  
+|outstanding_retired_nodes|**bigint**|Solo per uso interno. Numero totale di nodi per questo indice nelle strutture interne.|  
 |page_update_count|**bigint**|Numero cumulativo di operazioni di aggiornamento di una pagina nell'indice.|  
 |page_update_retry_count|**bigint**|Numero cumulativo di tentativi di un'operazione di aggiornamento di una pagina nell'indice.|  
 |page_consolidation_count|**bigint**|Numero cumulativo di consolidamenti di pagine nell'indice.|  
@@ -62,10 +62,10 @@ ms.locfileid: "68026792"
 |key_merge_count|**bigint**|Numero cumulativo di operazioni di unione di chiavi nell'indice.|  
 |key_merge_retry_count|**bigint**|Numero cumulativo di tentativi di operazioni di unione di chiavi.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE per il database corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Memoria-con ottimizzazione per la tabella viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica della tabella con ottimizzazione per la memoria &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

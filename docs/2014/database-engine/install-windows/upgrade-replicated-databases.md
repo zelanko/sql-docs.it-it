@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775321"
 ---
 # <a name="upgrade-replicated-databases"></a>Aggiornare database replicati
@@ -63,24 +63,24 @@ ms.locfileid: "62775321"
   
  Eseguire gli agenti da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], da Monitoraggio replica o dalla riga di comando. Per ulteriori informazioni sull'esecuzione dell'agente snapshot, vedere gli argomenti seguenti:  
   
--   [Creazione e applicazione dello snapshot iniziale](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Creare e applicare lo snapshot iniziale](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   [Creazione e applicazione dello snapshot iniziale](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Creare e applicare lo snapshot iniziale](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Concetti di base relativi ai file eseguibili dell'agente di replica](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  Per ulteriori informazioni sull'esecuzione dell'agente di merge, vedere gli argomenti seguenti:  
   
--   [Sincronizzazione di una sottoscrizione pull](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md)  
+-   [Sincronizzare una sottoscrizione pull](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md)  
   
--   [Sincronizzazione di una sottoscrizione push](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)  
+-   [Sincronizzare una sottoscrizione push](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)  
   
  Al termine dell'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in una topologia in cui viene utilizzata una replica di tipo merge, modificare il livello di compatibilità di tutte le pubblicazioni se si desidera utilizzare le nuove funzionalità.  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>Aggiornamento alle versioni Standard, Workgroup o Express  
- Prima di eseguire l'aggiornamento da un'edizione all'altra di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , verificare che le funzionalità utilizzate siano supportate nell'edizione a cui si esegue l'aggiornamento. Per altre informazioni, vedere la sezione sulla replica in [funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Prima di eseguire l'aggiornamento da un'edizione all'altra di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , verificare che le funzionalità utilizzate siano supportate nell'edizione a cui si esegue l'aggiornamento. Per ulteriori informazioni, vedere la sezione sulla replica in [funzionalità supportate dalle edizioni di SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="web-synchronization-for-merge-replication"></a>Sincronizzazione Web per la replica di tipo merge  
  L'opzione di sincronizzazione Web per la replica di tipo merge richiede che il listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (replisapi.dll) venga copiato nella directory virtuale nel server Internet Information Services (IIS) utilizzato per la sincronizzazione. Quando si configura la sincronizzazione Web, il file viene copiato nella directory virtuale dalla procedura di configurazione guidata della sincronizzazione Web. Se si aggiornano i componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installati nel server IIS, è necessario copiare manualmente replisapi.dll dalla directory COM alla directory virtuale nel server IIS. Per altre informazioni sulla configurazione della sincronizzazione Web, vedere [Configurazione della sincronizzazione Web](../../../2014/relational-databases/replication/configure-web-synchronization.md).  
@@ -92,6 +92,6 @@ ms.locfileid: "62775321"
  [Domande frequenti sull'amministrazione della replica](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilità con le versioni precedenti della replica](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Aggiornamenti di versione ed edizione supportati](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
+ [Eseguire l'aggiornamento a SQL Server 2014](upgrade-sql-server.md)  
   
   

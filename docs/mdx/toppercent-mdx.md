@@ -1,5 +1,5 @@
 ---
-title: TopPercent (MDX) | Microsoft Docs
+title: Percentuale (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036589"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
@@ -35,21 +35,21 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  Espressione numerica valida che specifica la percentuale di tuple da restituire.  
   
 > [!IMPORTANT]  
->  *Percentuale* deve essere un valore positivo; i valori negativi generano un errore.  
+>  La *percentuale* deve essere un valore positivo. i valori negativi generano un errore.  
   
  *Numeric_Expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Note  
- Il **TopPercent** funzione calcola la somma dell'espressione numerica specificata valutata sul set specificato, disponendo il set in ordine decrescente. La funzione restituisce quindi gli elementi con i valori più alti la cui percentuale cumulativa del valore sommato totale corrisponde almeno alla percentuale specificata. La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno alla percentuale specificata. Gli elementi restituiti sono ordinati dal più grande al più piccolo.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **topercent** calcola la somma dell'espressione numerica specificata valutata sul set specificato, ordinando il set in ordine decrescente. La funzione restituisce quindi gli elementi con i valori più alti la cui percentuale cumulativa del valore sommato totale corrisponde almeno alla percentuale specificata. La funzione restituisce il subset più piccolo di un set il cui totale cumulativo corrisponde almeno alla percentuale specificata. Gli elementi restituiti sono ordinati dal più grande al più piccolo.  
   
 > [!WARNING]  
->  Se *Numeric_Expression* restituisce quindi un valore negativo **TopPercent** restituisce solo un (1) riga.  
+>  Se *Numeric_Expression* restituisce un valore negativo, il numero di **righe restituisce solo** una riga (1).  
 >   
 >  Vedere il secondo esempio per una presentazione dettagliata di questo comportamento.  
   
 > [!IMPORTANT]  
->  Ad esempio la [BottomPercent](../mdx/bottompercent-mdx.md) funzione, il **TopPercent** funzione rispetta mai la gerarchia.  
+>  Analogamente alla funzione [BottomPercent](../mdx/bottompercent-mdx.md) , la funzione di **percentuale di percentuale** interrompe sempre la gerarchia.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono restituite le migliori città che contribuiscono al primo 10% delle vendite dei rivenditori per la categoria della bicicletta. Il risultato viene disposto in ordine decrescente a iniziare con la città con il valore massimo di vendite.  
@@ -69,10 +69,10 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ||Reseller Sales Amount|  
 |-|---------------------------|  
-|Toronto|$3,508,904.84|  
-|Londra|$1,521,530.09|  
-|Seattle|$1,209,418.16|  
-|Parigi|$1,170,425.18|  
+|Toronto|$3.508.904,84|  
+|Londra|$1.521.530,09|  
+|Seattle|$1.209.418,16|  
+|Parigi|$1.170.425,18|  
   
  Il set di dati originale può essere ottenuto con la query seguente e può restituire 588 righe:  
   
@@ -89,7 +89,7 @@ WHERE([Product].[Product Categories].[Bikes])
 ```  
   
 ## <a name="example"></a>Esempio  
- La procedura dettagliata seguente consentirà di comprendere l'effetto dei valori negativi nel *Numeric_Expression*. Prima compilare un contesto in cui è possibile presentare il comportamento.  
+ La procedura dettagliata seguente consente di comprendere l'effetto dei valori negativi nell' *Numeric_Expression*. Prima compilare un contesto in cui è possibile presentare il comportamento.  
   
  Nella query seguente viene restituita una tabella di rivenditori 'Sales Amount', 'Total Product Cost' e 'Gross Profit', disposto in ordine decrescente di profitto. Per il profitto sono presenti solo valori negativi e quindi la perdita più piccola appare all'inizio.  
   
@@ -104,12 +104,12 @@ FROM [Adventure Works]
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
-|2000 Touring blu, 46|$321,027.03|$333,021.50|($11,994.47)|  
-|62 blu, Touring 3000|$87,773.61|$100,133.52|($12,359.91)|  
+|Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
+|Touring-2000 blu, 46|$321.027,03|$333.021,50|($11.994,47)|  
+|Touring-3000 blu, 62|$87.773,61|$100.133,52|($12.359,91)|  
 |...|...|...|...|  
-|Touring-1000 Yellow, 46|$1,016,312.83|$1,234,454.27|($218,141.44)|  
-|Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
+|Touring-1000 giallo, 46|$1.016.312,83|$1.234.454,27|($218.141,44)|  
+|Touring-1000 Yellow, 60|$1.184.363,30|$1.443.407,51|($259.044,21)|  
   
  Ora, se è stato richiesto di presentare le prime biciclette al 100% in base al profitto si scriverebbe una query come quella riportata di seguito.  
   
@@ -120,13 +120,13 @@ FROM [Adventure Works]
   
 ```  
   
- La query chiede il cento percento (100%), ossia tutte le righe devono essere restituite. Tuttavia, poiché sono presenti valori negativi nel *Numeric_Expression* , viene restituita solo una riga.  
+ La query chiede il cento percento (100%), ossia tutte le righe devono essere restituite. Tuttavia, poiché nel *Numeric_Expression* sono presenti valori negativi, viene restituita una sola riga.  
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
+|Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

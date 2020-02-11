@@ -1,5 +1,5 @@
 ---
-title: Generare (MDX) | Microsoft Docs
+title: Generate (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005902"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,17 +41,17 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  Espressione stringa valida che corrisponde in genere al nome del membro corrente (CurrentMember.Name) di ogni tupla nel set specificato.  
   
- *Delimitatore*  
+ *Delimiter*  
  Delimitatore valido espresso come espressione stringa.  
   
-## <a name="remarks"></a>Note  
- Se viene specificato un secondo set, la **genera** funzione restituisce un set generato applicando le tuple del secondo set a ogni tupla nel primo set e quindi creando un join risultante imposta da union. Se **tutti** viene specificato, i duplicati nel set risultante vengono mantenuti.  
+## <a name="remarks"></a>Osservazioni  
+ Se viene specificato un secondo set, la funzione **generate** restituisce un set generato applicando le tuple nel secondo set a ogni tupla del primo set, quindi unendo i set risultanti in base all'Unione. Se si specifica **All** , la funzione mantiene i duplicati nel set risultante.  
   
- Se viene specificata un'espressione stringa, il **genera** funzione restituisce una stringa generata valutando l'espressione stringa specificata su ogni tupla nel primo set, e quindi concatenando i risultati. Facoltativamente, è possibile delimitare la stringa separando i vari risultati nella stringa concatenata risultante.  
+ Se viene specificata un'espressione stringa, la funzione **generate** restituisce una stringa generata dalla valutazione dell'espressione stringa specificata rispetto a ogni tupla nel primo set e quindi concatenando i risultati. Facoltativamente, è possibile delimitare la stringa separando i vari risultati nella stringa concatenata risultante.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="set"></a>Impostare  
+### <a name="set"></a>Set  
  Nell'esempio seguente, la query restituisce un set che contiene la misura Internet Sales amount quattro volte, perché quattro sono i membri nel set [Date].[Calendar Year].[Calendar Year].MEMBERS:  
   
 ```  
@@ -72,7 +72,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- L'utilizzo pratico più comune di **genera** è impostato per valutare un complesso espressione, ad esempio TopCount, su un set di membri. Nell'esempio di query seguente vengono visualizzati i primi 10 prodotti per ogni anno di calendario su righe:  
+ L'uso pratico più comune di **generate** consiste nel valutare un'espressione set complessa, ad esempio il numero di riscontri, su un set di membri. Nell'esempio di query seguente vengono visualizzati i primi 10 prodotti per ogni anno di calendario su righe:  
   
 ```  
 SELECT   
@@ -89,7 +89,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- Si noti che diverse top 10 viene visualizzato per ogni anno e che l'utilizzo di **genera** è l'unico modo per ottenere questo risultato. Applicando un semplice crossjoin ai calendari e al set dei 10 prodotti migliori sarà possibile visualizzare i 10 migliori prodotti ogni volta, ripetuti per ogni anno, come illustrato nell'esempio seguente:  
+ Si noti che per ogni anno vengono visualizzati diversi primi 10 e che l'uso di **generate** è l'unico modo per ottenere questo risultato. Applicando un semplice crossjoin ai calendari e al set dei 10 prodotti migliori sarà possibile visualizzare i 10 migliori prodotti ogni volta, ripetuti per ogni anno, come illustrato nell'esempio seguente:  
   
 ```  
 SELECT   
@@ -104,8 +104,8 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
- L'esempio seguente illustra l'uso di **genera** per restituire una stringa:  
+### <a name="string"></a>string  
+ Nell'esempio seguente viene illustrato l'utilizzo di **generate** per restituire una stringa:  
   
 ```  
 WITH   
@@ -124,9 +124,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Questa forma del **genera** funzione può essere utile durante il debug di calcoli, in quanto consente di restituire una stringa che visualizza i nomi di tutti i membri in un set. Ciò potrebbe essere più facile da leggere rispetto alla rigida rappresentazione MDX di un set che il [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) funzione restituisce.  
+>  Questo formato della funzione **generate** può essere utile durante il debug dei calcoli, in quanto consente di restituire una stringa che Visualizza i nomi di tutti i membri di un set. Questo potrebbe essere più facile da leggere rispetto alla rigorosa rappresentazione MDX di un set restituito dalla funzione [SetToStr &#40;mdx&#41;](../mdx/settostr-mdx.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

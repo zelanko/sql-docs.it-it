@@ -16,26 +16,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769017"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analisi di formati di file di testo non standard con il componente script
   Quando i dati di origine sono disposti in un formato non standard, può risultare utile consolidare tutta la logica di analisi in un singolo script anziché concatenare più trasformazioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per ottenere lo stesso risultato.  
   
- [Esempio 1: Analisi di record delimitati da righe](#example1)  
+ [Esempio 1: analisi di record delimitati da righe](#example1)  
   
- [Esempio 2: Divisione di record padre e figlio](#example2)  
+ [Esempio 2: divisione di record padre e figlio](#example2)  
   
 > [!NOTE]  
 >  Se si desidera creare un componente da riutilizzare più facilmente con più attività Flusso di dati e più pacchetti, è possibile utilizzare il codice di questo esempio di componente script come punto iniziale per un componente del flusso di dati personalizzato. Per altre informazioni, vedere [Sviluppo di un componente del flusso di dati personalizzato](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a> Esempio 1: Analisi di record delimitati da righe  
+##  <a name="example1"></a>Esempio 1: analisi di record delimitati da righe  
  In questo esempio viene illustrato come utilizzare il componente script per analizzare in una tabella di destinazione un file di testo in cui ogni colonna di dati appare in una riga distinta.  
   
- Per altre informazioni su come configurare il componente Script per l'utilizzo come trasformazione nel flusso di dati, vedere [creazione di una trasformazione sincrona con il componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)e [creando un asincrono Trasformazione con il componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Per ulteriori informazioni su come configurare il componente script per l'utilizzo come trasformazione nel flusso di dati, vedere [creazione di una trasformazione sincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)e [creazione di una trasformazione asincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Per configurare l'esempio di componente script  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62769017"
   
 11. Nella pagina **Colonne di input** dell'**Editor trasformazione Script** selezionare l'unica colonna di input disponibile.  
   
-12. Nel **input e output** pagina della **Editor trasformazione Script**selezionare Output 0 e impostare relativo `SynchronousInputID` su None. Creare 5 colonne di output, tutte di tipo string [DT_STR] con lunghezza 32:  
+12. Nella pagina **input e output** di **Editor trasformazione script**Selezionare output 0 e impostare il relativo `SynchronousInputID` valore su nessuno. Creare 5 colonne di output, tutte di tipo string [DT_STR] con lunghezza 32:  
   
     -   FirstName  
   
@@ -102,11 +102,11 @@ ms.locfileid: "62769017"
   
     -   Titolo  
   
-    -   Città  
+    -   city  
   
     -   StateProvince  
   
-13. Nel **Script** pagina della **Editor trasformazione Script**, fare clic su **modifica Script** e immettere il codice illustrato nel `ScriptMain` classe dell'esempio. Chiudere l'ambiente di sviluppo dello script e l'**Editor trasformazione Script**.  
+13. Nella pagina **script** di **Editor trasformazione script**fare clic su **Modifica script** e immettere il codice illustrato nella `ScriptMain` classe dell'esempio. Chiudere l'ambiente di sviluppo dello script e l'**Editor trasformazione Script**.  
   
 14. Aggiungere una destinazione SQL Server al flusso di dati. Configurarlo per l'utilizzo della gestione connessione OLE DB e della tabella RowDelimitedData. Connettere l'output del componente script a questa destinazione.  
   
@@ -187,13 +187,13 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Esempio 2: Divisione di record padre e figlio  
+##  <a name="example2"></a> Esempio 2: divisione di record padre e figlio  
  In questo esempio viene illustrato come utilizzare il componente script per analizzare in tabelle di destinazione padre e figlio correttamente normalizzate un file di testo in cui una riga del separatore precede una riga di record padre seguita da un numero indefinito di righe di record figlio. Questo semplice esempio può essere facilmente adottato per file di origine che utilizzano più di una riga o colonna per ogni record padre e figlio, purché esista la possibilità di identificare l'inizio e la fine di ogni record.  
   
 > [!CAUTION]  
 >  Questo esempio viene riportato a scopo puramente dimostrativo. Se viene eseguito più di una volta, verranno inseriti valori di chiave duplicati nella tabella di destinazione.  
   
- Per altre informazioni su come configurare il componente Script per l'utilizzo come trasformazione nel flusso di dati, vedere [creazione di una trasformazione sincrona con il componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)e [creando un asincrono Trasformazione con il componente Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Per ulteriori informazioni su come configurare il componente script per l'utilizzo come trasformazione nel flusso di dati, vedere [creazione di una trasformazione sincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)e [creazione di una trasformazione asincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Per configurare l'esempio di componente script  
   
@@ -253,7 +253,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. Nella pagina **Colonne di input** dell'**Editor trasformazione Script** selezionare l'unica colonna di input disponibile.  
   
-12. Nel **input e output** pagina della **Editor trasformazione Script**, selezionare Output 0, rinominarlo in ParentRecords e impostare relativo `SynchronousInputID` su None. Creare 2 colonne di output:  
+12. Nella pagina **input e output** di **Editor trasformazione script**Selezionare output 0, rinominarlo in ParentRecords e impostare il relativo `SynchronousInputID` valore su None. Creare 2 colonne di output:  
   
     -   ParentID (chiave primaria), di tipo integer con segno a quattro byte [DT_I4]  
   
@@ -346,7 +346,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di una trasformazione sincrona con il componente script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

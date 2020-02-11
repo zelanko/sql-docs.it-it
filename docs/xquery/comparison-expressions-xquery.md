@@ -20,10 +20,10 @@ ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039035"
 ---
 # <a name="comparison-expressions-xquery"></a>Espressioni di confronto (XQuery)
@@ -44,10 +44,10 @@ ms.locfileid: "68039035"
   
  Gli operatori generali sono indicati nella tabella seguente.  
   
-|Operator|Descrizione|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |=|Uguale|  
-|!=|Non uguaglianza|  
+|!=|Diverso|  
 |\<|Minore di|  
 |>|Maggiore di|  
 |\<=|Minore o uguale a|  
@@ -79,7 +79,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- La query seguente restituisce foto di piccole dimensioni di un modello di prodotto derivato dal catalogo prodotti disponibile nel database di esempio AdventureWorks. La query confronta una sequenza di valori atomici restituiti da `PD:ProductDescription/PD:Picture/PD:Size` con la sequenza singleton "small". Se il confronto è True, restituisce il < Picture\> elemento.  
+ La query seguente restituisce foto di piccole dimensioni di un modello di prodotto derivato dal catalogo prodotti disponibile nel database di esempio AdventureWorks. La query confronta una sequenza di valori atomici restituiti da `PD:ProductDescription/PD:Picture/PD:Size` con la sequenza singleton "small". Se il confronto è true, restituisce l'elemento immagine\> <.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -90,7 +90,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- La query confronta una sequenza di numeri di telefono in < numero\> elementi per la stringa letterale "112-111-1111". La query confronta la sequenza di elementi dei numeri di telefono nella colonna AdditionalContactInfo per determinare se il documento include un numero di telefono specifico di un determinato cliente.  
+ Nella query seguente viene confrontata una sequenza di numeri di telefono\> negli elementi <numero al valore letterale stringa "112-111-1111". La query confronta la sequenza di elementi dei numeri di telefono nella colonna AdditionalContactInfo per determinare se il documento include un numero di telefono specifico di un determinato cliente.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -103,7 +103,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- La query restituisce True. Questo valore indica che il documento contiene tale numero. La query seguente è una versione leggermente modificata della query precedente. In questa query, i valori dei numeri di telefono recuperati dal documento vengono confrontati con una sequenza costituita da due numeri telefonici. Se il confronto è True, il < numero\> viene restituito l'elemento.  
+ La query restituisce True. Questo valore indica che il documento contiene tale numero. La query seguente è una versione leggermente modificata della query precedente. In questa query, i valori dei numeri di telefono recuperati dal documento vengono confrontati con una sequenza costituita da due numeri telefonici. Se il confronto è true, viene restituito l'\> elemento <Number.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -121,7 +121,7 @@ WHERE ContactID=1
   
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 \<act:number   
@@ -139,10 +139,10 @@ WHERE ContactID=1
   
  Gli operatori di confronto dei valori sono indicati nella tabella seguente.  
   
-|Operator|Descrizione|  
+|Operatore|Descrizione|  
 |--------------|-----------------|  
 |eq|Uguale|  
-|ne|Non uguaglianza|  
+|ne|Diverso|  
 |lt|Minore di|  
 |gt|Maggiore di|  
 |le|Minore o uguale a|  
@@ -152,7 +152,7 @@ WHERE ContactID=1
   
  È possibile utilizzare questi operatori solo su valori atomici singleton. Pertanto, non è possibile specificare una sequenza come uno degli operandi.  
   
- Ad esempio, la query seguente recupera \<Picture > elementi di un modello di prodotto in cui la dimensione dell'immagine è "piccolo:  
+ Ad esempio, la query seguente recupera \<gli elementi immagine> per un modello di prodotto in cui le dimensioni dell'immagine sono "Small:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -167,13 +167,14 @@ WHERE ProductModelID=19
   
  Dalla query precedente si noti quanto segue:  
   
--   `declare namespace` definisce il prefisso dello spazio dei nomi utilizzato successivamente nella query.  
+-   
+  `declare namespace` definisce il prefisso dello spazio dei nomi utilizzato successivamente nella query.  
   
--   Il \<dimensioni > valore dell'elemento viene confrontato con il valore atomico specificato, "small".  
+-   La \<dimensione> valore dell'elemento viene confrontato con il valore atomico specificato, ovvero "Small".  
   
--   Si noti che poiché gli operatori funzionano solo su valori atomici, la **data ()** funzione viene utilizzata in modo implicito per recuperare il valore del nodo. Pertanto, `data($P/PD:Size) eq "small"` restituisce lo stesso risultato.  
+-   Si noti che poiché gli operatori value funzionano solo su valori atomici, la funzione **Data ()** viene utilizzata in modo implicito per recuperare il valore del nodo. Pertanto, `data($P/PD:Size) eq "small"` restituisce lo stesso risultato.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 \<PD:Picture   
@@ -187,7 +188,7 @@ WHERE ProductModelID=19
  Si noti che le regole per la promozione dei tipi sono identiche a quelle utilizzate per i confronti generali. Durante i confronti tra valori, inoltre, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza le stesse regole di cast per i valori non tipizzati utilizzate durante i confronti generali. Le regole delle specifiche XQuery, invece, prevedono sempre l'esecuzione del cast del valore non tipizzato a xs:string durante i confronti tra valori.  
   
 ## <a name="node-comparison-operator"></a>Operatore di confronto dei nodi  
- L'operatore di confronto, nodo **è**, si applica solo ai tipi di nodo. Il risultato restituito indica se due nodi passati come operandi rappresentano lo stesso nodo nel documento di origine. Questo operatore restituisce True se i due operandi rappresentano lo stesso nodo. In caso contrario, restituisce False.  
+ L'operatore di confronto dei nodi, **is**, si applica solo ai tipi di nodo. Il risultato restituito indica se due nodi passati come operandi rappresentano lo stesso nodo nel documento di origine. Questo operatore restituisce True se i due operandi rappresentano lo stesso nodo. In caso contrario, restituisce False.  
   
  La query seguente controlla se il centro di lavorazione 10 è il primo nell'ambito del processo di produzione di un modello di prodotto specifico.  
   
@@ -207,7 +208,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 ProductModelID       Result          
@@ -220,11 +221,11 @@ ProductModelID       Result
   
  I confronti eseguiti, basati sull'ordine dei nodi all'interno del documento, sono i seguenti:  
   
--   `<<` : Viene **operando 1** far precedere **operando 2** nell'ordine del documento.  
+-   `<<`: L' **operando 1** precede l' **operando 2** nell'ordine del documento.  
   
--   `>>` : Viene **operando 1** seguono **operando 2** nell'ordine del documento.  
+-   `>>`: L' **operando 1** segue l' **operando 2** nell'ordine del documento.  
   
- La query seguente restituisce True se la descrizione del catalogo prodotti ha il \<garanzia > elemento precede il \<manutenzione > elemento nell'ordine del documento per un determinato prodotto.  
+ La query seguente restituisce true se la descrizione del catalogo dei prodotti \<contiene la garanzia> elemento visualizzato prima \<dell'elemento> di manutenzione nell'ordine del documento per un determinato prodotto.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -240,9 +241,9 @@ where ProductModelID=19
   
  Dalla query precedente si noti quanto segue:  
   
--   Il **Value ()** metodo per il **xml**tipo di dati viene usato nella query.  
+-   Il metodo **value ()** del tipo di dati **XML**viene utilizzato nella query.  
   
--   Il valore booleano della query viene convertito in **nvarchar(10)** e restituiti.  
+-   Il risultato booleano della query viene convertito in **nvarchar (10)** e restituito.  
   
 -   La query restituisce True.  
   

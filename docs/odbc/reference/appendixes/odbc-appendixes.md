@@ -11,16 +11,16 @@ ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c9e54bec1c4a4f57ade8ded1034c8c503c0cece
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990650"
 ---
 # <a name="odbc-appendixes"></a>Appendici ODBC
-Dettagli tecnici relativi all'interfaccia di Microsoft ODBC sono contenuti nelle appendici seguenti:  
+I dettagli tecnici relativi all'interfaccia Microsoft ODBC sono contenuti nelle seguenti appendici:  
   
--   [Appendice A: Codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [Appendice A: codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
 -   [Appendice B: Tabelle della transizione di stato ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
@@ -28,8 +28,8 @@ Dettagli tecnici relativi all'interfaccia di Microsoft ODBC sono contenuti nelle
   
 -   [Appendice D: Tipi di dati](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
--   [Appendice e: Funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
+-   [Appendice E: Funzioni scalari](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   
--   [Appendice f: Libreria di cursori ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
+-   [Appendice F: Libreria di cursori ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   
--   [Appendice g: Linee guida di driver per la compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)
+-   [Appendice G: Indicazioni per la compatibilità con le versioni precedenti dei driver](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)

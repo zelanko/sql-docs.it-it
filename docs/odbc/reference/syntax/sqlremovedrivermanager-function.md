@@ -20,18 +20,18 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5cd31a45ed891a8dc95f4f23981d4b626a6095b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68024545"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Funzione SQLRemoveDriverManager
 **Conformità**  
- Versione introdotta: ODBC 3.0: Deprecato in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e versioni successive.  
+ Versione introdotta: ODBC 3,0: deprecato in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e sistemi operativi successivi.  
   
- **Riepilogo**  
- **SQLRemoveDriverManager** modifica o rimuove le informazioni sui componenti principali di ODBC dalla voce Odbcinst. ini nelle informazioni di sistema.  
+ **Summary**  
+ **SQLRemoveDriverManager** modifica o rimuove le informazioni sui componenti di base di ODBC dalla voce Odbcinst. ini nelle informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,25 +43,25 @@ BOOL SQLRemoveDriverManager(
   
 ## <a name="arguments"></a>Argomenti  
  *pdwUsageCount*  
- [Output] Il conteggio di utilizzo di gestione Driver dopo la chiamata a questa funzione.  
+ Output Conteggio di utilizzo di gestione driver dopo la chiamata a questa funzione.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore. Se le informazioni di sistema non esiste alcuna voce quando questa funzione viene chiamata, la funzione restituisce FALSE.  
+ La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo. Se nelle informazioni di sistema non è presente alcuna voce quando viene chiamata questa funzione, la funzione restituisce FALSE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLRemoveDriverManager** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
+ Quando **SQLRemoveDriverManager** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|Componente non trovato nel Registro di sistema|Il programma di installazione non è stato possibile rimuovere le informazioni sul Driver Manager perché non esiste nel Registro di sistema o non è stato trovato nel Registro di sistema.|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|Non è stato possibile incrementare o decrementare il conteggio di utilizzo del componente|Il programma di installazione non è stato possibile diminuire il conteggio di utilizzo di gestione Driver.|  
-|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è stato possibile eseguire la funzione a causa della mancanza di memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non è stato specificato alcun errore di programma di installazione.|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|Componente non trovato nel registro di sistema|Il programma di installazione non è riuscito a rimuovere le informazioni di gestione driver perché non esisteva nel registro di sistema o non è stato trovato nel registro di sistema.|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|Non è stato possibile incrementare o decrementare il numero di utilizzi dei componenti|Il programma di installazione non è riuscito a decrementare il conteggio di utilizzo di gestione driver.|  
+|ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione non è riuscito a eseguire la funzione a causa di memoria insufficiente.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLRemoveDriverManager** si integra con i **SQLInstallDriverManager** funzione e gli aggiornamenti contare l'utilizzo di componenti nelle informazioni di sistema. Questa funzione deve essere chiamata solo da un'applicazione di installazione.  
+ **SQLRemoveDriverManager** completa la funzione **SQLInstallDriverManager** e aggiorna il conteggio di utilizzo dei componenti nelle informazioni di sistema. Questa funzione deve essere chiamata solo da un'applicazione di installazione.  
   
- **SQLRemoveDriverManager** verrà decrementa il conteggio di utilizzo di componenti di base di 1. Se il conteggio di utilizzo del componente è pari a 0, vengono rimosse le informazioni relative alla voce del sistema. La voce di componente principale è nel seguente percorso nelle informazioni di sistema, sotto il titolo "ODBC Core":  
+ **SQLRemoveDriverManager** decrementerà di 1 il numero di utilizzo dei componenti di base. Se il conteggio utilizzo componenti passa a 0, le informazioni sul sistema di immissione verranno rimosse. La voce del componente principale si trova nel percorso seguente nelle informazioni di sistema, sotto il titolo "ODBC core":  
   
  `HKEY_LOCAL_MACHINE`  
   
@@ -72,28 +72,28 @@ BOOL SQLRemoveDriverManager(
  `Odbcinst.ini`  
   
 > [!CAUTION]  
->  Un'applicazione non rimuovere fisicamente i file di Driver Manager quando il conteggio di utilizzo del componente e il conteggio di utilizzo file raggiunge zero.  
+>  Un'applicazione non deve rimuovere fisicamente i file di gestione driver quando il conteggio utilizzo componenti e il conteggio utilizzo file raggiungono lo zero.  
   
- **SQLRemoveDriverManager** non vengono effettivamente rimossi tutti i file. Il programma chiamante è responsabile per l'eliminazione di file e mantenere l'utilizzo di file conta. File di Gestione driver non deve tuttavia, essere rimossi quando il conteggio di utilizzo del componente sia il conteggio di utilizzo di file hanno raggiunto lo zero, poiché questi file possono essere utilizzati da altre applicazioni che non hanno incrementato il conteggio di utilizzo di file.  
+ **SQLRemoveDriverManager** non rimuove effettivamente alcun file. Il programma chiamante è responsabile dell'eliminazione dei file e della gestione dei conteggi di utilizzo del file. Tuttavia, i file di gestione driver non devono essere rimossi quando il conteggio di utilizzo del componente e il conteggio di utilizzo file hanno raggiunto zero, perché questi file possono essere utilizzati da altre applicazioni che non hanno incrementato il numero di utilizzo del file.  
   
- **SQLRemoveDriverManager** viene chiamata come parte del processo di disinstallazione. Componenti ODBC (che includono gestione Driver, libreria di cursori, programma di installazione, libreria di linguaggio, amministratore, i file thunk e così via) vengono disinstallati nel suo complesso. I file seguenti non vengono rimossi quando **SQLRemoveDriverManager** viene chiamata come parte del processo di disinstallazione:  
+ **SQLRemoveDriverManager** viene chiamata come parte del processo di disinstallazione. I componenti di base di ODBC (che includono Gestione driver, la libreria di cursori, il programma di installazione, la libreria di lingue, l'amministratore, i file di thunk e così via) vengono completamente disinstallati. I file seguenti non vengono rimossi quando **SQLRemoveDriverManager** viene chiamato come parte del processo di disinstallazione:  
   
 |||  
 |-|-|  
-|ODBC32DLL|ODBCCP32.DLL|  
-|ODBCCR32.DLL|ODBC16GT.DLL|  
-|ODBCCU32.DLL|ODBC32GT.DLL|  
-|ODBCINT.DLL|DS16GT.DLL|  
-|ODBCTRAC. DLL|DS32GT.DLL|  
-|MSVCRT40.DLL|ODBCAD32.EXE|  
-|ODBCCP32.CPL||  
+|ODBC32DLL|Odbccp32. DLL|  
+|Odbccr32. DLL|Odbc16gt. DLL|  
+|ODBCCU32. DLL|ODBC32GT. DLL|  
+|ODBCINT. DLL|DS16GT. DLL|  
+|ODBCTRAC. DLL|DS32GT. DLL|  
+|MSVCRT40. DLL|Odbcad32. EXE|  
+|Odbccp32. CPL||  
   
- **SQLRemoveDriverManager** nota anche come parte di un processo di aggiornamento. Se un'applicazione rileva che deve eseguire un aggiornamento e il driver è installato in precedenza, il driver debba essere rimossi e reinstallato.  
+ **SQLRemoveDriverManager** viene chiamato anche come parte di un processo di aggiornamento. Se un'applicazione rileva che è necessario eseguire un aggiornamento e in precedenza ha installato il driver, il driver deve essere rimosso e quindi reinstallato.  
   
- **SQLRemoveDriverManager** deve innanzitutto essere chiamato per diminuire il conteggio di utilizzo del componente. **SQLInstallDriverEx** deve essere chiamato per incrementare il conteggio di utilizzo del componente. Il programma di installazione dell'applicazione è necessario sostituire i file dei componenti di base precedente con i nuovi file. Il conteggio degli utilizzi il file rimarrà invariato e altre applicazioni che usano i file dei componenti principali versione precedenti useranno i file della versione più recente.  
+ **SQLRemoveDriverManager** deve essere chiamato prima per decrementare il numero di utilizzo dei componenti. **SQLInstallDriverEx** deve quindi essere chiamato per incrementare il conteggio di utilizzo dei componenti. Il programma di installazione dell'applicazione deve sostituire i vecchi file dei componenti di base con i nuovi file. I conteggi di utilizzo dei file rimarranno invariati e altre applicazioni che utilizzano i file dei componenti di base della versione precedente utilizzeranno ora i file di versione più recenti.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Installazione di una gestione Driver|[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|
+|Installazione di una gestione driver|[SQLInstallDriverManager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|

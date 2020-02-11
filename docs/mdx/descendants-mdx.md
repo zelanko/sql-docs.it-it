@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999984"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
@@ -48,20 +48,20 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
- *distanza*  
+ *Distanza*  
  Espressione numerica valida che specifica la distanza dal membro specificato.  
   
  *Desc_Flag*  
  Espressione stringa valida che specifica un flag descrittivo che distingue i possibili set di discendenti.  
   
-## <a name="remarks"></a>Note  
- Se si specifica un livello, il **discendenti** funzione restituisce un set contenente i discendenti del membro specificato o i membri del set specificato, un livello specificato, modificato facoltativamente da un flag specificato in  *Desc_Flag*.  
+## <a name="remarks"></a>Osservazioni  
+ Se viene specificato un livello, la funzione **Descendants** restituisce un set contenente i discendenti del membro specificato o i membri del set specificato, a un livello specificato, modificato facoltativamente da un flag specificato in *Desc_Flag*.  
   
- Se *distanza* è specificato, il **discendenti** funzione restituisce un set contenente i discendenti del membro specificato o i membri del set specificato che sono il numero specificato di livelli di stoccaggio in la gerarchia del membro specificato, modificato facoltativamente da un flag specificato in *Desc_Flag*. Questa funzione viene in genere utilizzata con l'argomento Distance per gestire gerarchie incomplete. Se la distanza specificata è zero (0), la funzione restituisce un set costituito soltanto dal membro specificato o dal set specificato.  
+ Se si specifica *distance* , la funzione **Descendants** restituisce un set contenente i discendenti del membro specificato o i membri del set specificato che corrispondono al numero di livelli specificato nella gerarchia del membro specificato, modificato facoltativamente da un flag specificato in *Desc_Flag*. Questa funzione viene in genere utilizzata con l'argomento Distance per gestire gerarchie incomplete. Se la distanza specificata è zero (0), la funzione restituisce un set costituito soltanto dal membro specificato o dal set specificato.  
   
- Se viene specificata un'espressione set, la **discendenti** funzione viene risolta singolarmente per ogni membro del set e set viene creato nuovamente. In altre parole, la sintassi utilizzata per la **discendenti** funzione è funzionalmente equivalente a MDX [genera](../mdx/generate-mdx.md) (funzione).  
+ Se viene specificata un'espressione set, la funzione **Descendants** viene risolta singolarmente per ogni membro del set e il set viene creato di nuovo. In altre parole, la sintassi utilizzata per la funzione **Descendants** è equivalente dal punto di vista funzionale alla funzione MDX [generate](../mdx/generate-mdx.md) .  
   
- Se non viene specificato alcun livello o alla distanza, il valore predefinito per il livello utilizzato dalla funzione viene determinato chiamando il [livello](../mdx/level-mdx.md) funzione di (<\<membro >>. Livello) per il membro specificato (se viene specificato un membro) o chiamando il **livello** funzione per ogni membro del set specificato (se viene specificato un set). Se non si specifica un'espressione di livello o la distanza o non vengono specificati flag, la funzione viene eseguita come se fosse stata utilizzata la sintassi seguente:  
+ Se non viene specificato alcun livello o distanza, il valore predefinito per il livello utilizzato dalla funzione viene determinato chiamando la funzione [Level](../mdx/level-mdx.md) (<\<membro>>. Livello) per il membro specificato (se viene specificato un membro) o chiamando la funzione **Level** per ogni membro del set specificato (se viene specificato un set). Se non si specifica un'espressione di livello o la distanza o non vengono specificati flag, la funzione viene eseguita come se fosse stata utilizzata la sintassi seguente:  
   
  `Descendants`  
   
@@ -89,7 +89,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  `)`  
   
- Modificando il valore del flag descrittivo è possibile includere o escludere i discendenti alla distanza o al livello specificato, gli elementi figlio prima o dopo la distanza o il livello specificato (fino al nodo foglia) e tutti gli elementi figlio di tipo foglia indipendentemente dalla distanza o dal livello specificato. La tabella seguente descrive i flag consentiti nel *Desc_Flag* argomento.  
+ Modificando il valore del flag descrittivo è possibile includere o escludere i discendenti alla distanza o al livello specificato, gli elementi figlio prima o dopo la distanza o il livello specificato (fino al nodo foglia) e tutti gli elementi figlio di tipo foglia indipendentemente dalla distanza o dal livello specificato. Nella tabella seguente vengono descritti i flag consentiti nell'argomento *Desc_Flag* .  
   
 |Flag|Descrizione|  
 |----------|-----------------|  
@@ -123,7 +123,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- L'esempio seguente restituisce la media giornaliera del `Measures.[Gross Profit Margin]` misura, calcolata sui giorni di ogni mese dell'anno fiscale 2003, dai **Adventure Works** cubo. Il **discendenti** funzione restituisce un set di giorni determinato dal membro corrente del `[Date].[Fiscal]` gerarchia.  
+ Nell'esempio seguente viene restituita la media giornaliera `Measures.[Gross Profit Margin]` della misura, calcolata nei giorni di ogni mese dell'anno fiscale 2003, dal cubo **Adventure Works** . La funzione **Descendants** restituisce un set di giorni determinato dal membro corrente della `[Date].[Fiscal]` gerarchia.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  
@@ -140,7 +140,7 @@ FROM [Adventure Works]
 WHERE ([Date].[Fiscal Year].&[2003])  
 ```  
   
- Nell'esempio seguente viene utilizzata un'espressione di livello e vengono restituiti l'importo delle vendite su Internet per ogni State-Province in Australia e la percentuale sul totale delle vendite su Internet per l'Australia per ogni State-Province. In questo esempio la funzione Item viene utilizzata per estrarre la tupla prima (e unica) dal set restituito dal **predecessori** (funzione).  
+ Nell'esempio seguente viene utilizzata un'espressione di livello e vengono restituiti l'importo delle vendite su Internet per ogni State-Province in Australia e la percentuale sul totale delle vendite su Internet per l'Australia per ogni State-Province. In questo esempio viene utilizzata la funzione Item per estrarre la prima e unica tupla dal set restituito dalla funzione **predecessori** .  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -162,6 +162,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

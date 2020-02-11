@@ -1,5 +1,5 @@
 ---
-title: Le regole di convalida per le procedure guidate dell'applicazione livello dati | Microsoft Docs
+title: Regole di convalida per le procedure guidate dell'applicazione livello dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23b19a53b512996f72990714ba3a478965179a1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773386"
 ---
 # <a name="validation-rules-for-data-tier-application-wizards"></a>Regole di convalida per le procedure guidate dell'applicazione livello dati

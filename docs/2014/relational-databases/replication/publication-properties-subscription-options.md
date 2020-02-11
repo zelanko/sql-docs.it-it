@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021728"
 ---
 # <a name="publication-properties-subscription-options"></a>Proprietà pubblicazione, Opzioni sottoscrizione
@@ -35,9 +35,9 @@ ms.locfileid: "63021728"
   
 ### <a name="creation-and-synchronization"></a>Creazione e sincronizzazione  
  **Consenti sottoscrizioni anonime**  
- Determina se consentire le sottoscrizioni pull anonime. Le sottoscrizioni anonime sono supportate per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per Windows CE. Per utilizzare questa opzione per le pubblicazioni snapshot e transazionali, l'opzione **Snapshot sempre disponibile** deve essere impostata su **True**.  
+ Determina se consentire le sottoscrizioni pull anonime. Le sottoscrizioni anonime [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)]sono [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]supportate per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , e per Windows CE. Per utilizzare questa opzione per le pubblicazioni snapshot e transazionali, l'opzione **Snapshot sempre disponibile** deve essere impostata su **True**.  
   
- **Database di sottoscrizione collegabile**  
+ **Database di sottoscrizione collegati**  
  Determina se è possibile creare le sottoscrizioni collegando una copia del database di sottoscrizione. Per le pubblicazioni snapshot e transazionali, è necessario che l'opzione **Snapshot sempre disponibile** sia impostata su **True** .  
   
 > [!IMPORTANT]  
@@ -47,25 +47,25 @@ ms.locfileid: "63021728"
  Determina se consentire ai Sottoscrittori di creare sottoscrizioni pull sulla pubblicazione corrente. Per altre informazioni, vedere [Sottoscrivere le pubblicazioni](subscribe-to-publications.md).  
   
 ### <a name="schema-replication"></a>Replica dello schema  
- **Replica modifiche dello schema**  
- Solo[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se replicare le modifiche dello schema, ad esempio l'aggiunta di una colonna a una tabella o la modifica del tipo di dati di una colonna, agli oggetti pubblicati. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](publish/make-schema-changes-on-publication-databases.md).  
+ **Replicare le modifiche dello schema**  
+ Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se replicare le modifiche dello schema, ad esempio l'aggiunta di una colonna a una tabella o la modifica del tipo di dati di una colonna, agli oggetti pubblicati. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Opzioni per le pubblicazioni snapshot e transazionali  
   
 ### <a name="creation-and-synchronization"></a>Creazione e sincronizzazione  
- **Agente di distribuzione indipendente**  
+ **agente di distribuzione indipendenti**  
  Determina se utilizzare un agente che sia indipendente da altre pubblicazioni del database. Questa opzione è di sola lettura, è impostata su **True** per impostazione predefinita per le pubblicazioni create con la Creazione guidata nuova pubblicazione e non può essere modificata dopo la creazione della pubblicazione. Per altre informazioni, vedere [Amministrazione dell'agente di replica](agents/replication-agent-administration.md).  
   
  **Snapshot sempre disponibile**  
  Determina se vengono creati file di snapshot a ogni esecuzione dell'agente snapshot. È necessaria l'opzione **Agente di distribuzione indipendente**. Questa opzione è di sola lettura ed è impostata su **True** se è stata selezionata l'opzione **Crea uno snapshot immediatamente e mantieni lo snapshot disponibile per l'inizializzazione delle sottoscrizioni** nella pagina **Agente snapshot** della Creazione guidata nuova pubblicazione (opzione predefinita). Per altre informazioni, vedere [Creare e applicare lo snapshot](create-and-apply-the-snapshot.md).  
   
  **Consenti inizializzazione dai file di backup**  
- Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se consentire l'utilizzo dei file di backup per inizializzare le sottoscrizioni. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
+ Solo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se consentire l'utilizzo dei file di backup per inizializzare le sottoscrizioni. Per altre informazioni, vedere [Inizializzazione di una sottoscrizione transazionale senza uno snapshot](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Consenti Sottoscrittori non SQL Server**  
- Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si imposta questa opzione su **True** , alcune proprietà della pubblicazione verranno modificate per supportare Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se esistono sottoscrizioni questa opzione è di sola lettura. L'opzione non può essere impostata su **True** se **Consenti sottoscrizioni ad aggiornamento immediato**, **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti sottoscrizioni peer-to-peer** è impostata su **True**. Per altre informazioni, vedere [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
+ Solo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'impostazione di questa opzione su **true** consente di impostare altre proprietà della[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazione per supportare Sottoscrittori non. Se esistono sottoscrizioni questa opzione è di sola lettura. L'opzione non può essere impostata su **True** se **Consenti sottoscrizioni ad aggiornamento immediato**, **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti sottoscrizioni peer-to-peer** è impostata su **True**. Per altre informazioni, vedere [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-### <a name="data-transformation"></a>Trasformazioni dei dati  
+### <a name="data-transformation"></a>Trasformazione dei dati  
  **Consenti trasformazioni dei dati**  
  Determina se utilizzare Data Transformation Services (DTS) per trasformare i dati prima di distribuirli a un Sottoscrittore. Questa opzione è di sola lettura. Le trasformazioni dei dati possono essere abilitate solo se una pubblicazione viene creata utilizzando le stored procedure.  
   
@@ -76,8 +76,8 @@ ms.locfileid: "63021728"
  **Consenti sottoscrizioni peer-to-peer**  
  Si applica solo a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se la pubblicazione supporta la replica peer-to-peer. Se si imposta questa opzione su **True** , alcune proprietà della pubblicazione verranno modificate per supportare la replica peer-to-peer. Se esistono sottoscrizioni questa opzione è di sola lettura. Questa opzione non può essere impostata su **True** se l'opzione **Consenti sottoscrizioni ad aggiornamento immediato** , **Consenti sottoscrizioni ad aggiornamento in coda**o **Consenti Sottoscrittori non SQL Server** è impostata su **True**. Per altre informazioni, vedere [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md).  
   
- **Consenti rilevamento conflitti peer-to-peer**  
- Si applica solo a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Specifica se il rilevamento dei conflitti è abilitato per la pubblicazione. Per utilizzare il rilevamento dei conflitti, tutti i nodi devono eseguire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versione successiva e il rilevamento deve essere attivato per tutti i nodi. Per utilizzare rilevamento dei conflitti, è inoltre necessario specificare un valore per **ID origine peer**. Per altre informazioni, vedere [Conflict Detection in Peer-to-Peer Replication](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+ **Consenti rilevamento dei conflitti peer-to-peer**  
+ Si applica solo a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Specifica se il rilevamento dei conflitti è abilitato per la pubblicazione. Per usare il rilevamento dei conflitti, tutti i nodi devono eseguire [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive e il rilevamento deve essere abilitato per tutti i nodi. Per utilizzare il rilevamento dei conflitti, è inoltre necessario specificare un valore per **ID origine peer**. Per ulteriori informazioni, vedere [rilevamento dei conflitti nella replica peer-to-peer](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
  **ID origine peer**  
  Si applica solo a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive. Specifica un ID per un nodo in una topologia peer-to-peer. Questo ID viene utilizzato per il rilevamento dei conflitti se l'opzione **Consenti rilevamento dei conflitti peer-to-peer** è impostata su **True**. Specificare un ID positivo diverso da zero che non sia mai stato utilizzato nella topologia. Per un elenco degli ID che sono già stati utilizzati, eseguire una query sulla tabella di sistema [Mspeer_originatorid_history](/sql/relational-databases/system-tables/mspeer-originatorid-history-transact-sql) .  
@@ -104,15 +104,15 @@ ms.locfileid: "63021728"
  **Segnala conflitti a livello centrale**  
  Determina se segnalare i conflitti generati dalle modifiche apportate ai dati solo nel server di pubblicazione o sia nel server di pubblicazione che nel Sottoscrittore. Questa opzione è di sola lettura, è impostata su **True** per impostazione predefinita per le pubblicazioni create con la Creazione guidata nuova pubblicazione e non può essere modificata dopo la creazione della pubblicazione. Il valore **True** indica che i conflitti vengono segnalati solo sul server di pubblicazione. I conflitti possono essere visualizzati solo sul server in cui vengono segnalati. Per ulteriori informazioni, vedere la sezione relativa alla visualizzazione dei conflitti in [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-### <a name="filtering"></a>Filtro  
+### <a name="filtering"></a>Filtri  
  **Consenti filtri con parametri**  
- Viene impostata in base al fatto che una pubblicazione utilizzi i filtri con parametri. Questa opzione è sempre di sola lettura. Per altre informazioni, vedere [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Viene impostata in base al fatto che una pubblicazione utilizzi i filtri con parametri. Questa opzione è sempre di sola lettura. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Convalida Sottoscrittori**  
  Determina le funzioni da utilizzare per convalidare che un Sottoscrittore disponga della partizione dati corretta. È possibile immettere più valori separandoli con una virgola. Per altre informazioni, vedere [Convalidare le informazioni sulle partizioni per un Sottoscrittore di tipo merge](validate-partition-information-for-a-merge-subscriber.md).  
   
  **Pre-calcola partizioni**  
- Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se ottimizzare la sincronizzazione calcolando in anticipo quali righe di dati appartengono alle varie partizioni. L'impostazione predefinita di questa opzione è **True** se la pubblicazione soddisfa i criteri per le partizioni pre-calcolate. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Solo [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Determina se ottimizzare la sincronizzazione calcolando in anticipo quali righe di dati appartengono alle varie partizioni. L'impostazione predefinita di questa opzione è **True** se la pubblicazione soddisfa i criteri per le partizioni pre-calcolate. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Ottimizza sincronizzazione**  
  Determina se ottimizzare l'elaborazione di processi merge archiviando metadati aggiuntivi in ogni Sottoscrittore. Tale ottimizzazione è stata sostituita dalle partizioni pre-calcolate. L'opzione **Ottimizza sincronizzazione** è rilevante solo se l'opzione **Pre-calcola partizioni** è impostata su **False**. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](merge/parameterized-filters-parameterized-row-filters.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "63021728"
  **Limita processi simultanei**  
  Determina se limitare il numero di agenti di merge che possono essere eseguiti contemporaneamente. Questa opzione viene in genere utilizzata se una pubblicazione include un elevato numero di sottoscrizioni push che potrebbero sincronizzarsi contemporaneamente.  
   
- **Numero massimo processi simultanei**  
+ **Numero massimo di processi simultanei**  
  Numero massimo di agenti di merge che possono essere eseguiti contemporaneamente. È necessaria l'opzione **Limita processi simultanei**. Se il numero di agenti in sincronizzazione supera il numero massimo, gli agenti vengono inseriti in una coda fino a quando il loro numero non scende al di sotto di tale soglia.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767889"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS
@@ -50,7 +50,7 @@ ms.locfileid: "62767889"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Per eseguire la procedura guidata dal prompt dei comandi  
   
--   Al prompt dei comandi, eseguire il file SSISUpgrade.exe dal **C:\Program Files\Microsoft SQL Server\120\DTS\Binn** cartella.  
+-   Al prompt dei comandi, eseguire il file file SSISUpgrade. exe dalla cartella c:\Programmi\Microsoft **SQL Server\120\DTS\Binn**  
   
 ## <a name="backing-up-the-original-packages"></a>Esecuzione del backup dei pacchetti originali  
  Per eseguire il backup dei pacchetti originali, è necessario che i pacchetti originali e i pacchetti aggiornati siano archiviati nella stessa cartella del file system. A seconda di come viene eseguita la procedura guidata, è possibile che il percorso di archiviazione venga selezionato automaticamente.  
@@ -86,7 +86,7 @@ ms.locfileid: "62767889"
 2.  Nella pagina **Seleziona opzioni di gestione pacchetti** della procedura guidata selezionare l'opzione **Esegui backup pacchetti originali** .  
   
     > [!WARNING]  
-    >  Il **Esegui Backup pacchetti originali** opzione non viene visualizzata quando si apre un [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oppure [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] del progetto [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], che viene automaticamente avviata la procedura guidata.  
+    >  L'opzione **Esegui backup pacchetti originali** non viene visualizzata quando si apre [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] un [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] progetto di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]o in, che avvia automaticamente la procedura guidata.  
   
 3.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]eseguire l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   

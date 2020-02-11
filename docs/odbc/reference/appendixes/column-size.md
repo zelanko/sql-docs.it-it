@@ -1,5 +1,5 @@
 ---
-title: Dimensione della colonna | Microsoft Docs
+title: Dimensioni colonna | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,54 +16,54 @@ ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5639828c90141079ab66f6cceb466328ddb3f56d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019229"
 ---
 # <a name="column-size"></a>Dimensioni della colonna
-Le dimensioni di colonna (o parametro) di tipi di dati numerici sono definite come il numero massimo di cifre utilizzate dal tipo di dati della colonna o parametro, o la precisione dei dati. Per i tipi di carattere, si tratta della lunghezza in caratteri dei dati. per i tipi di dati binari, le dimensioni di colonna sono definita come la lunghezza in byte dei dati. Per il tempo, timestamp e tutti i tipi di dati di intervallo, questo è il numero di caratteri nella rappresentazione di caratteri di questi dati. La dimensione della colonna definita per ogni tipo di dati SQL concisa è illustrata nella tabella seguente.  
+La dimensione della colonna (o del parametro) dei tipi di dati numerici è definita come il numero massimo di cifre utilizzate dal tipo di dati della colonna o del parametro o dalla precisione dei dati. Per i tipi di carattere, si tratta della lunghezza in caratteri dei dati. per i tipi di dati binari, le dimensioni della colonna sono definite come lunghezza in byte dei dati. Per i tipi di dati time, timestamp e all Interval, questo è il numero di caratteri nella rappresentazione dei caratteri di questi dati. La dimensione della colonna definita per ogni tipo di dati SQL conciso è illustrata nella tabella seguente.  
   
-|Identificatore di tipo SQL|Dimensione colonna|  
+|Identificatore del tipo SQL|Dimensioni colonne|  
 |-------------------------|-----------------|  
-|Tutti i tipi di carattere [a], [b].|Le dimensioni di colonna massima o definita in caratteri della colonna o del parametro (come contenuto nel campo di descrizione SQL_DESC_LENGTH). Ad esempio, la dimensione della colonna di una colonna di tipo carattere a byte singolo definita come char (10) è 10.|  
-|SQL_DECIMAL SQL_NUMERIC|Il numero definito di cifre. Ad esempio, la precisione di una colonna definita come NUMERIC(10,3) è 10.|  
-|SQL_BIT[c]|1|  
-|SQL_TINYINT[c]|3|  
-|SQL_SMALLINT[c]|5|  
-|SQL_INTEGER[c]|10|  
-|SQL_BIGINT[c]|19 (con segno) o 20 (se senza segno)|  
-|SQL_REAL[c]|7|  
-|SQL_FLOAT[c]|15|  
-|SQL_DOUBLE[c]|15|  
-|Tutti i tipi binari [a], [b].|La lunghezza massima o definita in byte della colonna o del parametro. Ad esempio, la lunghezza di una colonna definita come BINARY(10) è 10.|  
-|SQL_TYPE_DATE[c]|10 (il numero di caratteri nel *aaaa-mm-gg* formato).|  
-|SQL_TYPE_TIME[c]|8 (il numero di caratteri nel *hh-mm-ss* formato), o 9 + *s* (il numero di caratteri nel *hh: mm:* formato [. fff], dove *s*è la precisione dei secondi).|  
-|SQL_TYPE_TIMESTAMP|16 (il numero di caratteri nel *aaaa-mm-gg hh: mm* formato)<br /><br /> 19 (il numero di caratteri nel *aaaa-mm-gg* *hh: mm:* formato)<br /><br /> oppure<br /><br /> 20 + *s* (il numero di caratteri nel *aaaa-mm-gg hh.mm.ss*formato [. fff], dove *s* è la precisione dei secondi).|  
-|SQL_INTERVAL_SECOND|In cui *p* è l'intervallo di precisione iniziale e *s* è la precisione in secondi, *p* (se *s*= 0) o *p* + *s*+ 1 (se *s*> 0). [ 1!d]|  
-|SQL_INTERVAL_DAY_TO_SECOND|In cui *p* è l'intervallo di precisione iniziale e *s* è la precisione in secondi, 9 +*p* (se *s*= 0) o 10 +*p* + *s* (se *s*> 0). [ 1!d]|  
-|SQL_INTERVAL_HOUR_TO_SECOND|In cui *p* è l'intervallo di precisione iniziale e *s* è la precisione in secondi, 6 +*p* (se *s*= 0) o 7 +*p* + *s* (se *s*> 0). [ 1!d]|  
-|SQL_INTERVAL_MINUTE_TO_SECOND|In cui *p* è l'intervallo di precisione iniziale e *s* è la precisione in secondi, 3 +*p* (se *s*= 0) o 4 +*p* + *s* (se *s*> 0). [ 1!d]|  
-|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, dove *p* è l'intervallo di precisione iniziale. [ 1!d]|  
-|SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, dove *p* è l'intervallo di precisione iniziale. [ 1!d]|  
-|SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*, dove *p* è l'intervallo di precisione iniziale. [ 1!d]|  
-|SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, dove *p* è l'intervallo di precisione iniziale. [ 1!d]|  
-|SQL_GUID|36 (il numero di caratteri nel *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato)|  
+|Tutti i tipi di carattere [a], [b]|Dimensioni di colonna definite o massime in caratteri della colonna o del parametro (come contenuto nel campo del descrittore di SQL_DESC_LENGTH). Ad esempio, le dimensioni della colonna di una colonna di tipo carattere a un byte definito come CHAR (10) sono 10.|  
+|SQL_DECIMAL SQL_NUMERIC|Numero di cifre definito. La precisione di una colonna definita come NUMERIC (10, 3), ad esempio, è 10.|  
+|SQL_BIT [c]|1|  
+|SQL_TINYINT [c]|3|  
+|SQL_SMALLINT [c]|5|  
+|SQL_INTEGER [c]|10|  
+|SQL_BIGINT [c]|19 (se firmato) o 20 (se non firmato)|  
+|SQL_REAL [c]|7|  
+|SQL_FLOAT [c]|15|  
+|SQL_DOUBLE [c]|15|  
+|Tutti i tipi binari [a], [b]|Lunghezza definita o massima, in byte, della colonna o del parametro. La lunghezza di una colonna definita come BINARY (10), ad esempio, è 10.|  
+|SQL_TYPE_DATE [c]|10 (numero di caratteri nel formato *aaaa-mm-gg* ).|  
+|SQL_TYPE_TIME [c]|8 (il numero di caratteri nel formato *hh-mm-SS* ) o 9 + *s* (il numero di caratteri nel formato *hh: mm: SS*[. fff...], dove *s* è la precisione dei secondi).|  
+|SQL_TYPE_TIMESTAMP|16 (il numero di caratteri nel formato *aaaa-mm-gg hh: mm* )<br /><br /> 19 (il numero di caratteri nel formato *aaaa-mm-gg* *hh: mm: SS* )<br /><br /> o<br /><br /> 20 + *s* (il numero di caratteri nel formato *aaaa-mm-gg hh: mm: SS*[. fff...], dove *s* è la precisione dei secondi).|  
+|SQL_INTERVAL_SECOND|Dove *p* è la precisione iniziali dell'intervallo e *s* è la precisione dei secondi, *p* (se *s*= 0) o *p*+*s*+ 1 (se *s*>0). d|  
+|SQL_INTERVAL_DAY_TO_SECOND|Dove *p* è la precisione massima dell'intervallo e *s* è la precisione dei secondi, 9 +*p* (se *s*= 0) o 10 +*p*+*s* (se *s*>0). d|  
+|SQL_INTERVAL_HOUR_TO_SECOND|Dove *p* è la precisione massima dell'intervallo e *s* è la precisione dei secondi, 6 +*p* (if *s*= 0) o 7 +*p*+*s* (se *s*>0). d|  
+|SQL_INTERVAL_MINUTE_TO_SECOND|Dove *p* è la precisione iniziali dell'intervallo e *s* è la precisione dei secondi, 3 +*p* (se *s*= 0) o 4 +*p*+*s* (se *s*>0). d|  
+|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, dove *p* è la precisione principale dell'intervallo. d|  
+|SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, dove *p* è la precisione principale dell'intervallo. d|  
+|SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*, dove *p* è la precisione principale dell'intervallo. d|  
+|SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, dove *p* è la precisione principale dell'intervallo. d|  
+|SQL_GUID|36 (numero di caratteri nel formato *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* )|  
   
- [a] per ODBC 1.0 un'applicazione che chiama **SQLSetParam** in un driver ODBC 2.0 e deve chiamare un'applicazione ODBC 2.0 **SQLBindParameter** in un driver ODBC 1.0, quando \*  *StrLen_or_IndPtr* è SQL_DATA_AT_EXEC per un tipo di SQL_LONGVARCHAR o SQL_LONGVARBINARY *ColumnSize* deve essere impostata sulla lunghezza totale dei dati da inviare, non la precisione come definito in questa tabella.  
+ [a] per un'applicazione ODBC 1,0 che **chiama SQLSetParam** in un driver ODBC 2,0 e per un'applicazione ODBC 2,0 che chiama **SQLBindParameter** in un driver ODBC 1,0, \*quando *StrLen_or_IndPtr* viene SQL_DATA_AT_EXEC per un tipo di SQL_LONGVARCHAR o SQL_LONGVARBINARY, *ColumnSize* deve essere impostato sulla lunghezza totale dei dati da inviare, non sulla precisione definita in questa tabella.  
   
- [b] se il driver non è possibile determinare la lunghezza della colonna o del parametro per un tipo di variabile, restituirà SQL_NO_TOTAL.  
+ [b] se il driver non è in grado di determinare la lunghezza della colonna o del parametro per un tipo di variabile, restituisce SQL_NO_TOTAL.  
   
- [c] al *ColumnSize* argomenti del **SQLBindParameter** viene ignorata per questo tipo di dati.  
+ [c] l'argomento *ColumnSize* di **SQLBindParameter** viene ignorato per questo tipo di dati.  
   
- [d] per le regole generali sulla lunghezza della colonna nei tipi di dati di intervallo, vedere [lunghezza del tipo di dati intervallo](../../../odbc/reference/appendixes/interval-data-type-length.md), più indietro in questa appendice.  
+ [d] per le regole generali sulla lunghezza di colonna nei tipi di dati interval, vedere [lunghezza dei tipi di dati interval](../../../odbc/reference/appendixes/interval-data-type-length.md), più indietro in questa appendice.  
   
- I valori restituiti per le dimensioni della colonna (o parametro) non corrispondono ai valori in qualsiasi campo del descrittore uno. I valori possono provenire da di SQL_DESC_PRECISION o il campo SQL_DESC_LENGTH, a seconda del tipo di dati, come illustrato nella tabella seguente.  
+ I valori restituiti per la dimensione della colonna o del parametro non corrispondono ai valori in un campo di descrizione. I valori possono provenire dal campo SQL_DESC_PRECISION o SQL_DESC_LENGTH, a seconda del tipo di dati, come illustrato nella tabella seguente.  
   
-|Tipo SQL|Campo di descrizione corrispondente a<br /><br /> dimensioni di colonna o parametro|  
+|Tipo SQL|Campo del descrittore corrispondente a<br /><br /> dimensioni della colonna o del parametro|  
 |--------------|--------------------------------------------------------------------|  
-|Tutti i tipi carattere e binario|LENGTH|  
+|Tutti i tipi di carattere e binari|LENGTH|  
 |Tutti i tipi numerici|PRECISION|  
-|Tutti i tipi data/ora e intervallo|LENGTH|  
+|Tutti i tipi DateTime e Interval|LENGTH|  
 |SQL_BIT|LENGTH|

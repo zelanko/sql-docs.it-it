@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781996"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
@@ -71,25 +71,25 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Istanza denominata**  
   
--   *MSSQLSvc/FQDN*:[_porta_ **|** _nomeistanza_], dove:  
+-   *MSSQLSvc/FQDN*: [_porta_**|**_NomeIstanza_], dove:  
   
     -   *MSSQLSvc* è il servizio da registrare.  
   
     -   *FQDN* è il nome di dominio completo del server.  
   
-    -   *porta* è il numero di porta TCP.  
+    -   *Port* è il numero di porta TCP.  
   
-    -   *nomeistanza* è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    -   *NomeIstanza* è il nome dell' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza di.  
   
  **Istanza predefinita**  
   
--   *MSSQLSvc/FQDN*:_porta_ **|** _MSSQLSvc/FQDN_, dove:  
+-   *MSSQLSvc/FQDN*:_porta_**|**_MSSQLSvc/FQDN_, dove:  
   
     -   *MSSQLSvc* è il servizio da registrare.  
   
     -   *FQDN* è il nome di dominio completo del server.  
   
-    -   *porta* è il numero di porta TCP.  
+    -   *Port* è il numero di porta TCP.  
   
  Per il nuovo formato del nome SPN non è necessario specificare un numero di porta. Di conseguenza, un server con più porte o un protocollo che non utilizza numeri di porta può utilizzare l'autenticazione Kerberos.  
   
@@ -98,14 +98,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:porta*|Nome SPN predefinito generato dal provider quando si utilizza il protocollo TCP. *port* è un numero di porta TCP.|  
+|MSSQLSvc/*FQDN: porta*|Nome SPN predefinito generato dal provider quando si utilizza il protocollo TCP. *port* è un numero di porta TCP.|  
 |MSSQLSvc/*fqdn*|Nome SPN predefinito generato dal provider per un'istanza predefinita quando si utilizza un protocollo diverso da TCP. *fqdn* è un nome di dominio completo.|  
-|MSSQLSvc/*fqdn:InstanceName*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP. *NomeIstanza* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*FQDN: nomeistanza*|Nome SPN predefinito generato dal provider per un'istanza denominata quando si usa un protocollo diverso da TCP. *NomeIstanza* è il nome di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Registrazione automatica del nome SPN  
  Quando viene avviata un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di registrare il nome SPN per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quando l'istanza viene arrestata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta di annullare la registrazione del nome SPN. Per una connessione TCP/IP, il nome SPN viene registrato nel formato *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Sia le istanze denominate che quella predefinita vengono registrate come *MSSQLSvc* e differenziate in base al valore *\<tcpport>* .  
   
- Per altre connessioni che supportano l'autenticazione Kerberos il nome SPN viene registrato nel formato *MSSQLSvc /\<FQDN >* : *\<NomeIstanza >* per un'istanza denominata. e nel formato *MSSQLSvc/\<FQDN>* per l'istanza predefinita.  
+ Per altre connessioni che supportano l'autenticazione Kerberos, il nome SPN viene registrato nel formato *MSSQLSvc/\<FQDN>*:*\<NomeIstanza>* per un'istanza denominata. e nel formato *MSSQLSvc/\<FQDN>* per l'istanza predefinita.  
   
  Se l'account di servizio non dispone delle autorizzazioni richieste per eseguire queste azioni, potrebbe essere necessario intervenire manualmente per registrare o annullare la registrazione del nome SPN.  
   
@@ -135,7 +135,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
 ##  <a name="Client"></a> Connessioni client  
  I nomi SPN specificati dall'utente sono supportati nei driver client. Se non viene specificato, tuttavia, il nome SPN verrà generato automaticamente in base al tipo di una connessione client. Per una connessione TCP, il formato del nome SPN è *MSSQLSvc*/*FQDN*:[*porta*] sia per le istanze denominate che per quella predefinita.  
   
- Per le connessioni con named pipe e con memoria condivisa, il formato del nome SPN è *MSSQLSvc*/*FQDN*:*nomeistanza* per un'istanza denominata e *MSSQLSvc*/*FQDN* per l'istanza predefinita.  
+ Per le connessioni named pipe e Shared Memory, viene usato un nome SPN nel formato *MSSQLSvc*/*FQDN*:*NomeIstanza* per un'istanza denominata e *MSSQLSvc*/*FQDN* viene usato per l'istanza predefinita.  
   
  **Utilizzo di un account di servizio come nome SPN**  
   
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Scenario|Metodo di autenticazione|  
 |--------------|---------------------------|  
-|Viene eseguito il mapping del nome SPN all'account di dominio, all'account virtuale, all'account dei servizi gestiti (MSA) o all'account predefinito corretto. ad esempio sistema locale o NETWORK SERVICE.<br /><br /> Nota: Termine corretto si intende che l'account eseguito il mapping da nome SPN registrato è l'account di cui è in esecuzione il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
-|Il nome SPN è l'account di dominio, l'account virtuale, l'account dei servizi gestiti (MSA) o l'account predefinito corretto.<br /><br /> Nota: Termine corretto si intende che l'account eseguito il mapping da nome SPN registrato è l'account di cui è in esecuzione il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
+|Viene eseguito il mapping del nome SPN all'account di dominio, all'account virtuale, all'account dei servizi gestiti (MSA) o all'account predefinito corretto. ad esempio sistema locale o NETWORK SERVICE.<br /><br /> Nota: Correct indica che l'account mappato dal nome SPN registrato è l'account con cui viene eseguito il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
+|Il nome SPN è l'account di dominio, l'account virtuale, l'account dei servizi gestiti (MSA) o l'account predefinito corretto.<br /><br /> Nota: Correct indica che l'account mappato dal nome SPN registrato è l'account con cui viene eseguito il servizio SQL Server.|Le connessioni locali utilizzano l'autenticazione NTLM, mentre quelle remote utilizzano l'autenticazione Kerberos.|  
 |Viene eseguito il mapping del nome SPN a un account di dominio, a un account virtuale, a un account dei servizi gestiti (MSA) o a un account predefinito non corretto.|Errore di autenticazione|  
 |La ricerca del nome SPN ha esito negativo o non viene eseguito il mapping a un account di dominio, a un account virtuale, a un account dei servizi gestiti (MSA) o a un account predefinito non corretto, oppure non è un account di dominio, un account virtuale, un account dei servizi gestiti o un account predefinito corretto.|Le connessioni locali e remote utilizzano l'autenticazione NTLM.|  
   

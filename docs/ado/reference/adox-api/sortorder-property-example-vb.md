@@ -15,14 +15,14 @@ ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965195"
 ---
 # <a name="sortorder-property-example-vb"></a>Esempio della proprietà SortOrder (VB)
-Questo esempio viene illustrato il [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) che è stato accodato per il [colonne](../../../ado/reference/adox-api/columns-collection-adox.md) raccolta di un [indice](../../../ado/reference/adox-api/index-object-adox.md). Il codice aggiunge un indice in ordine crescente per la colonna del paese nella **dipendenti** di tabella, quindi consente di visualizzare i record. Quindi il codice aggiunge un indice decrescente per la colonna del paese nella **dipendenti** di tabella e viene visualizzato nuovamente i record. Viene visualizzata la differenza tra crescente e decrescente gli indici.  
+In questo esempio viene illustrata la proprietà [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) di una [colonna](../../../ado/reference/adox-api/column-object-adox.md) aggiunta alla raccolta [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) di un [Indice](../../../ado/reference/adox-api/index-object-adox.md). Il codice aggiunge un indice crescente alla colonna Country della tabella **Employees** , quindi Visualizza i record. Il codice aggiunge quindi un indice decrescente alla colonna Country della tabella **Employees** e visualizza nuovamente i record. Viene visualizzata la differenza tra gli indici crescente e decrescente.  
   
 ```  
 ' BeginSortOrderVB  
@@ -138,6 +138,6 @@ End Sub
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Raccolta di colonne (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Oggetto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Raccolta Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Oggetto index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Proprietà SortOrder (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

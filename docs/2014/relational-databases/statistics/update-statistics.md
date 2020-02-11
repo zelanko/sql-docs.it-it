@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033653"
 ---
 # <a name="update-statistics"></a>Aggiorna statistiche
@@ -25,7 +25,7 @@ ms.locfileid: "63033653"
   
  Sebbene consenta di garantire che le query vengano compilate con statistiche aggiornate, l'aggiornamento delle statistiche causa la ricompilazione delle query. Si consiglia di non aggiornare le statistiche troppo frequentemente perché è necessario mantenere un equilibrio a livello di prestazioni tra la necessità di migliorare i piani di query e il tempo necessario per la ricompilazione delle query. Tale equilibrio dipende dall'applicazione in uso. Per le operazioni UPDATE STATISTICS è possibile usare tempdb per ordinare l'esempio di righe per la compilazione di statistiche.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63033653"
 ####  <a name="Permissions"></a> Autorizzazioni  
  Se si utilizza UPDATE STATISTICS o si apportano modifiche tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è necessaria l'autorizzazione ALTER per la tabella o la vista. Se si usa `sp_updatestats`, è necessario essere un membro del ruolo predefinito del server **sysadmin** o il proprietario del database (**dbo**).  
   
-##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Con SQL Server Management Studio  
   
 #### <a name="to-update-a-statistics-object"></a>Per aggiornare un oggetto statistiche  
   
@@ -58,9 +58,9 @@ ms.locfileid: "63033653"
   
 5.  Fare clic con il pulsante destro del mouse sull'oggetto che si vuole aggiornare e scegliere **Proprietà**.  
   
-6.  Nel **proprietà statistiche -** _nome_statistiche_ della finestra di dialogo Seleziona il **aggiornare le statistiche per le colonne selezionate** casella di controllo e quindi fare clic su **OK**.  
+6.  Nella finestra di dialogo **proprietà statistiche-**_statistics_name_ Selezionare la casella di controllo **Aggiorna statistiche per le colonne seguenti** e quindi fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Con Transact-SQL  
   
 #### <a name="to-update-a-specific-statistics-object"></a>Per aggiornare un oggetto statistiche specifico  
   

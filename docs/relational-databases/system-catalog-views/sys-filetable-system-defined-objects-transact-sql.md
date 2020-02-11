@@ -1,5 +1,5 @@
 ---
-title: Sys. filetable_system_defined_objects (Transact-SQL) | Microsoft Docs
+title: sys. filetable_system_defined_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dd05f24ab90844065b708230ee016ce9ce78bfbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005156"
 ---
-# <a name="sysfiletablesystemdefinedobjects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
+# <a name="sysfiletable_system_defined_objects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Contiene un elenco degli oggetti definiti dal sistema correlati a tabelle FileTable. Contiene una riga per ogni oggetto definito dal sistema.  
@@ -37,11 +37,11 @@ ms.locfileid: "68005156"
   
 |Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|**object_id**|**int**|ID dell'oggetto definito dal sistema correlato a una tabella FileTable.<br /><br /> Fa riferimento all'oggetto nel **Sys. Objects**.|  
-|**parent_object_id**|**int**|ID oggetto della tabella FileTable padre.<br /><br /> Fa riferimento all'oggetto nel **Sys. Objects**.|  
+|**object_id**|**int**|ID dell'oggetto definito dal sistema correlato a una tabella FileTable.<br /><br /> Fa riferimento all'oggetto in **sys. Objects**.|  
+|**parent_object_id**|**int**|ID oggetto della tabella FileTable padre.<br /><br /> Fa riferimento all'oggetto in **sys. Objects**.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare, modificare e rilasciare FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
+ [Creare, modificare ed eliminare FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Gestire tabelle FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   

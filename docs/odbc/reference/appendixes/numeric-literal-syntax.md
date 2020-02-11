@@ -1,5 +1,5 @@
 ---
-title: Sintassi dei valori letterali numerica | Microsoft Docs
+title: Sintassi di valori letterali numerici | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,39 +15,39 @@ ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990724"
 ---
 # <a name="numeric-literal-syntax"></a>Sintassi dei valori letterali numerici
-La sintassi seguente viene usata per i valori letterali numerici in ODBC:  
+Per i valori letterali numerici in ODBC viene utilizzata la sintassi seguente:  
   
- *valore letterale numerico* :: = *letterali numerici firmati &#124; letterale numerico senza segno*  
+ *numeric-Literal* :: = *signed-numeric-Literal &#124; unsigned-numeric-Literal*  
   
- *signed-numeric-literal* ::= [*sign*] *unsigned-numeric-literal*  
+ *signed-numeric-Literal* :: = [*segno*] senza *segno-numeric-Literal*  
   
- *Unsigned-numerico-literal* :: = *letterale numerico esatto &#124; letterali numerici approssimati*  
+ *unsigned-numeric-Literal* :: = *exact-numeric-Literal &#124; approssimate-numeric-Literal*  
   
- *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
+ *exact-numeric-Literal* :: = *unsigned-integer* [*periodo*[*senza segno-intero*]] *&#124;periodo senza segno-intero*  
   
- *Sign* :: = *segno &#124; segno di sottrazione*  
+ *Sign::* = *più-sign &#124; segno meno*  
   
- *letterali numerici approssimati* :: = *esponente mantissa E*  
+ *approssimativo-numeric-Literal* :: = *mantissa ed esponente*  
   
- *mantissa* ::= *exact-numeric-literal*  
+ *mantissa* :: = *exact-numeric-Literal*  
   
- *esponente* :: = *integer firmato*  
+ *esponente* :: = *Signed-Integer*  
   
- *signed-integer* ::= [*sign*] *unsigned-integer*  
+ *Signed-Integer* :: = [*segno*] senza *segno-intero*  
   
- *intero senza segno* :: = *cifra...*  
+ *unsigned-integer* :: = *digit...*  
   
- *segno di addizione* :: = *+*  
+ *segno più* :: =*+*  
   
- *segno di sottrazione* :: = -  
+ *segno meno* :: =-  
   
- *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *digit* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
  *periodo* :: =.

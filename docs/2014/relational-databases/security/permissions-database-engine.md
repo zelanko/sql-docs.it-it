@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128754"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
@@ -30,13 +30,13 @@ ms.locfileid: "63128754"
   
 -   [Convenzioni di denominazione delle autorizzazioni](#_conventions)  
   
--   [Autorizzazioni correlate alle entità a protezione diretta specifiche](#_securables)  
+-   [Autorizzazioni relative a particolari entità a protezione diretta](#_securables)  
   
--   [Autorizzazioni di SQL Server](#_permissions)  
+-   [Autorizzazioni SQL Server](#_permissions)  
   
--   [Algoritmo di controllo dell'autorizzazione](#_algorithm)  
+-   [Algoritmo di controllo delle autorizzazioni](#_algorithm)  
   
--   [Esempi](#_examples)  
+-   [esempi](#_examples)  
   
 ##  <a name="_conventions"></a> Convenzioni di denominazione delle autorizzazioni  
  Di seguito vengono descritte le convenzioni generali adottate per la denominazione delle autorizzazioni:  
@@ -92,7 +92,7 @@ ms.locfileid: "63128754"
      L'autorizzazione REFERENCES è necessaria su un oggetto per creare FUNCTION o VIEW con la clausola `WITH SCHEMABINDING` che faccia riferimento all'oggetto stesso.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Grafico delle autorizzazioni di SQL Server  
- Per un'anteprima di grandi dimensioni di tutte le autorizzazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in formato pdf, vedere [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
+ Per un grafico con dimensioni poster di [!INCLUDE[ssDE](../../includes/ssde-md.md)] tutte le autorizzazioni in formato PDF [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142), vedere.  
   
 ##  <a name="_securables"></a> Autorizzazioni applicabili a particolari entità a protezione diretta  
  Nella tabella seguente vengono elencati le classi principali di autorizzazione e i tipi di entità a protezione diretta a cui possono essere applicati.  
@@ -104,19 +104,19 @@ ms.locfileid: "63128754"
 |UPDATE|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
 |REFERENCES|Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelle e colonne<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e colonne<br /><br /> Tipi<br /><br /> Viste e colonne<br /><br /> Oggetti sequenza|  
 |INSERT|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
-|DELETE|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
+|Elimina|Sinonimi<br /><br /> Tabelle e colonne<br /><br /> Viste e colonne|  
 |EXECUTE|Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Sinonimi<br /><br /> Tipi CLR|  
 |RECEIVE|Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
-|VIEW DEFINITION|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni<br /><br /> Oggetti sequenza|  
-|ALTER|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Oggetti sequenza<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni|  
-|TAKE OWNERSHIP|Gruppi di disponibilità<br /><br /> Ruoli<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Ruoli del server<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni<br /><br /> Oggetti sequenza|  
-|CONTROL|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Visualizzazioni<br /><br /> Oggetti sequenza|  
+|VIEW DEFINITION|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
+|ALTER|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Oggetti sequenza<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste|  
+|TAKE OWNERSHIP|Gruppi di disponibilità<br /><br /> Ruoli<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Ruoli del server<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
+|CONTROL|Gruppi di disponibilità<br /><br /> Procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Account di accesso, utenti e ruoli<br /><br /> Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Sinonimi<br /><br /> Tabelle<br /><br /> Funzioni con valori di tabella ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR)<br /><br /> Viste<br /><br /> Oggetti sequenza|  
 |IMPERSONATE|Account di accesso e utenti|  
   
 > [!CAUTION]  
 >  Le autorizzazioni predefinite concesso a oggetti di sistema durante l'installazione vengono valutati attentamente per individuare possibili minacce e non è quindi necessario modificarli per implementare misure di protezione avanzata dell'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eventuali modifiche alle autorizzazioni per gli oggetti di sistema possono limitare o compromettere la funzionalità e potrebbero lasciare l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uno stato non supportato.  
   
-##  <a name="_permissions"></a> SQL Server e le autorizzazioni di Database SQL  
+##  <a name="_permissions"></a>Autorizzazioni per database SQL e SQL Server  
  La tabella seguente contiene un elenco completo delle autorizzazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le autorizzazioni del[!INCLUDE[ssSDS](../../includes/sssds-md.md)] sono disponibili solo per entità a protezione diretta supportate. Non è possibile concedere autorizzazioni a livello di server in [!INCLUDE[ssSDS](../../includes/sssds-md.md)], tuttavia in alcuni casi sono disponibili invece autorizzazioni di database.  
   
 |Entità a protezione diretta di base|Autorizzazioni di granularità sull'entità a protezione diretta di base|Codice tipo di autorizzazione|Entità a protezione diretta contenente l'entità a protezione diretta di base|Autorizzazione sull'entità a protezione diretta contenente che implica un'autorizzazione di granularità sull'entità a protezione diretta di base|  
@@ -127,26 +127,26 @@ ms.locfileid: "63128754"
 |ASSEMBLY|ALTER|AL|DATABASE|ALTER ANY ASSEMBLY|  
 |ASSEMBLY|CONTROL|CL|DATABASE|CONTROL|  
 |ASSEMBLY|REFERENCES|RF|DATABASE|REFERENCES|  
-|ASSEMBLY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|ASSEMBLY|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |ASSEMBLY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ASYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY ASYMMETRIC KEY|  
 |ASYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
 |ASYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
-|ASYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|ASYMMETRIC KEY|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |ASYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |AVAILABILITY GROUP|ALTER|AL|SERVER|ALTER ANY AVAILABILITY GROUP|  
 |AVAILABILITY GROUP|CONTROL|CL|SERVER|CONTROL SERVER|  
-|AVAILABILITY GROUP|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|AVAILABILITY GROUP|TAKE OWNERSHIP|A|SERVER|CONTROL SERVER|  
 |AVAILABILITY GROUP|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |CERTIFICATE|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
 |CERTIFICATE|CONTROL|CL|DATABASE|CONTROL|  
 |CERTIFICATE|REFERENCES|RF|DATABASE|REFERENCES|  
-|CERTIFICATE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|CERTIFICATE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |CERTIFICATE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |CONTRACT|ALTER|AL|DATABASE|ALTER ANY CONTRACT|  
 |CONTRACT|CONTROL|CL|DATABASE|CONTROL|  
 |CONTRACT|REFERENCES|RF|DATABASE|REFERENCES|  
-|CONTRACT|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|CONTRACT|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |CONTRACT|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |DATABASE|ALTER|AL|SERVER|ALTER ANY DATABASE|  
 |DATABASE|ALTER ANY APPLICATION ROLE|ALAR|SERVER|CONTROL SERVER|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128754"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: Si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: si applica solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128754"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: Si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: si applica solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -197,84 +197,84 @@ ms.locfileid: "63128754"
 |DATABASE|CREATE SERVICE|CRSV|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE SYMMETRIC KEY|CRSK|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE SYNONYM|CRSN|SERVER|CONTROL SERVER|  
-|DATABASE|CREATE TABLE|CRTB|SERVER|CONTROL SERVER|  
+|DATABASE|CREA TABELLA|CRTB|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
+|DATABASE|Elimina|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: Si applica solo a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: si applica solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a. Usare ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
-|DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|DATABASE|TAKE OWNERSHIP|A|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |ENDPOINT|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
 |ENDPOINT|CONNECT|CO|SERVER|CONTROL SERVER|  
 |ENDPOINT|CONTROL|CL|SERVER|CONTROL SERVER|  
-|ENDPOINT|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|ENDPOINT|TAKE OWNERSHIP|A|SERVER|CONTROL SERVER|  
 |ENDPOINT|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |FULLTEXT CATALOG|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT CATALOG|CONTROL|CL|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|REFERENCES|RF|DATABASE|REFERENCES|  
-|FULLTEXT CATALOG|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|FULLTEXT CATALOG|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |FULLTEXT CATALOG|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |FULLTEXT STOPLIST|ALTER|AL|DATABASE|ALTER ANY FULLTEXT CATALOG|  
 |FULLTEXT STOPLIST|CONTROL|CL|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
-|FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|FULLTEXT STOPLIST|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Account di accesso|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Account di accesso|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Account di accesso|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Account di accesso|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
-|MESSAGE TYPE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|MESSAGE TYPE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
+|OBJECT|Elimina|DL|SCHEMA|Elimina|  
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
-|OBJECT|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
+|OBJECT|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
 |OBJECT|UPDATE|UP|SCHEMA|UPDATE|  
 |OBJECT|VIEW CHANGE TRACKING|VWCT|SCHEMA|VIEW CHANGE TRACKING|  
 |OBJECT|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |REMOTE SERVICE BINDING|ALTER|AL|DATABASE|ALTER ANY REMOTE SERVICE BINDING|  
 |REMOTE SERVICE BINDING|CONTROL|CL|DATABASE|CONTROL|  
-|REMOTE SERVICE BINDING|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|REMOTE SERVICE BINDING|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |REMOTE SERVICE BINDING|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ROLE|ALTER|AL|DATABASE|ALTER ANY ROLE|  
 |ROLE|CONTROL|CL|DATABASE|CONTROL|  
-|ROLE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|ROLE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |ROLE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |ROUTE|ALTER|AL|DATABASE|ALTER ANY ROUTE|  
 |ROUTE|CONTROL|CL|DATABASE|CONTROL|  
-|ROUTE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|ROUTE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |ROUTE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SEARCH PROPERTY LIST|ALTER|AL|SERVER|ALTER ANY FULLTEXT CATALOG|  
 |SEARCH PROPERTY LIST|CONTROL|CL|SERVER|CONTROL|  
 |SEARCH PROPERTY LIST|REFERENCES|RF|SERVER|REFERENCES|  
-|SEARCH PROPERTY LIST|TAKE OWNERSHIP|TO|SERVER|CONTROL|  
+|SEARCH PROPERTY LIST|TAKE OWNERSHIP|A|SERVER|CONTROL|  
 |SEARCH PROPERTY LIST|VIEW DEFINITION|VW|SERVER|VIEW DEFINITION|  
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
+|SCHEMA|Elimina|DL|DATABASE|Elimina|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
-|SCHEMA|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|SCHEMA|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
 |SCHEMA|VIEW CHANGE TRACKING|VWCT|DATABASE|VIEW CHANGE TRACKING|  
 |SCHEMA|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
@@ -314,32 +314,32 @@ ms.locfileid: "63128754"
 |SERVER|VIEW SERVER STATE|VWSS|Non applicabile|Non applicabile|  
 |SERVER ROLE|ALTER|AL|SERVER|ALTER ANY SERVER ROLE|  
 |SERVER ROLE|CONTROL|CL|SERVER|CONTROL SERVER|  
-|SERVER ROLE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
+|SERVER ROLE|TAKE OWNERSHIP|A|SERVER|CONTROL SERVER|  
 |SERVER ROLE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |SERVICE|ALTER|AL|DATABASE|ALTER ANY SERVICE|  
 |SERVICE|CONTROL|CL|DATABASE|CONTROL|  
 |SERVICE|SEND|SN|DATABASE|CONTROL|  
-|SERVICE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|SERVICE|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |SERVICE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SYMMETRIC KEY|ALTER|AL|DATABASE|ALTER ANY SYMMETRIC KEY|  
 |SYMMETRIC KEY|CONTROL|CL|DATABASE|CONTROL|  
 |SYMMETRIC KEY|REFERENCES|RF|DATABASE|REFERENCES|  
-|SYMMETRIC KEY|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|SYMMETRIC KEY|TAKE OWNERSHIP|A|DATABASE|CONTROL|  
 |SYMMETRIC KEY|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |TYPE|CONTROL|CL|SCHEMA|CONTROL|  
 |TYPE|EXECUTE|EX|SCHEMA|EXECUTE|  
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
-|TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
+|TYPE|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|Utente|ALTER|AL|DATABASE|ALTER ANY USER|  
-|Utente|CONTROL|CL|DATABASE|CONTROL|  
-|Utente|IMPERSONATE|IM|DATABASE|CONTROL|  
-|Utente|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|EXECUTE|EX|SCHEMA|EXECUTE|  
 |XML SCHEMA COLLECTION|REFERENCES|RF|SCHEMA|REFERENCES|  
-|XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
+|XML SCHEMA COLLECTION|TAKE OWNERSHIP|A|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="_algorithm"></a> Riepilogo delle informazioni sull'algoritmo di controllo delle autorizzazioni  
@@ -399,7 +399,7 @@ ms.locfileid: "63128754"
 ##  <a name="_examples"></a> Esempi  
  Negli esempi inclusi in questa sezione viene illustrato come recuperare le informazioni sulle autorizzazioni.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. A. Restituzione dell'elenco completo delle autorizzazioni che è possibile concedere  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>R. A. Restituzione dell'elenco completo delle autorizzazioni che è possibile concedere  
  L'istruzione seguente restituisce tutte le autorizzazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] tramite la funzione `fn_builtin_permissions` . Per altre informazioni, vedere [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: substring-funzione (XQuery) | Microsoft Docs
+title: Funzione SUBSTRING (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004647"
 ---
 # <a name="functions-on-string-values---substring"></a>Funzioni su valori stringa - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce parte del valore del *$sourceString*, iniziando in corrispondenza della posizione indicata dal valore di *$startingLoc,* e continua per il numero di caratteri indicato dal valore di *$ lunghezza*.  
+  Restituisce parte del valore di *$sourceString*, a partire dalla posizione indicata dal valore di *$startingLoc* e continua per il numero di caratteri indicato dal valore di *$length*.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,35 +44,35 @@ fn:substring($sourceString as xs:string?,
  Stringa di origine.  
   
  *$startingLoc*  
- Punto della stringa di origine corrispondente al punto iniziale della sottostringa. Se il valore è negativo o è uguale a 0, vengono restituiti solo i caratteri nelle posizioni maggiori di zero. Se è maggiore della lunghezza del *$sourceString*, viene restituita la stringa di lunghezza zero.  
+ Punto della stringa di origine corrispondente al punto iniziale della sottostringa. Se il valore è negativo o è uguale a 0, vengono restituiti solo i caratteri nelle posizioni maggiori di zero. Se è maggiore della lunghezza della *$sourceString*, viene restituita la stringa di lunghezza zero.  
   
  *$length*  
- Numero di caratteri da recuperare (facoltativo). Se non specificato, restituisce tutti i caratteri dalla posizione specificata *$startingLoc* fino alla fine della stringa.  
+ Numero di caratteri da recuperare (facoltativo). Se non è specificato, vengono restituiti tutti i caratteri dalla posizione specificata in *$startingLoc* fino alla fine della stringa.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La versione della funzione con tre argomenti restituisce i caratteri di `$sourceString` il cui operatore di posizione `$p` è soggetto alla regola seguente:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
   
- Il valore di *$length* può essere maggiore del numero di caratteri nel valore di *$sourceString* successivi alla posizione iniziale. In questo caso, la sottostringa restituisce i caratteri fino alla fine della *$sourceString*.  
+ Il valore di *$length* può essere maggiore del numero di caratteri nel valore di *$sourceString* dopo la posizione iniziale. In questo caso, la sottostringa restituisce i caratteri fino alla fine del *$sourceString*.  
   
  Il primo carattere di una stringa si trova nella posizione 1.  
   
- Se il valore di *$sourceString* è una sequenza vuota, viene gestita come stringa di lunghezza zero. In caso contrario, se uno dei due *$startingLoc* oppure *$length* è una sequenza vuota, viene restituita la sequenza vuota.  
+ Se il valore di *$sourceString* è la sequenza vuota, viene gestito come stringa di lunghezza zero. In caso contrario, se *$startingLoc* o *$length* è una sequenza vuota, viene restituita la sequenza vuota.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
- Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per altre informazioni, vedere la sezione "XQuery funzioni riconoscono i surrogati" nell'argomento [le modifiche di rilievo alle funzionalità del motore di Database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Il comportamento delle coppie di surrogati nelle funzioni XQuery dipende dal livello di compatibilità del database e, in alcuni casi, dall'URI dello spazio dei nomi predefinito per le funzioni. Per ulteriori informazioni, vedere la sezione "funzioni XQuery sono compatibili con i surrogati" nell'argomento [modifiche di rilievo apportate alle funzionalità di motore di database in SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Vedere anche [livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [regole di confronto e supporto Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="implementation-limitations"></a>Limitazioni di implementazione  
- SQL Server richiede la *$startingLoc* e *$length parametri* sia di tipo xs: decimal anziché di xs: Double.  
+ SQL Server richiede che i parametri *$startingLoc* e *$length* siano di tipo xs: Decimal anziché di tipo xs: Double.  
   
- SQL Server consente *$startingLoc* e *$length* rappresentino la sequenza vuota, perché la sequenza vuota è un possibile valore risultante di errori dinamici viene eseguito il mapping a ().  
+ SQL Server consente *$startingLoc* e *$length* la sequenza vuota, perché la sequenza vuota è un possibile valore in seguito a errori dinamici di cui è stato eseguito il mapping a ().  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML **** archiviate in diverse colonne [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] di tipo XML nel database.  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>R. Utilizzo della funzione XQuery substring() per recuperare le descrizioni parziali del modello del prodotto disponibili nell'elemento Summary  
- La query recupera i primi 50 caratteri del testo che descrive il modello di prodotto, la <`Summary`> elemento del documento.  
+ La query recupera i primi 50 caratteri del testo che descrive il modello del prodotto, il <`Summary`> elemento nel documento.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -85,9 +85,9 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Dalla query precedente si noti quanto segue:  
   
--   Il **String ()** funzione restituisce il valore della stringa di <`Summary`> elemento. Questa funzione viene utilizzata, in quanto il <`Summary`> elemento contiene sia il testo e formattazione html (elementi), i sottoelementi e perché si ignorerà questi elementi e recuperare tutto il testo.  
+-   La funzione **String ()** restituisce il valore stringa dell'elemento<`Summary`>. Questa funzione viene usata, perché l'elemento `Summary` <> contiene sia il testo che i sottoelementi (elementi di formattazione HTML) e perché si ignoreranno questi elementi e si recupererà tutto il testo.  
   
--   Il **substring** funzione recupera i primi 50 caratteri del valore stringa recuperato dalle **String ()** .  
+-   La funzione **substring ()** recupera i primi 50 caratteri dal valore stringa recuperato dalla **stringa ()**.  
   
  Risultato parziale:  
   

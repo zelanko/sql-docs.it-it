@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127418"
 ---
-# <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (API Stored procedure estesa)
+# <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (API Stored procedure estesa)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce il valore di un parametro di chiamata a una stored procedure remota. Questa funzione è stata sostituita dalla funzione **srv_paraminfo**.  
   
@@ -58,30 +59,31 @@ n
 ## <a name="returns"></a>Valori di codice restituiti  
  Puntatore al valore di parametro. Se il parametro *n* è NULL o se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce NULL. Se il valore del parametro è una stringa, potrebbe non essere con terminazione Null. Usare **srv_paramlen** per determinare la lunghezza della stringa.  
   
- Questa funzione restituisce i valori seguenti, se il parametro è uno dei tipi di dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I dati puntatore indicano anche se il puntatore per il tipo di dati è valido (VP), NULL o non applicabile (N/A) e il contenuto dei dati a cui punta.  
+ Questa funzione restituisce i valori seguenti, se il parametro è uno dei tipi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di dati. I dati puntatore indicano anche se il puntatore per il tipo di dati è valido (VP), NULL o non applicabile (N/A) e il contenuto dei dati a cui punta.  
   
 |Nuovi tipi di dati|Lunghezza dei dati di input|  
 |--------------------|-----------------------|  
-|BITN|**NULL:** VP, NULL<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** N/D<br /><br /> **<255:** N/D|  
-|BIGVARCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255 caratteri<br /><br /> **<255:** VP, dati effettivi|  
-|BIGCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 spazi<br /><br /> **>=255:** VP, 255 caratteri<br /><br /> **<255:** VP, dati effettivi + riempimento (fino a 255)|  
-|BIGBINARY|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 0x00<br /><br /> **>=255:** VP, 255 byte<br /><br /> **<255:** VP, dati effettivi + riempimento (fino a 255)|  
-|BIGVARBINARY|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255 byte<br /><br /> **<255:** VP, dati effettivi|  
-|NCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 255 spazi<br /><br /> **>=255:** VP, 255 caratteri<br /><br /> **<255:** VP, dati effettivi + riempimento (fino a 255)|  
-|NVARCHAR|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255 caratteri<br /><br /> **<255:** VP, dati effettivi|  
-|NTEXT|**NULL:** N/D<br /><br /> **ZERO:** N/D<br /><br /> **>=255:** N/D<br /><br /> **\<255:** N/D|  
+|BITN|**Valore null:** VP, NULL<br /><br /> **Zero:** VP, NULL<br /><br /> **>= 255:** N/A<br /><br /> **<255:** N/A|  
+|BIGVARCHAR|**Valore null:** NULL, N/A<br /><br /> **Zero:** VP, NULL<br /><br /> **>= 255:** VP, 255 caratteri<br /><br /> **<255:** VP, dati effettivi|  
+|BIGCHAR|**Valore null:** NULL, N/A<br /><br /> **Zero:** VP, 255 spazi<br /><br /> **>= 255:** VP, 255 caratteri<br /><br /> **<255:** VP, dati effettivi + riempimento (fino a 255)|  
+|BIGBINARY|**Valore null:** NULL, N/A<br /><br /> **Zero:** VP, 255 0x00<br /><br /> **>= 255:** VP, 255 byte<br /><br /> **<255:** VP, dati effettivi + riempimento (fino a 255)|  
+|BIGVARBINARY|**Valore null:** NULL, N/A<br /><br /> **Zero:** VP, 0x00<br /><br /> **>= 255:** VP, 255 byte<br /><br /> **<255:** VP, dati effettivi|  
+|NCHAR|**Valore null:** NULL, N/A<br /><br /> **Zero:** VP, 255 spazi<br /><br /> **>= 255:** VP, 255 caratteri<br /><br /> **<255:** VP, dati effettivi + riempimento (fino a 255)|  
+|NVARCHAR|**Valore null:** NULL, N/A<br /><br /> **Zero:** VP, NULL<br /><br /> **>= 255:** VP, 255 caratteri<br /><br /> **<255:** VP, dati effettivi|  
+|NTEXT|**Valore null:** N/A<br /><br /> **Zero:** N/A<br /><br /> **>= 255:** N/A<br /><br /> ** \<255:** N/A|  
   
- \*   i dati non sono con terminazione Null e non viene generato alcun avviso di troncamento per i dati >255 caratteri.  
+ 
+  \*   i dati non sono con terminazione Null e non viene generato alcun avviso di troncamento per i dati >255 caratteri.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se si conosce il nome del parametro, è possibile usare **srv_paramnumber** per ottenerne il numero. Per determinare se un parametro è NULL, usare **srv_paramlen**.  
   
  Quando una chiamata alla stored procedure remota viene effettuata con i parametri, tali parametri possono essere passati per nome o per posizione (senza nome). Se invece viene effettuata con alcuni parametri passati per nome e altri passati per posizione, si verifica un errore. Se si verifica un errore, il gestore SRV_RPC viene chiamato comunque ma risulta che non sono presenti parametri e **srv_rpcparams** restituisce 0.  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
- [srv_rpcparams &#40;API delle stored procedure estese&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;API stored procedure estesa&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
   
   

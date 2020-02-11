@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0e8599378367dd47bd5858c09327795a25852105
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005843"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (Maggiore o uguale a) (MDX)
@@ -34,9 +34,9 @@ MDX_Expression >= MDX_Expression
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano basato sulle condizioni seguenti:  
   
--   **true** se il primo parametro è un valore che è maggiore o uguale a quello del secondo parametro.  
+-   **true** se il primo parametro ha un valore maggiore o uguale al valore del secondo parametro.  
   
--   **false** se il primo parametro ha un valore che è inferiore al valore del secondo parametro.  
+-   **false** se il primo parametro ha un valore minore del valore del secondo parametro.  
   
 -   **true** se entrambi i parametri sono null o se un parametro è null e l'altro parametro è 0.  
   
@@ -61,6 +61,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Guida di riferimento agli operatori MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
   
   

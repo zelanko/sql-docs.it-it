@@ -16,14 +16,14 @@ ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85511a9997ccbae0ebe4838218d43bc997344085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997774"
 ---
 # <a name="scalar-functions"></a>Funzioni scalari
-I driver di Database Desktop ODBC Microsoft supportano le funzioni scalari seguenti:  
+I driver di database di Microsoft ODBC Desktop supportano le funzioni scalari seguenti:  
   
 ||||  
 |-|-|-|  
@@ -31,8 +31,8 @@ I driver di Database Desktop ODBC Microsoft supportano le funzioni scalari segue
 |CONVERT|LEFT|RTRIM|  
 |CURDATE|LENGTH|SUBSTRING|  
 |CURTIME|LOCATE|UCASE|  
-|DATABASE|LTRIM|Utente|  
+|DATABASE|LTRIM|USER|  
 |DAYOFMONTH|MOD|YEAR|  
 |DAYOFWEEK|MONTH||  
   
- Per informazioni su argomenti e valori restituiti di funzioni scalari, vedere l'appendice F del *riferimento per programmatori ODBC.*
+ Per informazioni sugli argomenti e i valori restituiti delle funzioni scalari, vedere Appendice F di *ODBC Programmer ' s Reference.*

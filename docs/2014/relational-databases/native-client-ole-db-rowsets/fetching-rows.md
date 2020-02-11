@@ -1,5 +1,5 @@
 ---
-title: Il recupero di righe | Documenti di Microsoft
+title: Recupero di righe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140477"
 ---
 # <a name="fetching-rows"></a>Recupero di righe
+  
   **IRowset** è l'interfaccia di base dei set di righe. L'interfaccia **IRowset** comprende metodi che consentono di recuperare le righe in modo sequenziale, ottenere dati dalle righe e gestire le righe. I consumer utilizzano i metodi disponibili in **IRowset** per tutte le operazioni di base relative ai set di righe, incluse quelle che consentono di recuperare e rilasciare le righe nonché ottenere i valori delle colonne.  
   
  Quando un consumer ottiene un puntatore di interfaccia su un set di righe, il primo passaggio consiste, in genere, nel determinare le funzionalità del set di righe mediante il metodo **IRowsetInfo::GetProperties**. In questo modo vengono restituite le informazioni sulle interfacce esposte dal set di righe nonché le funzionalità del set di righe che non vengono visualizzate come interfacce distinte, ad esempio il numero massimo di righe attive e il numero di righe che possono presentare aggiornamenti in sospeso contemporaneamente.  
@@ -59,9 +60,9 @@ ms.locfileid: "63140477"
   
  Al termine delle operazioni relative al set di righe, il consumer chiama il metodo **IAccessor::ReleaseAccessor** per rilasciare le funzioni di accesso e il metodo **IUnknown::Release** su tutte le interfacce esposte dal set di righe per rilasciare il set di righe. Quando il set di righe viene rilasciato, forza il rilascio delle eventuali righe o funzioni di accesso rimanenti ancora in gestione da parte del consumer.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [posizione del recupero successivo](fetching-rows-next-fetch-position.md)  
+-   [Posizione del recupero successivo](fetching-rows-next-fetch-position.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe](rowsets.md)  

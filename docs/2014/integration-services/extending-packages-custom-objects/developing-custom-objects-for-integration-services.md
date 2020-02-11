@@ -14,24 +14,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768657"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Sviluppo di oggetti personalizzati per Integration Services
-  Quando gli oggetti del flusso di controllo e del flusso di dati inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non soddisfano completamente specifici requisiti, è possibile sviluppare molti tipi di oggetti personalizzati, tra cui:  
+  Quando gli oggetti flusso di controllo e flusso di dati inclusi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non soddisfano completamente i requisiti, è possibile sviluppare molti tipi di oggetti personalizzati, tra cui:  
   
 -   **Attività personalizzate**.  
   
--   **Gestioni connessioni personalizzate**. Consentono la connessione a origini dati esterne attualmente non supportate.  
+-   **Gestioni connessioni personalizzate.** Consentono la connessione a origini dati esterne attualmente non supportate.  
   
--   **Provider di log personalizzati**. Consentono di registrare eventi dei pacchetti in formati attualmente non supportati.  
+-   **Provider di log personalizzati.** Consentono di registrare eventi dei pacchetti in formati attualmente non supportati.  
   
--   **Enumeratori personalizzati**. Supportano l'iterazione in un set di oggetti o valori in formati attualmente non supportati.  
+-   **Enumeratori personalizzati.** Supportano l'iterazione in un set di oggetti o valori in formati attualmente non supportati.  
   
--   **Componenti flusso di dati personalizzati**. Possono essere configurati come origini, trasformazioni o destinazioni.  
+-   **Componenti del flusso di dati personalizzati.** Possono essere configurati come origini, trasformazioni o destinazioni.  
   
  Il modello a oggetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] facilita questo sviluppo personalizzato con classi di base che forniscono un framework coerente e affidabile per l'implementazione personalizzata.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62768657"
 ## <a name="base-classes-attributes-and-important-methods"></a>Classi di base, attributi e metodi importanti  
  In questa tabella viene fornito un riferimento rapido agli elementi più importanti del modello a oggetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per ogni tipo di oggetto personalizzato che è possibile sviluppare.  
   
-|Oggetto personalizzato|Classe di base|attribute|Metodi importanti|  
+|Oggetto personalizzato|Classe di base|Attributo|Metodi importanti|  
 |-------------------|----------------|---------------|-----------------------|  
 |Attività|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |Gestione connessione|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
@@ -110,10 +110,10 @@ ms.locfileid: "62768657"
   
 -   Intervento nel blog, [Il processo di compilazione della soluzione per Visual Studio restituisce un avviso sulla dipendenza indiretta dall'assembly .NET Framework a causa dei riferimenti SSIS](https://go.microsoft.com/fwlink/?LinkId=215662), su blogs.msdn.com.  
   
-![Icona di Integration Services (piccola)](../media/dts-16.gif "icona di Integration Services (piccola)")**rimangono fino a Date con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina di Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
+![Integration Services icona (piccola)](../media/dts-16.gif "Icona di Integration Services (piccola)")  **rimane aggiornata con Integration Services**<br /> Per i download, gli articoli, gli esempi e i video Microsoft più recenti, oltre alle soluzioni selezionate dalla community, visitare la pagina [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sul sito MSDN:<br /><br /> [Visita la pagina Integration Services su MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Per ricevere una notifica automatica su questi aggiornamenti, sottoscrivere i feed RSS disponibili nella pagina.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Persistenza degli oggetti personalizzati](persisting-custom-objects.md)   
+ [Salvataggio permanente di oggetti personalizzati](persisting-custom-objects.md)   
  [Compilazione, distribuzione e debug di oggetti personalizzati](building-deploying-and-debugging-custom-objects.md)  
   
   

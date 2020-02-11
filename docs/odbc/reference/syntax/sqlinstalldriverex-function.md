@@ -20,22 +20,22 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030599"
 ---
 # <a name="sqlinstalldriverex-function"></a>Funzione SQLInstallDriverEx
 **Conformità**  
- Versione introdotta: ODBC 3.0  
+ Versione introdotta: ODBC 3,0  
   
- **Riepilogo**  
- **SQLInstallDriverEx** aggiunge informazioni sul driver per la voce di Odbcinst. ini nelle informazioni di sistema e incrementa il driver *UsageCount* di 1. Tuttavia, se una versione del driver esiste già ma il *UsageCount* valore dell'indicatore per il driver non esiste, il nuovo *UsageCount* valore è impostato su 2.  
+ **Summary**  
+ **SQLInstallDriverEx** aggiunge informazioni sul driver alla voce Odbcinst. ini nelle informazioni sul sistema e incrementa di 1 il *UsageCount* del driver. Tuttavia, se esiste già una versione del driver, ma il valore *UsageCount* per il driver non esiste, il nuovo valore di *UsageCount* viene impostato su 2.  
   
- Questa funzione non copia effettivamente tutti i file. È responsabilità del programma chiamante per copiare i file del driver nella directory di destinazione in modo corretto.  
+ Questa funzione non copia effettivamente alcun file. È responsabilità del programma chiamante copiare correttamente i file del driver nella directory di destinazione.  
   
- La funzionalità del **SQLInstallDriverEx** sono accessibili anche con [ODBCCONF. File EXE](../../../odbc/odbcconf-exe.md).  
+ È anche possibile accedere alle funzionalità di **SQLInstallDriverEx** con [ODBCCONF. File EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,90 +53,90 @@ BOOL SQLInstallDriverEx(
   
 ## <a name="arguments"></a>Argomenti  
  *lpszDriver*  
- [Input] Descrizione del driver (in genere il nome del sistema DBMS associati) presentata agli utenti anziché il nome del driver fisico. Il *lpszDriver* argomento deve contenere un elenco di coppie parola chiave / valore che descrivono i driver doppia terminazione null. Per altre informazioni sulle coppie parola chiave / valore, vedere [sottochiavi di specifica di Driver](../../../odbc/reference/install/driver-specification-subkeys.md). Per altre informazioni sulla stringa di terminazione null, vedere [funzione ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ Input Descrizione del driver (in genere il nome del DBMS associato) presentata agli utenti anziché al nome del driver fisico. L'argomento *lpszDriver* deve contenere un elenco doppiato con terminazione null di coppie parola chiave/valore che descrivono il driver. Per ulteriori informazioni sulle coppie parola chiave/valore, vedere [sottochiavi di specifica driver](../../../odbc/reference/install/driver-specification-subkeys.md). Per ulteriori informazioni sulla stringa doppia con terminazione null, vedere [funzione ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
  *lpszPathIn*  
- [Input] Percorso completo della directory di destinazione dell'installazione, o un puntatore null. Se *lpszPathIn* è un puntatore null, il driver verranno installati nella directory di sistema.  
+ Input Percorso completo della directory di destinazione dell'installazione o un puntatore null. Se *lpszPathIn* è un puntatore null, i driver verranno installati nella directory di sistema.  
   
  *lpszPathOut*  
- [Output] Percorso della directory di destinazione in cui deve essere installato il driver. Se il driver non è stato precedentemente installato, *lpszPathOut* deve essere identico *lpszPathIn*. Se il driver è stato installato in precedenza, *lpszPathOut* è il percorso dell'installazione precedente.  
+ Output Percorso della directory di destinazione in cui deve essere installato il driver. Se il driver non è stato installato in precedenza, *lpszPathOut* deve essere uguale a *lpszPathIn*. Se il driver è stato installato in precedenza, *lpszPathOut* è il percorso dell'installazione precedente.  
   
  *cbPathOutMax*  
- [Input] Lunghezza di *lpszPathOut*.  
+ Input Lunghezza di *lpszPathOut*.  
   
  *pcbPathOut*  
- [Output] Numero totale di byte (escluso il carattere di terminazione null) disponibili per restituire *lpszPathOut*. Se il numero di byte disponibili da restituire è maggiore o uguale a *cbPathOutMax*, il percorso di output in *lpszPathOut* verrà troncato *cbPathOutMax* meno di carattere di terminazione null. Il *pcbPathOut* argomento può essere un puntatore null.  
+ Output Numero totale di byte (escluso il carattere di terminazione null) disponibili per restituire in *lpszPathOut*. Se il numero di byte disponibili per restituire è maggiore o uguale a *cbPathOutMax*, il percorso di output in *lpszPathOut* viene troncato in *cbPathOutMax* meno il carattere di terminazione null. L'argomento *pcbPathOut* può essere un puntatore null.  
   
  *fRequest*  
- [Input] Tipo di richiesta. Il *trattano* argomento deve essere uno dei valori seguenti:  
+ Input Tipo di richiesta. L'argomento *fRequest* deve contenere uno dei valori seguenti:  
   
- ODBC_INSTALL_INQUIRY: Richiedere informazioni su dove può essere installato un driver.  
+ ODBC_INSTALL_INQUIRY: informazioni sulla posizione in cui è possibile installare un driver.  
   
- ODBC_INSTALL_COMPLETE: Completare la richiesta di installazione.  
+ ODBC_INSTALL_COMPLETE: completare la richiesta di installazione.  
   
  *lpdwUsageCount*  
- [Output] Il conteggio di utilizzo del driver dopo la chiamata a questa funzione.  
+ Output Conteggio di utilizzo del driver dopo la chiamata a questa funzione.  
   
- Le applicazioni non devono impostare il conteggio di utilizzo. ODBC manterrà questo conteggio.  
+ Le applicazioni non devono impostare il conteggio dell'utilizzo. Il conteggio verrà mantenuto da ODBC.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- La funzione restituisce TRUE se ha esito positivo, FALSE in caso di errore.  
+ La funzione restituisce TRUE se ha esito positivo, FALSE in caso di esito negativo.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLInstallDriverEx** FALSO, restituisce un oggetto associato  *\*pfErrorCode* valore può essere ottenuto chiamando **SQLInstallerError**. La tabella seguente elenca i  *\*pfErrorCode* i valori che possono essere restituiti da **SQLInstallerError** e illustra ognuna nel contesto di questa funzione.  
+ Quando **SQLInstallDriverEx** restituisce false, è possibile ottenere un valore * \*pfErrorCode* associato chiamando **SQLInstallerError**. La tabella seguente elenca i * \*valori pfErrorCode* che possono essere restituiti da **SQLInstallerError** e ne illustra ognuno nel contesto di questa funzione.  
   
 |*\*pfErrorCode*|Errore|Descrizione|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Errore di programma di installazione generale|Errore per cui si è verificato alcun errore di programma di installazione specifico.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valido|Il *lpszPathOut* argomento non era sufficientemente grande da contenere il percorso di output. Il buffer contiene il percorso troncato.<br /><br /> Il *cbPathOutMax* argomento era 0, e *trattano* era ODBC_INSTALL_COMPLETE.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|Il *trattano* argomento non è uno dei seguenti:<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|Coppie parola chiave / valore non valido|Il *lpszDriver* argomento contiene un errore di sintassi.|  
-|ODBC_ERROR_INVALID_PATH|Percorso di installazione non è valido|Il *lpszPathIn* argomento contiene un percorso non valido.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Non è riuscito a caricare la libreria di programma di installazione driver o del convertitore.|Non è stato possibile caricare la libreria dell'installazione di driver.|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Sequenza di parametri non validi|Il *lpszDriver* argomento non contiene un elenco di coppie parola chiave / valore.|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|Non è stato possibile incrementare o decrementare il conteggio di utilizzo del componente|Il programma di installazione non riuscita a incrementare il conteggio di utilizzo del driver.|  
+|ODBC_ERROR_GENERAL_ERR|Errore generale del programma di installazione|Si è verificato un errore per il quale non è stato specificato alcun errore di programma di installazione.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Lunghezza del buffer non valida|L'argomento *lpszPathOut* non è sufficientemente grande da contenere il percorso di output. Il buffer contiene il percorso troncato.<br /><br /> L'argomento *cbPathOutMax* è 0 e *fRequest* è stato ODBC_INSTALL_COMPLETE.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo di richiesta non valido|L'argomento *fRequest* non è uno dei seguenti:<br /><br /> ODBC_INSTALL_INQUIRY ODBC_INSTALL_COMPLETE|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|Coppie parola chiave/valore non valide|L'argomento *lpszDriver* contiene un errore di sintassi.|  
+|ODBC_ERROR_INVALID_PATH|Percorso di installazione non valido|L'argomento *lpszPathIn* contiene un percorso non valido.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Non è stato possibile caricare la libreria di installazione del driver o del convertitore|Non è stato possibile caricare la libreria di installazione del driver.|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Sequenza di parametri non valida|L'argomento *lpszDriver* non contiene un elenco di coppie parola chiave/valore.|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|Non è stato possibile incrementare o decrementare il numero di utilizzi dei componenti|Il programma di installazione non è riuscito a incrementare il conteggio di utilizzo del driver.|  
   
 ## <a name="comments"></a>Commenti  
- Il *lpszDriver* argomento è un elenco di attributi in forma di coppie parola chiave / valore. Ogni coppia viene terminata con un byte null e l'intero elenco viene terminata con un byte null. (Vale a dire, due byte null contrassegnano la fine dell'elenco.) Il formato di questo elenco è come segue:  
+ L'argomento *lpszDriver* è un elenco di attributi sotto forma di coppie parola chiave/valore. Ogni coppia viene terminata con un byte null e l'intero elenco viene terminato con un byte null. Ovvero due byte null contrassegnano la fine dell'elenco. Il formato di questo elenco è il seguente:  
   
- _driver desc_ **\\** 0Driver **=** _driver-DLL-filename_ **\\** 0 [programma di installazione **=** _programma di installazione-DLL-filename_<b>\\</b>0]  
+ _driver-desc_ **\\**0Driver**=**_driver-dll-filename_**\\**0 [Setup**=** Setup _-dll-filename_<b>\\</b>0]  
   
- [_driver-attr-keyword1_ **=** _value1_<b>\\</b>0][_driver-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b>\\</b>0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0] [_driver-attr-keyword2_**=**_value2_<b>\\</b>0]... <b>\\</b>0  
   
- dove \0 è un byte null e *driver-attr-keywordn* è qualsiasi parola chiave degli attributi del driver. Le parole chiave devono essere visualizzato nell'ordine specificato. Ad esempio, si supponga che un driver per i file di testo formattato dispone di driver separato e file DLL di installazione e possono usare i file con le estensioni di file con estensione txt e. csv. Il *lpszDriver* argomento per questo driver potrebbe essere come segue:  
+ dove \ 0 è un byte null e *driver-attr-* keywordn è qualsiasi parola chiave dell'attributo del driver. Le parole chiave devono essere visualizzate nell'ordine specificato. Si supponga, ad esempio, che un driver per i file di testo formattati disponga di dll di installazione e driver separate e che sia possibile utilizzare file con le estensioni TXT e CSV. L'argomento *lpszDriver* per questo driver potrebbe essere il seguente:  
   
 ```  
 Text\0Driver=TEXT.DLL\0Setup=TXTSETUP.DLL\0FileUsage=1\0  
 FileExtns=*.txt,*.csv\0\0  
 ```  
   
- Si supponga che un driver per SQL Server non è una DLL di installazione separato e non ha tutte le parole chiave dell'attributo di driver. Il *lpszDriver* argomento per questo driver potrebbe essere come segue:  
+ Si supponga che un driver per SQL Server non disponga di una DLL di installazione separata e che non includa parole chiave degli attributi del driver. L'argomento *lpszDriver* per questo driver potrebbe essere il seguente:  
   
 ```  
 SQL Server\0Driver=SQLSRVR.DLL\0\0  
 ```  
   
- Dopo aver **SQLInstallDriverEx** recupera le informazioni riguardanti il driver dalle *lpszDriver* argomento, viene aggiunta la descrizione di driver alla sezione [ODBC Drivers] della voce Odbcinst. ini nel sistema informazioni. Quindi crea una sezione intitolata con la descrizione del driver e aggiunge i percorsi completi della DLL del driver e le DLL di installazione. Infine, restituisce il percorso della directory di destinazione dell'installazione, ma non copia i file di driver a esso. Il programma chiamante effettivamente necessario copiare i file dei driver nella directory di destinazione.  
+ Dopo che **SQLInstallDriverEx** recupera le informazioni sul driver dall'argomento *lpszDriver* , aggiunge la descrizione del driver alla sezione [ODBC Drivers] della voce Odbcinst. ini nelle informazioni di sistema. Viene quindi creata una sezione intitolata con la descrizione del driver e vengono aggiunti i percorsi completi della DLL del driver e della DLL di installazione. Infine, restituisce il percorso della directory di destinazione dell'installazione ma non copia i file del driver. Il programma chiamante deve effettivamente copiare i file del driver nella directory di destinazione.  
   
- **SQLInstallDriverEx** incrementa il conteggio di utilizzo del componente per il driver installato di 1. Se esiste già una versione del driver, ma il conteggio di utilizzo del componente per il driver non esiste, il nuovo valore di conteggio dell'utilizzo di componente è impostato su 2.  
+ **SQLInstallDriverEx** incrementa il numero di utilizzo del componente per il driver installato di 1. Se esiste già una versione del driver, ma il numero di utilizzo del componente per il driver non esiste, il nuovo valore di conteggio utilizzo componenti viene impostato su 2.  
   
- Il programma di installazione dell'applicazione è responsabile per copiare fisicamente il file del driver e mantenere il conteggio di utilizzo di file. Se il file del driver non è stato precedentemente installato, il programma di installazione dell'applicazione deve copiare il file nei *lpszPathIn* path e creare il conteggio di utilizzo di file. Se il file è stato precedentemente installato, il programma di installazione semplicemente incrementa il conteggio di utilizzo di file e restituisce il percorso dell'installazione precedente nel *lpszPathOut* argomento.  
-  
-> [!NOTE]  
->  Per altre informazioni sui conteggi dell'utilizzo di componenti e conteggi dell'utilizzo di file, vedere [Conteggio utilizzi](../../../odbc/reference/install/usage-counting.md).  
-  
- Se in precedenza è stata installata una versione precedente del file del driver dall'applicazione, il driver deve disinstallare e reinstallare, in modo che il conteggio di utilizzo del componente driver è valido. **SQLConfigDriver** (con un *trattano* di ODBC_REMOVE_DRIVER) deve essere anzitutto chiamata e quindi **SQLRemoveDriver** deve essere chiamato per diminuire il conteggio di utilizzo del componente. **SQLInstallDriverEx** deve quindi essere chiamato per reinstallare il driver, incrementare il conteggio di utilizzo del componente. Il programma di installazione dell'applicazione è necessario sostituire il vecchio file con il nuovo file. Il conteggio di utilizzo file rimarranno invariati e qualsiasi altra applicazione che utilizzato il file versione precedenti useranno la versione più recente.  
+ Il programma di installazione dell'applicazione è responsabile della copia fisica del file del driver e della gestione del numero di utilizzo del file. Se il file del driver non è stato installato in precedenza, il programma di installazione dell'applicazione deve copiare il file nel percorso *lpszPathIn* e creare il conteggio di utilizzo del file. Se il file è stato precedentemente installato, il programma di installazione incrementa semplicemente il conteggio di utilizzo dei file e restituisce il percorso dell'installazione precedente nell'argomento *lpszPathOut* .  
   
 > [!NOTE]  
->  Se il driver è stato installato precedentemente e **SQLInstallDriverEx** viene chiamato per installare il driver in una directory diversa, la funzione restituirà TRUE, ma *lpszPathOut* includerà le directory il driver in cui è già installato. Il servizio non include la directory immessa nella *lpszDriver* argomento.  
+>  Per ulteriori informazioni sui conteggi di utilizzo dei componenti e sui conteggi di utilizzo dei file, vedere [conteggio dell'utilizzo](../../../odbc/reference/install/usage-counting.md).  
   
- La lunghezza del percorso nella *lpszPathOut* nelle **SQLInstallDriverEx** consente un processo di installazione in due fasi, in modo che un'applicazione può determinare che cosa *cbPathOutMax* deve essere da la chiamata **SQLInstallDriverEx** con un *trattano* della modalità ODBC_INSTALL_INQUIRY. Verrà restituito il numero totale di byte disponibili nel *pcbPathOut* buffer. **SQLInstallDriverEx** può quindi essere chiamato con un *trattano* di ODBC_INSTALL_COMPLETE e il *cbPathOutMax* argomento impostato sul valore di *pcbPathOut*buffer, più il carattere di terminazione null.  
+ Se una versione precedente del file di driver è stata precedentemente installata dall'applicazione, è necessario disinstallare e reinstallare il driver, in modo che il numero di utilizzo del componente driver sia valido. È necessario chiamare prima **SQLConfigDriver** (con un *fRequest* di ODBC_REMOVE_DRIVER), quindi chiamare **SQLRemoveDriver** per decrementare il numero di utilizzo dei componenti. **SQLInstallDriverEx** deve quindi essere chiamato per reinstallare il driver, incrementando il numero di utilizzo dei componenti. Il programma di installazione dell'applicazione deve sostituire il file precedente con il nuovo file. Il conteggio di utilizzo file rimarrà invariato e qualsiasi altra applicazione che utilizzava il file della versione precedente utilizzerà la versione più recente.  
   
- Se si sceglie di non utilizzare il modello in due fasi per **SQLInstallDriverEx**, è necessario impostare *cbPathOutMax*, che definisce le dimensioni della risorsa di archiviazione per il percorso della directory di destinazione, per il valore di MAX_PATH valore, come definito in STDLIB. h, per evitare il troncamento.  
+> [!NOTE]  
+>  Se il driver è stato installato in precedenza e viene chiamato **SQLInstallDriverEx** per installare il driver in una directory diversa, la funzione restituirà true, ma *lpszPathOut* includerà la directory in cui il driver è già installato. Non verrà inclusa la directory immessa nell'argomento *lpszDriver* .  
   
- Quando *trattano* ODBC_INSTALL_COMPLETE, viene **SQLInstallDriverEx** nepovoluje hodnotu *lpszPathOut* null (o *cbPathOutMax* sia 0). Se *trattano* è ODBC_INSTALL_COMPLETE, viene restituito FALSE quando il numero di byte disponibili da restituire è maggiore o uguale a *cbPathOutMax*, fornendo il risultato se il troncamento si verifica.  
+ La lunghezza del percorso in *lpszPathOut* in **SQLInstallDriverEx** consente un processo di installazione in due fasi, in modo che un'applicazione possa determinare quale *cbPathOutMax* deve essere chiamando **SQLInstallDriverEx** con una *fRequest* di modalità ODBC_INSTALL_INQUIRY. Verrà restituito il numero totale di byte disponibili nel buffer *pcbPathOut* . **SQLInstallDriverEx** può quindi essere chiamato con un *fRequest* di ODBC_INSTALL_COMPLETE e l'argomento *cbPathOutMax* impostato sul valore nel buffer *pcbPathOut* , oltre al carattere di terminazione null.  
   
- Dopo aver **SQLInstallDriverEx** è stato chiamato e il programma di installazione dell'applicazione è copiato il file del driver (se necessario), il programma di installazione di driver in cui è necessario chiamare DLL **SQLConfigDriver** per impostare la configurazione per il driver.  
+ Se si sceglie di non usare il modello a due fasi per **SQLInstallDriverEx**, è necessario impostare *cbPathOutMax*, che definisce le dimensioni della risorsa di archiviazione per il percorso della directory di destinazione, sul valore _MAX_PATH, come definito in STDLIB. h, per evitare il troncamento.  
+  
+ Quando *fRequest* è ODBC_INSTALL_COMPLETE, **SQLInstallDriverEx** non consente a *lpszPathOut* di essere null (o *cbPathOutMax* è 0). Se *fRequest* è ODBC_INSTALL_COMPLETE, viene restituito false quando il numero di byte disponibili per restituire è maggiore o uguale a *cbPathOutMax*, con il risultato che si verifica il troncamento.  
+  
+ Dopo che **SQLInstallDriverEx** è stato chiamato e il programma di installazione dell'applicazione ha copiato il file del driver (se necessario), è necessario che la dll di installazione del driver chiami **SQLConfigDriver** per impostare la configurazione per il driver.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   

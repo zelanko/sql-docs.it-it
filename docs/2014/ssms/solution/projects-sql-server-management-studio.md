@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035678"
 ---
 # <a name="projects-sql-server-management-studio"></a>Progetti (SQL Server Management Studio)
@@ -48,7 +48,7 @@ ms.locfileid: "63035678"
 |----------------------|-----------|  
 |Viene descritto come creare un nuovo progetto in una soluzione.|[Creare un progetto](create-a-project.md)|  
 |Viene descritto come aggiungere un progetto esistente a una soluzione.|[Aggiunta di un progetto esistente a una soluzione](add-an-existing-project-to-a-solution.md)|  
-|Viene descritto come modificare il percorso predefinito in cui vengono salvati i file di progetto.|[Modifica del percorso predefinito per i progetti](change-the-default-location-for-projects.md)|  
+|Viene descritto come modificare il percorso predefinito in cui vengono salvati i file di progetto.|[Modificare il percorso predefinito per i progetti](change-the-default-location-for-projects.md)|  
 |Viene descritto come visualizzare le proprietà correnti di un progetto.|[Visualizzare le proprietà di un progetto](view-project-properties.md)|  
 |Viene descritto come aggiungere nuovi elementi, ad esempio connessioni o file di script, a un progetto.|[Aggiungere nuovi elementi a un progetto](add-new-items-to-a-project.md)|  
 |Viene descritto come definire le informazioni di connessione per una query.|[Associazione di una query a una connessione in un progetto](associate-a-query-with-a-connection-in-a-project.md)|  
@@ -57,7 +57,7 @@ ms.locfileid: "63035678"
   
 ## <a name="see-also"></a>Vedere anche  
  [Esplora soluzioni](solution-explorer.md)   
- [Soluzioni di &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
+ [Soluzioni &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [Controllo del codice sorgente di Esplora soluzioni](../../database-engine/solution-explorer-source-control.md)  
   
   

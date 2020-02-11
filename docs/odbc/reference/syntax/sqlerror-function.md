@@ -20,21 +20,21 @@ ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f98bbc393db9b1e1d10fe0f68285f30231c0ef8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003113"
 ---
 # <a name="sqlerror-function"></a>Funzione SQLError
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 ODBC: Funzionalità deprecate  
+ Versione introdotta: conformità agli standard ODBC 1,0: deprecato  
   
- **Riepilogo**  
- **SQLError** restituisce le informazioni di stato o di errore.  
+ **Summary**  
+ **SQLError** restituisce informazioni sugli errori o sullo stato.  
   
- Per altre informazioni su quali il Driver Manager esegue il mapping a questa funzione quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3. *x* driver, vedere [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
+ Per ulteriori informazioni su ciò che Gestione driver esegue il mapping di questa funzione a quando ODBC 2. l'applicazione *x* funziona con ODBC 3. driver *x* , vedere [mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Appendice G: linee guida per la compatibilità con le versioni precedenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

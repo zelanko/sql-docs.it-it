@@ -1,5 +1,5 @@
 ---
-title: Ruolo del Driver | Microsoft Docs
+title: Ruolo del driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: cac64c24-a27d-4884-96c0-ea7988351711
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c344c1d8b3a4702728807af9dae7ed9ca7c5cd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020377"
 ---
 # <a name="role-of-the-driver"></a>Ruolo del driver
-Il driver controlla tutti gli errori e avvisi non controllati da Gestione Driver e ordina i record di stato che genera. (Un ODBC 2. *x* driver non ordina i record di stato.) Quali errori e avvisi di troncamento dei dati, la conversione dei dati, sintassi e alcuni transizioni di stato. Il driver potrebbe anche controllare errori e avvisi controllo parzialmente selezionati da Gestione Driver. Ad esempio, anche se Gestione Driver controlla se il valore di *operazione* nel **SQLSetPos** è consentito, il driver deve controllare se è supportato.  
+Il driver controlla la presenza di tutti gli errori e gli avvisi non controllati da Gestione driver e i record di stato degli ordini generati. (ODBC 2). il driver *x* non Ordina i record di stato. Sono inclusi gli errori e gli avvisi nel troncamento dei dati, la conversione dei dati, la sintassi e alcune transizioni di stato. Il driver potrebbe inoltre controllare gli errori e gli avvisi parzialmente controllati da Gestione driver. Ad esempio, anche se Gestione driver controlla se il valore dell' *operazione* in **SQLSetPos** è valido, il driver deve verificare se è supportato.  
   
- Il driver esegue anche il mapping *gli errori nativi* - vale a dire, gli errori restituiti dall'origine dati - di SQLSTATE. Ad esempio, il driver può eseguire il mapping di un numero di errori nativi differenti per la sintassi non valida SQL a SQLSTATE 42000 (sintassi o violazione di accesso). Il driver restituisce il numero di errori nativi nel campo SQL_DIAG_NATIVE del record di stato. Documentazione del driver deve mostrare come errori e avvisi vengono mappati dall'origine dati e gli argomenti in **SQLGetDiagRec** e **SQLGetDiagField**.
+ Il driver esegue anche il mapping degli *errori nativi* , ovvero gli errori restituiti dall'origine dati a sqlstates. Ad esempio, il driver potrebbe eseguire il mapping di un numero di errori nativi diversi per la sintassi SQL non valida per SQLSTATE 42000 (errore di sintassi o violazione di accesso). Il driver restituisce il numero di errore nativo nel campo SQL_DIAG_NATIVE del record di stato. La documentazione del driver dovrebbe mostrare come viene eseguito il mapping degli errori e degli avvisi dall'origine dati agli argomenti in **SQLGetDiagRec** e **SQLGetDiagField**.

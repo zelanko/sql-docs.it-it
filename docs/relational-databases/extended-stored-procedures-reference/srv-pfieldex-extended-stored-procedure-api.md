@@ -20,17 +20,18 @@ ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1333cfc819b8027260c715ed3398c0099f96a854
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005550"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API delle stored procedure estese)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce un puntatore ai dati che contengono il campo SRV_PROC richiesto.  
   
@@ -51,7 +52,7 @@ len
  *srvproc*  
  Puntatore alla struttura SRV_PROC che rappresenta l'handle di una determinata connessione client. La struttura contiene informazioni utilizzate dalla libreria dell'API Stored procedure estesa per gestire le comunicazioni e i dati tra l'applicazione e il client.  
   
- *field*  
+ *campo*  
  Specifica il campo *srvproc* da restituire.  
   
 |Campo|Descrizione|Tipo restituito|  
@@ -59,7 +60,7 @@ len
 |SRV_MSGLCID|LCDI di messaggio della sessione corrente.|ULONG*|  
 |SRV_INSTANCENAME|Nome dell'istanza (se si tratta di un'istanza denominata); in caso contrario, restituisce NULL.|WCHAR*|  
   
- *len*  
+ *Len*  
  Puntatore a una variabile **int** che contiene la lunghezza in byte del valore *field* restituito. Se *len* è NULL, la lunghezza non viene restituita. Quando viene restituito NULL, **len* è impostato su 0.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
@@ -68,7 +69,7 @@ len
 > [!IMPORTANT]  
 >  Il buffer restituito dal server deve essere di sola lettura. In caso contrario, lo stato del server può risultare danneggiato.  
   
-## <a name="remarks"></a>Remarks  
- **Nota sulla sicurezza** È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+## <a name="remarks"></a>Osservazioni  
+ **Nota sulla sicurezza** È necessario esaminare accuratamente il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   
