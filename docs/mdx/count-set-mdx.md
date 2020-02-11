@@ -1,5 +1,5 @@
 ---
-title: Conteggio (Set) (MDX) | Microsoft Docs
+title: Conteggio (set) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047289"
 ---
 # <a name="count-set-mdx"></a>Count (Set) (MDX)
@@ -35,13 +35,13 @@ Set_Expression.Count
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- Il **conteggio (Set)** funzione include o esclude le celle vuote, a seconda della sintassi utilizzata. Se viene utilizzata la sintassi standard, le celle vuote possono essere esclusi o inclusi con il **EXCLUDEEMPTY** oppure **INCLUDEEMPTY** flag, rispettivamente. Se si utilizza la sintassi alternativa, la funzione includerà sempre le celle vuote.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **Count (set)** include o esclude le celle vuote, a seconda della sintassi utilizzata. Se si utilizza la sintassi standard, le celle vuote possono essere escluse o incluse utilizzando rispettivamente i flag **EXCLUDEEMPTY** o **INCLUDEEMPTY** . Se si utilizza la sintassi alternativa, la funzione includerà sempre le celle vuote.  
   
- Per escludere le celle vuote nel conteggio di un set, usare la sintassi standard e il parametro facoltativo **EXCLUDEEMPTY** flag.  
+ Per escludere le celle vuote nel conteggio di un set, utilizzare la sintassi standard e il flag facoltativo **EXCLUDEEMPTY** .  
   
 > [!NOTE]  
->  Il **conteggio (Set)** funzione consente di contare le celle vuote per impostazione predefinita. Al contrario, il **conteggio** funzione in OLE DB che conta un set esclude le celle vuote per impostazione predefinita.  
+>  Per impostazione predefinita, la funzione **Count (set)** conta le celle vuote. Al contrario, la funzione **count** in OLE DB che conta un set esclude le celle vuote per impostazione predefinita.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene contato il numero di celle nel set di membri che comprende i figli della gerarchia dell'attributo Model Name nella dimensione Product.  
@@ -53,14 +53,14 @@ SELECT Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
- Nell'esempio seguente conta il numero di prodotti nella dimensione Product utilizzando la **DrilldownLevel** funzione in combinazione con la **conteggio** (funzione).  
+ Nell'esempio seguente viene conteggiato il numero di prodotti nella dimensione Product utilizzando la funzione **DrilldownLevel** in combinazione con la funzione **count** .  
   
 ```  
 Count(DrilldownLevel (   
    [Product].[Product].[Product]))  
 ```  
   
- L'esempio seguente restituisce i rivenditori con alla diminuzione delle vendite rispetto al trimestre di calendario precedente, utilizzando il **conteggio** funzione in combinazione con la **filtro** (funzione) e un numero di altri funzioni. Questa query Usa la **aggregazione** (funzione) per supportare la selezione di più membri dell'area geografica, ad esempio la selezione da un elenco di riepilogo a discesa in un'applicazione client.  
+ Nell'esempio seguente vengono restituiti i rivenditori con vendite in calo rispetto al trimestre di calendario precedente, utilizzando la funzione **count** insieme alla funzione **Filter** e a una serie di altre funzioni. Questa query utilizza la funzione di **aggregazione** per supportare la selezione di più membri Geography, ad esempio per la selezione da un elenco a discesa in un'applicazione client.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -94,13 +94,13 @@ WHERE ([Geography].[State-Province].x,
  [Conteggio &#40;dimensione&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
  [Conteggio &#40;livelli di gerarchia&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
  [Conteggio &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [DrilldownLevel &#40;&#41;MDX](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers &#40;&#41;MDX](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize &#40;&#41;MDX](../mdx/hierarchize-mdx.md)   
+ [Proprietà &#40;&#41;MDX](../mdx/properties-mdx.md)   
+ [Aggregazione MDX &#40;&#41;](../mdx/aggregate-mdx.md)   
+ [Filtrare &#40;&#41;MDX](../mdx/filter-mdx.md)   
+ [PrevMember &#40;&#41;MDX](../mdx/prevmember-mdx.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

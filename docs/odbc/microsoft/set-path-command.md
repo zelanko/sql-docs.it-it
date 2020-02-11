@@ -1,5 +1,5 @@
 ---
-title: SET PATH (comando) | Microsoft Docs
+title: Comando SET PATH | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063642"
 ---
 # <a name="set-path-command"></a>SET PATH (comando)
-Specifica un percorso per la ricerca di file. Per informazioni specifiche del driver, vedere la sezione Osservazioni.  
+Specifica un percorso per le ricerche di file. Per informazioni specifiche del driver, vedere la sezione Osservazioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,27 +30,27 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- DA [ *percorso*]  
- Specifica le directory in cui che si desidera eseguire la ricerca di Visual FoxPro. Utilizzare virgole o punti e virgola per separare le directory.  
+ A [ *percorso*]  
+ Specifica le directory in cui si vuole eseguire la ricerca in Visual FoxPro. Usare virgole o punti e virgola per separare le directory.  
   
-## <a name="remarks"></a>Note  
- SET PATH consente di specificare i percorsi di ricerca per altri programmi Visual FoxPro che possono essere chiamati all'interno di stored procedure. SET PATH non verrà modificato il percorso dell'origine dati specificato per la connessione.  
+## <a name="remarks"></a>Osservazioni  
+ SET PATH consente di specificare i percorsi di ricerca per altri programmi Visual FoxPro che possono essere chiamati all'interno delle stored procedure. SET PATH non modificherà il percorso dell'origine dati specificata per la connessione.  
   
- Imposta percorso a senza emettere *percorso* per ripristinare il percorso di directory o cartella predefinita.  
+ Problema impostare percorso su senza *percorso* per ripristinare il percorso della directory o della cartella predefinita.  
   
-## <a name="driver-remarks"></a>Sezione Osservazioni di driver  
- Se si esegue percorso impostato in una stored procedure, verrà ignorato per i comandi e le funzioni seguenti:  
+## <a name="driver-remarks"></a>Osservazioni del driver  
+ Se si rilascia il percorso SET in una stored procedure, questo verrà ignorato dalle funzioni e dai comandi seguenti:  
   
--   Funzioni di catalogo, ad esempio [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) e [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) ignorerà il nuovo percorso e continuare a fare riferimento al percorso specificato dall'origine dei dati nelle [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) o[ SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+-   Le funzioni di catalogo come [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) e [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) ignoreranno il nuovo percorso e continueranno a fare riferimento al percorso specificato dall'origine dati in [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) o [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
--   Ignorerà il nuovo percorso e continuare a fare riferimento al percorso specificato dall'origine dei dati in comandi, ad esempio SELECT, INSERT, UPDATE, DELETE e CREATE TABLE **SQLPrepare** oppure **SQLExecDirect**.  
+-   I comandi come SELECT, INSERT, UPDATE, DELETE e CREATE TABLE ignoreranno il nuovo percorso e continueranno a fare riferimento al percorso specificato dall'origine dati in **SQLPrepare** o **SQLExecDirect**.  
   
- Se si rilascia percorso impostato in una stored procedure e successivamente non imposta il percorso allo stato originale, altre connessioni al database utilizza il nuovo percorso (poiché SET PATH non ha l'ambito per le sessioni di data).  
+ Se si esegue SET PATH in una stored procedure e non si imposta successivamente il percorso sullo stato originale, altre connessioni al database utilizzeranno il nuovo percorso, perché SET PATH non è limitato alle sessioni di dati.  
   
  Se si desidera creare, selezionare o aggiornare le tabelle in una directory diversa da quella specificata dall'origine dati, specificare il percorso completo del file con il comando.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Configurazione ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
- [SQLColumns (Driver ODBC Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
- [SQLDriverConnect (Driver ODBC Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
+ [Finestra di dialogo di installazione di Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
+ [SQLColumns (driver ODBC Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
+ [SQLDriverConnect (driver ODBC Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables (driver ODBC Visual FoxPro)](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)

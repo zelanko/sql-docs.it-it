@@ -1,5 +1,5 @@
 ---
-title: Gli endpoint di catalogo (Transact-SQL) | Microsoft Docs
+title: Viste del catalogo degli endpoint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 98838772b53b5b650aa2d268049afde29443277e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033027"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>Viste del catalogo degli endpoint (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68033027"
 |[sys.http_endpoints](../../relational-databases/system-catalog-views/sys-http-endpoints-transact-sql.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Viste di sistema &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

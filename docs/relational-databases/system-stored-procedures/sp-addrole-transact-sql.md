@@ -18,21 +18,21 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030924"
 ---
-# <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
+# <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un nuovo ruolo di database nel database corrente.  
   
 > [!IMPORTANT]
->  **sp_addrole** è inclusa per compatibilità con le versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e potrebbero non essere supportate nelle versioni future. Uso [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) invece.  
+>  **sp_addrole** è incluso per la compatibilità con le versioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti di e potrebbe non essere supportato in una versione futura. In alternativa, usare [create Role](../../t-sql/statements/create-role-transact-sql.md) .  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,25 +42,25 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @rolename = ] 'role'` È il nome del nuovo ruolo del database. *ruolo* è un **sysname**, non prevede alcun valore predefinito. *ruolo* deve essere un identificatore (ID) valido e non deve esistere già nel database corrente.  
+`[ @rolename = ] 'role'`Nome del nuovo ruolo del database. *Role* è di **tipo sysname**e non prevede alcun valore predefinito. *Role* deve essere un identificatore (ID) valido e non deve essere già presente nel database corrente.  
   
-`[ @ownername = ] 'owner'` È il proprietario del nuovo ruolo del database. *proprietario* è un **sysname**, con un valore predefinito dell'utente corrente in esecuzione. *proprietario* deve essere un utente del database o ruolo del database nel database corrente.  
+`[ @ownername = ] 'owner'`Proprietario del nuovo ruolo del database. *owner* è di **tipo sysname**e il valore predefinito è l'utente attualmente in esecuzione. il *proprietario* deve essere un utente del database o un ruolo del database nel database corrente.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- I nomi dei ruoli di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere da 1 a 128 caratteri. Sono consentiti simboli, numeri e lettere. I nomi dei ruoli predefiniti del database non possono: contenere un carattere di barra rovesciata (\\), essere NULL o una stringa vuota ( **'** ).  
+## <a name="remarks"></a>Osservazioni  
+ I nomi dei ruoli di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere da 1 a 128 caratteri. Sono consentiti simboli, numeri e lettere. I nomi dei ruoli del database non possono: contenere un carattere\\barra rovesciata (), essere null o una stringa vuota (**''**).  
   
- Dopo aver aggiunto un ruolo del database, utilizzare [sp_addrolemember &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) per aggiungere entità al ruolo. Quando si utilizza l'istruzione GRANT, DENY o REVOKE per applicare autorizzazioni al ruolo, i membri corrispondenti ereditano tali autorizzazioni come se fossero state assegnate direttamente ai relativi account.  
+ Dopo l'aggiunta di un ruolo del database, utilizzare [sp_addrolemember &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) per aggiungere entità al ruolo. Quando si utilizza l'istruzione GRANT, DENY o REVOKE per applicare autorizzazioni al ruolo, i membri corrispondenti ereditano tali autorizzazioni come se fossero state assegnate direttamente ai relativi account.  
   
 > [!NOTE]  
 >  Non è possibile creare nuovi ruoli di server. I ruoli possono essere creati solo a livello di database.  
   
- **sp_addrole** non può essere utilizzata in una transazione definita dall'utente.  
+ Impossibile utilizzare **sp_addrole** all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione CREATE ROLE per il database. Per la creazione di uno schema, è richiesta l'autorizzazione CREATE SCHEMA per il database. Se *proprietario* è specificato come un utente o gruppo, è richiesta l'autorizzazione IMPERSONATE in tale utente o gruppo. Se *proprietario* è specificato come un ruolo, richiede l'autorizzazione ALTER per tale ruolo o in un membro di tale ruolo. Se owner è specificato come ruolo di applicazione, è richiesta l'autorizzazione ALTER per quel ruolo di applicazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione CREATE ROLE per il database. Per la creazione di uno schema, è richiesta l'autorizzazione CREATE SCHEMA per il database. Se il *proprietario* viene specificato come utente o gruppo, richiede la rappresentazione per tale utente o gruppo. Se il *proprietario* viene specificato come ruolo, è richiesta l'autorizzazione ALTER per tale ruolo o per un membro di tale ruolo. Se owner è specificato come ruolo di applicazione, è richiesta l'autorizzazione ALTER per quel ruolo di applicazione.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene aggiunto un nuovo ruolo `Managers` al database corrente.  
@@ -71,7 +71,7 @@ EXEC sp_addrole 'Managers';
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREAZIONE di un ruolo &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

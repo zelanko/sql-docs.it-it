@@ -1,5 +1,5 @@
 ---
-title: Viste del catalogo degli eventi (Transact-SQL) estesa | Microsoft Docs
+title: Viste del catalogo degli eventi estesi (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5cfbdced0cae3188f8bfd50f2b0c12278f48a50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033016"
 ---
 # <a name="extended-events-catalog-views-transact-sql"></a>Viste del catalogo degli eventi estesi (Transact-SQL)

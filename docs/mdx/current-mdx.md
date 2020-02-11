@@ -1,5 +1,5 @@
 ---
-title: Corrente (MDX) | Microsoft Docs
+title: Current (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 821d517419b90df44b7943a1e0edde12ef667b6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047118"
 ---
 # <a name="current-mdx"></a>Current (MDX)
@@ -31,16 +31,16 @@ Set_Expression.Current
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- La tupla su cui si opera ad ogni passaggio di un'iterazione corrisponde alla tupla corrente. Il **correnti** funzione restituisce tale tupla. È valida solo durante un'iterazione su un set.  
+## <a name="remarks"></a>Osservazioni  
+ La tupla su cui si opera ad ogni passaggio di un'iterazione corrisponde alla tupla corrente. La funzione **corrente** restituisce tale tupla. È valida solo durante un'iterazione su un set.  
   
- Includono funzioni MDX che eseguono iterazioni in un set di [genera](../mdx/generate-mdx.md) (funzione).  
+ Le funzioni MDX che scorrono un set includono la funzione [generate](../mdx/generate-mdx.md) .  
   
 > [!NOTE]  
 >  La funzione viene eseguita correttamente solo con set denominati, utilizzando un alias del set o definendo un set denominato.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come utilizzare il **correnti** funzione all'interno **genera**:  
+ Nell'esempio seguente viene illustrato come utilizzare la funzione **corrente** all'interno di **generate**:  
   
  `WITH`  
   
@@ -67,6 +67,6 @@ Set_Expression.Current
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

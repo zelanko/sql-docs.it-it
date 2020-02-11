@@ -1,5 +1,5 @@
 ---
-title: Chiamata di procedura | Microsoft Docs
+title: Chiamata di routine | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: b9ff2c3a-2003-4832-adbe-08dd0f5ad948
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc37ef6d268dba71f8270909ea9c5b938ef3ee75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070487"
 ---
 # <a name="procedure-invocation"></a>Chiamata di procedura
-Quando viene usato il driver Microsoft Access, le procedure possono essere richiamate dal driver tramite il **SQLExecDirect** oppure **SQLPrepare** funzione con la sintassi seguente: {CHIAMARE *nome procedura*  [(*parametro*[,*parametro*]...)]}. Si noti che le espressioni non sono supportate come parametri per una routine chiamata.  
+Quando si utilizza il driver Microsoft Access, le procedure possono essere richiamate dal driver utilizzando la funzione **SQLExecDirect** o **SQLPrepare** con la sintassi seguente: {Call *procedure-name* [(*Parameter*[,*Parameter*]...)]}. Si noti che le espressioni non sono supportate come parametri di una stored procedure chiamata.  
   
- Se un nome di procedure include un trattino, il nome deve essere delimitato tra virgolette back (').  
+ Se il nome di una stored procedure include un trattino, il nome deve essere delimitato da virgolette inverso (').  
   
- Una query con parametri può essere chiamata utilizzando l'istruzione precedente.
+ Una query con parametri può essere chiamata usando l'istruzione precedente.

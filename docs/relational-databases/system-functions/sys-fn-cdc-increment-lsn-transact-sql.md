@@ -21,18 +21,18 @@ ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046376"
 ---
-# <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
+# <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce il successivo numero di sequenza del file di log (LSN) nella sequenza basata sul numero LSN specificato.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,17 +43,17 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>Argomenti  
  *lsn_value*  
- Valore LSN. *lsn_value* viene **binary(10)** .  
+ Valore LSN. *lsn_value* è **binario (10)**.  
   
 ## <a name="return-type"></a>Tipo restituito  
- **binary(10)**  
+ **binario (10)**  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Il valore LSN restituito dalla funzione è sempre maggiore del valore specificato e non esiste alcun valore LSN tra i due valori.  
   
  Per eseguire sistematicamente query su un flusso di dati delle modifiche, è possibile ripetere periodicamente la chiamata della funzione di query, specificando ogni volta un nuovo intervallo di query per delimitare le modifiche restituite nella query. Per assicurarsi che non si verifichino perdite di dati, il limite superiore della query precedente viene spesso utilizzato per generare il limite inferiore della query successiva. Poiché l'intervallo di query è un intervallo chiuso, il nuovo limite inferiore deve essere più grande del limite superiore precedente, ma piccolo abbastanza da garantire che nessuna modifica abbia valori LSN compresi tra questo valore e il limite superiore precedente. La funzione sys.fn_cdc_increment_lsn viene utilizzata per ottenere questo valore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database public.  
   
 ## <a name="examples"></a>Esempi  
@@ -71,9 +71,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.fn_cdc_decrement_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys. fn_cdc_decrement_lsn &#40;&#41;Transact-SQL](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
+ [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Informazioni su Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

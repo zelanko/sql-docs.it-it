@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042906"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68042906"
 
   Vengono restituite informazioni sul rilevamento delle modifiche per una tabella. È possibile utilizzare questa istruzione per restituire tutte le modifiche per una tabella o informazioni sul rilevamento delle modifiche per una riga specifica.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,27 +46,27 @@ CHANGETABLE (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Le modifiche apportate *tabella* , *last_sync_version*  
- Restituisce informazioni di rilevamento per tutte le modifiche apportate a una tabella che si sono verificate a partire dalla versione specificato da *last_sync_version*.  
+ *Tabella* delle modifiche, *last_sync_version*  
+ Restituisce informazioni di rilevamento per tutte le modifiche a una tabella che si sono verificate a partire dalla versione specificata da *last_sync_version*.  
   
- *table*  
+ *tavolo*  
  Tabella definita dall'utente di cui ottenere le modifiche rilevate. Il rilevamento delle modifiche deve essere abilitato per la tabella. È possibile utilizzare un nome di tabella composto da una, due, tre o quattro parti. Il nome della tabella può esserne un sinonimo.  
   
  *last_sync_version*  
  Quando ottiene modifiche, l'applicazione chiamante deve specificare il punto dal quale sono richieste le modifiche. Tale punto viene specificato da last_sync_version. La funzione restituisce informazioni per tutte le righe modificate a partire dalla versione indicata. L'applicazione esegue una query per ricevere modifiche con una versione successiva a quella restituita da last_sync_version.  
   
- In genere, prima di ottenere le modifiche, l'applicazione chiamerà **change_tracking_current_version ()** per ottenere la versione che verrà utilizzata sono necessarie le modifiche all'ora successive. Non è pertanto necessario che l'applicazione interpreti o conosca il valore effettivo.  
+ In genere, prima di ottenere le modifiche, l'applicazione chiamerà **CHANGE_TRACKING_CURRENT_VERSION ()** per ottenere la versione che verrà utilizzata la volta successiva che sono necessarie le modifiche. Non è pertanto necessario che l'applicazione interpreti o conosca il valore effettivo.  
   
  Poiché last_sync_version viene ottenuto dall'applicazione chiamante, il relativo valore dovrà essere salvato in modo permanente in tale applicazione. In caso di perdita del valore, sarà necessario reinizializzare i dati.  
   
- *last_sync_version* viene **bigint**. Il valore deve essere scalare. Un'espressione provocherà un errore di sintassi.  
+ *last_sync_version* è di tipo **bigint**. Il valore deve essere scalare. Un'espressione provocherà un errore di sintassi.  
   
  Se il valore è NULL, vengono restituite tutte le modifiche rilevate.  
   
- *last_sync_version* devono essere convalidate per assicurarsi che non è troppo vecchio, in quanto alcune o tutte le informazioni sulle modifiche potrebbero sono stati puliti in base al periodo di memorizzazione configurato per il database. Per altre informazioni, vedere [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ è necessario convalidare *last_sync_version* per assicurarsi che non sia troppo vecchio, perché alcune o tutte le informazioni sulle modifiche potrebbero essere state eliminate in base al periodo di memorizzazione configurato per il database. Per ulteriori informazioni, vedere [CHANGE_TRACKING_MIN_VALID_VERSION &#40;&#41;Transact-SQL](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [Opzioni ALTER database set &#40;transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- VERSIONE *tabella*, {< primary_key_values >}  
- Restituisce le informazioni più recenti sul rilevamento delle modifiche per una riga specificata. I valori della chiave primaria devono consentire di identificare la riga. < primary_key_values > identifica le colonne chiave primaria e specifica i valori. I nomi delle colonne chiave primaria possono essere specificati in qualsiasi ordine.  
+ *Tabella*della versione, {<primary_key_values>}  
+ Restituisce le informazioni più recenti sul rilevamento delle modifiche per una riga specificata. I valori della chiave primaria devono consentire di identificare la riga. <primary_key_values> identifica le colonne chiave primaria e specifica i valori. I nomi delle colonne chiave primaria possono essere specificati in qualsiasi ordine.  
   
  *Tabella*  
  Tabella definita dall'utente di cui ottenere le informazioni sul rilevamento delle modifiche. Il rilevamento delle modifiche deve essere abilitato per la tabella. È possibile utilizzare un nome di tabella composto da una, due, tre o quattro parti. Il nome della tabella può esserne un sinonimo.  
@@ -75,19 +75,19 @@ CHANGETABLE (
  Specifica il nome della colonna o delle colonne chiave primaria. È possibile specificare in qualsiasi ordine più nomi di colonna.  
   
  *Valore*  
- Il valore della chiave primaria. Se sono presenti più colonne chiave primaria, i valori devono essere specificati nello stesso ordine come le colonne sono visualizzate nel *column_name* elenco.  
+ Il valore della chiave primaria. Se sono presenti più colonne chiave primaria, i valori devono essere specificati nello stesso ordine in cui le colonne vengono visualizzate nell'elenco *column_name* .  
   
- [COME] *table_alias* [(*column_alias* [,... *n* ])]  
+ COME *table_alias* [(*column_alias* [,... *n* ])]  
  Fornisce nomi per i risultati restituiti da CHANGETABLE.  
   
  *table_alias*  
- Nome alias della tabella restituito da CHANGETABLE. *table_alias* è obbligatorio e deve essere una valida [identificatore](../../relational-databases/databases/database-identifiers.md).  
+ Nome alias della tabella restituito da CHANGETABLE. *table_alias* è obbligatorio e deve essere un [identificatore](../../relational-databases/databases/database-identifiers.md)valido.  
   
  *column_alias*  
  Alias di colonna facoltativo o elenco di alias di colonna per le colonne restituite da CHANGETABLE. Consente la personalizzazione dei nomi di colonna in caso di nomi duplicati nei risultati.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **table**  
+ **tavolo**  
   
 ## <a name="return-values"></a>Valori restituiti  
   
@@ -98,10 +98,10 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valore della versione associato all'ultima modifica alla riga|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valori della versione associati all'ultima operazione di inserimento.|  
-|SYS_CHANGE_OPERATION|**nchar(1)**|Specifica il tipo di modifica:<br /><br /> **U** = aggiornamento<br /><br /> **Ho** = inserimento<br /><br /> **1!d** = Delete|  
-|SYS_CHANGE_COLUMNS|**varbinary(4100)**|Vengono elencate le colonne modificate a partire da last_sync_version (versione di riferimento). Si noti che le colonne calcolate non vengono mai elencate come modificato.<br /><br /> Il valore è NULL quando viene soddisfatta una o più delle condizioni seguenti:<br /><br /> Il rilevamento delle modifiche per le colonne non è abilitato.<br /><br /> L'operazione è di inserimento o di eliminazione.<br /><br /> Tutte le colonne chiave non primaria sono state aggiornate in un'unica operazione. Questo valore binario non deve essere interpretato direttamente. Per interpretarlo, utilizzare invece [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
-|SYS_CHANGE_CONTEXT|**varbinary(128)**|Modificare le informazioni di contesto che è possibile specificare facoltativamente utilizzando la [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) clausola come parte di un'istruzione INSERT, UPDATE o DELETE.|  
-|\<valore della colonna chiave primaria >|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  
+|SYS_CHANGE_OPERATION|**nchar (1)**|Specifica il tipo di modifica:<br /><br /> **U** = aggiornamento<br /><br /> **I** = inserimento<br /><br /> **D** = Elimina|  
+|SYS_CHANGE_COLUMNS|**varbinary (4100)**|Vengono elencate le colonne modificate a partire da last_sync_version (versione di riferimento). Si noti che le colonne calcolate non vengono mai elencate come modificate.<br /><br /> Il valore è NULL quando viene soddisfatta una o più delle condizioni seguenti:<br /><br /> Il rilevamento delle modifiche per le colonne non è abilitato.<br /><br /> L'operazione è di inserimento o di eliminazione.<br /><br /> Tutte le colonne chiave non primaria sono state aggiornate in un'unica operazione. Questo valore binario non deve essere interpretato direttamente. Per interpretarlo, usare invece [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
+|SYS_CHANGE_CONTEXT|**varbinary (128)**|Modificare le informazioni di contesto che è possibile specificare facoltativamente utilizzando la clausola [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) come parte di un'istruzione INSERT, Update o DELETE.|  
+|\<valore della colonna chiave primaria>|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Quando si specifica VERSION, viene restituita una riga con le colonne seguenti.  
@@ -109,20 +109,20 @@ CHANGETABLE (
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Il valore della versione corrente associato alla riga.<br /><br /> Il valore è NULL se non è stata effettuata alcuna modifica per un periodo superiore a quello di memorizzazione del rilevamento delle modifiche, oppure se la riga non è stata modificata a partire dall'abilitazione del rilevamento delle modifiche.|  
-|SYS_CHANGE_CONTEXT|**varbinary(128)**|Modificare le informazioni di contesto specificabili liberamente utilizzando la clausola WITH come parte di un'istruzione INSERT, UPDATE o DELETE.|  
-|\<valore della colonna chiave primaria >|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  
+|SYS_CHANGE_CONTEXT|**varbinary (128)**|Modificare le informazioni di contesto specificabili liberamente utilizzando la clausola WITH come parte di un'istruzione INSERT, UPDATE o DELETE.|  
+|\<valore della colonna chiave primaria>|Come per le colonne della tabella utente|Valori della chiave primaria per la tabella rilevata. Questi valori identificano in modo univoco ogni riga nella tabella utente.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La funzione CHANGETABLE è in genere utilizzata nella clausola FROM di una query come se si trattasse di una tabella.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
- Per ottenere i dati delle righe per le righe nuove o modificate, unire il set di risultati alla tabella utente utilizzando le colonne chiave primaria. Viene restituita solo una riga per ogni riga nella tabella utente che è stata modificata, anche se sono state apportate più modifiche alla stessa riga perché la *last_sync_version* valore.  
+ Per ottenere i dati delle righe per le righe nuove o modificate, unire il set di risultati alla tabella utente utilizzando le colonne chiave primaria. Viene restituita una sola riga per ogni riga della tabella utente che è stata modificata, anche se sono state apportate più modifiche alla stessa riga rispetto al valore *last_sync_version* .  
   
  Le modifiche alla colonna chiave primaria non vengono mai contrassegnate come aggiornamenti. Se il valore della chiave primaria cambia, ciò viene considerato come un'eliminazione del valore obsoleto e un inserimento del nuovo valore.  
   
  Se si elimina una riga per poi inserire una riga con la chiave primaria obsoleta, la modifica viene considerata come un aggiornamento per tutte le colonne nella riga.  
   
- I valori restituiti per le colonne SYS_CHANGE_OPERATION e SYS_CHANGE_COLUMNS sono relativi alla linea di base (last_sync_version) specificata. Ad esempio, se un'operazione di inserimento viene effettuata alla versione 10 e un'operazione di aggiornamento alla versione 15 e se la linea di base *last_sync_version* è 12, verrà riportato un aggiornamento. Se il *last_sync_version* valore è 8, verrà riportato un inserimento. I valori SYS_CHANGE_COLUMNS non riporteranno mai colonne calcolate come aggiornate.  
+ I valori restituiti per le colonne SYS_CHANGE_OPERATION e SYS_CHANGE_COLUMNS sono relativi alla baseline (last_sync_version) specificata. Se, ad esempio, è stata eseguita un'operazione di inserimento alla versione 10 e un'operazione di aggiornamento alla versione 15 e se la linea di base *last_sync_version* è 12, verrà segnalato un aggiornamento. Se il valore *last_sync_version* è 8, verrà segnalato un inserimento. I valori SYS_CHANGE_COLUMNS non riporteranno mai colonne calcolate come aggiornate.  
   
  Generalmente, vengono rilevate tutte le operazioni che consentono di inserire, aggiornare o eliminare i dati nelle tabelle utente, inclusa l'istruzione MERGE.  
   
@@ -141,8 +141,8 @@ CHANGETABLE (
   
  Il valore di SYS_CHANGE_VERSION potrebbe essere NULL se non sono state apportate modifiche per un periodo superiore a quello di memorizzazione, ad esempio se la pulizia ha eliminato le informazioni sulle modifiche, o se la riga non è mai stata modificata dal momento dell'abilitazione del rilevamento delle modifiche per la tabella.  
   
-## <a name="permissions"></a>Permissions  
- Richiede le autorizzazioni seguenti per la tabella specificata dal *tabella* valore per ottenere informazioni di rilevamento delle modifiche:  
+## <a name="permissions"></a>Autorizzazioni  
+ Sono necessarie le autorizzazioni seguenti per la tabella specificata dal valore della *tabella* per ottenere informazioni sul rilevamento delle modifiche:  
   
 -   Autorizzazione SELECT per le colonne chiave primaria  
   
@@ -212,7 +212,7 @@ WHERE
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di rilevamento delle modifiche &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
- [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
+ [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;&#41;Transact-SQL](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   

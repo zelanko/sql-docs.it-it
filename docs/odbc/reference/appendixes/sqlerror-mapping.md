@@ -14,23 +14,23 @@ ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f24a305c2f22ef4cfacbbe4bcbcf498eab648f1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064470"
 ---
 # <a name="sqlerror-mapping"></a>Mapping di SQLError
-Quando un'applicazione chiama **SQLError** tramite un database ODBC *3.x* driver, la chiamata a  
+Quando un'applicazione chiama **SQLError** attraverso un driver ODBC *3. x* , la chiamata a  
   
 ```  
 SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)   
 ```  
   
- viene eseguito il mapping a  
+ viene mappato a  
   
 ```  
 SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)  
 ```  
   
- con il *HandleType* impostata sul valore SQL_HANDLE_ENV, SQL_HANDLE_DBC o SQL_HANDLE_STMT, come necessario, argomento e il *gestire* argomento impostato sul valore in *henv*, *hdbc*, o *hstmt*, nel modo appropriato. Il *RecNumber* argomento è determinato da Gestione Driver.
+ con l'argomento *HandleType* impostato sul valore SQL_HANDLE_ENV, SQL_HANDLE_DBC o SQL_HANDLE_STMT, in base alle esigenze, e l'argomento *handle* impostato sul valore in *HENV*, *HDBC*o *HSTMT*, a seconda dei casi. L'argomento *RecNumber* è determinato da Gestione driver.

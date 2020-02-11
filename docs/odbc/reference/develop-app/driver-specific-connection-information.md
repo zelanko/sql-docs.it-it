@@ -1,5 +1,5 @@
 ---
-title: Informazioni di connessione specifici del driver | Microsoft Docs
+title: Informazioni di connessione specifiche del driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,26 +19,26 @@ ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69f2c98678739a8b7879e152e13546f2bf9b9cc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046927"
 ---
 # <a name="driver-specific-connection-information"></a>Informazioni di connessione specifiche del driver
-**SQLConnect** presuppone che un nome dell'origine dati, l'ID utente e password siano sufficienti per connettersi a un'origine dati e che tutte le altre informazioni di connessione possono essere archiviati nel sistema. Non si tratta spesso il caso. Ad esempio, un driver potrebbe essere necessario un ID utente e password per accedere a un server e un ID utente diverso e una password per accedere a un sistema DBMS. In quanto **SQLConnect** accetta un ID singolo utente e una password, ciò significa che l'altro ID utente e password devono essere archiviati con le informazioni di origine dati nel sistema se **SQLConnect** deve essere utilizzato. Si tratta di una potenziale violazione della sicurezza e deve essere evitata, a meno che la password viene crittografata.  
+**SQLConnect** presuppone che il nome dell'origine dati, l'ID utente e la password siano sufficienti per connettersi a un'origine dati e che tutte le altre informazioni di connessione possano essere archiviate nel sistema. Spesso non è il caso. Un driver, ad esempio, potrebbe richiedere un ID utente e una password per accedere a un server e un ID utente e una password diversi per accedere a un sistema DBMS. Poiché **SQLConnect** accetta un ID utente e una password singoli, questo significa che l'altro ID utente e la password devono essere archiviati con le informazioni sull'origine dati nel sistema, se è necessario utilizzare **SQLConnect** . Si tratta di una potenziale violazione della sicurezza e deve essere evitata a meno che la password non sia crittografata.  
   
- **SQLDriverConnect** consente al driver definire un quantità arbitraria di informazioni di connessione nelle coppie valore-parola chiave della stringa di connessione. Si supponga, ad esempio, che un driver richiede un nome dell'origine dati, un ID utente e una password per il server e un ID utente e una password per il sistema DBMS. Un programma personalizzato che utilizza sempre l'origine dati Corp XYZ potrebbe richiedere all'utente per gli ID e password e compilare il seguente set di coppie valore-parola chiave, oppure *stringa di connessione* per passare a **SQLDriverConnect**:  
+ **SQLDriverConnect** consente al driver di definire una quantità arbitraria di informazioni di connessione nelle coppie parola chiave/valore della stringa di connessione. Si supponga, ad esempio, che un driver richieda un nome dell'origine dati, un ID utente e una password per il server e un ID utente e una password per il sistema DBMS. Un programma personalizzato che usa sempre l'origine dati XYZ Corp potrebbe richiedere all'utente ID e password e compilare il seguente set di coppie parola chiave/valore, o *stringa di connessione,* da passare a **SQLDriverConnect**:  
   
 > [!NOTE]  
->  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, è necessario specificare `Trusted_Connection=yes` anziché le informazioni utente di ID e la password nella stringa di connessione.  
+>  Se ci si connette a un provider dell'origine dati che supporta l'autenticazione di Windows, `Trusted_Connection=yes` è necessario specificare al posto delle informazioni sull'ID utente e sulla password nella stringa di connessione.  
   
 ```  
 DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUserID};PWDDBMS={MyDBMSUserPassword};  
 ```  
   
- Il **DSN** parola chiave (Data Source Name) indica l'origine dati, il **UID** e **PWD** parole chiave specificano l'ID utente e password per il server e il **UIDDBMS**  e **PWDDBMS** parole chiave specificano l'ID utente e password per il sistema DBMS. Si noti che il punto e virgola finale è facoltativo. **SQLDriverConnect** analizza questa stringa; Usa il nome dell'origine dati XYZ Corp per recuperare le informazioni di connessione aggiuntive dal sistema, ad esempio l'indirizzo del server; e accede al server e al sistema DBMS con l'ID utente specificato e una password.  
+ La parola chiave **DSN** (Data Source Name) denomina l'origine dati, le parole chiave **UID** e **pwd** specificano l'ID utente e la password per il server e le parole chiave **UIDDBMS** e **PWDDBMS** specificano l'ID utente e la password per il sistema DBMS. Si noti che il punto e virgola finale è facoltativo. **SQLDriverConnect** analizza la stringa; Usa il nome dell'origine dati Corp XYZ per recuperare informazioni aggiuntive sulla connessione dal sistema, ad esempio l'indirizzo del server. e accedono al server e al sistema DBMS usando gli ID utente e le password specificati.  
   
- Coppie parola chiave / valore **SQLDriverConnect** devono rispettare determinate regole di sintassi. Le parole chiave e i relativi valori non devono contenere il **[]{}(),? \*=! @** caratteri. Il valore della **DSN** parola chiave non può essere costituito solo da spazi vuoti e non deve contenere spazi vuoti iniziali. A causa la grammatica del Registro di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri. Non sono consentiti spazi prima e dopo il segno di uguale nella coppia parola chiave / valore.  
+ Le coppie parola chiave/valore in **SQLDriverConnect** devono seguire determinate regole di sintassi. Le parole chiave e i relativi valori non devono contenere **[{}] (),;? = \*! @** caratteri. Il valore della parola chiave **DSN** non può essere costituito solo da spazi vuoti e non deve contenere spazi vuoti iniziali. Grazie alla grammatica del registro di sistema, le parole chiave e i nomi delle origini\\dati non possono contenere il carattere barra rovesciata (). Gli spazi non sono consentiti intorno al segno di uguale nella coppia parola chiave/valore.  
   
- Il **FILEDSN** parola chiave può essere utilizzata in una chiamata a **SQLDriverConnect** per specificare il nome di un file che contiene informazioni sull'origine dati (vedere [la connessione con origini dati dei File](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)più avanti in questa sezione). Il **SAVEFILE** parola chiave consente di specificare il nome di un file DSN in cui le coppie parola chiave / valore di una connessione riuscita effettuata dalla chiamata al metodo **SQLDriverConnect** verrà salvato. Per altre informazioni sulle origini dati dei file, vedere la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrizione della funzione.
+ La parola chiave **FileDSN** può essere usata in una chiamata a **SQLDriverConnect** per specificare il nome di un file che contiene informazioni sull'origine dati. vedere [connessione tramite origini dati file](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), più avanti in questa sezione. La parola chiave **SaveFile** può essere usata per specificare il nome di un file con estensione DSN in cui verranno salvate le coppie parola chiave/valore di una connessione riuscita effettuata dalla chiamata a **SQLDriverConnect** . Per ulteriori informazioni sulle origini dati dei file, vedere la descrizione della funzione [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) .

@@ -1,5 +1,5 @@
 ---
-title: Funzione (XQuery) Last | Microsoft Docs
+title: Funzione Last (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038999"
 ---
 # <a name="context-functions---last-xquery"></a>Funzioni di contesto - last (XQuery)
@@ -34,14 +34,14 @@ ms.locfileid: "68038999"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Note  
- In SQL Server **fn:last()** può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
+## <a name="remarks"></a>Osservazioni  
+ In SQL Server, **FN: Last ()** può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi (`[ ]`).  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>R. Utilizzo della funzione XQuery last() per recuperare le ultime due fasi di produzione  
- La query seguente recupera le ultime due fasi di produzione relative a un modello di prodotto specifico. Il valore, il numero di fasi di produzione, restituiti dai **Last** funzione viene utilizzata nella query seguente per recuperare le ultime due fasi di produzione.  
+ La query seguente recupera le ultime due fasi di produzione relative a un modello di prodotto specifico. Il valore, il numero di fasi di produzione, restituito dalla funzione **Last ()** viene utilizzato in questa query per recuperare le ultime due fasi di produzione.  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -59,9 +59,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Nella query precedente, il **Last** funzionare in /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` restituisce il numero di fasi di produzione. Tale valore viene utilizzato per recuperare l'ultima fase di produzione nel centro di lavorazione.  
+ Nella query precedente, la funzione **Last ()** in/`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` restituisce il numero di fasi di produzione. Tale valore viene utilizzato per recuperare l'ultima fase di produzione nel centro di lavorazione.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 ProductModelID Result    

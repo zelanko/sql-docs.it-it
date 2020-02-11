@@ -16,18 +16,18 @@ ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 92df93d1c14b10aa6587d0eaf13f4de81bc4d7f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046007"
 ---
-# <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
+# <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce il percorso completo dell'ultimo snapshot generato per una pubblicazione di tipo merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,26 +37,26 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**snapshot_folder**|**nvarchar(2000)**|Percorso completo della directory snapshot.|  
+|**snapshot_folder**|**nvarchar (2000)**|Percorso completo della directory snapshot.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_browsemergesnapshotfolder** viene utilizzata nella replica di tipo merge.  
   
  Se la pubblicazione è configurata in modo da generare file di snapshot sia nella directory di lavoro del server di pubblicazione che nella cartella snapshot del server di pubblicazione, nel set di risultati saranno presenti due righe, delle quali la prima contiene la cartella snapshot della pubblicazione e la seconda contiene la directory di lavoro del server di pubblicazione.  
   
  **sp_browsemergesnapshotfolder** è utile per determinare la directory in cui vengono generati i file di snapshot di tipo merge. Il percorso della cartella e il relativo contenuto possono quindi essere copiati su supporti rimovibili e lo snapshot può essere utilizzato per la sincronizzazione di una sottoscrizione da una posizione snapshot alternativa.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_browsemergesnapshotfolder**.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_browsemergesnapshotfolder**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

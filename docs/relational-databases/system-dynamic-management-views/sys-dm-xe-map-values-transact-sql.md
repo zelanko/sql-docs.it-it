@@ -1,5 +1,5 @@
 ---
-title: DM xe_map_values (Transact-SQL) | Microsoft Docs
+title: sys. dm_xe_map_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,30 +20,30 @@ ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6eb770951e48f7145311fb75de18a17236a09d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090323"
 ---
-# <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
+# <a name="sysdm_xe_map_values-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce un mapping di chiavi numeriche interne in un testo leggibile.  
  
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(256)**|Nome della mappa. nome è univoco nel sistema locale. Non ammette i valori Null.|  
+|name|**nvarchar(256)**|Nome della mappa. il nome è univoco nel sistema locale. Non ammette i valori Null.|  
 |object_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene la mappa. Non ammette i valori Null.|  
 |map_key|**int**|Valore della chiave interna. Non ammette i valori Null.|  
-|map_value|**nvarchar(3072)**|Descrizione del valore della chiave. Non ammette i valori Null.|  
+|map_value|**nvarchar (3072)**|Descrizione del valore della chiave. Non ammette i valori Null.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalità delle relazioni  
   
-|From|Per|Relazione|  
+|Da|A|Relazione|  
 |----------|--------|------------------|  
 |dm_xe_map_values.object_package_guid<br /><br /> dm_xe_map_values.name|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Molti-a-uno| 
   

@@ -17,19 +17,19 @@ ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63d7c7dce51fe4f514232cfd0d5ae2e5abeb5b70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083179"
 ---
 # <a name="concurrency-types"></a>Tipi di concorrenza
-Per risolvere il problema di riduzione della concorrenza nei cursori, ODBC espone quattro diversi tipi di concorrenza dei cursori:  
+Per risolvere il problema relativo alla riduzione della concorrenza nei cursori, ODBC espone quattro tipi diversi di concorrenza del cursore:  
   
--   **Sola lettura** il cursore può leggere i dati, ma non è possibile aggiornare o eliminare dati. Questo è il tipo di concorrenza predefinita. Anche se il sistema DBMS potrebbe bloccare le righe per imporre la lettura ripetibile e livelli di isolamento serializzabile, può usare i blocchi in lettura invece di blocchi in scrittura. Ciò comporta una concorrenza più elevata perché almeno possono leggere i dati.  
+-   Sola **lettura** Il cursore può leggere i dati ma non può aggiornare o eliminare i dati. Si tratta del tipo di concorrenza predefinito. Sebbene il sistema DBMS possa bloccare le righe per applicare i livelli di isolamento Repeatable Read e Serializable, può utilizzare i blocchi Read anziché i blocchi Write. Ciò comporta una concorrenza più elevata perché altre transazioni possono almeno leggere i dati.  
   
--   **Blocco** il cursore utilizza il livello più basso di blocco necessario per assicurarsi che può aggiornare o eliminare righe nel set di risultati. Ciò comporta in genere i livelli di concorrenza molto bassa, soprattutto ai livelli di isolamento delle transazioni Repeatable Read e Serializable.  
+-   **Blocco** di Il cursore utilizza il livello di blocco più basso necessario per verificare che sia in grado di aggiornare o eliminare righe nel set di risultati. Questo in genere comporta livelli di concorrenza molto bassi, soprattutto a livello di isolamento delle transazioni Repeatable Read e Serializable.  
   
--   **La concorrenza ottimistica con le versioni di riga e la concorrenza ottimistica con valori** il cursore utilizza la concorrenza ottimistica: Aggiorna o Elimina le righe solo se non sono cambiati dall'ultima lettura. Per rilevare le modifiche, confronta le versioni delle righe o valori. Non c'è garanzia che il cursore sarà in grado di aggiornare o eliminare una riga, ma la concorrenza è molto maggiore rispetto a quando il blocco viene utilizzato. Per altre informazioni, vedere la sezione seguente [la concorrenza ottimistica](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
+-   **Concorrenza ottimistica che utilizza versioni di riga e concorrenza ottimistica utilizzando valori** Il cursore usa la concorrenza ottimistica: Aggiorna o Elimina le righe solo se non sono state modificate dall'ultima lettura. Per rilevare le modifiche, vengono confrontate le versioni di riga o i valori. Non vi è alcuna garanzia che il cursore sia in grado di aggiornare o eliminare una riga, ma la concorrenza è molto più elevata rispetto a quando si usa il blocco. Per ulteriori informazioni, vedere la sezione seguente, [concorrenza ottimistica](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
- Un'applicazione specifica quale tipo di concorrenza vuole che il cursore da utilizzare con l'attributo di istruzione SQL_ATTR_CONCURRENCY. Per determinare quali tipi sono supportati, chiama **SQLGetInfo** con l'opzione SQL_SCROLL_CONCURRENCY.
+ In un'applicazione viene specificato il tipo di concorrenza che si desidera venga utilizzato dal cursore con l'attributo dell'istruzione SQL_ATTR_CONCURRENCY. Per determinare quali tipi sono supportati, viene chiamato **SQLGetInfo** con l'opzione SQL_SCROLL_CONCURRENCY.

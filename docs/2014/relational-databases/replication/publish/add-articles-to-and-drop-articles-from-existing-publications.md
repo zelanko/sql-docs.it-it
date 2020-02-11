@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882331"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Aggiunta ed eliminazione di articoli a e da pubblicazioni esistenti
@@ -33,7 +33,7 @@ ms.locfileid: "73882331"
  L'aggiunta di un articolo comporta l'aggiunta dell'articolo alla pubblicazione, la creazione di un nuovo snapshot per la pubblicazione e la sincronizzazione della sottoscrizione per applicare lo schema e i dati per il nuovo articolo.  
   
 > [!NOTE]
->  Se in una pubblicazione di tipo merge si aggiunge un nuovo articolo dal quale dipende un articolo esistente, è necessario specificare l'ordine di elaborazione per entrambi gli articoli tramite il parametro **\@processing_order** di [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione, specificare il valore **1** per il parametro **\@processing_order** di **sp_addmergearticle** e il valore **2** per il parametro **\@processing_order** di **sp_changemergearticle**, indicando il nome della tabella per il parametro **\@article**. Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, purché il numero per la funzione sia inferiore a quello per la tabella.  
+>  Se si aggiunge un articolo a una pubblicazione di tipo merge e un articolo esistente dipende dal nuovo articolo, è necessario specificare un ordine di elaborazione per entrambi gli articoli ** \@** utilizzando il parametro processing_order di [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione, specificare il valore **1** per il parametro **\@processing_order** di **sp_addmergearticle** e il valore **2** per il parametro **\@processing_order** di **sp_changemergearticle**, indicando il nome della tabella per il parametro **\@article**. Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, purché il numero per la funzione sia inferiore a quello per la tabella.  
   
 1.  Aggiungere uno o più articoli tramite uno dei metodi seguenti:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73882331"
   
 -   Per pubblicazioni di tipo merge con un livello di compatibilità inferiore a 90RTM, gli articoli possono essere eliminati senza particolari considerazioni prima della sincronizzazione iniziale delle sottoscrizioni. Se un articolo viene eliminato dopo la sincronizzazione di una o più sottoscrizioni, è necessario che le sottoscrizioni vengano eliminate, ricreate e sincronizzate.  
   
--   Per le pubblicazioni snapshot o transazionali, gli articoli possono essere eliminati senza particolari considerazioni prima della creazione delle sottoscrizioni. Se un articolo viene eliminato dopo la creazione di una o più sottoscrizioni, è necessario che le sottoscrizioni vengano eliminate, ricreate e sincronizzate. Per altre informazioni sull'eliminazione delle sottoscrizioni, vedere [Sottoscrivere le pubblicazioni](../subscribe-to-publications.md) e [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). **sp_dropsubscription** consente all'utente di eliminare un solo articolo dalla sottoscrizione anziché la sottoscrizione intera.  
+-   Per le pubblicazioni snapshot o transazionali, gli articoli possono essere eliminati senza particolari considerazioni prima della creazione delle sottoscrizioni. Se un articolo viene eliminato dopo la creazione di una o più sottoscrizioni, è necessario che le sottoscrizioni vengano eliminate, ricreate e sincronizzate. Per altre informazioni sull'eliminazione delle sottoscrizioni, vedere [Sottoscrivere le pubblicazioni](../subscribe-to-publications.md) e [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). **sp_dropsubscription** consente di eliminare un singolo articolo dalla sottoscrizione anziché l'intera sottoscrizione.  
   
 1.  L'eliminazione di un articolo da una pubblicazione implica l'eliminazione dell'articolo e la creazione di un nuovo snapshot per la pubblicazione. Se si elimina un articolo, lo snapshot corrente non è più valido ed è perciò necessario creare un nuovo snapshot.  
   

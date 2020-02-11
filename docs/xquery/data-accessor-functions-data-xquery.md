@@ -16,16 +16,16 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038975"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funzioni di accesso dati - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il valore tipizzato per ciascun elemento specificato da *$arg*.  
+  Restituisce il valore tipizzato per ogni elemento specificato da *$arg*.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +38,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  Sequenza di elementi per i quali verranno restituiti i valori tipizzati.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per i valori tipizzati sono valide le osservazioni seguenti:  
   
 -   Il valore tipizzato di un valore atomico è il valore atomico.  
@@ -55,19 +55,19 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   Se un nodo attributo è tipizzato con un tipo di XML Schema, il relativo valore tipizzato è il valore tipizzato corrispondente.  
   
--   Se il nodo dell'attributo è tipizzato, il relativo valore tipizzato è uguale al valore stringa che viene restituito come un'istanza di **xdt: untypedAtomic**.  
+-   Se il nodo attributo non è tipizzato, il relativo valore tipizzato è uguale al relativo valore stringa restituito come un'istanza di **xdt: untypedAtomic**.  
   
--   Se il nodo dell'elemento non è stato tipizzato, il relativo valore tipizzato è uguale al valore stringa che viene restituito come un'istanza di **xdt: untypedAtomic**.  
+-   Se il nodo dell'elemento non è stato tipizzato, il relativo valore tipizzato è uguale al relativo valore stringa restituito come un'istanza di **xdt: untypedAtomic**.  
   
  Per i nodi elemento tipizzati sono valide le osservazioni seguenti:  
   
--   Se l'elemento ha un tipo di contenuto semplice **data ()** restituisce il valore tipizzato dell'elemento.  
+-   Se l'elemento ha un tipo di contenuto semplice, **Data ()** restituisce il valore tipizzato dell'elemento.  
   
--   Se il nodo è di tipo complesso, xs: anyType, compresi **data ()** restituisce un errore statico.  
+-   Se il nodo è di tipo complesso, incluso XS: anyType, **Data ()** restituisce un errore statico.  
   
- Anche se tramite il **data ()** funzione è spesso facoltativa, come illustrato negli esempi seguenti, specificando la **data ()** funzione aumenta in modo esplicito la leggibilità della query. Per altre informazioni, vedere [nozioni fondamentali su XQuery](../xquery/xquery-basics.md).  
+ Sebbene l'utilizzo della funzione **Data ()** sia spesso facoltativo, come illustrato negli esempi seguenti, la specifica della funzione **Data ()** aumenta in modo esplicito la leggibilità delle query. Per altre informazioni, vedere [nozioni di base su XQuery](../xquery/xquery-basics.md).  
   
- Non è possibile specificare **data ()** nel codice XML creato, come illustrato nell'esempio seguente:  
+ Non è possibile specificare **i dati ()** nel codice XML costruito, come illustrato di seguito:  
   
 ```  
 declare @x xml  
@@ -76,10 +76,10 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>R. Utilizzo della funzione XQuery data() per estrarre il valore tipizzato di un nodo  
- La query seguente viene illustrato come la **data ()** funzione viene utilizzata per recuperare i valori di attributo, un elemento e un nodo di testo:  
+ Nella query seguente viene illustrato il modo in cui viene utilizzata la funzione **Data ()** per recuperare i valori di un attributo, di un elemento e di un nodo di testo:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -98,13 +98,13 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- Come accennato, il **data ()** funzione è facoltativa durante la creazione di attributi. Se non si specifica la **data ()** funzione, in modo implicito presuppone. La query seguente genera gli stessi risultati della query precedente:  
+ Come indicato in precedenza, la funzione **Data ()** è facoltativa quando si costruiscono attributi. Se non si specifica la funzione **Data ()** , si presuppone in modo implicito. La query seguente genera gli stessi risultati della query precedente:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -123,9 +123,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Gli esempi seguenti illustrano le istanze in cui il **data ()** è necessaria la funzione.  
+ Negli esempi seguenti vengono illustrate le istanze in cui è richiesta la funzione **Data ()** .  
   
- Nella query seguente, **$pd / pD/P1:Specifications/Material / materiale** restituisce il <`Material`> elemento. È inoltre **dei dati ($pd/pD/P1:Specifications/Material/materiale)** restituisce dati di tipo carattere tipizzati come xdt: untypedAtomic, perché <`Material`> non è tipizzato. Quando l'input è non tipizzato, il risultato del **data ()** tipizzata come **xdt: untypedAtomic**.  
+ Nella query seguente **$PD/P1: Specifications/Material** restituisce l'elemento <`Material`>. Inoltre, **i dati ($PD/P1: Specifications/Material)** restituiscono dati di tipo carattere tipizzati come `Material` xdt: untypedAtomic, perché <> non è tipizzato. Quando l'input non è tipizzato, il risultato di **Data ()** viene tipizzato come **xdt: untypedAtomic**.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -141,7 +141,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <Root>  
@@ -149,7 +149,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- Nella query seguente, **data($pd/p1:Features/wm:Warranty)** restituisce un errore statico perché <`Warranty`> è un elemento di tipo complesso.  
+ Nella query seguente, **Data ($PD/P1: features/WM: warranty)** restituisce un errore statico, perché `Warranty` <> è un elemento di tipo complesso.  
   
 ```  
 WITH XMLNAMESPACES (  

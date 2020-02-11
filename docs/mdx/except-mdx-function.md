@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d53a88ce78eb5a1b106cefb0832ca1023f67c000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077258"
 ---
-# <a name="except-mdx-function"></a>Except-funzione (MDX)
+# <a name="except-mdx-function"></a>Except (MDX) (funzione)
 
 
   Valuta due set e rimuove le tuple del primo set presenti anche nel secondo, mantenendo facoltativamente i duplicati.  
@@ -34,8 +34,8 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- Se **tutti** è specificato, i duplicati individuati nel primo set vengono mantenuti; duplicati individuati nel secondo set verranno comunque rimosse. I membri verranno restituiti nell'ordine in cui sono visualizzati nel primo set.  
+## <a name="remarks"></a>Osservazioni  
+ Se viene specificato **All** , la funzione mantiene i duplicati trovati nel primo set; i duplicati trovati nel secondo set verranno comunque rimossi. I membri verranno restituiti nell'ordine in cui sono visualizzati nel primo set.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di questa funzione.  
@@ -57,7 +57,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [- &#40;Tranne&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [-&#40;ad eccezione di&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -22,17 +22,17 @@ ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fb016ac7597617b119834e20ffd9e12bd648dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076856"
 ---
 # <a name="default-data-source"></a>Origine dati predefinita
-Il driver può selezionare un'origine dati, l'origine dati predefinita, in alcuni casi in cui l'applicazione non specificano esplicitamente una chiamata:  
+Il driver può selezionare un'origine dati, denominata origine dati predefinita, in determinati casi in cui l'applicazione non ne specifichi esplicitamente uno:  
   
--   In una chiamata a **SQLConnect** in cui le *ServerName* argomento è una stringa di lunghezza zero, un puntatore null o DEFAULT.  
+-   In una chiamata a **SQLConnect** dove l'argomento *ServerName* è una stringa di lunghezza zero, un puntatore null o un valore predefinito.  
   
--   In una chiamata a **SQLDriverConnect** in cui *InConnectionString* una specifica **DSN**= DEFAULT o specifica con la **DSN** parola chiave un origine dati che non è contenuta nelle informazioni di sistema.  
+-   In una chiamata a **SQLDriverConnect** in cui *InConnectionString* specifica **DSN**= default o specifica con la parola chiave **DSN** un'origine dati che non è contenuta nelle informazioni di sistema.  
   
- È definito dal driver come viene specificata l'origine dati predefinita. Questa operazione potrebbe comportare un'azione amministrativa e può dipendere l'utente.
+ Viene definito dal driver come viene specificata l'origine dati predefinita. Questo può comportare un'azione amministrativa che può dipendere dall'utente.

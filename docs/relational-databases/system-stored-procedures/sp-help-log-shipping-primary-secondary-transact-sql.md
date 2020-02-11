@@ -18,18 +18,18 @@ ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d1c93bb6fecea955e139688b1a8f4f2c1dccc75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066819"
 ---
-# <a name="sphelplogshippingprimarysecondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
+# <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Questa stored procedure restituisce informazioni su tutti i database secondari di un determinato database primario.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,26 +40,26 @@ sp_help_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @primary_database = ] 'primary_database'` È il nome del database nel server primario. *primary_database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @primary_database = ] 'primary_database'`Nome del database nel server primario. *primary_database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
-|**secondary_server**|Il nome dell'istanza secondaria del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione di log shipping.|  
+|**secondary_server**|Nome dell'istanza secondaria di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione log shipping.|  
 |**secondary_database**|Nome del database secondario nella configurazione di log shipping.|  
   
-## <a name="remarks"></a>Note  
- **sp_help_log_shipping_primary_secondary** deve essere eseguita la **master** database nel server primario.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_help_log_shipping_primary_secondary** deve essere eseguito dal database **Master** nel server primario.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server può eseguire questa procedura.  
+## <a name="permissions"></a>Autorizzazioni  
+ Questa procedura può essere eseguita solo dai membri del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
- In questo esempio viene illustrato l'utilizzo **sp_help_log_shipping_primary_secondary** per recuperare un elenco di database secondario database associati al database primario [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ In questo esempio viene illustrato l'utilizzo di **sp_help_log_shipping_primary_secondary** per recuperare un elenco di database secondari associati al [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]database primario.  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  

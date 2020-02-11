@@ -16,18 +16,18 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032890"
 ---
-# <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
+# <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza informazioni su una riga di una tabella utilizzata come articolo in repliche di tipo merge. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,13 +40,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @ownername = ] 'ownername'` È il nome del proprietario della tabella. *ownername* viene **sysname**, con un valore predefinito è NULL. Questo parametro risulta utile per differenziare le tabelle quando un database contiene più tabelle aventi lo stesso nome ma appartenenti a proprietari diversi.  
+`[ @ownername = ] 'ownername'`Nome del proprietario della tabella. *OwnerName* è di **tipo sysname**e il valore predefinito è null. Questo parametro risulta utile per differenziare le tabelle quando un database contiene più tabelle aventi lo stesso nome ma appartenenti a proprietari diversi.  
   
-`[ @tablename = ] 'tablename'` È il nome della tabella che contiene la riga per il quale vengono restituite le informazioni. *TableName* viene **sysname**, con un valore predefinito è NULL.  
+`[ @tablename = ] 'tablename'`Nome della tabella contenente la riga per la quale vengono restituite le informazioni. *TableName* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @rowguid = ] rowguid` È l'identificatore univoco della riga. *ROWGUID* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
+`[ @rowguid = ] rowguid`Identificatore univoco della riga. *rowguid* è di tipo **uniqueidentifier**e non prevede alcun valore predefinito.  
   
-`[ @show = ] 'show'` Determina la quantità di informazioni da restituire nel set di risultati. *mostrare* viene **nvarchar(20)** con valore predefinito è BOTH. Se **riga**, viene restituiti solo le informazioni sulla versione di riga. Se **colonne**, viene restituiti solo le informazioni sulla versione di colonna. Se **entrambi**, di righe e vengono restituite informazioni di colonna.  
+`[ @show = ] 'show'`Determina la quantità di informazioni da restituire nel set di risultati. *show* è di **tipo nvarchar (20)** e il valore predefinito è both. Se **Row**, vengono restituite solo le informazioni sulla versione di riga. Se **colonne**, vengono restituite solo le informazioni sulla versione della colonna. Se sono **entrambi**, vengono restituite entrambe le informazioni di riga e colonna.  
   
 ## <a name="result-sets-for-row-information"></a>Set di risultati per informazioni sulla riga  
   
@@ -54,11 +54,11 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome del server che include il database in cui è stata immessa la voce sulla versione di riga.|  
 |**db_name**|**sysname**|Nome del database in cui è stata immessa la voce.|  
-|**db_nickname**|**binary(6)**|Nome alternativo del database in cui è stata immessa la voce.|  
-|**version**|**int**|Versione della voce.|  
-|**current_state**|**nvarchar(9)**|Restituisce informazioni sullo stato corrente della riga.<br /><br /> **y** -i dati di riga rappresentano lo stato corrente della riga.<br /><br /> **n** -dati di riga non rappresentano lo stato corrente della riga.<br /><br /> **\<n/a >** : non applicabile.<br /><br /> **\<sconosciuto >** -non è possibile determinare lo stato corrente.|  
-|**rowversion_table**|**nchar(17)**|Indica se le versioni delle righe vengono archiviate nel [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabella o nella [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabella.|  
-|**comment**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di riga. Questo campo è in genere vuoto.|  
+|**db_nickname**|**binario (6)**|Nome alternativo del database in cui è stata immessa la voce.|  
+|**Versione**|**int**|Versione della voce.|  
+|**current_state**|**nvarchar (9)**|Restituisce informazioni sullo stato corrente della riga.<br /><br /> i dati della riga **y** rappresentano lo stato corrente della riga.<br /><br /> i dati di **n** righe non rappresentano lo stato corrente della riga.<br /><br /> n/a>non applicabile. ** \<**<br /><br /> Impossibile determinare lo stato corrente di>sconosciuto. ** \<**|  
+|**rowversion_table**|**nchar (17)**|Indica se le versioni di riga vengono archiviate nella tabella [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) o nella tabella [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
+|**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di riga. Questo campo è in genere vuoto.|  
   
 ## <a name="result-sets-for-column-information"></a>Set di risultati per informazioni sulla colonna  
   
@@ -66,22 +66,22 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nome del server che include il database in cui è stata immessa la voce sulla versione di colonna.|  
 |**db_name**|**sysname**|Nome del database in cui è stata immessa la voce.|  
-|**db_nickname**|**binary(6)**|Nome alternativo del database in cui è stata immessa la voce.|  
-|**version**|**int**|Versione della voce.|  
+|**db_nickname**|**binario (6)**|Nome alternativo del database in cui è stata immessa la voce.|  
+|**Versione**|**int**|Versione della voce.|  
 |**colname**|**sysname**|Nome della colonna di articolo rappresentata dalla voce sulla versione di colonna.|  
-|**comment**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di colonna. Questo campo è in genere vuoto.|  
+|**Commento**|**nvarchar(255)**|Informazioni aggiuntive relative alla voce sulla versione di colonna. Questo campo è in genere vuoto.|  
   
 ## <a name="result-set-for-both"></a>Set di risultati per informazioni su riga e colonna  
- Se il valore **entrambe** scelto per *mostrano*, viene restituita sia la riga e colonna set di risultati.  
+ Se il valore viene scelto per *Mostra* **, vengono restituiti** entrambi i set di risultati di riga e colonna.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **sp_showrowreplicainfo** viene utilizzata nella replica di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
- **sp_showrowreplicainfo** può essere eseguita solo dai membri del **db_owner** ruolo predefinito del database nel database di pubblicazione o dai membri dell'elenco di accesso (PAL) nel database di pubblicazione.  
+## <a name="permissions"></a>Autorizzazioni  
+ **sp_showrowreplicainfo** possono essere eseguite solo da membri del ruolo predefinito del database **db_owner** nel database di pubblicazione o dai membri dell'elenco di accesso alla pubblicazione nel database di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rilevare e risolvere i conflitti tra repliche di tipo Merge](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Rilevare e risolvere i conflitti di replica di tipo merge](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

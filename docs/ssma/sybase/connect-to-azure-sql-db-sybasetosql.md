@@ -10,57 +10,57 @@ ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083469"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Connettersi al database SQL di Azure (SybaseToSQL)
-Usare la connessione alla finestra di dialogo di database SQL di Azure per la connessione al database che si desidera eseguire la migrazione di database SQL di Azure.  
+Usare la finestra di dialogo Connetti a database SQL di Azure per connettersi al database SQL di Azure di cui si vuole eseguire la migrazione.  
   
-Per accedere a questa finestra di dialogo, scegliere il **File** dal menu **Connetti al database SQL di Azure**. Se si è già connessa, il comando è **riconnessione al database SQL di Azure.**  
+Per accedere a questa finestra di dialogo, scegliere **Connetti al database SQL di Azure**dal menu **file** . Se è già stata effettuata la connessione, il comando viene **riconnesso al database SQL di Azure.**  
   
 ## <a name="options"></a>Opzioni  
 **Nome server**  
   
-Selezionare o immettere il nome del Server per la connessione al database SQL di Azure.  
+Selezionare o immettere il nome del server per la connessione al database SQL di Azure.  
   
 **Database**  
   
-Selezionare, inserire o **esplorare** il nome del Database.  
+Selezionare, immettere o **esplorare** il nome del database.  
   
 > [!IMPORTANT]  
 > SSMA per Sybase non supporta la connessione al database master nel database SQL di Azure.  
   
 **Nome utente**  
   
-Immettere il nome utente utilizzato per connettersi al database di Azure SQL DB SSMA  
+Immettere il nome utente che SSMA userà per connettersi al database SQL di Azure  
   
 **Password**  
   
-Immettere la password associata al nome utente.  
+Immettere il nome utente e la password  
   
-**Encrypt**  
+**Crittografare**  
   
-SSMA consiglia connessione crittografata al database SQL di Azure.  
+SSMA consiglia la connessione crittografata al database SQL di Azure.  
   
-## <a name="create-azure-database"></a>Creare il Database di Azure  
-Se non sono disponibili database nell'account di database SQL di Azure, è possibile creare il primo database.  
+## <a name="create-azure-database"></a>Creare un database di Azure  
+Se non sono presenti database nell'account del database SQL di Azure, è possibile creare il primo database.  
   
-Per creare un nuovo database per la prima volta, seguire la procedura seguente  
+Per creare un nuovo database per la prima volta, attenersi alla procedura seguente:  
   
-1.  Fare clic sul pulsante Sfoglia, che è presente nella finestra Connetti alla finestra di dialogo di database SQL di Azure  
+1.  Fare clic sul pulsante Sfoglia presente nella finestra di dialogo Connetti a database SQL di Azure  
   
-2.  Se non sono presenti database, vengono visualizzati i seguenti due voci di menu.  
+2.  Se non sono presenti database, vengono visualizzate le due voci di menu seguenti.  
   
-    1.  **(Nessun database trovato)**  che è disabilitata e continuamente in grigio  
+    1.  **(nessun database trovato)** disabilitato e disattivato per sempre  
   
-    2.  **Crea nuovo database** che è abilitato solo quando non sono presenti database nell'account di database SQL di Azure. Facendo clic su questa voce di menu, finestra di dialogo Crea Database di Azure è presente con dimensioni e il nome del database.  
+    2.  **Creare un nuovo database** che è abilitato solo quando non sono presenti database nell'account del database SQL di Azure. Quando si fa clic su questa voce di menu, la finestra di dialogo Crea database di Azure è disponibile con nome e dimensioni del database.  
   
 3.  Al momento della creazione del database, i due parametri seguenti vengono forniti come input:  
   
-    1.  **Nome del database:** Immettere il nome del Database.  
+    1.  **Nome database:** Immettere il nome del database.  
   
-    2.  **Dimensioni del database:** Selezionare le dimensioni del Database che è necessario creare account di database SQL di Azure.  
+    2.  **Dimensioni database:** Selezionare le dimensioni del database che è necessario creare nell'account del database SQL di Azure.  
   

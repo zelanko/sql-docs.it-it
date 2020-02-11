@@ -14,15 +14,15 @@ ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23823e53e516324832c79706e6171b48a9c5297c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071866"
 ---
 # <a name="drop-index-statement"></a>Istruzione DROP INDEX
-Quando viene usato il driver Paradox, dBASE o Microsoft Access, la sintassi dell'istruzione DROP INDEX è "DROP INDEX a in b" dove "a" è il nome dell'indice e "b" è il nome della tabella (non DROP INDEX *-nome dell'indice*).  
+Quando si usa il driver Microsoft Access, dBASE o Paradox, la sintassi dell'istruzione DROP INDEX è "DROP INDEX a on b", dove "a" è il nome dell'indice e "b" è il nome della tabella (non DROP INDEX *index-name*).  
   
- Quando viene usato il driver Paradox, l'istruzione DROP INDEX Elimina i file di indice secondario Paradox.  
+ Quando si utilizza il driver Paradox, l'istruzione DROP INDEX Elimina i file di indice secondario Paradox.  
   
  L'istruzione DROP INDEX non è supportata per i driver di Microsoft Excel o di testo.

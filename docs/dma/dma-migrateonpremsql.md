@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056527"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Aggiornare SQL Server usando il Data Migration Assistant
@@ -33,7 +33,7 @@ In questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento SQ
 
 2. Impostare il tipo di server di origine e di destinazione su **SQL Server** se si sta aggiornando una SQL Server locale a una versione successiva di SQL Server locale.
 
-3. Selezionare **Crea**.
+3. Selezionare **Create** (Crea).
 
    ![Crea progetto di migrazione](../dma/media/NewCreate.png)
 
@@ -49,7 +49,7 @@ In questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento SQ
 
 5. È consigliabile crittografare la connessione selezionando **Crittografa connessione** nella sezione **Proprietà connessione** .
 
-6. Scegliere **Avanti**.
+6. Fare clic su **Avanti**.
 
    ![Specificare la pagina di origine e di destinazione](../dma/media/SourceTarget.png)
 
@@ -64,7 +64,7 @@ In questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento SQ
    > [!NOTE]
    > È possibile applicare le impostazioni di migrazione a tutti i database di cui si sta eseguendo la migrazione selezionando il server nel riquadro sinistro. È anche possibile configurare un singolo database con impostazioni specifiche selezionando il database nel riquadro sinistro.
 
-    A. Specificare il **percorso condiviso accessibile da SQL Server di origine e di destinazione per l'operazione di backup**. Verificare che l'account del servizio che esegue l'istanza di SQL Server di origine disponga dei privilegi di scrittura per il percorso condiviso e che l'account del servizio di destinazione disponga dei privilegi di lettura per il percorso condiviso.
+    a. Specificare il **percorso condiviso accessibile da SQL Server di origine e di destinazione per l'operazione di backup**. Verificare che l'account del servizio che esegue l'istanza di SQL Server di origine disponga dei privilegi di scrittura per il percorso condiviso e che l'account del servizio di destinazione disponga dei privilegi di lettura per il percorso condiviso.
 
     b. Specificare il percorso in cui ripristinare i dati e i file di log transazionali nel server di destinazione.
 
@@ -78,7 +78,7 @@ In questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento SQ
 
    ![Opzione per copiare i backup del database in un percorso diverso](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. Fare clic su **Avanti**.
+5. Selezionare **Avanti**.
 
 Il Data Migration Assistant esegue le convalide sulle cartelle di backup, i dati e i percorsi dei file di log. Se la convalida ha esito negativo, correggere le opzioni e quindi fare clic su **Avanti**.
 
@@ -95,7 +95,7 @@ Il Data Migration Assistant esegue le convalide sulle cartelle di backup, i dati
 
    ![Selezionare gli account di accesso e avviare la migrazione](../dma/media/SelectLogins.png)
 
-## <a name="view-results"></a>Visualizzazione dei risultati
+## <a name="view-results"></a>Visualizzare i risultati
 
 È possibile monitorare lo stato di avanzamento della migrazione nella pagina **Visualizza risultati** .
 

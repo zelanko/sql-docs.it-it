@@ -1,5 +1,5 @@
 ---
-title: Dati Unicode e il Server le tabelle codici | Microsoft Docs
+title: Tabelle codici dati e server Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,34 +15,34 @@ ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064276"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Dati Unicode e tabelle codici del server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilizzare invece la funzionalità di integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Usare invece l'integrazione con CLR.  
   
  L'API Stored procedure estesa è abilitata per i dati Unicode ma non lo è per i metadati Unicode. La direttiva Unicode #define non produce alcun effetto sull'API Stored procedure estesa.  
   
- Si suppone che per tutti i metadati restituiti o forniti all'API Stored procedure estesa dall'applicazione delle stored procedure estese in uso venga utilizzata la tabella codici multibyte del server. La tabella codici predefinita di un'applicazione server API Stored Procedure estesa è la tabella codici ANSI del computer in cui è in esecuzione l'applicazione, che può essere ottenuto chiamando **srv_pfield** con il parametro di campo impostato su SRV _ SPROC_CODEPAGE.  
+ Si suppone che per tutti i metadati restituiti o forniti all'API Stored procedure estesa dall'applicazione delle stored procedure estese in uso venga utilizzata la tabella codici multibyte del server. La tabella codici predefinita di un'applicazione server API stored procedure estesa è la tabella codici ANSI del computer in cui è in esecuzione l'applicazione, che può essere ottenuta chiamando **srv_pfield** con il parametro di campo impostato su SRV_SPROC_CODEPAGE.  
   
  Se l'applicazione dell'API Stored procedure estesa è abilitata per l'utilizzo di Unicode, è necessario convertire i nomi delle colonne di metadati Unicode, i messaggi di errore e così via, in dati multibyte prima di passare tali dati all'API Stored procedure estesa.  
   
 ## <a name="example"></a>Esempio  
  Nella stored procedure estesa seguente è fornito un esempio delle conversioni Unicode descritte. Tenere presente quanto segue:  
   
--   Dati della colonna viene passati come dati Unicode **srv_describe** perché la colonna è descritta come srvnvarchar.  
+-   I dati della colonna vengono passati come dati Unicode a **srv_describe** perché la colonna è descritta come SRVNVARCHAR.  
   
--   I metadati della colonna nome viene passato a **srv_describe** come dati multibyte.  
+-   I metadati del nome di colonna vengono passati a **srv_describe** come dati multibyte.  
   
-     Estesa chiamate alle stored procedure **srv_pfield** con il parametro di campo impostato su SRV_SPROC_CODEPAGE per ottenere la tabella codici multibyte del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Il stored procedure esteso chiama **srv_pfield** con il parametro di campo impostato su SRV_SPROC_CODEPAGE per ottenere la tabella codici multibyte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]di.  
   
--   I messaggi di errore vengono passati al **srv_sendmsg** come dati multibyte.  
+-   I messaggi di errore vengono passati a **srv_sendmsg** come dati multibyte.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  
@@ -151,6 +151,6 @@ ms.locfileid: "68064276"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [srv_wsendmsg &#40;API Stored Procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
+ [srv_wsendmsg &#40;API stored procedure estesa&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

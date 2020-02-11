@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c37f43e82bdad11909695d5a2799b5065c7cb5b9
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095548"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Creazione, modifica e rimozione di chiavi esterne
@@ -25,12 +25,12 @@ ms.locfileid: "74095548"
 
   In SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) le chiavi esterne sono rappresentate dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
   
- Per creare una chiave esterna in SMO, è necessario specificare la tabella in cui la chiave esterna viene definita nel costruttore dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Dalla tabella, è necessario selezionare almeno una colonna che rappresenti la chiave esterna. A questo scopo, creare una variabile dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> e specificare il nome della colonna che rappresenta la chiave esterna. Specificare quindi la tabella e la colonna a cui si fa riferimento. Utilizzare il metodo <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> per aggiungere la colonna alla proprietà dell'oggetto **Columns** .  
+ Per creare una chiave esterna in SMO, è necessario specificare la tabella in cui la chiave esterna viene definita nel costruttore dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Dalla tabella, è necessario selezionare almeno una colonna che rappresenti la chiave esterna. A questo scopo, creare una variabile dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> e specificare il nome della colonna che rappresenta la chiave esterna. Specificare quindi la tabella e la colonna a cui si fa riferimento. Utilizzare il <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> metodo per aggiungere la colonna alla proprietà dell'oggetto **Columns** .  
   
- Le colonne che rappresentano la chiave esterna sono elencate nella proprietà dell'oggetto **Columns** dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. La chiave primaria a cui la chiave esterna fa riferimento è rappresentata dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> che si trova nella tabella specificata nella proprietà <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
+ Le colonne che rappresentano la chiave esterna sono elencate nella proprietà dell'oggetto **Columns** dell' <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> oggetto. La chiave primaria a cui la chiave esterna fa riferimento è rappresentata dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> che si trova nella tabella specificata nella proprietà <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Esempio  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per utilizzare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual C&#35; SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Creazione, modifica e rimozione di una chiave esterna in Visual Basic  
  In questo esempio di codice viene illustrato come creare una relazione di chiave esterna tra una o più colonne in una tabella e una colonna chiave primaria in un'altra tabella.  
@@ -121,7 +121,7 @@ $fk.Create()
 ```  
   
 ## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Esempio: chiavi esterne, chiavi primarie e colonne con vincolo univoco  
- In questo esempio vengono illustrate le operazioni seguenti:  
+ Questo esempio dimostra:  
   
 -   Individuazione di una chiave esterna in un oggetto esistente.  
   

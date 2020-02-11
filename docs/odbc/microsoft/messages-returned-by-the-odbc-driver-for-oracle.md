@@ -1,5 +1,5 @@
 ---
-title: I messaggi restituiti dal Driver ODBC per Oracle | Microsoft Docs
+title: Messaggi restituiti dal driver ODBC per Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 150bde1d-adb6-4e77-90e9-4dc93499a746
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb2fc54692a77441bb2516ad72c0c44951152f56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045184"
 ---
 # <a name="messages-returned-by-the-odbc-driver-for-oracle"></a>Messaggi restituiti dal driver ODBC per Oracle
 > [!IMPORTANT]  
->  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. In alternativa, usare il driver ODBC fornito da Oracle.  
+>  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare invece il driver ODBC fornito da Oracle.  
   
- Se un messaggio di errore Oracle è disponibile, verrà restituito preceduti da [Microsoft] [Driver ODBC per Oracle], [Oracle] tag; e in caso contrario, viene restituito il messaggio senza tag [Oracle] come negli esempi seguenti:  
+ Se è disponibile un messaggio di errore Oracle, verrà restituito preceduto dai tag [Microsoft], [driver ODBC per Oracle] e [Oracle]; in caso contrario, il messaggio viene restituito senza il tag [Oracle] come negli esempi seguenti:  
   
 ## <a name="oracle-error-message"></a>Messaggio di errore Oracle:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68045184"
 [Microsoft][ODBC driver for Oracle][Oracle]ORA-nnnnn message-text  
 ```  
   
-## <a name="odbc-driver-for-oracle-error-message"></a>Driver ODBC per il messaggio di errore Oracle:  
+## <a name="odbc-driver-for-oracle-error-message"></a>Messaggio di errore driver ODBC per Oracle:  
   
 ```  
 [Microsoft][ODBC driver for Oracle]  

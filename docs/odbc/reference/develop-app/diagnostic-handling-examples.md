@@ -1,5 +1,5 @@
 ---
-title: Gestione degli esempi di diagnostica | Microsoft Docs
+title: Esempi di gestione diagnostica | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13c713da543883ac4a5c4aaa0aad0631ae47be30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039955"
 ---
 # <a name="diagnostic-handling-examples"></a>Esempi di gestione di diagnostica
-Gli esempi seguenti mostrano come diversi componenti in una connessione ODBC potrebbero generare messaggi di diagnostica e i driver delle varie potrebbero restituire la diagnostica per l'applicazione con **SQLGetDiagRec**.  
+Negli esempi seguenti viene illustrato il modo in cui i vari componenti di una connessione ODBC possono generare messaggi di diagnostica e il modo in cui i vari driver possono restituire la diagnostica all'applicazione con **SQLGetDiagRec**.  
   
 -   [Esempio di diagnostica di driver basato su file](../../../odbc/reference/develop-app/file-based-driver-diagnostic-example.md)  
   

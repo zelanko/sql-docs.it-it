@@ -18,18 +18,18 @@ ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8bfdcafb37b6ff7b495f1306d5d8339725e55e10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108387"
 ---
-# <a name="spcursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
+# <a name="sp_cursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Elimina il piano di esecuzione sviluppato nella sp_cursorprepare stored procedure. sp_cursorunprepare viene richiamata specificando ID = 6 in un pacchetto del flusso TDS.  
+  Elimina il piano di esecuzione sviluppato nella sp_cursorprepare stored procedure. sp_cursorunprepare viene richiamato specificando ID = 6 in un pacchetto del flusso TDS (Tabular Data Stream).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,11 +39,11 @@ sp_cursorunprepare handle
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *handle*  
- È il *gestire* valore restituito da sp_cursorprepare quando viene preparata l'istruzione.  
+ *gestire*  
+ Valore dell' *handle* restituito da sp_cursorprepare quando l'istruzione viene preparata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+ [sp_cursorprepare &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Modello di cursore (Driver ODBC Visual FoxPro) supportato | Microsoft Docs
+title: Modello di cursore supportato (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e623c0ce5135a4b2e558be9c405ec2757e605ceb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68080708"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modello di cursore supportato (driver ODBC Visual FoxPro)
-Il Driver ODBC Visual FoxPro supporta sia *block* (*rowset*) e *statico* cursori. I cursori statici sono supportati per qualsiasi driver conforme alla conformità di livello 1 ODBC. Il driver non supporta dynamic, gestito da keyset o misto (keyset e dynamic) dei cursori.  
+Il driver ODBC Visual FoxPro supporta sia il *blocco* (*set di righe*) che i cursori *statici* . I cursori statici sono supportati per tutti i driver conformi alla conformità ODBC di livello 1. Il driver non supporta cursori dinamici, gestiti da keyset o misti (keyset e dinamici).  
   
  L'applicazione può chiamare [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) con un'opzione SQL_CURSOR_TYPE di SQL_CURSOR_FORWARD_ONLY (cursore a blocchi) o SQL_CURSOR_STATIC (cursore statico).  
   
 > [!NOTE]  
->  Se si chiama **SQLSetStmtOption** con un'opzione SQL_CURSOR_TYPE diverso da SQL_CURSOR_FORWARD_ONLY o SQL_CURSOR_STATIC, la funzione restituisce SQL_SUCCESS_WITH_INFO con un valore SQLSTATE pari 01S02 (valore dell'opzione modificato). Il driver imposta SQL_CURSOR_STATIC tutte le modalità di cursore non supportato.  
+>  Se si chiama **SQLSetStmtOption** con un'opzione di SQL_CURSOR_TYPE diversa da SQL_CURSOR_FORWARD_ONLY o SQL_CURSOR_STATIC, la funzione restituisce SQL_SUCCESS_WITH_INFO con un valore SQLSTATE di 01S02 (il valore dell'opzione è stato modificato). Il driver imposta tutte le modalità di cursore non supportate su SQL_CURSOR_STATIC.  
   
- Per altre informazioni sui tipi di cursore e circa **SQLSetStmtOption**, vedere la [riferimento per programmatori ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Per ulteriori informazioni sui tipi di cursore e su **SQLSetStmtOption**, vedere [ODBC Programmer ' s Reference](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 ## <a name="block-cursor"></a>cursore rettangolare  
- Un set di risultati forward-scorrimento e di sola lettura restituito al client, chi è responsabile della gestione risorse di archiviazione per i dati.  
+ Un set di risultati di scorrimento in diretta e di sola lettura restituito al client, responsabile della gestione dell'archiviazione per i dati.  
   
 ## <a name="static-cursor"></a>cursore statico  
- Uno snapshot di un set di dati definito dalla query. I cursori static non riflettono le modifiche in tempo reale dei dati sottostanti da altri utenti. Buffer di memoria del cursore viene gestito dalla libreria di cursori ODBC, che consente lo scorrimento in avanti e indietro.  
+ Snapshot di un set di dati definito dalla query. I cursori statici non riflettono le modifiche in tempo reale dei dati sottostanti da parte di altri utenti. Il buffer di memoria del cursore viene gestito dalla libreria di cursori ODBC, che consente lo scorrimento avanti e indietro.  
   
 ## <a name="rowset"></a>set di righe  
- Blocchi di dati archiviati in un cursore, che rappresenta le righe recuperate da un'origine dati.
+ Blocchi di dati archiviati in un cursore, che rappresentano le righe recuperate da un'origine dati.

@@ -18,18 +18,18 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a4cfa0178b04a53c3d5ea8419d063d636507a39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019936"
 ---
-# <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
+# <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina eventi dal log di Posta elettronica database. È possibile eliminare tutti gli eventi nel log oppure solo quelli che soddisfano un particolare criterio relativo alla data o al tipo.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,20 +41,20 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @logged_before = ] 'logged_before'` Elimina le voci anteriori alla data e ora specificate dal *logged_before* argomento. *logged_before* viene **datetime** con valore predefinito è NULL. che indica tutte le date.  
+`[ @logged_before = ] 'logged_before'`Elimina le voci fino alla data e all'ora specificate dall'argomento *logged_before* . *logged_before* è di tipo **DateTime** con valore predefinito. che indica tutte le date.  
   
-`[ @event_type = ] 'event_type'` Elimina le voci del tipo specificato come log di *event_type*. *event_type* viene **varchar(15)** non prevede alcun valore predefinito. Possibili valori sono **success**, **avviso**, **errore**, e **informativo**. NULL indica tutti i tipi di eventi.  
+`[ @event_type = ] 'event_type'`Elimina le voci di log del tipo specificato come *event_type*. *event_type* è di tipo **varchar (15)** e non prevede alcun valore predefinito. Le voci valide sono **esito positivo**, **avviso**, **errore**e **informativo**. NULL indica tutti i tipi di eventi.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- Usare la **sysmail_delete_log_sp** stored procedure per eliminare definitivamente le voci dal log di posta elettronica Database. Un argomento facoltativo consente di eliminare solo i record meno recenti tramite l'impostazione di una data e un'ora. Gli eventi con una data anteriore a quella specificata nell'argomento verranno eliminati. Un argomento facoltativo consente di eliminare solo gli eventi di un determinato tipo, specificato come la **event_type** argomento.  
+## <a name="remarks"></a>Osservazioni  
+ Usare il stored procedure **sysmail_delete_log_sp** per eliminare definitivamente le voci dal log di posta elettronica database. Un argomento facoltativo consente di eliminare solo i record meno recenti tramite l'impostazione di una data e un'ora. Gli eventi con una data anteriore a quella specificata nell'argomento verranno eliminati. Un argomento facoltativo consente di eliminare solo gli eventi di un determinato tipo, specificati come argomento **event_type** .  
   
- L'eliminazione delle voci dal log di Posta elettronica database non comporta la rimozione dei messaggi di posta elettronica dalle tabelle di Posta elettronica database. Uso [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) eliminare il messaggio di posta elettronica dalle tabelle di posta elettronica Database.  
+ L'eliminazione delle voci dal log di Posta elettronica database non comporta la rimozione dei messaggi di posta elettronica dalle tabelle di Posta elettronica database. Utilizzare [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) per eliminare la posta elettronica dalle tabelle posta elettronica database.  
   
-## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server può accedere a questa procedura.  
+## <a name="permissions"></a>Autorizzazioni  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono accedere a questa procedura.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -85,8 +85,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
+ [sysmail_event_log &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_delete_mailitems_sp &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
  [Creare un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

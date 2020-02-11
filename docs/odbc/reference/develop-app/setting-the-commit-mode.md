@@ -1,5 +1,5 @@
 ---
-title: Impostazione della modalità di Commit | Microsoft Docs
+title: Impostazione della modalità commit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: b60d0d74-0655-4013-8d5a-bc1866eaa166
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a43a78ad9453f65d9b12595851bd622f720b409a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094218"
 ---
 # <a name="setting-the-commit-mode"></a>Impostazione della modalità di commit
-Applicazioni di specificare la modalità di transazione con l'attributo di connessione SQL_ATTR_AUTOCOMMIT. Per impostazione predefinita, le transazioni ODBC sono in modalità autocommit (a meno che **SQLSetConnectAttr** e **SQLSetConnectOption** non sono supportate, che è improbabile). Il passaggio dalla modalità di commit manuale alla modalità di autocommit automaticamente esegue il commit di qualsiasi transazione aperta per la connessione.
+Le applicazioni specificano la modalità di transazione con l'attributo di connessione SQL_ATTR_AUTOCOMMIT. Per impostazione predefinita, le transazioni ODBC sono in modalità autocommit, a meno che non siano supportati **SQLSetConnectAttr** e **SQLSetConnectOption** , che è improbabile. Il cambio dalla modalità con commit manuale alla modalità di commit automatico consente di eseguire automaticamente il commit di tutte le transazioni aperte sulla connessione.

@@ -1,5 +1,5 @@
 ---
-title: Aggiornamento di colonne UDT con DataAdapter | Microsoft Docs
+title: Aggiornamento di colonne con tipo definito dall'utente con DataAdapter | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2154f5f81842cf8cefd5eac71f42837cbf33da31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028383"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Accesso ai tipi definiti dall'utente - Aggiornamento di colonne UDT con DataAdapter
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Tipi definiti dall'utente (UDT) sono supportati tramite un **DataSet** e una **SqlDataAdapter** per recuperare e modificare i dati.  
+  I tipi definiti dall'utente (UDT) sono supportati usando **System. Data. DataSet** e **System. Data. SqlClient. SqlDataAdapter** per recuperare e modificare i dati.  
   
 ## <a name="populating-a-dataset"></a>Popolamento di set di dati  
- È possibile utilizzare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT per selezionare i valori delle colonne con tipo definito dall'utente per popolare un set di dati utilizzando un adattatore dati. L'esempio seguente presuppone la presenza di un **punti** tabella definita con la struttura seguente e alcuni dati di esempio. Quanto segue [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni consentono di creare le **punti** di tabella e inserire alcune righe.  
+ È possibile utilizzare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT per selezionare i valori delle colonne con tipo definito dall'utente per popolare un set di dati utilizzando un adattatore dati. Nell'esempio seguente si presuppone che sia stata definita una tabella **Points** con la struttura seguente e alcuni dati di esempio. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti creano la tabella **Points** e inseriscono alcune righe.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +46,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- Il frammento di codice ADO.NET seguente recupera una stringa di connessione valida, crea un nuovo **SqlDataAdapter**e popola una **DataTable** con le righe di dati dal **punti**  tabella.  
+ Il frammento di codice ADO.NET seguente recupera una stringa di connessione valida, crea un nuovo oggetto **SqlDataAdapter**e popola un oggetto **System. Data. DataTable** con le righe di dati della tabella **Points** .  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -63,16 +63,16 @@ da.Fill(datTable);
 ```  
   
 ## <a name="updating-udt-data-in-a-dataset"></a>Aggiornamento dei dati dei tipi definiti dall'utente di un set di dati  
- È possibile utilizzare due metodi per aggiornare una colonna di tipo definito dall'utente in un **set di dati**:  
+ È possibile utilizzare due metodi per aggiornare una colonna con tipo definito dall'utente in un **set di dati**:  
   
--   Fornire una personalizzata **InsertCommand**, **UpdateCommand** e **DeleteCommand** gli oggetti per un **SqlDataAdapter** oggetto.  
+-   Fornire oggetti **InsertCommand**, **UpdateCommand** e **DeleteCommand** personalizzati per un oggetto **SqlDataAdapter** .  
   
--   Utilizzare il generatore comandi (**System.Data.SqlClient.SqlCommandBuilder**) per creare automaticamente i comandi INSERT, UPDATE e DELETE per l'utente. Per il rilevamento di conflitti, aggiungere un **timestamp** colonna (alias **rowversion**) per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella che contiene il tipo definito dall'utente. Il **timestamp** tipo di dati consente di indicatore di versione, le righe in una tabella e viene garantita l'univocità all'interno di un database. Quando un valore della tabella viene modificato, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene automaticamente aggiornato il numero binario di otto byte per la riga interessata dalla modifica.  
+-   Usare il generatore di comandi (**System. Data. SqlClient. SqlCommandBuilder**) per creare automaticamente i comandi INSERT, Update e DELETE. Per consentire il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rilevamento dei conflitti, aggiungere una colonna **timestamp** (alias **rowversion**) alla tabella che contiene il tipo definito dall'utente. Il tipo di dati **timestamp** consente di contrassegnare la versione delle righe di una tabella ed è sicuramente univoco all'interno di un database. Quando un valore della tabella viene modificato, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene automaticamente aggiornato il numero binario di otto byte per la riga interessata dalla modifica.  
   
- Si noti che il **SqlCommandBuilder** non considera il tipo definito dall'utente per il rilevamento dei conflitti, a meno che non esiste un **timestamp** colonna nella tabella sottostante. Dal momento che non è certa la comparabilità dei tipi definiti dall'utente, essi non vengono inclusi nella clausola WHERE quando viene utilizzata l'opzione per il confronto dei valori originali per generare un comando.  
+ Si noti che **SqlCommandBuilder** non considera il tipo definito dall'utente per il rilevamento dei conflitti, a meno che non esista una colonna **timestamp** nella tabella sottostante. Dal momento che non è certa la comparabilità dei tipi definiti dall'utente, essi non vengono inclusi nella clausola WHERE quando viene utilizzata l'opzione per il confronto dei valori originali per generare un comando.  
   
 ### <a name="example"></a>Esempio  
- L'esempio seguente richiede la creazione di una seconda tabella che contiene il **punto** colonna di tipo definito dall'utente, nonché un' **timestamp** colonna. Entrambe le tabelle vengono utilizzate per illustrare come creare oggetti comando personalizzati per aggiornare i dati e come eseguire l'aggiornamento utilizzando un **timestamp** colonna. Eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti per creare la seconda tabella e popolarla con i dati di esempio.  
+ Nell'esempio seguente è richiesta la creazione di una seconda tabella contenente la colonna del tipo definito dall'utente **Point** e una colonna **timestamp** . Entrambe le tabelle vengono usate per illustrare come creare oggetti comando personalizzati per aggiornare i dati e come eseguire l'aggiornamento usando una colonna **timestamp** . Eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti per creare la seconda tabella e popolarla con i dati di esempio.  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -85,9 +85,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  Nell'esempio ADO.NET seguente sono presenti due metodi:  
   
--   **UserProvidedCommands**, che illustra come fornire **InsertCommand**, **UpdateCommand**, e **DeleteCommand** oggetti per l'aggiornamento il  **Punto** UDT nel **punti** tabella (che non contiene una **timestamp** colonna).  
+-   **UserProvidedCommands**, che illustra come fornire oggetti **InsertCommand**, **UpdateCommand**e **DeleteCommand** per l'aggiornamento del tipo definito dall'utente **Point** nella tabella **Points** , che non contiene una colonna **timestamp** .  
   
--   **CommandBuilder**, che illustra come usare un **SqlCommandBuilder** nel **Points_ts** tabella che contiene il **timestamp** colonna.  
+-   **CommandBuilder**, che illustra come usare un **SqlCommandBuilder** nella tabella **Points_ts** che contiene la colonna **timestamp** .  
   
 ```vb  
 Imports System  
@@ -370,6 +370,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso ai tipi definiti dall'utente in ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
+ [Accesso ai tipi definiti dall'utente in ADO .NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLExtendedFetch (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLExtendedFetch (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: b28af112-fb47-4143-b11e-3b743b2ae1b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d58d7885eed1a8ed0611470f29cb24e8072afcb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053804"
 ---
 # <a name="sqlextendedfetch-visual-foxpro-odbc-driver"></a>SQLExtendedFetch (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: Livello 2  
+ Conformità API ODBC: livello 2  
   
- Simile a [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) ma restituisce più righe utilizzando una matrice per ogni colonna. Il set di risultati forward-supporta lo scorrimento e può essere eseguito con le versioni precedenti-scorrevole se il cursore viene definito come static e non forward-only.  
+ Simile a [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) ma restituisce più righe usando una matrice per ogni colonna. Il set di risultati è scorrevole per lo scorrimento avanti e può essere reso di scorrimento a ritroso se il cursore è definito come statico, non solo in avanti.  
   
- Per impostazione predefinita, il Driver ODBC Visual FoxPro non restituisce righe contrassegnate come eliminate in una tabella FoxPro. Le righe contrassegnate per l'eliminazione ma non ancora rimossi da una tabella non sono inclusi nel cursore del set di risultati. È possibile modificare questo comportamento usando il [SET DELETED](../../odbc/microsoft/set-deleted-command.md) comando.  
+ Per impostazione predefinita, il driver ODBC Visual FoxPro non restituisce righe contrassegnate come eliminate in una tabella di FoxPro. Le righe contrassegnate per l'eliminazione ma non ancora rimosse da una tabella non sono incluse nel cursore del set di risultati. È possibile modificare questo comportamento usando il comando [set Deleted](../../odbc/microsoft/set-deleted-command.md) .  
   
- Per altre informazioni, vedere [SQLExtendedFetch](../../odbc/reference/syntax/sqlextendedfetch-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLExtendedFetch](../../odbc/reference/syntax/sqlextendedfetch-function.md) in *ODBC Programmer ' s Reference*.

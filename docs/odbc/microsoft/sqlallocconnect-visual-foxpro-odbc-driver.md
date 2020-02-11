@@ -1,5 +1,5 @@
 ---
-title: SQLAllocConnect (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLAllocConnect (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 70d48b12-def5-475c-b8e1-654a55fdfe0f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2889ef8e5c6f3a0db4e133ddf0bdd51fda338b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063287"
 ---
 # <a name="sqlallocconnect-visual-foxpro-odbc-driver"></a>SQLAllocConnect (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: A livello centrale  
+ Conformità API ODBC: livello principale  
   
- Alloca memoria per un handle di connessione *hdbc*, all'interno dell'ambiente identificato dal *henv*. Gestione Driver elabora questa chiamata e il driver chiama **SQLAllocConnect** ogni volta che [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), **SQLBrowseConnect**, o [SQLDriverConnect ](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) viene chiamato.  
+ Alloca memoria per un handle di connessione, *HDBC*, all'interno dell'ambiente identificato da *HENV*. Gestione driver elabora questa chiamata e chiama il **SQLAllocConnect** del driver ogni volta che viene chiamato [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), **SQLBrowseConnect**o [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) .  
   
- Per altre informazioni, vedere [SQLAllocConnect](../../odbc/reference/syntax/sqlallocconnect-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLAllocConnect](../../odbc/reference/syntax/sqlallocconnect-function.md) in *ODBC Programmer ' s Reference*.

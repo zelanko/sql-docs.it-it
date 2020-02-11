@@ -16,16 +16,16 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038938"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Funzioni di accesso dati - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il valore del *$arg* rappresentato sotto forma di stringa.  
+  Restituisce il valore di *$arg* rappresentato come stringa.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,23 +39,23 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  È un nodo o un valore atomico.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
   
--   Se *$arg* è una sequenza vuota, viene restituita la stringa di lunghezza zero.  
+-   Se *$arg* è la sequenza vuota, viene restituita la stringa di lunghezza zero.  
   
--   Se *$arg* è un nodo, la funzione restituisce il valore di stringa del nodo in cui verrà ottenuto tramite la funzione di accesso di valore di stringa. definita nella specifica W3C "XQuery 1.0 and XPath 2.0 Data Model".  
+-   Se *$arg* è un nodo, la funzione restituisce il valore stringa del nodo ottenuto tramite la funzione di accesso stringa-valore. definita nella specifica W3C "XQuery 1.0 and XPath 2.0 Data Model".  
   
--   Se *$arg* è un valore atomico, la funzione restituisce la stessa stringa restituita dal cast dell'espressione come **xs: String**, *$arg*, tranne quando diversamente.  
+-   Se *$arg* è un valore atomico, la funzione restituisce la stessa stringa restituita dal cast dell'espressione come **xs: String**, *$arg*, tranne quando specificato diversamente.  
   
--   Se il tipo della *$arg* viene **xs: anyURI**, l'URI viene convertito in una stringa senza caratteri speciali di escape.  
+-   Se il tipo di *$arg* è **xs: anyURI**, l'URI viene convertito in una stringa senza caratteri di escape per i caratteri speciali.  
   
--   In questa implementazione **fn:string()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]).  
+-   In questa implementazione, **FN: String ()** senza un argomento può essere usato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]).  
   
 ## <a name="examples"></a>Esempi  
- In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
+ In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo **XML** nel database AdventureWorks.  
   
 ### <a name="a-using-the-string-function"></a>R. Utilizzo della funzione string  
- La query seguente recupera il <`Features`> nodo figlio dell'elemento di <`ProductDescription`> elemento.  
+ La query seguente recupera la <`Features`> nodo elemento figlio dell'elemento <`ProductDescription`>.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -79,7 +79,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- Se si specifica la **String ()** funzione, viene visualizzato il valore di stringa del nodo specificato.  
+ Se si specifica la funzione **String ()** , si riceverà il valore stringa del nodo specificato.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -98,7 +98,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. Utilizzo della funzione string su vari nodi  
- Nell'esempio seguente, un'istanza XML viene assegnata a una variabile di tipo XML. Le query vengono specificate per illustrare il risultato dell'applicazione **String ()** su vari nodi.  
+ Nell'esempio seguente, un'istanza XML viene assegnata a una variabile di tipo XML. Le query vengono specificate per illustrare il risultato dell'applicazione di **String ()** a vari nodi.  
   
 ```  
 declare @x xml  
@@ -118,7 +118,7 @@ just text
 select @x.query('string(/)')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 This is a comment 10  
@@ -138,7 +138,7 @@ select @x.query('string(/processing-instruction()[1])')
 select @x.query('string(/comment()[1])')  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 This is a comment   

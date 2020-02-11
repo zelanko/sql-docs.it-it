@@ -14,17 +14,17 @@ ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8cd3cebfcf20df2f8a3a786ea66fd28dd76307c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68119714"
 ---
 # <a name="like-predicate-limitations"></a>Limitazioni del predicato LIKE
-Se i dati in una colonna sono più lunghi di 255 caratteri, il confronto tra LIKE baserà solo i primi 255 caratteri.  
+Se i dati in una colonna hanno una lunghezza superiore a 255 caratteri, il confronto LIKE sarà basato solo sui primi 255 caratteri.  
   
- Un tipo usato in una routine è supportata solo con modelli costanti. I driver di Database Desktop supportano SQL-92, ad esempio criteri di ricerca.  
+ Un oggetto LIKE usato in una routine è supportato solo con i modelli costanti. I driver di database desktop supportano SQL-92 come i criteri di ricerca.  
   
- Utilizzo di una clausola di escape in un predicato LIKE non è supportato.  
+ L'uso di una clausola escape in un predicato LIKE non è supportato.  
   
- Non è necessario eseguire un confronto LIKE su una colonna contenente i dati di un tipo di dati numerici o float. I risultati potrebbero essere imprevedibili. Per altre informazioni, vedere la *Guida per programmatori di Microsoft Jet Database Engine*.
+ Un confronto LIKE non deve essere eseguito su una colonna contenente dati di tipo numerico o float. I risultati potrebbero essere imprevedibili. Per ulteriori informazioni, vedere la *Guida per programmatori Microsoft Jet motore di database*.

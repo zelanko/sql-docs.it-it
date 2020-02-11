@@ -15,32 +15,32 @@ ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf2ef856d8970bf60b3f1f329c57a2379eb528dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094017"
 ---
 # <a name="installing-odbc-components"></a>Installazione dei componenti ODBC
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. È consigliabile installare solo in modo esplicito ODBC nelle versioni precedenti di Windows.  
   
- Questa sezione descrive come i componenti ODBC vengono installati e rimossi. Poiché gli sviluppatori di driver installare sempre un componente ODBC (i driver), devono leggere questa sezione. Gli sviluppatori di applicazioni necessario leggere questa sezione solo se sono verranno inclusi i componenti ODBC con le proprie applicazioni. Componenti ODBC includono gestione Driver, driver, funzioni di conversione, il programma di installazione DLL, la libreria di cursori e tutti i file correlati. Ai fini di questa sezione, le applicazioni ODBC non sono considerate componenti ODBC.  
+ In questa sezione viene descritto il modo in cui vengono installati e rimossi i componenti ODBC. Poiché gli sviluppatori di driver installano sempre un componente ODBC (driver), devono leggere questa sezione. Gli sviluppatori di applicazioni devono leggere questa sezione solo se forniranno componenti ODBC con le applicazioni. I componenti ODBC includono Gestione driver, driver, convertitori, la DLL del programma di installazione, la libreria di cursori e tutti i file correlati. Ai fini di questa sezione, le applicazioni ODBC non vengono considerate componenti ODBC.  
   
 > [!NOTE]  
->  In questa sezione è specifica per le piattaforme Microsoft Windows. Modalità di installazione dei componenti ODBC in altre piattaforme è specifica della piattaforma.  
+>  Questa sezione è dedicata alle piattaforme Microsoft Windows. La modalità di installazione dei componenti ODBC in altre piattaforme è specifica della piattaforma.  
   
- Componenti ODBC vengono installati e rimossi in modo da singoli componenti, non una base file per file. Ad esempio, se una funzione di conversione è costituita da del convertitore stesso e un numero di file di dati, questi file sono installati e rimossi come un gruppo. non devono essere installati e rimossi in una base file per file. Il motivo è assicurarsi che completi solo componenti presenti nel sistema.  
+ I componenti ODBC vengono installati e rimossi in base ai singoli componenti, non a livello di file. Se, ad esempio, un traduttore è costituito dal traduttore stesso e da un numero di file di dati, questi file vengono installati e rimossi come gruppo. non devono essere installate e rimosse in base ai singoli file. Il motivo è quello di assicurarsi che nel sistema siano presenti solo i componenti completi.  
   
- Ai fini di installazione e rimozione di componenti, di seguito viene definiti i componenti ODBC:  
+ Per l'installazione e la rimozione di componenti, vengono definiti i componenti ODBC seguenti:  
   
--   **Componenti di base.** Gestione Driver, libreria di cursori, programma di installazione di DLL e qualsiasi altro correlati file costituiscono i componenti di base e devono essere installati e rimosso come gruppo.  
+-   **Componenti di base.** Gestione driver, la libreria di cursori, la DLL del programma di installazione e qualsiasi altro file correlato costituiscono i componenti di base e devono essere installati e rimossi come gruppo.  
   
 -   **Driver.** Ogni driver è un componente separato.  
   
--   **Funzioni di conversione.** Ogni Microsoft translator è un componente separato.  
+-   **Traduttori.** Ogni traduttore è un componente separato.  
   
- Con il supporto di Unicode in ODBC 3.5 e versioni successive, alcune considerazione deve essere concessa a usando componenti OLE DB a ODBC. La versione 1.1 del Provider OLE DB per ODBC è stata scritta in base alle specifiche Unicode specifici all'interno di ODBC 3.0. Poiché queste specifiche modificato in ODBC 3.5, è necessario disporre di versione 1.5 o versioni successive del provider quando si utilizza ODBC 3.5 e versioni successive. In questa sezione vengono trattati gli argomenti seguenti.  
+ Con il supporto di Unicode in ODBC 3,5 e versioni successive, è necessario considerare alcune considerazioni sull'utilizzo di OLE DB componenti con ODBC. La versione 1,1 del provider OLE DB per ODBC è stata scritta in specifiche Unicode specifiche all'interno di ODBC 3,0. Poiché queste specifiche sono state modificate in ODBC 3,5, è necessario disporre della versione 1,5 o successiva del provider quando si utilizza ODBC 3,5 e versioni successive. In questa sezione vengono trattati gli argomenti seguenti.  
   
 -   [Componenti di installazione](../../../odbc/reference/install/installation-components.md)  
   

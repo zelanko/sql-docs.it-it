@@ -15,14 +15,14 @@ ms.assetid: 4a987f69-158f-4cc4-a31b-2b7dd8dcbb87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6ed360c39b87efe851bcbbb5c60762288ea1719
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114277"
 ---
 # <a name="status-records"></a>Record di stato
-I campi nei record di stato contengono informazioni su errori o avvisi restituiti dall'origine gestione Driver, driver o dati, inclusi SQLSTATE, numero di errori nativi, messaggio di diagnostica, il numero di colonna e il numero di riga specifici. Stato record possono essere creati solo se la funzione restituisce SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA o SQL_STILL_EXECUTING. Per un elenco completo dei campi nei record di stato, vedere la [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrizione della funzione.  
+I campi nei record di stato contengono informazioni su errori o avvisi specifici restituiti da Gestione driver, driver o origine dati, inclusi SQLSTATE, numero di errore nativo, messaggio di diagnostica, numero di colonna e numero di riga. I record di stato possono essere creati solo se la funzione restituisce SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA o SQL_STILL_EXECUTING. Per un elenco completo dei campi nei record di stato, vedere la descrizione della funzione [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) .  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

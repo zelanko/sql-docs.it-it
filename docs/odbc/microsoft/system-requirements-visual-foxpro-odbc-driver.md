@@ -1,5 +1,5 @@
 ---
-title: Requisiti di sistema (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: Requisiti di sistema (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,39 +19,39 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939801"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Requisiti di sistema (driver ODBC Visual FoxPro)
-I requisiti di sistema per l'installazione offrono la minima del sistema operativo e lo spazio su disco necessaria per la corretta installazione del driver. Dopo aver installato il driver, è possibile selezionare il software specifiche dell'applicazione da usare per accedere ai dati Visual FoxPro.  
+I requisiti di sistema per l'installazione di forniscono il sistema operativo minimo e lo spazio su disco necessario per installare correttamente il driver. Dopo aver installato il driver, è possibile selezionare il software dell'applicazione specifico che si vuole usare per accedere ai dati Visual FoxPro.  
   
 ## <a name="installation-requirements"></a>Requisiti di installazione  
- Per i requisiti di installazione e altre informazioni, vedere [sito di download di Driver ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Per i requisiti di installazione e altre informazioni, vedere [il sito di download del driver ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
-## <a name="accessing-visual-foxpro-data"></a>L'accesso ai dati Visual FoxPro  
- Per accedere a Microsoft Visual FoxPro o FoxPro 2. *x* dati, è necessario quanto segue:  
+## <a name="accessing-visual-foxpro-data"></a>Accesso ai dati Visual FoxPro  
+ Per accedere a Microsoft Visual FoxPro o FoxPro 2. *x* data, è necessario disporre di quanto segue:  
   
--   Software Client di ODBC (installato automaticamente con il driver)  
+-   Software client ODBC (installato automaticamente con il driver)  
   
--   Driver ODBC di Microsoft Visual FoxPro  
+-   Driver ODBC Microsoft Visual FoxPro  
   
--   Uno dei seguenti tipi di applicazioni software:  
+-   Uno dei seguenti tipi di software applicativo:  
   
-    -   Applicazione di Microsoft Office, ad esempio Microsoft Word o Microsoft Excel  
+    -   Microsoft Office applicazione, ad esempio Microsoft Excel o Microsoft Word  
   
-    -   Linguaggio C o C++ applicazione ODBC  
+    -   Applicazione ODBC del linguaggio C o C++  
   
-    -   Applicazione ODBC di Microsoft Visual Basic  
+    -   Applicazione ODBC Microsoft Visual Basic  
   
--   Uno dei seguenti tipi di dati:  
+-   Uno dei tipi di dati seguenti:  
   
-    -   Visual FoxPro [database](../../odbc/microsoft/visual-foxpro-terminology.md) o una directory di [libero tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   [Database](../../odbc/microsoft/visual-foxpro-terminology.md) Visual FoxPro o una directory di [tabelle gratuite](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   2\.0 FoxPro, 2.5, 2.6 [tabella](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   FoxPro 2,0, 2,5, 2,6 [tabella](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
- Il Driver ODBC Visual FoxPro supporta double-byte character set (DBCS). Per altre informazioni, vedere [International Support](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
+ Il driver ODBC Visual FoxPro supporta i set di caratteri DBCS (Double-byte character set). Per ulteriori informazioni, vedere [supporto internazionale](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
- Il driver non supporta le applicazioni di Microsoft Windows 3.1 16 bit.
+ Il driver non supporta le applicazioni Microsoft Windows 3,1 a 16 bit.

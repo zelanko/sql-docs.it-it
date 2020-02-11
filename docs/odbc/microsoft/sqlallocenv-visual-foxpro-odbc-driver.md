@@ -1,5 +1,5 @@
 ---
-title: SQLAllocEnv (Driver ODBC Visual FoxPro) | Microsoft Docs
+title: SQLAllocEnv (driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: a21c3782-273f-40b3-b239-47beaf8df462
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4705ec549fb13ba056f5128167a6f5b7a39cff41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063276"
 ---
 # <a name="sqlallocenv-visual-foxpro-odbc-driver"></a>SQLAllocEnv (driver ODBC Visual FoxPro)
 > [!NOTE]  
->  In questo argomento contiene informazioni specifiche del Driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Questo argomento contiene informazioni specifiche del driver ODBC Visual FoxPro. Per informazioni generali su questa funzione, vedere l'argomento appropriato in informazioni di [riferimento sulle API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Supporto: Full  
+ Supporto: completo  
   
- Conformità di API ODBC: A livello centrale  
+ Conformità API ODBC: livello principale  
   
- Alloca memoria per un handle di ambiente *henv*e inizializza l'interfaccia a livello di chiamata ODBC per l'uso da un'applicazione.  
+ Alloca la memoria per un handle di ambiente, *HENV*, e Inizializza l'interfaccia del livello di chiamata ODBC per l'utilizzo da parte di un'applicazione.  
   
- Per altre informazioni, vedere [SQLAllocEnv](../../odbc/reference/syntax/sqlallocenv-function.md) nel *riferimento per programmatori ODBC*.
+ Per ulteriori informazioni, vedere [SQLAllocEnv](../../odbc/reference/syntax/sqlallocenv-function.md) in *ODBC Programmer ' s Reference*.

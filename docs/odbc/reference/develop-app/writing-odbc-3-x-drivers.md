@@ -1,5 +1,5 @@
 ---
-title: La scrittura di driver ODBC 3.x | Microsoft Docs
+title: Scrittura di driver ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,103 +16,103 @@ ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb403cef47f901cdb43bbb32c669ba68aa34913d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078902"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Scrittura di driver ODBC 3.x
-La tabella seguente illustra il supporto di funzione in un'applicazione ODBC 3. *x* driver e un'applicazione ODBC e il mapping eseguito da Gestione Driver quando le funzioni vengono chiamate su un'applicazione ODBC 3. *x* driver.  
+La tabella seguente illustra il supporto delle funzioni in un ODBC 3. driver *x* e un'applicazione ODBC e mapping eseguito da Gestione driver quando le funzioni vengono chiamate a un ODBC 3. driver *x* .  
   
-|Funzione|Supportato<br /><br /> da un<br /><br /> ODBC 3.*x*<br /><br /> driver?|Supportato<br /><br /> da un<br /><br /> ODBC 3.*x*<br /><br /> applicazione?|Il mapping o supportate<br /><br /> da ODBC 3. *x*<br /><br /> Gestione driver per<br /><br /> un'applicazione ODBC 3. *x* driver?|  
+|Funzione|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> driver?|Supportato<br /><br /> da un<br /><br /> ODBC 3. *x*<br /><br /> applicazione?|Mappato/supportato<br /><br /> da ODBC 3. *x*<br /><br /> Gestione driver a<br /><br /> ODBC 3. driver *x* ?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|No|No[1]|Yes|  
-|**SQLAllocEnv**|No|No[1]|Yes|  
-|**SQLAllocHandle**|Yes|Sì|No|  
-|**SQLAllocStmt**|No|No[1]|Yes|  
-|**SQLBindCol**|Yes|Sì|No|  
-|**SQLBindParam**|No|Sì [2]|Yes|  
-|**SQLBindParameter**|Yes|Sì|No|  
-|**SQLBrowseConnect**|Yes|Sì|No|  
-|**SQLBulkOperations**|Yes|Sì|No|  
-|**SQLCancel**|Yes|Sì|No|  
-|**SQLCloseCursor**|Yes|Sì|No|  
-|**SQLColAttribute**|Yes|Sì|No|  
-|**SQLColAttributes**|No[3]|No|Yes|  
-|**SQLColumnPrivileges**|Yes|Sì|No|  
-|**SQLColumns**|Yes|Sì|No|  
-|**SQLConnect**|Yes|Sì|No|  
-|**SQLCopyDesc**|Yes|Yes|Sì [4]|  
-|**SQLDataSources**|No|Yes|Yes|  
-|**SQLDescribeCol**|Yes|Sì|No|  
-|**SQLDescribeParam**|Yes|Sì|No|  
-|**SQLDisconnect**|Yes|Sì|No|  
-|**SQLDriverConnect**|Yes|Sì|No|  
-|**SQLDrivers**|No|Yes|Yes|  
-|**SQLEndTran**|Yes|Sì|No|  
-|**SQLError**|No|No[1]|Yes|  
-|**SQLExecDirect**|Yes|Sì|No|  
-|**SQLExecute**|Yes|Sì|No|  
-|**SQLExtendedFetch**|Yes|No|No|  
-|**SQLFetch**|Yes|Sì|No|  
-|**SQLFetchScroll**|Yes|Sì|No|  
-|**SQLForeignKeys**|Yes|Sì|No|  
-|**SQLFreeConnect**|No|Sì [1]|Yes|  
-|**SQLFreeEnv**|No|Sì [1]|Yes|  
-|**SQLFreeHandle**|Yes|Sì|No|  
-|**SQLFreeStmt**|Yes|Sì|No|  
-|**SQLGetConnectAttr**|Yes|Sì|No|  
-|**SQLGetConnectOption**|[5]|No[1]|Yes|  
-|**SQLGetCursorName**|Yes|Sì|No|  
-|**SQLGetData**|Yes|Sì|No|  
-|**SQLGetDescField**|Yes|Sì|No|  
-|**SQLGetDescRec**|Yes|Sì|No|  
-|**SQLGetDiagField**|Yes|Sì|No|  
-|**SQLGetDiagRec**|Yes|Sì|No|  
-|**SQLGetEnvAttr**|Yes|Sì|No|  
-|**SQLGetFunctions**|No[6]|Yes|Yes|  
-|**SQLGetInfo**|Yes|Sì|No|  
-|**SQLGetStmtAttr**|Yes|Sì|No|  
-|**SQLGetStmtOption**|[5]|No[1]|Yes|  
-|**SQLGetTypeInfo**|Yes|Sì|No|  
-|**SQLMoreResults**|Yes|Sì|No|  
-|**SQLNativeSql**|Yes|Sì|No|  
-|**SQLNumParams**|Yes|Sì|No|  
-|**SQLNumResultCols**|Yes|Sì|No|  
-|**SQLParamData**|Yes|Sì|No|  
-|**SQLParamOptions**|No|No|Yes|  
-|**SQLPrepare**|Yes|Sì|No|  
-|**SQLPrimaryKeys**|Yes|Sì|No|  
-|**SQLProcedureColumns**|Yes|Sì|No|  
-|**SQLProcedures**|Yes|Sì|No|  
-|**SQLPutData**|Yes|Sì|No|  
-|**SQLRowCount**|Yes|Sì|No|  
-|**SQLSetConnectAttr**|Yes|Sì|No|  
-|**SQLSetConnectOption**|[5]|No[1]|Yes|  
-|**SQLSetCursorName**|Yes|Sì|No|  
-|**SQLSetDescField**|Yes|Sì|No|  
-|**SQLSetDescRec**|Yes|Sì|No|  
-|**SQLSetEnvAttr**|Yes|Sì|No|  
-|**SQLSetPos**|Yes|Sì|No|  
-|**SQLSetParam**|No|No|Yes|  
-|**SQLSetScrollOption**|Yes|Sì|No|  
-|**SQLSetStmtAttr**|Yes|Sì|No|  
-|**SQLSetStmtOption**|[5]|No[1]|Yes|  
-|**SQLSpecialColumns**|Yes|Sì|No|  
-|**SQLStatistics**|Yes|Sì|No|  
-|**SQLTablePrivileges**|Yes|Sì|No|  
-|**SQLTables**|Yes|Sì|No|  
-|**SQLTransact**|No|No[1]|Yes|  
+|**SQLAllocConnect**|No|No [1]|Sì|  
+|**SQLAllocEnv**|No|No [1]|Sì|  
+|**SQLAllocHandle**|Sì|Sì|No|  
+|**SQLAllocStmt**|No|No [1]|Sì|  
+|**SQLBindCol**|Sì|Sì|No|  
+|**SQLBindParam**|No|Sì [2]|Sì|  
+|**SQLBindParameter**|Sì|Sì|No|  
+|**SQLBrowseConnect**|Sì|Sì|No|  
+|**SQLBulkOperations**|Sì|Sì|No|  
+|**SQLCancel**|Sì|Sì|No|  
+|**SQLCloseCursor**|Sì|Sì|No|  
+|**SQLColAttribute**|Sì|Sì|No|  
+|**SQLColAttributes**|No [3]|No|Sì|  
+|**SQLColumnPrivileges**|Sì|Sì|No|  
+|**SQLColumns**|Sì|Sì|No|  
+|**SQLConnect**|Sì|Sì|No|  
+|**SQLCopyDesc**|Sì|Sì|Sì [4]|  
+|**SQLDataSources**|No|Sì|Sì|  
+|**SQLDescribeCol**|Sì|Sì|No|  
+|**SQLDescribeParam**|Sì|Sì|No|  
+|**SQLDisconnect**|Sì|Sì|No|  
+|**SQLDriverConnect**|Sì|Sì|No|  
+|**SQLDrivers**|No|Sì|Sì|  
+|**SQLEndTran**|Sì|Sì|No|  
+|**SQLError**|No|No [1]|Sì|  
+|**SQLExecDirect**|Sì|Sì|No|  
+|**SQLExecute**|Sì|Sì|No|  
+|**SQLExtendedFetch**|Sì|No|No|  
+|**SQLFetch**|Sì|Sì|No|  
+|**SQLFetchScroll**|Sì|Sì|No|  
+|**SQLForeignKeys**|Sì|Sì|No|  
+|**SQLFreeConnect**|No|Sì [1]|Sì|  
+|**SQLFreeEnv**|No|Sì [1]|Sì|  
+|**SQLFreeHandle**|Sì|Sì|No|  
+|**SQLFreeStmt**|Sì|Sì|No|  
+|**SQLGetConnectAttr**|Sì|Sì|No|  
+|**SQLGetConnectOption**|No [5]|No [1]|Sì|  
+|**SQLGetCursorName**|Sì|Sì|No|  
+|**SQLGetData**|Sì|Sì|No|  
+|**SQLGetDescField**|Sì|Sì|No|  
+|**SQLGetDescRec**|Sì|Sì|No|  
+|**SQLGetDiagField**|Sì|Sì|No|  
+|**SQLGetDiagRec**|Sì|Sì|No|  
+|**SQLGetEnvAttr**|Sì|Sì|No|  
+|**SQLGetFunctions**|No [6]|Sì|Sì|  
+|**SQLGetInfo**|Sì|Sì|No|  
+|**SQLGetStmtAttr**|Sì|Sì|No|  
+|**SQLGetStmtOption**|No [5]|No [1]|Sì|  
+|**SQLGetTypeInfo**|Sì|Sì|No|  
+|**SQLMoreResults**|Sì|Sì|No|  
+|**SQLNativeSql**|Sì|Sì|No|  
+|**SQLNumParams**|Sì|Sì|No|  
+|**SQLNumResultCols**|Sì|Sì|No|  
+|**SQLParamData**|Sì|Sì|No|  
+|**SQLParamOptions**|No|No|Sì|  
+|**SQLPrepare**|Sì|Sì|No|  
+|**SQLPrimaryKeys**|Sì|Sì|No|  
+|**SQLProcedureColumns**|Sì|Sì|No|  
+|**SQLProcedures**|Sì|Sì|No|  
+|**SQLPutData**|Sì|Sì|No|  
+|**SQLRowCount**|Sì|Sì|No|  
+|**SQLSetConnectAttr**|Sì|Sì|No|  
+|**SQLSetConnectOption**|No [5]|No [1]|Sì|  
+|**SQLSetCursorName**|Sì|Sì|No|  
+|**SQLSetDescField**|Sì|Sì|No|  
+|**SQLSetDescRec**|Sì|Sì|No|  
+|**SQLSetEnvAttr**|Sì|Sì|No|  
+|**SQLSetPos**|Sì|Sì|No|  
+|**SQLSetParam**|No|No|Sì|  
+|**SQLSetScrollOption**|Sì|Sì|No|  
+|**SQLSetStmtAttr**|Sì|Sì|No|  
+|**SQLSetStmtOption**|No [5]|No [1]|Sì|  
+|**SQLSpecialColumns**|Sì|Sì|No|  
+|**SQLStatistics**|Sì|Sì|No|  
+|**SQLTablePrivileges**|Sì|Sì|No|  
+|**SQLTables**|Sì|Sì|No|  
+|**SQLTransact**|No|No [1]|Sì|  
   
- [1] questa funzione è deprecata in ODBC 3. *x*. ODBC 3. *x* applicazioni non deve usare questa funzione. Tuttavia, un'applicazione compatibile con ISO CLI o Open Group può chiamare questa funzione.  
+ [1] Questa funzione è deprecata in ODBC 3. *x*. ODBC 3. le applicazioni *x* non devono usare questa funzione. Tuttavia, un gruppo aperto o un'applicazione compatibile con l'interfaccia della riga di comando ISO può chiamare questa funzione.  
   
- [2] ODBC 3. *x* le applicazioni devono utilizzare **SQLBindParameter** anziché **SQLBindParam**. Tuttavia, un'applicazione compatibile con ISO CLI o Open Group può chiamare questa funzione.  
+ [2] ODBC 3. le applicazioni *x* devono usare **SQLBindParameter** anziché **SQLBindParam**. Tuttavia, un gruppo aperto o un'applicazione compatibile con l'interfaccia della riga di comando ISO può chiamare questa funzione.  
   
- [3] gli sviluppatori di driver di necessario notare che l'API ODBC 2. *x* SQL_COLUMN_PRECISION SQL_COLUMN_SCALE e SQL_COLUMN_LENGTH devono essere supportate con gli attributi di colonna **SQLColAttribute**.  
+ [3] i writer di driver devono tenere presente che ODBC 2. gli attributi di colonna *x* SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE e SQL_COLUMN_LENGTH devono essere supportati con **SQLColAttribute**.  
   
- [4] **SQLCopyDesc** viene implementato parzialmente da Gestione Driver quando un descrittore di vengono copiato tra le connessioni che appartengono a diversi driver. I driver necessari per supportare **SQLCopyDesc** tra due di loro connessioni. Le funzioni come **SQLDrivers**, che vengono implementate esclusivamente da Gestione Driver, non vengono visualizzati nell'elenco.  
+ [4] **SQLCopyDesc** viene implementato parzialmente da Gestione driver quando un descrittore viene copiato tra le connessioni che appartengono a driver diversi. I driver sono necessari per supportare **SQLCopyDesc** tra due connessioni. Le funzioni quali **SQLDrivers**, implementate esclusivamente da Gestione driver, non vengono visualizzate in questo elenco.  
   
- [5] in determinate circostanze, i driver potrebbe essere necessario supportare questa funzione. Per altre informazioni, vedere la pagina di riferimento relativa a questa funzione.  
+ [5] in determinate circostanze, potrebbe essere necessario che i driver supportino questa funzione. Per ulteriori informazioni, vedere la pagina di riferimento di questa funzione.  
   
- [6] i driver possono scegliere di supportare **SQLGetFunctions** se il set di funzioni supportate dal driver varia da una connessione alla connessione.
+ [6] il driver può scegliere di supportare **SQLGetFunctions** se il set di funzioni supportate dal driver varia dalla connessione alla connessione.

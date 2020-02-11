@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036709"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 
 
-  Restituisce la tupla specificata da una stringa di formato Multidimensional.  
+  Restituisce la tupla specificata da una stringa in formato MDX (Multidimensional Expression).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -31,10 +31,10 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  *Tuple_Specification*  
  Espressione stringa valida che specifica, in modo diretto o indiretto, una tupla.  
   
-## <a name="remarks"></a>Note  
- Il **StrToTuple** funzione restituisce il set specificato. Il **StrToTuple** funzione viene in genere utilizzata con funzioni definite dall'utente per la restituzione di una tupla specificata da una funzione esterna a un'istruzione MDX.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **StrToTuple** restituisce il set specificato. La funzione **StrToTuple** viene in genere utilizzata con funzioni definite dall'utente per la restituzione di una specifica di tupla da una funzione esterna a un'istruzione MDX.  
   
--   Quando viene utilizzato il flag CONSTRAINED, la tupla specificata deve contenere nomi di membri completi o non qualificati. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se viene fornita una stringa che non i nomi dei membri direttamente risolvibile in o non qualificati, viene visualizzato l'errore seguente: "Le restrizioni imposte dal CONSTRAINED flag nella funzione STRTOTUPLE sono state violate."  
+-   Quando viene utilizzato il flag CONSTRAINED, la tupla specificata deve contenere nomi di membri completi o non qualificati. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se viene specificata una stringa non direttamente risolvibile in nomi di membri completi o non qualificati, viene visualizzato l'errore seguente: "Le restrizioni imposte dal flag CONSTRAINED nella funzione STRTOTUPLE sono state violate".  
   
 -   Quando non viene utilizzato il flag CONSTRAINED, la tupla specificata può essere risolta in un'espressione MDX valida che restituisce una tupla.  
   
@@ -75,6 +75,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

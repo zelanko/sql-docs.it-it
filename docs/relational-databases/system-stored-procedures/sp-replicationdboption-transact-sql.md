@@ -16,10 +16,10 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056768"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
@@ -41,24 +41,24 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'` è il database per il quale viene impostata l'opzione del database di replica. *db_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
+`[ @dbname = ] 'dbname'`Database per cui è in corso l'impostazione dell'opzione del database di replica. *db_name* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @optname = ] 'optname'` è l'opzione del database di replica da abilitare o disabilitare. *optname* è di **tipo sysname**. i possibili valori sono i seguenti.  
+`[ @optname = ] 'optname'`Opzione del database di replica da abilitare o disabilitare. *optname* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
 |valore|Descrizione|  
 |-----------|-----------------|  
 |**pubblicazione di tipo merge**|Specifica se il database può essere utilizzato per pubblicazioni di tipo merge.|  
-|**publish**|Specifica se il database può essere utilizzato per altri tipi di pubblicazione.|  
+|**pubblicare**|Specifica se il database può essere utilizzato per altri tipi di pubblicazione.|  
 |**sottoscrivere**|Specifica se si tratta di un database di sottoscrizione.|  
-|**Sincronizza con backup**|Specifica se il database è abilitato per il backup coordinato. Per ulteriori informazioni, vedere [abilitare backup coordinati per la programmazione &#40;&#41;Transact-SQL della replica transazionale](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**sync with backup**|Specifica se il database è abilitato per il backup coordinato. Per ulteriori informazioni, vedere [abilitare backup coordinati per la replica transazionale &#40;&#41;di programmazione Transact-SQL della replica ](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'` indica se abilitare o disabilitare l'opzione del database di replica specificato. *value* è di **tipo sysname**e può essere **true** o **false**. Se questo valore è **false** e *optname* è **merge publish**, vengono eliminate anche le sottoscrizioni del database di pubblicazione di tipo merge.  
+`[ @value = ] 'value'`Indica se abilitare o disabilitare l'opzione del database di replica specificata. *value* è di **tipo sysname**e può essere **true** o **false**. Se questo valore è **false** e *optname* è **merge publish**, vengono eliminate anche le sottoscrizioni del database di pubblicazione di tipo merge.  
   
-`[ @ignore_distributor = ] ignore_distributor` indica se il stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**, che indica che il server di distribuzione deve essere connesso e aggiornato con il nuovo stato del database di pubblicazione. Il valore **1** deve essere specificato solo se il server di distribuzione non è accessibile e **sp_replicationdboption** viene utilizzato per disabilitare la pubblicazione.  
+`[ @ignore_distributor = ] ignore_distributor`Indica se questo stored procedure viene eseguito senza connettersi al server di distribuzione. *ignore_distributor* è di **bit**e il valore predefinito è **0**, che indica che il server di distribuzione deve essere connesso e aggiornato con il nuovo stato del database di pubblicazione. Il valore **1** deve essere specificato solo se il server di distribuzione non è accessibile e **sp_replicationdboption** viene utilizzato per disabilitare la pubblicazione.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -73,7 +73,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Creare una pubblicazione](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Eliminare una pubblicazione](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Disabilitare la pubblicazione e la distribuzione](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_start_job (Transact-SQL) | Microsoft Docs
+title: sys. sp_cdc_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5f38224cdd1f2ade609d5b10ba2a6b46f913639d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066707"
 ---
-# <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
+# <a name="syssp_cdc_start_job-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Avvia un processo di pulizia o di acquisizione di Change Data Capture per il database corrente.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,24 +41,24 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ [ @job_type = ] 'job_type' ]` Tipo di processo da aggiungere. *job_type* viene **nvarchar(20)** con valore predefinito è **acquisire**. Gli input validi sono **Acquisisci** e **pulizia**.  
+`[ [ @job_type = ] 'job_type' ]`Tipo di processo da aggiungere. *job_type* è di **tipo nvarchar (20)** e il valore predefinito è **Capture**. Gli input validi sono **Capture** e **Cleanup**.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna  
+ nessuno  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  sys.sp_cdc_start_job può essere utilizzato da un amministratore per avviare in modo esplicito il processo di acquisizione o di pulizia.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-starting-a-capture-job"></a>R. Avvio di un processo di acquisizione  
- Nell'esempio seguente viene avviato il processo di acquisizione per il database `AdventureWorks2012`. Se si specifica un valore per *job_type* non è necessaria perché il tipo di processo predefinito è **capture**.  
+ Nell'esempio seguente viene avviato il processo di acquisizione per il database `AdventureWorks2012`. Non è necessario specificare un valore per *job_type* perché il tipo di processo predefinito è **Capture**.  
   
 ```  
 USE AdventureWorks2012;  
@@ -77,7 +77,7 @@ EXEC sys.sp_cdc_start_job @job_type = N'cleanup';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
+ [dbo. cdc_jobs &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys. sp_cdc_stop_job &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
   
   

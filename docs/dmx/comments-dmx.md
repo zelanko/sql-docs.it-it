@@ -9,41 +9,45 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071048"
 ---
 # <a name="comments-dmx"></a>Commenti (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  I commenti nel Data Mining Extensions (DMX) sono stringhe di testo in programma il codice [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non viene eseguito. I commenti sono noti anche come osservazioni. È possibile utilizzare i commenti per documentare il codice o disabilitare temporaneamente parti di uno script o di un'istruzione DMX durante la diagnostica del codice.  
+  I commenti in DMX (Data Mining Extensions) sono stringhe di testo nel codice [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] del programma che non vengono eseguite. I commenti sono noti anche come osservazioni. È possibile utilizzare i commenti per documentare il codice o disabilitare temporaneamente parti di uno script o di un'istruzione DMX durante la diagnostica del codice.  
   
  Se si utilizzano i commenti per documentare il codice del programma, la successiva manutenzione del codice risulterà più semplice. È possibile utilizzare i commenti per registrare dettagli quali il nome del programma, il nome dello sviluppatore che ha scritto il codice e le date delle principali modifiche apportate al codice. È inoltre possibile utilizzare i commenti per descrivere calcoli complessi o un metodo di programmazione.  
   
  Di seguito sono riportate le linee guida di base per la scrittura dei commenti:  
   
--   In un commento è possibile utilizzare caratteri alfanumerici o simboli. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora tutti i caratteri all'interno di un commento.  
+-   In un commento è possibile utilizzare caratteri alfanumerici o simboli. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignora tutti i caratteri all'interno di un commento.  
   
 -   Per i commenti di uno script o istruzione non è prevista una lunghezza massima. Un commento può essere formato da una o più righe.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta gli indicatori di commento seguenti:  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta gli indicatori di commento seguenti:  
   
--   **(barra doppia).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera tutti i caratteri situati tra la barra doppia e la fine della riga come commento. Per creare commenti su più righe, specificare la barra doppia all'inizio di ogni riga di commento. Per altre informazioni su questo indicatore di commento, vedere [barre doppie &#40;commento&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md).  
+-   **(barre doppie).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera tutti i caratteri situati tra la barra doppia e la fine della riga come commento. Per creare commenti su più righe, specificare la barra doppia all'inizio di ogni riga di commento. Per ulteriori informazioni su questo carattere di commento, vedere la [barra doppia &#40;commento&#41; &#40;&#41;DMX ](../dmx/double-slash-comment-dmx.md).  
   
--   **-(trattino doppio).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera tutti i caratteri situati tra il trattino doppio e la fine della riga come commento. Per creare commenti su più righe, specificare il trattino doppio all'inizio di ogni riga di commento. Per altre informazioni su questo indicatore di commento, vedere [- &#40;commento&#41; &#40;DMX&#41; riepilogo](../dmx/comment-dmx-summary.md).  
+-   **--(trattini doppi).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera tutti i caratteri situati tra il trattino doppio e la fine della riga come commento. Per creare commenti su più righe, specificare il trattino doppio all'inizio di ogni riga di commento. Per ulteriori informazioni su questo carattere di commento, vedere [&#40;commento&#41; &#40;riepilogo&#41; DMX](../dmx/comment-dmx-summary.md).  
   
--   **/\* ... \*/ (barra-asterisco coppia di caratteri).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta, o anche per scrivere commenti in un codice eseguibile. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] situati tra la coppia di caratteri di commento Apri (/ *) per la coppia di chiusura del commento (\*/) come parte del commento. Per creare un commento su più righe, iniziare il commento con la coppia di caratteri di apertura del commento (/\*) e terminarlo con la coppia di caratteri di chiusura del commento (\*/). Nelle righe del commento non deve essere inserito nessun altro simbolo di commento. Per altre informazioni su questo indicatore di commento, vedere [barra asterisco &#40;commento&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
+-   **/\*... \*/(coppie di caratteri barra-asterisco).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta, o anche per scrivere commenti in un codice eseguibile. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]valuta tutti gli elementi dalla coppia di caratteri di apertura (/*) alla coppia di caratteri\*di chiusura (/) come parte del commento. Per creare un commento su più righe, iniziare il commento con la coppia di caratteri di apertura del commento\*(/) e terminare il commento con la coppia di caratteri di chiusura\*del commento (/). Nelle righe del commento non deve essere inserito nessun altro simbolo di commento. Per ulteriori informazioni su questo carattere di commento, vedere la pagina relativa al [Commento a Slash Star &#40;&#41; &#40;&#41;DMX ](../dmx/slash-star-comment-dmx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](../dmx/data-mining-extensions-dmx-statements.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Guida di riferimento alle estensioni di data mining &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Guida di riferimento alle funzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Guida di riferimento agli operatori DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Guida di riferimento alle istruzioni DMX&#41; &#40;di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40;le convenzioni della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40;elementi della sintassi DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Funzioni di stima generali &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
