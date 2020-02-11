@@ -18,16 +18,16 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106349"
 ---
-# <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
+# <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Il **MSmerge_sessions** tabella contiene righe di cronologia con i risultati delle precedenti sessioni dei processi dell'agente di Merge. Viene aggiunta una nuova riga alla tabella per ogni esecuzione dell'agente di merge. Questa tabella è archiviata nel database di distribuzione.  
+  La tabella **MSmerge_sessions** contiene righe di cronologia con i risultati delle sessioni di processo agente di merge precedenti. Viene aggiunta una nuova riga alla tabella per ogni esecuzione dell'agente di merge. Questa tabella è archiviata nel database di distribuzione.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "68106349"
 |**agent_id**|**int**|ID dell'agente di merge.|  
 |**start_time**|**datetime**|Ora di inizio dell'esecuzione del processo.|  
 |**end_time**|**datetime**|Ora di fine dell'esecuzione del processo.|  
-|**duration**|**int**|Durata cumulativa, espressa in secondi, di questa sessione del processo.|  
+|**durata**|**int**|Durata cumulativa, espressa in secondi, di questa sessione del processo.|  
 |**delivery_time**|**int**|Numero di secondi necessari per applicare un batch di modifiche.|  
 |**upload_time**|**int**|Numero di secondi necessari per il caricamento delle modifiche nel server di pubblicazione.|  
 |**download_time**|**int**|Numero di secondi necessari per il download delle modifiche nel Sottoscrittore.|  
@@ -56,14 +56,14 @@ ms.locfileid: "68106349"
 |**download_rows_retried**|**int**|Numero di righe con tentativi ripetuti di download nel Sottoscrittore.|  
 |**schema_changes**|**int**|Numero di modifiche dello schema applicate durante la sessione.|  
 |**metadata_rows_cleanedup**|**int**|Numero di righe di metadati rimossi durante la sessione.|  
-|**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = avvio.<br /><br /> **2** = esito positivo.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  
+|**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = avvia.<br /><br /> **2** = esito positivo.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  
 |**estimated_upload_changes**|**int**|Numero stimato di modifiche che devono essere applicate nel server di pubblicazione.|  
 |**estimated_download_changes**|**int**|Numero stimato di modifiche che devono essere applicate nel Sottoscrittore.|  
-|**connection_type**|**int**|Connessione utilizzata durante il caricamento:<br /><br /> **1** = rete locale (LAN).<br /><br /> **2** = connessione remota.<br /><br /> **3** = sincronizzazione web.|  
+|**connection_type**|**int**|Connessione utilizzata durante il caricamento:<br /><br /> **1** = rete locale (LAN).<br /><br /> **2** = connessione di rete remota.<br /><br /> **3** = sincronizzazione Web.|  
 |**timestamp**|**timestamp**|Colonna timestamp della tabella.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

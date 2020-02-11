@@ -18,10 +18,10 @@ ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d3800388f5c47d575f649ea83c05830fbe77fbc8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660611"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Proprietà Enabled (classe ServerNetworkProtocolIpAddress)
@@ -36,7 +36,7 @@ object.Enabled [= value]
 ```  
   
 ## <a name="parts"></a>Parti  
- *object*  
+ *oggetto*  
  A [classe ServerNetworkProtocolIPAdress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) che rappresenta un indirizzo IP del protocollo di rete nell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
