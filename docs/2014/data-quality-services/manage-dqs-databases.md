@@ -11,17 +11,17 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5be0404cc35964573b8a66d7874c76a82e7c55f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484470"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   In questa sezione vengono fornite le informazioni sulle attività di gestione di database che possono essere eseguite nei database DQS, ad esempio il backup e il ripristino oppure il collegamento o lo scollegamento.  
   
-##  <a name="BackupRestore"></a> Backup e ripristino dei database DQS  
- Le operazioni di backup e di ripristino dei database di SQL Server sono operazioni comuni che gli amministratori di database eseguono per impedire la perdita di dati in caso di emergenza recuperando i dati dai database di backup. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] viene implementato principalmente con due database di SQL Server: DQS_MAIN e DQS_PROJECTS. Le procedure di backup e ripristino dei database di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) sono simili a quelle degli altri database di SQL Server. Esistono tuttavia tre problemi associati al backup e al ripristino dei database DQS:  
+##  <a name="BackupRestore"></a>Eseguire il backup e il ripristino dei database DQS  
+ Le operazioni di backup e di ripristino dei database di SQL Server sono operazioni comuni che gli amministratori di database eseguono per impedire la perdita di dati in caso di emergenza recuperando i dati dai database di backup. Il[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] viene implementato principalmente con due database di SQL Server: DQS_MAIN e DQS_PROJECTS. Le procedure di backup e ripristino dei database di [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) sono simili a quelle degli altri database di SQL Server. Esistono tuttavia tre problemi associati al backup e al ripristino dei database DQS:  
   
 -   Le operazioni di backup e di ripristino dei database di DQS devono essere sincronizzate. In caso contrario, la versione ripristinata del [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] non funzionerà.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65484470"
 >  -   Nel modello di recupero con registrazione minima, se i record del log rimangono inattivi per molto tempo, ad esempio una transazione lunga e dispendiosa in termini di tempo, il troncamento del log può essere ritardato e pertanto può determinare il riempimento del log delle transazioni. Inoltre, il troncamento del log non comporta una riduzione delle dimensioni del file di log fisico (file con estensione ldf). Per ridurre le dimensioni di un file di log fisico, è necessario compattare il file di log. Per informazioni sulla risoluzione dei problemi riguardanti il log delle transazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) o l'articolo del Supporto tecnico Microsoft all'indirizzo [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   È necessario eseguire regolarmente un backup completo o differenziale dei database di DQS e un backup del log delle transazioni, nonché effettuare un recupero temporizzato dei dati. Per altre informazioni, vedere [Backup completo del database & #40; SQL Server & #41; ](../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Backup di un log delle transazioni & #40; SQL Server & #41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-##  <a name="DetachAttach"></a> Scollegare o collegare i database DQS  
+##  <a name="DetachAttach"></a>Scollegare/connettere i database DQS  
  È possibile scollegare i dati e i file di log delle transazioni dei database DQS, quindi ricollegare i database alla stessa istanza o a un'altra istanza di SQL Server se si desidera impostare i database DQS su un'istanza diversa di SQL Server nello stesso computer oppure spostare il database.  
   
  Per informazioni dettagliate sui fattori da considerare prima e durante lo scollegamento e il collegamento dei database in SQL Server, vedere [Collegamento e scollegamento di un database &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -55,6 +55,6 @@ ms.locfileid: "65484470"
 |Viene descritto come scollegare e collegare i database DQS.|[Scollegamento e collegamento di database DQS](../../2014/data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Amministrazione DQS](../../2014/data-quality-services/dqs-administration.md)  
+ [amministrazione dqs](../../2014/data-quality-services/dqs-administration.md)  
   
   

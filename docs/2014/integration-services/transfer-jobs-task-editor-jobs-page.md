@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054986"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor attività Trasferisci processi (pagina Processi)
@@ -29,17 +29,17 @@ ms.locfileid: "66054986"
   
 ## <a name="options"></a>Opzioni  
  **SourceConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **\<Nuova connessione...>** per creare una nuova connessione al server di origine.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di origine.  
   
  **DestinationConnection**  
- Selezionare una gestione connessione SMO nell'elenco o fare clic su **Nuova connessione...>\<** per creare una nuova connessione al server di destinazione.  
+ Selezionare una gestione connessione SMO nell'elenco oppure fare clic su ** \<nuova connessione... >** per creare una nuova connessione al server di destinazione.  
   
  **TransferAllJobs**  
  Indicare se l'attività deve copiare dal server di origine nel server di destinazione tutti i processi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent o solo quelli specificati.  
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Copia tutti i processi.|  
 |**False**|Copia solo i processi specificati.|  
@@ -57,7 +57,7 @@ ms.locfileid: "66054986"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**FailTask**|L'attività viene interrotta se nel server di destinazione esistono processi con lo stesso nome.|  
 |**Overwrite**|L'attività sovrascrive i processi con lo stesso nome che si trovano nel server di destinazione.|  
@@ -68,7 +68,7 @@ ms.locfileid: "66054986"
   
  Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Attiva i processi nel server di destinazione.|  
 |**False**|Disabilita i processi nel server di destinazione.|  
@@ -78,6 +78,6 @@ ms.locfileid: "66054986"
  [Attività di Integration Services](control-flow/integration-services-tasks.md)   
  [Editor attività Trasferisci processi &#40;pagina Generale&#41;](general-page-of-integration-services-designers-options.md)   
  [Pagina Espressioni](expressions/expressions-page.md)   
- [Gestione connessione SMO](connection-manager/smo-connection-manager.md)  
+ [gestione connessione SMO](connection-manager/smo-connection-manager.md)  
   
   

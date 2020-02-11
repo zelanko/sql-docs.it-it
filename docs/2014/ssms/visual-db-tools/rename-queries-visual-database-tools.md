@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316835"
 ---
 # <a name="rename-queries-visual-database-tools"></a>Rinominare le query (Visual Database Tools)
@@ -32,7 +32,7 @@ ms.locfileid: "63316835"
 3.  Digitare un nuovo nome per la query e premere Invio.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per le query e visualizzazioni di progettazione &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Eseguire operazioni di base con le query &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

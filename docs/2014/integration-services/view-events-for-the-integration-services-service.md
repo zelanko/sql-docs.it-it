@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054668"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Visualizzare eventi per il servizio Integration Services
-  Sono disponibili due strumenti nei quali è possibile visualizzare eventi per il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
+  Sono disponibili due strumenti nei quali è possibile visualizzare eventi per il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
   
 -   La finestra di dialogo **Visualizzatore file di log** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Nella finestra di dialogo **Visualizzatore file di log** sono disponibili opzioni per l'esportazione, l'applicazione di filtri e l'esecuzione di ricerche nel log. Per altre informazioni sulle opzioni della finestra di dialogo **Visualizzatore file di log**, vedere [Guida sensibile al contesto del Visualizzatore file di log](../relational-databases/logs/log-file-viewer-f1-help.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66054668"
 9. Scegliere **Esci** dal menu **File** per chiudere la finestra di dialogo **Visualizzatore eventi** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione del servizio Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)   
+ [Gestire il servizio Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)   
  [Aggiunta di un registro per i contatori delle prestazioni del flusso di dati](performance/performance-counters.md)  
   
   
