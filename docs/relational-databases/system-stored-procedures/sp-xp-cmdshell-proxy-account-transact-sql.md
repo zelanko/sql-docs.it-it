@@ -20,21 +20,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950458"
 ---
-# <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
+# <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea una credenziale proxy per **xp_cmdshell**.  
   
 > [!NOTE]  
->  **xp_cmdshell** è disabilitata per impostazione predefinita. Per abilitare **xp_cmdshell**, vedere [opzione di configurazione del Server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  **xp_cmdshell** è disabilitato per impostazione predefinita. Per abilitare **xp_cmdshell**, vedere [opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,15 +53,15 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  *password*  
  Specifica la password dell'account di Windows.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
-## <a name="remarks"></a>Note  
- La credenziale proxy verrà chiamata **# # xp_cmdshell_proxy_account # #** .  
+## <a name="remarks"></a>Osservazioni  
+ La credenziale proxy verrà chiamata **# #xp_cmdshell_proxy_account # #**.  
   
- Quando viene eseguito con l'opzione NULL, **sp_xp_cmdshell_proxy_account** consente di eliminare la credenziale proxy.  
+ Quando viene eseguita utilizzando l'opzione NULL, **sp_xp_cmdshell_proxy_account** Elimina la credenziale del proxy.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
@@ -83,10 +83,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
+ [xp_cmdshell &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
+ [Stored procedure di sicurezza &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   
   

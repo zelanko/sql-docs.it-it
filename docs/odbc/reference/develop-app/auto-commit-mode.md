@@ -18,15 +18,15 @@ ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8a02d58309f123e6cc8b29d41188ba5bebb26f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909896"
 ---
 # <a name="auto-commit-mode"></a>Modalità autocommit
-*In modalità autocommit,* ogni operazione di database è una transazione che verrà eseguito il commit eseguito. Questa modalità è adatta per numero di transazioni reali costituiti da una singola istruzione SQL. Non è necessario delimitare oppure specificare il completamento di queste transazioni. Nel database senza supporto delle transazioni, la modalità autocommit è l'unica modalità supportata. In tali database, le istruzioni vengono eseguite quando vengono eseguite e non è possibile eseguire il rollback li; sono pertanto sempre in modalità autocommit.  
+*In modalità autocommit,* ogni operazione di database è una transazione di cui viene eseguito il commit al momento dell'esecuzione. Questa modalità è adatta per molte transazioni reali costituite da una singola istruzione SQL. Non è necessario delimitare o specificare il completamento di queste transazioni. Nei database senza supporto delle transazioni, la modalità di commit automatico è l'unica modalità supportata. In tali database, viene eseguito il commit delle istruzioni quando vengono eseguite e non è possibile eseguirne il rollback; sono pertanto sempre in modalità autocommit.  
   
- Se il sistema DBMS sottostante non supporta le transazioni in modalità autocommit, il driver possibile emularli eseguendo manualmente il commit di ogni istruzione SQL eseguita.  
+ Se il sistema DBMS sottostante non supporta le transazioni in modalità autocommit, il driver può emularle eseguendo manualmente il commit di ogni istruzione SQL durante l'esecuzione.  
   
- Se un batch di istruzioni SQL viene eseguito in modalità autocommit, sono specifiche dell'origine dati quando le istruzioni nel batch vengono eseguito il commit. Possono essere eseguito il commit perché vengono eseguite o nel suo complesso dopo l'esecuzione dell'intero batch. Alcune origini dati supportino entrambi questi comportamenti e possono fornire un modo per la selezione di uno o altri utenti. In particolare, se si verifica un errore nel corso del batch, è specifico dell'origine dati se le istruzioni già eseguite sono stato eseguito il commit o rollback. Di conseguenza, le applicazioni interoperative che usano batch e richiedono loro di eseguire il commit o rollback nel suo complesso devono eseguire batch solo in modalità di commit manuale.
+ Se un batch di istruzioni SQL viene eseguito in modalità autocommit, si tratta di un'origine dati specifica quando viene eseguito il commit delle istruzioni nel batch. È possibile eseguirne il commit durante l'esecuzione o nel suo complesso dopo l'esecuzione dell'intero batch. Alcune origini dati possono supportare entrambi questi comportamenti e possono fornire un modo per selezionarne una o le altre. In particolare, se si verifica un errore all'interno del batch, è specifica dell'origine dati se viene eseguito il commit o il rollback delle istruzioni già eseguite. Pertanto, le applicazioni interoperative che usano batch e richiedono il commit o il rollback nel suo complesso devono eseguire batch solo in modalità di commit manuale.
