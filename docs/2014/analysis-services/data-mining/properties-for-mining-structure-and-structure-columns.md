@@ -1,5 +1,5 @@
 ---
-title: Le proprietà per la struttura di Data Mining e le colonne della struttura | Microsoft Docs
+title: Proprietà per le colonne della struttura e della struttura di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083054"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Proprietà delle strutture di data mining e delle colonne delle strutture di data mining
@@ -29,7 +29,7 @@ ms.locfileid: "66083054"
 >  Se si modifica il valore di una proprietà nella struttura di data mining, anche di metadati come, ad esempio, un nome o descrizione, la struttura di data mining e i relativi modelli devono essere rielaborati prima che sia possibile visualizzare o eseguire una query sul modello.  
   
 ## <a name="properties-of-mining-structures-and-mining-structure-columns"></a>Proprietà delle strutture di data mining e delle colonne delle strutture di data mining  
- Nella tabella seguente vengono descritte le proprietà della struttura di data mining e delle colonne della struttura di data mining specifiche del data mining, che è possibile visualizzare o configurare nella scheda **Struttura di data mining** . Per visualizzare o configurare queste proprietà, fare clic con il pulsante destro del mouse su un elemento della visualizzazione albero e quindi scegliere **Proprietà**.  
+ Nella tabella seguente vengono descritte le proprietà della struttura di data mining e delle colonne della struttura di data mining specifiche per data mining e che è possibile visualizzare o configurare nella scheda **struttura di data mining** . Per visualizzare o configurare queste proprietà, fare clic con il pulsante destro del mouse su un elemento nella visualizzazione albero e quindi scegliere **Proprietà**.  
   
 -   Per visualizzare le proprietà della struttura, fare clic sull'intestazione della struttura di data mining.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "66083054"
   
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
-|**CacheMode**|Specifica se i case utilizzati nel training devono essere memorizzati nella cache o eliminati una volta completato il training.<br /><br /> Nota: Questa proprietà deve essere impostata su `KeepTrainingCases` per abilitare il drill-through e il controllo.|  
+|**CacheMode**|Specifica se i case utilizzati nel training devono essere memorizzati nella cache o eliminati una volta completato il training.<br /><br /> Nota: questa proprietà deve essere impostata su `KeepTrainingCases` per abilitare il drill-through e il set di supporti.|  
 |**Regole di confronto**|Specifica le regole di confronto predefinite per la colonna. Se non specificato, vengono utilizzate le regole di confronto del server.|  
 |**Descrizione**|Descrive la struttura di data mining. È consigliabile che nella descrizione vengano specificati lo scopo e la composizione dei dati nella struttura.|  
-|**ErrorConfiguration (predefinita)**|Specifica le opzioni per la gestione speciale di errori, se presenti.|  
-|**HoldoutMaxCases**|Specifica il numero massimo di case della struttura che possono essere riservati come set di dati di test.  Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: Per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostata su `KeepTrainingCases`.|  
-|**HoldoutPercent**|Specifica la percentuale dei case della struttura da riservare come set di dati di test. Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: Per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostata su `KeepTrainingCases`.|  
-|**HoldoutSeed**|Specifica un valore per l'inizializzazione del partizionamento del set di test di controllo, per assicurare che il set di dati di test possa essere ricreato.<br /><br /> Nota: Per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostata su `KeepTrainingCases`.|  
+|**ErrorConfiguration (impostazione predefinita)**|Specifica le opzioni per la gestione speciale di errori, se presenti.|  
+|**HoldoutMaxCases**|Specifica il numero massimo di case della struttura che possono essere riservati come set di dati di test.  Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
+|**HoldoutPercent**|Specifica la percentuale dei case della struttura da riservare come set di dati di test. Se i valori vengono specificati per **HoldoutMaxCases** e **HoldoutPercent**, le condizioni vengono combinate.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
+|**HoldoutSeed**|Specifica un valore per l'inizializzazione del partizionamento del set di test di controllo, per assicurare che il set di dati di test possa essere ricreato.<br /><br /> Nota: per impostare questa proprietà, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> deve essere impostato su `KeepTrainingCases`.|  
 |**ID**|Consente di visualizzare l'identificatore univoco della struttura di data mining.<br /><br /> Il nome assegnato alla struttura di data mining quando è stata creata viene utilizzato come ID. Se successivamente si modifica il nome digitando un nuovo valore per la proprietà `Name`, il nuovo nome viene utilizzato solo come alias. L'ID non viene modificato.|  
 |**Lingua**|Specifica la lingua delle didascalie della struttura di data mining.|  
 |`Name`|Specifica il nome o l'alias della struttura di data mining.<br /><br /> Se si modifica il valore della proprietà Name, il nuovo nome viene utilizzato solo come didascalia o alias. L'identificatore della struttura di data mining non viene modificato.|  
@@ -67,8 +67,8 @@ ms.locfileid: "66083054"
 |**ModelingFlags**|Imposta parametri aggiuntivi disponibili tramite l'algoritmo.|  
 |`Name`|Nome della colonna.|  
 |**NameColumn**|Identifica la colonna che fornisce il nome dell'elemento padre.|  
-|**Origine**|Visualizza l'origine della colonna.<br /><br /> Per le origini dati relazionali, il valore è sempre **(nessuno)** .<br /><br /> Per le strutture basate su un cubo OLAP, il valore è l'istruzione MDX che definisce la sezione utilizzata come origine per la tabella nidificata.|  
-|**SourceMeasureGroup**|Visualizza l'origine del gruppo di misure.<br /><br /> Per le origini dati relazionali, il valore è sempre **(nessuno)** .<br /><br /> Per le strutture basate su un cubo OLAP, il valore è l'istruzione MDX che definisce la sezione utilizzata come origine per la tabella nidificata.|  
+|**Origine**|Visualizza l'origine della colonna.<br /><br /> Per le origini dati relazionali, il valore è sempre **(nessuno)**.<br /><br /> Per le strutture basate su un cubo OLAP, il valore è l'istruzione MDX che definisce la sezione utilizzata come origine per la tabella nidificata.|  
+|**SourceMeasureGroup**|Visualizza l'origine del gruppo di misure.<br /><br /> Per le origini dati relazionali, il valore è sempre **(nessuno)**.<br /><br /> Per le strutture basate su un cubo OLAP, il valore è l'istruzione MDX che definisce la sezione utilizzata come origine per la tabella nidificata.|  
 |**Tipo**|Tipo di dati del contenuto della colonna.|  
   
  Per altre informazioni sull'impostazione o sulla modifica delle proprietà, vedere [attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md).  

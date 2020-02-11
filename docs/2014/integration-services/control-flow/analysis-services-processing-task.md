@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832966"
 ---
 # <a name="analysis-services-processing-task"></a>Elaborazione Analysis Services - attività
@@ -35,7 +35,8 @@ ms.locfileid: "62832966"
   
 -   Le impostazioni batch vengono ignorate per i modelli tabulari.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono incluse diverse attività tramite cui è possibile effettuare operazioni di Business Intelligence, quali l'esecuzione di istruzioni DDL (Data Definition Language) e di query di stima basate su modelli di data mining. Per ulteriori informazioni sulle attività di Business Intelligence correlate, fare clic su uno degli argomenti seguenti:  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono incluse diverse attività tramite cui è possibile effettuare operazioni di Business Intelligence, quali l'esecuzione di istruzioni DDL (Data Definition Language) e di query di stima basate su modelli di data mining. Per ulteriori informazioni sulle attività di Business Intelligence correlate, fare clic su uno degli argomenti seguenti:  
   
 -   [Attività Esegui DDL Analysis Services](analysis-services-execute-ddl-task.md)  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62832966"
   
  Questa attività viene spesso usata insieme a un'attività Inserimento bulk che carica dati in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure a un'attività Flusso di dati che implementa un flusso di dati per il caricamento di dati in una tabella. L'attività Flusso di dati può ad esempio includere un flusso di dati che estrae dati da un database OLTP (Online Transaction Processing) e li carica in una tabella dei fatti in un data warehouse, quindi chiama l'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per elaborare il cubo compilato in base al data warehouse.  
   
- L'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa una gestione connessione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per connettersi a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni, vedere [Gestione connessione Analysis Services](../connection-manager/analysis-services-connection-manager.md).  
+ Nell' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attività elaborazione viene utilizzata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una gestione connessione per connettersi a un'istanza [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]di. Per altre informazioni, vedere [Gestione connessione Analysis Services](../connection-manager/analysis-services-connection-manager.md).  
   
 ## <a name="error-handling"></a>Gestione degli errori  
   
@@ -66,7 +67,7 @@ ms.locfileid: "62832966"
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic su uno degli argomenti seguenti:  
   
--   [Editor attività Elaborazione Analysis Services &#40;pagina Generale&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor attività Elaborazione Analysis Services &#40;pagina generale&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor attività Elaborazione Analysis Services &#40;pagina Analysis Services&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   

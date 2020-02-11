@@ -1,5 +1,5 @@
 ---
-title: Progettazione matrice | Microsoft Docs
+title: Progettare la matrice | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109301"
 ---
 # <a name="design-the-matrix"></a>Progettazione matrice
@@ -35,7 +35,7 @@ ms.locfileid: "66109301"
  **Colonne**  
  Consente di visualizzare l'elenco dei campi visualizzati come colonne della matrice. Per modificare l'ordine dei campi, selezionare un campo e quindi fare clic sul pulsante freccia in su o freccia in giù.  
   
- **Righe**  
+ **prime righe**  
  Consente di visualizzare l'elenco dei campi visualizzati come righe della matrice. Per modificare l'ordine dei campi, selezionare un campo e quindi fare clic sul pulsante freccia in su o freccia in giù.  
   
  **Dettagli**  
