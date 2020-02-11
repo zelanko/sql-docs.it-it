@@ -1,5 +1,5 @@
 ---
-title: Impostazioni (sincronizzazione) (SybaseToSQL) del progetto | Microsoft Docs
+title: Impostazioni progetto (sincronizzazione) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,51 +10,51 @@ ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 663a4b1e49d1f81ce040254a2c8f39a1a1f84b38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028682"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Impostazioni del progetto (sincronizzazione) (SybaseToSQL)
-La pagina di sincronizzazione del **impostazioni del progetto** finestra di dialogo contiene impostazioni che consentono di personalizzare la modalità SSMA carica gli oggetti di database, ad esempio tabelle e stored procedure, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
+La pagina sincronizzazione della finestra di dialogo **Impostazioni progetto** contiene impostazioni che consentono di personalizzare il modo in cui SSMA carica gli oggetti di database, ad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esempio tabelle e stored procedure, in o SQL Azure.  
   
 È possibile accedere a due diverse pagine di sincronizzazione che contengono le stesse impostazioni:  
   
--   Se si desidera specificare le impostazioni per tutti i progetti SSMA futuri, nel **degli strumenti** dal menu **impostazioni di progetto predefinite**, selezionare il tipo di progetto di migrazione per cui sono richiesti da visualizzare o modificare le impostazioni dal **versione di destinazione della migrazione** elenco a discesa e quindi selezionare **sincronizzazione** nella parte inferiore del riquadro di sinistra.  
+-   Se si desidera specificare le impostazioni per tutti i progetti SSMA futuri, nel menu **strumenti** selezionare **Impostazioni progetto predefinite**, selezionare il tipo di progetto di migrazione per il quale è necessario visualizzare o modificare le impostazioni dall'elenco a discesa **versione destinazione migrazione** e quindi selezionare **sincronizzazione** nella parte inferiore del riquadro sinistro.  
   
--   Per specificare le impostazioni per il progetto corrente, il **strumenti** dal menu **le impostazioni del progetto**e quindi selezionare **sincronizzazione** nella parte inferiore del riquadro di sinistra.  
+-   Per specificare le impostazioni per il progetto corrente, scegliere **Impostazioni progetto**dal menu **strumenti** , quindi selezionare **sincronizzazione** nella parte inferiore del riquadro sinistro.  
   
 ## <a name="options"></a>Opzioni  
-**Tentativi**  
-Specifica il numero di tentativi di SSMA deve apportare durante il caricamento di oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli oggetti che non vengono caricati nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel tentativo di corrente verrà ritentata fino a quando non SSMA raggiunge il numero massimo di tentativi durante il processo di sincronizzazione corrente.  
+**Tenta**  
+Specifica il numero di tentativi che SSMA deve eseguire quando carica gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in. Gli oggetti che non vengono caricati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel tentativo corrente verranno ritentati fino a quando SSMA non raggiunge il numero massimo di tentativi nel processo di sincronizzazione corrente.  
   
 ## <a name="synchronization-for-sql-server"></a>Sincronizzazione per SQL Server  
-**Aggiornare un oggetto locale in caso di modifica di oggetti locali e remoti**  
-Specifica se SSMA necessario sostituire i metadati dell'oggetto locale con i metadati dell'oggetto remoto se entrambi gli oggetti locali e remoti vengono modificati.  
-Se si seleziona **aggiornare dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
-Se si seleziona **scrivere Database**, SSMA aggiornerà gli oggetti del database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
-Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.   
-Set di opzioni predefinito è **scrivere nel Database.**  
+**Aggiorna oggetto locale sulla modifica di un oggetto locale e remoto**  
+Specifica se SSMA deve sostituire i metadati degli oggetti locali con i metadati degli oggetti remoti se gli oggetti locali e remoti cambiano.  
+Se si seleziona **Aggiorna da database**, SSMA caricherà le definizioni del database nei metadati quando viene soddisfatta la condizione.  
+Se si seleziona **Scrivi nel database**, SSMA aggiornerà gli oggetti nel database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
+Se si seleziona **Ignora**, SSMA non eseguirà alcuna azione di aggiornamento.   
+Il set di opzioni predefinito è **Write nel database.**  
   
-**Aggiornare un oggetto locale in caso di modifica oggetto locale**  
-Specifica se SSMA necessario sostituire i metadati dell'oggetto locale con i metadati dell'oggetto remoto se viene modificato l'oggetto remoto.  
-Se si seleziona **aggiornare dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
-Se si seleziona **scrivere Database**, SSMA aggiornerà l'oggetto nel database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
-Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.   
-Set di opzioni predefinito è **scrivere Database**.  
+**Aggiorna oggetto locale sulla modifica di un oggetto locale**  
+Specifica se SSMA deve sostituire i metadati degli oggetti locali con i metadati degli oggetti remoti se l'oggetto remoto viene modificato.  
+Se si seleziona **Aggiorna da database**, SSMA caricherà le definizioni del database nei metadati quando viene soddisfatta la condizione.  
+Se si seleziona **Scrivi nel database**, SSMA aggiornerà l'oggetto nel database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
+Se si seleziona **Ignora**, SSMA non eseguirà alcuna azione di aggiornamento.   
+Il set di opzioni predefinito è **Write nel database**.  
   
-**Aggiornare un oggetto locale in caso di modifica di oggetti remoti**  
-Specifica se SSMA necessario sostituire i metadati dell'oggetto locale con i metadati dell'oggetto remoto se viene modificato l'oggetto remoto.  
-Se si seleziona **aggiornare dal Database**, SSMA caricherà le definizioni di database nei metadati quando viene soddisfatta la condizione.  
-Se si seleziona **scrivere Database**, SSMA aggiornerà l'oggetto nel database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
-Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.   
-Set di opzioni predefinito è **aggiornare dal Database**.  
+**Aggiorna oggetto locale per la modifica dell'oggetto remoto**  
+Specifica se SSMA deve sostituire i metadati degli oggetti locali con i metadati degli oggetti remoti se l'oggetto remoto viene modificato.  
+Se si seleziona **Aggiorna da database**, SSMA caricherà le definizioni del database nei metadati quando viene soddisfatta la condizione.  
+Se si seleziona **Scrivi nel database**, SSMA aggiornerà l'oggetto nel database in base al contenuto dei metadati SSMA quando viene soddisfatta la condizione.  
+Se si seleziona **Ignora**, SSMA non eseguirà alcuna azione di aggiornamento.   
+Il set di opzioni predefinito è **Refresh from database**.  
   
-**Aggiornamento quando i metadati degli oggetti locali sono mancanti**  
-Specifica se SSMA deve creare i metadati locali se è presente un oggetto nel database di destinazione, ma non in locale.  
-Se si seleziona **aggiornare dal Database**, SSMA consente di selezionare l'aggiornamento dall'opzione di Database quando viene soddisfatta la condizione.  
-Se si seleziona **scrivere Database**, SSMA eliminerà l'oggetto dal database quando viene soddisfatta la condizione.  
-Se si seleziona **Skip**, SSMA non eseguirà alcuna azione di aggiornamento.   
-Set di opzioni predefinito è **aggiornare dal Database**.  
+**Aggiorna quando mancano i metadati degli oggetti locali**  
+Specifica se SSMA deve creare i metadati locali se un oggetto esiste nel database di destinazione, ma non in locale.  
+Se si seleziona **Aggiorna da database**, SSMA seleziona l'opzione Aggiorna da database quando viene soddisfatta la condizione.  
+Se si seleziona **Scrivi nel database**, SSMA eliminerà l'oggetto dal database quando viene soddisfatta la condizione.  
+Se si seleziona **Ignora**, SSMA non eseguirà alcuna azione di aggiornamento.   
+Il set di opzioni predefinito è **Refresh from database**.  
   

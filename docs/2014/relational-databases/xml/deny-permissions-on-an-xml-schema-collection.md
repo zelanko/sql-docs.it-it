@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2fe1a42540b21fd11dbfb9747a77991073d35c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637569"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Negazione delle autorizzazioni per una raccolta di XML Schema
@@ -47,7 +47,7 @@ ms.locfileid: "62637569"
 ## <a name="examples"></a>Esempi  
  Gli scenari degli esempi seguenti illustrano il funzionamento delle autorizzazioni per XML Schema. In ogni esempio vengono creati il database di prova, gli schemi relazionali e gli account di accesso necessari. A tali account di accesso vengono concesse le autorizzazioni necessarie per la raccolta di XML Schema. Alla fine di ogni esempio viene eseguito il processo di pulizia necessario.  
   
-### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. Procedura per impedire a un utente di creare una raccolta di XML Schema  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>R. Procedura per impedire a un utente di creare una raccolta di XML Schema  
  Uno dei modi per impedire a un utente di creare una raccolta di XML Schema consiste nel negare l'autorizzazione ALTER per uno schema relazionale, come illustrato nell'esempio seguente.  
   
  Nell'esempio vengono creati l'account utente `TestLogin1`e un database, nonché uno schema relazionale, in aggiunta allo schema `dbo` , nel database. Inizialmente, l'autorizzazione `CREATE XML SCHEMA` consente all'utente di creare una raccolta di schemi in una posizione qualsiasi all'interno del database. Nell'esempio viene negata all'utente l'autorizzazione `ALTER` per uno degli schemi relazionali. In questo modo, viene impedito all'utente di creare una raccolta di XML Schema in tale schema relazionale.  

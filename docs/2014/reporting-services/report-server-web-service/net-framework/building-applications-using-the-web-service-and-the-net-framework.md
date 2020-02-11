@@ -21,18 +21,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520346"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Compilazione di applicazioni tramite servizio Web e .NET Framework
-  Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile utilizzare costrutti di programmazione familiari, ad esempio metodi, tipi primitivi e tipi complessi definiti dall'utente, per utilizzare i servizi Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include un'infrastruttura e strumenti che è possibile utilizzare per creare i client del servizio Web che possono chiamare qualsiasi servizio Web conforme agli standard del World Wide Web Consortium (W3C).  
+  Con, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]è possibile utilizzare costrutti di programmazione familiari, ad esempio metodi, tipi primitivi e tipi complessi definiti dall'utente per lavorare con i servizi Web. 
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] include un'infrastruttura e strumenti che è possibile utilizzare per creare i client del servizio Web che possono chiamare qualsiasi servizio Web conforme agli standard del World Wide Web Consortium (W3C).  
   
  Un client del servizio Web ReportServer è qualsiasi componente o applicazione che comunica con un server di report utilizzando messaggi SOAP (Simple Object Access Protocol).  
   
- **Per creare un client del servizio Web ReportServer utilizzando .NET Framework, effettuare i passaggi di base seguenti:**  
+ **Per creare un client del servizio Web ReportServer utilizzando la .NET Framework, attenersi alla seguente procedura di base:**  
   
 1.  Creare una classe proxy per il servizio Web.  
   
@@ -46,17 +47,17 @@ ms.locfileid: "62520346"
   
      A tale scopo, chiamare un metodo del servizio Web e fornire gli argomenti necessari. Per altre informazioni sui metodi del servizio Web, vedere [Metodi del servizio Web ReportServer](../methods/report-server-web-service-methods.md). Per altre informazioni sulla chiamata, vedere [Chiamata ai metodi del servizio Web](calling-web-service-methods.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Creazione del proxy del servizio Web](creating-the-web-service-proxy.md)|Vengono descritte le modalità di aggiunta di una classe proxy al progetto utilizzando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
+|[Creazione del proxy del servizio Web](creating-the-web-service-proxy.md)|Vengono descritte le modalità di aggiunta di una classe proxy al progetto [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]utilizzando.|  
 |[Autenticazione del servizio Web](web-service-authentication.md)|Viene descritto in che modo vengono autenticate le chiamate al servizio Web ReportServer.|  
-|[Chiamata ai metodi del servizio Web](calling-web-service-methods.md)|Viene descritto come utilizzare l'API SOAP per chiamare i metodi del servizio Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Chiamata ai metodi del servizio Web](calling-web-service-methods.md)|Viene descritto come utilizzare l'API SOAP per chiamare i metodi del servizio [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Web in.|  
 |[Impostazione della proprietà Url del servizio Web](setting-the-url-property-of-the-web-service.md)|Viene illustrato come indirizzare a livello di programmazione il proxy del servizio Web a un nuovo URL del server dopo avere creato il riferimento Web.|  
 |[Impostazione degli argomenti dei metodi del servizio Web](supplying-web-service-method-arguments.md)|Viene descritto come richiamare un metodo del servizio Web e come fornire gli argomenti del metodo.|  
 |[Omissione di valori per gli oggetti del servizio Web facoltativi](omitting-values-for-optional-web-service-objects.md)|Viene descritto come omettere i valori per gli oggetti del servizio Web facoltativi.|  
-|[Uso di metodi del servizio Web protetti](using-secure-web-service-methods.md)|Viene descritta l'impostazione **SecureConnectionLevel** e in che modo influisce sull'uso dell'API SOAP di Reporting Services.|  
+|[Utilizzo di metodi del servizio Web protetti](using-secure-web-service-methods.md)|Viene descritta l'impostazione **SecureConnectionLevel** e in che modo influisce sull'uso dell'API SOAP di Reporting Services.|  
 |[Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering](passing-device-information-settings-to-rendering-extensions.md)|Vengono descritte le impostazioni relative alle informazioni sul dispositivo utilizzate per eseguire il rendering dei report in formati diversi.|  
 |[Impostazioni delle estensioni per il recapito di Reporting Services](reporting-services-delivery-extension-settings.md)|Vengono descritte le impostazioni utilizzate per recapitare i report utilizzando il servizio di posta elettronica del server di report.|  
 |[Uso di intestazioni SOAP di Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Viene illustrato l'utilizzo delle intestazioni SOAP in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  

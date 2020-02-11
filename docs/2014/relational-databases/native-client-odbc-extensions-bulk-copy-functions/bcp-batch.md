@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62631385"
 ---
-# <a name="bcpbatch"></a>bcp_batch
-  Esegue il commit di tutte le righe precedentemente bulk copiato dalle variabili di programma e inviate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal [bcp_sendrow](bcp-sendrow.md).  
+# <a name="bcp_batch"></a>bcp_batch
+  Esegue il commit di tutte le righe precedentemente copiate in massa dalle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] variabili di programma e inviate a da [bcp_sendrow](bcp-sendrow.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,12 +43,12 @@ hdbc
  Handle di connessione ODBC abilitato per la copia bulk.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- Il numero di righe salvato dopo l'ultima chiamata a **bcp_batch**, oppure -1 in caso di errore.  
+ Numero di righe salvate dopo l'ultima chiamata a **bcp_batch**, oppure-1 in caso di errore.  
   
-## <a name="remarks"></a>Note  
- I batch della copia bulk definiscono le transazioni. Quando un'applicazione usa [bcp_bind](bcp-bind.md) e **bcp_sendrow** per copia bulk di righe dalle variabili di programma alle tabelle di SQL Server, le righe vengono eseguito il commit solo quando il programma chiama **bcp_batch** oppure [bcp_done](bcp-done.md).  
+## <a name="remarks"></a>Osservazioni  
+ I batch della copia bulk definiscono le transazioni. Quando un'applicazione utilizza [bcp_bind](bcp-bind.md) e **bcp_sendrow** per eseguire la copia bulk delle righe dalle variabili di programma alle tabelle SQL Server, viene eseguito il commit delle righe solo quando il programma chiama **bcp_batch** o [bcp_done](bcp-done.md).  
   
- È possibile chiamare **bcp_batch** una volta ogni *n* righe o quando c'è una pausa nei dati in entrata (come in un'applicazione telemetrica). Se un'applicazione non chiama **bcp_batch** le righe della copia bulk vengono eseguito il commit solo quando **bcp_done** viene chiamato.  
+ È possibile chiamare **bcp_batch** una volta ogni *n* righe o quando si verifica una pausa nei dati in ingresso, come in un'applicazione di telemetria. Se un'applicazione non chiama **bcp_batch** viene eseguito il commit delle righe di cui è stata eseguita la copia bulk solo quando viene chiamato **bcp_done** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  

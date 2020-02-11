@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637994"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Creazione di variabili e colonne con tipo di dati XML
-  Il tipo di dati `xml` è un tipo di dati predefinito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è simile ad altri tipi predefiniti quali `int` e `varchar`. Come con altri tipi predefiniti, è possibile usare la `xml` tipo di dati come tipo di colonna quando si crea una tabella come un tipo di variabile, tipo di parametro, un tipo restituito dalla funzione, o in [CAST e CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  Il tipo di dati `xml` è un tipo di dati predefinito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed è simile ad altri tipi predefiniti quali `int` e `varchar`. Come per gli altri tipi incorporati, è possibile usare il `xml` tipo di dati come tipo di colonna quando si crea una tabella come tipo di variabile, un tipo di parametro, un tipo restituito dalla funzione o in [cast e Convert](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Creazione di colonne e variabili  
  Per creare una colonna di tipo `xml` come parte di una tabella, usare un'istruzione `CREATE TABLE` come illustrato nell'esempio seguente:  
@@ -66,7 +66,8 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta inoltre i vincoli NULL e NOT NULL sulle colonne di tipo `xml`. Ad esempio:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta inoltre i vincoli NULL e NOT NULL sulle colonne di tipo `xml`. Ad esempio:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -127,9 +128,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>Utilizzo di un'unica tabella o di più tabelle  
- Un `xml` colonna tipo di dati può essere creato in una tabella che contiene altre colonne relazionali oppure in una tabella separata con una relazione di chiave esterna con una tabella principale.  
+ È `xml` possibile creare una colonna con tipo di dati in una tabella che contiene altre colonne relazionali oppure in una tabella separata con una relazione di chiave esterna con una tabella principale.  
   
- Creare un `xml` colonna tipo di dati nella stessa tabella quando viene soddisfatta una delle condizioni seguenti:  
+ Creare una `xml` colonna con tipo di dati nella stessa tabella quando si verifica una delle condizioni seguenti:  
   
 -   L'applicazione esegue operazioni di recupero dei dati sulla colonna XML e non richiede un indice XML su tale colonna.  
   

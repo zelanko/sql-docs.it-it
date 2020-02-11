@@ -1,5 +1,5 @@
 ---
-title: Microsoft Data Shaping Service per OLE DB (ADO Service Provider) | Microsoft Docs
+title: Servizio Data Shaping Microsoft per OLE DB (provider di servizi ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,41 +14,41 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926814"
 ---
-# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping servizi per Panoramica OLE DB
+# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Panoramica di Microsoft Data Shaping Service per OLE DB
 > [!IMPORTANT]
 >  Questa funzionalità verrà rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Al contrario, le applicazioni devono utilizzare XML.
 
- Il servizio Microsoft di Data Shaping per provider di servizi OLE DB supporta la creazione della gerarchica (a forma di) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti da un provider di dati.
+ Il servizio di data shaping Microsoft per OLE DB provider di servizi supporta la costruzione di oggetti [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) gerarchici (a forma di) da un provider di dati.
 
 ## <a name="provider-keyword"></a>Parola chiave provider
- Per richiamare il servizio di Data Shaping dei dati per OLE DB, specificare la parola chiave e il valore seguenti nella stringa di connessione.
+ Per richiamare il servizio Data Shaping per OLE DB, specificare la parola chiave e il valore seguenti nella stringa di connessione.
 
 ```vb
 "Provider=MSDataShape"
 ```
 
 ## <a name="dynamic-properties"></a>Proprietà dinamiche
- Quando viene richiamato questo provider di servizi, le seguenti proprietà dinamiche vengono aggiunti per il [le proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme del[connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.
+ Quando il provider di servizi viene richiamato, le seguenti proprietà dinamiche vengono aggiunte alla raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto[Connection](../../../ado/reference/ado-api/connection-object-ado.md) .
 
-|Nome della proprietà dinamica|Descrizione|
+|Nome proprietà dinamica|Descrizione|
 |---------------------------|-----------------|
-|**Nomi univoci nuova forma**|Indica se **Recordset** gli oggetti con valori duplicati per loro **Reshape Name** sono consentite proprietà. Se questa proprietà dinamica **True** e un nuovo **Recordset** viene creato con lo stesso nome specificato dall'utente reshape esistente **Recordset**, quindi il nuovo  **Recordset** reshape name dell'oggetto viene modificato per renderlo univoco. Se questa proprietà è **False** e un nuovo **Recordset** viene creato con lo stesso nome specificato dall'utente reshape esistente **Recordset**, entrambi **Recordset**  gli oggetti abbiano lo stesso nome di modifica della forma. Di conseguenza, nessuno dei due **Recordset** possono essere ridefinite fino a quando esistono entrambi gli oggetti.<br /><br /> Il valore predefinito della proprietà è **False**.|
-|**Provider di dati**|Indica il nome del provider che fornirà le righe da assumere una forma. Questo valore può essere NONE se non verrà utilizzato un provider per fornire le righe.|
+|**Nomi di riforme univoci**|Indica se sono consentiti oggetti **Recordset** con valori duplicati per le proprietà del nome di modifica della **forma** . Se questa proprietà dinamica è **true** e viene creato un nuovo **Recordset** con lo stesso nome di modifica della forma specificato dall'utente come **Recordset**esistente, il nome della nuova forma dell'oggetto **Recordset** viene modificato per renderlo univoco. Se questa proprietà è **false** e viene creato un nuovo **Recordset** con lo stesso nome di modifica della forma specificato dall'utente del **Recordset**esistente, entrambi gli oggetti **Recordset** avranno lo stesso nome di modifica della forma. Non è pertanto possibile modificare la forma di un **Recordset** purché siano presenti entrambi i recordset.<br /><br /> Il valore predefinito della proprietà è **false**.|
+|**Provider di dati**|Indica il nome del provider che fornirà le righe da modellare. Questo valore può essere NONE se non viene utilizzato un provider per fornire righe.|
 
- È anche possibile impostare proprietà dinamiche scrivibile specificando i relativi nomi come parole chiave nella stringa di connessione. Ad esempio, in Microsoft Visual Basic, impostare il **Provider di dati** proprietà dinamica da "MSDASQL", specificando:
+ È inoltre possibile impostare le proprietà dinamiche scrivibili specificandone i nomi come parole chiave nella stringa di connessione. Ad esempio, in Microsoft Visual Basic impostare la proprietà dinamica **provider di dati** su "MSDASQL" specificando:
 
 ```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- È anche possibile impostare o recuperare una proprietà dinamica specificandone il nome dell'indice per la [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) proprietà. Ad esempio, il codice seguente recupera e stampa il valore corrente della **Provider di dati** proprietà dinamica, quindi imposta un nuovo valore se cn. DataProvider è stata impostata su "MSDataShape" (direttamente o indirettamente tramite la stringa di connessione) e non è stata aperta la connessione:
+ È anche possibile impostare o recuperare una proprietà dinamica specificandone il nome come indice della proprietà [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) . Ad esempio, l'esempio di codice seguente ottiene e stampa il valore corrente della proprietà dinamica **provider di dati** , quindi imposta un nuovo valore se cn. Datafornitor è stato impostato su "MSDataShape" (in modo diretto o indiretto tramite la stringa di connessione) e la connessione non è stata aperta:
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -56,9 +56,9 @@ cn.Properties("Data Provider") = "MSDASQL"
 ```
 
 > [!NOTE]
->  La proprietà dinamica **Provider di dati**, può essere impostato solo su una non aperta **connessione** oggetto. Una volta che viene aperta la connessione, il **Provider di dati** proprietà diventa di sola lettura.
+>  La proprietà dinamica, **provider di dati**, può essere impostata solo su un oggetto **connessione** non aperto. Una volta aperta la connessione, la proprietà **provider di dati** diventa di sola lettura.
 
- Per altre informazioni sul data shaping, vedere [Data Shaping](../../../ado/guide/data/data-shaping-overview.md).
+ Per ulteriori informazioni sulla data shaping, vedere [data shaping](../../../ado/guide/data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Vedere anche
- [Appendice A: provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)

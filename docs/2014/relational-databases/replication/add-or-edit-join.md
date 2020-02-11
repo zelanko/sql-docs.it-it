@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625931"
 ---
 # <a name="add-or-edit-join"></a>Aggiungi join o Modifica join
@@ -58,7 +58,7 @@ ms.locfileid: "62625931"
         > [!CAUTION]  
         >  Selezionando questa opzione si indica che la relazione tra la tabella padre e le tabelle figlio in un filtro join è uno-a-uno o uno-a-molti. Selezionare questa opzione solo se la colonna unita in join nella tabella padre contiene un vincolo che garantisce l'unicità. Se l'opzione è impostata in modo errato può impedire la convergenza dei dati.  
   
-    -   Solo[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Per impostazione predefinita, durante la sincronizzazione la replica di tipo merge elabora le modifiche riga per riga. Per fare in modo che le modifiche correlate vengano elaborate come singola unità, selezionare l'opzione **Record logico**. Questa opzione è disponibile solo se sono soddisfatti i requisiti relativi all'utilizzo dei record logici negli articoli e nelle pubblicazioni. Per altre informazioni vedere la sezione "Considerazioni sull'utilizzo di record logici" in [Raggruppare modifiche alle righe correlate con record logici](merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Per impostazione predefinita, durante la sincronizzazione la replica di tipo merge elabora le modifiche riga per riga. Per fare in modo che le modifiche correlate vengano elaborate come singola unità, selezionare l'opzione **Record logico**. Questa opzione è disponibile solo se sono soddisfatti i requisiti relativi all'utilizzo dei record logici negli articoli e nelle pubblicazioni. Per altre informazioni vedere la sezione "Considerazioni sull'utilizzo di record logici" in [Raggruppare modifiche alle righe correlate con record logici](merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Dopo aver aggiunto o modificato un filtro, fare clic su **OK** per salvare le modifiche e chiudere la finestra di dialogo. Il filtro specificato viene analizzato ed eseguito sulla tabella nella clausola SELECT. Se nell'istruzione di filtro sono presenti errori di sintassi o di altro tipo, verrà visualizzato un apposito messaggio di notifica e sarà possibile modificare l'istruzione.  
   

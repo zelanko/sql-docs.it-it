@@ -1,5 +1,5 @@
 ---
-title: Configurazione di DataFactory per la modalità sicura o senza restrizioni | Microsoft Docs
+title: Configurazione di DataFactory per modalità sicure o senza restrizioni | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,32 +13,32 @@ ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92e3b029d2b18065faf50dcd0343f64b7b01654e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922948"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Configurazione di DataFactory per la modalità sicura o senza restrizioni
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Per impostazione predefinita, ADO viene installato con un "sicura" [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) configurazione. La modalità sicura per i componenti Server di servizi desktop remoto indica che si verifica quanto segue:  
+ Per impostazione predefinita, ADO viene installato con una configurazione [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) "sicura". La modalità provvisoria per i componenti server RDS indica che sono soddisfatte le condizioni seguenti:  
   
-1.  Gestore di è obbligatorio con il RDSServer (imposto dall'impostazione di una chiave del Registro di sistema).  
+1.  Il gestore è obbligatorio con RDSServer. DataFactory. questa operazione è obbligatoria da un'impostazione della chiave del registro di sistema.  
   
-2.  Il gestore predefinito, MSDFMAP. Handler, viene registrato, presente nell'elenco di gestori sicuri e contrassegnata come gestore predefinito.  
+2.  Il gestore predefinito, msdfmap. Handler, viene registrato, presente nell'elenco dei gestori di sicurezza e contrassegnato come gestore predefinito.  
   
-3.  File MSDFMAP viene installato nella directory di Windows. È necessario configurare questo file in base alle esigenze, prima di usare servizi desktop remoto in modalità a tre livelli.  
+3.  Il file msdfmap. ini viene installato nella directory Windows. È necessario configurare il file in base alle proprie esigenze, prima di utilizzare Servizi Desktop remoto in modalità a tre livelli.  
   
- Facoltativamente, è possibile configurare senza restrizioni **DataFactory** installazione. **Data factory** possono essere usati direttamente, senza il gestore personalizzato. Gli utenti possono ancora usare un gestore personalizzato modificando le stringhe di connessione, ma non è obbligatorio. Per altre informazioni sulle implicazioni dell'uso di **RDSServer** oggetti, vedere [protezione di applicazioni di servizi desktop remoto](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
+ Facoltativamente, è possibile configurare un'installazione di **DataFactory** senza restrizioni. **DataFactory** può essere usato direttamente senza il gestore personalizzato. Gli utenti possono comunque utilizzare un gestore personalizzato modificando le stringhe di connessione, ma non è obbligatorio. Per ulteriori informazioni sulle implicazioni dell'utilizzo dell'oggetto **RDSServer. DataFactory** , vedere [protezione delle applicazioni RDS](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
   
- Per configurare le voci del Registro di sistema di gestore per una configurazione sicura è disponibile il file di registro di sistema handsafe. reg. Per eseguire in modalità provvisoria, eseguire handsafe.  
+ Il file del registro di sistema Handsafe. reg è stato fornito per configurare le voci del registro di sistema del gestore per una configurazione sicura. Per l'esecuzione in modalità provvisoria, eseguire handsafe. reg.  
   
- Dopo aver eseguito handsafe. reg, è necessario arrestare e riavviare il servizio pubblicazione sul Web nel server Web digitando i comandi seguenti in una finestra del prompt dei comandi: "NET STOP W3SVC" e "NET START W3SVC".  
+ Dopo l'esecuzione di handsafe. reg, è necessario arrestare e riavviare il servizio di pubblicazione World Wide Web sul server Web digitando i comandi seguenti in una finestra del prompt dei comandi: "NET STOP W3SVC" e "NET START W3SVC".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Personalizzazione di DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [Personalizzazione di datafactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519202"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Ruolo di SOAP in Reporting Services
@@ -41,7 +41,7 @@ ms.locfileid: "62519202"
 </soap:Envelope>  
 ```  
   
- SOAP  richiede che i messaggi siano inseriti in un elemento `Envelope` e che il blocco del messaggio sia inserito in un elemento `Body`. In questo esempio il corpo contiene una chiamata al metodo <xref:ReportService2010.ReportingService2010.DeleteItem%2A> che accetta un parametro stringa che rappresenta il percorso dell'elemento da eliminare. È possibile creare una classe proxy client [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] che incapsula tutte le operazioni SOAP nei metodi. Il metodo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] seguente rappresenta l'esempio SOAP riportato in precedenza.  
+ SOAP  richiede che i messaggi siano inseriti in un elemento `Envelope` e che il blocco del messaggio sia inserito in un elemento `Body`. In questo esempio il corpo contiene una chiamata al metodo <xref:ReportService2010.ReportingService2010.DeleteItem%2A> che accetta un parametro stringa che rappresenta il percorso dell'elemento da eliminare. È possibile creare una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classe proxy client che incapsula tutte le operazioni SOAP nei metodi. Il metodo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] seguente rappresenta l'esempio SOAP fornito in precedenza.  
   
 ```  
 public void DeleteItem(string item);  
@@ -62,7 +62,7 @@ public void DeleteItem(string item);
 ## <a name="see-also"></a>Vedere anche  
  [Accesso all'API SOAP](accessing-the-soap-api.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services Report Server](../reporting-services-report-server.md)   
+ [Reporting Services server di report](../reporting-services-report-server.md)   
  [Servizio Web ReportServer](report-server-web-service.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Creazione di file di connessione del Server (SybaseToSQL) | Microsoft Docs
+title: Creazione dei file di connessione del server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029366"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Creazione dei file di connessione del server (SybaseToSQL)
-Nella sezione dei server del file di script o in un file di connessione server separato, è possibile specificare le informazioni sul server. Il parametro della riga di comando per il file di connessione del server è, `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione server sia file di script, viene considerata la definizione del server nel file di script.  
+È possibile specificare le informazioni sul server nella sezione server del file script o in un file di connessione server separato. Il parametro della riga di comando per il file di connessione `-c <serverconnectionfile>`del server è,. Se lo stesso ID server è presente nel file di script e nel file di connessione al server, viene considerata la definizione del server nel file di script.  
   
 **Esempio:**  
   
@@ -101,11 +101,11 @@ Nella sezione dei server del file di script o in un file di connessione server s
 </sql-server>  
 ```  
   
-## <a name="server-connection-file-validation"></a>Convalida del File di connessione server  
-L'utente può facilmente convalidare il file di connessione del server in base al file di definizione dello schema **S2SSConsoleScriptServersSchema.xsd** disponibile nella cartella "Schemi".  
+## <a name="server-connection-file-validation"></a>Convalida file di connessione server  
+L'utente può convalidare facilmente il proprio file di connessione del server con il file di definizione dello schema **S2SSConsoleScriptServersSchema. xsd** disponibile nella cartella "schemi".  
   
-## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo in costi operativi console consiste [esecuzione della Console SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+## <a name="next-step"></a>passaggio successivo  
+Il passaggio successivo per la gestione della console è [l'esecuzione della console SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione della console SSMA](executing-the-ssma-console-sybasetosql.md)  

@@ -13,25 +13,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467855"
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
   Negli argomenti seguenti sono incluse informazioni sulle funzionalità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulle operazioni associate.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Dashboard utilità &#40;utilità SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Dashboard utilità &#40;Utilità SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
   
- [I dettagli dell'applicazione livello dati distribuite &#40;utilità SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
+ [Dettagli di applicazioni livello dati distribuite &#40;Utilità SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
- [Dettagli dell'istanza gestita &#40;utilità SQL Server&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
+ [Dettagli di istanze gestite &#40;Utilità SQL Server&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   
  [Amministrazione utilità &#40;Utilità SQL Server&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>Riferimenti  
+## <a name="reference"></a>Informazioni di riferimento  
  [Creare un punto di controllo dell'Utilità SQL Server &#40;Utilità SQL Server&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [Effettuare la connessione a Utilità SQL Server.](connect-to-a-sql-server-utility.md)  

@@ -1,5 +1,5 @@
 ---
-title: Il Data Shaping | Microsoft Docs
+title: Data Shaping | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1811d46bb99b7cdb38bf6508d709826167f787f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925608"
 ---
 # <a name="data-shaping"></a>Data shaping
@@ -24,13 +24,13 @@ In questa sezione vengono trattati gli argomenti seguenti.
   
 -   [Panoramica del data shaping](../../../ado/guide/data/data-shaping-overview.md)  
   
--   [Dati ShapingExample](../../../ado/guide/data/data-shaping-example.md)  
+-   [ShapingExample dati](../../../ado/guide/data/data-shaping-example.md)  
   
 -   [Modifica della forma](../../../ado/guide/data/reshaping.md)  
   
 -   [Aggregazioni nipote](../../../ado/guide/data/grandchild-aggregates.md)  
   
--   [Comandi con parametri intercalati da comandi COMPUTE](../../../ado/guide/data/parameterized-commands-with-intervening-compute-commands.md)  
+-   [Comandi con parametri con comandi COMPUTE intermedi](../../../ado/guide/data/parameterized-commands-with-intervening-compute-commands.md)  
   
 -   [Persistenza dei recordset gerarchici](../../../ado/guide/data/persisting-hierarchical-recordsets.md)  
   
@@ -38,7 +38,7 @@ In questa sezione vengono trattati gli argomenti seguenti.
   
 -   [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)  
   
--   [Clausola APPEND per Shape](../../../ado/guide/data/shape-append-clause.md)  
+-   [Clausola APPEND di Shape](../../../ado/guide/data/shape-append-clause.md)  
   
 -   [Clausola COMPUTE di Shape](../../../ado/guide/data/shape-compute-clause.md)  
   
@@ -48,4 +48,4 @@ In questa sezione vengono trattati gli argomenti seguenti.
   
 -   [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)  
   
--   [Funzioni di applicazioni Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+-   [Funzioni Visual Basic, Applications Edition](../../../ado/guide/data/visual-basic-for-applications-functions.md)

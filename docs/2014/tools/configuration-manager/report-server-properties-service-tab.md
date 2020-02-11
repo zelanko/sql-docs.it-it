@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62506776"
 ---
 # <a name="report-server-properties-service-tab"></a>Proprietà - Server di report (scheda Servizio)
-  Si tratta del servizio del server di report di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
+  Questo servizio è il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio del server di report. I valori delle proprietà visualizzati in grigio chiaro non possono essere modificati con questa applicazione.  
   
 ## <a name="options"></a>Opzioni  
  **Percorso binario**  
@@ -30,26 +30,26 @@ ms.locfileid: "62506776"
  **Codice di uscita**  
  Quando si verifica un errore, il numero dell'errore viene visualizzato in questa casella. Questo numero può risultare utile per la risoluzione dei problemi. È possibile cercarlo nella [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base oppure comunicarlo al personale del supporto tecnico.  
   
- **Host Name**  
+ **Nome host**  
  Visualizza il nome del computer o del cluster che esegue la ricerca full-text.  
   
- **Name**  
+ **Nome**  
  Indica il nome visualizzato del servizio.  
   
- **ID processo**  
+ **ID di processo**  
  Visualizza l'ID di processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Tipo di servizio SQL Server**  
- Tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati diversi servizi.  
+ **Tipo di servizio SQL**  
+ Tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installa diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  
   
--   Manuale: Questo servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
+-   Manuale: il servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
   
--   Automatico: Il servizio tenta di avviare all'avvio del computer.  
+-   Automatico: viene eseguito un tentativo automatico di avvio del servizio all'avvio del computer.  
   
--   Disabilitato: Il servizio non può essere avviato.  
+-   Disabilitato: il servizio non può essere avviato.  
   
  **Stato**  
  Indica se il servizio è in esecuzione, arrestato o disabilitato.  

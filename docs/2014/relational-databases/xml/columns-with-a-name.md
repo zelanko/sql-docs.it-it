@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638165"
 ---
 # <a name="columns-with-a-name"></a>Colonne provviste di un nome
@@ -33,7 +33,7 @@ ms.locfileid: "62638165"
 -   Una colonna ha un nome diverso.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Il nome di colonna inizia con un simbolo di chiocciola (\@)  
- Se il nome della colonna inizia con un simbolo di chiocciola (\@) e non contiene una barra (/), un attributo del <`row`> viene creato l'elemento con il valore della colonna corrispondente. Ad esempio, la query seguente restituisce un set di righe a due colonne (\@PmId, Name). Nel codice XML risultante, un attributo **PmId** viene aggiunto all'elemento <`row`> corrispondente e gli viene assegnato un valore di ProductModelID.  
+ Se il nome della colonna inizia con un simbolo di\@chiocciola () e non contiene una barra (/), viene creato un attributo `row` dell'elemento <> con il valore di colonna corrispondente. Ad esempio, la query seguente restituisce un set di righe a due colonne (\@PmId, Name). Nel codice XML risultante, un attributo **PmId** viene aggiunto all'elemento <`row`> corrispondente e gli viene assegnato un valore di ProductModelID.  
   
 ```  
   
@@ -46,7 +46,7 @@ go
   
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <row PmId="7">  
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Il nome di colonna non inizia con un simbolo di chiocciola (\@)  
- Se il nome della colonna non inizia con un simbolo di chiocciola (\@), non è uno dei test di nodo XPath e non contiene una barra (/), un elemento XML che è un sottoelemento dell'elemento riga, <`row`> per impostazione predefinita, viene creato.  
+ Se il nome di colonna non inizia con un simbolo di chiocciola (\@), non è uno dei test di nodo XPath e non contiene una barra (/), viene creato un elemento XML che è un sottoelemento dell'elemento riga <`row`> per impostazione predefinita.  
   
  La query seguente specifica il nome della colonna, il risultato. Un elemento figlio <`result`> viene pertanto aggiunto all'elemento <`row`>.  
   
@@ -75,7 +75,7 @@ SELECT 2+2 as result
 for xml PATH  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <row>  
@@ -98,7 +98,7 @@ FOR XML PATH
 go  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <row>  
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- I nomi di colonna vengono usati come un percorso nella creazione del codice XML in modalità PATH. Il nome della colonna che contiene i valori ID dipendente inizia con '\@'. Pertanto, un attributo, **EmpID**, viene aggiunto per la <`row`> elemento. I nomi di tutte le altre colonne contengono una barra ("/"), che indica la gerarchia. Il codice XML risultante avrà l'elemento figlio <`EmpName`> sotto l'elemento <`row`> e l'elemento figlio <`EmpName`> avrà gli elementi figlio <`First`>, <`Middle`> e <`Last`>.  
+ I nomi di colonna vengono usati come un percorso nella creazione del codice XML in modalità PATH. Il nome della colonna che contiene i valori ID dipendente inizia con\@''. Viene pertanto aggiunto un attributo **EmpID**all'elemento <`row`>. I nomi di tutte le altre colonne contengono una barra ("/"), che indica la gerarchia. Il codice XML risultante avrà l'elemento figlio <`EmpName`> sotto l'elemento <`row`> e l'elemento figlio <`EmpName`> avrà gli elementi figlio <`First`>, <`Middle`> e <`Last`>.  
   
 ```  
 <row EmpID="1">  
@@ -152,7 +152,7 @@ AND    E.EmployeeID=1
 FOR XML PATH, ELEMENTS XSINIL  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
@@ -184,7 +184,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <row EmpID="1">  
@@ -222,7 +222,7 @@ FOR XML PATH
   
  Di conseguenza, la query crea due elementi <`EmpName`>. Il primo elemento <`EmpName`> ha l'elemento figlio <`FirstName`> e il secondo elemento <`EmpName`> ha gli elementi figlio <`MiddleName`> e <`LastName`>.  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <row EmpID="1">  

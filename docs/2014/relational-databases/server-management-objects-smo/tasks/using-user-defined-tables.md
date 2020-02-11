@@ -13,20 +13,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781814"
 ---
 # <a name="using-user-defined-tables"></a>Utilizzo di tabelle definite dall'utente
   Le tabelle definite dall'utente rappresentano informazioni tabulari. Vengono utilizzate come parametri quando si passano dati tabulari in stored procedure o funzioni definite dall'utente. Non è possibile utilizzare le tabelle definite dall'utente per rappresentare le colonne di una tabella di database.  
   
- L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> dispone di una proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> che fa riferimento a un oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Ogni oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> in tale raccolta dispone di una proprietà **Columns** che fa riferimento a una raccolta di oggetti <xref:Microsoft.SqlServer.Management.Smo.Column> in cui sono elencate le colonne della tabella definita dall'utente. Utilizzare il metodo Add per aggiungere colonne alla tabella definita dall'utente.  
+ L'oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> dispone di una proprietà <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> che fa riferimento a un oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Ogni <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> oggetto nella raccolta dispone di una proprietà **Columns** che fa riferimento a una raccolta <xref:Microsoft.SqlServer.Management.Smo.Column> di oggetti in cui sono elencate le colonne della tabella definita dall'utente. Utilizzare il metodo Add per aggiungere colonne alla tabella definita dall'utente.  
   
  Quando si definisce una nuova tabella definita dall'utente tramite l'oggetto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, è necessario fornire colonne e una chiave primaria basata su una delle colonne.  
   
- Dopo averli creati, non è più possibile modificare i tipi di tabella definita dall'utente. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> non supporta il metodo Alter. I tipi di tabella definita dall'utente possono disporre di vincoli CHECK, ma alcune operazioni di controllo genereranno un'eccezione perché il tipo non è modificabile.  
+ Dopo averli creati, non è più possibile modificare i tipi di tabella definita dall'utente. 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> non supporta il metodo Alter. I tipi di tabella definita dall'utente possono disporre di vincoli CHECK, ma alcune operazioni di controllo genereranno un'eccezione perché il tipo non è modificabile.  
   
  La classe <xref:Microsoft.SqlServer.Management.Smo.DataType> consente di specificare il tipo di dati associato a colonne e parametri. Utilizzare questo tipo per specificare il tipo di tabella definita dall'utente come parametro per stored procedure e funzioni definite dall'utente.  
   

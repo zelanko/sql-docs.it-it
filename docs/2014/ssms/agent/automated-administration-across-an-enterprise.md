@@ -21,21 +21,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473148"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Amministrazione automatizzata in un'organizzazione
-  L'automazione dell'amministrazione in più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene definita *amministrazione multiserver*. Utilizzare l'amministrazione multiserver per eseguire le operazioni seguenti:  
+  L'automazione dell'amministrazione in più istanze [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di viene definita *amministrazione multiserver*. Utilizzare l'amministrazione multiserver per eseguire le operazioni seguenti:  
   
 -   Gestione di due o più server.  
   
 -   Pianificazione dei flussi di informazioni tra server aziendali per il data warehousing.  
   
 > [!NOTE]  
->  Come parte dell'impegno costante di [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel ridurre il costo totale di proprietà, in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono incluse due nuove caratteristiche: un metodo di gestione dei server denominato gestione basata su criteri e query multiserver che utilizzano server di configurazione e gruppi di server. Tali caratteristiche possono essere utilizzate con, o al posto di, alcune delle caratteristiche descritte in questo argomento. Per altre informazioni, vedere [amministrare server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) e [amministrare più server usando server di gestione centrale](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  Come parte dell'impegno costante di [!INCLUDE[msCoName](../../includes/msconame-md.md)] nel ridurre il costo totale di proprietà, in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono incluse due nuove caratteristiche: un metodo di gestione dei server denominato gestione basata su criteri e query multiserver che utilizzano server di configurazione e gruppi di server. Tali caratteristiche possono essere utilizzate con, o al posto di, alcune delle caratteristiche descritte in questo argomento. Per altre informazioni, vedere [amministrare i server usando la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) e [amministrare più server tramite server di gestione centrale](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  Una soddisfacente configurazione di amministrazione multiserver è costituita da almeno un server master e almeno un server di destinazione. Il server master distribuisce processi ai server di destinazione e riceve eventi da tali server. Nel server master è inoltre archiviata la copia centrale delle definizioni di processo per i processi eseguiti nei server di destinazione. I server di destinazione stabiliscono connessioni periodiche al server master per aggiornare l'elenco dei processi pianificati. Se nel server master è presente un nuovo processo, questo viene scaricato dal server di destinazione. Dopo il completamento del processo, il server di destinazione stabilisce una nuova connessione al server master e trasmette lo stato del processo.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62473148"
 > [!NOTE]  
 >  Le caratteristiche di amministrazione multiserver sono riservate ai membri del ruolo sysadmin. Un membro del ruolo sysadmin nel server di destinazione non può tuttavia modificare le operazioni eseguite in tale server dal server master. Questa misura di sicurezza impedisce l'eliminazione accidentale di passaggi del processo ed evita l'interruzione delle operazioni nel server di destinazione.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Creazione di un ambiente multiserver](create-a-multiserver-environment.md)  
  Contiene informazioni sulla creazione e la gestione di server master e di destinazione.  
   
@@ -82,18 +82,18 @@ ms.locfileid: "62473148"
  Sono incluse informazioni sull'utilizzo ottimale delle caratteristiche di ottimizzazione automatica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]durante l'amministrazione automatizzata in un ambiente multiserver.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Compatibilità con le versioni precedenti del motore di database di SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
- [Registrazione di server](../register-servers/register-servers.md)   
- [sp_add_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
- [sp_delete_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
- [sp_delete_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
- [sp_help_downloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
- [sp_help_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
- [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
- [sp_resync_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
- [sp_update_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [dbo.sysjobservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [dbo.systargetservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [Compatibilità con le versioni precedenti di SQL Server motore di database](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Registra server](../register-servers/register-servers.md)   
+ [sp_add_targetservergroup &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
+ [sp_delete_targetserver &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
+ [sp_delete_targetservergroup &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
+ [sp_help_downloadlist &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
+ [sp_help_jobserver &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
+ [sp_help_targetservergroup &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
+ [sp_resync_targetserver &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
+ [sp_update_targetservergroup &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
+ [dbo. sysjobservers &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys. syslogins &#40;&#41;Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [dbo. systargetservers &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

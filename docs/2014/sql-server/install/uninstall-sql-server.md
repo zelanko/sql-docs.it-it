@@ -1,5 +1,5 @@
 ---
-title: Disinstallare SQL Server 2014 | Microsoft Docs
+title: Disinstalla SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470227"
 ---
 # <a name="uninstall-sql-server-2014"></a>Disinstallare SQL Server 2014
   Seguire gli argomenti indicati a continuazione per disinstallare completamente un'istanza esistente di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e preparare il sistema in modo che sia possibile reinstallare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Disinstallare un'istanza esistente di SQL Server &#40;Programma di installazione&#41;](uninstall-an-existing-instance-of-sql-server-setup.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Disinstallare un'istanza esistente di SQL Server &#40;Setup&#41;](uninstall-an-existing-instance-of-sql-server-setup.md)  
  In questo argomento viene descritto come disinstallare manualmente un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Disinstallare PowerPivot per SharePoint](uninstall-power-pivot-for-sharepoint.md)  
@@ -47,6 +47,6 @@ ms.locfileid: "62470227"
 ## <a name="see-also"></a>Vedere anche  
  [Pianificazione di un'installazione di SQL Server](planning-a-sql-server-installation.md)   
  [Installare SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
- [Aggiornamento a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Eseguire l'aggiornamento a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

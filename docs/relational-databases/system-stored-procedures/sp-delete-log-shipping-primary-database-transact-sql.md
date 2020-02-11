@@ -18,10 +18,10 @@ ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aff19eabc5738e986fca1bf13f85130daead3217
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909871"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
@@ -40,13 +40,13 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'` è il nome del database log shipping primario. il *database* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
+`[ @database = ] 'database'`Nome del database primario log shipping. il *database* è di **tipo sysname**e non prevede alcun valore predefinito e non può essere null.  
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuno  
+ No.  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_delete_log_shipping_primary_database** deve essere eseguito dal database **Master** nel server primario. Questa stored procedure esegue le operazioni seguenti:  

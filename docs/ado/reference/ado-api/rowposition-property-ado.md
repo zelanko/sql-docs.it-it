@@ -20,14 +20,14 @@ ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931226"
 ---
 # <a name="rowposition-property-ado"></a>Proprietà RowPosition (ADO)
-Ottiene o imposta un DB OLE **RowPosition** oggetto da/in un **ADORecordsetConstruction** oggetto. Quando si usa **put_RowPosition** per impostare il **RowPosition** oggetto, risultante **Recordset** oggetto utilizza il **RowPosition** dell'oggetto a determinare la riga corrente.  
+Ottiene o imposta un OLE DB oggetto **RowPosition** da/in un oggetto **ADORecordsetConstruction** . Quando si utilizza **put_RowPosition** per impostare l'oggetto **RowPosition** , l'oggetto **Recordset** risultante utilizza l'oggetto **RowPosition** per determinare la riga corrente.  
   
  Proprietà di lettura/scrittura.  
   
@@ -40,16 +40,16 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
   
 ## <a name="parameters"></a>Parametri  
  *ppRowPos*  
- Puntatore a OLE DB **RowPosition** oggetto.  
+ Puntatore a un oggetto OLE DB **RowPosition** .  
   
  *PRowPos*  
- OLE DB **RowPosition** oggetto.  
+ Oggetto OLE DB **RowPosition** .  
   
 ## <a name="return-values"></a>Valori restituiti  
- Metodo di questa proprietà restituisce i valori HRESULT standard, tra cui S_OK ed E_FAIL.  
+ Questo metodo di proprietà restituisce i valori HRESULT standard, inclusi S_OK e E_FAIL.  
   
-## <a name="remarks"></a>Note  
- Quando questa proprietà è impostata, se il **set di righe** dell'oggetto nel **RowPosition** oggetto è diverso dal **set di righe** dell'oggetto nel **Recordset**dell'oggetto, il primo esegue l'override di quest'ultimo. Lo stesso comportamento si applica all'oggetto corrente **capitolo** delle **RowPosition** anche.  
+## <a name="remarks"></a>Osservazioni  
+ Quando questa proprietà è impostata, se l'oggetto **set di righe** nell'oggetto **RowPosition** è diverso dall'oggetto **set di righe** nell'oggetto **Recordset** , il primo esegue l'override di quest'ultimo. Lo stesso comportamento si applica anche al **capitolo** corrente di **RowPosition** .  
   
 ## <a name="applies-to"></a>Si applica a  
  [Interfaccia ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

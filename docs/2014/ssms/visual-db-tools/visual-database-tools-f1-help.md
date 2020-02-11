@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b893480036b607dc1e6639ed9f50232520663879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473018"
 ---
 # <a name="visual-database-tools-f1-help"></a>Guida sensibile al contesto relativa a Visual Database Tools
@@ -25,7 +25,7 @@ ms.locfileid: "62473018"
  Per accedere agli argomenti relativi alle finestre di dialogo, premere F1 quando la finestra di dialogo desiderata è aperta e attiva. Per accedere agli argomenti relativi alle finestre delle proprietà, fare clic nella finestra Proprietà e premere F1.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Progettazione di tabelle &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Progettare tabelle &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

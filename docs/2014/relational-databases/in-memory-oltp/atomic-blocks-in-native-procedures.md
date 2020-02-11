@@ -11,14 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467281"
 ---
 # <a name="atomic-blocks"></a>Blocchi atomici
-  `BEGIN ATOMIC` fa parte dello standard SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i blocchi atomici solo al livello superiore delle stored procedure compilate in modo nativo.  
+  
+  `BEGIN ATOMIC` fa parte dello standard SQL ANSI. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i blocchi atomici solo al livello superiore delle stored procedure compilate in modo nativo.  
   
 -   Ogni stored procedure compilata in modo nativo contiene un blocco di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Si tratta di un blocco ATOMIC.  
   
@@ -31,7 +33,7 @@ ms.locfileid: "62467281"
   
  Se non è presente alcuna transazione attiva in una sessione, `BEGIN ATOMIC` avvia una nuova transazione. Se non viene generata alcuna eccezione all'esterno dell'ambito del blocco, verrà eseguito il commit della transazione alla fine del blocco. Se il blocco genera un'eccezione (l'eccezione non viene rilevata e gestita nel blocco), verrà eseguito il rollback della transazione. Per le transazioni che interessano un singolo blocco atomico (una singola stored procedure compilata in modo nativo), non è necessario scrivere istruzioni `BEGIN TRANSACTION` e `COMMIT` o `ROLLBACK` esplicite.  
   
- Le stored procedure compilate in modo nativo supportano i costrutti `TRY`, `CATCH` e `THROW` per la gestione degli errori. `RAISERROR` non è supportata.  
+ Le stored procedure compilate in modo nativo supportano i costrutti `TRY`, `CATCH` e `THROW` per la gestione degli errori. `RAISERROR`non è supportato.  
   
  Nell'esempio seguente viene illustrato il comportamento della gestione degli errori con blocchi atomici e stored procedure compilate in modo nativo:  
   
@@ -141,22 +143,22 @@ GO
 |----------------------|-----------------|  
 |`DATEFORMAT`|Tutti i formati data di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati. Quando viene specificata, `DATEFORMAT` esegue l'override del formato data predefinito associato a `LANGUAGE`.|  
 |`DATEFIRST`|Quando viene specificata, `DATEFIRST` esegue l'override dell'impostazione predefinita associata a `LANGUAGE`.|  
-|`DELAYED_DURABILITY`|I valori supportati sono `OFF` e `ON`.<br /><br /> Il commit delle transazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, che è l'impostazione predefinita, oppure con durabilità ritardata. Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../logs/control-transaction-durability.md).|  
+|`DELAYED_DURABILITY`|I valori supportati sono `OFF` e `ON`.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]il commit delle transazioni può essere completamente durevole, il valore predefinito o con durabilità ritardata. Per ulteriori informazioni, vedere [controllo della durabilità delle transazioni](../logs/control-transaction-durability.md).|  
   
  Le opzioni SET seguenti presentano lo stesso valore predefinito di sistema per tutti i blocchi atomici in tutte le stored procedure compilate in modo nativo:  
   
 |Opzione SET|Impostazione predefinita di sistema per i blocchi atomici|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|ATTIVA|  
+|ANSI_PADDING|ATTIVA|  
+|ANSI_WARNING|ATTIVA|  
+|ARITHABORT|ATTIVA|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|ATTIVA|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
+|NOCOUNT|ATTIVA|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|ATTIVA|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Le eccezioni non rilevate causano il rollback dei blocchi atomici, ma non l'interruzione della transazione, a meno che l'errore non comporti la fine della transazione.|  

@@ -14,22 +14,22 @@ ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de22797bdcf4ff526a8c17aee313567da3114b60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036538"
 ---
 # <a name="closing-the-cursor"></a>Chiusura del cursore
-Quando un'applicazione ha terminato di utilizzare un cursore, chiama **SQLCloseCursor** per chiudere il cursore. Ad esempio:  
+Al termine dell'utilizzo di un cursore da parte di un'applicazione, viene chiamato **SQLCloseCursor** per chiudere il cursore. Ad esempio:  
   
 ```  
 SQLCloseCursor(hstmt);  
 ```  
   
- Fino a quando l'applicazione chiude il cursore, l'istruzione in cui viene aperto il cursore non è utilizzabile per la maggior parte delle altre operazioni, ad esempio l'esecuzione di un'altra istruzione SQL. Per un elenco completo delle funzioni che possono essere chiamate quando un cursore è aperto, vedere [appendice b: Tabelle della transizione di stato ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Fino a quando l'applicazione non chiude il cursore, non è possibile utilizzare l'istruzione in cui è aperto il cursore per la maggior parte delle altre operazioni, ad esempio l'esecuzione di un'altra istruzione SQL. Per un elenco completo di funzioni che possono essere chiamate mentre un cursore è aperto, vedere [Appendice B: tabelle di transizione dello stato ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
 > [!NOTE]  
 >  Per chiudere un cursore, un'applicazione deve chiamare **SQLCloseCursor**, non **SQLCancel**.  
   
- I cursori rimangono aperti fino a quando non sono chiuse in modo esplicito, ad eccezione del fatto quando una transazione viene eseguito il commit o rollback, nel qual caso alcune origini dati chiudere il cursore. In particolare, il raggiungimento della fine del risultato impostato, quando **SQLFetch** restituisce SQL_NO_DATA, non si chiude un cursore. I cursori anche nei set di risultati vuoto (set di risultati creati durante un'istruzione eseguita correttamente, ma che non ha restituito righe) devono essere chiuso in modo esplicito.
+ I cursori rimangono aperti fino a quando non vengono chiusi in modo esplicito, tranne quando viene eseguito il commit o il rollback di una transazione, nel qual caso alcune origini dati chiudono il cursore. In particolare, se si raggiunge la fine del set di risultati, quando **SQLFetch** restituisce SQL_NO_DATA non chiude un cursore. Anche i cursori su set di risultati vuoti (set di risultati creati quando un'istruzione è stata eseguita correttamente ma che non hanno restituito righe) devono essere chiusi in modo esplicito.

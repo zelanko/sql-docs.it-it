@@ -1,5 +1,5 @@
 ---
-title: La corrispondenza dei tipi di sequenza | Microsoft Docs
+title: Corrispondenza del tipo di sequenza | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946220"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema di tipi - Corrispondenza per il tipo di sequenza
@@ -33,15 +33,15 @@ ms.locfileid: "67946220"
   
 -   È possibile stabilire se l'espressione restituisce un elemento XML o un nodo di attributo con un nome e un tipo specifico.  
   
- Per individuare una corrispondenza per il tipo di sequenza, è possibile utilizzare l'operatore booleano `instance of`. Per altre informazioni sul `instance of` espressione, vedere [espressioni SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
+ Per individuare una corrispondenza per il tipo di sequenza, è possibile utilizzare l'operatore booleano `instance of`. Per ulteriori informazioni sull' `instance of` espressione, vedere [espressioni SequenceType &#40;&#41;XQuery ](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Confronto del tipo del valore atomico restituito da un'espressione  
  Se un'espressione restituisce una sequenza di valori atomici, potrebbe essere necessario trovare il tipo del valore nella sequenza. Negli esempi seguenti viene illustrato l'utilizzo della sintassi del tipo di sequenza per valutare il tipo di valore atomico restituito da un'espressione.  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>Esempio: Determinare se una sequenza è vuota  
- Il **della Empty ()** tipo di sequenza utilizzabile in un'espressione sequencetype per determinare se la sequenza restituita dall'espressione specificata è una sequenza vuota.  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>Esempio: determinazione di una sequenza vuota  
+ Il tipo di sequenza **Empty ()** può essere utilizzato in un'espressione di tipo sequenza per determinare se la sequenza restituita dall'espressione specificata è una sequenza vuota.  
   
- Nell'esempio seguente, il XML schema consente la <`root`> elemento per essere supporta i valori null:  
+ Nell'esempio seguente, il XML Schema consente di supporta <`root` elemento>:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -51,7 +51,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Ora, se un'istanza XML tipizzata specifica un valore per la <`root`> elemento `instance of empty()` restituisce False.  
+ A questo punto, se un'istanza XML tipizzata specifica un valore `root` per l'elemento `instance of empty()` <>, restituisce false.  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -61,7 +61,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- Se il <`root`> supporta i valori null elemento nell'istanza, il valore è una sequenza vuota e `instance of empty()` restituisce True.  
+ Se l'elemento `root` <> è supporta nell'istanza, il relativo valore è una sequenza vuota e `instance of empty()` restituisce true.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -70,7 +70,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>Esempio: Determinazione del tipo di un valore di attributo  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>Esempio: determinazione del tipo di valore di un attributo  
  A volte è possibile valutare il tipo di sequenza restituito da un'espressione prima dell'elaborazione. Ad esempio, si consideri uno XML Schema nel quale un nodo è definito come un tipo unione. Nell'esempio seguente, l'XML Schema della raccolta definisce l'attributo `a` come un tipo unione il cui valore può essere di tipo decimal o string.  
   
 ```  
@@ -111,8 +111,8 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>Esempio: Cardinalità nelle espressioni di sequenza  
- Nell'esempio seguente viene illustrato l'effetto della cardinalità in un'espressione di sequenza. il XML schema seguente definisce una <`root`> elemento che è di tipo byte ed è di tipo nil.  
+### <a name="example-cardinality-in-sequence-expressions"></a>Esempio: cardinalità nelle espressioni di sequenza  
+ Nell'esempio seguente viene illustrato l'effetto della cardinalità in un'espressione di sequenza. Nell'XML Schema seguente viene definito un `root` elemento <> che è di tipo byte ed è nillable.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -131,7 +131,7 @@ SELECT @var.query('data(/root[1]) instance of  xs:byte ')
 GO  
 ```  
   
- Se si apportano le <`root`> elemento nil, il relativo valore è una sequenza vuota. ovvero l'espressione `/root[1]` restituisce una sequenza vuota e pertanto `instance of xs:byte` restituisce False. Si noti che in questo caso la cardinalità predefinita è 1.  
+ Se si imposta il <`root`> elemento Nil, il relativo valore è una sequenza vuota. ovvero l'espressione `/root[1]` restituisce una sequenza vuota e pertanto `instance of xs:byte` restituisce False. Si noti che in questo caso la cardinalità predefinita è 1.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -159,8 +159,8 @@ GO
   
  Se entrambe le condizioni sono vere, l'espressione `instance of` restituisce True.  
   
-### <a name="example-querying-against-an-xml-type-column"></a>Esempio: L'esecuzione di query su una colonna di tipo xml  
- Nell'esempio seguente, una query viene eseguita su una colonna Instructions della **xml** digitare il [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Si tratta di una colonna XML tipizzata, perché è associata a uno schema. Tramite XML Schema viene definito l'attributo `LocationID` di tipo integer. Pertanto, nell'espressione di sequenza, il `instance of xs:integer?` restituisce True.  
+### <a name="example-querying-against-an-xml-type-column"></a>Esempio: esecuzione di una query su una colonna di tipo xml  
+ Nell'esempio seguente viene specificata una query su una colonna Instructions di tipo **XML** nel [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database. Si tratta di una colonna XML tipizzata, perché è associata a uno schema. Tramite XML Schema viene definito l'attributo `LocationID` di tipo integer. Pertanto, nell'espressione Sequence, `instance of xs:integer?` restituisce true.  
   
 ```  
 SELECT Instructions.query('   
@@ -175,17 +175,17 @@ WHERE ProductModelID = 7
   
 -   **Item ()** -corrisponde a qualsiasi elemento nella sequenza.  
   
--   **Node ()** -determina se la sequenza è un nodo.  
+-   **node ()** : determina se la sequenza è un nodo.  
   
--   **//Processing-Instruction ()** -determina se l'espressione restituisce un'istruzione di elaborazione.  
+-   **processing-instruction ()** : determina se l'espressione restituisce un'istruzione di elaborazione.  
   
--   **comment** -determina se l'espressione restituisce un commento.  
+-   **Comment ()** : determina se l'espressione restituisce un commento.  
   
--   **document-node()** -determina se l'espressione restituisce un nodo di documento.  
+-   **document-node ()** : determina se l'espressione restituisce un nodo del documento.  
   
  Nell'esempio seguente vengono illustrati questi tipi di sequenza.  
   
-### <a name="example-using-sequence-types"></a>Esempio: Utilizzo di tipi di sequenza  
+### <a name="example-using-sequence-types"></a>Esempio: utilizzo di tipi di sequenza  
  In questo esempio vengono eseguite numerose query su una variabile XML non tipizzata. Le query illustrano l'utilizzo dei tipi di sequenza.  
   
 ```  
@@ -205,7 +205,7 @@ SELECT @var.query('data(/root[1]/a[1]) instance of item()')
 SELECT @var.query('/root[1]/a[1] instance of item()')  
 ```  
   
- Tutte le espressioni XQuery nelle tre query seguenti restituiscono l'elemento figlio del nodo di <`root`> elemento. L'espressione SequenceType `instance of node()` restituisce pertanto True e le altre due espressioni, `instance of text()` e `instance of document-node()`, restituiscono False.  
+ Tutte le espressioni XQuery nelle tre query seguenti restituiscono il nodo elemento figlio dell'elemento <`root`>. L'espressione SequenceType `instance of node()` restituisce pertanto True e le altre due espressioni, `instance of text()` e `instance of document-node()`, restituiscono False.  
   
 ```  
 SELECT @var.query('(/root/*)[1] instance of node()')  
@@ -213,7 +213,7 @@ SELECT @var.query('(/root/*)[1] instance of text()')
 SELECT @var.query('(/root/*)[1] instance of document-node()')   
 ```  
   
- Nella query seguente, il `instance of document-node()` espressione restituisce True, perché l'elemento padre del <`root`> elemento è un nodo di documento.  
+ Nella query seguente, l' `instance of document-node()` espressione restituisce true perché l'elemento padre dell'elemento <`root`> è un nodo del documento.  
   
 ```  
 SELECT @var.query('(/root/..)[1] instance of document-node()') -- true  
@@ -228,9 +228,9 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Sono valide le limitazioni seguenti:  
   
--   **document-node()** con tipo di contenuto non è supportata la sintassi.  
+-   il **documento-node ()** con sintassi del tipo di contenuto non è supportato.  
   
--   **Processing-Instruction(Name)** sintassi non è supportata.  
+-   la sintassi **di elaborazione-istruzione (nome)** non è supportata.  
   
 ## <a name="element-tests"></a>Test dell'elemento  
  Un test dell'elemento consente di stabilire una corrispondenza tra il nodo elemento restituito da un'espressione e un nodo elemento con un nome e un tipo specifico. Sono disponibili i test dell'elemento seguenti:  
@@ -255,7 +255,7 @@ element(*, ElementType?)
  Negli esempi seguenti vengono illustrati scenari nei quali i test dell'elemento e dell'attributo possono risultare utili.  
   
 ### <a name="example-a"></a>Esempio A  
- il XML schema seguente definisce la `CustomerType` tipo complesso in cui <`firstName`> e <`lastName`> gli elementi sono facoltativi. Per un'istanza XML specificata, potrebbe essere necessario stabilire se esiste il nome di un cliente specifico.  
+ Nell'XML Schema seguente viene definito `CustomerType` il tipo complesso in `firstName` cui gli elementi `lastName` <> e <> sono facoltativi. Per un'istanza XML specificata, potrebbe essere necessario stabilire se esiste il nome di un cliente specifico.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -279,7 +279,7 @@ SET @var = '<x:customer xmlns:x="myNS">
 </x:customer>'  
 ```  
   
- La query seguente usa un' `instance of element (firstName)` espressione per determinare se il primo elemento figlio di <`customer`> è un elemento il cui nome è <`firstName`>. In caso affermativo, restituisce True.  
+ Nella query seguente viene utilizzata `instance of element (firstName)` un'espressione per determinare se il primo elemento figlio di `customer` <> è un elemento il cui nome `firstName` è <>. In caso affermativo, restituisce True.  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -287,7 +287,7 @@ SELECT @var.query('declare namespace x="myNS";
 GO  
 ```  
   
- Se si rimuove il <`firstName`> elemento dall'istanza, la query restituirà False.  
+ Se si rimuove l'elemento `firstName` <> dall'istanza, la query restituirà false.  
   
  È inoltre possibile utilizzare:  
   
@@ -306,9 +306,9 @@ GO
     ```  
   
 ### <a name="example-b"></a>Esempio B  
- Nell'esempio seguente viene illustrato come determinare se il nodo restituito da un'espressione è un nodo elemento con un nome specifico, Usa il **Element ()** di test.  
+ Nell'esempio seguente viene illustrato come determinare se il nodo restituito da un'espressione è un nodo elemento con un nome specifico, Usa il test **Element ()** .  
   
- Nell'esempio seguente, i due <`Customer`> elementi nell'istanza XML che vengono eseguite query sono di due tipi diversi, `CustomerType` e `SpecialCustomerType`. Si supponga di voler conoscere il tipo del <`Customer`> elemento restituito dall'espressione. La raccolta di XML Schema seguente definisce i tipi `CustomerType` e `SpecialCustomerType`.  
+ Nell'esempio seguente, i due <`Customer`> elementi nell'istanza XML su cui viene eseguita la query sono di due tipi diversi, `CustomerType` e. `SpecialCustomerType` Si supponga di voler ottenere informazioni sul tipo di <`Customer` elemento> restituito dall'espressione. La raccolta di XML Schema seguente definisce i tipi `CustomerType` e `SpecialCustomerType`.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -335,7 +335,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Questa raccolta di XML schema consente di creare un oggetto tipizzato **xml** variabile. L'istanza XML assegnata a questa variabile include due <`customer`> elementi di due tipi diversi. Il primo elemento è di tipo `CustomerType` e il secondo elemento è di tipo `SpecialCustomerType`.  
+ Questa raccolta di XML Schema viene utilizzata per creare una variabile **XML** tipizzata. L'istanza XML assegnata a questa variabile presenta due `customer` <> elementi di due tipi diversi. Il primo elemento è di tipo `CustomerType` e il secondo elemento è di tipo `SpecialCustomerType`.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -358,10 +358,10 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- Se si modifica l'espressione della query precedente e recupera il secondo <`customer`> elemento (`/x:customer)[2]`), il `instance of` restituirà True.  
+ Se si modifica l'espressione della query precedente e si recupera il secondo <`customer` elemento> (`/x:customer)[2]`), il `instance of` restituisce true.  
   
 ### <a name="example-c"></a>Esempio C  
- In questo esempio viene utilizzato il test dell'attributo. L'XML Schema seguente definisce il tipo complesso CustomerType con gli attributi CustomerID e Age. L'attributo Age è facoltativo. Per un'istanza XML specifica, è possibile determinare se l'attributo Age è presente nel <`customer`> elemento.  
+ In questo esempio viene utilizzato il test dell'attributo. L'XML Schema seguente definisce il tipo complesso CustomerType con gli attributi CustomerID e Age. L'attributo Age è facoltativo. Per un'istanza XML specifica, può essere utile determinare se l'attributo Age è presente nell'elemento <`customer`>.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -382,7 +382,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- La query seguente restituisce True perché nell'istanza XML su cui viene eseguita la query esiste un nodo di attributo al quale è assegnato il nome `Age`. In questa espressione viene utilizzato il test dell'attributo `attribute(Age)`. Gli attributi non sono ordinati, pertanto la query utilizza l'espressione FLWOR per recuperare tutti gli attributi per poi testare ognuno di essi tramite l'espressione `instance of`. Nell'esempio viene creata una raccolta di XML schema per creare un oggetto tipizzato **xml** variabile.  
+ La query seguente restituisce True perché nell'istanza XML su cui viene eseguita la query esiste un nodo di attributo al quale è assegnato il nome `Age`. In questa espressione viene utilizzato il test dell'attributo `attribute(Age)`. Gli attributi non sono ordinati, pertanto la query utilizza l'espressione FLWOR per recuperare tutti gli attributi per poi testare ognuno di essi tramite l'espressione `instance of`. Nell'esempio viene innanzitutto creata una raccolta di XML Schema per creare una variabile **XML** tipizzata.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -415,22 +415,22 @@ RETURN
         ()')  
 ```  
   
- In alternativa, è possibile specificare il `attribute(*, type)` sintassi del tipo di sequenza. Se il tipo di attributo corrisponde al tipo specificato, in questo modo viene stabilita una corrispondenza per il nodo di attributo, indipendentemente dal nome.  
+ In alternativa, è possibile specificare la `attribute(*, type)` sintassi del tipo di sequenza. Se il tipo di attributo corrisponde al tipo specificato, in questo modo viene stabilita una corrispondenza per il nodo di attributo, indipendentemente dal nome.  
   
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Sono valide le limitazioni seguenti:  
   
--   Nel test dell'elemento, il nome del tipo deve essere seguito dall'indicatore di occorrenza ( **?** ).  
+-   Nel test dell'elemento il nome del tipo deve essere seguito dall'indicatore di occorrenza (**?**).  
   
--   **Element (ElementName, TypeName)** non è supportato.  
+-   l' **elemento (ElementName, typeName)** non è supportato.  
   
--   **elemento (\*, TypeName)** non è supportato.  
+-   **elemento (\*, typeName)** non supportato.  
   
--   **schema-Element()** non è supportato.  
+-   **Schema-Element ()** non è supportato.  
   
--   **schema-Attribute(AttributeName)** non è supportato.  
+-   l' **attributo schema (attributeName)** non è supportato.  
   
--   In modo esplicito l'esecuzione di query per **xsi: Type** oppure **xsi: nil** non è supportato.  
+-   L'esecuzione di query in modo esplicito per **xsi: Type** o **xsi: nil** non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sistema di tipi &#40;XQuery&#41;](../xquery/type-system-xquery.md)  

@@ -13,64 +13,64 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925800"
 ---
 # <a name="comments-on-hellodata"></a>Commenti su HelloData
-L'applicazione di HelloData illustrata in dettaglio le operazioni di base di una tipica applicazione ADO: introduzione, l'analisi, la modifica e aggiornamento dei dati. Quando si avvia l'applicazione, fare clic sul primo pulsante, **recupera dati**. Verrà eseguita la **GetData** subroutine.  
+L'applicazione HelloData è in grado di eseguire le operazioni di base di una tipica applicazione ADO, ovvero ottenere, esaminare, modificare e aggiornare i dati. Quando si avvia l'applicazione, fare clic sul primo pulsante, **recuperare i dati**. Verrà eseguita la subroutine **GetData** .  
   
 ## <a name="getdata"></a>GetData  
- **GetData** inserisce una stringa di connessione valido in una variabile, a livello di modulo *m_sConnStr*. Per altre informazioni sulle stringhe di connessione, vedere [creazione della stringa di connessione](../../../ado/guide/data/creating-a-connection-string.md).  
+ **GetData** inserisce una stringa di connessione valida in una variabile a livello di modulo, *m_sConnStr*. Per ulteriori informazioni sulle stringhe di connessione, vedere [creazione della stringa di connessione](../../../ado/guide/data/creating-a-connection-string.md).  
   
- Assegnare un gestore degli errori utilizzando Visual Basic **OnError** istruzione. Per altre informazioni sulla gestione degli errori in ADO, vedere [Error Handling](../../../ado/guide/data/error-handling.md). Una nuova **connessione** viene creato l'oggetto e il **CursorLocation** è impostata su **adUseClient** poiché nell'esempio di HelloData viene creato un  *Recordset disconnesso*. Ciò significa che non appena i dati sono stati recuperati dall'origine dati, la connessione fisica all'origine dati viene interrotta, ma è possibile proseguire con i dati memorizzati nella cache in locale nel **Recordset** oggetto.  
+ Assegnare un gestore errori usando un'istruzione Visual Basic **OnError** . Per ulteriori informazioni sulla gestione degli errori in ADO, vedere [gestione degli errori](../../../ado/guide/data/error-handling.md). Viene creato un nuovo oggetto **connessione** e la proprietà **CursorLocation** è impostata su **adUseClient** perché nell'esempio HelloData viene creato un *Recordset disconnesso*. Ciò significa che non appena i dati sono stati recuperati dall'origine dati, la connessione fisica con l'origine dati è interruppe, ma è comunque possibile utilizzare i dati memorizzati nella cache in locale nell'oggetto **Recordset** .  
   
- Dopo aver aperto la connessione, è possibile assegnare una stringa SQL a una variabile (sSQL). Quindi creare un'istanza di una nuova **Recordset** oggetto `m_oRecordset1`. Nella riga successiva del codice, aprire il **Recordset** tramite l'oggetto esistente **connessione**passando `sSQL` come origine della **Recordset**. Consente di ADO in rendendo la determinazione che il codice SQL stringa si hanno superato come origine per il **Recordset** è una definizione di un comando testuale passando **adCmdText** nell'argomento finale per il **Apertura di un Recordset** (metodo). Questa riga imposta anche il **LockType** e **CursorType** associato il **Recordset**.  
+ Una volta aperta la connessione, assegnare una stringa SQL a una variabile (crediti). Quindi, creare un'istanza di un **** nuovo oggetto recordset `m_oRecordset1`,. Nella riga di codice successiva aprire il **Recordset** sulla **connessione**esistente, passando `sSQL` come origine del **Recordset**. Si aiuta ADO a determinare che la stringa SQL passata come origine per il **Recordset** è una definizione testuale di un comando passando **adCmdText** nell'argomento finale al metodo **Open del recordset** . Questa riga imposta anche **LockType** e **CursorType** associati al **Recordset**.  
   
- La riga successiva del set di codice le **MarshalOptions** uguale alla proprietà **adMarshalModifiedOnly**. **MarshalOptions** indica quali record devono effettuare il marshalling al livello intermedio (o al server Web). Per altre informazioni sul marshalling, vedere la documentazione di COM. Quando si usa **adMarshalModifiedOnly** con un cursore lato client ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**), solo i record che sono stati modificati di client vengono riscritte al livello intermedio. L'impostazione **MarshalOptions** al **adMarshalModifiedOnly** può migliorare le prestazioni poiché vengono effettuato il marshalling meno righe.  
+ La riga di codice successiva imposta la proprietà **MarshalOptions** su **adMarshalModifiedOnly**. **MarshalOptions** indica i record di cui deve essere effettuato il marshalling al livello intermedio (o al server Web). Per ulteriori informazioni sul marshalling, vedere la documentazione COM. Quando si usa **adMarshalModifiedOnly** con un cursore sul lato client ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**), solo i record modificati sul client vengono riscritti nel livello intermedio. L'impostazione di **MarshalOptions** su **adMarshalModifiedOnly** può migliorare le prestazioni perché viene effettuato il marshalling di un numero minore di righe  
   
- Successivamente, disconnettere il **Recordset** mediante l'impostazione relativa **ActiveConnection** uguale alla proprietà **Nothing**. Per altre informazioni, vedere la sezione "Disconnettendo e riconnettendo il valore Recordset" nella [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).  
+ Successivamente, disconnettere il **Recordset** impostando la relativa proprietà **ActiveConnection** su **Nothing**. Per ulteriori informazioni, vedere la sezione relativa alla disconnessione e riconnessione del recordset in [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).  
   
- Chiudere la connessione all'origine dati ed eliminare definitivamente l'oggetto esistente **connessione** oggetto. Ciò rilascia le risorse che utilizzato.  
+ Chiudere la connessione all'origine dati ed eliminare l'oggetto **connessione** esistente. Questa operazione rilascia le risorse utilizzate.  
   
- Il passaggio finale consiste nell'impostare il **Recordset** come la **DataSource** per il controllo DataGrid Microsoft controllo nel form in modo che è possibile visualizzare i dati dal **Recordset** sul Form.  
+ Il passaggio finale consiste nell'impostare il **Recordset** come **origine** dati per il controllo Microsoft DataGrid sul modulo, in modo da poter visualizzare facilmente i dati del **Recordset** nel form.  
   
- Fare clic sul pulsante, secondo **esaminare i dati**. Questo comando esegue la **ExamineData** subroutine.  
+ Fare clic sul secondo pulsante, **esaminare i dati**. Viene eseguita la subroutine **ExamineData** .  
   
 ## <a name="examinedata"></a>ExamineData  
- ExamineData Usa diversi metodi e proprietà del **Recordset** oggetto per visualizzare le informazioni relative ai dati di **Recordset**. Segnala il numero di record usando il **RecordCount** proprietà. Esegue un ciclo tramite il **Recordset** e stampa il valore della **AbsolutePosition** proprietà nella casella di testo visualizzato nel form. Anche all'interno di ciclo, il valore della **segnalibro** proprietà per il terzo record viene inserita in una variabile variant *vBookmark*, per un uso successivo.  
+ ExamineData utilizza diversi metodi e proprietà dell'oggetto **Recordset** per visualizzare informazioni sui dati nel **Recordset**. Indica il numero di record utilizzando la proprietà **RecordCount** . Esegue il ciclo del **Recordset** e stampa il valore della proprietà **AbsolutePosition** nella casella di testo di visualizzazione del form. Anche durante il ciclo, il valore della proprietà **Bookmark** per il terzo record viene inserito in una variabile Variant, *vBookmark*, per un uso successivo.  
   
- La routine consente di passare direttamente al terzo record utilizzando la variabile segnalibri che archiviato in precedenza. Le chiamate di routine il **WalkFields** subroutine, che consente di scorrere le **campi** raccolta del **Recordset** e Visualizza informazioni dettagliate sui singoli **campo**  nella raccolta.  
+ La routine passa direttamente al terzo record usando la variabile di segnalibro archiviata in precedenza. La routine chiama la subroutine **WalkFields** , che esegue il ciclo della raccolta **Fields** del **Recordset** e Visualizza i dettagli relativi a ogni **campo** nella raccolta.  
   
- Infine **ExamineData** Usa le **filtro** proprietà del **Recordset** nella schermata per solo i record con un **CategoryId** uguale a 2. Il risultato dell'applicazione di questo filtro è immediatamente visibile nella griglia di visualizzazione nel form.  
+ Infine, **ExamineData** usa la proprietà **Filter** del **Recordset** per schermare solo i record con un **CategoryID** uguale a 2. Il risultato dell'applicazione di questo filtro è immediatamente visibile nella griglia di visualizzazione del form.  
   
- Per altre informazioni sulle funzionalità visualizzate nel **ExamineData** subroutine, vedere [analisi dei dati](../../../ado/guide/data/examining-data.md).  
+ Per ulteriori informazioni sulle funzionalità illustrate nella subroutine **ExamineData** , vedere [analisi dei dati](../../../ado/guide/data/examining-data.md).  
   
- Fare quindi clic sul terzo pulsante **la modifica dei dati**. Verrà eseguita la **EditData** subroutine.  
+ Quindi, fare clic sul terzo pulsante, **Edit data**. Verrà eseguita la subroutine **EditData** .  
   
 ## <a name="editdata"></a>EditData  
- Quando il codice avvia il **EditData** subroutine, il **Recordset** ancora viene applicato un filtro **CategoryId** è uguale a 2, in modo che solo gli elementi che soddisfano i criteri di filtro visibile. Viene innanzitutto eseguita una ricerca di **Recordset** e incrementa il prezzo di ogni elemento visibile nel **Recordset** 10 percento. Il valore della **prezzo** campo viene modificato impostando la **valore** proprietà per il campo uguale a una quantità di nuovo, valida.  
+ Quando il codice immette la subroutine **EditData** , il **Recordset** viene comunque filtrato in base a **CategoryID** uguale a 2, in modo che siano visibili solo gli elementi che soddisfano i criteri di filtro. Esegue prima il ciclo del **Recordset** e aumenta il 10% del prezzo di ogni elemento visibile nel **Recordset** . Il valore del campo **Price** viene modificato impostando la proprietà **value** per il campo su un valore nuovo e valido.  
   
- Tenere presente che il **Recordset** è disconnesso dall'origine dati. Le modifiche apportate **EditData** vengono apportate solo per la copia dei dati memorizzati nella cache locale. Per altre informazioni, vedere [modifica dei dati](../../../ado/guide/data/editing-data.md).  
+ Tenere presente che il **Recordset** è disconnesso dall'origine dati. Le modifiche apportate in **EditData** vengono apportate solo alla copia locale dei dati memorizzata nella cache. Per ulteriori informazioni, vedere [modifica di dati](../../../ado/guide/data/editing-data.md).  
   
- Le modifiche non sono pertanto dell'origine dati finché non si sceglie il quarto pulsante **aggiornare i dati**. Verrà eseguita la **UpdateData** subroutine.  
+ Le modifiche non verranno apportate all'origine dati fino a quando non si fa clic sul quarto pulsante **Aggiorna dati**. Verrà eseguita la subroutine **UpdateData** .  
   
 ## <a name="updatedata"></a>UpdateData  
- UpdateData rimuove prima il filtro viene applicato il **Recordset**. Il codice cancella e reimposta `m_oRecordset1` come il **DataSource** per il controllo DataGrid associato di Microsoft nel form in modo che il non filtrate **Recordset** visualizzato nella griglia.  
+ UpdateData rimuove innanzitutto il filtro che è stato applicato al **Recordset**. Il codice rimuove e Reimposta `m_oRecordset1` come **origine dati** per il DataGrid associato Microsoft sul form, in modo che il **Recordset** non filtrato venga visualizzato nella griglia.  
   
- Il codice verifica quindi se è possibile spostarsi all'indietro **Recordset** tramite il **supporta** metodo con il **adMovePrevious** argomento.  
+ Il codice verifica quindi se è possibile spostarsi all'indietro nel **Recordset** usando il metodo **Supports** con l'argomento **adMovePrevious** .  
   
- La routine passa al primo record usando il **MoveFirst** metodo e visualizza i valori del campo originale e corrente, usando la **OriginalValue** e **valore** proprietà del **campo** oggetto. Queste proprietà, insieme con il **UnderlyingValue** proprietà (non usato in questo esempio), sono descritti in [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).  
+ La routine passa al primo record usando il metodo **MoveFirst** e Visualizza i valori originali e correnti del campo, usando le proprietà **OriginalValue** e **value** dell'oggetto **Field** . Queste proprietà, insieme alla proprietà **UnderlyingValue** (non usato in questo caso), sono descritte in [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).  
   
- Successivamente, una nuova **connessione** oggetto viene creato e usato per ristabilire una connessione all'origine dati. Si riconnette il **Recordset** all'origine dei dati impostando la nuova **connessione** come il **ActiveConnection** per il **Recordset**. Per inviare gli aggiornamenti al server, il codice chiama **UpdateBatch** nel **Recordset**.  
+ Successivamente, viene creato un nuovo oggetto **connessione** che viene utilizzato per ristabilire una connessione all'origine dati. Per riconnettere il **Recordset** all'origine dati, impostare la nuova **connessione** come **ActiveConnection** per il **Recordset**. Per inviare gli aggiornamenti al server, il codice chiama **UpdateBatch** sul **Recordset**.  
   
- Se l'aggiornamento batch ha esito positivo, la variabile a livello di modulo flag `m_flgPriceUpdated`, è impostato su True. Si ricorderà in un secondo momento per pulire tutte le modifiche apportate al database.  
+ Se l'aggiornamento del batch riesce, una variabile di flag a livello di `m_flgPriceUpdated`modulo,, viene impostata su true. In questo modo verrà visualizzato un avviso in seguito per pulire tutte le modifiche apportate al database.  
   
- Infine, il codice consente di tornare al primo record nel **Recordset** e visualizza i valori originali e correnti. I valori sono gli stessi dopo la chiamata a **UpdateBatch**.  
+ Infine, il codice si sposta nuovamente sul primo record del **Recordset** e Visualizza i valori originali e quelli correnti. I valori sono gli stessi dopo la chiamata a **UpdateBatch**.  
   
- Per informazioni dettagliate su come aggiornare i dati, tra cui operazioni da eseguire quando i dati sulle modifiche server durante la **Recordset** viene disconnesso, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).  
+ Per informazioni dettagliate su come aggiornare i dati, incluse le operazioni da eseguire quando vengono modificati i dati nel server mentre il **Recordset** è disconnesso, vedere [aggiornamento e salvataggio permanente dei dati](../../../ado/guide/data/updating-and-persisting-data.md).  
   
-## <a name="formunload"></a>Form_Unload  
- Il **Form_Unload** subroutine è importante per diversi motivi. In primo luogo, poiché si tratta di un'applicazione di esempio, Form_Unload pulisce le modifiche apportate al database prima di uscire dall'applicazione. In secondo luogo, il codice viene illustrato come un comando può essere eseguito direttamente da un oggetto aperto **Connection** oggetto tramite il **Execute** (metodo). Infine viene illustrato un esempio di esecuzione di una query non restituiscono righe (una query di aggiornamento) rispetto all'origine dati.
+## <a name="form_unload"></a>Form_Unload  
+ La subroutine **Form_Unload** è importante per diversi motivi. Innanzitutto, poiché si tratta di un'applicazione di esempio, Form_Unload pulisce le modifiche apportate al database prima che l'applicazione venga chiusa. In secondo luogo, il codice Mostra come un comando può essere eseguito direttamente da un oggetto **connessione** aperto tramite il metodo **Execute** . Infine, viene illustrato un esempio di esecuzione di una query che non restituisce righe (una query di aggiornamento) rispetto all'origine dati.

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629723"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Amministrazione di una topologia peer-to-peer (programmazione Transact-SQL della replica)
@@ -40,7 +40,7 @@ ms.locfileid: "62629723"
 5.  Eseguire [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) per creare il nuovo articolo in ogni nodo nella topologia. Per altre informazioni, vedere [definire un articolo](../publish/define-an-article.md).  
   
     > [!NOTE]  
-    >  Dopo l'esecuzione di [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), la replica aggiunge automaticamente l'articolo alle sottoscrizioni nella topologia.  
+    >  Dopo l'esecuzione di [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) , la replica aggiunge automaticamente l'articolo alle sottoscrizioni nella topologia.  
   
 6.  Riavviare gli agenti di distribuzione in ciascun nodo nella topologia.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "62629723"
 ## <a name="see-also"></a>Vedere anche  
  [Domande frequenti sull'amministrazione della replica](frequently-asked-questions-for-replication-administrators.md)   
  [Backup e ripristino di database SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Replica transazionale peer-to-peer](../transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Proprietà operatore: Nuovo operatore (pagina notifiche) | Microsoft Docs'
+title: 'Proprietà operatore: nuovo operatore (pagina notifiche) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630689"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>Proprietà operatore: Nuovo operatore (pagina Notifiche)
+# <a name="operator-properties-new-operator-notifications-page"></a>Proprietà Operatore - Nuovo operatore (pagina Notifiche)
   Utilizzare questa pagina per impostare gli avvisi e i processi di notifica relativi all'operatore.  
   
 ## <a name="options"></a>Opzioni  
@@ -40,10 +40,10 @@ ms.locfileid: "62630689"
  **Posta elettronica**  
  Consente di inviare una notifica all'operatore tramite posta elettronica.  
   
- **Cercapersone**  
+ **Pager**  
  Inviare una notifica all'operatore tramite un messaggio di posta elettronica all'indirizzo del cercapersone.  
   
- **Net send**  
+ **NET SEND**  
  Notificare questo operatore tramite **Net Send**.  
   
 ## <a name="see-also"></a>Vedere anche  

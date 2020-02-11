@@ -12,112 +12,112 @@ ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e1debb31cd70c73e3fecd569a58534377742a9a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948528"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Connessione a Sybase ASE (SybaseToSQL)
-La migrazione dei database di Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario connettersi al Server adattivo che contiene i database che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nel Server adattivo e visualizza i metadati del database nel riquadro di esplorazione di metadati di Sybase. SSMA archivia le informazioni sui server di database, ma non archivia le password.  
+Per eseguire la migrazione dei database di Sybase Adaptive Server Enterprise ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ASE) a o SQL Azure, è necessario connettersi al server adattivo che contiene i database di cui si desidera eseguire la migrazione. Quando si esegue la connessione, SSMA ottiene i metadati relativi a tutti i database nel server adattivo e Visualizza i metadati del database nel riquadro di Esplora metadati Sybase. SSMA archivia le informazioni sul server di database, ma non archivia le password.  
   
-La connessione ad ambiente del servizio App rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettersi all'ambiente del servizio App se si desidera che una connessione attiva al server.  
+La connessione all'ambiente del servizio app rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettersi all'ambiente del servizio app se si vuole una connessione attiva al server.  
   
-Metadati relativi al Server adattivo non viene aggiornato automaticamente. In alternativa, se si desidera aggiornare i metadati nel Visualizzatore metadati Sybase, è necessario aggiornare manualmente i metadati, come descritto nella sezione "Aggiornamento dei metadati di ASE Sybase" più avanti in questo argomento.  
+I metadati relativi al server adattivo non vengono aggiornati automaticamente. Se invece si desidera aggiornare i metadati in Sybase Metadata Explorer, è necessario aggiornare manualmente i metadati, come descritto nella sezione "aggiornamento dei metadati di Sybase ASE" più avanti in questo argomento.  
   
-## <a name="required-ase-permissions"></a>Autorizzazioni di ambiente del servizio App necessaria  
-L'account utilizzato per connettersi all'ambiente del servizio app deve avere almeno **pubbliche** accesso al database master e a qualsiasi database di origine per eseguire la migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Inoltre, per selezionare le autorizzazioni sulle tabelle cui vengono eseguita la migrazione, l'utente deve disporre delle autorizzazioni SELECT su tabelle di sistema seguenti:  
+## <a name="required-ase-permissions"></a>Autorizzazioni ASE richieste  
+L'account usato per la connessione all'ambiente del servizio app deve avere almeno l'accesso **pubblico** al database master e ai database di origine di cui eseguire la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrazione o SQL Azure. Inoltre, per selezionare le autorizzazioni per le tabelle di cui viene eseguita la migrazione, l'utente deve disporre delle autorizzazioni SELECT per le tabelle di sistema seguenti:  
   
--   [source_db].dbo.sysobjects  
+-   [source_db]. dbo. sysobjects  
   
--   [source_db].dbo.syscolumns  
+-   [source_db]. dbo. syscolumns  
   
--   [source_db].dbo.sysusers  
+-   [source_db]. dbo. sysusers  
   
--   [source_db].dbo.systypes  
+-   [source_db]. dbo. systypes  
   
--   [source_db].dbo.sysconstraints  
+-   [source_db]. dbo. sysconstraints  
   
--   [source_db].dbo.syscomments  
+-   [source_db]. dbo. syscomments  
   
--   [source_db].dbo.sysindexes  
+-   [source_db]. dbo. sysindexes  
   
--   [source_db].dbo.sysreferences  
+-   [source_db]. dbo. sysreferences  
   
--   master.dbo.sysdatabases  
+-   Master. dbo. sysdatabases  
   
-## <a name="establishing-a-connection-to-ase"></a>Tentativo di stabilire una connessione all'ambiente del servizio App  
-Quando ci si connette a un Server adattivo, SSMA legge i metadati del database nel server di database e quindi aggiunge i metadati del file di progetto. Questi metadati vengono utilizzati da SSMA durante la conversione di oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o la sintassi SQL Azure, e quando esegue la migrazione di dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile esplorare i metadati nel riquadro di esplorazione di metadati Sybase e le proprietà di singoli oggetti di database.  
+## <a name="establishing-a-connection-to-ase"></a>Stabilire una connessione all'ambiente del servizio app  
+Quando ci si connette a un server adattivo, SSMA legge i metadati del database nel server di database e quindi aggiunge i metadati al file di progetto. Questi metadati vengono usati da SSMA quando converte gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure sintassi e quando esegue la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile esplorare questi metadati nel riquadro di Esplora metadati Sybase ed esaminare le proprietà dei singoli oggetti di database.  
   
 > [!IMPORTANT]  
-> Prima di provare a connettersi al server di database, assicurarsi che il server di database è in esecuzione e può accettare connessioni.  
+> Prima di provare a connettersi al server di database, verificare che il server di database sia in esecuzione e che sia in grado di accettare le connessioni.  
   
 **Per connettersi a Sybase ASE**  
   
-1.  Nel **File** dal menu **Connetti a Sybase**.  
+1.  Scegliere **Connetti a Sybase**dal menu **file** .  
   
-    Se connesso in precedenza a Sybase, il nome del comando saranno **Riconnetti a Sybase**.  
+    Se in precedenza si è connessi a Sybase, il nome del comando verrà **riconnesso a Sybase**.  
   
-2.  Nel **Provider** , selezionare uno qualsiasi dei provider installati nel computer per connettersi al server Sybase.  
+2.  Nella casella **provider** selezionare uno dei provider installati nel computer per la connessione al Server Sybase.  
   
-3.  Nel **modalità** seleziona **modalità Standard** oppure **modalità avanzata**.  
+3.  Nella casella **modalità** selezionare **modalità standard** o **modalità avanzata**.  
   
-    Usare la modalità standard per specificare il nome del server, porta, nome utente e password. Utilizzare modalità avanzata per fornire una stringa di connessione. Questa modalità viene in genere usata solo per la risoluzione dei problemi o l'utilizzo con il supporto tecnico.  
+    Utilizzare la modalità standard per specificare il nome del server, la porta, il nome utente e la password. Utilizzare la modalità avanzata per specificare una stringa di connessione. Questa modalità viene in genere usata solo per la risoluzione dei problemi o per l'uso del supporto tecnico.  
   
-4.  Se si seleziona **modalità Standard**, specificare i valori seguenti:  
+4.  Se si seleziona la **modalità standard**, fornire i valori seguenti:  
   
-    1.  Nel **nome Server** casella, immettere o selezionare il nome o l'indirizzo IP del server di database.  
+    1.  Nella casella **nome server** immettere o selezionare il nome o l'indirizzo IP del server di database.  
   
-    2.  Se il server di database non è configurato per accettare le connessioni sull'impostazione predefinita la porta (5000), immettere il numero di porta che viene usato per le connessioni di Sybase nel **porta Server** casella.  
+    2.  Se il server di database non è configurato per accettare le connessioni sulla porta predefinita (5000), immettere il numero di porta usato per le connessioni Sybase nella casella **porta server** .  
   
-    3.  Nel **nome utente** immettere un account di Sybase che dispone delle autorizzazioni necessarie.  
+    3.  Nella casella **nome utente** immettere un account Sybase con le autorizzazioni necessarie.  
   
-    4.  Nel **Password** casella, immettere la password per il nome utente specificato.  
+    4.  Nella casella **password** immettere la password per il nome utente specificato.  
   
-5.  Se si seleziona **modalità avanzata**, specificare una stringa di connessione nel **stringa di connessione** casella.  
+5.  Se si seleziona la **modalità avanzata**, specificare una stringa di connessione nella casella **stringa di connessione** .  
   
-    Esempi di stringhe di connessione diverse sono come segue:  
+    Di seguito sono riportati alcuni esempi di diverse stringhe di connessione:  
   
-    1.  **Stringhe di connessione per il Provider OLE DB Sybase:**  
+    1.  **Stringhe di connessione per il provider di OLE DB Sybase:**  
   
-        Per Sybase ASE OLE DB 12,5, una stringa di connessione di esempio è il seguente:  
+        Per Sybase ASE OLE DB 12,5, una stringa di connessione di esempio è la seguente:  
   
         `Server Name=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider=Sybase.ASEOLEDBProvider;`  
   
-        Per Sybase ASE OLE DB 15, una stringa di connessione di esempio è il seguente:  
+        Per Sybase ASE OLE DB 15, una stringa di connessione di esempio è la seguente:  
   
         `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider= ASEOLEDB;Port=5000;`  
   
-    2.  **Stringa di connessione del Provider ODBC Sybase:**  
+    2.  **Stringa di connessione per il provider ODBC Sybase:**  
   
         `Driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`  
   
-    3.  **Stringa di connessione per il Provider ADO.NET Sybase:**  
+    3.  **Stringa di connessione per il provider ADO.NET Sybase:**  
   
         `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
     Per altre informazioni, vedere [connettersi a Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
   
-## <a name="reconnecting-to-sybase-ase"></a>La riconnessione a Sybase ASE  
-La connessione al server di database rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettere se si desidera che una connessione attiva al Server adattivo. È possibile lavorare offline fino a quando non si desidera aggiornare i metadati, caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, ed eseguire la migrazione dei dati.  
+## <a name="reconnecting-to-sybase-ase"></a>Riconnessione a Sybase ASE  
+La connessione al server di database rimane attiva fino a quando non si chiude il progetto. Quando si riapre il progetto, è necessario riconnettersi se si desidera una connessione attiva al server adattivo. È possibile lavorare offline fino a quando non si desidera aggiornare i metadati, caricare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti di database in o SQL Azure ed eseguire la migrazione dei dati.  
   
-## <a name="refreshing-sybase-ase-metadata"></a>Aggiornamento dei metadati di ASE Sybase  
-I metadati sui database ambiente del servizio App non vengono aggiornati automaticamente. I metadati nel Visualizzatore metadati Sybase sono uno snapshot dei metadati quando si è connessi prima di tutto per il Server adattivo o l'ultima volta aggiornate manualmente i metadati. È possibile aggiornare manualmente i metadati per un singolo database, un unico schema di database o tutti i database.  
+## <a name="refreshing-sybase-ase-metadata"></a>Aggiornamento dei metadati di Sybase ASE  
+I metadati relativi ai database dell'ambiente del servizio app non vengono aggiornati automaticamente. I metadati in Sybase Metadata Explorer sono uno snapshot dei metadati al momento della prima connessione al server adattivo o dell'ultimo aggiornamento manuale dei metadati. È possibile aggiornare manualmente i metadati per un singolo database, uno schema di database singolo o tutti i database.  
   
 **Per aggiornare i metadati**  
   
-1.  Assicurarsi di essere connessi al Server adattivo.  
+1.  Assicurarsi di essere connessi al server adattivo.  
   
-2.  Nel Visualizzatore metadati Sybase, selezionare la casella di controllo accanto al database o schema di database che si desidera aggiornare.  
+2.  In Sybase Metadata Explorer selezionare la casella di controllo accanto allo schema del database o del database che si desidera aggiornare.  
   
-3.  I database o i singoli database o lo schema del database e quindi scegliere **aggiornare dal Database**.  
+3.  Fare clic con il pulsante destro del mouse su database o sul database singolo o sullo schema del database, quindi scegliere **Aggiorna da database**.  
   
-4.  Se viene chiesto di selezionare l'oggetto corrente, fare clic su **Sì**.  
+4.  Se viene richiesto di controllare l'oggetto corrente, fare clic su **Sì**.  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
   
--   Il passaggio successivo del processo di migrazione consiste [connettersi a un'istanza di SQL Server](connecting-to-sql-server-sybasetosql.md) / [ci si connette a un'istanza di SQL Azure](connecting-to-azure-sql-db-sybasetosql.md)  
+-   Il passaggio successivo del processo di migrazione consiste nel [connettersi a un'istanza di SQL Server](connecting-to-sql-server-sybasetosql.md) / la[connessione a un'istanza di SQL Azure](connecting-to-azure-sql-db-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione dei database di Sybase ASE a SQL Server - Azure SQL database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrazione dei database Sybase ASE a SQL Server-database SQL di Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

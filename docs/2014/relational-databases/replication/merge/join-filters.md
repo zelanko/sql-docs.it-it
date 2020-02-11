@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629747"
 ---
 # <a name="join-filters"></a>filtri di join
@@ -43,7 +43,7 @@ ms.locfileid: "62629747"
 LoginID = SUSER_SNAME()  
 ```  
   
- Questo filtro garantisce che la sottoscrizione di ogni dipendente contenga soltanto i dati della tabella **HumanResources.Employee** rilevanti per tale dipendente. In questo caso, si tratta di una singola riga. Per altre informazioni, vedere [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
+ Questo filtro garantisce che la sottoscrizione di ogni dipendente contenga soltanto i dati della tabella **HumanResources.Employee** rilevanti per tale dipendente. In questo caso, si tratta di una singola riga. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](parameterized-filters-parameterized-row-filters.md).  
   
  Il passaggio successivo consiste nell'estendere questo filtro a ogni tabella correlata, utilizzando una sintassi simile a quella utilizzata per specificare un join tra due tabelle. La prima clausola di filtro di join è:  
   

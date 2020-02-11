@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467417"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Vincolo di attribuzione di particelle univoche
@@ -80,11 +80,11 @@ ms.locfileid: "62467417"
 ## <a name="finding-more-information"></a>Per ulteriori informazioni  
  Il documento seguente è pubblicato dal World Wide Web Consortium (W3C) e contiene la descrizione tecnica del vincolo di attribuzione di particelle univoche (informazioni in lingua inglese):  
   
- "XML Schema Part 1: Strutture Second Edition, W3C Proposed Recommendation modificato":  
+ "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
   
--   Sezione 3.8.6: Vincoli su Model Group Schema Components  
+-   Section 3.8.6: Constraints on Model Group Schema Components  
   
--   Appendice h: Analisi di Particle Attribution vincoli univoci (non normativo)  
+-   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
  Per vedere il documento, visitare [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   

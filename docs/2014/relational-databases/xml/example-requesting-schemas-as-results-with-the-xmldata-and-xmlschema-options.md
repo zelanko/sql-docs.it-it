@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637927"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Esempio: richiesta di schemi di risultato mediante le opzioni XMLDATA e XMLSCHEMA
@@ -35,7 +35,7 @@ FOR XML RAW, XMLDATA
 GO  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data"   
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  <`Schema`> viene considerato come uno spazio dei nomi. Al fine di evitare collisioni a livello di spazi dei nomi quando vengono richiesti più schemi XML-Data in query FOR XML diverse, l'identificatore dello spazio dei nomi, in questo esempio `Schema1` , cambia a ogni esecuzione della query. L'identificatore dello spazio dei nomi è costituito da **Schema_n_** in cui **_n_** è un numero intero.  
+>  <`Schema`> viene considerato come uno spazio dei nomi. Al fine di evitare collisioni a livello di spazi dei nomi quando vengono richiesti più schemi XML-Data in query FOR XML diverse, l'identificatore dello spazio dei nomi, in questo esempio `Schema1` , cambia a ogni esecuzione della query. L'identificatore dello spazio dei nomi è costituito da **Schema_n_** dove **_n_** è un numero intero.  
   
  Specificando l'opzione `XMLSCHEMA` è possibile richiedere lo schema XSD per il risultato.  
   
@@ -66,7 +66,7 @@ FOR XML RAW, XMLSCHEMA
 GO  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -101,7 +101,7 @@ FOR XML RAW, XMLSCHEMA ('urn:example.com')
 GO  
 ```  
   
- Questo è il risultato:  
+ Risultato:  
   
 ```  
 <xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -124,6 +124,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo della modalità RAW con FOR XML](use-raw-mode-with-for-xml.md)  
+ [Usare la modalità RAW con FOR XML](use-raw-mode-with-for-xml.md)  
   
   

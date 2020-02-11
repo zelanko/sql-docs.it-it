@@ -1,5 +1,5 @@
 ---
-title: Raccolta di parametri, esempio di proprietà Command (VC + +) | Microsoft Docs
+title: Raccolta Parameters, esempio di proprietà Command (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5197f81ed9363a1df128281bd2ae6020bdb6bf14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4707899d44ca74e868c82ddc6a6962022fd75759
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965603"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911065"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Raccolta Parameters: esempio della proprietà Command (VC++)
-Il codice seguente illustra come usare il [comandi](../../../ado/reference/adox-api/command-property-adox.md) proprietà con il [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto per recuperare informazioni sui parametri per la procedura.  
+Nel codice seguente viene illustrato come utilizzare la proprietà [Command](../../../ado/reference/adox-api/command-property-adox.md) con l'oggetto [Command](../../../ado/reference/ado-api/command-object-ado.md) per recuperare le informazioni sui parametri per la procedura.  
   
 ```  
 // BeginProcedureParametersCpp.cpp  
@@ -90,7 +90,7 @@ void ProcedureParametersX() {
         printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
     }  
     catch(...) {  
-        cout << "Error occured in ProcedureParametersX...." << endl;  
+        cout << "Error occurred in ProcedureParametersX...." << endl;  
     }  
 }  
 ```

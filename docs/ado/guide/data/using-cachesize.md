@@ -14,24 +14,24 @@ ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2e3a67e9ad0f1f26f804ecb38e960041863fad9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923570"
 ---
 # <a name="using-cachesize"></a>Uso di CacheSize
-Usare la **CacheSize** proprietà per controllare il numero di record per recuperare in una sola volta nella memoria locale del provider. Ad esempio, se il **CacheSize** è 10, dopo l'apertura prima le **Recordset** dell'oggetto, il provider recupera i primi 10 record nella memoria locale. Quando si spostano attraverso la **Recordset** dell'oggetto, il provider restituisce i dati dal buffer di memoria locale. Non appena si sposta oltre l'ultimo record nella cache, il provider recupera i successivi 10 record dall'origine dati nella cache.  
+Utilizzare la proprietà **CacheSize** per controllare il numero di record da recuperare contemporaneamente nella memoria locale del provider. Se, ad esempio, **CacheSize** è 10, dopo la prima apertura dell'oggetto **Recordset** , il provider recupera i primi 10 record nella memoria locale. Quando si sposta l'oggetto **Recordset** , il provider restituisce i dati dal buffer di memoria locale. Non appena si passa oltre l'ultimo record nella cache, il provider recupera i 10 record successivi dall'origine dati nella cache.  
   
 > [!NOTE]
->  **CacheSize** si basa sul **numero massimo righe aperte** proprietà specifiche del provider (nel **le proprietà** insieme del **Recordset** oggetto). Non è possibile impostare **CacheSize** su un valore maggiore **numero massimo di righe aperto.** Per modificare il numero di righe che può essere aperto dal provider, impostare **numero massimo righe aperte**.  
+>  **CacheSize** è basato sulla proprietà massima specifica del provider di **righe aperte** (nella raccolta **Properties** dell'oggetto **Recordset** ). Non è possibile impostare **CacheSize** su un valore maggiore del **numero massimo di righe aperte.** Per modificare il numero di righe che possono essere aperte dal provider, impostare il numero **massimo di righe aperte**.  
   
- Il valore di **CacheSize** può essere modificata nel corso della durata delle **Recordset** oggetto, ma se si modifica questo valore interessa solo il numero di record nella cache dopo recuperi successivi, dall'origine dati. La modifica il valore della proprietà da solo non modificherà il contenuto corrente della cache.  
+ Il valore di **CacheSize** può essere regolato durante il ciclo di vita dell'oggetto **Recordset** , ma la modifica di questo valore influisca solo sul numero di record nella cache dopo i successivi recuperi dall'origine dati. La modifica del valore della proprietà da solo non comporterà la modifica del contenuto corrente della cache.  
   
- Se sono presenti record minore rispetto al recupero **CacheSize** specifica, il provider restituisce i record rimanenti e si verifica alcun errore.  
+ Se il numero di record da recuperare è inferiore a quello specificato da **CacheSize** , il provider restituisce i record rimanenti e non si verifica alcun errore.  
   
- Oggetto **CacheSize** impostando pari a zero non è consentito e restituisce un errore.  
+ Un'impostazione **CacheSize** pari a zero non è consentita e restituisce un errore.  
   
- Record recuperato dalla cache non riflettono le modifiche simultanee che altri utenti apportate ai dati di origine. Per forzare un aggiornamento di tutti i dati memorizzati nella cache, usare il [Risincronizza](../../../ado/reference/ado-api/resync-method.md) (metodo).  
+ I record recuperati dalla cache non riflettono le modifiche simultanee apportate da altri utenti ai dati di origine. Per forzare un aggiornamento di tutti i dati memorizzati nella cache, usare il metodo [Resync](../../../ado/reference/ado-api/resync-method.md) .  
   
- Se **CacheSize** è impostata su un valore maggiore di 1, i metodi di navigazione ([spostare](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) potrebbe causare il passaggio a una classe eliminata registrare, se l'eliminazione viene eseguita dopo che sono stati recuperati i record. Dopo l'operazione di recupero iniziale, le successive operazioni di eliminazione non si rifletteranno nella cache per i dati fino a quando non si tenta di accedere a un valore di dati da una riga eliminata. Tuttavia, impostando **CacheSize** a 1 consente di eliminare questo problema in quanto non è possibile recuperare le righe eliminate.
+ Se **CacheSize** è impostato su un valore maggiore di 1, i metodi di navigazione ([Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext e MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) possono comportare la navigazione a un record eliminato, se l'eliminazione viene eseguita dopo il recupero dei record. Dopo il recupero iniziale, le eliminazioni successive non verranno riflesse nella cache dei dati fino a quando non si tenta di accedere a un valore di dati da una riga eliminata. Tuttavia, se si imposta **CacheSize** su 1, questo problema viene eliminato perché non è possibile recuperare le righe eliminate.

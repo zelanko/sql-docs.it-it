@@ -14,22 +14,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467301"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parametri con valori di tabella (ODBC)
   Il supporto ODBC dei parametri con valori di tabella consente a un'applicazione client di inviare più efficientemente i dati con parametri al server, inviando più righe al server con una sola chiamata.  
   
- Per informazioni sui parametri con valori di tabella nel server, vedere [usare parametri &#40;motore di Database&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Per informazioni sui parametri con valori di tabella nel server, vedere [usare i parametri con valori di tabella &#40;motore di database&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
  In ODBC è possibile inviare parametri con valori di tabella al server in due modi:  
   
--   Tutti i dati del parametro con valori di tabella possono essere in memoria al momento SQLExecDirect o SQLExecute viene chiamata. Se sono presenti più righe nel valore di tabella, i dati vengono archiviati in matrici.  
+-   Tutti i dati dei parametri con valori di tabella possono essere in memoria al momento della chiamata a SQLExecDirect o SQLExecute. Se sono presenti più righe nel valore di tabella, i dati vengono archiviati in matrici.  
   
--   Un'applicazione può specificare data-at-execution per un parametro con valori di tabella quando viene chiamata SQLExecDirect o SQLExecute. In tal caso, le righe di dati per il valore di tabella possono essere fornite in batch o uno alla volta per ridurre i requisiti di memoria.  
+-   Un'applicazione può specificare data-at-execution per un parametro con valori di tabella quando viene chiamato SQLExecDirect o SQLExecute. In tal caso, le righe di dati per il valore di tabella possono essere fornite in batch o uno alla volta per ridurre i requisiti di memoria.  
   
  La prima opzione consente alle stored procedure di incapsulare più logica di business. Ad esempio, una singola stored procedure può incapsulare un'intera transazione di immissione ordini se gli articoli dell'ordine vengono passati come parametro con valori di tabella. Questa opzione è molto efficiente poiché è necessario un solo round trip del server. In alternativa, è possibile utilizzare altre procedure per gestire separatamente l'intestazione degli ordini e gli articoli richiedendo più codice e un contratto più complesso tra il client e il server.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "62467301"
   
  È possibile creare vincoli e chiavi primarie durante la creazione della variabile di tabella. I vincoli rappresentano un ottimo metodo per assicurarsi che i dati di una tabella soddisfino requisiti specifici.  
   
-## <a name="in-this-section"></a>In questa sezione  
- [Usi dei parametri con valori di tabella in ODBC](uses-of-odbc-table-valued-parameters.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Utilizzi dei parametri con valori di tabella in ODBC](uses-of-odbc-table-valued-parameters.md)  
  Vengono descritti gli scenari utente principali per i parametri con valori di tabella e ODBC.  
   
  [Tipo SQL ODBC per parametri con valori di tabella](odbc-sql-type-for-table-valued-parameters.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "62467301"
  Viene descritto il modo in cui un'applicazione può ottenere i metadati per una chiamata alla procedura preparata.  
   
  [Metadati aggiuntivi dei parametri con valori di tabella](additional-table-valued-parameter-metadata.md)  
- Viene descritto come utilizzare SQLColumns, SQLProcedureColumns e SQLTables per recuperare i metadati per un parametro con valori di tabella.  
+ Viene descritto come utilizzare SQLProcedureColumns, SQLTables e SQLColumns per recuperare i metadati per un parametro con valori di tabella.  
   
  [Conversione di dati dei parametri con valori di tabella e altri errori e avvisi](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Viene descritta l'elaborazione degli errori nei valori delle colonne dei parametri con valori di tabella.  
@@ -79,6 +79,6 @@ ms.locfileid: "62467301"
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [I parametri con valori di tabella &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [Parametri con valori di tabella &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

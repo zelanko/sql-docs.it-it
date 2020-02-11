@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Guida introduttiva con il motore di Database | Microsoft Docs'
+title: 'Esercitazione: Introduzione al motore di database | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524333"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Introduzione al motore di database
@@ -42,9 +42,9 @@ ms.locfileid: "62524333"
   
  Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] può essere installato eseguendo il programma di installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o scaricandolo e installandolo dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]può essere installato eseguendo il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] programma di installazione di oppure scaricando e installando dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazione: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+ [Esercitazione su SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

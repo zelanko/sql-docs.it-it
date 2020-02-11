@@ -1,5 +1,5 @@
 ---
-title: Usando le funzioni sui Set | Microsoft Docs
+title: Utilizzo di funzioni set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038048"
 ---
 # <a name="using-set-functions"></a>Utilizzo delle funzioni sui set
@@ -22,7 +22,7 @@ ms.locfileid: "68038048"
   
  Le funzioni sui set, come le funzioni membro e le funzioni di tupla, sono essenziali per la negoziazione delle strutture multidimensionali utilizzate in Analysis Services. Le funzioni sui set sono essenziali anche per ottenere risultati dalle query MDX, perché le espressioni set definiscono gli assi di una query MDX.  
   
- Una delle funzioni set più comune è il [i membri &#40;impostare&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) funzione, che recupera un set contenente tutti i membri di una dimensione, gerarchia o livello. Nell'esempio seguente viene illustrato l'utilizzo di questa funzione all'interno di una query:  
+ Una delle funzioni set più comuni è rappresentata dai [membri &#40;impostare&#41; &#40;funzione&#41;MDX](../mdx/members-set-mdx.md) , che consente di recuperare un set contenente tutti i membri di una dimensione, una gerarchia o un livello. Nell'esempio seguente viene illustrato l'utilizzo di questa funzione all'interno di una query:  
   
  `SELECT`  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68038048"
   
  `FROM [Adventure Works]`  
   
- Un'altra funzione di uso comune è il [Crossjoin &#40;MDX&#41; ](../mdx/crossjoin-mdx.md) (funzione). Questa funzione restituisce un set di tuple che rappresenta il prodotto cartesiano dei set passati come parametri. In termini pratici, consente di creare assi "nidificati" o "con campi incrociati" nelle query:  
+ Un'altra funzione di uso comune è [Crossjoin &#40;funzione MDX&#41;](../mdx/crossjoin-mdx.md) . Questa funzione restituisce un set di tuple che rappresenta il prodotto cartesiano dei set passati come parametri. In termini pratici, consente di creare assi "nidificati" o "con campi incrociati" nelle query:  
   
  `SELECT`  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68038048"
   
  `FROM [Adventure Works]`  
   
- Il [discendenti &#40;MDX&#41; ](../mdx/descendants-mdx.md) funzione è simile il **figli** funzionare, ma è più potente. Restituisce i discendenti di qualsiasi membro a uno o più livelli in una gerarchia:  
+ I [discendenti &#40;funzione MDX&#41;](../mdx/descendants-mdx.md) sono simili alla funzione **Children** , ma sono più potenti. Restituisce i discendenti di qualsiasi membro a uno o più livelli in una gerarchia:  
   
  SELECT  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68038048"
   
  DESCENDANTS(  
   
- [Date]. [Calendar]. [Calendar Year]. & [2004]  
+ [DATE]. [Calendario]. [Anno di calendario]. & [2004]  
   
  , [Date].[Calendar].[Date])  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68038048"
   
  FROM [Adventure Works]  
   
- Il [ordini &#40;MDX&#41; ](../mdx/order-mdx.md) funzione consente di ordinare il contenuto di un set in ordine crescente o decrescente in base a una particolare espressione numerica. La query seguente restituisce gli stessi membri nelle righe della query precedente, ma in questo caso i membri vengono ordinati in base alla misura Internet Sales Amount:  
+ L' [ordine &#40;funzione MDX&#41;](../mdx/order-mdx.md) consente di ordinare il contenuto di un set in ordine crescente o decrescente in base a una determinata espressione numerica. La query seguente restituisce gli stessi membri nelle righe della query precedente, ma in questo caso i membri vengono ordinati in base alla misura Internet Sales Amount:  
   
  `SELECT`  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68038048"
   
  Questa query illustra anche come passare come parametro il set restituito da una funzione sui set (Descendants) a un'altra funzione sui set (Order).  
   
- Filtraggio di un set in base a determinati criteri si rivela utile quando la scrittura di query e per questo scopo è possibile usare la [filtro &#40;MDX&#41; ](../mdx/filter-mdx.md) funzionare, come illustrato nell'esempio seguente:  
+ Il filtraggio di un set in base a determinati criteri è molto utile durante la scrittura di query. a tale scopo, è possibile utilizzare la funzione [Filter &#40;MDX&#41;](../mdx/filter-mdx.md) , come illustrato nell'esempio seguente:  
   
  `SELECT`  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68038048"
   
  `FROM [Adventure Works]`  
   
- Esistono altre funzioni più sofisticate che consentono di applicare filtri a un set con modalità diverse. Ad esempio, la query seguente viene illustrata la [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md) funzione restituisce i primi n elementi in un set:  
+ Esistono altre funzioni più sofisticate che consentono di applicare filtri a un set con modalità diverse. Ad esempio, nella query seguente viene illustrato il [conteggio &#40;funzione MDX&#41;](../mdx/topcount-mdx.md) restituisce i primi n elementi di un set:  
   
  `SELECT`  
   
@@ -176,7 +176,7 @@ ms.locfileid: "68038048"
   
  `FROM [Adventure Works]`  
   
- Infine è possibile eseguire una serie di operazioni logiche sui set utilizzando funzioni quali [Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md), [Union &#40;MDX&#41; ](../mdx/union-mdx.md) e [tranne &#40;MDX&#41; ](../mdx/except-mdx-function.md) le funzioni. La query seguente illustra l’utilizzo delle ultime due funzioni:  
+ Infine, è possibile eseguire una serie di operazioni sui set logici utilizzando funzioni come [Intersect &#40;mdx&#41;](../mdx/intersect-mdx.md), [Union &#40;MDX&#41;](../mdx/union-mdx.md) e [ad eccezione &#40;funzioni MDX&#41;](../mdx/except-mdx-function.md) . La query seguente illustra l’utilizzo delle ultime due funzioni:  
   
  `SELECT`  
   
@@ -215,8 +215,8 @@ ms.locfileid: "68038048"
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [Uso delle funzioni membro](../mdx/using-member-functions.md)   
- [Uso delle funzioni di tupla](../mdx/using-tuple-functions.md)  
+ [Funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
+ [Uso di funzioni membro](../mdx/using-member-functions.md)   
+ [Utilizzo delle funzioni di tupla](../mdx/using-tuple-functions.md)  
   
   

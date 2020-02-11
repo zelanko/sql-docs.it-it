@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909087"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
@@ -41,11 +41,11 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'name'` è il nome di qualsiasi oggetto, in **sysobjects** o qualsiasi tipo di dati definito dall'utente nella tabella **systypes** . *Name* è di **tipo nvarchar (** 776 **)** e il valore predefinito è null. I nomi di database non sono validi.  I nomi in due o tre parti devono essere delimitati, ad esempio 'Person.AddressType' o [Person.AddressType].   
+`[ @objname = ] 'name'`Nome di qualsiasi oggetto, in **sysobjects** o qualsiasi tipo di dati definito dall'utente nella tabella **systypes** . *Name* è di **tipo nvarchar (** 776 **)** e il valore predefinito è null. I nomi di database non sono validi.  I nomi in due o tre parti devono essere delimitati, ad esempio 'Person.AddressType' o [Person.AddressType].   
    
   
-## <a name="return-code-values"></a>Valori restituiti  
- 0 (esito positivo) o 1 (esito negativo)  
+## <a name="return-code-values"></a>Valori del codice restituito  
+ 0 (operazione completata) o 1 (operazione non riuscita)  
   
 ## <a name="result-sets"></a>Set di risultati  
  I set di risultati restituiti variano a seconda che il *nome* venga specificato, quando viene specificato e quale oggetto di database è.  
@@ -54,31 +54,31 @@ sp_help [ [ @objname = ] 'name' ]
   
     |Nome colonna|Tipo di dati|Descrizione|  
     |-----------------|---------------|-----------------|  
-    |**Nome**|**nvarchar(** 128 **)**|Nome oggetto|  
-    |**Proprietario**|**nvarchar(** 128 **)**|Proprietario dell'oggetto. Si tratta dell'entità di database proprietaria dell'oggetto. Corrispondente per impostazione predefinita al proprietario dello schema contenente l'oggetto.|  
-    |**Object_type**|**nvarchar(** 31 **)**|Tipo oggetto|  
+    |**Nome**|**nvarchar (** 128 **)**|Nome dell'oggetto|  
+    |**Proprietario**|**nvarchar (** 128 **)**|Proprietario dell'oggetto. Si tratta dell'entità di database proprietaria dell'oggetto. Corrispondente per impostazione predefinita al proprietario dello schema contenente l'oggetto.|  
+    |**Object_type**|**nvarchar (** 31 **)**|Tipo di oggetto|  
   
-2.  Se *Name* è un tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un tipo di dati definito dall'utente, **sp_help** restituisce il set di risultati.  
+2.  Se *Name* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati o un tipo di dati definito dall'utente, **sp_help** restituisce il set di risultati.  
   
     |Nome colonna|Tipo di dati|Descrizione|  
     |-----------------|---------------|-----------------|  
-    |**Type_name**|**nvarchar(** 128 **)**|Nome del tipo di dati.|  
-    |**Storage_type**|**nvarchar(** 128 **)**|Nome del tipo di archiviazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+    |**Type_name**|**nvarchar (** 128 **)**|Nome del tipo di dati.|  
+    |**Storage_type**|**nvarchar (** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nome del tipo.|  
     |**Length**|**smallint**|Lunghezza fisica del tipo di dati in byte.|  
     |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-    |**Scala**|**int**|Numero di cifre a destra del separatore decimale.|  
-    |**Ammette i valori Null**|**varchar(** 35 **)**|Indica se i valori NULL sono supportati. I possibili valori sono Yes o No.|  
-    |**Default_name**|**nvarchar(** 128 **)**|Nome del valore predefinito associato al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
-    |**Rule_name**|**nvarchar(** 128 **)**|Nome di una regola associata al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
-    |**Confronto**|**sysname**|Regole di confronto per il tipo di dati. Per i tipi di dati non carattere, è NULL.|  
+    |**Scalabilità**|**int**|Numero di cifre a destra del separatore decimale.|  
+    |**Nullable**|**varchar (** 35 **)**|Indica se i valori NULL sono supportati. I possibili valori sono Yes o No.|  
+    |**Default_name**|**nvarchar (** 128 **)**|Nome del valore predefinito associato al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
+    |**Rule_name**|**nvarchar (** 128 **)**|Nome di una regola associata al tipo di dati specificato.<br /><br /> NULL = Non è associata alcuna regola predefinita.|  
+    |**Regole di confronto**|**sysname**|Regole di confronto per il tipo di dati. Per i tipi di dati non carattere, è NULL.|  
   
 3.  Se *Name* è un oggetto di database diverso da un tipo di dati, **sp_help** restituisce il set di risultati e anche altri set di risultati in base al tipo di oggetto specificato.  
 
     |Nome colonna|Tipo di dati|Descrizione|  
     |-----------------|---------------|-----------------|  
-    |**Nome**|**nvarchar(** 128 **)**|Nome tabella|  
-    |**Proprietario**|**nvarchar(** 128 **)**|Proprietario della tabella.|  
-    |**Tipo**|**nvarchar(** 31 **)**|Tipo di tabella.|  
+    |**Nome**|**nvarchar (** 128 **)**|Nome tabella|  
+    |**Proprietario**|**nvarchar (** 128 **)**|Proprietario della tabella.|  
+    |**Tipo**|**nvarchar (** 31 **)**|Tipo di tabella|  
     |**Created_datetime**|**datetime**|Data di creazione della tabella.|  
   
      A seconda dell'oggetto di database specificato, **sp_help** restituisce set di risultati aggiuntivi.  
@@ -89,25 +89,25 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
-        |**Column_name**|**nvarchar(** 128 **)**|Nome colonna.|  
-        |**Tipo**|**nvarchar(** 128 **)**|Tipo di dati della colonna.|  
-        |**Calcolata**|**varchar(** 35 **)**|Indica se i valori della colonna sono calcolati (Yes o No).|  
-        |**Length**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: se il tipo di dati della colonna è un tipo di valore di grandi dimensioni (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** o **XML**), il valore verrà visualizzato come-1.|  
-        |**Prec**|**char(** 5 **)**|Precisione della colonna.|  
-        |**Scala**|**char(** 5 **)**|Scala della colonna.|  
-        |**Ammette i valori Null**|**varchar(** 35 **)**|Indica se nella colonna sono consentiti i valori Null. I possibili valori sono Yes o No.|  
-        |**TrimTrailingBlanks**|**varchar(** 35 **)**|Specifica se gli spazi vuoti finali devono essere eliminati o meno. Restituisce Yes o No.|  
-        |**FixedLenNullInSource**|**varchar(** 35 **)**|Disponibile solo per compatibilità con le versioni precedenti.|  
-        |**Confronto**|**sysname**|Regole di confronto della colonna. NULL per i tipi di dati non carattere.|  
+        |**Column_name**|**nvarchar (** 128 **)**|Nome della colonna.|  
+        |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati della colonna.|  
+        |**Calcolata**|**varchar (** 35 **)**|Indica se i valori della colonna sono calcolati (Yes o No).|  
+        |**Length**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: se il tipo di dati della colonna è un tipo di valore di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** o **XML**), il valore verrà visualizzato come-1.|  
+        |**Prec**|**char (** 5 **)**|Precisione della colonna.|  
+        |**Scalabilità**|**char (** 5 **)**|Scala della colonna.|  
+        |**Nullable**|**varchar (** 35 **)**|Indica se nella colonna sono consentiti i valori Null. I possibili valori sono Yes o No.|  
+        |**TrimTrailingBlanks**|**varchar (** 35 **)**|Specifica se gli spazi vuoti finali devono essere eliminati o meno. Restituisce Yes o No.|  
+        |**FixedLenNullInSource**|**varchar (** 35 **)**|Disponibile solo per compatibilità con le versioni precedenti.|  
+        |**Regole di confronto**|**sysname**|Regole di confronto della colonna. NULL per i tipi di dati non carattere.|  
   
     -   Set di risultati aggiuntivo restituito per le colonne Identity  
   
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
-        |**Identità**|**nvarchar(** 128 **)**|Nome della colonna il cui tipo di dati viene dichiarato come Identity.|  
-        |**Inizializzazione**|**numeric**|Valore iniziale per la colonna Identity.|  
-        |**Incremento valore Identity**|**numeric**|Incremento da utilizzare per i valori della colonna.|  
-        |**Non applicare in processi di replica**|**int**|La proprietà IDENTITY non viene applicata quando un account di accesso per la replica, ad esempio **sqlrepl**, inserisce i dati nella tabella:<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**Identità**|**nvarchar (** 128 **)**|Nome della colonna il cui tipo di dati viene dichiarato come Identity.|  
+        |**Inizializzazione**|**numerico**|Valore iniziale per la colonna Identity.|  
+        |**Incremento**|**numerico**|Incremento da utilizzare per i valori della colonna.|  
+        |**Non per la replica**|**int**|La proprietà IDENTITY non viene applicata quando un account di accesso per la replica, ad esempio **sqlrepl**, inserisce i dati nella tabella:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Set di risultati aggiuntivo restituito per le colonne  
   
@@ -119,43 +119,43 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Filegroup in cui si trovano i dati (primario, secondario o log delle transazioni).|  
+        |**Data_located_on_filegroup**|**nvarchar (** 128 **)**|Filegroup in cui si trovano i dati (primario, secondario o log delle transazioni).|  
   
     -   Set di risultati aggiuntivo restituito per gli indici:  
   
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Nome dell'indice.|  
-        |**Index_description**|**varchar(** 210 **)**|Descrizione dell'indice.|  
-        |**index_keys**|**nvarchar(** 2078 **)**|Nomi delle colonne in cui viene compilato l'indice. Restituisce NULL per gli indici columnstore con ottimizzazione per la memoria xVelocity.|  
+        |**Index_description**|**varchar (** 210 **)**|Descrizione dell'indice.|  
+        |**index_keys**|**nvarchar (** 2078 **)**|Nomi delle colonne in cui viene compilato l'indice. Restituisce NULL per gli indici columnstore con ottimizzazione per la memoria xVelocity.|  
   
     -   Set di risultati aggiuntivo restituito per i vincoli:  
   
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
-        |**constraint_type**|**nvarchar(** 146 **)**|Tipo di vincolo.|  
-        |**constraint_name**|**nvarchar(** 128 **)**|Nome del vincolo.|  
-        |**delete_action**|**nvarchar(** 9 **)**|Indica se l'azione DELETE è NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Valido solo per i vincoli FOREIGN KEY.|  
-        |**update_action**|**nvarchar(** 9 **)**|Indica se l'azione UPDATE è NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Valido solo per i vincoli FOREIGN KEY.|  
-        |**status_enabled**|**varchar(** 8 **)**|Indica se il vincolo è abilitato. I possibili valori sono Enabled, Disabled o N/D.<br /><br /> Valido solo per i vincoli CHECK e FOREIGN KEY.|  
-        |**status_for_replication**|**varchar(** 19 **)**|Indica se il vincolo è relativo alla replica.<br /><br /> Valido solo per i vincoli CHECK e FOREIGN KEY.|  
-        |**constraint_keys**|**nvarchar(** 2078 **)**|Nomi delle colonne che formano il vincolo o, nel caso di valori predefiniti e regole, il testo che definisce il valore predefinito o la regola.|  
+        |**constraint_type**|**nvarchar (** 146 **)**|Tipo di vincolo.|  
+        |**constraint_name**|**nvarchar (** 128 **)**|Nome del vincolo.|  
+        |**delete_action**|**nvarchar (** 9 **)**|Indica se l'azione DELETE è NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Valido solo per i vincoli FOREIGN KEY.|  
+        |**update_action**|**nvarchar (** 9 **)**|Indica se l'azione UPDATE è NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Valido solo per i vincoli FOREIGN KEY.|  
+        |**status_enabled**|**varchar (** 8 **)**|Indica se il vincolo è abilitato. I possibili valori sono Enabled, Disabled o N/D.<br /><br /> Valido solo per i vincoli CHECK e FOREIGN KEY.|  
+        |**status_for_replication**|**varchar (** 19 **)**|Indica se il vincolo è relativo alla replica.<br /><br /> Valido solo per i vincoli CHECK e FOREIGN KEY.|  
+        |**constraint_keys**|**nvarchar (** 2078 **)**|Nomi delle colonne che formano il vincolo o, nel caso di valori predefiniti e regole, il testo che definisce il valore predefinito o la regola.|  
   
     -   Set di risultati aggiuntivo restituito per gli oggetti di riferimento  
   
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
-        |**Tabella a cui fa riferimento**|**nvarchar(** 516 **)**|Identifica gli oggetti di database che fanno riferimento alla tabella.|  
+        |**Table is referenced by**|**nvarchar (** 516 **)**|Identifica gli oggetti di database che fanno riferimento alla tabella.|  
   
     -   Set di risultati aggiuntivo restituito per stored procedure, funzioni o stored procedure estese  
   
         |Nome colonna|Tipo di dati|Descrizione|  
         |-----------------|---------------|-----------------|  
-        |**Parameter_name**|**nvarchar(** 128 **)**|Nome del parametro della stored procedure.|  
-        |**Tipo**|**nvarchar(** 128 **)**|Tipo di dati del parametro della stored procedure.|  
+        |**Parameter_name**|**nvarchar (** 128 **)**|Nome del parametro della stored procedure.|  
+        |**Tipo**|**nvarchar (** 128 **)**|Tipo di dati del parametro della stored procedure.|  
         |**Length**|**smallint**|Capacità massima di archiviazione fisica in byte.|  
         |**Prec**|**int**|Precisione, ovvero il numero totale di cifre.|  
-        |**Scala**|**int**|Numero di cifre a destra del separatore decimale.|  
+        |**Scalabilità**|**int**|Numero di cifre a destra del separatore decimale.|  
         |**Param_order**|**smallint**|Ordine del parametro.|  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -180,7 +180,7 @@ EXEC sp_help;
 GO  
 ```  
   
-### <a name="b-returning-information-about-a-single-object"></a>b. Restituzione di informazioni su un solo oggetto  
+### <a name="b-returning-information-about-a-single-object"></a>B. Restituzione di informazioni su un solo oggetto  
  Nell'esempio seguente vengono visualizzate informazioni sulla tabella `Person`.  
   
 ```  
@@ -191,13 +191,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Stored procedure &#40;motore di database Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [Stored procedure di motore di database &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpindex &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_helprotect &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpserver &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helptrigger &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sp_helpuser &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [sys. sysobjects &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638751"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pacchetti degli eventi estesi di SQL Server
@@ -36,7 +36,7 @@ ms.locfileid: "62638751"
   
  Un pacchetto può contenere alcuni o tutti gli oggetti seguenti, che vengono discussi in maggior dettaglio più avanti in questo argomento:  
   
--   Events  
+-   Eventi  
   
 -   Server di destinazione  
   
@@ -48,14 +48,14 @@ ms.locfileid: "62638751"
   
 -   Mappe  
   
- Oggetti da pacchetti diversi possono essere combinati in una sessione dell'evento. Per altre informazioni, vedere [Sessioni Eventi estesi di SQL Server](sql-server-extended-events-sessions.md).  
+ Oggetti da pacchetti diversi possono essere combinati in una sessione dell'evento. Per altre informazioni, vedere [Sessioni degli eventi estesi di SQL Server](sql-server-extended-events-sessions.md).  
   
 ## <a name="package-contents"></a>Contenuti del pacchetto  
  Nella figura seguente si illustrano gli oggetti che possono essere presenti nei pacchetti, che sono contenuti in un modulo. Un modulo può essere un file eseguibile o una libreria a collegamento dinamico (DLL).  
   
- ![Relazione tra modulo, pacchetti e oggetti](../../database-engine/media/xepackagesobjects.gif "Relazione tra modulo, pacchetti e oggetti")  
+ ![Relazione tra un modulo, pacchetti e un oggetto](../../database-engine/media/xepackagesobjects.gif "Relazione tra un modulo, pacchetti e un oggetto")  
   
-### <a name="events"></a>Events  
+### <a name="events"></a>Eventi  
  Gli eventi monitorano i punti di interesse nel percorso di esecuzione di un programma, ad esempio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La generazione di un evento implica che il punto di interesse è stato raggiunto e fornisce informazioni sullo stato derivanti dall'ora in cui l'evento è stato generato.  
   
  Gli eventi possono essere utilizzati solamente per scopi di traccia o per azioni di trigger. Queste azioni possono essere sincrone o asincrone.  
@@ -74,12 +74,12 @@ ms.locfileid: "62638751"
   
  Un canale identifica il pubblico per un evento. Questi canali sono descritti nella tabella seguente.  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
 |Amministrativi|Gli eventi amministrativi sono indirizzati principalmente agli utenti finali, agli 'amministratori e al supporto. Gli eventi trovati nei canali amministrativi indicano un problema con una soluzione ben definita sul quale può agire un amministratore. Un esempio di evento amministrativo è quando un'applicazione non riesce a connettersi a una stampante. Questi eventi sono ben documentati oppure hanno un messaggio ad essi associato che comunica a chi legge che cosa fare per risolvere il problema.|  
 |Operativo|Gli eventi operativi sono utilizzati per l'analisi e la diagnostica di un problema o di un'occorrenza. Possono essere utilizzati per attivare strumenti o attività basate su un problema o un'occorrenza. Un esempio di un evento operativo è quando una stampante viene aggiunta o rimossa da un sistema.|  
 |Analitici|Gli eventi analitici sono pubblicati in volumi elevati. Descrivono il funzionamento del programma e sono in genere utilizzati nell'analisi delle prestazioni.|  
-|Debug|Gli eventi di debug sono utilizzati solamente dagli sviluppatori per diagnosticare un problema nelle operazioni di debug.<br /><br /> Nota: Gli eventi nel canale di debug restituiscono dati interni, specifici dell'implementazione, relativi allo stato. Gli schemi e i dati restituiti dagli eventi potrebbero cambiare o non essere più validi nelle versioni future di SQL Server. Pertanto, gli eventi nel canale di debug potrebbero cambiare o essere rimossi senza preavviso nelle versioni future di SQL Server.|  
+|Debug|Gli eventi di debug sono utilizzati solamente dagli sviluppatori per diagnosticare un problema nelle operazioni di debug.<br /><br /> Nota: gli eventi nel canale di debug restituiscono dati di stato interni specifici dell'implementazione. Gli schemi e i dati restituiti dagli eventi potrebbero cambiare o non essere più validi nelle versioni future di SQL Server. Pertanto, gli eventi nel canale di debug potrebbero cambiare o essere rimossi senza preavviso nelle versioni future di SQL Server.|  
   
  **Parola chiave**  
   
@@ -93,7 +93,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  Le parole chiave eseguono il mapping ravvicinato degli eventi Traccia SQL.  
   
-### <a name="targets"></a>Destinazioni  
+### <a name="targets"></a>Server di destinazione  
  Le destinazioni sono consumer di eventi. Le destinazioni elaborano gli eventi, in modo sincrono nel thread che genera l'evento o in modo asincrono in un thread fornito dal sistema. Gli eventi estesi forniscono diverse destinazioni che è possibile utilizzare in base alle proprie esigenze per indirizzare l'output dell'evento. Per ulteriori informazioni, vedere [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md).  
   
 ### <a name="actions"></a>Azioni  
@@ -216,6 +216,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Vedere anche  
  [Sessioni Eventi estesi di SQL Server](sql-server-extended-events-sessions.md)   
  [Motore degli eventi estesi di SQL Server](sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
+ [Destinazioni degli eventi estesi di SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   
   

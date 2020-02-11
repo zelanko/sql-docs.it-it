@@ -1,5 +1,5 @@
 ---
-title: Sempre in viste DMV di gruppi di disponibilità - funzioni | Microsoft Docs
+title: Viste a gestione dinamica dei gruppi di disponibilità Always On-funzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 732f1f84d7bc336969d2484f18eb2dae8ebfab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018043"
 ---
-# <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Sempre in viste DMV di gruppi di disponibilità - funzioni
+# <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Viste a gestione dinamica dei gruppi di disponibilità Always On-funzioni
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In questa sezione sono contenute le DMV e le funzioni correlate a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |||  
 |-|-|  
@@ -39,7 +39,7 @@ ms.locfileid: "68018043"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Viste del catalogo dei gruppi di disponibilità AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Viste del catalogo di Gruppi di disponibilità AlwaysOn &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Monitorare Gruppi di disponibilità &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

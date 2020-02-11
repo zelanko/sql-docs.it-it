@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62631364"
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
@@ -103,13 +103,13 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Query Processor usa l'indice XML primario per le query che implicano [metodi con tipo di dati XML](/sql/t-sql/xml/xml-data-type-methods) e restituisce valori scalari o sottoalberi XML dall'indice primario stesso. In tale indice vengono archiviate tutte le informazioni necessarie per ricostruire l'istanza XML.  
   
- Ad esempio, la query seguente restituisce informazioni di riepilogo archiviate nella `CatalogDescription``xml` colonna type nella `ProductModel` tabella. La query restituisce informazioni <`Summary`> solo per modelli di prodotti la cui descrizione di catalogo contiene inoltre la descrizione <`Features`>.  
+ Ad esempio, la query seguente restituisce informazioni di riepilogo archiviate `CatalogDescription``xml` nella colonna Type della `ProductModel` tabella. La query restituisce informazioni <`Summary`> solo per modelli di prodotti la cui descrizione di catalogo contiene inoltre la descrizione <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
- In relazione all'indice XML primario, anziché suddividere ogni istanza degli oggetti BLOB XML nella tabella di base, nelle righe dell'indice che corrispondono a ogni oggetto BLOB XML viene eseguita la ricerca sequenziale dell'espressione specificata nel metodo `exist()`. Se il percorso viene individuato nella colonna Path dell'indice, l'elemento <`Summary`> e i relativi sottoalberi vengono recuperati dall'indice XML primario e convertiti in un oggetto BLOB XML come risultato del metodo `query()`.  
+ In relazione all'indice XML primario, anziché suddividere ogni istanza degli oggetti BLOB XML nella tabella di base, nelle righe dell'indice che corrispondono a ogni oggetto BLOB XML viene eseguita la ricerca sequenziale dell'espressione specificata nel metodo `exist()` . Se il percorso viene individuato nella colonna Path dell'indice, l'elemento <`Summary`> e i relativi sottoalberi vengono recuperati dall'indice XML primario e convertiti in un oggetto BLOB XML come risultato del metodo `query()`.  
   
  Si noti che l'indice XML primario non viene utilizzato per il recupero di un'istanza XML completa. Ad esempio, la query seguente recupera dalla tabella l'intera istanza XML che descrive le istruzioni di produzione per un modello di prodotto specifico.  
   
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]` dove la query cerca l'elemento <`book`> che dispone di un qualche attributo con valore `"someValue"`.  
   
- La query seguente restituisce `ContactID` dalla tabella `Contact` . Il `WHERE` clausola che specifica un filtro che esegue la ricerca di valori nel `AdditionalContactInfo``xml` colonna di tipo. Gli ID dei contatti vengono restituiti solo se il BLOB XML con le informazioni aggiuntive corrispondenti include un numero di telefono specifico. Poiché l'elemento <`telephoneNumber`> può trovarsi ovunque nell'XML, l'espressione del percorso specifica l'asse discendente o stesso.  
+ La query seguente restituisce `ContactID` dalla tabella `Contact` . La `WHERE` clausola specifica un filtro che cerca valori nella colonna `AdditionalContactInfo``xml` tipo. Gli ID dei contatti vengono restituiti solo se il BLOB XML con le informazioni aggiuntive corrispondenti include un numero di telefono specifico. Poiché l'elemento <`telephoneNumber`> può trovarsi ovunque nell'XML, l'espressione del percorso specifica l'asse discendente o stesso.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  In questo caso, il valore di ricerca di <`number`> è noto ma può trovarsi ovunque nell'istanza XML come figlio dell'elemento <`telephoneNumber`>. Per questo tipo di query può risultare utile eseguire una ricerca nell'indice basata su un valore specifico.  
   
 ### <a name="property-secondary-index"></a>Indice secondario PROPERTY  
- Per le query che recuperano uno o più valori da singole istanze XML può essere utile un indice PROPERTY. Questo scenario si verifica quando si recuperano proprietà dell'oggetto tramite il **Value ()** metodo il `xml` tipo e quando si conosce il valore di chiave primaria dell'oggetto.  
+ Per le query che recuperano uno o più valori da singole istanze XML può essere utile un indice PROPERTY. Questo scenario si verifica quando si recuperano le proprietà dell'oggetto utilizzando il metodo **value ()** del `xml` tipo e quando il valore della chiave primaria dell'oggetto è noto.  
   
  L'indice PROPERTY viene compilato in base alle colonne PK e Path e al valore di nodo dell'indice XML primario, in cui PK è la chiave primaria della tabella di base.  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Ad eccezione delle differenze descritte più avanti in questo argomento, la creazione un indice XML in un'`xml` è simile alla creazione di un indice su una colonna di tipo`xml` colonna di tipo. Per la creazione e la gestione di indici XML, è possibile utilizzare le istruzioni DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
+ Ad eccezione delle differenze descritte più avanti in questo argomento, la creazione di un indice`xml` XML in una colonna di tipo è simile alla creazione di un`xml` indice in una colonna non di tipo. Per la creazione e la gestione di indici XML, è possibile utilizzare le istruzioni DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

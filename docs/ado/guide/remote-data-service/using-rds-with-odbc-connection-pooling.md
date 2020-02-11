@@ -1,5 +1,5 @@
 ---
-title: Uso di servizi desktop remoto con ODBC Connection Pooling | Microsoft Docs
+title: Utilizzo di RDS con il pool di connessioni ODBC | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,115 +13,115 @@ ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2ffcc64cb9d0e45d371e927cd1c15be51cd917c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921931"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Uso di RDS con pool di connessioni ODBC
-Se si usa un'origine dati ODBC, è possibile usare l'opzione in Internet Information Services (IIS) al pool per ottenere la gestione di ad alte prestazioni del carico di lavoro client. Pool di connessioni è un gestore di risorse per le connessioni, mantenere lo stato aperto per le connessioni utilizzate di frequente.  
+Se si utilizza un'origine dati ODBC, è possibile utilizzare l'opzione pool di connessioni in Internet Information Services (IIS) per ottenere una gestione elevata delle prestazioni del carico client. Il pool di connessioni è un Resource Manager per le connessioni, mantenendo lo stato aperto sulle connessioni usate di frequente.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Per abilitare il pool di connessioni, vedere la documentazione di Internet Information Services.  
+ Per abilitare il pool di connessioni, vedere la documentazione Internet Information Services.  
   
- Si noti che l'abilitazione del pool di connessioni può comportare il server Web da altre restrizioni, come illustrato nella documentazione di Microsoft Internet Information Services.  
+ Si noti che l'abilitazione del pool di connessioni può sottoporre il server Web ad altre restrizioni, come indicato nella documentazione di Microsoft Internet Information Services.  
   
- Per garantire che il pool di connessioni è stabile e offre ulteriori miglioramenti delle prestazioni, è necessario configurare Microsoft SQL Server per usare la libreria di rete TCP/IP Socket.  
+ Per assicurarsi che il pool di connessioni sia stabile e fornisca un miglioramento delle prestazioni aggiuntivo, è necessario configurare Microsoft SQL Server per l'utilizzo della libreria di rete socket TCP/IP.  
   
  A questo scopo, è necessario:  
   
--   Configurare il computer di SQL Server per usare i socket TCP/IP.  
+-   Configurare il computer SQL Server per l'utilizzo dei socket TCP/IP.  
   
--   Configurare il server Web per usare i socket TCP/IP.  
+-   Configurare il server Web per l'utilizzo dei socket TCP/IP.  
   
-## <a name="configuring-the-sql-server-computer-to-use-tcpip-sockets"></a>Configurazione del Computer SQL Server per usare i socket TCP/IP  
- Nel computer SQL Server, eseguire il programma di installazione di SQL Server in modo che le interazioni con l'origine dati usano la libreria di rete TCP/IP Socket.  
+## <a name="configuring-the-sql-server-computer-to-use-tcpip-sockets"></a>Configurazione del computer SQL Server per l'utilizzo di socket TCP/IP  
+ Nel computer SQL Server eseguire il programma di installazione di SQL Server in modo che le interazioni con l'origine dati usino la libreria di rete socket TCP/IP.  
   
-### <a name="to-specify-the-tcpip-socket-network-library-on-the-sql-server-computer"></a>Per specificare la libreria di rete del Socket TCP/IP nel computer SQL Server  
+### <a name="to-specify-the-tcpip-socket-network-library-on-the-sql-server-computer"></a>Per specificare la libreria di rete socket TCP/IP nel computer SQL Server  
   
-### <a name="in-microsoft-sql-server-65"></a>In Microsoft SQL Server 6.5:  
+### <a name="in-microsoft-sql-server-65"></a>In Microsoft SQL Server 6,5:  
   
-1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 6.5 e quindi fare clic su installazione di SQL.  
+1.  Dal menu Start scegliere programmi, Microsoft SQL Server 6,5, quindi fare clic su installazione di SQL.  
   
-2.  Fare doppio clic su Continua.  
+2.  Fare clic due volte su continua.  
   
-3.  In Microsoft SQL Server-finestra di dialogo Opzioni, selezionare il supporto di rete di modifica e quindi fare clic su Continua.  
+3.  Nella finestra di dialogo Microsoft SQL Server-Opzioni selezionare Cambia supporto di rete e quindi fare clic su continua.  
   
-4.  Assicurarsi che sia selezionata la casella di controllo socket TCP/IP e fare clic su OK.  
+4.  Verificare che la casella di controllo TCP/IP Sockets sia selezionata e fare clic su OK.  
   
-5.  Fare clic su continua alla fine e uscire dall'installazione.  
+5.  Fare clic su continua per terminare e uscire dal programma di installazione.  
   
-### <a name="in-microsoft-sql-server-70"></a>In Microsoft SQL Server 7.0:  
+### <a name="in-microsoft-sql-server-70"></a>In Microsoft SQL Server 7,0:  
   
-1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 7.0 e quindi fare clic su Utilità di rete del Server.  
+1.  Dal menu Start scegliere programmi, Microsoft SQL Server 7,0, quindi fare clic su utilità di rete server.  
   
-2.  Nella scheda Generale della finestra di dialogo, fare clic su Aggiungi.  
+2.  Nella scheda generale della finestra di dialogo fare clic su Aggiungi.  
   
-3.  Nella finestra di dialogo Aggiungi configurazione libreria di rete, fare clic su TCP/IP.  
+3.  Nella finestra di dialogo Aggiungi configurazione libreria di rete fare clic su TCP/IP.  
   
-4.  Nel numero di porta delle finestre di indirizzo Proxy, immettere l'indirizzo proxy e numero di porta fornito dall'amministratore di rete.  
+4.  Nelle caselle numero di porta e indirizzo proxy immettere il numero di porta e l'indirizzo proxy forniti dall'amministratore di rete.  
   
-5.  Fare clic su OK per terminare e uscire dall'installazione.  
+5.  Fare clic su OK per terminare e uscire dal programma di installazione.  
   
-## <a name="configuring-the-web-server-to-use-tcpip-sockets"></a>Configurazione del Server Web per usare i socket TCP/IP  
- Sono disponibili due opzioni di configurazione del server Web per usare i socket TCP/IP. Operazioni dipende dal fatto che tutte le istanze di SQL Server sono accessibili dal server Web o solo un Server SQL specifico è accessibile dal server Web.  
+## <a name="configuring-the-web-server-to-use-tcpip-sockets"></a>Configurazione del server Web per l'utilizzo di socket TCP/IP  
+ Sono disponibili due opzioni per la configurazione del server Web per l'utilizzo dei socket TCP/IP. Le operazioni da eseguire variano a seconda che si acceda a tutti i server SQL dal server Web o che venga eseguito l'accesso solo a un SQL Server specifico dal server Web.  
   
- Se tutte le istanze di SQL Server sono accessibili dal server Web, è necessario eseguire l'utilità di configurazione di SQL Server Client sul computer server Web. La procedura seguente modifica la libreria di rete predefinito per tutte le connessioni di SQL Server eseguita dal server Web IIS per usare la libreria di rete TCP/IP Sockets.  
+ Se si accede a tutti i server SQL dal server Web, è necessario eseguire l'utilità di configurazione client di SQL Server nel computer server Web. Nei passaggi seguenti viene modificata la libreria di rete predefinita per tutte le connessioni SQL Server effettuate da questo server Web IIS per l'utilizzo della libreria di rete TCP/IP Sockets.  
   
 ### <a name="to-configure-the-web-server-all-sql-servers"></a>Per configurare il server Web (tutti i server SQL)  
   
-### <a name="for-microsoft-sql-server-65"></a>Per Microsoft SQL Server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>Per Microsoft SQL Server 6,5:  
   
-1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 6.5 e quindi fare clic su Utilità di configurazione di SQL Client.  
+1.  Dal menu Start scegliere programmi, Microsoft SQL Server 6,5, quindi fare clic su utilità di configurazione client SQL.  
   
-2.  Fare clic sulla scheda Libreria di rete.  
+2.  Fare clic sulla scheda NET Library.  
   
-3.  Nella finestra di rete predefinito, selezionare TCP/IP Sockets.  
+3.  Nella casella rete predefinita selezionare socket TCP/IP.  
   
-4.  Fare clic su Fine per salvare le modifiche e uscire dall'utilità.  
+4.  Fare clic su fine per salvare le modifiche e uscire dall'utilità.  
   
-### <a name="for-microsoft-sql-server-70"></a>Per Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>Per Microsoft SQL Server 7,0:  
   
-1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 7.0 e quindi fare clic su Utilità di rete del Client.  
+1.  Dal menu Start scegliere programmi, Microsoft SQL Server 7,0, quindi fare clic su utilità di rete client.  
   
-2.  Fare clic sulla scheda Generale.  
+2.  Fare clic sulla scheda General.  
   
-3.  Nella casella di libreria di rete predefinito, fare clic su TCP/IP.  
+3.  Nella casella libreria di rete predefinita fare clic su TCP/IP.  
   
 4.  Fare clic su OK per salvare le modifiche e uscire dall'utilità.  
   
- Se una specifica di SQL Server è accessibile da un server Web, è necessario eseguire l'utilità di configurazione di SQL Server Client sul computer server Web. Per modificare la libreria di rete per una connessione di SQL Server specifica, configurare il software Client di SQL Server sul computer server Web come indicato di seguito.  
+ Se si accede a un SQL Server specifico da un server Web, è necessario eseguire l'utilità di configurazione client SQL Server sul computer server Web. Per modificare la libreria di rete per una connessione di SQL Server specifica, configurare il software client SQL Server nel computer server Web come indicato di seguito.  
   
-### <a name="to-configure-the-web-server-a-specific-sql-server"></a>Per configurare il server Web (SQL Server specifica)  
+### <a name="to-configure-the-web-server-a-specific-sql-server"></a>Per configurare il server Web (uno specifico SQL Server)  
   
-### <a name="for-microsoft-sql-server-65"></a>Per Microsoft SQL Server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>Per Microsoft SQL Server 6,5:  
   
-1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 6.5 e quindi fare clic su Utilità di configurazione di SQL Client.  
+1.  Dal menu Start scegliere programmi, Microsoft SQL Server 6,5, quindi fare clic su utilità di configurazione client SQL.  
   
 2.  Fare clic sulla scheda Avanzate.  
   
-3.  Nella finestra di Server, digitare il nome del server a cui connettersi tramite TCP/IP Sockets.  
+3.  Nella casella Server digitare il nome del server a cui connettersi utilizzando i socket TCP/IP.  
   
-4.  Nella casella nome della DLL, selezionare TCP/IP Sockets.  
+4.  Nella casella nome DLL selezionare socket TCP/IP.  
   
-5.  Fare clic su Aggiungi/modifica. Tutte le origini dati che punta a questo server useranno i socket TCP/IP.  
+5.  Fare clic su Aggiungi/modifica. Tutte le origini dati che puntano a questo server utilizzeranno ora i socket TCP/IP.  
   
-6.  Fare clic su Fine.  
+6.  Fare clic su Done.  
   
-### <a name="for-microsoft-sql-server-70"></a>Per Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>Per Microsoft SQL Server 7,0:  
   
-1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 7.0 e quindi fare clic su Utilità di configurazione del Client.  
+1.  Dal menu Start scegliere programmi, Microsoft SQL Server 7,0, quindi fare clic su utilità configurazione client.  
   
-2.  Fare clic sulla scheda Generale.  
+2.  Fare clic sulla scheda General.  
   
 3.  Fare clic su Aggiungi.  
   
-4.  Nella finestra di alias Server, immettere l'alias del server. Nella casella di librerie di rete, fare clic su TCP/IP. Nella casella Nome Computer, immettere il nome del computer del computer in cui è in ascolto per i client TCP/IP Sockets. Nella casella Numero porta, immettere la porta su cui è in ascolto di SQL Server.  
+4.  Immettere l'alias del server nella casella alias server. Nella casella librerie di rete fare clic su TCP/IP. Nella casella nome computer immettere il nome del computer che ascolta i client TCP/IP Sockets. Nella casella numero porta immettere la porta su cui è in ascolto il SQL Server.  
   
-5.  Fare clic su OK e quindi di nuovo OK per uscire dall'utilità.  
+5.  Fare clic su OK e quindi di nuovo su OK per uscire dall'utilità.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

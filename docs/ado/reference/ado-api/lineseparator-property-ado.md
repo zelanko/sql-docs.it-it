@@ -16,22 +16,22 @@ ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0343954f549f2cba4b535b8ab4ebafec5a842015
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918279"
 ---
 # <a name="lineseparator-property-ado"></a>Proprietà LineSeparator (ADO)
-Indica il carattere da usare come separatore di riga nel testo binario [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetti.  
+Indica il carattere binario da utilizzare come separatore di riga negli oggetti del [flusso](../../../ado/reference/ado-api/stream-object-ado.md) di testo.  
   
-## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
- Imposta o restituisce un [LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md) valore che indica il carattere separatore di riga utilizzato nel **Stream**. Il valore predefinito è **adCRLF**.  
+## <a name="settings-and-return-values"></a>Impostazioni e valori restituiti  
+ Imposta o restituisce un valore [LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md) che indica il carattere separatore di riga usato nel **flusso**. Il valore predefinito è **adCRLF**.  
   
-## <a name="remarks"></a>Note  
- **Proprietà LineSeparator** viene utilizzato per interpretare le righe durante la lettura del contenuto di testo **Stream**. È possibile ignorare le righe con la [SkipLine](../../../ado/reference/ado-api/skipline-method.md) (metodo).  
+## <a name="remarks"></a>Osservazioni  
+ **LineSeparator** viene utilizzato per interpretare le linee durante la lettura del contenuto di un **flusso**di testo. Le righe possono essere ignorate con il metodo [SkipLine](../../../ado/reference/ado-api/skipline-method.md) .  
   
- **Proprietà LineSeparator** viene usato solo con il testo **Stream** oggetti ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) viene **adTypeText**). Questa proprietà viene ignorata se **tipo** viene **adTypeBinary**.  
+ **LineSeparator** viene utilizzato solo con gli oggetti del **flusso** di testo (il[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) è **adTypeText**). Questa proprietà viene ignorata se il **tipo** è **adTypeBinary**.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

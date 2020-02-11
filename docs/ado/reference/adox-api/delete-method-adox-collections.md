@@ -1,5 +1,5 @@
 ---
-title: Metodo (raccolte ADOX) Delete | Microsoft Docs
+title: Metodo Delete (raccolte ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -31,10 +31,10 @@ ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be2aa91cf27d7dc12d3cd0c1e0bf719bd43797ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966438"
 ---
 # <a name="delete-method-adox-collections"></a>Metodo Delete (raccolte ADOX)
@@ -48,22 +48,22 @@ Collection.Delete Name
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *Name*  
- Oggetto **Variant** che specifica il nome o la posizione (indice) dell'oggetto da eliminare.  
+ *Nome*  
+ **Variant** che specifica il nome o la posizione ordinale (indice) dell'oggetto da eliminare.  
   
-## <a name="remarks"></a>Note  
- Si verifica un errore se il *nome* non esiste nella raccolta.  
+## <a name="remarks"></a>Osservazioni  
+ Si verificherà un errore se il *nome* non esiste nella raccolta.  
   
- Per la [tabelle](../../../ado/reference/adox-api/tables-collection-adox.md) e [utenti](../../../ado/reference/adox-api/users-collection-adox.md) raccolte, viene visualizzato un errore se il provider non supporta l'eliminazione di tabelle o gli utenti, rispettivamente. Per [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) e [viste](../../../ado/reference/adox-api/views-collection-adox.md) raccolte **Elimina** avrà esito negativo se il provider non supporta comandi di persistenza.  
+ Per le raccolte di [tabelle](../../../ado/reference/adox-api/tables-collection-adox.md) e [utenti](../../../ado/reference/adox-api/users-collection-adox.md) , si verificherà un errore se il provider non supporta rispettivamente l'eliminazione di tabelle o utenti. Per [le raccolte procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) e [viste](../../../ado/reference/adox-api/views-collection-adox.md) , l' **eliminazione** avrà esito negativo se il provider non supporta la persistenza dei comandi.  
   
 ## <a name="applies-to"></a>Si applica a  
   
 ||||  
 |-|-|-|  
-|[Raccolta di oggetti Column (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Raccolta di oggetti Group (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta di oggetti Index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Raccolta di oggetti Key (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Raccolta di oggetti Procedure (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Raccolta di oggetti Table (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
-|[Raccolta di oggetti User (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
+|[Raccolta Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Raccolta di Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Raccolta Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Raccolta Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Raccolta Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Raccolta Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
+|[Raccolta Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Raccolta Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure di esempio del metodo Delete (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Esempio di metodo Delete oggetti View (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)
+ [Esempio di metodo Delete delle procedure (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Esempio del metodo Delete di Views (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

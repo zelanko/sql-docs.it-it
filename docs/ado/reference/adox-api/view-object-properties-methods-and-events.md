@@ -1,5 +1,5 @@
 ---
-title: Visualizzare le proprietà degli oggetti, metodi ed eventi | Microsoft Docs
+title: Visualizzare proprietà, metodi ed eventi degli oggetti | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01ddab58c594991cf38fb6da66dc2b77692c3daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964819"
 ---
 # <a name="view-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto View
@@ -27,12 +27,12 @@ ms.locfileid: "67964819"
   
  [Proprietà DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)  
   
- [Nome proprietà](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Proprietà Name](../../../ado/reference/adox-api/name-property-adox.md)  
   
 ## <a name="methods"></a>Metodi  
  No.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventi  
  No.  
   
 ## <a name="see-also"></a>Vedere anche  

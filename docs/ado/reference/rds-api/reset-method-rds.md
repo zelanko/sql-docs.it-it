@@ -1,5 +1,5 @@
 ---
-title: Reset (metodo) (RDS) | Microsoft Docs
+title: Metodo Reset (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +14,17 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963499"
 ---
 # <a name="reset-method-rds"></a>Metodo Reset (Servizi Desktop remoto)
-Esegue l'ordinamento o filtro sul lato client **Recordset** basato sulle proprietà di ordinamento e filtro specificata.  
+Esegue l'ordinamento o il filtro su un **Recordset** lato client in base alle proprietà di ordinamento e filtro specificate.  
   
 > [!IMPORTANT]
->  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partire da Windows 8 e Windows Server 2012, i componenti server Servizi Desktop remoto non sono più inclusi nel sistema operativo Windows. per altri dettagli, vedere le informazioni di riferimento sulla compatibilità di Windows 8 e [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) . I componenti client Servizi Desktop remoto verranno rimossi in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano Servizi Desktop remoto devono eseguire la migrazione a [WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -35,17 +35,17 @@ DataControl.Reset(value)
   
 #### <a name="parameters"></a>Parametri  
  *DataControl*  
- Una variabile oggetto che rappresenta un [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
+ Variabile oggetto che rappresenta un Servizi Desktop remoto [. Oggetto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- *Valore*  
- facoltativo. Oggetto **booleana** valore corrispondente a **True** (impostazione predefinita) se si desidera filtrare il set di righe corrente "filtrato". **False** indica che viene filtrato il set di righe originali, rimuovendo eventuali opzioni di filtro precedente.  
+ *valore*  
+ Facoltativa. Valore **booleano** che è **true** (impostazione predefinita) se si desidera filtrare il set di righe "filtrato" corrente. **False** indica che si filtra il set di righe originale, rimuovendo eventuali opzioni di filtro precedenti.  
   
-## <a name="remarks"></a>Note  
- Il [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)le proprietà forniscono l'ordinamento e filtrare le funzionalità della cache lato client. La funzionalità di ordinamento Ordina i record per i valori da una colonna. La funzionalità di filtro consente di visualizzare un subset di record basata su criteri di ricerca, mentre la versione completa [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene mantenuto nella cache. Il **reimpostare** esegue i criteri e sostituire il metodo **Recordset** con un aggiornabile **Recordset**.  
+## <a name="remarks"></a>Osservazioni  
+ Le proprietà [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)e [FilterColumn offrono](../../../ado/reference/rds-api/filtercolumn-property-rds.md) forniscono funzionalità di ordinamento e filtro nella cache sul lato client. La funzionalità di ordinamento ordina i record in base ai valori di una colonna. La funzionalità di filtro Visualizza un subset di record in base a un criterio di ricerca, mentre il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) completo viene mantenuto nella cache. Il metodo **Reset** eseguirà i criteri e sostituirà il **Recordset** corrente con un **Recordset**aggiornabile.  
   
- Se sono state apportate modifiche ai dati originali che non sono state inviate, il **reimpostare** metodo avrà esito negativo. In primo luogo, usare il [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) metodo per salvare le modifiche in lettura/scrittura **Recordset**e quindi usare il **Reimposta** metodo ordinare o filtrare i record.  
+ Se sono state apportate modifiche ai dati originali che non sono stati inviati, il metodo **Reset** avrà esito negativo. Per prima cosa, utilizzare il metodo [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) per salvare le modifiche in un **Recordset**di lettura/scrittura, quindi utilizzare il metodo **Reset** per ordinare o filtrare i record.  
   
- Se si desidera eseguire più di un filtro sul set di righe, è possibile usare l'opzione facoltativa *booleana* argomento con la **reimpostare** (metodo). Nell'esempio seguente viene illustrato come eseguire questa operazione:  
+ Se si desidera eseguire più di un filtro sul set di righe, è possibile utilizzare l'argomento *booleano* facoltativo con il metodo **Reset** . L'esempio seguente illustra come farlo:  
   
 ```  
 ADC.SQL = "Select au_lname from authors"  
@@ -74,7 +74,7 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [FilterColumn, FilterCriterion, valore FilterValue, SortColumn e SortDirection Properties ed esempio di metodo Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [Esempio di proprietà FilterColumn offrono, FilterCriterion, FilterValue, SortColumn e SortDirection e metodo Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Metodo SubmitChanges (Servizi Desktop remoto)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

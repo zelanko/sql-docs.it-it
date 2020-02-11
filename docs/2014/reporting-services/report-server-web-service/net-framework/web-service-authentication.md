@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aaccc593ea7e4baece132b759ca920018cdbe4b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62518726"
 ---
 # <a name="web-service-authentication"></a>Autenticazione del servizio Web
-  Per autenticare le chiamate effettuate al servizio Web ReportServer, è possibile utilizzare l'autenticazione di Windows o l'autenticazione di base. Qualsiasi client che effettua richieste SOAP al server di report deve implementare la parte client di uno dei protocolli di autenticazione supportati. Se si utilizza [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile utilizzare le classi HTTP di codice gestito per implementare l'autenticazione. L'utilizzo di queste API semplifica l'invio delle informazioni di autenticazione insieme alle richieste SOAP.  
+  Per autenticare le chiamate effettuate al servizio Web ReportServer, è possibile utilizzare l'autenticazione di Windows o l'autenticazione di base. Qualsiasi client che effettua richieste SOAP al server di report deve implementare la parte client di uno dei protocolli di autenticazione supportati. Se si utilizza [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], è possibile utilizzare le classi http di codice gestito per implementare l'autenticazione. L'utilizzo di queste API semplifica l'invio delle informazioni di autenticazione insieme alle richieste SOAP.  
   
  Se non si dispone delle credenziali appropriate prima di effettuare una chiamata al servizio Web ReportServer, la chiamata ha esito negativo. In fase di esecuzione è possibile passare le credenziali al servizio Web impostando la proprietà **Credenziali** dell'oggetto sul lato client che rappresenta il servizio Web prima di chiamarne i metodi.  
   
@@ -54,10 +54,11 @@ ReportingService service = new ReportingService();
 service.Credentials = new System.Net.NetworkCredential("username", "password", "domain");  
 ```  
   
- Le credenziali devono essere impostate prima di chiamare i metodi del servizio Web ReportServer. Se non si imposta le credenziali, viene visualizzato il codice di errore Errore HTTP 401: Accesso negato. È necessario autenticare il servizio prima di utilizzarlo, ma dopo avere impostato le credenziali non è necessario impostarle di nuovo fino a quando si continua a utilizzare la stessa variabile del servizio (ad esempio *rs*).  
+ Le credenziali devono essere impostate prima di chiamare i metodi del servizio Web ReportServer. Se non si impostano le credenziali, viene visualizzato il codice di errore Errore HTTP 401: Accesso negato. È necessario autenticare il servizio prima di utilizzarlo, ma dopo avere impostato le credenziali non è necessario impostarle di nuovo fino a quando si continua a utilizzare la stessa variabile del servizio (ad esempio *rs*).  
   
 ## <a name="custom-authentication"></a>Autenticazione personalizzata  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include un'API di programmazione che consente agli sviluppatori di progettare e sviluppare estensioni di autenticazione personalizzate, note come estensioni di sicurezza. Per ulteriori informazioni, vedere [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md).  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] include un'API di programmazione che consente agli sviluppatori di progettare e sviluppare estensioni di autenticazione personalizzate, note come estensioni di sicurezza. Per ulteriori informazioni, vedere [Implementing a Security Extension](../../extensions/security-extension/implementing-a-security-extension.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni tramite servizio Web e .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   

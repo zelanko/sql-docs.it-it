@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472931"
 ---
 # <a name="pick-schedule-for-job"></a>Seleziona pianificazione per il processo
-  Usare questa finestra di dialogo per selezionare un pianificazione esistente per il processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Utilizzare questa finestra di dialogo per selezionare una pianificazione esistente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il processo di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Pianificazioni disponibili**  
  Consente di elencare le pianificazioni disponibili per il processo. Poiché un processo e una pianificazione devono avere lo stesso proprietario, in questo elenco sono incluse solo le pianificazioni di proprietà del proprietario del processo.  
   
- **Name**  
+ **Nome**  
  Consente di visualizzare il nome della pianificazione.  
   
- **Abilitata**  
+ **Enabled**  
  Questa opzione è selezionata se la pianificazione è abilitata.  
   
  **Descrizione**  

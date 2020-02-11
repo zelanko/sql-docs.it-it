@@ -13,10 +13,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199321"
 ---
 # <a name="query-options-execution-advanced-page"></a>Esecuzione di Opzioni query (pagina Avanzate)
@@ -66,4 +66,4 @@ I protocolli di attestazione supportati correnti sono:
 
 Per altre informazioni, vedere [Always Encrypted con le enclave sicure](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) e l' [attestazione protetta dell'enclave](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 
-**Ripristina predefiniti** Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.
+**Ripristina impostazioni predefinite** Reimposta tutti i valori di questa pagina sui valori predefiniti originali.

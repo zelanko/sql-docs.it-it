@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637599"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Creare, modificare o eliminare indici XML selettivi
@@ -24,7 +24,7 @@ ms.locfileid: "62637599"
   
 ##  <a name="create"></a> Creazione di un indice XML selettivo  
   
-### <a name="how-to-create-a-selective-xml-index"></a>Procedura: Creare un indice XML selettivo  
+### <a name="how-to-create-a-selective-xml-index"></a>Procedura: creare un indice XML selettivo  
  **Creare un indice XML selettivo tramite Transact-SQL**  
  Creare un indice XML selettivo chiamando l'istruzione CREATE SELECTIVE XML INDEX. Per altre informazioni, vedere [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql).  
   
@@ -48,7 +48,7 @@ FOR(
   
 ##  <a name="alter"></a> Modifica di un indice XML selettivo  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>Procedura: Modificare un indice XML selettivo  
+### <a name="how-to-alter-a-selective-xml-index"></a>Procedura: modificare un indice XML selettivo  
  **Modificare un indice XML selettivo tramite Transact-SQL**  
  Modificare un indice XML selettivo esistente chiamando l'istruzione ALTER INDEX. Per altre informazioni, vedere [ALTER INDEX &#40;indici XML selettivi&#41;](../indexes/indexes.md).  
   
@@ -70,7 +70,7 @@ FOR
   
 ##  <a name="drop"></a> Eliminazione di un indice XML selettivo  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>Procedura: Eliminare un indice XML selettivo  
+### <a name="how-to-drop-a-selective-xml-index"></a>Procedura: eliminare un indice XML selettivo  
  **Eliminare un indice XML selettivo tramite Transact-SQL**  
  Eliminare un indice XML selettivo chiamando l'istruzione DROP INDEX. Per altre informazioni, vedere [DROP INDEX &#40;indici XML selettivi&#41;](/sql/t-sql/statements/drop-index-selective-xml-indexes).  
   

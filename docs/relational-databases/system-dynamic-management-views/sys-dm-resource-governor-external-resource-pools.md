@@ -1,5 +1,5 @@
 ---
-title: sys. dm _resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
+title: sys. dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68468517"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys. dm _resource_governor_external_resource_pools (Transact-SQL)
+# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Restituisce informazioni sullo stato corrente del pool di risorse esterne, la configurazione corrente dei pool di risorse e le statistiche del pool di risorse. 
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 |Nome colonna      |Tipo di dati      |Descrizione|  
 |----------------|---------------|-----------------| 
@@ -51,11 +51,11 @@ Restituisce informazioni sullo stato corrente del pool di risorse esterne, la co
 | active_processes_count|**int**|Numero di processi esterni in esecuzione al momento della richiesta. Non ammette i valori Null. |
 
  
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 È richiesta l'autorizzazione `VIEW SERVER STATE`.
 
 ## <a name="see-also"></a>Vedere anche  
- [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+ [sys. dm_resource_governor_external_resource_pool_affinity &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

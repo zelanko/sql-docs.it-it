@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629917"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Rilevamento e risoluzione dei conflitti nei record logici
-  In questo argomento vengono illustrate le varie combinazioni di metodi possibili per il rilevamento e la risoluzione dei conflitti nell'utilizzo di record logici. Nella replica di merge si verificano conflitti quando più di un nodo modifica gli stessi dati oppure quando, durante la replica di modifiche, si riscontrano determinati tipi di errori, ad esempio la violazione di un vincolo. Per ulteriori informazioni sul rilevamento e sulla risoluzione dei conflitti, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](advanced-merge-replication-conflict-detection-and-resolution.md).  
+  In questo argomento vengono illustrate le varie combinazioni di metodi possibili per il rilevamento e la risoluzione dei conflitti nell'utilizzo di record logici. Nella replica di merge si verificano conflitti quando più di un nodo modifica gli stessi dati oppure quando, durante la replica di modifiche, si riscontrano determinati tipi di errori, ad esempio la violazione di un vincolo. Per ulteriori informazioni sul rilevamento e sulla risoluzione dei conflitti, vedere [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Per specificare il livello di rilevamento e risoluzione dei conflitti di un articolo, vedere [Specifica del livello di rilevamento e risoluzione dei conflitti per gli articoli di merge](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+ Per specificare il livello di rilevamento e risoluzione dei conflitti di un articolo, vedere [specifica del livello di risoluzione e rilevamento dei conflitti per articoli di Merge](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-detection"></a>Rilevamento dei conflitti  
  La modalità con cui vengono rilevati i conflitti per i record logici è determinata da due proprietà degli articoli: **column_tracking** e **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni successive supportano anche rilevamento a livello di record logico.  
@@ -74,7 +74,7 @@ ms.locfileid: "62629917"
   
  Dato che i conflitti vengono risolti a livello dei record logici, le modifiche confermate apportate nel server di pubblicazione sostituiscono le modifiche inserite nelle tabelle del Sottoscrittore durante l'elaborazione della replica.  
   
- ![Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate](../media/logical-records-06.gif "Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate")  
+ ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../media/logical-records-06.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Rilevamento a livello di riga, risoluzione a livello di record logico  
  In questo esempio, la pubblicazione è configurata come segue:  
@@ -89,7 +89,7 @@ ms.locfileid: "62629917"
   
  Dato che i conflitti vengono risolti a livello dei record logici, le modifiche confermate apportate nel server di pubblicazione sostituiscono le modifiche inserite nelle tabelle del Sottoscrittore durante la sincronizzazione.  
   
- ![Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate](../media/logical-records-07.gif "Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate")  
+ ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../media/logical-records-07.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Rilevamento a livello di record logico, risoluzione a livello di record logico  
  In questo esempio, la pubblicazione è configurata come segue:  
@@ -102,7 +102,7 @@ ms.locfileid: "62629917"
   
  Dato che i conflitti vengono ugualmente risolti a livello dei record logici, la modifica confermata apportata nel server di pubblicazione sostituisce la modifica inserita nelle tabelle del Sottoscrittore durante la sincronizzazione.  
   
- ![Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate](../media/logical-records-08.gif "Serie di tabelle in cui sono visualizzate le modifiche alle righe correlate")  
+ ![Serie di tabelle che visualizzano le modifiche alle righe correlate](../media/logical-records-08.gif "Serie di tabelle che visualizzano le modifiche alle righe correlate")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raggruppare modifiche alle righe correlate con record logici](group-changes-to-related-rows-with-logical-records.md)  

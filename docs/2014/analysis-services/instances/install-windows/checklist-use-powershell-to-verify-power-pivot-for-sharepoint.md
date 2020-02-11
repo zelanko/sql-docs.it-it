@@ -10,12 +10,12 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26d88f2123d87d462ff7f83d0736c182885bf250
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 868fb0f7176faf1c1e795b8efe43f8b6d4cdb3f5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75225351"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918101"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Elenco di controllo: utilizzare PowerShell per verificare PowerPivot per SharePoint
   Senza il superamento della prova di verifica con cui viene confermata l'operatività dei servizi e dei dati in uso, non vengono completate né le installazioni di [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] né le operazioni di recupero. In questo articolo viene illustrata la modalità di esecuzione di queste procedure tramite Windows PowerShell. Ogni passaggio è inserito nella relativa sezione in modo da poter accedere direttamente ad attività specifiche. Ad esempio, eseguire lo script nella sezione [Database](#bkmk_databases) di questo argomento per verificare il nome dell'applicazione di servizio e i database del contenuto, se si desidera programmarli per la manutenzione o il backup.  
@@ -302,7 +302,7 @@ Category    : Data Refresh
 EventID     : 43  
 Level       : High  
 Correlation : 5755879c-7cab-e097-8f80-f27895d44a77  
-Message     : The following error occured when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
+Message     : The following error occurred when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
   
 Timestamp   : 4/14/2014 7:15:02 PM  
 Area        : PowerPivot Service  
@@ -414,7 +414,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
   
  [Gestire Excel Services con Windows PowerShell (SharePoint Server 2010)](https://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)  
   
- [Visualizzare e leggere i file di log del programma di installazione SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
  [Usare il cmdlet Get-EvenLog](https://technet.microsoft.com/library/ee176846.aspx)  
   
@@ -458,7 +458,7 @@ Get-SPExcelServiceApplication | Select typename,  DisplayName, status
 #Write-Host ""  
 Write-Host -ForegroundColor Green "PowerPivot Service Application pool"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-# the following assumes there is only 1 PowerPivot Service Application, and returns that applicaitons pool name.  if you have more than one, use the 2nd version  
+# the following assumes there is only 1 PowerPivot Service Application, and returns that application's pool name.  if you have more than one, use the 2nd version  
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)  
 $position = $poolname.lastindexof("=")  
 $poolname = $poolname.substring($position+1)  

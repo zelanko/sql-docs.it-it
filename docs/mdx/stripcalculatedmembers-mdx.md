@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4a29a8227fc7b0452f17d6da0c1f47d37738ed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036815"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
@@ -31,8 +31,8 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Note  
- Il **StripCalculatedMembers** funzione rimuove i membri calcolati da un set. Calcolati i membri possono essere aggiunti a un set tramite il [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (funzione), che restituisce i membri calcolati definiti nel server oppure membri calcolati che sono stati aggiunti all'interno della query stessa tramite WITH Sintassi dei membri.  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **StripCalculatedMembers** rimuove i membri calcolati da un set. I membri calcolati possono essere aggiunti a un set usando la funzione [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) , che restituisce i membri calcolati definiti nel server, o i membri calcolati che sono stati aggiunti all'interno della query stessa usando la sintassi del membro with.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono rimossi tutti i membri calcolati dalla query.  
@@ -78,6 +78,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)  
   
   

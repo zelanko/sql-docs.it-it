@@ -1,5 +1,5 @@
 ---
-title: Uso di set di risultati predefiniti SQL Server | Microsoft Docs
+title: Utilizzo di SQL Server set di risultati predefiniti | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d7101cf4775e5280c22cc27ecae009410d231d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62511686"
 ---
 # <a name="using-sql-server-default-result-sets"></a>Utilizzo dei set di risultati predefiniti di SQL Server
@@ -33,11 +33,11 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_CONCURRENCY, SQL_CONCUR_READ_ONLY, SQL_IS_INTEGER
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);  
 ```  
   
- Ogni volta che questi attributi sono impostati sui valori predefiniti, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client utilizza un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] set di risultati predefinito. I set di risultati predefiniti possono essere utilizzati per qualsiasi istruzione SQL supportata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e rappresentano il metodo più efficiente per trasferire un intero set di risultati al client.  
+ Ogni volta che questi attributi sono impostati sui valori predefiniti, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] il driver ODBC di Native client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizza un set di risultati predefinito. I set di risultati predefiniti possono essere utilizzati per qualsiasi istruzione SQL supportata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e rappresentano il metodo più efficiente per trasferire un intero set di risultati al client.  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdotto il supporto per più set di risultati attivi (MARS); le applicazioni possono ora includere più di un set di risultati predefinito attivo per connessione. Per impostazione predefinita, la funzionalità MARS non è abilitata.  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]è stato introdotto il supporto per MARS (Multiple Active Result Sets); le applicazioni possono ora disporre di più set di risultati predefiniti attivi per connessione. Per impostazione predefinita, la funzionalità MARS non è abilitata.  
   
- Prima di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], i set di risultati predefiniti non supportavano più istruzioni attive nella stessa connessione. Dopo l'esecuzione di un'istruzione SQL in una connessione, il server non accetta comandi dal client in tale connessione finché non sono state elaborate tutte le righe del set di risultati, ad eccezione di una richiesta per annullare il resto del set di risultati. Per annullare il resto di un set di risultati parzialmente elaborato, chiamare [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) oppure [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md) con il *fOption* parametro impostato su SQL_CLOSE. Per completare un set di risultati parzialmente elaborato e verificare la presenza di un altro set di risultati, chiamare [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md). Se un'applicazione ODBC tenta di eseguire un comando su un handle di connessione prima di un set di risultati predefinito è stato completamente elaborato, la chiamata che genera l'errore SQL_ERROR e una chiamata a **SQLGetDiagRec** restituisce:  
+ Prima di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], i set di risultati predefiniti non supportavano più istruzioni attive nella stessa connessione. Dopo l'esecuzione di un'istruzione SQL in una connessione, il server non accetta comandi dal client in tale connessione finché non sono state elaborate tutte le righe del set di risultati, ad eccezione di una richiesta per annullare il resto del set di risultati. Per annullare il resto di un set di risultati parzialmente elaborato, chiamare [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) o [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md) con il parametro *fOption* impostato su SQL_CLOSE. Per completare un set di risultati parzialmente elaborato e verificare la presenza di un altro set di risultati, chiamare [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md). Se un'applicazione ODBC tenta di eseguire un comando su un handle di connessione prima che un set di risultati predefinito venga elaborato completamente, la chiamata genera SQL_ERROR e una chiamata a **SQLGetDiagRec** restituisce:  
   
 ```  
 szSqlState: "HY000", pfNativeError: 0  

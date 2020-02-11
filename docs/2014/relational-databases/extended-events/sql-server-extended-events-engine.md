@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638237"
 ---
 # <a name="sql-server-extended-events-engine"></a>Motore degli eventi estesi di SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "62638237"
   
  Nell'illustrazione seguente è mostrata una vista semplificata di una sessione degli eventi estesi. Per altre informazioni, vedere [Sessioni degli eventi estesi di SQL Server](sql-server-extended-events-sessions.md).  
   
- ![Architettura dettagliata degli eventi estesi](../../database-engine/media/xearchitecturedetailed.gif "Architettura dettagliata degli eventi estesi")  
+ ![Architettura dettagliata di eventi estesi](../../database-engine/media/xearchitecturedetailed.gif "Architettura dettagliata di eventi estesi")  
   
  Tenere presente quanto segue:  
   

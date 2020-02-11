@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510320"
 ---
 # <a name="save-as"></a>Save As
-  Utilizzare questa finestra di dialogo per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Per visualizzare questa finestra di dialogo, fare clic su **salvare**  *\<file >* **come** sul **File** menu (dove  *\<file >* è il nome dell'elemento corrente), oppure premere ALT + F, A nell'Editor del codice.  
+  Utilizzare questa finestra di dialogo per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Per visualizzare questa finestra di dialogo, fare clic su **Salva** * \<file>* **come** nel menu **file** (dove * \<file>* è il nome dell'elemento corrente) oppure premere ALT + F, a nell'editor di codice.  
   
 ## <a name="central-panel"></a>Pannello centrale  
  **Salva in**  
@@ -34,7 +34,7 @@ ms.locfileid: "62510320"
 > [!TIP]
 >  Per visualizzare file contenuti in percorsi di rete o Web, specificare un URL o un percorso di rete nella casella **Nome file** . Ad esempio, se si digita "<http://mywebsite>" vengono visualizzati i file disponibili nel percorso Web "mywebsite", mentre se si digita "\\" vengono visualizzati i file disponibili nel percorso "myshare" del server "myserver".  
   
- **Salva come**  
+ **Salva come tipo**  
  Utilizzare questa opzione per selezionare un nuovo tipo di file per l'elemento selezionato. I tipi di file visualizzati comprendono tutti i tipi di file disponibili in cui è possibile convertire l'elemento selezionato.  
   
  **Opzioni di salvataggio avanzate**  
@@ -52,6 +52,6 @@ ms.locfileid: "62510320"
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni di salvataggio avanzate](advanced-save-options.md)   
- [Gestire file con codifica](../solution/manage-files-with-encoding.md)  
+ [Gestione di file con codifica](../solution/manage-files-with-encoding.md)  
   
   

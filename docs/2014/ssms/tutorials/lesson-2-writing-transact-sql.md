@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Scrivere codice Transact-SQL | Microsoft Docs'
+title: 'Lezione 2: Scrittura di codice Transact-SQL| Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470028"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Lezione 2: Scrittura di codice Transact-SQL
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è un ambiente di sviluppo integrato per la scrittura di query [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML e di comandi SQLCMD. Nell'esercitazione viene illustrato l'utilizzo dell'editor di query del motore di database per scrivere uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]è un Integrated Development Environment per la [!INCLUDE[tsql](../../includes/tsql-md.md)]scrittura di query, MDX, DMX e XML e di comandi sqlcmd. Nell'esercitazione viene illustrato l'utilizzo dell'editor di query del motore di database per scrivere uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 > [!NOTE]  
->  In questa lezione vengono illustrate le funzionalità dello strumento. Per un'esercitazione sulla scrittura [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, vedere [esercitazione: Scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
+>  In questa lezione vengono illustrate le funzionalità dello strumento. Per un'esercitazione sulla scrittura di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] , vedere [Esercitazione: Scrittura di istruzioni Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
   
  Questa lezione include gli argomenti seguenti:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62470028"
   
 -   Creazione di script per una tabella  
   
--   Riepilogo  
+-   Summary  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Connessione all'editor di query](lesson-2-1-connecting-with-query-editor.md)  

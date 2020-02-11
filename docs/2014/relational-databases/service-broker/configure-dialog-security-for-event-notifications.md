@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630719"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurazione della sicurezza del dialogo per le notifiche degli eventi
@@ -28,11 +28,11 @@ ms.locfileid: "62630719"
 > [!IMPORTANT]  
 >  È necessario creare tutti i certificati con date di inizio e di scadenza valide.  
   
- **Passaggio 1: Impostare una porta TCP numero e la destinazione del servizio nome.**  
+ **Passaggio 1: impostare un numero di porta TCP e un nome del servizio di destinazione.**  
   
  Impostare la porta TCP in cui il server di origine e il server di destinazione riceveranno i messaggi. È inoltre necessario determinare il nome del servizio di destinazione.  
   
- **Passaggio 2: Configurare la crittografia e condivisione dei certificati per l'autenticazione a livello di database.**  
+ **Passaggio 2: configurare la crittografia e la condivisione dei certificati per l'autenticazione a livello di database.**  
   
  Completare le azioni seguenti nel server di origine e in quello di destinazione.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62630719"
 |[Eseguire il backup del certificato](/sql/t-sql/statements/backup-certificate-transact-sql) in un file accessibile al server di destinazione.|Eseguire il backup del certificato in un file accessibile al server di origine.|  
 |[Creare un utente](/sql/t-sql/statements/create-user-transact-sql), specificando l'utente del database di destinazione e WITHOUT LOGIN. Questo utente sarà proprietario del certificato del database di destinazione da creare dal file di backup. Non è necessario eseguire il mapping dell'utente a un account di accesso, poiché l'unico scopo di questo utente è essere proprietario del certificato del database di destinazione creato al passaggio 3 seguente.|Creare un utente, specificando l'utente del database di origine e WITHOUT LOGIN. Questo utente sarà proprietario del certificato del database di origine da creare dal file di backup. Non è necessario eseguire il mapping dell'utente a un account di accesso, poiché l'unico scopo di questo utente è essere proprietario del certificato del database di origine creato al passaggio 3 seguente.|  
   
- **Passaggio 3: Condividere i certificati e concedere le autorizzazioni per l'autenticazione a livello di database.**  
+ **Passaggio 3: condividere i certificati e concedere le autorizzazioni per l'autenticazione a livello di database.**  
   
  Completare le azioni seguenti nel server di origine e in quello di destinazione.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62630719"
 ||[Concedere l'autorizzazione SEND](/sql/t-sql/statements/grant-transact-sql) per il servizio di destinazione all'utente del database di origine.|  
 |Fornire l'identificatore di Service Broker del database di origine al server di destinazione. È possibile ottenere questo identificatore eseguendo una query sulla colonna **service_broker_guid** della vista del catalogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) Per una notifica degli eventi a livello di server, usare l'identificatore di Service Broker di **msdb**.|Fornire l'identificatore di Service Broker del database di destinazione al server di origine.|  
   
- **Passaggio 4: Creare route e impostare l'autenticazione a livello di server.**  
+ **Passaggio 4: creare route e impostare l'autenticazione a livello di server.**  
   
  Completare le azioni seguenti nel server di origine e in quello di destinazione.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62630719"
 |[Concedere l'autorizzazione CONNECT](/sql/t-sql/statements/grant-transact-sql) per l'endpoint all'account di accesso dell'autenticatore di destinazione.|Concedere l'autorizzazione CONNECT per l'endpoint all'account di accesso dell'autenticatore di origine.|  
 |[Creare un utente](/sql/t-sql/statements/create-user-transact-sql)e specificare l'account di accesso dell'autenticatore di destinazione.|Creare un utente e specificare l'account di accesso dell'autenticatore di origine.|  
   
- **Passaggio 5: Condividere i certificati per l'autenticazione a livello di server e creare la notifica degli eventi.**  
+ **Passaggio 5: condividere i certificati per l'autenticazione a livello di server e creare la notifica degli eventi.**  
   
  Completare le azioni seguenti nel server di origine e in quello di destinazione.  
   

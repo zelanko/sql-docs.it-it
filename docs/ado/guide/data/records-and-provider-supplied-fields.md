@@ -1,5 +1,5 @@
 ---
-title: I record e campi specificati dal Provider | Microsoft Docs
+title: Record e campi forniti dal provider | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,68 +14,68 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924511"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Record e campi specificati dal provider
-Quando un [Record](../../../ado/reference/ado-api/record-object-ado.md) apertura dell'oggetto, l'origine può essere la riga corrente di un elemento aperto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), un URL assoluto o un URL relativo in combinazione con un elemento aperto [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto .  
+Quando un oggetto [record](../../../ado/reference/ado-api/record-object-ado.md) viene aperto, la relativa origine può essere la riga corrente di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)aperto, un URL assoluto o un URL relativo insieme a un oggetto di [connessione](../../../ado/reference/ado-api/connection-object-ado.md) aperto.  
   
- Se il **Record** viene aperto da un **Recordset**, il **Record** oggetto [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta conterrà tutti i campi dal  **Recordset**, oltre a tutti i campi aggiunti dal provider sottostante.  
+ Se il **record** viene aperto da un **Recordset**, la raccolta dei [campi](../../../ado/reference/ado-api/fields-collection-ado.md) dell'oggetto **record** conterrà tutti i campi del **Recordset**, più tutti i campi aggiunti dal provider sottostante.  
   
- Il provider può inserire campi aggiuntivi che fungono da supplementari caratteristiche dei **Record**. Di conseguenza, una **Record** può includere campi univoci non nel **Recordset** come intero o qualsiasi **Record** derivato da un'altra riga del **Recordset**.  
+ Il provider può inserire campi aggiuntivi che fungano da caratteristiche supplementari del **record**. Di conseguenza, un **record** può includere campi univoci non nel **Recordset** come un intero o qualsiasi **record** derivato da un'altra riga del **Recordset**.  
   
- Ad esempio, tutte le righe di una **Recordset** derivato da un messaggio con origine dati potrebbe disporre di colonne, ad esempio, a e il soggetto. Oggetto **Record** deriva da quello **Recordset** avranno gli stessi campi. Tuttavia, il **Record** debba anche gli altri campi univoci al messaggio specifico, rappresentato da tale **Record**, ad esempio allegato e Cc (copia).  
+ Ad esempio, tutte le righe di un **Recordset** derivato da un'origine dati di posta elettronica potrebbero contenere colonne quali from, to e Subject. Un **record** derivato da tale **Recordset** avrà gli stessi campi. Tuttavia, il **record** potrebbe avere anche altri campi univoci per il messaggio specifico rappresentato da tale **record**, ad esempio allegato e CC (copia carbone).  
   
- Anche se il **Record** oggetto e la riga corrente delle **Recordset** hanno gli stessi campi sono diversi perché **Record** e **Recordset**gli oggetti hanno proprietà e metodi diversi.  
+ Anche se l'oggetto **record** e la riga corrente del **Recordset** hanno gli stessi campi, sono diversi perché gli oggetti **record** e **Recordset** hanno metodi e proprietà diversi.  
   
- Un campo comune per il **Record** e **Recordset** può essere modificato in uno qualsiasi degli oggetti. Tuttavia, non è possibile eliminare il campo sul **Record** dell'oggetto, anche se il provider sottostante può supportare l'impostazione del campo su null.  
+ Un campo contenuto in comune dal **record** e dal **Recordset** può essere modificato in entrambi gli oggetti. Tuttavia, il campo non può essere eliminato nell'oggetto **record** , sebbene il provider sottostante possa supportare l'impostazione del campo su null.  
   
- Dopo il **Record** è aperto, è possibile aggiungere a livello di programmazione i campi. È anche possibile eliminare i campi che sono stati aggiunti, ma non è possibile eliminare i campi dalla versione originale **Recordset**.  
+ Una volta aperto il **record** , è possibile aggiungere campi a livello di codice. È anche possibile eliminare i campi che sono stati aggiunti, ma non è possibile eliminare i campi dal **Recordset**originale.  
   
- È anche possibile aprire il **Record** oggetto direttamente da un URL. In questo caso, i campi aggiunti per il **Record** dipendono dal provider sottostante. Attualmente, la maggior parte dei provider di aggiungere un set di campi che descrivono l'entità rappresentata dal **Record**. Se l'entità è costituita da un flusso di byte, ad esempio un semplice file, un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto in genere può essere aperta dalle **Record**.  
+ È anche possibile aprire l'oggetto **record** direttamente da un URL. In questo caso, i campi aggiunti al **record** dipendono dal provider sottostante. Attualmente, la maggior parte dei provider aggiunge un set di campi che descrivono l'entità rappresentata dal **record**. Se l'entità è costituita da un flusso di byte, ad esempio un file semplice, un oggetto [flusso](../../../ado/reference/ado-api/stream-object-ado.md) può in genere essere aperto dal **record**.  
   
-## <a name="special-fields-for-document-source-providers"></a>Provider di origine di campi specifici per documento  
- Una classe speciale di provider, detti *provider di origine del documento*, gestisce le cartelle e documenti. Quando un **Record** oggetto rappresenta un documento o un **Recordset** oggetto rappresenta una cartella dei documenti, il provider di origine del documento consente di popolare gli oggetti con un set univoco di campi che descrivono caratteristiche del documento invece dell'effettivo del documento stesso. In genere, un campo contiene un riferimento per la **Stream** che rappresenta il documento.  
+## <a name="special-fields-for-document-source-providers"></a>Campi speciali per i provider di origine dei documenti  
+ Una classe speciale di provider, detti *provider di origine del documento*, gestisce cartelle e documenti. Quando un oggetto **record** rappresenta un documento o un oggetto **Recordset** rappresenta una cartella di documenti, il provider di origine del documento compila tali oggetti con un set univoco di campi che descrivono le caratteristiche del documento anziché il documento effettivo. In genere, un campo contiene un riferimento al **flusso** che rappresenta il documento.  
   
- Questi campi rappresentano una risorsa **record** oppure **recordset** e sono elencate per il provider specifici che li supportano in [appendice a: I provider](../../../ado/guide/appendixes/appendix-a-providers.md).  
+ Questi campi costituiscono un **record** di risorse o un **Recordset** e sono elencati per i provider specifici che li supportano in [appendice a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md).  
   
- Indice di due costanti il **campi** raccolta di una risorsa **Record** oppure **Recordset** per recuperare due campi di usati comune. Il **campo** oggetto [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà restituisce il contenuto desiderato.  
+ Due costanti indicizzano la raccolta **Fields** di un **record** di risorse o di un **Recordset** per recuperare una coppia di campi usati di frequente. La proprietà **Field** Object [value](../../../ado/reference/ado-api/value-property-ado.md) restituisce il contenuto desiderato.  
   
--   Il campo cui si accede con il **adDefaultStream** costante contiene un flusso predefinito associato il **Record** oppure **Recordset** oggetto. Il provider assegna un flusso predefinito a un oggetto.  
+-   Il campo a cui si accede con la costante **adDefaultStream** contiene un flusso predefinito associato all'oggetto **record** o **Recordset** . Il provider assegna un flusso predefinito a un oggetto.  
   
--   Il campo cui si accede con il **adRecordURL** costante contiene l'URL assoluto che identifica il documento.  
+-   Il campo a cui si accede con la costante **adRecordURL** contiene l'URL assoluto che identifica il documento.  
   
- Un provider di origine del documento non supporta il [delle proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta di **Record** e **campo** oggetti. Il contenuto di **proprietà** la raccolta è null per tali oggetti.  
+ Un provider di origine del documento non supporta la raccolta [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) di oggetti **record** e **Field** . Il contenuto della raccolta **Properties** è null per tali oggetti.  
   
- Un provider di origine del documento potrebbe aggiungere una proprietà specifica del provider, ad esempio **tipo di origine dati** per identificare se un provider di origine del documento. Per altre informazioni su come determinare il tipo di provider, vedere la documentazione del provider.  
+ Un provider di origine del documento può aggiungere una proprietà specifica del provider, ad esempio **DataSource type** , per stabilire se si tratta di un provider di origine del documento. Per ulteriori informazioni su come determinare il tipo di provider, vedere la documentazione del provider.  
   
-## <a name="resource-recordset-columns"></a>Risorsa colonne dei Recordset  
- Oggetto *recordset risorse* costituito dalle colonne seguenti.  
+## <a name="resource-recordset-columns"></a>Colonne recordset di risorse  
+ Un *Recordset di risorse* è costituito dalle colonne seguenti.  
   
-|Nome colonna|type|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|Di sola lettura. Indica l'URL della risorsa.|  
 |RESOURCE_PARENTNAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto del record padre.|  
-|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto della risorsa, che rappresenta la concatenazione di PARENTNAME e PARSENAME.|  
-|CUI RESOURCE_ISHIDDEN|adBoolean|True se la risorsa è nascosto. Verrà restituita alcuna riga, a meno che il comando che crea in modo esplicito il set di righe consente di selezionare le righe in cui RESOURCE_ISHIDDEN è True.|  
-|RESOURCE_ISREADONLY|adBoolean|True se la risorsa è di sola lettura. Tentativi per aprire questa risorsa con DBBINDFLAG_WRITE e che non riescono con DBBINDFLAG_WRITE. Questa proprietà può essere modificata anche quando la risorsa è stata aperta solo per la lettura.|  
-|RESOURCE_CONTENTTYPE|AdVarWChar|Indica l'utilizzo probabile del documento, ad esempio, un avvocato del breve. Questo valore può corrispondere al modello di Office che è stato usato per creare il documento.|  
-|RESOURCE_CONTENTCLASS|AdVarWChar|Indica il tipo MIME del documento, che indica il formato, ad esempio "`text/html`".|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Di sola lettura. Indica l'URL assoluto della risorsa, ovvero la concatenazione di PARENTname e PARSEname.|  
+|RESOURCE_ISHIDDEN|AdBoolean|True se la risorsa è nascosta. Non verrà restituita alcuna riga, a meno che il comando che crea il set di righe non selezioni in modo esplicito le righe in cui RESOURCE_ISHIDDEN è true.|  
+|RESOURCE_ISREADONLY|AdBoolean|True se la risorsa è di sola lettura. Tenta di aprire questa risorsa con DBBINDFLAG_WRITE e avrà esito negativo con DB_E_READONLY. Questa proprietà può essere modificata anche quando la risorsa è stata aperta solo per la lettura.|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|Indica l'utilizzo probabile del documento, ad esempio il Brief di un avvocato. Questo può corrispondere al modello di Office usato per creare il documento.|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|Indica il tipo MIME del documento, che indica il formato, ad esempio`text/html`"".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica la lingua in cui è archiviato il contenuto.|  
-|RESOURCE_CREATIONTIME|adFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora di che creazione della risorsa. Il tempo è espresso nel formato Coordinated Universal Time (UTC).|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora di ultimo accesso alla risorsa. Il tempo è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro temporale.|  
-|RESOURCE_LASTWRITETIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultima scrittura alla risorsa. Il tempo è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro temporale.|  
-|RESOURCE_STREAMSIZE|asUnsignedBigInt|Di sola lettura. Indica le dimensioni della risorsa predefinita, in byte del flusso.|  
-|RESOURCE_ISCOLLECTION|adBoolean|Di sola lettura. True se la risorsa è una raccolta, ad esempio una directory. False se la risorsa è un semplice file.|  
-|RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True se la risorsa è un documento strutturato. False se la risorsa non è un documento strutturato. Potrebbe trattarsi di una raccolta o un file semplice.|  
-|DEFAULT_DOCUMENT|AdVarWChar|Di sola lettura. Indica che questa risorsa contiene un URL per il documento predefinito semplice di una cartella o un documento strutturato. Utilizzato quando viene richiesto il flusso predefinito da una risorsa. Questa proprietà è vuota per un semplice file.|  
-|CHAPTERED_CHILDREN|adChapter|Di sola lettura. facoltativo. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. (Il *Provider OLE DB per Internet Publishing* non usare questa colonna.)|  
+|RESOURCE_CREATIONTIME|adFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora in cui è stata creata la risorsa. L'ora è indicata nel formato UTC (Coordinated Universal Time).|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultimo accesso alla risorsa. L'ora è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro di tempo.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|Di sola lettura. Indica una struttura FILETIME che contiene l'ora dell'ultima scrittura della risorsa. L'ora è in formato UTC. I membri FILETIME sono zero se il provider non supporta questo membro di tempo.|  
+|RESOURCE_STREAMSIZE|asUnsignedBigInt|Di sola lettura. Indica la dimensione, in byte, del flusso predefinito della risorsa.|  
+|RESOURCE_ISCOLLECTION|AdBoolean|Di sola lettura. True se la risorsa è una raccolta, ad esempio una directory. False se la risorsa è un file semplice.|  
+|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True se la risorsa è un documento strutturato. False se la risorsa non è un documento strutturato. Potrebbe trattarsi di una raccolta o di un semplice file.|  
+|DEFAULT_DOCUMENT|AdVarWChar|Di sola lettura. Indica che questa risorsa contiene un URL del documento semplice predefinito di una cartella o di un documento strutturato. Utilizzato quando il flusso predefinito viene richiesto da una risorsa. Questa proprietà è vuota per un file semplice.|  
+|CHAPTERED_CHILDREN|AdChapter|Di sola lettura. Facoltativa. Indica il capitolo del set di righe che contiene gli elementi figlio della risorsa. Il *provider di OLE DB per la pubblicazione Internet* non utilizza questa colonna.|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|Di sola lettura. Indica il nome visualizzato della risorsa.|  
-|RESOURCE_ISROOT|adBoolean|Di sola lettura. True se la risorsa è la radice di una raccolta o documento strutturato.|  
+|RESOURCE_ISROOT|AdBoolean|Di sola lettura. True se la risorsa è la radice di una raccolta o di un documento strutturato.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Appendice A: provider](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: Provider](../../../ado/guide/appendixes/appendix-a-providers.md)

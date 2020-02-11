@@ -22,18 +22,18 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770981"
 ---
-# <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
+# <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce informazioni sui processi di agente che generano snapshot dei dati filtrati. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è **%** di **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutti i processi di snapshot dei dati filtrati che corrispondono ai valori specificati per *dynamic_snapshot_jobid*e *dynamic_snapshot_jobname* Pubblicazioni.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **%** **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutti i processi di snapshot dei dati filtrati che corrispondono al *dynamic_snapshot_jobid*e *dynamic_snapshot_jobname*specificati per tutte le pubblicazioni.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nome di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobname*è di **%** **tipo sysname**e il valore predefinito è', che restituisce tutti i processi dinamici per una pubblicazione con il *dynamic_snapshot_jobid*specificato. Se quando è stato creato il processo non è stato specificato in modo esplicito un nome di processo, il nome del processo verrà indicato nel formato seguente:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nome di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobname*è di **%** **tipo sysname**e il valore predefinito è', che restituisce tutti i processi dinamici per una pubblicazione con la *dynamic_snapshot_jobid*specificata. Se quando è stato creato il processo non è stato specificato in modo esplicito un nome di processo, il nome del processo verrà indicato nel formato seguente:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -59,7 +59,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Identifica il processo di snapshot dei dati filtrati.|  
+|**ID**|**int**|Identifica il processo di snapshot dei dati filtrati.|  
 |**job_name**|**sysname**|Nome del processo di snapshot dei dati filtrati.|  
 |**job_id**|**uniqueidentifier**|Identifica il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent nel server di distribuzione.|  
 |**dynamic_filter_login**|**sysname**|Valore utilizzato per la valutazione della funzione [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) in un filtro di riga con parametri definito per la pubblicazione.|  
@@ -76,15 +76,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**active_start_time**|**int**|Ora della prima esecuzione pianificata dell'agente nel formato HHMMSS.|  
 |**active_end_time**|**int**|Ora dell'ultima esecuzione pianificata dell'agente nel formato HHMMSS.|  
   
-## <a name="return-code-values"></a>Valori restituiti  
+## <a name="return-code-values"></a>Valori del codice restituito  
  **0** (esito positivo) o **1** (esito negativo)  
   
-## <a name="remarks"></a>Note  
- **sp_helpdynamicsnapshot_job** viene utilizzata per la replica di tipo merge.  
+## <a name="remarks"></a>Osservazioni  
+ **sp_helpdynamicsnapshot_job** viene utilizzata nella replica di tipo merge.  
   
  Se vengono utilizzati tutti i valori predefiniti dei parametri, verranno restituite informazioni su tutti i processi di snapshot dei dati partizionati per l'intero database di pubblicazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** e dell'elenco di accesso alla pubblicazione possono eseguire **sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Vedere anche  

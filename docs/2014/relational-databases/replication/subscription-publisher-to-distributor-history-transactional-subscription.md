@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626776"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Sottoscrizione, Cronologia server di pubblicazione - server di distribuzione (sottoscrizione transazionale)
@@ -28,12 +28,12 @@ ms.locfileid: "62626776"
  **Visualizza**  
  Selezionare le sessioni dell'agente di lettura log da visualizzare. L'agente di lettura log in genere viene eseguito in modo continuo, pertanto potrebbe essere disponibile una sola sessione da visualizzare.  
   
- **Stato**  
+ **Status**  
  Stato dell'agente di lettura log. Nell'elenco seguente vengono indicati i valori di stato possibili:  
   
 -   Errore  
   
--   Operazione completata  
+-   Completi  
   
 -   Nuovo tentativo in corso  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62626776"
  **Ora fine**  
  Ora di fine della sessione. Se l'agente non è arrestato, questo campo è vuoto.  
   
- **Durata**  
+ **Duration**  
  Periodo di tempo durante il quale l'agente di lettura log è stato eseguito in questa sessione. Il valore di durata rappresenta il tempo trascorso se l'agente è ancora in esecuzione e la durata totale della sessione se la sessione dell'agente è terminata.  
   
  **Messaggio di errore**  

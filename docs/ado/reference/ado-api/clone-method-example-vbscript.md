@@ -1,5 +1,5 @@
 ---
-title: Esempio del metodo Clone (VBScript) | Microsoft Docs
+title: Esempio di metodo Clone (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919995"
 ---
 # <a name="clone-method-example-vbscript"></a>Esempio del metodo Clone (VBScript)
-Questo esempio Usa la [Clone](../../../ado/reference/ado-api/clone-method-ado.md) metodo per creare copie di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e quindi consente all'utente di posizionare il puntatore al record di ogni copia in modo indipendente.  
+In questo esempio viene usato il metodo [Clone](../../../ado/reference/ado-api/clone-method-ado.md) per creare copie di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e quindi si consente all'utente di posizionare il puntatore del record di ogni copia in modo indipendente.  
   
- Usare l'esempio seguente in una pagina ASP (Active Server). Questo esempio Usa la **Northwind** database distribuito con Microsoft Access. Tagliare e incollare il codice seguente nel blocco note o un altro editor di testo e salvarlo come CloneVBS. È possibile visualizzare il risultato in qualsiasi browser client.  
+ Utilizzare l'esempio seguente in una pagina di Active Server (ASP). In questo esempio viene utilizzato il database **Northwind** distribuito con Microsoft Access. Tagliare e incollare il codice seguente nel blocco note o in un altro editor di testo e salvarlo come CloneVBS. ASP. È possibile visualizzare i risultati in qualsiasi browser client.  
   
- Per usare l'esempio, modificare la riga `RsCustomerList.Source = "Customers"` a `RsCustomerList.Source = "Products"` da contare una tabella di dimensioni maggiori.  
+ Per eseguire l'esempio, modificare la riga `RsCustomerList.Source = "Customers"` in `RsCustomerList.Source = "Products"` per conteggiare una tabella più grande.  
   
 ```  
 <!-- BeginCloneVBS -->  

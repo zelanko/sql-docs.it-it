@@ -1,5 +1,5 @@
 ---
-title: Programmazione del modello tabulare | Microsoft Docs
+title: Programmazione di modelli tabulari | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757635"
 ---
 # <a name="tabular-model-programming"></a>Programmazione di modelli tabulari
@@ -24,7 +24,7 @@ ms.locfileid: "62757635"
   
  In questa sezione vengono fornite ulteriori informazioni sull'utilizzo a livello di codice delle entità del modello tabulare e delle relative proprietà.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Annotazioni CSDL per Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Informazioni sul modello a oggetti tabulare](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "62757635"
  [Interfaccia IMDEmbedded](imdembeddeddata-interface.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modellazione tabulare &#40;tabulare di SSAS&#41;](../tabular-models/tabular-models-ssas.md)   
- [Progettazione di modelli tabulari &#40;tabulare di SSAS&#41;](../tabular-model-designer-ssas-tabular.md)  
+ [Modellazione tabulare &#40;SSAS tabulare&#41;](../tabular-models/tabular-models-ssas.md)   
+ [Progettazione di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-designer-ssas-tabular.md)  
   
   

@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643447"
 ---
 # <a name="granting-access-to-a-database-object"></a>Concessione dell'accesso a un oggetto di database
-  In qualità di amministratore, l'utente è autorizzato a eseguire l'istruzione SELECT dalla tabella **Products** e dalla vista **vw_Names**, nonché a eseguire la procedura **pr_Names**. All'utente Mary non sono tuttavia concesse tali autorizzazioni. Per concedere a tale utente le autorizzazioni necessarie, utilizzare l'istruzione GRANT.  
+  In qualità di amministratore, è possibile eseguire l'istruzione SELECT dalla tabella **Products** e la vista **vw_Names** ed eseguire la procedura **pr_Names** ; Tuttavia, Mary non può. Per concedere a tale utente le autorizzazioni necessarie, utilizzare l'istruzione GRANT.  
   
 ### <a name="procedure-title"></a>Titolo della procedura  
   
@@ -40,10 +40,10 @@ ms.locfileid: "62643447"
  È necessario disporre dell'autorizzazione EXECUTE per eseguire una stored procedure. Per accedere e modificare i dati, è necessario disporre delle autorizzazioni SELECT, INSERT, UPDATE e DELETE. L'istruzione GRANT è inoltre utilizzata per altre autorizzazioni , ad esempio quella per creare tabelle.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Riepilogo: Configurazione delle autorizzazioni per oggetti di Database](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+ [Riepilogo: Configurazione delle autorizzazioni per gli oggetti di database](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [CONCEDERE &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-transact-sql)   
+ [Revoke &#40;&#41;Transact-SQL](/sql/t-sql/statements/revoke-transact-sql)  
   
   

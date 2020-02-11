@@ -1,5 +1,5 @@
 ---
-title: Esempio di metodo (VC + +) Append | Microsoft Docs
+title: Esempio di metodo Append degli indici (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 23c6970dd503c15e0eb04d6d97bed15c5a90dc71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d9c8cf7e99c05b7213d3731e6aecb97fc46d203
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966070"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929494"
 ---
 # <a name="indexes-append-method-example-vc"></a>Esempio del metodo Append di Indexes (VC++)
-Il codice seguente viene illustrato come creare un nuovo indice. L'indice è in due colonne della tabella.  
+Nel codice seguente viene illustrato come creare un nuovo indice. L'indice si trova in due colonne della tabella.  
   
 ```  
 // BeginCreateIndexCpp.cpp  
@@ -85,7 +85,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateIndexX...." << endl;  
+      cout << "Error occurred in CreateIndexX...." << endl;  
    }  
    ::CoUninitialize();  
 }  
