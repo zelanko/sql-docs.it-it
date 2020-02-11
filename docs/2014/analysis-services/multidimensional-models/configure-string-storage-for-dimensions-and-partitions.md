@@ -1,5 +1,5 @@
 ---
-title: Configurare l'archivio di stringhe per partizioni e dimensioni | Microsoft Docs
+title: Configurare l'archiviazione di stringhe per dimensioni e partizioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076535"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurare l'archivio di stringhe per dimensioni e partizioni
@@ -24,7 +24,7 @@ ms.locfileid: "66076535"
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**1050**|Viene specificata l'architettura dell'archivio di stringhe predefinita, soggetta a dimensioni del file massime di 4 GB per archivio.|  
 |**1100**|Viene specificato un archivio di stringhe più ampio in grado di supportare fino a 4 miliardi di stringhe univoche per archivio.|  
@@ -38,11 +38,11 @@ ms.locfileid: "66076535"
   
 -   [Prerequisiti](#bkmk_prereq)  
   
--   [Passaggio 1: Impostare la proprietà StringStoreCompatiblityLevel in SQL Server Data Tools](#bkmk_step1)  
+-   [Passaggio 1: impostare la proprietà StringStoreCompatiblityLevel in SQL Server Data Tools](#bkmk_step1)  
   
--   [Passaggio 2: Elaborazione degli oggetti](#bkmk_step2)  
+-   [Passaggio 2: elaborare gli oggetti](#bkmk_step2)  
   
-##  <a name="bkmk_background"></a> Informazioni sugli archivi di stringhe  
+##  <a name="bkmk_background"></a>Informazioni sugli archivi di stringhe  
  La configurazione dell'archiviazione di stringhe è facoltativa, pertanto anche nei nuovi database creati viene usata l'architettura predefinita soggetta al limite massimo di 4 GB per le dimensioni dei file. L'utilizzo di questa architettura più ampia comporta un lieve ma percettibile impatto sulle prestazioni. È necessario utilizzarla solo se le dimensioni dei file dell'archivio di stringhe sono prossime o al limite massimo di 4 GB.  
   
 > [!NOTE]  
@@ -59,9 +59,9 @@ ms.locfileid: "66076535"
   
  Per le dimensioni e le partizioni deve essere utilizzata l'archiviazione MOLAP.  
   
- Il livello di compatibilità del database deve essere impostato su 1100. Se è stato creato o distribuito un database usando [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o una versione successiva, il livello di compatibilità del database è già impostato su 1100. Se è stato spostato un database creato in una versione precedente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in ssSQL11 o versione successiva, è necessario aggiornare il livello di compatibilità. Per database spostati ma non ridistribuiti è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per impostare il livello di compatibilità. Per altre informazioni, vedere [impostare il livello di compatibilità di un Database multidimensionale &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Il livello di compatibilità del database deve essere impostato su 1100. Se è stato creato o distribuito un database usando [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] e la versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o una versione successiva, il livello di compatibilità del database è già impostato su 1100. Se è stato spostato un database creato in una versione precedente di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in ssSQL11 o versione successiva, è necessario aggiornare il livello di compatibilità. Per database spostati ma non ridistribuiti è possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per impostare il livello di compatibilità. Per ulteriori informazioni, vedere [impostare il livello di compatibilità di un database multidimensionale &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a> Passaggio 1: Impostare la proprietà StringStoreCompatiblityLevel in SQL Server Data Tools  
+##  <a name="bkmk_step1"></a>Passaggio 1: impostare la proprietà StringStoreCompatiblityLevel in SQL Server Data Tools  
   
 1.  Se si usa [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto contenente le dimensioni o le partizioni che si desidera modificare.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66076535"
   
 8.  Salvare il file.  
   
-##  <a name="bkmk_step2"></a> Passaggio 2: Elaborazione degli oggetti  
+##  <a name="bkmk_step2"></a>Passaggio 2: elaborare gli oggetti  
  La nuova architettura di archiviazione verrà utilizzata dopo l'elaborazione degli oggetti. Questa operazione consente di dimostrare anche la corretta risoluzione del problema relativo al vincolo dell'archivio in quanto l'errore, tramite cui era stata segnalata una precedente condizione di overflow dell'archivio di stringhe, non verrà più generato.  
   
 -   In Esplora soluzioni fare clic con il pulsante destro del mouse sulla dimensione appena modificata e selezionare **Elabora**.  
@@ -87,7 +87,7 @@ ms.locfileid: "66076535"
  È necessario utilizzare l'opzione Elaborazione completa su ogni oggetto in cui viene utilizzata la nuova architettura dell'archivio di stringhe. Prima dell'elaborazione, assicurarsi di eseguire un'analisi di impatto sulla dimensione per controllare se anche per gli oggetti dipendenti è necessaria la rielaborazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti e approcci per l'elaborazione &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [Strumenti e approcci per l'elaborazione di &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
  [Elaborazione e modalità di archiviazione delle partizioni](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Archiviazione di dimensioni](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  

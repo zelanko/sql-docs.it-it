@@ -1,5 +1,5 @@
 ---
-title: Importare da un Feed di dati (SSAS tabulare) | Microsoft Docs
+title: Importare da un feed di dati (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080565"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importare da un feed di dati (SSAS tabulare)
@@ -30,23 +30,23 @@ ms.locfileid: "66080565"
   
 -   [Importare feed di dati da elenchi SharePoint](#importlist)  
   
--   [Importare feed di dati da report di Reporting Services](#importreport)  
+-   [Importare feed di dati da report Reporting Services](#importreport)  
   
-##  <a name="prereq"></a> Informazioni sull'importazione da un feed di dati  
+##  <a name="prereq"></a>Informazioni sull'importazione da un feed di dati  
  È possibile importare dati in un modello tabulare dai tipi di feed di dati seguenti:  
   
- **Report di Reporting Services**  
+ **Report Reporting Services**  
  È possibile utilizzare come origine dati in un modello un report di Reporting Services pubblicato in un sito di SharePoint o in un server di report. Quando si importano dati da un report di Reporting Services, è necessario specificare un file di definizione del report (con estensione rdl) come origine dati.  
   
  **Set di dati di Azure DataMarket**  
  Azure DataMarket è un servizio che fornisce un marketplace e un canale di recapito unici per informazioni quali i servizi cloud. Per i set di dati di Azure DataMarket è richiesta una chiave di account, anziché un account utente di Windows.  
   
- **Feed atom**  
+ **Feed Atom**  
  Il feed deve essere un feed Atom. I feed RSS non sono supportati. Il feed deve essere disponibile pubblicamente oppure è necessario disporre dell'autorizzazione per connettersi ad esso con l'account di Windows con cui si è attualmente connessi.  
   
  I dati di un feed di dati vengono aggiunti una volta in un modello durante l'importazione. Per ottenere dati aggiornati dal feed, è possibile aggiornare i dati da Progettazione modelli o configurare una pianificazione dell'aggiornamento dei dati per il modello dopo la relativa distribuzione in un'istanza di produzione di Analysis Services. Per altre informazioni, vedere [Elaborare dati &#40;SSAS tabulare&#41;](process-data-ssas-tabular.md).  
   
-##  <a name="azure"></a> Importare dati da un set di dati di Azure DataMarket  
+##  <a name="azure"></a>Importare dati da un set di dati di Azure DataMarket  
  È possibile importare dati da un set di dati di Azure DataMarket, ad esempio una tabella del modello.  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>Per importare dati da un set di dati di Azure DataMarket  
@@ -73,7 +73,7 @@ ms.locfileid: "66080565"
   
 11. Nella pagina **Selezione tabelle e viste** fare clic su **Fine**.  
   
-##  <a name="importdata"></a> Importare feed di dati da origini dati pubbliche o aziendali  
+##  <a name="importdata"></a>Importare feed di dati da origini dati pubbliche o aziendali  
  È possibile accedere a feed pubblici o compilare servizi dati personalizzati che consentono di generare feed Atom da sistemi di database proprietari o legacy.  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>Per importare dati da feed di dati pubblici o aziendali  
@@ -111,7 +111,7 @@ ms.locfileid: "66080565"
   
 10. Nella pagina **Selezione tabelle e viste** fare clic su **Fine**.  
   
-##  <a name="importlist"></a> Importare feed di dati da elenchi SharePoint  
+##  <a name="importlist"></a>Importare feed di dati da elenchi SharePoint  
  È possibile importare un elenco SharePoint che dispone di un pulsante **Esporta come feed di dati** nella barra multifunzione di SharePoint. È possibile fare clic su questo pulsante per esportare l'elenco come feed.  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>Per importare feed di dati da un elenco SharePoint  
@@ -122,7 +122,7 @@ ms.locfileid: "66080565"
   
 3.  Nella pagina **Connessione a un feed di dati** digitare un nome descrittivo per il feed a cui si sta eseguendo l'accesso. Se si importano più feed o origini dati, l'utilizzo di nomi descrittivi per la connessione consente di ricordare come viene utilizzata la connessione.  
   
-4.  In URL Feed di dati, digitare un indirizzo al servizio dati di elenco, sostituendo \<server-name > con il nome effettivo del server di SharePoint:  
+4.  In URL feed di dati digitare un indirizzo per il servizio dati elenco, sostituendo \<nome-server> con il nome effettivo del server SharePoint:  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -143,7 +143,7 @@ ms.locfileid: "66080565"
   
 10. Nella pagina **Selezione tabelle e viste** fare clic su **Fine**.  
   
-##  <a name="importreport"></a> Importare feed di dati da report di Reporting Services  
+##  <a name="importreport"></a>Importare feed di dati da report Reporting Services  
  Se si ha una distribuzione di [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services, è possibile usare l'estensione per il rendering Atom per generare un feed di dati da un report esistente.  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>Per importare dati da un report pubblicato di Reporting Services  
@@ -156,7 +156,7 @@ ms.locfileid: "66080565"
   
 4.  Fare clic su **Sfoglia** e selezionare un server di report.  
   
-     Se si usano normalmente i report in un server di report, è possibile che il server sia elencato in **Siti e server recenti**. In caso contrario, digitare in Nome l'indirizzo di un server di report e fare clic su **Apri** per esplorare le cartelle nel sito del server di report. Un esempio di indirizzo per un server di report potrebbe essere http://\<nomecomputer > / reportserver.  
+     Se si usano normalmente i report in un server di report, è possibile che il server sia elencato in **Siti e server recenti**. In caso contrario, digitare in Nome l'indirizzo di un server di report e fare clic su **Apri** per esplorare le cartelle nel sito del server di report. Un indirizzo di esempio per un server di report potrebbe\<essere http://nomecomputer>/ReportServer.  
   
 5.  Selezionare il report e fare clic su **Apri**. In alternativa, è possibile incollare un collegamento al report, compresi il percorso completo e il nome del report, nella casella di testo **Nome** . L'Importazione guidata tabella si connetterà al report e ne eseguirà il rendering nell'area di anteprima.  
   

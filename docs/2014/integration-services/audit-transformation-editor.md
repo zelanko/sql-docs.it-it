@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061423"
 ---
 # <a name="audit-transformation-editor"></a>Editor trasformazione Controllo
-  La trasformazione Controllo consente di includere nel flusso di dati di un pacchetto informazioni sull'ambiente in cui viene eseguito il pacchetto. Ad esempio, il nome del pacchetto, del computer e dell'operatore può essere aggiunto al flusso di dati. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include variabili di sistema che forniscono queste informazioni.  
+  La trasformazione Controllo consente di includere nel flusso di dati di un pacchetto informazioni sull'ambiente in cui viene eseguito il pacchetto. Ad esempio, il nome del pacchetto, del computer e dell'operatore può essere aggiunto al flusso di dati. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]include variabili di sistema che forniscono queste informazioni.  
   
  Per ulteriori informazioni sulla trasformazione Controllo, vedere [Audit Transformation](data-flow/transformations/audit-transformation.md).  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66061423"
  **Tipo di controllo**  
  Consente di selezionare una variabile di sistema disponibile per visualizzare le informazioni di controllo.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**GUID istanza esecuzione**|Consente di specificare il GUID che identifica in modo univoco l'istanza di esecuzione del pacchetto.|  
+|**GUID dell'istanza di esecuzione**|Consente di specificare il GUID che identifica in modo univoco l'istanza di esecuzione del pacchetto.|  
 |**ID pacchetto**|Consente di specificare il GUID che identifica in modo univoco il pacchetto.|  
 |**Nome pacchetto**|Consente di specificare il nome del pacchetto.|  
 |**ID versione**|Consente di specificare il GUID che identifica in modo univoco la versione del pacchetto.|  

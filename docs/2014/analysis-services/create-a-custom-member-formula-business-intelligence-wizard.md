@@ -1,5 +1,5 @@
 ---
-title: Creare una Formula personalizzata membro (configurazione guidata Business Intelligence) | Microsoft Docs
+title: Creazione formula personalizzata membro (configurazione guidata funzionalità di Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087001"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Creazione formula personalizzata membro (Configurazione guidata funzionalità di Business Intelligence)
-  Usare la **creare una Formula personalizzata membro** pagina per associare attributi nella dimensione specificata con colonne formula personalizzata membro colonne-contenenti istruzioni MDX (Multidimensional Expressions) che definiscono valori membro per tale attributo.  
+  Utilizzare la pagina **Crea formula personalizzata membro** per associare attributi nella dimensione specificata a colonne di formule personalizzate membro, ovvero colonne contenenti istruzioni MDX (Multidimensional Expressions) che definiscono i valori dei membri di tale attributo.  
   
 ## <a name="options"></a>Opzioni  
- **Attribute**  
+ **Attributo**  
  Consente di selezionare l'attributo da associare a una formula personalizzata membro.  
   
  **Colonna di origine**  
- Fare clic su Sfoglia ( **...** ) per aprire la **selezionare una colonna** nella finestra di dialogo e selezionare la colonna della formula personalizzata membro da associare con l'attributo.  
+ Fare clic sul pulsante Sfoglia (**..**.) per aprire la finestra di dialogo **Seleziona colonna** e selezionare la colonna della formula personalizzata membro da associare all'attributo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

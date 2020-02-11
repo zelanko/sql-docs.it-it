@@ -1,5 +1,5 @@
 ---
-title: Dialogo Trova tabella (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Finestra di dialogo Trova tabella (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081092"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Trova tabella (Analysis Services - Dati multidimensionali)
@@ -42,8 +42,8 @@ ms.locfileid: "66081092"
  Consente di specificare il filtro usato per limitare il numero di oggetti elencati e quindi di applicare il filtro alle tabelle elencate in **Selezionare una tabella dalla vista origine dati**facendo clic sul pulsante.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà assembly &#40;Analysis Services - dati multidimensionali&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
- [Vista origine dati &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+ [Finestra di dialogo Proprietà assembly &#40;Analysis Services-Dati multidimensionali&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
+ [Vista origine dati &#40;scheda Struttura dimensione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074705"
 ---
 # <a name="cube-space"></a>Spazio del cubo
@@ -55,7 +55,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Si noti che per designare l'asse delle colonne viene utilizzato 0, la forma abbreviata per Axis(0), indicante l'asse delle colonne.  
   
- La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può anche essere scritta usando la nuova * valore variant di tipo i [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) (funzione).  
+ La query precedente restituisce solo le celle dei membri di ogni gerarchia dell'attributo della query che esistono in ogni livello superiore. La query precedente può anche essere scritta con la nuova variante * della funzione [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) .  
   
 ```  
 SELECT   
@@ -78,7 +78,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  I valori delle celle restituiti saranno identici, sebbene i metadati nel set di risultati saranno diversi. Con la query precedente, ad esempio, la gerarchia Country è stata spostata sull'asse di sezionamento (nella clausola WHERE) e pertanto non viene visualizzata in modo esplicito nel set di risultati.  
   
- Ognuna delle tre query precedenti dimostra l'effetto del comportamento di Auto Exist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Ognuna di queste tre query precedenti dimostra l'effetto del comportamento di auto exist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>Gerarchie definite dall'utente e spazio del cubo  
  Negli esempi precedenti di questo argomento vengono definite le posizioni nello spazio del cubo utilizzando le gerarchie dell'attributo. È tuttavia possibile definire una posizione nello spazio del cubo anche utilizzando gerarchie definite dall'utente in base alle gerarchie dell'attributo in una dimensione. Una gerarchia definita dall'utente è una gerarchia di gerarchie dell'attributo utilizzata per facilitare l'esplorazione dei dati del cubo da parte degli utenti.  
@@ -98,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  Nella query precedente la gerarchia definita dall'utente Customer Geography all'interno della dimensione Customer viene utilizzata per definire la posizione nello spazio del cubo definita in precedenza utilizzando una gerarchia dell'attributo. La medesima posizione nello spazio del cubo può essere definita utilizzando gerarchie dell'attributo o gerarchie definite dall'utente.  
   
-##  <a name="AttribRelationships"></a> Relazioni tra attributi e spazio del cubo  
+##  <a name="AttribRelationships"></a>Relazioni tra attributi e spazio del cubo  
  La definizione delle relazioni tra attributi correlati migliora le prestazioni delle query (facilitando la creazione di aggregazioni appropriate) e influisce sul membro di una gerarchia dell'attributo correlata che include un membro della gerarchia dell'attributo. Quando, ad esempio, si definisce una tupla che include un membro della gerarchia dell'attributo City e la tupla non definisce in modo esplicito il membro della gerarchia dell'attributo Country, ci si potrebbe aspettare che il membro predefinito della gerarchia dell'attributo Country fosse il membro correlato della gerarchia dell'attributo Country. Questo tuttavia si verifica solo se tra la gerarchia dell'attributo City e la gerarchia dell'attributo Country è definita una relazione tra attributi.  
   
  Nell'esempio seguente viene restituito il membro di una gerarchia dell'attributo correlata non inclusa in modo esplicito nella query.  
@@ -112,7 +112,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Si noti che il `WITH` parola chiave viene usata con il [CurrentMember (MDX)](/sql/mdx/current-mdx) e [Name (MDX)](/sql/mdx/members-string-mdx) funzioni per creare un membro calcolato da usare nella query. Per altre informazioni, vedere [Query MDX di base &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Si noti che `WITH` la parola chiave viene utilizzata con le funzioni [CurrentMember (MDX)](/sql/mdx/current-mdx) e [Name (MDX)](/sql/mdx/members-string-mdx) per creare un membro calcolato da utilizzare nella query. Per altre informazioni, vedere [Query MDX di base &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  Nella query precedente, viene restituito il nome del membro della gerarchia dell'attributo Country associata a ogni membro della gerarchia dell'attributo State. Viene visualizzato il membro Country previsto, perché tra gli attributi City e Country è definita una relazione. Se tuttavia tra le gerarchie dell'attributo della stessa dimensione non venisse definita alcuna relazione tra attributi, verrebbe restituito il membro (Totale), come illustrato nella query seguente.  
   
@@ -132,9 +132,9 @@ FROM [Adventure Works]
  [Concetti chiave di MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuple](tuples.md)   
  [Autoexists](autoexists.md)   
- [Utilizzo di membri, tuple e set &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Totali visualizzati e non visualizzati](visual-totals-and-non-visual-totals.md)   
- [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Utilizzo di membri, Tuple e set &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Totali visivi e totali non visualizzati](visual-totals-and-non-visual-totals.md)   
+ [Guida di riferimento al linguaggio MDX &#40;&#41;MDX](/sql/mdx/mdx-language-reference-mdx)   
+ [Espressioni multidimensionali &#40;riferimento&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

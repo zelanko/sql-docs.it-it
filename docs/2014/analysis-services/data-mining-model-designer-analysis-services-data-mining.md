@@ -1,5 +1,5 @@
 ---
-title: Progettazione modelli di Data Mining (Analysis Services - Data Mining) | Microsoft Docs
+title: Progettazione modelli di data mining (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086405"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>Progettazione modelli di data mining - (Analysis Services - Data mining)
@@ -28,17 +28,17 @@ ms.locfileid: "66086405"
   
 -   [Esercitazione di base sul data mining](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Creazione ed esecuzione di query su modelli di Data Mining con DMX: Esercitazioni su &#40;Analysis Services - Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Creazione ed esecuzione di query sui modelli di data mining con DMX: esercitazioni &#40;Analysis Services-Data mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
--   [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+-   [Creazione guidata modello di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 -   [Concetti di data mining](data-mining/data-mining-concepts.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione struttura di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Visualizzazione di modelli di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-models-view-data-mining-model-designer.md)   
+ [Visualizzazione struttura di data mining &#40;Progettazione modelli di data mining&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Visualizzazione modelli di data mining &#40;Progettazione modelli di data mining&#41;](mining-models-view-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Generatore di Query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
+ [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
+ [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)  
   
   

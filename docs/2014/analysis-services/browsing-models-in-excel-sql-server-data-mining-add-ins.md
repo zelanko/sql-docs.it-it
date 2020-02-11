@@ -1,5 +1,5 @@
 ---
-title: Esplorazione di modelli in Excel (SQL Server Data Mining Add-ins) | Microsoft Docs
+title: Esplorazione di modelli in Excel (SQL Server componenti aggiuntivi Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 961b32e84d41e021fbad185189981adb90ba44b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088462"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Esplorazione di modelli in Excel (componenti aggiuntivi Data mining di SQL Server)
-  ![Pulsante Esplora modello sulla barra multifunzione Data Mining](media/dmc-browse.gif "pulsante Esplora modello sulla barra multifunzione Data Mining")  
+  ![Pulsante Esplora modello sulla barra multifunzione Data mining](media/dmc-browse.gif "Pulsante Esplora modello sulla barra multifunzione Data mining")  
   
  L'esplorazione visiva del modello è generalmente il modo più veloce e facile per ottenere informazioni sulle regole e sulle relazioni individuate dall'analisi. Utilizzando Client di data mining per Excel, è possibile esplorare i modelli temporanei creati durante la sessione corrente di Excel e quelli archiviati in un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -30,24 +30,24 @@ ms.locfileid: "66088462"
   
 ## <a name="using-the-browse-model-wizard"></a>Utilizzo della procedura guidata Esplora modello  
   
-1.  Scegliere il **Data Mining** scheda.  
+1.  Fare clic sulla scheda **data mining** .  
   
-2.  Nel **modello di utilizzo** gruppo, fare clic su **Sfoglia**.  
+2.  Nel gruppo **utilizzo modelli** fare clic su **Sfoglia**.  
   
-3.  Nel **Seleziona modello** finestra di dialogo, scegliere un modello di data mining dall'elenco e fare clic su **successivo**.  
+3.  Nella finestra di dialogo **Seleziona modello** scegliere un modello di data mining dall'elenco e fare clic su **Avanti**.  
   
-4.  La procedura guidata consente di aprire una **esplorare** finestra appropriato per il tipo di modello selezionato.  
+4.  La procedura guidata consente di aprire una finestra di **esplorazione** appropriata per il tipo di modello selezionato.  
   
 ## <a name="list-of-data-mining-viewers"></a>Elenco dei visualizzatori di data mining  
- A seconda dell'algoritmo di data mining di dati usato durante la creazione del modello, il **esplorare** finestra avrà un aspetto leggermente diversa. Può includere grafici per consentire l'interpretazione dei risultati, legende contenenti dettagli aggiuntivi e controlli per l'interazione con i dati.  
+ A seconda dell'algoritmo di data mining usato durante la creazione del modello, la finestra di **esplorazione** sarà leggermente diversa. Può includere grafici per consentire l'interpretazione dei risultati, legende contenenti dettagli aggiuntivi e controlli per l'interazione con i dati.  
   
  Negli argomenti seguenti sono disponibili informazioni sulle procedure per l'utilizzo di ciascuno dei visualizzatori, inclusi suggerimenti per l'interpretazione dei grafici complessi, nonché istruzioni per la modifica, la copia o l'utilizzo dei risultati.  
   
- [Esplorazione di un modello di regole di associazione](browsing-an-association-rules-model.md)  
+ [Esplorazione di un modello Association Rules](browsing-an-association-rules-model.md)  
   
  [Esplorazione di un modello di clustering](browsing-a-clustering-model.md)  
   
- [Esplorazione di un modello di albero delle decisioni](browsing-a-decision-trees-model.md)  
+ [Esplorazione di un modello Decision Trees](browsing-a-decision-trees-model.md)  
   
  [Esplorazione di un modello di previsione](browsing-a-forecasting-model.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66088462"
  [Esplorazione di un modello di rete neurale](browsing-a-neural-network-model.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione di modelli di Data Mining in Visio &#40;componenti aggiuntivi data mining&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
- [Gestire i modelli &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md)  
+ [Visualizzazione di modelli di data mining in Visio &#40;componenti aggiuntivi Data mining&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
+ [Gestire i modelli &#40;SQL Server componenti aggiuntivi Data mining&#41;](manage-models-sql-server-data-mining-add-ins.md)  
   
   

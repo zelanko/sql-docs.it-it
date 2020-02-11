@@ -1,5 +1,5 @@
 ---
-title: Contenuto dei modelli di regressione logistica modelli di data mining (Analysis Services - Data Mining) | Microsoft Docs
+title: Contenuto dei modelli di data mining per i modelli di regressione logistica (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083620"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di regressione logistica (Analysis Services - Data mining)
@@ -31,7 +31,7 @@ ms.locfileid: "66083620"
   
  Tuttavia, in un modello di regressione logistica, il nodo che rappresenta il livello nascosto è vuoto e non ha elementi figlio. Il modello contiene pertanto nodi che rappresentano singoli output (NODE_TYPE = 23) e singoli input (NODE_TYPE = 21), ma non singoli nodi nascosti.  
   
- ![struttura di contenuto modello di regressione logistica](../media/skt-modelcontentstructure-logregc.gif "struttura di contenuto modello di regressione logistica")  
+ ![Struttura del contenuto del modello di regressione logistica](../media/skt-modelcontentstructure-logregc.gif "Struttura del contenuto del modello di regressione logistica")  
   
  Per impostazione predefinita, un modello di regressione logistica è visualizzato nel **Visualizzatore Microsoft Neural Network**. Con questo visualizzatore personalizzato, è possibile impostare un filtro sugli attributi di input e i relativi valori e visualizzarne graficamente l'impatto sugli output. Le descrizioni comandi nel visualizzatore mostrano la probabilità e l'accuratezza associate a ogni coppia di input e valori di output. Per altre informazioni, vedere [Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66083620"
  ATTRIBUTE_NAME  
  Nomi degli attributi che corrispondono a questo nodo.  
   
-|Node|Content|  
+|Nodo|Contenuto|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -62,7 +62,7 @@ ms.locfileid: "66083620"
 |Nodo di output|Nome dell'attributo di output|  
   
  NODE_NAME  
- Nome del nodo. Attualmente, questa colonna contiene lo stesso valore di NODE_UNIQUE_NAME, anche se nelle versioni future il valore potrebbe essere diverso.  
+ Il nome del nodo. Attualmente, questa colonna contiene lo stesso valore di NODE_UNIQUE_NAME, anche se nelle versioni future il valore potrebbe essere diverso.  
   
  NODE_UNIQUE_NAME  
  Nome univoco del nodo.  
@@ -89,7 +89,7 @@ ms.locfileid: "66083620"
  CHILDREN_CARDINALITY  
  Stima del numero di nodi figlio del nodo.  
   
-|Node|Content|  
+|Nodo|Contenuto|  
 |----------|-------------|  
 |Nodo radice del modello|Indica il conteggio di nodi figlio che include almeno 1 rete, 1 nodo marginale obbligatorio e 1 livello di input obbligatorio. Se, ad esempio, il valore è 5, sono presenti 3 subnet.|  
 |Statistiche marginali|Sempre 0.|  
@@ -107,7 +107,7 @@ ms.locfileid: "66083620"
  NODE_DESCRIPTION  
  Descrizione intuitiva del nodo.  
   
-|Node|Content|  
+|Nodo|Contenuto|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -120,7 +120,7 @@ ms.locfileid: "66083620"
  NODE_RULE  
  Descrizione XML della regola incorporata nel nodo.  
   
-|Node|Content|  
+|Nodo|Contenuto|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -140,7 +140,7 @@ ms.locfileid: "66083620"
  Probabilità di raggiungere il nodo dal nodo padre. Nei modelli di regressione logistica è sempre 0.  
   
  NODE_DISTRIBUTION  
- Tabella nidificata che contiene informazioni statistiche per il nodo. Per informazioni dettagliate sul contenuto di questa tabella per ogni tipo di nodo, vedere la sezione relativa alle informazioni sulla tabella NODE_DISTRIBUTION in [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Tabella nidificata che contiene informazioni statistiche per il nodo. Per informazioni dettagliate sul contenuto di questa tabella per ogni tipo di nodo, vedere la sezione relativa alle informazioni sulla tabella NODE_DISTRIBUTION in [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  Nei modelli di regressione logistica è sempre 0.  
@@ -151,7 +151,7 @@ ms.locfileid: "66083620"
  Per ottenere informazioni sul supporto nei case di training per valori specifici, vedere il nodo delle statistiche marginali.  
   
  MSOLAP_MODEL_COLUMN  
- |Node|Content|  
+ |Nodo|Contenuto|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -167,7 +167,7 @@ ms.locfileid: "66083620"
  MSOLAP_NODE_SHORT_CAPTION  
  Nei modelli di regressione logistica è sempre vuoto.  
   
-##  <a name="bkmk_NodeIDs"></a> Utilizzo dei nomi e degli ID dei nodi  
+##  <a name="bkmk_NodeIDs"></a>Utilizzo dei nomi e degli ID dei nodi  
  La denominazione dei nodi in un modello di regressione logistica fornisce informazioni aggiuntive sulle relazioni tra i nodi nel modello. Nella tabella seguente vengono illustrate le convenzioni per gli ID assegnati ai nodi in ogni livello.  
   
 |Tipo di nodo|Convenzione per ID del nodo|  
@@ -184,8 +184,8 @@ ms.locfileid: "66083620"
  È possibile utilizzare questi ID per determinare il modo in cui gli attributi di output sono correlati ad attributi di livello di input specifici, visualizzando la tabella NODE_DISTRIBUTION del nodo di output. Ogni riga della tabella contiene un ID che punta a un nodo dell'attributo di input specifico. La tabella NODE_DISTRIBUTION contiene inoltre il coefficiente per tale coppia di input/output.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm.md)   
- [Contenuto dei modelli di data mining per i modelli di rete neurale &#40;Analysis Services - Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Algoritmo di regressione logistica Microsoft](microsoft-logistic-regression-algorithm.md)   
+ [Contenuto del modello di data mining per i modelli di rete neurale &#40;Analysis Services-Data mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Esempi di query sul modello di regressione logistica](logistic-regression-model-query-examples.md)   
  [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Nome elemento schema (DTA) | Microsoft Docs
+title: Elemento Name per schema (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657275"
 ---
 # <a name="name-element-for-schema-dta"></a>Elemento Name per Schema (DTA)
@@ -38,8 +38,9 @@ ms.locfileid: "62657275"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|`string`, tra 1 e 255 caratteri|  
-|**Valore predefinito**|Nessuna.|  
+|**Tipo di dati e lunghezza**|
+  `string`, tra 1 e 255 caratteri|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio una sola volta per elemento **Schema** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -47,7 +48,7 @@ ms.locfileid: "62657275"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Schema per Database &#40;DTA&#41;](schema-element-for-database-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Elemento Server &#40;DTA&#41;](server-element-dta.md).  

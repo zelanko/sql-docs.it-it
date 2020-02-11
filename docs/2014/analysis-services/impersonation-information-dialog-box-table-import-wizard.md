@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6592d81e91e0582c79bc1a8bb1264b6ab9a7b733
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080700"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>Finestra di dialogo Impostazioni di rappresentazione (Importazione guidata tabella)
   Utilizzare la pagina **Impostazioni di rappresentazione** per specificare le credenziali che verranno utilizzate da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per la connessione all'origine dati. Per altre informazioni sulla rappresentazione delle credenziali, vedere [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
   
 ## <a name="options"></a>Opzioni  
- **Specifica nome utente di Windows e password**  
+ **Nome utente e password specifici di Windows**  
  Selezionare questa opzione per fare in modo che le credenziali di sicurezza di un account utente di Windows specificato vengano utilizzate dal modello tabulare.  
   
  **Nome utente**  
- Digitare il dominio e il nome dell'account utente da utilizzare Utilizzare il formato seguente:  
+ Digitare il dominio e il nome dell'account utente da utilizzare Utilizzare il seguente formato:  
   
- *\<Nome di dominio >* ** \\ ** * \<nome dell'account utente >*  
+ Nome di **\\** dominio>* \<nome account utente>* * \<*  
   
  Questa opzione è abilitata solo se si seleziona l'opzione **Usa nome utente e password specifici** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66080700"
   
  Questa opzione è abilitata solo se si seleziona l'opzione **Usa nome utente e password specifici** .  
   
- **Account del servizio**  
+ **Account servizio**  
  Selezionare questa opzione per usare le credenziali di sicurezza associate al servizio [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tramite cui viene gestito il modello.  
   
 ## <a name="see-also"></a>Vedere anche  

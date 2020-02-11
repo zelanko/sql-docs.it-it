@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705130"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Finestra di dialogo Valuta criteri, pagina Selezione criteri
@@ -24,29 +24,29 @@ ms.locfileid: "62705130"
   
 ## <a name="options"></a>Opzioni  
  **Origine**  
- Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona origine** .  
+ Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona origine** .  
   
  **File**  
- Digitare il percorso o usare il pulsante Sfoglia ( **...** ) per selezionare un file che contiene i criteri della gestione basata su criteri.  
+ Digitare il percorso o usare il pulsante Sfoglia (**...**) per selezionare un file che contiene i criteri della gestione basata su criteri.  
   
  **Server**  
  Selezionare questa opzione per eseguire una connessione a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che contiene i criteri desiderati.  
   
- **Criteri: criterio**  
+ **Criteri: criteri**  
  Fare clic su questa opzione per aprire la finestra di dialogo relativa ai criteri specificati.  
   
  **Criteri: Categoria**  
  Categoria dei criteri. Il contenuto di questa casella è di sola lettura.  
   
- **Criteri: Facet**  
+ **Criteri: facet**  
  Facet implementato dai criteri. Il contenuto di questa casella è di sola lettura.  
   
- **Valuta**  
+ **Valutare**  
  Esegue i criteri in modalità di valutazione. Verrà generato un report sulla conformità per il set di destinazioni, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verrà riconfigurato, né verrà applicata la conformità successiva.  
   
 ## <a name="possible-errors"></a>Possibili errori  
   
--   **Impossibile trovare destinazioni**  
+-   **Non sono state trovate destinazioni**  
   
      È possibile che il set di destinazioni sia vuoto a causa di uno dei motivi seguenti:  
   

@@ -1,5 +1,5 @@
 ---
-title: Definizione associazioni valute locali (configurazione guidata Business Intelligence) | Microsoft Docs
+title: Definizione riferimento valuta locale (configurazione guidata funzionalità di Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,44 +13,44 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082183"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Definizione associazioni valute locali (Configurazione guidata funzionalità di Business Intelligence)
   Usare la pagina **Definizione associazioni valute locali** per definire le valute locali per la funzionalità di conversione valuta che riguarda il tipo di conversione molti-a-molti o molti-a-uno specificato nella pagina **Selezione tipo di conversione** . Una valuta locale è la valuta in cui vengono archiviate le transazioni per le misure selezionate nella pagina **Selezione misure** .  
   
 > [!NOTE]  
->  Questa pagina non viene visualizzata se la Configurazione guidata funzionalità di Business Intelligence viene avviata da Progettazione dimensioni o facendo clic con il pulsante destro del mouse su una dimensione in Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Questa pagina non viene inoltre visualizzata se è stata selezionata l'opzione **One-to-Many** (Uno-a-molti) nella pagina **Selezione tipo di conversione** .  
+>  Questa pagina non viene visualizzata se la Configurazione guidata funzionalità di Business Intelligence viene avviata da Progettazione dimensioni oppure facendo clic con il pulsante destro del mouse su una dimensione in Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Questa pagina non viene inoltre visualizzata se è stata selezionata l'opzione **One-to-Many** (Uno-a-molti) nella pagina **Selezione tipo di conversione** .  
   
 ## <a name="options"></a>Opzioni  
  **Identificatori nella tabella dei fatti**  
- Selezionare questa opzione per specificare un attributo che fornisce gli identificatori di valuta per le valute locali in una dimensione di tipo Valuta a cui fa riferimento la tabella dei fatti contenente le misure selezionate nella pagina **Selezione misure** . (Dimensione di una valuta uno cui proprietà `Type` è impostata su *valuta*.)  
+ Selezionare questa opzione per specificare un attributo che fornisce gli identificatori di valuta per le valute locali in una dimensione di tipo Valuta a cui fa riferimento la tabella dei fatti contenente le misure selezionate nella pagina **Selezione misure** . Una dimensione di tipo valuta in un `Type` oggetto la cui proprietà è impostata su *Currency*.  
   
- Utilizzare questa opzione quando è la transazione stessa a determinare la valuta corrente per la transazione. Ad esempio, nelle [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] del database di esempio -[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], il gruppo di misure Internet Sales ha una relazione di tipo regolare con la dimensione di valuta. La tabella dei fatti per tale gruppo di misure include una colonna chiave esterna che fa riferimento agli identificatori di valuta della tabella della dimensione.  
+ Utilizzare questa opzione quando è la transazione stessa a determinare la valuta corrente per la transazione. Nel [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database di esempio, ad esempio[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], il gruppo di misure Internet Sales ha una relazione di tipo regolare con la dimensione di tipo valuta. La tabella dei fatti per tale gruppo di misure include una colonna chiave esterna che fa riferimento agli identificatori di valuta della tabella della dimensione.  
   
- **Dimensione di tipo valuta e attributo a cui fanno riferimento le tabelle dei fatti**  
- Consente di selezionare l'attributo di valuta nella dimensione di tipo Valuta i cui membri rappresentano gli identificatori di valuta per le valute locali. (Un attributo di valuta è un attributo il cui `Type` è impostata su *valuta*.)  
+ **Dimensione e attributo di valuta a cui fanno riferimento i dati della tabella dei fatti**  
+ Consente di selezionare l'attributo di valuta nella dimensione di tipo Valuta i cui membri rappresentano gli identificatori di valuta per le valute locali. Un attributo di valuta è uno la `Type` cui proprietà è impostata su *Currency*.  
   
 > [!NOTE]  
->  Questa opzione non è disponibile se non è stata selezionata l'opzione **Identificatori nella tabella dei fatti** .  
+>  Questa opzione non è disponibile se non è selezionata l'opzione **identificatori nella tabella dei fatti** .  
   
- **Attributi nella tabella della dimensione**  
+ **Attributi nella tabella delle dimensioni**  
  Consente di specificare un attributo da una dimensione correlata al gruppo di misure che contiene gli identificatori di valuta per le valute locali.  
   
- Utilizzare questa opzione quando è la relazione tra una transazione e un'altra entità commerciale, ad esempio un percorso, a determinare la valuta locale per la transazione. Ad esempio, nelle [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database di esempio -[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], il gruppo di misure Financial Reporting ha una relazione di dimensione di riferimento per la dimensione di tipo valuta tramite la dimensione Organization. Cioè, la tabella dei fatti per il gruppo di misure Financial Reporting contiene una colonna chiave esterna che fa riferimento a membri nella tabella della dimensione per la dimensione Organization. Questa tabella della dimensione include a sua volta una colonna chiave esterna che fa riferimento agli identificatori di valuta nella tabella della dimensione per la dimensione di tipo Valuta.  
+ Utilizzare questa opzione quando è la relazione tra una transazione e un'altra entità commerciale, ad esempio un percorso, a determinare la valuta locale per la transazione. Nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esempio, ad esempio[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)], il gruppo di misure Financial Reporting dispone di una relazione di dimensione di tipo riferimento con la dimensione di tipo valuta tramite la dimensione Organization. Cioè, la tabella dei fatti per il gruppo di misure Financial Reporting contiene una colonna chiave esterna che fa riferimento a membri nella tabella della dimensione per la dimensione Organization. Questa tabella della dimensione include a sua volta una colonna chiave esterna che fa riferimento agli identificatori di valuta nella tabella della dimensione per la dimensione di tipo Valuta.  
   
  **Attributo della dimensione che fa riferimento alla valuta**  
  Consente di selezionare l'attributo all'interno di una dimensione i cui membri fanno riferimento agli identificatori di valuta per la valuta locale.  
   
 > [!NOTE]  
->  Questa opzione non è disponibile se non è stata selezionata l'opzione **Attributi nella tabella delle dimensioni** .  
+>  Questa opzione non è disponibile se l'opzione **attributi nella tabella delle dimensioni** non è selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

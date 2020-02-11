@@ -1,5 +1,5 @@
 ---
-title: Destinazione File di eventi | Microsoft Docs
+title: Destinazione file di eventi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53cf3aa4b23484bb22f4237fbf61874990381067
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064859"
 ---
 # <a name="event-file-target"></a>Event File Target
@@ -33,7 +33,7 @@ ms.locfileid: "66064859"
 |max_rollover_files|Qualsiasi valore intero a 32 bit. Questo valore è facoltativo.|Numero massimo di file da mantenere nel file system. Il valore predefinito è 5.|  
 |increment|Qualsiasi valore intero a 32 bit. Questo valore è facoltativo.|Crescita incrementale del file in megabyte (MB). Se non viene specificato, il valore predefinito per questa opzione è il doppio delle dimensioni del buffer della sessione.|  
   
- La prima volta che viene creata una destinazione del file di evento, il nome del file specificato viene aggiunto con _0\_ e un valore long integer. Il valore intero viene calcolato come il numero di millisecondi compresi tra 1 gennaio 1601 e la data e ora il file viene creato. Questo formato viene usato anche da file di rollover successivi. L'analisi del valore long integer consente di determinare il file più recente. Nell'esempio seguente viene illustrato come denominare i file in uno scenario in cui l'opzione relativa al nome di file viene specificata come C:\OutputFiles\MyOutput.xel:  
+ La prima volta che viene creata una destinazione del file di evento, il nome del file specificato viene aggiunto con _0\_ e un valore long integer. Il valore integer viene calcolato come numero di millisecondi compresi tra l'1 gennaio 1601 e la data e l'ora di creazione del file. Questo formato viene usato anche da file di rollover successivi. L'analisi del valore long integer consente di determinare il file più recente. Nell'esempio seguente viene illustrato come denominare i file in uno scenario in cui l'opzione relativa al nome di file viene specificata come C:\OutputFiles\MyOutput.xel:  
   
 -   primo file creato - C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   
@@ -59,7 +59,7 @@ FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)
   
 ## <a name="see-also"></a>Vedere anche  
  [Destinazioni degli eventi estesi di SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
+ [sys. fn_xe_file_target_read_file &#40;&#41;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   

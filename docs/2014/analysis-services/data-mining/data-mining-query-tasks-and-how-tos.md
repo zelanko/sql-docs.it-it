@@ -1,5 +1,5 @@
 ---
-title: Attività e procedure relative alle Query di Data Mining | Microsoft Docs
+title: Attività e procedure relative alle query di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084953"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Attività e procedure relative alle query di data mining
@@ -25,11 +25,11 @@ ms.locfileid: "66084953"
 ## <a name="creating-queries-with-prediction-query-builder"></a>Creazione di query con il generatore delle query di stima  
  Il generatore delle query di stima è disponibile sia in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] come strumento grafico per la creazione di query rispetto ai modelli di data mining. Negli argomenti seguenti viene illustrato come selezionare un modello, specificare un'origine dati, personalizzare le stime e salvare l'output.  
   
--   [Creare una query di stima usando Generatore di query di stima](create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [Creare una query di stima utilizzando Generatore query di stima](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [Creare una query singleton in Progettazione modelli di data mining](create-a-singleton-query-in-the-data-mining-designer.md)  
   
--   [Creare una query di stima usando Generatore di query di stima](create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [Creare una query di stima utilizzando Generatore query di stima](create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [Visualizzare e salvare i risultati di una query di stima](view-and-save-the-results-of-a-prediction-query.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66084953"
 ## <a name="using-other-data-mining-query-tools"></a>Utilizzo di altri strumenti di query di data mining  
  Oltre a usare il generatore delle query di stima, è possibile digitare una query direttamente in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tramite DMX o XMLA. È inoltre possibile creare le query di stima a livello di codice e inviarle a un server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Negli argomenti seguenti vengono fornite informazioni sulla creazione e utilizzo delle query di stima all'esterno del generatore delle query di stima.  
   
- [Creare una Query di stima Singleton da un modello](create-a-singleton-prediction-query-from-a-template.md)  
+ [Creare una query di stima singleton da un modello](create-a-singleton-prediction-query-from-a-template.md)  
  Viene illustrato come usare gli strumenti disponibili in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per creare ed eseguire una query di stima.  
   
  [Creare una query di stima singleton da un modello](create-a-singleton-prediction-query-from-a-template.md)  
@@ -59,6 +59,6 @@ ms.locfileid: "66084953"
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento al linguaggio di query ed espressioni &#40;Analysis Services&#41;](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
- [Stored procedure di data mining &#40;Analysis Services - Data mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Stored procedure di data mining &#40;Analysis Services-&#41;di data mining](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

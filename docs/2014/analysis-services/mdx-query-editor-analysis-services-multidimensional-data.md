@@ -1,5 +1,5 @@
 ---
-title: Editor di Query MDX (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Editor di query MDX (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 579af162998ffaa7c9483a6e6d29a87f98e96fac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077874"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>Editor di query MDX (Analysis Services - Dati multidimensionali)
@@ -40,10 +40,10 @@ ms.locfileid: "66077874"
 ## <a name="sql-server-analysis-services-editors-toolbar"></a>Barra degli strumenti degli Editor di SQL Server Analysis Services  
  Quando l'Editor di query MDX è aperto, la barra degli strumenti Editor di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] visualizzata contiene i pulsanti elencati nella tabella seguente.  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
-|**Connect**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Disconnetti**|Consente di disconnettere l'Editor di query MDX da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Connettere**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Disconnettere**|Consente di disconnettere l'Editor di query MDX da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Cambia connessione**|Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a una diversa istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Nuova query con connessione corrente**|Consente di aprire una nuova finestra dell'Editor di query MDX utilizzando le informazioni di connessione contenute nella finestra dell'Editor di query MDX corrente.|  
 |**Database disponibili**|Consente di cambiare la connessione a un diverso database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nella stessa istanza.|  
@@ -54,14 +54,14 @@ ms.locfileid: "66077874"
 ## <a name="mdx-query-editor-window"></a>Finestra dell'Editor di query MDX  
  Nell'Editor di query MDX sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
-|**Finestra dell'editor di query**|Consente di digitare le istruzioni e gli script MDX da eseguire tramite l'Editor di query MDX.<br /><br /> Nel menu di scelta rapida dell'editor di query sono disponibili le opzioni seguenti:<br /><br /> **Taglia**: Consente di copiare la selezione corrente negli Appunti e di rimuovere la selezione dalla finestra dell'editor di query.<br /><br /> **Copia**: Consente di copiare la selezione corrente negli Appunti.<br /><br /> **Incolla**: Consente di incollare il contenuto degli Appunti nella selezione corrente.<br /><br /> **Connetti**: Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Disconnetti**: Consente di disconnettere l'editor di query corrente da un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br /><br /> **Disconnetti tutte le query**: Consente di disconnettere tutti gli editor di query attualmente aperti.<br /><br /> **Cambia connessione**: Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a una diversa istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> **Apri server in Esplora oggetti**: Consente di aprire l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui è connesso l'editor di query corrente in **Esplora oggetti**.<br /><br /> **Esegui**: Consente di eseguire il codice selezionato oppure, nel caso in cui non sia stato selezionato alcun codice, di eseguire tutto il codice contenuto nell'editor di query corrente.<br /><br /> **Finestra Proprietà**: Consente di visualizzare la finestra **Proprietà** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per la finestra della query corrente.<br /><br /> **Opzioni query**: Consente di visualizzare la finestra di dialogo **Opzioni query** .|  
-|**Finestra metadati**|Consente di visualizzare i metadati per il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] attualmente connesso.|  
-|**Cube**|Consente di selezionare un cubo nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] attualmente connesso per visualizzare i metadati associati al cubo nella scheda **Metadati** .|  
+|**Finestra dell'editor di query**|Consente di digitare le istruzioni e gli script MDX da eseguire tramite l'Editor di query MDX.<br /><br /> Nel menu di scelta rapida dell'editor di query sono disponibili le opzioni seguenti:<br /><br /> **Taglia**: consente di copiare la selezione corrente negli Appunti e di rimuovere la selezione dalla finestra dell'editor di query.<br /><br /> **Copia**: copia la selezione corrente negli Appunti.<br /><br /> **Incolla**: incolla il contenuto degli Appunti nella selezione corrente.<br /><br /> **Connetti**: apre la finestra di dialogo **Connetti al server** per stabilire una connessione a un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di.<br /><br /> **Disconnetti**: disconnette l'editor di query corrente da un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di.<br /><br /> **Disconnetti tutte le query**: disconnette tutti gli editor di query attualmente aperti.<br /><br /> **Cambia connessione**: apre la finestra di dialogo **Connetti al server** per stabilire una connessione a un'istanza [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] diversa.<br /><br /> **Apri server in Esplora oggetti**: apre l' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] istanza di a cui è connesso l'editor di query corrente nel **Esplora oggetti**.<br /><br /> **Esegui**: esegue il codice selezionato oppure, se non è selezionato alcun codice, esegue l'intero codice nell'editor di query corrente.<br /><br /> **Finestra Proprietà**: consente di **** visualizzare la finestra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] proprietà in per la finestra di query corrente.<br /><br /> **Opzioni query**: consente di visualizzare la finestra di dialogo **Opzioni query** .|  
+|**Finestra Metadati**|Consente di visualizzare i metadati per il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] attualmente connesso.|  
+|**Cubo**|Consente di selezionare un cubo nel database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] attualmente connesso per visualizzare i metadati associati al cubo nella scheda **Metadati** .|  
 |**Metadati**|Consente di visualizzare i metadati per il cubo selezionato in **Cubo**, inclusi i gruppi di misure e le misure, gli indicatori di prestazioni chiave, le dimensioni, le gerarchie, i livelli, i membri e le proprietà membro. Per recuperare la chiave completa di un oggetto eseguire una delle operazioni seguenti:<br /><br /> Trascinare l'oggetto dalla scheda **Metadati** nel riquadro Query.<br /><br /> Fare clic con il pulsante destro del mouse sull'oggetto e scegliere **Copia**, quindi fare clic con il pulsante destro del mouse nel riquadro Query e scegliere **Incolla**.|  
 |**Funzioni**|Consente di visualizzare i metadati per le funzioni MDX disponibili per il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] come metadati recuperati dal set di righe dello schema MDSCHEMA_FUNCTIONS. Per recuperare la sintassi di una funzione eseguire una delle operazioni seguenti:<br /><br /> Trascinare l'oggetto dalla scheda **Funzioni** nel riquadro Query.<br /><br /> Fare clic con il pulsante destro del mouse sulla funzione e scegliere **Copia**, quindi fare clic con il pulsante destro del mouse nel riquadro Query e scegliere **Incolla**.|  
-|**Finestra dei risultati**|Consente di visualizzare i risultati di un'istruzione o di uno script MDX in una griglia.|  
-|**Finestra dei messaggi**|Consente di visualizzare informazioni sulla modalità di esecuzione di un'istruzione o di uno script MDX. Ad esempio, in questa finestra vengono visualizzati gli eventuali errori rilevati durante l'esecuzione o il numero di celle recuperate dopo l'esecuzione.|  
+|**Finestra Risultati**|Consente di visualizzare i risultati di un'istruzione o di uno script MDX in una griglia.|  
+|**Finestra Messaggi**|Consente di visualizzare informazioni sulla modalità di esecuzione di un'istruzione o di uno script MDX. Ad esempio, in questa finestra vengono visualizzati gli eventuali errori rilevati durante l'esecuzione o il numero di celle recuperate dopo l'esecuzione.|  
   
   

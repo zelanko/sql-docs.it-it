@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione ADO NET (pagina Mapping) | Microsoft Docs
+title: Editor destinazione ADO NET (pagina mapping) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061749"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Editor destinazione ADO NET (pagina Mapping)
@@ -47,6 +47,6 @@ ms.locfileid: "66061749"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Editor destinazione ADO NET &#40;pagina Output errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+ [Editor destinazione ADO NET &#40;pagina output degli errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

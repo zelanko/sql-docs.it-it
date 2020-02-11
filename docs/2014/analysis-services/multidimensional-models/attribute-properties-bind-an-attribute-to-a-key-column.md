@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6fb2888ba5cba2d3ab2701d934f83dc55cf362ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077436"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>Associare un attributo a una colonna chiave
@@ -35,6 +35,6 @@ ms.locfileid: "66077436"
 4.  Digitare il nuovo nome.  
   
     > [!NOTE]  
-    >  È anche possibile impostare il `Name` proprietà di un attributo selezionato nel **delle proprietà** finestra di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+    >  È inoltre possibile impostare la `Name` proprietà di un attributo selezionato nella finestra **Proprietà** di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
   

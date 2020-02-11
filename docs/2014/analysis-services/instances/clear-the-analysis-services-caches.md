@@ -1,5 +1,5 @@
 ---
-title: Cancella la cache di Analysis Services | Microsoft Docs
+title: Cancellare le cache Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080296"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Cancellare le cache di Analysis Services
@@ -46,13 +46,13 @@ ms.locfileid: "66080296"
   
  La cancellazione della cache richiede che si fornisca un identificatore di oggetto all'istruzione `ClearCache` in una query XMLA. Nel primo passaggio di questo argomento viene illustrato come ottenere un identificatore di oggetto.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Passaggio 1: Ottenere l'identificatore di oggetto  
+#### <a name="step-1-get-the-object-identifier"></a>Passaggio 1: ottenere l'identificatore di oggetto  
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un oggetto, selezionare **Proprietà**e copiare il valore dell'ID proprietà nel riquadro **Proprietà** . Questo approccio funziona per database, cubi, dimensioni o tabelle.  
   
 2.  Per ottenere l'ID del gruppo di misure, fare clic con il pulsante destro del mouse sul gruppo di misure e selezionare **Crea script per gruppo di misure**. Scegliere **Crea** o **Modifica**e inviare la query a una finestra. L'ID del gruppo di misure sarà visibile nella definizione dell'oggetto. Copiare l'ID della definizione dell'oggetto.  
   
-#### <a name="step-2-run-the-query"></a>Passaggio 2: Eseguire la query  
+#### <a name="step-2-run-the-query"></a>Passaggio 2: eseguire la query  
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un database, scegliere **Nuova query**, quindi **XMLA**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66080296"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Creazione di script per attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Monitorare un'istanza di Analysis Services](monitor-an-analysis-services-instance.md)  
   
   

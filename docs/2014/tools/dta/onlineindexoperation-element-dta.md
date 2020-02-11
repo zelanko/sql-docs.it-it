@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb877ae48153d4fabae13170eb5f072218012d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657216"
 ---
 # <a name="onlineindexoperation-element-dta"></a>Elemento OnlineIndexOperation (DTA)
@@ -38,17 +38,18 @@ ms.locfileid: "62657216"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
+|**Tipo di dati e lunghezza**|
+  `string`, lunghezza illimitata.|  
 |**Valori consentiti**|**OFF**<br /> Le strutture di progettazione fisica indicate non possono essere create online.<br /><br /> **ON**<br /> Tutte le strutture di progettazione fisica indicate possono essere create online.<br /><br /> **MIXED**<br /> Ottimizzazione guidata motore di database indica le strutture di progettazione fisica che possono essere create online quando possibile.<br /><br /> Con questo elemento utilizzare solo uno di questi valori. Se si creano indici online, la parola chiave **ONLINE = ON** viene aggiunta alla relativa definizione di oggetto.|  
-|**Valore predefinito**|Nessuna.|  
-|**Occorrenza**|Facoltativo. Se utilizzato, può essere utilizzato una sola volta per l'elemento `TuningOptions`.|  
+|**Valore predefinito**|No.|  
+|**Occorrenza**|Facoltativa. Se utilizzato, può essere utilizzato una sola volta per l'elemento `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML semplice &#40;DTA&#41;](simple-xml-input-file-sample-dta.md).  

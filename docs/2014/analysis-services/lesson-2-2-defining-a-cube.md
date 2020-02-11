@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079062"
 ---
 # <a name="defining-a-cube"></a>Definizione di un cubo
@@ -22,7 +22,7 @@ ms.locfileid: "66079062"
   
 ### <a name="to-define-a-cube-and-its-properties"></a>Per definire un cubo e le relative proprietà  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Cubi**e quindi scegliere **Nuovo cubo**. Verrà visualizzata la Creazione guidata cubo.  
+1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **cubi**, quindi scegliere **nuovo cubo**. Verrà visualizzata la Creazione guidata cubo.  
   
 2.  Nella pagina **Creazione guidata cubo** fare clic su **Avanti**.  
   
@@ -34,31 +34,31 @@ ms.locfileid: "66079062"
   
      Nel corso della procedura guidata vengono esaminate le tabelle e viene suggerita **InternetSales** come tabella del gruppo di misure. Le tabelle del gruppo di misure, anche dette tabelle dei fatti, contengono le misure a cui si è interessati, ad esempio il numero di unità vendute.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 7.  Nella pagina **Selezione misure** esaminare le misure selezionate nel gruppo di misure **Internet Sales** , quindi deselezionare le caselle di controllo per le misure seguenti:  
   
-    -   **Promotion Key**  
+    -   **Chiave Promozione**  
   
-    -   **Currency Key**  
+    -   **Chiave di valuta**  
   
-    -   **Sales Territory Key**  
+    -   **Chiave territorio vendita**  
   
-    -   **Revision Number**  
+    -   **Numero revisione**  
   
      Per impostazione predefinita, la procedura guidata seleziona come misure tutte le colonne numeriche della tabella dei fatti che non sono collegate a dimensioni. Tuttavia, queste quattro colonne non sono effettive misure. Le prime tre sono valori chiave che collegano la tabella dei fatti alle tabelle delle dimensioni che non sono utilizzate nella versione iniziale di questo cubo.  
   
-8.  Scegliere **Avanti**.  
+8.  Fare clic su **Avanti**.  
   
 9. Nella pagina **Selezione dimensioni esistenti** assicurarsi che la dimensione **Date** creata in precedenza sia selezionata, quindi fare clic su **Avanti**.  
   
 10. Nella pagina **Seleziona nuove dimensioni** selezionare le nuove dimensioni da creare. A tale scopo, verificare che le caselle di controllo **Customer**, **Geography**e **Product** siano selezionate, quindi deselezionare la casella di controllo **InternetSales** .  
   
-11. Scegliere **Avanti**.  
+11. Fare clic su **Avanti**.  
   
-12. Nel **Completamento procedura guidata** pagina, modificare il nome del cubo `Analysis Services Tutorial`. Nel riquadro Anteprima è possibile visualizzare il gruppo di misure **InternetSales** e le relative misure. È inoltre possibile visualizzare le dimensioni **Date**, **Customer** e **Product** .  
+12. Nella pagina **Completamento procedura guidata** modificare il nome del cubo in `Analysis Services Tutorial`. Nel riquadro Anteprima è possibile visualizzare il gruppo di misure **InternetSales** e le relative misure. È inoltre possibile visualizzare le dimensioni **Date**, **Customer** e **Product** .  
   
-13. Fare clic su **Fine** per completare la procedura guidata.  
+13. Fare clic su **Finish** per completare la procedura guidata.  
   
      In Esplora soluzioni, nel progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial viene visualizzato nella cartella **Cubi** e le dimensioni del database Customer e Product vengono visualizzate nella cartella **Dimensions** . Il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial viene inoltre visualizzato al centro dell'ambiente di sviluppo nella scheda Struttura cubo.  
   

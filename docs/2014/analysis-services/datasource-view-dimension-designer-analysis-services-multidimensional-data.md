@@ -1,5 +1,5 @@
 ---
-title: Vista origine dati (scheda struttura dimensione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Vista origine dati (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082352"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vista origine dati (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
@@ -32,7 +32,7 @@ ms.locfileid: "66082352"
 ## <a name="diagram-context-menu"></a>Menu di scelta rapida del diagramma  
  Le opzioni elencate nella tabella seguente sono disponibili nel menu di scelta rapida visualizzato facendo clic con il pulsante destro del mouse sullo sfondo del diagramma del riquadro **Vista origine dati** .  
   
- **Mostra tabelle**  
+ **Show Tables**  
  Consente di visualizzare la finestra di dialogo **Mostra tabelle**. Per altre informazioni sulla finestra di dialogo **Mostra tabelle**, vedere [Finestra di dialogo Mostra tabelle &#40;Analysis Services - Dati multidimensionali&#41;](show-table-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Mostra tutte le tabelle**  
@@ -53,29 +53,29 @@ ms.locfileid: "66082352"
  **Disponi tabelle**  
  Consente di disporre gli oggetti nel riquadro in base al layout specificato selezionando **Passa a layout diagonale** o **Passa a layout rettangolare**.  
   
- **Passa a Layout diagonale**  
+ **Passa a layout diagonale**  
  Selezionare questa opzione per disporre gli oggetti in un modello diagonale.  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se è selezionata l'opzione **Passa a layout rettangolare** .  
+>  Questa opzione viene visualizzata solo se è selezionata l'opzione **passa a layout rettangolare** .  
   
- **Passa a Layout rettangolare**  
+ **Passa a layout rettangolare**  
  Selezionare questa opzione per disporre gli oggetti in un modello rettangolare.  
   
 > [!NOTE]  
->  Questa opzione viene visualizzata solo se è selezionata l'opzione **Passa a layout diagonale** .  
+>  Questa opzione viene visualizzata solo se è selezionata l'opzione **passa a layout diagonale** .  
   
  **Modifica vista origine dati**  
  Consente di visualizzare **Progettazione vista origine dati** per la vista origine dati associata alla dimensione. Per altre informazioni su **Progettazione vista origine dati**, vedere [Progettazione vista origine dati &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
- **Mostra vista origine dati In**  
+ **Mostra vista origine dati in**  
  Selezionare una delle opzioni seguenti per visualizzare/nascondere il riquadro **Vista origine dati** nelle modalità seguenti:  
   
 -   Diagramma  
   
      Consente di visualizzare un diagramma delle tabelle e delle colonne associate alla dimensione corrente.  
   
--   Struttura ad albero  
+-   Albero  
   
      Consente di ottenere una visualizzazione albero delle tabelle e delle colonne associate alla dimensione corrente.  
   
@@ -131,9 +131,9 @@ ms.locfileid: "66082352"
  Consente di visualizzare la finestra **Proprietà** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] relativa alla relazione selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Struttura dimensione &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Sulla barra degli strumenti &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
- [Gli attributi &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Gerarchie di &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Struttura dimensione &#40;Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra degli strumenti &#40;scheda Struttura dimensione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
+ [Attributi &#40;scheda Struttura dimensione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Gerarchie &#40;scheda Struttura dimensione, Progettazione dimensioni&#41; &#40;Analysis Services Dati multidimensionali&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

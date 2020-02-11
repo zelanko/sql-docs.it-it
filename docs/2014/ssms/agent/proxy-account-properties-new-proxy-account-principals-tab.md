@@ -1,5 +1,5 @@
 ---
-title: Proprietà Account proxy e nuovo Account Proxy (scheda entità) | Microsoft Docs
+title: Proprietà dell'account proxy e nuovo account proxy (scheda entità) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650222"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Proprietà account proxy e Nuovo account proxy (scheda Entità)
-  Usare questa pagina per visualizzare o modificare le entità che possono usare un account proxy di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nei passaggi di processo.  
+  Usare questa pagina per visualizzare o modificare le entità che possono usare un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account proxy di Agent nei passaggi di processo.  
   
 ## <a name="options"></a>Opzioni  
  **Entità account proxy**  
  Elenca le entità che possono utilizzare l'account proxy.  
   
- **Aggiungi**  
+ **Aggiungere**  
  Consente di aggiungere un'entità all'elenco.  
   
  **Rimuovi**  

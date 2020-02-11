@@ -1,5 +1,5 @@
 ---
-title: Visualizzazione di modelli (Progettazione modelli di Data Mining) di data mining | Microsoft Docs
+title: Visualizzazione modelli di data mining (Progettazione modelli di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b698a6c216d4179de414f236fb7d41d6366e470d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077651"
 ---
 # <a name="mining-models-view-data-mining-model-designer"></a>Visualizzazione Modelli di dati mining (Progettazione modelli di data mining)
@@ -24,12 +24,12 @@ ms.locfileid: "66077651"
   
  Nella visualizzazione **Modelli di data mining** sono disponibili gli strumenti e le finestre di dialogo seguenti:  
   
--   [Finestra di dialogo parametri algoritmo &#40;visualizzazione di modelli di Data Mining&#41;](algorithm-parameters-dialog-box-mining-models-view.md)  
+-   [Finestra di dialogo parametri algoritmo &#40;visualizzazione modelli di data mining&#41;](algorithm-parameters-dialog-box-mining-models-view.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzazione struttura di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [Visualizzazione struttura di data mining &#40;Progettazione modelli di data mining&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Generatore di Query di stima &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
+ [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
+ [Generatore di query di stima &#40;&#41;di data mining](prediction-query-builder-data-mining.md)  
   
   

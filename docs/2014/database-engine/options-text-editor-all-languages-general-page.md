@@ -1,5 +1,5 @@
 ---
-title: Opzioni (pagina Editor di testo - tutti i linguaggi - generale) | Microsoft Docs
+title: Opzioni (editor di testo-tutti i linguaggi-pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089246"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Opzioni (Editor di testo - Tutte le lingue - pagina Generale)
@@ -29,7 +29,7 @@ ms.locfileid: "66089246"
  Alcuni editor potrebbero non supportare tutte le opzioni elencate in questa pagina. Se nella pagina **Generale** della finestra di dialogo **Opzioni** un'opzione è selezionata solo per alcuni linguaggi di programmazione e non per altri, accanto all'opzione in questione verrà visualizzato un segno di spunta ombreggiato.  
   
 ## <a name="statement-completion"></a>Completamento istruzioni  
- **Elenco membri automatico**  
+ **Elenco automatico membri**  
  Consente di visualizzare gli elenchi popup dei membri, delle proprietà e dei valori disponibili mentre si immettono i dati nell'editor. Scegliere un elemento dall'elenco popup per inserirlo nel codice. Se si seleziona questa casella di controllo, viene abilitata automaticamente l'opzione **Nascondi membri avanzati**.  
   
  **Nascondi membri avanzati**  
@@ -39,19 +39,19 @@ ms.locfileid: "66089246"
  Consente di visualizzare la sintassi completa della procedura o della dichiarazione corrente a sinistra del punto di inserimento nell'editor, insieme a tutti i parametri disponibili. Il parametro successivo che può essere assegnato è evidenziato in grassetto.  
   
 ## <a name="settings"></a>Impostazioni  
- **Attiva spazio virtuale**  
+ **Abilita spazio virtuale**  
  Consente di inserire i commenti sempre nel medesimo punto accanto al codice. Quando questa casella di controllo è selezionata, è possibile posizionare il cursore oltre l'ultimo carattere nella riga. Durante l'immissione del testo, le tabulazioni e gli spazi vengono aggiunti automaticamente per completare la riga fino al punto di inserimento.  
   
- **Ritorno a capo automatico**  
+ **A capo automatico**  
  Consente di visualizzare sulla riga successiva le parti di una riga che si estendono orizzontalmente oltre l'area visibile dell'editor. Se si seleziona questa casella di controllo, viene abilitata automaticamente l'opzione **Mostra icona per ritorno a capo automatico** .  
   
- **Mostra icone per ritorno a capo automatico**  
+ **Mostra icona per ritorno a capo automatico**  
  Consente di visualizzare un simbolo di ritorno a capo nel punto in cui una riga lunga va a capo sulla riga successiva.  
   
 > [!NOTE]  
 >  I simboli di ritorno a capo non vengono aggiunti al codice, né stampati. Si tratta esclusivamente di elementi di riferimento. Questa caratteristica non è disponibile in tutti i tipi di editor.  
   
- **Applica comandi Taglia o copia a righe vuote quando è presente nessuna selezione**  
+ **Applica comandi Taglia o Copia a righe vuote in assenza di selezione**  
  Consente di impostare il comportamento dell'editor nei casi in cui si posiziona il punto di inserimento in una riga vuota senza selezionare alcun elemento e quindi si fa clic su **Copia** o **Taglia**.  
   
  Se la casella di controllo è selezionata, la riga vuota viene copiata o incollata. Se quindi si fa clic su **Incolla**, viene inserita una nuova riga vuota.  

@@ -1,5 +1,5 @@
 ---
-title: Creazione di misure in MDX | Microsoft Docs
+title: Compilazione di misure in MDX | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7587e3304d1464beb7ef94cd7d3093982f394bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074593"
 ---
 # <a name="building-measures-in-mdx"></a>Compilazione di misure in MDX
@@ -44,7 +44,7 @@ from [Model]
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzione CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Guida di riferimento alle funzioni MDX &#40;&#41;MDX](/sql/mdx/mdx-function-reference-mdx)   
  [Istruzione SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

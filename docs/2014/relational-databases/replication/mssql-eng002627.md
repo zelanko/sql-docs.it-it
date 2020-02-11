@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a102991d08085f093e08a068a3d3127c9d7f7fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666697"
 ---
-# <a name="mssqleng002627"></a>MSSQL_ENG002627
+# <a name="mssql_eng002627"></a>MSSQL_ENG002627
     
 ## <a name="message-details"></a>Dettagli messaggio  
   
@@ -60,6 +60,6 @@ ms.locfileid: "62666697"
  [Guida di riferimento a errori ed eventi &#40;replica&#41;](errors-and-events-reference-replication.md)   
  [Replica di tipo merge](merge/merge-replication.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
- [Sottoscrizioni aggiornabili per la replica transazionale](transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

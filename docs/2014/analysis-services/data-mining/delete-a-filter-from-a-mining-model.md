@@ -1,5 +1,5 @@
 ---
-title: Eliminare un filtro da un modello di Data Mining | Microsoft Docs
+title: Eliminare un filtro da un modello di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084724"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Eliminare un filtro da un modello di data mining
@@ -32,7 +32,7 @@ ms.locfileid: "66084724"
   
 3.  Selezionare il modello, quindi fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida.  
   
-     oppure  
+     -oppure-  
   
      Selezionare il modello. Scegliere **Imposta filtro modello** dal menu **Modello di data mining**.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "66084724"
   
 1.  In Esplora soluzioni fare clic sul modello di data mining che contiene il filtro.  
   
-2.  Nel **delle proprietà** finestra, fare clic sul testo del filtro nella `Filter` proprietà e selezionare **Seleziona tutto**.  
+2.  Nella finestra **Proprietà** fare clic con il pulsante destro del mouse sul testo `Filter` del filtro nella proprietà, quindi scegliere **Seleziona tutto**.  
   
 3.  Premere il tasto BACKSPACE o CANC.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire il drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md)   
+ [Drill-through sui dati del case da un modello di data mining](drill-through-to-case-data-from-a-mining-model.md)   
  [Attività e procedure relative al modello di data mining](mining-model-tasks-and-how-tos.md)   
- [Filtri per i modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)  
+ [Filtri per i modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento database per Server (DTA) | Microsoft Docs
+title: Elemento database per server (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661833"
 ---
 # <a name="database-element-for-server-dta"></a>Elemento Database per Server (DTA)
@@ -37,8 +37,8 @@ ms.locfileid: "62661833"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuna.|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|No.|  
+|Valore predefinito|No.|  
 |Occorrenza|Obbligatorio una o più volte per elemento `Server`.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -48,11 +48,11 @@ ms.locfileid: "62661833"
 |Elemento padre|[Elemento Server &#40;DTA&#41;](server-element-dta.md)|  
 |Elementi figlio|[Elemento Name per Database &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Elemento Schema per Database &#40;DTA&#41;](schema-element-for-database-dta.md)|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Questo elemento appartiene al nome **DatabaseDetailsTypecomplexType** nell'XML Schema di Ottimizzazione guidata motore di database. Questo elemento `Database` non deve essere confuso con quello il cui padre radice è l'elemento `Configuration`. Per altre informazioni, vedere [Elemento Database per Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Esempio  
- Per un esempio di utilizzo di `Database` elemento, vedere [elemento Server &#40;DTA&#41;](server-element-dta.md).  
+ Per un esempio di utilizzo dell' `Database` elemento, vedere [elemento Server &#40;DTA&#41;](server-element-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

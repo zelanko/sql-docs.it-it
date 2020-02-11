@@ -1,5 +1,5 @@
 ---
-title: Cubo di struttura (Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Struttura Cube (Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086583"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Struttura cubo (Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -28,17 +28,17 @@ ms.locfileid: "66086583"
   
 |Riquadro|Definizione|  
 |----------|----------------|  
-|**Barra degli strumenti**|Utilizzare la barra degli strumenti per eseguire azioni comuni in questa scheda. Per altre informazioni su questo riquadro, vedere [Barra degli strumenti &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barra degli strumenti**|Utilizzare la barra degli strumenti per eseguire azioni comuni in questa scheda. Per ulteriori informazioni su questo riquadro, vedere [barra degli strumenti &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services-&#41;dati multidimensionali ](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Misure**|Utilizzare il riquadro **Misure** per creare e modificare misure e gruppi di misure per il cubo selezionato. Per altre informazioni su questo riquadro, vedere [Misure &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Dimensions**|Utilizzare il riquadro **Dimensioni** per includere e modificare dimensioni cubo per il cubo selezionato. Per altre informazioni su questo riquadro, vedere [Dimensioni &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Dimensioni**|Utilizzare il riquadro **Dimensioni** per includere e modificare dimensioni cubo per il cubo selezionato. Per altre informazioni su questo riquadro, vedere [Dimensioni &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Vista origine dati**|Utilizzare il riquadro **Vista origine dati** per visualizzare e modificare la vista origine dati associata al cubo selezionato. Per altre informazioni su questo riquadro, vedere [Vista origine dati &#40;scheda Struttura cubo, Progettazione cubi&#41; &#40;Analysis Services - Dati multidimensionali&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Architettura logica &#40;Analysis Services - Dati multidimensionali&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Architettura logica &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Configurare le proprietà delle misure](multidimensional-models/configure-measure-properties.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Configura proprietà misura](multidimensional-models/configure-measure-properties.md)   
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Scheda set di elementi (Visualizzatore modello di Data Mining) | Microsoft Docs
+title: Scheda set di elementi (Visualizzatore modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079554"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Scheda Set di elementi (Visualizzatore modello di data mining)
   È possibile usare il riquadro **Set di elementi** per visualizzare i set di elementi frequenti inclusi in un modello di data mining delle regole di associazione. Poiché in un modello di associazione possono essere inclusi molti set di elementi, i controlli vengono forniti nel visualizzatore come supporto per filtrare i set di elementi mostrati nel visualizzatore.  
   
- **Per altre informazioni:** [Algoritmo Microsoft Association Rules](data-mining/microsoft-association-algorithm.md), [visualizzare un modello usando il visualizzatore Microsoft Association Rules](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Per altre informazioni:** [algoritmo Microsoft Association](data-mining/microsoft-association-algorithm.md), [visualizzare un modello usando il Visualizzatore Microsoft Association Rules](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opzioni  
  **Aggiorna contenuto visualizzatore**  
@@ -65,7 +65,7 @@ ms.locfileid: "66079554"
  **Mostra nomi lunghi**  
  Selezionare questa opzione per visualizzare il nome completo del set di elementi come viene visualizzato nel contenuto del modello di data mining.  
   
- **Numero massimo di righe**  
+ **Righe massime**  
  Consente di impostare il limite del numero di set di elementi che è possibile visualizzare. Per impostazione predefinita, i set di elementi vengono ordinati per supporto in modo decrescente, pertanto abbassando questo valore, l'elenco viene limitato ai set di elementi più comuni.  
   
  **Supporto**  
@@ -74,11 +74,11 @@ ms.locfileid: "66079554"
  **Dimensione**  
  Consente di visualizzare il numero di elementi esistenti in ogni set.  
   
- **Itemset**  
+ **Set**  
  Consente di visualizzare la descrizione di ogni set di elementi. Per impostazione predefinita, i set di elementi vengono presentati come un elenco delimitato da virgole di attributi e dei relativi valori. È possibile modificare la modalità di visualizzazione tramite l'opzione **Mostra** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di data mining &#40;Analysis Services-&#41;di data mining](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   

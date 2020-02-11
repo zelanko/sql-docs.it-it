@@ -1,5 +1,5 @@
 ---
-title: Query sui dati in set di righe dello Schema di Data Mining (Analysis Services - Data Mining) | Microsoft Docs
+title: Esecuzione di query sui set di righe dello schema di data mining (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084906"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Esecuzione di query sui set di righe dello schema di data mining (Analysis Services - Data mining)
@@ -41,7 +41,7 @@ ms.locfileid: "66084906"
 |DMSCHEMA_MINING_STRUCTURE_COLUMNS|Elenca tutte le colonne utilizzate nelle strutture di data mining nel contesto corrente.<br /><br /> Le informazioni specificano il tipo di contenuto e il tipo di dati, l'eventuale supporto dei valori Null e la presenza o meno di dati di tabella nidificati nella colonna.|  
 |DMSCHEMA_MINING_SERVICES|Elenca tutti i servizi di data mining, o algoritmi, disponibili sul server specificato.<br /><br /> Le informazioni specificano i flag di modellazione supportati, i tipi di input e i tipi di origine dati supportati.|  
 |DMSCHEMA_MINING_SERVICE_PARAMETERS|Elenca tutti i parametri per i servizi di data mining disponibili nell'istanza corrente.<br /><br /> Le informazioni includono il tipo di dati per ogni parametro, i valori predefiniti e i limiti superiore e inferiore.|  
-|DMSCHEMA_MODEL_CONTENT|Restituisce il contenuto del modello se il modello è stato elaborato.<br /><br /> Per altre informazioni, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).|  
+|DMSCHEMA_MODEL_CONTENT|Restituisce il contenuto del modello se il modello è stato elaborato.<br /><br /> Per altre informazioni, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).|  
 |DBSCHEMA_CATALOGS|Elenca tutti i database (cataloghi) nell'istanza corrente di Analysis Services.|  
 |MDSCHEMA_INPUT_DATASOURCES|Elenca tutte le origini dati nell'istanza corrente di Analysis Services.|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66084906"
 ## <a name="examples"></a>Esempi  
  Nella sezione seguente sono riportati alcuni esempi di query sui set di righe dello schema di data mining.  
   
-### <a name="example-1-list-data-mining-services"></a>Esempio 1: Elenco servizi di Data Mining  
+### <a name="example-1-list-data-mining-services"></a>Esempio 1: Elenco di servizi di data mining  
  Nella query seguente viene restituito un elenco di servizi di data mining disponibili sul server corrente, che indica gli algoritmi abilitati. Le colonne specificate per ogni servizio di data mining includono i flag di modellazione e i tipi di contenuto che possono essere utilizzati con ogni algoritmo, il GUID di ogni servizio e gli eventuali limiti di stima che potrebbero essere stati specificati per ogni servizio.  
   
 ```  
@@ -59,7 +59,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Esempio 2: Elenco dei parametri del modello di Data Mining  
+### <a name="example-2-list-mining-model-parameters"></a>Esempio 2: Elenco di parametri del modello di data mining  
  Nell'esempio seguente vengono restituiti i parametri utilizzati per creare uno specifico modello di data mining:  
   
 ```  
@@ -68,7 +68,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Esempio 3: Elencare tutti i set di righe  
+### <a name="example-3-list-all-rowsets"></a>Esempio 3: Elenco di tutti i set di righe  
  Nell'esempio seguente viene restituito un elenco completo di set di righe disponibili nel server corrente:  
   
 ```  
@@ -77,6 +77,6 @@ FROM $system.DBSCHEMA_TABLES
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti di risoluzione dei problemi (Analysis Services - Data Mining)](https://msdn.microsoft.com/library/cc645881.aspx)  
+ [Concetti relativi alla risoluzione dei problemi (Analysis Services - Dati mining)](https://msdn.microsoft.com/library/cc645881.aspx)  
   
   

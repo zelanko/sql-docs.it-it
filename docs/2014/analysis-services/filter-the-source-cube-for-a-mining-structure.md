@@ -1,5 +1,5 @@
 ---
-title: Filtrare il cubo di origine per una struttura di Data Mining | Microsoft Docs
+title: Filtrare il cubo di origine per una struttura di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,38 +16,38 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081145"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrare il cubo di origine per una struttura di data mining
-  Quando si crea una struttura di data mining che si basa sui dati in un modello multidimensionale (cubo OLAP), è possibile *slice* del cubo che dipende dalla struttura di data mining. Il sezionamento consente di creare subset di dati, come un filtro da applicare ai dati utilizzati per il training del modello di data mining.  
+  Quando si crea una struttura di data mining basata sui dati in un modello multidimensionale (un cubo OLAP), è possibile *sezionare* il cubo su cui è basata la struttura di data mining. Il sezionamento consente di creare subset di dati, come un filtro da applicare ai dati utilizzati per il training del modello di data mining.  
   
 ### <a name="to-slice-a-cube"></a>Per sezionare un cubo  
   
-1.  Progettazione modelli di Data Mining in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], selezionare il **struttura di Data Mining** scheda o il **modelli di Data Mining** scheda.  
+1.  In Progettazione modelli di data [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]mining in selezionare la scheda **struttura** di data mining o **modelli di data mining** .  
   
-2.  Nel **modello di Data Mining** dal menu **Definisci sezione del cubo struttura di Data Mining**.  
+2.  Scegliere **Definisci sezione del cubo della struttura di data**mining dal menu **modello di data mining** .  
   
-     Il **seziona cubo** verrà visualizzata la finestra di dialogo.  
+     Verrà visualizzata la finestra di dialogo **Seziona cubo** .  
   
-3.  Nel **dimensione** della colonna della **seziona cubo** finestra di dialogo, selezionare la dimensione che si desidera filtrare.  
+3.  Nella colonna **dimensione** della finestra di dialogo **sezionamento cubo** Selezionare la dimensione che si desidera filtrare.  
   
-4.  Selezionare un livello di una gerarchia, tramite l'elenco nella **gerarchia** colonna.  
+4.  Consente di selezionare un livello di una gerarchia, utilizzando l'elenco nella colonna **gerarchia** .  
   
-5.  Selezionare un operatore dall'elenco nella **operatore** colonna, da utilizzare nella compilazione della condizione di filtro.  
+5.  Consente di selezionare un operatore nell'elenco della colonna **operatore** da utilizzare per la compilazione della condizione di filtro.  
   
-6.  Fare clic sulla casella di **filtro** colonna.  
+6.  Fare clic sulla casella nella colonna **filtro** .  
   
      Verrà visualizzata una finestra di dialogo contenente tutti i membri al livello specificato della gerarchia.  
   
 7.  Selezionare uno o più membri a cui si desidera applicare il filtro.  
   
-8.  Fare clic su **OK** nella finestra di dialogo di membro.  
+8.  Fare clic su **OK** nella finestra di dialogo membro.  
   
-9. Fare clic su **OK** nel **seziona cubo** nella finestra di dialogo.  
+9. Fare clic su **OK** nella finestra di dialogo **Seziona cubo** .  
   
      A questo punto, il cubo di origine è filtrato come definito dalla sezione del cubo.  
   

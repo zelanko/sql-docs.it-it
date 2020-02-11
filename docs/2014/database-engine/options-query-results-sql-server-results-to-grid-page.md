@@ -1,5 +1,5 @@
 ---
-title: Opzioni (risultati SQL Server-risultati della Query in pagina della griglia) | Microsoft Docs
+title: Opzioni (risultati delle query-SQL Server-risultati nella pagina della griglia) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089304"
 ---
-# <a name="options-query-results-sql-server-results-to-grid-page"></a>Opzioni (risultati SQL Server-risultati della Query in pagina della griglia)
-  Utilizzare questa pagina per specificare le opzioni di visualizzazione di un set di risultati di query in formato griglia. Le modifiche apportate a queste opzioni vengono applicate solo alle nuove query di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per modificare le opzioni relative alle query correnti, scegliere **Opzioni query** dal menu **Query** oppure fare clic con il pulsante destro del mouse nella finestra Query di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e quindi scegliere **Opzioni query**. Nel riquadro sinistro della finestra di dialogo **Opzioni query** fare clic su **Griglia** in **Risultati**.  
+# <a name="options-query-results-sql-server-results-to-grid-page"></a>Opzioni (risultati delle query-SQL Server-risultati nella pagina della griglia)
+  Utilizzare questa pagina per specificare le opzioni di visualizzazione di un set di risultati di query in formato griglia. Le modifiche apportate a queste opzioni vengono [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applicate solo alle nuove query. Per modificare le opzioni per le query correnti, scegliere **Opzioni query** dal menu **query** oppure fare clic con il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pulsante destro del mouse nella finestra query e scegliere **Opzioni query**. Nel riquadro sinistro della finestra di dialogo **Opzioni query** fare clic su **Griglia** in **Risultati**.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Includi la query nel set di risultati**  
  Restituisce il testo della query all'interno dell'output della query.  
   
- **Includi intestazioni di colonna nelle operazioni di copia o salvataggio dei risultati**  
+ **Includi intestazioni di colonna durante la copia o il salvataggio dei risultati**  
  Selezionare questa casella di controllo per includere le intestazioni di colonna quando i risultati vengono copiati negli Appunti o salvati in un file. Deselezionare la casella se si desidera salvare o copiare i dati dei risultati senza le intestazioni di colonna.  
   
  **Elimina risultati dopo l'esecuzione**  
@@ -35,10 +35,10 @@ ms.locfileid: "66089304"
  **Visualizza risultati in una scheda separata**  
  Selezionare questa casella di controllo per visualizzare il set di risultati in una nuova scheda invece che nella parte inferiore della finestra del documento di query.  
   
- **Passa alla scheda dei risultati al termine della query**  
+ **Passa alla scheda risultati dopo l'esecuzione della query**  
  Selezionare questa casella di controllo per impostare automaticamente lo stato attivo sul riquadro dei risultati al termine della query.  
   
- **Dimensioni massime caratteri recuperati**  
+ **Numero massimo di caratteri recuperati**  
  **Dati non XML**:  
   
  Consente di immettere un valore compreso tra 1 e 65535 per specificare il numero massimo di caratteri che sarà possibile visualizzare in ogni cella.  
@@ -48,9 +48,9 @@ ms.locfileid: "66089304"
   
  **Dati XML**:  
   
- Consente di selezionare i valori **1 MB**, **2 MB**o **5 MB**. Selezionare **Illimitate** per recuperare tutti i caratteri.  
+ Selezionare **1 MB**, **2 MB**o **5 MB**. Selezionare **illimitato** per recuperare tutti i caratteri.  
   
- **Ripristina predefiniti**  
+ **Ripristina impostazioni predefinite**  
  Reimposta le impostazioni predefinite originali per tutti i valori nella pagina.  
   
   

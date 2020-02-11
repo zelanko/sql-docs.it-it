@@ -1,5 +1,5 @@
 ---
-title: Usare le viste a gestione dinamica (DMV) per monitorare Analysis Services | Microsoft Docs
+title: Utilizzare le viste a gestione dinamica (DMV) per monitorare Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079578"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utilizzare DMV per monitorare Analysis Services
@@ -28,7 +28,7 @@ SELECT * FROM $System.<schemaRowset>
   
  Le query DMV restituiscono informazioni sullo stato del server corrente al momento dell'esecuzione della query. Per monitorare le operazioni in tempo reale, utilizzare invece la traccia. Per altre informazioni, vedere [Utilizzare SQL Server Profiler per il monitoraggio di Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md).  
   
- In questo argomento sono contenute le sezioni seguenti:  
+ Questo argomento include le sezioni seguenti:  
   
  [Vantaggi dell'utilizzo di query DMV](#bkmk_ben)  
   
@@ -38,25 +38,29 @@ SELECT * FROM $System.<schemaRowset>
   
  [Strumenti e autorizzazioni](#bkmk_tools)  
   
- [Guida di riferimento alle DMV](#bkmk_ref)  
+ [Riferimento DMV](#bkmk_ref)  
   
-##  <a name="bkmk_ben"></a> Vantaggi dell'utilizzo di query DMV  
+##  <a name="bkmk_ben"></a>Vantaggi dell'utilizzo di query DMV  
  Le query DMV restituiscono informazioni sulle operazioni e sull'utilizzo delle risorse, che non sono disponibili in altro modo.  
   
  Le query DMV rappresentano un'alternativa all'esecuzione di comandi di individuazione XML/A. Per la maggior parte degli amministratori, la scrittura di una query DMV risulta più semplice in quanto la sintassi di query è basata su SQL. Il set di risultati viene inoltre restituito in un formato tabulare, che offre maggiore semplicità per le operazioni di lettura e copia.  
   
-##  <a name="bkmk_ex"></a> Esempi e scenari  
+##  <a name="bkmk_ex"></a>Esempi e scenari  
  Una query DMV può essere utile per rispondere a domande sulle connessioni e sulle sessioni attive, nonché per verificare quali oggetti stanno utilizzando la maggior parte di memoria o CPU in un momento specifico. In questa sezione vengono forniti esempi per scenari in cui le query DMV sono più comunemente utilizzate. È possibile vedere anche la [Guida operativa di SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) per informazioni aggiuntive sull'uso di query DMV per monitorare un'istanza del server.  
   
- `Select * from $System.discover_object_activity` /** Questa query fornisce informazioni sull'attività dell'oggetto dal momento dell'ultimo avvio del servizio. Per query di esempio basate su questa DMV, vedere [Nuova DMV System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
+ 
+  `Select * from $System.discover_object_activity` /** Questa query fornisce informazioni sull'attività dell'oggetto dal momento dell'ultimo avvio del servizio. Per query di esempio basate su questa DMV, vedere [Nuova DMV System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322).  
   
- `Select * from $System.discover_object_memory_usage` /** Questa query fornisce informazioni sull'utilizzo di memoria per oggetto.  
+ 
+  `Select * from $System.discover_object_memory_usage` /** Questa query fornisce informazioni sull'utilizzo di memoria per oggetto.  
   
- `Select * from $System.discover_sessions` /** Questa query fornisce informazioni sulle sessioni attive, incluse informazioni su durata e utente della sessione.  
+ 
+  `Select * from $System.discover_sessions` /** Questa query fornisce informazioni sulle sessioni attive, incluse informazioni su durata e utente della sessione.  
   
- `Select * from $System.discover_locks` /** Questa query restituisce uno snapshot dei blocchi usati in un momento specifico.  
+ 
+  `Select * from $System.discover_locks` /** Questa query restituisce uno snapshot dei blocchi usati in un momento specifico.  
   
-##  <a name="bkmk_syn"></a> Sintassi di query  
+##  <a name="bkmk_syn"></a>Sintassi di query  
  Il motore di query per le DMV è il parser di data mining. La sintassi di query DMV è basata sull'istruzione [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
  Sebbene la sintassi di query DMV sia basata su un'istruzione SQL SELECT, non è supportata la sintassi completa di un'istruzione SELECT. In particolare, non sono supportate le clausole JOIN, GROUP BY, LIKE, CAST e CONVERT.  
@@ -81,14 +85,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a> Strumenti e autorizzazioni  
+##  <a name="bkmk_tools"></a>Strumenti e autorizzazioni  
  Per eseguire una query su una DMV, è necessario disporre delle autorizzazioni di amministratore di sistema nell'istanza di Analysis Services.  
   
  È possibile utilizzare qualsiasi applicazione client che supporta le query MDX o DMX, inclusi SQL Server Management Studio, un report di Reporting Services o un dashboard di PerformancePoint.  
   
  Per eseguire una query DMV da Management Studio, connettersi all'istanza su cui si vuole eseguire la query e fare clic su **Nuova query**. È possibile eseguire una query da una finestra Query DMX o MDX.  
   
-##  <a name="bkmk_ref"></a> Guida di riferimento alle DMV  
+##  <a name="bkmk_ref"></a>Riferimento DMV  
  Non tutti i set di righe dello schema dispongono di un'interfaccia DMV. Per restituire un elenco di tutti i set di righe dello schema su cui è possibile eseguire una query utilizzando DMV, eseguire la query seguente.  
   
 ```  
@@ -98,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Se una DMV non è disponibile per un determinato set di righe, il server restituisce l'errore seguente: "Il \<schemarowset > tipo di richiesta non è stato riconosciuto dal server". Tutti gli altri errori indicano problemi con la sintassi.  
+>  Se non è disponibile una DMV per un determinato set di righe, il server restituisce l'errore seguente: \<"SchemaRowset> tipo di richiesta non è stato riconosciuto dal server". Tutti gli altri errori indicano problemi con la sintassi.  
   
 |Set di righe|Descrizione|  
 |------------|-----------------|  
@@ -164,7 +168,7 @@ ORDER BY TABLE_NAME ASC
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida operativa di SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
- [Nuova DMV System.Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
- [Nuova funzione SYSTEMRESTRICTEDSCHEMA per DMV e set di righe con restrizioni](https://go.microsoft.com/fwlink/?LinkId=231885)  
+ [Nuovo sistema. Discover_Object_Activity](https://go.microsoft.com/fwlink/?linkid=221322)   
+ [Nuova funzione SYSTEMRESTRICTEDSCHEMA per set di righe con restrizioni e DMV](https://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721081"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lezione 2: Creazione di una sottoscrizione per una pubblicazione transazionale
-  In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In questa lezione richiede di aver completato la lezione precedente, [lezione 1: Pubblicazione dei dati tramite la replica transazionale](lesson-1-publishing-data-using-transactional-replication.md).  
+  In questa lezione verranno descritte le procedure per creare una sottoscrizione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per eseguire questa lezione è necessario aver completato la lezione precedente, [Lezione 1: Pubblicazione dei dati tramite la replica transazionale](lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Per creare la sottoscrizione  
   
-1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere il nodo del server e quindi la cartella **Replica** .  
+1.  Connettersi al server di pubblicazione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in, espandere il nodo del server, quindi espandere la cartella **replica** .  
   
 2.  Nella cartella **Pubblicazioni locali** fare clic con il pulsante destro del mouse sulla pubblicazione **AdvWorksProductTrans** e quindi scegliere **Nuove sottoscrizioni**.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "62721081"
   
 5.  Nella pagina Sottoscrittori, se il nome dell'istanza del Sottoscrittore non è visualizzato, fare clic su **Aggiungi Sottoscrittore**, quindi su **Aggiungi Sottoscrittore SQL Server**, immettere il nome dell'istanza del Sottoscrittore nella finestra di dialogo **Connetti al server** e quindi fare clic su **Connetti**.  
   
-6.  Nella pagina sottoscrittori selezionare il nome dell'istanza del server del sottoscrittore e selezionare  **\<Nuovo Database >** sotto **Database di sottoscrizione**.  
+6.  Nella pagina Sottoscrittori selezionare il nome dell'istanza del server Sottoscrittore e selezionare ** \<nuovo database>** nel **database di sottoscrizione**.  
   
 7.  Nella finestra di dialogo **Nuovo database** digitare **ProductReplica** nella casella **Nome database** , fare clic su **OK**e scegliere **Avanti**.  
   
-8.  Nel **sicurezza agente di distribuzione** finestra di dialogo fare clic sui puntini di sospensione ( **...** ) pulsante, immettere \< _nome_macchina >_ **\repl_distribution** nel **account processo** immettere la password per questo oggetto account, fare clic su **OK**, quindi fare clic su **successivo**.  
+8.  Nella finestra di dialogo **sicurezza agente di distribuzione** fare clic sul pulsante con i puntini di sospensione (**..**.), immettere \< _Machine_Name>_ **\ repl_distribution** nella casella **account processo** , immettere la password per l'account, fare clic su **OK**e quindi su **Avanti**.  
   
 9. Fare clic su **Fine** per accettare i valori predefiniti nelle pagine seguenti e completare la procedura guidata.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "62721081"
   
 2.  Nella pagina **Generale** , nell'elenco della pagina **Tipo utente** selezionare **Utente di Windows**.  
   
-3.  Selezionare il **nome utente** casella e fare clic sui puntini di sospensione (...), nella **immettere il nome dell'oggetto da selezionare** casella digitare < nome_computer > **\repl_distribution**, fare clic su  **Controlla nomi**, quindi fare clic su **OK**.  
+3.  Selezionare la casella **nome utente** e fare clic sul pulsante con i puntini di sospensione (...) nella casella **immettere il nome dell'oggetto da selezionare** <Machine_Name>**\ Repl_distribution**, fare clic su **Controlla nomi**e quindi su **OK**.  
   
 4.  Nella pagina **Appartenenze** , in **Appartenenza a ruoli del database** selezionare **db_owner**, quindi scegliere **OK** per creare l'utente.  
   
 ### <a name="to-view-the-synchronization-status-of-the-subscription"></a>Per visualizzare lo stato di sincronizzazione della sottoscrizione  
   
-1.  Connettersi al server di pubblicazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], espandere il nodo del server e quindi la cartella **Replica** .  
+1.  Connettersi al server di pubblicazione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in, espandere il nodo del server, quindi espandere la cartella **replica** .  
   
 2.  Nella cartella **Pubblicazioni locali** espandere la pubblicazione **AdvWorksProductTrans** , fare clic con il pulsante destro del mouse sulla sottoscrizione nel database **ProductReplica** e quindi scegliere **Visualizza stato sincronizzazione**.  
   

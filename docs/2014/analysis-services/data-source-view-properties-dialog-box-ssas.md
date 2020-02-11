@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà vista (SSAS) dell'origine dati | Microsoft Docs
+title: Finestra di dialogo Proprietà vista origine dati (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082495"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Finestra di dialogo Proprietà vista origine dati (SSAS)
@@ -24,12 +24,12 @@ ms.locfileid: "66082495"
   
 ## <a name="options"></a>Opzioni  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
-|**Name**|Consente di visualizzare il nome della vista origine dati.|  
+|**Nome**|Consente di visualizzare il nome della vista origine dati.|  
 |**ID**|Consente di visualizzare l'identificatore della vista origine dati.|  
 |**Descrizione**|Consente di visualizzare la descrizione della vista origine dati.|  
-|**Timestamp creazione**|Consente di visualizzare la data e l'ora di creazione della vista origine dati.|  
+|**Crea timestamp**|Consente di visualizzare la data e l'ora di creazione della vista origine dati.|  
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati per la vista origine dati.|  
 |**Origine dati primaria**|Consente di visualizzare il nome dell'origine dei dati primaria associata alla vista origine dati.|  
   

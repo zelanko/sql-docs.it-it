@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086972"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copiare e incollare dati (SSAS tabulare)
@@ -47,7 +47,7 @@ ms.locfileid: "66086972"
   
 -   Quando si usa l'opzione **Accoda il contenuto degli Appunti** o **Incolla e sostituisci**, nei nuovi dati deve essere contenuto esattamente lo stesso numero di colonne dei dati originali. Preferibilmente, i dati delle colonne che si incollano o si accodano devono essere dello stesso tipo o compatibili con quelli della tabella di destinazione. In alcuni casi è possibile usare un tipo di dati diverso, tuttavia potrebbe venire visualizzato un errore di **tipo non corrispondente** .  
   
-##  <a name="bkmk_paste_data"></a> Incollare i dati  
+##  <a name="bkmk_paste_data"></a>Incollare i dati  
   
 #### <a name="to-paste-data-into-the-designer"></a>Per incollare dati nella finestra di progettazione  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66086972"
   
     -   Fare clic su **Incolla e sostituisci** per sostituire la tabella selezionata con il contenuto degli Appunti. Tutti i nomi delle intestazioni di colonna esistenti rimarranno nella tabella e le relazioni vengono mantenute.  
   
-##  <a name="bkmk_paste_preview"></a> Finestra di dialogo Anteprima Incolla  
+##  <a name="bkmk_paste_preview"></a>Finestra di dialogo Anteprima Incolla  
  La finestra di dialogo **Anteprima Incolla** consente di visualizzare un'anteprima dei dati copiati nella finestra di progettazione e di assicurarsi che la copia dei dati sia eseguita correttamente. Per accedere a questa finestra di dialogo, copiare negli Appunti i dati basati su tabelle in formato HTML, quindi nella finestra di progettazione fare clic sul menu **Modifica** e scegliere **Incolla**, **Accoda il contenuto degli Appunti**o **Incolla e sostituisci**. Le opzioni **Accoda il contenuto degli Appunti** e **Incolla e sostituisci** sono disponibili solo quando si aggiungono o si sostituiscono dati in una tabella creata tramite un'operazione di copia e incolla dagli Appunti. Non è possibile usare **Accoda il contenuto degli Appunti** o **Incolla e sostituisci** per aggiungere dati in una tabella con dati importati.  
   
  Le opzioni per questa finestra di dialogo variano a seconda che i dati vengano incollati in una tabella completamente nuova o in una tabella esistente e quindi si sostituiscano i dati esistenti con i nuovi dati o che si aggiungano dati a una tabella esistente.  

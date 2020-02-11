@@ -1,5 +1,5 @@
 ---
-title: Progettazione query e filtro (scheda esplorazione, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Query e filtro (scheda Esplorazione, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070542"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Query e filtro (scheda Esplorazione, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -31,21 +31,21 @@ ms.locfileid: "66070542"
  **Dimension**  
  Consente di selezionare la dimensione in base a cui sezionare il sottocubo.  
   
- **Hierarchy**  
+ **Gerarchia**  
  Consente di selezionare la gerarchia in base a cui sezionare il sottocubo.  
   
  **Operatore**  
  Consente di selezionare l'operatore che definisce il modo in cui l'espressione contenuta in **Espressione filtro** viene applicata alla gerarchia selezionata. Nella tabella seguente vengono descritti gli operatori disponibili.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**Equal**|I risultati sono limitati al set definito in **Espressione filtro**.|  
-|**Non è uguale**|I risultati sono limitati ai membri esclusi dal set definito in **Espressione filtro**.|  
+|**Uguale**|I risultati sono limitati al set definito in **Espressione filtro**.|  
+|**Diverso da**|I risultati sono limitati ai membri esclusi dal set definito in **Espressione filtro**.|  
 |**In**|I risultati sono limitati al set denominato scelto in **Espressione filtro**.|  
-|**Non In**|I risultati sono limitati ai membri esclusi dal set denominato scelto in **Espressione filtro**.|  
+|**Non incluso**|I risultati sono limitati ai membri esclusi dal set denominato scelto in **Espressione filtro**.|  
 |**Contiene**|I risultati sono limitati ai membri i cui nomi contengono la stringa inclusa in **Espressione filtro**.|  
 |**Inizia con**|I risultati sono limitati ai membri i cui nomi iniziano con la stringa inclusa in **Espressione filtro**.|  
-|**Range (Inclusive)**|I risultati sono limitati all'intervallo scelto in **Espressione filtro**.|  
+|**Intervallo (inclusivo)**|I risultati sono limitati all'intervallo scelto in **Espressione filtro**.|  
 |**Intervallo (esclusivo)**|I risultati sono limitati ai membri esclusi dall'intervallo scelto in **Espressione filtro**.|  
 |**MDX**|I risultati sono limitati al set di espressioni MDX incluso in **Espressione filtro**.|  
   
@@ -56,10 +56,10 @@ ms.locfileid: "66070542"
 >  Questo campo rappresenta un elemento dinamico per l'immissione di dati, che cambia aspetto per riflettere i tipi di dati necessari per l'operatore selezionato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Sulla barra degli strumenti &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Analizza in Excel &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Metadati &#40;scheda esplorazione, Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione cubi &#40;browser&#41; &#40;Analysis Services Dati multidimensionali&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra degli strumenti &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analizza in Excel &#40;scheda Esplorazione, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Scheda Esplorazione &#40;metadati, Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

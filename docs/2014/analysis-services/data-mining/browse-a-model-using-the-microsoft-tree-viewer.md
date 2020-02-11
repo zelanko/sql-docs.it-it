@@ -1,5 +1,5 @@
 ---
-title: Visualizzare un modello usando il visualizzatore Microsoft Decision Trees | Microsoft Docs
+title: Visualizzare un modello usando il Visualizzatore Microsoft Decision Trees | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,19 +24,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085943"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Decision Trees
-  Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Trees disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare alberi delle decisioni compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo dell'albero delle decisioni ibrido che supporta classificazione e regressione. È anche possibile pertanto usare il visualizzatore per visualizzare modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees viene usato per la modellazione predittiva di attributi discreti e continui. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md).  
+  Il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visualizzatore dell'albero [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in Visualizza gli alberi delle decisioni compilati con l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Decision Trees. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo dell'albero delle decisioni ibrido che supporta classificazione e regressione. È anche possibile pertanto usare il visualizzatore per visualizzare modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees viene usato per la modellazione predittiva di attributi discreti e continui. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md).  
   
 > [!NOTE]  
 >  Per visualizzare informazioni dettagliate sulle equazioni utilizzate nel modello e sui modelli individuati, utilizzare il visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer. Per altre informazioni, vedere [Visualizzare un modello usando Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_TabsPanes"></a> Schede del visualizzatore  
+##  <a name="BKMK_TabsPanes"></a>Schede del Visualizzatore  
  Per la visualizzazione di un modello di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene utilizzato il visualizzatore appropriato nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees include le schede e i riquadri seguenti:  
   
 -   [Albero delle decisioni](#BKMK_DecisionTree)  
@@ -45,7 +45,7 @@ ms.locfileid: "66085943"
   
 -   [Legenda data mining](#BKMK_MiningLegend)  
   
-###  <a name="BKMK_DecisionTree"></a> Albero delle decisioni  
+###  <a name="BKMK_DecisionTree"></a>Albero delle decisioni  
  Quando si compila un modello di albero delle decisioni, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene compilato un albero separato per ogni attributo stimabile. È possibile visualizzare un singolo albero selezionandolo dall'elenco **Albero** nella scheda **Albero delle decisioni** del visualizzatore.  
   
  Un albero delle decisioni è costituito da una serie di divisioni di cui la più importante, determinata dall'algoritmo, si trova a sinistra del visualizzatore nel nodo **Tutto** . Le altre divisioni si trovano a destra. La divisione nel nodo **Tutto** è la più importante in quanto contiene l'espressione condizionale più attendibile tra quelle che causano la divisione nel set di dati e, di conseguenza, ha causato la prima divisione.  
@@ -75,7 +75,7 @@ ms.locfileid: "66085943"
   
  [Torna all'inizio](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_DependencyNetwork"></a> Rete di dipendenze  
+###  <a name="BKMK_DependencyNetwork"></a>Rete di dipendenze  
  Nella scheda **Rete di dipendenze** vengono visualizzate le dipendenze tra gli attributi di input e gli attributi stimabili del modello. Il dispositivo di scorrimento a sinistra del visualizzatore svolge la funzione di filtro correlato ai livelli di attendibilità delle dipendenze. Se si sposta il dispositivo di scorrimento verso il basso, vengono visualizzati solo i collegamenti più attendibili.  
   
  Quando si seleziona un nodo, nel visualizzatore vengono evidenziate le dipendenze specifiche del nodo. Se ad esempio si sceglie un nodo stimabile, nel visualizzatore verrà inoltre evidenziato ogni nodo che contribuisce alla stima del nodo stimabile.  
@@ -86,7 +86,7 @@ ms.locfileid: "66085943"
   
  [Torna all'inizio](#BKMK_TabsPanes)  
   
-###  <a name="BKMK_MiningLegend"></a> Legenda data mining  
+###  <a name="BKMK_MiningLegend"></a>Legenda data mining  
  Quando si seleziona un nodo nel modello di albero delle decisioni, in **Legenda data mining** vengono visualizzate le informazioni seguenti:  
   
 -   Il numero di case nel nodo, suddivisi in base agli stati dell'attributo stimabile  
@@ -106,7 +106,7 @@ ms.locfileid: "66085943"
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md)   
  [Visualizzatori modello di data mining &#40;Progettazione modelli di data mining&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Attività e procedure relative al visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Attività e procedure relative al Visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Strumenti di data mining](data-mining-tools.md)   
  [Visualizzatori modello di data mining](data-mining-model-viewers.md)  
   

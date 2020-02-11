@@ -1,5 +1,5 @@
 ---
-title: Progettazione viste (Analysis Services - dati multidimensionali) dell'origine dati | Microsoft Docs
+title: Progettazione vista origine dati (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9153a2d07653872ca6ce1f90e39c90f32da21fba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082517"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Progettazione vista origine dati (Analysis Services - Dati multidimensionali)
@@ -34,7 +34,7 @@ ms.locfileid: "66082517"
   
  In **Progettazione vista origine dati** è presente una barra degli strumenti, un diagramma che illustra oggetti e relazioni nella vista origine dati, un riquadro Tabelle con l'elenco in ordine alfabetico delle tabelle e delle query denominate e un riquadro Libreria diagrammi utilizzato per creare e visualizzare i diagrammi specifici della vista origine dati. È possibile fare clic con il pulsante destro del mouse su una tabella o una relazione per accedere ai comandi sensibili al contesto.  
   
- ![Progettazione vista origine dati](media/ssas-dsvdesigner.PNG "progettazione vista origine dati")  
+ ![Progettazione vista origine dati](media/ssas-dsvdesigner.PNG "Progettazione vista origine dati")  
   
  In una vista origine dati vengono visualizzate almeno le tabelle di database relazionali che verranno utilizzate per popolare gli oggetti del modello durante l'elaborazione. Una vista origine dati viene solitamente generata tramite la Creazione guidata vista origine dati. Tabelle, colonne e relazioni nella vista origine dati diventano la base per dimensioni e misure in un cubo. Una volta creata la vista origine dati, è possibile utilizzare Progettazione vista origine dati per modificarla.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "66082517"
 |Rinominare colonne o tabelle oppure creare nuove colonne calcolate. Ad esempio, concatenare un nome e un cognome in una nuova colonna per il nome completo.|[Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
 |Aggiungere manualmente relazioni tra tabelle.|[Definire relazioni logiche in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
 |Creare una query denominata per definire un nuovo oggetto basato su una query T-SQL.|[Definire query denominate in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
-|Esplorare i dati sottostanti per visualizzare i valori di dati effettivi rappresentati dagli oggetti del modello.<br /><br /> L'esplorazione dei dati consente di controllare visivamente e copiare i dati restituiti dalla query o dalla tabella dimensionale sottostante. L'esplorazione dei dati utilizza per impostazione predefinita la prima metodologia di campionamento di conteggio, con un conteggio di esempio di 5000, ma è possibile revisionare queste impostazioni.|[Esplorare dati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
-|Creare un diagramma di tutte o parte delle tabelle e relazioni in una vista origine dati.|[Usare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
+|Esplorare i dati sottostanti per visualizzare i valori di dati effettivi rappresentati dagli oggetti del modello.<br /><br /> L'esplorazione dei dati consente di controllare visivamente e copiare i dati restituiti dalla query o dalla tabella dimensionale sottostante. L'esplorazione dei dati utilizza per impostazione predefinita la prima metodologia di campionamento di conteggio, con un conteggio di esempio di 5000, ma è possibile revisionare queste impostazioni.|[Esplorazione dei dati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
+|Creare un diagramma di tutte o parte delle tabelle e relazioni in una vista origine dati.|[Utilizzare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](multidimensional-models/data-source-views-in-multidimensional-models.md)   

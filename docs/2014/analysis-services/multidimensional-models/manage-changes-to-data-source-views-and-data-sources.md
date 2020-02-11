@@ -1,5 +1,5 @@
 ---
-title: Gestire modifiche a viste origine dati e origini dati | Microsoft Docs
+title: Gestione delle modifiche apportate alle viste origine dati e alle origini dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac551a708433e973ada499f0e7504bc75516e756
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074772"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Gestire modifiche a viste origine dati e origini dati

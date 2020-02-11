@@ -1,5 +1,5 @@
 ---
-title: Dettagli prospettiva (scheda prospettive, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Dettagli prospettiva (scheda prospettive, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072055"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Dettagli prospettiva (scheda Prospettive, Progettazione cubi) (Analysis Services - Dati multidimensionali)
-  Utilizzare il riquadro **dei dettagli della prospettiva** della scheda **Prospettiva** in Progettazione cubi per gestire i metadati disponibili per gli utenti che eseguono query sulla prospettiva selezionata.  
+  Utilizzare il riquadro dei dettagli della prospettiva **** della scheda **Prospettiva** in Progettazione cubi per gestire i metadati disponibili per gli utenti che eseguono query sulla prospettiva selezionata.  
   
 ## <a name="options"></a>Opzioni  
- **Oggetti Cube**  
+ **Oggetti cubo**  
  Consente di visualizzare un elenco gerarchico di proprietà e oggetti contenuti nel cubo che è possibile includere nella prospettiva.  
   
  **Tipo di oggetto**  
  Consente di visualizzare il nome della proprietà o il tipo di oggetto del cubo che può essere incluso nella prospettiva.  
   
- **Nome della prospettiva**  
+ **Nome prospettiva**  
  Consente di visualizzare i valori della proprietà, nonché di stabilire se nella prospettiva rappresentata dalla colonna **Nome prospettiva** è incluso un oggetto del cubo. Per ogni prospettiva inclusa nel cubo, viene visualizzata una colonna **Nome prospettiva** .  
   
  Digitare il nome della prospettiva nella cella della proprietà **Nome** del cubo relativo alla prospettiva selezionata.  

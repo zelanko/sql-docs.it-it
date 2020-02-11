@@ -1,5 +1,5 @@
 ---
-title: Modificare manualmente un Query di stima | Microsoft Docs
+title: Modificare manualmente una query di stima | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084204"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Modificare manualmente un query di stima
@@ -44,7 +44,7 @@ ms.locfileid: "66084204"
   
 ## <a name="see-also"></a>Vedere anche  
  [Query di data mining](data-mining-queries.md)   
- [Generatore delle query di stima &#40;Data Mining&#41;](../prediction-query-builder-data-mining.md)   
- [Lezione 6: Creazione e utilizzo di stime &#40;esercitazione di base di Data Mining&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Generatore di query di stima &#40;&#41;di data mining](../prediction-query-builder-data-mining.md)   
+ [Lezione 6: creazione e utilizzo di stime &#40;esercitazione di base sul data mining&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

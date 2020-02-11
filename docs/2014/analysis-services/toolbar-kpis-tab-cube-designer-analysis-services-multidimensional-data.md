@@ -1,5 +1,5 @@
 ---
-title: Sulla barra degli strumenti (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Barra degli strumenti (scheda KPI, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066004"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra degli strumenti (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Il riquadro **Barra degli strumenti** consente di eseguire azioni comuni nella scheda **KPI** di Progettazione cubi.  
   
 ## <a name="options"></a>Opzioni  
- **Aggiungere funzionalità di Business Intelligence**  
+ **Aggiungi funzionalità di Business Intelligence**  
  Fare clic su questa opzione per visualizzare la **Configurazione guidata funzionalità di Business Intelligence** e aggiungere funzionalità di Business Intelligence al cubo.  
   
- **Process**  
+ **Processo**  
  Fare clic su questo pulsante per visualizzare la finestra di dialogo **Elabora** ed elaborare il cubo.  
   
- **Ristabilire la connessione**  
+ **Ricollegare**  
  Fare clic su questo pulsante per riconnettere la scheda **KPIs** all'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e al database contenente il cubo, se la sessione relativa alla scheda **KPIs** viene disconnessa a causa dell'interruzione o del timeout della connessione.  
   
  **Nuovo indicatore KPI**  
@@ -57,10 +57,10 @@ ms.locfileid: "66066004"
  **Visualizzazione form**  
  Selezionare questa opzione per usare la scheda **KPIs** nella visualizzazione Form.  
   
- **Visualizzazione esplorazione**  
+ **Visualizzazione Esplorazione**  
  Selezionare questa opzione per usare la scheda **KPIs** nella visualizzazione Esplorazione.  
   
- **Controllare la sintassi**  
+ **Controlla sintassi**  
  Fare clic su questo pulsante per controllare la sintassi dell'indicatore KPI selezionato nel riquadro **Libreria KPI** .  
   
 > [!NOTE]  

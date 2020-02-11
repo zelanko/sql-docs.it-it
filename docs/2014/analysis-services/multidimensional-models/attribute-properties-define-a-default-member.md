@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077414"
 ---
 # <a name="define-a-default-member"></a>Definire un membro predefinito
@@ -33,17 +33,17 @@ ms.locfileid: "66077414"
  Se non viene specificato alcun membro predefinito per una gerarchia dell'attributo e tale gerarchia è aggregabile, ovvero la proprietà `IsAggregatable` dell'attributo è impostata su `True`, il membro (All) è sarà il membro predefinito. Se non viene specificato alcun membro predefinito e la gerarchia dell'attributo non è aggregabile, ovvero la proprietà `IsAggregatable` dell'attributo è impostata su `False`, verrà selezionato un membro predefinito dal livello principale della gerarchia dell'attributo.  
   
 ## <a name="specifying-the-default-member"></a>Impostazione del membro predefinito  
- Tutti gli attributi di una dimensione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ha un membro predefinito, che è possibile specificare utilizzando il `DefaultMember` proprietà per un attributo. Questa impostazione viene utilizzata per valutare espressioni nel caso in cui in una query non venga specificato un attributo. Se in una query viene specificata una gerarchia di una dimensione, i membri predefiniti degli attributi nella gerarchia verranno ignorati. Se una query non specifica una gerarchia in una dimensione, il `DefaultMember` effettive le impostazioni per gli attributi della dimensione.  
+ Ogni attributo di una dimensione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dispone di un membro predefinito, che è possibile specificare usando la `DefaultMember` proprietà per un attributo. Questa impostazione viene utilizzata per valutare espressioni nel caso in cui in una query non venga specificato un attributo. Se in una query viene specificata una gerarchia di una dimensione, i membri predefiniti degli attributi nella gerarchia verranno ignorati. Se una query non specifica una gerarchia in una dimensione, verranno applicate `DefaultMember` le impostazioni per gli attributi della dimensione.  
   
- Se il `DefaultMember` impostazione di un attributo è vuoto e la relativa `IsAggregatable` è impostata su `True`, il membro predefinito è il membro totale. Se il `IsAggregatable` è impostata su `False`, il membro predefinito è il primo membro del primo livello visibile.  
+ Se l' `DefaultMember` impostazione per un attributo è vuota e la `IsAggregatable` relativa proprietà è impostata `True`su, il membro predefinito è il membro totale. Se la `IsAggregatable` proprietà è impostata su `False`, il membro predefinito è il primo membro del primo livello visibile.  
   
- Il `DefaultMember` l'impostazione di un attributo viene applicata a tutte le gerarchie in cui l'attributo. Non è possibile utilizzare impostazioni diverse per gerarchie diverse in una dimensione. Se, ad esempio, il membro [1998] è il membro predefinito di un attributo [Year], questa impostazione verrà applicata a tutte le gerarchie della dimensione. Il `DefaultMember` impostazione in questo caso non può essere [1998] in una gerarchia e [1997] in una gerarchia diversa.  
+ L' `DefaultMember` impostazione di un attributo si applica a ogni gerarchia a cui partecipa l'attributo. Non è possibile utilizzare impostazioni diverse per gerarchie diverse in una dimensione. Se, ad esempio, il membro [1998] è il membro predefinito di un attributo [Year], questa impostazione verrà applicata a tutte le gerarchie della dimensione. In `DefaultMember` questo caso, l'impostazione non può essere [1998] in una gerarchia e [1997] in una gerarchia diversa.  
   
- Se si definisce un membro predefinito per un livello particolare di una gerarchia che non viene aggregato in modo naturale, sarà necessario definire membri predefiniti in tutti i livelli al di sopra di tale livello nella gerarchia. Nella gerarchia All-paesi-climatici, ad esempio, è possibile definire un membro predefinito per Climate se non si definisce un membro predefinito per Countries. Se non si rispetta questo requisito, si verificheranno errori durante l'esecuzione delle query.  
+ Se si definisce un membro predefinito per un livello particolare di una gerarchia che non viene aggregato in modo naturale, sarà necessario definire membri predefiniti in tutti i livelli al di sopra di tale livello nella gerarchia. Ad esempio, nella gerarchia all-countries-Climate non è possibile definire un membro predefinito per Climate se non si definisce un membro predefinito per i paesi. Se non si rispetta questo requisito, si verificheranno errori durante l'esecuzione delle query.  
   
- Quando i livelli di una gerarchia vengono aggregati in modo naturale, è possibile definire un membro predefinito per qualsiasi attributo della gerarchia senza tenere conto di altri attributi di tale gerarchia. Ad esempio, nella gerarchia di stato-provincia-città, è possibile definire un membro predefinito per City quale [City]. [Montreal] senza definire il membro predefinito per State o Country.  
+ Quando i livelli di una gerarchia vengono aggregati in modo naturale, è possibile definire un membro predefinito per qualsiasi attributo della gerarchia senza tenere conto di altri attributi di tale gerarchia. Ad esempio, nella gerarchia Country-Province-City è possibile definire un membro predefinito per City come [City]. [Montreal] senza definire il membro predefinito per state o Country.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare il livello &#40;Totale&#41; per le gerarchie di attributi](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurare il &#40;tutti i livelli di&#41; per le gerarchie di attributi](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084381"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Trovare un nodo specifico in una rete di dipendenze
-  Una rete di dipendenze in un modello di data mining di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può contenere molti nodi, rendendo difficile l'individuazione dei dati desiderati. Per risolvere il problema, è possibile usare la finestra di dialogo **Trova nodo** nella scheda **Rete di dipendenze** di Progettazione modelli di data mining per cercare un nodo specifico.  
+  Una rete di dipendenze [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un modello di data mining può contenere molti nodi, rendendo difficile l'individuazione dei dati a cui si è interessati. Per risolvere il problema, è possibile usare la finestra di dialogo **Trova nodo** nella scheda **Rete di dipendenze** di Progettazione modelli di data mining per cercare un nodo specifico.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Per trovare un nodo specifico in una rete di dipendenze  
   

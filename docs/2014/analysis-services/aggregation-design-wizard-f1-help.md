@@ -1,5 +1,5 @@
 ---
-title: Guida F1 di aggregazione progettazione guidata | Microsoft Docs
+title: Guida sensibile al contesto della progettazione guidata aggregazioni | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062745"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>Guida sensibile al contesto della Progettazione guidata aggregazioni
-  Le aggregazioni garantiscono miglioramenti delle prestazioni poiché consentono a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di recuperare totali precalcolati direttamente dall'archiviazione del cubo senza dover ricalcolare i dati da un'origine dati sottostante per ogni query.  
+  Le aggregazioni garantiscono miglioramenti delle prestazioni [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consentendo di recuperare i totali precalcolati direttamente dall'archiviazione del cubo anziché ricalcolare i dati da un'origine dati sottostante per ogni query.  
   
  Per progettare queste aggregazioni, è possibile utilizzare Progettazione guidata aggregazioni. Questa procedura guidata consente di eseguire in modo semplificato i passaggi seguenti:  
   
@@ -34,22 +34,22 @@ ms.locfileid: "66062745"
   
  Dopo avere utilizzato la Progettazione guidata aggregazioni è possibile utilizzare l'Ottimizzazione guidata basata sulle statistiche di utilizzo per progettare aggregazioni basate sui modelli di utilizzo degli utenti aziendali e delle applicazioni client che eseguono query sul cubo.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Selezione partizioni da modificare &#40;progettazione guidata aggregazioni&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
+-   [Selezionare le partizioni per modificare &#40;progettazione guidata aggregazioni&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
   
--   [Controlla utilizzo aggregazioni &#40;progettazione guidata aggregazioni&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
+-   [Esaminare l'utilizzo delle aggregazioni &#40;progettazione guidata aggregazioni&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
   
--   [Impostazione conteggi oggetti &#40;progettazione guidata aggregazioni&#41;](specify-object-counts-aggregation-design-wizard.md)  
+-   [Specificare i conteggi degli oggetti &#40;progettazione guidata aggregazioni&#41;](specify-object-counts-aggregation-design-wizard.md)  
   
--   [Impostare le opzioni di aggregazione &#40;progettazione guidata aggregazioni&#41;](set-aggregation-options-aggregation-design-wizard.md)  
+-   [Impostazione opzioni di aggregazione &#40;progettazione guidata aggregazioni&#41;](set-aggregation-options-aggregation-design-wizard.md)  
   
 -   [Completamento procedura guidata &#40;progettazione guidata aggregazioni&#41;](completing-the-wizard-aggregation-design-wizard.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le aggregazioni e progettazione di aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [Aggregazioni e progettazioni delle aggregazioni](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
- [F1 Guida della procedura guidata di ottimizzazione basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
+ [Guida sensibile al contesto dell'ottimizzazione guidata basata sull'utilizzo](usage-based-optimization-wizard-f1-help.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

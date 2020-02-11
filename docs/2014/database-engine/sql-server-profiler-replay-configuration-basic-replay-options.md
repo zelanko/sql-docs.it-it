@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - configurazione riproduzione (opzioni di base di riproduzione) | Microsoft Docs
+title: Configurazione della riproduzione SQL Server Profiler (opzioni di base di riproduzione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089716"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - Configurazione riproduzione (Opzioni di base di riproduzione)
@@ -34,10 +34,12 @@ ms.locfileid: "66089716"
  Consente di aprire la finestra di dialogo **Connetti al server** per stabilire una connessione a un altro server.  
   
  **Salva nel file**  
- Consente di salvare i risultati di riproduzione in un file. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo dei file standard in cui è possibile specificare la posizione in cui salvare il file.  
+ Consente di salvare i risultati di riproduzione in un file. 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo dei file standard in cui è possibile specificare la posizione in cui salvare il file.  
   
  **Salva nella tabella**  
- Consente di salvare i risultati di riproduzione in una tabella. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
+ Consente di salvare i risultati di riproduzione in una tabella. 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] visualizza la finestra di dialogo di selezione della tabella in cui è possibile specificare la posizione in cui salvare la tabella.  
   
  **Numero di thread di riproduzione**  
  Consente di specificare il numero di thread di riproduzione da utilizzare simultaneamente. Un numero elevato determina un maggior consumo di risorse durante la riproduzione, ma la riproduzione viene eseguita in modo più veloce e simultaneo.  

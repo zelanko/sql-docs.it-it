@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670842"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Gestire il rilevamento delle modifiche (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62670842"
   
  Inoltre, la vista del catalogo [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) elenca le tabelle interne create quando il rilevamento delle modifiche è abilitato per una tabella utente.  
   
-### <a name="security"></a>Sicurezza  
+### <a name="security"></a>Security  
  Per accedere alle informazioni sul rilevamento delle modifiche utilizzando le [funzioni di rilevamento delle modifiche](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql), l'entità deve disporre delle autorizzazioni seguenti:  
   
 -   Autorizzazione SELECT almeno nelle colonne chiave primaria nella tabella di cui sono state rilevate le modifiche per la tabella in cui si sta eseguendo la query.  
@@ -102,14 +102,14 @@ sp_spaceused 'sys.syscommittab'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Rilevare le modifiche ai dati &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
+ [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [Proprietà database &#40;pagina Rilevamento delle modifiche&#41;](../databases/database-properties-changetracking-page.md)   
- [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables)   
- [Rilevare le modifiche ai dati &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
+ [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [Informazioni sul rilevamento delle modifiche &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
- [Utilizzare i dati delle modifiche &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  
+ [Usare i dati delle modifiche &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  
   
   

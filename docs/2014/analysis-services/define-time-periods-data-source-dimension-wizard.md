@@ -1,5 +1,5 @@
 ---
-title: Definizione periodi di tempo (origine dati) (Creazione guidata dimensione) | Microsoft Docs
+title: Definizione periodi di tempo (origine dati) (creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082006"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Definizione periodi di tempo (Origine dati) (Creazione guidata dimensione)
   Utilizzare la pagina **Definizione periodi di tempo** per definire gli attributi che rappresentano periodi di tempo nella dimensione temporale con colonne nella tabella specificata nella pagina **Selezione tipo di dimensione** .  
   
 > [!NOTE]  
->  Questa pagina viene visualizzata solo se sono state selezionate le opzioni **Compila dimensione utilizzando un'origine dati** nella scheda **Definizione dimensione** e **Dimensione temporale** nella pagina **Selezione tipo di dimensione** .  
+>  Questa pagina viene visualizzata solo se è stata selezionata **l'opzione Compila la dimensione utilizzando un'origine dei dati** nella pagina **definizione dimensione** e **dimensione temporale** nella pagina **Selezione tipo di dimensione** .  
   
 ## <a name="options"></a>Opzioni  
  **Nome proprietà tempo**  
@@ -38,8 +38,8 @@ ms.locfileid: "66082006"
  Per cambiare la colonna, fare clic sulla colonna e quindi selezionare una colonna diversa nell'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
- [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida sensibile al contesto della creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services Dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

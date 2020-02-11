@@ -1,5 +1,5 @@
 ---
-title: Visualizzatore KPI (scheda KPI, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
+title: Visualizzatore KPI (scheda KPI, Progettazione cubi) (Analysis Services-Dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079495"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Visualizzatore KPI (scheda KPI, Progettazione cubi) (Analysis Services - Dati multidimensionali)
-  Usare il riquadro **Visualizzatore KPI** della scheda **KPI** in Progettazione cubi per visualizzare e testare i risultati degli indicatori di prestazioni chiave (KPI). Prima dell'esplorazione è necessario distribuire gli indicatori KPI a un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+  Usare il riquadro **Visualizzatore KPI** della scheda **KPI** in Progettazione cubi per visualizzare e testare i risultati degli indicatori di prestazioni chiave (KPI). Prima di eseguire l'esplorazione, gli [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] indicatori KPI devono essere prima distribuiti in un'istanza di.  
   
 > [!NOTE]  
 >  Questo riquadro viene visualizzato solo nella visualizzazione Esplorazione.  
@@ -32,21 +32,21 @@ ms.locfileid: "66079495"
  **Dimension**  
  Consente di selezionare la dimensione alla quale viene applicato il filtro.  
   
- **Hierarchy**  
+ **Gerarchia**  
  Consente di selezionare la gerarchia alla quale viene applicato il filtro.  
   
  **Operatore**  
  Consente di selezionare l'operatore che definisce il modo in cui l'espressione contenuta in **Espressione filtro** viene applicata alla gerarchia selezionata. Nella tabella seguente vengono descritti gli operatori disponibili.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|**Equal**|I risultati sono limitati al set definito in **Espressione filtro**.|  
-|**Non è uguale**|I risultati sono limitati ai membri esclusi dal set definito in **Espressione filtro**.|  
+|**Uguale**|I risultati sono limitati al set definito in **Espressione filtro**.|  
+|**Diverso da**|I risultati sono limitati ai membri esclusi dal set definito in **Espressione filtro**.|  
 |**In**|I risultati sono limitati al set denominato scelto in **Espressione filtro**.|  
-|**Non In**|I risultati sono limitati ai membri esclusi dal set denominato scelto in **Espressione filtro**.|  
+|**Non incluso**|I risultati sono limitati ai membri esclusi dal set denominato scelto in **Espressione filtro**.|  
 |**Contiene**|I risultati sono limitati ai membri i cui nomi contengono la stringa inclusa in **Espressione filtro**.|  
 |**Inizia con**|I risultati sono limitati ai membri i cui nomi iniziano con la stringa inclusa in **Espressione filtro**.|  
-|**Range (Inclusive)**|I risultati sono limitati all'intervallo scelto in **Espressione filtro**.|  
+|**Intervallo (inclusivo)**|I risultati sono limitati all'intervallo scelto in **Espressione filtro**.|  
 |**Intervallo (esclusivo)**|I risultati sono limitati ai membri esclusi dall'intervallo scelto in **Espressione filtro**.|  
 |**MDX**|I risultati sono limitati al set di espressioni MDX incluso in **Espressione filtro**.|  
   
@@ -68,16 +68,16 @@ ms.locfileid: "66079495"
  **Obiettivo**  
  Consente di visualizzare il valore dell'obiettivo dell'indicatore KPI.  
   
- **Stato**  
+ **Status**  
  Consente di visualizzare l'icona di stato dell'indicatore KPI.  
   
- **Trend**  
+ **Tendenza**  
  Consente di visualizzare l'icona di tendenza dell'indicatore KPI.  
   
- **Weight**  
+ **Peso**  
  Consente di visualizzare il fattore di ponderazione dell'indicatore KPI.  
   
- **(Descrizione)**  
+ **Descrizione**  
  Consente di visualizzare un'icona Informazioni se è disponibile una descrizione per un indicatore KPI.  
   
  Fare passare il mouse sull'icona Informazioni per visualizzare una descrizione comando per l'indicatore KPI.  
@@ -86,6 +86,6 @@ ms.locfileid: "66079495"
 >  Se viene generato un errore durante il calcolo di un indicatore KPI nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , questa opzione visualizza le informazioni associate all'errore.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services - dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
+ [Indicatori KPI &#40;Progettazione cubi&#41; &#40;Analysis Services Dati multidimensionali&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

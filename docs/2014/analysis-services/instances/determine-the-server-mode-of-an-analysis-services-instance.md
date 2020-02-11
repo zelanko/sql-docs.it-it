@@ -1,5 +1,5 @@
 ---
-title: Determinare la modalità Server di analisi Services istanza | Microsoft Docs
+title: Determinare la modalità server di un'istanza di Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080055"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinare la modalità server di un'istanza di Analysis Services
-  Analysis Services può essere installato in una delle tre modalità server: Multidimensionale e Data Mining (impostazione predefinita), PowerPivot per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
+  È possibile installare Analysis Services in una di tre modalità server: multidimensionale e data mining (valore predefinito), PowerPivot per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
   
  La modalità server determina il tipo di soluzione creata e distribuita. Se non è stato installato il software server e si desidera sapere in quale modalità è stato installato il server, è possibile usare le informazioni di questo argomento per determinare tale modalità. Per altre informazioni sulla disponibilità delle funzionalità in una modalità specifica, vedere [Confronto tra soluzioni tabulari e multidimensionali &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
@@ -27,7 +27,7 @@ ms.locfileid: "66080055"
 ## <a name="server-icons-in-object-explorer"></a>Icone del server in Esplora oggetti  
  Il modo più semplice per determinare la modalità server consiste nel connettersi al server in SQL Server Management Studio e individuare l'icona accanto al nome del server in Esplora oggetti. Nell'illustrazione seguente vengono mostrate tre istanze di Analysis Services distribuite in modalità multidimensionale, tabulare e PowerPivot:  
   
- ![Icone Esplora oggetti per ogni modalità server](../media/ssas-ssms-servermodes.gif "icone di Esplora oggetti per ogni modalità server")  
+ ![Icone Esplora oggetti per ogni modalità server](../media/ssas-ssms-servermodes.gif "Icone Esplora oggetti per ogni modalità server")  
   
 ## <a name="viewing-deploymentmode-property-in-msmdsrvini-file"></a>Visualizzazione della proprietà DeploymentMode nel file MSMDSRV.INI  
  In alternativa, è possibile verificare la proprietà `DeploymentMode` nel file msmdsrv.ini incluso in ogni istanza di Analysis Services. Il valore di questa proprietà identifica la modalità del server. I valori validi sono 0 (multidimensionale), 1 (SharePoint) o 2 (tabulare). Per aprire il file msmdsrv.ini, è necessario essere un amministratore (ovvero, un membro del ruolo server) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Questo file contiene XML strutturato. È possibile visualizzare il file usando Blocco note o qualsiasi editor di testo.  
@@ -36,13 +36,13 @@ ms.locfileid: "66080055"
 >  Non modificare il valore della proprietà `DeploymentMode`. La modifica manuale della proprietà dopo l'installazione del server non è supportata.  
   
 ## <a name="about-the-deploymentmode-property"></a>Informazioni sulla proprietà DeploymentMode  
- La proprietà `DeploymentMode` consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà è definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene inizializzata dal programma di installazione in base alla modalità di installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
+ La proprietà `DeploymentMode` consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà viene definità modalità server ' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene inizializzata dal programma di installazione in base alla modalità di installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|0|Rappresenta il valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
+|0|Si tratta del valore predefinito. Specifica la modalità multidimensionale, usata per i database multidimensionali che usano l'archiviazione MOLAP, HOLAP e ROLAP, nonché i modelli di data mining.|  
 |1|Consente di specificare le istanze di Analysis Services installate come parte di una distribuzione di PowerPivot per SharePoint. Non modificare la proprietà della modalità di distribuzione dell'istanza di Analysis Services che è parte di un'installazione di PowerPivot per SharePoint. I dati PowerPivot non verranno più eseguiti nel server se si cambia modalità.|  
 |2|Specifica la modalità tabulare usata per l'hosting dei database del modello tabulare che usano l'archiviazione in memoria o DirectQuery.|  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66080055"
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare Analysis Services in modalità tabulare](install-windows/install-analysis-services.md)   
- [Installazione di Analysis Services in modalità Multidimensionale e Data Mining](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
- [Installazione PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Connetti ad Analysis Services](connect-to-analysis-services.md)   
+ [Installare Analysis Services in modalità multidimensionale e di data mining](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
+ [Installazione di PowerPivot per SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
+ [Connetti a Analysis Services](connect-to-analysis-services.md)   
  [Soluzioni di modelli tabulari &#40;SSAS tabulare&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Soluzioni di modelli multidimensionali &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelli di data mining &#40;Analysis Services-&#41;di data mining](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

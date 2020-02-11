@@ -1,5 +1,5 @@
 ---
-title: Contenuto dei modelli di data mining per i modelli di Clustering (Analysis Services - Data Mining) | Microsoft Docs
+title: Contenuto dei modelli di data mining per i modelli di clustering (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083676"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di clustering (Analysis Services - Data mining)
-  In questo argomento viene descritto il contenuto dei modelli di data mining specifico per i modelli che utilizzano l'algoritmo Microsoft Clustering. Per una spiegazione generale del contenuto del modello di data mining valida per tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  In questo argomento viene descritto il contenuto dei modelli di data mining specifico per i modelli che utilizzano l'algoritmo Microsoft Clustering. Per una spiegazione del modello di data mining applicabile a tutti i tipi di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>Informazioni sulla struttura di un modello di clustering  
  Un modello di clustering ha una struttura semplice. Ogni modello include un singolo nodo padre che rappresenta il modello e i relativi metadati e ogni nodo padre è associato a un elenco semplice di cluster (NODE_TYPE = 5). Questa organizzazione è illustrata nell'immagine seguente.  
   
- ![struttura del contenuto del modello per il clustering](../media/modelcontentstructure-clust.gif "struttura del contenuto del modello per il clustering")  
+ ![Struttura del contenuto del modello per il clustering](../media/modelcontentstructure-clust.gif "Struttura del contenuto del modello per il clustering")  
   
  Ogni nodo figlio rappresenta un singolo cluster e contiene statistiche dettagliate sugli attributi dei relativi case, tra cui un conteggio del numero di case nel cluster e la distribuzione di valori che distinguono un cluster dagli altri.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "66083676"
   
  Il nodo padre contiene statistiche utili che descrivono la distribuzione effettiva di tutti i case di training. Queste statistiche si trovano nella colonna della tabella nidificata, NODE_DISTRIBUTION. Ad esempio, nella tabella seguente sono illustrate diverse righe della tabella NODE_DISTRIBUTION che descrivono la distribuzione di dati demografici dei clienti per il modello di clustering `TM_Clustering`creato nell' [Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md):  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORTO|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1 (Mancante)|  
 |Age|44.9016152716593|12939|1|125.663453102554|3 (Continuo)|  
-|Gender|Missing|0|0|0|1 (Mancante)|  
-|Gender|F|6350|0.490764355823479|0|4 (discreto)|  
-|Gender|M|6589|0.509235644176521|0|4 (discreto)|  
+|Sesso|Missing|0|0|0|1 (Mancante)|  
+|Sesso|F|6350|0.490764355823479|0|4 (discreto)|  
+|Sesso|M|6589|0.509235644176521|0|4 (discreto)|  
   
  Da questi risultati emerge che sono stati utilizzati 12939 case per compilare il modello, che il rapporto tra maschi e femmine è approssimativamente 50-50 e che l'età media è 44 anni. Le statistiche descrittive variano a seconda che l'attributo riportato sia un tipo di dati numerico continuo, ad esempio l'età, o un tipo di valore discreto, ad esempio il sesso. Le misure statistiche *media* e *varianza* vengono calcolate per i tipi di dati continui, mentre *probabilità* e *supporto* vengono calcolate per i tipi di dati discreti.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66083676"
 ## <a name="model-content-for-a-clustering-model"></a>Contenuto di un modello di clustering  
  In questa sezione vengono forniti dettagli ed esempi relativi solo alle colonne del contenuto dei modelli di data mining pertinenti per i modelli di clustering.  
   
- Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome del database in cui è archiviato il modello.  
@@ -91,21 +91,21 @@ ms.locfileid: "66083676"
   
  **Nodo padre** Indica il numero di cluster nel modello.  
   
- **Nodi del cluster** Sempre 0.  
+ **Nodi cluster** Sempre 0.  
   
  PARENT_UNIQUE_NAME  
  Nome univoco dell'elemento padre del nodo.  
   
- **Nodo padre** Sempre NULL.  
+ **Nodo padre** Sempre NULL  
   
- **Nodi del cluster** Solitamente 000.  
+ **Nodi cluster** In genere 000.  
   
  NODE_DESCRIPTION  
  Descrizione del nodo.  
   
- **Nodo padre** Sempre **(All)**.  
+ **Nodo padre** Sempre **(tutti)**.  
   
- **Nodi del cluster** Elenco delimitato da virgole degli attributi principali che distinguono il cluster dagli altri.  
+ **Nodi cluster** Elenco delimitato da virgole degli attributi primari che distinguono il cluster dagli altri cluster.  
   
  NODE_RULE  
  Opzione non utilizzata per i modelli di clustering.  
@@ -116,7 +116,7 @@ ms.locfileid: "66083676"
  NODE_PROBABILITY  
  Probabilità associata a questo nodo. **Nodo padre** Sempre 1.  
   
- **Nodi del cluster** La probabilità rappresenta la probabilità composta degli attributi, con alcuni adattamenti a seconda dell'algoritmo usato per creare il modello di clustering.  
+ **Nodi cluster** La probabilità rappresenta la probabilità composta degli attributi, con alcune modifiche a seconda dell'algoritmo utilizzato per creare il modello di clustering.  
   
  MARGINAL_PROBABILITY  
  Probabilità di raggiungere il nodo dal nodo padre. In un modello di clustering la probabilità marginale corrisponde sempre alla probabilità del nodo.  
@@ -124,16 +124,16 @@ ms.locfileid: "66083676"
  NODE_DISTRIBUTION  
  Tabella contenente l'istogramma delle probabilità del nodo.  
   
- **Nodo padre** Vedere l'introduzione di questo argomento.  
+ **Nodo padre** Vedere l'introduzione a questo argomento.  
   
- **Nodi del cluster** Rappresenta la distribuzione di attributi e valori per i case inclusi nel cluster.  
+ **Nodi cluster** Rappresenta la distribuzione di attributi e valori per i case inclusi nel cluster.  
   
  NODE_SUPPORT  
  Numero di case che supportano il nodo. **Nodo padre** Indica il numero di case di training per l'intero modello.  
   
- **Nodi del cluster** Indica la dimensione del cluster come numero di case.  
+ **Nodi cluster** Indica le dimensioni del cluster come numero di case.  
   
- **Nota** Se il modello usa il clustering K-medie, ogni case può appartenere a un unico cluster. Se invece il modello utilizza il clustering EM, ogni case può appartenere a cluster diversi e gli viene assegnata una distanza ponderata per ogni cluster cui appartiene. Pertanto, per i modelli EM la somma del supporto per un singolo cluster è maggiore del supporto per il modello complessivo.  
+ **Nota** Se il modello usa il clustering K-means, ogni case può appartenere a un solo cluster. Se invece il modello utilizza il clustering EM, ogni case può appartenere a cluster diversi e gli viene assegnata una distanza ponderata per ogni cluster cui appartiene. Pertanto, per i modelli EM la somma del supporto per un singolo cluster è maggiore del supporto per il modello complessivo.  
   
  MSOLAP_MODEL_COLUMN  
  Opzione non utilizzata per i modelli di clustering.  
@@ -141,25 +141,26 @@ ms.locfileid: "66083676"
  MSOLAP_NODE_SCORE  
  Visualizza un punteggio associato al nodo.  
   
- **Nodo padre** Punteggio BIC (Bayesian Information Criterion) per il modello di clustering.  
+ **Nodo padre** Punteggio BIC (Bayes Information Criterion) per il modello di clustering.  
   
- **Nodi del cluster** Sempre 0.  
+ **Nodi cluster** Sempre 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Etichetta utilizzata a scopo di visualizzazione. Questa didascalia non può essere modificata.  
   
- **Nodo padre** il tipo di modello: Modello di cluster  
+ **Nodo padre** Tipo di modello: modello di cluster  
   
- **Nodi del cluster** Nome del cluster. Esempio: Cluster 1.  
+ **Nodi cluster** Nome del cluster. Esempio: Cluster 1.  
   
-## <a name="remarks"></a>Note  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre più metodi per la creazione di un modello di clustering. Se non si conosce il metodo impiegato per creare il modello in uso, è possibile recuperare a livello di programmazione i metadati del modello, utilizzando un client ADOMD o AMO oppure eseguendo una query sul set di righe dello schema di data mining. Per altre informazioni, vedere [Eseguire query sui parametri usati per creare un modello di data mining](query-the-parameters-used-to-create-a-mining-model.md).  
+## <a name="remarks"></a>Osservazioni  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre più metodi per la creazione di un modello di clustering. Se non si conosce il metodo impiegato per creare il modello in uso, è possibile recuperare a livello di programmazione i metadati del modello, utilizzando un client ADOMD o AMO oppure eseguendo una query sul set di righe dello schema di data mining. Per altre informazioni, vedere [Eseguire query sui parametri usati per creare un modello di data mining](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  La struttura e il contenuto del modello rimangono invariati, indipendentemente dal metodo di clustering o dai parametri utilizzati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto del modello di data mining &#40;Analysis Services-&#41;di data mining](mining-model-content-analysis-services-data-mining.md)   
  [Visualizzatori modello di data mining](data-mining-model-viewers.md)   
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
  [Query di data mining](data-mining-queries.md)  

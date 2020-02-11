@@ -1,5 +1,5 @@
 ---
-title: Matrice di classificazione (componenti aggiuntivi Data Mining SQL Server dati) | Microsoft Docs
+title: Matrice di classificazione (componenti aggiuntivi Data mining SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -16,31 +16,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087965"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matrice di classificazione (componenti aggiuntivi Data mining di SQL Server)
-  ![Pulsante matrice di classificazione, barra multifunzione Data Mining](media/dmc-cmatrix.gif "pulsante matrice di classificazione, barra multifunzione Data Mining")  
+  ![Pulsante Matrice di classificazione, barra multifunzione Data mining](media/dmc-cmatrix.gif "Pulsante Matrice di classificazione, barra multifunzione Data mining")  
   
  È possibile utilizzare la matrice di classificazione per valutare l'accuratezza di un modello per la stima. Per generare una matrice di classificazione, è necessario eseguire un set di dati di testing tramite il modello; inoltre mediante lo strumento della matrice di classificazione vengono confrontati i valori effettivi del set di testing con le stime eseguite dal modello. Osservando la matrice, è possibile determinare immediatamente la frequenza con cui il modello è corretto e quella con cui vengono eseguite stime in modo errato.  
   
- In questi componenti aggiuntivi, usare il **matrice di classificazione** guidato per selezionare un modello, specificare i dati di test e quindi generare una matrice di risultati.  
+ In questi componenti aggiuntivi utilizzare la procedura guidata **matrice di classificazione** per selezionare un modello, specificare i dati di test e quindi generare una matrice di risultati.  
   
 ## <a name="how-to-read-a-classification-matrix"></a>Modalità di lettura di una matrice di classificazione  
- Si supponga che l'obiettivo consiste nel progettare un programma di fedeltà dei clienti e quindi assegnare i clienti a categorie appropriate, in modo da fornire loro il livello adeguato di incentivi. L'implementazione di tre livelli per il programma di ricompensa: bronzo, argento e oro - e assegnati ai clienti in una fase di valutazione. È stato inoltre progettato un modello tramite cui vengono analizzati i clienti e stimate le categorie corrette. A questo punto si utilizzerà la matrice di classificazione nei dati di prova per determinare l'efficacia del modello relativamente alla stima dell'offerta corretta per tutti i clienti.  
+ Si supponga che l'obiettivo sia quello di progettare un programma di fedeltà dei clienti e quindi assegnare i clienti alle categorie appropriate, in modo che sia possibile fornire il livello appropriato di incentivi. Sono stati implementati tre livelli per il programma Reward, ovvero bronzo, argento e oro, che sono stati forniti ai clienti in una fase di valutazione. È stato inoltre progettato un modello tramite cui vengono analizzati i clienti e stimate le categorie corrette. A questo punto si utilizzerà la matrice di classificazione nei dati di prova per determinare l'efficacia del modello relativamente alla stima dell'offerta corretta per tutti i clienti.  
   
  Tramite la tabella della matrice di classificazione viene indicato il numero di clienti che verranno assegnati a ogni categoria in base al modello e il risultato ottenuto verrà confrontato con il numero di clienti effettivamente iscritti a ogni livello di ricompensa.  
   
 ||Bronzo (valore effettivo)|Oro (valore effettivo)|Argento (valore effettivo)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronzo|**94.45%**|15.18%|1.70%|  
-|Oro|2.72%|**84.82%**|0,00%|  
-|Argento|1.84%|0,00%|**93.80%**|  
-|*Corretti*|*95.45%*|*84.82%*|*98.30%*|  
-|*Classificato in modo errato*|*4.55%*|*15.18%*|*1.70%*|  
+|Bronze|**94,45%**|15,18%|1,70%|  
+|Gold|2,72%|**84,82%**|0,00%|  
+|Silver|1,84%|0,00%|**93,80%**|  
+|*Corretto*|*95,45%*|*84,82%*|*98,30%*|  
+|*Classificazioni non corrette*|*4,55%*|*15,18%*|*1,70%*|  
   
 -   In ogni colonna vengono visualizzati i valori effettivi del set di dati di testing.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "66087965"
   
 3.  Selezionare la colonna di cui si desidera valutare l'accuratezza. È possibile selezionare solo una colonna quando si crea una matrice, ma la colonna può disporre di più valori.  
   
-     Suggerimento: Può essere difficile interpretare una matrice di classificazione se nella colonna stimabile contiene molte colonne da confrontare.  
+     Suggerimento: può essere difficile interpretare una matrice di classificazione se nella colonna stimabile vi sono numerose colonne da confrontare.  
   
-     Nel **Seleziona colonne da stimare** pagina, è possibile inoltre specificare se si desidera visualizzare il numero di valori errati e corretti o visualizzare una percentuale.  
+     Nella pagina **Seleziona colonne da stimare** è inoltre possibile specificare se si desidera visualizzare il numero di valori non corretti e non corretti oppure visualizzare una percentuale.  
   
 4.  Nella pagina Selezione dati di origine indicare se si utilizzano i dati di test esterni o i dati di test salvati con il modello.  
   
-5.  Se si usano dati di test esterni, è necessario eseguire il mapping alle colonne di input il modello i **specificare la relazione** pagina della procedura guidata.  
+5.  Se si utilizzano dati di test esterni, è necessario eseguire il mapping del modello alle colonne di input nella pagina **impostazione relazione** della procedura guidata.  
   
      Se si utilizza il set di dati di test predefinito, il mapping viene eseguito automaticamente.  
   
@@ -80,16 +80,16 @@ ms.locfileid: "66087965"
   
 -   Per il modello di misura è necessario stimare un valore che sia discreto o che sia già stato discretizzato.  
   
--   Se si non utilizza l'opzione per salvare un set di testing insieme alla struttura o modello, è necessario ottenere un set di dati di input che è essenzialmente lo stesso numero di colonne, con i corrispondenti tipi di dati, come quelli usati nel modello.  
+-   Se non è stata usata l'opzione per salvare un set di testing insieme alla struttura o al modello, è necessario ottenere un set di dati di input con essenzialmente lo stesso numero di colonne, con i tipi di dati corrispondenti, come quelli usati nel modello.  
   
 -   Sia il modello di data mining che i nuovi dati utilizzati per il testing devono contenere almeno una colonna stimabile e le colonne devono includere lo stesso tipo di dati.  
   
 ### <a name="known-issues"></a>Problemi noti  
- In SQL Server 2012 e SQL Server 2014, la possibilità di eseguire il mapping di set di dati di test interno al modello non funziona **matrice di classificazione** dello strumento. Tuttavia, è possibile specificare un set di dati esterno e selezionare il set di training come input per determinare l'errore nel set di dati originale.  
+ In SQL Server 2012 e SQL Server 2014, la possibilità di eseguire il mapping del set di dati di test interno al modello non funziona nello strumento **matrice di classificazione** . Tuttavia, è possibile specificare un set di dati esterno e selezionare il set di training come input per determinare l'errore nel set di dati originale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalida dei modelli e utilizzo dei modelli per la stima &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [Esplorare i dati &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md)   
- [Rileva categorie &#40;strumenti di analisi tabelle per Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
+ [Convalida di modelli e utilizzo di modelli per la stima &#40;componenti aggiuntivi Data mining per Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Esplorare &#40;dati SQL Server componenti aggiuntivi Data mining&#41;](explore-data-sql-server-data-mining-add-ins.md)   
+ [Rilevare le categorie &#40;strumenti di analisi tabelle per Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078925"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modifica della dimensione Customer
@@ -27,15 +27,15 @@ ms.locfileid: "66078925"
   
 1.  Passare a **Progettazione dimensioni** per la dimensione Customer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. A tale scopo, fare doppio clic sulla dimensione **Customer** nel nodo **Dimensioni** di Esplora soluzioni.  
   
-2.  Nel riquadro **Attributi** fare clic con il pulsante destro del mouse su **English Country Region Name**e scegliere **Rinomina**. Modificare il nome dell'attributo da `Country-Region`.  
+2.  Nel riquadro **Attributi** fare clic con il pulsante destro del mouse su **English Country Region Name**e scegliere **Rinomina**. Modificare il nome dell'attributo in `Country-Region`.  
   
 3.  Modificare i nomi degli attributi seguenti allo stesso modo:  
   
-    -   **English Education** degli attributi - modificare in `Education`  
+    -   Attributo per la **formazione in lingua inglese** -modifica a`Education`  
   
-    -   **English Occupation** degli attributi - modificare in `Occupation`  
+    -   Attributo **occupation inglese** -modifica in`Occupation`  
   
-    -   **State Province Name** degli attributi - modificare in `State-Province`  
+    -   Attributo **nome Provincia di stato** -modifica in`State-Province`  
   
 4.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -44,28 +44,28 @@ ms.locfileid: "66078925"
   
 #### <a name="to-create-a-hierarchy"></a>Per creare una gerarchia  
   
-1.  Trascinare il `Country-Region` dell'attributo dal **attributi** riquadro il **gerarchie** riquadro.  
+1.  Trascinare l' `Country-Region` attributo dal riquadro **attributi** al riquadro **gerarchie** .  
   
-2.  Trascinare il `State-Province` dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro, sotto il `Country-Region` livello.  
+2.  Trascinare l' `State-Province` attributo dal riquadro **attributi** al ** \<nuovo livello>** cella nel riquadro **gerarchie** , sotto il `Country-Region` livello.  
   
-3.  Trascinare il **Città** dell'attributo dal **attributi** riquadro il  **\<nuovo livello >** cella il **gerarchie** riquadro di sotto di `State-Province` livello.  
+3.  Trascinare l'attributo **City** dal riquadro **attributi** al ** \<nuovo livello>** cella nel riquadro **gerarchie** , sotto il `State-Province` livello.  
   
-4.  Nel **gerarchie** riquadro della finestra il **struttura dimensione** scheda, fare clic sulla barra del titolo del **gerarchia** gerarchia, seleziona **rinominare**, quindi digitare `Customer Geography`.  
+4.  Nel riquadro **gerarchie** della scheda **Struttura dimensione** fare clic con il pulsante destro del mouse sulla barra del titolo della gerarchia **gerarchia** , scegliere **Rinomina**, quindi `Customer Geography`digitare.  
   
      Il nome della gerarchia è ora `Customer Geography`.  
   
 5.  Scegliere **Salva tutti** dal menu **File**.  
   
 ## <a name="adding-a-named-calculation"></a>Aggiunta di un calcolo denominato  
- È possibile aggiungere un calcolo denominato, ovvero un'espressione SQL rappresentata da una colonna calcolata, a una tabella in una vista origine dati. L'espressione ha lo stesso aspetto e funziona allo stesso modo di una colonna di una tabella. I calcoli denominati consentono di estendere lo schema relazionale delle tabelle esistenti in una vista origine dati senza modificare la tabella dell'origine dei dati sottostante. Per altre informazioni, vedere [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ È possibile aggiungere un calcolo denominato, ovvero un'espressione SQL rappresentata da una colonna calcolata, a una tabella in una vista origine dati. L'espressione ha lo stesso aspetto e funziona allo stesso modo di una colonna di una tabella. I calcoli denominati consentono di estendere lo schema relazionale delle tabelle esistenti in una vista origine dati senza modificare la tabella dell'origine dei dati sottostante. Per altre informazioni, vedere [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>Per aggiungere un calcolo denominato  
   
-1.  Aprire la vista origine dati **[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012** facendo doppio clic su di essa nella cartella **Viste origine dati** di Esplora soluzioni.  
+1.  Per aprire ** [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] ** la vista origine dati DW 2012, fare doppio clic su di essa nella cartella **viste origine dati** in Esplora soluzioni.  
   
 2.  Nel riquadro **Tabelle** a sinistra, fare clic con il pulsante destro del mouse su **Customer**e scegliere **Nuovo calcolo denominato**.  
   
-3.  Nel **Crea calcolo denominato** finestra di dialogo, digitare `FullName` nel **nome colonna** casella, digitare o copiare e incollare il codice seguente `CASE` istruzione nel **espressione**  casella:  
+3.  Nella finestra di dialogo **Crea calcolo denominato** Digitare `FullName` nella casella **nome colonna** , quindi digitare o copiare e incollare l'istruzione seguente `CASE` nella casella **espressione** :  
   
     ```  
     CASE  
@@ -76,11 +76,11 @@ ms.locfileid: "66078925"
     END  
     ```  
   
-     Il `CASE` istruzione consente di concatenare il **FirstName**, **MiddleName**, e **LastName** colonne in una singola colonna che si userà il cliente della dimensione come il nome visualizzato per il **cliente** attributo.  
+     L' `CASE` istruzione concatena le colonne **FirstName**, **MiddleName**e **LastName** in una singola colonna che verrà usata nella dimensione Customer come nome visualizzato per l'attributo **Customer** .  
   
 4.  Fare clic su **OK**e quindi espandere **Customer** nel riquadro **Tabelle** .  
   
-     Il `FullName` calcolo denominato verrà visualizzato nell'elenco delle colonne della tabella Customer, con un'icona che indica che si tratta di un calcolo denominato.  
+     Il `FullName` calcolo denominato viene visualizzato nell'elenco di colonne della tabella Customer, con un'icona che indica che si tratta di un calcolo denominato.  
   
 5.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66078925"
   
 7.  Controllare l'ultima colonna della vista **Esplora tabella Customer** .  
   
-     Si noti che il `FullName` colonna vengono visualizzate nella vista origine dati, concatenando correttamente i dati di numerose colonne dell'origine dati sottostante e senza modificare l'origine dati originale.  
+     Si noti che `FullName` la colonna viene visualizzata nella vista origine dati, concatenando correttamente i dati di numerose colonne dell'origine dati sottostante e senza modificare l'origine dati originale.  
   
 8.  Chiudere la scheda **Esplora tabella Customer** .  
   
@@ -103,13 +103,13 @@ ms.locfileid: "66078925"
   
 3.  Aprire la finestra Proprietà e fare clic sul pulsante **Nascondi automaticamente** sulla barra del titolo in modo che rimanga aperta.  
   
-4.  Nel **Name** campo della proprietà, tipo `Full Name`.  
+4.  Nel campo della proprietà **nome** Digitare `Full Name`.  
   
-5.  Fare clic nella **NameColumn** proprietà campo nella parte inferiore e quindi fare clic su Sfoglia ( **...** ) per aprire la **colonna nome** nella finestra di dialogo.  
+5.  Fare clic sul campo proprietà **NameColumn** nella parte inferiore, quindi fare clic sul pulsante Sfoglia (**..**.) per aprire la finestra di dialogo **colonna nome** .  
   
-6.  Selezionare `FullName` nella parte inferiore della **Source column** elenco e quindi fare clic su **OK**.  
+6.  Selezionare `FullName` nella parte inferiore dell'elenco **colonna di origine** , quindi fare clic su **OK**.  
   
-7.  Nella scheda struttura dimensione trascinare il `Full Name` dell'attributo dal **attributi** riquadro nel  **\<nuovo livello >** cella il **gerarchie** riquadro, sotto il **Città** livello.  
+7.  Nella scheda struttura dimensioni trascinare `Full Name` l'attributo dal riquadro **attributi** al ** \<nuovo livello>** cella nel riquadro **gerarchie** , sotto il livello **City** .  
   
 8.  Scegliere **Salva tutti** dal menu **File**.  
   
@@ -122,17 +122,17 @@ ms.locfileid: "66078925"
   
 2.  Nel riquadro **Attributi** tenere premuto CTRL e fare clic su ognuno dei seguenti attributi per selezionarli:  
   
-    -   **City**  
+    -   **city**  
   
     -   `Country-Region`  
   
-    -   **Postal Code**  
+    -   **Cap**  
   
     -   `State-Province`  
   
-3.  Nella finestra Proprietà scegliere il **AttributeHierarchyDisplayFolder** campo della proprietà nella parte superiore (potrebbe essere necessario in modo che punti a questo argomento per visualizzare il nome completo) e quindi digitare `Location`.  
+3.  Nella Finestra Proprietà fare clic sul campo della proprietà **AttributeHierarchyDisplayFolder** nella parte superiore (potrebbe essere necessario puntare a tale campo per visualizzare il nome completo), quindi digitare `Location`.  
   
-4.  Nel **gerarchie** riquadro, fare clic su `Customer Geography`, quindi nella finestra proprietà a destra, selezionare `Location` come valore del **DisplayFolder** proprietà.  
+4.  Nel riquadro **gerarchie** fare clic `Customer Geography`su, quindi nella finestra proprietà a destra selezionare `Location` come valore della proprietà **DisplayFolder** .  
   
 5.  Nel riquadro **Attributi** tenere premuto CTRL e fare clic su ognuno dei seguenti attributi per selezionarli:  
   
@@ -140,15 +140,15 @@ ms.locfileid: "66078925"
   
     -   `Education`  
   
-    -   **Gender**  
+    -   **Genere**  
   
-    -   **House Owner Flag**  
+    -   **Flag proprietario casa**  
   
     -   **Marital Status**  
   
-    -   **Number Cars Owned**  
+    -   **Numero automobili di proprietà**  
   
-    -   **Number Children At Home**  
+    -   **Numero di figli a casa**  
   
     -   `Occupation`  
   
@@ -156,20 +156,20 @@ ms.locfileid: "66078925"
   
     -   **Yearly Income**  
   
-6.  Nella finestra Proprietà scegliere il **AttributeHierarchyDisplayFolder** proprietà campo nella parte superiore e quindi digitare `Demographic`.  
+6.  Nella Finestra Proprietà fare clic sul campo della proprietà **AttributeHierarchyDisplayFolder** nella parte superiore, quindi digitare `Demographic`.  
   
 7.  Nel riquadro **Attributi** tenere premuto CTRL e fare clic su ognuno dei seguenti attributi per selezionarli:  
   
-    -   **Email Address**  
+    -   **Indirizzo di posta elettronica**  
   
     -   **Phone**  
   
-8.  Nella finestra Proprietà scegliere il **AttributeHierarchyDisplayFolder** campo della proprietà e il tipo `Contacts`.  
+8.  Nella Finestra Proprietà fare clic sul campo della proprietà **AttributeHierarchyDisplayFolder** e digitare `Contacts`.  
   
 9. Scegliere **Salva tutti** dal menu **File**.  
   
 ## <a name="defining-composite-keycolumns"></a>Definizione della proprietà KeyColumns composta  
- La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano la chiave per l'attributo. In questa lezione, si crea una chiave composta per la **Città** e `State-Province` attributi. Le chiavi composte possono essere utili quando è necessario identificare in modo univoco un attributo. Ad esempio, quando si definiscono le relazioni tra attributi più avanti in questa esercitazione, un' **Città** attributo deve identificare in modo univoco un `State-Province` attributo. Tuttavia, è possibile che esistano varie città con lo stesso nome in stati diversi. Per questo motivo verrà creata una chiave composta, costituita dalle colonne **StateProvinceName** e **City** per l'attributo **City** . Per altre informazioni, vedere [Modificare la proprietà KeyColumn di un attributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
+ La proprietà **KeyColumns** contiene la colonna o le colonne che rappresentano la chiave per l'attributo. In questa lezione verrà creata una chiave composta per la **città** e `State-Province` gli attributi. Le chiavi composte possono essere utili quando è necessario identificare in modo univoco un attributo. Ad esempio, quando si definiscono le relazioni tra attributi più avanti in questa esercitazione, un attributo **City** deve identificare `State-Province` in modo univoco un attributo. Tuttavia, è possibile che esistano varie città con lo stesso nome in stati diversi. Per questo motivo verrà creata una chiave composta, costituita dalle colonne **StateProvinceName** e **City** per l'attributo **City** . Per altre informazioni, vedere [Modificare la proprietà KeyColumn di un attributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>Per definire la proprietà KeyColumns composta per l'attributo City  
   
@@ -177,7 +177,7 @@ ms.locfileid: "66078925"
   
 2.  Nel riquadro **Attributi** fare clic sull'attributo **City** .  
   
-3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** nella parte inferiore e fare clic sul pulsante Sfoglia ( **...** ).  
+3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** nella parte inferiore e fare clic sul pulsante Sfoglia (**...**).  
   
 4.  Nella finestra di dialogo **Colonne chiave** , nell'elenco **Colonne disponibili** selezionare la colonna **StateProvinceName**e fare clic sul pulsante **>** .  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66078925"
   
 5.  Fare clic su **OK**.  
   
-6.  Per impostare la proprietà **NameColumn** dell'attributo **City** , fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia ( **...** ).  
+6.  Per impostare la proprietà **NameColumn** dell'attributo **City** , fare clic nel campo **NameColumn** della finestra Proprietà e fare clic sul pulsante Sfoglia (**...**).  
   
 7.  Nella finestra di dialogo **Colonna nome** , nell'elenco **Colonna di origine** selezionare **City**e fare clic su **OK**.  
   
@@ -195,9 +195,9 @@ ms.locfileid: "66078925"
   
 1.  Assicurarsi che la scheda **Struttura dimensione** per la dimensione Customer sia aperta.  
   
-2.  Nel **attributi** riquadro, fare clic su di `State-Province` attributo.  
+2.  Nel riquadro **attributi** fare clic sull' `State-Province` attributo.  
   
-3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** e quindi sul pulsante Sfoglia ( **...** ).  
+3.  Nella finestra **Proprietà** fare clic nel campo **KeyColumns** e quindi sul pulsante Sfoglia (**...**).  
   
 4.  Nella finestra di dialogo **Colonne chiave** , nell'elenco **Colonne disponibili** selezionare la colonna **EnglishCountryRegionName**e fare clic sul pulsante **>** .  
   
@@ -205,7 +205,7 @@ ms.locfileid: "66078925"
   
 5.  Fare clic su **OK**.  
   
-6.  Per impostare il **NameColumn** proprietà delle `State-Province` dell'attributo, fare clic sul **NameColumn** campo nella finestra proprietà e quindi fare clic su Sfoglia ( **...** ) pulsante.  
+6.  Per impostare la proprietà **NameColumn** dell' `State-Province` attributo, fare clic sul campo **NameColumn** nel finestra Proprietà, quindi fare clic sul pulsante Sfoglia (**..**.).  
   
 7.  Nell'elenco **Colonna di origine** della finestra di dialogo **Colonna nome** selezionare **StateProvinceName**e fare clic su **OK**.  
   
@@ -216,11 +216,11 @@ ms.locfileid: "66078925"
   
 #### <a name="to-define-attribute-relationships"></a>Per definire relazioni tra attributi  
   
-1.  In **Progettazione dimensioni** per la dimensione Customer fare clic sulla scheda **Relazioni tra attributi** . Potrebbe essere necessario attendere alcuni istanti.  
+1.  In **Progettazione dimensioni** per la dimensione Customer fare clic sulla scheda **relazioni tra attributi** . Potrebbe essere necessario attendere.  
   
 2.  Nel diagramma fare clic con il pulsante destro del mouse sull'attributo **City** , quindi scegliere **Nuova relazione tra attributi**.  
   
-3.  Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **City**. Impostare il **attributo correlato** a `State-Province`.  
+3.  Nella finestra di dialogo **Crea relazione tra attributi** l'opzione **Attributo di origine** è impostata su **City**. Impostare **attributo correlato** su `State-Province`.  
   
 4.  Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
@@ -228,9 +228,9 @@ ms.locfileid: "66078925"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Nel diagramma, fare doppio clic il `State-Province` dell'attributo e quindi selezionare **nuova relazione tra attributi**.  
+6.  Nel diagramma fare clic con il pulsante destro `State-Province` del mouse sull'attributo e quindi scegliere **nuova relazione tra attributi**.  
   
-7.  Nel **Crea relazione tra attributi** finestra di dialogo, il **attributo di origine** è `State-Province`. Impostare il **attributo correlato** a `Country-Region`.  
+7.  Nella finestra di dialogo **Crea relazione tra attributi** l' **attributo** di origine `State-Province`è. Impostare **attributo correlato** su `Country-Region`.  
   
 8.  Nell'elenco **Tipo di relazione** impostare il tipo di relazione su **Rigida**.  
   
@@ -243,11 +243,11 @@ ms.locfileid: "66078925"
   
 #### <a name="to-deploy-the-changes-process-the-objects-and-view-the-changes"></a>Per distribuire le modifiche, elaborare gli oggetti e visualizzare le modifiche  
   
-1.  Nel menu **Compila** di [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], scegliere **Distribuisci Analysis Services Tutorial**.  
+1.  Scegliere **Distribuisci Analysis Services Tutorial** dal menu [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Compila **di**.  
   
 2.  Dopo la visualizzazione del messaggio **Distribuzione completata** , fare clic sulla scheda **Esplorazione** di Progettazione dimensioni per la dimensione Customer e fare clic sul pulsante Riconnetti a sinistra della barra degli strumenti della finestra di progettazione.  
   
-3.  Verificare che `Customer Geography` sia selezionato nel **gerarchia** elenco e quindi nel riquadro di esplorazione, espandere **tutti**, espandere **Australia**, espandere **nuovo meridionale Ticino**, quindi espandere **Coffs Harbour**.  
+3.  Verificare che `Customer Geography` sia selezionato nell'elenco **gerarchia** , quindi nel riquadro del browser espandere **tutto**, **Australia**, **New South Wales**, quindi espandere **Coffs Harbour**.  
   
      Verranno visualizzati i clienti della città.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "66078925"
  [Modifica della dimensione Product](lesson-3-3-modifying-the-product-dimension.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alle proprietà degli attributo delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Riferimento alle proprietà degli attributi delle dimensioni](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Rimuovere un attributo da una dimensione](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [Rinominare un attributo](multidimensional-models/attribute-properties-rename-an-attribute.md)   
  [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  

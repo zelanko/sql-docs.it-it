@@ -1,5 +1,5 @@
 ---
-title: Generale (finestra di dialogo struttura di Data Mining) (Analysis Services - Data Mining) | Microsoft Docs
+title: Generale (finestra di dialogo struttura di data mining) (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081062"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Generale (finestra di dialogo Struttura di data mining) (Analysis Services – Data Mining)
@@ -24,17 +24,17 @@ ms.locfileid: "66081062"
   
 ## <a name="options"></a>Opzioni  
   
-|Nome|Definizione|  
+|Termine|Definizione|  
 |----------|----------------|  
-|**Name**|Consente di visualizzare il nome della struttura di data mining.|  
+|**Nome**|Consente di visualizzare il nome della struttura di data mining.|  
 |**ID**|Consente di visualizzare l'identificatore della struttura di data mining.|  
 |**Descrizione**|Consente di visualizzare la descrizione della struttura di data mining.|  
-|**Timestamp creazione**|Consente di visualizzare la data e l'ora di creazione della struttura di data mining.|  
+|**Crea timestamp**|Consente di visualizzare la data e l'ora di creazione della struttura di data mining.|  
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati per la struttura di data mining.|  
 |**Stato**|Consente di visualizzare lo stato di elaborazione della struttura di data mining. Per ulteriori informazioni sui valori per questa proprietà, vedere <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Ultima elaborazione**|Consente di visualizzare la data e l'ora dell'ultima elaborazione della struttura di data mining.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining &#40;Analysis Services - Data mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Strutture di data mining &#40;Analysis Services-&#41;di data mining](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

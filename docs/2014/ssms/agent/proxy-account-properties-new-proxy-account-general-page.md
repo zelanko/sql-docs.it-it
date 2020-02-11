@@ -1,5 +1,5 @@
 ---
-title: Proprietà Account proxy e nuovo Account Proxy (pagina generale) | Microsoft Docs
+title: Proprietà dell'account proxy e nuovo account proxy (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650202"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Proprietà account proxy e Nuovo account proxy (pagina Generale)
-  Usare questa pagina per visualizzare o modificare le proprietà di un account proxy di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Utilizzare questa pagina per visualizzare o modificare le proprietà di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account proxy di Agent.  
   
 ## <a name="options"></a>Opzioni  
  **Nome proxy**  
  Consente di digitare il nome del proxy.  
   
- **Nome credenziali**  
+ **Nome delle credenziali**  
  Consente di digitare il nome delle credenziali per il proxy.  
   
 > [!NOTE]  
->  Il nome delle credenziali fornito deve essere il nome di credenziali esistenti. Per informazioni sulla creazione delle credenziali, vedere [creare una credenziale](../../relational-databases/security/authentication-access/create-a-credential.md)  
+>  Il nome delle credenziali fornito deve essere il nome di credenziali esistenti. Per informazioni sulla creazione di credenziali, vedere [creare una credenziale](../../relational-databases/security/authentication-access/create-a-credential.md) .  
   
  **...**  
  Apre la finestra di dialogo **Seleziona credenziali** .  

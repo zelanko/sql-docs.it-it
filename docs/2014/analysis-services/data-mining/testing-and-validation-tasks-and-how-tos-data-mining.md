@@ -1,5 +1,5 @@
 ---
-title: Test e convalida le attività e procedure dettagliate (Data Mining) | Microsoft Docs
+title: Attività e procedure di test e convalida (data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082865"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Attività e procedure di test e convalida (data mining)
@@ -39,11 +39,11 @@ ms.locfileid: "66082865"
   
  I primi tre grafici usano la scheda **Selezione input** per definire i dati usati per la generazione del grafico.  
   
- Il grafico di convalida incrociata viene creato usando input aggiuntivi, disponibili nella scheda **Convalida incrociata** . Per altre informazioni, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](cross-validation-analysis-services-data-mining.md).  
+ Il grafico di convalida incrociata viene creato usando input aggiuntivi, disponibili nella scheda **convalida incrociata** . Per ulteriori informazioni, vedere [convalida Incrociata &#40;Analysis Services-&#41;di data mining ](cross-validation-analysis-services-data-mining.md).  
   
  Per altre informazioni su come usare il grafico di accuratezza del modello di data mining, vedere [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md).  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661853"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Finestre degli strumenti in SQL Server Management Studio
@@ -31,7 +31,7 @@ ms.locfileid: "62661853"
 |[Esplora modelli](template/template-explorer.md)|Creare query basate sui modelli esistenti. È inoltre possibile creare query personalizzate o modificare i modelli esistenti per renderli più adeguati alle proprie esigenze. È possibile accedere a questo strumento dal menu **Visualizza** .|  
 |[Guida dinamica](sql-server-management-studio-ssms.md)|Visualizzare un elenco di argomenti correlati della Guida quando si fa clic su un componente o si digita un codice.|  
   
- Gli strumenti presenti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] interagiscono tra loro. È ad esempio possibile:  
+ Gli strumenti presenti in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] interagiscono tra loro. Ad esempio, è possibile:  
   
 -   Registrare un server con Esplora oggetti.  
   

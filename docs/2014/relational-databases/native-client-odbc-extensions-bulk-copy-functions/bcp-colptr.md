@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689144"
 ---
-# <a name="bcpcolptr"></a>bcp_colptr
+# <a name="bcp_colptr"></a>bcp_colptr
   Imposta l'indirizzo dei dati della variabile di programma per la copia corrente su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
@@ -50,24 +50,24 @@ idxServerCol
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *pData*  
- Puntatore ai dati da copiare. Se il tipo di dati associato è il tipo di valori di grandi dimensioni (ad esempio SQLTEXT o SQLIMAGE), *pData* può essere NULL. Un valore NULL *pData* indica i valori di dati long verranno inviati a SQL Server in blocchi mediante [bcp_moretext](bcp-moretext.md).  
+ Puntatore ai dati da copiare. Se il tipo di dati associato è un tipo di valore di grandi dimensioni, ad esempio SQLTEXT o SQLIMAGE, *pData* può essere null. Un valore NULL *pData* indica che i valori di dati Long verranno inviati a SQL Server in blocchi utilizzando [bcp_moretext](bcp-moretext.md).  
   
- Se *pData* è impostata su NULL e la colonna corrispondente al campo associato, non è un tipo di valore elevato **bcp_colptr** ha esito negativo.  
+ Se *pData* è impostato su null e la colonna corrispondente al campo associato non è un tipo di valore di grandi dimensioni, **bcp_colptr** ha esito negativo.  
   
- Per altre informazioni sui tipi di valori di grandi dimensioni, vedere [bcp_bind](bcp-bind.md)**.**  
+ Per ulteriori informazioni sui tipi di valore di grandi dimensioni, vedere [bcp_bind](bcp-bind.md)**.**  
   
  *idxServerCol*  
- Posizione ordinale della colonna nella tabella di database in cui vengono copiati i dati. La prima colonna di una tabella è la colonna 1. La posizione ordinale di una colonna viene indicata da [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  
+ Posizione ordinale della colonna nella tabella di database in cui vengono copiati i dati. La prima colonna di una tabella è la colonna 1. La posizione ordinale di una colonna viene segnalata da [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Note  
- Il **bcp_colptr** funzione consente di modificare l'indirizzo dei dati di origine per una determinata colonna quando si copiano dati da SQL Server con [bcp_sendrow](bcp-sendrow.md).  
+## <a name="remarks"></a>Osservazioni  
+ La funzione **bcp_colptr** consente di modificare l'indirizzo dei dati di origine per una determinata colonna durante la copia dei dati in SQL Server con [bcp_sendrow](bcp-sendrow.md).  
   
- Inizialmente, il puntatore ai dati dell'utente viene impostato da una chiamata a **bcp_bind**. Se l'indirizzo di dati della variabile di programma cambia tra le chiamate a **bcp_sendrow**, è possibile chiamare **bcp_colptr** per reimpostare il puntatore ai dati. La chiamata successiva a **bcp_sendrow** invia i dati indirizzati dalla chiamata al metodo **bcp_colptr**.  
+ Inizialmente, il puntatore ai dati utente viene impostato da una chiamata a **bcp_bind**. Se l'indirizzo dei dati della variabile di programma cambia tra le chiamate a **bcp_sendrow**, è possibile chiamare **bcp_colptr** per reimpostare il puntatore ai dati. La chiamata successiva a **bcp_sendrow** invia i dati indirizzati dalla chiamata al **bcp_colptr**.  
   
- Deve essere presente un oggetto separato **bcp_colptr** chiamata per ogni colonna della tabella di indirizzi contenente i dati che si desidera modificare.  
+ Deve essere presente una chiamata di **bcp_colptr** separata per ogni colonna della tabella di cui si desidera modificare l'indirizzo dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](sql-server-driver-extensions-bulk-copy-functions.md)  

@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un File di Microsoft Excel (SSAS) | Microsoft Docs
+title: Connettersi a un file di Microsoft Excel (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087315"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Connessione a un file di Microsoft Excel (SSAS)
-  Questa pagina dell'**Importazione guidata tabella** consente di connettersi a un file di Microsoft Excel archiviato nel computer locale. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
+  Questa pagina dell' **Importazione guidata tabella** consente di connettersi a un file di Microsoft Excel archiviato nel computer locale. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
  Per connettersi a un file di Microsoft Excel, è necessario che nel computer sia installato il provider ACE appropriato. Per altre informazioni, vedere [Origini dati supportate &#40;SSAS tabulare&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
@@ -31,16 +31,16 @@ ms.locfileid: "66087315"
  **Nome descrittivo connessione**  
  Digitare un nome univoco per questa connessione all'origine dati. Questo campo è obbligatorio.  
   
- **Percorso File di Excel**  
+ **Percorso file di Excel**  
  Specificare il percorso completo del file di Excel.  
   
  **Sfoglia**  
  Passare al percorso in cui è disponibile un file di Excel.  
   
- **Advanced**  
+ **Funzionalità avanzate**  
  Impostare altre proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** .  
   
- **Utilizza la prima riga come intestazioni di colonna**  
+ **Utilizza la prima riga per le intestazioni di colonna**  
  Specificare se utilizzare la prima riga di dati per le intestazioni di colonna della tabella di destinazione.  
   
  **Test connessione**  

@@ -1,5 +1,5 @@
 ---
-title: Creare una dimensione mediante Creazione guidata dimensione | Microsoft Docs
+title: Creazione di una dimensione tramite la creazione guidata dimensione | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076431"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Creare una dimensione utilizzando la Creazione guidata dimensione
@@ -45,7 +45,7 @@ ms.locfileid: "66076431"
   
          Se l'elenco **Colonne chiave** contiene più colonne chiave, è necessario specificare una colonna del nome che fornisce i valori del membro per l'attributo chiave. A questo scopo, è possibile creare un calcolo denominato nella vista origine dati e utilizzarlo come colonna del nome.  
   
-    5.  Scegliere **Avanti**.  
+    5.  Fare clic su **Avanti**.  
   
 4.  Nella pagina **Selezione tabelle correlate** selezionare le tabelle correlate che si vuole includere nella dimensione e quindi fare clic su **Avanti**.  
   

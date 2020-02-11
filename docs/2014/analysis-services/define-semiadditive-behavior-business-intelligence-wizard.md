@@ -1,5 +1,5 @@
 ---
-title: Definisci funzioni semiadditive (configurazione guidata Business Intelligence) | Microsoft Docs
+title: Definire il comportamento di funzioni semiadditive (configurazione guidata funzionalità di Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081997"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Definizione funzioni semiadditive (Configurazione guidata funzionalità di Business Intelligence)
@@ -26,24 +26,24 @@ ms.locfileid: "66081997"
 >  Ad eccezione di LastChild disponibile nell'edizione Standard, le funzioni semiadditive sono disponibili solo in Business Intelligence o nelle edizioni Enterprise. Inoltre, poiché le funzioni semiadditive vengono definite solo sulle misure e non sulle dimensioni, questa pagina non verrà visualizzata nella Configurazione guidata funzionalità di Business Intelligence se avviata da Progettazione dimensioni oppure facendo clic con il pulsante destro del mouse su una dimensione in Esplora soluzioni in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="options"></a>Opzioni  
- **Disabilita funzioni semiadditive**  
+ **Disattiva il comportamento di funzioni semiadditive**  
  Consente di disabilitare le funzioni semiadditive in tutte le misure contenute nel cubo.  
   
- **La procedura guidata ha rilevato il \<nome dimensione > dimensione di tipo conti, che contiene membri semiadditivi. Il server aggregherà i membri di questa dimensione in base alle funzioni semiadditive specificate per ogni tipo di account.**  
+ **La procedura guidata ha rilevato \<il nome della dimensione> dimensione di tipo conti, che contiene membri funzioni semiadditive. Il server aggrega i membri di questa dimensione in base al comportamento funzioni semiadditive specificato per ogni tipo di conto.**  
  Abilita le funzioni semiadditive per le dimensioni di tipo Conti che contengono membri semiadditivi. Se si seleziona questa opzione, le funzioni di aggregazione vengono impostate per tutti i gruppi di misure che fanno riferimento alla dimensione di tipo Conti in `ByAccount`.  
   
  Per altre informazioni sulle dimensioni di tipo Conti, vedere [Creare un conto finanziario della dimensione di tipo padre-figlio](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
   
- **Definisci funzioni semiadditive per singole**  
+ **Definisci funzioni semiadditive per singole misure**  
  Abilita le funzioni semiadditive e specifica la funzione di aggregazione semiadditiva per misure specifiche. La funzione di aggregazione viene applicata a tutte le dimensioni a cui fa riferimento il gruppo di misure che contiene la misura.  
   
  **Misure**  
  Consente di visualizzare il nome di una misura contenuta nel cubo.  
   
- **Funzione semiadditiva**  
+ **Funzioni semiadditive (funzione)**  
  Consente di selezionare la funzione di aggregazione per la misura selezionata. Nella tabella seguente vengono elencate le funzioni di aggregazioni disponibili.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**AverageOfChildren**|Aggregazione eseguita restituendo la media degli elementi figlio della misura.|  
 |`ByAccount`|Aggregazione eseguita mediante la funzione di aggregazione associata al tipo di conto specificato di un attributo in una dimensione di tipo Conti.|  
@@ -55,15 +55,15 @@ ms.locfileid: "66081997"
 |**LastNonEmpty**|Aggregazione eseguita restituendo l'ultimo membro non vuoto della misura in base a una dimensione temporale.|  
 |`Max`|Aggregazione eseguita mediante la funzione `Max`.|  
 |`Min`|Aggregazione eseguita mediante la funzione `Min`.|  
-|**None**|Aggregazione non eseguita.|  
+|**Nessuno**|Aggregazione non eseguita.|  
 |`Sum`|Aggregazione eseguita mediante la funzione `Sum`.|  
   
 > [!NOTE]  
 >  Le selezioni effettuate per questa opzione vengono applicate solo se **Definisci funzioni semiadditive per singole misure** è selezionato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida sensibile al contesto della Configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
- [Finestra di progettazione del cubo &#40;Analysis Services - dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Finestra di progettazione della dimensione &#40;Analysis Services - dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [Guida sensibile al contesto della configurazione guidata funzionalità di Business Intelligence](business-intelligence-wizard-f1-help.md)   
+ [Progettazione cubi &#40;Analysis Services-Dati multidimensionali&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Progettazione dimensioni &#40;Analysis Services-Dati multidimensionali&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

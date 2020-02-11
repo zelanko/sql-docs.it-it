@@ -1,5 +1,5 @@
 ---
-title: "Lezione 3: L'accesso al servizio Web | Microsoft Docs"
+title: 'Lezione 3: accesso al servizio Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653784"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>Lezione 3: Accesso al servizio Web
@@ -113,17 +113,17 @@ ms.locfileid: "62653784"
   
 4.  Salvare la soluzione.  
   
- Nel codice di esempio dell'esercitazione viene utilizzato il metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servizio Web per recuperare le proprietà del report di esempio Company Sales 2012. Il <xref:ReportService2010.ReportingService2010.GetProperties%2A> metodo accetta due argomenti: il nome del report per il quale si desidera recuperare informazioni sulle proprietà e una matrice di **Property []** gli oggetti che contiene i nomi delle proprietà i cui valori da recuperare. Il metodo restituisce anche una matrice di **Property []** gli oggetti che contiene i nomi e valori delle proprietà specificate nell'argomento properties.  
+ Nel codice di esempio dell'esercitazione viene utilizzato il metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servizio Web per recuperare le proprietà del report di esempio Company Sales 2012. Il <xref:ReportService2010.ReportingService2010.GetProperties%2A> metodo accetta due argomenti: il nome del report per il quale si desidera recuperare le informazioni sulle proprietà e una matrice di oggetti **Property []** contenente i nomi delle proprietà di cui si desidera recuperare i valori. Il metodo restituisce inoltre una matrice di oggetti **Property []** che contiene i nomi e i valori delle proprietà specificate nell'argomento Properties.  
   
 > [!NOTE]  
->  Se si fornisce un oggetto vuoto **Property []** matrice per l'argomento di proprietà, vengono restituite tutte le proprietà disponibili.  
+>  Se si specifica una matrice di **Proprietà []** vuota per l'argomento Properties, verranno restituite tutte le proprietà disponibili.  
   
  Nel codice dell'esempio precedente viene utilizzato il metodo <xref:ReportService2010.ReportingService2010.GetProperties%2A> per restituire il nome e la descrizione del report di esempio Company Sales 2012, quindi viene utilizzato un ciclo `foreach` per scrivere le proprietà e i valori nella console.  
   
  Per ulteriori informazioni sulla creazione e l'utilizzo di una classe proxy per il servizio Web ReportServer, vedere [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Lezione 4: Esecuzione dell'applicazione &#40;VB, VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
- [L'accesso al servizio Web ReportServer con Visual Basic o Visual C#&#35; &#40;esercitazione su SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Lezione 4: esecuzione dell'applicazione &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
+ [Accesso al servizio Web ReportServer utilizzando Visual Basic o Visual C&#35; &#40;SSRS tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

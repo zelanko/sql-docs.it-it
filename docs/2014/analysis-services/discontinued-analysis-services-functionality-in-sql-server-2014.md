@@ -1,5 +1,5 @@
 ---
-title: Non più disponibili caratteristiche di Analysis Services in SQL Server 2014 | Microsoft Docs
+title: Funzionalità di Analysis Services sospese in SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 616c39d03ff8081c209a80dcca912d831bcef1ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081680"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>Funzionalità di Analysis Services non più utilizzate in SQL Server 2014
@@ -30,10 +30,10 @@ ms.locfileid: "66081680"
   
 |Category|Funzionalità deprecata|Sostituzione|  
 |--------------|------------------------|-----------------|  
-|Cubi locali|Proprietà della stringa di connessione InsertInto|La sintassi della stringa di connessione originale per il popolamento di cubi locali viene sostituita dall'istruzione Create Global Cube. Per altre informazioni, vedere [istruzione CREATE GLOBAL CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
-|Cubi locali|Proprietà della stringa di connessione CreateCube|La sintassi della stringa di connessione originale per il popolamento di cubi locali viene sostituita dall'istruzione Create Global Cube. Per altre informazioni, vedere [istruzione CREATE GLOBAL CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
+|Cubi locali|Proprietà della stringa di connessione InsertInto|La sintassi della stringa di connessione originale per il popolamento di cubi locali viene sostituita dall'istruzione Create Global Cube. Per ulteriori informazioni, vedere [istruzione CREATE GLOBAL CUBE &#40;&#41;MDX ](/sql/mdx/mdx-data-definition-create-global-cube).|  
+|Cubi locali|Proprietà della stringa di connessione CreateCube|La sintassi della stringa di connessione originale per il popolamento di cubi locali viene sostituita dall'istruzione Create Global Cube. Per ulteriori informazioni, vedere [istruzione CREATE GLOBAL CUBE &#40;&#41;MDX ](/sql/mdx/mdx-data-definition-create-global-cube).|  
 |Data Mining|SQL Server 2000 PMML|Tramite la funzionalità SQL Server 2000 PMML veniva prodotto un formato di PMML con estensioni proprietarie per supportare funzionalità univoche fornite da algoritmi di Data mining non disponibili nella specifica PMML. In SQL Server 2005, tramite Analysis Services è stato effettuare l'aggiornamento della funzionalità PMML allo standard più recente PMML 2.1. Di conseguenza, le estensioni proprietarie aggiunte in SQL Server 2000 non sono più necessarie, sebbene siano ancora supportate in questa versione.|  
-|Istruzione MDX|Istruzione Create Action|Questa istruzione è stata inclusa per compatibilità con le versioni precedenti. Viene sostituita dall'oggetto Azione. Per altre informazioni su come creare azioni in versioni recenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vedere [azioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).|  
+|Istruzione MDX|Istruzione Create Action|Questa istruzione è stata inclusa per compatibilità con le versioni precedenti. Viene sostituita dall'oggetto Azione. Per ulteriori informazioni su come creare azioni nelle versioni recenti di, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]vedere [azioni &#40;Analysis Services-&#41;di dati multidimensionali ](multidimensional-models/actions-analysis-services-multidimensional-data.md).|  
   
 ## <a name="discontinued-features-in-previous-releases"></a>Funzionalità non più supportate delle versioni precedenti  
  La Migrazione guidata, utilizzata per la migrazione dei database di SQL Server 2000 Analysis Services a versioni più recenti non è più disponibile in quanto SQL Server 2000 non è più supportato.  

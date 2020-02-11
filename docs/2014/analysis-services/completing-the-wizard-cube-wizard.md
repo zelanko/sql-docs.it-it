@@ -1,5 +1,5 @@
 ---
-title: Completamento procedura guidata (Creazione guidata cubo) | Microsoft Docs
+title: Completamento procedura guidata (creazione guidata cubo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c0d0f99ebd4fcd45d456cb25d256e230ec1194d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087723"
 ---
 # <a name="completing-the-wizard-cube-wizard"></a>Completamento procedura guidata (Creazione guidata cubo)
   La pagina **Completamento procedura guidata** consente di assegnare un nome e visualizzare in anteprima il cubo che verrà creato al termine della procedura guidata.  
   
 ## <a name="options"></a>Opzioni  
- **Nome del cubo**  
+ **Nome cubo**  
  Consente di digitare il nome del cubo.  
   
  **Anteprima**  
  Consente di visualizzare la struttura del cubo che verrà creato al termine della procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti cubo &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Oggetti Cube &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubi nei modelli multidimensionali](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

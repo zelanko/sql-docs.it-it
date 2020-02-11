@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 6: Creare colonne calcolate | Microsoft Docs'
+title: 'Lezione 6: creare colonne calcolate | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,48 +11,48 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078555"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lezione 6: Creare colonne calcolate
   In questa lezione verranno creati nuovi dati nel modello aggiungendo colonne calcolate. Una colonna calcolata è basata sui dati già presenti nel modello. Per altre informazioni, vedere [Colonne calcolate &#40;SSAS tabulare&#41;](tabular-models/ssas-calculated-columns.md).  
   
- Verranno create cinque nuove colonne calcolate in tre tabelle diverse. I passaggi sono leggermente diversi per ogni attività. L'obiettivo è quello di mostrare che vi sono diversi metodi per creare nuove colonne, rinominarle e collocarle in diverse posizioni in una tabella.  
+ Verranno create cinque nuove colonne calcolate in tre tabelle diverse. I passaggi sono leggermente diversi per ogni attività. Lo scopo è dimostrare che esistono diversi modi per creare nuove colonne, rinominarle e inserirle in diverse posizioni in una tabella.  
   
- Tempo stimato per il completamento della lezione: **15 minuti**  
+ Tempo previsto per il completamento della lezione: **15 minuti**  
   
-## <a name="prerequisites"></a>Prerequisiti  
- Questo argomento fa parte di un'esercitazione relativa alla modellazione tabulare che deve essere completata nell'ordine specificato. Prima di eseguire le attività in questa lezione, è necessario avere completato la lezione precedente: [Lezione 5: Creare relazioni](lesson-4-create-relationships.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Questo argomento fa parte di un'esercitazione sulla creazione di modelli tabulari, con lezioni che è consigliabile completare nell'ordine indicato. Prima di eseguire le attività in questa lezione è necessario aver completato la lezione precedente: [Lezione 5: Creare relazioni](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Creare colonne calcolate  
   
 #### <a name="create-a-month-calendar-calculated-column-in-the-date-table"></a>Creare una colonna calcolata Month Calendar nella tabella Date  
   
-1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] scegliere **Vista modelli** nel menu **Modello**, quindi fare clic su **Vista dati**.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]scegliere **Vista modelli** nel menu **Modello**, quindi fare clic su **Vista dati**.  
   
-     Le colonne calcolate possono essere create solo tramite Progettazione modelli in Vista dati.  
+     Le colonne calcolate possono essere create solo tramite la finestra di progettazione dei modelli in vista dati.  
   
 2.  In Progettazione modelli fare clic sulla tabella (scheda) **Data** .  
   
-3.  Fare doppio clic il **Calendar Quarter** colonna e quindi fare clic su **Inserisci colonna**.  
+3.  Fare clic con il pulsante destro del mouse sulla colonna **Calendar Quarter** , quindi scegliere **Inserisci colonna**.  
   
-     Una nuova colonna denominata **CalculatedColumn1** verrà inserita a sinistra del **Calendar Quarter** colonna.  
+     Una nuova colonna denominata **CalculatedColumn1** verrà inserita a sinistra della colonna **Calendar Quarter** .  
   
-4.  Sulla barra della formula sopra la tabella digitare la formula seguente. La funzionalità Completamento automatico consente di digitare i nomi completi di colonne e tabelle ed elencare le funzioni disponibili.  
+4.  Sulla barra della formula sopra la tabella digitare la formula seguente. La funzionalità Completamento automatico è utile per digitare correttamente i nomi completi di colonne e tabelle ed elenca le funzioni disponibili.  
   
      `=RIGHT(" " & FORMAT([Month],"#0"), 2) & " - " & [Month Name]`  
   
      Dopo avere completato la compilazione della formula, premere INVIO.  
   
-     I valori vengono quindi popolati per tutte le righe nella colonna calcolata. Scorrendo la tabella verso il basso, si vedrà che le righe possono avere valori diversi per questa colonna, in base ai dati presenti in ogni riga.  
+     I valori vengono quindi popolati per tutte le righe nella colonna calcolata. Se si scorre verso il basso nella tabella, si noterà che le righe possono avere valori diversi per questa colonna, in base ai dati in ogni riga.  
   
     > [!NOTE]  
-    >  Se si riceve un errore, verificare i nomi di colonna nella formula corrispondano ai nomi di colonna modificati in [lezione 3: Rinominare le colonne](rename-columns.md).  
+    >  Se viene visualizzato un errore, verificare che i nomi di colonna nella formula corrispondano ai nomi di colonna modificati in [Lezione 3: Rinominare colonne](rename-columns.md).  
   
-5.  Rinominare la colonna `Month Calendar`.  
+5.  Rinominare la colonna in `Month Calendar`.  
   
  La colonna calcolata Month Calendar fornisce un nome ordinabile per il mese.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66078555"
   
      Una nuova colonna verrà aggiunta all'estremità destra della tabella.  
   
-2.  Sulla barra della formula digitare la formula seguente:  
+2.  Nella barra della formula digitare la formula seguente:  
   
      `=RIGHT(" " & FORMAT([Day Number Of Week],"#0"), 2) & " - " & [Day Name]`  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66078555"
 4.  Fare clic sull'intestazione di colonna, quindi trascinare la colonna tra le colonne **Day Name** e **Day of Month** .  
   
     > [!TIP]  
-    >  Lo spostamento delle colonne nella tabella semplifica l'esplorazione.  
+    >  Spostare le colonne nella tabella facilita la navigazione.  
   
  La colonna calcolata Day of Week fornisce un nome ordinabile per il giorno della settimana.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66078555"
   
 2.  Scorrere fino all'estremità destra della tabella. Si noti che la colonna all'estrema destra è denominata **Aggiungi colonna** (in corsivo). Fare clic sull'intestazione di colonna.  
   
-3.  Sulla barra della formula digitare la formula seguente.  
+3.  Nella barra della formula digitare la formula seguente.  
   
      `=RELATED('Product Subcategory'[Product Subcategory Name])`  
   
@@ -91,13 +91,13 @@ ms.locfileid: "66078555"
   
 4.  Rinominare la colonna in `Product Subcategory Name`.  
   
- La colonna calcolata Product Subcategory Name viene utilizzata per creare una gerarchia nella tabella Product, che include dati della colonna Product Subcategory Name della tabella Product Subcategory. Le gerarchie non possono estendersi in più di una tabella. La creazione di gerarchie verrà eseguita più avanti, nella lezione 7.  
+ La colonna calcolata Product Subcategory Name viene utilizzata per creare una gerarchia nella tabella Product, che include dati della colonna Product Subcategory Name della tabella Product Subcategory. Le gerarchie non possono essere estese a più di una tabella. La creazione di gerarchie verrà eseguita più avanti, nella lezione 7.  
   
 #### <a name="create-a-product-category-name-calculated-column-in-the-product-table"></a>Creare una colonna calcolata Product Category Name nella tabella Product  
   
 1.  Con la tabella **Product** ancora attiva, fare clic sul menu **Colonna** , quindi scegliere **Aggiungi colonna**.  
   
-2.  Sulla barra della formula digitare la formula seguente:  
+2.  Nella barra della formula digitare la formula seguente:  
   
      `=RELATED('Product Category'[Product Category Name])`  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66078555"
   
 3.  Rinominare la colonna in `Product Category Name`.  
   
- La colonna calcolata Product Category Name viene utilizzata per creare una gerarchia nella tabella Product, che include dati della colonna Product Category Name della tabella Product Category. Le gerarchie non possono estendersi in più di una tabella.  
+ La colonna calcolata Product Category Name viene utilizzata per creare una gerarchia nella tabella Product, che include dati della colonna Product Category Name della tabella Product Category. Le gerarchie non possono essere estese a più di una tabella.  
   
 #### <a name="create-a-margin-calculated-column-in-the-internet-sales-table"></a>Creare una colonna calcolata Margin nella tabella Internet Sales  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66078555"
   
 2.  Aggiungere una nuova colonna.  
   
-3.  Sulla barra della formula digitare la formula seguente:  
+3.  Nella barra della formula digitare la formula seguente:  
   
      `=[Sales Amount]-[Total Product Cost]`  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66078555"
   
  La colonna calcolata Margin viene utilizzata per analizzare i margini di profitto per ogni riga (prodotto).  
   
-## <a name="next-step"></a>Passaggio successivo  
+## <a name="next-step"></a>passaggio successivo  
  Per continuare questa esercitazione, passare alla lezione successiva: [Lezione 7: Creare misure](lesson-6-create-measures.md).  
   
   

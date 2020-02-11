@@ -1,5 +1,5 @@
 ---
-title: Scheda grafico (vista grafico di accuratezza Data Mining) di accuratezza | Microsoft Docs
+title: Scheda grafico di accuratezza (vista Grafico accuratezza modello di data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078099"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Scheda Grafico di accuratezza (vista Grafico di accuratezza modello di data mining)
@@ -43,8 +43,8 @@ ms.locfileid: "66078099"
  Consente di copiare il grafico negli Appunti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di progettazione grafico accuratezza di data mining &#40;Data Mining&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test e convalida &#40;Data mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Progettazione Grafico accuratezza modello di data mining &#40;&#41;di data mining](mining-accuracy-chart-designer-data-mining.md)   
+ [Attività e procedure di test e convalida &#40;di data mining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Test e convalida &#40;&#41;di data mining](data-mining/testing-and-validation-data-mining.md)  
   
   

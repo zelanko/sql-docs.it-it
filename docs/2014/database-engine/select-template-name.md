@@ -1,5 +1,5 @@
 ---
-title: Seleziona nome modello | Microsoft Docs
+title: Selezionare il nome del modello | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089796"
 ---
 # <a name="select-template-name"></a>Nome modello
   Utilizzare la finestra di dialogo **Seleziona nome modello** per selezionare un modello di traccia esistente di [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ed esportarlo in un file nel sistema operativo. È inoltre possibile utilizzare questa finestra di dialogo per selezionare o immettere un nome diverso per il salvataggio di un modello di traccia, ad esempio quando si modifica un modello di traccia esistente. Per accedere a questa finestra di dialogo durante l'esportazione di un modello, scegliere [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **dal menu** File **di**e quindi fare clic su **Esporta modello**. Per accedere a questa finestra di dialogo durante la modifica del nome di un modello, scegliere **Modelli** dal menu **File**, quindi scegliere **Modifica modello**e fare clic su **Salva con nome**.  
   
 ## <a name="options"></a>Opzioni  
- **Tipo server**  
+ **Tipo di server**  
  Selezionare il tipo di server dal quale si desidera scegliere un modello. Questa opzione è disponibile solo durante l'esportazione di un modello.  
   
  **Nome modello**  

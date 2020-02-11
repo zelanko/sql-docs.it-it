@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e3b6dc676c11444c8dd45d1874f77942316a462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075494"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>Eliminare un'origine dati in Esplora soluzioni (SSAS multidimensionale)
@@ -45,6 +45,6 @@ ms.locfileid: "66075494"
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati nei modelli multidimensionali](data-sources-in-multidimensional-models.md)   
- [Origini dati supportate &#40;multidimensionale di SSAS&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [Origini dati supportate &#40;SSAS multidimensionale&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

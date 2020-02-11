@@ -1,5 +1,5 @@
 ---
-title: Automatizzare attività amministrative di Analysis Services con SSIS | Microsoft Docs
+title: Automatizzare Analysis Services attività amministrative con SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080329"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizzare le attività amministrative di Analysis Services con SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di automatizzare l'esecuzione di script DDL, le attività di elaborazione di cubi e modelli di data mining e attività di query di data mining. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può essere considerato come una raccolta di attività di flusso di controllo e manutenzione che possono essere collegate per formare processi di elaborazione dati sequenziali e paralleli.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di automatizzare l'esecuzione di script DDL, attività di elaborazione di cubi e modelli di data mining e data mining attività di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] query. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] può essere considerato come una raccolta di attività di flusso di controllo e manutenzione che possono essere collegate per formare processi di elaborazione dati sequenziali e paralleli.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è progettato per l'esecuzione di operazioni di pulitura dei dati durante le attività di elaborazione dei dati e per il raggruppamento di dati da diverse origini dei dati. Quando si usano cubi e modelli di data mining, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di trasformare i dati non numerici in dati numerici e di garantire che i valori dei dati rientrino nei limiti previsti, creando pertanto dati puliti con cui popolare dimensioni e tabelle dei fatti.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è progettato per l'esecuzione di operazioni di pulitura dei dati durante le attività di elaborazione dei dati e per il raggruppamento di dati da diverse origini dei dati. Quando si usano cubi e modelli di data mining, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consente di trasformare i dati non numerici in dati numerici e di garantire che i valori dei dati rientrino nei limiti previsti, creando pertanto dati puliti con cui popolare dimensioni e tabelle dei fatti.  
   
 ## <a name="integration-services-tasks"></a>Attività di Integration Services  
- Ogni attività o processo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è costituito da due elementi principali, ovvero elementi del flusso di controllo ed elementi del flusso di dati. Gli elementi del flusso di controllo definiscono l'ordinamento logico dell'avanzamento del processo tramite l'applicazione di vincoli di precedenza. Gli elementi del flusso di dati riguardano la connettività tra l'output di un componente e l'input del componente seguente, più eventuali trasformazioni dei dati che potrebbero avvenire nei dati intermedi. Per quanto riguarda la decisione relativa alla destinazione dei dati, i vincoli di precedenza contengono la logica che specifica il componente che riceve l'output. Le attività di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] più rilevanti per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includono l'attività Esegui DDL, l'attività Elaborazione Analysis Services e l'attività Query di data mining. Per ognuna di queste attività, è possibile utilizzare l'attività Invia messaggi per inviare all'amministratore un messaggio di posta elettronica contenente i risultati dell'attività.  
+ Ogni attività o processo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è costituito da due elementi principali, ovvero elementi del flusso di controllo ed elementi del flusso di dati. Gli elementi del flusso di controllo definiscono l'ordinamento logico dell'avanzamento del processo tramite l'applicazione di vincoli di precedenza. Gli elementi del flusso di dati riguardano la connettività tra l'output di un componente e l'input del componente seguente, più eventuali trasformazioni dei dati che potrebbero avvenire nei dati intermedi. Per quanto riguarda la decisione relativa alla destinazione dei dati, i vincoli di precedenza contengono la logica che specifica il componente che riceve l'output. Le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] attività più rilevanti per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includere l'attività Esegui DDL, l'attività Elaborazione Analysis Services e l'attività query di data mining. Per ognuna di queste attività, è possibile utilizzare l'attività Invia messaggi per inviare all'amministratore un messaggio di posta elettronica contenente i risultati dell'attività.  
   
 ## <a name="the-execute-ddl-task"></a>Attività Esegui DDL  
  In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] l'attività Esegui DDL consente di inviare script DDL direttamente al server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e di eseguirli automaticamente. In questo modo, l'amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può eseguire operazioni di backup, ripristino o sincronizzazione da un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Un pacchetto è costituito dagli elementi del flusso di dati e di controllo descritti in precedenza, che devono essere tutti eseguiti regolarmente ( **run regularly**), come le altre istruzioni DDL che è possibile aggiungere alle attività. Poiché le attività illustrate in questa sezione vengono spesso eseguite di notte, è particolarmente utile disporre di pacchetti che possano essere eseguiti da qualsiasi applicazione di pianificazione. Tramite [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è possibile pianificare l'esecuzione di un pacchetto a qualsiasi ora. Per altre informazioni sull'implementazione di questa attività, vedere [Attività Elaborazione Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md).  
@@ -40,8 +42,8 @@ ms.locfileid: "66080329"
 ## <a name="see-also"></a>Vedere anche  
  [Destinazione elaborazione partizione](../../integration-services/data-flow/partition-processing-destination.md)   
  [Destinazione elaborazione dimensione](../../integration-services/data-flow/dimension-processing-destination.md)   
- [Trasformazione Query di data mining](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
- [Elaborazione degli oggetti modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Creare script per le attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Trasformazione query di data mining](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
+ [Elaborazione di oggetti del modello multidimensionale](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [Creazione di script per attività amministrative in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - Modifica filtro | Microsoft Docs
+title: SQL Server Profiler-modifica filtro | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089775"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Modifica filtro
@@ -27,8 +27,8 @@ ms.locfileid: "66089775"
   
 ## <a name="see-also"></a>Vedere anche  
  [Filtrare gli eventi in una traccia &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [Filtrare gli eventi in base all'ora di fine &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
- [Filtrare gli eventi in base all'ora di inizio &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
+ [Filtrare gli eventi in base all'ora di fine dell'evento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
+ [Filtrare gli eventi in base all'ora di inizio dell'evento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   
  [Filtrare una traccia](../relational-databases/sql-trace/filter-a-trace.md)   
  [Filtrare le tracce tramite SQL Server Profiler](../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)  
   

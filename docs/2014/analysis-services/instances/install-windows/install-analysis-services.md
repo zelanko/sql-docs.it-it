@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079904"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Installare Analysis Services in modalità Tabella
@@ -29,11 +29,11 @@ ms.locfileid: "66079904"
   
 1.  Selezionare **Analysis Services** dall'albero delle funzionalità nell'installazione.  
   
-     ![Albero delle funzionalità di installazione che mostra i servizi Analsyis](../../../sql-server/install/media/ssas-setupas.gif "albero delle funzionalità di installazione che mostra Analsyis Services")  
+     ![Albero delle funzionalità del programma di installazione in cui viene mostrato Analsyis Services](../../../sql-server/install/media/ssas-setupas.gif "Albero delle funzionalità del programma di installazione in cui viene mostrato Analsyis Services")  
   
-2.  Nella pagina Configurazione di Analysis Services, assicurarsi di selezionare **modalità tabulare**.  
+2.  Nella pagina configurazione Analysis Services assicurarsi di selezionare la **modalità tabulare**.  
   
-     ![Pagina di installazione con le opzioni di configurazione di Analysis Services](../../../sql-server/install/media/ssas-setupasconfig.gif "pagina di installazione con le opzioni di configurazione di Analysis Services")  
+     ![Pagina di installazione con le opzioni di configurazione di Analysis Services](../../../sql-server/install/media/ssas-setupasconfig.gif "Pagina di installazione con le opzioni di configurazione di Analysis Services")  
   
  Tramite questa modalità viene utilizzato il motore di analisi in memoria xVelocity (VertiPaq) che costituisce l'archivio predefinito per i modelli tabulari distribuiti in Analysis Services. Una volta distribuite le soluzioni del modello tabulare nel server, è possibile configurare selettivamente le soluzioni tabulari per utilizzare l'archivio su disco DirectQuery in alternativa allo spazio di archiviazione associato alla memoria.  
   
@@ -45,23 +45,25 @@ ms.locfileid: "66079904"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- `INSTANCENAME` deve contenere meno di 17 caratteri.  
+ 
+  `INSTANCENAME` deve contenere meno di 17 caratteri.  
   
  Tutti i valori segnaposto degli account devono essere sostituiti con password e account validi.  
   
- Strumenti come SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] non vengono installati utilizzando la sintassi della riga di comando di esempio fornita. Per altre informazioni sull'aggiunta di funzionalità, vedere [installare SQL Server 2014 dal Prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Strumenti come SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] non vengono installati utilizzando la sintassi della riga di comando di esempio fornita. Per ulteriori informazioni sull'aggiunta di funzionalità, vedere [Install SQL Server 2014 dal prompt dei comandi](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
- `ASSERVERMODE` supporta la distinzione tra maiuscole e minuscole.  È necessario esprimere tutti i valori in lettere maiuscole. Nella tabella seguente vengono descritti i valori validi per `ASSERVERMODE`.  
+ 
+  `ASSERVERMODE` supporta la distinzione tra maiuscole e minuscole.  È necessario esprimere tutti i valori in lettere maiuscole. Nella tabella seguente vengono descritti i valori validi per `ASSERVERMODE`.  
   
-|Value|Descrizione|  
+|valore|Descrizione|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|Rappresenta il valore predefinito. Se `ASSERVERMODE` non viene impostato, il server viene installato nella modalità server Multidimensionale.|  
-|POWERPIVOT|Questo valore è facoltativo. In pratica, se si imposta il parametro `ROLE`, la modalità del server è automaticamente impostata su 1, rendendo `ASSERVERMODE` facoltativo per un'installazione di PowerPivot per SharePoint. Per altre informazioni, vedere [installare PowerPivot dal Prompt dei comandi](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
+|MULTIDIMENSIONAL|Si tratta del valore predefinito. Se `ASSERVERMODE` non viene impostato, il server viene installato nella modalità server Multidimensionale.|  
+|POWERPIVOT|Questo valore è facoltativo. In pratica, se si imposta il parametro `ROLE`, la modalità del server è automaticamente impostata su 1, rendendo `ASSERVERMODE` facoltativo per un'installazione di PowerPivot per SharePoint. Per ulteriori informazioni, vedere [installare PowerPivot dal prompt dei comandi](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
 |TABULAR|Questo valore è obbligatorio se si installa Analysis Services nella modalità Tabella tramite l'installazione dalla riga di comando.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Determinare la modalità server di un'istanza di Analysis Services](../determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Configurare l'accesso DirectQuery per un Database modello tabulare o In memoria](../../tabular-models/enable-directquery-mode-in-ssms.md)   
- [Modellazione tabulare &#40;tabulare di SSAS&#41;](../../tabular-models/tabular-models-ssas.md)  
+ [Configurare l'accesso in memoria o DirectQuery per un database modello tabulare](../../tabular-models/enable-directquery-mode-in-ssms.md)   
+ [Modellazione tabulare &#40;SSAS tabulare&#41;](../../tabular-models/tabular-models-ssas.md)  
   
   

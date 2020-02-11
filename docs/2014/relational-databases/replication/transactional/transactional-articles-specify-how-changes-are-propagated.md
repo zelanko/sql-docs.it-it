@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655676"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Impostazione della modalità di propagazione delle modifiche per gli articoli transazionali
@@ -37,13 +37,13 @@ ms.locfileid: "62655676"
 ## <a name="default-and-custom-stored-procedures"></a>Stored procedure predefinite e personalizzate  
  Le tre procedure che la replica crea per impostazione predefinita per ogni articolo di tabella sono:  
   
--   **sp_MSins_\<** *NomeTabella* **>** , per la gestione degli inserimenti.  
+-   **sp_MSins_\<** *tablename* **>** , per la gestione degli inserimenti.  
   
--   **sp_MSupd_\<** *NomeTabella* **>** , per la gestione degli aggiornamenti.  
+-   **sp_MSupd_\<** *tablename* **>** , per la gestione degli aggiornamenti.  
   
--   **sp_MSdel_\<** *NomeTabella* **>** , per la gestione delle eliminazioni.  
+-   **sp_MSdel_\<** *tablename* **>** , per la gestione delle eliminazioni.  
   
- Il valore **\<***NomeTabella***>** usato nella procedura dipende dalla modalità adottata per aggiungere l'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga o meno una tabella con lo stesso nome, ma di un proprietario diverso.  
+ Il **\< ***tablename ***>** utilizzato nella procedura dipende dalla modalità impiegata per aggiungere l'articolo alla pubblicazione e dal fatto che il database di sottoscrizione contenga una tabella con lo stesso nome, ma di un proprietario diverso.  
   
  Ognuna di queste procedure può essere sostituita da una procedura personalizzata che viene specificata durante l'aggiunta di un articolo a una pubblicazione. Le procedure personalizzate vengono utilizzate se un'applicazione richiede una logica personalizzata, ad esempio l'inserimento di dati in una tabella di controllo quando una riga viene aggiornata in un Sottoscrittore. Per ulteriori informazioni sulla definizione di stored procedure personalizzate, vedere l'elenco delle procedure riportato sopra.  
   

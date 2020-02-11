@@ -1,5 +1,5 @@
 ---
-title: Eliminare una vista origine dati (Analysis Services) | Microsoft Docs
+title: Eliminazione di una vista origine dati (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075436"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Eliminare una vista origine dati (Analysis Services)
@@ -30,7 +30,7 @@ ms.locfileid: "66075436"
   
  Se si elimina una vista origina dati, gli altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da cui dipendono non saranno validi pertanto, prima di eliminare la vista origine dati, si esaminerà l'elenco di oggetti che diventeranno non validi una volta rimossa tale vista. Esaminare con attenzione l'elenco per assicurarsi che non siano inclusi oggetti che si prevede di utilizzare ancora.  
   
- ![Dialogo Elimina oggetti](../media/ssas-olapdsv-deleteobjects.gif "nella finestra di dialogo Elimina oggetti")  
+ ![Finestra di dialogo Elimina oggetti](../media/ssas-olapdsv-deleteobjects.gif "Finestra di dialogo Elimina oggetti")  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)   

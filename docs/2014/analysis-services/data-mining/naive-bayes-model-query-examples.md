@@ -1,5 +1,5 @@
 ---
-title: Esempi di Query sul modello Naive Bayes | Microsoft Docs
+title: Esempi di query sul modello Naive Bayes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083275"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Esempi di query sul modello Naive Bayes
@@ -28,7 +28,7 @@ ms.locfileid: "66083275"
   
  [Recupero di metadati del modello tramite DMX](#bkmk_Query1)  
   
- [Recupero di un riepilogo di dati di training](#bkmk_Query2)  
+ [Recupero di un riepilogo dei dati di training](#bkmk_Query2)  
   
  [Ricerca di ulteriori informazioni sugli attributi](#bkmk_Query3)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66083275"
   
  **Query di stima**  
   
- [Stima dei risultati mediante una query singleton](#bkmk_Query5)  
+ [Stima di risultati mediante una query singleton](#bkmk_Query5)  
   
  [Recupero di stime con valori di probabilità e supporto](#bkmk_Query6)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66083275"
 ## <a name="finding-information-about-a-naive-bayes-model"></a>Ricerca di informazioni su un modello Naive Bayes  
  Il contenuto di un modello Naive Bayes fornisce informazioni aggregate sulla distribuzione di valori nei dati di training. Tramite la creazione di query sui set di righe dello schema di data mining è possibile inoltre recuperare informazioni sui metadati del modello.  
   
-###  <a name="bkmk_Query1"></a> Esempio di Query 1: Recupero di metadati del modello tramite DMX  
+###  <a name="bkmk_Query1"></a>Esempio di query 1: recupero di metadati del modello tramite DMX  
  Tramite l'esecuzione di una query sul set di righe dello schema di data mining, è possibile trovare i metadati per il modello. Tali dati possono includere la data di creazione del modello, la data dell'ultima elaborazione del modello, il nome della struttura di data mining su cui si basa il modello e il nome delle colonne utilizzate come attributo stimabile. È inoltre possibile restituire i parametri utilizzati durante la creazione del modello.  
   
 ```  
@@ -69,7 +69,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
   
  Il modello utilizzato per questo esempio si basa sul modello Naive Bayes creato nell' [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md), ma è stato modificato tramite l'aggiunta di un secondo attributo stimabile e l'applicazione di un filtro ai dati di training.  
   
-###  <a name="bkmk_Query2"></a> Esempio di Query 2: Recupero di un riepilogo dei dati di Training  
+###  <a name="bkmk_Query2"></a>Esempio di query 2: recupero di un riepilogo di dati di training  
  In un modello Naive Bayes il nodo delle statistiche marginali consente di archiviare informazioni aggregate sulla distribuzione di valori nei dati di training. Questo riepilogo risulta particolarmente utile in quanto consente di non dover creare query SQL sui dati di training per trovare le stesse informazioni.  
   
  Nell'esempio seguente viene utilizzata una query sul contenuto DMX per recuperare i dati dal nodo (NODE_TYPE = 24). Poiché le statistiche vengono archiviate in una tabella nidificata, viene utilizzata la parola chiave FLATTENED per rendere più semplice la visualizzazione dei risultati.  
@@ -86,20 +86,20 @@ WHERE NODE_TYPE = 26
   
  Risultati parziali:  
   
-|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0,507263784|4|  
 |TM_NaiveBayes|Bike Buyer|1|8615|0,492736216|4|  
-|TM_NaiveBayes|Gender|Missing|0|0|1|  
-|TM_NaiveBayes|Gender|F|8656|0.495081217|4|  
-|TM_NaiveBayes|Gender|M|8828|0.504918783|4|  
+|TM_NaiveBayes|Sesso|Missing|0|0|1|  
+|TM_NaiveBayes|Sesso|F|8656|0.495081217|4|  
+|TM_NaiveBayes|Sesso|M|8828|0.504918783|4|  
   
  Questi risultati indicano, ad esempio, il numero di case di training per ogni valore discreto (VALUETYPE = 4), insieme alla probabilità calcolata, adattata per i valori mancanti (VALUETYPE = 1).  
   
  Per una definizione dei valori forniti nella tabella NODE_DISTRIBUTION in un modello Naive Bayes, vedere [Contenuto dei modelli di data mining per i modelli Naive Bayes &#40;Analysis Services - Data mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md). Per altre informazioni sull'influenza dei valori mancanti sui calcoli di probabilità e supporto, vedere [Valori mancanti &#40;Analysis Services - Data mining&#41;](missing-values-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query3"></a> Esempio di Query 3: Ricerca di ulteriori informazioni sugli attributi  
+###  <a name="bkmk_Query3"></a>Esempio di query 3: ricerca di ulteriori informazioni sugli attributi  
  Poiché un modello Naive Bayes spesso contiene informazioni complesse sulle relazioni fra attributi diversi, il modo più semplice per visualizzare tali relazioni consiste nell'utilizzare il [Visualizzatore Microsoft Naive Bayes](browse-a-model-using-the-microsoft-naive-bayes-viewer.md). È tuttavia possibile creare query DMX per restituire i dati.  
   
  Nell'esempio seguente viene illustrato come restituire informazioni dal modello su un particolare attributo, `Region`.  
@@ -146,7 +146,7 @@ ORDER BY MSOLAP_NODE_SCORE DESC
   
  Esplorando il contenuto del modello in [Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md), sarà possibile identificare le statistiche più interessanti. Alcuni degli esempi più semplici sono stati già illustrati qui. Molto spesso diventa necessario invece eseguire più query o archiviare i risultati ed elaborarli sul client.  
   
-###  <a name="bkmk_Query4"></a> Esempio di Query 4: Utilizzo del sistema di Stored procedure  
+###  <a name="bkmk_Query4"></a>Esempio di query 4: utilizzo di stored procedure di sistema  
  Oltre a scrivere query sul contenuto personalizzate, è possibile utilizzare alcune stored procedure di sistema di Analysis Services per esplorare i risultati. Per utilizzare una stored procedure di sistema, aggiungere davanti al nome della stessa la parola chiave CALL:  
   
 ```  
@@ -167,7 +167,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
 ## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Utilizzo di un modello Naive Bayes per eseguire stime  
  L'algoritmo Microsoft Naive Bayes in genere viene utilizzato meno per la stima che per l'esplorazione di relazioni tra attributi di input e stimabili. Tuttavia, il modello supporta l'utilizzo di funzioni di stima sia per la stima che per l'associazione.  
   
-###  <a name="bkmk_Query5"></a> Esempio di Query 5: Stima dei risultati mediante una Query Singleton  
+###  <a name="bkmk_Query5"></a>Esempio di query 5: stima di risultati mediante una query singleton  
  Nella query seguente viene utilizzata una query singleton per fornire un nuovo valore e stimare, in base al modello, se è probabile che un cliente con queste caratteristiche acquisti una bicicletta. Il modo più semplice per creare una query singleton in un modello di regressione consiste nell'utilizzare la finestra di dialogo **Input query singleton** . È ad esempio possibile compilare la query DMX seguente selezionando il modello `TM_NaiveBayes` , scegliendo **Query singleton**, quindi selezionando valori dagli elenchi a discesa per `[Commute Distance]` e `Gender`.  
   
 ```  
@@ -182,13 +182,13 @@ NATURAL PREDICTION JOIN
   
  Risultati dell'esempio:  
   
-|Espressione|  
+|Expression|  
 |----------------|  
 |0|  
   
  Tramite la funzione di stima viene restituito il valore più probabile, in questo caso, 0, che indica che è improbabile che questo tipo di cliente acquisti una bicicletta.  
   
-###  <a name="bkmk_Query6"></a> Esempio di Query 6: Recupero di stime con valori di probabilità e supporto  
+###  <a name="bkmk_Query6"></a>Esempio di query 6: recupero di stime con valori di probabilità e supporto  
  Oltre a stimare un risultato, spesso si desidera conoscere l'attendibilità della stima. Nella query seguente viene usata la stessa query singleton dell'esempio precedente, ma viene aggiunta la funzione di stima [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) per restituire una tabella annidata contenente statistiche a supporto della stima.  
   
 ```  
@@ -212,8 +212,8 @@ NATURAL PREDICTION JOIN
   
  Nella riga finale nella tabella vengono mostrate le modifiche apportate a supporto e probabilità per il valore mancante. I valori della varianza e della deviazione standard sono sempre 0, perché tramite i modelli Naive Bayes non è possibile modellare valori continui.  
   
-###  <a name="bkmk_Query7"></a> Esempio di Query 7: Stima delle associazioni  
- L'algoritmo Microsoft Naive Bayes può essere utilizzato per l'analisi di associazione, se nella struttura di data mining è contenuta una tabella nidificata con l'attributo stimabile come chiave. Ad esempio, è possibile compilare un modello Naive Bayes tramite la struttura di data mining creata [lezione 3: Compilazione di uno Scenario Market Basket &#40;esercitazione intermedia sul Data Mining&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) dell'esercitazione di data mining. Il modello utilizzato in questo esempio è stato modificato per aggiungere informazioni sul reddito e sulla regione del cliente nella tabella del case.  
+###  <a name="bkmk_Query7"></a>Esempio di query 7: stima delle associazioni  
+ L'algoritmo Microsoft Naive Bayes può essere utilizzato per l'analisi di associazione, se nella struttura di data mining è contenuta una tabella nidificata con l'attributo stimabile come chiave. Ad esempio, è possibile compilare un modello Naive Bayes tramite la struttura di data mining creata in [Lezione 3: Compilazione di uno scenario Market Basket &#40;Esercitazione intermedia sul data mining&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) dell'esercitazione sul data mining. Il modello utilizzato in questo esempio è stato modificato per aggiungere informazioni sul reddito e sulla regione del cliente nella tabella del case.  
   
  Nell'esempio di query seguente viene illustrata una query singleton che stima prodotti relativi ad acquisti del prodotto, `'Road Tire Tube'`. È possibile utilizzare queste informazioni per consigliare prodotti a un tipo specifico di cliente.  
   
@@ -244,8 +244,8 @@ AS t
 |||  
 |-|-|  
 |Funzione di stima|Uso|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
-|[Predict &#40;DMX&#41;](/sql/dmx/predict-dmx)|Viene restituito un valore, o un set di valori, stimato per una colonna specificata.|  
+|[&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
+|[Prevedere &#40;DMX&#41;](/sql/dmx/predict-dmx)|Viene restituito un valore, o un set di valori, stimato per una colonna specificata.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Viene restituita la probabilità ponderata.|  
 |[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Viene stimata l'appartenenza a un set di dati associativo.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Viene restituito l'oggetto Node_ID per ogni case.|  
@@ -257,6 +257,6 @@ AS t
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Algoritmo Microsoft Naive Bayes](microsoft-naive-bayes-algorithm.md)   
- [Contenuto dei modelli di data mining per i modelli Naive Bayes &#40;Analysis Services - Data mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli Naive Bayes &#40;Analysis Services-Data mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

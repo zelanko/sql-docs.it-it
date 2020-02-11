@@ -1,5 +1,5 @@
 ---
-title: Grafico di accuratezza (Analysis Services - Data Mining) | Microsoft Docs
+title: Grafico di accuratezza (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64783573ee24c5d0224393237fdac94044a1dbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084306"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Grafico di accuratezza (Analysis Services - Data mining)
-  Oggetto **grafico di accuratezza** rappresenta graficamente i miglioramenti da un modello di data mining fornisce rispetto a un'ipotesi casuale. inoltre, consente di misurare la modifica in termini di un *lift* punteggio. Confrontando i punteggi di accuratezza per varie porzioni del set di dati e per modelli differenti, è possibile determinare quale modello sia migliore, nonché quale percentuale dei case nel set di dati può trarre vantaggio dall'applicazione le stime del modello.  
+  Un **grafico di accuratezza** rappresenta graficamente il miglioramento fornito da un modello di data mining rispetto a un'ipotesi casuale e misura la modifica in termini di Punteggio di *accuratezza* . Confrontando i punteggi di accuratezza per diverse parti del set di dati e per modelli diversi, è possibile determinare quale sia il modello migliore e quale percentuale dei case nel set di dati trarrebbe vantaggio dall'applicazione delle stime del modello.  
   
  Con un grafico di accuratezza, è possibile confrontare l'accuratezza delle stime per più modelli aventi lo stesso attributo stimabile. Inoltre, è possibile valutare l'accuratezza della stima per un singolo risultato (un solo valore dell'attributo stimabile) o per tutti i risultati (tutti i valori dell'attributo specificato).  
   
  Un grafico dei profitti è un tipo di grafico correlato contenente le stesse informazioni di un grafico di accuratezza, ma consente di visualizzare anche l'aumento di profitto previsto associato all'utilizzo di ogni modello.  
   
-##  <a name="bkmk_Top"></a> Utilizzo del grafico di accuratezza  
+##  <a name="bkmk_Top"></a>Informazioni sul grafico di accuratezza  
  Può essere difficile capire i grafici di accuratezza in astratto. Pertanto, per illustrare l'utilizzo degli strumenti del grafico di accuratezza e le informazioni nel grafico, in questa sezione viene presentato uno scenario in cui un grafico di accuratezza viene utilizzato per stimare la risposta a una campagna di mailing diretto.  
   
  Il reparto Marketing in questo scenario sa che la percentuale di risposta tipica delle campagne di mailing è pari più o meno al 10%. In una tabella del database è archiviato un elenco di 10.000 potenziali clienti. In base alla percentuale di risposta tipica, è possibile prevedere che risponderanno solo circa 1.000 di questi clienti. Si consideri inoltre che il budget del progetto non è sufficiente per raggiungere tutti i 10.000 clienti archiviati nel database e che si desidera migliorare la percentuale di risposta. Si supponga che per questo scenario sia disponibile un budget che consente di inviare un annuncio pubblicitario solo a 5.000 clienti. Il reparto Marketing ha due opzioni:  
@@ -53,7 +53,7 @@ ms.locfileid: "66084306"
   
  In questo grafico sono inclusi più modelli basati sugli stessi dati. Uno di questi modelli è stato personalizzato per essere destinato a clienti specifici. È possibile personalizzare un modello aggiungendo filtri sui dati utilizzati per eseguire il training della modalità. Questo filtro consente di limitare i case utilizzati nel training e nella valutazione di clienti al di sotto dei 30 anni. Si noti che un effetto del filtro è che nel modello di base e in quello filtrato vengono utilizzati set di dati diversi e, pertanto, anche il numero di case utilizzati per la valutazione nel grafico di accuratezza è diverso. È importante ricordare questo punto durante l'interpretazione dei risultati della stima e di altre statistiche.  
   
- ![che visualizza due modelli di grafico di accuratezza](../media/newliftchart-tm30-30.gif "grafico di accuratezza che visualizza due modelli")  
+ ![Grafico di accuratezza che visualizza due modelli](../media/newliftchart-tm30-30.gif "Grafico di accuratezza che visualizza due modelli")  
   
  L'asse x del grafico rappresenta la percentuale del set di dati di test utilizzata per confrontare le stime. L'asse y del grafico rappresenta la percentuale di valori stimati.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66084306"
   
  In **Legenda data mining** sono inoltre presenti i punteggi e le statistiche che agevolano l'interpretazione del grafico. Questi risultati rappresentano l'accuratezza del modello in corrispondenza della linea grigia, che qui è posizionata in modo da includere il 30% dei test case complessivi.  
   
-|Serie e modello|Punteggio|Popolazione target|Probabilità di stima|  
+|Serie e modello|Score|Popolazione target|Probabilità di stima|  
 |-----------------------|-----------|-----------------------|-------------------------|  
 |Targeted mailing all|0.71|47.40%|61.38%|  
 |Targeted mailing under 30|0.85|51.81%|46.62%|  
@@ -91,11 +91,11 @@ ms.locfileid: "66084306"
   
  L'asse x è lo stesso del grafico con la colonna stimabile specificata, ma in questo caso l'asse y rappresenta la percentuale di stime corrette. La linea ideale pertanto è la diagonale che indica che in corrispondenza del 50% dei dati il modello stima correttamente il 50% dei case, il massimo che è possibile aspettarsi.  
   
- ![Stime corrette che Visualizza grafico di accuratezza](../media/lift1.gif "grafico di accuratezza che mostra le stime corrette")  
+ ![Grafico di accuratezza che visualizza le stime corrette](../media/lift1.gif "Grafico di accuratezza che visualizza le stime corrette")  
   
  È possibile fare clic sul grafico per spostare la barra grigia verticale in modo da visualizzare in **Legenda data mining** la percentuale di case complessivi e la percentuale di case stimati correttamente. Ad esempio, se si posiziona la barra di scorrimento grigia in corrispondenza del contrassegno del 50%, in **Legenda data mining** vengono visualizzati i punteggi di accuratezza riportati di seguito. Le cifre sono basate sul modello TM_Decision Tree creato nell'Esercitazione di base sul data mining.  
   
-|Serie, modello|Punteggio|Popolazione target|Probabilità di stima|  
+|Serie, modello|Score|Popolazione target|Probabilità di stima|  
 |-------------------|-----------|-----------------------|-------------------------|  
 |TM_DecisionTree|0.77|40.50%|72.91%|  
 |Modello ideale||50,00%||  
@@ -117,6 +117,6 @@ ms.locfileid: "66084306"
  [Torna all'inizio](#bkmk_Top)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40;Data mining&#41;](testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;&#41;di data mining](testing-and-validation-data-mining.md)  
   
   

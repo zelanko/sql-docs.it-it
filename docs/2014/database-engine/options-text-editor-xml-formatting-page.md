@@ -1,5 +1,5 @@
 ---
-title: Opzioni (Editor di testo - XML - pagina formattazione) | Microsoft Docs
+title: Opzioni (editor di testo-XML-pagina formattazione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089850"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opzioni (Editor di testo - XML - pagina Formattazione)
@@ -24,9 +24,9 @@ Questa finestra di dialogo consente di specificare le impostazioni di formattazi
 > [!NOTE]  
 > Queste impostazioni sono disponibili quando si selezionano la cartella **Editor di testo**, la cartella **XML** e quindi l'opzione **Formattazione** nella finestra di dialogo **Opzioni**.  
   
-## <a name="attributes"></a>Attributi  
+## <a name="attributes"></a>Attributes  
  **Mantieni la formattazione manuale degli attributi**  
- Consente di non riformattare gli attributi. Questa è l'impostazione predefinita.  
+ Consente di non riformattare gli attributi. Questa è la modalità predefinita.  
   
 > [!NOTE]  
 >  Se gli attributi sono disposti su più righe, a ogni riga di attributi verrà applicato un rientro corrispondente al rientro dell'elemento padre.  
@@ -42,15 +42,15 @@ Questa finestra di dialogo consente di specificare le impostazioni di formattazi
 ```  
   
 ## <a name="auto-reformat"></a>Riformatta automaticamente  
- **Quando si incolla dagli Appunti.**  
+ **Quando si incolla dagli Appunti**  
  Consente di riformattare il testo XML incollato dagli Appunti.  
   
  **Al completamento del tag di fine**  
  Consente di riformattare l'elemento al completamento del tag di fine.  
   
 ## <a name="mixed-content"></a>Contenuto misto  
- **Formatta contenuto misto per impostazione predefinita.**  
- Viene riformattato il contenuto misto, tranne quando il contenuto si trova in un ambito `xml:space="preserve"`. Questa è l'impostazione predefinita.  
+ **Formatta contenuto misto per impostazione predefinita**  
+ Viene riformattato il contenuto misto, tranne quando il contenuto si trova in un ambito `xml:space="preserve"`. Questa è la modalità predefinita.  
   
  Se un elemento contiene testo e markup, il contenuto viene considerato misto. Di seguito viene riportato un esempio di elemento con contenuto misto.  
   
@@ -60,7 +60,7 @@ Questa finestra di dialogo consente di specificare le impostazioni di formattazi
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \</dir>  
+ \<>/dir  
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor XML &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

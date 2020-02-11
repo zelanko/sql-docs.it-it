@@ -19,16 +19,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086544"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversioni di valuta (Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  Solo dati multidimensionali  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensionale  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una serie di funzionalità, basate su script MDX (Multidimensional Expressions), che implementano il supporto per la conversione di valuta nei cubi che supportano più valute.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una serie di funzionalità, basate su script MDX (Multidimensional Expressions), che implementano il supporto per la conversione di valuta nei cubi che supportano più valute.  
   
 ## <a name="currency-conversion-terminology"></a>Terminologia relativa alla conversione di valuta  
  Di seguito sono elencati i termini relativi alla conversione di valuta usati in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -84,7 +85,7 @@ ms.locfileid: "66086544"
 ## <a name="defining-currency-conversions"></a>Definizione delle conversioni di valuta  
  La Configurazione guidata funzionalità di Business Intelligence consente di definire la funzionalità di conversione di valuta per un cubo. In alternativa, le conversioni di valuta possono essere definite in modo manuale tramite script MDX.  
   
-### <a name="prerequisites"></a>Prerequisiti  
+### <a name="prerequisites"></a>Prerequisites  
  Per poter definire una conversione di valuta in un cubo tramite la Configurazione guidata funzionalità di Business Intelligence, è prima necessario definire almeno una dimensione di tipo Valuta, una dimensione temporale e un gruppo di misure di tipo Tasso. Quando si esegue la Configurazione guidata funzionalità di Business Intelligence, questi oggetti vengono usati per recuperare i dati e i metadati per la creazione della dimensione di tipo Valuta report e dello script MDX necessari per l'implementazione della funzionalità di conversione di valuta.  
   
 ### <a name="decisions"></a>Decisioni  
@@ -105,7 +106,7 @@ ms.locfileid: "66086544"
   
 |||||  
 |-|-|-|-|  
-|Direzione del tasso di cambio|**Molti-a-uno**|**Uno-a-molti**|**Molti-a-molti**|  
+|Direzione del tasso di cambio|**Molti-a-uno**|**Uno-a-molti**|**Molti a molti**|  
 |**n valuta pivot per 1 valuta di esempio**|Moltiplica la misura da convertire in base alla misura di tipo Tasso della valuta locale allo scopo di convertirla nella valuta pivot.|Divide la misura da convertire in base alla misura di tipo Tasso della valuta report allo scopo di convertirla nella valuta report.|Moltiplica la misura da convertire in base alla misura di tipo Tasso della valuta locale allo scopo di convertirla nella valuta pivot, quindi divide la misura convertita in base alla misura di tipo Tasso della valuta report allo scopo di convertirla nella valuta report.|  
 |**n valuta di esempio per 1 valuta pivot**|Divide la misura da convertire in base alla misura di tipo Tasso della valuta locale allo scopo di convertirla nella valuta pivot.|Moltiplica la misura da convertire in base alla misura di tipo Tasso della valuta report allo scopo di convertirla nella valuta report.|Divide la misura da convertire in base alla misura di tipo Tasso della valuta locale allo scopo di convertirla nella valuta pivot, quindi moltiplica la misura convertita in base alla misura di tipo Tasso della valuta report allo scopo di convertirla nella valuta report.|  
   
@@ -137,7 +138,7 @@ ms.locfileid: "66086544"
   
      Se, ad esempio, si imposta la valuta pivot sul dollaro statunitense (USD), le transazioni possono venire archiviate nella tabella dei fatti in euro (EUR), dollari australiani (AUD) e peso messicani (MXN). Con questo tipo di conversione le valute locali specificate delle transazioni vengono convertite nella valuta pivot. Di conseguenza le transazioni possono essere archiviate nelle valute locali specificate e visualizzate nella valuta pivot, la quale è specificata nella dimensione di tipo Valuta report definita per la conversione di valuta.  
   
--   **Molti-a-molti**  
+-   **Molti a molti**  
   
      Le transazioni vengono archiviate nella tabella dei fatti nelle valute locali. La funzionalità di conversione di valuta consente di convertire queste transazioni nella valuta pivot e quindi in una o più valute report.  
   

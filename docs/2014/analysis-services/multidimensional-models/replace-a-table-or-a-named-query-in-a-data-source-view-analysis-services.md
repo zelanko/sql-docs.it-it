@@ -1,5 +1,5 @@
 ---
-title: Sostituire una tabella o una Query denominata in una vista origine dati (Analysis Services) | Microsoft Docs
+title: Sostituire una tabella o una query denominata in una vista origine dati (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073126"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Sostituire una tabella o una query denominata in una vista origine dati (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66073126"
 > [!IMPORTANT]  
 >  Se si rinomina una tabella in un'origine dati, è necessario seguire la procedura per la sostituzione di una tabella e specificare la tabella rinominata come origine della tabella corrispondente nella vista origine dati prima di aggiornare la vista. Se si completa la sostituzione e si rinomina il processo, verranno mantenuti sia la tabella sia i riferimenti e le relazioni corrispondenti nella vista origine dati. In caso contrario, quando si aggiorna la vista origine dati, una tabella rinominata nell'origine dati verrà considerata come un elemento da eliminare. Per altre informazioni, vedere [Aggiornare lo schema in una vista origine dati &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_nq"></a> Sostituire una tabella con una query denominata  
+##  <a name="bkmk_nq"></a>Sostituire una tabella con una query denominata  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto o connettersi al database contenente la vista origine dati in cui si vuole sostituire una tabella o una query denominata.  
   

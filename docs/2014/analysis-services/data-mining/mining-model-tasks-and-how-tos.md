@@ -1,5 +1,5 @@
 ---
-title: Modello attività e procedure relative al data mining | Microsoft Docs
+title: Attività e procedure relative al modello di data mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083489"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Attività e procedure relative al modello di data mining
   La scheda **Modelli di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] consente di gestire ed elaborare i modelli di data mining in una struttura di data mining.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Aggiungere un modello di data mining a una struttura di data mining esistente](add-a-mining-model-to-an-existing-mining-structure.md)  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66083489"
   
 -   [Modificare la discretizzazione di una colonna in un modello di data mining](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](modeling-flags-data-mining.md)  
+-   [Visualizzare o modificare i flag di modellazione &#40;data mining&#41;](modeling-flags-data-mining.md)  
   
--   [Specificare una colonna da usare come regressore in un modello](specify-a-column-to-use-as-regressor-in-a-model.md)  
+-   [Specificare una colonna da utilizzare come regressore in un modello](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
 -   [Modificare le proprietà di un modello di data mining](change-the-properties-of-a-mining-model.md)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66083489"
   
 ## <a name="see-also"></a>Vedere anche  
  [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)   
- [Modelli di data mining &#40;Analysis Services - Data mining&#41;](mining-models-analysis-services-data-mining.md)   
+ [Modelli di data mining &#40;Analysis Services-&#41;di data mining](mining-models-analysis-services-data-mining.md)   
  [Concetti di data mining](data-mining-concepts.md)  
   
   

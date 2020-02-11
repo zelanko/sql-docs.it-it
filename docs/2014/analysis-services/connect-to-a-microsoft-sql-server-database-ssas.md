@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Database Microsoft SQL Server (SSAS) | Microsoft Docs
+title: Connettersi a un database di Microsoft SQL Server (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cc3530c7bc316c0dbdc3271d456d4f7adf05038a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087222"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Connessione a un database di Microsoft SQL Server (SSAS)
-  Questa pagina dell'**Importazione guidata tabella** consente di specificare le impostazioni per connettersi a un database di Microsoft SQL Server. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
+  Questa pagina dell' **Importazione guidata tabella** consente di specificare le impostazioni per connettersi a un database di Microsoft SQL Server. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
  Per connettersi a un'origine dati, è necessario che nel computer sia installato il provider appropriato.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66087222"
   
  Quando viene utilizzato questo tipo di autenticazione, le credenziali dell'utente corrente vengono utilizzate in caso di visualizzazione in anteprima e filtro dei dati nella finestra Proprietà tabella e nell'Importazione guidata. Tali credenziali non vengono utilizzate per importare o aggiornare dati; in tal caso vengono infatti utilizzate le credenziali di Windows specificate nella pagina Impostazioni di rappresentazione.  
   
- **Usa autenticazione di SQL Server**  
+ **Usa autenticazione SQL Server**  
  Specificare se usare l'autenticazione di SQL Server per connettersi a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Con questo tipo di autenticazione, in SQL Server l'autenticazione viene eseguita verificando che sia stato impostato un account di accesso di SQL Server e che la password specificata corrisponda a quella registrata in precedenza.  
@@ -57,13 +57,13 @@ ms.locfileid: "66087222"
  Specificare una password per la connessione al database. Questa opzione è modificabile solo se è stata selezionata l'autenticazione di SQL Server per la connessione.  
   
  **Salva password**  
- Specificare se la password immessa nella casella **Password** è stata archiviata. Questa opzione è disponibile solo se è stata selezionata l'autenticazione di SQL Server per la connessione.  
+ Specificare se archiviare la password immessa nella casella **Password** . Questa opzione è disponibile solo se è stata selezionata l'autenticazione di SQL Server per la connessione.  
   
  **Nome database**  
  Selezionare un database dall'elenco di database.  
   
- **Advanced**  
- Impostare ulteriori proprietà relative alla connessione tramite la finestra di dialogo **Impostazione delle proprietà avanzate** . Per altre informazioni, vedere [Impostazione delle proprietà avanzate &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
+ **Funzionalità avanzate**  
+ Per impostare ulteriori proprietà della connessione, utilizzare la finestra di dialogo **Imposta proprietà avanzate** . Per altre informazioni, vedere [Impostazione delle proprietà avanzate &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
  **Test connessione**  
  Provare a stabilire una connessione all'origine dati utilizzando le impostazioni correnti. Viene visualizzato un messaggio che indica se la connessione è stata stabilita.  

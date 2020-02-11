@@ -1,5 +1,5 @@
 ---
-title: Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite | Microsoft Docs
+title: Passare un database Analysis Services tra le modalità ReadOnly e ReadWrite | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072892"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Passare un database di Analysis Services tra le modalità ReadOnly e ReadWrite
-  In alcune situazioni frequenti, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] potrebbe voler modificare la modalità lettura/scrittura di un database tabulare o multidimensionale. Queste situazioni spesso sono determinate da esigenze aziendali, ad esempio condividere il database fra un pool di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server per migliorare l'esperienza utente.  
+  In alcune situazioni frequenti, un amministratore del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] potrebbe voler modificare la modalità lettura/scrittura di un database tabulare o multidimensionale. Queste situazioni sono spesso determinate da esigenze aziendali, ad esempio la condivisione del database tra un pool [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di server per una migliore esperienza utente.  
   
  In un database è possibile passare da una modalità all'altra in vari modi. In questo documento vengono illustrati gli scenari comuni seguenti:  
   
@@ -38,24 +38,24 @@ ms.locfileid: "66072892"
   
 1.  Individuare il database di cui cambiare la modalità nel riquadro sinistro o destro di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Il database e scegliere **proprietà**. Individuare la cartella del database e prendere nota del percorso. Un percorso di archiviazione del database vuoto indica che la cartella del database si trova nella cartella di dati del server.  
+2.  Fare clic con il pulsante destro del mouse sul database e scegliere **Proprietà**. Individuare la cartella del database e prendere nota del percorso. Un percorso di archiviazione del database vuoto indica che la cartella del database si trova nella cartella di dati del server.  
   
     > [!IMPORTANT]  
     >  Non appena il database viene scollegato, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non consente più di ottenerne il percorso.  
   
-3.  Il database e scegliere **Scollega...**  
+3.  Fare clic con il pulsante destro del mouse sul database e scegliere **Disconnetti.**  
   
 4.  Assegnare una password al database da scollegare, quindi fare clic su **OK** per eseguire il comando.  
   
-5.  Individuare il **database** cartella nel riquadro sinistro o destro di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Individuare la cartella **database** nel riquadro sinistro o destro di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-6.  Fare doppio clic il **database** cartella e selezionare **Connetti...**  
+6.  Fare clic con il pulsante destro del mouse sulla cartella **database** e scegliere **Connetti...**  
   
-7.  Nella casella di testo **cartella** digitare il percorso originale della cartella del database. In alternativa, è possibile usare il pulsante Sfoglia ( **...** ) per individuare la cartella di database.  
+7.  Nella casella di testo **cartella** digitare il percorso originale della cartella del database. In alternativa, è possibile utilizzare il pulsante Sfoglia (**...**) per individuare la cartella del database.  
   
 8.  Selezionare la modalità di lettura/scrittura per il database.  
   
-9. Digitare la password usata nel passaggio 3 e fare clic su **OK** per eseguire il comando attach.  
+9. Digitare la password usata nel passaggio 3 e fare clic su **OK** per eseguire il comando di connessione.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>Per attivare la modalità lettura/scrittura di un database a livello di programmazione tramite AMO  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66072892"
   
 1.  Individuare il database di cui cambiare la modalità nel riquadro sinistro o destro di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Il database e scegliere **proprietà**. Individuare la cartella del database e prendere nota del percorso. Un percorso di archiviazione del database vuoto indica che la cartella del database si trova nella cartella di dati del server.  
+2.  Fare clic con il pulsante destro del mouse sul database e scegliere **Proprietà**. Individuare la cartella del database e prendere nota del percorso. Un percorso di archiviazione del database vuoto indica che la cartella del database si trova nella cartella di dati del server.  
   
     > [!IMPORTANT]  
     >  Non appena il database viene scollegato, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] non consente più di ottenerne il percorso.  
@@ -169,11 +169,11 @@ ms.locfileid: "66072892"
 ## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Collegamento e scollegamento di database di Analysis Services](attach-and-detach-analysis-services-databases.md)   
- [Percorso di archiviazione dei database](database-storage-location.md)   
+ [Collegamento e scollegamento di Analysis Services database](attach-and-detach-analysis-services-databases.md)   
+ [Percorso di archiviazione del database](database-storage-location.md)   
  [Proprietà ReadWriteMode del database](database-readwritemodes.md)   
- [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
- [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Connetti elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Scollega elemento](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
  [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
